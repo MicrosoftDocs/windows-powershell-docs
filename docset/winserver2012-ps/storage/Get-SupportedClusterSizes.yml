@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: Storage
+notes: ""
+syntaxes:
+- >-
+  Get-SupportedClusterSizes [-DriveLetter] <Char[]> [-AsJob] [-CimSession <CimSession[]>] [-FileSystem <String>]
+
+   [-ThrottleLimit <Int32>]
+- >-
+  Get-SupportedClusterSizes [-AsJob] [-CimSession <CimSession[]>] [-FileSystem <String>] [-ThrottleLimit <Int32>]
+
+   -InputObject <CimInstance[]>
+- >-
+  Get-SupportedClusterSizes [-AsJob] [-CimSession <CimSession[]>] [-FileSystem <String>] [-ThrottleLimit <Int32>]
+
+   -Path <String[]>
+- >-
+  Get-SupportedClusterSizes [-AsJob] [-CimSession <CimSession[]>] [-FileSystem <String>] [-ThrottleLimit <Int32>]
+
+   -ObjectId <String[]>
+- >-
+  Get-SupportedClusterSizes [-AsJob] [-CimSession <CimSession[]>] [-FileSystem <String>] [-ThrottleLimit <Int32>]
+
+   -FileSystemLabel <String[]>
+examples:
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+- title: '2:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Char" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DriveLetter
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileSystem
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FileSystemLabel
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ObjectId
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-SupportedClusterSizes
+name: Get-SupportedClusterSizes
+description: ""
+metadata:
+  external help file: Storage2_Cmdlets.xml
+  Module Name: Storage
+  online version: https://docs.microsoft.com/powershell/module/storage/get-supportedclustersizes?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,209 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sends a test message to remote queues.
+module: MSMQ
+notes: ""
+links:
+- text: Clear-MsmqQueue
+  href: ./Clear-MSMQQueue.yml
+- text: Get-MsmqQueue
+  href: ./Get-MsmqQueue.yml
+- text: New-MsmqQueue
+  href: ./New-MsmqQueue.yml
+- text: Receive-MsmqQueue
+  href: ./Receive-MsmqQueue.yml
+- text: Remove-MsmqQueue
+  href: ./Remove-MsmqQueue.yml
+- text: Set-MsmqQueue
+  href: ./Set-MsmqQueue.yml
+syntaxes:
+- >-
+  Send-MsmqQueue [-Name] <String> [-MessageObject <Message>] [-Body <Object>] [-Label <String>] [-Recoverable]
+
+   [-Authenticated] [-Journaling] [-Transactional] [-AcknowledgeType <AcknowledgeTypes>]
+
+   [-AdminQueuePath <String>] [-ResponseQueuePath <String>] [-TimeToReachQueue <TimeSpan>]
+
+   [-TimeToBeReceived <TimeSpan>] [<CommonParameters>]
+- >-
+  Send-MsmqQueue -InputObject <MessageQueue[]> [-MessageObject <Message>] [-Body <Object>] [-Label <String>]
+
+   [-Recoverable] [-Authenticated] [-Journaling] [-Transactional] [-AcknowledgeType <AcknowledgeTypes>]
+
+   [-AdminQueuePath <String>] [-ResponseQueuePath <String>] [-TimeToReachQueue <TimeSpan>]
+
+   [-TimeToBeReceived <TimeSpan>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Send a test message to a queue'
+  code: |-
+    PS C:\> Get-MsmqQueue -Name "a04bm10\private$\order_queue" | Send-MsmqQueue -AdminQueuePath ".\private$\admin_queue" -Recoverable -Transactional
+  description: |-
+    This command gets a queue that has the specified name by using the **Get-MsmqQueue** cmdlet.
+    The command passes the results to the current cmdlet by using the pipeline operator.
+    The current cmdlet sends a test message to the queue.
+    The cmdlet specifies properties of the message.
+  summary: ""
+- title: 'Example 2: Send a test message with a label to a queue'
+  code: |-
+    PS C:\> Get-MsmqQueue -Name "FormatName:DIRECT=TCP:10.199.37.61\order_queue" | Send-MsmqQueue -Label "From PowerShell" -Transactional
+  description: |-
+    This command gets a queue that has the specified name by using **Get-MsmqQueue**.
+    The command passes the results to the current cmdlet by using the pipeline operator.
+    The current cmdlet sends a test message to the queue.
+    The test message has a label.
+  summary: ""
+parameters:
+- type: <xref href="AcknowledgeTypes" data-throw-if-not-resolved="False" />
+  name: AcknowledgeType
+  description: |+
+    Specifies the type of acknowledgement messages that can be returned by Messaging Queuing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, PositiveArrival, PositiveReceive, NotAcknowledgeReachQueue, FullReachQueue, NegativeReceive, NotAcknowledgeReceive, FullReceive
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdminQueuePath
+  description: |+
+    Specifies a path.
+    The queue that the path specifies receives the acknowledgement messages that Message Queuing generates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Authenticated
+  description: |+
+    Indicates that the cmdlet sends the message as an authenticated message.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Body
+  description: |+
+    Specifies the body of the message.
+    The cmdlet sends a message that includes the body that this parameter specifies to the queue.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="MessageQueue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of **MessageQueue** objects.
+    This cmdlet sends messages to the destination queues that the **MessageQueue** specify.
+    This parameter accepts pipeline input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Journaling
+  description: |+
+    Indicates that the originating computer keeps a copy of the message in a journal.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Label
+  description: |+
+    Specifies a label.
+    The label that this parameter specifies describes the message.
+    The default value is an empty string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Message" data-throw-if-not-resolved="False" />
+  name: MessageObject
+  description: |+
+    Specifies a preconstructed message object that you can specify as pipeline input.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recoverable
+  description: |+
+    Indicates that the cmdlet sends the message as a recoverable message.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResponseQueuePath
+  description: |+
+    Specifies a path.
+    The queue that this parameter specifies receives application-generated response messages.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: TimeToBeReceived
+  description: |+
+    Specifies the maximum amount of time, in milliseconds, for the message to be received from the destination queue.
+    The default value is 49.17:02:47.295.
+
+  defaultValue: None
+  position: Named
+  aliases: TTBR
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: TimeToReachQueue
+  description: |+
+    Specifies the maximum amount of time, in milliseconds, for the message to reach the queue.
+    The default value is 49.17:02:47.295.
+
+  defaultValue: None
+  position: Named
+  aliases: TTRQ
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Transactional
+  description: |+
+    Indicates that this cmdlet sends the message as a transactional message.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MSMQ.Send-MsmqQueue
+name: Send-MsmqQueue
+description: |-
+  The **Send-MsmqQueue** cmdlet sends a test message to one or more remote queues.
+  This cmdlet accepts values for the *Name* parameter of path names, format names, and direct format names.
+  Some other Message Queuing (also known as MSMQ) cmdlets require a friendly name for the queue.
+  By default, this cmdlet sends express messages.
+  It returns a **System.Messaging.Message** object that represents the message sent.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/send-msmqqueue?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Send-MsmqQueue

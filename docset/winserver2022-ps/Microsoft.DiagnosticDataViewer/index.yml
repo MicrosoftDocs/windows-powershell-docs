@@ -1,0 +1,22 @@
+### YamlMime:PowershellModule
+children:
+- title: Microsoft.DiagnosticDataViewer
+  cmdlets:
+  - Microsoft.DiagnosticDataViewer.Disable-DiagnosticDataViewing
+  - Microsoft.DiagnosticDataViewer.Enable-DiagnosticDataViewing
+  - Microsoft.DiagnosticDataViewer.Get-DiagnosticData
+  - Microsoft.DiagnosticDataViewer.Get-DiagnosticDataTypes
+  - Microsoft.DiagnosticDataViewer.Get-DiagnosticDataViewingSetting
+  - Microsoft.DiagnosticDataViewer.Get-DiagnosticStoreCapacity
+  - Microsoft.DiagnosticDataViewer.Set-DiagnosticStoreCapacity
+uid: Microsoft.DiagnosticDataViewer
+name: Microsoft.DiagnosticDataViewer
+description: |-
+  The Microsoft.DiagnosticDataViewer module provides commands for viewing and analyzing the Diagnostic Data sent by a Windows device.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: '{{Please enter version of help manually (X.X.X.X) format}}'
+  Locale: en-US
+  Module Guid: 9bd99f27-788b-4912-8f67-5d9d1640fd9b
+  Module Name: Microsoft.DiagnosticDataViewer
+  title: Microsoft.DiagnosticsDataViewer

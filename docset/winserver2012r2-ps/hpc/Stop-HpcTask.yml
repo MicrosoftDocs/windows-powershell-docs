@@ -1,0 +1,195 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cancels a task or subtask.
+module: HPC
+notes: |-
+  * The built-in ConfirmImpact setting for this cmdlet is Medium. If this ConfirmImpact setting is equal to or higher than the value of the $ConfirmPreference variable for your environment, the cmdlet prompts for confirmation unless you specify `-Confirm:$False`. If this ConfirmImpact setting is lower than the value of the $ConfirmPreference variable for your environment, the cmdlet does not prompt for confirmation unless you specify `-Confirm` or `-Confirm:$True`.
+  * This cmdlet was introduced in HPC Pack 2008 R2. It is not supported in previous versions.
+inputs:
+- name: <xref href="HpcTask" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-HpcTask
+  href: ./Add-HpcTask.md
+- text: Export-HpcTask
+  href: ./Export-HpcTask.md
+- text: Get-HpcTask
+  href: ./Get-HpcTask.md
+- text: Set-HpcTask
+  href: ./Set-HpcTask.yml
+- text: Stop-HpcJob
+  href: ./Stop-HpcJob.yml
+- text: Submit-HpcJob
+  href: ./Submit-HpcJob.yml
+syntaxes:
+- >-
+  Stop-HpcTask -JobId <Int32> -TaskId <Int32> [-SubTaskId <Int32>] [-Message <String>] [-State <String>] [-Force]
+
+    [-Scheduler <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Stop-HpcTask -Task <HpcTask> [-Message <String>] [-State <String>] [-Force]
+
+    [-Scheduler <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Stop a task by ID'
+  code: |-
+    PS C:\>Stop-HpcTask -JobId 12 -TaskId 2
+  description: |-
+    This command cancels the task with a task ID of 2 in the job with a job ID of 12.
+  summary: ""
+- title: 'Example 2: Stop a subtask by ID'
+  code: |-
+    PS C:\>Stop-HpcTask -JobId 46 -TaskId 3 -SubTaskId 12 -Message "Clearing space for other tasks that need to run immediately." -Force
+  description: |-
+    This command cancels the subtask with a subtask ID of 12 for the task with a task ID of 3 in the job with a job ID of 46 without using the grace period for task cancellation, and then sets the message that explains the reason for the cancellation to "Clearing space for other tasks that need to run immediately."
+  summary: ""
+- title: 'Example 3: Get a task by ID and stop it'
+  code: |-
+    PS C:\>GetHpcTask -JobId 25 -TaskId 1 | Stop-HpcTask
+  description: |-
+    This command gets an **HpcTask** object for the task with a task ID of 1 in the job with a job ID of 25, and then cancels that task by redirecting that **HpcTask** object to the input of the **Stop-HpcTask** cmdlet.
+  summary: ""
+- title: 'Example 4: Stop a task and set its state'
+  code: |-
+    PS C:\>Stop-HpcTask -JobId 5 -TaskId 1 -SubTaskId 5 -State Finished
+  description: |-
+    This command cancels the subtask with a subtask ID of 5 for the task with a task ID of 1 in the job with a job ID of 5, and sets the state of the task after it is canceled to Finished.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Stops the task immediately without using the grace period for task cancellation.
+    Only tasks that respond when the user types CTRL+BREAK can use the grace period for task cancellation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: JobId
+  isRequired: true
+  description: |+
+    Specifies the job ID of the job that includes the task or subtask that you want to cancel.
+    You cannot specify both the *JobId* and *Task* parameters.
+    If you specify the *JobId* parameter, you must also specify the *TaskId* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Message
+  description: |+
+    Specifies a message that indicates the reason that you are canceling the task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Scheduler
+  description: |+
+    Specifies the host name or IP address of the head node for the HPC cluster to which the job that contains the task or subtask that you want to cancel was submitted.
+    The value must be a valid computer name or IP address.
+    If you do not specify the *Scheduler* parameter, this cmdlet uses the scheduler on the head node that the CCP_SCHEDULER environment variable specifies.
+    To set this environment variable, run the following cmdlet:
+
+    `Set-Content Env:CCP_SCHEDULER \<head_node_name\>`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: State
+  description: |+
+    Specifies the state of the task after it is canceled.
+    The only valid value is Finished.
+    If you do not specify the *State* parameter, the task has a state of Canceled after it is canceled.
+
+    Use this parameter when you want to end a task process immediately.
+
+    This parameter was introduced in HPC Pack 2012 R2 Update 1.
+    It is not supported in previous versions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SubTaskId
+  description: |+
+    Specifies the subtask ID of the subtask that you want to cancel.
+    If you specify the *SubTaskId* parameter, you must also specify the *JobId* and *TaskId* parameters.
+    You cannot specify both the *SubTaskId* and *Task* parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HpcTask" data-throw-if-not-resolved="False" />
+  name: Task
+  isRequired: true
+  description: |+
+    Specifies the task or subtask that you want to cancel.
+    Use the Get-HpcTask cmdlet to get the **HpcTask** object for the task or subtask.
+    You cannot specify the Task parameter if you also specify the *JobId*, the *TaskId*, or the *SubtaskId* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TaskId
+  isRequired: true
+  description: |+
+    Specifies the task ID of the task that you want to cancel.
+    If you specify the *TaskId* parameter, you must also specify the *JobId* parameter.
+    You cannot specify both the *TaskId* and *Task* parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HPC.Stop-HpcTask
+name: Stop-HpcTask
+description: |-
+  The **Stop-HpcTask** cmdlet cancels the specified task or subtask.
+  You can specify a task or subtask by specifying an **HpcTask** object for the task or subtask, or by specifying the job, task, and subtask IDs.
+  You can also specify that the state of the task after it is canceled should be Finished instead of Canceled.
+
+  When you cancel a task or subtask, the job scheduler removes the task or subtask from the queue if the task or subtask is waiting to run.
+  If the task or subtask is running, the scheduler stops the task or subtask and frees the resources that it was using so that they can be allocated to other jobs.
+
+  Only an administrator or the owner of the job that contains a task or subtask can cancel the task or subtask.
+metadata:
+  external help file: CCPPSH.dll-Help.xml
+  Module Name: HPC
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hpc/stop-hpctask?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Stop-HpcTask

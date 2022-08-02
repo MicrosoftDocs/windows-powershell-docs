@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the File History configurations settings for the server.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssFileHistoryManagementStatus
+  href: ./Get-WssFileHistoryManagementStatus.yml
+syntaxes:
+- Set-WssFileHistoryConfiguration [-Configuration] <ConfigurationSet> [-Force] [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Change the File History configurations settings'
+  code: |-
+    PS C:\> $fileHistoryConfig = Get-WssFileHistoryConfiguration
+    PS C:\> $FileHistoryConfig.RetentionInMonths = 6
+    PS C:\> Set-WssFileHistoryConfiguration -Configuration $fileHistoryConfig
+  description: |-
+    This example changes the File History configurations settings for the server.
+
+    The first command gets the File History configurations settings for the server, and stores the result in the **$fileHistoryConfig** variable.
+
+    The second command sets the RetentionInMonths property of the File History configurations object to six months.
+
+    The third command sets the File History configuration settings stored in **$fileHistoryConfig**.
+  summary: ""
+parameters:
+- type: <xref href="ConfigurationSet" data-throw-if-not-resolved="False" />
+  name: Configuration
+  isRequired: true
+  description: |+
+    Specifies the File History configuration settings for the server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Config
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Set-WssFileHistoryConfiguration
+name: Set-WssFileHistoryConfiguration
+description: |-
+  The **Set-WssFileHistoryConfiguration** cmdlet changes the File History configuration settings for the server.
+  File History is a backup application that continuously protects the personal files of users stored in Libraries, Desktop, Favorites, and Contacts folders.
+  You can use the Get-WssFileHistoryConfiguration to get the File History configurations settings for the server.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssfilehistoryconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

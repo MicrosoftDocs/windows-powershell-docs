@@ -1,0 +1,149 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Obtains the iSCSI virtual disks and their associated properties.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Checkpoint-IscsiVirtualDisk
+  href: ./Checkpoint-IscsiVirtualDisk.yml
+- text: Convert-IscsiVirtualDisk
+  href: ./Convert-IscsiVirtualDisk.yml
+- text: Import-IscsiVirtualDisk
+  href: ./Import-IscsiVirtualDisk.yml
+- text: New-IscsiVirtualDisk
+  href: ./New-IscsiVirtualDisk.yml
+- text: Remove-IscsiVirtualDisk
+  href: ./Remove-IscsiVirtualDisk.yml
+- text: Restore-IscsiVirtualDisk
+  href: ./Restore-IscsiVirtualDisk.yml
+- text: Set-IscsiVirtualDisk
+  href: ./Set-IscsiVirtualDisk.yml
+syntaxes:
+- >-
+  Get-IscsiVirtualDisk [-ClusterGroupName <String>] [[-Path] <String>] [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+- >-
+  Get-IscsiVirtualDisk [-ClusterGroupName <String>] [-TargetName <String>] [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+- >-
+  Get-IscsiVirtualDisk [-ClusterGroupName <String>] [-InitiatorId <InitiatorId>] [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all virtual disks on the local server'
+  code: |-
+    PS C:\> Get-IscsiVirtualDisk
+  description: |-
+    This example gets all of the virtual disks on the local server.
+  summary: ""
+- title: 'Example 2: Get virtual disk by using a path'
+  code: |-
+    PS C:\> Get-IscsiVirtualDisk -Path "E:\temp\test.vhdx"
+  description: |-
+    This example gets the virtual disk object that has the path E:\temp\test.vhdx on the local server.
+  summary: ""
+- title: 'Example 3: Get a virtual disk on a remote server'
+  code: |-
+    PS C:\> Get-IscsiVirtualDisk -Path "E:\temp\test.vhdx" -ComputerName "fscluster.contoso.com" -ClusterGroupName "target1Group"
+  description: |-
+    This example gets the virtual disk object that has the path E:\temp\test.vhdx in the resource group named target1Group on cluster server named fscluster.contoso.com.
+  summary: ""
+- title: 'Example 4: Get virtual disks associated with a target'
+  code: |-
+    PS C:\> Get-IscsiVirtualDisk -TargetName "TargetOne"
+  description: |-
+    This example gets all of the virtual disks that are associated with the target named TargetOne on the local server.
+  summary: ""
+- title: 'Example 5: Get virtual disks by an initial'
+  code: |-
+    PS C:\> Get-IscsiVirtualDisk -InitiatorId "IpAddress:10.10.1.1"
+  description: |-
+    This example gets all of the virtual disks on the local server that are used by the initiator with IP address 10.10.1.1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterGroupName
+  description: |+
+    Specifies the name of the resource group or network in the resource group on which this cmdlet runs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="InitiatorId" data-throw-if-not-resolved="False" />
+  name: InitiatorId
+  description: |+
+    Specifies the iSCSI initiator identifiers (IDs) to which the iSCSI target is assigned.
+    Use this parameter to filter out the iSCSI virtual disk object that can be accessed by the given iSCSI initiator.
+    The format for this parameter is IdType:Value.
+    The acceptable values for this parameter are: DNSName, IPAddress, IPv6Address, IQN, or MACAddress.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path of the virtual hard disk (VHD) file that is associated with the iSCSI virtual disk.
+    Filter the iSCSI virtual disk object by using this parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DevicePath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  description: |+
+    Specifies the name of the iSCSI target.
+    Use this parameter to filter out the iSCSI virtual disk objects that are assigned to the specified iSCSI target.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Get-IscsiVirtualDisk
+name: Get-IscsiVirtualDisk
+description: |-
+  The **Get-IscsiVirtualDisk** cmdlet obtains the iSCSI virtual disks and their associated properties.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/get-iscsivirtualdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-IscsiVirtualDisk

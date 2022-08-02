@@ -1,0 +1,20 @@
+### YamlMime:PowershellModule
+children:
+- title: AppV
+  cmdlets:
+  - AppV.ConvertFrom-AppvLegacyPackage
+  - AppV.Test-AppvLegacyPackage
+uid: AppV
+name: AppV
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Application Virtualization (App-V) Package Converter cmdlets.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  Download Help Link: http://go.microsoft.com/fwlink/?LinkId=403113
+  Help Version: 4.0.0.0
+  Locale: en-US
+  Module Guid: "5"
+  Module Name: AppV
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  title: AppV

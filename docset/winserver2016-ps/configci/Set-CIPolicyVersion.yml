@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the version number of the policy.
+module: ConfigCI
+notes: ""
+links:
+- text: Merge-CIPolicy
+  href: ./Merge-CIPolicy.yml
+- text: New-CIPolicy
+  href: ./New-CIPolicy.yml
+syntaxes:
+- Set-CIPolicyVersion -FilePath <String> -Version <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Update the version number of a policy'
+  code: |-
+    PS C:\> Set-CIPolicyVersion -FilePath '.\Policy.xml' -Version '11.1.0.2' 
+    PS C:\> Get-Content -Path '.Policy.xml'
+    <?xml version="1.0" encoding="utf-8"?>
+    <SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy">
+      <VersionEx>11.1.0.2</VersionEx>
+      <PolicyTypeID>{A244370E-44C9-4C06-B551-F6016E563076}</PolicyTypeID>
+  description: |-
+    The first command modifies the version of Policy.xml to be 11.1.0.2.
+
+    The second command displays the contents of the policy.
+    This example shows the first few lines of the policy, which include the **VersionEx** property.
+    It now has a value of 11.1.0.2.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies the path of a policy .xml file that this cmdlet updates.
+
+  defaultValue: None
+  position: Named
+  aliases: f
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  isRequired: true
+  description: |+
+    Specifies the version string with which this cmdlet replaces the current version of the policy.
+    Specify the version in the following format: integer.integer.integer.integer.
+    The **New-CIPolicy** and **Merge-CIPolicy** cmdlets create policies with the default version of 10.0.0.0.
+
+  defaultValue: None
+  position: Named
+  aliases: v
+  parameterValueGroup: ""
+uid: ConfigCI.Set-CIPolicyVersion
+name: Set-CIPolicyVersion
+description: |-
+  The **Set-CIPolicyVersion** cmdlet updates the version number of the policy for a signed policy scenario.
+  When you update a signed policy, the policy must be replaced by a policy that has a signer specified in the **UpdatePolicySigners** property of the policy.
+  The policy must also be an equal or greater version that the previous policy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/configci/set-cipolicyversion?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-CIPolicyVersion

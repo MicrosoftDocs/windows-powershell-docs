@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Restarts an application pool.
+module: WebAdministration
+notes: ""
+links:
+- text: New-WebAppPool
+  href: ./New-WebAppPool.yml
+- text: Remove-WebAppPool
+  href: ./Remove-WebAppPool.yml
+- text: Start-WebAppPool
+  href: ./Start-WebAppPool.yml
+- text: Stop-WebAppPool
+  href: ./Stop-WebAppPool.yml
+syntaxes:
+- Restart-WebAppPool [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Restart an application pool'
+  code: |-
+    IIS:\> Restart-WebAppPool -Name "DefaultAppPool"
+  description: |-
+    This command restarts the application pool named DefaultAppPool.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the application pool to restart.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Restart-WebAppPool
+name: Restart-WebAppPool
+description: |-
+  The **Restart-WebAppPool** cmdlet restarts the specified application pool.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/restart-webapppool?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Restart-WebAppPool

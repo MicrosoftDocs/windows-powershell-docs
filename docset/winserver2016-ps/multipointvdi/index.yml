@@ -1,0 +1,24 @@
+### YamlMime:PowershellModule
+children:
+- title: MultipointVdi
+  cmdlets:
+  - MultipointVdi.Disable-WmsVirtualDesktopRole
+  - MultipointVdi.Enable-WmsVirtualDesktopRole
+  - MultipointVdi.Get-WmsVirtualDesktop
+  - MultipointVdi.Import-WmsVirtualDesktop
+  - MultipointVdi.New-WmsVirtualDesktop
+  - MultipointVdi.New-WmsVirtualDesktopTemplate
+  - MultipointVdi.Open-WmsVirtualDesktop
+uid: MultipointVdi
+name: MultipointVdi
+description: |-
+  The MultiPoint VDI cmdlets in this module are used to manage MultiPoint VDI virtual desktops.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.2.1
+  Locale: en-US
+  Module Guid: 7f53f4d9-97ba-4322-9c8d-008f1ca4be6a
+  Module Name: MultipointVdi
+  ms.date: 12/20/2016
+  title: MultipointVdi

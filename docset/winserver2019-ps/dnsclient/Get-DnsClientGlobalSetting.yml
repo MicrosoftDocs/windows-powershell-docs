@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves global DNS client settings like the suffix search list.
+module: DnsClient
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_DNSClientGlobalSetting" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Set-DnsClientGlobalSetting
+  href: ./Set-DnsClientGlobalSetting.yml
+syntaxes:
+- Get-DnsClientGlobalSetting [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get global DNS client settings'
+  code: |-
+    PS C:\> Get-DnsClientGlobalSetting
+    UseSuffixSearchList : True 
+    SuffixSearchList    : {corp.contoso.com, na.corp.contoso.com} 
+    UseDevolution       : True 
+    DevolutionLevel     : 0
+  description: |-
+    This example gets all of the global DNS client settings.
+  summary: ""
+- title: 'Example 2: Get connection-specific suffixes'
+  code: |-
+    PS C:\> $dnsCGSetting = Get-DnsClientGlobalSetting
+    PS C:\> $dnsCGSetting.SuffixSearchList
+    corp.contoso.com 
+    na.corp.contoso.com
+  description: |-
+    This example gets the connection-specific suffixes.
+    The first item in the list is the primary DNS suffix, if configured.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsClient.Get-DnsClientGlobalSetting
+name: Get-DnsClientGlobalSetting
+description: |-
+  The **Get-DnsClientGlobalSetting** cmdlet retrieves DNS client settings that are global, that are not associated with a specific interface.
+  The settings affect the behavior of the DNS client across all of the interfaces.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_DnsClientGlobalSetting.cdxml-help.xml
+  Module Name: DnsClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsclient/get-dnsclientglobalsetting?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DnsClientGlobalSetting

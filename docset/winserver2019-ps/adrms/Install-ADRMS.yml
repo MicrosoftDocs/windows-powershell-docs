@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a new deployment of AD RMS Server.
+module: ADRMS
+notes: ""
+inputs:
+- name: <xref href="string, PSCredential" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Install-ADRMS [-Path] <String> [-Credential <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Install-ADRMS [-ADFSUrl] <String> [-Credential <PSCredential>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: configures AD RMS'
+  code: |-
+    PS C:\> Install-ADRMS -Path adrmsDrive:\
+  description: |-
+    This command configures AD RMS by using configuration settings that were previously set on items in the adrmsdrive:\ drive.
+    For more information on using this cmdlet, see [Using Windows PowerShell with AD RMS](https://go.microsoft.com/fwlink/?LinkId=136806).
+  summary: ""
+- title: 'Example 2: Configure Identity Federation Support and set federation server URL'
+  code: |-
+    PS C:\> Install-ADRMS -ADFSUrl https://sampleadfsurl.com -Force
+  description: |-
+    This command configures Identity Federation Support for the AD RMS cluster and sets the federation server URL.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ADFSUrl
+  isRequired: true
+  description: |+
+    Configures the AD RMS cluster to support Active Directory Federation Services (AD FS) and specifies the federation server URL.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies user credentials to use for the configuration process.
+    If this parameter is specified, you will be prompted to enter credentials.
+    This parameter operates in a similar manner to the RunAs command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces completion of the command by overriding restrictions that would prevent it from succeeding (so long as a the changes made do not compromise security).
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a provider drive and path or relative path on the current drive.
+    This parameter is required.
+    Use a dot (.) to specify the current location.
+    This parameter does not accept wildcards and has no default value.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADRMS.Install-ADRMS
+name: Install-ADRMS
+description: |-
+  The **Install-ADRMS** cmdlet configures the Active Directory Rights Management Services (AD RMS) server role.
+  Before running this cmdlet, create a Windows PowerShell drive specifying the ADRmsInstall provider and the type of installation (RootCluster, LicensingCluster, or JoinCluster) as the root, and then set properties on the containers and child items in the drive to specify the initial values for provisioning the server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.RightsManagementServices.Configuration.dll-Help.xml
+  Module Name: ADRMS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adrms/install-adrms?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Install-ADRMS

@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a netgroup.
+module: NFS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.FileServices.Powershell.Nfs.NetGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-NfsNetgroup
+  href: ./New-NfsNetgroup.yml
+- text: Remove-NfsNetgroup
+  href: ./Remove-NfsNetgroup.yml
+- text: Set-NfsNetgroupStore
+  href: ./Set-NfsNetgroupStore.yml
+syntaxes:
+- Get-NfsNetgroup [[-NetGroupName] <String>] [<CommonParameters>]
+- >-
+  Get-NfsNetgroup [[-NetGroupName] <String>] [-LdapServer] <String> [[-LdapNamingContext] <String>]
+
+   [<CommonParameters>]
+- Get-NfsNetgroup [[-NetGroupName] <String>] [-NisServer] <String> [[-NisDomain] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a netgroup from an NFS domain'
+  code: |-
+    PS C:\> Get-NfsNetgroup -LdapServer "Contoso.com" -NetGroupName "ExchangeServers"
+
+
+    NetgroupName          : ExchangeServers
+    NetgroupNamingContext : CN=mappedidentity,DC=Contoso,DC=com
+    NetgroupMembers       : {}
+  description: |-
+    This command gets the netgroup that is named ExchangeServers from an NFS domain netgroup store that is named Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LdapNamingContext
+  description: |+
+    Specifies the Lightweight Directory Access Protocol (LDAP) naming context of the netgroup store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: dn
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LdapServer
+  isRequired: true
+  description: |+
+    Gets the netgroups that are configured on a specified LDAP server.
+    The LDAP server name can be a domain name, Active Directory Lightweight Directory Services (AD LDS) server name, or other LDAP server.
+
+    If you do not specify the *LdapServer* parameter or a Network Information Service (NIS) server, the **Get-NfsNetgroup** cmdlet uses the netgroup store configuration that exists on the local NFS server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ldap
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetGroupName
+  description: |+
+    Specifies the name of a netgroup.
+    If no name is specified, all netgroups in the specified or configured store are enumerated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: name, ngname
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NisDomain
+  description: |+
+    Specifies the domain of an NIS server that stores information about netgroups.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: domain
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NisServer
+  isRequired: true
+  description: |+
+    Specifies the host name of an NIS server that stores information about netgroups.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: nis
+  parameterValueGroup: ""
+uid: NFS.Get-NfsNetgroup
+name: Get-NfsNetgroup
+description: |-
+  The **Get-NfsNetgroup** cmdlet gets a netgroup from a configured netgroup store that Network File System (NFS) server uses.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FileServices.Powershell.NFS.dll-Help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/get-nfsnetgroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NfsNetgroup

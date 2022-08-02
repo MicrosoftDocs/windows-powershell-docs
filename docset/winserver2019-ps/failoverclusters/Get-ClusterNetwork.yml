@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about one or more networks in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNetwork" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ClusterNetworkInterface
+  href: ./Get-ClusterNetworkInterface.yml
+syntaxes:
+- >-
+  Get-ClusterNetwork [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cluster <String>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterNetwork
+    Name                                                                      State 
+    ----                                                                      ----- 
+    Cluster Network 1                                                            Up 
+    Cluster Network 2                                                            Up 
+    Cluster Network 3                                                            Up
+  description: |-
+    This example gets information about the networks used by the local cluster.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> (Get-ClusterNetwork -Name "Cluster Network 1").Name = "Cluster Network 3"
+  description: |-
+    This example renames Cluster Network 1 to Cluster Network 3.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to enumerate the cluster networks.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster network to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterNetwork
+name: Get-ClusterNetwork
+description: |-
+  The **Get-ClusterNetwork** cmdlet gets information about one or more networks in a failover cluster.
+  A failover cluster requires network connectivity among nodes and between clients and nodes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternetwork?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterNetwork

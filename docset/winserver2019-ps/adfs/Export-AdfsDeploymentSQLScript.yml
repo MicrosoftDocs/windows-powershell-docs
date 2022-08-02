@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generates SQL scripts to create the AD FS database and to grant permissions.
+module: ADFS
+notes: ""
+syntaxes:
+- >-
+  Export-AdfsDeploymentSQLScript -DestinationFolder <String> -ServiceAccountName <String> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Export SQL deployment scripts'
+  code: |-
+    PS C:\> Export-AdfsDeploymentSQLScript -DestinationFolder ".\ScriptFolder" -ServiceAccountName "ContosoDomain\PattiFuller"
+  description: |-
+    This command exports SQL deployment scripts for AD FS installation on behalf of the specified AD FS service account.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationFolder
+  isRequired: true
+  description: |+
+    Specifies the folder in which the cmdlet saves the generated SQL scripts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Active Directory® Domain Services account under which the AD FS service runs. 
+    All nodes in the farm must use the same service account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Export-AdfsDeploymentSQLScript
+name: Export-AdfsDeploymentSQLScript
+description: |-
+  The **Export-AdfsDeploymentSQLScript** cmdlet generates the SQL scripts that you can use separately to create the Active Directory Federation Services (AD FS) database and to grant permissions.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/export-adfsdeploymentsqlscript?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-AdfsDeploymentSQLScript

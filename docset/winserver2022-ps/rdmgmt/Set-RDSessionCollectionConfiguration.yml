@@ -1,0 +1,460 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies configuration options for an existing session collection.
+module: RDMgmt
+notes: |-
+  * The **IncludeFolderPath** and **IncludeFilePath** parameters are mutually exclusive with the **ExcludeFolderPath** and **ExcludeFilePath** parameters.
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDSessionCollectionConfiguration
+  href: ./Get-RDSessionCollectionConfiguration.yml
+- text: Get-RDSessionCollection
+  href: ./Get-RDSessionCollection.yml
+- text: New-RDSessionCollection
+  href: ./New-RDSessionCollection.yml
+- text: Remove-RDSessionCollection
+  href: ./Remove-RDSessionCollection.yml
+syntaxes:
+- >-
+  Set-RDSessionCollectionConfiguration [-CollectionName] <String> [-CollectionDescription <String>]
+
+   [-UserGroup <String[]>] [-ClientDeviceRedirectionOptions <RDClientDeviceRedirectionOptions>]
+
+   [-MaxRedirectedMonitors <Int32>] [-ClientPrinterRedirected <Boolean>] [-RDEasyPrintDriverEnabled <Boolean>]
+
+   [-ClientPrinterAsDefault <Boolean>] [-TemporaryFoldersPerSession <Boolean>]
+
+   [-BrokenConnectionAction <RDBrokenConnectionAction>] [-TemporaryFoldersDeletedOnExit <Boolean>]
+
+   [-AutomaticReconnectionEnabled <Boolean>] [-ActiveSessionLimitMin <Int32>]
+
+   [-DisconnectedSessionLimitMin <Int32>] [-IdleSessionLimitMin <Int32>] [-AuthenticateUsingNLA <Boolean>]
+
+   [-EncryptionLevel <RDEncryptionLevel>] [-SecurityLayer <RDSecurityLayer>]
+
+   [-LoadBalancing <RDSessionHostCollectionLoadBalancingInstance[]>] [-CustomRdpProperty <String>]
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+- >-
+  Set-RDSessionCollectionConfiguration [-CollectionName] <String> [-DisableUserProfileDisk]
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+- >-
+  Set-RDSessionCollectionConfiguration [-CollectionName] <String> [-EnableUserProfileDisk]
+
+   [-IncludeFolderPath <String[]>] [-ExcludeFolderPath <String[]>] [-IncludeFilePath <String[]>]
+
+   [-ExcludeFilePath <String[]>] -MaxUserProfileDiskSizeGB <Int32> -DiskPath <String>
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable user profile disk'
+  code: |-
+    PS C:\> Set-RDSessionCollectionConfiguration -CollectionName "Session Collection 02" -DisableUserProfileDisk -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command configures a session collection to not use a user profile disk for a session collection named Session Collection 02 that has an RD Connection Broker named RDCB.Contoso.com.
+  summary: ""
+- title: 'Example 2: Specify a user profile disk with included file and folder'
+  code: |-
+    PS C:\> Set-RDSessionCollectionConfiguration -CollectionName "Session Collection 09" -EnableUserProfileDisk -MaxUserProfileDiskSizeGB 40 -DiskPath "C:\UserVHDs" -IncludeFolderPath "C:\Resources Folder" -IncludeFileFolderPath "C:\Required Text File.txt" -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command configures a session collection to use a user profile disk for a session collection named Session Collection 09 that has an RD Connection Broker named RDCB.Contoso.com.
+    The command specifies the maximum size of the user profile disk and its disk path.
+    The command specifies a path and file to include in the user profile.
+  summary: ""
+- title: 'Example 3: Specify a user profile disk with excluded file and folder'
+  code: |-
+    PS C:\> Set-RDSessionCollectionConfiguration -CollectionName "Session Collection 19" -EnableUserProfileDisk -MaxUserProfileDiskSizeGB 40 -DiskPath "C:\UserVHDs" -ExcludeFolderPath "C:\Local Resources Folder" -ExcludeFilePath "C:\Local Text File.txt" -ConnectionBroker "RDCD.Contoso.com"
+  description: |-
+    This command configures a session collection to use a user profile disk for a session collection named Session Collection 19 that has an RD Connection Broker named RDCB.Contoso.com.
+    The command specifies the maximum size of the user profile disk and its disk path.
+    The command specifies a path and file to exclude from the user profile.
+  summary: ""
+- title: 'Example 4: Configure load balancing'
+  code: |-
+    PS C:\> $LoadBalanceObjectsArray = New-Object System.Collections.Generic.List[Microsoft.RemoteDesktopServices.Management.RDSessionHostCollectionLoadBalancingInstance]
+    PS C:\>$LoadBalanceSessionHost1 = New-Object Microsoft.RemoteDesktopServices.Management.RDSessionHostCollectionLoadBalancingInstance( "SessionHostCollection", 50, 200, "RDSH-1.Contoso.com" )
+    PS C:\> $LoadBalanceObjectsArray.Add($LoadBalanceSessionHost1)
+    PS C:\> $LoadBalanceSessionHost2 = New-Object Microsoft.RemoteDesktopServices.Management.RDSessionHostCollectionLoadBalancingInstance( "SessionHostCollection", 50, 300, "RDSH-2Contoso.com" )
+    PS C:\> $LoadBalanceObjectsArray.Add($LoadBalanceSessionHost2)
+    PS C:\> Set-RDSessionCollectionConfiguration -CollectionName "Session Collection 07" -LoadBalancing $LoadBalanceObjectsArray -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This example configures load balancing for a session collection named Session Collection 07 that has an RD Connection Broker server named RDCB.Contoso.com.
+
+    The first five commands use standard Windows PowerShell® syntax to create an array of objects to define load balancing guidelines, and store those guidelines in the **$LoadBalanceObjectsArray** variable.
+    This example configuration uses two RD Session Host servers named RDSH-1.Contoso.com and RDSH-2.Contoso.com
+
+    The final command specifies load balancing settings for the session collection that has the name Session Collection 07 and the RD Connection Broker server named RDCB.Contoso.com.
+    The command uses the array stored in the **$LoadBalanceObjectsArray** variable to specify load balancing behavior.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ActiveSessionLimitMin
+  description: |+
+    Specifies the maximum time, in minutes, an active session runs.
+    After this period, the RD Session Host server ends the session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AuthenticateUsingNLA
+  description: |+
+    Indicates whether to use Network Level Authentication (NLA).
+    If this value is $True, Remote Desktop uses NLA to authenticate a user before the user sees a logon screen.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutomaticReconnectionEnabled
+  description: |+
+    Indicates whether the Remote Desktop client attempts to reconnect after a connection interruption.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RDBrokenConnectionAction" data-throw-if-not-resolved="False" />
+  name: BrokenConnectionAction
+  description: |+
+    Specifies an action for an RD Session Host server to take after a connection interruption.
+    The acceptable values for this parameter are:
+
+    - None
+    - Disconnect
+    - LogOff
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Disconnect, LogOff
+- type: <xref href="RDClientDeviceRedirectionOptions" data-throw-if-not-resolved="False" />
+  name: ClientDeviceRedirectionOptions
+  description: |+
+    Specifies a type of client device to be redirected to an RD Session Host server in this session collection.
+    The acceptable values for this parameter are:
+
+    - 0x0000.
+    None.
+    - 0x0001.
+    AudioVideoPlayBack.
+    - 0x0002.
+    AudioRecording.
+    - 0x0004.
+    COMPort.
+    - 0x0008.
+    PlugAndPlayDevice.
+    - 0x0010.
+    SmartCard.
+    - 0x0020.
+    Clipboard.
+    - 0x0040.
+    LPTPort.
+    - 0x0080.
+    Drive.
+    - 0x0100.
+    TimeZone.
+
+    You can use binary-or to combine two or more values of this enum to specify multiple client device types.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, AudioVideoPlayBack, AudioRecording, COMPort, PlugAndPlayDevice, SmartCard, Clipboard, LPTPort, Drive, TimeZone
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ClientPrinterAsDefault
+  description: |+
+    Indicates whether to use the client printer or server printer as the default printer.
+    If this value is $True, use the client printer as default.
+    If this value is $False, use the server as default.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ClientPrinterRedirected
+  description: |+
+    Indicates whether to use client printer redirection, which routes print jobs from the Remote Desktop session to a printer attached to the client computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionDescription
+  description: |+
+    Specifies a description of the session collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a session collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CustomRdpProperty
+  description: |+
+    Specifies Remote Desktop Protocol (RDP) settings to include in the .rdp files for all Windows Server 2012 RemoteApp programs and remote desktops published in this collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableUserProfileDisk
+  isRequired: true
+  description: |+
+    Indicates that Remote Desktop does not use a user profile to configure the session collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DisconnectedSessionLimitMin
+  description: |+
+    Specifies a length of time, in minutes.
+    After client disconnection from a session for this period, the RD Session Host ends the session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DiskPath
+  isRequired: true
+  description: |+
+    Specifies a path for the user profile disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableUserProfileDisk
+  isRequired: true
+  description: |+
+    Indicates that Remote Desktop uses a user profile disk to configure the session collection.
+    A user profile disk stores user profile information as a separate virtual hard disk in order to persist user profile settings across a pool of virtual desktops.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RDEncryptionLevel" data-throw-if-not-resolved="False" />
+  name: EncryptionLevel
+  description: |+
+    Specifies the level of data encryption used for a Remote Desktop session.
+    The acceptable values for this parameter are:
+
+    - 0 - Low.
+    - 1 - ClientCompatible.
+    - 2 - High.
+    - 3 - FipsCompliant.
+
+    The default value is ClientCompatible.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Low, ClientCompatible, High, FipsCompliant
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExcludeFilePath
+  description: |+
+    Specifies an array of file paths to exclude from a user profile disk.
+    By default, Remote Desktop creates standard file and folder paths, such as Documents and Music.
+    Use this parameter to prevent creation of specified file paths.
+    This parameter overrides any identical values specified in the **IncludeFilePath** or **IncludeFolderPath** parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExcludeFolderPath
+  description: |+
+    Specifies an array of folder paths to exclude from a user profile disk.
+    By default, Remote Desktop creates standard file and folder paths, such as Documents and Music.
+    Use this parameter to prevent creation of specified folder paths.
+    This parameter overrides any identical values specified in the **IncludeFilePath** or **IncludeFolderPath** parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: IdleSessionLimitMin
+  description: |+
+    Specifies the length of time, in minutes, to wait before an RD Session Host logs off or disconnects an idle session.
+    The **BrokenConnectionAction** parameter determines whether to log off or disconnect.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IncludeFilePath
+  description: |+
+    Specifies an array of file paths to include in a user profile disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IncludeFolderPath
+  description: |+
+    Specifies an array of folder paths to include in a user profile disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RDSessionHostCollectionLoadBalancingInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LoadBalancing
+  description: |+
+    Specifies an array of objects that defines load balancing guidelines for the remote session collection.
+    Each object specifies the collection name, RD Session Host server name, relative weight to use for that server, and a maximum number of sessions to allow.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxRedirectedMonitors
+  description: |+
+    Specifies the maximum number of client monitors that an RD Session Host server can redirect to a remote session.
+    The highest value for this parameter is 16.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxUserProfileDiskSizeGB
+  isRequired: true
+  description: |+
+    Specifies the maximum size, in gigabytes, for a user profile disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RDEasyPrintDriverEnabled
+  description: |+
+    Specifies whether to enable the Remote Desktop Easy Print driver.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RDSecurityLayer" data-throw-if-not-resolved="False" />
+  name: SecurityLayer
+  description: |+
+    Specifies which security protocol to use.
+    The acceptable values for this parameter are:
+
+    - 0 - RDP.
+    - 1 - Negotiate.
+    - 2 - SSL.
+
+    The default value is Negotiate.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: RDP, Negotiate, SSL
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: TemporaryFoldersDeletedOnExit
+  description: |+
+    Specifies whether to delete temporary folders from the RD Session Host server for a disconnected session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: TemporaryFoldersPerSession
+  description: |+
+    Specifies whether to use a single folder for temporary files.
+    If this value is $True, a single folder contains temporary files.
+    If this value is $False, individual users have separate folders to store temporary files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserGroup
+  description: |+
+    Specifies an array of domain groups and users authorized to connect to the RD Session Host servers in a session collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Set-RDSessionCollectionConfiguration
+name: Set-RDSessionCollectionConfiguration
+description: |-
+  The **Set-RDSessionCollectionConfiguration** cmdlet modifies configuration options for an existing session collection.
+  A session collection consists of one or more Remote Desktop Session Host (RD Session Host) servers.
+  Users can connect to RD Session Host servers in a session collection to run programs, save files, and use resources on those servers.
+
+  You can use the New-RDSessionCollection cmdlet to create a session collection.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdsessioncollectionconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDSessionCollectionConfiguration

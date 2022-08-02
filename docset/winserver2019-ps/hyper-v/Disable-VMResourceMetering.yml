@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables collection of resource utilization data for a virtual machine or resource pool.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.HyperV.PowerShell.VMResourcePoolType" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Measure-VM
+  href: ./Measure-VM.yml
+- text: Measure-VMResourcePool
+  href: ./Measure-VMResourcePool.yml
+- text: Enable-VMResourceMetering
+  href: ./Enable-VMResourceMetering.yml
+syntaxes:
+- >-
+  Disable-VMResourceMetering [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [-VMName] <String[]> [<CommonParameters>]
+- >-
+  Disable-VMResourceMetering [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [-ResourcePoolName] <String> [[-ResourcePoolType] <VMResourcePoolType>]
+
+   [<CommonParameters>]
+- Disable-VMResourceMetering [-VM] <VirtualMachine[]> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Disable-VMResourceMetering -VMName TestVM
+  description: |-
+    Disables collection of resource utilization data on a virtual machine named TestVM.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-VM Test* | Disable-VMResourceMetering
+  description: |-
+    Disables collection of resource utilization data on a set of virtual machines whose names begin with the string Test.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Disable-VMResourceMetering -ResourcePoolName TestResourcePool -ResourcePoolType Memory
+  description: |-
+    Disables collection of resource utilization data on a resource pool named TestResourcePool of type Memory.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which resource utilization data collection is to be disabled.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourcePoolName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the resource pool on which resource utilization data collection is to be disabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="VMResourcePoolType" data-throw-if-not-resolved="False" />
+  name: ResourcePoolType
+  description: |+
+    Specifies the resource type of the resource pool on which resource utilization data collection is to be disabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Ethernet, Memory, Processor, VHD
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine on which resource utilization data collection is to be disabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the virtual machine on which resource utilization data collection is to be disabled.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Disable-VMResourceMetering
+name: Disable-VMResourceMetering
+description: |-
+  The **Disable-VMResourceMetering** cmdlet disables collection of resource utilization data for a virtual machine or resource pool.
+
+  Calling this cmdlet stops collection of data and deletes data collected up to the point of the call.
+
+  After the call, Measure-VM and Measure-VMResourcePool are not usable.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/disable-vmresourcemetering?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-VMResourceMetering

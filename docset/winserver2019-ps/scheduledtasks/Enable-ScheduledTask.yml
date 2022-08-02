@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables a scheduled task.
+module: ScheduledTasks
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_ScheduledTask" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-ScheduledTask
+  href: ./Disable-ScheduledTask.yml
+- text: Export-ScheduledTask
+  href: ./Export-ScheduledTask.yml
+- text: Get-ScheduledTask
+  href: ./Get-ScheduledTask.yml
+- text: New-ScheduledTask
+  href: ./New-ScheduledTask.yml
+- text: Register-ScheduledTask
+  href: ./Register-ScheduledTask.yml
+- text: Set-ScheduledTask
+  href: ./Set-ScheduledTask.yml
+- text: Start-ScheduledTask
+  href: ./Start-ScheduledTask.yml
+- text: Stop-ScheduledTask
+  href: ./Stop-ScheduledTask.yml
+- text: Unregister-ScheduledTask
+  href: ./Unregister-ScheduledTask.yml
+syntaxes:
+- >-
+  Enable-ScheduledTask [-TaskName] <String> [[-TaskPath] <String>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Enable-ScheduledTask [-InputObject] <CimInstance> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable a scheduled task'
+  code: |-
+    PS C:\> Enable-ScheduledTask -TaskName "SystemScan"
+    TaskPath                          TaskName                        State
+    --------                          --------                        --------
+    \                                 SystemScan                      Ready
+  description: |-
+    This command enables the SystemScan task in the root folder.
+  summary: ""
+- title: 'Example 2: Enable all scheduled tasks in a folder'
+  code: |-
+    PS C:\> Get-ScheduledTask -TaskPath "\UpdateTasks\" | Enable-ScheduledTask
+    TaskPath                          TaskName                        State
+    --------                          --------                        --------
+    \UpdateTasks\                     UpdateApps                      Ready
+    \UpdateTasks\                     UpdateDrivers                   Ready
+  description: |-
+    This command uses the Get-ScheduledTask cmdlet to get all scheduled tasks in the **\UpdateTasks\** folder.
+    It pipes this information to the **Enable-ScheduledTasks** cmdlet, which enables these scheduled tasks.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input object that is used in a pipeline command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TaskName
+  isRequired: true
+  description: |+
+    Specifies the name of a scheduled task.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TaskPath
+  description: |+
+    Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace. You can use **"*"** for a wildcard character query.
+    You can use **\\*** for the root folder. To specify a full TaskPath you need to include the leading and trailing **\\**.
+    If you do not specify a path, the cmdlet uses the root folder.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ScheduledTasks.Enable-ScheduledTask
+name: Enable-ScheduledTask
+description: |-
+  The **Enable-ScheduledTask** cmdlet enables a disabled scheduled task.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
+  Module Name: ScheduledTasks
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/scheduledtasks/enable-scheduledtask?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-ScheduledTask

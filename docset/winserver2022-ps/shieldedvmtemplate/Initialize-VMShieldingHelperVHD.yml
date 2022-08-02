@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Initializes a VHD for use as a shielding utility disk in a guarded fabric.
+module: ShieldedVMTemplate
+notes: ""
+links:
+- text: Protect-TemplateDisk
+  href: ./Protect-TemplateDisk.yml
+syntaxes:
+- Initialize-VMShieldingHelperVHD -Path <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Initialize a virtual hard disk'
+  code: |-
+    PS C:\>Initialize-VMShieldingHelperVHD -Path "C:\temp\ShieldedVMUtility.vhdx"
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the .vhdx file to initialize.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ShieldedVMTemplate.Initialize-VMShieldingHelperVHD
+name: Initialize-VMShieldingHelperVHD
+description: |-
+  The **Protect-TemplateDisk** cmdlet initializes a virtual hard disk (VHD) for use as a shielding utility disk in a guarded fabric.
+
+  Utility VHDs contain the software needed to shield an existing VM on a guarded fabric.
+  A supported operating system must be installed on the disk before initializing it as a shielding helper VHD.
+
+  For more information about preparing a shielding helper VHD, see Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHDhttps://technet.microsoft.com/en-us/windows-server-docs/security/guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd at https://go.microsoft.com/fwlink/?linkid=832557.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
+  Module Name: ShieldedVMTemplate
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/shieldedvmtemplate/initialize-vmshieldinghelpervhd?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Initialize-VMShieldingHelperVHD

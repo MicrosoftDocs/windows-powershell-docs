@@ -1,0 +1,448 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an Active Directory Domain Services authentication policy object.
+module: ActiveDirectory
+notes: ""
+inputs:
+- name: <xref href="None or Microsoft.ActiveDirectory.Management.ADAuthenticationPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts an authentication policy object.
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more objects.
+links:
+- text: Get-ADAuthenticationPolicy
+  href: ./Get-ADAuthenticationPolicy.yml
+- text: New-ADAuthenticationPolicy
+  href: ./New-ADAuthenticationPolicy.yml
+- text: Remove-ADAuthenticationPolicy
+  href: ./Remove-ADAuthenticationPolicy.yml
+- text: AD DS Administration Cmdlets in Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Set-ADAuthenticationPolicy [-WhatIf] [-Confirm] [-Add <Hashtable>] [-AuthType <ADAuthType>] [-Clear <String[]>]
+
+   [-ComputerAllowedToAuthenticateTo <String>] [-ComputerTGTLifetimeMins <Int32>] [-Credential <PSCredential>]
+
+   [-Description <String>] [-Enforce <Boolean>] [-Identity] <ADAuthenticationPolicy> [-PassThru]
+
+   [-ProtectedFromAccidentalDeletion <Boolean>] [-Remove <Hashtable>] [-Replace <Hashtable>]
+
+   [-RollingNTLMSecret <ADStrongNTLMPolicyType>] [-Server <String>] [-ServiceAllowedToAuthenticateFrom <String>]
+
+   [-ServiceAllowedToAuthenticateTo <String>] [-ServiceAllowedNTLMNetworkAuthentication <Boolean>]
+
+   [-ServiceTGTLifetimeMins <Int32>] [-UserAllowedToAuthenticateFrom <String>]
+
+   [-UserAllowedToAuthenticateTo <String>] [-UserAllowedNTLMNetworkAuthentication <Boolean>]
+
+   [-UserTGTLifetimeMins <Int32>] [<CommonParameters>]
+- >-
+  Set-ADAuthenticationPolicy [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
+
+   -Instance <ADAuthenticationPolicy> [-PassThru] [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify properties of a specified authentication policy'
+  code: |-
+    PS C:\> Set-ADAuthenticationPolicy -Identity AuthenticationPolicy01 -Description "TestDescription" -UserTGTLifetimeMins 45
+  description: |-
+    This command modifies the description and the **UserTGTLifetimeMins** properties of the specified authentication policy.
+  summary: ""
+- title: 'Example 2: Modify properties of an authentication policy by using an Instance.'
+  code: |-
+    PS C:\> $AuthPolicy = Get-ADAuthenticationPolicy -Identity AuthenticationPolicy02
+    PS C:\> $AuthPolicy.Description = 'testDescription'
+    PS C:\> $AuthPolicy.UserTGTLifetimeMins = 60
+    PS C:\> Set-ADAuthenticationPolicy -Instance $AuthPolicy
+  description: |-
+    This example first gets the authentication policy named AuthenticationPolicy02 by using the **Get-ADAuthenticationPolicy** cmdlet.
+    The authentication policy object is stored in the variable named $authPolicy.
+
+    The next commands modify the properties of the object in the variable, and the final command specifies the *Instance* parameter to commit the changes to the authentication policy stored in the $authPolicy variable.
+  summary: ""
+- title: 'Example 3: Modify multiple authentication policies'
+  code: |-
+    PS C:\> Get-ADAuthenticationPolicy -Filter 'UserTGTLifetimeMins -le 50' | Set-ADAuthenticationPolicy -UserTGTLifetimeMins 60
+  description: |-
+    This command uses the **Get-ADAuthenticationPolicy** cmdlet with the *Filter* parameter to get all authentication policies that have the **UserTGTLifetimeMins** value set below 50 minutes.
+    The pipeline operator then passes the result of the filter to **Set-AdAuthenticationPolicy**, which sets the new *UserTGTLifetimeMins* value to 60 minutes.
+  summary: ""
+- title: 'Example 4: Replace an existing property value'
+  code: |-
+    PS C:\> Set-ADAuthenticationPolicy -Identity AuthenticationPolicy03 -Replace @{description="New Description"}
+  description: |-
+    This command replaces the existing description property for **AuthenticationPolicy03** with the new description specified by the *Replace* parameter.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Add
+  description: |+
+    Specifies a list of values to add to an object property.
+    Use this parameter to add one or more values to a property that cannot be modified using a parameter.
+    To identify an attribute, specify the Lightweight Directory Access Protocol (LDAP) display name defined for it in the Active Directory Domain Services schema.
+
+    Specify the attribute and the value of the attribute in the following format: @{'AttributeLDAPDisplayName'=value}.
+
+    To specify multiple values for an attribute, specify a comma separated list the values for the display name.
+    You can specify values for more than one attribute by using semicolons to separate attribute value pairs.
+
+    When specifying the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations are performed in the following order:
+
+    - **Remove**
+    - **Add**
+    - **Replace**
+    - **Clear**
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADAuthType" data-throw-if-not-resolved="False" />
+  name: AuthType
+  description: |+
+    Specifies the authentication method to use.
+    The acceptable values for this parameter are:
+
+    - Negotiate or 0
+    - Basic or 1
+
+    The default authentication method is Negotiate.
+    A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Negotiate, Basic
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Clear
+  description: |+
+    Specifies an array of object properties that are cleared in the directory.
+    Use this parameter to clear one or more values of a property that cannot be modified using a parameter.
+    To modify an object property, you must specify the LDAP display name.
+    You can modify more than one property by specifying a comma-separated list.
+
+    When specifying the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations are performed in the following order: 
+
+    - **Remove**
+    - **Add**
+    - **Replace**
+    - **Clear**
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerAllowedToAuthenticateTo
+  description: |+
+    Specifies the security descriptor definition language (SDDL) string of the security descriptor used to determine if the computer can authenticate to this account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ComputerTGTLifetimeMins
+  description: |+
+    Specifies the lifetime in minutes for non-renewable ticket granting tickets (TGTs) for computer accounts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user account that has permission to perform the task.
+    The default is the current user.
+    Type a user name, such as "User01" or "Domain01\User01", or enter a **PSCredential** object, such as one generated by the **Get-Credential** cmdlet.
+
+    By default, the cmdlet uses the credentials of the currently logged on user unless the cmdlet is run from an Active Directory Domain Services Windows PowerShell provider drive.
+    If you run the cmdlet in a provider drive, the account associated with the drive is the default.
+
+    If you specify credentials that do not have permission to perform the task, the cmdlet returns an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the object.
+    This parameter sets the value of the description property for the object.
+    The LDAP display name (**ldapDisplayName**) for this property is "description".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enforce
+  description: |+
+    Indicates whether the authentication policy is enforced.
+    Specify $True to set the authentication policy to enforced.
+    Specify $False to set the authentication policy to not enforced.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADAuthenticationPolicy" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies an Active Directory Domain Services authentication policy object.
+    Specify the authentication policy object in one of the following formats: 
+
+    - Distinguished Name
+    - GUID
+    - Name
+
+    This parameter can also get this object through the pipeline or you can set this parameter to an object instance.
+
+    The cmdlet searches the default naming context or partition to find the object.
+    If the cmdlet finds two or more objects, the cmdlet returns a non-terminating error.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADAuthenticationPolicy" data-throw-if-not-resolved="False" />
+  name: Instance
+  isRequired: true
+  description: |+
+    Specifies a modified copy of an **ADAuthenticationPolicy** object to use to update the actual **ADAuthenticationPolicy** object.
+    When you specify this parameter, any modifications made to the modified copy of the object are also made to the corresponding **ADAuthenticationPolicy** object.
+    The cmdlet only updates the object properties that have changed.
+    When you specify the *Instance* parameter, you cannot specify other parameters that set properties on the object.
+
+    To get the **ADAuthenticationPolicy** object to use to update the **ADAuthenticationPolicy** on which the cmdlet runs, use the **Get-ADAuthenticationPolicy** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ProtectedFromAccidentalDeletion
+  description: |+
+    Indicates whether to prevent the object from being deleted.
+    When this property is set to true, you cannot delete the corresponding object without changing the value of the property.
+    The acceptable values for this parameter are:
+
+    - $False or 0
+    - $True or 1
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Remove
+  description: |+
+    Specifies that the cmdlet remove the values of an object property.
+    Use this parameter to remove one or more values of a property that cannot be modified using a cmdlet parameter.
+    To remove an object property, you must specify the LDAP display name.
+
+    Specify the attribute and the value of the attribute in the following format: @{'AttributeLDAPDisplayName'=value}.
+
+    To specify multiple values for an attribute, specify a comma separated list the values for the display name.
+    You can specify values for more than one attribute by using semicolons to separate attribute value pairs.
+
+    When specifying the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations are performed in the following order:
+
+    - **Remove**
+    - **Add**
+    - **Replace**
+    - **Clear**
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Replace
+  description: |+
+    Specifies a list of values for an object property that replaces the current values.
+    Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
+    To modify an object property, you must specify the LDAP display name.
+
+    Specify the attribute and the value of the attribute in the following format: @{'AttributeLDAPDisplayName'=value}.
+
+    To specify multiple values for an attribute, specify a comma separated list the values for the display name.
+    You can specify values for more than one attribute by using semicolons to separate attribute value pairs.
+
+    When specifying the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations are performed in the following order:
+
+    - **Remove**
+    - **Add**
+    - **Replace**
+    - **Clear**
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADStrongNTLMPolicyType" data-throw-if-not-resolved="False" />
+  name: RollingNTLMSecret
+  description: |+
+    Beginning with Windows 10, version 1703, this feature is deprecated and should not be configured in Active Directory.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Optional, Required
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the Active Directory Domain Services instance to which to connect, by providing one of the following values for a corresponding domain name or directory server.
+    The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+
+    Specify the Active Directory Domain Services instance in one of the following ways:  
+
+    Domain name values:
+    - Fully qualified domain name
+    - NetBIOS name
+
+    Directory server values: 
+
+    - Fully qualified directory server name
+    - NetBIOS name
+    - Fully qualified directory server name and port
+
+    The default value for this parameter is determined by one of the following methods in the order that they are listed:
+
+    - By using the **Server** value from objects passed through the pipeline
+    - By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
+    - By using the domain of the computer running Windows PowerShell
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ServiceAllowedNTLMNetworkAuthentication
+  description: |+
+    Specifies that the policy allows NTLM network authentication if the service account has an access control expression specified by the *ServiceAllowedToAuthenticateFrom* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceAllowedToAuthenticateFrom
+  description: |+
+    Specifies an access control expression used to determine from which devices the service can authenticate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceAllowedToAuthenticateTo
+  description: |+
+    Specifies the SDDL string of the security descriptor used to determine if the service can authenticate to this account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ServiceTGTLifetimeMins
+  description: |+
+    Specifies the lifetime in minutes for non-renewable TGTs for service accounts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UserAllowedNTLMNetworkAuthentication
+  description: |+
+    Indicates that the policy allows NTLM network authentication if the user account has an access control expression specified by the *UserAllowedToAuthenticateFrom* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserAllowedToAuthenticateFrom
+  description: |+
+    Specifies an access control expression used to determine from which devices the users can authenticate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserAllowedToAuthenticateTo
+  description: |+
+    Specifies the SDDL string of the security descriptor used to determine if the users can authenticate to this account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: UserTGTLifetimeMins
+  description: |+
+    Specifies the lifetime in minutes for non-renewable TGTs for user accounts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ActiveDirectory.Set-ADAuthenticationPolicy
+name: Set-ADAuthenticationPolicy
+description: |-
+  The **Set-ADAuthenticationPolicy** cmdlet modifies the properties of an Active Directory® Domain Services authentication policy.
+  Commonly used attributes of the object can be specified by the parameters of this cmdlet.
+  Property values that are not associated with cmdlet parameters can be modified by using the *Add*, *Remove*, *Replace*, and *Clear* parameters.
+
+  The *Identity* parameter specifies the Active Directory Domain Services authentication policy to modify.
+  You can specify an authentication policy object by using a distinguished name, a GUID, or a name.
+  You can also use the *Identity* parameter to specify a variable that contains an authentication policy object, or you can use the pipeline operator to pass an authentication policy object to the *Identity* parameter.
+  To get an authentication policy object, use the **Get-ADAuthenticationPolicy** cmdlet.
+
+  Use the *Instance* parameter to specify an authentication policy object to use as a template for the object being modified.
+  Do not specify both the *Instance* parameter and the *Identity* parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/set-adauthenticationpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-ADAuthenticationPolicy

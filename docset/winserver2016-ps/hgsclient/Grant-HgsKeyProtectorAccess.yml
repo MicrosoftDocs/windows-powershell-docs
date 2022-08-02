@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Grants access to a guardian for a key protector.
+module: HgsClient
+notes: ""
+outputs:
+- name: <xref href="CimInstance#MSFT_HgsKeyProtector" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: New-HgsKeyProtector
+  href: ./New-HgsKeyProtector.yml
+- text: Revoke-HgsKeyProtectorAccess
+  href: ./Revoke-HgsKeyProtectorAccess.yml
+- text: Get-HgsGuardian
+  href: ./Get-HgsGuardian.yml
+syntaxes:
+- >-
+  Grant-HgsKeyProtectorAccess -KeyProtector <CimInstance> -Guardian <CimInstance> [-AllowUntrustedRoot]
+
+   [-AllowExpired] [<CommonParameters>]
+- >-
+  Grant-HgsKeyProtectorAccess -KeyProtector <CimInstance> -GuardianFriendlyName <String> [-AllowUntrustedRoot]
+
+   [-AllowExpired] [<CommonParameters>]
+examples:
+- title: 'Example 1: Grant access to a guardian'
+  code: |-
+    PS C:\> $Owner = Get-HgsGuardian -Name "Guardian06"
+    PS C:\> $Guardian01 = Get-HgsGuardian -Name "Guardian11"
+    PS C:\> $KeyProtector = New-HgsKeyProtector -Owner $Owner 
+    PS C:\> Grant-HgsKeyProtectorAccess -KeyProtector $KeyProtector -Guardian $Guardian01
+  description: |-
+    The first command gets the guardian object named Guardian06 by using the **Get-HgsGuardian** cmdlet, and then stores that object in the **$Owner** variable.
+
+    The second commands get the guardian object named Guardian11, and then stores it in the **$Guardian01** variable.
+
+    The third command creates a key protector.
+    The command defines Guardian06, stored in **$Owner**, as the **Owner**.
+
+    The final command grants access to the guardian stored in **$Guardian01** for the key protector.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowExpired
+  description: |+
+    Indicates that this cmdlet can grant permissions to a guardian that contains certificates that are expired.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowUntrustedRoot
+  description: |+
+    Indicates that this cmdlet can grant permissions to a guardian that uses self-signed certificates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Guardian
+  isRequired: true
+  description: |+
+    Specifies a guardian to which to grant access to the key.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GuardianFriendlyName
+  isRequired: true
+  description: |+
+    Specifies a friendly name for the guardian.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: KeyProtector
+  isRequired: true
+  description: |+
+    Specifies the key protector to which to grant access.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HgsClient.Grant-HgsKeyProtectorAccess
+name: Grant-HgsKeyProtectorAccess
+description: |-
+  The **Grant-HgsKeyProtectorAccess** cmdlet grants a Host Guardian Service guardian access to a key protector.
+  This operation requires the private signing key of the owner of the key protector.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: HgsClient-help.xml
+  Module Name: HgsClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsclient/grant-hgskeyprotectoraccess?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Grant-HgsKeyProtectorAccess

@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets all virtual machines and components from the backup policy.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="Windows.ServerBackup.Commands.WBPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Windows.ServerBackup.Commands.WBVirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Add-WBVirtualMachine
+  href: ./Add-WBVirtualMachine.yml
+- text: Remove-WBVirtualMachine
+  href: ./Remove-WBVirtualMachine.yml
+syntaxes:
+- Get-WBVirtualMachine [-WhatIf] [-Confirm] [<CommonParameters>]
+- Get-WBVirtualMachine [[-Policy] <WBPolicy>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all virtual machines and components from the backup policy'
+  code: |-
+    PS C:\> Get-WBVirtualMachine
+  description: |-
+    This command queries for virtual machines and Hyper-V Server 2016 components on the machine and lists them.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  description: |+
+    Specifies the backup policy information contained in the **WBPolicy** object to display.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Get-WBVirtualMachine
+name: Get-WBVirtualMachine
+description: |-
+  The **Get-WBVirtualMachine** cmdlet gets all virtual machines and Hyper-V Server components from the **WBPolicy** object or the physical computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbvirtualmachine?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WBVirtualMachine

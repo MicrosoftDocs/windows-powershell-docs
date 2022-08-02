@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Closes an application.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WmsApp
+  href: ./Get-WmsApp.yml
+- text: Open-WmsApp
+  href: ./Open-WmsApp.yml
+syntaxes:
+- >-
+  Close-WmsApp [-SessionId] <UInt32> [-ProcessId] <UInt32> [-WindowId] <UInt64> [-CreateTime] <UInt64>
+
+   [-Server <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Close an application'
+  code: |-
+    PS C:\> Close-WmsApp -SessionId 3 -ProcessId 852 -WindowId 65854 -CreateTime 45689009809823
+  description: |-
+    This command closes the application running on session 3 with the process ID 852 and window ID 65854.
+
+    Use Get-WmsApp to get a list of applications along with their process IDs and window IDs.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: CreateTime
+  isRequired: true
+  description: |+
+    Specifies the process creation time.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ProcessId
+  isRequired: true
+  description: |+
+    Specifies the ID of the process to close.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SessionId
+  isRequired: true
+  description: |+
+    Specifies the ID of the session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: WindowId
+  isRequired: true
+  description: |+
+    Specifies the ID of the window.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MultiPoint.Close-WmsApp
+name: Close-WmsApp
+description: |-
+  The **Close-WmsApp** cmdlet closes the specified application using the specified process ID and window ID.
+  The cmdlet first attempts to close the application gracefully.
+  If the application does not close gracefully, the cmdlet forces the application to close.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/close-wmsapp?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Close-WmsApp

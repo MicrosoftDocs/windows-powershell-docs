@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Prepares a signed template disk (.VHDX) which can be used to provision new shielded virtual machines.
+module: ShieldedVMTemplate
+notes: ""
+links:
+- text: Initialize-VMShieldingHelperVHD
+  href: ./Initialize-VMShieldingHelperVHD.yml
+syntaxes:
+- >-
+  Protect-TemplateDisk -Path <String> -TemplateName <String> -Version <Version> -Certificate <X509Certificate2>
+
+   [-ProtectedTemplateTargetDiskType <ProtectedTemplateTargetDiskType>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Protect-TemplateDisk -Path <String> -PopulateFrom <String> [-TemplateName <String>] [-Version <Version>]
+
+   -Certificate <X509Certificate2> [-ProtectedTemplateTargetDiskType <ProtectedTemplateTargetDiskType>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- Protect-TemplateDisk -Path <String> [-DiskIsAlreadySpecialized] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Prepare a template disk by populating existing values'
+  code: |-
+    PS C:\>Protect-TemplateDisk -Certificate $certificate -PopulateFrom "ExistingPreparedTemplate.vhdx" -Path "NewTemplate.vhdx" -TemplateName "Windows Server 2016"
+  description: |-
+    This command prepares the .vhdx that the *Path* specifies.
+    The command uses the version information from ExistingPreparedTemplate.vhdx.
+    The command specifies the template name "Windows Server 2016".
+  summary: ""
+- title: 'Example 2: Prepare a template disk by specifying name and version'
+  code: |-
+    PS C:\>Protect-TemplateDisk -Certificate $certificate -Path "WindowsServer2016-ShieldedTemplate.vhdx" -TemplateName "Windows Server 2016" -Version 1.0.0.0
+  description: |-
+    This command prepares the .vhdx that the *Path* specifies.
+    The command uses the name and version information specified by the *TemplateName* and *Version* parameters.
+  summary: ""
+parameters:
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: Certificate
+  isRequired: true
+  description: |+
+    Specifies the certificate used to sign metadata including the disk name, version, and hash calculated during the preparation process.
+    The specified certificate must have a private key installed on the local machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DiskIsAlreadySpecialized
+  description: |+
+    Indicates the disk has already been prepared as a signed template disk, but its contents have since changed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path to the template disk (.VHDX) to be prepared.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PopulateFrom
+  isRequired: true
+  description: |+
+    Specifies the path of a template disk that contains a previously published volume signature catalog.
+    The disk name, version, and certificate will be used as defaults for the new template disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ProtectedTemplateTargetDiskType" data-throw-if-not-resolved="False" />
+  name: ProtectedTemplateTargetDiskType
+  description: |+
+    Specifies the type of OS installed on the VHDX.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: MicrosoftWindows, PreprocessedLinux
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TemplateName
+  isRequired: true
+  description: |+
+    Specifies the name of the template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Version" data-throw-if-not-resolved="False" />
+  name: Version
+  isRequired: true
+  description: |+
+    Specifies a value that uniquely identifies this version of the template.
+    The version value uses the form a.b.c.d, where each value is an integer less than 65536.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ShieldedVMTemplate.Protect-TemplateDisk
+name: Protect-TemplateDisk
+description: |-
+  The **Protect-TemplateDisk** cmdlet prepares a virtual hard disk to be used for provisioning shielded virtual machines.
+  The virtual hard disk must use the VHDX format and contain a generalized OS image.
+  The VHDX will be modified in place, and can only be used with shielded virtual machines after the process is complete.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
+  Module Name: ShieldedVMTemplate
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/shieldedvmtemplate/protect-templatedisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Protect-TemplateDisk

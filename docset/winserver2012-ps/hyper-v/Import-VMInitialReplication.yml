@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports initial replication files for a Replica virtual machine to complete the initial replication when using external media as the source.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.Virtualization.Powershell.VirtualMachine" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+syntaxes:
+- >-
+  Import-VMInitialReplication [-VMName] <String[]> [-Path] <String> [-AsJob] [-ComputerName <String[]>]
+
+   [-PassThru]
+- Import-VMInitialReplication [-VM] <VirtualMachine[]> [-Path] <String> [-AsJob] [-PassThru]
+- Import-VMInitialReplication [-VMReplication] <VMReplication[]> [-Path] <String> [-AsJob] [-PassThru]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Import-VMInitialReplication VM01 d:\VMImportLocation\VM01
+  description: |-
+    This example imports the initial replication files for a virtual machine named VM01 from location d:\VMImportLocation\VM01.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VMReplication | % {$path = "D:\OOBLoc\" + $_.VMName + "_" + $_.VMID; if (Test-Path $path -PathType Container) {Import-VMInitialReplication $_ $path}}
+  description: |-
+    This example imports the initial replication files for a set of virtual machines using files located in D:\OOBLoc\
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which initial replication files are to be imported.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Specifies that an object is to be passed through to the pipeline representing the virtual machine for which initial replication files are to be imported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the initial replication files to import.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine for which the initial replication files are to be imported.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine for which the initial replication files are to be imported.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMReplication" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMReplication
+  isRequired: true
+  description: |+
+    Specifies the virtual machine replication object for which initial replication files are to be imported.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Import-VMInitialReplication
+name: Import-VMInitialReplication
+description: |-
+  The **Import-VMInitialReplication** cmdlet imports initial replication files on a Replica server.
+  It completes the initial replication of a virtual machine when external is used as the source of the files for initial replication.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/import-vminitialreplication?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

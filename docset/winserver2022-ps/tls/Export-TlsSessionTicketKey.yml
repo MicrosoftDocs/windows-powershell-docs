@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports a TLS session ticket key.
+module: TLS
+notes: ""
+links:
+- text: Enable-TlsSessionTicketKey
+  href: ./Enable-TlsSessionTicketKey.yml
+- text: New-TlsSessionTicketKey
+  href: ./New-TlsSessionTicketKey.yml
+- text: Disable-TlsSessionTicketKey
+  href: ./Disable-TlsSessionTicketKey.yml
+syntaxes:
+- >-
+  Export-TlsSessionTicketKey [-ServiceAccountName] <NTAccount> [[-Path] <String>] [-Password] <SecureString>
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Export a TLS session ticket key'
+  code: |-
+    PS C:\>$Password = Read-Host -AsSecureString
+    PS C:\> Export-TlsSessionTicketKey -Password $Password -Path "C:\KeyConfig\TlsSessionTicketKey.config" -ServiceAccountName "NetworkService"
+  description: |-
+    The first command prompts the user to enter a password by using the **Read-Host** cmdlet.
+    The command masks the password that the user types at the prompt.
+    For more information, type `Get-Help Read-Host`.
+    The command stores the password in the **$Password** variable.
+
+    The second command exports the session ticket key for the service account named NetworkService from the configuration file on the TLS server.
+    The command specifies the path for the configuration file on the TLS server, and specifies that the TLS session use the password stored in **$Password** to access the configuration file.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Specifies the password, as a secure string, for the key.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path of the configuration file for the TLS server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: FullName
+  parameterValueGroup: ""
+- type: <xref href="NTAccount" data-throw-if-not-resolved="False" />
+  name: ServiceAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of a service account.
+    The cmdlet exports the configuration of the TLS session ticket key for the service account.
+    Only System, LocalService, NetworkService, and SID of virtual accounts are supported.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: TLS.Export-TlsSessionTicketKey
+name: Export-TlsSessionTicketKey
+description: |-
+  The **Export-TlsSessionTicketKey** cmdlet exports the administrator managed Transport Layer Security (TLS) session ticket key for a service account.
+
+  TLS creates a session ticket by using the TLS Session Resumption without Server-Side State mechanism.
+  For more information, see New-TlsSessionTicketKey or type `Get-Help New-TlsSessionTicketKey`.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
+  Module Name: TLS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/tls/export-tlssessionticketkey?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-TlsSessionTicketKey

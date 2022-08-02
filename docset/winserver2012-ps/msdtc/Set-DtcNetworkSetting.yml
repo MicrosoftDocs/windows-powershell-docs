@@ -1,0 +1,185 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies DTC network and security configuration for a DTC instance.
+module: MsDTC
+notes: ""
+links:
+- text: Get-DtcNetworkSetting
+  href: ./Get-DtcNetworkSetting.yml
+syntaxes:
+- >-
+  Set-DtcNetworkSetting [-AuthenticationLevel] [-CimSession <CimSession[]>] [-DtcName <String>]
+
+   [-InboundTransactionsEnabled <Boolean>] [-LUTransactionsEnabled <Boolean>]
+
+   [-OutboundTransactionsEnabled <Boolean>] [-RemoteAdministrationAccessEnabled <Boolean>]
+
+   [-RemoteClientAccessEnabled <Boolean>] [-ThrottleLimit <Int32>] [-XATransactionsEnabled <Boolean>] [-Confirm]
+
+   [-WhatIf]
+- >-
+  Set-DtcNetworkSetting [-CimSession <CimSession[]>] [-DtcName <String>] [-ThrottleLimit <Int32>]
+
+   [-DisableNetworkAccess] [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Modify network and security settings'
+  code: |-
+    PS C:\> Set-DtcNetworkSetting -DtcName "Local" -AuthenticationLevel "Incoming" -InboundTransactionsEnabled $False
+    PS C:\> Get-DtcNetworkSetting -DtcName "Local"
+    __GENUS                           : 2
+    __CLASS                           : DtcNetworkSettings
+    __SUPERCLASS                      :
+    __DYNASTY                         : DtcNetworkSettings
+    __RELPATH                         : 
+    __PROPERTY_COUNT                  : 7
+    __DERIVATION                      : {}
+    __SERVER                          :
+    __NAMESPACE                       :
+    __PATH                            :
+    AuthenticationLevel               : Mutual
+    InboundTransactionsEnabled        : True
+    LUTransactionsEnabled             : True
+    OutboundTransactionsEnabled       : True
+    RemoteAdministrationAccessEnabled : True
+    RemoteClientAccessEnabled         : True
+    XATransactionsEnabled             : True
+  description: |-
+    The first command modifies the DTC network and security settings for the local DTC instance.
+    The second command verifies the changes.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AuthenticationLevel
+  description: |+
+    Sets the network authentication level of the DTC instance to NoAuth, Incoming, or Mutual.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoAuth, Incoming, Mutual
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableNetworkAccess
+  isRequired: true
+  description: |+
+    Specifies whether to disable network access for the DTC instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DtcName
+  description: |+
+    Specifies a DTC instance.
+    If you do not specify this parameter, or if you specify a value of Local, this cmdlet modifies the local DTC instance.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: InboundTransactionsEnabled
+  description: |+
+    Indicates whether to enable inbound transactions to the DTC instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: LUTransactionsEnabled
+  description: |+
+    Indicates whether to enable LU transactions in the DTC instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: OutboundTransactionsEnabled
+  description: |+
+    Indicates whether to enable outbound transactions from the DTC instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RemoteAdministrationAccessEnabled
+  description: |+
+    Indicates whether to enable remote administration access for the DTC instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RemoteClientAccessEnabled
+  description: |+
+    Indicates whether to enable remote client access for the DTC instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: XATransactionsEnabled
+  description: |+
+    Indicates whether to enable XA transactions in the DTC instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MsDTC.Set-DtcNetworkSetting
+name: Set-DtcNetworkSetting
+description: |-
+  The **Set-DtcNetworkSetting** cmdlet modifies the Distributed Transaction Coordinator (DTC) network and security configuration for the DTC instance specified by the **DtcName** parameter.
+  This cmdlet also restarts the DTC instance.
+metadata:
+  external help file: MsDTC_Cmdlets.xml
+  Module Name: MsDTC
+  online version: https://docs.microsoft.com/powershell/module/msdtc/set-dtcnetworksetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

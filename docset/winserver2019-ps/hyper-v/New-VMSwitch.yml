@@ -1,0 +1,215 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new virtual switch on one or more virtual machine hosts.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMSwitch" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Name] <String> [-AllowManagementOS <Boolean>] -NetAdapterName <String[]> [-Notes <String>]
+
+   [-MinimumBandwidthMode <VMSwitchBandwidthMode>] [-EnableIov <Boolean>] [-EnablePacketDirect <Boolean>]
+
+   [-EnableEmbeddedTeaming <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Name] <String> [-AllowManagementOS <Boolean>] -NetAdapterInterfaceDescription <String[]> [-Notes <String>]
+
+   [-MinimumBandwidthMode <VMSwitchBandwidthMode>] [-EnableIov <Boolean>] [-EnablePacketDirect <Boolean>]
+
+   [-EnableEmbeddedTeaming <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Name] <String> -SwitchType <VMSwitchType> [-Notes <String>] [-MinimumBandwidthMode <VMSwitchBandwidthMode>]
+
+   [-EnableIov <Boolean>] [-EnablePacketDirect <Boolean>] [-EnableEmbeddedTeaming <Boolean>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-VMSwitch "QoS Switch" -NetAdapterName "Wired Ethernet Connection 3" -MinimumBandwidthMode Weight
+  description: |-
+    Creates a new switch QoS switch, which binds to a network adapter called Wired Ethernet Connection 3 and supports weight-based minimum bandwidth.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowManagementOS
+  description: |+
+    Specifies whether the parent partition (i.e.
+    the management operating system) is to have access to the physical NIC bound to the virtual switch to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the virtual switch is to be created.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: PSComputerName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableEmbeddedTeaming
+  description: |+
+    Specifies whether this cmdlet enables teaming for the virtual switch.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableIov
+  description: |+
+    Specifies that IO virtualization is to be enabled on the virtual switch to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnablePacketDirect
+  description: |+
+    Specifies whether this cmdlet enables the packet direct path through the virtual switch.
+    The default value is $False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitchBandwidthMode" data-throw-if-not-resolved="False" />
+  name: MinimumBandwidthMode
+  description: |+
+    Specifies how minimum bandwidth is to be configured on the virtual switch.
+    Allowed values are **Absolute**, **Default**, **None**, or **Weight**.
+    If **Absolute** is specified, minimum bandwidth is bits per second.
+    If **Weight** is specified, minimum bandwidth is a value ranging from 1 to 100.
+    If **None** is specified, minimum bandwidth is disabled on the switch - that is, users cannot configure it on any network adapter connected to the switch.
+    If **Default** is specified, the system will set the mode to **Weight**, if the switch is not IOV-enabled, or **None** if the switch is IOV-enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Default, Weight, Absolute, None
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the switch to be created.
+
+  defaultValue: None
+  position: "0"
+  aliases: SwitchName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NetAdapterInterfaceDescription
+  isRequired: true
+  description: |+
+    Specifies the interface description of the network adapter to be bound to the switch to be created.
+    You can use the **Get-NetAdapter** cmdlet to get the interface description of a network adapter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: InterfaceDescription
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NetAdapterName
+  isRequired: true
+  description: |+
+    Specifies the name of the network adapter to be bound to the switch to be created.
+    You can use the **Get-NetAdapter** cmdlet to get the interface description of a network adapter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notes
+  description: |+
+    Specifies a note to be associated with the switch to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitchType" data-throw-if-not-resolved="False" />
+  name: SwitchType
+  isRequired: true
+  description: |+
+    Specifies the type of the switch to be created.
+    Allowed values are **Internal** and **Private**.
+    To create an External virtual switch, specify either the **NetAdapterInterfaceDescription** or the **NetAdapterName** parameter, which implicitly set the type of the virtual switch to External.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Internal, Private
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.New-VMSwitch
+name: New-VMSwitch
+description: |-
+  The **New-VMSwitch** cmdlet creates a new virtual switch on one or more virtual machine hosts.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/new-vmswitch?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-VMSwitch

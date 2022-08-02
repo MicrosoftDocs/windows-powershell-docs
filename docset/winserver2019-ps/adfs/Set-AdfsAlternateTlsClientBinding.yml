@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures an existing AD FS deployment to use the same port for both device certificate and client certificate authentication.
+module: ADFS
+notes: ""
+links:
+- text: Set-AdfsSslCertificate
+  href: ./Set-AdfsSslCertificate.yml
+syntaxes:
+- >-
+  Set-AdfsAlternateTlsClientBinding [-Thumbprint <String>] [-Member <String[]>] [-Force <Boolean>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure a deployment'
+  code: |-
+    PS C:\> Set-AdfsAlternateTlsClientBinding -Member "ADFSServer1.contoso.com" -Thumbprint "c67e1ffba186d70c7e00c89596e0cb5645f9874a"
+  description: |-
+    This command configures a deployment to use the same port for device certificate authentication and user certificate authentication.
+    In this example, the certificate that has the specified thumbprint contains a SAN for certauth.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Member
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsAlternateTlsClientBinding
+name: Set-AdfsAlternateTlsClientBinding
+description: |-
+  The **Set-AdfsAlternateTlsClientBinding** cmdlet configures an existing AD FS deployment to use the same port (443) for both device certificate and client certificate authentication (client TLS).
+  The cmdlet creates an endpoint for user certificate authentication on `certauth`.\<federation service name\>, such as `certauth.contoso.com`.
+
+  To change the deployment back to one in which user certificate authentication uses a non-standard port, use the Set-AdfsSslCertificate cmdlet with a new certificate that does not contain a Subject Alternative Name (SAN) for `certauth`.\<federation service name\>.
+
+  The **Install-AdfsFarm** cmdlet configures client TLS on port 49443 if the SSL certificate does not contain a Subject Alternative Name (SAN) for `certauth`.\<federation service name\>, such as `certauth.contoso.com`.
+
+  Use **Set-AdfsAlternateTlsClientBinding** with a new certificate that contains the SAN entry.
+  It will configure AD FS to use port 443 for client TLS.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsalternatetlsclientbinding?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsAlternateTlsClientBinding

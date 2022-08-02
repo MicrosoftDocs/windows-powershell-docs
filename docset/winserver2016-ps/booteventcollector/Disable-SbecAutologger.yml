@@ -1,0 +1,179 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables the forwarding of events to the Setup and Boot Event Collector in the AutoLogger settings.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-SbecBcd
+  href: ./Disable-SbecBcd.yml
+- text: Enable-SbecAutologger
+  href: ./Enable-SbecAutologger.yml
+- text: Enable-SbecBcd
+  href: ./Enable-SbecBcd.yml
+- text: Enable-SbecBootImage
+  href: ./Enable-SbecBootImage.yml
+syntaxes:
+- >-
+  Disable-SbecAutologger -Path <String[]> [-Logger <String[]>] [-NoDefaultLoggers] [-DismLogPath <String>]
+
+   [<CommonParameters>]
+- >-
+  Disable-SbecAutologger -ComputerName <String[]> [-Credential <PSCredential>] [-Logger <String[]>]
+
+   [-NoDefaultLoggers] [<CommonParameters>]
+- Disable-SbecAutologger -Session <PSSession[]> [-Logger <String[]>] [-NoDefaultLoggers] [<CommonParameters>]
+- >-
+  Disable-SbecAutologger [-Local] [-SystemHive <String>] [-ControlSet <String>] [-Logger <String[]>]
+
+   [-NoDefaultLoggers] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable the AutoLogger'
+  code: |-
+    PS C:\> Disable-SbecAutologger -ComputerName Server01
+  description: |-
+    This command disables the AutoLogger settings on the computer named Server01.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies the names of the computers on which you want to perform the operation.
+    You can specify a fully qualified domain name (FQDN), a NetBIOS name, or an IP address for each computer.
+    For more information, see [Invoke-CimMethod](https://go.microsoft.com/fwlink/?LinkId=808801) on TechNet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ControlSet
+  description: |+
+    Specifies the control set key for the registry path.
+    This parameter is valid only when used with the *Local* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user account that has permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DismLogPath
+  description: |+
+    Specifies the path of the file for the Deployment Image Servicing and Management (DISM) log when mounting images.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Local
+  isRequired: true
+  description: |+
+    Indicates to perform this operation on the local computer.
+
+    This mode enables control over the registry path of where settings are applied.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Logger
+  description: |+
+    Specifies an array of AutoLogger sessions to disable.
+    Specify an asterisk (*) to disable the EVENTNET forwarding in all of the sessions defined in the registry.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoDefaultLoggers
+  description: |+
+    Indicates this operation does not automatically add the default set of logger sessions (EventLog-System, NT Kernel Logger, and SetupPlatform) to those specified by the *Logger* parameter.
+
+    If the value of Logger is *, this parameter has no effect.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the list of full paths to the offline Windows image files (WIM or VHD) to which to apply the settings.
+    If a WIM file contains multiple images, all of them are modified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Session
+  isRequired: true
+  description: |+
+    Specifies the **PSSession** objects connected to the remote target computers.
+    Enter a session object, such as the output of the **Get-PSSession** or **New-PSSession** cmdlet, or an array of these objects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SystemHive
+  description: |+
+    Specifies the full path to the system hive for the registry path.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Disable-SbecAutologger
+name: Disable-SbecAutologger
+description: |-
+  The **Disable-SbecAutologger** cmdlet disables the forwarding of events to the Setup and Boot Event Collector in the AutoLogger settings in the registry.
+  This has no immediate effect on the currently running log sessions, but takes effect after the operating system reboots and the AutoLogger service restarts the log sessions.
+
+  The changes can be applied to the local computer, to a remote computer, or to an offline disk image.
+
+  To operate on a local computer, specify the *Local* parameter.
+  Enabling forwarding on the computer that runs the Collector service makes sense only if it sends the data to a Collector on a different computer.
+  Otherwise, the in-kernel module is not able to connect to the Collector.
+  However, you can copy the PowerShell BootEventCollector module to the other computers, where you can use it for local configuration.
+
+  To operate on a remote computer, specify either the *ComputerName* or *Session* parameter.
+  Windows PowerShell remoting is used to perform the remote operations.
+
+  To operate on an offline (WIM or VHD) image, use the *Path* parameter.
+
+  If you used the **Enable-SbecAutologger** cmdlet to convert some log sessions from file-based to real-time mode, this command undoes that conversion.
+
+  If **Enable-SbecAutologger** created the NT Kernel Logger session, that session is **not** deleted by **Disable-SbecAutologger**.
+  Only the forwarding of events from it to the Collector is disabled.
+
+  If the Debug Print filter was modified by **Enable-SbecAutologger**, the change is **not** undone by **Disable-SbecAutologger**.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/disable-sbecautologger?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-SbecAutologger

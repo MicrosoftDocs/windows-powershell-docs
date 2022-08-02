@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables the relying party trust object for the Web Application Proxy.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Add-AdfsWebApplicationProxyRelyingPartyTrust.yml
+- text: Disable-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Disable-AdfsWebApplicationProxyRelyingPartyTrust.yml
+- text: Get-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Get-AdfsWebApplicationProxyRelyingPartyTrust.yml
+- text: Remove-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Remove-AdfsWebApplicationProxyRelyingPartyTrust.yml
+- text: Set-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Set-AdfsWebApplicationProxyRelyingPartyTrust.yml
+syntaxes:
+- Enable-AdfsWebApplicationProxyRelyingPartyTrust [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable relying party trust for the web application proxy'
+  code: |-
+    PS C:\> Enable-AdfsWebApplicationProxyRelyingPartyTrust
+  description: |-
+    This command enables the relying party trust object for the web application proxy.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Enable-AdfsWebApplicationProxyRelyingPartyTrust
+name: Enable-AdfsWebApplicationProxyRelyingPartyTrust
+description: |-
+  The **Enable-AdfsWebApplicationProxyRelyingPartyTrust** cmdlet enables the relying party trust object for the web application proxy.
+  Use this cmdlet if you have temporarily disabled all external access by using the **Disable-AdfsWebApplicationProxyRelyingPartyTrust** cmdlet.
+
+  The Web Application Proxy relying party trust is useful to manage global network access from outside the corporate network.
+  By setting authentication and authorization policies, an administrator can restrict access to internal web applications and services that have been published through the Web Application Proxy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/enable-adfswebapplicationproxyrelyingpartytrust?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-AdfsWebApplicationProxyRelyingPartyTrust

@@ -1,0 +1,307 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new claim transformation policy object in Active Directory.
+module: ActiveDirectory
+notes: |-
+  * This cmdlet does not work with an Active Directory snapshot.
+  * This cmdlet does not work with a read-only domain controller.
+inputs:
+- name: <xref href="None or Microsoft.ActiveDirectory.Management.ADClaimTransformPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    Specifies a claims transformation policy object that is a template for the new claims transformation policy object is received by the *Instance* parameter.
+outputs:
+- name: <xref href="None or Microsoft.ActiveDirectory.Management.ADClaimTransformPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ADClaimTransformPolicy
+  href: ./Get-ADClaimTransformPolicy.yml
+- text: Remove-ADClaimTransformPolicy
+  href: ./Remove-ADClaimTransformPolicy.yml
+- text: Set-ADClaimTransformPolicy
+  href: ./Set-ADClaimTransformPolicy.yml
+- text: AD DS Administration Cmdlets in Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  New-ADClaimTransformPolicy [-WhatIf] [-Confirm] [-AllowAll] [-AuthType <ADAuthType>]
+
+   [-Credential <PSCredential>] [-Description <String>] [-Name] <String> [-PassThru]
+
+   [-ProtectedFromAccidentalDeletion <Boolean>] [-Server <String>] [<CommonParameters>]
+- >-
+  New-ADClaimTransformPolicy [-WhatIf] [-Confirm] -AllowAllExcept <ADClaimType[]> [-AuthType <ADAuthType>]
+
+   [-Credential <PSCredential>] [-Description <String>] [-Name] <String> [-PassThru]
+
+   [-ProtectedFromAccidentalDeletion <Boolean>] [-Server <String>] [<CommonParameters>]
+- >-
+  New-ADClaimTransformPolicy [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
+
+   [-DenyAll] [-Description <String>] [-Name] <String> [-PassThru] [-ProtectedFromAccidentalDeletion <Boolean>]
+
+   [-Server <String>] [<CommonParameters>]
+- >-
+  New-ADClaimTransformPolicy [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
+
+   -DenyAllExcept <ADClaimType[]> [-Description <String>] [-Name] <String> [-PassThru]
+
+   [-ProtectedFromAccidentalDeletion <Boolean>] [-Server <String>] [<CommonParameters>]
+- >-
+  New-ADClaimTransformPolicy [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
+
+   [-Description <String>] [-Instance <ADClaimTransformPolicy>] [-Name] <String> [-PassThru]
+
+   [-ProtectedFromAccidentalDeletion <Boolean>] -Rule <String> [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a new claims transformation policy by name that denies all claims'
+  code: |-
+    PS C:\> New-ADClaimTransformPolicy -Name "DenyAllPolicy" -DenyAll
+  description: |-
+    This command creates a new claims transformation policy named DenyAllPolicy that denies all claims, both those that are sent as well as those that are received.
+  summary: ""
+- title: 'Example 2: Create a new claim transformation policy by name with exclusions'
+  code: |-
+    PS C:\> New-ADClaimTransformPolicy -Name "AllowAllExceptCompanyAndDepartmentPolicy" -AllowAllExcept Company,Department
+  description: |-
+    This command creates a new claims transformation policy named AllowAllExceptCompanyAndDepartmentPolicy that allows all claims to be sent or received except for the claims Company and Department.
+  summary: ""
+- title: 'Example 3: Create a new claim transformation policy that changes an existing name to a new name'
+  code: |-
+    PS C:\> New-ADClaimTransformPolicy -Name "HumanResourcesToHrPolicy" -Rule 'C1:[Type=="ad://ext/Department:88ceb0fe88a125db", Value=="Human Resources", ValueType=="string"] => issue(Type=C1.Type, Value="HR", ValueType=C1.ValueType);'
+  description: |-
+    This command creates a new claims transformation policy named HumanResourcesToHrPolicy that transforms the value Human Resources to HR in the claim Department.
+  summary: ""
+- title: 'Example 4: Create a new claims transformation policy by name using a rule specified in a file'
+  code: |-
+    PS C:\> $Rule = Get-Content C:\rule.txt
+    PS C:\> New-ADClaimTransformPolicy -Name "MyRule" -Rule $Rule
+  description: |-
+    This example creates a claims transformation policy named MyRule with the rule specified in C:\rule.txt.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowAll
+  isRequired: true
+  description: |+
+    Indicates that the policy sets a claims transformation rule that would allow all claims to be sent or received.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: "true"
+- type: <xref href="ADClaimType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AllowAllExcept
+  isRequired: true
+  description: |+
+    Specifies an array of claim types.
+    When this parameter is specified, the policy sets a claims transformation rule that would allow all claims to be sent or received except for the specified claim types.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADAuthType" data-throw-if-not-resolved="False" />
+  name: AuthType
+  description: |+
+    Specifies the authentication method to use.
+    The acceptable values for this parameter are:
+
+    - Negotiate or 0
+    - Basic or 1
+
+    The default authentication method is Negotiate.
+
+    A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Negotiate, Basic
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user account that has permission to perform this action.
+    The default is the current user.
+
+    Type a user name, such as User01 or Domain01\User01, or enter a **PSCredential** object, such as one generated by the **Get-Credential** cmdlet.
+    You will be prompted for a password if you type a user name.
+
+    This parameter is not supported by any providers installed with Windows PowerShell.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DenyAll
+  isRequired: true
+  description: |+
+    Indicates that the policy sets a claims transformation rule that would deny all claims to be sent or received.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: "true"
+- type: <xref href="ADClaimType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DenyAllExcept
+  isRequired: true
+  description: |+
+    Specifies an array of claim types.
+    When this parameter is specified, the policy sets a claims transformation rule that would deny all claims to be sent or received except for the specified claim types.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description of the object.
+    This parameter sets the value of the **Description** property for the object.
+    The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName**) for this property is description.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADClaimTransformPolicy" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Specifies an instance of an Active Directory object to use as a template for a new claims transformation policy object.
+
+    You can use an instance of an existing claims transformation policy object as a template or you can construct a new claims transformation policy object by using the Windows PowerShell command line or by using a script.
+
+    Method 1: Use an existing claims transformation policy object as a template for a new object.
+    To retrieve an instance of an existing claims transformation policy object, use  the  Get-ADClaimTransformPolicy cmdlet.
+    Then provide this object to the *Instance* parameter of the **New-ADClaimTransformPolicy** cmdlet to create a new claims transformation policy object.
+    You can override property values of the new object by setting the appropriate parameters.
+
+    Method 2: Create a new **ADClaimsTransformationPolicy** object and set the property values by using the Windows PowerShell command line interface.
+    Then pass this object to the Instance parameter of the **New-ADClaimTransformPolicy** cmdlet to create the new Active Directory object.
+
+    Note: Specified attributes are not validated, so attempting to set attributes that do not exist or cannot be set will raise an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the object.
+    This parameter sets the **Name** property of the Active Directory object.
+    The LDAP display name (**ldapDisplayName**) of this property is name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ProtectedFromAccidentalDeletion
+  description: |+
+    Specifies whether to prevent the object from being deleted.
+    When this property is set to $True, you cannot delete the corresponding object without changing the value of the property.
+    The acceptable values for this parameter are:
+
+    - $False or 0
+    - $True or 1
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Rule
+  isRequired: true
+  description: |+
+    Specifies the claims transformation rule.
+    To specify the rule, you can either (1) type the rule in a text file, and then pass the file to the cmdlet (recommended), or (2) type the rule inline.
+
+    For instance, the following commands demonstrate how to create a new claims transformation policy object with the rule specified in a text file named Rule.txt located in a temporary folder C:\temp.
+
+    `$Rule = Get-Content C:\temp\rule.txt`
+
+    `New-ADClaimTransformPolicy MyRule -Rule $Rule`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+    The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+
+    Specify the Active Directory Domain Services instance in one of the following ways: 
+
+    Domain name values:
+
+    - Fully qualified domain name
+    - NetBIOS name
+
+    Directory server values: 
+
+    - Fully qualified directory server name
+    - NetBIOS name
+    - Fully qualified directory server name and port
+
+    The default value for this parameter is determined by one of the following methods in the order that they are listed:
+
+    - By using the *Server* value from objects passed through the pipeline
+    - By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
+    - By using the domain of the computer running Windows PowerShell
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ActiveDirectory.New-ADClaimTransformPolicy
+name: New-ADClaimTransformPolicy
+description: |-
+  The **New-ADClaimTransformPolicy** cmdlet creates a new claims transformation policy object in Active Directory.
+  A claims transformation policy object contains a set of rules authored in the transformation rule language.
+  After creating a policy object, you can link it with a forest trust to apply the claims transformation to the trust.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/new-adclaimtransformpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-ADClaimTransformPolicy

@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets unused regions in persistent memory.
+module: PersistentMemory
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-PmemDisk
+  href: Get-PmemDisk.yml
+- text: New-PmemDisk
+  href: New-PmemDisk.yml
+syntaxes:
+- Get-PmemUnusedRegion [[-RegionId] <UInt32[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get unused regions'
+  code: |-
+    Get-PmemUnusedRegion
+
+    RegionId TotalSizeInBytes DeviceId
+    -------- ---------------- --------
+           1     270582939648 {20, 120}
+           3     270582939648 {1020, 1120}
+  description: |-
+    This example gets all the unused regions of persistent memory.
+  summary: ""
+- title: 'Example 1: Get a specific region'
+  code: |-
+    Get-PmemUnusedRegion -RegionId 3
+
+    RegionId TotalSizeInBytes DeviceId
+    -------- ---------------- --------
+           3     270582939648 {1020, 1120}
+  description: |-
+    This example gets all the unused regions of persistent memory.
+  summary: ""
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RegionId
+  description: |+
+    Specifies the ID of the region of the persistent memory disk to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: PersistentMemory.Get-PmemUnusedRegion
+name: Get-PmemUnusedRegion
+description: |-
+  The **Get-PmemUnusedRegion** cmdlet gets unused regions of persistent memory.
+  Use this cmdlet with the **New-PmemDisk** cmdlet to create persistent memory disks.
+metadata:
+  description: The Get-PmemUnusedRegion cmdlet gets unused regions in persistent memory.
+  external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
+  Module Name: PersistentMemory
+  online version: https://docs.microsoft.com/powershell/module/persistentmemory/get-pmemUnusedregion?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  ms.date: 09/24/2021
+  title: Get-PmemUnusedRegion

@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Shares a desktop and optionally allows remote control of the desktop.
+module: MultiPoint
+notes: ""
+outputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the desktop sharing invitation string that is used to initiate viewing of the published session's desktop.
+links:
+- text: Show-WmsDesktop
+  href: ./Show-WmsDesktop.yml
+- text: Unpublish-WmsDesktop
+  href: ./Unpublish-WmsDesktop.yml
+syntaxes:
+- >-
+  Publish-WmsDesktop [-SessionId] <UInt32> [-RemoteControl] [-MaxViewers <Int32>] [-Server <String>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Publish a desktop'
+  code: |-
+    PS C:\> Publish-WmsDesktop -RemoteControl -MaxViewers 10 -SessionId 2 -TeacherName "PattiFuller"
+
+
+
+
+
+    Invitation string
+  description: |-
+    This command shares the desktop of session 2 for viewing by up to 10 other sessions, and permits remote control of the desktop.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxViewers
+  description: |+
+    Specifies the maximum number of clients that can view the published desktop.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemoteControl
+  description: |+
+    Indicates that the published desktop can be remotely controlled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SessionId
+  isRequired: true
+  description: |+
+    Specifies the session ID of the desktop to publish.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MultiPoint.Publish-WmsDesktop
+name: Publish-WmsDesktop
+description: |-
+  The **Publish-WmsDesktop** cmdlet shares the specified session desktop, which makes it viewable by other sessions.
+  A published desktop can also optionally be remotely controlled.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/publish-wmsdesktop?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Publish-WmsDesktop

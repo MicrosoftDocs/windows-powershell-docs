@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes one or more RD Session Host servers from a session collection.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-RDSessionHost
+  href: ./Add-RDSessionHost.yml
+- text: Get-RDSessionHost
+  href: ./Get-RDSessionHost.yml
+- text: Set-RDSessionHost
+  href: ./Set-RDSessionHost.yml
+syntaxes:
+- >-
+  Remove-RDSessionHost [-SessionHost] <String[]> [-ConnectionBroker <String>] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a session host'
+  code: |-
+    PS C:\> Remove-RDSessionHost -SessionHost @("rdsh.contoso.com") -ConnectionBroker "rdcb.contoso.com" -Force
+  description: |-
+    This command removes the session host named rdsh.contoso.com from the session collection.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for this Remote Desktop deployment.
+    If this parameter does not appear, the default value is the fully qualified domain name (FQDN) of the local host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SessionHost
+  isRequired: true
+  description: |+
+    Specifies an array that contains the name(s) of one or more servers that run the RD Session Host role and that you remove from the session collection.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RDMgmt.Remove-RDSessionHost
+name: Remove-RDSessionHost
+description: |-
+  The **Remove-RDSessionHost** cmdlet removes one or more Remote Desktop Session Host (RD Session Host) servers from a session collection.
+  The servers remain part of the deployment.
+
+  RD Session Host is a Remote Desktop Services role service that lets users share Windows-based programs or the full Windows desktop.
+  Users can connect to an RD Session Host server to run programs, save files, and use network resources on that server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/remove-rdsessionhost?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-RDSessionHost

@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports all report definition (.rdl) files for this version of Active Directory Rights Management Services (AD RMS).
+module: ADRMSAdmin
+notes: ""
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Get-RmsSystemHealthReport
+  href: ./Get-RmsSystemHealthReport.yml
+- text: Get-RmsUserRequestReport
+  href: ./Get-RmsUserRequestReport.yml
+syntaxes:
+- >-
+  Export-RmsReportDefinitionLanguage [-ExportLocation] <String> [-Force] [-Path] <String[]> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '--------------  EXAMPLE1 --------------'
+  code: |-
+    C:\PS>Export-RmsReportDefinitionLanguage path . -ExportLocation c:\temp\
+  description: |-
+    This command exports the .rdl files to the directory c:\temp\.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ExportLocation
+  isRequired: true
+  description: |+
+    Specifies the path of the exported file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overrides restrictions that prevent the command from succeeding, just so the changes do not compromise security.
+    For example, Force will override the read-only attribute or create directories to complete a file path, but it will not attempt to change file permissions.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a provider drive and path or relative path on the current drive.
+    This parameter is required.
+    Use a dot (.) to specify the current location.
+    This parameter does not accept wildcards and has no default value.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADRMSAdmin.Export-RmsReportDefinitionLanguage
+name: Export-RmsReportDefinitionLanguage
+description: |-
+  HelpLongDescription This cmdlet exports the following report definition (.rdl) files for this version of Active Directory Rights Management Services (AD RMS).
+
+  Report_Health_MultiReport.rdl
+
+  Report_TroubleShooting_UserRequestSummary.rdl
+
+  Report_TroubleShooting_UserRequestTypeList.rdl
+
+  Report_TroubleShooting_UserRequestDetail.rdl
+
+  Report_TroubleShooting_UserRequestCertificateInfo.rdl
+
+  Report_TroubleShooting_AllILsFromCLC.rdl.rdl
+
+  Report_TroubleShooting_AllEULsFromIssuanceLicense.rdl
+
+  The file Report_TroubleShooting_DecryptILRightsLabel.rdl is not exported because it cannot be used by the SQL Server report service because it would require a private key.
+
+  To export the report definition files, specify the ExportLocation where you want the files to be saved and then set the Path parameter to the AD RMS provider drive subpath "\<PSDrive\>:\Report" where \<PSDrive\> is the provider drive ID.
+  You can also specify a relative path.
+  For example, "." specifies the current location.
+metadata:
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  Module Name: ADRMSAdmin
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/adrmsadmin/export-rmsreportdefinitionlanguage?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-RmsReportDefinitionLanguage

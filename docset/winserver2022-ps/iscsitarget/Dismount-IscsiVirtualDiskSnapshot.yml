@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Dismounts the snapshot.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-IscsiVirtualDiskSnapshot
+  href: ./Export-IscsiVirtualDiskSnapshot.yml
+- text: Get-IscsiVirtualDiskSnapshot
+  href: ./Get-IscsiVirtualDiskSnapshot.yml
+- text: Mount-IscsiVirtualDiskSnapshot
+  href: ./Mount-IscsiVirtualDiskSnapshot.yml
+- text: Remove-IscsiVirtualDiskSnapshot
+  href: ./Remove-IscsiVirtualDiskSnapshot.yml
+- text: Set-IscsiVirtualDiskSnapshot
+  href: ./Set-IscsiVirtualDiskSnapshot.yml
+syntaxes:
+- >-
+  Dismount-IscsiVirtualDiskSnapshot [-SnapshotId] <String> [-ComputerName <String>] [-Credential <PSCredential>]
+
+   [<CommonParameters>]
+- >-
+  Dismount-IscsiVirtualDiskSnapshot -InputObject <IscsiVirtualDiskSnapshot> [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Dismount all snapshots'
+  code: |-
+    PS C:\> Get-IscsiVirtualDiskSnapshot | Dismount-IscsiVirtualDiskSnapshot
+  description: |-
+    This example gets all of the snapshot and dismounts them.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an iSCSI virtual disk snapshot object from the input pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SnapshotId
+  isRequired: true
+  description: |+
+    Specifies the identifier (ID) for the snapshot.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Dismount-IscsiVirtualDiskSnapshot
+name: Dismount-IscsiVirtualDiskSnapshot
+description: |-
+  Note: This cmdlet is deprecated and might be removed in a future release.
+  We recommend that you do not use this cmdlet.
+
+  The **Dismount-IscsiVirtualDiskSnapshot** cmdlet dismounts the snapshot.
+  The snapshot will not be accessible after dismount.
+  This cmdlet operates on snapshots in the virtual disk 1.0 (VHD) format only.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/dismount-iscsivirtualdisksnapshot?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Dismount-IscsiVirtualDiskSnapshot

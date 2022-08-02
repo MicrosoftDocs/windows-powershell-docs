@@ -1,0 +1,151 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new IIS request handler.
+module: WebAdministration
+notes: ""
+syntaxes:
+- >-
+  New-WebHandler [-Name] <String> -Path <String> -Verb <String> [-Type <String>] [-Modules <String>]
+
+   [-ScriptProcessor <String>] [-Precondition <String>] [-ResourceType <String>] [-RequiredAccess <String>]
+
+   [-Force] [-Location <String[]>] [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Add a new handler --------------'
+  code: |-
+    IIS:\>New-WebHandler -Name testHandler -Path *.test -Verb 'GET,POST' -Modules IsapiModule -PSPath "IIS:\sites\Default Web Site"
+  description: |-
+    Adds a handler named "testHandler" to the Default Web Site.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces creation of the new handler.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    Configuration location in which the handler is configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Modules
+  description: |+
+    Modules used for the handler.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the new request handler.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    The physical path to the handler (native modules only).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Precondition
+  description: |+
+    Specifies any preconditions that are used for the new handler.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    An IIS configuration path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RequiredAccess
+  description: |+
+    The user rights that are required for the new handler: Read, Write, Execute, or Script.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Read, Write, Script, Execute
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceType
+  description: |+
+    The resource type this handler executes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: File, Directory, Either, Unspecified
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScriptProcessor
+  description: |+
+    The script processor that executes for the module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    The managed type of the new module (managed modules only).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Verb
+  isRequired: true
+  description: |+
+    The HTTP verbs handled by the new handler.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-WebHandler
+name: New-WebHandler
+description: |-
+  Creates a new IIS request handler.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-webhandler?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

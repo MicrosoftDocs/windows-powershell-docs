@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the current volume backup performance settings.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="SwitchParameter, WBVolume" data-throw-if-not-resolved="False" />
+  description: |-
+    Indicates either global settings or volume settings.
+links:
+- text: Get-WBBackupSet
+  href: ./Get-WBBackupSet.yml
+- text: Set-WBPerformanceConfiguration
+  href: ./Set-WBPerformanceConfiguration.yml
+syntaxes:
+- Get-WBPerformanceConfiguration [-Volume] <WBVolume> [<CommonParameters>]
+- Get-WBPerformanceConfiguration [-OverallPerformanceSetting] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get global settings'
+  code: |-
+    PS C:\> Get-WBPerformanceConfiguration -OverallPerformanceSetting AlwaysIncremental
+  description: |-
+    This command gets the global settings for all volumes with the AlwaysIncremental setting.
+  summary: ""
+- title: 'Example 2: Get settings for a volume'
+  code: |-
+    PS C:\> $Backup = Get-WBBackupSet
+    PS C:\> Get-WBPerformanceConfiguration -Volume $Backup.Volume[1] AlwaysFull
+  description: |-
+    This example gets the settings for a specific volume with the AlwaysFull setting.
+
+    The first command gets the backup set from the local machine and stores the result in the variable named $Backup.
+
+    The second command gets the settings from the volume at index 1 that is stored in the $Backup variable.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverallPerformanceSetting
+  isRequired: true
+  description: |+
+    Indicates that the returned data is used for the global setting.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBVolume" data-throw-if-not-resolved="False" />
+  name: Volume
+  isRequired: true
+  description: |+
+    Specifies the **WBVolume** object for which this cmdlet gets the current performance settings.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Get-WBPerformanceConfiguration
+name: Get-WBPerformanceConfiguration
+description: |-
+  The **Get-WBPerformanceConfiguration** cmdlet gets the current performance settings for volume backups.
+  The settings are applicable only for volume backups; these settings are not applicable for files, folders, system state, or applications.
+  The settings apply globally to all volumes in a backup, or to specific volumes.
+  The acceptable values for this parameter are:
+
+  - AlwaysFull: The time to create a backup is proportional to the size of volume being backed up.
+  This setting applies at a global level for all volumes or for specific volumes. 
+
+  - AlwaysIncremental: Increase the backup speed by just tracking the changes between the last and current backup.
+  This option is not recommended for servers with disk-intensive operation which may experience reduced disk throughput on volumes included in the backup.
+  This can be set at a global level for all volumes or specific for some volumes. 
+
+  - Custom: This is the global setting reported in case there is a specific volume level setting set.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbperformanceconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WBPerformanceConfiguration

@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a remediation server group from an NPS.
+module: NPS
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NpsRemediationServer
+  href: ./Get-NpsRemediationServer.yml
+- text: Get-NpsRemediationServerGroup
+  href: ./Get-NpsRemediationServerGroup.yml
+- text: New-NpsRemediationServer
+  href: ./New-NpsRemediationServer.yml
+- text: New-NpsRemediationServerGroup
+  href: ./New-NpsRemediationServerGroup.yml
+- text: Remove-NpsRemediationServer
+  href: ./Remove-NpsRemediationServer.yml
+syntaxes:
+- Remove-NpsRemediationServerGroup -Name <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a remediation server group'
+  code: |-
+    PS C:\>Remove-NpsRemediationServerGroup -Name "RemServers01"
+  description: |-
+    The following command removes a remediation server group named RemServers01.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a remediation server group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NPS.Remove-NpsRemediationServerGroup
+name: Remove-NpsRemediationServerGroup
+description: |-
+  The **Remove-NpsRemediationServerGroup** cmdlet removes a remediation server group from a Network Policy Server (NPS).
+  A remediation server group is a group of remediation servers in a Microsoft Windows NPS configuration.
+
+  In Network Access Protection (NAP), the network policies on an NPS use remediation to enforce NAP for clients whose health state does not comply with policy requirements and to bring those clients into a compliant state.
+  Remediation servers provide the resources that clients need to become compliant including the client management point, the software update point, or distribution points that contain software updates.
+metadata:
+  external help file: Microsoft.NPS.Commands.dll-Help.xml
+  Module Name: NPS
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/nps/remove-npsremediationservergroup?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-NpsRemediationServerGroup

@@ -1,0 +1,168 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables DNS server policies.
+module: DnsServer
+notes: ""
+links:
+- text: Enable-DnsServerPolicy
+  href: ./Enable-DnsServerPolicy.yml
+- text: Add-DnsServerQueryResolutionPolicy
+  href: ./Add-DnsServerQueryResolutionPolicy.yml
+- text: Add-DnsServerZoneTransferPolicy
+  href: ./Add-DnsServerZoneTransferPolicy.yml
+syntaxes:
+- >-
+  Disable-DnsServerPolicy [-Level] <String> [[-Name] <String>] [-ComputerName <String>] [-Force]
+
+   [[-ZoneName] <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable a zone level policy'
+  code: |-
+    PS C:\> Disable-DnsServerPolicy -Level Zone -Name "Policy07" -ZoneName "EuropeZone"
+  description: |-
+    This command disables a zone level policy named Policy07.
+    This policy can be either a query resolution policy or a zone transfer policy.
+  summary: ""
+- title: 'Example 2: Disable a server level policy'
+  code: |-
+    PS C:\> Disable-DnsServerPolicy -Level Server -Name "Policy22"
+  description: |-
+    This command disables a server level policy named Policy22.
+  summary: ""
+- title: 'Example 3: Disable all zone level policies'
+  code: |-
+    PS C:\> Disable-DnsServerPolicy -Level Zone -ZoneName "EuropeZone"
+  description: |-
+    This command disables all the policies in the zone named EuropeZone.
+  summary: ""
+- title: 'Example 4: Disable all server level policies'
+  code: |-
+    PS C:\> Disable-DnsServerPolicy -Level Server
+  description: |-
+    This command disables all the server level policies.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Level
+  isRequired: true
+  description: |+
+    Specifies which level at which to disable policies.
+    The acceptable values for this parameter are: Zone and Server.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Zone, Server
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the policy to disable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ZoneName
+  description: |+
+    Specifies the name of a DNS zone in which to disable policies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Disable-DnsServerPolicy
+name: Disable-DnsServerPolicy
+description: |-
+  The **Disable-DnsServerPolicy** cmdlet disables Domain Name System (DNS) server policies.
+  You can disable both query resolution policies and zone transfer policies.
+  Specify a single policy by name.
+  If you do not specify a name, this cmdlet disables all policies for the zone or domain that you specify.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerPolicy_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/disable-dnsserverpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-DnsServerPolicy

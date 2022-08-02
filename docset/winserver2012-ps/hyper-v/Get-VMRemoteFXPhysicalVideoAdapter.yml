@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the RemoteFX physical graphics adapters on one or more Hyper-V hosts.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+syntaxes:
+- Get-VMRemoteFXPhysicalVideoAdapter [[-Name] <String[]>] [-ComputerName <String[]>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMRemoteFXPhysicalVideoAdapter
+  description: |-
+    Gets all RemoteFX physical video adapters on the Hyper-V host.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia*
+  description: |-
+    Gets all RemoteFX physical video adapters on the Hyper-V host which include the sequence Nvidia in their name.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which the RemoteFX physical graphics adapters are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the names of one or more RemoteFX physical graphics adapters to be retrieved.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMRemoteFXPhysicalVideoAdapter
+name: Get-VMRemoteFXPhysicalVideoAdapter
+description: |-
+  The **Get-VMRemoteFXPhysicalVideoAdapter** cmdlet gets the RemoteFX physical graphics adapters on one or more Hyper-V hosts.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmremotefxphysicalvideoadapter?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

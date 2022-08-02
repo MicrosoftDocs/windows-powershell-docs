@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a signer rule and adds it to a policy.
+module: ConfigCI
+notes: ""
+links:
+- text: New-CIPolicyRule
+  href: ./New-CIPolicyRule.yml
+syntaxes:
+- >-
+  Add-SignerRule -FilePath <String> -CertificatePath <String> [-Kernel] [-User] [-Update] [-Deny]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create and add a signer rule for User mode'
+  code: |-
+    PS C:\> Add-SignerRule -FilePath '.\Policy.xml' -CertificatePath '.\certificate07.cer' -User
+  description: |-
+    This command generates a signer rule for the certificate in certificate07.cer.
+    The command adds the rule to policy.xml for the User mode scenario.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificatePath
+  isRequired: true
+  description: |+
+    Specifies the path of a certificate (.cer) file that this cmdlet uses for the rule.
+
+  defaultValue: None
+  position: Named
+  aliases: c
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Deny
+  description: |+
+    Indicates that this cmdlet creates a deny rule instead of the default allow rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies the path of the policy .xml file to which this cmdlet adds the rule.
+
+  defaultValue: None
+  position: Named
+  aliases: f
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Kernel
+  description: |+
+    Indicates that this cmdlet adds the rule as a Kernel mode rule.
+    You can add a rule as more than one scenario.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Update
+  description: |+
+    Indicates that this cmdlet adds the rule as an Update policy signers rule.
+    You can add a rule as more than one scenario.
+
+    Update policy signers rules to determine which signers can sign a policy in signed policy scenario.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: User
+  description: |+
+    Indicates that this cmdlet adds the rule as a User mode rule.
+    You can add a rule as more than one scenario.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ConfigCI.Add-SignerRule
+name: Add-SignerRule
+description: |-
+  The **Add-SignerRule** cmdlet creates a signer rule based on a certificate, and then adds the rule to a Code Integrity policy.
+  By default, this cmdlet creates allow rules.
+  Specify at least one scenario for the rule in the policy from the following scenarios: 
+
+  - User 
+  - Kernel 
+  - Update
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/configci/add-signerrule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-SignerRule

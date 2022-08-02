@@ -1,0 +1,152 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a signed app package to a user account.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.IO.FileInfo" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: PackageManager class
+  href: https://go.microsoft.com/fwlink/?LinkId=245447
+- text: Sideload Apps with DISM
+  href: https://go.microsoft.com/fwlink/?LinkID=231020
+syntaxes:
+- >-
+  Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-ForceApplicationShutdown] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-Register] [-DisableDevelopmentMode]
+
+   [-ForceApplicationShutdown] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-ForceApplicationShutdown] [-Update] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add an app package'
+  code: |-
+    PS C:\>Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.appx" -DependencyPath "C:\Users\user1\Desktop\winjs.appx"
+  description: |-
+    This command adds an app package and the signing certificate that the package contains.
+  summary: ""
+- title: 'Example 2: Add a disabled app package in development mode'
+  code: |-
+    PS C:\>$ManifestPath = (Get-AppxPackage -Name "*WindowsCalculator*").InstallLocation + "\Appxmanifest.xml"
+    PS C:\> Add-AppxPackage -Path $ManifestPath -Register -DisableDevelopmentMode
+  description: |-
+    This command gets the full path of the package manifest file of an installed Windows Store app, and then registers that package.
+    You can use *DisableDevelopmentMode* to register an application that is staged by the **StagePackageAsync** API, has been disabled, or has become corrupted during testing.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DependencyPath
+  description: |+
+    Specifies an array of file paths of dependency packages that  are required for the installation of the app package.
+    The app package has an .appx or .appxbundle file name extension.
+    You can specify the paths to more than one dependency package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableDevelopmentMode
+  description: |+
+    Indicates that this cmdlet registers an existing app package installation that has been disabled, did not register, or has become corrupted.
+    Use the current parameter to specify that the manifest is from an existing installation, and not from a collection of files in development mode.
+    You can also use this parameter to register an application that the Package Manager APIhttp://go.microsoft.com/fwlink/?LinkId=245447 has staged.
+    Use the *Register* parameter to specify the location of the app package manifest .xml file from the installation location.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceApplicationShutdown
+  description: |+
+    Forces all active processes that are associated with the package or its dependencies to shut down.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the file path of the app package.
+    An app package has an .appx or .appxbundle file name extension.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: PSPath
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Register
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet registers an application in development mode.
+    You can use development mode to install applications from a folder of unpackaged files.
+    You can use the current parameter to test your Windows® Store apps before you deploy them as app packages.
+    To register an existing app package installation, you must specify the *DisableDevelopmentMode* parameter and the *Register* parameter.
+    In order to specify dependency packages, specify the *DependencyPath* parameter and the *DisableDevelopmentMode* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Update
+  isRequired: true
+  description: |+
+    Indicates that the package being added is a dependency package update.
+    A dependency package is removed from the user account when the parent app is removed.
+    If you do not use this parameter, the package being added is a primary package and is not removed from the user account if the parent app is removed.
+    To update an already installed package, the new package must have the same package family name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Appx.Add-AppxPackage
+name: Add-AppxPackage
+description: |-
+  The **Add-AppxPackage** cmdlet adds a signed app package (.appx) to a user account.
+  An app package has an .appx file name extension.
+  Use the *DependencyPath* parameter to add all other packages that are required for the installation of the app package.
+
+  You can use the *Register* parameter to install from a folder of unpackaged files during development of Windows® Store apps.
+
+  To update an already installed package, the new package must have the same package family name.
+metadata:
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: Appx
+  online version: https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

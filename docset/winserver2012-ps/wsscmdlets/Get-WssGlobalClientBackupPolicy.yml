@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the current global client backup policy.
+module: WssCmdlets
+notes: ""
+inputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.DataProtection.PCBackup.BackupUtil.WcfContracts.PCBackupConfiguration" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-WssGlobalClientBackupPolicy
+  href: ./Set-WssGlobalClientBackupPolicy.yml
+syntaxes:
+- Get-WssGlobalClientBackupPolicy
+examples:
+- title: 'Example 1: Get the global client backup policy'
+  code: |-
+    PS C:\> Get-WssGlobalClientBackupPolicy
+  description: |-
+    This command gets the global client backup policy.
+  summary: ""
+uid: WssCmdlets.Get-WssGlobalClientBackupPolicy
+name: Get-WssGlobalClientBackupPolicy
+description: |-
+  The **Get-WssGlobalClientBackupPolicy** cmdlet gets the current global client backup policy.
+  This policy includes the following values: 
+
+  - BackupStartTime.
+  The beginning of the backup window.
+  The default value is 18:00.
+  - BackupEndTime.
+  The end of the backup window.
+  The default value is 9:00.
+  - DailyRetainCount.
+  The number of daily backups to keep.
+  The default value is five. 
+  - WeeklyRetainCount.
+  The number of weekly backups to keep.
+  The default value is four.
+  - MonthlyRetainCount.
+  The number of monthly backups to keep.
+  The default value is six. 
+  - YearlyRetainCount.
+  The number of yearly backups to keep.
+  The default value is ten.
+
+  You can use the Set-WssGlobalClientBackupPolicy cmdlet to change any of these settings, or to reset all settings to their default values.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssglobalclientbackuppolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

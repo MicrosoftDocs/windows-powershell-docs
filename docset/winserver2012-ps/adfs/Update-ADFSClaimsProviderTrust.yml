@@ -1,0 +1,135 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the claims provider trust from federation metadata.
+module: ADFS
+notes: |-
+  * The claims provider collects and authenticates a user's credentials, builds up claims for that user, and packages the claims into security tokens or Information Cards. In other words, a claims provider represents the organization for whose users the claims provider issues security tokens or Information Cards on their behalf. When you configure Active Directory Federation Services (AD FS) 2.0 to use federation services, the role of the claims provider is to enable its users to access resources that are hosted in a relying party organization by establishing one side of a federation trust relationship. After the trust is established, tokens and Information Cards can be presented to a relying party across the federation trust.
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    A class structure that represents a claims provider trust.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ADFSClaimsProviderTrust
+  href: ./Get-ADFSClaimsProviderTrust.yml
+- text: Set-ADFSClaimsProviderTrust
+  href: ./Set-ADFSClaimsProviderTrust.yml
+syntaxes:
+- >-
+  Update-ADFSClaimsProviderTrust [-MetadataFile <String>] -TargetClaimsProviderTrust <ClaimsProviderTrust>
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-ADFSClaimsProviderTrust [-MetadataFile <String>] -TargetCertificate <X509Certificate2> [-PassThru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-ADFSClaimsProviderTrust [-MetadataFile <String>] -TargetIdentifier <String> [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Update-ADFSClaimsProviderTrust [-MetadataFile <String>] -TargetName <String> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>Update-ADFSClaimsProviderTrust -TargetName "My claims provider" -Identifier  https://contoso.com/adfs/ls/
+  description: |-
+    Description
+
+    -----------
+
+    Update the identifier for an existing claims provider trust.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MetadataFile
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Passes an object to the pipeline.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: TargetCertificate
+  isRequired: true
+  description: |+
+    Specifies the token-signing certificate of the claims provider trust to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  name: TargetClaimsProviderTrust
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the identifier of the claims provider trust to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the claims provider trust to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Update-ADFSClaimsProviderTrust
+name: Update-ADFSClaimsProviderTrust
+description: |-
+  The Update-ADFSClaimsProviderTrust cmdlet updates the claims provider trust from federation metadata that is available at the federation metadata URL of the claims provider.
+  This cmdlet updates claims, endpoints, and certificates.
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/update-adfsclaimsprovidertrust?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

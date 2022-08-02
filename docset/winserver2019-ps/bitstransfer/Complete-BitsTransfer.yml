@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Completes a BITS transfer job.
+module: BitsTransfer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.BackgroundIntelligentTransfer.Management.BitsJob" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet accepts one or more **BitsJob** objects as input that populates the *BitsJob* parameter.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Add-BitsFile
+  href: ./Add-BitsFile.yml
+- text: Get-BitsTransfer
+  href: ./Get-BitsTransfer.yml
+- text: Remove-BitsTransfer
+  href: ./Remove-BitsTransfer.yml
+- text: Resume-BitsTransfer
+  href: ./Resume-BitsTransfer.yml
+- text: Set-BitsTransfer
+  href: ./Set-BitsTransfer.yml
+- text: Start-BitsTransfer
+  href: ./Start-BitsTransfer.yml
+- text: Suspend-BitsTransfer
+  href: ./Suspend-BitsTransfer.yml
+syntaxes:
+- Complete-BitsTransfer [-BitsJob] <BitsJob[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Complete all BITS transfer jobs owned by the current user'
+  code: |-
+    C:\PS>Get-BitsTransfer | Complete-BitsTransfer
+  description: |-
+    This command completes all the BITS transfer jobs that are owned by the current user.
+
+    In this command, the output of the **Get-BitsTransfer** cmdlet is piped to the **Complete-BitsTransfer** cmdlet.
+    The output is a set of **BitsJob** objects.
+  summary: ""
+- title: 'Example 2: Complete all BITS transfer jobs on the computer'
+  code: |-
+    PS C:\> $Bits = Get-BitsTransfer -AllUsers
+    PS C:\> Complete-BitsTransfer -BitsJob $Bits
+  description: |-
+    These commands complete all the BITS transfer jobs on the computer.
+
+    The first command retrieves all the **BitsJob** objects on the computer and then stores them in the $Bits variable.
+
+    The second command uses the *BitsJob* parameter to pass the **BitsJob** objects that are stored in the $Bits variable to the **Complete-BitsTransfer** cmdlet.
+  summary: ""
+- title: 'Example 3: Complete a BITS transfer job by display name'
+  code: |-
+    PS C:\> Get-BitsTransfer -Name testjob1 | Complete-BitsTransfer
+  description: |-
+    This command completes the BITS transfer job that is identified by the specified display name.
+
+    The output of the **Get-BitsTransfer** cmdlet is a **BitsJob** object.
+    This output is piped to the **Complete-BitsTransfer** cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="BitsJob" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: BitsJob
+  isRequired: true
+  description: |+
+    Specifies the BITS transfer jobs to complete.
+    You can pipe a value to this parameter from other cmdlets that return **BitsJob** objects, such as **Get-BitsTransfer**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: b
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: BitsTransfer.Complete-BitsTransfer
+name: Complete-BitsTransfer
+description: |-
+  The **Complete-BitsTransfer** cmdlet ends one or more Background Intelligent Transfer Service (BITS) transfer jobs and then saves the files on the client computer.
+  If an error occurs, the associated **BitsJob** object is written to the error pipeline.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.BackgroundIntelligentTransfer.Management.dll-Help.xml
+  Module Name: BitsTransfer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/bitstransfer/complete-bitstransfer?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Complete-BitsTransfer

@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Forces the HGS client to attest against the configured attestation servers.
+module: HgsClient
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: |-
+    An object containing the attestation server URL used and the results of the attestation attempt.
+syntaxes:
+- Test-HgsClientConfiguration [-UsePrimary]
+- Test-HgsClientConfiguration [-UseFallback]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Test-HgsClientConfiguration
+  description: |-
+    Performs an attestation attempt using the primary HGS server.
+    If the primary HGS server cannot be reached and fallback URLs are configured, the fallback HGS server will be used.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Test-HgsClientConfiguration -UsePrimary
+  description: |-
+    Performs an attestation attempt using the primary HGS server.
+    If the primary HGS server cannot be reached, the cmdlet will fail.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Test-HgsClientConfiguration -UseFallback
+  description: |-
+    Performs an attestation attempt using the fallback HGS server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseFallback
+  isRequired: true
+  description: |+
+    Specifies that the HGS client should only attest against the fallback attestation server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UsePrimary
+  description: |+
+    Specifies that the HGS client should only attest against the primary attestation server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HgsClient.Test-HgsClientConfiguration
+name: Test-HgsClientConfiguration
+description: |-
+  The **Test-HgsClientConfiguration** cmdlet forces the HGS client to attest against an HGS server and report back on the attestation attempt.
+  Any cached attestation health certificates from recent attestation attempts will be ignored.
+metadata:
+  external help file: HgsClient-help.xml
+  Module Name: HgsClient
+  online version: https://docs.microsoft.com/powershell/module/hgsclient/test-hgsclientconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-HgsClientConfiguration

@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the system locale for the current computer.
+module: International
+notes: |-
+  Please note that the System Locale setting on the computer is primarily used for legacy code page selection and font fallback. This setting is primarily used by applications that do not support Unicode. It should not be viewed from the sense of a traditional locale or culture info, and should not be confused with the user locale (Regional Format) setting.
+
+  When changing the System Locale setting it is highly recommended to also change the Windows Display Language or UI language setting for the computer so that it matches the System Locale. In some cases, the UI language may depend on the code page and/or the font to render properly. Failure to do so can result in configurations where non-Unicode applications don't work as intended.
+inputs:
+- name: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    An object that contains a BCP-47 tag to specify the system locale for the current computer.
+    For more information about the CultureInfo object, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306).
+links:
+- text: Configurable Language and Cultural Settings
+  href: https://go.microsoft.com/fwlink/?LinkID=242307
+- text: Get-WinSystemLocale
+  href: ./Get-WinSystemLocale.yml
+syntaxes:
+- Set-WinSystemLocale [-SystemLocale] <CultureInfo> [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the system locale'
+  code: |-
+    PS C:\> Set-WinSystemLocale -SystemLocale ja-JP
+  description: |-
+    This command sets the system locale to Japanese (Japan).
+  summary: ""
+parameters:
+- type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  name: SystemLocale
+  isRequired: true
+  description: |+
+    Specifies a system locale.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: International.Set-WinSystemLocale
+name: Set-WinSystemLocale
+description: |-
+  The **Set-WinSystemLocale** cmdlet sets the system locale for the current computer.
+  The System-locale setting determines which code pages, which include ANSI, DOS, and Macintosh, the computer uses by default.
+  If you change the System-locale setting, the necessary bitmap font files are installed to support legacy applications in the selected language.
+
+  This is a system setting.
+  It can only be changed by a user who has Administrator permissions.
+  Changes take effect after the computer is restarted.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/international/set-winsystemlocale?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WinSystemLocale

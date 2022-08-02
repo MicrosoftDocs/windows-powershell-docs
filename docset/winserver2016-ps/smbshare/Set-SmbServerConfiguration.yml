@@ -1,0 +1,539 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the Server Message Block (SMB) server configuration.
+module: SmbShare
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-SmbServerConfiguration
+  href: ./Get-SmbServerConfiguration.yml
+syntaxes:
+- >-
+  Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean>]
+
+   [-AsynchronousCredits <UInt32>] [-AuditSmb1Access <Boolean>] [-AutoDisconnectTimeout <UInt32>]
+
+   [-AutoShareServer <Boolean>] [-AutoShareWorkstation <Boolean>] [-CachedOpenLimit <UInt32>]
+
+   [-DurableHandleV2TimeoutInSeconds <UInt32>] [-EnableAuthenticateUserSharing <Boolean>]
+
+   [-EnableDownlevelTimewarp <Boolean>] [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>]
+
+   [-EnableMultiChannel <Boolean>] [-EnableOplocks <Boolean>] [-EnableSecuritySignature <Boolean>]
+
+   [-EnableSMB1Protocol <Boolean>] [-EnableSMB2Protocol <Boolean>] [-EnableStrictNameChecking <Boolean>]
+
+   [-EncryptData <Boolean>] [-IrpStackSize <UInt32>] [-KeepAliveTime <UInt32>] [-MaxChannelPerSession <UInt32>]
+
+   [-MaxMpxCount <UInt32>] [-MaxSessionPerConnection <UInt32>] [-MaxThreadsPerQueue <UInt32>]
+
+   [-MaxWorkItems <UInt32>] [-NullSessionPipes <String>] [-NullSessionShares <String>]
+
+   [-OplockBreakWait <UInt32>] [-PendingClientTimeoutInSeconds <UInt32>] [-RejectUnencryptedAccess <Boolean>]
+
+   [-RequireSecuritySignature <Boolean>] [-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>]
+
+   [-Smb2CreditsMin <UInt32>] [-SmbServerNameHardeningLevel <UInt32>] [-TreatHostAsStableStorage <Boolean>]
+
+   [-ValidateAliasNotCircular <Boolean>] [-ValidateShareScope <Boolean>]
+
+   [-ValidateShareScopeNotAliased <Boolean>] [-ValidateTargetName <Boolean>] [-Force]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the SMB Service configuration'
+  code: |-
+    PS C:\>Set-SmbServerConfiguration -MaxChannelPerSession 16
+
+    Confirm
+    Are you sure you want to perform this action?
+    Performing operation 'Modify' on Target 'SMB Service Configuration'.
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+  description: |-
+    This command sets the SMB Service configuration.
+  summary: ""
+- title: 'Example 2: Set the SMB Service configuration without confirmation'
+  code: |-
+    PS C:\>Set-SmbServerConfiguration -MaxChannelPerSession 32 -Force
+  description: |-
+    This command sets the SMB Service configuration without user confirmation.
+  summary: ""
+- title: 'Example 3: Turn on SMB signing and encryption'
+  code: |-
+    PS C:\>Set-SmbServerConfiguration -RequireSecuritySignature $True -EnableSecuritySignature $True -EncryptData $True -Confirm:$false
+  description: |-
+    This command turns on SMB signing and encryption.
+  summary: ""
+- title: 'Example 4: Turn off the default server and workstations shares'
+  code: |-
+    PS C:\>Set-SmbServerConfiguration -AutoShareServer $False -AutoShareWorkstation $False -Confirm:$false
+  description: |-
+    This command turns off the default server and workstations shares.
+  summary: ""
+- title: 'Example 5: Turn off server announcements'
+  code: |-
+    PS C:\>Set-SmbServerConfiguration -ServerHidden $False -AnnounceServer $False -Confirm:$false
+  description: |-
+    This command turns off server announcements.
+  summary: ""
+- title: 'Example 6: Turn off SMB1'
+  code: |-
+    PS C:\>Set-SmbServerConfiguration -EnableSMB1Protocol $false
+  description: |-
+    This command disables SMB1 on the SMB server.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AnnounceComment
+  description: |+
+    Specifies the announce comment string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AnnounceServer
+  description: |+
+    Indicates that this server announces itself by using browser announcements.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: AsynchronousCredits
+  description: |+
+    Specifies the asynchronous credits.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AuditSmb1Access
+  description: |+
+    Enables auditing of SMB version 1 protocol in Windows Event Log.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: AutoDisconnectTimeout
+  description: |+
+    Specifies the auto disconnect time-out.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoShareServer
+  description: |+
+    Indicates that the default server shares are shared out.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoShareWorkstation
+  description: |+
+    Indicates whether the default workstation shares are shared out.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: CachedOpenLimit
+  description: |+
+    Specifies the maximum number of cached open files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DurableHandleV2TimeoutInSeconds
+  description: |+
+    Specifies the durable handle v2 time-out period, in seconds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableAuthenticateUserSharing
+  description: |+
+    Indicates whether authenticate user sharing is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableDownlevelTimewarp
+  description: |+
+    Indicates whether down-level timewarp support is disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableForcedLogoff
+  description: |+
+    Indicates whether forced logoff is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLeasing
+  description: |+
+    Indicates whether leasing is disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableMultiChannel
+  description: |+
+    Indicates whether multi-channel is disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableOplocks
+  description: |+
+    Indicates whether the opportunistic locks are enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableSecuritySignature
+  description: |+
+    Indicates whether the security signature is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableSMB1Protocol
+  description: |+
+    Indicates whether the SMB1 protocol is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableSMB2Protocol
+  description: |+
+    Indicates whether the SMB2 protocol is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableStrictNameChecking
+  description: |+
+    Indicates whether the server should perform strict name checking on incoming connects.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EncryptData
+  description: |+
+    Indicates whether the sessions established on this server are encrypted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IrpStackSize
+  description: |+
+    Specifies the default IRP stack size.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: KeepAliveTime
+  description: |+
+    Specifies the keep alive time.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxChannelPerSession
+  description: |+
+    Specifies the maximum channels per session.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxMpxCount
+  description: |+
+    Specifies the maximum MPX count for SMB1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxSessionPerConnection
+  description: |+
+    Specifies the maximum sessions per connection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxThreadsPerQueue
+  description: |+
+    Specifies the maximum threads per queue.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaxWorkItems
+  description: |+
+    Specifies the maximum SMB1 work items.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NullSessionPipes
+  description: |+
+    Specifies the null session pipes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NullSessionShares
+  description: |+
+    Specifies the null session shares.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: OplockBreakWait
+  description: |+
+    Specifies how long the create caller waits for an opportunistic lock break.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: PendingClientTimeoutInSeconds
+  description: |+
+    Specifies the pending client time-out period, in seconds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RejectUnencryptedAccess
+  description: |+
+    Indicates whether the client that does not support encryption is denied access if it attempts to connect to an encrypted share.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RequireSecuritySignature
+  description: |+
+    Indicates whether the security signature is required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ServerHidden
+  description: |+
+    Indicates whether the server announces itself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Smb2CreditsMax
+  description: |+
+    Specifies the maximum SMB2 credits.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Smb2CreditsMin
+  description: |+
+    Specifies the minimum SMB2 credits.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SmbServerNameHardeningLevel
+  description: |+
+    Specifies the SMB Service name hardening level.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: TreatHostAsStableStorage
+  description: |+
+    Indicates whether the host is treated as the stable storage.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ValidateAliasNotCircular
+  description: |+
+    Indicates whether the aliases that are not circular are validated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ValidateShareScope
+  description: |+
+    Indicates that the existence of share scopes is checked during share creation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ValidateShareScopeNotAliased
+  description: |+
+    Indicates whether the share scope being aliased is validated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ValidateTargetName
+  description: |+
+    Indicates whether the target name is validated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: SmbShare.Set-SmbServerConfiguration
+name: Set-SmbServerConfiguration
+description: |-
+  The **Set-SmbServerConfiguration** cmdlet sets the Server Message Block (SMB) Service configuration. For more information on SMB server and protocol specifications, see [Overview of file sharing using the SMB 3 protocol in Windows Server](https://docs.microsoft.com/windows-server/storage/file-server/file-server-smb-overview) and [[MS-SMB2]: Server Message Block (SMB) Protocol Versions 2 and 3](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: SmbServerConfiguration.cdxml-help.xml
+  Module Name: SmbShare
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/smbshare/set-smbserverconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-SmbServerConfiguration

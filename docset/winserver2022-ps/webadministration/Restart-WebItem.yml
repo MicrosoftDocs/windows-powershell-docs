@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Restarts an application pool or a website.
+module: WebAdministration
+notes: ""
+inputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Start-WebItem
+  href: ./Start-WebItem.yml
+- text: Stop-WebItem
+  href: ./Stop-WebItem.yml
+syntaxes:
+- Restart-WebItem [-Protocol <String>] [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Restart an application pool'
+  code: |-
+    IIS:\> Restart-WebItem -PSPath 'IIS:\AppPools\DefaultAppPool'
+  description: |-
+    This command restarts the application pool named DefaultAppPool.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Protocol
+  description: |+
+    Specifies the protocol binding of the item to restart.
+    This parameter applies to sites only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies the path to the application pool or web site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Restart-WebItem
+name: Restart-WebItem
+description: |-
+  The **Restart-WebItem** cmdlet restarts an application pool or a website.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/restart-webitem?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Restart-WebItem

@@ -1,0 +1,38 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets disks to use to create storage space.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.Storage.Disk" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-WssStorageSpace
+  href: ./New-WssStorageSpace.yml
+- text: Add-WssDisksToSpacesPool
+  href: ./Add-WssDisksToSpacesPool.yml
+syntaxes:
+- Get-WssPoolableDisk [<CommonParameters>]
+examples:
+- title: 'Example 1: Get poolable disks'
+  code: |-
+    PS C:\>Get-WssPoolableDisk
+  description: |-
+    This command gets objects that represent all of the physical disks available for storage space.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+uid: WSSCmdlets.Get-WssPoolableDisk
+name: Get-WssPoolableDisk
+description: |-
+  The **Get-WssPoolableDisk** cmdlet gets objects that represent the physical disks to use to create storage space.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wsspoolabledisk?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssPoolableDisk

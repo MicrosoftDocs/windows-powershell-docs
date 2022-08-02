@@ -1,0 +1,60 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops the sharing of the specified session desktop.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Publish-WmsDesktop
+  href: ./Publish-WmsDesktop.yml
+- text: Show-WmsDesktop
+  href: ./Show-WmsDesktop.yml
+syntaxes:
+- Unpublish-WmsDesktop [-SessionId] <UInt32> [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Stop sharing a desktop'
+  code: |-
+    PS C:\> Unpublish-WmsDesktop -SessionId 2
+  description: |-
+    This command stops desktop sharing of the desktop with the session ID of 2.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SessionId
+  isRequired: true
+  description: |+
+    Specifies the session ID to stop sharing.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MultiPoint.Unpublish-WmsDesktop
+name: Unpublish-WmsDesktop
+description: |-
+  The **Unpublish-WmsDesktop** cmdlet stops the sharing of the specified session desktop.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/unpublish-wmsdesktop?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Unpublish-WmsDesktop

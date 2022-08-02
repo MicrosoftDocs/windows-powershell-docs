@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables a constrained delegation authorization for an SMB client and server.
+module: SmbShare
+notes: |-
+  * This cmdlet relies on Active Directory Windows PowerShell cmdlets to perform its actions. Before you use this cmdlet, you must install the Active Directory cmdlets. To install the Active Directory cmdlets, run the following command: 
+  `Install-WindowsFeature RSAT-AD-PowerShell`
+  For more information, type `Get-Help Install-WindowsFeature`.
+
+    This cmdlet works only with resource-based delegation, and the Active Directory forest must be at the Windows Server 2012 functional level.
+  To check the functional level of the Active Directory forest, use the Get-ADForest cmdlet.
+links:
+- text: Install-WindowsFeature
+  href: ../Microsoft.Windows.ServerManager.Migration/Install-WindowsFeature.md
+- text: Disable-SmbDelegation
+  href: ./Disable-SmbDelegation.yml
+- text: Get-SmbDelegation
+  href: ./Get-SmbDelegation.yml
+syntaxes:
+- Enable-SmbDelegation [-SmbClient] <String> [-SmbServer] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable a constrained delegation authorization for SMB clients and servers'
+  code: |-
+    PS C:\> Enable-SmbDelegation -SmbServer "FileServer01" -SmbClient "HVSVR01"
+  description: |-
+    This command adds a new constrained delegation authorization so that a user remotely connected to the SMB client named HVSVR01 can configure resources on the SMB server named FileServer01.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SmbClient
+  isRequired: true
+  description: |+
+    Specifies the name of the SMB client.
+    The cmdlet enables constrained delegation authorizations for the SMB client that you specify.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SmbServer
+  isRequired: true
+  description: |+
+    Specifies the name of the SMB server.
+    The cmdlet enables constrained delegation authorizations for the SMB server that you specify.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: SmbShare.Enable-SmbDelegation
+name: Enable-SmbDelegation
+description: |-
+  The **Enable-SmbDelegation** cmdlet enables a constrained delegation authorization for a Server Message Block (SMB) client and server.
+  Delegation allows a user who remotes into an SMB client to perform operations on a remote SMB server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: SmbScriptModule-help.xml
+  Module Name: SmbShare
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/smbshare/enable-smbdelegation?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-SmbDelegation

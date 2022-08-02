@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Performs the process of cleanup on a WSUS server.
+module: UpdateServices
+notes: ""
+inputs:
+- name: <xref href="Microsoft.UpdateServices.Commands.IUpdateServer" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WsusServer
+  href: ./Get-WsusServer.yml
+syntaxes:
+- >-
+  Invoke-WsusServerCleanup [-UpdateServer <IUpdateServer>] [-CleanupObsoleteComputers] [-CleanupObsoleteUpdates]
+
+   [-CleanupUnneededContentFiles] [-CompressUpdates] [-DeclineExpiredUpdates] [-DeclineSupersededUpdates]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Run cleanup for obsolete computers'
+  code: |-
+    PS C:\> Get-WsusServer | Invoke-WsusServerCleanup -CleanupObsoleteComputers
+    Obsolete Computers Deleted: 1
+  description: |-
+    This command runs this cmdlet on the local WSUS server specifying the option to clean up obsolete computers.
+  summary: ""
+- title: 'Example 2: Run cleanup for obsolete computers and updates'
+  code: |-
+    PS C:\> Get-WsusServer "contoso" | Invoke-WsusServerCleanup -CleanupObsoleteComputers -CleanupObsoleteUpdates
+    Obsolete Updates Deleted: 62
+    Obsolete Computers Deleted: 0
+  description: |-
+    This command runs this cmdlet on the server named contoso specifying the options to clean up obsolete computers and obsolete updates.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CleanupObsoleteComputers
+  description: |+
+    Specifies that the cmdlet deletes obsolete computers from the database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CleanupObsoleteUpdates
+  description: |+
+    Specifies that the cmdlet deletes obsolete updates from the database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CleanupUnneededContentFiles
+  description: |+
+    Specifies that the cmdlet deletes unneeded update files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CompressUpdates
+  description: |+
+    Specifies that the cmdlet deletes obsolete revisions to updates from the database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeclineExpiredUpdates
+  description: |+
+    Specifies that the cmdlet declines expired updates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeclineSupersededUpdates
+  description: |+
+    Specifies that the cmdlet declines superseded updates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IUpdateServer" data-throw-if-not-resolved="False" />
+  name: UpdateServer
+  description: |+
+    Specifies the object that contains the WSUS server. This value is obtained by calling the [Get-WsusServer](./Get-WsusServer.yml) cmdlet and passing the resulting **IUpdateServer** object into this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UpdateServices.Invoke-WsusServerCleanup
+name: Invoke-WsusServerCleanup
+description: |-
+  The **Invoke-WsusServerCleanup** cmdlet performs the process of cleanup on a specified Windows Server Update Services (WSUS) server. This process has the same impact as running the **Cleanup Wizard** from within the WSUS Console application and allows the specification of the same options as parameters.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/updateservices/invoke-wsusservercleanup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Invoke-WsusServerCleanup

@@ -1,0 +1,238 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes one or more IPv4 option values at the server, scope or reservation level, either for the standard IPv4 options or for the specified vendor or user class.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4OptionValue" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4OptionValue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-DhcpServerv4OptionValue
+  href: ./Get-DhcpServerv4OptionValue.yml
+- text: Set-DhcpServerv4OptionValue
+  href: ./Set-DhcpServerv4OptionValue.yml
+syntaxes:
+- >-
+  Remove-DhcpServerv4OptionValue [-VendorClass <String>] [-ComputerName <String>] [-OptionId] <UInt32[]>
+
+   [-UserClass <String>] [[-ScopeId] <IPAddress>] [-ReservedIP <IPAddress>] [-PassThru] [-PolicyName <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Delete an option value on a scope'
+  code: |-
+    PS C:\> Remove-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -OptionId 23
+  description: |-
+    This example deletes DHCPv4 option value configured on the specified scope for the specified option ID.
+  summary: ""
+- title: 'Example 2: Delete an option value for a vendor class'
+  code: |-
+    PS C:\> Remove-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -VendorClass "MSUCClient" -OptionId 5
+  description: |-
+    This example deletes DHCPv4 option value configured on the specified scope for the specified vendor class named MSUCClient with the specific option 5.
+  summary: ""
+- title: 'Example 3: Delete an option value by using an option ID'
+  code: |-
+    PS C:\> Remove-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -PolicyName "SmartPhonePolicy" -OptionId 252
+  description: |-
+    This example deletes DHCPv4 option value with the option ID 252 configured for the specified policy in the scope 10.10.10.0.
+  summary: ""
+- title: 'Example 4: Delete an option value for a user class in a scope'
+  code: |-
+    PS C:\> Remove-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -UserClass "LabComputer" -OptionId 252
+  description: |-
+    This example deletes DHCPv4 option value with the option ID 252 configured for the specified user class in the scope 10.10.10.0.
+  summary: ""
+- title: 'Example 5: Delete an option value at the server level'
+  code: |-
+    PS C:\> Remove-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -OptionId 23
+  description: |-
+    This example deletes DHCPv4 option value configured at the server level, or server-wide, for the specified option ID.
+  summary: ""
+- title: 'Example 6: Delete an otion value at the server level for a vendor class'
+  code: |-
+    PS C:\> Remove-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -VendorClass "MSUCClient" -OptionId 5
+  description: |-
+    This example deletes DHCPv4 option value configured at the server level, or server-wide, for the specified vendor class named MSUCClient with the specific option 5.
+  summary: ""
+- title: 'Example 7: Delete an option value at the server level by using an option ID'
+  code: |-
+    PS C:\> Remove-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -PolicyName "SmartPhonePolicy" -OptionId 252
+  description: |-
+    This example deletes DHCPv4 option value with the option ID 252 configured for the specified policy at the server level, or server-wide.
+  summary: ""
+- title: 'Example 8: Delete an option value by using an option ID for a user class'
+  code: |-
+    PS C:\> Remove-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -UserClass "LabComputer" -OptionId 252
+  description: |-
+    This example deletes DHCPv4 option value with the option ID 252 configured for the specified user class at the server level, or server-wide.
+  summary: ""
+- title: 'Example 9: Delete an option value on a reservation'
+  code: |-
+    PS C:\> Remove-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ReservedIP 10.10.10.5 -OptionId 23
+  description: |-
+    This example deletes DHCPv4 option value configured on the specified reservation for the specified option ID.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer that runs the Dynamic Host Configuration Protocol (DHCP) server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OptionId
+  isRequired: true
+  description: |+
+    Specifies one or more numeric identifiers (IDs) for the options which are to be deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyName
+  description: |+
+    Specifies the name of the policy from which the option values are deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: ReservedIP
+  description: |+
+    Specifies the IPv4 address of the reservation from which the option values are deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPAddress
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: ScopeId
+  description: |+
+    Specifies the scope ID, in IPv4 address format, from which the option values are deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserClass
+  description: |+
+    Specifies that the option values for the specified user class are deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VendorClass
+  description: |+
+    Specifies that the option values for the specified vendor class are deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Remove-DhcpServerv4OptionValue
+name: Remove-DhcpServerv4OptionValue
+description: |-
+  The **Remove-DhcpServerv4OptionValue** cmdlet deletes one or more IPv4 option values at the server, scope or reservation level, either for the standard IPv4 options or for the specified vendor or user class.
+
+  If you specify only the *ReservedIP* parameter, the option values set at the reservation level are deleted.
+  If you specify only the *ScopeId* parameter, the option values set at the scope level are deleted.
+  If you specify neither the *ScopeId* nor the *ReservedIP* parameter, the option values set at the server level are deleted.
+  The *ScopeId* and the *ReservedIP* parameters cannot both be specified.
+
+  The *UserClass* and *PolicyName* parameters cannot both be specified.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerV4OptionValue_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/remove-dhcpserverv4optionvalue?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-DhcpServerv4OptionValue

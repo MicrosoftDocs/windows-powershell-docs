@@ -1,0 +1,32 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets synchronization properties the configuration database of AD FS.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AdfsSyncProperties
+  href: ./Set-AdfsSyncProperties.yml
+syntaxes:
+- Get-AdfsSyncProperties [<CommonParameters>]
+examples:
+- title: 'Example 1: Get synchronization properties'
+  code: |-
+    PS C:\> Get-ADFSSyncProperties
+  description: |-
+    This command gets the synchronization properties for the configuration database.
+  summary: ""
+uid: ADFS.Get-AdfsSyncProperties
+name: Get-AdfsSyncProperties
+description: |-
+  The **Get-ADFSSyncProperties** cmdlet gets the synchronization properties for the configuration database of Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfssyncproperties?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsSyncProperties

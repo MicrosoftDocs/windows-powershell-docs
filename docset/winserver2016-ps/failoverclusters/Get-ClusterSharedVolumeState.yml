@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the state of Cluster Shared Volumes in a cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster, Microsoft.FailoverClusters.PowerShell.ClusterNode, Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ClusterSharedVolume
+  href: ./Get-ClusterSharedVolume.yml
+syntaxes:
+- >-
+  Get-ClusterSharedVolumeState [-Node <StringCollection>] [[-Name] <StringCollection>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: '1:'
+  code: |-
+    PS C:\> Get-ClusterSharedVolumeState
+    Name                : Cluster Disk X 
+    VolumeName          : \\?\Volume{2297f079-53c2-41e9-94d1-483d61ea94d7}\
+    Node                : ClusterNode1
+    State               : Direct
+
+    VolumeFriendlyName  : Volume1
+    RedirectedIOReason  : NotRedirected
+
+    Name                : Cluster Disk Y 
+    VolumeName          : \\?\Volume{0312ef48-74c7-4a4d-946e-4bb4a397ad1f}\
+    Node                : ClusterNode2
+    State               : File System Redirected
+
+    VolumeFriendlyName  : Volume2
+    RedirectedIOReason  : UserRequest
+
+    Name                : Cluster Disk Z 
+    VolumeName          : \\?\Volume{c4689cef-83e3-4f47-9eaf-161a9e31c5a0}\
+    Node                : ClusterNode3
+    State               : Block Redirected
+    VolumeFriendlyName  : Volume3
+    RedirectedIOReason  : NoDiskConnectivity
+  description: |-
+    This command gets the state of Cluster Shared Volumes on the local cluster.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If you specify a period (`.`) or do not specify this parameter, the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the names, as a collection of strings, of the Cluster Shared Volumes for which to get state information.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Node
+  description: |+
+    Specifies the names, as a collection of strings, of the cluster nodes for which to get the state of Cluster Shared Volumes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterSharedVolumeState
+name: Get-ClusterSharedVolumeState
+description: |-
+  The **Get-ClusterSharedVolumeState** cmdlet gets the state of Cluster Shared Volumes in a cluster.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clustersharedvolumestate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterSharedVolumeState

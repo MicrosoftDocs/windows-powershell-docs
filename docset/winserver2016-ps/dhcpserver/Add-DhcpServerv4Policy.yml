@@ -1,0 +1,470 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new policy either at the server level or at the scope level.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Policy" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Scope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Policy" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Add-DhcpServerv4PolicyIPRange
+  href: ./Add-DhcpServerv4PolicyIPRange.yml
+- text: Get-DhcpServerv4Policy
+  href: ./Get-DhcpServerv4Policy.yml
+- text: Get-DhcpServerv4PolicyIPRange
+  href: ./Get-DhcpServerv4PolicyIPRange.yml
+- text: Remove-DhcpServerv4Policy
+  href: ./Remove-DhcpServerv4Policy.yml
+- text: Remove-DhcpServerv4PolicyIPRange
+  href: ./Remove-DhcpServerv4PolicyIPRange.yml
+- text: Set-DhcpServerv4Policy
+  href: ./Set-DhcpServerv4Policy.yml
+syntaxes:
+- >-
+  Add-DhcpServerv4Policy [-ComputerName <String>] [-Name] <String> [-Condition] <String> [-Description <String>]
+
+   [-ScopeId <IPAddress>] [-ProcessingOrder <UInt16>] [-RelayAgent <String[]>] [-RemoteId <String[]>]
+
+   [-SubscriberId <String[]>] [-PassThru] [-LeaseDuration <TimeSpan>] [-Fqdn <String[]>] [-Enabled <Boolean>]
+
+   [-VendorClass <String[]>] [-UserClass <String[]>] [-MacAddress <String[]>] [-CircuitId <String[]>]
+
+   [-ClientId <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a server level policy for virtual machine clients'
+  code: |-
+    PS C:\> Add-DhcpServerv4Policy -Name "HyperVPolicy" -Condition OR -MacAddress EQ,00155D*,000569*
+  description: |-
+    This example creates a server level policy for virtual machine clients.
+    The MAC addresses of Hyper-V virtual machines (00-15-5D) and VMWare virtual machines (00-05-69) are used as a condition in the policy.
+  summary: ""
+- title: 'Example 2: Create a server level policy for non-virtual machine clients'
+  code: |-
+    PS C:\> Add-DhcpServerv4Policy -Name "PhysicalComputersPolicy" -Condition OR -MacAddress NE,00155D*,000569*
+  description: |-
+    This example creates a server level policy for non-virtual machine clients.
+    The MAC address of Hyper-V virtual machines (00-15-5D) and VMware virtual machines (000569) is used as a negation condition in the policy.
+  summary: ""
+- title: 'Example 3: Create a scope level policy for virtual machine clients'
+  code: |-
+    PS C:\> Add-DhcpServerv4Policy -Name "VMPolicy" -ScopeId 10.10.10.0 -Condition OR -MacAddress EQ,00155D*,000569*
+  description: |-
+    This example creates a scope level policy for virtual machine clients inside the scope 10.10.10.0.
+    The MAC addresses of Hyper-V virtual machines (00-15-5D) and VMware virtual machines (00-05-69) are used as a condition in the policy.
+  summary: ""
+- title: 'Example 4: Create a printer policy in a scope based on a vendor class'
+  code: |-
+    PS C:\> Add-DhcpServerv4Policy -Name "PrinterPolicy" -ScopeId 10.10.10.0 -Condition OR -VendorClass EQ,"HP Printer","Xerox Printer"
+  description: |-
+    This example creates a printer policy inside the scope 10.10.10.0 based on the vendor class of printers.
+    The vendor classes must be defined before they are used in the policy.
+  summary: ""
+- title: 'Example 5: Create a printer policy in a scope based on a user class'
+  code: |-
+    PS C:\> Add-DhcpServerv4Policy -Name "LabComputerPolicy" -ScopeId 10.10.10.0 -Condition OR -UserClass EQ,LabComputers
+  description: |-
+    This example creates a lab computers policy inside the scope 10.10.10.0 based on the user class.
+    The user class must be defined before they are used in the policy.
+  summary: ""
+- title: 'Example 6: Create a policy based on the relay agent information inside a scope'
+  code: |-
+    PS C:\> Add-DhcpServerv4Policy -Name "RelayAgentBasedPolicy" -ScopeId 10.10.10.0 -Condition OR -RelayAgent EQ,01030a0b0c02050000000123
+  description: |-
+    This example creates a policy based on the relay agent information (option 82) inside the scope 10.10.10.0.
+    The DHCP relay agent must be configured to use the relay agent information option (option 82).
+  summary: ""
+- title: 'Example 7: Create a policy by combining conditions based on a MAC address prefix and vendor class'
+  code: |-
+    PS C:\> Add-DhcpServerv4Policy -Name "DevicesPolicy" -ScopeId 10.10.10.0 -Condition OR -MacAddress EQ,F8DB7F* -VendorClass EQ,Android
+  description: |-
+    This example creates a policy by combining conditions, using OR, based on MAC address prefix of HTC phone devices and vendor class of Android, inside the scope 10.10.10.0.
+    The vendor class must be defined before it is used in the policy.
+  summary: ""
+- title: 'Example 8: Create a server level policy for virtual machine clients, assign a processing order'
+  code: |-
+    PS C:\> Add-DhcpServerv4Policy -Name "HyperVPolicy" -Condition OR -MacAddress EQ,00155D*,000569* -ProcessingOrder 2 -Enabled $False
+  description: |-
+    This example creates a server level policy for virtual machine clients and assigns a processing order of 2 and creates the policy in a disabled state.
+    The MAC addresses of Hyper-V virtual machines (00-15-5D) and VMWare virtual machines (00-05-69) are used as a condition in the policy.
+  summary: ""
+- title: 'Example 9: Create a policy by combining conditions based on a MAC address prefix and vendor class with lease duration'
+  code: |-
+    PS C:\> Add-DhcpServerv4Policy -Name "DevicesPolicy" -Condition OR -LeaseDuration 10 -MacAddress EQ,F8DB7F -ScopeId 10.10.10.0 -VendorClass "EQ","Android"
+  description: |-
+    This example creates a policy by combining conditions, using OR, based on MAC address prefix of HTC phone devices and vendor class of Android, inside the scope 10.10.10.0.
+    The vendor class must be defined before it is used in the policy.
+    In addition, the command sets the lease duration for the clients to 10 days.
+  summary: ""
+- title: 'Example 10: Create a server level policy for workgroup joined clients'
+  code: |-
+    PS C:\> Add-DhcpServerv4Policy -Name "WorkgroupDevices" -Condition OR -Fqdn "Isl"
+  description: |-
+    This example creates a server level policy for workgroup joined clients.
+    The policy matches clients that have a single label FQDN in the conditions in the policy.
+  summary: ""
+- title: 'Example 11: Create a server level policy for clients that are not members of a domain'
+  code: |-
+    PS C:\> Add-DhcpServerv4Policy -Name "ForeignDevices" -Condition OR -Fqdn NE,*.contoso.com
+  description: |-
+    This example creates a server level policy for all foreign clients that are not members of the local domain contoso.com.
+    The policy matches clients that have an FQDN that does not contain the value contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CircuitId
+  description: |+
+    Specifies the comparator to use and the values with which to compare the circuit id sub-option.
+    The first element is the comparator, either EQ or NE, followed by a single value.
+
+    If the last character in a value is an asterisk, then the subsequent characters are treated as wildcard characters for the comparison.
+    If the first character in a value-element is an asterisk, the preceding characters are treated as wildcard characters for comparison.
+
+    The value can again be followed by another comparator, either EQ or NE, which is followed by another value for comparison.
+
+    The input format for the value is a hexadecimal string with or without hyphen separation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClientId
+  description: |+
+    Specifies the comparator to use and the values with which to compare client identifier.
+    The first element is the comparator, either EQ or NE, and subsequent elements are values.
+
+    If the last character in a value is an asterisk, then the subsequent characters are treated as wildcard characters for the comparison.
+    If the first character in a value-element is an asterisk, the preceding characters are treated as wildcard characters for comparison.
+
+    The values can again be followed by another comparator, either EQ or NE, which is followed by another set of values for comparison.
+
+    The input format is a hexadecimal string with or without hyphen separation.
+    For example: `EQ, 00-11-22-33-44-55, AA-BB-CC-DD-EE*`.
+
+    The output format is a hexadecimal string with hyphen separation.
+
+    The values that follow the EQ operator are treated as multiple assertions which are logically combined (OR'd).
+
+    The values that follow the NE operator are treated as multiple assertions which are logically differenced (AND'd).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer running the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Condition
+  isRequired: true
+  description: |+
+    Specifies the logical operator between conditions when multiple conditions are specified.
+    The acceptable values for this parameter are: AND and OR.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: And, Or
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies the description string of the policy added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  description: |+
+    Specifies the enabled state of a policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Fqdn
+  description: |+
+    Specifies the comparator to use and the values with which to compare the fully qualified domain name (FQDN) in the client request.
+    The first element is the comparator, EQ, NE, Isl, or Insl, and the subsequent elements are values.
+    For the comparators Island Insl, use a blank value.
+    If the last character in a value is an asterisk, then the subsequent characters are treated as wildcard characters for the comparison.
+    If the first character in a value-element is an asterisk, the preceding characters are treated as wildcard characters for comparison.
+
+    The values can again be followed by another comparator, EQ or NE, which is followed by another set of values.
+
+    The input format is a string.
+    A trailing wildcard character can be present to indicate partial match.
+
+    The values that follow the EQ operator are treated as multiple assertions which are logically combined (OR'd).
+
+    The values that follow the NE operator are treated as multiple assertions which are logically differenced (AND'd).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: LeaseDuration
+  description: |+
+    Specifies the duration of the lease for clients that match the policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MacAddress
+  description: |+
+    Specifies the comparator to use and the values with which to compare the MAC Address in the client request.
+    The first element is the comparator, EQ or NE, and the subsequent elements are values.
+    If the last character in a value is an asterisk, then the subsequent characters are treated as wildcard characters for the comparison.
+    If the first character in a value-element is an asterisk, the preceding characters are treated as for comparison.
+
+    The values can again be followed by another comparator, EQ or NE, which is followed by another set of values.
+
+    The input format is a hexadecimal string with or without hyphen separation.
+    A trailing wildcard character can be present to indicate partial match.
+    For example: `00-1F-3B-7C-B7-89, 00-1F-3B-7C-B7-*, 001F3B7CB789`.
+    The output format is a hexadecimal string with hyphen separation.
+
+    The values that follow the EQ operator are treated as multiple assertions which are logically combined (OR'd).
+
+    The values that follow the NE operator are treated as multiple assertions which are logically differenced (AND'd).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the policy to be added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: ProcessingOrder
+  description: |+
+    Specifies the order of this policy with regard to other policies in the scope or server.
+    The DHCP server service processes the policies in the specified order when evaluating client requests.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RelayAgent
+  description: |+
+    Specifies the comparator to use and values with which to compare the relay agent information.
+    The first element is the comparator, EQ or NE, and subsequent elements are values.
+    If the last character in a value is an asterisk, then the subsequent characters are treated as wildcard characters for the comparison.
+    If the first character in a value-element is an asterisk, the preceding characters are treated as wildcard characters for comparison.
+
+    The values can again be followed by another comparator, EQ or NE, which is followed by another set of values.
+
+    The input format is a hexadecimal string with or without hyphen separation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemoteId
+  description: |+
+    Specifies the comparator to use and values with which to compare the remote ID sub-option.
+    The first element is the comparator, EQ or NE, followed by a single value.
+    If the last character in a value is an asterisk, then the subsequent characters are treated as wildcard characters for the comparison.
+    If the first character in a value-element is an asterisk, the preceding characters are treated as wildcard characters for comparison.
+
+    The value can again be followed by another comparator, EQ or NE, which is followed by another value.
+
+    The input format for the value is a hexadecimal string with or without hyphen separation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: ScopeId
+  description: |+
+    Specifies the scope identifier, in IPv4 address format, in which the policy is added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SubscriberId
+  description: |+
+    Specifies the comparator to use and the values with which to compare the subscriber ID sub-option.
+    The first element is the comparator, EQ or NE, and followed by a single value.
+    If the last character in a value is an asterisk, then the subsequent characters are treated as wildcard characters for the comparison.
+    If the first character in a value-element is an asterisk, the preceding characters are treated as wildcard characters for comparison.
+
+    The value can again be followed by another comparator, EQ or NE, which is followed by another value.
+
+    The input format is a hexadecimal string with or without hyphen separation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserClass
+  description: |+
+    Specifies the comparator to use and the user class values to compare with the user class field in the client request.
+    The first element to be specified is the comparator, EQ or NE, and the subsequent elements are values.
+    If the last character in a value is an asterisk, then the subsequent characters are treated as wildcard characters for the comparison.
+    If the first character in a value-element is an asterisk, the preceding characters are treated as wildcard characters for comparison.
+
+    The values can again be followed by another comparator, EQ or NE, which is followed by another set of values.
+
+    The values to be specified are the user class names which already exist on the server.
+
+    The values that follow the EQ operator are treated as multiple assertions which are logically combined (OR'd).
+
+    The values that follow the NE operator are treated as multiple assertions which are logically differenced (AND'd).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VendorClass
+  description: |+
+    Specifies the comparator to use and vendor class values to compare with the vendor class field in the client request.
+    The first element is the comparator, EQ or NE, and the subsequent elements are values.
+    If the last character in a value is an asterisk, then the subsequent characters are treated as wildcard characters for the comparison.
+    If the first character in a value-element is an asterisk, the preceding characters are treated as wildcard characters for comparison.
+
+    The values can again be followed by another comparator, EQ or NE, which is followed by another set of values.
+
+    The values to be specified are the vendor class names which already exist on the server.
+
+    The values that follow the EQ operator are treated as multiple assertions which are logically combined (OR'd).
+
+    The values that follow the NE operator are treated as multiple assertions which are logically differenced (AND'd).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Add-DhcpServerv4Policy
+name: Add-DhcpServerv4Policy
+description: |-
+  The **Add-DhcpServerv4Policy** cmdlet adds a new policy either at the server level or at the scope level.
+  The policy name must be unique at the level, either server or specific scope, where the policy is added and should have at least one condition as specified by the *CircuitId*, *ClientId*, *Fqdn*, *MACAddress*, *RelayAgent*, *RemoteId*, *SubscriberId*, *UserClass*, or *VendorClass* parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerv4Policy_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/add-dhcpserverv4policy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DhcpServerv4Policy

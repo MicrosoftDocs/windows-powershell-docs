@@ -1,0 +1,303 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables specific power management features on the network adapter.
+module: NetAdapter
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapterPowerManagementSettingData" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapterPowerManagementSettingData" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Disable-NetAdapterPowerManagement
+  href: ./Disable-NetAdapterPowerManagement.yml
+- text: Get-NetAdapter
+  href: ./Get-NetAdapter.yml
+- text: Get-NetAdapterPowerManagement
+  href: ./Get-NetAdapterPowerManagement.yml
+- text: Set-NetAdapterPowerManagement
+  href: ./Set-NetAdapterPowerManagement.yml
+syntaxes:
+- >-
+  Enable-NetAdapterPowerManagement [-Name] <String[]> [-IncludeHidden] [-ArpOffload] [-D0PacketCoalescing]
+
+   [-DeviceSleepOnDisconnect] [-NSOffload] [-RsnRekeyOffload] [-SelectiveSuspend] [-WakeOnMagicPacket]
+
+   [-WakeOnPattern] [-NoRestart] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Enable-NetAdapterPowerManagement -InterfaceDescription <String[]> [-IncludeHidden] [-ArpOffload]
+
+   [-D0PacketCoalescing] [-DeviceSleepOnDisconnect] [-NSOffload] [-RsnRekeyOffload] [-SelectiveSuspend]
+
+   [-WakeOnMagicPacket] [-WakeOnPattern] [-NoRestart] [-PassThru] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Enable-NetAdapterPowerManagement -InputObject <CimInstance[]> [-ArpOffload] [-D0PacketCoalescing]
+
+   [-DeviceSleepOnDisconnect] [-NSOffload] [-RsnRekeyOffload] [-SelectiveSuspend] [-WakeOnMagicPacket]
+
+   [-WakeOnPattern] [-NoRestart] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable power management on the specified network adapter'
+  code: |-
+    PS C:\> Enable-NetAdapterPowerManagement -Name "Ethernet 1"
+  description: |-
+    This command enables power management on the network adapter named Ethernet 1 and restarts the network adapter.
+  summary: ""
+- title: 'Example 2: Enable power management on the specified network adapter'
+  code: |-
+    The first command gets the network adapter named Ethernet 2 and stores the result in the variable named $NetAdapter2. The second command and enables power management for the network adapter stored in the $NetAdapter variable. 
+    PS C:\> $NetAdapter2 = Get-NetAdapter -Name "Ethernet 2"
+    PS C:\> Enable-NetAdapterPowerManagement -InputObject $NetAdapter2
+
+    This command is a version of the cmdlet that uses the pipeline to select the network adapter named Ethernet 3 and pipes that object into this cmdlet.
+    PS C:\> Get-NetAdapter -Name "Ethernet 3" | Enable-NetAdapterPowerManagement
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ArpOffload
+  description: |+
+    Indicates that the cmdlet manages the address resolution protocol (ARP) offload capability of the network adapter.
+
+    The computer, when in low power mode using the ARP offload technology, is able to offload the responsibility of handling responses for incoming ARP protocol requests.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: D0PacketCoalescing
+  description: |+
+    Indicates that the cmdlet manages the D0 packet coalescing capability of the network adapter.
+
+    This feature enables power saving on the computer by reducing the number of receive interrupts.
+    This reduces the number of receive interrupts by coalescing random broadcast or multicast packets.
+    The processing overhead and power consumption is significantly reduced on the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeviceSleepOnDisconnect
+  description: |+
+    Indicates that the cmdlet manages the device sleep on disconnect capability of the network adapter.
+
+    This feature allows the device to stand-by in a low power mode when media is disconnected and wake when media is connected again.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeHidden
+  description: |+
+    Indicates that the cmdlet includes both visible and hidden network adapters in the operation.
+    By default only visible network adapters are included.
+    If a wildcard character is used in identifying a network adapter and this parameter has been specified, then the wildcard string is matched against both hidden and visible network adapters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceDescription
+  isRequired: true
+  description: |+
+    Specifies an array of network adapter interface descriptions.
+    For a physical network adapter this is typically the name of the vendor of the network adapter followed by a part number and description, such as `Contoso 12345 Gigabit Network Device`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ifDesc, InstanceID
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of network adapter names.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ifAlias, InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRestart
+  description: |+
+    Indicates that the cmdlet does not restart the network adapter after completing the operation.
+    Many advanced properties require restarting the network adapter before the new settings take effect.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NSOffload
+  description: |+
+    Indicates that the cmdlet manages the neighbor solicitation (NS) offload capability of the network adapter.
+
+    The computer, when in low power mode using the NS offload technology, is able to offload the handling of responses for incoming NS protocol requests.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RsnRekeyOffload
+  description: |+
+    Indicates that the cmdlet manages the Wi-Fi robust security network (RSN) rekey offload capability of the network adapter.
+
+    The computer, when it goes into sleep state, is able to offload the group temporal key (GTK) rekeying for wake on wireless LAN (WoWLAN).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SelectiveSuspend
+  description: |+
+    Indicates that the cmdlet manages the selective suspend capability of the network adapter.
+
+    The network drive interface specification (NDIS) selective suspend interface allows NDIS to suspend an idle network adapter by transitioning the adapter to a low-power state.
+    This enables the computer to reduce the power overhead on the processor and network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WakeOnMagicPacket
+  description: |+
+    Indicates that the cmdlet manages the wake on magic packet capability of the network adapter.
+
+    The magic packet is a broadcast frame containing anywhere within its payload 6 bytes of all 255 (FF FF FF FF FF FF in hexadecimal), followed by sixteen repetitions of the 48-bit MAC address of the target computer, for a total of 102 bytes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WakeOnPattern
+  description: |+
+    Indicates that the cmdlet manages the wake on pattern capability of the network adapter.
+    A wake pattern refers to network packet filters that determine if incoming network traffic should wake the computer.
+    These patterns can be enabled on the network adapter.
+
+    The following wake patterns may be supported by a network adapter: 
+
+    - Wake Pattern. 
+    - Wake on new incoming TCP connection for IPv4 and IPv6 including TCP SYN IPv4 and TCP SYN IPv6. 
+    - 802.1x re-authentication packets. 
+    - Bitmapped Patterns: Most network adapters can be programmed with bit-mapped pattern filters.
+    Bitmapped patterns are defined by a bit-map mask and a pattern filter.
+    As a network packet is received, it is masked using the bitmap mask and then compared to the pattern filter.
+    If there is a match, then the network adapter wakes the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetAdapter.Enable-NetAdapterPowerManagement
+name: Enable-NetAdapterPowerManagement
+description: |-
+  The **Enable-NetAdapterPowerManagement** cmdlet enables specific power management features on the network adapter.
+  If no power options are specified, then all supported power management features are enabled.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetAdapterPowerManagement.cmdletDefinition.cdxml-help.xml
+  Module Name: NetAdapter
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/netadapter/enable-netadapterpowermanagement?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-NetAdapterPowerManagement

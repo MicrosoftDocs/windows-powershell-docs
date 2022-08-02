@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the COM ports of a virtual machine or snapshot.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.ComPort" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-VMComPort [-VMName] <String[]> [[-Number] <Int32>] [-ComputerName <String[]>] [<CommonParameters>]
+- Get-VMComPort [-VMSnapshot] <VMSnapshot> [[-Number] <Int32>] [<CommonParameters>]
+- Get-VMComPort [[-Number] <Int32>] [-VM] <VirtualMachine[]> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMComPort TestVM
+  description: |-
+    Gets all COM ports associated with virtual machine TestVM.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VMComPort TestVM -Number 2
+  description: |-
+    Gets the second COM port associated with virtual machine TestVM.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the COM ports of a virtual machine or snapshot are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Number
+  description: |+
+    Specifies the Id (1 or 2) of the COM ports to be retrieved.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine whose COM ports are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine whose COM ports are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSnapshot" data-throw-if-not-resolved="False" />
+  name: VMSnapshot
+  isRequired: true
+  description: |+
+    Specifies the snapshot whose COM ports are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMComPort
+name: Get-VMComPort
+description: |-
+  The **Get-VMComPort** cmdlet gets the COM ports of a virtual machine or snapshot.
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmcomport?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMComPort

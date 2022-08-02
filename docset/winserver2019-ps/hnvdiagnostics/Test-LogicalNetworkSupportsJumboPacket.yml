@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests whether a jumbo packet can be sent between two nodes.
+module: HNVDiagnostics
+notes: ""
+syntaxes:
+- >-
+  Test-LogicalNetworkSupportsJumboPacket [-SourceHost] <String> [-DestinationHost] <String>
+
+   [[-SourceHostCreds] <PSCredential>] [[-DestinationHostCreds] <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Test a jumbo packet'
+  code: |-
+    PS C:\> $cred = Get-Credential
+    Test-LogicalNetworkSupportsJumboPacket -SourceHost "localhost" -SourceHostCreds $cred -DestinationHost "1.1.1.1" -DestinationHostCreds $cred
+  description: |-
+    The first command gets the user's credentials, and then stores them in the $cred variable.
+
+    The second command tests a jumbo packet between the specified source and destination hosts.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationHost
+  isRequired: true
+  description: |+
+    Specifies the destination IP address or fully qualified domain name (FQDN).
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DestinationHostCreds
+  description: |+
+    Specifies the credentials to use on the destination host.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceHost
+  isRequired: true
+  description: |+
+    Specifies the source IP address or FQDN.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: SourceHostCreds
+  description: |+
+    Specifies the credentials to use on the source host.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HNVDiagnostics.Test-LogicalNetworkSupportsJumboPacket
+name: Test-LogicalNetworkSupportsJumboPacket
+description: |-
+  The **Test-LogicalNetworkSupportsJumboPacket** cmdlet tests whether a jumbo packet can be sent between two nodes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Test-LogicalNetworkSupportsJumboPacket-help.xml
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/test-logicalnetworksupportsjumbopacket?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-LogicalNetworkSupportsJumboPacket

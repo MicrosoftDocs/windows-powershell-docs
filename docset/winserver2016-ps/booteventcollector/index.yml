@@ -1,0 +1,49 @@
+### YamlMime:PowershellModule
+children:
+- title: BootEventCollector
+  cmdlets:
+  - BootEventCollector.Checkpoint-SbecActiveConfig
+  - BootEventCollector.Clear-SbecProviderCache
+  - BootEventCollector.Disable-SbecAutologger
+  - BootEventCollector.Disable-SbecBcd
+  - BootEventCollector.Enable-SbecAutologger
+  - BootEventCollector.Enable-SbecBcd
+  - BootEventCollector.Enable-SbecBootImage
+  - BootEventCollector.Enable-SbecWdsBcd
+  - BootEventCollector.Get-SbecActiveConfig
+  - BootEventCollector.Get-SbecBackupConfig
+  - BootEventCollector.Get-SbecDestination
+  - BootEventCollector.Get-SbecForwarding
+  - BootEventCollector.Get-SbecHistory
+  - BootEventCollector.Get-SbecLocalizedMessage
+  - BootEventCollector.Get-SbecLogSession
+  - BootEventCollector.Get-SbecTraceProviders
+  - BootEventCollector.New-SbecUnattendFragment
+  - BootEventCollector.Redo-SbecActiveConfig
+  - BootEventCollector.Restore-SbecBackupConfig
+  - BootEventCollector.Save-SbecInstance
+  - BootEventCollector.Save-SbecLogSession
+  - BootEventCollector.Set-SbecActiveConfig
+  - BootEventCollector.Set-SbecLogSession
+  - BootEventCollector.Start-SbecInstance
+  - BootEventCollector.Start-SbecLogSession
+  - BootEventCollector.Start-SbecNtKernelLogSession
+  - BootEventCollector.Start-SbecSimpleLogSession
+  - BootEventCollector.Stop-SbecInstance
+  - BootEventCollector.Stop-SbecLogSession
+  - BootEventCollector.Test-SbecActiveConfig
+  - BootEventCollector.Test-SbecConfig
+  - BootEventCollector.Undo-SbecActiveConfig
+uid: BootEventCollector
+name: BootEventCollector
+description: |-
+  The Boot Event Collector module contains cmdlets to help you administer Boot Event Collector tasks in Windows Server 2016 Technical Preview.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.0.2
+  Locale: en-US
+  Module Guid: 7e4c6113-1789-4c2d-abaa-bea1ef5c62e8
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  title: BootEventCollector

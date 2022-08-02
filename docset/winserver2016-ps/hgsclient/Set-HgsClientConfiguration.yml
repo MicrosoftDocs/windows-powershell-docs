@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the configuration of a Host Guardian Service client.
+module: HgsClient
+notes: ""
+outputs:
+- name: <xref href="CimInstance#MSFT_HgsClientConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    An HGS client configuration object containing information about the operating mode, configured URLs, and result of the most recent attestation attempt, if applicable.
+links:
+- text: Get-HgsClientConfiguration
+  href: ./Get-HgsClientConfiguration.yml
+syntaxes:
+- Set-HgsClientConfiguration [-EnableLocalMode] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-HgsClientConfiguration -KeyProtectionServerUrl <String> -AttestationServerUrl <String>
+
+   -FallbackKeyProtectionServerUrl <String> -FallbackAttestationServerUrl <String> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-HgsClientConfiguration -KeyProtectionServerUrl <String> -AttestationServerUrl <String> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set an attestation and key protection servers'
+  code: |-
+    PS C:\> Set-HgsClientConfiguration -AttestationServerUrl "https://DemoHgs.Contoso.com/Attestation" -KeyProtectionServerUrl "https://DemoHgs.Contoso.com/KeyProtection"
+  description: |-
+    This command configures the URLs used by the attestation client and the key protection client.
+    Use this command to configure the local host to run in Host Guardian Service mode.
+  summary: ""
+- title: 'Example 2: Change the mode to Local'
+  code: |-
+    PS C:\> Set-HgsClientConfiguration -EnableLocalMode
+  description: |-
+    This command changes the Host Guardian Service client from Host Guardian Service mode to Local mode.
+    This command resets the attestation server URL and the key protection server URL.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AttestationServerUrl
+  isRequired: true
+  description: |+
+    Specifies the URL of an attestation server.
+    A Host Guardian Service client in Secure Hosting Service mode uses the server that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableLocalMode
+  description: |+
+    Indicates that this cmdlet changes the mode of client from Host Guardian Service to Local mode.
+    A change in mode to Local resets the attestation server and key protection server URLs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FallbackAttestationServerUrl
+  isRequired: true
+  description: |+
+    Specifies the URL of an attestation server to use if the primary attestation server cannot be reached.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FallbackKeyProtectionServerUrl
+  isRequired: true
+  description: |+
+    Specifies the URL of a key protection server to use if the primary attestation server cannot be reached.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: KeyProtectionServerUrl
+  isRequired: true
+  description: |+
+    Specifies the URL of a key protection server.
+    A Host Guardian Service client in Secure Hosting Service mode uses the server that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsClient.Set-HgsClientConfiguration
+name: Set-HgsClientConfiguration
+description: |-
+  The **Set-HgsClientConfiguration** cmdlet modifies the configuration of a Host Guardian Service client.
+  You can configure the client in either local mode or Host Guardian Service mode.
+  In local mode, there is no attestation and the client keeps key material.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: HgsClient-help.xml
+  Module Name: HgsClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsclient/set-hgsclientconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-HgsClientConfiguration

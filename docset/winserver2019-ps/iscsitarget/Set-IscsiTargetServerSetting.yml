@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the global settings or common configurations for an iSCSI target virtual disk.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiTargetServerSetting" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-IscsiTargetServerSetting
+  href: ./Set-IscsiTargetServerSetting.yml
+syntaxes:
+- >-
+  Set-IscsiTargetServerSetting [-IP] <String> [-Port <Int32>] [-Enable <Boolean>] [-PassThru]
+
+   [-ComputerName <String>] [-Credential <PSCredential>] [<CommonParameters>]
+- >-
+  Set-IscsiTargetServerSetting -DisableRemoteManagement <Boolean> [-PassThru] [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set target portal port number'
+  code: |-
+    PS C:\> Set-IscsiTargetServerSetting -IP 10.1.1.1 -Port 3200
+  description: |-
+    This example sets the target portal with the IP address 10.1.1.1 to use port number 3200.
+    The default is port number 3260.
+  summary: ""
+- title: 'Example 2: Disable target portal'
+  code: |-
+    PS C:\> Set-IscsiTargetServerSetting -IP 10.1.1.1 -Enable $False
+  description: |-
+    This example disables the target portal with the IP address 10.1.1.1.
+  summary: ""
+- title: 'Example 3: Enable target portal'
+  code: |-
+    PS C:\> Set-IscsiTargetServerSetting -IP 10.1.1.1 -Port 3200 -Enable $True
+  description: |-
+    This example enables the target portal with the IP address 10.1.1.1 and changes the port number to 3200.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DisableRemoteManagement
+  isRequired: true
+  description: |+
+    Indicates whether the computer that runs Microsoft iSCSI Target Server accepts any network-based management requests.
+    If you specify a value of $True, iSCSI Target Server does not accept requests issued by thread tokens that contain a SECURITY_NETWORK_RID.
+
+    You can specify this parameter only as a local user on the computer that runs iSCSI Target Server or on the cluster node that owns the iSCSI Target Server clustered role.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enable
+  description: |+
+    Specifies the portal state as set by the user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IP
+  isRequired: true
+  description: |+
+    Specifies an IP address.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies the port number to which the iSCSI target should listen.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Set-IscsiTargetServerSetting
+name: Set-IscsiTargetServerSetting
+description: |-
+  The **Set-IscsiTargetServerSetting** cmdlet sets the global settings or common configurations for an iSCSI target.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/set-iscsitargetserversetting?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-IscsiTargetServerSetting

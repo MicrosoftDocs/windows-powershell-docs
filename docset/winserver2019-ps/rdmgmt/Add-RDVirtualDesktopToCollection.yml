@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds virtual desktops to a virtual desktop collection.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-RDVirtualDesktopFromCollection
+  href: ./Remove-RDVirtualDesktopFromCollection.yml
+- text: Get-RDVirtualDesktopCollection
+  href: ./Get-RDVirtualDesktopCollection.yml
+syntaxes:
+- >-
+  Add-RDVirtualDesktopToCollection [-CollectionName] <String> -VirtualDesktopAllocation <Hashtable>
+
+   [-VirtualDesktopPasswordAge <Int32>] [-ConnectionBroker <String>] [<CommonParameters>]
+- >-
+  Add-RDVirtualDesktopToCollection [-CollectionName] <String> -VirtualDesktopName <String[]>
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+- >-
+  Add-RDVirtualDesktopToCollection [-CollectionName] <String> -VirtualDesktopAllocation <Hashtable>
+
+   [-VirtualDesktopTemplateName <String>] [-VirtualDesktopTemplateHostServer <String>]
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add virtual desktops to a virtual desktop collection on an RD Connection Broker'
+  code: |-
+    PS C:\> Add-RDVirtualDesktopToCollection -ConnectionBroker "rdcb.contoso.com" -CollectionName "Virtual Desktop Pool" -VirtualDesktopAllocation @{"RDS-WKS-A27.vdi.contoso.com"=1;"RDS-WKS-A28.vdi.contoso.com"=2} -VirtualDesktopPasswordAge 31
+  description: |-
+    This command adds virtual desktops to the managed pooled virtual desktop collection named Virtual Desktop Pool that is associated with the RD Connection Broker server named rdcb.contoso.com.
+    The **VirtualDesktopAllocation** parameter specifies that one virtual desktop is created on the host servers named RDS-WKS-A27.vdi.contoso.com and two virtual desktops are created on the host server named RDS-WKS-A28.vdi.contoso.com.
+    The command specifies that after 31 days the server enforces a password update for the virtual desktops.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a virtual desktop collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopAllocation
+  isRequired: true
+  description: |+
+    Specifies a collection of values (key/value pair) that allocate virtual desktops to Remote Desktop Virtualization (RD Virtualization Host) servers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VirtualDesktopName
+  isRequired: true
+  description: |+
+    Specifies an array of names of a virtual desktops.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopPasswordAge
+  description: |+
+    Specifies the number of days after which the server enforces a password update.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopTemplateHostServer
+  description: |+
+    Specifies the fully qualified domain name (FQDN) of the server where the virtual desktop template associated with the collection is stored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDesktopTemplateName
+  description: |+
+    Specifies a descriptive name for the virtual desktop template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Add-RDVirtualDesktopToCollection
+name: Add-RDVirtualDesktopToCollection
+description: |-
+  The **Add-RDVirtualDesktopToCollection** cmdlet adds one or more virtual desktops to a virtual desktop collection.
+  You can use this cmdlet to add virtual desktops to personal virtual desktop collections, managed pooled virtual desktop collections, and unmanaged pooled virtual desktop collections.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/add-rdvirtualdesktoptocollection?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-RDVirtualDesktopToCollection

@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enlists a diagnostic Resource Manager for a transaction object.
+module: MsDtc
+notes: ""
+links:
+- text: Start-DtcDiagnosticResourceManager
+  href: ./Start-DtcDiagnosticResourceManager.yml
+- text: Stop-DtcDiagnosticResourceManager
+  href: ./Stop-DtcDiagnosticResourceManager.yml
+- text: New-DtcDiagnosticTransaction
+  href: ./New-DtcDiagnosticTransaction.yml
+syntaxes:
+- >-
+  Join-DtcDiagnosticResourceManager [-Transaction] <DtcDiagnosticTransaction> [[-ComputerName] <String>]
+
+   [[-Port] <Int32>] [-Volatile] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enlist a new diagnostic transaction'
+  code: |-
+    PS C:\> $Transaction = New-DtcDiagnosticTransaction
+    PS C:\> Join-DtcDiagnosticResourceManager -Transaction $Transaction
+  description: |-
+    The first command creates a transaction by using the **New-DtcDiagnosticTransaction** cmdlet, and then stores that transaction in the **$Transaction** variable.
+
+    The second command enlists the transaction stored in **$Transaction** to a diagnostic resource manager.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the host name of the computer on which the RM runs.
+    If you do not specify a host name, this cmdlet uses the name of the local computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies the listening port of the test RM.
+    If you do not specify a port number, this cmdlet uses the name of the local computer.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DtcDiagnosticTransaction" data-throw-if-not-resolved="False" />
+  name: Transaction
+  isRequired: true
+  description: |+
+    Specifies the transaction object on which to enlist the RM.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Volatile
+  description: |+
+    Indicates that this cmdlet makes a volatile enlistment.
+    If you do not specify this parameter, the cmdlet makes a durable enlistment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MsDtc.Join-DtcDiagnosticResourceManager
+name: Join-DtcDiagnosticResourceManager
+description: |-
+  The **Join-DtcDiagnosticResourceManager** cmdlet enlists a diagnostic Resource Manager (RM) for a specified transaction object.
+  The transaction first needs to be sent to the RM.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dtc.PowerShell.dll-Help.xml
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/msdtc/join-dtcdiagnosticresourcemanager?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Join-DtcDiagnosticResourceManager

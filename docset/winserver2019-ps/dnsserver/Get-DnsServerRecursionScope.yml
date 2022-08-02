@@ -1,0 +1,114 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the DNS server recursion scopes.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerRecursionScope" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Add-DnsServerRecursionScope
+  href: ./Add-DnsServerRecursionScope.yml
+- text: Remove-DnsServerRecursionScope
+  href: ./Remove-DnsServerRecursionScope.yml
+- text: Set-DnsServerRecursionScope
+  href: ./Set-DnsServerRecursionScope.yml
+syntaxes:
+- >-
+  Get-DnsServerRecursionScope [[-Name] <String>] [-ComputerName <String>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all recursion scopes'
+  code: |-
+    PS C:\> Get-DnsServerRecursionScope
+    Name                                             Forwarder                                        EnableRecursion
+    ----                                             ---------                                        ---------------
+    .                                                                                                 True
+    scopeInternal                                    {10.0.0.1, 172.22.0.1}                           True
+  description: |-
+    This command gets all the recursion scopes on the DNS server.
+    The command gets the default scope, identified as dot (.).
+    The default scope includes the legacy forwarder and recursion settings.
+  summary: ""
+- title: 'Example 2: Get a specific recursion scope'
+  code: |-
+    PS C:\> Get-DnsServerRecursionScope -Name "ScopeInternal"
+    Name                                             Forwarder                                        EnableRecursion
+    ----                                             ---------                                        ---------------
+    ScopeInternal                                    {10.0.0.1, 172.22.0.1}                           True
+  description: |-
+    This command gets the recursion scope named ScopeInternal.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a remote DNS server.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the recursion scope to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Get-DnsServerRecursionScope
+name: Get-DnsServerRecursionScope
+description: |-
+  The **Get-DnsServerRecursionScope** cmdlet gets the Domain Name System (DNS) server recursion scopes.
+  Specify a scope by name to get only that scope.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerRecursionScope_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/get-dnsserverrecursionscope?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DnsServerRecursionScope

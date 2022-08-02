@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the name of a server cluster.
+module: ServerManagerTasks
+notes: ""
+syntaxes:
+- Get-SMServerClusterName [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+examples:
+- title: 'Example 1: Get the server cluster name'
+  code: |-
+    PS C:\>Get-SMServerClusterName
+  description: |-
+    This command gets the server cluster name.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ServerManagerTasks.Get-SMServerClusterName
+name: Get-SMServerClusterName
+description: |-
+  The **Get-SMServerClusterName** cmdlet retrieves the name of a server cluster, if the target server participates in a cluster.
+  A server cluster is a group of computers that work together as a single resource.
+metadata:
+  external help file: SMTasks_Cmdlets.xml
+  Module Name: ServerManagerTasks
+  online version: https://docs.microsoft.com/powershell/module/servermanagertasks/get-smserverclustername?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

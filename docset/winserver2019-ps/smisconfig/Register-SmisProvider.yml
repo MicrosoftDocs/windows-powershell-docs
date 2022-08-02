@@ -1,0 +1,145 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Registers an SMI-S provider and stores the configuration in the SMI-S service.
+module: SMISConfig
+notes: ""
+links:
+- text: ConvertTo-SecureString
+  href: https://go.microsoft.com/fwlink/p/?LinkId=113291
+- text: Search-SmisProvider
+  href: ./Search-SmisProvider.yml
+- text: Unregister-SmisProvider
+  href: ./Unregister-SmisProvider.yml
+syntaxes:
+- >-
+  Register-SmisProvider [-ConnectionUri] <Uri> [-Credential] <PSCredential> [[-AdditionalUsers] <String[]>]
+
+   [[-CimSession] <CimSession>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Register an SMI-S provider'
+  code: |-
+    PS C:\> Register-SmisProvider -ConnectionUri https://smis.contoso.com:5989
+  description: |-
+    This command registers an SMI-S provider by using a URI.
+  summary: ""
+- title: 'Example 2: Register an SMI-S WMI provider in an automated script'
+  code: |-
+    PS C:\> $Password = ConvertTo-SecureString "password" -AsPlainText -Force
+    PS C:\> $Credential = New-Object System.Management.Automation.PSCredential "admin", $Password
+    PS C:\> Register-SmisProvider -ConnectionUri ContosoServer17 -Credential $Credential
+  description: |-
+    This example registers an SMI-S WMI provider.
+
+    The first command converts a string to a secure string and assigns the result to the variable $Password.
+    For more information, type `Get-Help ConvertTo-SecureString`.
+
+    The second command creates a new credential object by using the $Password variable and assigns the result to the variable $Credential.
+
+    The third command registers an SMI-S provider by using the variable $Credential.
+  summary: ""
+- title: 'Example 3: Discover the storage objects managed by a registered provider'
+  code: |-
+    PS C:\> Update-StorageProviderCache -Name "smis.contoso.com" -DiscoveryLevel Level3
+  description: |-
+    This command discovers the managed objects under a registered SMI-S provider.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AdditionalUsers
+  description: |+
+    Specifies an array of other users who can manage the SMI-S provider.
+    The cmdlet stores the credentials, specified by the *Credentials* parameter, for the users that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: Users
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the URI of the SMI-S provider to register.
+    For CIMXML-based providers, the format must include the protocol specifier.
+    The parameter supports HTTPS and HTTP.
+    The port number for such providers should also be specified.
+    You can omit default SMI-S ports, which are 5989 for HTTPS and 5988 for HTTP.
+    The *ConnectionUri* is the server name for SMI-S providers implemented as WMI providers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Uri
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  isRequired: true
+  description: |+
+    Specifies the credentials used to for authentication with the SMI-S provider.
+    The cmdlet stores the credentials for subsequent use.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Creds
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: SMISConfig.Register-SmisProvider
+name: Register-SmisProvider
+description: |-
+  The **Register-SmisProvider** cmdlet registers a Storage Management Initiative - Specification (SMI-S) provider.
+  The cmdlet registers a provider identified by a Uniform Resource Identifier (URI), and stores the configuration and credentials for later use.
+  In order to use a provider, you must register the provider with the SMI-S service.
+
+  When you register the provider, the credentials are stored for your use only.
+  You can also specify other users to manage the registered provider.
+
+  To search for a list of SMI-S providers on the same subnet as your server, use the Search-SmisProvider cmdlet.
+
+  If the provider is using the HTTPS protocol, you may be prompted to accept the certificate if it has not been previously seen by your server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.StorageManagementService.Configuration.Cmdlets.dll-Help.xml
+  Module Name: SMISConfig
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/smisconfig/register-smisprovider?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Register-SmisProvider

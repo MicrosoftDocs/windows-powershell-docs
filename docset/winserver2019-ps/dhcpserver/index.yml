@@ -1,0 +1,139 @@
+### YamlMime:PowershellModule
+children:
+- title: DhcpServer
+  cmdlets:
+  - DhcpServer.Add-DhcpServerInDC
+  - DhcpServer.Add-DhcpServerSecurityGroup
+  - DhcpServer.Add-DhcpServerv4Class
+  - DhcpServer.Add-DhcpServerv4ExclusionRange
+  - DhcpServer.Add-DhcpServerv4Failover
+  - DhcpServer.Add-DhcpServerv4FailoverScope
+  - DhcpServer.Add-DhcpServerv4Filter
+  - DhcpServer.Add-DhcpServerv4Lease
+  - DhcpServer.Add-DhcpServerv4MulticastExclusionRange
+  - DhcpServer.Add-DhcpServerv4MulticastScope
+  - DhcpServer.Add-DhcpServerv4OptionDefinition
+  - DhcpServer.Add-DhcpServerv4Policy
+  - DhcpServer.Add-DhcpServerv4PolicyIPRange
+  - DhcpServer.Add-DhcpServerv4Reservation
+  - DhcpServer.Add-DhcpServerv4Scope
+  - DhcpServer.Add-DhcpServerv4Superscope
+  - DhcpServer.Add-DhcpServerv6Class
+  - DhcpServer.Add-DhcpServerv6ExclusionRange
+  - DhcpServer.Add-DhcpServerv6Lease
+  - DhcpServer.Add-DhcpServerv6OptionDefinition
+  - DhcpServer.Add-DhcpServerv6Reservation
+  - DhcpServer.Add-DhcpServerv6Scope
+  - DhcpServer.Backup-DhcpServer
+  - DhcpServer.Export-DhcpServer
+  - DhcpServer.Get-DhcpServerAuditLog
+  - DhcpServer.Get-DhcpServerDatabase
+  - DhcpServer.Get-DhcpServerDnsCredential
+  - DhcpServer.Get-DhcpServerInDC
+  - DhcpServer.Get-DhcpServerSetting
+  - DhcpServer.Get-DhcpServerv4Binding
+  - DhcpServer.Get-DhcpServerv4Class
+  - DhcpServer.Get-DhcpServerv4DnsSetting
+  - DhcpServer.Get-DhcpServerv4ExclusionRange
+  - DhcpServer.Get-DhcpServerv4Failover
+  - DhcpServer.Get-DhcpServerv4Filter
+  - DhcpServer.Get-DhcpServerv4FilterList
+  - DhcpServer.Get-DhcpServerv4FreeIPAddress
+  - DhcpServer.Get-DhcpServerv4Lease
+  - DhcpServer.Get-DhcpServerv4MulticastExclusionRange
+  - DhcpServer.Get-DhcpServerv4MulticastLease
+  - DhcpServer.Get-DhcpServerv4MulticastScope
+  - DhcpServer.Get-DhcpServerv4MulticastScopeStatistics
+  - DhcpServer.Get-DhcpServerv4OptionDefinition
+  - DhcpServer.Get-DhcpServerv4OptionValue
+  - DhcpServer.Get-DhcpServerv4Policy
+  - DhcpServer.Get-DhcpServerv4PolicyIPRange
+  - DhcpServer.Get-DhcpServerv4Reservation
+  - DhcpServer.Get-DhcpServerv4Scope
+  - DhcpServer.Get-DhcpServerv4ScopeStatistics
+  - DhcpServer.Get-DhcpServerv4Statistics
+  - DhcpServer.Get-DhcpServerv4Superscope
+  - DhcpServer.Get-DhcpServerv4SuperscopeStatistics
+  - DhcpServer.Get-DhcpServerv6Binding
+  - DhcpServer.Get-DhcpServerv6Class
+  - DhcpServer.Get-DhcpServerv6DnsSetting
+  - DhcpServer.Get-DhcpServerv6ExclusionRange
+  - DhcpServer.Get-DhcpServerv6FreeIPAddress
+  - DhcpServer.Get-DhcpServerv6Lease
+  - DhcpServer.Get-DhcpServerv6OptionDefinition
+  - DhcpServer.Get-DhcpServerv6OptionValue
+  - DhcpServer.Get-DhcpServerv6Reservation
+  - DhcpServer.Get-DhcpServerv6Scope
+  - DhcpServer.Get-DhcpServerv6ScopeStatistics
+  - DhcpServer.Get-DhcpServerv6StatelessStatistics
+  - DhcpServer.Get-DhcpServerv6StatelessStore
+  - DhcpServer.Get-DhcpServerv6Statistics
+  - DhcpServer.Get-DhcpServerVersion
+  - DhcpServer.Import-DhcpServer
+  - DhcpServer.Invoke-DhcpServerv4FailoverReplication
+  - DhcpServer.Remove-DhcpServerDnsCredential
+  - DhcpServer.Remove-DhcpServerInDC
+  - DhcpServer.Remove-DhcpServerv4Class
+  - DhcpServer.Remove-DhcpServerv4ExclusionRange
+  - DhcpServer.Remove-DhcpServerv4Failover
+  - DhcpServer.Remove-DhcpServerv4FailoverScope
+  - DhcpServer.Remove-DhcpServerv4Filter
+  - DhcpServer.Remove-DhcpServerv4Lease
+  - DhcpServer.Remove-DhcpServerv4MulticastExclusionRange
+  - DhcpServer.Remove-DhcpServerv4MulticastLease
+  - DhcpServer.Remove-DhcpServerv4MulticastScope
+  - DhcpServer.Remove-DhcpServerv4OptionDefinition
+  - DhcpServer.Remove-DhcpServerv4OptionValue
+  - DhcpServer.Remove-DhcpServerv4Policy
+  - DhcpServer.Remove-DhcpServerv4PolicyIPRange
+  - DhcpServer.Remove-DhcpServerv4Reservation
+  - DhcpServer.Remove-DhcpServerv4Scope
+  - DhcpServer.Remove-DhcpServerv4Superscope
+  - DhcpServer.Remove-DhcpServerv6Class
+  - DhcpServer.Remove-DhcpServerv6ExclusionRange
+  - DhcpServer.Remove-DhcpServerv6Lease
+  - DhcpServer.Remove-DhcpServerv6OptionDefinition
+  - DhcpServer.Remove-DhcpServerv6OptionValue
+  - DhcpServer.Remove-DhcpServerv6Reservation
+  - DhcpServer.Remove-DhcpServerv6Scope
+  - DhcpServer.Rename-DhcpServerv4Superscope
+  - DhcpServer.Repair-DhcpServerv4IPRecord
+  - DhcpServer.Restore-DhcpServer
+  - DhcpServer.Set-DhcpServerAuditLog
+  - DhcpServer.Set-DhcpServerDatabase
+  - DhcpServer.Set-DhcpServerDnsCredential
+  - DhcpServer.Set-DhcpServerSetting
+  - DhcpServer.Set-DhcpServerv4Binding
+  - DhcpServer.Set-DhcpServerv4Class
+  - DhcpServer.Set-DhcpServerv4DnsSetting
+  - DhcpServer.Set-DhcpServerv4Failover
+  - DhcpServer.Set-DhcpServerv4FilterList
+  - DhcpServer.Set-DhcpServerv4MulticastScope
+  - DhcpServer.Set-DhcpServerv4OptionDefinition
+  - DhcpServer.Set-DhcpServerv4OptionValue
+  - DhcpServer.Set-DhcpServerv4Policy
+  - DhcpServer.Set-DhcpServerv4Reservation
+  - DhcpServer.Set-DhcpServerv4Scope
+  - DhcpServer.Set-DhcpServerv6Binding
+  - DhcpServer.Set-DhcpServerv6Class
+  - DhcpServer.Set-DhcpServerv6DnsSetting
+  - DhcpServer.Set-DhcpServerv6OptionDefinition
+  - DhcpServer.Set-DhcpServerv6OptionValue
+  - DhcpServer.Set-DhcpServerv6Reservation
+  - DhcpServer.Set-DhcpServerv6Scope
+  - DhcpServer.Set-DhcpServerv6StatelessStore
+uid: DhcpServer
+name: DhcpServer
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Dynamic Host Configuration Protocol (DHCP) server service-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet. 
+
+  Also see [DHCP Classes](https://go.microsoft.com/FWLink/p/?LinkId=260590).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 90eaa9df-133a-450c-8728-91055cd946a1
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  title: DhcpServer

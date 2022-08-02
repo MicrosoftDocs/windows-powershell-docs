@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Grants the Remote Desktop Connection Broker server access to one or more organizational units in a given domain of Active Directory Domain Services.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Test-RDOUAccess
+  href: ./Test-RDOUAccess.yml
+syntaxes:
+- Grant-RDOUAccess [[-Domain] <String>] [-OU] <String> [[-ConnectionBroker] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Grant the RD Connection Broker access to the Computers OU'
+  code: |-
+    PS C:\> Grant-RDOUAccess -ConnectionBroker "Rdcb.Contoso.com" -OU "Computers"
+  description: |-
+    This command grants the RD Connection Broker server named Rdcb.Contoso.com access to the OU named Computers.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies an RD Connection Broker server for a remote desktop deployment.
+    If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Specifies an Active Directory (AD) domain to which to grant access.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OU
+  isRequired: true
+  description: |+
+    Specifies one or more OUs to which to grant access.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Grant-RDOUAccess
+name: Grant-RDOUAccess
+description: |-
+  The **Grant-RDOUAccess** cmdlet grants the Remote Desktop Connection Broker (RD Connection Broker) server access to one or more organizational units (OUs) in a given domain of Active Directory Domain Services (AD DS).
+
+  The RD Connection Broker must have Read access to an OU to query user account information.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/grant-rdouaccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Grant-RDOUAccess

@@ -1,0 +1,153 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables the Compliance and Audit and Recovery databases.
+module: MBAM
+notes: ""
+links:
+- text: Enable-MbamReport
+  href: enable-mbamreport.yml
+- text: Enable-MbamWebApplication
+  href: enable-mbamwebapplication.yml
+- text: Test-MbamDatabase
+  href: test-mbamdatabase.yml
+syntaxes:
+- >-
+  Enable-MbamDatabase [-SkipValidation] -ConnectionString <String> [-DatabaseName <String>]
+
+   -AccessAccount <String> -ReportAccount <String> [-ComplianceAndAudit] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Enable-MbamDatabase [-SkipValidation] -ConnectionString <String> [-DatabaseName <String>]
+
+   -AccessAccount <String> [-Recovery] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable the Compliance and Audit Database'
+  code: |-
+    PS C:\> Enable-MbamDatabase -ComplianceAndAudit -ConnectionString "Integrated Security=SSPI;Data Source=MyDatabaseServer" -AccessAccount "MyDomain\MyAccessAccount" -ReportAccount "MyDomain\MyReportAccount" -DatabaseName "MyComplianceDatabaseName"
+  description: |-
+    This command enables the Compliance and Audit Database on MyDatabaseServer.
+    The name of the database is MyComplianceDatabaseName.
+    The domain account MyAccessAccount has read and write permission to the database, and MyReportAccount has read-only permission to the database for reporting purposes.
+    The current Windows account credentials are used for authentication.
+  summary: ""
+- title: 'Example 2: Enable the Recovery Database'
+  code: |-
+    PS C:\> Enable-MbamDatabase -Recovery -ConnectionString "Integrated Security=SSPI;Data Source=MyDatabaseServer" -AccessAccount "MyDomain\MyAccessAccount" -DatabaseName "MyRecoveryDatabaseName"
+  description: |-
+    This command enables the Recovery database on MyRecoveryDatabaseServer.
+    The name of the database is MyRecoveryDatabaseName.
+    The domain account MyAccessAccount has read/write permission to the database.
+    The command uses the current Windows account credentials for authentication.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessAccount
+  isRequired: true
+  description: |+
+    Specifies a domain user or group.
+    This domain user or group has read and write permission to this database, which enables web applications to access the data and reports.
+    If the value is a domain user, the *WebServiceApplicationPoolCredential* parameter in the **Enable-MbamWebApplication** cmdlet must use the same user account.
+    If the value is a group, the domain account used by the *WebServiceApplicationPoolCredential* parameter must be a member of this group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ComplianceAndAudit
+  isRequired: true
+  description: |+
+    Indicates that the Compliance and Audit Database is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionString
+  isRequired: true
+  description: |+
+    Specifies the connection string used to connect to the data store.
+    The Integrated Security field must be in the connection string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  description: |+
+    Specifies the name of the database.
+    This parameter cannot contain leading or trailing spaces or non-printable characters.
+    If you do not specify a name, the Compliance and Audit Database is given the name MBAM Compliance Status, and the Recovery database is given the name MBAM Recovery and Hardware.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recovery
+  isRequired: true
+  description: |+
+    Indicates that the Recovery Database is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportAccount
+  isRequired: true
+  description: |+
+    Specifies a domain user or group.
+    This domain user or group has read-only permission to this database, which enables reports to access the compliance and audit data.
+    If the value is a domain user, the *ComplianceAndAuditDBCredential* parameter in the **Enable-MbamReport** cmdlet must use the same user account.
+    If the value is a domain user group, the domain account used by the *ComplianceAndAuditDBCredential* parameter must be a member of this group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipValidation
+  description: |+
+    Indicates that this cmdlet bypasses validation of parameter values.
+    If you specify this parameter, the feature may not function properly after you enable it.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MBAM.Enable-MbamDatabase
+name: Enable-MbamDatabase
+description: |-
+  The **Enable-MbamDatabase** cmdlet enables a Compliance and Audit or a Recovery Database.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Enable-MbamDatabase

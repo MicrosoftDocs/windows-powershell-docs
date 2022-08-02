@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops a scheduled task from running the next scheduled backup.
+module: WssCmdlets
+notes: ""
+links:
+- text: Disable-WssBackupPolicy
+  href: ./Disable-WssBackupPolicy.yml
+- text: Get-WssBackupPolicy
+  href: ./Get-WssBackupPolicy.yml
+- text: Resume-WssBackupPolicy
+  href: ./Resume-WssBackupPolicy.yml
+- text: Set-WssBackupPolicy
+  href: ./Set-WssBackupPolicy.yml
+syntaxes:
+- Suspend-WssBackupPolicy [-BackupPolicy] <ScheduledBackupPolicy> [-Force] [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Suspend a backup policy'
+  code: |-
+    PS C:\>$ContosoBUPolicy25 = Get-WBPolicy PS C:\>Suspend-WssBackupPolicy -BackupPolicy $ContosoBUPolicy25
+  description: |-
+    This example suspends a backup policy.
+
+    The first command gets the backup policy for the computer and stores it in the variable named $ContosoBUPolicy25.
+
+    The second command suspends the backup policy that is stored in $ContosoBUPolicy25.
+  summary: ""
+parameters:
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies the scheduled backup policy to suspend.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Suspend-WssBackupPolicy
+name: Suspend-WssBackupPolicy
+description: |-
+  The **Suspend-WssBackupPolicy** cmdlet stops a scheduled task from running the next scheduled backup.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/suspend-wssbackuppolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

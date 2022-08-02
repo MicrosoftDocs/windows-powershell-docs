@@ -1,0 +1,408 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new scheduled task settings object.
+module: ScheduledTasks
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_TaskSettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Enable-ScheduledTask
+  href: ./Enable-ScheduledTask.yml
+- text: Get-ScheduledTask
+  href: ./Get-ScheduledTask.yml
+- text: Get-ScheduledTaskInfo
+  href: ./Get-ScheduledTaskInfo.yml
+- text: New-ScheduledTask
+  href: ./New-ScheduledTask.yml
+- text: Register-ScheduledTask
+  href: ./Register-ScheduledTask.yml
+- text: Start-ScheduledTask
+  href: ./Start-ScheduledTask.yml
+- text: Unregister-ScheduledTask
+  href: ./Unregister-ScheduledTask.yml
+syntaxes:
+- >-
+  New-ScheduledTaskSettingsSet [-DisallowDemandStart] [-DisallowHardTerminate]
+
+   [-Compatibility <CompatibilityEnum>] [-DeleteExpiredTaskAfter <TimeSpan>] [-AllowStartIfOnBatteries]
+
+   [-Disable] [-MaintenanceExclusive] [-Hidden] [-RunOnlyIfIdle] [-IdleWaitTimeout <TimeSpan>]
+
+   [-NetworkId <String>] [-NetworkName <String>] [-DisallowStartOnRemoteAppSession]
+
+   [-MaintenancePeriod <TimeSpan>] [-MaintenanceDeadline <TimeSpan>] [-StartWhenAvailable]
+
+   [-DontStopIfGoingOnBatteries] [-WakeToRun] [-IdleDuration <TimeSpan>] [-RestartOnIdle] [-DontStopOnIdleEnd]
+
+   [-ExecutionTimeLimit <TimeSpan>] [-MultipleInstances <MultipleInstancesEnum>] [-Priority <Int32>]
+
+   [-RestartCount <Int32>] [-RestartInterval <TimeSpan>] [-RunOnlyIfNetworkAvailable]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Register a scheduled task that uses default task settings'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+
+    PS C:\>$STSet = New-ScheduledTaskSettingsSet
+
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $STSet
+  description: "The first command creates a scheduled task action named Cmd and assigns the ScheduledTaskAction object to the $Sta variable.\r\n \r\nThe second command creates scheduled task settings that use the default settings and assigns the **ScheduledTaskSettings** object to the $Stset variable.\r\n\r\nThe third command registers the scheduled task Task01 to run the task action named Cmd and to use the default task settings.\r\n\r\nThis example registers a scheduled task that uses default task settings.\r\n\r\nThe first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the $Sta variable."
+  summary: ""
+- title: 'Example 2: Set the priority of a scheduled task'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+
+    PS C:\>$STSet = New-ScheduledTaskSettingsSet -Priority 5
+
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
+  description: "The first command creates a scheduled task action named Cmd and assigns the ScheduledTaskAction object to the $Sta variable.\r\n \r\nThe second command creates scheduled task settings that sets a higher priority for the scheduled task, and assigns the **ScheduledTaskSettings** object to the $Stset variable.\r\n\r\nThe third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that have a priority setting of 9.\r\n\r\nThis example sets the priority of a scheduled task.\r\n\r\nThe first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the $Sta variable."
+  summary: ""
+- title: 'Example 3: Set restart settings for a scheduled task'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+
+    PS C:\>$Stset = New-ScheduledTaskSettingsSet -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 60)
+
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
+  description: "The first command creates a scheduled task action named Cmd and assigns the ScheduledTaskAction object to the $Sta variable.\r\n \r\nThe second command creates scheduled task settings that specify that Task Scheduler attempts three restarts of the task at sixty minute intervals. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.\r\n\r\nThe third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that the **ScheduledTaskSettings** object defines.\r\n\r\nThis example sets restart settings for a scheduled task.\r\n\r\nThe first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the $Sta variable."
+  summary: ""
+- title: 'Example 4: Set idle settings for a scheduled task'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+
+    PS C:\>$Stset = New-ScheduledTaskSettingsSet -RunOnlyIfIdle -IdleDuration 00:02:00 -IdleWaitTimeout 02:30:00
+
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
+  description: "The first command creates a scheduled task action named Cmd and assigns the ScheduledTaskAction object to the $Sta variable.\r\n \r\nThe second command creates scheduled task settings that specify that Task Scheduler runs the task only when the computer is idle for 2 minutes and waits for 2 hours and 30 minutes for an idle condition. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.\r\n\r\nThe third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that the **ScheduledTaskSettings** object defines.\r\n\r\nThis example sets idle settings for a scheduled task.\r\n\r\nThe first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the $Sta variable."
+  summary: ""
+- title: 'Example 5: Register a scheduled task that runs only when a network is available'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+
+    PS C:\>$Stset = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable
+
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
+  description: "The first command creates a scheduled task action named Cmd and assigns the ScheduledTaskAction object to the $Sta variable.\r\n \r\nThe second command creates scheduled task settings that specify that Task Scheduler runs the task only when a network is available. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.\r\n\r\nThe third command registers the scheduled task Task01 to run the task action named Cmd only when a network is available.\r\n\r\nThis example registers a scheduled task that runs only when a network is available."
+  summary: ""
+- title: 'Example 6: Register a scheduled task that has a time limit to complete the task'
+  code: |-
+    PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+
+    $Stset = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Hours 1)
+
+    PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
+  description: "The first command creates a scheduled task action named Cmd and assigns the ScheduledTaskAction object to the $Sta variable.\r\n \r\nThe second command creates scheduled task settings that specify if the task is not finished after one hour, it is considered as failed. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.\r\n\r\nThe third command registers the scheduled task Task01 to run the task action named Cmd, only then finish the task after one hour.\r\n\r\nWithout the ExecutionTimeLimit setting defined, the time limit set to it's default of three days for the Task Scheduler is allowed to complete the task. To configure the time limit, see [New-TimeSpan](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan)."
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowStartIfOnBatteries
+  description: |+
+    Indicates that Task Scheduler starts if the computer is running on battery power.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CompatibilityEnum" data-throw-if-not-resolved="False" />
+  name: Compatibility
+  description: |+
+    Indicates which version of Task Scheduler with which a task is compatible.
+    The acceptable values for this parameter are:
+
+    - At
+    - V1
+    - Vista
+    - Win7
+    - Win8
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: At, V1, Vista, Win7, Win8
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: DeleteExpiredTaskAfter
+  description: |+
+    Specifies the amount of time that Task Scheduler waits before deleting the task after it expires.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disable
+  description: |+
+    Indicates that the task is disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisallowDemandStart
+  description: |+
+    Indicates that the task cannot be started by using either the Run command or the Context menu.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisallowHardTerminate
+  description: |+
+    Indicates that the task cannot be terminated by using TerminateProcess.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisallowStartOnRemoteAppSession
+  description: |+
+    Indicates that the task does not start if the task is triggered to run in a Remote Applications Integrated Locally (RAIL) session.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DontStopIfGoingOnBatteries
+  description: |+
+    Indicates that the task does not stop if the computer switches to battery power.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DontStopOnIdleEnd
+  description: |+
+    Indicates that Task Scheduler does not terminate the task if the idle condition ends before the task is completed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: ExecutionTimeLimit
+  description: |+
+    Specifies the amount of time that Task Scheduler is allowed to complete the task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Hidden
+  description: |+
+    Indicates that the task is hidden in the Task Scheduler UI.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: IdleDuration
+  description: |+
+    Specifies the amount of time that the computer must be in an idle state before Task Scheduler runs the task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: IdleWaitTimeout
+  description: |+
+    Specifies the amount of time that Task Scheduler waits for an idle condition to occur.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: MaintenanceDeadline
+  description: |+
+    Specifies the amount of time after which Task Scheduler attempts to run the task during emergency Automatic maintenance, if the task failed to complete during regular Automatic maintenance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MaintenanceExclusive
+  description: |+
+    Indicates that the task needs to run alone when it is started in maintenance mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: MaintenancePeriod
+  description: |+
+    Specifies the amount of time that the task needs to run once during regular Automatic maintenance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="MultipleInstancesEnum" data-throw-if-not-resolved="False" />
+  name: MultipleInstances
+  description: |+
+    Specifies the policy that defines how Task Scheduler handles multiple instances of the task. The acceptable values for this parameter are:
+
+    IgnoreNew. The new task instance is ignored.
+    Parallel. The new task instance starts immediately.
+    Queue. The new task instance starts as soon as the current instance completes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Parallel, Queue, IgnoreNew
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkId
+  description: |+
+    Specifies the ID of a network profile that Task Scheduler uses to determine if the task can run.
+    You must specify the ID of a network if you specify the *RunOnlyIfNetworkAvailable* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkName
+  description: |+
+    Specifies the name of a network profile that Task Scheduler uses to determine if the task can run.
+    The Task Scheduler UI uses this setting for display purposes.
+    Specify a network name if you specify the *RunOnlyIfNetworkAvailable* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Priority
+  description: |+
+    Specifies the priority level of the task.
+    Priority must be an integer from 0 (highest priority) to 10 (lowest priority).
+    The default value is 7.
+
+    Priority levels 7 and 8 are used for background tasks.
+    Priority levels 4, 5, and 6 are used for interactive tasks.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RestartCount
+  description: |+
+    Specifies the number of times that Task Scheduler attempts to restart the task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: RestartInterval
+  description: |+
+    Specifies the amount of time that Task Scheduler attempts to restart the task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RestartOnIdle
+  description: |+
+    Indicates that Task Scheduler restarts the task when the computer cycles into an idle condition more than once.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RunOnlyIfIdle
+  description: |+
+    Indicates that Task Scheduler runs the task only when the computer is idle.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RunOnlyIfNetworkAvailable
+  description: |+
+    Indicates that Task Scheduler runs the task only when a network is available.
+    Task Scheduler uses the *NetworkID* parameter and *NetworkName* parameter that you specify in this cmdlet to determine if the network is available.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: StartWhenAvailable
+  description: |+
+    Indicates that Task Scheduler can start the task at any time after its scheduled time has passed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WakeToRun
+  description: |+
+    Indicates that Task Scheduler wakes the computer before it runs the task.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ScheduledTasks.New-ScheduledTaskSettingsSet
+name: New-ScheduledTaskSettingsSet
+description: |-
+  The **New-ScheduledTaskSettingsSet** cmdlet creates an object that contains scheduled task settings.
+  Each scheduled task has one set of task settings.
+  Use this cmdlet to configure options to manage the behavior of the task upon completion, to manage the behavior of the task if a problem occurs, or to manage the behavior of the task if an instance of the task is already running.
+
+  You can use the scheduled task settings to register a new scheduled task or update an existing task registration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
+  Module Name: ScheduledTasks
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/scheduledtasks/new-scheduledtasksettingsset?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-ScheduledTaskSettingsSet

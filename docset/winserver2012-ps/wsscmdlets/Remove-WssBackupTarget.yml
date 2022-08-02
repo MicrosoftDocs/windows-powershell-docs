@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a backup target from a scheduled backup policy.
+module: WssCmdlets
+notes: ""
+links:
+- text: Add-WssBackupTarget
+  href: ./Add-WssBackupTarget.yml
+- text: Get-WssBackupTarget
+  href: ./Get-WssBackupTarget.yml
+- text: New-WssBackupTarget
+  href: ./New-WssBackupTarget.yml
+syntaxes:
+- Remove-WssBackupTarget [-BackupPolicy] <ScheduledBackupPolicy> [-BackupTarget] <BackupTarget>
+examples:
+- title: 'Example 1: Remove a backup target from a policy'
+  code: |-
+    PS C:\>$ContosoBUPolicies10 = Get-WSSBackupPolicy PS C:\>$ContosoBUTarget = Get-WssBackupTarget -BackupPolicy $ContosoBUPolicies10[9] PS C:\>Remove-WssBackupTarget -BackupPolicy $ContosoBUPolicy10[9] -BackupTarget $ContosoBUTarget
+  description: |-
+    This example removes a backup target from a backup policy.
+
+    The first command gets the current backup policies and stores them in the variable named **$ContosoBUPolicies10**.
+
+    The second command gets the backup target for the tenth policy in the **$ContosoBUPolicies10** array, and then stores the backup target in the variable named **$ContosoBUTarget**.
+
+    The third command removes the backup target that is stored in **$ContosoBUTarget** from the policy stored in **$ContosoBUPolicies10\[9\]**.
+  summary: ""
+parameters:
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies the scheduled backup policy from which to remove the backup target.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="BackupTarget" data-throw-if-not-resolved="False" />
+  name: BackupTarget
+  isRequired: true
+  description: |+
+    Specifies the name of the backup target to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Remove-WssBackupTarget
+name: Remove-WssBackupTarget
+description: |-
+  The **Remove-WssBackupTarget** cmdlet removes a backup target from a scheduled backup policy.
+  A scheduled backup policy is a backup file specification that has a backup schedule associated with it.
+  If you remove a backup target from a scheduled backup policy, backups that use the policy no longer back up the files and volumes that the target specifies.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/remove-wssbackuptarget?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

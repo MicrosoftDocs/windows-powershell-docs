@@ -1,0 +1,153 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies properties of an App-V Publishing Server.
+module: AppvClient
+notes: ""
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvPublishingServer" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.AppvAgent.AppvPublishingServer" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvPublishingServer
+  href: ./Add-AppvPublishingServer.yml
+- text: Get-AppvPublishingServer
+  href: ./Get-AppvPublishingServer.yml
+- text: Remove-AppvPublishingServer
+  href: ./Remove-AppvPublishingServer.yml
+- text: Sync-AppvPublishingServer
+  href: ./Sync-AppvPublishingServer.yml
+syntaxes:
+- >-
+  Set-AppvPublishingServer [-ServerId] <UInt32> [[-GlobalRefreshEnabled] <Boolean>]
+
+   [[-GlobalRefreshOnLogon] <Boolean>] [[-GlobalRefreshInterval] <UInt32>]
+
+   [[-GlobalRefreshIntervalUnit] <IntervalUnit>] [[-UserRefreshEnabled] <Boolean>]
+
+   [[-UserRefreshOnLogon] <Boolean>] [[-UserRefreshInterval] <UInt32>]
+
+   [[-UserRefreshIntervalUnit] <IntervalUnit>] [<CommonParameters>]
+- >-
+  Set-AppvPublishingServer [-Server] <AppvPublishingServer> [[-GlobalRefreshEnabled] <Boolean>]
+
+   [[-GlobalRefreshOnLogon] <Boolean>] [[-GlobalRefreshInterval] <UInt32>]
+
+   [[-GlobalRefreshIntervalUnit] <IntervalUnit>] [[-UserRefreshEnabled] <Boolean>]
+
+   [[-UserRefreshOnLogon] <Boolean>] [[-UserRefreshInterval] <UInt32>]
+
+   [[-UserRefreshIntervalUnit] <IntervalUnit>] [<CommonParameters>]
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: GlobalRefreshEnabled
+  description: |+
+    Specifies whether the server does automatic syncs with the publishing server for all globally published packages.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: GlobalRefreshInterval
+  description: |+
+    Specifies a time span that represents the period where refreshes occur for packages published globally.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IntervalUnit" data-throw-if-not-resolved="False" />
+  name: GlobalRefreshIntervalUnit
+  description: |+
+    Specifies the unit of time measurement.
+    The acceptable values for this parameter are: day and hour.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: Hour, Day
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: GlobalRefreshOnLogon
+  description: |+
+    Specifies whether a refresh occurs for all package published globally every time that a user logs into the target computer.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppvPublishingServer" data-throw-if-not-resolved="False" />
+  name: Server
+  isRequired: true
+  description: |+
+    Specifies an **AppvPublishingServer** object.
+    To obtain an **AppvPublishingServer** object, use the **Get-AppvPublishingServer** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ServerId
+  isRequired: true
+  description: |+
+    Specifies the identifier for the App-V Publishing Server.
+    This can be queried using the **Get-AppvPublishingServer** cmdlet.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UserRefreshEnabled
+  description: |+
+    Specifies whether user refresh is enabled.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: UserRefreshInterval
+  description: |+
+    Specifies the identifier for the App-V Publishing Server.
+    This can be queried using the **Get-AppvPublishingServer** cmdlet.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IntervalUnit" data-throw-if-not-resolved="False" />
+  name: UserRefreshIntervalUnit
+  description: |+
+    Specifies the unit of time measurement.
+    The acceptable values for this parameter are: day and hour.
+
+  defaultValue: None
+  position: "8"
+  aliases: ""
+  parameterValueGroup: Hour, Day
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UserRefreshOnLogon
+  description: |+
+    Specifies whether a refresh occurs every time that a user logs into the computer.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Set-AppvPublishingServer
+name: Set-AppvPublishingServer
+description: |-
+  The **Set-AppvPublishingServer** cmdlet modifies properties of an already existing Microsoft Application Virtualization (App-V) Publishing Server.
+  To obtain an App-V Publishing Server object, use the **Get-AppvPublishingServer** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/set-appvpublishingserver?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AppvPublishingServer

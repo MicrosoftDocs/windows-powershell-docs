@@ -1,0 +1,34 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Fetches the mapping of diagnostic data type identifiers to their corresponding descriptions.
+module: Microsoft.DiagnosticDataViewer
+notes: |-
+  Requires Windows 10 version 17134 (1803) or higher
+outputs:
+- name: <xref href="DDVCmdlets.Containers.DiagnosticDataType" data-throw-if-not-resolved="False" />
+  description: |-
+    Diagnostic data type information.
+links:
+- text: About Windows Diagnostic Data
+  href: https://docs.microsoft.com/en-us/windows/privacy/windows-diagnostic-data
+syntaxes:
+- Get-DiagnosticDataTypes [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-DiagnosticDataTypes
+  description: |-
+    Fetches Windows Diagnostic Data diagnostic data types.
+  summary: ""
+uid: Microsoft.DiagnosticDataViewer.Get-DiagnosticDataTypes
+name: Get-DiagnosticDataTypes
+description: |-
+  This cmdlet shows the mapping between diagnostic data type identifiers to their official descriptions.
+  Each diagnostic data event is grouped into a Data Type based on how Microsoft uses the data.
+  It may take some time for descriptions to be loaded.
+metadata:
+  external help file: DDVCmdlets.dll-Help.xml
+  Module Name: Microsoft.DiagnosticDataViewer
+  online version: https://docs.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/get-diagnosticdatatypes?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DiagnosticDataTypes

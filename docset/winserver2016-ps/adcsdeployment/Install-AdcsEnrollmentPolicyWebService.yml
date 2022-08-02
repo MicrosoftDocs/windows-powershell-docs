@@ -1,0 +1,144 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Performs the configuration of Certificate Enrollment Policy Web service.
+module: ADCSDeployment
+notes: |-
+  * Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.
+
+    To see parameters, run the following command: `Install-AdcsEnrollmentPolicyWebService -?`
+
+  * You can get the CA configuration, which is the computer name and CA name by running certutil without any parameters. You can see the certificate SSL certificate thumbprints assigned to the local computer by running the following commands:
+   - `cd cert:\LocalMachine\My`
+   - `dir | format-list`
+inputs:
+- name: <xref href="enum, string, bool, PSCredential" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Deployment.Commands.CEP.EnrollmentPolicyServiceResult" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Uninstall-AdcsEnrollmentPolicyWebService
+  href: ./Uninstall-AdcsEnrollmentPolicyWebService.yml
+syntaxes:
+- >-
+  Install-AdcsEnrollmentPolicyWebService [-AuthenticationType <AuthenticationType>] [-SSLCertThumbprint <String>]
+
+   [-KeyBasedRenewal] [-Force] [-Credential <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Install the Certificate Enrollment Policy Web Service using Kerberos'
+  code: |-
+    PS C:\> Install-AdcsEnrollmentPolicyWebService -AuthenticationType Kerberos -SSLCertThumbprint "sslCertThumbPrint"
+  description: |-
+    This command installs the Certificate Enrollment Policy Web Service using Kerberos for authentication.
+    For information on obtaining a certificate thumbprint using Windows PowerShell, see [Certificate Provider](https://go.microsoft.com/fwlink/?LinkId=225044).
+  summary: ""
+- title: 'Example 2: Install the Certificate Enrollment Policy Web Service specifying a username and password'
+  code: |-
+    PS C:\> Install-AdcsEnrollmentPolicyWebService -AuthenticationType Username -SSLCertThumbprint "sslCertThumbPrint"
+  description: |-
+    This command installs the Certificate Enrollment Policy Web Service specifying that a username and password is used for authentication.
+  summary: ""
+- title: 'Example 3: Install the Certificate Enrollment Policy Web Service specifying a username and password for Key-Based Renewal'
+  code: |-
+    PS C:\> Install-AdcsEnrollmentPolicyWebService -AuthenticationType Username -SSLCertThumbprint <sslCertThumbPrint> -KeyBasedRenewal
+  description: |-
+    This command installs the Certificate Enrollment Policy Web Service specifying that a username and password is used for authentication and configures the service for Key-Based Renewal of the certificate.
+  summary: ""
+parameters:
+- type: <xref href="AuthenticationType" data-throw-if-not-resolved="False" />
+  name: AuthenticationType
+  description: |+
+    Specifies the authentication type used by the Certificate Enrollment Policy Web Service.
+    The acceptable values for this parameter are:
+
+    - Certificate
+    - Kerberos
+    - UserName
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Kerberos, UserName, Certificate
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials for installing the Enrollment Policy Web Service.
+    To obtain a credential object, use the **Get-Credential** cmdlet.
+    For more information, type `Get-Help Get-Credential`.
+    The Enrollment Policy Web Service must be installed on a server that is a member of an Active Directory Domain Services (AD DS) domain.
+    You must use an account that is a member of Domain Admins group to install this service.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: KeyBasedRenewal
+  description: |+
+    Indicates that this cmdlet configures the Certificate Enrollment Policy Web Service to operate in key-based renewal mode.
+    Key-based renewal allows certificate clients to renew their certificates using the key of their existing certificate for authentication.
+    When in key-based renewal mode, the service will only return certificate templates that are set for key based renewal.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SSLCertThumbprint
+  description: |+
+    Specifies the thumbprint of the certificate used by Internet Information Service (IIS) to enable support for required Secure Sockets Layer (SSL).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADCSDeployment.Install-AdcsEnrollmentPolicyWebService
+name: Install-AdcsEnrollmentPolicyWebService
+description: |-
+  The **Install-AdcsEnrollmentPolicyWebService** cmdlet performs the configuration of Certificate Enrollment Policy Web service.
+  It is also used to create additional instances of the service within an existing installation.
+  To remove the certification authority (CA) role service use the **Uninstall-AdcsEnrollmentPolicyWebService** cmdlet.
+
+  You can import the cmdlet by running the following commands from Windows PowerShell:
+
+  - `Import-Module ServerManager`
+  - `Add-WindowsFeature Adcs-Enroll-Web-Pol`
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+  Module Name: ADCSDeployment
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsenrollmentpolicywebservice?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Install-AdcsEnrollmentPolicyWebService

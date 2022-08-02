@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a Storage fault domain object.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+outputs:
+- name: <xref href="MSFT_PhysicalDisk, MSFT_StorageEnclosure, MSFT_StorageScaleUnit, MSFT_StorageRack, MSFT_StorageChassis" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-StorageFaultDomain [-Type <StorageFaultDomainType>] [-PhysicalLocation <String>] [-CimSession <CimSession>]
+
+   [<CommonParameters>]
+- >-
+  Get-StorageFaultDomain [-Type <StorageFaultDomainType>] [-PhysicalLocation <String>]
+
+   -StorageFaultDomain <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
+- >-
+  Get-StorageFaultDomain [-Type <StorageFaultDomainType>] [-PhysicalLocation <String>]
+
+   -StorageSubsystem <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Find a rack by its serial number'
+  code: |-
+    PS C:\>$Rack = Get-StorageFaultDomain -Type Rack | Where-Object {$_.SerialNumber -eq "xyzz"}
+  description: |-
+    The first command gets the Rack domain type fault domains and uses the pipeline to pass them to Where-Object, which finds the Rack whose serial number is xyzz.
+    The Rack is stored in the $Rack variable.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhysicalLocation
+  description: |+
+    Specifies the physical location of the hardware.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageFaultDomain
+  isRequired: true
+  description: |+
+    Specifies the objects in the hierarchy that are above or below the fault domain.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageSubsystem
+  isRequired: true
+  description: |+
+    Specifies the storage subsystem object in which to retrieve storage jobs.
+    Enter a StorageSubsystem CIM object.
+    The StorageSubsystem CIM object is exposed by the Get-StorageSubSystem cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StorageFaultDomainType" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the Storage fault domain type:
+
+    - PhysicalDisk
+    - Enclosure
+    - StorageScaleUnit
+    - Rack
+    - Chassis
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassis, StorageRack, StorageSite
+uid: Storage.Get-StorageFaultDomain
+name: Get-StorageFaultDomain
+description: |-
+  The **Get-StorageFaultDomain** cmdlet gets a Storage fault domain object.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: StorageScripts-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-storagefaultdomain?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-StorageFaultDomain

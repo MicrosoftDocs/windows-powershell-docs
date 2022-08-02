@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a session collection of RD Session Host servers.
+module: RemoteDesktop
+notes: ""
+outputs:
+- name: <xref href="Microsoft.RemoteDesktopServices.Management.RDSessionCollection" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDSessionCollection
+  href: ./Get-RDSessionCollection.yml
+- text: Remove-RDSessionCollection
+  href: ./Remove-RDSessionCollection.yml
+syntaxes:
+- >-
+  New-RDSessionCollection [-CollectionName] <String> [-CollectionDescription <String>] -SessionHost <String[]>
+
+   [-ConnectionBroker <String>] [-PersonalUnmanaged] [-AutoAssignUser] [-GrantAdministrativePrivilege]
+
+   [<CommonParameters>]
+- >-
+  New-RDSessionCollection [-CollectionName] <String> [-CollectionDescription <String>] -SessionHost <String[]>
+
+   [-ConnectionBroker <String>] [-PooledUnmanaged] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a session collection'
+  code: |-
+    PS C:\> New-RDSessionCollection -CollectionName "Session Collection 02" -SessionHost @("RDSH01.Contoso.com"," RDSH02.Contoso.com") -CollectionDescription "Session collection for West office hosts." -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command creates a session collection named Session Collection 02 in the Remote Desktop deployment that has the RD Connection Broker server named RDCB.Contoso.com.
+    The collection includes the RD Session Host servers named RDSH01.Contoso.com and RDSH02.Contoso.com.
+    The command specifies a description of the new collection.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AutoAssignUser
+  description: |+
+    Indicates that this cmdlet enables automatic session desktop assignments for a personal session collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionDescription
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GrantAdministrativePrivilege
+  description: |+
+    Indicates that the server grants administrative privileges to the user account that the server assigns to a given personal virtual desktop.
+    This parameter applies only to personal virtual desktop collections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PersonalUnmanaged
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PooledUnmanaged
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SessionHost
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteDesktop.New-RDSessionCollection
+name: New-RDSessionCollection
+description: |-
+  The **New-RDSessionCollection** cmdlet creates a session collection that consists of one or more Remote Desktop Session Host (RD Session Host) servers.
+  Users can connect to RD Session Host servers in a session collection to run programs, save files, and use resources on those servers.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/new-rdsessioncollection?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-RDSessionCollection

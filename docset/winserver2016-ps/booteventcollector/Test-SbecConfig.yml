@@ -1,0 +1,136 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Validates a configuration.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The text of the configuration, same as in the *Content* parameter.
+outputs:
+- name: <xref href="hash table" data-throw-if-not-resolved="False" />
+  description: |-
+    The hash table includes the following elements: 
+
+    - `<Success>`
+    - `<ErrorType>`
+    - `<ErrorString>`
+    - `<WarningString>`
+    - `<InfoString>`
+
+    The `<ErrorType>` element contains 0 on success.
+    If a failure occurs, `<ErrorType>` has a code that describes the error: 
+
+    - 1 (bad argument format) 
+    - 2 (bad argument value)
+
+    The `<Success>` element is $True on success, $False otherwise.
+
+    `<ErrorString>`, `<WarningString>`, and `<InfoString>` contain detailed error messages.
+    `<ErrorString>` contains information only if an error occurs.
+links:
+- text: Get-SbecActiveConfig
+  href: ./Get-SbecActiveConfig.yml
+- text: Set-SbecActiveConfig
+  href: ./Set-SbecActiveConfig.yml
+- text: Test-SbecActiveConfig
+  href: ./Test-SbecActiveConfig.yml
+syntaxes:
+- >-
+  Test-SbecConfig [-Content] <String[]> [-Continue] [[-ComputerName] <String[]>] [[-CimSession] <CimSession[]>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Validate a configuration'
+  code: |-
+    PS C:\> $res = Test-SbecConfig -Content $NewConfig -Continue
+  description: |-
+    This command validates the configuration in $NewConfig, and then stores the results in the $res variable.
+    Because the *Continue* parameter is specified, the command does not throw an error if any errors occur.
+  summary: ""
+- title: 'Example 2: Validate a configuration using the pipeline'
+  code: |-
+    PS C:\> Get-Content MyConfig.xml | Test-SbecConfig -Continue | Format-List
+  description: |-
+    This command validates the configuration from a file.
+    Format-List prints all the returned information without reducing it.
+  summary: ""
+- title: 'Example 3: Validate a configuration and throw on error'
+  code: |-
+    PS C:\> $res = Test-SbecConfig -Content (Get-Content MyConfig.xml)
+  description: |-
+    Validate the configuration from a file and throw on error.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet on the remote computers through a remote session.
+    Enter a session object, such as the output of a **New-CimSession** or **Get-CimSession** cmdlet or an array of these objects.
+    The default is to run the cmdlet on the local computer.
+    For more information, see About_CimSession.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies the names of the computers on which you want to perform the operation.
+    You can specify a fully qualified domain name (FQDN), a NetBIOS name, or an IP address for each computer.
+    For more information see [Invoke-CimMethod](https://go.microsoft.com/fwlink/?LinkId=808801) on MSDN.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Content
+  isRequired: true
+  description: |+
+    Specifies the configuration to validate.
+    The acceptable values for this parameter are:
+
+    - A multiline string.
+    Use `\n` to indicate line breaks. 
+    - An array of one-line strings.
+    This cmdlet merges the array.
+    - A mix of multiline strings and string arrays.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Continue
+  description: |+
+    Indicates that this operation will not throw an exception if a failure occurs.
+    Instead the caller should examine the output of the cmdlet for the error information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Test-SbecConfig
+name: Test-SbecConfig
+description: |-
+  The **Test-SbecConfig** cmdlet validates a configuration for the Setup and Boot Event Collector.
+
+  This cmdlet checks a configuration for validity without applying it.
+  This is similar to running the command `bevtcol.exe -checkOnly`, except that **Test-SbecConfig** uses the running service to perform the validation.
+
+  The values that **Test-SbecConfig** returns are a subset of those returned by **Set-SbecActiveConfig**, because **Test-SbecConfig** does not apply the configuration.
+
+  You must have the Builtin Administrator privilege to run this command.
+
+  This cmdlet is also available using the alias **Validate-SbecConfig**.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/test-sbecconfig?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-SbecConfig

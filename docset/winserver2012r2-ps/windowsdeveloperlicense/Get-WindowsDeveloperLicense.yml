@@ -1,0 +1,39 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Provides information about a developer license for the current computer.
+module: WindowsDeveloperLicense
+notes: ""
+outputs:
+- name: <xref href="WindowsDeveloperLicense" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Unregister-WindowsDeveloperLicense
+  href: ./Unregister-WindowsDeveloperLicense.yml
+- text: Show-WindowsDeveloperLicenseRegistration
+  href: ./Show-WindowsDeveloperLicenseRegistration.yml
+syntaxes:
+- Get-WindowsDeveloperLicense [<CommonParameters>]
+examples:
+- title: 'Example 1: Get developer license status'
+  code: |-
+    PS C:\> Get-WindowsDeveloperLicense
+  description: |-
+    This command checks for a developer license for the current computer.
+    If there is a license on the computer, the cmdlet displays whether it is valid and when it expires.
+    If the computer does not have a developer license, the cmdlet returns an error.
+  summary: ""
+uid: WindowsDeveloperLicense.Get-WindowsDeveloperLicense
+name: Get-WindowsDeveloperLicense
+description: |-
+  The **Get-WindowsDeveloperLicense** cmdlet provides information about the developer license present on the current computer.
+  For more information about developer licenses, see Get a developer license (Windows Store apps) (Windows)http://msdn.microsoft.com/library/windows/apps/hh974578.aspx (http://msdn.microsoft.com/library/windows/apps/hh974578.aspx) in the Microsoft Developer Network library.
+
+  The cmdlet gets an object that contains the expiration date for the developer license and a Boolean value that indicates whether that license is valid.
+  If the cmdlet does not find a developer license, it informs you that there is no developer license on the current computer.
+metadata:
+  external help file: Microsoft.Windows.DeveloperLicense.Commands.dll-Help.xml
+  Module Name: WindowsDeveloperLicense
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/windowsdeveloperlicense/get-windowsdeveloperlicense?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WindowsDeveloperLicense

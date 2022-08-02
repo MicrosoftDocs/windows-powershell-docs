@@ -1,0 +1,121 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a key protector for a BitLocker volume.
+module: BitLocker
+notes: ""
+inputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" /><span>[</span><xref href="], String[" data-throw-if-not-resolved="False" /><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Add-BitLockerKeyProtector
+  href: ./Add-BitLockerKeyProtector.yml
+- text: Backup-BitLockerKeyProtector
+  href: ./Backup-BitLockerKeyProtector.yml
+- text: Get-BitLockerVolume
+  href: ./Get-BitLockerVolume.yml
+syntaxes:
+- >-
+  Remove-BitLockerKeyProtector [-MountPoint] <String[]> [-KeyProtectorId] <String> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove the second key protector for a volume'
+  code: |-
+    PS C:\> $BLV = Get-BitLockerVolume -MountPoint "C:"
+    PS C:\> Remove-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProtector[1].KeyProtectorId
+  description: |-
+    This example removes a key protector for a specified BitLocker volume.
+
+    The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the `$BLV` variable.
+
+    The second command removes the key protector for the BitLocker volume specified by the **MountPoint** parameter.
+    The command specifies the key protector by using its ID, contained in the BitLocker object stored in `$BLV`.
+  summary: ""
+- title: 'Example 2: Remove TpmPin key protector for a volume'
+  code: |-
+    PS C:\> $BLV = Get-BitlockerVolume -MountPoint "C:"
+    PS C:\> $TpmPinKeyProtector = $BLV.KeyProtector | Where-Object {$PSItem.KeyProtectorType -eq "TpmPin"}
+    PS C:\> Remove-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $TpmPinKeyProtector.KeyProtectorId
+  description: |-
+    This example removes a key protector of type TpmPin for a specified BitLocker Volume.
+
+    The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the `$BLV` variable.
+
+    The second command filters the key protectors to get only the one with TpmPin type and stores it in the `$TpmPinKeyProtector` variable.
+
+    The third command removes the key protector by its ID.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: KeyProtectorId
+  isRequired: true
+  description: |+
+    Specifies the ID for a key protector.
+    A BitLocker volume object includes a **KeyProtector** object.
+    You have to specify the key protector ID.
+    See the Examples section.
+    To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: id
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MountPoint
+  isRequired: true
+  description: |+
+    Specifies an array of drive letters or BitLocker volume objects.
+    The cmdlet removes key protectors for the volumes specified.
+    To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: BitLocker.Remove-BitLockerKeyProtector
+name: Remove-BitLockerKeyProtector
+description: |-
+  The **Remove-BitLockerKeyProtector** cmdlet removes a key protector for a volume protected by BitLocker Drive Encryption.
+
+  You can specify a key protector to remove by using an ID.
+  To add a protector, use the **Add-BitLockerKeyProtector** cmdlet.
+
+  If you remove all the key protectors for a BitLocker volume, BitLocker stores the data encryption key for the volume without using encryption.
+  This means that any user that can access the volume can read the encrypted data on the volume unless you add a key protector.
+  Any encrypted data on the drive remains encrypted.
+
+  We recommend you have at least one recovery password as key protector to a volume in case you need to recover a system.
+
+  For an overview of BitLocker, see [Overview of BitLocker Device Encryption](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BitLocker-help.xml
+  Module Name: BitLocker
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/bitlocker/remove-bitlockerkeyprotector?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-BitLockerKeyProtector

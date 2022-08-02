@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Streams the contents of packages to the local disk.
+module: AppvClient
+notes: |-
+  * If a previous load has been canceled, the cmdlet resumes that load when it is run again. The package will be added to the system before loading. Otherwise the cmdlet fails. If you do not specify any parameters, the cmdlet loads all packages on the system.
+  * The cmdlet is synchronous. It returns when the load option has completed. To make the cmdlet asynchronous, use the **Start-Job** cmdlet.
+  * The cmdlet checks that you have permissions to perform the specific action. If not, the cmdlet returns an error.
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvClientConnectionGroup
+  href: ./Add-AppvClientConnectionGroup.yml
+- text: Disable-AppvClientConnectionGroup
+  href: ./Disable-AppvClientConnectionGroup.yml
+- text: Enable-AppvClientConnectionGroup
+  href: ./Enable-AppvClientConnectionGroup.yml
+- text: Get-AppvClientConnectionGroup
+  href: ./Get-AppvClientConnectionGroup.yml
+- text: Remove-AppvClientConnectionGroup
+  href: ./Remove-AppvClientConnectionGroup.yml
+- text: Repair-AppvClientConnectionGroup
+  href: ./Repair-AppvClientConnectionGroup.yml
+- text: Stop-AppvClientConnectionGroup
+  href: ./Stop-AppvClientConnectionGroup.yml
+syntaxes:
+- Mount-AppvClientConnectionGroup [-GroupId] <Guid> [-VersionId] <Guid> [<CommonParameters>]
+- Mount-AppvClientConnectionGroup [-Name] <String> [<CommonParameters>]
+- Mount-AppvClientConnectionGroup [-ConnectionGroup] <AppvClientConnectionGroup> [<CommonParameters>]
+examples:
+- title: 'Example 1: Download packages for a named group'
+  code: |-
+    PS C:\> Mount-AppvClientConnectionGroup -Name "MyGroup"
+  description: |-
+    This command downloads all packages that are part of the enabled connection group named MyGroup.
+  summary: ""
+- title: 'Example 2: Download packages for a group by using group ID'
+  code: |-
+    PS C:\> Mount-AppvClientConnectionGroup -GroupID 793afd37-bd68-4ea1-859a-669f6afd0aa8
+  description: |-
+    This cmdlet downloads all the packages that are part of the enabled connection group that has the group ID 793afd37-bd68-4ea1-859a-669f6afd0aa8.
+  summary: ""
+- title: 'Example 3: Download packages for groups that match a string'
+  code: |-
+    PS C:\> Get-AppvClientConnectionGroup -Name "MyGr*" | Mount-AppvClientConnectionGroup
+  description: |-
+    This command gets all enabled connection groups that have the string MyGr in the name, and then downloads all of the packages in those connection groups.
+  summary: ""
+parameters:
+- type: <xref href="AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+  name: ConnectionGroup
+  isRequired: true
+  description: |+
+    Specifies the Microsoft Application Virtualization (App-V) Connection Group object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: GroupId
+  isRequired: true
+  description: |+
+    Specifies the group ID of specific connection group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the App-V Connection Group.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionId
+  isRequired: true
+  description: |+
+    Specifies the GUID that differentiates a Connection Group version from other versions.
+    If you do not specify this parameter, the cmdlet operates on all versions of the connection group.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Mount-AppvClientConnectionGroup
+name: Mount-AppvClientConnectionGroup
+description: |-
+  The **Mount-AppvClientConnectionGroup** cmdlet streams the contents of all packages in a connection group to the local disk.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/mount-appvclientconnectiongroup?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Mount-AppvClientConnectionGroup

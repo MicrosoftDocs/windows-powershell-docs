@@ -1,0 +1,205 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new failover cluster.
+module: FailoverClusters
+notes: |-
+  - This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterNode
+  href: ./Add-ClusterNode.yml
+- text: Get-Cluster
+  href: ./Get-Cluster.yml
+- text: Remove-Cluster
+  href: ./Remove-Cluster.yml
+- text: Start-Cluster
+  href: ./Start-Cluster.yml
+- text: Stop-Cluster
+  href: ./Stop-Cluster.yml
+- text: Test-Cluster
+  href: ./Test-Cluster.yml
+syntaxes:
+- >-
+  New-Cluster [-Name] <String> [-Node <StringCollection>] [-StaticAddress <StringCollection>]
+
+   [-IgnoreNetwork <StringCollection>] [-NoStorage] [-S2D] [-AdministrativeAccessPoint <AdminAccessPoint>]
+
+   [-Force] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4
+
+    Name 
+    ---- 
+    cluster1
+  description: |-
+    This example creates a four-node cluster named cluster1, using default settings for IP addressing.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> New-Cluster -Name cluster1 -Node node1,node2 -NoStorage
+
+    Name 
+    ---- 
+    cluster1
+  description: |-
+    This example creates a two-node cluster named cluster1.
+    The cluster will not have any clustered storage, or disk resources.
+    Storage can be added using the **Get-ClusterAvailableDisk** cmdlet with the **Add-ClusterDisk** cmdlet.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123
+
+    Name 
+    ---- 
+    cluster1
+  description: |-
+    This example creates a four-node cluster named cluster1 that uses the static IP address 2.0.0.123.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123,3.0.0.123
+
+    Name 
+    ---- 
+    cluster1
+  description: |-
+    This example creates a four-node cluster named cluster1 that uses the static IP addresses 2.0.0.123 and 3.0.0.123.
+  summary: ""
+- title: Example 5
+  code: |-
+    PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -IgnoreNetwork 2.0.0.0/8
+
+    Name 
+    ---- 
+    cluster1
+  description: |-
+    This example creates a four-node cluster named cluster1.
+    The cluster uses default settings for IP addressing, and does not use the network 2.0.0.0/8.
+  summary: ""
+- title: Example 6
+  code: |-
+    PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123 -IgnoreNetwork 3.0.0.0/8
+
+    Name 
+    ---- 
+    cluster1
+  description: |-
+    This example creates a four-node cluster named cluster1.
+    The cluster uses the static IP address 2.0.0.123, and does not use the network 3.0.0.0/8.
+  summary: ""
+parameters:
+- type: <xref href="AdminAccessPoint" data-throw-if-not-resolved="False" />
+  name: AdministrativeAccessPoint
+  description: |+
+    Specifies the type of administrative access point that the cmdlet creates for the cluster.
+    The acceptable values for this parameter are:
+
+    - ActiveDirectoryAndDns.
+    The cmdlet creates an administrative access point for the cluster.
+    The administrative access point is registered in DNS and enabled in Active Directory Domain Services.
+    - Dns.
+    The cmdlet creates an administrative access point for the cluster.
+    The administrative access point is registered in DNS but is not enabled in Active Directory Domain Services.
+    - None.
+    The cmdlet does not create an administrative access point for the cluster.
+    Some clustered roles and functionality might not be available for a cluster that does not have an administrative access point.
+    Also, you cannot use Failover Cluster Manager to manage a cluster that does not have an administrative access point.
+
+  defaultValue: None
+  position: Named
+  aliases: aap
+  parameterValueGroup: None, ActiveDirectoryAndDns, Dns, ActiveDirectory
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: IgnoreNetwork
+  description: |+
+    Specifies one or more networks to ignore when running the cmdlet.
+    Networks with DHCP enabled are always included, but other networks need a static address to be specified using the **StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the cluster to create.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Node
+  description: |+
+    Specifies a comma-separated list of cluster node names, or server names, on which to create the cluster.
+    If this parameter is not specified, then a one node cluster is created on the local physical computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoStorage
+  description: |+
+    Specifies that shared storage is ignored during the cluster creation.
+    The cluster created at the end of the operation will not have shared storage.
+    Shared storage can later be added by piping the **ClusterDiskInfo** object from the **Get-ClusterAvailableDisk** cmdlet into the **Add-ClusterDisk** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: S2D
+  description: |+
+    Specifies whether to enable Storage Spaces Direct when creating the cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: StaticAddress
+  description: |+
+    Specifies one or more static addresses to use when running the cmdlet.
+    Networks with DHCP enabled are always included, but other networks need a static address to be specified using the **StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.New-Cluster
+name: New-Cluster
+description: |-
+  The **New-Cluster** cmdlet creates a new failover cluster.
+  Before creating a cluster, the hardware (servers, networks, and storage) must be connected, and the validation tests must be run.
+
+  Use Test-Cluster to run the validation tests.
+  The tests will confirm that the hardware and settings are compatible with failover clustering.
+  There are multiple types of tests, including Inventory, System Configuration, Network, Storage, and other types of tests.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/new-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-Cluster

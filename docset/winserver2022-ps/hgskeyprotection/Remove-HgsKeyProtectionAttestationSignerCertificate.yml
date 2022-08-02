@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an attestation signer certificate from the trusted certificates in the Key Protection Service.
+module: HgsKeyProtection
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Add-HgsKeyProtectionAttestationSignerCertificate
+  href: ./Add-HgsKeyProtectionAttestationSignerCertificate.yml
+- text: Get-HgsKeyProtectionAttestationSignerCertificate
+  href: ./Get-HgsKeyProtectionAttestationSignerCertificate.yml
+syntaxes:
+- >-
+  Remove-HgsKeyProtectionAttestationSignerCertificate -Thumbprint <String> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove an attestation certificate'
+  code: |-
+    PS C:\> Remove-HgsKeyProtectionAttestationSignerCertificate -Thumbprint "d39203a3b3544743ad552afe0615dc1f"
+  description: |-
+    This command removes a trusted attestation certificate signer.
+    The command looks up the certificate signer to remove by using a thumbprint.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  isRequired: true
+  description: |+
+    Specifies the thumbprint of the attestation signer certificate to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsKeyProtection.Remove-HgsKeyProtectionAttestationSignerCertificate
+name: Remove-HgsKeyProtectionAttestationSignerCertificate
+description: |-
+  The **Remove-HgsKeyProtectionAttestationSignerCertificate** cmdlet removes the signer certificate of an attestation server from the attestation signer certificates that the Key Protection Service trusts.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/remove-hgskeyprotectionattestationsignercertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-HgsKeyProtectionAttestationSignerCertificate

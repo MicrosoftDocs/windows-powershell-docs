@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts an application pool.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Start-WebAppPool [[-Name] <String>] [-Passthru] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Starting an Application Pool --------------'
+  code: |-
+    IIS:\>Start-WebAppPool -Name "DefaultAppPool"
+  description: |-
+    Starts the application pool named DefaultAppPool.
+  summary: ""
+- title: '-------------- EXAMPLE 2: Starting stopped Application Pools --------------'
+  code: |-
+    IIS:\>Get-ChildItem IIS:\AppPools | where {$_.state -eq "Stopped"} | Start-WebAppPool
+  description: |-
+    Starts the application pools that are currently stopped.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the application pool to start.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Passes an object that represents the application pool to the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Start-WebAppPool
+name: Start-WebAppPool
+description: |-
+  Starts the specified application pool.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/start-webapppool?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

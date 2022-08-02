@@ -1,0 +1,227 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a virtual network adapter to a virtual machine.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None by default; if **PassThru** is specified, then either a **Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter** if **ManagementOS** is specified, or a **Microsoft.HyperV.PowerShell.VMNetworkAdapter** if it is not.
+syntaxes:
+- >-
+  Add-VMNetworkAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String[]> [-SwitchName <String>] [-IsLegacy <Boolean>] [-Name <String>] [-DynamicMacAddress]
+
+   [-StaticMacAddress <String>] [-Passthru] [-ResourcePoolName <String>] [-DeviceNaming <OnOffState>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Add-VMNetworkAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-ManagementOS] [-SwitchName <String>] [-Name <String>] [-DynamicMacAddress] [-StaticMacAddress <String>]
+
+   [-Passthru] [-DeviceNaming <OnOffState>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-VMNetworkAdapter [-SwitchName <String>] [-IsLegacy <Boolean>] [-Name <String>] [-DynamicMacAddress]
+
+   [-StaticMacAddress <String>] [-Passthru] [-ResourcePoolName <String>] [-VM] <VirtualMachine[]>
+
+   [-DeviceNaming <OnOffState>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-VMNetworkAdapter -VMName Redmond -Name "Redmond NIC1"
+  description: |-
+    This example adds a virtual network adapter named Redmond NIC1 to a virtual machine named Redmond.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Add-VMNetworkAdapter -VMName Test -SwitchName Network
+  description: |-
+    This example adds a virtual network adapter to a virtual machine named Test and connects it to a virtual switch named Network.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-VM Test | Add-VMNetworkAdapter -IsLegacy $true -Name Bootable
+  description: |-
+    This example uses two cmdlets and the pipeline in one command to perform the operation.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Add-VMNetworkAdapter -ManagementOS -Name Secondary
+  description: |-
+    This example adds a second virtual network adapter in the management operating system.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the virtual network adapter is to be added.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="OnOffState" data-throw-if-not-resolved="False" />
+  name: DeviceNaming
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: On, Off
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DynamicMacAddress
+  description: |+
+    Assigns a dynamically generated MAC address to the new virtual network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsLegacy
+  description: |+
+    Specifies whether the virtual network adapter is the legacy type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagementOS
+  description: |+
+    Specifies the management operating system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies a name for the new virtual network adapter.
+    The default value is "Network Adapter."
+
+  defaultValue: None
+  position: Named
+  aliases: VMNetworkAdapterName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that an object is to be passed through to be pipeline representing the network adapter to be added.
+    If you specify **-ManagementOS**, the object passed is a **Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter**; otherwise the object passed is a **Microsoft.HyperV.PowerShell.VMNetworkAdapter**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourcePoolName
+  description: |+
+    Specifies the friendly name of a resource pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StaticMacAddress
+  description: |+
+    Assigns a specific MAC address to the new virtual network adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SwitchName
+  description: |+
+    Specifies the name of the virtual switch to connect to the new network adapter.
+    If the switch name is not unique, then the operation fails.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine on which the network adapter is to be added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine on which the network adapter is to be added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Add-VMNetworkAdapter
+name: Add-VMNetworkAdapter
+description: |-
+  The **Add-VMNetworkAdapter** cmdlet adds a virtual network adapter to a virtual machine.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/add-vmnetworkadapter?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-VMNetworkAdapter

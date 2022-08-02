@@ -1,0 +1,1061 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes exclusions or default actions.
+module: Defender
+notes: ""
+links:
+- text: Add-MpPreference
+  href: ./Add-MpPreference.yml
+- text: Get-MpPreference
+  href: ./Get-MpPreference.yml
+- text: Set-MpPreference
+  href: ./Set-MpPreference.yml
+syntaxes:
+- >-
+  Remove-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
+
+   [-ExclusionIpAddress <String[]>] [-RealTimeScanDirection] [-QuarantinePurgeItemsAfterDelay]
+
+   [-RemediationScheduleDay] [-RemediationScheduleTime] [-ReportingAdditionalActionTimeOut]
+
+   [-ReportingCriticalFailureTimeOut] [-ReportingNonCriticalTimeOut] [-ScanAvgCPULoadFactor]
+
+   [-CheckForSignaturesBeforeRunningScan] [-ScanPurgeItemsAfterDelay] [-ScanOnlyIfIdleEnabled] [-ScanParameters]
+
+   [-ScanScheduleDay] [-ScanScheduleQuickScanTime] [-ScanScheduleTime] [-SignatureFirstAuGracePeriod]
+
+   [-SignatureAuGracePeriod] [-SignatureDefinitionUpdateFileSharesSources]
+
+   [-SignatureDisableUpdateOnStartupWithoutEngine] [-SignatureFallbackOrder] [-SharedSignaturesPath]
+
+   [-SignatureScheduleDay] [-SignatureScheduleTime] [-SignatureUpdateCatchupInterval] [-SignatureUpdateInterval]
+
+   [-SignatureBlobUpdateInterval] [-SignatureBlobFileSharesSources] [-MeteredConnectionUpdates]
+
+   [-AllowNetworkProtectionOnWinServer] [-DisableDatagramProcessing] [-DisableCpuThrottleOnIdleScans]
+
+   [-MAPSReporting] [-SubmitSamplesConsent] [-DisableAutoExclusions] [-DisablePrivacyMode]
+
+   [-RandomizeScheduleTaskTimes] [-SchedulerRandomizationTime] [-DisableBehaviorMonitoring]
+
+   [-DisableIntrusionPreventionSystem] [-DisableIOAVProtection] [-DisableRealtimeMonitoring]
+
+   [-DisableScriptScanning] [-DisableArchiveScanning] [-DisableCatchupFullScan] [-DisableCatchupQuickScan]
+
+   [-DisableEmailScanning] [-DisableRemovableDriveScanning] [-DisableRestorePoint]
+
+   [-DisableScanningMappedNetworkDrivesForFullScan] [-DisableScanningNetworkFiles] [-UILockdown]
+
+   [-ThreatIDDefaultAction_Ids <Int64[]>] [-ThreatIDDefaultAction_Actions <ThreatAction[]>]
+
+   [-UnknownThreatDefaultAction] [-LowThreatDefaultAction] [-ModerateThreatDefaultAction]
+
+   [-HighThreatDefaultAction] [-SevereThreatDefaultAction] [-DisableBlockAtFirstSeen] [-PUAProtection]
+
+   [-CloudBlockLevel] [-CloudExtendedTimeout] [-EnableNetworkProtection] [-EnableControlledFolderAccess]
+
+   [-AttackSurfaceReductionOnlyExclusions <String[]>] [-ControlledFolderAccessAllowedApplications <String[]>]
+
+   [-ControlledFolderAccessProtectedFolders <String[]>] [-AttackSurfaceReductionRules_Ids <String[]>]
+
+   [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>] [-EnableLowCpuPriority]
+
+   [-EnableFileHashComputation] [-EnableFullScanOnBatteryPower] [-ProxyPacUrl] [-ProxyServer] [-ProxyBypass]
+
+   [-ForceUseProxyOnly] [-DisableTlsParsing] [-DisableHttpParsing] [-DisableDnsParsing]
+
+   [-DisableDnsOverTcpParsing] [-DisableSshParsing] [-PlatformUpdatesChannel] [-EngineUpdatesChannel]
+
+   [-SignaturesUpdatesChannel] [-DisableGradualRelease] [-AllowNetworkProtectionDownLevel]
+
+   [-AllowDatagramProcessingOnWinServer] [-EnableDnsSinkhole] [-DisableInboundConnectionFiltering]
+
+   [-DisableRdpParsing] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a folder from the exclusion list'
+  code: |-
+    Remove-MpPreference -ExclusionPath "C:\Temp"
+  description: |-
+    This command removes the folder C:\Temp from the exclusion list.
+  summary: ""
+- title: 'Example 2: Exclude a specific file'
+  code: |-
+    Remove-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\Windows\App.exe"
+  description: |-
+    This command will exclude only that specific file app.exe in that specific folder.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowDatagramProcessingOnWinServer
+  description: |+
+    Indicates that the cmdlet removes whether to disable inspection of UDP connections on Windows Server.
+
+  defaultValue: None
+  position: Named
+  aliases: adpows
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowNetworkProtectionDownLevel
+  description: |+
+    Indicates that the cmdlet removes whether to allow network protection to be set to Enabled or Audit Mode on Windows versions before 1709.
+
+  defaultValue: None
+  position: Named
+  aliases: anpdl
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowNetworkProtectionOnWinServer
+  description: |+
+    Indicates that the cmdlet removes whether to allow network protection to be set to Enabled or Audit Mode for Windows Server.
+
+  defaultValue: None
+  position: Named
+  aliases: anpws
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AttackSurfaceReductionOnlyExclusions
+  description: |+
+    Specifies the files and paths to exclude from Attack Surface Reduction (ASR) rules. Specify the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, ""C:\Windows"" will exclude all files in that directory. ""C:\Windows\App.exe"" will exclude only that specific file in that specific folder.
+
+    For more information about excluding files and folders from [ASR rules](/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ASRRuleActionType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AttackSurfaceReductionRules_Actions
+  description: |+
+    Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
+    If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AttackSurfaceReductionRules_Ids
+  description: |+
+    Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
+    If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CheckForSignaturesBeforeRunningScan
+  description: |+
+    Indicates that the cmdlet removes whether to check for new virus and spyware definitions before Windows Defender runs a scan.
+
+  defaultValue: None
+  position: Named
+  aliases: csbr
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. 
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CloudBlockLevel
+  description: |+
+    Specifies a cloud block level.
+    This value determines how aggressive Microsoft Defender Antivirus is in blocking and scanning suspicious files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CloudExtendedTimeout
+  description: |+
+    Specifies the amount of extended time to block a suspicious file and scan it in the cloud.
+    Standard time is 10 seconds. Extend by up to 50 seconds.
+
+  defaultValue: None
+  position: Named
+  aliases: cloudextimeout
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ControlledFolderAccessAllowedApplications
+  description: |+
+    Specifies applications that can make changes in controlled folders.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ControlledFolderAccessProtectedFolders
+  description: |+
+    Specifies more folders to protect.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableArchiveScanning
+  description: |+
+    Indicates that the cmdlet removes whether to scan archive files, such as .zip and .cab files, for malicious and unwanted software.
+
+  defaultValue: None
+  position: Named
+  aliases: darchsc
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableAutoExclusions
+  description: |+
+    Indicates that the cmdlet removes whether to disable the Automatic Exclusions feature for the server.
+
+  defaultValue: None
+  position: Named
+  aliases: dae
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableBehaviorMonitoring
+  description: |+
+    Indicates that the cmdlet removes whether to enable behavior monitoring.
+
+  defaultValue: None
+  position: Named
+  aliases: dbm
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableBlockAtFirstSeen
+  description: |+
+    Indicates that the cmdlet removes whether to enable block at first seen.
+
+  defaultValue: None
+  position: Named
+  aliases: dbaf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableCatchupFullScan
+  description: |+
+    Indicates that the cmdlet removes whether Windows Defender runs catch-up scans for scheduled full scans.
+
+  defaultValue: None
+  position: Named
+  aliases: dcfsc
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableCatchupQuickScan
+  description: |+
+    Indicates that the cmdlet removes whether Windows Defender runs catch-up scans for scheduled quick scans.
+
+  defaultValue: None
+  position: Named
+  aliases: dcqsc
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableCpuThrottleOnIdleScans
+  description: |+
+    Indicates that the cmdlet removes whether the CPU will be throttled for scheduled scans while the device is idle.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableDatagramProcessing
+  description: |+
+    Indicates that the cmdlet removes whether to disable inspection of UDP connections.
+
+  defaultValue: None
+  position: Named
+  aliases: ddtgp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableDnsOverTcpParsing
+  description: |+
+    Indicates that the cmdlet removes whether to disable inspection of DNS traffic that occurs over a TCP channel.
+
+  defaultValue: None
+  position: Named
+  aliases: ddnstcpp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableDnsParsing
+  description: |+
+    Indicates that the cmdlet removes whether to disable inspection of DNS traffic that occurs over a UDP channel.
+
+  defaultValue: None
+  position: Named
+  aliases: ddnsp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableEmailScanning
+  description: |+
+    Indicates that the cmdlet removes whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
+
+  defaultValue: None
+  position: Named
+  aliases: demsc
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableGradualRelease
+  description: |+
+    Indicates that the cmdlet removes whether to disable gradual rollout of monthly and daily Windows Defender updates. 
+    If you enable this option, devices are offered all updates after the gradual release cycle finishes.
+    Consider this option for datacenter computers that only receive limited updates. 
+
+    This setting applies to both monthly and daily updates.
+    It overrides any previously configured channel selections for platform and engine updates. 
+
+    If you disable or do not configure this policy, the device remains in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates.
+    The device stays up to date automatically during the gradual release cycle, which is suitable for most devices. 
+
+    This policy is available starting with platform version 4.18.2106.5 and later.
+
+  defaultValue: None
+  position: Named
+  aliases: dgr
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableHttpParsing
+  description: |+
+    Indicates that the cmdlet removes whether disable inspection of HTTP traffic.
+    If **EnableNetworkProtection** has the value `Enabled`, HTTP connections to malicious websites can be blocked.
+
+  defaultValue: None
+  position: Named
+  aliases: dhttpp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableInboundConnectionFiltering
+  description: |+
+    Indicates that the cmdlet removes whether to inspect only outbound connections.
+    By default, Network Protection inspects both inbound and outbound connections.
+
+  defaultValue: None
+  position: Named
+  aliases: dicf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableIntrusionPreventionSystem
+  description: |+
+    Indicates that the cmdlet removes whether to configure network protection against exploitation of known vulnerabilities.
+
+  defaultValue: None
+  position: Named
+  aliases: dips
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableIOAVProtection
+  description: |+
+    Indicates that the cmdlet removes whether Windows Defender scans all downloaded files and attachments.
+
+  defaultValue: None
+  position: Named
+  aliases: dioavp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisablePrivacyMode
+  description: |+
+    Indicates that the cmdlet removes whether to disable privacy mode.
+
+  defaultValue: None
+  position: Named
+  aliases: dpm
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableRdpParsing
+  description: |+
+    Indicates that the cmdlet removes whether to inspect only outbound connections. By default, Network Protection inspects both inbound and outbound connections.
+
+  defaultValue: None
+  position: Named
+  aliases: drdpp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableRealtimeMonitoring
+  description: |+
+    Indicates that the cmdlet removes whether to use real-time protection.
+
+  defaultValue: None
+  position: Named
+  aliases: drtm
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableRemovableDriveScanning
+  description: |+
+    Indicates that the cmdlet removes whether to scan for malicious and unwanted software in removable drives, such as flash drives, during a full scan.
+
+  defaultValue: None
+  position: Named
+  aliases: drdsc
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableRestorePoint
+  description: |+
+    Indicates that the cmdlet removes whether to disable scanning of restore points.
+
+  defaultValue: None
+  position: Named
+  aliases: drp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableScanningMappedNetworkDrivesForFullScan
+  description: |+
+    Indicates that the cmdlet removes whether to scan mapped network drives.
+    If you specify a value of `$False` or do not specify a value, Windows Defender scans mapped network drives.
+
+  defaultValue: None
+  position: Named
+  aliases: dsmndfsc
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableScanningNetworkFiles
+  description: |+
+    Indicates that the cmdlet removes whether to scan for network files.
+
+  defaultValue: None
+  position: Named
+  aliases: dsnf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableScriptScanning
+  description: |+
+    Indicates that the cmdlet removes whether to disable the scanning of scripts during malware scans.
+    If you specify a value of $False or do not specify a value, Windows Defender does not scan scripts.
+
+  defaultValue: None
+  position: Named
+  aliases: dscrptsc
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableSshParsing
+  description: |+
+    Indicates that the cmdlet removes whether to disable inspection of SSH traffic.
+    By default, Network Protection inspects SSH traffic.
+
+  defaultValue: None
+  position: Named
+  aliases: dsshp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableTlsParsing
+  description: |+
+    Indicates that the cmdlet removes whether to disable inspection of TLS traffic, also known as HTTPS.
+    By default, Network Protection inspects TLS traffic.
+
+  defaultValue: None
+  position: Named
+  aliases: dtlsp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableControlledFolderAccess
+  description: |+
+    Indicates that the cmdlet removes the state for the controlled folder access feature. Valid values are Disabled, Enabled, and Audit Mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableDnsSinkhole
+  description: |+
+    Indicates that the cmdlet removes whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks. 
+
+  defaultValue: None
+  position: Named
+  aliases: ednss
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableFileHashComputation
+  description: |+
+    Indicates that the cmdlet removes whether to enable file hash computation.
+    When this feature is enabled, Windows Defender computes hashes for files it scans.
+
+  defaultValue: None
+  position: Named
+  aliases: efhc
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableFullScanOnBatteryPower
+  description: |+
+    Indicates that the cmdlet removes whether Windows Defender does a full scan while on battery power.
+
+  defaultValue: None
+  position: Named
+  aliases: efsobp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableLowCpuPriority
+  description: |+
+    Indicates that the cmdlet removes whether Windows Defender uses low CPU priority for scheduled scans.
+
+  defaultValue: None
+  position: Named
+  aliases: elcp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableNetworkProtection
+  description: |+
+    Specifies how the Network Protection Service handles web-based malicious threats, including phishing and malware.
+    Possible values are Disabled, Enabled, and AuditMode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EngineUpdatesChannel
+  description: |+
+    Specifies when devices receive Microsoft Defender engine updates during the monthly gradual rollout.
+
+    Valid values are:
+
+    - NotConfigured. Devices stay up to date automatically during the gradual release cycle. This value is suitable for most devices.
+    - Beta. Devices are the first to receive new updates. Select Beta Channel to participate in identifying and reporting issues to Microsoft. Devices in the Windows Insider Program are subscribed to this channel by default. This value is for use in manual test environments only and a limited number of devices.
+    - Broad. Devices are offered updates only after the gradual release cycle completes. This value is suggested for a broad set of devices in your production population, from 10 to 100 percent.
+    - Preview. Devices are offered updates earliest during the monthly gradual release cycle. This value is suggested for pre-production or validation environments.
+    - Staged. Devices are offered updates after the monthly gradual release cycle. This value is suggested for a small, representative part of your production population, around 10 percent.
+
+  defaultValue: None
+  position: Named
+  aliases: erelr
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExclusionExtension
+  description: |+
+    Specifies an array of file name extensions, such as obj or lib, to exclude from scheduled, custom, and real-time scanning.
+    This cmdlet removes the exclusions that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExclusionIpAddress
+  description: |+
+    Specifies an array of IP addresses to exclude from scheduled and real-time scanning.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExclusionPath
+  description: |+
+    Specifies an array of file paths to exclude from scheduled and real-time scanning.
+    This cmdlet removes the exclusions that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExclusionProcess
+  description: |+
+    Specifies an array of processes, as paths to process images.
+    This cmdlet removes exclusions of files opened by the processes that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceUseProxyOnly
+  description: |+
+    Removes whether to force the device to use only the proxy.
+
+  defaultValue: None
+  position: Named
+  aliases: fupo
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: HighThreatDefaultAction
+  description: |+
+    Indicates that this cmdlet removes the automatic remediation action specified for the high threat alert level.
+
+  defaultValue: None
+  position: Named
+  aliases: htdefac
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LowThreatDefaultAction
+  description: |+
+    Indicates that this cmdlet removes the automatic remediation action specified for the low threat alert level.
+
+  defaultValue: None
+  position: Named
+  aliases: ltdefac
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MAPSReporting
+  description: |+
+    Indicates that the cmdlet removes membership in Microsoft Active Protection Service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MeteredConnectionUpdates
+  description: |+
+    Indicates that the cmdlet removes whether to update managed devices to update through metered connections.
+    Data charges may apply.
+
+  defaultValue: None
+  position: Named
+  aliases: mcupd
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ModerateThreatDefaultAction
+  description: |+
+    Indicates that this cmdlet removes the automatic remediation action specified for the moderate threat alert level.
+
+  defaultValue: None
+  position: Named
+  aliases: mtdefac
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PlatformUpdatesChannel
+  description: |+
+    Specifies when devices receive Microsoft Defender platform updates during the monthly gradual rollout.
+
+    Valid values are:
+
+    - NotConfigured. Devices stay up to date automatically during the gradual release cycle. This value is suitable for most devices.
+    - Beta. Devices are the first to receive new updates. Select Beta Channel to participate in identifying and reporting issues to Microsoft. Devices in the Windows Insider Program are subscribed to this channel by default. This value is for use in manual test environments only and a limited number of devices.
+    - Broad. Devices are offered updates only after the gradual release cycle completes. This value is suggested for a broad set of devices in your production population, from 10 to 100 percent.
+    - Preview. Devices are offered updates earliest during the monthly gradual release cycle. This value is suggested for pre-production or validation environments.
+    - Staged. Devices are offered updates after the monthly gradual release cycle. This value is suggested for a small, representative part of your production population, around 10 percent.
+
+  defaultValue: None
+  position: Named
+  aliases: prelr
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ProxyBypass
+  description: |+
+    Specifies proxy bypasses.
+
+  defaultValue: None
+  position: Named
+  aliases: proxbps
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ProxyPacUrl
+  description: |+
+    Specifies the Privilege Attribute Certificate (PAC) proxy.
+
+  defaultValue: None
+  position: Named
+  aliases: ppurl
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ProxyServer
+  description: |+
+    Specifies the proxy server.
+
+  defaultValue: None
+  position: Named
+  aliases: proxsrv
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PUAProtection
+  description: |+
+    Specifies the level of detection for potentially unwanted applications.
+    When potentially unwanted software is downloaded or attempts to install itself on your computer, you are warned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: QuarantinePurgeItemsAfterDelay
+  description: |+
+    Indicates that the cmdlet removes specified number of days to keep items in the Quarantine folder.
+
+  defaultValue: None
+  position: Named
+  aliases: qpiad
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RandomizeScheduleTaskTimes
+  description: |+
+    Indicates that the cmdlet removes whether to select a random time for the scheduled start and scheduled update for definitions.
+
+  defaultValue: None
+  position: Named
+  aliases: rstt
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RealTimeScanDirection
+  description: |+
+    Indicates that the cmdlet removes specified scanning configuration for incoming and outgoing files on NTFS volumes.
+
+  defaultValue: None
+  position: Named
+  aliases: rtsd
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemediationScheduleDay
+  description: |+
+    Indicates that the cmdlet removes specified day of the week on which to perform a scheduled full scan in order to complete remediation.
+
+  defaultValue: None
+  position: Named
+  aliases: rsd
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemediationScheduleTime
+  description: |+
+    Indicates that the cmdlet removes specified time of day, as the number of minutes after midnight, to perform a scheduled scan.
+
+  defaultValue: None
+  position: Named
+  aliases: rst
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReportingAdditionalActionTimeOut
+  description: |+
+    Indicates that the cmdlet removes specified number of minutes before a detection in the additional action state changes to the cleared state.
+
+  defaultValue: None
+  position: Named
+  aliases: raat
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReportingCriticalFailureTimeOut
+  description: |+
+    Indicates that the cmdlet removes specified the number of minutes before a detection in the critically failed state changes to either the additional action state or the cleared state.
+
+  defaultValue: None
+  position: Named
+  aliases: rcto
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReportingNonCriticalTimeOut
+  description: |+
+    Indicates that the cmdlet removes specified number of minutes before a detection in the non-critically failed state changes to the cleared state.
+
+  defaultValue: None
+  position: Named
+  aliases: rncto
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ScanAvgCPULoadFactor
+  description: |+
+    Indicates that the cmdlet removes specified maximum percentage CPU usage for a scan.
+
+  defaultValue: None
+  position: Named
+  aliases: saclf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ScanOnlyIfIdleEnabled
+  description: |+
+    Indicates that the cmdlet removes whether to start scheduled scans only when the computer is not in use.
+
+  defaultValue: None
+  position: Named
+  aliases: soiie
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ScanParameters
+  description: |+
+    Indicates that the cmdlet removes specified scan type to use during a scheduled scan.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ScanPurgeItemsAfterDelay
+  description: |+
+    Indicates that the cmdlet removes specified number of days to keep items in the scan history folder.
+
+  defaultValue: None
+  position: Named
+  aliases: spiad
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ScanScheduleDay
+  description: |+
+    Indicates that the cmdlet removes specified the day of the week on which to perform a scheduled scan.
+
+  defaultValue: None
+  position: Named
+  aliases: scsd
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ScanScheduleQuickScanTime
+  description: |+
+    Indicates that the cmdlet removes specified time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
+
+  defaultValue: None
+  position: Named
+  aliases: scsqst
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ScanScheduleTime
+  description: |+
+    Indicates that the cmdlet removes specified time of day, as the number of minutes after midnight, to perform a scheduled scan.
+
+  defaultValue: None
+  position: Named
+  aliases: scst
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SchedulerRandomizationTime
+  description: |+
+    Specifies the randomization time for the scheduler.
+
+  defaultValue: None
+  position: Named
+  aliases: srt
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SevereThreatDefaultAction
+  description: |+
+    Indicates that this cmdlet removes the automatic remediation action specified for the severe threat alert level.
+
+  defaultValue: None
+  position: Named
+  aliases: stdefac
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SharedSignaturesPath
+  description: |+
+    Specifies the shared signatures path.
+
+  defaultValue: None
+  position: Named
+  aliases: ssp, SecurityIntelligenceLocation, ssl
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SignatureAuGracePeriod
+  description: |+
+    Indicates that the cmdlet removes specified grace period, in minutes, for the definition.
+
+  defaultValue: None
+  position: Named
+  aliases: sigagp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SignatureBlobFileSharesSources
+  description: |+
+    Specifies the file shares sources for signatures.
+
+  defaultValue: None
+  position: Named
+  aliases: sigbfs
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SignatureBlobUpdateInterval
+  description: |+
+    Indicates that the cmdlet removes the signature update interval.
+
+  defaultValue: None
+  position: Named
+  aliases: sigbui
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SignatureDefinitionUpdateFileSharesSources
+  description: |+
+    Indicates that the cmdlet removes specified file-share sources for definition updates.
+
+  defaultValue: None
+  position: Named
+  aliases: sigdufss
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SignatureDisableUpdateOnStartupWithoutEngine
+  description: |+
+    Indicates that the cmdlet removes whether to initiate definition updates even if no antimalware engine is present.
+
+  defaultValue: None
+  position: Named
+  aliases: sigduoswo
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SignatureFallbackOrder
+  description: |+
+    Indicates that the cmdlet removes specified order in which to contact different definition update sources.
+
+  defaultValue: None
+  position: Named
+  aliases: sfo
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SignatureFirstAuGracePeriod
+  description: |+
+    Indicates that the cmdlet removes specified grace period, in minutes, for the definition.
+
+  defaultValue: None
+  position: Named
+  aliases: sigfagp
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SignatureScheduleDay
+  description: |+
+    Indicates that the cmdlet removes specified day of the week on which to check for definition updates.
+
+  defaultValue: None
+  position: Named
+  aliases: sigsd
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SignatureScheduleTime
+  description: |+
+    Indicates that the cmdlet removes specified time of day, as the number of minutes after midnight, to check for definition updates.
+
+  defaultValue: None
+  position: Named
+  aliases: sigst
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SignaturesUpdatesChannel
+  description: |+
+    Specifies when devices receive daily Microsoft Defender definition updates during the monthly gradual rollout.
+
+    Valid values are:
+
+    - NotConfigured. Devices stay up to date automatically during the gradual release cycle. This value is suitable for most devices.
+    - Broad. Devices are offered updates only after the gradual release cycle completes. This value is suggested for a broad set of devices in your production population, from 10 to 100 percent.
+    - Staged. Devices are offered updates after the monthly gradual release cycle. This value is suggested for a small, representative part of your production population, around 10 percent.
+
+    This parameter name will be updated to **DefinitionUpdatesChannel** in a future release.
+
+  defaultValue: None
+  position: Named
+  aliases: srelr
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SignatureUpdateCatchupInterval
+  description: |+
+    Indicates that the cmdlet removes specified number of days after which Windows Defender requires a catch-up definition update.
+
+  defaultValue: None
+  position: Named
+  aliases: siguci
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SignatureUpdateInterval
+  description: |+
+    Indicates that the cmdlet removes specified interval at which to check for definition updates.
+
+  defaultValue: None
+  position: Named
+  aliases: sigui
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SubmitSamplesConsent
+  description: |+
+    Indicates that the cmdlet removes how Windows Defender checks for user consent for certain samples.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ThreatAction" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ThreatIDDefaultAction_Actions
+  description: |+
+    Specifies an array of the actions to take for the IDs specified by using the **ThreatIDDefaultAction_Ids** parameter.
+    The acceptable values for this parameter are:
+
+    - 1: Clean 
+    - 2: Quarantine 
+    - 3: Remove 
+    - 6: Allow 
+    - 8: UserDefined 
+    - 9: NoAction 
+    - 10: Block
+
+    >[!NOTE]
+    >A value of 0 (NULL) applies an action based on the Security Intelligence Update (SIU). This is the default value.
+
+  defaultValue: None
+  position: Named
+  aliases: tiddefaca
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ThreatIDDefaultAction_Ids
+  description: |+
+    Specifies an array of threat IDs.
+    This cmdlet removes the default actions for the threat IDs that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: tiddefaci
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UILockdown
+  description: |+
+    Indicates that the cmdlet removes whether to disable UI lockdown mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UnknownThreatDefaultAction
+  description: |+
+    Indicates that this cmdlet removes the automatic remediation action specified for the unknown threat alert level.
+
+  defaultValue: None
+  position: Named
+  aliases: unktdefac
+  parameterValueGroup: ""
+uid: Defender.Remove-MpPreference
+name: Remove-MpPreference
+description: |-
+  The **Remove-MpPreference** cmdlet removes exclusions for file name extensions, paths, and processes, or default actions for high, moderate, and low threats.
+  If you attempt to remove an exclusion that is not in the list, this cmdlet reports the error.
+metadata:
+  description: The Remove-MpPreference cmdlet removes exclusions for file name extensions, paths, and processes, or default actions for high, moderate, and low threats.
+  external help file: MSFT_MpPreference.cdxml-help.xml
+  Module Name: Defender
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/defender/remove-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-MpPreference

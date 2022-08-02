@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes queues.
+module: MSMQ
+notes: ""
+links:
+- text: Clear-MsmqQueue
+  href: ./Clear-MSMQQueue.yml
+- text: Get-MsmqQueue
+  href: ./Get-MsmqQueue.yml
+- text: New-MsmqQueue
+  href: ./New-MsmqQueue.yml
+- text: Receive-MsmqQueue
+  href: ./Receive-MsmqQueue.yml
+- text: Send-MsmqQueue
+  href: ./Send-MsmqQueue.yml
+- text: Set-MsmqQueue
+  href: ./Set-MsmqQueue.yml
+syntaxes:
+- Remove-MsmqQueue -InputObject <MessageQueue[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove public queues that have specified names'
+  code: |-
+    PS C:\> Get-MsmqQueue -Name "Order*" -QueueType Public | Remove-MsmqQueue
+  description: |-
+    This command gets public queues that have names that start with the string Order by using the **Get-MsmqQueue** cmdlet.
+    The command passes the results to the current cmdlet by using the pipeline operator.
+    The current cmdlet removes the queues.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="MessageQueue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of **MsmqQueue** objects.
+    This cmdlet deletes the queues that the **MsmqQueue** objects specify.
+    This parameter accepts pipeline input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MSMQ.Remove-MsmqQueue
+name: Remove-MsmqQueue
+description: |-
+  The **Remove-MsmqQueue** cmdlet deletes queues.
+  Specify queues to delete by using **MsmqQueue** objects.
+  This cmdlet does not return anything.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/remove-msmqqueue?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-MsmqQueue

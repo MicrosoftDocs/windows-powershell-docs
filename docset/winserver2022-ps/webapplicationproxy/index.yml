@@ -1,0 +1,29 @@
+### YamlMime:PowershellModule
+children:
+- title: WebApplicationProxy
+  cmdlets:
+  - WebApplicationProxy.Add-WebApplicationProxyApplication
+  - WebApplicationProxy.Get-WebApplicationProxyApplication
+  - WebApplicationProxy.Get-WebApplicationProxyAvailableADFSRelyingParty
+  - WebApplicationProxy.Get-WebApplicationProxyConfiguration
+  - WebApplicationProxy.Get-WebApplicationProxyHealth
+  - WebApplicationProxy.Get-WebApplicationProxySslCertificate
+  - WebApplicationProxy.Install-WebApplicationProxy
+  - WebApplicationProxy.Remove-WebApplicationProxyApplication
+  - WebApplicationProxy.Set-WebApplicationProxyApplication
+  - WebApplicationProxy.Set-WebApplicationProxyConfiguration
+  - WebApplicationProxy.Set-WebApplicationProxySslCertificate
+  - WebApplicationProxy.Update-WebApplicationProxyDeviceRegistration
+uid: WebApplicationProxy
+name: WebApplicationProxy
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Web Application Proxy cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.2.1
+  Locale: en-US
+  Module Guid: dcfdd8a2-772e-443b-9108-0fdfe8356f22
+  Module Name: WebApplicationProxy
+  ms.date: 12/20/2016
+  title: WebApplicationProxy

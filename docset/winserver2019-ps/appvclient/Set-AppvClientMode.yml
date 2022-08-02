@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the mode in which the client runs.
+module: AppvClient
+notes: ""
+links:
+- text: Get-AppvClientMode
+  href: ./Get-AppvClientMode.yml
+syntaxes:
+- Set-AppvClientMode [-Normal] [<CommonParameters>]
+- Set-AppvClientMode [-Uninstall] [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Normal
+  isRequired: true
+  description: |+
+    Indicates that the App-V Client functions normally.
+    This means all adding and publishing of App-V packages and creating of Virtual environments function normally.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Uninstall
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet prevents the App-V Client from adding and publishing packages or creating any virtual environments.
+    This is set to enable an uninstall of the App-V Client to correctly occur.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Set-AppvClientMode
+name: Set-AppvClientMode
+description: |-
+  The **Set-AppvClientMode** cmdlet sets the mode in which the client runs.
+  By default, the cmdlet is set to *Normal* and the Microsoft Application Virtualization (App-V) Client runs normally.
+  If the *Uninstall* parameter is specified, the App-V Client prevents all client activity from happening which includes adding and publishing packages and creating virtual environments.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/set-appvclientmode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AppvClientMode

@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Initializes the VAMT database and removes all the data.
+module: VAMT
+notes: ""
+links:
+- text: Import-VamtData
+  href: ./Import-VamtData.yml
+- text: Export-VamtData
+  href: ./Export-VamtData.yml
+syntaxes:
+- >-
+  Initialize-VamtData [-PreserveKeys] [-DbConnectionString <String>] [-Confirm] [-DbCommandTimeout <Int32>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Initialize database and preserve keys'
+  code: |-
+    PS C:\>Initialize-VamtData -PreserveKeys
+  description: |-
+    This command initializes the database, but retains the product keys.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DbCommandTimeout
+  description: |+
+    Indicates how long dep_nextref_vamt waits for a response from the database before timing out.
+    The default value is 30 seconds.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DbConnectionString
+  description: |+
+    Specifies the database to be initialized.
+    If no database connection string is provided, dep_nextref_vamt attempts to use the database that the dep_nextref_vamt user console used on the local computer.
+    If dep_nextref_vamt does not find a database, it returns an error.
+    You can find the connection string in the dep_nextref_vamt UI in the Preferences dialog box.
+    On the menu bar, click View, and then click Preferences to open the Volume Activation Management Tool Preferences dialog box.
+    The connection string is in the Database Settings section under Current connection string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PreserveKeys
+  description: |+
+    Indicates that the product keys in the dep_nextref_vamt database will be retained when the database is initialized.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: VAMT.Initialize-VamtData
+name: Initialize-VamtData
+description: |-
+  The **Initialize-VamtData** cmdlet restores a dep_nextref_vamt database to its initial state and removes all the data from the database.
+  You can preserve the product keys in the database if you need them.
+  You can also suppress the prompt that asks you to confirm the database initialization.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
+  Module Name: VAMT
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/vamt/initialize-vamtdata?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Initialize-VamtData

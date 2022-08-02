@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Puts a device into maintenance mode.
+module: HCS
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Exit-HcsMaintenanceMode
+  href: ./Exit-HcsMaintenanceMode.yml
+- text: Get-HcsFirmwareVersion
+  href: ./Get-HcsFirmwareVersion.yml
+- text: Start-HcsFirmwareCheck
+  href: ./Start-HcsFirmwareCheck.yml
+syntaxes:
+- Enter-HcsMaintenanceMode [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enter device maintenance mode'
+  code: |-
+    PS C:\> Enter-HcsMaintenanceMode
+
+
+    Maintenance mode will disrupt all IOs and server the connection to the 
+    azure_1 Management Portal. Entering maintenance mode will reboot both 
+    controllers, which takes a few minutes to complete. Are you sure you want to enter 
+    maintenance mode? 
+    [Y] Yes  [N] No  [?] Help (default is "Y"):
+    ----------------MAINTENANCE MODE-----------------
+
+    azure_1 StorSimple Device Model 7700
+    Name: emards_device
+    Software Version: 6.3.9600.16517
+    Copyright (C) 2013 Microsoft Corporation. All rights reserved. 
+    You are connected to Controller1
+
+    -------------------------------------------------
+  description: |-
+    This command enters device maintenance mode.
+
+    To reconnect, you must start a new Windows PowerShell® session.
+    When you reconnect, maintenance mode information is displayed.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HCS.Enter-HcsMaintenanceMode
+name: Enter-HcsMaintenanceMode
+description: |-
+  The **Enter-HcsMaintenanceMode** cmdlet puts a device into maintenance mode.
+  Putting a device in maintenance mode disrupts its I/Os and severs its connection to the azure_1 Management Portal.
+  Maintenance mode is primarily for installing updates that require you to disable I/O.
+  Updates to disk firmware require you to disable I/O.
+metadata:
+  external help file: Microsoft.HCS.Management.dll-Help.xml
+  Module Name: HCS
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/hcs/enter-hcsmaintenancemode?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enter-HcsMaintenanceMode

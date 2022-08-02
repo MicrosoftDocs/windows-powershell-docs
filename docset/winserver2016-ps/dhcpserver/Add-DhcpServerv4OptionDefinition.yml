@@ -1,0 +1,232 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a DHCPv4 option definition on the DHCP server service.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4OptionDefinition" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4OptionValue" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4OptionDefinition" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-DhcpServerv4OptionDefinition
+  href: ./Get-DhcpServerv4OptionDefinition.yml
+- text: Remove-DhcpServerv4OptionDefinition
+  href: ./Remove-DhcpServerv4OptionDefinition.yml
+- text: Set-DhcpServerv4OptionDefinition
+  href: ./Set-DhcpServerv4OptionDefinition.yml
+syntaxes:
+- >-
+  Add-DhcpServerv4OptionDefinition [-ComputerName <String>] [-Name] <String> [-Description <String>]
+
+   [-OptionId] <UInt32> [-Type] <String> [-MultiValued] [-VendorClass <String>] [-DefaultValue <String[]>]
+
+   [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Add the IPv4 option definition for web proxy auto detection'
+  code: |-
+    PS C:\> Add-DhcpServerv4OptionDefinition -Name "WPAD" -OptionId 252 -Type "String"
+  description: |-
+    This example adds the IPv4 option definition for web proxy auto detection (wpad) to the DHCPv4 server service.
+  summary: ""
+- title: 'Example 2: Add the option definition for the UC identifier for a vendor class'
+  code: |-
+    PS C:\> Add-DhcpServerv4OptionDefinition -Name "UCIdentifier" -OptionId 1 -Type "BinaryData" -VendorClass "MS-UC-Client" -Description "UC Identifier"
+  description: |-
+    This example adds the option definition for the Unified Communications (UC) identifier for the vendor class named MS-UC-Client.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+    For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer that runs the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DefaultValue
+  description: |+
+    Specifies the default value for the option for which a definition is created.
+    The syntax to specify the default value for the option as follows: 
+
+    - Byte, Word, DWord, DWordDword.
+    These values can be specified as decimal or hexadecimal strings. 
+    - IPAddress, IPv6Address.
+    These values can be specified as IP address strings. 
+    - String.
+    This value can be specified as a string. 
+    - BinaryData, EncapsulatedData.
+    These values can be specified as hexadecimal strings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies the description of the option definition being added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MultiValued
+  description: |+
+    Allows for multiple values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the DHCPv4 option.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: OptionId
+  isRequired: true
+  description: |+
+    Specifies the numeric identifier of the option.
+    The acceptable values for this parameter are: 1 through 255.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Specifies the data type of the values for this option.
+    The acceptable values for this parameter are:
+
+    - Byte 
+    - Word 
+    - DWord 
+    - DWordDword 
+    - IPAddress 
+    - String 
+    - BinaryData 
+    - EncapsulatedData 
+    - IPv6Address
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: Byte, Word, DWord, DWordDWord, IPv4Address, String, BinaryData, EncapsulatedData
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VendorClass
+  description: |+
+    Adds the Option Definition for the specified vendor class.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DhcpServer.Add-DhcpServerv4OptionDefinition
+name: Add-DhcpServerv4OptionDefinition
+description: |-
+  The **Add-DhcpServerv4OptionDefinition** cmdlet adds a new DHCPv4 option definition on the Dynamic Host Configuration Protocol (DHCP) server service.
+  An option definition must exist before an option value of that type can be configured.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DhcpServerV4OptionDefinition_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/add-dhcpserverv4optiondefinition?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DhcpServerv4OptionDefinition

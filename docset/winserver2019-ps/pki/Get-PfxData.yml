@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Extracts the content of a Personal Information Exchange (PFX) file into a structure without importing it to certificate store.
+module: pki
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    A string containing the path to PFX file.
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.PFXData" data-throw-if-not-resolved="False" />
+  description: |-
+    A **PFXData** object.
+links:
+- text: ConvertTo-SecureString
+  href: https://go.microsoft.com/fwlink/p/?LinkID=293933
+- text: Export-PfxCertificate
+  href: ./Export-PfxCertificate.yml
+syntaxes:
+- Get-PfxData [-Password <SecureString>] [-FilePath] <String> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
+
+    PS C:\>$mypfx = Get-PfxData -FilePath C:\mypfx.pfx -Password $mypwd
+  description: |-
+    This example returns certificate information for the file mypfx.pfx located on the C: drive that is secured with the specified password.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>$NewPwd = ConvertTo-SecureString -String "abcd" -Force -AsPlainText
+
+    PS C:\>$mypfx = Get-PfxData -FilePath C:\mypfx.pfx -Password $OldPwd
+
+    PS C:\>Export-PfxCertificate -PfxData $mypfx -FilePath C:\mypfx.pfx -Password $NewPwd -Force
+  description: |-
+    This example shows how one can change an existing password for mypfx.pfx file from $OldPwd to $NewPwd.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies the path to the PFX file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: FullName
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Specifies the password for the imported PFX file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: pki.Get-PfxData
+name: Get-PfxData
+description: |-
+  The **Get-PfxData** cmdlet extracts the content of a Personal Information Exchange (PFX) file into a structure that contains the end entity certificate, any intermediate and root certificates.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  Module Name: pki
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/pki/get-pfxdata?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-PfxData

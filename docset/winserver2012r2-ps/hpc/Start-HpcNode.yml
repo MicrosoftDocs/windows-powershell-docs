@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Turns on nodes by using an Intelligent Platform Management Interface (IPMI) script.
+module: HPC
+notes: |-
+  * You must be a cluster administrator to run this cmdlet successfully.
+inputs:
+- name: <xref href="HpcNode" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-HpcNode
+  href: ./Get-HpcNode.md
+- text: Remove-HpcNode
+  href: ./Remove-HpcNode.md
+- text: Restart-HpcNode
+  href: ./Restart-HpcNode.md
+- text: Set-HpcNode
+  href: ./Set-HpcNode.yml
+- text: Shutdown-HpcNode
+  href: ./Shutdown-HpcNode.yml
+syntaxes:
+- >-
+  Start-HpcNode [-Name] <String[]>  [-Scheduler <String[]>]
+
+   [<CommonParameters>]
+- >-
+  Start-HpcNode -Node <HpcNode[]>  [-Scheduler <String[]>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Start a node'
+  code: |-
+    PS C:\>Start-HpcNode -Name "hpc01cn02"
+  description: |-
+    This command turns on a node named hpc01cn02.
+  summary: ""
+- title: 'Example 2: Get nodes by group name and start them'
+  code: |-
+    PS C:\>Get-HpcNode -GroupName "Maintenance" | Start-HpcNode
+  description: |-
+    This command gets the **HpcNode** objects for all of the nodes in the group named Maintenance, and starts those nodes.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a list of the names of the nodes that you want to turn on.
+    You cannot specify both the *Name* and *Node* parameters.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HpcNode" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Node
+  isRequired: true
+  description: |+
+    Specifies one or more **HpcNode** objects for the nodes that you want to turn on.
+    You cannot specify both the *Node* and *Name* parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Scheduler
+  description: |+
+    Specifies the host name or IP address of the head node for the cluster that includes the nodes.
+    The value must be a valid computer name or IP address.
+    If you do not specify the *Scheduler* parameter, this cmdlet uses the scheduler on the head node that the CCP_SCHEDULER environment variable specifies.
+    To set this environment variable, run the following cmdlet:
+
+    `Set-Content Env:CCP_SCHEDULER \<head_node_name\>`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HPC.Start-HpcNode
+name: Start-HpcNode
+description: |-
+  The **Start-HpcNode** cmdlet turns on one or more nodes by using a preconfigured Intelligent Platform Management Interface (IPMI) script.
+  Your computer vendor should have configured the IPMI script for your computer.
+  If the IPMI script is not configured, **Start-HpcNode** generates an error.
+metadata:
+  external help file: CCPPSH.dll-Help.xml
+  Module Name: HPC
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hpc/start-hpcnode?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-HpcNode

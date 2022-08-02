@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the HTML string of a specific health report.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-WssReportHtml [-Id] <Guid> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the report HTML string'
+  code: |-
+    PS C:\> Get-WssReportHtml | Out-File -Filepath C:\Test01\Report.html
+  description: |-
+    This command gets the report HTML string on the server on which you run the cmdlet.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the ID of a report instance.
+    The cmdlet gets the report instance for the ID that you specify.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Get-WssReportHtml
+name: Get-WssReportHtml
+description: |-
+  The **Get-WssReportHtml** cmdlet gets the HTML string of a specific health report.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssreporthtml?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssReportHtml

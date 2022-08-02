@@ -1,0 +1,32 @@
+### YamlMime:PowershellModule
+children:
+- title: EventTracingManagement
+  cmdlets:
+  - EventTracingManagement.Add-EtwTraceProvider
+  - EventTracingManagement.Get-AutologgerConfig
+  - EventTracingManagement.Get-EtwTraceProvider
+  - EventTracingManagement.Get-EtwTraceSession
+  - EventTracingManagement.New-AutologgerConfig
+  - EventTracingManagement.New-EtwTraceSession
+  - EventTracingManagement.Remove-AutologgerConfig
+  - EventTracingManagement.Remove-EtwTraceProvider
+  - EventTracingManagement.Save-EtwTraceSession
+  - EventTracingManagement.Send-EtwTraceSession
+  - EventTracingManagement.Set-AutologgerConfig
+  - EventTracingManagement.Set-EtwTraceProvider
+  - EventTracingManagement.Start-EtwTraceSession
+  - EventTracingManagement.Stop-EtwTraceSession
+  - EventTracingManagement.Update-EtwTraceSession
+uid: EventTracingManagement
+name: EventTracingManagement
+description: |-
+  This reference provides cmdlet descriptions and syntax for Event Tracing Management-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 80cb11cf-96b5-4d48-84bd-f85f65de78ae
+  Module Name: EventTracingManagement
+  ms.date: 01/05/2017
+  title: EventTracingManagement

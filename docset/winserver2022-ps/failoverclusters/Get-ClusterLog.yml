@@ -1,0 +1,145 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a log file for all nodes, or a specific a node, in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.IO.FileInfo" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-ClusterLog
+  href: ./Set-ClusterLog.yml
+syntaxes:
+- >-
+  Get-ClusterLog [[-Node] <StringCollection>] [-Destination <String>] [-TimeSpan <UInt32>] [-UseLocalTime]
+
+   [-SkipClusterState] [-Health] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a log file for the local cluster'
+  code: |-
+    PS C:\> Get-ClusterLog
+    Mode                LastWriteTime     Length Name 
+    ----                -------------     ------ ---- 
+    -a---          9/4/2008   3:53 PM    2211301 Cluster.log 
+    -a---          9/4/2008   3:53 PM    1261025 Cluster.log
+  description: |-
+    This command creates a log file for the local cluster in the cluster reports folder (C:\Windows\Cluster\Reports) on each node of the cluster.
+  summary: ""
+- title: 'Example 2: Create log files for each node and save them locally'
+  code: |-
+    PS C:\> Get-ClusterLog -Destination .
+    Mode                LastWriteTime     Length Name 
+    ----                -------------     ------ ---- 
+    -a---          9/4/2008   3:55 PM    2211301 node1_cluster.log 
+    -a---          9/4/2008   3:55 PM    1261025 node2_cluster.log
+  description: |-
+    This command creates a log file for each node of the local cluster, and copies all logs to the local folder.
+  summary: ""
+- title: 'Example 3: Create a log file for the local cluster for previous five minutes'
+  code: |-
+    PS C:\> Get-ClusterLog -TimeSpan 5
+    Mode                LastWriteTime     Length Name 
+    ----                -------------     ------ ---- 
+    -a---          9/4/2008   3:58 PM     128299 Cluster.log 
+    -a---          9/4/2008   4:01 PM     104181 Cluster.log
+  description: |-
+    This command creates a log file for the local cluster in the cluster reports folder (C:\Windows\Cluster\Reports) on each node of the cluster.
+    The log covers the last 5 minutes.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Destination
+  description: |+
+    Specifies the location to which to copy one or more cluster logs.
+    To copy to the current folder, use `.` for this parameter input.
+    Default location is C:\Windows\Cluster\Reports.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Health
+  description: |+
+    Indicates that the cmdlet also logs the health information of the cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster from which to generate cluster logs.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Node
+  description: |+
+    Specifies the name of the cluster node for which to generate the cluster log.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipClusterState
+  description: |+
+    Indicates that the cmdlet does not add additional cluster state information to the cluster logs.
+
+  defaultValue: None
+  position: Named
+  aliases: scs
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: TimeSpan
+  description: |+
+    Specifies the time span in minutes for which to generate the cluster log.
+
+  defaultValue: None
+  position: Named
+  aliases: Span
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseLocalTime
+  description: |+
+    Specifies that the time stamp for each cluster log entry uses local time.
+    By default, the timestamp uses Greenwich Mean Time (GMT).
+
+  defaultValue: None
+  position: Named
+  aliases: lt
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterLog
+name: Get-ClusterLog
+description: |-
+  The **Get-ClusterLog** cmdlet creates a log file for all nodes, or a specific a node, in a failover cluster.
+
+  When creating a log file for the cluster, you can specify the timespan that you want logged information for in addition to providing a destination for the created logs.
+
+  Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterlog?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterLog

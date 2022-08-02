@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Assigns an online service account to a user account.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    WssUserName
+    Type: System.String
+    Description: local network account name of user
+links:
+- text: Remove-WssMsoUserAssignment
+  href: ./Remove-WssMsoUserAssignment.yml
+- text: Get-WssMsoAssignedUser
+  href: ./Get-WssMsoAssignedUser.yml
+- text: Rename-WssMsoAssignedUser
+  href: ./Rename-WssMsoAssignedUser.yml
+- text: Set-WssMsoGroupAssignment
+  href: ./Set-WssMsoGroupAssignment.yml
+syntaxes:
+- Set-WssMsoUserAssignment [-WssUserName] <String> [-MsoUserName] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Assign an online service account'
+  code: |-
+    PS C:\> Set-WssMSOAssignedUser -WssUserName "Admin" -MsoUserName "DavidChew@TSQA.Contoso.com"
+  description: |-
+    This command assigns the online service account DavidChew@TSQA.Contoso.com to the local network user account named Admin.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MsoUserName
+  isRequired: true
+  description: |+
+    Specifies a user principal name (UPN).
+    The cmdlet assigns the online service account for the UPN that you specify to a user account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WssUserName
+  isRequired: true
+  description: |+
+    Specifies the name of a user account.
+    The cmdlet assigns the online service account to the user account that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Set-WssMsoUserAssignment
+name: Set-WssMsoUserAssignment
+description: |-
+  The **Set-WssMsoUserAssignment** cmdlet assigns an online service account to a local network user account.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssmsouserassignment?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssMsoUserAssignment

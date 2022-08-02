@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports certificates and private keys from a Personal Information Exchange (PFX) file to the destination store.
+module: pki
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    A **String** containing the path to the PFX file.
+outputs:
+- name: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="False" />
+  description: |-
+    The imported **X509Certificate2** object contained in the PFX file that is associated with private keys.
+links:
+- text: ConvertTo-SecureString
+  href: https://go.microsoft.com/fwlink/p/?LinkID=293933
+- text: Get-ChildItem
+  href: https://go.microsoft.com/fwlink/p/?LinkId=290488
+- text: Set-Location
+  href: https://go.microsoft.com/fwlink/p/?LinkID=293912
+- text: Export-PfxCertificate
+  href: ./Export-PfxCertificate.yml
+- text: System Store Locations
+  href: https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations
+syntaxes:
+- >-
+  Import-PfxCertificate [-Exportable] [-Password <SecureString>] [[-CertStoreLocation] <String>]
+
+   [-FilePath] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>$mypwd = Get-Credential -UserName 'Enter password below' -Message 'Enter password below'
+
+    PS C:\>Import-PfxCertificate -FilePath C:\mypfx.pfx -CertStoreLocation Cert:\LocalMachine\My -Password $mypwd.Password
+  description: |-
+    This example imports the PFX file my.pfx with a private non-exportable key into the My store for the machine account.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Get-ChildItem -Path c:\mypfx\my.pfx | Import-PfxCertificate -CertStoreLocation Cert:\CurrentUser\My -Exportable
+  description: |-
+    This example imports the PFX file my.pfx with a private non-exportable key into the My store for the current user with private key exportable.
+    The **Password** parameter is not required since this PFX file is not password protected.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Set-Location -Path cert:\localMachine\my
+
+    PS Cert:\localMachine\my>Import-PfxCertificate -FilePath c:\mypfx.pfx
+  description: |-
+    This example imports the PFX file mypfx.pfx into the My store for the machine account.
+    The **Password** parameter is not required since this PFX file is protected using the domain account of this machine.
+    This requires a Windows Server® 2012 domain controller.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertStoreLocation
+  description: |+
+    Specifies the path of the store to which certificates will be imported.
+    If this parameter is not specified, then the current path is used as the destination store.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Exportable
+  description: |+
+    Specifies whether the imported private key can be exported.
+    If this parameter is not specified, then the private key cannot be exported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies the path for the PFX file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: FullName
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Specifies the password for the imported PFX file in the form of a secure string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: pki.Import-PfxCertificate
+name: Import-PfxCertificate
+description: |-
+  The **Import-PfxCertificate** cmdlet imports certificates and private keys from a PFX file to the destination store.
+  Certificates with and without private keys in the PFX file are imported, along with any external properties that are present.
+
+  Delegation may be required when using this cmdlet with Windows PowerShell® remoting and changing user configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  Module Name: pki
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/pki/import-pfxcertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-PfxCertificate

@@ -1,0 +1,377 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a signed app package to a user account.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="System.IO.FileInfo" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Package Manager API
+  href: https://go.microsoft.com/fwlink/?LinkId=245447
+- text: How to Add and Remove Apps
+  href: https://go.microsoft.com/fwlink/?LinkID=231020
+- text: Get-AppxPackage
+  href: ./Get-AppxPackage.yml
+- text: Get-AppxPackageManifest
+  href: ./Get-AppxPackageManifest.yml
+- text: Move-AppxPackage
+  href: ./Move-AppxPackage.yml
+- text: Remove-AppxPackage
+  href: ./Remove-AppxPackage.yml
+syntaxes:
+- >-
+  Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-RequiredContentGroupOnly]
+
+   [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-ForceUpdateFromAnyVersion]
+
+   [-RetainFilesOnFailure] [-InstallAllResources] [-Volume <AppxVolume>] [-ExternalPackages <String[]>]
+
+   [-DeferRegistrationWhenPackagesAreInUse] [-OptionalPackages <String[]>] [-RelatedPackages <String[]>] 
+
+
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-AppxPackage [-Path] <String> [-RequiredContentGroupOnly] [-AppInstallerFile]
+
+   [-ForceTargetApplicationShutdown] [-InstallAllResources] [-LimitToExistingPackages] [-Volume <AppxVolume>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-Register] [-DisableDevelopmentMode]
+
+   [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-ForceUpdateFromAnyVersion]
+
+   [-InstallAllResources] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-RequiredContentGroupOnly]
+
+   [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-ForceUpdateFromAnyVersion]
+
+   [-RetainFilesOnFailure] [-InstallAllResources] [-Update] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-RequiredContentGroupOnly] [-Stage]
+
+   [-ForceUpdateFromAnyVersion] [-Volume <AppxVolume>] [-ExternalPackages <String[]>]
+
+   [-OptionalPackages <String[]>] [-RelatedPackages <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-AppxPackage [-Register] -MainPackage <String> [-DependencyPackages <String[]>] [-ForceApplicationShutdown]
+
+   [-ForceTargetApplicationShutdown] [-ForceUpdateFromAnyVersion] [-InstallAllResources] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Add-AppxPackage [-RegisterByFamilyName] -MainPackage <String> [-DependencyPackages <String[]>]
+
+   [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-InstallAllResources]
+
+   [-OptionalPackages <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add an app package'
+  code: |-
+    PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msix" -DependencyPath "C:\Users\user1\Desktop\winjs.msix"
+  description: |-
+    This command adds an app package that the package contains.
+  summary: ""
+- title: 'Example 2: Update an app, but defer registration until the app has closed'
+  code: |-
+    PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msix" -DependencyPath "C:\Users\user1\Desktop\winjs.msix" -DeferRegistrationWhenPackagesAreInUse
+  description: |-
+    This command will register an update to an existing app, but will not do so until the next launch of the app.
+  summary: ""
+- title: 'Example 3: Add a disabled app package in development mode'
+  code: |-
+    PS C:\> $ManifestPath = (Get-AppxPackage -Name "*WindowsCalculator*").InstallLocation + "\Appxmanifest.xml"
+    PS C:\> Add-AppxPackage -Path $ManifestPath -Register -DisableDevelopmentMode
+  description: |-
+    This command gets the full path of the package manifest file of an installed Windows Store app, and then registers that package.
+    You can use *DisableDevelopmentMode* to register an application that is staged by the **StagePackageAsync** API, has been disabled, or has become corrupted during testing.
+  summary: ""
+- title: 'Example 4: Add an app along with its optional packages'
+  code: |-
+    PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -ExternalPackages "C:\Users\user1\Desktop\optionalpackage1.msix","C:\Users\user1\Desktop\optionalpackage2.msixbundle"
+
+    PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -OptionalPackages "29270sandstorm.OptionalPackage1_gah1vdar1nn7a"
+  description: |-
+    This command adds an app package along with its optional packages. It is an atomic operation which means that if the app or its optional packages fail to install, the deployment operation will be aborted
+  summary: ""
+- title: 'Example 5: Install only the required section of a streaming app'
+  code: |-
+    PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -RequiredContentGroupOnly
+  description: |-
+    This command adds an app package but only installs the required section of a streaming app. Calling this command again without the RequiredContentGroupOnly flag proceeds to install the rest of the application in the order defined by the AppxContentGroupMap.xml
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AppInstallerFile
+  isRequired: true
+  description: |+
+    Runs an appinstaller file and allows the user to install all of the defined packages with a single click.
+    For more information, see [Create an App Installer file manually](https://github.com/microsoftdocs/msix-docs/blob/master/msix-src/app-installer/how-to-create-appinstaller-file.md).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeferRegistrationWhenPackagesAreInUse
+  description: |+
+    Specifies that the app will not register for a user if currently in use. The app will update on the next launch.
+
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DependencyPackages
+  description: |+
+    Specifies the dependency package full name or dependency package bundle full name to be registered.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DependencyPath
+  description: |+
+    Specifies an array of file paths of dependency packages that  are required for the installation of the app package.
+    The app package has an .msix, .appx, .msixbundle, or .appxbundle file name extension. You can specify the paths to more than one dependency package.
+    If a package is already installed for a user, you can skip adding it to the DependencyPath.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableDevelopmentMode
+  description: |+
+    Indicates that this cmdlet registers an existing app package installation that has been disabled, did not register, or has become corrupted.
+    Use the current parameter to specify that the manifest is from an existing installation, and not from a collection of files in development mode.
+    You can also use this parameter to register an application that the [Package Manager API](https://go.microsoft.com/fwlink/?LinkId=245447) has staged.
+    Use the *Register* parameter to specify the location of the app package manifest .xml file from the installation location.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExternalPackages
+  description: |+
+    Specifies an array of optional packages that must be installed along with the app package. It is an atomic operation which means that if the app or its optional packages fail to install, the deployment operation will be aborted
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceApplicationShutdown
+  description: |+
+    Indicates that this cmdlet forces all active processes that are associated with the package or its dependencies to shut down.
+    If you specify this parameter, do not specify the *ForceTargetApplicationShutdown* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceTargetApplicationShutdown
+  description: |+
+    Indicates that this cmdlet forces all active processes that are associated with the package to shut down.
+    If you specify this parameter, do not specify the *ForceApplicationShutdown* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceUpdateFromAnyVersion
+  description: |+
+    This parameter is used to force a specific version of a package to be staged/registered, regardless of whether a higher version is already staged/registered.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InstallAllResources
+  description: |+
+    Indicates that this cmdlet forces the deployment of all resource packages specified from a bundle argument.
+    This overrides the resource applicability check of the deployment engine and forces staging of all resource packages, registration of all resource packages, or staging and registration of all resource packages.
+    This parameter can only be used when specifying a resource bundle or resource bundle manifest.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LimitToExistingPackages
+  description: |+
+    This parameter is used to prevent missing referenced packages to be downloaded.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MainPackage
+  isRequired: true
+  description: |+
+    Specifies the main package full name or bundle full name to register.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OptionalPackages
+  description: |+
+    Specifies the PackageFamilyName of the optional packages that are in a related set that need to be installed along with the app. Unlike the external packages flag, you do not need to pass in a path to the optional package(s). It is an atomic operation which means that if the app or its optional packages fail to install, the deployment operation will be aborted
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the file path of the app package.
+    An app package has an .msix, .appx, .msixbundle, or .appxbundle file name extension.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: PSPath
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Register
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet registers an application in development mode.
+    You can use development mode to install applications from a folder of unpackaged files.
+    You can use the current parameter to test your Windows® Store apps before you deploy them as app packages.
+    To register an existing app package installation, you must specify the *DisableDevelopmentMode* parameter and the *Register* parameter.
+    In order to specify dependency packages, specify the *DependencyPath* parameter and the *DisableDevelopmentMode* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RegisterByFamilyName
+  isRequired: true
+  description: |+
+    Specifies the parameter -MainPackage that defines the family name or full name to be registered.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RelatedPackages
+  description: |+
+    This is an optional element that is used to specify the other optional packages that are specified in the main app package. These packages will not be installed as part of the deployment operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RequiredContentGroupOnly
+  description: |+
+    Specifies that only the required content group that is specified in the AppxContentGroupMap.xml must be installed. At this point the app can be launched. Calling add-appxpackage specifying the path to the app, triggers the rest of the app to be installed in the order defined in the AppxContentGroupMap.xml.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RetainFilesOnFailure
+  description: |+
+    In the case of a failed deployment, if this switch is set to $true, files that have been created on the target machine during the installation process are not removed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Stage
+  isRequired: true
+  description: |+
+    Stages a package to the system without registering it.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Update
+  isRequired: true
+  description: |+
+    Specifies that the package being added is a dependency package update.
+    A dependency package is removed from the user account when the parent app is removed.
+    If you do not use this parameter, the package being added is a primary package and is not removed from the user account if the parent app is removed.
+    To update an already installed package, the new package must have the same package family name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppxVolume" data-throw-if-not-resolved="False" />
+  name: Volume
+  description: |+
+    Specifies the **AppxVolume** object to which to stage the package.
+    The volume also specifies the default location for user **AppData**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Appx.Add-AppxPackage
+name: Add-AppxPackage
+description: |-
+  The **Add-AppxPackage** cmdlet adds a signed app package to a user account.
+  An app package has an .msix or .appx file name extension.
+  Use the *DependencyPath* parameter to add all other packages that are required for the installation of the app package.
+
+  You can use the *Register* parameter to install from a folder of unpackaged files during development of Windows® Store apps.
+
+  To update an already installed package, the new package must have the same package family name.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+  Module Name: Appx
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-AppxPackage

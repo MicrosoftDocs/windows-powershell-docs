@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Converts an mitigation policy file formats.
+module: ProcessMitigations
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- ConvertTo-ProcessMitigationPolicy -EMETFilePath <String> -OutputFilePath <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> ConvertTo-ProcessMitigationPolicy -EMETFilePath policy.xml -OutputFilePath result.xml
+  description: |-
+    Converts EMET file policy.xml to result.xml, may also generate a CI file CI-result.xml if necessary.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EMETFilePath
+  isRequired: true
+  description: |-
+    {{Fill EMETFilePath Description}}
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: f
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutputFilePath
+  isRequired: true
+  description: |-
+    {{Fill OutputFilePath Description}}
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: o
+  parameterValueGroup: ""
+uid: ProcessMitigations.ConvertTo-ProcessMitigationPolicy
+name: ConvertTo-ProcessMitigationPolicy
+description: |-
+  Converts an EMET policy file or pinning rule file to a new Windows 10 format.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ProcessMitigations.dll-Help.xml
+  Module Name: ProcessMitigations
+  ms.date: 03/29/2017
+  online version: https://docs.microsoft.com/powershell/module/processmitigations/convertto-processmitigationpolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: ConvertTo-ProcessMitigationPolicy

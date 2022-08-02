@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables shared configuration.
+module: IISAdministration
+notes: ""
+links:
+- text: Disable-IISSharedConfig
+  href: ./Disable-IISSharedConfig.yml
+- text: Get-IISSharedConfig
+  href: ./Get-IISSharedConfig.yml
+syntaxes:
+- >-
+  Enable-IISSharedConfig [-PhysicalPath] <String> [[-UserName] <String>] [[-Password] <SecureString>]
+
+   [[-KeyEncryptionPassword] <SecureString>] [-DontCopyRemoteKeys] [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable shared configuration'
+  code: |-
+    PS C:\> $KeyEncryptionPassword = ConvertTo-SecureString -AsPlainText -String "SecurePa$$w0rd" -Force
+    #For automation scenarios
+    PS C:\> $KeyEncryptionPassword = Read-Host -AsSecureString
+    #For UI scenarios
+    PS C:\> $Password = Read-Host -AsSecureString
+    PS C:\> Enable-IISSharedConfig -PhysicalPath "C:\export" -KeyEncryptionPassword $KeyEncryptionPassword -UserName "administrator" -Password $Password
+  description: |-
+    Passwords must be in **SecureString** format.
+    The first command uses ConvertTo-SecureString to convert the specified password, and then stores it in the $KeyEncryptionPassword variable.
+    Using **ConvertTo-SecureString** is useful in automation scenarios.
+
+    The second command uses Read-Host to read console input for the key encryption password, and then stores it in the $KeyEncryptionPassword variable.
+    Using **Read-Host** is a more secure method for UI scenarios.
+
+    The third command uses **Read-Host** to get the password for the user account that has permission to perform the operation.
+
+    The fourth command enables shared configuration using the exported configuration and keys at C:\export.
+  summary: ""
+- title: 'Example 2: Enable shared configuration without importing the keys'
+  code: |-
+    PS C:\> Enable-IISSharedConfig -PhysicalPath "C:\export" -DontCopyRemoteKeys
+  description: |-
+    This command enables shared configuration, but does not import the keys into the local key store.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DontCopyRemoteKeys
+  description: |+
+    Indicates that IIS uses the currently active keys, and will try to use the configuration specified by the *PhysicalPath* parameter.
+    If this exported configuration has secrets encrypted with a different key, IIS will now be unable to decrypt these secrets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: KeyEncryptionPassword
+  description: |+
+    Specifies the key encryption password for the exported keys.
+    This value is initially specified with the **Export-IISConfiguration** cmdlet or through IIS Manager.
+
+    *KeyEncryptionPassword* is required if you don't specify a value for *DontCopyRemoteKeys*.
+    If you specify a value for *DontCopyRemoteKeys*, you cannot use this parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Specifies the password of the account for accessing the physical location.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhysicalPath
+  isRequired: true
+  description: |+
+    Specifies the location of the exported configuration and keys.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  description: |+
+    Specifies the user name of the account to access the physical location.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.Enable-IISSharedConfig
+name: Enable-IISSharedConfig
+description: |-
+  The **Enable-IISSharedConfig** cmdlet enables the IIS shared configuration feature.
+  Before enabling shared configuration, this operation backs up the keys.
+
+  You can disable shared configuration through IIS Manager or with the **Disable-IISSharedConfig** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/enable-iissharedconfig?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-IISSharedConfig

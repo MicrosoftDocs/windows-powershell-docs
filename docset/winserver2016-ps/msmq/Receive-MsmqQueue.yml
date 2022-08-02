@@ -1,0 +1,117 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Does a destructive read from a queue.
+module: MSMQ
+notes: ""
+links:
+- text: Clear-MsmqQueue
+  href: ./Clear-MSMQQueue.yml
+- text: Get-MsmqQueue
+  href: ./Get-MsmqQueue.yml
+- text: New-MsmqQueue
+  href: ./New-MsmqQueue.yml
+- text: Remove-MsmqQueue
+  href: ./Remove-MsmqQueue.yml
+- text: Send-MsmqQueue
+  href: ./Send-MsmqQueue.yml
+- text: Set-MsmqQueue
+  href: ./Set-MsmqQueue.yml
+syntaxes:
+- >-
+  Receive-MsmqQueue -InputObject <MessageQueue> [-Transactional] [-RetrieveBody] [-Timeout <TimeSpan>]
+
+   [-Count <Int32>] [<CommonParameters>]
+- >-
+  Receive-MsmqQueue -InputObject <MessageQueue> [-Peek] [-RetrieveBody] [-Timeout <TimeSpan>] [-Count <Int32>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Perform a transacted read'
+  code: |-
+    PS C:\> Get-MsmqQueue -Name "a04bm10\private$\order_queue" | Receive-MsmqQueue -Transactional
+  description: |-
+    This command gets the specified queue by using the **Get-MsmqQueue** cmdlet.
+    The command passes the result to the current cmdlet by using the pipeline operator.
+    The current cmdlet performs a transacted read on the queue.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Count
+  description: |+
+    Specifies the number of messages to be returned.
+    The default value is 1.
+    You must specify a value larger than 0.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="MessageQueue" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies a **MessageQueue** object.
+    The cmdlet reads from the queue that the **MessageQueue** specifies.
+    This parameter accepts pipeline input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Peek
+  description: |+
+    Indicates that this cmdlet returns a copy of the first message in the queue without removing the message from the queue.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RetrieveBody
+  description: |+
+    Indicates that this cmdlet returns the body of the message.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: Timeout
+  description: |+
+    Specifies the maximum time, in milliseconds, to wait for the queue to contain a message.
+    The default value is 0.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Transactional
+  description: |+
+    Indicates that the cmdlet performs a transacted receive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MSMQ.Receive-MsmqQueue
+name: Receive-MsmqQueue
+description: |-
+  The **Receive-MsmqQueue** cmdlet does a destructive read from a queue.
+  The cmdlet returns the received **System.Messaging.Message** object.
+  This cmdlet accepts values for the **Name** parameter of path names, format names, and direct format names.
+  Some other Message Queuing (also known as MSMQ) cmdlets require a friendly name for the queue.
+  If you specify the **Peek** parameter, the cmdlet peeks at the message instead of doing a destructive read.
+  The cmdlet succeeds if it returns at least one message.
+
+  If you specify the **Peek** parameter, this cmdlet returns the number of messages  that is the minimum of the number supplied by the **Count** parameter and the number of messages in the queue.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/receive-msmqqueue?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Receive-MsmqQueue

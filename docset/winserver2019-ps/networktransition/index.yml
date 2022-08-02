@@ -1,0 +1,51 @@
+### YamlMime:PowershellModule
+children:
+- title: NetworkTransition
+  cmdlets:
+  - NetworkTransition.Add-NetIPHttpsCertBinding
+  - NetworkTransition.Disable-NetDnsTransitionConfiguration
+  - NetworkTransition.Disable-NetIPHttpsProfile
+  - NetworkTransition.Disable-NetNatTransitionConfiguration
+  - NetworkTransition.Enable-NetDnsTransitionConfiguration
+  - NetworkTransition.Enable-NetIPHttpsProfile
+  - NetworkTransition.Enable-NetNatTransitionConfiguration
+  - NetworkTransition.Get-Net6to4Configuration
+  - NetworkTransition.Get-NetDnsTransitionConfiguration
+  - NetworkTransition.Get-NetDnsTransitionMonitoring
+  - NetworkTransition.Get-NetIPHttpsConfiguration
+  - NetworkTransition.Get-NetIPHttpsState
+  - NetworkTransition.Get-NetIsatapConfiguration
+  - NetworkTransition.Get-NetNatTransitionConfiguration
+  - NetworkTransition.Get-NetNatTransitionMonitoring
+  - NetworkTransition.Get-NetTeredoConfiguration
+  - NetworkTransition.Get-NetTeredoState
+  - NetworkTransition.New-NetIPHttpsConfiguration
+  - NetworkTransition.New-NetNatTransitionConfiguration
+  - NetworkTransition.Remove-NetIPHttpsCertBinding
+  - NetworkTransition.Remove-NetIPHttpsConfiguration
+  - NetworkTransition.Remove-NetNatTransitionConfiguration
+  - NetworkTransition.Rename-NetIPHttpsConfiguration
+  - NetworkTransition.Reset-Net6to4Configuration
+  - NetworkTransition.Reset-NetDnsTransitionConfiguration
+  - NetworkTransition.Reset-NetIPHttpsConfiguration
+  - NetworkTransition.Reset-NetIsatapConfiguration
+  - NetworkTransition.Reset-NetTeredoConfiguration
+  - NetworkTransition.Set-Net6to4Configuration
+  - NetworkTransition.Set-NetDnsTransitionConfiguration
+  - NetworkTransition.Set-NetIPHttpsConfiguration
+  - NetworkTransition.Set-NetIsatapConfiguration
+  - NetworkTransition.Set-NetNatTransitionConfiguration
+  - NetworkTransition.Set-NetTeredoConfiguration
+uid: NetworkTransition
+name: NetworkTransition
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Network Transition-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: eff9ccf9-53ed-423d-b0da-23e6772aacaa
+  Module Name: NetworkTransition
+  ms.date: 12/20/2016
+  title: NetworkTransition

@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Installs a VPN server.
+module: WssCmdlets
+notes: ""
+links:
+- text: Test-WssVpnServerInstallation
+  href: ./Test-WssVpnServerInstallation.yml
+- text: Uninstall-WssVpnServer
+  href: ./Uninstall-WssVpnServer.yml
+syntaxes:
+- >-
+  Install-WssVpnServer [-ApplyToExistingUsers] [-AutoDetect] [-DenyAccessByDefault] [-NoSkip] [-Confirm]
+
+   [-WhatIf]
+- >-
+  Install-WssVpnServer [[-IPv4AddressRange] <IPAddress[]>] [[-IPv6AddressPrefix] <IPAddress>]
+
+   [-ApplyToExistingUsers] [-DenyAccessByDefault] [-NoSkip] [-Confirm] [-WhatIf]
+- Install-WssVpnServer [-ApplyToExistingUsers] [-DenyAccessByDefault] [-NoSkip] [-UseDhcp] [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Install a VPN server'
+  code: |-
+    PS C:\> Install-WssVpnServer -AutoDetect
+  description: |-
+    This command installs a VPN server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ApplyToExistingUsers
+  description: |+
+    Indicates that access is granted to existing users.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AutoDetect
+  description: |+
+    Indicates that the VPN server automatically detect best-fit settings, regardless of previous settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DenyAccessByDefault
+  description: |+
+    Indicates that the VPN server deny access by default.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPv4AddressRange
+  description: |+
+    Specifies an array of IPv4 addresses for the static IP address pool.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IPv6AddressPrefix
+  description: |+
+    Specifies the prefix of IPv6 addresses for the static IP address pool.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoSkip
+  description: |+
+    Indicates that the VPN server installation runs, even if there are no changes to the previous installation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseDhcp
+  description: |+
+    Indicates that DHCP assigns IP addresses to VPN clients.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Install-WssVpnServer
+name: Install-WssVpnServer
+description: |-
+  The **Install-WssVpnServer** cmdlet installs a VPN server on sbs_sbs8_2.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/install-wssvpnserver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

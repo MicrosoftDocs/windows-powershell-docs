@@ -1,0 +1,241 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Grants permission to access shares that an NFS server exports.
+module: NFS
+notes: ""
+outputs:
+- name: <xref href="Nothing" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NfsSharePermission
+  href: ./Get-NfsSharePermission.yml
+- text: Revoke-NfsSharePermission
+  href: ./Revoke-NfsSharePermission.yml
+syntaxes:
+- >-
+  Grant-NfsSharePermission [-ClientName] <String> [-ClientType] <String> [[-Permission] <String>]
+
+   [[-LanguageEncoding] <String>] [[-AllowRootAccess] <Boolean>] [-Name] <String> [-NetworkName <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Grant-NfsSharePermission [-Path] <String> [-ClientName] <String> [-ClientType] <String>
+
+   [[-Permission] <String>] [[-LanguageEncoding] <String>] [[-AllowRootAccess] <Boolean>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Grant NFS share permissions to a specified client computer'
+  code: |-
+    PS C:\> Grant-NfsSharePermission -Name "Export" -ClientName "contoso-fs" -ClientType "host" -Permission "readwrite"
+  description: |-
+    This command grants read/write access to a share named Export for a computer named contoso-fs.
+  summary: ""
+- title: 'Example 2: Grant NFS share permissions to a specified client group'
+  code: |-
+    PS C:\> Grant-NfsSharePermission -Name "Export" -ClientName "contoso-clientgroup" -ClientType "clientgroup" -Permission "readonly"
+  description: |-
+    This command grants read-only access to a share named Export for a client group named contoso-clientgroup.
+  summary: ""
+- title: 'Example 3: Grant NFS share permissions to a specific UNIX computer with root user access'
+  code: |-
+    PS C:\> Grant-NfsSharePermission -Name "Export" -ClientName "192.168.1.8" -ClientType "host" -Permission "readonly" -AllowRootAccess:$true
+  description: |-
+    This command grants read access to a share named Export for a computer specifying its IP address, and also grants UNIX root user access.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowRootAccess
+  description: |+
+    Specifies whether to grant the UNIX root user access to an NFS share.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Indicates that this cmdlet runs the command as a background job on a remote computer.
+    Use this parameter to run commands that take an extensive time to finish.
+
+    When you use the *AsJob* parameter, the command returns an object that represents the job, and then displays the command prompt.
+    You can continue to work in the session while the job finishes.
+    To manage the job, use the **Job** cmdlets.
+    To get the job results, use the Receive-Job cmdlet.
+
+    The *AsJob* parameter resembles using the Invoke-Command cmdlet to run a Start-Job command remotely.
+    However, with *AsJob*, the job is created on the local computer, even though the job runs on a remote computer, and the results of the remote job are automatically returned to the local computer.
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251) and [about_Remote_Jobs](https://go.microsoft.com/fwlink/?LinkID=135184).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientName
+  isRequired: true
+  description: |+
+    Specifies a client name.
+    The client name can be a host name or IP address, netgroup name, or client group name.
+    To specify the type of client, use the *ClientType* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Client
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientType
+  isRequired: true
+  description: |+
+    Specifies a client type.
+    Use the builtin client type only when the *ClientName* parameter value is All Machines.
+
+    Valid values are:
+
+    - host
+    - clientgroup
+    - netgroup
+    - builtin
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: Type
+  parameterValueGroup: host, netgroup, clientgroup, builtin
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LanguageEncoding
+  description: |+
+    Specifies the type of language encoding used for access permissions configured on an NFS share.
+    You can use only one of the following values for a share:
+
+    - euc-jp (Japanese)
+    - euc-tw (Chinese)
+    - euc-kr (Korean)
+    - shift-jis (Japanese)
+    - big5 (Chinese)
+    - ksc5601 (Korean)
+    - gb2312-80 (Simplified Chinese)
+    - ansi
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: Lang, Encoding
+  parameterValueGroup: euc-jp, euc-tw, euc-kr, shift-jis, big5, ksc5601, gb2312-80, ansi
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of an NFS share.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ShareName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkName
+  description: |+
+    Specifies the scoped network name of an NFS share.
+
+    On a local share, *NetworkName* is the host name.
+    On a cluster, it is the network name in the resource group to which the share is scoped.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: netname
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of an NFS share.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: SharePath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Permission
+  description: |+
+    Specifies the type of access to grant for an NFS share.
+    Valid values are:
+
+    - no-access
+    - readonly
+    - readwrite
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: Access
+  parameterValueGroup: no-access, readonly, readwrite
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NFS.Grant-NfsSharePermission
+name: Grant-NfsSharePermission
+description: |-
+  The **Grant-NfsSharePermission** cmdlet configures access permissions to a Network File System (NFS) share that an NFS server exports.
+  You can use **Grant-NfsSharePermission** to grant permissions for a share by using a specified name or path.
+
+  You can choose the type of permissions to provide to client computers, netgroups, or client groups.
+
+  You can choose to fence the language encoding across individual hosts or netgroups.
+  Services for NFS supports fencing of shares by using the following principals:
+
+  - Hosts
+  - Client groups
+  - Netgroups
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NfsServerTasks.cmdletDefinition.cdxml-help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/grant-nfssharepermission?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Grant-NfsSharePermission

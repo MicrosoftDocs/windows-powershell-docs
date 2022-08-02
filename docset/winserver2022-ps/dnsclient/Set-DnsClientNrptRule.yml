@@ -1,0 +1,364 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a DNS client Name Resolution Policy Table (NRPT) rule for the specified namespace.
+module: DnsClient
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DNS/DnsClientNrptRule" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DNS/DnsClientNrptRule" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The **DnsClientNrptRule** object contains all of the properties of the DNS client NRPT rule.
+links:
+- text: Add-DnsClientNrptRule
+  href: ./Add-DnsClientNrptRule.yml
+- text: Get-DnsClientNrptGlobal
+  href: ./Get-DnsClientNrptGlobal.yml
+- text: Get-DnsClientNrptPolicy
+  href: ./Get-DnsClientNrptPolicy.yml
+- text: Get-DnsClientNrptRule
+  href: ./Get-DnsClientNrptRule.yml
+- text: Remove-DnsClientNrptRule
+  href: ./Remove-DnsClientNrptRule.yml
+- text: Set-DnsClientNrptGlobal
+  href: ./Set-DnsClientNrptGlobal.yml
+syntaxes:
+- >-
+  Set-DnsClientNrptRule [-DAEnable <Boolean>] [-DAIPsecEncryptionType <String>] [-DAIPsecRequired <Boolean>]
+
+   [-DANameServers <String[]>] [-DAProxyServerName <String>] [-DAProxyType <String>] [-Comment <String>]
+
+   [-DnsSecEnable <Boolean>] [-DnsSecIPsecEncryptionType <String>] [-DnsSecIPsecRequired <Boolean>]
+
+   [-DnsSecValidationRequired <Boolean>] [-GpoName <String>] [-IPsecTrustAuthority <String>] [-Name] <String>
+
+   [-NameEncoding <String>] [-NameServers <String[]>] [-Namespace <String[]>] [-Server <String>]
+
+   [-DisplayName <String>] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify an NRPT rule'
+  code: |-
+    PS C:\> Set-DnsClientNrptRule  -DAEnable $True -DAIPsecEncryptionType "High" -DAIPsecRequired $True -DANameServers "10.0.0.1" -DAProxyServerName "DaServer.com:6666" -DAProxyType "UseProxyName" -DisplayName "Sample" -PassThru -IPsecTrustAuthority "RootCA" -Name "{1326d9d0-4fb5-4fed-9f67-f53637b85010}" -NameEncoding "Punycode" -NameServers "10.0.0.1" -Namespace "dnsnrpt.com" -Server "host1.com" -Comment "Sample NRPT Rule" -DnsSecEnable $True -DnsSecIPsecEncryptionType "Medium" -DnsSecIPsecRequired $True -DnsSecValidationRequired $True -GpoName "TestGPO"
+  description: |-
+    This example modifies an NRPT rule for a GPO named TestGPO on the server named host1.com for namespace dnsnrpt.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Comment
+  description: |+
+    Stores administrator comments.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DAEnable
+  description: |+
+    Indicates the rule state for DirectAccess (DA).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DirectAccessEnabled
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DAIPsecEncryptionType
+  description: |+
+    Specifies the IPsec encryption type for DA.
+    The acceptable values for this parameter are:
+
+    - None
+    - Low
+    - Medium
+    - High
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DirectAccessQueryIPSSECEncryption
+  parameterValueGroup: ', None, Low, Medium, High'
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DAIPsecRequired
+  description: |+
+    Indicates whether IPsec is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DirectAccessQueryIPsecRequired
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DANameServers
+  description: |+
+    Specifies the DNS servers which will be queried when DA is enabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DirectAccessDNSServers
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DAProxyServerName
+  description: |+
+    Specifies the proxy server to be used when connecting to the Internet.
+
+    This parameter is only applicable when the *DAProxyType* parameter is set to UseProxyName.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DirectAccessProxyName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DAProxyType
+  description: |+
+    Specifies the proxy server type to be used when connecting to the Internet.
+    The acceptable values for this parameter are:
+
+    - NoProxy
+    - UseDefault
+    - UseProxyName
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DirectAccessProxyType
+  parameterValueGroup: ', NoProxy, UseDefault, UseProxyName'
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Specifies an optional friendly name for the NRPT rule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DnsSecEnable
+  description: |+
+    Indicates whether DNSSEC is enabled on the rule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DnsSecEnabled
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DnsSecIPsecEncryptionType
+  description: |+
+    Specifies the IPsec tunnel encryption settings.
+    The acceptable values for this parameter are:
+
+    - None
+    - Low
+    - Medium
+    - High
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DnsSecQueryIPsecEncryption
+  parameterValueGroup: ', None, Low, Medium, High'
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DnsSecIPsecRequired
+  description: |+
+    Indicates that the DNS client must set up an IPsec connection to the DNS server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DnsSecQueryIPsecRequired
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DnsSecValidationRequired
+  description: |+
+    Indicates that DNSSEC validation is required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GpoName
+  description: |+
+    Specifies the name of the Group Policy Object (GPO). 
+
+    - If this parameter and the *Server* parameter are specified, then the NRPT rule is added in the GPO of domain.
+    The *Server* parameter specifies the domain controller (DC). 
+    - If neither this parameter nor the *Server* parameter is specified, then the NRPT rule is added for local client computer. 
+    - If this parameter is specified and the *Server* parameter is not specified, then the DC of the domain specified by this parameter value is found and NRPT rule is added to the GPO. 
+    - If this parameter is not specified and the *Server* parameter is specified, then an error is displayed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPsecTrustAuthority
+  description: |+
+    Specifies the Certification Authority (CA) to validate the IPsec channel for DA.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPsecCARestriction
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name which uniquely identifies a rule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NameEncoding
+  description: |+
+    Specifies the encoding format for host names in the DNS query.
+    The acceptable values for this parameter are:
+
+    - Disable
+    - Utf8WithMapping
+    - Utf8WithoutMapping
+    - Punycode
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disable, Utf8WithMapping, Utf8WithoutMapping, Punycode
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NameServers
+  description: |+
+    Specifies the DNS servers to which the DNS query is sent when DA is disabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Namespace
+  description: |+
+    Specifies the DNS namespace.
+    The acceptable values for this parameter are:
+
+    - Suffix
+    - Prefix
+    - FQDN
+    - Subnet
+    - Any
+
+    If this parameter is set to Any, then the parameter value must be specified in dot-notation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the server hosting the GPO.
+    This parameter is only applicable with the *GpoName* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DnsClient.Set-DnsClientNrptRule
+name: Set-DnsClientNrptRule
+description: |-
+  The **Set-DnsClientNrptRule** cmdlet modifies the specified DNS client Name Resolution Policy Table (NRPT) rule.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsClientNRPTRule_v1.0.0.cdxml-help.xml
+  Module Name: DnsClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsclient/set-dnsclientnrptrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DnsClientNrptRule

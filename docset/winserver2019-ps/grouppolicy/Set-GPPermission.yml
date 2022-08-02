@@ -1,0 +1,280 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Grants a level of permissions to a security principal for one GPO or all the GPOs in a domain.
+module: GroupPolicy
+notes: |-
+  * You can use the *DomainName* parameter to explicitly specify the domain for this cmdlet.
+
+    If you do not explicitly specify the domain, the cmdlet uses a default domain.
+  The default domain is the domain that is used to access network resources by the security context under which the current session is running.
+  This domain is typically the domain of the user that is running the session.
+  For example, the domain of the user who started the session by opening Windows PowerShell from the Program Files menu, or the domain of a user that is specified in a runas command.
+  However, computer startup and shutdown scripts run under the context of the LocalSystem account.
+  The LocalSystem account is a built-in local account, and it accesses network resources under the context of the computer account.
+  Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
+inputs:
+- name: <xref href="Microsoft.GroupPolicy.Gpo" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe an object that represents a GPO to this cmdlet.
+    Collections that contain GPOs from different domains are not supported.
+outputs:
+- name: <xref href="Microsoft.GroupPolicy.Gpo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents the GPO for which the permission level was set.
+links:
+- text: Get-GPPermission
+  href: ./Get-GPPermission.yml
+syntaxes:
+- >-
+  Set-GPPermission -Guid <Guid> -PermissionLevel <GPPermissionType> -TargetName <String>
+
+   -TargetType <PermissionTrusteeType> [-DomainName <String>] [-Server <String>] [-Replace] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-GPPermission [-Name] <String> -PermissionLevel <GPPermissionType> -TargetName <String>
+
+   -TargetType <PermissionTrusteeType> [-DomainName <String>] [-Server <String>] [-Replace] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-GPPermission -PermissionLevel <GPPermissionType> -TargetName <String> -TargetType <PermissionTrusteeType>
+
+   [-DomainName <String>] [-Server <String>] [-All] [-Replace] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the permission level for a security group belonging to a GPO'
+  code: |-
+    PS C:\> Set-GPPermission -Name TestGpo -TargetName "Domain Users" -TargetType Group -PermissionLevel GpoRead
+  description: |-
+    This command sets the permission level for the Domain Users security group to GpoRead for the GPO named TestGpo.
+    Because the *Replace* parameter is not specified, if the group already has a permission level higher than GpoRead, such as GpoEdit, no action is taken.
+  summary: ""
+- title: 'Example 2: Set the permission level for a security group that belongs to all GPOs'
+  code: |-
+    PS C:\> Set-GPPermission -All -TargetName "Marketing Admins" -TargetType Group -PermissionLevel GpoEdit -Replace
+  description: |-
+    This command sets the permission level for the Marketing Admins security group to GpoEdit on all GPOs in the domain.
+    This includes GPOs that are not linked to any site, domain, or OU.
+    Because the *Replace* parameter is specified, the new permission level overwrites the existing permissions set for the group.
+  summary: ""
+- title: 'Example 3: Replace the permission level of a security group for all GPOs on which the group has permissions'
+  code: |-
+    PS C:\> Get-GPO -All | ForEach-Object { if($_ | Get-GPPermission -TargetName "Marketing Admins" -TargetType Group -ErrorAction SilentlyContinue) {$_ | Set-GPPermission -Replace -PermissionLevel GpoApply -TargetName "Marketing Admins" -TargetType Group }}
+    DisplayName      : TestGPO 
+    DomainName       : contoso.com 
+    Owner            : CONTOSO\Domain Admins 
+    Id               : 24f217d4-1403-4d43-9247-d17eeedb22f0 
+    GpoStatus        : AllSettingsEnabled 
+    Description      : 
+    CreationTime     : 3/1/2009 10:51:34 PM 
+    ModificationTime : 3/2/2009 12:53:40 AM 
+    UserVersion      : AD Version: 8, SysVol Version: 8 
+    ComputerVersion  : AD Version: 0, SysVol Version: 0 
+    WmiFilter        : 
+
+
+    DisplayName      : TestGPO-1 
+    DomainName       : contoso.com 
+    Owner            : CONTOSO\Domain Admins 
+    Id               : fe2f7402-101b-4b3c-87e4-85d3f47735cb 
+    GpoStatus        : AllSettingsEnabled 
+    Description      : 
+    CreationTime     : 3/1/2009 7:22:03 PM 
+    ModificationTime : 3/2/2009 12:53:54 AM 
+    UserVersion      : AD Version: 0, SysVol Version: 0 
+    ComputerVersion  : AD Version: 0, SysVol Version: 0 
+    WmiFilter        :
+  description: |-
+    This command replaces the current permission level of the Marketing Admins security group with GpoApply for all GPOs on which the group has permissions.
+    The command returns each GPO for which the new permission level is set.
+
+    The cmdlet is used to get all the GPOs in the domain.
+    Then, the collection is piped into the **ForEach-Object** command.
+    As each GPO is evaluated, it is piped into **Get-GPPermission**.
+    If a permission level for the Marketing Admins group is returned, the GPO is piped into **Set-GPPermission** to set the permission level for the group.
+    The *Replace* parameter is specified to make sure that the previous permission level is overwritten.
+
+    The *ErrorAction* parameter is set to SilentlyContinue for **Get-GPPermissions**.
+    This is because a non-terminating error occurs if the specified security principal does not have permissions on the GPO.
+    Specifying *ErrorAction* as SilentlyContinue prevents the error messages from being printed for GPOs on which the security principal does not have permissions.
+    For more information about the *ErrorAction* parameter, see about_CommonParameters.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  isRequired: true
+  description: |+
+    Specifies that the permission level is set for the specified security principal for all GPOs in the domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the domain for this cmdlet.
+    You must specify the fully qualified domain name (FQDN) of the domain. 
+
+    For the **Set-GPPermission** cmdlet, the GPO for which to get the permission level must exist in this domain. 
+
+    If you do not specify the *DomainName* parameter, the domain of the user that is running the current session is used.
+    If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
+    For more information, see the Notes section in the full Help. 
+
+    If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user or the computer.
+
+    You can also refer to the *DomainName* parameter by its built-in alias, domain.
+    For more information, see about_Aliases.
+
+  defaultValue: None
+  position: Named
+  aliases: Domain
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Guid
+  isRequired: true
+  description: |+
+    Specifies the GPO for which to set the permission level by its globally unique identifier (GUID).
+    The GUID uniquely identifies the GPO.
+
+    You can also refer to the *Guid* parameter by its built-in alias, id.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ID
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the GPO for which to set the permission level by its display name.
+
+    The display name is not guaranteed to be unique in the domain.
+    If another GPO with the same display name exists in the domain, an error occurs.
+    You can use the *Guid* parameter to uniquely identify a GPO.
+
+    You can also refer to the Name parameter by its built-in alias, displayname.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DisplayName
+  parameterValueGroup: ""
+- type: <xref href="GPPermissionType" data-throw-if-not-resolved="False" />
+  name: PermissionLevel
+  isRequired: true
+  description: |+
+    Specifies the permission level to set for the security principal.
+
+    The acceptable values for this parameter are:
+
+    - GpoRead
+    - GpoApply
+    - GpoEdit
+    - GpoEditDeleteModifySecurity
+    - None
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, GpoApply, GpoRead, GpoEdit, GpoEditDeleteModifySecurity, GpoCustom, WmiFilterEdit, WmiFilterFullControl, WmiFilterCustom, StarterGpoRead, StarterGpoEdit, StarterGpoFullControl, StarterGpoCustom, SomCreateWmiFilter, SomWmiFilterFullControl, SomCreateGpo, SomCreateStarterGpo, SomLogging, SomPlanning, SomLink
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Replace
+  description: |+
+    Specifies that the existing permission level for the group or user is removed before the new permission level is set.
+    If a security principal is already granted a permission level that is higher than the specified permission level and you do not use the *Replace* parameter, no change is made.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
+    You can specify either the fully qualified domain name (FQDN) or the host name.
+
+    If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+
+    You can also refer to the *Server* parameter by its built-in alias, dc.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    The name of the security principal for which to set the permission level.
+    You can specify a user, a security group, or a computer.
+    You can use either the domain-qualified name of the security principal (domain\account) or just its name.
+
+    For instance, in the contoso.com domain, to specify:
+
+    - The user "someuser", use "contoso\someuser" or "someuser".
+
+    - The Domain Admins security group, use "contoso\Domain Admins" or "Domain Admins".
+
+    - The computer "computer-01", use "contoso\computer-01" or "computer-01".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PermissionTrusteeType" data-throw-if-not-resolved="False" />
+  name: TargetType
+  isRequired: true
+  description: |+
+    The type of security principal for which to set the permission level.
+    You must specify User, Group, or Computer.
+
+    The acceptable values for this parameter are:
+
+    - Computer
+    - User
+    - Group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Computer, User, Group
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: GroupPolicy.Set-GPPermission
+name: Set-GPPermission
+description: |-
+  The **Set-GPPermission** cmdlet grants a level of permissions to a security principal (user, security group, or computer) for one Group Policy Object (GPO) or all the GPOs in a domain.
+  You use the *TargetName* and *TargetType* parameters to specify a user, security group, or computer for which to set the permission level.
+  You can use the *Name* or the *Guid* parameter to set the permission level for the security principal on a single GPO, or you can use the *All* parameter to set the permission level for the security principal on all GPOs in the domain.
+
+  By default, if the security principal already has a higher permission level than the specified permission level, the change is not applied.
+  You can specify the *Replace* parameter, to remove the existing permission level from the GPO before the new permission level is set.
+  This ensures that the existing permission level is replaced by the new permission level.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.GroupPolicy.Commands.dll-Help.xml
+  Module Name: GroupPolicy
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/grouppolicy/set-gppermission?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-GPPermission

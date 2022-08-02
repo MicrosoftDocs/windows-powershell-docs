@@ -1,0 +1,25 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a QueueManager state info object that represents the local queue manager.
+module: MSMQ
+notes: ""
+links:
+- text: Set-MsmqQueueManager
+  href: ./Set-MsmqQueueManager.yml
+syntaxes:
+- Get-MsmqQueueManager
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+uid: MSMQ.Get-MsmqQueueManager
+name: Get-MsmqQueueManager
+description: |-
+  The **Get-MsmqQueueManager** cmdlet gets a **QueueManager** state info object that represents the local queue manager.
+  The cmdlet will call native Microsoft Message queue (MSMQ) APIs to populate the properties of the **QueueManager** object.
+metadata:
+  external help file: MSMQ_Cmdlets.xml
+  Module Name: MSMQ
+  online version: https://docs.microsoft.com/powershell/module/msmq/get-msmqqueuemanager?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

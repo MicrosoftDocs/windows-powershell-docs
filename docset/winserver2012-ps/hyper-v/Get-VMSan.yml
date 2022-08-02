@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the available virtual machine storage area networks on a Hyper-V host or hosts.
+module: Hyper-V
+notes: ""
+syntaxes:
+- Get-VMSan [[-Name] <String[]>] [-ComputerName <String[]>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMSan -Name ProductionSAN
+  description: |-
+    Gets a virtual storage area network (SAN) named ProductionSAN.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which the available virtual machine storage area networks (SANs) are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the friendly name of a virtual storage area network (SAN) to be retrieved.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMSan
+name: Get-VMSan
+description: |-
+  The **Get-VMSan** cmdlet gets the available virtual storage area networks (SANs) on one or more Hyper-V hosts.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmsan?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

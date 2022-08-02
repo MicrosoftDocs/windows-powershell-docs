@@ -1,0 +1,210 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an IP-HTTPS configuration.
+module: NetworkTransition
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts no input objects.
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object.
+links:
+- text: Get-NetIPHttpsConfiguration
+  href: ./Get-NetIPHttpsConfiguration.yml
+- text: Remove-NetIPHttpsConfiguration
+  href: ./Remove-NetIPHttpsConfiguration.yml
+- text: Rename-NetIPHttpsConfiguration
+  href: ./Rename-NetIPHttpsConfiguration.yml
+- text: Reset-NetIPHttpsConfiguration
+  href: ./Reset-NetIPHttpsConfiguration.yml
+- text: Set-NetIPHttpsConfiguration
+  href: ./Set-NetIPHttpsConfiguration.yml
+syntaxes:
+- >-
+  New-NetIPHttpsConfiguration [-PolicyStore] <String> [-Profile <String>] [-Type <Type>] -ServerURL <String>
+
+   [-State <State>] [-AuthMode <AuthMode>] [-StrongCRLRequired <Boolean>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-NetIPHttpsConfiguration [-Profile <String>] [-Type <Type>] -ServerURL <String> [-State <State>]
+
+   [-AuthMode <AuthMode>] [-StrongCRLRequired <Boolean>] [-GPOSession] <String> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an IP-HTTPS configuration'
+  code: |-
+    PS C:\>New-NetIPHttpsConfiguration -Profile "Redmond" -ServerURL "https://contoso.com:443/IPHTTPs" -PolicyStore "Domain\TestGPO"
+  description: |-
+    This command creates an IP-HTTPS configuration named Redmond with the specified server URL https://contoso.com:443/IPHTTPs in the GPO named TestGPO.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AuthMode" data-throw-if-not-resolved="False" />
+  name: AuthMode
+  description: |+
+    Specifies the authentication mode of the IP-HTTPS configuration.The acceptable values for this parameter are:
+
+    - None.
+    Performs no client authentication during the SSL handshake.
+    This is the default value. 
+    - Certificates.
+    Uses client certificates to authenticate clients.
+    This authentication mode applies only to a server interface on a computer running Windows Server® 2012 or Windows Server 2016.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Certificates
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GPOSession
+  isRequired: true
+  description: |+
+    Specifies the Group Policy session in which to store the configuration information.
+
+    You can use this parameter with the **NetGPO** cmdlets to aggregate multiple operations performed on a GPO.
+
+    You cannot use this parameter with the *PolicyStore* parameter.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  isRequired: true
+  description: |+
+    Specifies the policy store to which to add the configuration profile.
+    The acceptable values for this parameter are:
+
+    - ActiveStore 
+    - PersistentStore 
+    - GPO
+
+    To add the configuration profile to a GPO, specify the GPO name using the following format: Domain\GPOName
+
+    You cannot use this parameter with the *GPOSession* parameter.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Profile
+  description: |+
+    Specifies the name by which to identify the IP-HTTPS configuration profile.
+    This option is only available if the store is a GPO.
+
+  defaultValue: None
+  position: Named
+  aliases: IPHttpsProfile
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServerURL
+  isRequired: true
+  description: |+
+    Specifies the URL for the server.
+    If the profile is a client profile, Windows Server 2012 or Windows Server 2016 attempts to connect to the server URL.
+    If the profile is a server profile, then this is the URL on which the server listens.
+
+    Specify the server URL using the following format: https://myserver/IPHTTPS
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="State" data-throw-if-not-resolved="False" />
+  name: State
+  description: "Specifies the state behavior of IP-HTTPS.\r\nThe acceptable values for this parameter are:\r\n\r\n- Default: \r\n                         \r\n---- For a server interface, IP-HTTPS is always configured. \r\n                         \r\n---- For a client interface, IP-HTTPS is configured on-demand based on the other connectivity options available.\r\nClient interfaces are created with this setting by default. \r\n\r\n- Enabled.\r\nIP-HTTPS is always configured, for both server interfaces and client interfaces.\r\nServer interfaces are created with this setting by default. \r\n\r\n- Disabled.\r\nDisables the IP-HTTPS interface. \r\n\r\n- OutsideEnabled.\r\nIP-HTTPs is configured on-demand whenever the computer is outside of the corporate network.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Default, Enabled, Disabled, OutsideEnabled
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: StrongCRLRequired
+  description: |+
+    Indicates if a strong certificate revocation list (CRL) check is required before a connection.
+
+    By default, the value of this parameter is $False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Type" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies if IP-HTTPS should start in server mode or client mode.
+    Server mode is only allowed on Windows Server 2012.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Client, Server
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkTransition.New-NetIPHttpsConfiguration
+name: New-NetIPHttpsConfiguration
+description: |-
+  The **New-NetIPHttpsConfiguration** cmdlet creates an IP-HTTPS configuration.
+
+  This cmdlet can create IP-HTTPS configurations on the ActiveStore, PersistentStore, or Group Policy Objects (GPOs).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetIpHTTPsConfiguration.cdxml-help.xml
+  Module Name: NetworkTransition
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networktransition/new-netiphttpsconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetIPHttpsConfiguration

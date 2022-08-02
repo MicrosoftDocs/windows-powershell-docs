@@ -1,0 +1,24 @@
+### YamlMime:PowershellModule
+children:
+- title: AGPM
+  cmdlets:
+  - AGPM.Add-ControlledGpo
+  - AGPM.Get-ControlledGpo
+  - AGPM.Lock-ControlledGpo
+  - AGPM.Publish-ControlledGpo
+  - AGPM.Remove-ControlledGpo
+  - AGPM.Unlock-ControlledGpo
+uid: AGPM
+name: AGPM
+description: |-
+  This reference provides cmdlet descriptions and syntax for the Advanced Group Policy Management (AGPM) cmdlets.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  Download Help Link: http://go.microsoft.com/fwlink/?LinkId=517622
+  Help Version: 4.0.0.0
+  Locale: en-US
+  Module Guid: CMDLETS
+  Module Name: AGPM
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  title: AGPM

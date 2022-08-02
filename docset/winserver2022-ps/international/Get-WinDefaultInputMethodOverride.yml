@@ -1,0 +1,38 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the default input method override setting for the current user account.
+module: International
+notes: ""
+outputs:
+- name: <xref href="WinKeyboardObject" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the Tablet Input Panel (TIP) string for the default input method override setting.
+links:
+- text: Set-WinDefaultInputMethodOverride
+  href: ./Set-WinDefaultInputMethodOverride.yml
+syntaxes:
+- Get-WinDefaultInputMethodOverride [<CommonParameters>]
+examples:
+- title: 'Example 1: Display default input method'
+  code: |-
+    PS C:\> Get-WinDefaultInputMethodOverride
+    InputMethodTip      Keyboard name
+    ---------------     -------------
+    0409:00000409       English (United States) - US
+  description: |-
+    This command returns and displays the default input method for the current user account.
+  summary: ""
+uid: International.Get-WinDefaultInputMethodOverride
+name: Get-WinDefaultInputMethodOverride
+description: |-
+  The **Get-WinDefaultInputMethodOverride** cmdlet retrieves the default input method override setting, which specifies a default input method for the current user account.
+  If no override setting is used, the input method is dynamically determined from the language list of the current user account.
+  For more information, see the **Get-WinUserLanguageList** and **Set-WinUserLanguageList** cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/international/get-windefaultinputmethodoverride?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WinDefaultInputMethodOverride

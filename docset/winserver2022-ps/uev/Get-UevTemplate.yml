@@ -1,0 +1,172 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets settings location templates for UE-V.
+module: UEV
+notes: ""
+outputs:
+- name: <xref href="Microsoft.UEV.Commands.Template" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a **Template** object that contains the general information about a settings location template, such as template ID, template name, and template version.
+links:
+- text: Disable-UevTemplate
+  href: ./Disable-UevTemplate.yml
+- text: Enable-UevTemplate
+  href: ./Enable-UevTemplate.yml
+- text: Register-UevTemplate
+  href: ./Register-UevTemplate.yml
+- text: Set-UevTemplateProfile
+  href: ./Set-UevTemplateProfile.yml
+- text: Test-UevTemplate
+  href: ./Test-UevTemplate.yml
+- text: Unregister-UevTemplate
+  href: ./Unregister-UevTemplate.yml
+- text: Update-UevTemplate
+  href: ./Update-UevTemplate.yml
+syntaxes:
+- Get-UevTemplate [<CommonParameters>]
+- Get-UevTemplate -Application <String> [<CommonParameters>]
+- Get-UevTemplate -TemplateID <String> [<CommonParameters>]
+- Get-UevTemplate -Profile <String> [<CommonParameters>]
+- Get-UevTemplate [-ApplicationOrTemplateID] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all registered templates'
+  code: |-
+    PS C:\> Get-UevTemplate | Format-Table -AutoSize
+    TemplateId                                  TemplateName                                TemplateVersion PackageVersion TemplateType Enabled EnableStateLocation TemplateDescription
+    ----------                                  ------------                                --------------- -------------- ------------ ------- ------------------- -------------------
+    DesktopSettings                             Desktop Settings                                          1 N/A            OS             False LocalMachine
+    MicrosoftNotepad6                           Microsoft Notepad                                         0 N/A            Application     True NotSet
+    MicrosoftCalculator6                        Microsoft Calculator                                      0 N/A            Application     True NotSet
+    MicrosoftCommunicator2007                   Microsoft Communicator 2007                               7 N/A            Application     True NotSet
+    MicrosoftOffice2010Win64                    Microsoft Office 2010 (64-bit)                           18 N/A            Application     True NotSet
+    MicrosoftOffice2010Win64.common             Common Settings                                          18 N/A            Application     True NotSet
+    MicrosoftOffice2010Win64.Access             Microsoft Access 2010 (64-bit)                           18 N/A            Application     True NotSet
+  description: |-
+    This command gets all the settings location templates that are registered with UE-V, and then passes them to the **Format-Table** cmdlet by using the pipeline operator.
+    For more information, type `Get-Help Format-Table`.
+  summary: ""
+- title: 'Example 2: Get registered templates that contain a specified string'
+  code: |-
+    PS C:\> Get-UevTemplate -ApplicationOrTemplateID "office" | Format-Table -AutoSize
+    TemplateId                                  TemplateName                                TemplateVersion PackageVersion TemplateType Enabled EnableStateLocation TemplateDescription
+    ----------                                  ------------                                --------------- -------------- ------------ ------- ------------------- -------------------
+    MicrosoftOffice2010Win64                    Microsoft Office 2010 (64-bit)                           18 N/A            Application     True NotSet
+    MicrosoftOffice2010Win64.common             Common Settings                                          18 N/A            Application     True NotSet
+    MicrosoftOffice2010Win64.Access             Microsoft Access 2010 (64-bit)                           18 N/A            Application     True NotSet
+    MicrosoftOffice2010Win64.Excel              Microsoft Excel 2010 (64-bit)                            18 N/A            Application     True NotSet
+    MicrosoftOffice2010Win64.Groove             Microsoft Groove 2010 (64-bit)                           18 N/A            Application     True NotSet
+    MicrosoftOffice2010Win64.InfoPath           Microsoft InfoPath 2010 (64-bit)                         18 N/A            Application     True NotSet
+  description: |-
+    This command gets settings location templates that are registered with UE-V, and passes them to **Format-Table** by using the pipeline operator.
+    This command specifies a value for the *ApplicationOrTemplateID* parameter.
+    The cmdlet gets the templates that have a name or template ID that includes the specified string.
+  summary: ""
+- title: 'Example 3: Get registered templates that contain a specified string that includes a wildcard'
+  code: |-
+    PS C:\> Get-UevTemplate -ApplicationOrTemplateID "office*word" | Format-Table -AutoSize
+    TemplateId                    TemplateName                 TemplateVersion PackageVersion TemplateType Enabled EnableStateLocation TemplateDescription
+    ----------                    ------------                 --------------- -------------- ------------ ------- ------------------- -------------------
+    MicrosoftOffice2010Win64.Word Microsoft Word 2010 (64-bit)              18 N/A            Application     True NotSet
+  description: |-
+    This command gets settings location templates that are registered with UE-V, and passes them to **Format-Table** by using the pipeline operator.
+    This command specifies a value for the *ApplicationOrTemplateID* parameter that contains a wildcard.
+    The cmdlet gets the templates that have a name or template ID that includes the string office followed by the string word.
+  summary: ""
+- title: 'Example 4: Get registered templates associated with the Backup profile'
+  code: |-
+    PS C:\>Get-UevTemplate -Profile Backup
+    TemplateId          : MicrosoftCalculator6
+
+    TemplateName        : Microsoft Calculator
+    TemplateDescription : 
+    TemplateVersion     : 0
+    TemplateType        : Application
+    Enabled             : True
+    EnableStateLocation : NotSet
+    TemplateProfile     : Backup
+
+    TemplateId          : MicrosoftWordpad6
+
+    TemplateName        : Microsoft Wordpad
+
+    TemplateDescription : 
+
+    TemplateVersion     : 0
+
+    TemplateType        : Application
+
+    Enabled             : True
+
+    EnableStateLocation : LocalUser
+
+    TemplateProfile     : Backup
+  description: |-
+    This command gets settings location templates that are registered with UE-V and are associated with the Backup profile.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Application
+  isRequired: true
+  description: |+
+    Specifies the name of an application.
+    The cmdlet gets templates that include the applications that you specify.
+    Use wildcards to specify a partial name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationOrTemplateID
+  isRequired: true
+  description: |+
+    Specifies an application name or a template ID.
+    The cmdlet gets templates that include the applications or IDs that you specify.
+    Use wildcards to specify partial names or IDs.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Profile
+  isRequired: true
+  description: |+
+    Specifies the name of a profile.
+    The cmdlet gets all templates associated with the specified profile. 
+    Valid values are: 
+
+    - Roaming
+    - Backup
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TemplateID
+  isRequired: true
+  description: |+
+    Specifies the ID of a template.
+    The cmdlet gets templates that include the applications that you specify.
+    Use wildcards to specify partial IDs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: UEV.Get-UevTemplate
+name: Get-UevTemplate
+description: |-
+  The **Get-UevTemplate** cmdlet gets settings location templates that are registered with Microsoft User Experience Virtualization (UE-V).
+  Use this cmdlet to display information which includes the template ID, template name, template version, template description, template type, and the state settings of the template.
+  The template ID includes a primary ID and a secondary ID.
+  Applications in the same suite share the same primary ID.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/get-uevtemplate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-UevTemplate

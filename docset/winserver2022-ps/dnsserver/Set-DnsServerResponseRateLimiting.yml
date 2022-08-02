@@ -1,0 +1,266 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables RRL on a DNS server.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerResponseRateLimiting" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Add-DnsServerResponseRateLimitingExceptionlist
+  href: ./Add-DnsServerResponseRateLimitingExceptionlist.yml
+- text: Get-DnsServerResponseRateLimiting
+  href: ./Get-DnsServerResponseRateLimiting.yml
+- text: Set-DnsServerResponseRateLimitingExceptionlist
+  href: ./Set-DnsServerResponseRateLimitingExceptionlist.yml
+syntaxes:
+- >-
+  Set-DnsServerResponseRateLimiting [-ResponsesPerSec <UInt32>] [-ErrorsPerSec <UInt32>] [-WindowInSec <UInt32>]
+
+   [-IPv4PrefixLength <UInt32>] [-IPv6PrefixLength <UInt32>] [-LeakRate <UInt32>] [-ResetToDefault]
+
+   [-TruncateRate <UInt32>] [-MaximumResponsesPerWindow <UInt32>] [-Mode <String>] [-ComputerName <String>]
+
+   [-PassThru] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set RRL parameters on a DNS server'
+  code: |-
+    PS C:\> Set-DnsServerResponseRateLimiting -WindowInSec 7 -LeakRate 4 -TruncateRate 3 -ErrorsPerSec 8 -ResponsesPerSec 8
+  description: |-
+    This command sets the RRL parameters on the DNS Server.
+  summary: ""
+- title: 'Example 2: Reset RRL settings to default values'
+  code: |-
+    PS C:\> Set-DnsServerResponseRateLimiting -ResetToDefault
+  description: |-
+    This command resets all the RRL parameters on the DNS Server to default values.
+  summary: ""
+- title: 'Example 3: Set RRL to LogOnly mode'
+  code: |-
+    PS C:\> Set-DnsServerRRL -Mode LogOnly
+  description: |-
+    This command sets the RRL on the DNS server to **LogOnly** mode.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a remote DNS server.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NetBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ErrorsPerSec
+  description: |+
+    Specifies the maximum number of times that the server can send an error response to a client within a one-second interval.
+    The error responses include: REFUSED, FORMERR and SERVFAIL
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IPv4PrefixLength
+  description: |+
+    Specifies the IPv4 prefix length, which indicates the size of the subnet in which the incoming queries are grouped.
+    The server applies RRL if queries resulting in the same response occur more frequently than expected in a specified time window.
+    The default value of this parameter is 24.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: IPv6PrefixLength
+  description: |+
+    Specifies the IPv6 prefix length, which indicates the size of the IPv6 subnet in which the incoming queries are grouped.
+    The server applies RRL if queries resulting in the same response occur more frequently than expected in a specified time window.
+    The default value of this parameter is 56.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LeakRate
+  description: |+
+    Specifies the rate at which the server responds to dropped queries.
+    For queries that meet criteria to be dropped due to RRL, the DNS server still responds once per *LeakRate* queries.
+    For example, if *LeakRate* is 3, the server responds to one in every 3 queries.
+    The allowed range for LeakRate is 2 to 10.
+    If *LeakRate* is set to zero, then no responses are 'leaked' by RRL.
+    *LeakRate* leaves a chance for the victims in the same subnet as the forged IP address to get responses to their valid queries.
+    The default value for *LeakRate* is 3.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaximumResponsesPerWindow
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Mode
+  description: |+
+    Specifies the state of RRL on the DNS server.
+    The acceptable values for this parameter are: Enable, or Disable, or LogOnly.
+    If the mode is set to LogOnly the DNS server performs all the RRL calculations but instead of taking the preventive actions (dropping or truncating responses), it only logs the potential actions as if RRL were enabled and continues with the normal responses.
+    The default value is Enable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: LogOnly, Enable, Disable
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ResetToDefault
+  description: |+
+    Indicates that this cmdlet sets all the RRL settings to their default values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ResponsesPerSec
+  description: |+
+    Specifies the maximum number of times that the server sends a client the same response within a one-second interval.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: TruncateRate
+  description: |+
+    Specifies the rate at which the server responds with truncated responses.
+    For queries that meet the criteria to be dropped due to RRL, the DNS server still responds with truncated responses once per *TruncateRate* queries.
+    For example, if *TruncateRate* is 2, one in every 2 queries receives a truncated response.
+    The *TruncateRate* parameter provides the valid clients a way to reconnect using TCP.
+    The allowed range for TruncateRate is 2 to 10.
+    If it is set to 0, then this behaviour is disabled.
+    The default value is 2.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: WindowInSec
+  description: |+
+    Specifies the period (in seconds) over which rates are measured and averaged for RRL.
+    RRL is applied if queries from same subnet, resulting in same response, occur more frequently than expected in a specified time window.
+    The default value is 5.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Set-DnsServerResponseRateLimiting
+name: Set-DnsServerResponseRateLimiting
+description: |-
+  The **Set-DnsServerResponseRateLimiting** cmdlet enables Response Rate Limiting (RRL) on a Windows DNS server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerResponseRateLimiting_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverresponseratelimiting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DnsServerResponseRateLimiting

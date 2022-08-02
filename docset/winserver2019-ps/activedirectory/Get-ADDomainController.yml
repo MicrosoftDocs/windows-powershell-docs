@@ -1,0 +1,373 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets one or more Active Directory domain controllers based on discoverable services criteria, search parameters or by providing a domain controller identifier, such as the NetBIOS name.
+module: ActiveDirectory
+notes: |-
+  * The **Name** and **HostName** properties of the **ADDomainController** objects returned by the cmdlet are set according to the following rules:
+
+    - If the *Discover* parameter is used, HostName is the Fully Qualified Domain Name of the Domain Controller, and the Name is the NetBIOS name of the Domain Controller.
+  With the *Discover* parameter, the cmdlet will perform a second DCLocator call, to populate the **Name** property.
+  This property will not be set, to the NetBIOS name of the Domain Controller, if the WINS service is unavailable.
+
+    - If the *Identity* or the *Filter* parameter is used, **HostName** is the **DNSHostName** attribute of the Domain Controller object, and the **Name** is the **Name** (RDN) attribute of the Domain Controller object.
+  With the *Identity* or the *Filter* parameter, the **HostName** property will not be set, if the **DNSHostName** attribute of the Domain Controller object is null.
+
+  * This cmdlet does not work with Active Directory Lightweight Directory Services (AD LDS).
+  * This cmdlet does not work when targeting a snapshot using the *Server* parameter.
+inputs:
+- name: <xref href="Microsoft.ActiveDirectory.Management.ADDomainController" data-throw-if-not-resolved="False" />
+  description: |-
+    A domain controller object is received by the *Identity* parameter.
+outputs:
+- name: <xref href="Microsoft.ActiveDirectory.Management.ADDomainController" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns one or more domain controller objects.
+
+    When you use the *Discover* parameter to get a domain controller, the cmdlet returns a default set of property values for each domain controller.
+
+    When you use the *Identity* or *Filter* parameters to get a domain controller, this cmdlet returns all of the properties of the domain controller.
+
+    To view all of the properties for an **ADDomainController** object, use the following command and replace \<domaincontroller\> with a domain controller identifier such as a DNS host name.
+
+    `Get-ADDomainController`\<domaincontroller\>`| Get-Member`
+links:
+- text: Add-ADDomainControllerPasswordReplicationPolicy
+  href: ./Add-ADDomainControllerPasswordReplicationPolicy.yml
+- text: Get-ADDomainControllerPasswordReplicationPolicy
+  href: ./Get-ADDomainControllerPasswordReplicationPolicy.yml
+- text: Remove-ADDomainControllerPasswordReplicationPolicy
+  href: ./Remove-ADDomainControllerPasswordReplicationPolicy.yml
+syntaxes:
+- >-
+  Get-ADDomainController [-AuthType <ADAuthType>] [-Credential <PSCredential>] [[-Identity] <ADDomainController>]
+
+   [-Server <String>] [<CommonParameters>]
+- >-
+  Get-ADDomainController [-AuthType <ADAuthType>] [-AvoidSelf] [-Discover] [-DomainName <String>]
+
+   [-ForceDiscover] [-MinimumDirectoryServiceVersion <ADMinimumDirectoryServiceVersion>] [-NextClosestSite]
+
+   [-Service <ADDiscoverableService[]>] [-SiteName <String>] [-Writable] [<CommonParameters>]
+- >-
+  Get-ADDomainController [-AuthType <ADAuthType>] [-Credential <PSCredential>] -Filter <String>
+
+   [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a domain controller in a specified site'
+  code: |-
+    PS C:\> Get-ADDomainController -Discover -Site "Default-First-Site-Name"
+  description: |-
+    This command gets one available domain controller in the site specified by the *Site* parameter.
+    The command uses Discovery.
+  summary: ""
+- title: 'Example 2: Get an available domain controller using force discovery in a specified site'
+  code: |-
+    PS C:\> Get-ADDomainController -Discover -Site "Default-First-Site-Name" -ForceDiscover
+  description: |-
+    This command force discovers or finds one available domain controller in the site specified by the *Site* parameter.
+  summary: ""
+- title: 'Example 3: Get a global catalog in the current forest using discovery'
+  code: |-
+    PS C:\> Get-ADDomainController -Discover -Service "GlobalCatalog"
+  description: |-
+    This command gets a global catalog in the current forest using Discovery.
+  summary: ""
+- title: 'Example 4: Get an available domain controller in the current domain using discovery'
+  code: |-
+    PS C:\> Get-ADDomainController -Discover
+  description: |-
+    This command gets one available domain controller in the current domain using Discovery.
+  summary: ""
+- title: 'Example 5: Get an available domain controller in a given domain using discovery'
+  code: |-
+    PS C:\> Get-ADDomainController -Discover -Domain "user01.com"
+  description: |-
+    This command gets one available domain controller in a given domain using Discovery.
+  summary: ""
+- title: 'Example 6: Get the primary domain controller that is advertising as a time server using discovery'
+  code: |-
+    PS C:\> Get-ADDomainController -Discover -Domain "corp.contoso.com" -Service "PrimaryDC","TimeService"
+  description: |-
+    This command gets the primary domain controller using Discovery and make sure that is advertising as a time server.
+  summary: ""
+- title: 'Example 7: Get a domain controller using its NetBIOS name'
+  code: |-
+    PS C:\> Get-ADDomainController -Identity "PDC-01"
+  description: |-
+    This command gets a domain controller using its NetBIOS name.
+  summary: ""
+- title: 'Example 8: Get a domain controller using its DNS host name in a specified site using administrator credentials'
+  code: |-
+    PS C:\> Get-ADDomainController -Identity "TK5-CORP-DC-10.user01.com" -Server "user01.com" -Credential "corp\administrator"
+  description: |-
+    This command gets a domain controller using its DNS host name, in the domain specified by the *Site* parameter, specified in *Server* parameter, and specifying administrator credentials.
+  summary: ""
+parameters:
+- type: <xref href="ADAuthType" data-throw-if-not-resolved="False" />
+  name: AuthType
+  description: |+
+    Specifies the authentication method to use.
+    The acceptable values for this parameter are:
+
+    - Negotiate or 0
+    - Basic or 1
+
+    The default authentication method is Negotiate.
+
+    A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Negotiate, Basic
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AvoidSelf
+  description: |+
+    Specifies to not return the current computer as a domain controller.
+    If the current computer is not a domain controller, this parameter is ignored.
+    You can specify this parameter when you want to get the name of another domain controller in the domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the user account credentials to use to perform this task.
+    The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
+    If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
+
+    To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
+    If you specify a user name for this parameter, the cmdlet prompts for a password.
+
+    You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+    You can then set the *Credential* parameter to the **PSCredential** object.
+
+    If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Discover
+  isRequired: true
+  description: |+
+    Specifies to return a discoverable domain controller that meets the conditions specified by the cmdlet parameters.
+
+    To get a domain controller by using the discovery mechanism of DCLocator, use the *Discover* parameter.
+    Along with this parameter, you can provide search criteria by setting parameters such as *Service*, *SiteName*, *DomainName*, *NextClosestSite*, *AvoidSelf*, and *ForceDiscover*.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the domain to search.
+    The cmdlet locates a discoverable domain controller in this domain.
+    Specify the domain by using the NetBIOS name or Fully Qualified Domain Name (FQDN) of the domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  isRequired: true
+  description: |+
+    Specifies a query string that retrieves Active Directory objects.
+    This string uses the Windows PowerShell Expression Language syntax.
+    The Windows PowerShell Expression Language syntax provides rich type-conversion support for value types received by the *Filter* parameter.
+    The syntax uses an in-order representation, which means that the operator is placed between the operand and the value.
+    For more information about the *Filter* parameter, type `Get-Help about_ActiveDirectory_Filter`.
+
+    Syntax:
+
+    The following syntax uses Backus-Naur form to show how to use the Windows PowerShell Expression Language for this parameter.
+
+    \<filter\>  ::= "{" \<FilterComponentList\> "}"
+
+    \<FilterComponentList\> ::= \<FilterComponent\> | \<FilterComponent\> \<JoinOperator\> \<FilterComponent\> | \<NotOperator\>  \<FilterComponent\>
+
+    \<FilterComponent\> ::= \<attr\> \<FilterOperator\> \<value\> | "(" \<FilterComponent\> ")"
+
+    \<FilterOperator\> ::= "-eq" | "-le" | "-ge" | "-ne" | "-lt" | "-gt"| "-approx" | "-bor" | "-band" | "-recursivematch" | "-like" | "-notlike"
+
+    \<JoinOperator\> ::= "-and" | "-or"
+
+    \<NotOperator\> ::= "-not"
+
+    \<attr\> ::= \<PropertyName\> | \<LDAPDisplayName of the attribute\>
+
+    \<value\>::= \<compare this value with an \<attr\> by using the specified \<FilterOperator\>\>
+
+    For a list of supported types for \<value\>, type `Get-Help about_ActiveDirectory_ObjectModel`.
+
+    Note: PowerShell wildcards other than *, such as ?, are not supported by the *Filter* syntax.
+
+    Note: To query using LDAP query strings, use the *LDAPFilter* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceDiscover
+  description: |+
+    Indicates that the cmdlet to clears any cached domain controller information and perform a new discovery.
+    If this parameter is not specified the cmdlet may return cached domain controller information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADDomainController" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies an Active Directory domain controller object by providing one of the following values.
+    The identifier in parentheses is the LDAP display name for the attribute.
+    Unless specified otherwise, these values are for the server object that represents the domain controller.
+    The acceptable values for this parameter are:
+
+    - A GUID (objectGUID)
+    - An IPV4Address
+    - A Global IPV6Address
+    - A DNS Host Name (dNSHostName)
+    - The name of the server object
+    - The distinguished name of the NTDS Settings object
+    - The distinguished name of the server object that represents the domain controller
+    - The GUID of NTDS settings object under the configuration partition
+    - The GUID of server object under the configuration partition
+    - The distinguished name of the computer object that represents the domain controller
+
+    The cmdlet searches the default naming context or partition to find the object.
+    If two or more objects are found, the cmdlet returns a non-terminating error.
+
+    This parameter can also get this object through the pipeline or you can set this parameter to an object instance.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADMinimumDirectoryServiceVersion" data-throw-if-not-resolved="False" />
+  name: MinimumDirectoryServiceVersion
+  description: |+
+    Species the earliest operating system that the domain controller can have so that it is returned by the cmdlet when getting a domain controller using *Discover* parameter.
+    The acceptable values for this parameter are:
+
+    - Windows2000 or 1
+    - Windows2008 or 2
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Windows2000, Windows2008, Windows2012, Windows2012R2
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NextClosestSite
+  description: |+
+    Specifies to return a domain controller in the next closest site when a domain controller is not found in the site that contains the client.
+    The next closest site is the site with the lowest site link cost with respect to the current site.
+    Costs between sites are based on factors such as bandwidth, as well as physical proximity.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+    The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+
+    Specify the Active Directory Domain Services instance in one of the following ways:
+
+    Domain name values:
+
+    - Fully qualified domain name
+    - NetBIOS name
+
+    Directory server values:
+
+    - Fully qualified directory server name
+    - NetBIOS name
+    - Fully qualified directory server name and port
+
+    The default value for this parameter is determined by one of the following methods in the order that they are listed:
+
+    - By using the *Server* value from objects passed through the pipeline
+    - By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
+    - By using the domain of the computer running Windows PowerShell
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADDiscoverableService" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Service
+  description: |+
+    Species the types of domain controllers to get.
+    You can specify more than one type by using a comma-separated list.
+    The acceptable values for this parameter are:
+
+    - PrimaryDC or 1
+    - GlobalCatalog or 2
+    - KDC or 3
+    - TimeService or 4
+    - ReliableTimeService or 5
+    - ADWS or 6
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: PrimaryDC, GlobalCatalog, KDC, TimeService, ReliableTimeService, ADWS
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SiteName
+  description: |+
+    Specifies the name of a site to search in to find the domain controller.
+    If this parameter is not set, the cmdlet searches for domain controllers in the same site as the client.
+    The name of the site is defined by the **Name** property of the site object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Writable
+  description: |+
+    Specifies whether this is a writable domain controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ActiveDirectory.Get-ADDomainController
+name: Get-ADDomainController
+description: |-
+  The **Get-ADDomainController** cmdlet gets the domain controllers specified by the parameters.
+  You can get domain controllers by setting the *Identity*, *Filter* or *Discover* parameters.
+
+  The *Identity* parameter specifies the domain controller to get.
+  You can identify a domain controller by its GUID, IPV4Address, global IPV6Address, or DNS host name.
+  You can also identify a domain controller by the name of the server object that represents the domain controller, the distinguished name of the NTDS settings object or the server object, the GUID of the NTDS settings object or the server object under the configuration partition, or the distinguished name of the computer object that represents the domain controller.
+  You can also set the *Identity* parameter to a domain controller object variable, such as `$<localDomainControllerObject>`, or pass a domain controller object through the pipeline to the *Identity* parameter.
+
+  To search for and retrieve more than one domain controller, use the *Filter* parameter.
+  The *Filter* parameter uses the Windows PowerShell Expression Language to write query strings for Active Directory.
+  Windows PowerShell Expression Language syntax provides rich type conversion support for value types received by the *Filter* parameter.
+  For more information about the *Filter* parameter syntax, type `Get-Help about_ActiveDirectory_Filter`.
+  You cannot use a Lightweight Directory Access Protocol (LDAP) query string with this cmdlet.
+
+  To get a domain controller by using the discovery mechanism of DCLocator, use the *Discover* parameter.
+  You can provide search criteria by setting parameters such as *Service*, *SiteName*, *DomainName*, *NextClosestSite*, *AvoidSelf*, and *ForceDiscover*.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/get-addomaincontroller?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ADDomainController

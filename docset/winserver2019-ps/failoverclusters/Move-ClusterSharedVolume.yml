@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Moves a Cluster Shared Volume (CSV) to ownership by a different node in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterSharedVolume
+  href: ./Add-ClusterSharedVolume.yml
+- text: Get-ClusterSharedVolume
+  href: ./Get-ClusterSharedVolume.yml
+- text: Remove-ClusterSharedVolume
+  href: ./Remove-ClusterSharedVolume.yml
+- text: Resume-ClusterResource
+  href: ./Resume-ClusterResource.yml
+- text: Start-ClusterResource
+  href: ./Start-ClusterResource.yml
+- text: Stop-ClusterResource
+  href: ./Stop-ClusterResource.yml
+- text: Suspend-ClusterResource
+  href: ./Suspend-ClusterResource.yml
+syntaxes:
+- >-
+  Move-ClusterSharedVolume [[-Name] <String>] [[-Node] <String>] [-Wait <Int32>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Move-ClusterSharedVolume -Name "Cluster Disk 3"
+    Name                       State                      Node 
+    ----                       -----                      ---- 
+    Cluster Disk 3             Online                     node2
+  description: |-
+    This example moves the Cluster Shared Volume called Cluster Disk 3 to another cluster node.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Move-ClusterSharedVolume -Name "Cluster Disk 3" -Node node1
+    Name                       State                      Node 
+    ----                       -----                      ---- 
+    Cluster Disk 3             Online                     node1
+  description: |-
+    This example moves the Cluster Shared Volume called Cluster Disk 3 to the node named node1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the Cluster Shared Volume to move.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the Cluster Shared Volume to move.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Node
+  description: |+
+    Specifies the name of the cluster node to which to move the Cluster Shared Volume.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the **Wait** parameter is not specified, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Move-ClusterSharedVolume
+name: Move-ClusterSharedVolume
+description: |-
+  The **Move-ClusterSharedVolume** cmdlet moves a Cluster Shared Volume (CSV) to ownership by a different node in a failover cluster.
+
+  On a failover cluster that uses CSVs, at any given time, access to each CSV is controlled by a particular node, called the owner of that CSV.
+  However, a single CSV can contain virtual hard disk (VHD) files used by multiple clustered virtual machines that are distributed across multiple cluster nodes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/move-clustersharedvolume?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Move-ClusterSharedVolume

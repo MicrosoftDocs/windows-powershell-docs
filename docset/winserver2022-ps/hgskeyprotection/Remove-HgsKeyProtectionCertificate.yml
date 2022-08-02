@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a key certificate from the Key Protection Service.
+module: HgsKeyProtection
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Add-HgsKeyProtectionCertificate
+  href: ./Add-HgsKeyProtectionCertificate.yml
+- text: Get-HgsKeyProtectionCertificate
+  href: ./Get-HgsKeyProtectionCertificate.yml
+- text: Set-HgsKeyProtectionCertificate
+  href: ./Set-HgsKeyProtectionCertificate.yml
+syntaxes:
+- >-
+  Remove-HgsKeyProtectionCertificate -CertificateType <KeyCertificateType> -Thumbprint <String> [-Force]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove an encryption certificate'
+  code: |-
+    PS C:\> Remove-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint "d39203a3b3544743ad552afe0615dc1f"
+  description: |-
+    This command removes an encryption certificate from the Key Protection Service.
+  summary: ""
+parameters:
+- type: <xref href="KeyCertificateType" data-throw-if-not-resolved="False" />
+  name: CertificateType
+  isRequired: true
+  description: |+
+    Specifies of the type of the certificate that this cmdlet removes.
+    The acceptable values for this parameter are:
+
+    - Signing
+    - Encryption
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Signing, Encryption
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  isRequired: true
+  description: |+
+    Specifies the thumbprint of the certificate to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsKeyProtection.Remove-HgsKeyProtectionCertificate
+name: Remove-HgsKeyProtectionCertificate
+description: |-
+  The **Remove-HgsKeyProtectionCertificate** cmdlet removes a key certificate from the Key Protection Service.
+  If the certificate being removed references a certificate stored in the LocalMachine\My certificate store, this cmdlet does not delete that certificate from the LocalMachine\My certificate store.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/remove-hgskeyprotectioncertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-HgsKeyProtectionCertificate

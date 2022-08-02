@@ -1,0 +1,360 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a printer to the specified computer.
+module: PrintManagement
+notes: |-
+  - The WhatIf switch doesn’t work if the **ConnectionName** parameter set is used.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-Printer
+  href: ./Get-Printer.yml
+- text: Set-Printer
+  href: ./Set-Printer.yml
+- text: Remove-Printer
+  href: ./Remove-Printer.yml
+- text: Rename-Printer
+  href: ./Rename-Printer.yml
+syntaxes:
+- >-
+  Add-Printer [-ConnectionName] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Add-Printer [-Comment <String>] [-Datatype <String>] [-UntilTime <UInt32>] [-KeepPrintedJobs]
+
+   [-Location <String>] [-SeparatorPageFile <String>] [-ComputerName <String>] [-Shared] [-ShareName <String>]
+
+   [-StartTime <UInt32>] [-Name] <String> [-PermissionSDDL <String>] [-PrintProcessor <String>]
+
+   [-Priority <UInt32>] [-Published] [-RenderingMode <RenderingModeEnum>] [-DisableBranchOfficeLogging]
+
+   [-BranchOfficeOfflineLogSizeMB <UInt32>] [-DeviceURL <String>] [-DeviceUUID <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-Printer [-Comment <String>] [-Datatype <String>] [-DriverName] <String> [-UntilTime <UInt32>]
+
+   [-KeepPrintedJobs] [-Location <String>] [-SeparatorPageFile <String>] [-ComputerName <String>] [-Shared]
+
+   [-ShareName <String>] [-StartTime <UInt32>] [-Name] <String> [-PermissionSDDL <String>]
+
+   [-PrintProcessor <String>] [-Priority <UInt32>] [-Published] [-RenderingMode <RenderingModeEnum>]
+
+   -PortName <String> [-DisableBranchOfficeLogging] [-BranchOfficeOfflineLogSizeMB <UInt32>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a printer to a local computer'
+  code: |-
+    PS C:\> Add-Printer -Name "mxdw 2" -DriverName "Microsoft XPS Document Writer v4" -PortName "portprompt:"
+  description: |-
+    This command adds a printer with name mxdw2 to the local computer.
+    The mxdw printer uses the Microsoft XPS Document Writer v4 driver and the `portprompt:` port.
+
+    The` portprompt:` port prompts for a file name to save the XPS document when printing to the XPS printer.
+  summary: ""
+- title: 'Example 2: Add a new network printer connection'
+  code: |-
+    PS C:\> Add-Printer -ConnectionName \\printServer\printerName
+  description: |-
+    This command adds a printer by specifying the name of a print server and a shared printer on that server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: BranchOfficeOfflineLogSizeMB
+  description: |+
+    Specifies the maximum size, in megabytes, of the branch office remote offline log file for this printer.
+    You cannot specify this parameter for unshared queues or queues that do not have branch office enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Comment
+  description: |+
+    Specifies the text to add to the Comment field for the specified printer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the computer to which to add the printer.
+
+  defaultValue: None
+  position: Named
+  aliases: CN
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a shared printer to which to connect.
+    This parameter is required.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Datatype
+  description: |+
+    Specifies the data type the printer uses to record print jobs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DeviceURL
+  description: |+
+    Specifies a URL for the directed discovery of a Web Services on Devices (WSD) printer to add to the specified computer.s
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DeviceUUID
+  description: |+
+    Specifies the multicast UUID for device detection for the WSD port.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableBranchOfficeLogging
+  description: |+
+    Indicates that branch office remote logging is disabled.
+    You cannot specify this parameter for unshared queues.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DriverName
+  isRequired: true
+  description: |+
+    Specifies the name of the printer driver for the printer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: KeepPrintedJobs
+  description: |+
+    Specifies whether the print jobs in the queue are kept.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    Specifies the location of the printer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the printer to add.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PermissionSDDL
+  description: |+
+    Specifies the permissions for the printer as a Security Descriptor Definition Language (SDDL) string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PortName
+  isRequired: true
+  description: |+
+    Specifies the name of the port that is used or created for the printer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrintProcessor
+  description: |+
+    Specifies the name of the print processor used by the printer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Priority
+  description: |+
+    Specifies the relative queue priority.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Published
+  description: |+
+    Specifies whether the printer is published in the network directory service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RenderingModeEnum" data-throw-if-not-resolved="False" />
+  name: RenderingMode
+  description: |+
+    Specifies the rendering mode for the printer.
+    You can specify one of the following rendering modes: 
+
+    - SSR, Service Side Rendering 
+    - CSR.
+    Client Side Rendering 
+    - BranchOffice.
+    Branch Office
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: SSR, CSR, BranchOffice
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SeparatorPageFile
+  description: |+
+    Specifies the path of and name of the separator page to be used by the printer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Shared
+  description: |+
+    Indicates whether to share the printer on the network.
+    You can determine the name by which the printer is shared by specifying **ShareName**.
+    If **ShareName** is not specified, the name of the printer is used as the share name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ShareName
+  description: |+
+    Specifies the name by which to share the printer on the network.
+    To share a printer, specify the **Shared** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: StartTime
+  description: |+
+    Specifies the starting time of printer availability.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: UntilTime
+  description: |+
+    Specifies the ending time of printer availability.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: PrintManagement.Add-Printer
+name: Add-Printer
+description: |-
+  The **Add-Printer** cmdlet adds a printer to a specified computer.
+  You can add both local printers and connections to network-based printers.
+
+  You cannot use wildcard characters with **Add-Printer**.
+  You can use **Add-Printer** in a Windows PowerShell remoting session.
+
+  You may need administrative credentials to run **Add-Printer**.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_Printer_v1.0.cdxml-help.xml
+  Module Name: PrintManagement
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/printmanagement/add-printer?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-Printer

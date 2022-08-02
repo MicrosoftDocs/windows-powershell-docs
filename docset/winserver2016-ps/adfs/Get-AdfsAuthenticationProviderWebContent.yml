@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves web content objects for authentication providers.
+module: ADFS
+notes: ""
+links:
+- text: Remove-AdfsAuthenticationProviderWebContent
+  href: ./Remove-AdfsAuthenticationProviderWebContent.yml
+- text: Set-AdfsAuthenticationProviderWebContent
+  href: ./Set-AdfsAuthenticationProviderWebContent.yml
+syntaxes:
+- Get-AdfsAuthenticationProviderWebContent [-Locale <CultureInfo>] [-Name <String[]>] [<CommonParameters>]
+parameters:
+- type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  name: Locale
+  description: |+
+    Specifies a locale.
+    The cmdlet gets the provider web content associated for the locale that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies a array of names.
+    The cmdlet gets the provider web content associated for the names that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsAuthenticationProviderWebContent
+name: Get-AdfsAuthenticationProviderWebContent
+description: |-
+  The **Get-AdfsAuthenticationProviderWebContent** cmdlet retrieves web content objects for all authentication providers, or a specified authentication provider in a locale.
+  Specify an authentication provider by its name.
+  If you do not supply an authentication provider name, the cmdlet retrieves all authentication provider web content objects.
+  If you do not specify the locale, the cmdlet retrieves web content for all locales.
+  The cmdlet does not return any information if you do not use the Set-AdfsAuthenticationProviderWebContent cmdlet to customize the authentication provider web content.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsauthenticationproviderwebcontent?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsAuthenticationProviderWebContent

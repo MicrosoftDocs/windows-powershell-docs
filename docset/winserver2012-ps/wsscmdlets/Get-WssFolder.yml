@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an object that represents a folder.
+module: WssCmdlets
+notes: ""
+outputs:
+- name: <xref href="Folder" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WssFolder
+  href: ./Get-WssFolder.yml
+- text: Set-WssFolder
+  href: ./Set-WssFolder.yml
+- text: Add-WssFolder
+  href: ./Add-WssFolder.yml
+- text: Move-WssFolder
+  href: ./Move-WssFolder.yml
+- text: Remove-WssFolder
+  href: ./Remove-WssFolder.yml
+- text: Measure-WssFolder
+  href: ./Measure-WssFolder.yml
+syntaxes:
+- Get-WssFolder [-ID] <Guid>
+- Get-WssFolder [-Name] <String>
+examples:
+- title: 'Example 1: Get a folder by using a name'
+  code: |-
+    PS C:\> Get-WssFolder -Name "ProjectsWest"
+  description: |-
+    This command gets the folder named ProjectsWest.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ID
+  isRequired: true
+  description: |+
+    Specifies the GUID for a folder.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a folder.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Get-WssFolder
+name: Get-WssFolder
+description: |-
+  The **Get-WssFolder** cmdlet gets an object that represents a folder.
+  Specify a GUID for a specific folder.
+  If you do not specify a GUID, the cmdlet gets **Folder** objects for all the folders on current server.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssfolder?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

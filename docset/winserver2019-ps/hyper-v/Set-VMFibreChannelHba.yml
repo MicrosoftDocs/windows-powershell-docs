@@ -1,0 +1,248 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a Fibre Channel host bus adapter on a virtual machine.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMFibreChannelHba" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-VMFibreChannelHba [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String> [-WorldWideNodeNameSetA] <String> [-WorldWidePortNameSetA] <String>
+
+   [-WorldWideNodeNameSetB] <String> [-WorldWidePortNameSetB] <String> -SanName <String> [-Passthru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMFibreChannelHba [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String> [-WorldWideNodeNameSetA] <String> [-WorldWidePortNameSetA] <String>
+
+   [-WorldWideNodeNameSetB] <String> [-WorldWidePortNameSetB] <String> [-GenerateWwn] [-Passthru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMFibreChannelHba [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String> [-WorldWideNodeNameSetA] <String> [-WorldWidePortNameSetA] <String>
+
+   [-WorldWideNodeNameSetB] <String> [-WorldWidePortNameSetB] <String> [-NewWorldWideNodeNameSetA <String>]
+
+   [-NewWorldWidePortNameSetA <String>] [-NewWorldWideNodeNameSetB <String>] [-NewWorldWidePortNameSetB <String>]
+
+   [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMFibreChannelHba [-VMFibreChannelHba] <VMFibreChannelHba> [-GenerateWwn] [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-VMFibreChannelHba [-VMFibreChannelHba] <VMFibreChannelHba> [-NewWorldWideNodeNameSetA <String>]
+
+   [-NewWorldWidePortNameSetA <String>] [-NewWorldWideNodeNameSetB <String>] [-NewWorldWidePortNameSetB <String>]
+
+   [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMFibreChannelHba [-VMFibreChannelHba] <VMFibreChannelHba> -SanName <String> [-Passthru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-VMFibreChannelHba -VMName MyVM | Set-VMFibreChannelHba -GenerateWwn
+  description: |-
+    Configures a Fibre Channel host bus adapter on a virtual machine named MyVM, with World Wide Names to be generated automatically.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which a Fibre Channel host bus adapter is to be configured.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GenerateWwn
+  isRequired: true
+  description: |+
+    Specifies that the World Wide Names for sets A and B are to be generated automatically.
+    When this parameter is specified, parameters **WorldWideNodeNameSetA**, **WorldWideNodeNameSetB**, **WorldWidePortNameSetA**, and **WorldWidePortNameSetB** cannot be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewWorldWideNodeNameSetA
+  description: |+
+    Specifies the World Wide Node name of address set A to be associated with the Fibre Channel host bus adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewWorldWideNodeNameSetB
+  description: |+
+    Specifies the World Wide Node name of address set B to be associated with the Fibre Channel host bus adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewWorldWidePortNameSetA
+  description: |+
+    Specifies the World Wide Port name of address set A to be associated with the Fibre Channel host bus adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewWorldWidePortNameSetB
+  description: |+
+    Specifies the World Wide Port name of address set B to be associated with the Fibre Channel host bus adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that an object is to be passed through to the pipeline representing the configured Fibre Channel host bus adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SanName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual storage area network (SAN) to be associated with the Fibre Channel host bus adapter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMFibreChannelHba" data-throw-if-not-resolved="False" />
+  name: VMFibreChannelHba
+  isRequired: true
+  description: |+
+    Specifies the Fibre Channel host bus adapter to be configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine to which the virtual Fibre Channel host bus adapter parameters are to be set.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WorldWideNodeNameSetA
+  isRequired: true
+  description: |+
+    Specifies the World Wide Node name of address set A that is associated with the Fibre Channel host bus adapter.
+
+  defaultValue: None
+  position: "1"
+  aliases: Wwnn1
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WorldWideNodeNameSetB
+  isRequired: true
+  description: |+
+    Specifies the World Wide Node name of address set B that is associated with the Fibre Channel host bus adapter.
+
+  defaultValue: None
+  position: "3"
+  aliases: Wwnn2
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WorldWidePortNameSetA
+  isRequired: true
+  description: |+
+    Specifies the World Wide Port name of address set A that is associated with the Fibre Channel host bus adapter.
+
+  defaultValue: None
+  position: "2"
+  aliases: Wwpn1
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WorldWidePortNameSetB
+  isRequired: true
+  description: |+
+    Specifies the World Wide Port name of address set B that is associated with the Fibre Channel host bus adapter.
+
+  defaultValue: None
+  position: "4"
+  aliases: Wwpn2
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VMFibreChannelHba
+name: Set-VMFibreChannelHba
+description: |-
+  The **Set-VMFibreChannelHba** cmdlet configures a Fibre Channel host bus adapter on a virtual machine.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmfibrechannelhba?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VMFibreChannelHba

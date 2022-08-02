@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables a relying party trust of the Federation Service.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *TargetIdentifier* and *TargetName* parameters.
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    RelyingPartytrust objects are received by the *TargetRelyingParty* parameter.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the disabled RelyingPartyTrust object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Add-AdfsRelyingPartyTrust
+  href: ./Add-AdfsRelyingPartyTrust.yml
+- text: Enable-AdfsRelyingPartyTrust
+  href: ./Enable-AdfsRelyingPartyTrust.yml
+- text: Get-AdfsRelyingPartyTrust
+  href: ./Get-AdfsRelyingPartyTrust.yml
+- text: Remove-AdfsRelyingPartyTrust
+  href: ./Remove-AdfsRelyingPartyTrust.yml
+- text: Set-AdfsRelyingPartyTrust
+  href: ./Set-AdfsRelyingPartyTrust.yml
+syntaxes:
+- Disable-AdfsRelyingPartyTrust -TargetIdentifier <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Disable-AdfsRelyingPartyTrust -TargetRelyingParty <RelyingPartyTrust> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Disable-AdfsRelyingPartyTrust -TargetName <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the identifier of the relying party trust to disable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the relying party trust to disable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  name: TargetRelyingParty
+  isRequired: true
+  description: |+
+    Specifies the relying party trust to disable.
+    This value is typically taken from the pipeline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Disable-AdfsRelyingPartyTrust
+name: Disable-AdfsRelyingPartyTrust
+description: |-
+  The **Disable-AdfsRelyingPartyTrust** cmdlet disables a relying party trust of the Federation Service.
+  When disabled, AD FS does not issue tokens when users attempt to access this relying party.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/disable-adfsrelyingpartytrust?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-AdfsRelyingPartyTrust

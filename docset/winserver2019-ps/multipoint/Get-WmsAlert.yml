@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets alert information.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **WmsAlert** collection as a **PSObject** collection.
+syntaxes:
+- Get-WmsAlert [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get alert information'
+  code: |-
+    PS C:\> Get-WmsAlert
+    TimeStampInUtc : 12/7/2010 12:17:15 AM
+    AlertType      : HubMissingRequiredDevice
+    AlertSeverity  : Warning
+    ComputerName   : TEST
+    StationId      : 1
+  description: |-
+    This cmdlet returns alert information from the MultiPoint Server core service.
+    In this example, station 1 is missing a keyboard.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+uid: MultiPoint.Get-WmsAlert
+name: Get-WmsAlert
+description: |-
+  The **Get-WmsAlert** cmdlet gets alert information from the Windows MultiPoint Server core service.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/get-wmsalert?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WmsAlert

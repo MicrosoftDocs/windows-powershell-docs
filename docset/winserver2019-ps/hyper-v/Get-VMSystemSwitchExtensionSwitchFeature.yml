@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the switch-level features on one or more Hyper-V hosts.
+module: Hyper-V
+notes: ""
+syntaxes:
+- >-
+  Get-VMSystemSwitchExtensionSwitchFeature [-FeatureName <String[]>] [-FeatureId <Guid[]>]
+
+   [-ExtensionName <String[]>] [-SystemSwitchExtension <VMSystemSwitchExtension[]>] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String[]>] [-Credential <PSCredential[]>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-VMSystemSwitchExtensionSwitchFeature
+  description: |-
+    Gets all virtual switch extensions that support switch level features that can be configured on a virtual switch.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which the switch-level features in an extension are to be retrieved.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExtensionName
+  description: |+
+    Specifies the name of the extension from which the switch-level features are to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FeatureId
+  description: |+
+    Specifies the unique identifier of the features are to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FeatureName
+  description: |+
+    Specifies the name of the switch-level features to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSystemSwitchExtension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SystemSwitchExtension
+  description: |+
+    Specifies the extension from which the switch-level features are to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMSystemSwitchExtensionSwitchFeature
+name: Get-VMSystemSwitchExtensionSwitchFeature
+description: |-
+  The **Get-VMSystemSwitchExtensionSwitchFeature** cmdlet gets the switch-level features supported by virtual switch extensions in an extension on one or more Hyper-V hosts.
+  The returned feature object will contain default values for the feature.
+  The object can be used to apply the configuration on specific ports using the **Add-VMSwitchExtensionFeature** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmsystemswitchextensionswitchfeature?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMSystemSwitchExtensionSwitchFeature

@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Simulates a failure of a cluster resource.
+module: FailoverClusters
+notes: ""
+links:
+- text: Move-ClusterGroup
+  href: ./Move-ClusterGroup.yml
+- text: Start-ClusterResource
+  href: ./Start-ClusterResource.yml
+syntaxes:
+- >-
+  Test-ClusterResourceFailure [[-Name] <String>] [-InputObject <PSObject>] [-Cluster <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Simulate a failure'
+  code: |-
+    PS C:\> Test-ClusterResourceFailure -Name "Cluster Disk 4"
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    Cluster Disk 4      Failed              cluster12FS         Physical Disk
+  description: |-
+    This example simulates a failure in cluster resource named Cluster Disk 4.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster resource of which to simulate failure.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster resource of which to simulate failure.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Test-ClusterResourceFailure
+name: Test-ClusterResourceFailure
+description: |-
+  The **Test-ClusterResourceFailure** cmdlet simulates a failure of a cluster resource.
+
+  Based on the failover and failback policies, when this cmdlet runs, the Cluster service moves the clustered role, or resource group, and attempts to bring the clustered resource online.
+  This cmdlet can be used to simulate what actions the Cluster service will take when a resource fails.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/test-clusterresourcefailure?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-ClusterResourceFailure

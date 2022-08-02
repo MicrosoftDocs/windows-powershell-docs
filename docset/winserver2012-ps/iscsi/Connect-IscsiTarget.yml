@@ -1,0 +1,255 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Establishes a connection between the local iSCSI initiator, and the specified iSCSI target device.
+module: iSCSI
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiSession" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: iSCSI Target Server Overview
+  href: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848272(v=ws.11)
+syntaxes:
+- >-
+  Connect-IscsiTarget [-AsJob] [-AuthenticationType <String>] [-ChapSecret <String>] [-ChapUsername <String>]
+
+   [-CimSession <CimSession[]>] [-InitiatorInstanceName <String>] [-InitiatorPortalAddress <String>]
+
+   [-IsDataDigest <Boolean>] [-IsHeaderDigest <Boolean>] [-IsMultipathEnabled <Boolean>]
+
+   [-IsPersistent <Boolean>] [-ReportToPnP <Boolean>] [-TargetPortalAddress <String>]
+
+   [-TargetPortalPortNumber <UInt16>] [-ThrottleLimit <Int32>] -NodeAddress <String>
+- >-
+  Connect-IscsiTarget [-AsJob] [-AuthenticationType <String>] [-ChapSecret <String>] [-ChapUsername <String>]
+
+   [-CimSession <CimSession[]>] [-InitiatorInstanceName <String>] [-InitiatorPortalAddress <String>]
+
+   [-IsDataDigest <Boolean>] [-IsHeaderDigest <Boolean>] [-IsMultipathEnabled <Boolean>] [-ReportToPnP <Boolean>]
+
+   [-TargetPortalAddress <String>] [-TargetPortalPortNumber <UInt16>] [-ThrottleLimit <Int32>]
+
+   -InputObject <CimInstance[]>
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-IscsiTarget
+    IsConnected NodeAddress 
+    ----------- ----------- 
+    True iqn.1991-05.com.contoso:testiscsi-deepcore-target 
+
+
+    PS C:\>$Tar = Get-IscsiTarget
+
+
+
+    PS C:\>Disconnect-IscsiTarget -NodeAddress $Tar.NodeAddress
+    Confirm 
+    Are you sure you want to perform this action? 
+    Performing operation '' on Target ''.
+
+
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):Y
+
+
+
+    PS C:\>Connect-IscsiTarget -NodeAddress $Tar.NodeAddress
+    AuthenticationType      : NONE 
+    InitiatorInstanceName   : ROOT\ISCSIPRT\0000_0 
+    InitiatorNodeAddress    : iqn.1991-05.com.contoso:deepcore.contoso.com 
+    InitiatorPortalAddress  : 
+    InitiatorSideIdentifier : 400001370000 
+    IsConnected             : True 
+    IsDataDigest            : False 
+    IsDiscovered            : True 
+    IsHeaderDigest          : False 
+    IsMultipathEnabled      : False 
+    IsPersistent            : True 
+    NumberOfConnections     : 1 
+    SessionIdentifier       : fffffa800d008430-400001370000000b 
+    TargetNodeAddress       : iqn.1991-05.com.contoso:testiscsi-deepcore-target 
+    TargetSideIdentifier    : 0100
+  description: |-
+    This example connects an iSCSI target, collects information about the target, and stores it in a variable, disconnects, and then connects using this cmdlet
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AuthenticationType
+  description: |+
+    Specifies the type of authentication to use when logging into the target.
+    Valid values are **None**, **OneWayCHAP**, and **MutualCHAP**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ChapSecret
+  description: |+
+    Specifies the CHAP secret to use when establishing a connection authenticated by using CHAP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ChapUsername
+  description: |+
+    Specifies the user name to use when establishing a connection authenticated by using Mutual CHAP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InitiatorInstanceName
+  description: |+
+    Specifies the name of the initiator via which the **SendTargets** operation is performed.
+    If not specified, then the initiator used is selected by the iSCSI initiator service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InitiatorPortalAddress
+  description: |+
+    Specifies the IP address or DNS name associated with the portal.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an object from the pipeline as input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsDataDigest
+  description: |+
+    Enables data digest when the initiator logs into the target portal.
+    By not specifying this parameter, the digest setting is determined by the initiator kernel mode driver.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsHeaderDigest
+  description: |+
+    Enables header digest when the initiator logs into the target portal.
+    By not specifying this parameter, the digest setting is determined by the initiator kernel mode driver.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsMultipathEnabled
+  description: |+
+    Indicates that the initiator has enabled Multipath I/O (MPIO) and it will be used when logging into the target portal.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsPersistent
+  description: |+
+    Specifies that the session is to be automatically connected after each restart.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NodeAddress
+  isRequired: true
+  description: |+
+    Represents the IQN of the discovered target.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ReportToPnP
+  description: |+
+    Specifies that the operation is reported to PNP.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetPortalAddress
+  description: |+
+    Represents the IP address or DNS name of the target portal.
+
+  defaultValue: None
+  position: Named
+  aliases: TA
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: TargetPortalPortNumber
+  description: |+
+    Specifies the TCP/IP port number for the target portal.
+    By default, the port number is `3260`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: iSCSI.Connect-IscsiTarget
+name: Connect-IscsiTarget
+description: |-
+  The **Connect-IscsiTarget** cmdlet initiates a connection to the specified iSCSI target device.
+metadata:
+  external help file: Iscsi_Cmdlets.xml
+  Module Name: iSCSI
+  online version: https://docs.microsoft.com/powershell/module/iscsi/connect-iscsitarget?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

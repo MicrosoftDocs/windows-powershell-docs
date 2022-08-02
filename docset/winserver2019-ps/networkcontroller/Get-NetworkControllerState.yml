@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet retrieves the provisioning state of NetworkControllerState resource.
+module: NetworkController
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Provisioning state of the resource
+syntaxes:
+- >-
+  Get-NetworkControllerState -ConnectionUri <Uri> [-CertificateThumbprint <String>]
+
+   [-Credential <PSCredential>] [-PassInnerException] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $state=Get-NetworkControllerState -ConnectionUri https://networkcontroller
+    $state.Properties
+  description: ""
+  summary: |+
+    This example shows that the provisioning state of NetworkControllerState resource is succeeded. The state of all the Network Controller services has been dumped on the Network Controller nodes.
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.Get-NetworkControllerState
+name: Get-NetworkControllerState
+description: |-
+  This cmdlet retrieves the provisioning state of NetworkControllerState resource. To get the current configuration and state of the Network Controller services, you need to execute Invoke-NetworkControllerState. After executing Invoke-NetworkControllerState, you can use Get-NetworkControllerState to get the provisioning state of the resource (whether the configuration and state of the Network Controller services were successfully dumped on the Network Controller nodes)
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrollerstate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerState

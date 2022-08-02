@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a virtual switch to an Ethernet resource pool.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None by default; **Microsoft.Virtualization.Powershell.VMNetwork** if **-PassThru** is present.
+syntaxes:
+- Add-VMSwitch [-Name] <String[]> [-ResourcePoolName] <String[]> [-ComputerName <String[]>]
+- Add-VMSwitch [-VMSwitch] <VMSwitch[]> [-ResourcePoolName] <String[]>
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Add-VMSwitch -Name Test -ResourcePoolName "Engineering Department"
+  description: |-
+    Adds virtual switch Test to Ethernet resource pool Engineering Department.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VMSwitch -Name Test | Add-VMSwitch -ResourcePoolName "Engineering Department"
+  description: |-
+    Adds virtual switch Test to Ethernet resource pool Engineering Department.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: ""
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual switch to be added.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ResourcePoolName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource pool to which the virtual switch is to be added.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitch" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMSwitch
+  isRequired: true
+  description: |+
+    Specifies the virtual switch to be added to the Ethernet resource pool.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Add-VMSwitch
+name: Add-VMSwitch
+description: |-
+  The **Add-VMSwitch** cmdlet adds a virtual switch to an Ethernet resource pool.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/add-vmswitch?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

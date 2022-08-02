@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Locks an IIS configuration section or element.
+module: WebAdministration
+notes: ""
+links:
+- text: Get-WebConfigurationLock
+  href: ./Get-WebConfigurationLock.yml
+- text: Remove-WebConfigurationLock
+  href: ./Remove-WebConfigurationLock.yml
+syntaxes:
+- >-
+  Add-WebConfigurationLock -Type <String> [-Force] [-Passthru] [-Location <String[]>] [-Filter] <String[]>
+
+   [[-PSPath] <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add and remove configuration locks'
+  code: |-
+    IIS:\> Add-WebConfigurationLock -Type "general" -Filter "//asp" 
+    IIS:\> Remove-WebConfigurationLock -Filter "//asp" 
+    IIS:\> Add-WebConfigurationLock -Type "inclusive" -Filter "//asp/@lcid" 
+    IIS:\> Remove-WebConfigurationLock -Filter "//asp/@lcid" 
+    IIS:\> Add-WebConfigurationLock -Type "exclusive" -Filter "//asp/@lcid"
+  description: |-
+    This example demonstrates how to add and remove inclusive and exclusive locks using a filter.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Filter
+  isRequired: true
+  description: |+
+    Specifies an XPath filter expression.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the configuration lock.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    Specifies the location at which this cmdlet applies the configuration lock.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Passes an object that represents the configuration lock to the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies the configuration path.
+    This path can be either an IIS configuration path in the format computer name/webroot/apphost, or the IIS module path in the format IIS:\sites\Default Web Site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Specifies the type of configuration lock that this cmdlet adds.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Add-WebConfigurationLock
+name: Add-WebConfigurationLock
+description: |-
+  The **Add-WebConfigurationLock** cmdlet locks an Internet Information Services (IIS) configuration section, element, or attribute.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/add-webconfigurationlock?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-WebConfigurationLock

@@ -1,0 +1,208 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the advanced properties of a network adapter to their factory default values.
+module: NetAdapter
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapterAdvancedPropertySettingData" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapterAdvancedPropertySettingData" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-NetAdapterAdvancedProperty
+  href: ./Get-NetAdapterAdvancedProperty.yml
+- text: New-NetAdapterAdvancedProperty
+  href: ./New-NetAdapterAdvancedProperty.yml
+- text: Remove-NetAdapterAdvancedProperty
+  href: ./Remove-NetAdapterAdvancedProperty.yml
+- text: Set-NetAdapterAdvancedProperty
+  href: ./Set-NetAdapterAdvancedProperty.yml
+syntaxes:
+- >-
+  Reset-NetAdapterAdvancedProperty [[-Name] <String[]>] -DisplayName <String[]> [-IncludeHidden] [-NoRestart]
+
+   [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Reset-NetAdapterAdvancedProperty -InterfaceDescription <String[]> -DisplayName <String[]> [-IncludeHidden]
+
+   [-NoRestart] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Reset-NetAdapterAdvancedProperty -InputObject <CimInstance[]> [-NoRestart] [-PassThru]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Reset the advanced property for the specified network adapter to the default value'
+  code: |-
+    PS C:\> Reset-NetAdapterAdvancedProperty -Name "MyAdapter" -DisplayName "Interrupt Moderation"
+  description: |-
+    This command resets the advanced property named Interrupt Moderation for the network adapter named MyAdapter to the default value.
+  summary: ""
+- title: 'Example 2: Reset all advanced properties for the specified network adapter to default values'
+  code: |-
+    PS C:\> Reset-NetAdapterAdvancedProperty -Name "MyAdapter" -DisplayName "*"
+  description: |-
+    This command resets all advanced properties from the network adapter named MyAdapter to default values.
+  summary: ""
+- title: 'Example 3: Get the specified network adapter, format the list based on specific property names, then reset them'
+  code: |-
+    PS C:\> Get-NetAdapterAdvancedProperty -Name "MyAdapter" | Format-List -Property "Name, DisplayName, RegistryKeyword, Valid*";
+    PS C:\> Reset-NetAdapterAdvancedProperty -Name "MyAdapter" -DisplayName "*"
+  description: |-
+    The first command gets the advanced properties for the network adapter named MyAdapter and formats the list based on the specified property names.
+
+    The second command resets all the properties from the network adapter named MyAdapter.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DisplayName
+  isRequired: true
+  description: |+
+    Specifies the display name of the advanced property as an array which is shown in the Advanced tab for the Network Adapter properties page in Windows Server® 2012 and Windows® 8 and later.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DispN
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeHidden
+  description: |+
+    Indicates that the cmdlet includes both visible and hidden network adapters in the operation.
+    By default only visible network adapters are included.
+    If a wildcard character is used in identifying a network adapter and this parameter has been specified, then the wildcard string is matched against both hidden and visible network adapters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceDescription
+  isRequired: true
+  description: |+
+    Specifies an array of network adapter interface descriptions.
+    For a physical network adapter this is typically the name of the vendor of the network adapter followed by a part number and description, such as `Contoso 12345 Gigabit Network Device`.
+
+  defaultValue: None
+  position: Named
+  aliases: ifDesc, InstanceID
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of the network adapters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ifAlias, InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRestart
+  description: |+
+    Indicates that the cmdlet does not restart the network adapter after completing the operation.
+    Many advanced properties require restarting the network adapter before the new settings take effect.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetAdapter.Reset-NetAdapterAdvancedProperty
+name: Reset-NetAdapterAdvancedProperty
+description: |-
+  The **Reset-NetAdapterAdvancedProperty** cmdlet resets the advanced properties or a specific advanced property of a network adapter to one or more of the factory default values.
+  The advanced property must have the *DisplayName* parameter value specified.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetAdapterAdvancedProperty.cmdletDefinition.cdxml-help.xml
+  Module Name: NetAdapter
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/netadapter/reset-netadapteradvancedproperty?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Reset-NetAdapterAdvancedProperty

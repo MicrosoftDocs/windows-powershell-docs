@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Queries for resources in a failure or warning state.
+module: NetworkControllerDiagnostics
+notes: ""
+links:
+- text: Debug-NetworkController
+  href: ./Debug-NetworkController.yml
+- text: Debug-ServiceFabricNodeStatus
+  href: ./Debug-ServiceFabricNodeStatus.yml
+syntaxes:
+- >-
+  Debug-NetworkControllerConfigurationState [-NetworkController] <String> [[-ResourceId] <String>]
+
+   [[-ResourceType] <String>] [[-Credential] <PSCredential>] [[-RestURI] <String>]
+
+   [[-CertificateThumbprint] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Query configuration state for REST resources'
+  code: |-
+    PS C:\>Debug-NetworkControllerConfigurationState -NetworkController 10.123.177.94
+  description: |-
+    This command queries configuration state for all REST resources for the specified Network Controller.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the certificate thumbprint to use for the Network Controller.
+    Specify this parameter for certificate deployment.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a credential to use for the Network Controller.
+    To obtain a **PSCredential** object, use the Get-Credential cmdlet.
+    Specify this parameter for Kerberos deployment.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkController
+  isRequired: true
+  description: |+
+    Specifies the name or IP address of a Network Controller node.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  description: |+
+    Specifies a REST resource ID.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceType
+  description: |+
+    Specifies a REST Resource type.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RestURI
+  description: |+
+    Specifies the URI to use for Network Controller REST APIs.
+    Specify this parameter for wildcard certificate deployment.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkControllerDiagnostics.Debug-NetworkControllerConfigurationState
+name: Debug-NetworkControllerConfigurationState
+description: |-
+  The **Debug-NetworkControllerConfigurationState** cmdlet queries for resources that are in a failure or warning state.
+  This cmdlet queries the Network Controller to see if there are any tenant or fabric resources that are in a failure or warning configuration state based on the actual configuration state of the component.
+  This cmdlet also returns detailed information that contains the source of the error, a message, and error code.
+
+  You can run this cmdlet from a computer that has Layer-3 connectivity to the Representational State Transfer (REST) IP address of the Network Controller.
+  The computer must have the Network Controller REST certificate installed.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Debug-NetworkControllerConfigurationState-help.xml
+  Module Name: NetworkControllerDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontrollerdiagnostics/debug-networkcontrollerconfigurationstate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Debug-NetworkControllerConfigurationState

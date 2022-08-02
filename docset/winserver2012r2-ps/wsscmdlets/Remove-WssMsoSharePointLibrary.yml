@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a sp_online_2 library.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.O365Integration.SharePointLibrary" data-throw-if-not-resolved="False" />
+  description: |-
+    Library
+
+    Type: Microsoft.WindowsServerSolutions.O365Integration.SharePointLibrary
+
+    Description: SharePoint library
+links:
+- text: Get-WssMsoSharePointLibrary
+  href: ./Get-WssMsoSharePointLibrary.yml
+- text: New-WssMsoSharePointLibrary
+  href: ./New-WssMsoSharePointLibrary.yml
+- text: Set-WssMsoSharePointLibrary
+  href: ./Set-WssMsoSharePointLibrary.yml
+syntaxes:
+- >-
+  Remove-WssMsoSharePointLibrary [-Library] <SharePointLibrary> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a SharePoint library'
+  code: |-
+    PS C:\> $Library = Get-WssMsoSharePointLibrary | Select-Object -First 1
+    PS C:\> Remove-WssMsoSharePointLibrary -Library $Library
+  description: |-
+    The first command uses the Get-WssMsoSharePointLibrary cmdlet to get a library, and stores the result in the $Library variable.
+
+    The second command removes the library named $Library.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SharePointLibrary" data-throw-if-not-resolved="False" />
+  name: Library
+  isRequired: true
+  description: |+
+    Specifies a sp_online_2 library object.
+    The cmdlet removes the library that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WSSCmdlets.Remove-WssMsoSharePointLibrary
+name: Remove-WssMsoSharePointLibrary
+description: |-
+  The **Remove-WssMsoSharePointLibrary** cmdlet removes a sp_online_1 library.
+  A office_365_1 site stores the sp_online_2 library.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/remove-wssmsosharepointlibrary?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WssMsoSharePointLibrary

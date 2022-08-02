@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the mode the client is running in.
+module: AppVClient
+notes: ""
+links:
+- text: Get-AppvClientMode
+  href: ./get-appvclientmode.yml
+syntaxes:
+- Set-AppvClientMode [-Normal] [<CommonParameters>]
+- Set-AppvClientMode [-Uninstall] [<CommonParameters>]
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Normal
+  isRequired: true
+  description: |+
+    Indicates that the App-V Client functions normally.
+    This means all adding and publishing of App-V packages and creating of Virtual environments will function normally.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Uninstall
+  isRequired: true
+  description: |+
+    Indicates that prevents the App-V Client from adding and publishing packages or creating any virtual environments.
+    This is set to enable an uninstall of the App-V Client to properly occur.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppVClient.Set-AppvClientMode
+name: Set-AppvClientMode
+description: |-
+  The **Set-AppvClientMode** cmdlet  sets the mode the client is running in.
+  By default, the cmdlet is set to *Normal* and the Microsoft Application Virtualization (App-V) Client runs normally.
+  If the *Uninstall* parameter is specified, the App-V Client prevents all client activity from happening which includes adding and publishing packages, along with creating virtual environments.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Set-AppvClientMode

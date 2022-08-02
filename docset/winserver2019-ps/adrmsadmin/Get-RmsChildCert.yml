@@ -1,0 +1,163 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns all child certificates from a parent certificate used in a user request for the AD RMS cluster.
+module: ADRMSAdmin
+notes: ""
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Get-RmsCertChain
+  href: ./Get-RmsCertChain.yml
+- text: Get-RmsCertInfo
+  href: ./Get-RmsCertInfo.yml
+- text: Get-RmsUserRequestReport
+  href: ./Get-RmsUserRequestReport.yml
+syntaxes:
+- >-
+  Get-RmsChildCert [-StartTime <DateTime>] [-EndTime <DateTime>] -ParentCertId <String> -ParentCertType <String>
+
+   [-Path] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all child certificates for a parent'
+  code: |-
+    PS C:\> Get-RmsChildCert -Path "." -ParentCertId "8AGI9GoWuobJDsTmr/CUHTCEpsI=" -ParentCertType CLC
+  description: |-
+    This command returns all child certificates from a parent client licensor certificate.
+  summary: ""
+- title: 'Example 2: Pass a certificate ID and get all child certificates'
+  code: |-
+    PS C:\> $parentCert = Get-RmsCertChain -Path "." -RequestID 3 | Where {$_.CertificateType -eq 'Client-Licensor-Certificate'}
+    PS C:\> Get-RmsChildCert -Path "." -ParentCertId $parentCert.CertificateID -ParentCertType $parentCert.CertificateType
+  description: |-
+    This command stores a certificate obtained from the **Get-RmsCertChain** cmdlet in a variable and then uses that variable to pass the certificate ID and type to the **Get-RmsChildCert** cmdlet to return child certificates.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: EndTime
+  description: |+
+    Specifies the end of a time period for a system health report.
+    This parameter specifies a time value.
+    See the description of the StartTime parameter for information on specifying a time.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ParentCertId
+  isRequired: true
+  description: |+
+    Specifies the parent certificate for which child certificates are to be returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ParentCertType
+  isRequired: true
+  description: |+
+    Specifies the type of parent certificate for which child certificates are to be returned.
+    Possible values for this parameter are Client-Licensor-Certificate (or CLC) or Issuance-License (or IL).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: CLC, Client-Licensor-Certificate, IL, Issuance-License
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a provider drive and path or relative path on the current drive.
+    This parameter is required.
+    Use a dot (.) to specify the current location.
+    This parameter does not accept wildcards and has no default value.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartTime
+  description: |+
+    Specifies the beginning of a time period.
+    This parameter specifies a time value.
+
+    The following examples show commonly-used syntax to specify a time.
+    Time is assumed to be local time unless otherwise specified.
+    When a time value is not specified, the time is assumed to 12:00:00 AM local time.
+    When a date is not specified, the date is assumed to be the current date.
+
+    `4/17/2006`
+
+    `Monday, April 17, 2006`
+
+    `2:22:45 PM`
+
+    `Monday, April 17, 2006 2:22:45 PM`
+
+    These examples specify the same date and the time without the seconds.
+
+    `4/17/2006 2:22 PM`
+
+    `Monday, April 17, 2006 2:22 PM`
+
+    `2:22 PM`
+
+    The following example shows how to specify a date and time by using the RFC1123 standard.
+    This example defines time by using Greenwich Mean Time (GMT).
+
+    `Mon, 17 Apr 2006 21:22:48 GMT`
+
+    The following example shows how to specify a round-trip value as Coordinated Universal Time (UTC).
+    This example represents Monday, April 17, 2006 at 2:22:48 PM UTC.
+
+    `2000-04-17T14:22:48.0000000`
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADRMSAdmin.Get-RmsChildCert
+name: Get-RmsChildCert
+description: |-
+  The **Get-RmsChildCert** cmdlet returns all issuance licenses from a parent client licensor certificate (CLC) or all end-user licenses (EULs) from a parent issuance license used in a user request on the Active Directory Rights Management Services (AD RMS) cluster.
+
+  To obtain licenses, specify the *ParentCertID* and *ParentCertType* of the parent certificate for which you want to retrieve child certificates and then set the *Path* parameter to the AD RMS provider drive path `<PSDrive>:\`Report where `<PSDrive>` is the provider drive ID.
+  You can also specify a relative path.
+  For example, a dot (.) specifies the current location.
+
+  Use the **Get-RmsCertChain** cmdlet to obtain the *ParentCertID* and the *ParentCertType* of the certificate for which you to retrieve child certificates.
+  The *ParentCertID* value returned is valid only for the cluster identified by the *Path* parameter of **Get-RmsCertChain**.
+  You cannot use a *ParentCertID* to identify the same certificate in different clusters.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adrmsadmin/get-rmschildcert?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RmsChildCert

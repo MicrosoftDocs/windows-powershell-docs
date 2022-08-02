@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Specifies folders to exclude from client backup on a computer.
+module: WssCmdlets
+notes: ""
+links:
+- text: Disable-WssClientBackupVolume
+  href: ./Disable-WssClientBackupVolume.yml
+- text: Enable-WssClientBackupVolume
+  href: ./Enable-WssClientBackupVolume.yml
+- text: Get-WssClientBackupVolume
+  href: ./Get-WssClientBackupVolume.yml
+syntaxes:
+- >-
+  Set-WssClientBackupVolumeExcludedFolder [-ComputerName] <String> [-VolumeGuid] <Guid>
+
+   [[-ExcludedFolders] <ICollection<String>>] [-Clear] [-Confirm] [-WhatIf]
+- >-
+  Set-WssClientBackupVolumeExcludedFolder [-ComputerSid] <String> [-VolumeGuid] <Guid>
+
+   [[-ExcludedFolders] <ICollection<String>>] [-Clear] [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Exclude folders from backup for a volume'
+  code: |-
+    PS C:\> Set-WssClientBackupVolumeExcludedFolder -ComputerName "Workstation073" -VolumeGuid b6b093a2-1860-4172-a4a5-07ce2aebfa13 -ExcludedFolders (@("C:\Temp","C:\Downloads") -as [string[]])
+  description: |-
+    This command excludes folders for the specified volume for the computer named Workstation073.
+    The command accepts a collection of folders to exclude from backup.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Clear
+  description: |+
+    Indicates that the cmdlet clears the list of excluded folders.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of a computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerSid
+  isRequired: true
+  description: |+
+    Specifies the SID of a computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ICollection<String>" data-throw-if-not-resolved="False" />
+  name: ExcludedFolders
+  description: |+
+    Specifies a collection of folder paths.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VolumeGuid
+  isRequired: true
+  description: |+
+    Specifies the GUID of a volume.
+    To obtain a GUID, use the Get-WssClientBackupVolume cmdlet.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Set-WssClientBackupVolumeExcludedFolder
+name: Set-WssClientBackupVolumeExcludedFolder
+description: |-
+  The **Set-WssClientBackupVolumeExcludedFolder** cmdlet specifies folders to exclude from client backup on a computer.
+  Specify a computer by name or security identifier (SID).
+  Specify a volume by using its GUID.
+
+  If you use the **Clear** parameter, the cmdlet clears the list of excluded folders, so future backups do not exclude any folders.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssclientbackupvolumeexcludedfolder?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

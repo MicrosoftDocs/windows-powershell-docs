@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new managed module to the IIS request pipeline.
+module: WebAdministration
+notes: ""
+links:
+- text: Get-WebManagedModule
+  href: ./Get-WebManagedModule.yml
+- text: Remove-WebManagedModule
+  href: ./Remove-WebManagedModule.yml
+- text: Set-WebManagedModule
+  href: ./Set-WebManagedModule.yml
+syntaxes:
+- >-
+  New-WebManagedModule [-Name] <String> [-Type <String>] [-Precondition <String>] [-Force] [-Location <String[]>]
+
+   [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a new managed module to the default website'
+  code: |-
+    IIS:\> New-WebManagedModule -Name "ContosoModule" -Type "Contoso.MyModule"
+  description: |-
+    This command adds a new module named ContosoModule to the default website.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    Specifies the location for which the new handler applies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the new managed module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Precondition
+  description: |+
+    Specifies any preconditions for the new managed module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies an IIS configuration path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the .NET Framework type of the new managed module.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-WebManagedModule
+name: New-WebManagedModule
+description: |-
+  The **New-WebManagedModule** cmdlet adds a new managed module to the Internet Information Services (IIS) request pipeline.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-webmanagedmodule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WebManagedModule

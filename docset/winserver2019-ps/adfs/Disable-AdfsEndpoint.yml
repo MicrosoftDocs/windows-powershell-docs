@@ -1,0 +1,108 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables an endpoint of AD FS.
+module: ADFS
+notes: |-
+  * Endpoints provide access to the federation server functionality of AD FS, such as token issuance and the publishing of federation metadata. Depending on the type of endpoint, you can enable or disable the endpoint or control whether the endpoint is published to Web Application Proxy.
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.Endpoint" data-throw-if-not-resolved="False" />
+  description: |-
+    A class that represents an endpoint for the Federation Service.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Enable-AdfsEndpoint
+  href: ./Enable-AdfsEndpoint.yml
+- text: Get-AdfsEndpoint
+  href: ./Get-AdfsEndpoint.yml
+- text: Set-AdfsEndpoint
+  href: ./Set-AdfsEndpoint.yml
+syntaxes:
+- Disable-AdfsEndpoint [[-TargetAddressPath] <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Disable-AdfsEndpoint [-TargetEndpoint] <Endpoint> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Disable-AdfsEndpoint [-TargetFullUrl] <Uri> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable an endpoint'
+  code: |-
+    PS C:\> Disable-AdfsEndpoint -TargetAddressPath "/adfs/services/trust/13/Windows"
+  description: |-
+    This command disables the WS-Trust 1.3 endpoint on the current federation server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetAddressPath
+  description: |+
+    Specifies the address path of the endpoint.
+    The cmdlet disables the endpoint that you specify.
+    An example of such a path is /adfs/portal/updatepassword.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Endpoint" data-throw-if-not-resolved="False" />
+  name: TargetEndpoint
+  isRequired: true
+  description: |+
+    Specifies the endpoint to disable.
+    This value is typically taken from the pipeline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: TargetFullUrl
+  isRequired: true
+  description: |+
+    Specifies the full URL of the endpoint to disable.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Disable-AdfsEndpoint
+name: Disable-AdfsEndpoint
+description: |-
+  The **Disable-AdfsEndpoint** cmdlet disables an endpoint of Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/disable-adfsendpoint?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-AdfsEndpoint

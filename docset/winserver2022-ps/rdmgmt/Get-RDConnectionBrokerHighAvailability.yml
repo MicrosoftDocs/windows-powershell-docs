@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets high availability settings for the RD Connection Broker server in a Remote Desktop deployment.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="RDCBHADetails" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-RDConnectionBrokerHighAvailability
+  href: ./Set-RDConnectionBrokerHighAvailability.yml
+syntaxes:
+- Get-RDConnectionBrokerHighAvailability [[-ConnectionBroker] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get High Availability Settings'
+  code: |-
+    PS C:\> Get-RDConnectionBrokerHighAvailability -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    This command gets the high availability settings for the RD Connection Broker server named RDCB.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the RD Connection Broker server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Get-RDConnectionBrokerHighAvailability
+name: Get-RDConnectionBrokerHighAvailability
+description: |-
+  The **Get-RDConnectionBrokerHighAvailability** cmdlet gets high availability settings for the Remote Desktop Connection Broker (RD Connection Broker) server in a Remote Desktop deployment.
+  The cmdlet displays the following settings:
+
+  - ActiveManagementServer.
+  Current active management server in the highly available RD Connection Broker server list.
+  - ConnectionBroker.
+  List of RD Connection Broker servers.
+  - ClientAccessName.
+  Client access name for the group of RD Connection Broker servers.
+  - DatabaseConnectionString.
+  Database connection string of the central database that stores the configuration.
+  - DatabaseSecondaryConnectionString.
+  Database secondary connection string of the central database that stores the configuration.
+  This setting is displayed if the high availability configuration is on a shared database server.
+  - DatabaseFilePath.
+  File path for the database specified by the database connection string.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdconnectionbrokerhighavailability?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDConnectionBrokerHighAvailability

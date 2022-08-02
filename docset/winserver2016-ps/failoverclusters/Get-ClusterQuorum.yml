@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about the quorum configuration of a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterQuorumSettings" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-ClusterQuorum
+  href: ./Set-ClusterQuorum.yml
+syntaxes:
+- Get-ClusterQuorum [[-Cluster] <String>] [-InputObject <PSObject>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterQuorum
+    Cluster                    QuorumResource                            QuorumType 
+    -------                    --------------                            ---------- 
+    cluster1                   Cluster Disk 1                   NodeAndDiskMajority
+  description: |-
+    This example displays the quorum configuration for the local cluster.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterQuorum -Cluster Cluster1
+    Cluster                    QuorumResource                            QuorumType 
+    -------                    --------------                            ---------- 
+    mycluster                                                          NodeMajority
+  description: |-
+    This example displays the quorum configuration for the cluster named Cluster1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster for which to query the quorum type.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterQuorum
+name: Get-ClusterQuorum
+description: |-
+  The **Get-ClusterQuorum** cmdlet gets information about the quorum configuration of a failover cluster.
+
+  The quorum configuration in a failover cluster determines the number of failures that the cluster can sustain.
+  If an additional failure occurs, then the cluster must stop running.
+  The relevant failures in this context are failures of nodes or, in some cases, of a disk witness (which contains a copy of the cluster configuration) or file share witness.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterquorum?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterQuorum

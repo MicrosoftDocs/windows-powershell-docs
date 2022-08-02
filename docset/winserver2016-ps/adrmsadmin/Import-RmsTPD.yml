@@ -1,0 +1,134 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports a TPD from a file in AD RMS.
+module: ADRMSAdmin
+notes: ""
+outputs:
+- name: <xref href="Microsoft.RightsManagementServices.PowerShell.TrustedPublishingDomainImportedItem" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Export-RmsTPD
+  href: ./Export-RmsTPD.yml
+syntaxes:
+- >-
+  Import-RmsTPD [-DisplayName] <String> [-SourceFile] <String> [-Password] <SecureString> [-Force] [-PassThru]
+
+   [-Path] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Import a TPD and assign it a name'
+  code: |-
+    PS C:\> Import-RmsTPD -Path "." -DisplayName "Fabrikam" -SourceFile "c:\transfer\fabrikam.xml"
+  description: |-
+    This command imports the TPD information stored in the specified file and assigns the name Fabrikam to the TPD.
+    Because the *Password* parameter is not specified, the **Import-RmsTPD** cmdlet prompts for the domain password.
+  summary: ""
+- title: 'Example 2: Read a password and use it to import a TPD'
+  code: |-
+    PS C:\> $pswd = Read-Host -Prompt "Password:" -AsSecureString
+    PS C:\> Import-RmsTPD -Path "." -DisplayName "Fabrikam" -SourceFile "c:\transfer\fabrikam.xml" -Password $pswd
+  description: |-
+    This command uses the **Read-Host** cmdlet to prompt the user for a password and then stores the password in a variable that is passed to the **Import-RmsTPD** cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    Specifies the name that will be used to identify the domain being imported.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overrides restrictions that prevent the command from succeeding, just so the changes do not compromise security.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Passes the object created by this cmdlet through the pipeline.
+    By default, this cmdlet does not pass any objects through the pipeline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Specifies a password as a **SecureString** object.
+    To create a **SecureString** object that contains a password, use the Read-Host cmdlet and specify the *AsSecureString* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a provider drive and path or relative path on the current drive.
+    Use a dot (.) to specify the current location.
+    This parameter does not accept wildcards and has no default value.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceFile
+  isRequired: true
+  description: |+
+    Specifies the path to the file that contains the domain information to import.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADRMSAdmin.Import-RmsTPD
+name: Import-RmsTPD
+description: |-
+  The **Import-RmsTPD** cmdlet imports a trusted publishing domain (TPD) from a file in Active Directory Rights Management Services (AD RMS).
+
+  To perform the import, specify the *DisplayName*, *SourceFile* and *Password* parameters, and then set the *Path* parameter to the AD RMS provider drive path `<PSDrive>:\TrustPolicy\TrustedPublishingDomain` where `<PSDrive>` is the provider drive ID.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adrmsadmin/import-rmstpd?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-RmsTPD

@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes all settings for the central certificate provider.
+module: WebAdministration
+notes: ""
+links:
+- text: Disable-WebCentralCertProvider
+  href: ./Disable-WebCentralCertProvider.yml
+- text: Get-WebCentralCertProvider
+  href: ./Get-WebCentralCertProvider.yml
+- text: Set-WebCentralCertProvider
+  href: ./Set-WebCentralCertProvider.yml
+- text: Set-WebCentralCertProvider
+  href: ./Set-WebCentralCertProvider.yml
+syntaxes:
+- Clear-WebCentralCertProvider [-PrivateKeyPassword] [<CommonParameters>]
+examples:
+- title: 'Example 1: Clear certificates'
+  code: |-
+    Removes all settings for the central certificate provider without removing the provider itself.
+    PS C:\>Clear-WebCentralCertProvider
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PrivateKeyPassword
+  description: |+
+    Password for the private key if one exists.
+    If provided, this password is the same for all keys.
+    The password can be $null.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Clear-WebCentralCertProvider
+name: Clear-WebCentralCertProvider
+description: |-
+  Removes all settings for the central certificate provider.
+  The settings that are affected include: whether the provider is enabled, the location of the centralized certification store, user name and password, and the private key password.
+  This command does not delete the provider.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/clear-webcentralcertprovider?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

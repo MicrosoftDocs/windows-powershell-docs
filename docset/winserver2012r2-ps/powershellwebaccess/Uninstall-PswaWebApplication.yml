@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Uninstalls the Windows PowerShell® web application.
+module: PowerShellWebAccess
+notes: ""
+links:
+- text: Install-PswaWebApplication
+  href: ./Install-PswaWebApplication.yml
+syntaxes:
+- >-
+  Uninstall-PswaWebApplication [[-WebApplicationName] <String>] [-WebSiteName <String>] [-DeleteTestCertificate]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Uninstall-PswaWebApplication
+  description: |-
+    This command uninstalls the Windows PowerShell Web Application.
+    You can use this cmdlet to uninstall the Windows PowerShell Web Application if you installed it using the default values.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Uninstall-PswaWebApplication -DeleteTestCertificate
+  description: |-
+    This command uninstalls the Windows PowerShell Web Application, and deletes the test certificate associated with the application.
+    You can use this cmdlet to uninstall the Windows PowerShell Web Application if you installed it using the default values and created a test certificate.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\> Uninstall-PswaWebApplication -WebApplicationName TestApplication -WebsiteName MySite -DeleteTestCertificate
+  description: |-
+    This command uninstalls the Windows PowerShell Web Application when a custom website and application were specified during the install.
+    The command removes the website named MySite and the application named TestApplication and specifies that the test certificates associated with the application are also deleted.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeleteTestCertificate
+  description: |+
+    Indicates that the test certificates created by the **Install_PswaWebApplication** cmdlet (with the **UseTestCertificate** parameter) is deleted. 
+    Only the test certificate with the same name as the one created by the **Install-PswaWebApplication** cmdlet is removed.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WebApplicationName
+  description: |+
+    Specifies the name of the web application to uninstall.
+
+  defaultValue: Pswa
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WebSiteName
+  description: |+
+    Specifies the name of the web site where the web application is installed.
+
+  defaultValue: Default Web Site
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: PowerShellWebAccess.Uninstall-PswaWebApplication
+name: Uninstall-PswaWebApplication
+description: |-
+  The **Uninstall-PswaWebApplication** cmdlet uninstalls the Windows PowerShell web application and removes the website from IIS.
+  The cmdlet does not uninstall IIS, or any other features installed because they were required for Windows PowerShell to run.
+metadata:
+  external help file: Microsoft.Management.UI.PowWA.Commands.dll-help.xml
+  Module Name: PowerShellWebAccess
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/powershellwebaccess/uninstall-pswawebapplication?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Uninstall-PswaWebApplication

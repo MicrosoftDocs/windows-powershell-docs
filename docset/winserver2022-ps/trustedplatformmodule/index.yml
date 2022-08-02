@@ -1,0 +1,28 @@
+### YamlMime:PowershellModule
+children:
+- title: TrustedPlatformModule
+  cmdlets:
+  - TrustedPlatformModule.Clear-Tpm
+  - TrustedPlatformModule.ConvertTo-TpmOwnerAuth
+  - TrustedPlatformModule.Disable-TpmAutoProvisioning
+  - TrustedPlatformModule.Enable-TpmAutoProvisioning
+  - TrustedPlatformModule.Get-Tpm
+  - TrustedPlatformModule.Get-TpmEndorsementKeyInfo
+  - TrustedPlatformModule.Get-TpmSupportedFeature
+  - TrustedPlatformModule.Import-TpmOwnerAuth
+  - TrustedPlatformModule.Initialize-Tpm
+  - TrustedPlatformModule.Set-TpmOwnerAuth
+  - TrustedPlatformModule.Unblock-Tpm
+uid: TrustedPlatformModule
+name: TrustedPlatformModule
+description: |-
+  This reference provides cmdlet descriptions and syntax for all TPM cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 17fc1f02-cff3-45fb-ac4f-126594c70b1e
+  Module Name: TrustedPlatformModule
+  ms.date: 12/20/2016
+  title: TrustedPlatformModule

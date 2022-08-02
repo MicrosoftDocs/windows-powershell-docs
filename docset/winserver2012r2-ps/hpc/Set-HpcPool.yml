@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the weight of a resource pool.
+module: HPC
+notes: |-
+  This cmdlet was introduced in HPC Pack 2008 R2 with Service Pack 2 (SP2). It is not supported in previous versions.
+links:
+- text: Add-HpcPool
+  href: ./Add-HpcPool.md
+- text: Get-HpcPool
+  href: ./Get-HpcPool.md
+- text: Remove-HpcPool
+  href: ./Remove-HpcPool.md
+syntaxes:
+- >-
+  Set-HpcPool -Pool <HpcPool> [-Weight <Int32>]  [-Scheduler <String[]>]
+
+   [<CommonParameters>]
+- >-
+  Set-HpcPool -Name <String> [-Weight <Int32>]  [-Scheduler <String[]>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the weight of a resource pool'
+  code: |-
+    PS C:\>Set-HpcPool -Name "Pool01" -Weight 10
+  description: |-
+    This command sets the weight of an existing pool using the pool name and weight parameters.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the resource pool that you will be setting the weight on.
+    You cannot specify both the *Name* and the *Pool* parameters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HpcPool" data-throw-if-not-resolved="False" />
+  name: Pool
+  isRequired: true
+  description: |+
+    Specifies the **HpcPool** object.
+    You cannot specify both the *Name* and the *Pool* parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Scheduler
+  description: |+
+    Specifies the host name or IP address of the head node for the cluster that contains the resource pool.
+    The value must be a valid computer name or IP address.
+    If you do not specify the *Scheduler* parameter, this cmdlet uses the scheduler on the head node that the CCP_SCHEDULER environment variable specifies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Weight
+  description: |+
+    Specifies the pool weight.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HPC.Set-HpcPool
+name: Set-HpcPool
+description: |-
+  The **Set-HpcPool** cmdlet sets the weight of an HPC resource pool.
+  This cmdlet returns an error if the specified pool does not exist, or if the specified weight is less than 0 or greater than 999,999.
+metadata:
+  external help file: CCPPSH.dll-Help.xml
+  Module Name: HPC
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hpc/set-hpcpool?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-HpcPool

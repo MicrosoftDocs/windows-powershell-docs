@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about a node object or the NLB cluster object that is queried by the caller.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Format-List
+  href: https://go.microsoft.com/fwlink/?LinkID=113302
+- text: Add-NlbClusterNode
+  href: ./Add-NlbClusterNode.yml
+- text: Remove-NlbClusterNode
+  href: ./Remove-NlbClusterNode.yml
+- text: Resume-NlbClusterNode
+  href: ./Resume-NlbClusterNode.yml
+- text: Set-NlbClusterNode
+  href: ./Set-NlbClusterNode.yml
+- text: Stop-NlbClusterNode
+  href: ./Stop-NlbClusterNode.yml
+- text: Suspend-NlbClusterNode
+  href: ./Suspend-NlbClusterNode.yml
+syntaxes:
+- Get-NlbClusterNode [-HostName <String>] [-InterfaceName <String>] [[-NodeName] <String>] [<CommonParameters>]
+- Get-NlbClusterNode -InputObject <Cluster[]> [-HostName <String>] [[-NodeName] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: List nodes that belong to the local cluster'
+  code: |-
+    PS C:\>Get-NlbClusterNode
+    Name                State               Interface           HostID 
+    ----                -----               ---------           ------ 
+    node1               Converged(default)  vlan-3              1 
+    node2               Converged           vlan-3              2
+  description: |-
+    This command lists nodes that are part of the local cluster.
+    It also shows the state of the nodes and the interface to which NLB is bound on each node.
+  summary: ""
+- title: 'Example 2: Get details about a cluster node'
+  code: |-
+    PS C:\>Get-NlbClusterNode -NodeName "Node01" | Format-List *
+    Cluster                   : mycluster 
+    Name                      : Node01 
+    InterfaceName             : vlan-3 
+    Host                      :  
+    State                     : Converged 
+    HostPriority              : 2 
+    AdapterGuid               : {} 
+    InitialHostState          : Started 
+    PersistSuspendOnReboot    : True 
+    MaskSourceMac             : True 
+    FilterIcmp                : 0 
+    GreDescriptorTimeout      : 10
+  description: |-
+    This command gets details about cluster node named Node01.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: Named
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="Cluster" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of clusters for which this cmdlet enumerates the nodes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NodeName
+  description: |+
+    Specifies the cluster node name that this cmdlet gets.
+
+  defaultValue: None
+  position: "0"
+  aliases: Name, NN
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Get-NlbClusterNode
+name: Get-NlbClusterNode
+description: |-
+  The **Get-NlbClusterNode** cmdlet gets information about a node in the Network Load Balancing (NLB) cluster.
+  The information includes the properties, or attributes, that define the node and its status.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/get-nlbclusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NlbClusterNode

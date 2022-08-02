@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports one or more Updating Run reports into an HTML or CSV-formatted document.
+module: ClusterAwareUpdating
+notes: ""
+inputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauReport" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauReport" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-CauReport
+  href: ./Get-CauReport.yml
+- text: Invoke-CauRun
+  href: ./Invoke-CauRun.yml
+syntaxes:
+- >-
+  Export-CauReport [-InputReport] <CauReport[]> [-Format] <OutputType> [-Path] <String> [-PassThru] [-Force]
+
+   [-TimeZone <TimeZoneInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a detailed version of the last CAU report for the specified cluster'
+  code: |-
+    PS C:\> Get-CauReport -ClusterName "Contoso-FC1" -Last -Detailed | Export-CauReport -Format HTML -Path "C:\temp\contoso-fc1_last.html" -TimeZone ([system.timezoneinfo]::Utc)
+  description: |-
+    This command gets a detailed version of the last CAU report for the cluster named Contoso-FC1, then exports that report in HTML format to the path C:\temp\contoso-fc1_last.html.
+    The timestamps in the report are formatted in the Coordinated Universal Time (UTC) zone.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="OutputType" data-throw-if-not-resolved="False" />
+  name: Format
+  isRequired: true
+  description: |+
+    Specifies the format of the output report.
+    The acceptable values for this parameter are: CSV or HTML.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Csv, Html
+- type: <xref href="CauReport" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputReport
+  isRequired: true
+  description: |+
+    Specifies an array of CAU report objects, such as generated from a call to Get-CauReport with the *Detailed* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the local or complete path of the file to save the exported report.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TimeZoneInfo" data-throw-if-not-resolved="False" />
+  name: TimeZone
+  description: |+
+    Specifies the formatting of the report timestamps to match the specified time zone.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ClusterAwareUpdating.Export-CauReport
+name: Export-CauReport
+description: |-
+  The **Export-CauReport** cmdlet exports one or more Updating Run reports into an HTML or CSV-formatted document.
+  Each Run report summarizes both the node-level and cluster-level summary status for the Updating Run.
+
+  Pipe one or more reports from the **Get-CauReport** cmdlet with the *Detailed* parameter, and control the content in the report by specifying appropriate parameters for the **Get-CauReport** cmdlet.
+  For example, the *Last* parameter specifies the most recent Updating Run.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  Module Name: ClusterAwareUpdating
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/export-caureport?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-CauReport

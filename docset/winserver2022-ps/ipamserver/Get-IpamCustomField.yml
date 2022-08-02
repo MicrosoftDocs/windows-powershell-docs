@@ -1,0 +1,108 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets custom fields in IPAM.
+module: IpamServer
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Windows.Ipam.Commands.IpamCustomField" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that contains an IPAM custom field.
+links:
+- text: Add-IpamCustomField
+  href: ./Add-IpamCustomField.yml
+- text: Add-IpamCustomValue
+  href: ./Add-IpamCustomValue.yml
+syntaxes:
+- >-
+  Get-IpamCustomField [[-Name] <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all custom fields'
+  code: |-
+    PS C:\> Get-IpamCustomField
+    Name                 Category               Multivalue          CustomValue 
+    ---------------------------------------------------------------------------------------------------------------------------- 
+    AdSite                BuiltIn               False 
+    CountryOrRegion       BuiltIn               True                {Afghanistan, Alfand Islands,...} 
+    ..... 
+    .....
+  description: |-
+    This command retrieves all the built-in and user defined custom fields in the IPAM server.
+    For multivalued fields, the command retrieves the custom field objects and the associated custom value objects.
+  summary: ""
+- title: 'Example 2: Get a custom field'
+  code: |-
+    PS C:\> Get-IpamCustomField -Name "ManagedByService"
+    Name                 Category               Multivalue          CustomValue 
+    ---------------------------------------------------------------------------------------------------------------------------- 
+    ManagedByService      BuiltIn                True               {IPAM,MS DHCP,Non-MS DHCP...}
+  description: |-
+    This command retrieves the custom field named ManagedByService and then gets the corresponding custom value.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of a custom field.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IpamServer.Get-IpamCustomField
+name: Get-IpamCustomField
+description: |-
+  The **Get-IpamCustomField** gets information about custom fields in IP Address Management (IPAM).
+  If you do not specify the *Name* parameter, this cmdlet retrieves all the custom fields in IPAM.
+  For multivalued custom fields, the cmdlet retrieves the custom field objects and the associated custom values.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamCustomField.cdxml-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/get-ipamcustomfield?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-IpamCustomField

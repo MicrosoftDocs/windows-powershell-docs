@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new IIS Web application.
+module: WebAdministration
+notes: ""
+syntaxes:
+- >-
+  New-WebApplication [-Site <String>] [-Name] <String> [-PhysicalPath <String>] [-ApplicationPool <String>]
+
+   [-Force] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Creating a new web application --------------'
+  code: |-
+    IIS:\>New-WebApplication -Name testApp -Site 'Default Web Site' -PhysicalPath c:\test -ApplicationPool DefaultAppPool
+  description: |-
+    This example creates a new Web application named testApp on the Default Web Site.
+    The application files are stored in the C:\Test folder, and the application runs in the DefaultAppPool application pool.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  description: |+
+    The name of the application pool in which the new Web application executes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the creation of the application without prompting for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the Web application to create.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhysicalPath
+  description: |+
+    The physical path to the Web application files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Site
+  description: |+
+    The name of the site on which the application is created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-WebApplication
+name: New-WebApplication
+description: |-
+  Creates a new IIS Web application.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-webapplication?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

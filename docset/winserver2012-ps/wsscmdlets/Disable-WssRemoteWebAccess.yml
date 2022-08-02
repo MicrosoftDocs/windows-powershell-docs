@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables Remote Web Access.
+module: WssCmdlets
+notes: ""
+links:
+- text: Enable-WssRemoteWebAccess
+  href: ./Enable-WssRemoteWebAccess.yml
+- text: Repair-WssRemoteWebAccess
+  href: ./Repair-WssRemoteWebAccess.yml
+syntaxes:
+- Disable-WssRemoteWebAccess
+examples:
+- title: 'Example 1: Disable Remote Web Access'
+  code: |-
+    PS C:\> Disable-WssRemoteWebAccess
+  description: |-
+    This command disables Remote Web Access on the server.
+  summary: ""
+uid: WssCmdlets.Disable-WssRemoteWebAccess
+name: Disable-WssRemoteWebAccess
+description: |-
+  The **Disable-WssRemoteWebAccess** cmdlet disables Remote Web Access on the sbs_sbs8_2 server.
+
+  To enable Remote Web Access, use the **Enable-WssRemoteWebAccess** cmdlet.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/disable-wssremotewebaccess?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

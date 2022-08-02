@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports a web theme to a folder.
+module: ADFS
+notes: ""
+links:
+- text: Get-AdfsWebTheme
+  href: ./Get-AdfsWebTheme.yml
+- text: New-AdfsWebTheme
+  href: ./New-AdfsWebTheme.yml
+- text: Remove-AdfsWebTheme
+  href: ./Remove-AdfsWebTheme.yml
+- text: Set-AdfsWebTheme
+  href: ./Set-AdfsWebTheme.yml
+syntaxes:
+- Export-AdfsWebTheme -Name <String> -DirectoryPath <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Export-AdfsWebTheme -RelyingPartyName <String> -DirectoryPath <String> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Export-AdfsWebTheme -WebTheme <WebThemeBase> -DirectoryPath <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Export a web theme'
+  code: |-
+    PS C:\> Export-AdfsWebTheme -Name "Theme01" -DirectoryPath "C:\WebTheme"
+  description: |-
+    This command exports a web theme named Theme01 to the folder C:\WebTheme.
+    The command places all files, including cascading style sheets, JavaScript files, and images, in folders in the specified folder.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DirectoryPath
+  isRequired: true
+  description: |+
+    Specifies the path of a folder.
+    The cmdlet exports the web theme to the folder that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name.
+    The cmdlet exports the web theme that has the name that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RelyingPartyName
+  isRequired: true
+  description: |+
+    Specifies the name of the relying party.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WebThemeBase" data-throw-if-not-resolved="False" />
+  name: WebTheme
+  isRequired: true
+  description: |+
+    Specifies an **AdfsWebTheme** object.
+    The cmdlet exports the theme that you specify.
+    To obtain an **AdfsWebTheme** object, use the **Get-AdfsWebTheme** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Export-AdfsWebTheme
+name: Export-AdfsWebTheme
+description: |-
+  The **Export-AdfsWebTheme** cmdlet exports a web theme object to a folder.
+  The cmdlet creates necessary folders that correspond to the web theme settings.
+  Use this cmdlet to create web themes based on existing themes, such as the default theme available with Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/export-adfswebtheme?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-AdfsWebTheme

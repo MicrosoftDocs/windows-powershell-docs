@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts a Network Load Balancing (NLB) cluster node.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-NlbClusterNode
+  href: ./Add-NlbClusterNode.yml
+- text: Get-NlbClusterNode
+  href: ./Get-NlbClusterNode.yml
+- text: Remove-NlbClusterNode
+  href: ./Remove-NlbClusterNode.yml
+- text: Resume-NlbClusterNode
+  href: ./Resume-NlbClusterNode.yml
+- text: Set-NlbClusterNode
+  href: ./Set-NlbClusterNode.yml
+- text: Stop-NlbClusterNode
+  href: ./Stop-NlbClusterNode.yml
+- text: Suspend-NlbClusterNode
+  href: ./Suspend-NlbClusterNode.yml
+syntaxes:
+- Start-NlbClusterNode [[-HostName] <String>] [-InterfaceName <String>]
+- Start-NlbClusterNode -InputObject <Node>
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Start-NlbClusterNode -InputObject node2
+    Name                State               Interface           HostID 
+    ----                -----               ---------           ------ 
+    node2               Converged           vlan-3              2
+  description: |-
+    This example starts cluster node named node2 on the local cluster.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: "1"
+  aliases: hn
+  parameterValueGroup: ""
+- type: <xref href="Node" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the cluster node to start.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Start-NlbClusterNode
+name: Start-NlbClusterNode
+description: |-
+  The **Start-NlbClusterNode** cmdlet starts a node in a Network Load Balancing (NLB) cluster.
+  Once the node is started, NLB will include that node in load balancing network traffic.
+metadata:
+  external help file: NLB_Cmdlets.xml
+  Module Name: NetworkLoadBalancingClusters
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/start-nlbclusternode?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

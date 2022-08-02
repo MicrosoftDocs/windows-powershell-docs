@@ -1,0 +1,26 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets domain configuration information for Online Services.
+module: WSSCmdlets
+notes: ""
+syntaxes:
+- Get-WssMsoDomainConfiguration [<CommonParameters>]
+examples:
+- title: 'Example 1: Get configuration information'
+  code: |-
+    PS C:\> Get-WssMsoDomainConfiguration
+  description: |-
+    This command gets configuration information for the domain configuration of online services.
+  summary: ""
+uid: WSSCmdlets.Get-WssMsoDomainConfiguration
+name: Get-WssMsoDomainConfiguration
+description: |-
+  The **Get-WssMsoDomainConfiguration** cmdlet gets domain configuration information for Microsoft Online Services from aad_1.
+  Configuration information includes the domain name and validation status.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssmsodomainconfiguration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssMsoDomainConfiguration

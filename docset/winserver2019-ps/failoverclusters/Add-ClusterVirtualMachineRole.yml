@@ -1,0 +1,128 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a clustered virtual machine, that is, a virtual machine that can be failed over if necessary to a different server in the failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Move-ClusterVirtualMachineRole
+  href: ./Move-ClusterVirtualMachineRole.yml
+- text: Update-ClusterVirtualMachineConfiguration
+  href: ./Update-ClusterVirtualMachineConfiguration.yml
+- text: Get-VM
+  href: ../Hyper-V/Get-VM.yml
+syntaxes:
+- >-
+  Add-ClusterVirtualMachineRole [-Name <String>] [[-VMName] <String>] [-VirtualMachine <String>] [-VMId <Guid>]
+
+   [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-ClusterVirtualMachineRole -VirtualMachine VM1
+    Name                       OwnerNode                            State 
+    ----                       ---------                            ----- 
+    Virtual Machine            node1                              Offline
+  description: |-
+    This example configures VM1 as a clustered virtual machine, and assigns a default name.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Add-ClusterVirtualMachineRole -VirtualMachine VM1 -Name "MainServer1"
+    Name                       OwnerNode                            State 
+    ----                       ---------                            ----- 
+    MainServer1                 node1                              Offline
+  description: |-
+    This example configures VM1 as a clustered virtual machine, and assigns the name MainServer1.
+  summary: ""
+- title: Example 3
+  code: "PS C:\\> Get-VM -Name *print* | Add-ClusterVirtualMachineRole\r\nReport file location: C:\\Windows\\cluster\\Reports\\Highly Available Virtual Machine 0ce88dce-eb6b-4c17-a512-d13bdbe5fcba on2011.11.28 At 15.37.33.mht \r\n \r\nName                                    OwnerNode                               State \r\n----                                    ---------                               ----- \r\nprint-VM1                               node1                                   Online"
+  description: |-
+    This example queries for virtual machines matching the wildcard characters *print* and configures them as clustered virtual machines.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to create the highly available virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the highly available virtual machine to create.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualMachine
+  description: |+
+    Specifies the name of the virtual machine to make highly available.
+    Use either the **VirtualMachine** parameter or the **VMName** parameter to specify the name of the virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: VM
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VMId
+  description: |+
+    Specifies the virtual machine identifier (ID).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMName
+  description: |+
+    Specifies the name of the virtual machine to make highly available.
+    Use either the **VirtualMachine** parameter or the **VMName** parameter to specify the name of the virtual machine.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusterVirtualMachineRole
+name: Add-ClusterVirtualMachineRole
+description: |-
+  The **Add-ClusterVirtualMachineRole** cmdlet creates a clustered virtual machine, that is, a virtual machine that can be failed over if necessary to a different server in the failover cluster.
+
+  By creating clustered virtual machines, you can consolidate multiple servers on one physical server without causing that server to become a single point of failure.
+  Instead, if that server, or cluster node, fails or requires scheduled maintenance, then another node begins to run the virtual machines instead through a process known as failover.
+  The virtual hard disk (VHD) file for the clustered virtual machine must be on the clustered disk used by that virtual machine.
+
+  **Note:** This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+
+  **Note:** This cmdlet generates a .TMP file under the user temp folder, and you can't have more than 65535 .TMP files generated by this cmdlet, otherwise you will receive an exception "The File Exist". For more information, please go to: https://techcommunity.microsoft.com/t5/ITOps-Talk-Blog/TQA-Add-ClusterVirtualMachineRole-fails-with-the-error-quot-The/ba-p/713344
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustervirtualmachinerole?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ClusterVirtualMachineRole

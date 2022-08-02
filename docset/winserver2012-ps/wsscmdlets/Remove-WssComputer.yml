@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a client computer identity, backup, and properties from the network.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssComputer
+  href: ./Get-WssComputer.yml
+- text: Get-WssComputer
+  href: ./Get-WssComputer.yml
+syntaxes:
+- Remove-WssComputer [-Computer] <DeviceInfo> [-RemoveBackup] [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Remove a computer and backups'
+  code: |-
+    PS C:\>$DeviceList = Get-WssComputer PS C:\> Remove-WssComputer -Computer $DeviceList[0] -RemoveBackup
+  description: |-
+    This example removes a computer identity and any backups from the network.
+
+    The first command uses the Get-WssComputer cmdlet to get all **DeviceInfo** objects, and then stores them in the **$DeviceList** variable.
+
+    The second command removes a **DeviceInfo** object.
+    The command uses standard array notation to specify the first element of the **$DeviceList** array as the computer to be removed.
+    The command includes the **RemoveBackup** parameter.
+    Therefore, the command removes any backups.
+  summary: ""
+parameters:
+- type: <xref href="DeviceInfo" data-throw-if-not-resolved="False" />
+  name: Computer
+  isRequired: true
+  description: |+
+    Specifies the **DeviceInfo** object for computer.
+    To obtain **DeviceInfo** objects, use the Get-WssComputer cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemoveBackup
+  description: |+
+    Indicates that the cmdlet removes any backups for the specified computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Remove-WssComputer
+name: Remove-WssComputer
+description: |-
+  The **Remove-WssComputer** cmdlet removes a client computer identity, backup, and properties from the network.
+  For active clients, the cmdlet removes the computer identity, but does not remove backups, unless you use the **RemoveBackup** parameter to remove associated backups.
+
+  An archived client exists only as a backup of a computer that is no longer part of the network.
+  This cmdlet removes the identity, backup, and properties for an archived client without the **RemoveBackup** parameter.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/remove-wsscomputer?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

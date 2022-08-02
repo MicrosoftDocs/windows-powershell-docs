@@ -1,0 +1,121 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a relying party trust from the Federation Service.
+module: ADFS
+notes: |-
+  * A relying party in Active Directory Federation Services (AD FS) is an organization in which Web servers that host one or more Web-based applications reside. Tokens and Information Cards that originate from a claims provider can be presented and ultimately consumed by the Web-based resources that are located in the relying party organization. When AD FS is configured in the role of the relying party, it acts as a partner that trusts a claims provider to authenticate users. Therefore, the relying party consumes the claims that are packaged in security tokens that come from users in the claims provider. In other words, a relying party is the organization whose Web servers are protected by the resource-side federation server. The federation server in the relying party uses the security tokens that the claims provider produces to issue tokens to the Web servers that are located in the relying party.
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *TargetIdentifier* and *TargetName* parameters.
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    RelyingPartytrust objects are received by the *TargetRelyingParty* parameter.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the removed RelyingPartyTrust object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Add-AdfsRelyingPartyTrust
+  href: ./Add-AdfsRelyingPartyTrust.yml
+- text: Disable-AdfsRelyingPartyTrust
+  href: ./Disable-AdfsRelyingPartyTrust.yml
+- text: Enable-AdfsRelyingPartyTrust
+  href: ./Enable-AdfsRelyingPartyTrust.yml
+- text: Get-AdfsRelyingPartyTrust
+  href: ./Get-AdfsRelyingPartyTrust.yml
+- text: Set-AdfsRelyingPartyTrust
+  href: ./Set-AdfsRelyingPartyTrust.yml
+- text: Update-AdfsRelyingPartyTrust
+  href: ./Update-AdfsRelyingPartyTrust.yml
+syntaxes:
+- Remove-AdfsRelyingPartyTrust -TargetIdentifier <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-AdfsRelyingPartyTrust -TargetRelyingParty <RelyingPartyTrust> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- Remove-AdfsRelyingPartyTrust -TargetName <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a relying party trust'
+  code: |-
+    PS C:\> Remove-AdfsRelyingPartyTrust -TargetName "FabrikamApp"
+  description: |-
+    This command removes the relying party trust named FabrikamApp.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the identifier of the relying party trust to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the relying party trust to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  name: TargetRelyingParty
+  isRequired: true
+  description: |+
+    Specifies a **RelyingPartyTrust** object.
+    The cmdlet removes the relying party trust that you specify.
+    To obtain a **RelyingPartyTrust** object, use the **Get-AdfsRelyingPartyTrust** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Remove-AdfsRelyingPartyTrust
+name: Remove-AdfsRelyingPartyTrust
+description: |-
+  The **Remove-AdfsRelyingPartyTrust** cmdlet removes a relying party trust from the Federation Service.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfsrelyingpartytrust?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AdfsRelyingPartyTrust

@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes a virtual switch.
+module: Hyper-V
+notes: ""
+syntaxes:
+- Remove-VMSwitch [-Name] <String[]> [[-ResourcePoolName] <String[]>] [-ComputerName <String[]>] [-Force]
+- Remove-VMSwitch [-VMSwitch] <VMSwitch[]> [[-ResourcePoolName] <String[]>] [-Force]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Remove-VMSwitch "QoS Switch"
+  description: |-
+    Removes a virtual switch named Qos Switch.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the virtual switch is to be deleted.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual switch to be deleted.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ResourcePoolName
+  description: |+
+    Specifies the name of the resource pool from which the switch is to be deleted.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitch" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMSwitch
+  isRequired: true
+  description: |+
+    Specifies the virtual switch to be deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Remove-VMSwitch
+name: Remove-VMSwitch
+description: |-
+  The **Remove-VMSwitch** cmdlet deletes a virtual switch.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/remove-vmswitch?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

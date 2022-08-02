@@ -1,0 +1,208 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a virtual DVD drive.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.DvdDrive" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+syntaxes:
+- >-
+  Set-VMDvdDrive [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String> [[-ControllerNumber] <Int32>] [[-ControllerLocation] <Int32>] [-ToControllerNumber <Int32>]
+
+   [-ToControllerLocation <Int32>] [[-Path] <String>] [-ResourcePoolName <String>] [-AllowUnverifiedPaths]
+
+   [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMDvdDrive [-VMDvdDrive] <DvdDrive[]> [-ToControllerNumber <Int32>] [-ToControllerLocation <Int32>]
+
+   [[-Path] <String>] [-ResourcePoolName <String>] [-AllowUnverifiedPaths] [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-VMDvdDrive -VMName TestVM -Path .\WinBuild.iso
+  description: |-
+    Configures the virtual DVD drive of virtual machine TestVM to use WinBuild.iso as its media.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-VMDvdDrive -VMName TestVM -ControllerNumber 1 -ControllerLocation 0 -Path $null
+  description: |-
+    Configures the virtual DVD drive at IDE 1,0 of virtual machine TestVM to use no media.
+    (This ejects any existing media from the virtual DVD drive.)
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-VMDvdDrive -VMName TestVM -ControllerNumber 1 -ControllerLocation 0 | Set-VMDvdDrive -ToControllerLocation 1
+  description: |-
+    Moves virtual DVD drive from IDE 1,0 to IDE 1,1 on virtual machine TestVM.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowUnverifiedPaths
+  description: |+
+    Specifies that no error is to be thrown if the specified path is not verified as accessible by the cluster.
+    This parameter is applicable to clustered virtual machines.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the DVD drive is to be configured.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ControllerLocation
+  description: |+
+    Specifies the IDE controller location of the DVD drives to be configured.
+    If not specified, DVD drives in all controller locations are configured.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ControllerNumber
+  description: |+
+    Specifies the IDE controller of the DVD drives to be configured.
+    If not specified, DVD drives attached to all controllers are configured.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that a **Microsoft.HyperV.PowerShell.DvdDrive** object is to be passed through to the pipeline representing the virtual DVD drive to be configured.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path to the ISO file or physical DVD drive that will serve as media for the virtual DVD drive.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourcePoolName
+  description: |+
+    Specifies the friendly name of the ISO resource pool to which this DVD drive is to be associated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ToControllerLocation
+  description: |+
+    Specifies the controller location to which this virtual DVD drive should be moved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ToControllerNumber
+  description: |+
+    Specifies the controller number to which this VMDvdDrive should be moved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DvdDrive" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMDvdDrive
+  isRequired: true
+  description: |+
+    Specifies the virtual DVD drive to be configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine on which the DVD drive is to be configured.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VMDvdDrive
+name: Set-VMDvdDrive
+description: |-
+  The **Set-VMDvdDrive** cmdlet configures the controller and location of a virtual DVD drive.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmdvddrive?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VMDvdDrive

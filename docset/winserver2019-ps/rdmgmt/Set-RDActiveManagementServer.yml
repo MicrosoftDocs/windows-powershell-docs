@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the active Remote Desktop Connection Broker  server, or management server, in a remote desktop deployment.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: |-
+    None
+syntaxes:
+- Set-RDActiveManagementServer [-ManagementServer] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the active management server for a remote desktop deployment'
+  code: |-
+    PS C:\> Set-RDActiveManagementServer -ManagementServer "Rdcb.Contoso.com"
+  description: |-
+    This command sets the active management server for the remote desktop.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ManagementServer
+  isRequired: true
+  description: |+
+    Specifies the name of a server that acts as the active RD Connection Broker for a remote desktop deployment.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Set-RDActiveManagementServer
+name: Set-RDActiveManagementServer
+description: |-
+  The **Set-RDActiveManagementServer** cmdlet sets the active Remote Desktop Connection Broker (RD Connection Broker) server in a remote desktop deployment.
+
+  This server runs the Remote Desktop Management Server (RDMS) service, which belongs in a high availability group to ensure uninterrupted access.
+  The Remote Desktop Management Server service configures the deployment and deployment properties, creates and configures collections, and provisions virtual machines.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdactivemanagementserver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDActiveManagementServer

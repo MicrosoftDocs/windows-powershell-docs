@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Clears the provider cache.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-SbecTraceProviders
+  href: ./Get-SbecTraceProviders.yml
+syntaxes:
+- Clear-SbecProviderCache [<CommonParameters>]
+uid: BootEventCollector.Clear-SbecProviderCache
+name: Clear-SbecProviderCache
+description: |-
+  The **Clear-SbecProviderCache** cmdlet clears the provider cache.
+
+  The next time you run the **Get-SbecTraceProviders** cmdlet, the cmdlet re-reads the providers from the operating system and re-populates the cache.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/clear-sbecprovidercache?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-SbecProviderCache

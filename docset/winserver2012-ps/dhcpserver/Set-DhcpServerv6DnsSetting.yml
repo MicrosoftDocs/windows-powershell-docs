@@ -1,0 +1,199 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures how the Dynamic Host Configuration Protocol (DHCP) server service updates the DNS server with the client-related information.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6DnsSetting" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Reservation" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6Scope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6DnsSetting" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-DhcpServerv6DnsSetting
+  href: ./Get-DhcpServerv6DnsSetting.yml
+syntaxes:
+- >-
+  Set-DhcpServerv6DnsSetting [[-Prefix] <IPAddress>] [[-IPAddress] <IPAddress>] [-AsJob]
+
+   [-CimSession <CimSession[]>] [-ComputerName <String>] [-DeleteDnsRROnLeaseExpiry <Boolean>]
+
+   [-DynamicUpdates <String>] [-NameProtection <Boolean>] [-PassThru] [-ThrottleLimit <Int32>] [-Confirm]
+
+   [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Set-DhcpServerv6DnsSetting -ComputerName dhcpserver.contoso.com -DynamicUpdates Always -DeleteDnsRRonLeaseExpiry $true
+  description: |-
+    This example sets the DHCPv6 server level, or server-wide, DNS update configuration settings to always update DNS with leases entries, enables NAP protection by creating dynamic host configuration identifier (DHCID) resource records, and deletes the client entry from the DNS server when the lease expires.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Set-DhcpServerv6DnsSetting -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020:: -DynamicUpdates OnClientRequest -NameProtection $true
+  description: |-
+    This example sets the DNS update configuration settings for scope 2001:4898:7020:1020:: to update the DNS server with lease entries based on client request using the fully qualified domain name (FQDN) option (ID `81`), and enables name protection by creating dynamic host configuration identifier (DHCID) resource records.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Set-DhcpServerv6DnsSetting -ComputerName dhcpserver.contoso.com -IPAddress 2001:4898:7020:1020::5 -DynamicUpdates Never
+  description: |-
+    This example sets the DNS update configuration settings for the reserved IP address 2001:4898:7020:1020::5 to never update the DNS server for client lease entries.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer running the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DeleteDnsRROnLeaseExpiry
+  description: |+
+    Specifies that the DHCP server service should delete the DNS resource records for the DHCP client after the lease expires. 
+    The acceptable values for this parameter are: $true or $false.
+    This parameter can only be set if the **DynamicUpdate** parameter is set to Always or OnClientRequest.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DynamicUpdates
+  description: |+
+    Specifies the conditions under which to perform dynamic updates on the DNS server. 
+    The acceptable values for this parameter are: Always, Never, or OnClientRequest. 
+
+     -- Always: The DHCP server service will always perform dynamic DNS registration of A and PTR records for the DHCP clients. 
+
+     -- Never: The DHCP server service will not perform any dynamic DNS registration. 
+
+     -- OnClientRequest: The DHCP server service will perform dynamic DNS registration of A and PTR records if the DHCP client has requested for the same in the DHCP client message.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IPAddress
+  description: |+
+    Specifies the IPv6 address of the reservation on which the DNS update behavior is being configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: NameProtection
+  description: |+
+    Sets the enabled state for the name protection on the DHCP server service. 
+
+    If this parameter is specified and there is an existing DNS record already by the same name, then the DNS update for the client will fail instead of being overwritten.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: Prefix
+  description: |+
+    Specifies the subnet prefix of the IPv6 scope on which the DNS update behavior is being configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DhcpServer.Set-DhcpServerv6DnsSetting
+name: Set-DhcpServerv6DnsSetting
+description: |-
+  The **Set-DhcpServerv6DnsSetting** cmdlet configures how the Dynamic Host Configuration Protocol (DHCP) server service updates the DNS server with the client-related information.
+  The **Prefix** or **IPAddress** parameter must be specified with at least one of the optional parameters.
+  The **Prefix** and **IPAddress** cannot both be specified.
+  If neither the **Prefix** nor **IPAddress** parameter is specified, then this cmdlet sets DNS update setting at the server level.
+
+  This cmdlet modifies the effective DNS update setting and sets it on the specified reservation, scope, or server level.
+metadata:
+  external help file: DhcpServer_Cmdlets.xml
+  Module Name: DhcpServer
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv6dnssetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,238 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets one or more resource properties.
+module: ActiveDirectory
+notes: ""
+inputs:
+- name: <xref href="None or Microsoft.ActiveDirectory.Management.ADResourceProperty" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.ActiveDirectory.Management.ADResourceProperty" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-ADResourceProperty
+  href: ./New-ADResourceProperty.yml
+- text: Remove-ADResourceProperty
+  href: ./Remove-ADResourceProperty.yml
+- text: Set-ADResourceProperty
+  href: ./Set-ADResourceProperty.yml
+syntaxes:
+- >-
+  Get-ADResourceProperty [-AuthType <ADAuthType>] [-Credential <PSCredential>] -Filter <String>
+
+   [-Properties <String[]>] [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-Server <String>]
+
+   [<CommonParameters>]
+- >-
+  Get-ADResourceProperty [-AuthType <ADAuthType>] [-Credential <PSCredential>] [-Identity] <ADResourceProperty>
+
+   [-Properties <String[]>] [-Server <String>] [<CommonParameters>]
+- >-
+  Get-ADResourceProperty [-AuthType <ADAuthType>] [-Credential <PSCredential>] -LDAPFilter <String>
+
+   [-Properties <String[]>] [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-Server <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get filtered resource properties'
+  code: |-
+    PS C:\> Get-ADResourceProperty -Filter "SharesValuesWith -eq 'Country'"
+  description: |-
+    This command gets all the resource properties that refer to the claim type named Country for their suggested values.
+  summary: ""
+- title: 'Example 2: Get the specified resource property'
+  code: |-
+    PS C:\> Get-ADResourceProperty -Identity Authors
+  description: |-
+    This command gets the resource property with display name Authors.
+  summary: ""
+parameters:
+- type: <xref href="ADAuthType" data-throw-if-not-resolved="False" />
+  name: AuthType
+  description: |+
+    Specifies the authentication method to use.
+    The acceptable values for this parameter are:
+
+    - Negotiate or 0
+    - Basic or 1
+
+    The default authentication method is Negotiate.
+
+    A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Negotiate, Basic
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the user account credentials to use to perform this task.
+    The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory PowerShell provider drive.
+    If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
+
+    To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
+    If you specify a user name for this parameter, the cmdlet prompts for a password.
+
+    You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+    You can then set the *Credential* parameter to the **PSCredential** object.
+
+    If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  isRequired: true
+  description: |+
+    Specifies a query string that retrieves Active Directory objects.
+    This string uses the PowerShell Expression Language syntax.
+    The PowerShell Expression Language syntax provides rich type-conversion support for value types received by the *Filter* parameter.
+    The syntax uses an in-order representation, which means that the operator is placed between the operand and the value.
+    For more information about the *Filter* parameter, type `Get-Help about_ActiveDirectory_Filter`.
+
+    Syntax:
+
+    The following syntax uses Backus-Naur form to show how to use the PowerShell Expression Language for this parameter.
+
+    \<filter\>  ::= "{" \<FilterComponentList\> "}"
+
+    \<FilterComponentList\> ::= \<FilterComponent\> | \<FilterComponent\> \<JoinOperator\> \<FilterComponent\> | \<NotOperator\>  \<FilterComponent\>
+
+    \<FilterComponent\> ::= \<attr\> \<FilterOperator\> \<value\> | "(" \<FilterComponent\> ")"
+
+    \<FilterOperator\> ::= "-eq" | "-le" | "-ge" | "-ne" | "-lt" | "-gt"| "-approx" | "-bor" | "-band" | "-recursivematch" | "-like" | "-notlike"
+
+    \<JoinOperator\> ::= "-and" | "-or"
+
+    \<NotOperator\> ::= "-not"
+
+    \<attr\> ::= \<PropertyName\> | \<LDAPDisplayName of the attribute\>
+
+    \<value\>::= \<compare this value with an \<attr\> by using the specified \<FilterOperator\>\>
+
+    For a list of supported types for \<value\>, type `Get-Help about_ActiveDirectory_ObjectModel`.
+
+    Note: PowerShell wildcards other than *, such as ?, are not supported by the *Filter* syntax.
+
+    Note: To query using LDAP query strings, use the *LDAPFilter* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADResourceProperty" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies an Active Directory object by providing one of the following property values.
+    The identifier in parentheses is the LDAP display name for the attribute.The acceptable values for this parameter are:
+
+    - A distinguished name
+    - A GUID (objectGUID)
+
+    This parameter can also get this object through the pipeline or you can set this parameter to an object instance.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LDAPFilter
+  isRequired: true
+  description: |+
+    Specifies an LDAP query string that is used to filter Active Directory objects.
+    You can use this parameter to run your existing LDAP queries.
+    The *Filter* parameter syntax supports the same functionality as the LDAP syntax.
+    For more information, see the *Filter* parameter description or type `Get-Help about_ActiveDirectory_Filter`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Properties
+  description: |+
+    Specifies the properties of the output object to retrieve from the server.
+    Use this parameter to retrieve properties that are not included in the default set.
+
+    Specify properties for this parameter as a comma-separated list of names.
+    To display all of the attributes that are set on the object, specify * (asterisk).
+
+    To specify an individual extended property, use the name of the property.
+    For properties that are not default or extended properties, you must specify the LDAP display name of the attribute.
+
+    To retrieve properties and display them for an object, you can use the Get-* cmdlet associated with the object and pass the output to the **Get-Member** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: Property
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ResultPageSize
+  description: |+
+    Specifies the number of objects to include in one page for an Active Directory Domain Services query.
+
+    The default is 256 objects per page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ResultSetSize
+  description: |+
+    Specifies the maximum number of objects to return for an Active Directory Domain Services query.
+    If you want to receive all of the objects, set this parameter to $Null (null value).
+    You can use Ctrl+C to stop the query and return of objects.
+
+    The default is $Null.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the Active Directory Domain Services (AD DS) instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+    The service may be any of the following:  Active Directory Lightweight Domain Services (AD LDS), AD DS, or Active Directory snapshot instance.
+
+    Specify the Active Directory Domain Services instance in one of the following ways:  
+
+    Domain name values:
+
+    - Fully qualified domain name
+    - NetBIOS name
+
+    Directory server values:  
+
+    - Fully qualified directory server name
+    - NetBIOS name
+    - Fully qualified directory server name and port
+
+    The default value for this parameter is determined by one of the following methods in the order that they are listed:
+
+    - By using the *Server* value from objects passed through the pipeline
+    - By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
+    - By using the domain of the computer running Windows PowerShell
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ActiveDirectory.Get-ADResourceProperty
+name: Get-ADResourceProperty
+description: |-
+  The **Get-ADResourceProperty** cmdlet gets one or more resource properties.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/get-adresourceproperty?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ADResourceProperty

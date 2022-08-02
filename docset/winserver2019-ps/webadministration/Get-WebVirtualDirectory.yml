@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of the virtual directories on the specified site.
+module: WebAdministration
+notes: ""
+links:
+- text: New-WebVirtualDirectory
+  href: ./New-WebVirtualDirectory.yml
+- text: Remove-WebVirtualDirectory
+  href: ./Remove-WebVirtualDirectory.yml
+syntaxes:
+- Get-WebVirtualDirectory [-Site <String>] [-Application <String>] [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Getting a virtual directory'
+  code: |-
+    IIS:\> Get-WebVirtualDirectory -Site "Default Web Site" -Application "TestApp"
+  description: |-
+    This command returns the list of virtual directories on the default website on which the application named TestApp is configured.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Application
+  description: |+
+    Specifies the name of a web application associated with virtual directories to return.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of a virtual directory that this cmdlet returns.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Site
+  description: |+
+    Specifies the name of the site for which this cmdlet returns a list of virtual directories.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebVirtualDirectory
+name: Get-WebVirtualDirectory
+description: |-
+  The **Get-WebVirtualDirectory** cmdlet gets a list of the virtual directories on the specified site.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webvirtualdirectory?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebVirtualDirectory

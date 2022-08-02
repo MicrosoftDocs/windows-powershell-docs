@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates dedicated persistent memory in the specified region.
+module: PersistentMemory
+notes: ""
+inputs:
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-PmemUnusedRegion
+  href: Get-PmemUnusedRegion.yml
+- text: Get-PmemDedicatedMemory
+  href: Get-PmemDedicatedMemory.yml
+- text: Remove-PmemDedicatedMemory
+  href: Remove-PmemDedicatedMemory.yml
+syntaxes:
+- >-
+  New-PmemDedicatedMemory -RegionId <UInt32[]> [-FriendlyName <String[]>] [-SizeInBytes <UInt64[]>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create dedicated persistent memory'
+  code: |-
+    New-PmemDedicatedMemory -RegionId 1 -SizeInBytes 270582939648
+  description: |-
+    This command creates dedicated persistent memory from the region with the ID `1`.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FriendlyName
+  description: |+
+    Specifies a friendly name for the dedicated persistent memory.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RegionId
+  isRequired: true
+  description: |+
+    Specifies the ID of the region for the dedicated persistent memory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SizeInBytes
+  description: |+
+    Specifies the size of the dedicated persistent memory.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PersistentMemory.New-PmemDedicatedMemory
+name: New-PmemDedicatedMemory
+description: |-
+  The **New-PmemDedicatedMemory** cmdlet creates dedicated persistent memory in the specified region. You can see unused regions by using the **Get-PmemUnusedRegion** cmdlet.
+
+  Small amounts of dedicated storage can be used for memory-mapping data.
+metadata:
+  description: The New-PmemDedicatedMemory cmdlet creates dedicated persistent memory in the specified region.
+  external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
+  Module Name: PersistentMemory
+  online version: https://docs.microsoft.com/powershell/module/persistentmemory/new-pmemdedicatedmemory?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  ms.date: 09/24/2021
+  title: New-PmemDedicatedMemory

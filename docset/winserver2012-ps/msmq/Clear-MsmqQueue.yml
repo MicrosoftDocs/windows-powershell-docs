@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Clears all queues that are represented by the supplied MessageQueue objects.
+module: MSMQ
+notes: ""
+links:
+- text: Get-MsmqQueue
+  href: ./Get-MsmqQueue.yml
+- text: New-MsmqQueue
+  href: ./New-MsmqQueue.yml
+- text: Receive-MsmqQueue
+  href: ./Receive-MsmqQueue.yml
+- text: Remove-MsmqQueue
+  href: ./Remove-MsmqQueue.yml
+- text: Send-MsmqQueue
+  href: ./Send-MsmqQueue.yml
+- text: Set-MsmqQueue
+  href: ./Set-MsmqQueue.yml
+syntaxes:
+- Clear-MsmqQueue -InputObject <MessageQueue[]> [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Clear all queues under a specified wildcard'
+  code: |-
+    PS C:\>Get-MessageQueue -Name Order* | Clear-MessageQueue
+  description: |-
+    This command gets all queue under the wildcard named Order, then clears them.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="MessageQueue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies a **MessageQueue** object that represents a queue that will be purged.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MSMQ.Clear-MsmqQueue
+name: Clear-MsmqQueue
+description: |-
+  The **Clear-MsmqQueue** cmdlet clears all queues that are represented by the supplied **MessageQueue** objects.
+  It returns a **MessageQueue** object that represents the cleared outgoing queue.
+metadata:
+  external help file: MSMQ_Cmdlets.xml
+  Module Name: MSMQ
+  online version: https://docs.microsoft.com/powershell/module/msmq/clear-msmqqueue?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

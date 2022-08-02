@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a volume from the Cluster Shared Volumes in a failover cluster, and places it in Available Storage in the cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterSharedVolume
+  href: ./Add-ClusterSharedVolume.yml
+- text: Get-ClusterSharedVolume
+  href: ./Get-ClusterSharedVolume.yml
+- text: Move-ClusterSharedVolume
+  href: ./Move-ClusterSharedVolume.yml
+syntaxes:
+- >-
+  Remove-ClusterSharedVolume [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cluster <String>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-ClusterSharedVolume -Name "Cluster Disk 3"
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    Cluster Disk 3      Online              Available Storage   Physical Disk
+  description: |-
+    This example removes the CSV named Cluster Disk 3 from the Cluster Shared Volumes on the local cluster, and places it in Available Storage.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterSharedVolume -Name "Cluster Disk 4" | Remove-ClusterSharedVolume
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    Cluster Disk 4      Online              Available Storage   Physical Disk
+  description: |-
+    This example removes the CSV named Cluster Disk 4 from the Cluster Shared Volumes on the local cluster, and places it in Available Storage.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the Cluster Shared Volume to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the Cluster Shared Volume to remove.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: FailoverClusters.Remove-ClusterSharedVolume
+name: Remove-ClusterSharedVolume
+description: |-
+  The **Remove-ClusterSharedVolume** cmdlet removes a volume from the Cluster Shared Volumes in a failover cluster, and places it in Available Storage in the cluster.
+  After placing a volume in Available Storage, you can use the volume when you configure a new clustered role.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/remove-clustersharedvolume?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-ClusterSharedVolume

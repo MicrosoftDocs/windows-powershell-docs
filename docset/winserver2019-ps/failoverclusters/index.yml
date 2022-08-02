@@ -1,0 +1,118 @@
+### YamlMime:PowershellModule
+children:
+- title: FailoverClusters
+  cmdlets:
+  - FailoverClusters.Add-ClusterCheckpoint
+  - FailoverClusters.Add-ClusterDisk
+  - FailoverClusters.Add-ClusterFileServerRole
+  - FailoverClusters.Add-ClusterGenericApplicationRole
+  - FailoverClusters.Add-ClusterGenericScriptRole
+  - FailoverClusters.Add-ClusterGenericServiceRole
+  - FailoverClusters.Add-ClusterGroup
+  - FailoverClusters.Add-ClusterGroupSetDependency
+  - FailoverClusters.Add-ClusterGroupToSet
+  - FailoverClusters.Add-ClusteriSCSITargetServerRole
+  - FailoverClusters.Add-ClusterNode
+  - FailoverClusters.Add-ClusterResource
+  - FailoverClusters.Add-ClusterResourceDependency
+  - FailoverClusters.Add-ClusterResourceType
+  - FailoverClusters.Add-ClusterScaleOutFileServerRole
+  - FailoverClusters.Add-ClusterSharedVolume
+  - FailoverClusters.Add-ClusterVirtualMachineRole
+  - FailoverClusters.Add-ClusterVMMonitoredItem
+  - FailoverClusters.Block-ClusterAccess
+  - FailoverClusters.Clear-ClusterDiskReservation
+  - FailoverClusters.Clear-ClusterNode
+  - FailoverClusters.Disable-ClusterStorageSpacesDirect
+  - FailoverClusters.Enable-ClusterStorageSpacesDirect
+  - FailoverClusters.Get-Cluster
+  - FailoverClusters.Get-ClusterAccess
+  - FailoverClusters.Get-ClusterAvailableDisk
+  - FailoverClusters.Get-ClusterCheckpoint
+  - FailoverClusters.Get-ClusterDiagnosticInfo
+  - FailoverClusters.Get-ClusterFaultDomain
+  - FailoverClusters.Get-ClusterFaultDomainXML
+  - FailoverClusters.Get-ClusterGroup
+  - FailoverClusters.Get-ClusterGroupSet
+  - FailoverClusters.Get-ClusterGroupSetDependency
+  - FailoverClusters.Get-ClusterLog
+  - FailoverClusters.Get-ClusterNetwork
+  - FailoverClusters.Get-ClusterNetworkInterface
+  - FailoverClusters.Get-ClusterNode
+  - FailoverClusters.Get-ClusterOwnerNode
+  - FailoverClusters.Get-ClusterParameter
+  - FailoverClusters.Get-ClusterQuorum
+  - FailoverClusters.Get-ClusterResource
+  - FailoverClusters.Get-ClusterResourceDependency
+  - FailoverClusters.Get-ClusterResourceDependencyReport
+  - FailoverClusters.Get-ClusterResourceType
+  - FailoverClusters.Get-ClusterSharedVolume
+  - FailoverClusters.Get-ClusterSharedVolumeState
+  - FailoverClusters.Get-ClusterStorageSpacesDirect
+  - FailoverClusters.Get-ClusterVMMonitoredItem
+  - FailoverClusters.Grant-ClusterAccess
+  - FailoverClusters.Move-ClusterGroup
+  - FailoverClusters.Move-ClusterResource
+  - FailoverClusters.Move-ClusterSharedVolume
+  - FailoverClusters.Move-ClusterVirtualMachineRole
+  - FailoverClusters.New-Cluster
+  - FailoverClusters.New-ClusterFaultDomain
+  - FailoverClusters.New-ClusterGroupSet
+  - FailoverClusters.New-ClusterNameAccount
+  - FailoverClusters.Remove-Cluster
+  - FailoverClusters.Remove-ClusterAccess
+  - FailoverClusters.Remove-ClusterCheckpoint
+  - FailoverClusters.Remove-ClusterFaultDomain
+  - FailoverClusters.Remove-ClusterGroup
+  - FailoverClusters.Remove-ClusterGroupFromSet
+  - FailoverClusters.Remove-ClusterGroupSet
+  - FailoverClusters.Remove-ClusterGroupSetDependency
+  - FailoverClusters.Remove-ClusterNode
+  - FailoverClusters.Remove-ClusterResource
+  - FailoverClusters.Remove-ClusterResourceDependency
+  - FailoverClusters.Remove-ClusterResourceType
+  - FailoverClusters.Remove-ClusterSharedVolume
+  - FailoverClusters.Remove-ClusterVMMonitoredItem
+  - FailoverClusters.Repair-ClusterStorageSpacesDirect
+  - FailoverClusters.Reset-ClusterVMMonitoredState
+  - FailoverClusters.Resume-ClusterNode
+  - FailoverClusters.Resume-ClusterResource
+  - FailoverClusters.Set-ClusterFaultDomain
+  - FailoverClusters.Set-ClusterFaultDomainXML
+  - FailoverClusters.Set-ClusterGroupSet
+  - FailoverClusters.Set-ClusterLog
+  - FailoverClusters.Set-ClusterOwnerNode
+  - FailoverClusters.Set-ClusterParameter
+  - FailoverClusters.Set-ClusterQuorum
+  - FailoverClusters.Set-ClusterResourceDependency
+  - FailoverClusters.Set-ClusterStorageSpacesDirect
+  - FailoverClusters.Set-ClusterStorageSpacesDirectDisk
+  - FailoverClusters.Start-Cluster
+  - FailoverClusters.Start-ClusterGroup
+  - FailoverClusters.Start-ClusterNode
+  - FailoverClusters.Start-ClusterResource
+  - FailoverClusters.Stop-Cluster
+  - FailoverClusters.Stop-ClusterGroup
+  - FailoverClusters.Stop-ClusterNode
+  - FailoverClusters.Stop-ClusterResource
+  - FailoverClusters.Suspend-ClusterNode
+  - FailoverClusters.Suspend-ClusterResource
+  - FailoverClusters.Test-Cluster
+  - FailoverClusters.Test-ClusterResourceFailure
+  - FailoverClusters.Update-ClusterFunctionalLevel
+  - FailoverClusters.Update-ClusterIPResource
+  - FailoverClusters.Update-ClusterNetworkNameResource
+  - FailoverClusters.Update-ClusterVirtualMachineConfiguration
+uid: FailoverClusters
+name: FailoverClusters
+description: |-
+  This reference provides cmdlet descriptions and syntax for all failover cluster-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.  If these cmdlets aren't available in your PowerShell session, you may need to add the `Failover Cluster Module for Windows PowerShell` Feature, using the following PowerShell cmd: `Add-WindowsFeature RSAT-Clustering-PowerShell`.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.3.3
+  Locale: en-US
+  Module Guid: cc3e946b-9141-48c2-95d8-d9e56594416a
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  title: FailoverClusters

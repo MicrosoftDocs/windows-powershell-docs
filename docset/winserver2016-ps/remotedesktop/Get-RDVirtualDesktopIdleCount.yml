@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the number of idle virtual desktops on hosts.
+module: RemoteDesktop
+notes: ""
+links:
+- text: Set-RDVirtualDesktopIdleCount
+  href: ./Set-RDVirtualDesktopIdleCount.yml
+- text: Get-RDVirtualDesktopCollectionConfiguration
+  href: ./Get-RDVirtualDesktopCollectionConfiguration.yml
+syntaxes:
+- >-
+  Get-RDVirtualDesktopIdleCount [[-HostServer] <String[]>] [-ConnectionBroker <String>] [-BatchSize <Int32>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Count idle virtual desktops on hosts'
+  code: |-
+    PS C:\>Get-RDVirtualDesktopIdleCount -HostServer @("rdvh-1.contoso.com","rdvh-2.contoso.com") -ConnectionBroker "rdcb.contoso.com"
+  description: |-
+    This command gets the number of idle virtual desktops associated with the connection broker named rdcb.contoso.com on the host servers named rdvh-1.contoso.com and rdvh-2.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: BatchSize
+  description: |+
+    Specifies the batch size.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HostServer
+  description: |+
+    Specifies an array of names of the servers that host the session.
+    For session collections the host server has the name of the Remote Desktop Session Host (RD Session Host) server.
+    For virtual desktop collections the host server has the name of the Remote Desktop Virtualization Host (RD Virtualization Host) server.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteDesktop.Get-RDVirtualDesktopIdleCount
+name: Get-RDVirtualDesktopIdleCount
+description: |-
+  The **Get-RDVirtualDesktopIdleCount** cmdlet gets the number of idle virtual desktops on one or more hosts.
+  This cmdlet returns a value that represents the number of idle virtual desktops from every pool.
+
+  An idle virtual desktop is a virtual machine that is in a running state and there is no user logged on to it.
+  Idle virtual desktops continue to run even if you configured the pool so that the server saves a virtual desktop that is not in use.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdvirtualdesktopidlecount?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDVirtualDesktopIdleCount

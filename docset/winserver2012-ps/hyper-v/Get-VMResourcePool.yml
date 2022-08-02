@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the resource pools on one or more virtual machine hosts.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Virtualization.Powershell.ResourcePool" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-VMResourcePool [[-Name] <String[]>] [[-ResourcePoolType] <VMResourcePoolType[]>] [-ComputerName <String[]>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMResourcePool * VHD
+  description: |-
+    Get all VHD resource pools on the local virtual machine host.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VMResourcePool Test*
+  description: |-
+    Get all resource pools on the local virtual machine host having a name that starts with Test.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>Get-VMResourcePoolTest "test resource pool" VHD
+  description: |-
+    Get all VHD resource pools on the local virtual machine host named test resource pool.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the resource pools are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the resource pool or pools to be retrieved.
+    Wildcards are allowed.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMResourcePoolType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ResourcePoolType
+  description: |+
+    Specifies the type of the resource pool or pools to be retrieved.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMResourcePool
+name: Get-VMResourcePool
+description: |-
+  The **Get-VMResourcePool** cmdlet gets the resource pools on one or more virtual machine hosts.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmresourcepool?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

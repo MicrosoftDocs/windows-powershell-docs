@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the configuration for the specified superscope.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Superscope" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Superscope" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Add-DhcpServerv4Superscope
+  href: ./Add-DhcpServerv4Superscope.yml
+- text: Remove-DhcpServerv4Superscope
+  href: ./Remove-DhcpServerv4Superscope.yml
+syntaxes:
+- >-
+  Get-DhcpServerv4Superscope [[-SuperscopeName] <String[]>] [-AsJob] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String>] [-ThrottleLimit <Int32>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Get-DhcpServerv4SuperScope -ComputerName dhcpserver.contoso.com
+  description: |-
+    This example gets all of the superscopes and the associated scopes on the specified DHCP server service.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Get-DhcpServerv4SuperScope -ComputerName dhcpserver.contoso.com -SuperscopeName ExtendedLabNet
+  description: |-
+    This example gets the configuration for the superscope named ExtendedLabNet and the associated scopes on the specified DHCP server service on the computer named dhcpserver.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer running the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SuperscopeName
+  description: |+
+    Specifies the name of the superscopes whose configuration needs to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DhcpServer.Get-DhcpServerv4Superscope
+name: Get-DhcpServerv4Superscope
+description: |-
+  The **Get-DhcpServerv4SuperScope** cmdlet gets the configuration for the specified superscope.
+  If the **SuperscopeName** parameter is not specified, then all of the superscopes present on the Dynamic Host Configuration Protocol (DHCP) server service are returned.
+metadata:
+  external help file: DhcpServer_Cmdlets.xml
+  Module Name: DhcpServer
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/get-dhcpserverv4superscope?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

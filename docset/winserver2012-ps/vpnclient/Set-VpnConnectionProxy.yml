@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures web proxy information for the specified VPN connection.
+module: VpnClient
+notes: ""
+links:
+- text: Get-VpnConnection
+  href: ./Get-VpnConnection.yml
+syntaxes:
+- >-
+  Set-VpnConnectionProxy [-Name] <String> [-AutoConfigurationScript <String>] [-AutoDetect]
+
+   [-BypassProxyForLocal] [-ExceptionPrefix <String[]>] [-ProxyServer <String>]
+examples:
+- title: 'Example 1: Configure the proxy settings for a VPN connection profile'
+  code: |-
+    PS C:\>Set-VpnConnectionProxy -Name Contoso -ProxyServer 10.0.0.1:8080 -BypassProxyForLocal
+  description: |-
+    This command sets the proxy configuration for the VPN connection named Contoso to use the proxy server with IP address 10.0.0.1 over port 8080, as specified by the _ProxyServer_ parameter.
+    The command also specifies that internal IP addresses are not routed to the proxy server, as specified by the _BypassProxyForLocal_ parameter.
+  summary: ""
+- title: 'Example 2: Configure proxy and exclude based on domain and network'
+  code: |-
+    PS C:\>Set-VpnConnectionProxy -Name "Contoso" -ProxyServer "10.0.0.1:8080" -ExcludePrefix '10.', '*.microsoft.com'
+  description: |-
+    This command also sets the proxy for Contoso VPN and also specifies prefixes for addresses that will not use proxy via the _ExcludePrefix_ parameter. This exclude 10.0.0.0/8 and *.microsoft.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AutoConfigurationScript
+  description: |+
+    Specifies the name of the automatic WPAD configuration script that the specified connection uses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AutoDetect
+  description: |+
+    Indicates that proxy settings are automatically detected.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: BypassProxyForLocal
+  description: |+
+    Indicates that the proxy configuration is bypassed for local addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ExceptionPrefix
+  description: |+
+    Specifies the prefixes for internet addresses for which the proxy is not to be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the VPN connection for which the proxy settings are configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProxyServer
+  description: |+
+    Specifies the web proxy server IP address and port number.
+    Specify the address and port separated by a colon.
+    For example, 10.0.0.1:8080.
+    If you do not specify the port number, port 80 is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: VpnClient.Set-VpnConnectionProxy
+name: Set-VpnConnectionProxy
+description: |-
+  The **Set-VpnConnectionProxy** cmdlet configures web proxy information for the specified VPN connection.
+  If errors occur when you modify the web proxy information, the error information is returned.
+metadata:
+  external help file: VpnClient_Cmdlets.xml
+  Module Name: VpnClient
+  online version: https://docs.microsoft.com/powershell/module/vpnclient/set-vpnconnectionproxy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

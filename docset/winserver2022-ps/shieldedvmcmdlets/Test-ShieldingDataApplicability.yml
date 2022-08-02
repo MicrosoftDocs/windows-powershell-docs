@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies a shielding data file can be used with a given volume signature catalog.
+module: ShieldedVmCmdlets
+notes: ""
+links:
+- text: Get-KeyProtectorFromShieldingDataFile
+  href: ./Get-KeyProtectorFromShieldingDataFile.yml
+- text: Get-ShieldedVMProvisioningStatus
+  href: ./Get-ShieldedVMProvisioningStatus.yml
+- text: Initialize-ShieldedVM
+  href: ./Initialize-ShieldedVM.yml
+- text: New-ShieldedVMSpecializationDataFile
+  href: ./New-ShieldedVMSpecializationDataFile.yml
+syntaxes:
+- >-
+  Test-ShieldingDataApplicability [-ShieldingDataFilePath] <String> [-VolumeSignatureCatalogPath] <String>
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Verify that a shielding data file can be used with a given volume signature catalog'
+  code: |-
+    PS C:\>Test-ShieldingDataApplicability -ShieldingDataFilePath "C:\temp\Tenant01-Shielded.pdk" -VolumeSignatureCatalogPath "C:\temp\templatedisk.vsc"
+  description: |-
+    This command verifies that the shielding data file located at C:\temp\Tenant01-Shielded.pdk can be used to provision new shielded virtual machines using the template disk with the volume signature catalog located at C:\temp\templatedisk.vsc.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ShieldingDataFilePath
+  isRequired: true
+  description: |+
+    Specifies the path to a shielding data file (.pdk).
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VolumeSignatureCatalogPath
+  isRequired: true
+  description: |+
+    Specifies the path to a volume signature catalog file (.vsc).
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ShieldedVmCmdlets.Test-ShieldingDataApplicability
+name: Test-ShieldingDataApplicability
+description: |-
+  The **Test-ShieldingDataApplicability** cmdlet verifies a shielding data file can be used with a given volume signature catalog.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ShieldedVmCmdlets-help.xml
+  Module Name: ShieldedVmCmdlets
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/shieldedvmcmdlets/test-shieldingdataapplicability?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-ShieldingDataApplicability

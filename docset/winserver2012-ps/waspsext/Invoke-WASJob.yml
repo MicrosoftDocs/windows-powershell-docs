@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates and runs a job instance.
+module: WasPSExt
+notes: ""
+links:
+- text: Windows Assessment Services Technical Reference
+  href: https://go.microsoft.com/fwlink/?LinkId=215628
+- text: Get-WASJob
+  href: ./Get-WASJob.yml
+- text: Update-WASJob
+  href: ./Update-WASJob.yml
+syntaxes:
+- Invoke-WASJob [-Job] <WASJob[]> [[-Runtag] <String>] [[-Testpass] <String>]
+examples:
+- title: 'Example 1: Run a job'
+  code: |-
+    PS C:\> $job = Get-WASJob -JobName *automated*
+    PS C:\> Invoke-WASJob -Job $job
+  description: |-
+    This command gets all the jobs with "automated" in the job name, saves it as a variable, and runs the jobs.
+  summary: ""
+- title: 'Example 2: Run a job specifying runtag and testpass'
+  code: |-
+    PS C:\> $job = Get-WASJob -JobName *automated*
+    PS C:> Invoke-WASJob -Job $job -RunTag "Test iteration 5" -TestPass "Spring 2012"
+  description: |-
+    This command gets all the jobs with "automated" in the job name, saves it as a variable, and runs the jobs adding run tag and test pass metadata to the job.
+  summary: ""
+parameters:
+- type: <xref href="WASJob" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Job
+  isRequired: true
+  description: |+
+    Specifies the job to invoke.
+    This is a required parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Runtag
+  description: |+
+    Specifies the run tag you want to add to the job.
+    If not specified, the default run tag is used.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Testpass
+  description: |+
+    Specifies the test pass you want to label the job with.
+    If not specified, the default test pass is used.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WasPSExt.Invoke-WASJob
+name: Invoke-WASJob
+description: |-
+  The **Invoke-WASJob** cmdlet creates a new job instance in Windows Assessment Services.
+  It also initiates a run of the job instance.
+  The **Job** parameter is required.
+metadata:
+  external help file: WasPsExt_Cmdlets.xml
+  Module Name: WasPSExt
+  online version: https://docs.microsoft.com/powershell/module/waspsext/invoke-wasjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

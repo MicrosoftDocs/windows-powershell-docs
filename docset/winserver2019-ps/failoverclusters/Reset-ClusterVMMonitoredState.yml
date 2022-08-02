@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the Application Critical state of a virtual machine, so that the virtual machine is no longer marked as being in a critical state in the cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterVMMonitoredItem
+  href: ./Add-ClusterVMMonitoredItem.yml
+- text: Get-ClusterVMMonitoredItem
+  href: ./Get-ClusterVMMonitoredItem.yml
+- text: Remove-ClusterVMMonitoredItem
+  href: ./Remove-ClusterVMMonitoredItem.yml
+syntaxes:
+- Reset-ClusterVMMonitoredState [-Wait <Int32>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Reset-ClusterVMMoniteredState
+  description: |-
+    This example resets the state of the virtual machine and clears the critical state.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Reset-ClusterVMMonitoredState
+name: Reset-ClusterVMMonitoredState
+description: |-
+  The **Reset-ClusterVMMonitoredState** cmdlet resets the Application Critical state of a virtual machine, so that the virtual machine is no longer marked as being in a critical state in the cluster.
+  Note: This cmdlet can only be run locally on the virtual machine or through Windows PowerShell® remoting to the virtual machine.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/reset-clustervmmonitoredstate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Reset-ClusterVMMonitoredState

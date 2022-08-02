@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Specifies a default appx volume.
+module: Appx
+notes: ""
+links:
+- text: Get-AppxDefaultVolume
+  href: ./Get-AppxDefaultVolume.yml
+syntaxes:
+- Set-AppxDefaultVolume [-Volume] <AppxVolume> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a default volume by using a path'
+  code: |-
+    PS C:\> Set-AppxDefaultVolume -Volume F:\
+  description: |-
+    This command sets the default volume to be the volume F:\.
+  summary: ""
+- title: 'Example 2: Set a default volume by using an ID'
+  code: |-
+    PS C:\> Set-AppxDefaultVolume -Volume {ef23c8d6-b13c-4c4c-ae3b-7d5a162de9b9}
+  description: |-
+    This command sets the default volume to be the one that has the specified media ID.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="AppxVolume" data-throw-if-not-resolved="False" />
+  name: Volume
+  isRequired: true
+  description: |+
+    Specifies the path a volume.
+    This cmdlet sets the volume that this parameter specifies to be the default deployment target for the computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Appx.Set-AppxDefaultVolume
+name: Set-AppxDefaultVolume
+description: |-
+  The **Set-AppxDefaultVolume** cmdlet specifies a default **AppxVolume**.
+  The default **AppxVolume** is the default target for all deployment operations on the computer.
+  Deployment operations can specify a different non-default target volume.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: Appx
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appx/set-appxdefaultvolume?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AppxDefaultVolume

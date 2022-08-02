@@ -1,0 +1,189 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the properties of the specified resiliency setting name.
+module: Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_ResiliencySetting" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-ResiliencySetting
+  href: ./Get-ResiliencySetting.yml
+syntaxes:
+- >-
+  Set-ResiliencySetting [-AsJob] [-AutoNumberOfColumns] [-CimSession <CimSession[]>]
+
+   [-InterleaveDefault <UInt64>] [-NumberOfColumnsDefault <UInt16>] [-NumberOfDataCopiesDefault <UInt16>]
+
+   [-PassThru] [-PhysicalDiskRedundancyDefault <UInt16>] [-ThrottleLimit <Int32>] -Name <String[]>
+
+   -StoragePool <CimInstance>
+- >-
+  Set-ResiliencySetting [-AsJob] [-AutoNumberOfColumns] [-CimSession <CimSession[]>]
+
+   [-InterleaveDefault <UInt64>] [-NumberOfColumnsDefault <UInt16>] [-NumberOfDataCopiesDefault <UInt16>]
+
+   [-PassThru] [-PhysicalDiskRedundancyDefault <UInt16>] [-ThrottleLimit <Int32>] -InputObject <CimInstance[]>
+- >-
+  Set-ResiliencySetting [-AsJob] [-AutoNumberOfColumns] [-CimSession <CimSession[]>]
+
+   [-InterleaveDefault <UInt64>] [-NumberOfColumnsDefault <UInt16>] [-NumberOfDataCopiesDefault <UInt16>]
+
+   [-PassThru] [-PhysicalDiskRedundancyDefault <UInt16>] [-ThrottleLimit <Int32>] -UniqueId <String[]>
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Set-ResiliencySetting -Name "Mirror" -NumberofColumnsDefault 8 -NumberofDataCopies 2
+  description: |-
+    This example sets the default number of columns to eight on virtual disks that use the Mirror setting, with the number of data copies set to two, indicating a two-way mirror, instead of a three-way mirror.
+    A two-way mirror with eight columns requires 16 physical disks to create.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AutoNumberOfColumns
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an object from the pipeline as input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: InterleaveDefault
+  description: |+
+    Specifies the default interleave value to use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of an object or setting.
+    The acceptable values for this parameter are:simple, mirror, or parity.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: NumberOfColumnsDefault
+  description: |+
+    Specifies the default number of columns to create.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: NumberOfDataCopiesDefault
+  description: |+
+    Specifies the default number of data copies to create.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: "Sends items from the interactive window down the pipeline as input to other cmdlets.\r\nBy default, this cmdlet does not generate any output. \r\n\r\n\r\n                        \r\nTo send items from the interactive window down the pipeline, click to select the items and then click OK.\r\nShift-click and Ctrl-click are supported.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: PhysicalDiskRedundancyDefault
+  description: |+
+    Specifies the default number to use for the physical disk redundancy value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StoragePool
+  isRequired: true
+  description: |+
+    Accepts a StoragePool object as input.
+    The Storage Pool CIM object is exposed by the Get-StoragePoolhttp://technet.microsoft.com/library/288acad9-7678-45c2-b7b4-3a0522fea499 cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UniqueId
+  isRequired: true
+  description: |+
+    Specifies an ID used to uniquely identify a Disk object in the system.
+    The ID persists through restarts.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+uid: Storage.Set-ResiliencySetting
+name: Set-ResiliencySetting
+description: |-
+  The **Set-ResiliencySetting** cmdlet modifies the properties of the specified resiliency setting name.
+  For example, the user can specify that when creating any new virtual disk using the resiliency setting named Mirror, that the default interleave value would be 128K, or to define the default number of columns to use when creating a Simple (stripe without parity) virtual disk.
+metadata:
+  external help file: Storage2_Cmdlets.xml
+  Module Name: Storage
+  online version: https://docs.microsoft.com/powershell/module/storage/set-resiliencysetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

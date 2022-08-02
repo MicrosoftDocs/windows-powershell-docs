@@ -1,0 +1,138 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets Provider Addresses.
+module: NetWNV
+notes: ""
+links:
+- text: New-NetVirtualizationProviderAddress
+  href: ./New-NetVirtualizationProviderAddress.yml
+- text: Remove-NetVirtualizationProviderAddress
+  href: ./Remove-NetVirtualizationProviderAddress.yml
+- text: Set-NetVirtualizationProviderAddress
+  href: ./Set-NetVirtualizationProviderAddress.yml
+syntaxes:
+- >-
+  Get-NetVirtualizationProviderAddress [-AddressState <AddressState[]>] [-AsJob] [-CimSession <CimSession[]>]
+
+   [-InterfaceIndex <UInt32[]>] [-PrefixLength <Byte[]>] [-ProviderAddress <String[]>] [-ThrottleLimit <Int32>]
+
+   [-VlanID <UInt16[]>]
+examples:
+- title: 'Example 1: Get Provider Addresses for an interface'
+  code: |-
+    PS C:\> Get-NetVirtualizationProviderAddress -InterfaceIndex 13
+  description: |-
+    This command gets the Provider Address for the interface with the specified index.
+  summary: ""
+- title: 'Example 2: Get a specific Provider Address'
+  code: |-
+    PS C:\>Get-NetVirtualizationProviderAddress -ProviderAddress "172.16.2.3"
+  description: |-
+    This command gets the Provider Address that has the IP address 172.16.2.3.
+  summary: ""
+parameters:
+- type: <xref href="AddressState" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressState
+  description: |+
+    Specifies an array of states of Provider Addresses.
+    The acceptable values for this parameter are:
+
+    - Preferred.
+    The address is unique. 
+    - Tentative.
+    The address is not yet verified. 
+    - Duplicate.
+    There is a duplicate address on the network. 
+    - Invalid.
+    The address lifetime has expired. 
+    - Deprecated.
+    The address cannot start new connections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceIndex
+  description: |+
+    Specifies an array of indexes for network interfaces that have hv_win8_2 Network Virtualization enabled.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PrefixLength
+  description: |+
+    Specifies an array of lengths of IP prefixes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ProviderAddress
+  description: |+
+    Specifies an array of IP addresses.
+    You can use IPv4 and IPv6 addresses.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VlanID
+  description: |+
+    Specifies an array of IDs for VLANs for Provider Addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetWNV.Get-NetVirtualizationProviderAddress
+name: Get-NetVirtualizationProviderAddress
+description: |-
+  The **Get-NetVirtualizationProviderAddress** cmdlet gets Provider Addresses configured in hv_win8_1 Network Virtualization.
+  A Provider Address is an IPv4 or IPv6 address that Network Virtualization uses for multiple virtual Customer Addresses.
+  For more information, see Network Virtualization technical detailshttp://technet.microsoft.com/library/jj134174.aspx (http://technet.microsoft.com/library/jj134174.aspx) on TechNet.
+
+  You can specify which Provider Addresses to get by using address state, interface index, prefix length, IP address, or VLAN ID.
+  You can use this cmdlet to get Provider Addresses for other cmdlets, such as the Set-NetVirtualizationProviderAddress cmdlet or the Remove-NetVirtualizationProviderAddress cmdlet.
+metadata:
+  external help file: NetWNV_Cmdlets.xml
+  Module Name: NetWNV
+  online version: https://docs.microsoft.com/powershell/module/netwnv/get-netvirtualizationprovideraddress?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

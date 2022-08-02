@@ -1,0 +1,142 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Loads a package into the App-V cache.
+module: AppvClient
+notes: |-
+  * If a previous mount has been canceled, the cmdlet resumes that mount when it is run again. The package must be added to the system before mounting. Otherwise the cmdlet fails. If you do not specify any parameters, the cmdlet mounts all packages on the system.
+  * This cmdlet is synchronous. It returns when the mount option has completed. To make the cmdlet asynchronous, use the **Start-Job** cmdlet.
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AppvClientPackage
+  href: ./Add-AppvClientPackage.yml
+- text: Get-AppvClientPackage
+  href: ./Get-AppvClientPackage.yml
+- text: Publish-AppvClientPackage
+  href: ./Publish-AppvClientPackage.yml
+- text: Remove-AppvClientPackage
+  href: ./Remove-AppvClientPackage.yml
+- text: Repair-AppvClientPackage
+  href: ./Repair-AppvClientPackage.yml
+- text: Set-AppvClientPackage
+  href: ./Set-AppvClientPackage.yml
+- text: Stop-AppvClientPackage
+  href: ./Stop-AppvClientPackage.yml
+- text: Unpublish-AppvClientPackage
+  href: ./Unpublish-AppvClientPackage.yml
+syntaxes:
+- Mount-AppvClientPackage [-Cancel] [-PackageId] <Guid> [-VersionId] <Guid> [<CommonParameters>]
+- Mount-AppvClientPackage [-Cancel] [-Package] <AppvClientPackage> [<CommonParameters>]
+- Mount-AppvClientPackage [-Name] <String> [[-Version] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a specific version of a package'
+  code: |-
+    PS C:\> Mount-AppvClientPackage -Name "MyApp" -Version 2
+  description: |-
+    This command downloads the version 2 of the package named MyApp.
+  summary: ""
+- title: 'Example 2: Get all versions of a package'
+  code: |-
+    PS C:\> Mount-AppvClientPackage -Name "MyApp"
+  description: |-
+    This command downloads the all versions of the package named MyApp.
+  summary: ""
+- title: 'Example 3: Download all packages that match a string'
+  code: |-
+    PS C:\> Get-AppvClientPackage -Name "My*" | Mount-AppvClientPackage
+  description: |-
+    This command gets all packages that have the string My in the name, and then downloads them.
+  summary: ""
+- title: 'Example 4: Download and publish a new package'
+  code: |-
+    PS C:\> Add-AppvClientPackage -Path "http://MyServer/content/package.Appv" | Mount-AppvClientPackage | Publish-AppvClientPackage -Global
+  description: |-
+    This command adds the package from the path specified, downloads it, and then publishes it to all users on the computer.
+  summary: ""
+- title: 'Example 5: Cancel a download'
+  code: |-
+    PS C:\> Mount-AppvClientPackage -Name "MyApp" -Cancel
+  description: |-
+    This command cancels the download of the package name MyApp.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Cancel
+  description: |+
+    Indicates that the cmdlet stops the loading of a package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the package given during sequencing time.
+    This value is obtained from the package manifest.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppvClientPackage" data-throw-if-not-resolved="False" />
+  name: Package
+  isRequired: true
+  description: |+
+    Specifies an App-V package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PackageId
+  isRequired: true
+  description: |+
+    Specifies a GUID that uniquely identifies the package.
+    It can be found in the package manifest or by opening the package in the App-V Sequencer.
+    The package IDs are shared by all versions of a specific package.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of an App-V package in one lineage.
+    If you do not specify this parameter, the cmdlet operates on all versions on the computer.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionId
+  isRequired: true
+  description: |+
+    Specifies a GUID that differentiates a package version from other versions, whether older, newer, or of a different lineage.
+    If you do not specify this parameter, the cmdlet operates on all versions of the package.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Mount-AppvClientPackage
+name: Mount-AppvClientPackage
+description: |-
+  The **Mount-AppvClientPackage** cmdlet initiates or resumes the loading of an Microsoft Application Virtualization (App-V) package into the cache.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/mount-appvclientpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Mount-AppvClientPackage

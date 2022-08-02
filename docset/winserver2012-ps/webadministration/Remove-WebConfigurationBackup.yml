@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an existing IIS configuration backup.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Remove-WebConfigurationBackup [[-Name] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Adding and removing an IIS configuration backup --------------'
+  code: |-
+    IIS:\>Backup-WebConfiguration MyNewBackup Get-WebConfigurationBackup MyNewBackup sleep 5 Remove-WebConfigurationBackup MyNewBackup
+  description: |-
+    The example creates a configuration backup, lists the backup created, sleeps for 5 seconds, and then removes the backup.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the configuration backup that is to be removed.
+    The folder with this name is deleted from the $env:Windir\system32\inetsrv\backup folder.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Remove-WebConfigurationBackup
+name: Remove-WebConfigurationBackup
+description: |-
+  Removes an IIS configuration backup that was created by using theT:Microsoft.IIs.PowerShell.Provider.Backup-WebConfigurationcmdlet.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/remove-webconfigurationbackup?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

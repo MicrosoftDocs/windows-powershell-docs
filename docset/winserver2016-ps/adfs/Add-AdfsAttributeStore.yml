@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an attribute store to the Federation Service.
+module: ADFS
+notes: |-
+  * An Active Directory Federation Services (AD FS) 2.0 attribute store is a pluggable module that the policy process for AD FS 2.0 can query to retrieve claim values. You can use either an Active Directory database or a Microsoft SQL Server database as your attribute store, or you can implement your own custom attribute store.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None or Microsoft.IdentityServer.Management.Resources.AttributeStore" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the new AttributeStore object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Get-AdfsAttributeStore
+  href: ./Get-AdfsAttributeStore.yml
+- text: Set-AdfsAttributeStore
+  href: ./Set-AdfsAttributeStore.yml
+- text: Remove-AdfsAttributeStore
+  href: ./Remove-AdfsAttributeStore.yml
+syntaxes:
+- >-
+  Add-AdfsAttributeStore -Name <String> -StoreType <String> -Configuration <Hashtable> [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Add-AdfsAttributeStore -Name <String> -TypeQualifiedName <String> -Configuration <Hashtable> [-PassThru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a SQL type attribute store'
+  code: |-
+    PS C:\> Add-AdfsAttributeStore -Name "LocalSqlStore" -StoreType "SQL" -Configuration @{"name" = "SQL Attribute Store"; "Connection" = "Server=CONTOSOSRV01;Database=UserAttributes;Integrated Security=True;Async=True"}
+  description: |-
+    This command adds a SQL-based attribute store named LocalSqlStore.
+  summary: ""
+- title: 'Example 2: Add a custom attribute store'
+  code: |-
+    PS C:\> Add-AdfsAttributeStore -Name "MyCustomStore" -TypeQualifiedName "Contoso.CustomTypes.MyAttributeStore, Contoso.CustomTypes" -Configuration @{"Name" = "Custom Attribute Store"; "Connection" = "Default"}
+  description: |-
+    This command adds a custom attribute store named MyCustomStore.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Configuration
+  isRequired: true
+  description: |+
+    Specifies the initialization parameters of the attribute store, such as a connection string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of this attribute store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StoreType
+  isRequired: true
+  description: |+
+    Specifies the type of attribute store to add.
+    The acceptable values for this parameter are:
+
+    - ActiveDirectory
+    - LDAP
+    - SQL
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ActiveDirectory, LDAP, SQL
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TypeQualifiedName
+  isRequired: true
+  description: |+
+    Specifies the class reference for a custom attribute store that is implemented in a .NET assembly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Add-AdfsAttributeStore
+name: Add-AdfsAttributeStore
+description: |-
+  The **Add-AdfsAttributeStore** cmdlet adds an attribute store to the Federation Service.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/add-adfsattributestore?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-AdfsAttributeStore

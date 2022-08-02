@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets persistent memory disks.
+module: PersistentMemory
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Storage.PersistentMemory.Management.PmemPhysicalDevice" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-PhysicalDisk
+  href: ../storage/Get-PhysicalDisk.yml
+- text: New-PmemDisk
+  href: New-PmemDisk.yml
+- text: Remove-PmemDisk
+  href: Remove-PmemDisk.yml
+syntaxes:
+- Get-PmemDisk [<CommonParameters>]
+- Get-PmemDisk [[-DiskNumber] <UInt32[]>] [<CommonParameters>]
+- Get-PmemDisk [-PhysicalDevice <PmemPhysicalDevice>] [<CommonParameters>]
+- Get-PmemDisk [-PhysicalDeviceId <String[]>] [<CommonParameters>]
+- Get-PmemDisk [-InputObject <CimInstance>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get persistent memory disks'
+  code: |-
+    Get-PmemDisk
+
+    DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds UnsafeShutdownCount
+    ---------- ----   ------------ ------------- ------------ ----------------- -------------------
+    2          252 GB Healthy      None          True         {20, 120}         0
+    3          252 GB Healthy      None          True         {1020, 1120}      0
+  description: |-
+    This example gets all persistent memory disks.
+  summary: ""
+- title: 'Example 2: Get persistent memory disk by number'
+  code: |-
+    Get-PmemDisk -DiskNumber 2
+
+    DiskNumber Size   HealthStatus AtomicityType CanBeRemoved PhysicalDeviceIds UnsafeShutdownCount
+    ---------- ----   ------------ ------------- ------------ ----------------- -------------------
+    2          252 GB Healthy      None          True         {20, 120}         0
+  description: |-
+    This example gets the specified persistent memory disk.
+  summary: ""
+- title: 'Example 3: Get physical disk information'
+  code: |-
+    Get-PmemDisk | Get-PhysicalDisk | select SerialNumber, HealthStatus, OperationalStatus, OperationalDetails
+
+    SerialNumber               HealthStatus OperationalStatus  OperationalDetails
+    ------------               ------------ ------------------ ------------------
+    802c-01-1602-117cb5fc      Healthy      OK
+    802c-01-1602-117cb64f      Warning      Predictive Failure {Threshold Exceeded,NVDIMM_N Error}
+  description: |-
+    This example gets persistent memory disks. It then gets the physical disks that host them and uses the **select** command to display serial number, health status, and operational information.
+  summary: ""
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DiskNumber
+  description: |+
+    Specifies the disk number of persistent memory disk to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the input object that is used in a pipeline command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PmemPhysicalDevice" data-throw-if-not-resolved="False" />
+  name: PhysicalDevice
+  description: |+
+    Specifies a physical disk.
+    The cmdlet gets persistent memory disks on the physical disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PhysicalDeviceId
+  description: |+
+    Specifies the ID of a physical disk.
+    The cmdlet gets persistent memory disks on the physical disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PersistentMemory.Get-PmemDisk
+name: Get-PmemDisk
+description: |-
+  The **Get-PmemDisk** cmdlet gets persistent memory disks.
+  You can get disks by number or physical device.
+metadata:
+  description: The Get-PmemDisk cmdlet gets persistent memory disks.
+  external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
+  Module Name: PersistentMemory
+  online version: https://docs.microsoft.com/powershell/module/persistentmemory/get-pmemdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  ms.date: 09/24/2021
+  title: Get-PmemDisk

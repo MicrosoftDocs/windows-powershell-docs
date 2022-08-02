@@ -1,0 +1,267 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a trust anchor to a DNS server.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerTrustAnchor" data-throw-if-not-resolved="False" />
+  description: |-
+    The DnsServerTrustAnchor object contains the following fields:
+
+    - EnteredStateTime
+    - KeyTag
+    - NextStateTime
+    - TrustAnchorData
+    - TrustAnchorName
+    - TrustAnchorState
+    - TrustAnchorType
+links:
+- text: Get-DnsServerTrustAnchor
+  href: ./Get-DnsServerTrustAnchor.yml
+- text: Import-DnsServerTrustAnchor
+  href: ./Import-DnsServerTrustAnchor.yml
+- text: Remove-DnsServerTrustAnchor
+  href: ./Remove-DnsServerTrustAnchor.yml
+- text: Get-DnsServerResourceRecord
+  href: ./Get-DnsServerResourceRecord.yml
+syntaxes:
+- >-
+  Add-DnsServerTrustAnchor [-Name] <String> [-KeyProtocol <String>] -Base64Data <String> [-ComputerName <String>]
+
+   [-CryptoAlgorithm] <String> [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-DnsServerTrustAnchor [-Name] <String> [-ComputerName <String>] [-CryptoAlgorithm] <String> [-PassThru]
+
+   -KeyTag <UInt16> -DigestType <String> -Digest <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-DnsServerTrustAnchor [-ComputerName <String>] [-PassThru] [-Root] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a trust anchor to a DNS server'
+  code: |-
+    PS C:\> Get-DnsServerResourceRecord -ZoneName "sec.contoso.com" -RRType "dnskey" -ComputerName DNS1 | %{ $_.RecordData | Add-DnsServerTrustAnchor -PassThru -Verbose -Name "sec.contoso.com"}
+    VERBOSE: Adding trust anchor for trust point sec.contoso.com of type DNSKEY on server Server01. 
+    TrustAnchorName             TrustAnchorType      TrustAnchorState     TrustAnchorData
+    ---------------              ---------------      ----------------     ---------------
+    sec.contoso.com             DNSKEY               Valid                [23600][DnsSec][RsaSha256][AwEAAbZvBTiMzoqK... 
+    VERBOSE: Adding trust anchor for trust point sec.contoso.com of type DNSKEY on server Server01. 
+    sec.contoso.com             DNSKEY               Valid                [53180][DnsSec][RsaSha256][AwEAAbsS7NnziyRY... 
+    VERBOSE: Adding trust anchor for trust point sec.contoso.com of type DNSKEY on server Server01. 
+
+    sec.contoso.com             DNSKEY               Valid                [50272][DnsSec][RsaSha256][AwEAAe1EkxNj6M1b... 
+    VERBOSE: Adding trust anchor for trust point sec.contoso.com of type DNSKEY on server Server01. 
+    sec.contoso.com             DNSKEY               Valid                [37436][DnsSec][RsaSha256][AwEAAa1PJyk2lITB... 
+    VERBOSE: Adding trust anchor for trust point sec.contoso.com of type DNSKEY on server Server01. 
+    sec.contoso.com             DNSKEY               Valid                [2895][DnsSec][RsaSha1NSec3][AwEAAbOk5nl41M... 
+    VERBOSE: Adding trust anchor for trust point sec.contoso.com of type DNSKEY on server Server01. 
+    sec.contoso.com             DNSKEY               Valid                [62250][DnsSec][RsaSha1NSec3][AwEAAci9Ayfjg... 
+    VERBOSE: Adding trust anchor for trust point sec.contoso.com of type DNSKEY on server Server01. 
+    sec.contoso.com             DNSKEY               Valid                [47244][DnsSec][RsaSha1NSec3][AwEAAcFv94ne6...
+  description: |-
+    This command uses the **Get-DnsServerResourceRecord** cmdlet to obtain a DnsKey resource record from the DNS server DNS1 for the zone named sec.contoso.com.
+    The command then uses the pipeline operator to send it to the **Add-DnsServerTrustAnchor** cmdlet to add a trust anchor to the current DNS server for this zone.
+  summary: ""
+- title: 'Example 2: Add a trust anchor from the RootTrustAnchorsURL property'
+  code: |-
+    PS C:\> Add-DnsServerTrustAnchor -Root
+  description: |-
+    This command adds the trust anchors from the URL specified by the **RootTrustAnchorsURL** property of the DNS server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Base64Data
+  isRequired: true
+  description: |+
+    Specifies key data.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a remote DNS server.
+    The acceptable values for this parameter are:an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CryptoAlgorithm
+  isRequired: true
+  description: |+
+    Specifies the cryptographic algorithm that the cmdlet uses for key generation.
+    The acceptable values for this parameter are:
+
+    - RsaSha1
+    - RsaSha256
+    - RsaSha512
+    - RsaSha1NSec3
+    - ECDsaP256Sha256
+    - ECDsaP384Sha384
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: RsaSha1, RsaSha256, RsaSha512, RsaSha1NSec3, ECDsaP256Sha256, ECDsaP384Sha384
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Digest
+  isRequired: true
+  description: |+
+    Specifies the DS digest data.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DigestType
+  isRequired: true
+  description: |+
+    Specifies the type of algorithm that the zone signing key uses to create the DS record.
+    Valid values are one or more of the following: 
+    - Sha1
+    - Sha256
+    - Sha384
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Sha1, Sha256, Sha384
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: KeyProtocol
+  description: |+
+    Specifies the key protocol.
+    The default is Dnssec.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: DnsSec
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: KeyTag
+  isRequired: true
+  description: |+
+    Specifies the unique key tag that the DNS server uses to identify a key.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a trust anchor on a DNS server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: TrustAnchorName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Root
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet adds the trust anchor of the root zone from the URL specified by the **RootTrustAnchorsURL** property of the DNS server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DnsServer.Add-DnsServerTrustAnchor
+name: Add-DnsServerTrustAnchor
+description: |-
+  The **Add-DnsServerTrustAnchor** cmdlet adds a trust anchor (DNSKEY record or DS record) to a Domain Name System (DNS) server.
+  If no trust anchor is present, the cmdlet creates one.
+  If you specify the *DigestType* parameter, the cmdlet adds a trust anchor delegation signer (DS) record.
+
+  If you specify the *Root* parameter the cmdlet retrieves the trust anchors from the URL specified in RootTrustAnchorsURL property of the DNS server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerTrustAnchor_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/add-dnsservertrustanchor?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-DnsServerTrustAnchor

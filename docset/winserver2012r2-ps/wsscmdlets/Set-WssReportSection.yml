@@ -1,0 +1,39 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the sections to include in a health report.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Get-WssReportSection
+  href: ./Get-WssReportSection.yml
+syntaxes:
+- Set-WssReportSection [-Section] <WssReportSection> [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the report sections for a health report'
+  code: |-
+    PS C:\> Set-WssReportSection ShowCriticalAlertsAndWarnings,ShowBackups
+  description: |-
+    This command sets the report sections for a health report on a server where you run the cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="WssReportSection" data-throw-if-not-resolved="False" />
+  name: Section
+  isRequired: true
+  description: |+
+    Specifies the sections to include in a health report.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ShowCriticalAlertsAndWarnings, ShowErrorsInEventLog, ShowServiceNotRunning, ShowSecurityAndUpdates, ShowBackups, ShowStorage, All, None
+uid: WSSCmdlets.Set-WssReportSection
+name: Set-WssReportSection
+description: |-
+  The **Set-WssReportSection** cmdlet sets the sections to include in a health report.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssreportsection?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssReportSection

@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the Culture from language list opt out setting for the current user account.
+module: International
+notes: ""
+links:
+- text: Get-WinCultureFromLanguageListOptOut
+  href: ./Get-WinCultureFromLanguageListOptOut.yml
+syntaxes:
+- Set-WinCultureFromLanguageListOptOut [-OptOut] <Boolean> [<CommonParameters>]
+examples:
+- title: 'Example 1: Block dynamic setting'
+  code: |-
+    PS C:\> Set-WinCultureFromLanguageListOptOut -OptOut $True
+  description: |-
+    This command blocks the dynamic setting behavior.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: OptOut
+  isRequired: true
+  description: |+
+    Specifies the opt-out value.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: International.Set-WinCultureFromLanguageListOptOut
+name: Set-WinCultureFromLanguageListOptOut
+description: |-
+  The **Set-WinCultureFromLanguageListOptOut** cmdlet sets the Culture, or User Locale, opt-out setting for the current user account.
+  Setting this option to $True disables the action of dynamically setting the Culture for the current user based on changes to the Windows display language.
+  Setting this option to $False activates the dynamic setting behavior.
+  The default setting is $False.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/international/set-winculturefromlanguagelistoptout?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WinCultureFromLanguageListOptOut

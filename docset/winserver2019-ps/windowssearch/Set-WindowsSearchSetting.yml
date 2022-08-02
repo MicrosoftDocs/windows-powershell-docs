@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies values that control Windows Search.
+module: WindowsSearch
+notes: ""
+links:
+- text: Get-WindowsSearchSetting
+  href: ./Get-WindowsSearchSetting.yml
+syntaxes:
+- >-
+  Set-WindowsSearchSetting [-EnableWebResultsSetting <Boolean>] [-EnableMeteredWebResultsSetting <Boolean>]
+
+   [-SearchExperienceSetting <String>] [-SafeSearchSetting <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Personalize Windows Search'
+  code: |-
+    PS C:\> Set-WindowsSearchSetting -SearchExperienceSetting "Personalized"
+  description: |-
+    This command allows Windows Search to use search history, but not specific location of the user, to personalize results.
+  summary: ""
+- title: 'Example 2: Modify Windows Search settings'
+  code: |-
+    PS C:\> Set-WindowsSearchSetting -EnableWebResultsSetting $True -SafeSearchSetting "Strict" -SearchExperienceSetting "PersonalizedAndLocation"
+  description: |-
+    This command modifies Windows Search settings.
+    The command enables the use of search history and specific location of the user by specifying a value of PersonalizedAndLocation for the *SearchExperienceSetting* parameter.
+    The command enables web results and sets SafeSearch to a value of Strict.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableMeteredWebResultsSetting
+  description: |+
+    Indicates whether Windows Search displays web results and suggestions while using metered connections.
+    Specify a value of $True to display web results and suggestions over metered connections or a value of $False to exclude web results and suggestions.
+
+    Do not specify a value for this parameter if the value of the *EnableWebResultsSetting* parameter is $False.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableWebResultsSetting
+  description: |+
+    Indicates whether Windows Search displays web results and suggestions.
+    Specify a value of $True to display web results and suggestions or a value of $False to exclude web results and suggestions.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SafeSearchSetting
+  description: |+
+    Specifies a SafeSearch setting for Window Search.
+
+    The acceptable values for this parameter are:
+
+    - Off.
+    Windows Search does not remove adult content from the results. 
+    - Moderate.
+    Windows Search excludes adult images and videos, but not text, from the results. 
+    - Strict.
+    Windows Search excludes adult images, videos, and text from the results.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Strict, Moderate, Off
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SearchExperienceSetting
+  description: |+
+    Specifies a Windows Search experience setting.
+
+    The acceptable values for this parameter are:
+
+    - PersonalizedAndLocation.
+    Personalize Windows Search and other Microsoft experiences by using search history, some Microsoft account information, and specific location of the user. 
+    - Personalized.
+    Personalize Windows Search and other Microsoft experiences by using search history and some Microsoft account information, but do not use specific location of the user. 
+    - NotPersonalized.
+    Do not personalize Windows Search and other Microsoft experiences or use specific location of the user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: PersonalizedAndLocation, Personalized, NotPersonalized
+uid: WindowsSearch.Set-WindowsSearchSetting
+name: Set-WindowsSearchSetting
+description: |-
+  The **Set-WindowsSearchSetting** cmdlet modifies values that control Windows Search.
+  You can specify whether Windows Search displays web results or suggestions, and you can specify whether to display web results and suggestions while using a metered network.
+  You can specify whether Windows Search personalizes results, including whether Windows Search employs the specific location of the user.
+  You can also specify SafeSearch settings.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.WindowsSearch.Commands.dll-Help.xml
+  Module Name: WindowsSearch
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/windowssearch/set-windowssearchsetting?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WindowsSearchSetting

@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Defines settings for the RD Licensing server and the licensing mode of the Remote Desktop deployment.
+module: RemoteDesktop
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDLicenseConfiguration
+  href: ./Get-RDLicenseConfiguration.yml
+syntaxes:
+- Set-RDLicenseConfiguration -Mode <LicensingMode> [-Force] [-ConnectionBroker <String>] [<CommonParameters>]
+- >-
+  Set-RDLicenseConfiguration -Mode <LicensingMode> -LicenseServer <String[]> [-Force]
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+- Set-RDLicenseConfiguration -LicenseServer <String[]> [-Force] [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the Remote Desktop license configuration'
+  code: |-
+    PS C:\> Set-RDLicenseConfiguration -LicenseServer @("Rdl-1.Contoso.com","Rdl-2.Contoso.com") -ConnectionBroker "Rdcb.Contoso.com"
+  description: |-
+    This command sets the Remote Desktop license configuration with the servers named Rdl1-Contoso.com and Rdl-2.Contoso.com and the RD Connection Broker server named Rdcb.Contoso.com.
+  summary: ""
+- title: 'Example 2: Set the Remote Desktop license configuration in PerUser mode'
+  code: |-
+    PS C:\> Set-RDLicenseConfiguration -LicenseServer @("Rdl-1.Contoso.com","Rdl-2.Contoso.com") -Mode PerUser -ConnectionBroker "Rdcb.Contoso.com"
+  description: |-
+    This command sets the Remote Desktop license configuration in PerUser mode with the servers named Rdl-1.Contoso.com and Rdl-2.Contoso.com and the RD Connection Broker server named Rdcb.Contoso.com.
+  summary: ""
+- title: 'Example 3: Set the Remote Desktop license configuration in PerDevice mode'
+  code: |-
+    PS C:\> Set-RDLicenseConfiguration -Mode PerDevice -ConnectionBroker "Rdcb.Contoso.com"
+  description: |-
+    This command sets the Remote Desktop license configuration in PerDevice mode for the RD Connection Broker server named Rdcb.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local host.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LicenseServer
+  isRequired: true
+  description: |+
+    Specifies the FQDN of the RD Licensing server to configure.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LicensingMode" data-throw-if-not-resolved="False" />
+  name: Mode
+  isRequired: true
+  description: |+
+    Specifies the licensing mode to configure for the deployment.
+    Valid values are PerUser, PerDevice, and NotConfigured.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: PerDevice, PerUser, NotConfigured
+uid: RemoteDesktop.Set-RDLicenseConfiguration
+name: Set-RDLicenseConfiguration
+description: |-
+  The **Set-RDLicenseConfiguration** cmdlet defines settings for the Remote Desktop Licensing (RD Licensing) server and the licensing mode of the Remote Desktop deployment.
+
+  RD Licensing manages the Remote Desktop Services client access licenses (RDS CALs) that each device or user requires to connect to a Remote Desktop Session Host (RD Session Host) server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdlicenseconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDLicenseConfiguration

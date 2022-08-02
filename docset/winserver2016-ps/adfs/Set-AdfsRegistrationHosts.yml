@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  The Set-AdfsRegistrationHosts cmdlet is deprecated.
+  Instead, use the **Set-AdfsDeviceRegistrationUpnSuffix** cmdlet.
+module: ADFS
+notes: ""
+links:
+- text: Get-AdfsRegistrationHosts
+  href: ./Get-AdfsRegistrationHosts.yml
+- text: Set-AdfsDeviceRegistrationUpnSuffix
+  href: ./Set-AdfsDeviceRegistrationUpnSuffix.yml
+syntaxes:
+- Set-AdfsRegistrationHosts [-UpnSuffixes] <String[]> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UpnSuffixes
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsRegistrationHosts
+name: Set-AdfsRegistrationHosts
+description: |-
+  The **Set-AdfsRegistrationHosts** cmdlet is deprecated in this release.
+  Instead, use the **Set-AdfsDeviceRegistrationUpnSuffix** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsregistrationhosts?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsRegistrationHosts

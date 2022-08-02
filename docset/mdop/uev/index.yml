@@ -1,0 +1,40 @@
+### YamlMime:PowershellModule
+children:
+- title: UEV
+  cmdlets:
+  - UEV.Clear-UevAppxPackage
+  - UEV.Clear-UevConfiguration
+  - UEV.Disable-UevAppxPackage
+  - UEV.Disable-UevTemplate
+  - UEV.Enable-UevAppxPackage
+  - UEV.Enable-UevTemplate
+  - UEV.Export-UevConfiguration
+  - UEV.Export-UevPackage
+  - UEV.Get-UevAppxPackage
+  - UEV.Get-UevConfiguration
+  - UEV.Get-UevTemplate
+  - UEV.Get-UevTemplateProgram
+  - UEV.Import-UevConfiguration
+  - UEV.Register-UevTemplate
+  - UEV.Repair-UevTemplateIndex
+  - UEV.Restore-UevBackup
+  - UEV.Restore-UevUserSetting
+  - UEV.Set-UevConfiguration
+  - UEV.Set-UevTemplateProfile
+  - UEV.Test-UevTemplate
+  - UEV.Unregister-UevTemplate
+  - UEV.Update-UevTemplate
+uid: UEV
+name: UEV
+description: |-
+  The following list contains links to the help topics for the cmdlets.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  Download Help Link: http://go.microsoft.com/fwlink/?LinkId=301255
+  Help Version: 4.0.100.0
+  Locale: en-US
+  Module Guid: D22E34C9-0A99-47D7-98F3-C0570257DEB6
+  Module Name: UEV
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  title: UEV

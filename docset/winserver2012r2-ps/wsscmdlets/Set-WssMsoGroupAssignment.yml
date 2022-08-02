@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Assigns a security group to a user group.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    WssGroupName
+    Type: System.String
+    Description: local network account name of group
+links:
+- text: Remove-WssMsoGroupAssignment
+  href: ./Remove-WssMsoGroupAssignment.yml
+- text: Set-WssMsoUserAssignment
+  href: ./Set-WssMsoUserAssignment.yml
+syntaxes:
+- Set-WssMsoGroupAssignment [-WssGroupName] <String> [-MsoId] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Assign a security group'
+  code: |-
+    PS C:\> Set-WssMSOAssignedGroup -WssGroupName "Admins" -MsoId "d77e9419-2e1f-4080-ae7c-9b97c6caa681"
+  description: |-
+    This command assigns the specified security group to the user group named Admins.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MsoId
+  isRequired: true
+  description: |+
+    Specifies an ID for a security group.
+    The cmdlet assign the security group that you specify to a Windows Server Essentials user group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WssGroupName
+  isRequired: true
+  description: |+
+    Specifies the name of a Windows Server Essentials user group.
+    The cmdlet assigns a security group to the gets the user group that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Set-WssMsoGroupAssignment
+name: Set-WssMsoGroupAssignment
+description: |-
+  The **Set-WssMsoGroupAssignment** cmdlet assigns a aad_1 security group to a Windows Server Essentials user group.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssmsogroupassignment?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssMsoGroupAssignment

@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports the settings stored in a settings package.
+module: UEV
+notes: ""
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    A collection of paths to the settings packages.
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates XML text that describes the settings stored in the specified settings package.
+syntaxes:
+- Export-UevPackage [-Path] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Export-UevPackage -LiteralPath <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Export a UE-V package'
+  code: |-
+    PS C:\> Export-UevPackage -Path "MicrosoftCalculator6.pkgx"
+    <SettingsDocument>
+    <registry>
+    <Setting Type="VT_BINARY" Name="registry://HKCU\Software\Microsoft\Calc\Window_Placement" Action="Update">LAAAAAAAAAABAAAA/////////////////////60AAABQAAAAVAIAANQBAAA=</Setting>
+    <Setting Type="VT_DWORD" Name="registry://HKCU\Software\Microsoft\Calc\layout" Action="Update">2</Setting>
+    </registry>
+    </SettingsDocument>
+  description: |-
+    This command exports a settings package file for Microsoft calculator by using the *Path* parameter.
+  summary: ""
+- title: 'Example 2: Export a UE-V package by name'
+  code: |-
+    PS C:\> Export-UevPackage -Path "*calc*.pkgx"
+
+
+    <SettingsDocument>
+    <registry>
+    <Setting Type="VT_BINARY" Name="registry://HKCU\Software\Microsoft\Calc\Window_Placement" Action="Update">LAAAAAAAAAABAAAA/////////////////////60AAABQAAAAVAIAANQBAAA=</Setting>
+    <Setting Type="VT_DWORD" Name="registry://HKCU\Software\Microsoft\Calc\layout" Action="Update">2</Setting>
+    </registry>
+    </SettingsDocument>
+  description: |-
+    This command exports a settings package file for Microsoft calculator by using wildcard characters in the file name.
+  summary: ""
+- title: 'Example 3: Export a UE-V package by path'
+  code: |-
+    PS C:\> Export-UevPackage -LiteralPath "MicrosoftCalculator6.pkgx"
+    <SettingsDocument>
+    <registry>
+    <Setting Type="VT_BINARY" Name="registry://HKCU\Software\Microsoft\Calc\Window_Placement" Action="Update">LAAAAAAAAAABAAAA/////////////////////60AAABQAAAAVAIAANQBAAA=</Setting>
+    <Setting Type="VT_DWORD" Name="registry://HKCU\Software\Microsoft\Calc\layout" Action="Update">2</Setting>
+    </registry>
+    </SettingsDocument>
+  description: |-
+    This command exports a settings package file for Microsoft calculator.
+    The example does not use wildcard characters in the path.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LiteralPath
+  isRequired: true
+  description: |+
+    Specifies an array of literal file paths.
+    The cmdlet exports the settings location templates that have the literal paths that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: PSPath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies an array of file paths.
+    The cmdlet exports the settings location templates that have the paths you specify.
+    Use wildcards to specify multiple files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UEV.Export-UevPackage
+name: Export-UevPackage
+description: |-
+  The **Export-UevPackage** cmdlet exports the settings that are stored in a settings package to an XML file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/export-uevpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-UevPackage

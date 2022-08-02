@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resumes a node from the paused state or brings back drained workloads to the node or both.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterNode
+  href: ./Add-ClusterNode.yml
+- text: Clear-ClusterNode
+  href: ./Clear-ClusterNode.yml
+- text: Get-ClusterNode
+  href: ./Get-ClusterNode.yml
+- text: Remove-ClusterNode
+  href: ./Remove-ClusterNode.yml
+- text: Start-ClusterNode
+  href: ./Start-ClusterNode.yml
+- text: Stop-ClusterNode
+  href: ./Stop-ClusterNode.yml
+- text: Suspend-ClusterNode
+  href: ./Suspend-ClusterNode.yml
+syntaxes:
+- >-
+  Resume-ClusterNode [[-Name] <StringCollection>] [[-Failback] <ResumeClusterNodeFailbackType>]
+
+   [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Resume-ClusterNode node1
+    Name                                                                      State 
+    ----                                                                      ----- 
+    node1                                                                        Up
+  description: |-
+    This example resumes node1 on the local cluster.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Resume-ClusterNode node2 -Cluster mycluster
+    Name                                                                      State 
+    ----                                                                      ----- 
+    node2                                                                        Up
+  description: |-
+    This example resumes node2 on the cluster called mycluster.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-ClusterNode | Resume-ClusterNode
+    Name                                                                      State 
+    ----                                                                      ----- 
+    node1                                                                        Up
+  description: |-
+    This example resumes all cluster nodes that are suspended, or paused, on the local cluster.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-ClusterNode | Resume-ClusterNode -Failback Immediate
+    Name                                                                      State 
+    ----                                                                      ----- 
+    node2                                                                        Up
+  description: |-
+    This example resumes all cluster nodes that are suspended, or paused, on the local cluster and immediately brings back the workloads drained from the nodes.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResumeClusterNodeFailbackType" data-throw-if-not-resolved="False" />
+  name: Failback
+  description: |+
+    Sets the policy to bring back drained workloads to the node.
+    The acceptable values for this parameter are:NoFailback, Immediate, and Policy.
+    Policy can be configured to not failback, failback immediately, or failback only during specific hours.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: NoFailback, Immediate, Policy
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the group, node, resource, or service for which or cluster on which to run the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the group, node, resource, or service for which or cluster on which to run the cmdlet.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Resume-ClusterNode
+name: Resume-ClusterNode
+description: |-
+  The **Resume-ClusterNode** cmdlet resumes activity on a failover cluster node after it has been suspended, or paused, or brings back drained workloads to the node, or both.
+  When a node is resumed, clustered roles that were drained from the node are returned to it, and clustered roles or resources that are currently offline can be brought online on that node.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/resume-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Resume-ClusterNode

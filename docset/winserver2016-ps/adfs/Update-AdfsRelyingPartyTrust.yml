@@ -1,0 +1,138 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the relying party trust from federation metadata.
+module: ADFS
+notes: |-
+  * A relying party in Active Directory Federation Services (AD FS) is an organization in which Web servers that host one or more Web-based applications reside. Tokens and Information Cards that originate from a claims provider can then be presented and ultimately consumed by the Web-based resources that are located in the relying party organization. When you configure AD FS in the role of the relying party, it acts as a partner that trusts a claims provider to authenticate users. Therefore, the relying party consumes the claims that are packaged in security tokens that come from users in the claims provider. In other words, a relying party is the organization whose Web servers are protected by the resource-side federation server. The federation server at the relying party uses the security tokens that the claims provider produces to issue tokens to the Web servers that are located in the relying party.
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *TargetIdentifier* and *TargetName* parameters.
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    RelyingPartytrust objects are received by the *TargetRelyingParty* parameter.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the updated RelyingPartyTrust object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Add-AdfsRelyingPartyTrust
+  href: ./Add-AdfsRelyingPartyTrust.yml
+- text: Disable-AdfsRelyingPartyTrust
+  href: ./Disable-AdfsRelyingPartyTrust.yml
+- text: Enable-AdfsRelyingPartyTrust
+  href: ./Enable-AdfsRelyingPartyTrust.yml
+- text: Get-AdfsRelyingPartyTrust
+  href: ./Get-AdfsRelyingPartyTrust.yml
+- text: Remove-AdfsRelyingPartyTrust
+  href: ./Remove-AdfsRelyingPartyTrust.yml
+- text: Set-AdfsRelyingPartyTrust
+  href: ./Set-AdfsRelyingPartyTrust.yml
+syntaxes:
+- >-
+  Update-AdfsRelyingPartyTrust [-MetadataFile <String>] -TargetIdentifier <String> [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Update-AdfsRelyingPartyTrust [-MetadataFile <String>] -TargetRelyingParty <RelyingPartyTrust> [-PassThru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Update-AdfsRelyingPartyTrust [-MetadataFile <String>] -TargetName <String> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Update a relying party trust'
+  code: |-
+    PS C:\> Update-ADFSRelyingPartyTrust -TargetName "FabrikamApp"
+  description: |-
+    This command updates the relying party trust named FabrikamApp.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MetadataFile
+  description: |+
+    Specifies a file path in UNC format.
+    The file that you specify contains the federation metadata for the relying party application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the identifier of the relying party trust to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the relying party trust to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RelyingPartyTrust" data-throw-if-not-resolved="False" />
+  name: TargetRelyingParty
+  isRequired: true
+  description: |+
+    Specifies a **RelyingPartyTrust** object.
+    The cmdlet updates the relying party trust that you specify.
+    To obtain a **RelyingPartyTrust** object, use the **Get-AdfsRelyingPartyTrust** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Update-AdfsRelyingPartyTrust
+name: Update-AdfsRelyingPartyTrust
+description: |-
+  The **Update-AdfsRelyingPartyTrust** cmdlet updates the relying party trust from the federation metadata that is available at the federation metadata URL.
+  The cmdlet updates claims, endpoints, and certificates.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/update-adfsrelyingpartytrust?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-AdfsRelyingPartyTrust

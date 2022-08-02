@@ -1,0 +1,40 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the title string of a Remote Web Access website.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Get-WssRemoteWebAccessTitle
+  href: ./Get-WssRemoteWebAccessTitle.yml
+syntaxes:
+- Set-WssRemoteWebAccessTitle -Title <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the title for Remote Web Access'
+  code: |-
+    PS C:\> Set-WssRemoteWebAccessTitle -Title "Contoso Remote Web Access"
+  description: |-
+    This command modifies the title for a Remote Access Web website.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  isRequired: true
+  description: |+
+    Specifies a title string for the Remote Web Access website.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Set-WssRemoteWebAccessTitle
+name: Set-WssRemoteWebAccessTitle
+description: |-
+  The **Set-WssRemoteWebAccessTitle** cmdlet modifies the title string of a Remote Web Access website in sbs_sbs8_2.
+  The title string appears in the middle of the logon page.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssremotewebaccesstitle?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssRemoteWebAccessTitle

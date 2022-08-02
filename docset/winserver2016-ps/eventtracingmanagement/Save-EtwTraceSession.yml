@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Saves the events collected by the ETW session to an .etl file.
+module: EventTracingManagement
+notes: ""
+inputs:
+- name: <xref href="System.IO.FileInfo, System.IO.DirectoryInfo" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.IO.FileInfo, CIM_DataFile" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **System.IO.FileInfo** object that represents a file on the local computer.
+    The object is returned when the current session is saved successfully to a file on the local machine.
+
+    This cmdlet returns a **CIM_DataFile** object when the current session is saved successfully to a file over a CIM session.
+links:
+- text: Get-EtwTraceSession
+  href: ./Get-EtwTraceSession.yml
+- text: New-EtwTraceSession
+  href: ./New-EtwTraceSession.yml
+- text: Send-EtwTraceSession
+  href: ./Send-EtwTraceSession.yml
+- text: Start-EtwTraceSession
+  href: ./Start-EtwTraceSession.yml
+- text: Stop-EtwTraceSession
+  href: ./Stop-EtwTraceSession.yml
+- text: Update-EtwTraceSession
+  href: ./Update-EtwTraceSession.yml
+syntaxes:
+- >-
+  Save-EtwTraceSession [-Name] <String> [-OutputFile <FileInfo>] [-OutputFolder <DirectoryInfo>] [-Stop]
+
+   [-Overwrite] [-CimSession <CimSession>] [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the ETW session.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FileInfo" data-throw-if-not-resolved="False" />
+  name: OutputFile
+  description: |+
+    Specifies the file to save the .etl file to for the ETW session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DirectoryInfo" data-throw-if-not-resolved="False" />
+  name: OutputFolder
+  description: |+
+    Specifies the folder to save the .etl file to for the ETW session.
+
+    When this parameter is set, the file name of the .etl will be selected automatically based on the session properties.
+
+    If the session is a buffering mode session, the file name will be the name of the session.
+
+    If the session is a file mode session, the file name will be the file name of the currently being written to.
+
+    To control the file name as well as the output folder, use the *OutputFile* parameter instead.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Overwrite
+  description: |+
+    Controls whether an existing file should be overwritten by saving this session.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Stop
+  description: |+
+    Controls whether the session should be stopped after the save is complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: EventTracingManagement.Save-EtwTraceSession
+name: Save-EtwTraceSession
+description: |-
+  The **Save-EtwTraceSession** cmdlet saves the events collected by the ETW session to an .etl file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: EventTracingManagement-help.xml
+  Module Name: EventTracingManagement
+  ms.date: 01/05/2017
+  online version: https://docs.microsoft.com/powershell/module/eventtracingmanagement/save-etwtracesession?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Save-EtwTraceSession

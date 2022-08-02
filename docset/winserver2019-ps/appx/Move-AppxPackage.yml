@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Moves a package from its current location to another appx volume.
+module: Appx
+notes: ""
+links:
+- text: Add-AppxPackage
+  href: ./Add-AppxPackage.yml
+- text: Get-AppxPackage
+  href: ./Get-AppxPackage.yml
+- text: Remove-AppxPackage
+  href: ./Remove-AppxPackage.yml
+syntaxes:
+- Move-AppxPackage [-Package] <String[]> [-Volume] <AppxVolume> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Move a package to a volume specified by a path'
+  code: |-
+    PS C:\> Move-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe" -Volume F:\
+  description: |-
+    This command moves package that has the specified name to volume F:\.
+    This cmdlet also moves your app data.
+  summary: ""
+- title: 'Example 2: Move a package to a volume specified by an ID'
+  code: |-
+    PS C:\> Move-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe" -Volume {d2a4d1f4-f45a-46f3-a419-160ab52af091}
+  description: |-
+    This command moves package that has the specified name to the volume that has the specified media ID.
+    This cmdlet also moves your app data.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Package
+  isRequired: true
+  description: |+
+    Specifies an **AppxPackage** object or the full name of a package.
+    This cmdlet moves the package that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppxVolume" data-throw-if-not-resolved="False" />
+  name: Volume
+  isRequired: true
+  description: |+
+    Specifies an **AppxVolume** object.
+    The cmdlet moves the package to the volume that this parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Appx.Move-AppxPackage
+name: Move-AppxPackage
+description: |-
+  The **Move-AppxPackage** cmdlet moves a package from its current location to another **AppxVolume**.
+  The new location must be a volume that Package Manager knows about and that is mounted.
+  This cmdlet also moves your application data to the specified volume.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: Appx
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appx/move-appxpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Move-AppxPackage

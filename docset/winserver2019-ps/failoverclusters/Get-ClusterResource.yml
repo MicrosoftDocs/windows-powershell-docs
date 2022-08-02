@@ -1,0 +1,196 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about one or more resources in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: ForEach-Object
+  href: https://go.microsoft.com/fwlink/?LinkID=113300
+- text: Format-List
+  href: https://go.microsoft.com/fwlink/?LinkID=113302
+- text: Add-ClusterResource
+  href: ./Add-ClusterResource.yml
+- text: Move-ClusterResource
+  href: ./Move-ClusterResource.yml
+- text: Remove-ClusterResource
+  href: ./Remove-ClusterResource.yml
+- text: Resume-ClusterResource
+  href: ./Resume-ClusterResource.yml
+- text: Start-ClusterResource
+  href: ./Start-ClusterResource.yml
+- text: Stop-ClusterResource
+  href: ./Stop-ClusterResource.yml
+- text: Suspend-ClusterResource
+  href: ./Suspend-ClusterResource.yml
+syntaxes:
+- >-
+  Get-ClusterResource [[-Name] <StringCollection>] [-VMId <Guid>] [-InputObject <PSObject>] [-Cluster <String>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterResource
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    Cluster Disk 1      Online              Cluster Group       Physical Disk 
+    Cluster Disk 2      Online              Available Storage   Physical Disk 
+    Cluster Disk 3      Online              Available Storage   Physical Disk 
+    Cluster Disk 4      Online              Available Storage   Physical Disk 
+    Cluster Disk 5      Online              Available Storage   Physical Disk 
+    Cluster Disk 6      Online              Available Storage   Physical Disk 
+    Cluster Disk 7      Online              Available Storage   Physical Disk 
+    Cluster IP Address  Online              Cluster Group       IP Address 
+    Cluster IP Addre... Online              Cluster Group       IPv6 Address 
+    Cluster Name        Online              Cluster Group       Network Name
+  description: |-
+    This example lists all cluster resources on the local cluster.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterResource -Name "Cluster Disk 2" | Format-List -Property *
+    Cluster                :  cluster1 
+    IsCoreResource         : False 
+    IsNetworkClassResource : False 
+    IsStorageClassResource : True 
+    OwnerNode              :  node2 
+    ResourceType           : Physical Disk 
+    State                  : Online 
+    OwnerGroup             : Available Storage 
+    Name                   :  Cluster Disk 2 
+    MaintenanceMode        : False 
+    MonitorProcessId       : 524 
+    Description            : 
+    SeparateMonitor        : False 
+    PersistentState        : 1 
+    LooksAlivePollInterval : 4294967295 
+    IsAlivePollInterval    : 4294967295 
+    RestartAction          : 2 
+    RestartThreshold       : 1 
+    RestartDelay           : 500 
+    RestartPeriod          : 900000 
+    RetryPeriodOnFailure   : 3600000 
+    PendingTimeout         : 180000 
+    DeadlockTimeout        : 300000 
+    ResourceSpecificStatus : 
+    Id                     :  6e394089-145a-4279-b75d-b14015cc36e4
+  description: |-
+    This example displays information about Cluster Disk 2, on the local cluster, in the form of a list.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-ClusterResource -Name "Cluster Disk 2" | Get-ClusterParameter
+    Object              Name                Value               Type 
+    ------              ----                -----               ---- 
+    Cluster Disk 2      DiskIdType          0                   UInt32 
+    Cluster Disk 2      DiskSignature       2654136047          UInt32 
+    Cluster Disk 2      DiskIdGuid                              String 
+    Cluster Disk 2      DiskRunChkDsk       0                   UInt32 
+    Cluster Disk 2      DiskUniqueIds       {16, 0, 0, 0...}    ByteArray 
+    Cluster Disk 2      DiskVolumeInfo      {1, 0, 0, 0...}     ByteArray 
+    Cluster Disk 2      DiskArbInterval     3                   UInt32 
+    Cluster Disk 2      DiskPath                                String 
+    Cluster Disk 2      DiskReload          0                   UInt32 
+    Cluster Disk 2      MaintenanceMode     0                   UInt32 
+    Cluster Disk 2      MaxIoLatency        1000                UInt32 
+    Cluster Disk 2      CsvEnforseWriteT... 0                   UInt32 
+    Cluster Disk 2      DiskPnpUpdate       {0, 0, 0, 0...}     ByteArray
+  description: |-
+    This example displays detailed parameters for Cluster Disk 2 on the local cluster.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-ClusterGroup -Name FileServer1 | Get-ClusterResource
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    Cluster Disk 1      Online              FileServer1         Physical Disk 
+    Cluster IP Address  Online              FileServer1         IP Address 
+    Cluster IP Addre... Online              FileServer1         IPv6 Address 
+    FileServer1         Online              FileServer1         Network Name
+  description: |-
+    This example lists cluster resources in cluster group named FileServer1, a clustered file server on the local cluster.
+  summary: ""
+- title: Example 5
+  code: |-
+    PS C:\> Get-ClusterResource -Name "Cluster Disk 2" | ForEach-Object -Process {$_.RestartDelay = 600}
+  description: |-
+    This example sets the common property RestartDelay for the Cluster Disk 2 resource on the local cluster to 600.
+  summary: ""
+- title: Example 6
+  code: |-
+    PS C:\> Get-ClusterResource -Name "cluster pool 1" | Format-List -Property OwnerNode
+    OwnerNode : cluster-node1
+  description: |-
+    This example shows how to display the owner of a cluster pooled disk.
+  summary: ""
+- title: Example 7
+  code: "PS C:\\> Get-ClusterResource -Name *print-VM1 | Get-VM | Stop-VM -Verbose\r\nVERBOSE: Current VMobject  = Microsoft.HyperV.PowerShell.VirtualMachine[] \r\nVERBOSE: Stop-VM will shutdown the virtual machine \"print-VM1\". \r\n \r\nConfirm \r\nHyper-V cannot shut down virtual machine print-VM1 because the Shutdown integration service is unavailable. To avoid \r\npotential data loss, you can pause or save the state of the virtual machine. The other option is to turn off the \r\nvirtual machine, but data loss might occur. \r\n\r\n\r\n[Y] Yes  [N] No  [S] Suspend  [?] Help (default is \"Y\"):Y"
+  description: |-
+    This example enumerates the cluster resources for wildcard characters *print-VM1 and stops the corresponding virtual machines.
+    Verbose mode is turned on for details of the operation.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster node or cluster group on which to enumerate cluster resources.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster resource to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VMId
+  description: |+
+    Specifies the virtual machine identifier (ID).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterResource
+name: Get-ClusterResource
+description: |-
+  The **Get-ClusterResource** cmdlet gets information about one or more resources in a failover cluster.
+
+  To set a common property for a clustered resource, use this cmdlet to get the object for the clustered resource, and then set the appropriate property on that object directly.
+  To get and set more specific information about a clustered resource, use this cmdlet with Get-ClusterParameter and Set-ClusterParameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterresource?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterResource

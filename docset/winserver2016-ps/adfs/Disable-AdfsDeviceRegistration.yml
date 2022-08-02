@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Marks the Device Registration Service as disabled on an AD FS server.
+module: ADFS
+notes: ""
+links:
+- text: Enable-AdfsDeviceRegistration
+  href: ./Enable-AdfsDeviceRegistration.yml
+- text: Get-AdfsDeviceRegistration
+  href: ./Get-AdfsDeviceRegistration.yml
+- text: Set-AdfsDeviceRegistration
+  href: ./Set-AdfsDeviceRegistration.yml
+syntaxes:
+- Disable-AdfsDeviceRegistration [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable Windows Server Device Registration Service'
+  code: |-
+    PS C:\> Disable-AdfsDeviceRegistration
+  description: |-
+    This command marks the Device Registration Service as disabled on the Active Directory Federation Services (AD FS) server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Disable-AdfsDeviceRegistration
+name: Disable-AdfsDeviceRegistration
+description: |-
+  The **Disable-AdfsDeviceRegistration** cmdlet marks the Device Registration Service as disabled on an Active Directory Federation Services (AD FS) server.
+  To completely disable the Device Registration Service, you must run this command on each AD FS server in your AD FS farm.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/disable-adfsdeviceregistration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-AdfsDeviceRegistration

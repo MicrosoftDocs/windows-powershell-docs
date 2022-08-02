@@ -1,0 +1,376 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of all PhysicalDisk objects visible across any available Storage Management Providers, or optionally a filtered list.
+module: Storage
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_StoragePool object to the *StoragePool* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubsystem" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_StorageSubsystem object to the *StorageSubsystem* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_VirtualDisk object to the *VirtualDisk* parameter.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    The Get-PhysicalDisk cmdlet returns objects that represent physical disks.
+links:
+- text: Add-PhysicalDisk
+  href: ./Add-PhysicalDisk.yml
+- text: Get-StorageEnclosure
+  href: ./Get-StorageEnclosure.yml
+- text: Get-StoragePool
+  href: ./Get-StoragePool.yml
+- text: Get-StorageSubSystem
+  href: ./Get-StorageSubsystem.yml
+- text: New-StoragePool
+  href: ./New-StoragePool.yml
+- text: Remove-PhysicalDisk
+  href: ./Remove-PhysicalDisk.yml
+- text: Reset-PhysicalDisk
+  href: ./Reset-PhysicalDisk.yml
+- text: Set-PhysicalDisk
+  href: ./Set-PhysicalDisk.yml
+- text: New-VirtualDisk
+  href: ./New-VirtualDisk.yml
+- text: Get-StorageNode
+  href: ./Get-StorageNode.yml
+syntaxes:
+- >-
+  Get-PhysicalDisk [-UniqueId <String>] [-Usage <PhysicalDiskUsage>] [-Description <String>]
+
+   [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>] [-HealthStatus <PhysicalDiskHealthStatus>]
+
+   [-CimSession <CimSession>] [<CommonParameters>]
+- >-
+  Get-PhysicalDisk [-ObjectId <String>] [-Usage <PhysicalDiskUsage>] [-Description <String>]
+
+   [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>] [-HealthStatus <PhysicalDiskHealthStatus>]
+
+   [-CimSession <CimSession>] [<CommonParameters>]
+- >-
+  Get-PhysicalDisk [[-FriendlyName] <String>] [[-SerialNumber] <String>] [-Usage <PhysicalDiskUsage>]
+
+   [-Description <String>] [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>]
+
+   [-HealthStatus <PhysicalDiskHealthStatus>] [-CimSession <CimSession>] [<CommonParameters>]
+- Get-PhysicalDisk -InputObject <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
+- >-
+  Get-PhysicalDisk -StorageSubsystem <CimInstance> [-Usage <PhysicalDiskUsage>] [-Description <String>]
+
+   [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>] [-HealthStatus <PhysicalDiskHealthStatus>]
+
+   [-CimSession <CimSession>] [<CommonParameters>]
+- >-
+  Get-PhysicalDisk -StorageEnclosure <CimInstance> [-Usage <PhysicalDiskUsage>] [-Description <String>]
+
+   [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>] [-HealthStatus <PhysicalDiskHealthStatus>]
+
+   [-CimSession <CimSession>] [<CommonParameters>]
+- >-
+  Get-PhysicalDisk -StorageNode <CimInstance> [-PhysicallyConnected] [-Usage <PhysicalDiskUsage>]
+
+   [-Description <String>] [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>]
+
+   [-HealthStatus <PhysicalDiskHealthStatus>] [-CimSession <CimSession>] [<CommonParameters>]
+- >-
+  Get-PhysicalDisk -StoragePool <CimInstance> [-Usage <PhysicalDiskUsage>] [-Description <String>]
+
+   [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>] [-HealthStatus <PhysicalDiskHealthStatus>]
+
+   [-CimSession <CimSession>] [<CommonParameters>]
+- >-
+  Get-PhysicalDisk -VirtualDisk <CimInstance> [-VirtualRangeMin <UInt64>] [-VirtualRangeMax <UInt64>]
+
+   [-HasAllocations <Boolean>] [-SelectedForUse <Boolean>] [-NoRedundancy] [-Usage <PhysicalDiskUsage>]
+
+   [-Description <String>] [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>]
+
+   [-HealthStatus <PhysicalDiskHealthStatus>] [-CimSession <CimSession>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Getting all physical disks'
+  code: |-
+    PS C:\> Get-PhysicalDisk
+    FriendlyName        CanPool            OperationalStatus   HealthStatus        Usage                              Size
+    ------------        --------            -----------------   ------------        -----                              ----
+    PhysicalDisk4       False               OK                  Healthy             Data Store                        25 GB
+  description: |-
+    This example returns an array of all PhysicalDisk objects present in the computer.
+    A storage management provider is required to manage physical disks.
+  summary: ""
+- title: 'Example 2: Getting all physical disks eligible for adding to a storage pool'
+  code: |-
+    PS C:\>Get-PhysicalDisk -CanPool $True
+  description: |-
+    This example returns an array of PhysicalDisk objects that are available for adding to a storage pool (they are in a primordial pool).
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: CanPool
+  description: |+
+    Gets physical disks that are available for use in a storage pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Gets the physical disks that contain the specified description.
+    Enter a description or use wildcard characters to enter a description pattern.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FriendlyName
+  description: |+
+    Gets the physical disk with the specified friendly name.
+    Enter a friendly name or use wildcard characters to enter a name pattern.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: HasAllocations
+  description: |+
+    Indicates whether the cmdlet gets a list of physical disks that host the extents of the virtual disk that you specify by using the *VirtualDisk* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PhysicalDiskHealthStatus" data-throw-if-not-resolved="False" />
+  name: HealthStatus
+  description: |+
+    Specifies the **health status** of physical disks.
+    The acceptable values for this parameter are:
+
+    - Healthy
+    - Unhealthy
+    - Unknown
+    - Warning
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Healthy, Warning, Unhealthy, Unknown
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input object that is used in a pipeline command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Manufacturer
+  description: |+
+    Gets the physical disks with the specified manufacturer.
+    Enter a manufacturer string or use wildcard characters to enter a pattern.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Model
+  description: |+
+    Gets the physical disks of the specified model.
+    Enter a model string or use wildcard characters to enter a pattern.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRedundancy
+  description: |+
+    Indicates that this cmdlet gets physical disks that contain the last remaining copy of the data of a virtual disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ObjectId
+  description: |+
+    Specifies the ID of the physical disk to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: PhysicalDiskObjectId
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PhysicallyConnected
+  description: |+
+    Indicates that this cmdlet gets physical disks that are physically connected to the specified storage node.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SelectedForUse
+  description: |+
+    Indicates whether the cmdlet gets a list of physical disks to host the extents that belong to the virtual disk specified by the *VirtualDisk* parameter.
+    Specify the physical disks to host the extents of a virtual disk by using the *PhysicalDisksToUse* parameter of the **New-VirtualDisk** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SerialNumber
+  description: |+
+    Specifies the serial number of the physical disk to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageEnclosure
+  isRequired: true
+  description: |+
+    Specifies a storage enclosure associated with the physical disk that this cmdlet gets.
+    To obtain a **StorageEnclosure** object, use the **Get-StorageEnclosure** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageNode
+  isRequired: true
+  description: |+
+    Specifies a storage node as a **CimInstance** object.
+    The cmdlet gets the physical disk connected to the node that you specify.
+    To obtain a storage node object, use the **Get-StorageNode** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StoragePool
+  isRequired: true
+  description: |+
+    Accepts a StoragePool object as input and gets the physical disks that belong to the pool.
+    The Storage Pool CIM object is exposed by the **Get-StoragePool** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageSubsystem
+  isRequired: true
+  description: |+
+    Specifies a storage subsystem.
+    This cmdlet gets physical disks attached to the storage subsystem that you specify.
+    To obtain a **StorageSubsystem** object, use the **Get-StorageSubSystem** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UniqueId
+  description: |+
+    Gets only the physical disks with the specified IDs.
+    Type one or more IDs (separated by commas), or use wildcard characters to enter a pattern.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="PhysicalDiskUsage" data-throw-if-not-resolved="False" />
+  name: Usage
+  description: |+
+    Specifies an allocation method or usage.
+    This cmdlet gets the physical disks that have the specified allocation method.
+    The acceptable values for this parameter are:
+
+    - AutoSelect
+    - HotSpare
+    - Journal
+    - ManualSelect
+    - Retired
+    - Unknown
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, AutoSelect, ManualSelect, HotSpare, Retired, Journal
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: VirtualDisk
+  isRequired: true
+  description: |+
+    Accepts a VirtualDisk object as input and gets the physical disks used by the virtual disk.
+    The VirtualDisk object is exposed by the **Get-VirtualDisk** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: VirtualRangeMax
+  description: |+
+    This parameter is reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: VirtualRangeMin
+  description: |+
+    This parameter is reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-PhysicalDisk
+name: Get-PhysicalDisk
+description: |-
+  The **Get-PhysicalDisk** cmdlet gets a list of all PhysicalDisk objects visible across any available Storage Management Providers, or optionally a filtered list of disks.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: StorageScripts-help.xml
+  Module Name: Storage
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storage/get-physicaldisk?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-PhysicalDisk

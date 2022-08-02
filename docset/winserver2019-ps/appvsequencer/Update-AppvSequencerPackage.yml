@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Upgrades virtual application packages.
+module: AppvSequencer
+notes: ""
+links:
+- text: Expand-AppvSequencerPackage
+  href: ./Expand-AppvSequencerPackage.yml
+- text: New-AppvSequencerPackage
+  href: ./New-AppvSequencerPackage.yml
+syntaxes:
+- >-
+  Update-AppvSequencerPackage [-FullLoad] [-InputPackagePath] <String> [-Installer] <String> [-Name] <String>
+
+   [-Path] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Update an application'
+  code: |-
+    PS C:\> Update-AppvSequencerPackage -AppvPackageFilePath "C:\Packages\MyPackage.appv" -Installer "C:\PackageInstall\PackageUpgrade.exe" -OutputPath "C:\UpgradedPackages"
+  description: |-
+    This command updates an application, changing the output path.
+  summary: ""
+- title: 'Example 2: Update an application and require package to be fully loaded'
+  code: |-
+    PS C:\> Update-AppvSequencerPackage -AppvPackageFilePath "C:\Packages\MyPackage.appv" -Installer "C:\PackageInstall\PackageUpgrade.exe" -OutputPath "C:\UpgradedPackages" -FullLoad
+  description: |-
+    This command updates an application, and sets the package to be fully loaded.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: FullLoad
+  description: |+
+    Indicates that the cmdlet forces the package to be fully downloaded onto the computer before it can be launched.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InputPackagePath
+  isRequired: true
+  description: |+
+    Specifies the path of the existing Microsoft Application Virtualization (App-V) package to upgrade.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Installer
+  isRequired: true
+  description: |+
+    Specifies the installer used to upgrade the App-V package.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the package given during Sequencing time.
+    This value is obtained from the package manifest.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the folder where the updated package is to be saved.
+
+  defaultValue: None
+  position: "2"
+  aliases: OutputPath
+  parameterValueGroup: ""
+uid: AppvSequencer.Update-AppvSequencerPackage
+name: Update-AppvSequencerPackage
+description: |-
+  The **Update-AppvSequencerPackage** cmdlet upgrades virtual application packages.
+  It takes as an input the original package, the upgrade installer, and an output path.
+  The cmdlet returns a package that is upgraded.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.Modernizer.Cmdlets.dll-Help.xml
+  Module Name: AppvSequencer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvsequencer/update-appvsequencerpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-AppvSequencerPackage

@@ -1,0 +1,38 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the status of current or previous backup jobs.
+module: WssCmdlets
+notes: ""
+links:
+- text: Start-WssBackupJob
+  href: ./Start-WssBackupJob.yml
+- text: Stop-WssBackupJob
+  href: ./Stop-WssBackupJob.yml
+syntaxes:
+- Get-WssBackupJob [[-JobCount] <UInt32>]
+examples:
+- title: 'Example 1: Get status past backup jobs'
+  code: |-
+    PS C:\> $ContosoBUJobs11 = Get-WssBackupJob -JobCount 10
+  description: |-
+    This command gets the status of the previous 10 backup jobs and stores the status in the variable named $ContosoBUJobs11.
+  summary: ""
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: JobCount
+  description: |+
+    Specifies how many past backup jobs to retrieve.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Get-WssBackupJob
+name: Get-WssBackupJob
+description: |-
+  The **Get-WssBackupJob** cmdlet gets the status of current or previous backup jobs.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssbackupjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

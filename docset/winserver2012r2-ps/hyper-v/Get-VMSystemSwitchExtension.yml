@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the switch extensions installed on a virtual machine host.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.SystemSwitchExtension" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-VMSystemSwitchExtension [-Name <String[]>] [-ComputerName <String[]>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMSystemSwitchExtension
+  description: |-
+    Gets all virtual switch extensions installed on the system.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts from which the switch extensions are to be retrieved.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the switch extension to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMSystemSwitchExtension
+name: Get-VMSystemSwitchExtension
+description: |-
+  The **Get-VMSystemSwitchExtension** cmdlet gets the switch extensions installed on a virtual machine host.
+  The returned switch extension does not contain embedded objects for features or an array of feature IDs.
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmsystemswitchextension?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMSystemSwitchExtension

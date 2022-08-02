@@ -1,0 +1,28 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a setting that determines if a user can configure the CPU assessment.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssWinSatCpuScore
+  href: ./Get-WssWinSatCpuScore.yml
+- text: Set-WssWinSatCpuScore
+  href: ./Set-WssWinSatCpuScore.yml
+syntaxes:
+- Get-WssWinSatCpuScoreUserConfigurable
+examples:
+- title: 'Example 1: Retrieve the user-configurable setting'
+  code: |-
+    PS C:\> Get-WssWinSatCpuScoreUserConfigurable
+  description: |-
+    This command retrieves a setting that determines if the CPU assessment is user-configurable.
+  summary: ""
+uid: WssCmdlets.Get-WssWinSatCpuScoreUserConfigurable
+name: Get-WssWinSatCpuScoreUserConfigurable
+description: |-
+  The **Get-WssWinSatCpuScoreUserConfigurable** cmdlet retrieves a setting that determines if a user can configure the CPU assessment.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wsswinsatcpuscoreuserconfigurable?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

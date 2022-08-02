@@ -1,0 +1,260 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a replicated folder in a replication group.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DfsReplicatedFolder
+  href: ./Get-DfsReplicatedFolder.yml
+- text: Set-DfsReplicatedFolder
+  href: ./Set-DfsReplicatedFolder.yml
+- text: Remove-DfsReplicatedFolder
+  href: ./Remove-DfsReplicatedFolder.yml
+syntaxes:
+- >-
+  New-DfsReplicatedFolder [-GroupName] <String[]> [-FolderName] <String[]> [[-Description] <String>]
+
+   [[-FileNameToExclude] <String[]>] [[-DirectoryNameToExclude] <String[]>] [[-DfsnPath] <String>]
+
+   [-CreateDisabledMemberships] [[-DomainName] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a replicated folder'
+  code: |-
+    PS C:\> New-DfsReplicatedFolder -GroupName "RG22" -FolderName "RF26"
+
+
+    GroupName              : RG22
+    FolderName             : RF26
+    DomainName             : corp.contoso.com
+    Identifier             : 434ca205-388d-4f24-a5b0-7ff875d433e0
+    Description            :
+    FileNameToExclude      : {~*, *.bak, *.tmp}
+    DirectoryNameToExclude : {}
+    DfsnPath               :
+    IsDfsnPathPublished    : False
+    State                  : Normal
+  description: |-
+    This command creates a replicated folder named RF26 in the replication group named RG22.
+    The command does not alter the default settings for a replicated folder.
+  summary: ""
+- title: 'Example 2: Create a replicated folder and add a DFS namespace link path'
+  code: |-
+    PS C:\> New-DfsReplicatedFolder -GroupName "RG22" -FolderName "RF26" -DfsnPath "\\corp.contoso.com\public\link1"
+
+
+    WARNING: The DfsnPath parameter is not validated. An incorrect path will not produce an error.
+
+
+    GroupName              : RG22
+    FolderName             : RF267
+    DomainName             : corp.contoso.com
+    Identifier             : 111c28cb-348a-47e3-8e4d-4bf394f640bb
+    Description            :
+    FileNameToExclude      : {~*, *.bak, *.tmp}
+    DirectoryNameToExclude : {}
+    DfsnPath               : \\corp.contoso.com\public\link1
+    IsDfsnPathPublished    : True
+    State                  : Normal
+  description: |-
+    This command creates a replicated folder named RF26 in the replication group named RG22.
+    The command **DfsnPath** parameter sets the administrative property for a DFS namespace link path.
+    The cmdlet reminds the administrator that the DFSN path is cosmetic only and is not verified or used by DFS Replication in any way.
+  summary: ""
+- title: 'Example 3: Create a replicated folder that excludes specific file names'
+  code: |-
+    PS C:\> New-DfsReplicatedFolder -GroupName "RG11" -FolderName "RF08" -FileNameToExclude "~*, *.bak, *.tmp, *.ned"
+
+
+    GroupName              : RG11
+    FolderName             : RF08
+    DomainName             : corp.contoso.com
+    Identifier             : 085a1de3-b4e5-46a4-a8f4-8f36a20bafdf
+    Description            :
+    FileNameToExclude      : {~*, *.bak, *.tmp, *.ned}
+    DirectoryNameToExclude : {}
+    DfsnPath               :
+    IsDfsnPathPublished    : False
+    State                  : Normal
+  description: |-
+    This command creates a replicated folder named RF08 in the replication group named RG11.
+    The command specifies that the DFS Replication service exclude file names starting with a tilde (~) character and files that have the extensions .bak, .tmp, and .ned from replication.
+  summary: ""
+- title: 'Example 4: Create a data distribution replication topology'
+  code: |-
+    The first command uses the **New-DfsReplicationGroup** cmdlet to create a replication group object named Branch Office 1, and passes the object to the **New-DfsReplicatedFolder** cmdlet by using the pipe operator. The **New-DfsReplicatedFolder** cmdlet creates a replication folder object named Data Distribution 1, and passes the object to the **Add-DfsrMember** cmdlet by using the pipe operator. The **Add-DfsrMember** cmdlet adds the computers named SRV01, SRV02, and SRV03 to the replication group named Branch Office 1.
+    PS C:\> New-DfsReplicationGroup -GroupName "Branch Office 1" | New-DfsReplicatedFolder -FolderName "Data Distribution 1" | Add-DfsrMember -ComputerName "SRV01","SRV02","SRV03" | Format-Table dnsname,groupname -auto -wrap
+
+    DnsName               GroupName
+    -------               ---------
+    SRV01.corp.contoso.com Branch Office 1
+    SRV02.corp.contoso.com Branch Office 1
+    SRV03.corp.contoso.com Branch Office 1
+
+
+    The second command creates a bidirectional replication connection between the computer named SRV01 and the computer named SRV02 in the replication group named Branch Office 1.
+    PS C:\> Add-DfsrConnection -GroupName "Branch Office 1" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" | Format-Table *name -wrap -auto
+
+
+
+    GroupName       SourceComputerName DestinationComputerName
+    ---------       ------------------ -----------------------
+    Branch Office 1 SRV01               SRV02
+    Branch Office 1 SRV02               SRV01
+
+
+    The third command creates a bidirectional replication connection between the computer named SRV01 and the computer named SRV03 in the replication group named Branch Office 1.
+    PS C:\> Add-DfsrConnection -GroupName "Branch Office 1" -SourceComputerName "SRV01" -DestinationComputerName "SRV03" | Format-Table *name -wrap -auto
+    GroupName       SourceComputerName DestinationComputerName
+    ---------       ------------------ -----------------------
+    Branch Office 1 SRV01               SRV03
+    Branch Office 1 SRV03               SRV01
+
+
+    The fourth command uses the **Set-DfsrMembership** cmdlet to configure membership settings for the primary member of the replication group named Branch Office 1. The command specifies that the computer named SRV01 is the primary member of the group. The command sets an appropriate quota size of the staging folder instead of the lower default.
+    PS C:\> Set-DfsrMembership -GroupName "Branch Office 1" -FolderName "Data Distribution 1" -ContentPath "C:\rf1" -ComputerName "SRV01" -PrimaryMember $True -StagingPathQuotaInMB 16384 -Force | Format-Table *name,*path,primary* -auto -wrap
+
+
+    DomainName       GroupName       FolderName          ComputerName ContentPath StagingPath                PrimaryMember
+    ----------       ---------       ----------          ------------ ----------- -----------                -------------
+    corp.contoso.com Branch Office 1 Data Distribution 1 SRV01         c:\rf1      c:\rf1\DfsrPrivate\Staging          True
+
+    The last command uses the **Set-DfsrMembership** cmdlet to configure membership settings for the members of the replication group named Branch Office 1. The command specifies that the computers named SRV02 and SRV03 are members of the group. The command sets an appropriate quota size of the staging folder instead of the lower default.
+    PS C:\> Set-DfsrMembership -GroupName "Branch Office 1" -FolderName "Data Distribution 1" -ContentPath "C:\rf1" -ComputerName "SRV02","SRV03" -StagingPathQuotaInMB 16384 -Force | Format-Table *name,*path,primary* -auto -wrap
+
+
+    DomainName       GroupName       FolderName          ComputerName ContentPath StagingPath                PrimaryMember
+    ----------       ---------       ----------          ------------ ----------- -----------                -------------
+    corp.contoso.com Branch Office 1 Data Distribution 1 SRV02         c:\rf1      c:\rf1\DfsrPrivate\Staging         False
+    corp.contoso.com Branch Office 1 Data Distribution 1 SRV03         c:\rf1      c:\rf1\DfsrPrivate\Staging         False
+  description: |-
+    This example creates a hub and spoke data distribution replication topology.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CreateDisabledMemberships
+  description: |+
+    Indicates that the any members that you add to the replicated folder have disabled memberships.
+    You do not typically need to set this parameter, because the next step in creating a new replication topology is to create the connections and membership, and then start replication.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the replicated folder.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DfsnPath
+  description: |+
+    Specifies the DFS Namespace (DFSN) folder path of the replicated folder.
+
+    The DFSN folder path has no effect on replication.
+    This property exists only as a descriptive convenience to administrators and DFS Replication service does not validate the value of this property.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DirectoryNameToExclude
+  description: |+
+    Specifies an array of names of subfolders that the DSFR service excludes and does not replicate in the replicated folder.
+    You must provide only folder names, not full paths.
+    You can use wildcards.
+
+  defaultValue: None
+  position: "4"
+  aliases: DirectoryFilter
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains the replication group.
+    If you do not specify this parameter, the cmdlet uses the domain of the current user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "100"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FileNameToExclude
+  description: |+
+    Specifies an array of names and extensions of files that the Distributed File System (DSF) Replication service excludes and does not replicate in the replicated folder.
+    Provide only folder names for this parameter.
+    Do not specify full paths.
+    You can use wildcards.
+
+  defaultValue: None
+  position: "3"
+  aliases: FileFilter
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FolderName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replicated folders.
+    You can use a comma separated list and the wildcard character (*).
+    If you do not specify this parameter, the cmdlet gets all replicated folders.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: RF, RfName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replication groups.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DFSR.New-DfsReplicatedFolder
+name: New-DfsReplicatedFolder
+description: |-
+  The **New-DfsReplicatedFolder** cmdlet creates a new replicated folder in a replication group.
+  Replicated folders are logical arrangements of replication that do not contain computer-specific settings.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/new-dfsreplicatedfolder?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-DfsReplicatedFolder

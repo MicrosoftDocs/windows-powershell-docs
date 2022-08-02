@@ -1,0 +1,305 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a hard disk drive to a virtual machine.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="Microsoft.HyperV.Powershell.DriveController" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.HyperV.Powershell.VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.HardDiskDrive" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+syntaxes:
+- >-
+  Add-VMHardDiskDrive [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-VMName] <String[]> [[-ControllerType] <ControllerType>] [[-ControllerNumber] <Int32>]
+
+   [[-ControllerLocation] <Int32>] [[-Path] <String>] [-DiskNumber <UInt32>] [-ResourcePoolName <String>]
+
+   [-SupportPersistentReservations] [-AllowUnverifiedPaths] [-MaximumIOPS <UInt64>] [-MinimumIOPS <UInt64>]
+
+   [-QoSPolicyID <String>] [-QoSPolicy <CimInstance>] [-Passthru] [-OverrideCacheAttributes <CacheAttributes>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-VMHardDiskDrive [-VM] <VirtualMachine[]> [[-ControllerType] <ControllerType>] [[-ControllerNumber] <Int32>]
+
+   [[-ControllerLocation] <Int32>] [[-Path] <String>] [-DiskNumber <UInt32>] [-ResourcePoolName <String>]
+
+   [-SupportPersistentReservations] [-AllowUnverifiedPaths] [-MaximumIOPS <UInt64>] [-MinimumIOPS <UInt64>]
+
+   [-QoSPolicyID <String>] [-QoSPolicy <CimInstance>] [-Passthru] [-OverrideCacheAttributes <CacheAttributes>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-VMHardDiskDrive [-VMDriveController] <VMDriveController> [[-ControllerLocation] <Int32>] [[-Path] <String>]
+
+   [-DiskNumber <UInt32>] [-ResourcePoolName <String>] [-SupportPersistentReservations] [-AllowUnverifiedPaths]
+
+   [-MaximumIOPS <UInt64>] [-MinimumIOPS <UInt64>] [-QoSPolicyID <String>] [-QoSPolicy <CimInstance>] [-Passthru]
+
+   [-OverrideCacheAttributes <CacheAttributes>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-VMHardDiskDrive -VMName Test -Path D:\VHDs\disk1.vhdx
+  description: |-
+    Creates a virtual hard disk using file D:\VHDs\disk1.vhdx on virtual machine Test.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-VM Test | Add-VMHardDiskDrive -ControllerType SCSI -ControllerNumber 0
+  description: |-
+    Adds a virtual hard disk to SCSI controller number 0 on virtual machine Test.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-VMScsiController -VMName Test -ControllerNumber 0 | Add-VMHardDiskDrive -DiskNumber 2
+  description: |-
+    This example gets a SCSI controller on a virtual machine named Test and then adds physical disk 2 to that controller.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-Disk 2 | Add-VMHardDiskDrive -VMName Test
+  description: |-
+    This example gets physical disk 2 and then adds it to a virtual machine named Test.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowUnverifiedPaths
+  description: |+
+    Specifies that no error is to be thrown if the specified path is not verified as accessible by the cluster.
+    This parameter is applicable to clustered virtual machines.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts that run this cmdlet.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: PSComputerName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ControllerLocation
+  description: |+
+    Specifies the number of the location on the controller at which the hard disk drive is to be added.
+    If not specified, the first available location in the controller specified with the **ControllerNumber** parameter is used.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ControllerNumber
+  description: |+
+    Specifies the number of the controller to which the hard disk drive is to be added.
+    If not specified, this parameter assumes the value of the first available controller at the location specified in the **ControllerLocation** parameter.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ControllerType" data-throw-if-not-resolved="False" />
+  name: ControllerType
+  description: |+
+    Specifies the type of the controller to which the hard disk drive is to be added.
+    If not specified, **IDE** is attempted first.
+    If the IDE controller port at the specified number and location is already connected to a drive, then it will try to create one on the SCSI controller specified by **ControllerNumber**.
+    Allowed values are **IDE** and **SCSI**.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: IDE, SCSI
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DiskNumber
+  description: |+
+    Specifies the disk number of the offline physical hard drive to be connected as a passthrough disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Number
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: MaximumIOPS
+  description: |+
+    Specifies the maximum normalized I/O operations per second (IOPS) for the hard disk.
+    Hyper-V calculates normalized IOPS as the total size of I/O per second divided by 8 KB.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: MinimumIOPS
+  description: |+
+    Specifies the minimum normalized I/O operations per second (IOPS) for the hard disk.
+    Hyper-V calculates normalized IOPS as the total size of I/O per second divided by 8 KB.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CacheAttributes" data-throw-if-not-resolved="False" />
+  name: OverrideCacheAttributes
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Default, WriteCacheEnabled, WriteCacheAndFUAEnabled, WriteCacheDisabled
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Passes the added **Microsoft.HyperV.PowerShell.HardDiskDrive** object through to the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the full path of the hard disk drive file to be added.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: QoSPolicy
+  description: |+
+    Specifies the name of the storage Quality of Service (QoS) policy that this cmdlet associates with the hard disk drive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: QoSPolicyID
+  description: |+
+    Specifies the unique ID for a storage QoS policy that this cmdlet associates with the hard disk drive.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourcePoolName
+  description: |+
+    Specifies the friendly name of the ISO resource pool to which this virtual hard disk is to be associated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SupportPersistentReservations
+  description: |+
+    Indicates that the hard disk supports SCSI persistent reservation semantics.
+    Specify this parameter when the hard disk is a shared disk that is used by multiple virtual machines.
+
+  defaultValue: None
+  position: Named
+  aliases: ShareVirtualDisk
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine to which the hard disk drive is to be added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMDriveController" data-throw-if-not-resolved="False" />
+  name: VMDriveController
+  isRequired: true
+  description: |+
+    Specifies the controller to which the hard disk drive is to be added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine to which the hard disk drive is to be added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Add-VMHardDiskDrive
+name: Add-VMHardDiskDrive
+description: |-
+  The **Add-VMHardDiskDrive** cmdlet adds a hard disk drive to a virtual machine.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/add-vmharddiskdrive?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-VMHardDiskDrive

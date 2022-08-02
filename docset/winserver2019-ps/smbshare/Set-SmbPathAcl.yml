@@ -1,0 +1,60 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the ACL for the file system folder to match the ACL used by an SMB share.
+module: SmbShare
+notes: |-
+  * The previous syntax for the same task, `((Get-SmbShare -Name \<ShareName\> ).PresetPathACL | Set-Acl)`, continues to work with newer versions of the Windows Server operating system, but the new syntax is much simpler and therefore recommended.
+links:
+- text: SMB Share Cmdlets in Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- Set-SmbPathAcl [-ShareName] <String> [[-ScopeName] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the SMB path ACL by share name'
+  code: |-
+    PS C:\> Set-SmbPathAcl -ShareName "Share01"
+  description: |-
+    This command sets the ACL on the file system folder used by the Share01 share to match the ACL of the share.
+  summary: ""
+- title: 'Example 2: Set the SMB path ACL by share name and scope name'
+  code: |-
+    PS C:\> Set-SmbPathAcl -ShareName "Share01" -ScopeName "SOFS01"
+  description: |-
+    This command sets the ACL on the file system folder used by the Share01 share on the SOFS01 scope to match the ACL of the share.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScopeName
+  description: |+
+    Specifies the scope name of the SMB share.
+    The cmdlet sets the ACL for the scope that you specify.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ShareName
+  isRequired: true
+  description: |+
+    Specifies the name of the SMB share.
+    The cmdlet sets the ACL on the file system folder to the ACL used by the SMB share that you specify.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: SmbShare.Set-SmbPathAcl
+name: Set-SmbPathAcl
+description: |-
+  The **Set-SmbPathAcl** cmdlet sets the access control list (ACL) for the file system folder to match the ACL for the server message block (SMB) share.
+  The cmdlet sets the ACL to match the SMB share itself.
+  This action simplifies the configuration of NTFS or ReFS file system permissions by copying the SMB share permissions.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: SmbScriptModule-help.xml
+  Module Name: SmbShare
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/smbshare/set-smbpathacl?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-SmbPathAcl

@@ -1,0 +1,4546 @@
+items:
+- name: Reference
+  items:
+  - name: ActiveDirectory
+    uid: ActiveDirectory
+    items:
+    - name: Add-ADCentralAccessPolicyMember
+      uid: ActiveDirectory.Add-ADCentralAccessPolicyMember
+    - name: Add-ADComputerServiceAccount
+      uid: ActiveDirectory.Add-ADComputerServiceAccount
+    - name: Add-ADDomainControllerPasswordReplicationPolicy
+      uid: ActiveDirectory.Add-ADDomainControllerPasswordReplicationPolicy
+    - name: Add-ADFineGrainedPasswordPolicySubject
+      uid: ActiveDirectory.Add-ADFineGrainedPasswordPolicySubject
+    - name: Add-ADGroupMember
+      uid: ActiveDirectory.Add-ADGroupMember
+    - name: Add-ADPrincipalGroupMembership
+      uid: ActiveDirectory.Add-ADPrincipalGroupMembership
+    - name: Add-ADResourcePropertyListMember
+      uid: ActiveDirectory.Add-ADResourcePropertyListMember
+    - name: Clear-ADAccountExpiration
+      uid: ActiveDirectory.Clear-ADAccountExpiration
+    - name: Clear-ADClaimTransformLink
+      uid: ActiveDirectory.Clear-ADClaimTransformLink
+    - name: Disable-ADAccount
+      uid: ActiveDirectory.Disable-ADAccount
+    - name: Disable-ADOptionalFeature
+      uid: ActiveDirectory.Disable-ADOptionalFeature
+    - name: Enable-ADAccount
+      uid: ActiveDirectory.Enable-ADAccount
+    - name: Enable-ADOptionalFeature
+      uid: ActiveDirectory.Enable-ADOptionalFeature
+    - name: Get-ADAccountAuthorizationGroup
+      uid: ActiveDirectory.Get-ADAccountAuthorizationGroup
+    - name: Get-ADAccountResultantPasswordReplicationPolicy
+      uid: ActiveDirectory.Get-ADAccountResultantPasswordReplicationPolicy
+    - name: Get-ADCentralAccessPolicy
+      uid: ActiveDirectory.Get-ADCentralAccessPolicy
+    - name: Get-ADCentralAccessRule
+      uid: ActiveDirectory.Get-ADCentralAccessRule
+    - name: Get-ADClaimTransformPolicy
+      uid: ActiveDirectory.Get-ADClaimTransformPolicy
+    - name: Get-ADClaimType
+      uid: ActiveDirectory.Get-ADClaimType
+    - name: Get-ADComputer
+      uid: ActiveDirectory.Get-ADComputer
+    - name: Get-ADComputerServiceAccount
+      uid: ActiveDirectory.Get-ADComputerServiceAccount
+    - name: Get-ADDCCloningExcludedApplicationList
+      uid: ActiveDirectory.Get-ADDCCloningExcludedApplicationList
+    - name: Get-ADDefaultDomainPasswordPolicy
+      uid: ActiveDirectory.Get-ADDefaultDomainPasswordPolicy
+    - name: Get-ADDomain
+      uid: ActiveDirectory.Get-ADDomain
+    - name: Get-ADDomainController
+      uid: ActiveDirectory.Get-ADDomainController
+    - name: Get-ADDomainControllerPasswordReplicationPolicy
+      uid: ActiveDirectory.Get-ADDomainControllerPasswordReplicationPolicy
+    - name: Get-ADDomainControllerPasswordReplicationPolicyUsage
+      uid: ActiveDirectory.Get-ADDomainControllerPasswordReplicationPolicyUsage
+    - name: Get-ADFineGrainedPasswordPolicy
+      uid: ActiveDirectory.Get-ADFineGrainedPasswordPolicy
+    - name: Get-ADFineGrainedPasswordPolicySubject
+      uid: ActiveDirectory.Get-ADFineGrainedPasswordPolicySubject
+    - name: Get-ADForest
+      uid: ActiveDirectory.Get-ADForest
+    - name: Get-ADGroup
+      uid: ActiveDirectory.Get-ADGroup
+    - name: Get-ADGroupMember
+      uid: ActiveDirectory.Get-ADGroupMember
+    - name: Get-ADObject
+      uid: ActiveDirectory.Get-ADObject
+    - name: Get-ADOptionalFeature
+      uid: ActiveDirectory.Get-ADOptionalFeature
+    - name: Get-ADOrganizationalUnit
+      uid: ActiveDirectory.Get-ADOrganizationalUnit
+    - name: Get-ADPrincipalGroupMembership
+      uid: ActiveDirectory.Get-ADPrincipalGroupMembership
+    - name: Get-ADReplicationAttributeMetadata
+      uid: ActiveDirectory.Get-ADReplicationAttributeMetadata
+    - name: Get-ADReplicationConnection
+      uid: ActiveDirectory.Get-ADReplicationConnection
+    - name: Get-ADReplicationFailure
+      uid: ActiveDirectory.Get-ADReplicationFailure
+    - name: Get-ADReplicationPartnerMetadata
+      uid: ActiveDirectory.Get-ADReplicationPartnerMetadata
+    - name: Get-ADReplicationQueueOperation
+      uid: ActiveDirectory.Get-ADReplicationQueueOperation
+    - name: Get-ADReplicationSite
+      uid: ActiveDirectory.Get-ADReplicationSite
+    - name: Get-ADReplicationSiteLink
+      uid: ActiveDirectory.Get-ADReplicationSiteLink
+    - name: Get-ADReplicationSiteLinkBridge
+      uid: ActiveDirectory.Get-ADReplicationSiteLinkBridge
+    - name: Get-ADReplicationSubnet
+      uid: ActiveDirectory.Get-ADReplicationSubnet
+    - name: Get-ADReplicationUpToDatenessVectorTable
+      uid: ActiveDirectory.Get-ADReplicationUpToDatenessVectorTable
+    - name: Get-ADResourceProperty
+      uid: ActiveDirectory.Get-ADResourceProperty
+    - name: Get-ADResourcePropertyList
+      uid: ActiveDirectory.Get-ADResourcePropertyList
+    - name: Get-ADResourcePropertyValueType
+      uid: ActiveDirectory.Get-ADResourcePropertyValueType
+    - name: Get-ADRootDSE
+      uid: ActiveDirectory.Get-ADRootDSE
+    - name: Get-ADServiceAccount
+      uid: ActiveDirectory.Get-ADServiceAccount
+    - name: Get-ADTrust
+      uid: ActiveDirectory.Get-ADTrust
+    - name: Get-ADUser
+      uid: ActiveDirectory.Get-ADUser
+    - name: Get-ADUserResultantPasswordPolicy
+      uid: ActiveDirectory.Get-ADUserResultantPasswordPolicy
+    - name: Install-ADServiceAccount
+      uid: ActiveDirectory.Install-ADServiceAccount
+    - name: Move-ADDirectoryServer
+      uid: ActiveDirectory.Move-ADDirectoryServer
+    - name: Move-ADDirectoryServerOperationMasterRole
+      uid: ActiveDirectory.Move-ADDirectoryServerOperationMasterRole
+    - name: Move-ADObject
+      uid: ActiveDirectory.Move-ADObject
+    - name: New-ADCentralAccessPolicy
+      uid: ActiveDirectory.New-ADCentralAccessPolicy
+    - name: New-ADCentralAccessRule
+      uid: ActiveDirectory.New-ADCentralAccessRule
+    - name: New-ADClaimTransformPolicy
+      uid: ActiveDirectory.New-ADClaimTransformPolicy
+    - name: New-ADClaimType
+      uid: ActiveDirectory.New-ADClaimType
+    - name: New-ADComputer
+      uid: ActiveDirectory.New-ADComputer
+    - name: New-ADDCCloneConfigFile
+      uid: ActiveDirectory.New-ADDCCloneConfigFile
+    - name: New-ADFineGrainedPasswordPolicy
+      uid: ActiveDirectory.New-ADFineGrainedPasswordPolicy
+    - name: New-ADGroup
+      uid: ActiveDirectory.New-ADGroup
+    - name: New-ADObject
+      uid: ActiveDirectory.New-ADObject
+    - name: New-ADOrganizationalUnit
+      uid: ActiveDirectory.New-ADOrganizationalUnit
+    - name: New-ADReplicationSite
+      uid: ActiveDirectory.New-ADReplicationSite
+    - name: New-ADReplicationSiteLink
+      uid: ActiveDirectory.New-ADReplicationSiteLink
+    - name: New-ADReplicationSiteLinkBridge
+      uid: ActiveDirectory.New-ADReplicationSiteLinkBridge
+    - name: New-ADReplicationSubnet
+      uid: ActiveDirectory.New-ADReplicationSubnet
+    - name: New-ADResourceProperty
+      uid: ActiveDirectory.New-ADResourceProperty
+    - name: New-ADResourcePropertyList
+      uid: ActiveDirectory.New-ADResourcePropertyList
+    - name: New-ADServiceAccount
+      uid: ActiveDirectory.New-ADServiceAccount
+    - name: New-ADUser
+      uid: ActiveDirectory.New-ADUser
+    - name: Remove-ADCentralAccessPolicy
+      uid: ActiveDirectory.Remove-ADCentralAccessPolicy
+    - name: Remove-ADCentralAccessPolicyMember
+      uid: ActiveDirectory.Remove-ADCentralAccessPolicyMember
+    - name: Remove-ADCentralAccessRule
+      uid: ActiveDirectory.Remove-ADCentralAccessRule
+    - name: Remove-ADClaimTransformPolicy
+      uid: ActiveDirectory.Remove-ADClaimTransformPolicy
+    - name: Remove-ADClaimType
+      uid: ActiveDirectory.Remove-ADClaimType
+    - name: Remove-ADComputer
+      uid: ActiveDirectory.Remove-ADComputer
+    - name: Remove-ADComputerServiceAccount
+      uid: ActiveDirectory.Remove-ADComputerServiceAccount
+    - name: Remove-ADDomainControllerPasswordReplicationPolicy
+      uid: ActiveDirectory.Remove-ADDomainControllerPasswordReplicationPolicy
+    - name: Remove-ADFineGrainedPasswordPolicy
+      uid: ActiveDirectory.Remove-ADFineGrainedPasswordPolicy
+    - name: Remove-ADFineGrainedPasswordPolicySubject
+      uid: ActiveDirectory.Remove-ADFineGrainedPasswordPolicySubject
+    - name: Remove-ADGroup
+      uid: ActiveDirectory.Remove-ADGroup
+    - name: Remove-ADGroupMember
+      uid: ActiveDirectory.Remove-ADGroupMember
+    - name: Remove-ADObject
+      uid: ActiveDirectory.Remove-ADObject
+    - name: Remove-ADOrganizationalUnit
+      uid: ActiveDirectory.Remove-ADOrganizationalUnit
+    - name: Remove-ADPrincipalGroupMembership
+      uid: ActiveDirectory.Remove-ADPrincipalGroupMembership
+    - name: Remove-ADReplicationSite
+      uid: ActiveDirectory.Remove-ADReplicationSite
+    - name: Remove-ADReplicationSiteLink
+      uid: ActiveDirectory.Remove-ADReplicationSiteLink
+    - name: Remove-ADReplicationSiteLinkBridge
+      uid: ActiveDirectory.Remove-ADReplicationSiteLinkBridge
+    - name: Remove-ADReplicationSubnet
+      uid: ActiveDirectory.Remove-ADReplicationSubnet
+    - name: Remove-ADResourceProperty
+      uid: ActiveDirectory.Remove-ADResourceProperty
+    - name: Remove-ADResourcePropertyList
+      uid: ActiveDirectory.Remove-ADResourcePropertyList
+    - name: Remove-ADResourcePropertyListMember
+      uid: ActiveDirectory.Remove-ADResourcePropertyListMember
+    - name: Remove-ADServiceAccount
+      uid: ActiveDirectory.Remove-ADServiceAccount
+    - name: Remove-ADUser
+      uid: ActiveDirectory.Remove-ADUser
+    - name: Rename-ADObject
+      uid: ActiveDirectory.Rename-ADObject
+    - name: Reset-ADServiceAccountPassword
+      uid: ActiveDirectory.Reset-ADServiceAccountPassword
+    - name: Restore-ADObject
+      uid: ActiveDirectory.Restore-ADObject
+    - name: Search-ADAccount
+      uid: ActiveDirectory.Search-ADAccount
+    - name: Set-ADAccountControl
+      uid: ActiveDirectory.Set-ADAccountControl
+    - name: Set-ADAccountExpiration
+      uid: ActiveDirectory.Set-ADAccountExpiration
+    - name: Set-ADAccountPassword
+      uid: ActiveDirectory.Set-ADAccountPassword
+    - name: Set-ADCentralAccessPolicy
+      uid: ActiveDirectory.Set-ADCentralAccessPolicy
+    - name: Set-ADCentralAccessRule
+      uid: ActiveDirectory.Set-ADCentralAccessRule
+    - name: Set-ADClaimTransformLink
+      uid: ActiveDirectory.Set-ADClaimTransformLink
+    - name: Set-ADClaimTransformPolicy
+      uid: ActiveDirectory.Set-ADClaimTransformPolicy
+    - name: Set-ADClaimType
+      uid: ActiveDirectory.Set-ADClaimType
+    - name: Set-ADComputer
+      uid: ActiveDirectory.Set-ADComputer
+    - name: Set-ADDefaultDomainPasswordPolicy
+      uid: ActiveDirectory.Set-ADDefaultDomainPasswordPolicy
+    - name: Set-ADDomain
+      uid: ActiveDirectory.Set-ADDomain
+    - name: Set-ADDomainMode
+      uid: ActiveDirectory.Set-ADDomainMode
+    - name: Set-ADFineGrainedPasswordPolicy
+      uid: ActiveDirectory.Set-ADFineGrainedPasswordPolicy
+    - name: Set-ADForest
+      uid: ActiveDirectory.Set-ADForest
+    - name: Set-ADForestMode
+      uid: ActiveDirectory.Set-ADForestMode
+    - name: Set-ADGroup
+      uid: ActiveDirectory.Set-ADGroup
+    - name: Set-ADObject
+      uid: ActiveDirectory.Set-ADObject
+    - name: Set-ADOrganizationalUnit
+      uid: ActiveDirectory.Set-ADOrganizationalUnit
+    - name: Set-ADReplicationConnection
+      uid: ActiveDirectory.Set-ADReplicationConnection
+    - name: Set-ADReplicationSite
+      uid: ActiveDirectory.Set-ADReplicationSite
+    - name: Set-ADReplicationSiteLink
+      uid: ActiveDirectory.Set-ADReplicationSiteLink
+    - name: Set-ADReplicationSiteLinkBridge
+      uid: ActiveDirectory.Set-ADReplicationSiteLinkBridge
+    - name: Set-ADReplicationSubnet
+      uid: ActiveDirectory.Set-ADReplicationSubnet
+    - name: Set-ADResourceProperty
+      uid: ActiveDirectory.Set-ADResourceProperty
+    - name: Set-ADResourcePropertyList
+      uid: ActiveDirectory.Set-ADResourcePropertyList
+    - name: Set-ADServiceAccount
+      uid: ActiveDirectory.Set-ADServiceAccount
+    - name: Set-ADUser
+      uid: ActiveDirectory.Set-ADUser
+    - name: Sync-ADObject
+      uid: ActiveDirectory.Sync-ADObject
+    - name: Test-ADServiceAccount
+      uid: ActiveDirectory.Test-ADServiceAccount
+    - name: Uninstall-ADServiceAccount
+      uid: ActiveDirectory.Uninstall-ADServiceAccount
+    - name: Unlock-ADAccount
+      uid: ActiveDirectory.Unlock-ADAccount
+  - name: adcsadministration
+    uid: adcsadministration
+    items:
+    - name: add-caauthorityinformationaccess
+      uid: adcsadministration.add-caauthorityinformationaccess
+    - name: add-cacrldistributionpoint
+      uid: adcsadministration.add-cacrldistributionpoint
+    - name: add-catemplate
+      uid: adcsadministration.add-catemplate
+    - name: Backup-CARoleService
+      uid: adcsadministration.Backup-CARoleService
+    - name: Confirm-CAEndorsementKeyInfo
+      uid: adcsadministration.Confirm-CAEndorsementKeyInfo
+    - name: get-caauthorityinformationaccess
+      uid: adcsadministration.get-caauthorityinformationaccess
+    - name: get-cacrldistributionpoint
+      uid: adcsadministration.get-cacrldistributionpoint
+    - name: get-catemplate
+      uid: adcsadministration.get-catemplate
+    - name: remove-caauthorityinformationaccess
+      uid: adcsadministration.remove-caauthorityinformationaccess
+    - name: remove-cacrldistributionpoint
+      uid: adcsadministration.remove-cacrldistributionpoint
+    - name: remove-catemplate
+      uid: adcsadministration.remove-catemplate
+    - name: Restore-CARoleService
+      uid: adcsadministration.Restore-CARoleService
+  - name: adcsdeployment
+    uid: adcsdeployment
+    items:
+    - name: install-adcscertificationauthority
+      uid: adcsdeployment.install-adcscertificationauthority
+    - name: install-adcsenrollmentpolicywebservice
+      uid: adcsdeployment.install-adcsenrollmentpolicywebservice
+    - name: install-adcsenrollmentwebservice
+      uid: adcsdeployment.install-adcsenrollmentwebservice
+    - name: install-adcsnetworkdeviceenrollmentservice
+      uid: adcsdeployment.install-adcsnetworkdeviceenrollmentservice
+    - name: install-adcsonlineresponder
+      uid: adcsdeployment.install-adcsonlineresponder
+    - name: install-adcswebenrollment
+      uid: adcsdeployment.install-adcswebenrollment
+    - name: uninstall-adcscertificationauthority
+      uid: adcsdeployment.uninstall-adcscertificationauthority
+    - name: uninstall-adcsenrollmentpolicywebservice
+      uid: adcsdeployment.uninstall-adcsenrollmentpolicywebservice
+    - name: uninstall-adcsenrollmentwebservice
+      uid: adcsdeployment.uninstall-adcsenrollmentwebservice
+    - name: uninstall-adcsnetworkdeviceenrollmentservice
+      uid: adcsdeployment.uninstall-adcsnetworkdeviceenrollmentservice
+    - name: uninstall-adcsonlineresponder
+      uid: adcsdeployment.uninstall-adcsonlineresponder
+    - name: uninstall-adcswebenrollment
+      uid: adcsdeployment.uninstall-adcswebenrollment
+  - name: ADDSDeployment
+    uid: ADDSDeployment
+    items:
+    - name: Add-ADDSReadOnlyDomainControllerAccount
+      uid: ADDSDeployment.Add-ADDSReadOnlyDomainControllerAccount
+    - name: Install-ADDSDomain
+      uid: ADDSDeployment.Install-ADDSDomain
+    - name: Install-ADDSDomainController
+      uid: ADDSDeployment.Install-ADDSDomainController
+    - name: Install-ADDSForest
+      uid: ADDSDeployment.Install-ADDSForest
+    - name: Test-ADDSDomainControllerInstallation
+      uid: ADDSDeployment.Test-ADDSDomainControllerInstallation
+    - name: Test-ADDSDomainControllerUninstallation
+      uid: ADDSDeployment.Test-ADDSDomainControllerUninstallation
+    - name: Test-ADDSDomainInstallation
+      uid: ADDSDeployment.Test-ADDSDomainInstallation
+    - name: Test-ADDSForestInstallation
+      uid: ADDSDeployment.Test-ADDSForestInstallation
+    - name: Test-ADDSReadOnlyDomainControllerAccountCreation
+      uid: ADDSDeployment.Test-ADDSReadOnlyDomainControllerAccountCreation
+    - name: Uninstall-ADDSDomainController
+      uid: ADDSDeployment.Uninstall-ADDSDomainController
+  - name: ADFS
+    uid: ADFS
+    items:
+    - name: Add-ADFSAttributeStore
+      uid: ADFS.Add-ADFSAttributeStore
+    - name: Add-ADFSCertificate
+      uid: ADFS.Add-ADFSCertificate
+    - name: Add-ADFSClaimDescription
+      uid: ADFS.Add-ADFSClaimDescription
+    - name: Add-ADFSClaimsProviderTrust
+      uid: ADFS.Add-ADFSClaimsProviderTrust
+    - name: Add-AdfsFarmNode
+      uid: ADFS.Add-AdfsFarmNode
+    - name: Add-AdfsProxy
+      uid: ADFS.Add-AdfsProxy
+    - name: Add-ADFSRelyingPartyTrust
+      uid: ADFS.Add-ADFSRelyingPartyTrust
+    - name: Disable-ADFSClaimsProviderTrust
+      uid: ADFS.Disable-ADFSClaimsProviderTrust
+    - name: Disable-ADFSEndpoint
+      uid: ADFS.Disable-ADFSEndpoint
+    - name: Disable-ADFSRelyingPartyTrust
+      uid: ADFS.Disable-ADFSRelyingPartyTrust
+    - name: Enable-ADFSClaimsProviderTrust
+      uid: ADFS.Enable-ADFSClaimsProviderTrust
+    - name: Enable-ADFSEndpoint
+      uid: ADFS.Enable-ADFSEndpoint
+    - name: Enable-ADFSRelyingPartyTrust
+      uid: ADFS.Enable-ADFSRelyingPartyTrust
+    - name: Export-AdfsDeploymentSQLScript
+      uid: ADFS.Export-AdfsDeploymentSQLScript
+    - name: Get-ADFSAttributeStore
+      uid: ADFS.Get-ADFSAttributeStore
+    - name: Get-ADFSCertificate
+      uid: ADFS.Get-ADFSCertificate
+    - name: Get-ADFSClaimDescription
+      uid: ADFS.Get-ADFSClaimDescription
+    - name: Get-ADFSClaimsProviderTrust
+      uid: ADFS.Get-ADFSClaimsProviderTrust
+    - name: Get-ADFSConfiguration
+      uid: ADFS.Get-ADFSConfiguration
+    - name: Get-ADFSEndpoint
+      uid: ADFS.Get-ADFSEndpoint
+    - name: Get-ADFSProxyConfiguration
+      uid: ADFS.Get-ADFSProxyConfiguration
+    - name: Get-ADFSRelyingPartyTrust
+      uid: ADFS.Get-ADFSRelyingPartyTrust
+    - name: Get-ADFSSyncConfiguration
+      uid: ADFS.Get-ADFSSyncConfiguration
+    - name: Install-AdfsFarm
+      uid: ADFS.Install-AdfsFarm
+    - name: Install-AdfsStandalone
+      uid: ADFS.Install-AdfsStandalone
+    - name: New-ADFSClaimRuleSet
+      uid: ADFS.New-ADFSClaimRuleSet
+    - name: New-ADFSContactPerson
+      uid: ADFS.New-ADFSContactPerson
+    - name: New-ADFSOrganization
+      uid: ADFS.New-ADFSOrganization
+    - name: New-ADFSSamlEndpoint
+      uid: ADFS.New-ADFSSamlEndpoint
+    - name: Remove-ADFSAttributeStore
+      uid: ADFS.Remove-ADFSAttributeStore
+    - name: Remove-ADFSCertificate
+      uid: ADFS.Remove-ADFSCertificate
+    - name: Remove-ADFSClaimDescription
+      uid: ADFS.Remove-ADFSClaimDescription
+    - name: Remove-ADFSClaimsProviderTrust
+      uid: ADFS.Remove-ADFSClaimsProviderTrust
+    - name: Remove-ADFSRelyingPartyTrust
+      uid: ADFS.Remove-ADFSRelyingPartyTrust
+    - name: Revoke-ADFSProxyTrust
+      uid: ADFS.Revoke-ADFSProxyTrust
+    - name: Set-ADFSAttributeStore
+      uid: ADFS.Set-ADFSAttributeStore
+    - name: Set-ADFSCertificate
+      uid: ADFS.Set-ADFSCertificate
+    - name: Set-ADFSClaimDescription
+      uid: ADFS.Set-ADFSClaimDescription
+    - name: Set-ADFSClaimsProviderTrust
+      uid: ADFS.Set-ADFSClaimsProviderTrust
+    - name: Set-ADFSConfiguration
+      uid: ADFS.Set-ADFSConfiguration
+    - name: Set-ADFSEndpoint
+      uid: ADFS.Set-ADFSEndpoint
+    - name: Set-ADFSProxyConfiguration
+      uid: ADFS.Set-ADFSProxyConfiguration
+    - name: Set-ADFSRelyingPartyTrust
+      uid: ADFS.Set-ADFSRelyingPartyTrust
+    - name: Set-ADFSSyncConfiguration
+      uid: ADFS.Set-ADFSSyncConfiguration
+    - name: Update-ADFSCertificate
+      uid: ADFS.Update-ADFSCertificate
+    - name: Update-ADFSClaimsProviderTrust
+      uid: ADFS.Update-ADFSClaimsProviderTrust
+    - name: Update-ADFSRelyingPartyTrust
+      uid: ADFS.Update-ADFSRelyingPartyTrust
+  - name: ADRMS
+    uid: ADRMS
+    items:
+    - name: Install-ADRMS
+      uid: ADRMS.Install-ADRMS
+    - name: Uninstall-ADRMS
+      uid: ADRMS.Uninstall-ADRMS
+    - name: Update-ADRMS
+      uid: ADRMS.Update-ADRMS
+  - name: ADRMSAdmin
+    uid: ADRMSAdmin
+    items:
+    - name: Export-RmsReportDefinitionLanguage
+      uid: ADRMSAdmin.Export-RmsReportDefinitionLanguage
+    - name: Export-RmsTPD
+      uid: ADRMSAdmin.Export-RmsTPD
+    - name: Export-RmsTUD
+      uid: ADRMSAdmin.Export-RmsTUD
+    - name: Get-RmsCertChain
+      uid: ADRMSAdmin.Get-RmsCertChain
+    - name: Get-RmsCertInfo
+      uid: ADRMSAdmin.Get-RmsCertInfo
+    - name: Get-RmsChildCert
+      uid: ADRMSAdmin.Get-RmsChildCert
+    - name: Get-RmsEncryptedIL
+      uid: ADRMSAdmin.Get-RmsEncryptedIL
+    - name: Get-RmsRequestInfo
+      uid: ADRMSAdmin.Get-RmsRequestInfo
+    - name: Get-RmsSvcAccount
+      uid: ADRMSAdmin.Get-RmsSvcAccount
+    - name: Get-RmsSystemHealthReport
+      uid: ADRMSAdmin.Get-RmsSystemHealthReport
+    - name: Get-RmsUserRequestReport
+      uid: ADRMSAdmin.Get-RmsUserRequestReport
+    - name: Import-RmsTPD
+      uid: ADRMSAdmin.Import-RmsTPD
+    - name: Import-RmsTUD
+      uid: ADRMSAdmin.Import-RmsTUD
+    - name: Initialize-RmsCryptoMode2
+      uid: ADRMSAdmin.Initialize-RmsCryptoMode2
+    - name: Install-RmsMfgEnrollment
+      uid: ADRMSAdmin.Install-RmsMfgEnrollment
+    - name: Install-RmsMfgSupport
+      uid: ADRMSAdmin.Install-RmsMfgSupport
+    - name: Set-RmsSvcAccount
+      uid: ADRMSAdmin.Set-RmsSvcAccount
+    - name: Uninstall-RmsMfgEnrollment
+      uid: ADRMSAdmin.Uninstall-RmsMfgEnrollment
+    - name: Uninstall-RmsMfgSupport
+      uid: ADRMSAdmin.Uninstall-RmsMfgSupport
+    - name: Update-RmsCluster
+      uid: ADRMSAdmin.Update-RmsCluster
+    - name: Update-RmsMfgEnrollment
+      uid: ADRMSAdmin.Update-RmsMfgEnrollment
+  - name: AppLocker
+    uid: AppLocker
+    items:
+    - name: Get-AppLockerFileInformation
+      uid: AppLocker.Get-AppLockerFileInformation
+    - name: Get-AppLockerPolicy
+      uid: AppLocker.Get-AppLockerPolicy
+    - name: New-AppLockerPolicy
+      uid: AppLocker.New-AppLockerPolicy
+    - name: Set-AppLockerPolicy
+      uid: AppLocker.Set-AppLockerPolicy
+    - name: Test-AppLockerPolicy
+      uid: AppLocker.Test-AppLockerPolicy
+  - name: Appx
+    uid: Appx
+    items:
+    - name: Add-AppxPackage
+      uid: Appx.Add-AppxPackage
+    - name: Get-AppxLastError
+      uid: Appx.Get-AppxLastError
+    - name: Get-AppxLog
+      uid: Appx.Get-AppxLog
+    - name: Get-AppxPackage
+      uid: Appx.Get-AppxPackage
+    - name: Get-AppxPackageManifest
+      uid: Appx.Get-AppxPackageManifest
+    - name: Remove-AppxPackage
+      uid: Appx.Remove-AppxPackage
+  - name: BestPractices
+    uid: BestPractices
+    items:
+    - name: Get-BpaModel
+      uid: BestPractices.Get-BpaModel
+    - name: Get-BpaResult
+      uid: BestPractices.Get-BpaResult
+    - name: Invoke-BpaModel
+      uid: BestPractices.Invoke-BpaModel
+    - name: Set-BpaResult
+      uid: BestPractices.Set-BpaResult
+  - name: BitLocker
+    uid: BitLocker
+    items:
+    - name: Add-BitLockerKeyProtector
+      uid: BitLocker.Add-BitLockerKeyProtector
+    - name: Backup-BitLockerKeyProtector
+      uid: BitLocker.Backup-BitLockerKeyProtector
+    - name: Clear-BitLockerAutoUnlock
+      uid: BitLocker.Clear-BitLockerAutoUnlock
+    - name: Disable-BitLocker
+      uid: BitLocker.Disable-BitLocker
+    - name: Disable-BitLockerAutoUnlock
+      uid: BitLocker.Disable-BitLockerAutoUnlock
+    - name: Enable-BitLocker
+      uid: BitLocker.Enable-BitLocker
+    - name: Enable-BitLockerAutoUnlock
+      uid: BitLocker.Enable-BitLockerAutoUnlock
+    - name: Get-BitLockerVolume
+      uid: BitLocker.Get-BitLockerVolume
+    - name: Lock-BitLocker
+      uid: BitLocker.Lock-BitLocker
+    - name: Remove-BitLockerKeyProtector
+      uid: BitLocker.Remove-BitLockerKeyProtector
+    - name: Resume-BitLocker
+      uid: BitLocker.Resume-BitLocker
+    - name: Suspend-BitLocker
+      uid: BitLocker.Suspend-BitLocker
+    - name: Unlock-BitLocker
+      uid: BitLocker.Unlock-BitLocker
+  - name: BranchCache
+    uid: BranchCache
+    items:
+    - name: Add-BCDataCacheExtension
+      uid: BranchCache.Add-BCDataCacheExtension
+    - name: Clear-BCCache
+      uid: BranchCache.Clear-BCCache
+    - name: Disable-BC
+      uid: BranchCache.Disable-BC
+    - name: Disable-BCDowngrading
+      uid: BranchCache.Disable-BCDowngrading
+    - name: Disable-BCServeOnBattery
+      uid: BranchCache.Disable-BCServeOnBattery
+    - name: Enable-BCDistributed
+      uid: BranchCache.Enable-BCDistributed
+    - name: Enable-BCDowngrading
+      uid: BranchCache.Enable-BCDowngrading
+    - name: Enable-BCHostedClient
+      uid: BranchCache.Enable-BCHostedClient
+    - name: Enable-BCHostedServer
+      uid: BranchCache.Enable-BCHostedServer
+    - name: Enable-BCLocal
+      uid: BranchCache.Enable-BCLocal
+    - name: Enable-BCServeOnBattery
+      uid: BranchCache.Enable-BCServeOnBattery
+    - name: Export-BCCachePackage
+      uid: BranchCache.Export-BCCachePackage
+    - name: Export-BCSecretKey
+      uid: BranchCache.Export-BCSecretKey
+    - name: Get-BCClientConfiguration
+      uid: BranchCache.Get-BCClientConfiguration
+    - name: Get-BCContentServerConfiguration
+      uid: BranchCache.Get-BCContentServerConfiguration
+    - name: Get-BCDataCache
+      uid: BranchCache.Get-BCDataCache
+    - name: Get-BCDataCacheExtension
+      uid: BranchCache.Get-BCDataCacheExtension
+    - name: Get-BCHashCache
+      uid: BranchCache.Get-BCHashCache
+    - name: Get-BCHostedCacheServerConfiguration
+      uid: BranchCache.Get-BCHostedCacheServerConfiguration
+    - name: Get-BCNetworkConfiguration
+      uid: BranchCache.Get-BCNetworkConfiguration
+    - name: Get-BCStatus
+      uid: BranchCache.Get-BCStatus
+    - name: Import-BCCachePackage
+      uid: BranchCache.Import-BCCachePackage
+    - name: Import-BCSecretKey
+      uid: BranchCache.Import-BCSecretKey
+    - name: Publish-BCFileContent
+      uid: BranchCache.Publish-BCFileContent
+    - name: Publish-BCWebContent
+      uid: BranchCache.Publish-BCWebContent
+    - name: Remove-BCDataCacheExtension
+      uid: BranchCache.Remove-BCDataCacheExtension
+    - name: Reset-BC
+      uid: BranchCache.Reset-BC
+    - name: Set-BCAuthentication
+      uid: BranchCache.Set-BCAuthentication
+    - name: Set-BCCache
+      uid: BranchCache.Set-BCCache
+    - name: Set-BCDataCacheEntryMaxAge
+      uid: BranchCache.Set-BCDataCacheEntryMaxAge
+    - name: Set-BCMinSMBLatency
+      uid: BranchCache.Set-BCMinSMBLatency
+    - name: Set-BCSecretKey
+      uid: BranchCache.Set-BCSecretKey
+  - name: ClusterAwareUpdating
+    uid: ClusterAwareUpdating
+    items:
+    - name: Add-CauClusterRole
+      uid: ClusterAwareUpdating.Add-CauClusterRole
+    - name: Disable-CauClusterRole
+      uid: ClusterAwareUpdating.Disable-CauClusterRole
+    - name: Enable-CauClusterRole
+      uid: ClusterAwareUpdating.Enable-CauClusterRole
+    - name: Export-CauReport
+      uid: ClusterAwareUpdating.Export-CauReport
+    - name: Get-CauClusterRole
+      uid: ClusterAwareUpdating.Get-CauClusterRole
+    - name: Get-CauPlugin
+      uid: ClusterAwareUpdating.Get-CauPlugin
+    - name: Get-CauReport
+      uid: ClusterAwareUpdating.Get-CauReport
+    - name: Get-CauRun
+      uid: ClusterAwareUpdating.Get-CauRun
+    - name: Invoke-CauRun
+      uid: ClusterAwareUpdating.Invoke-CauRun
+    - name: Invoke-CauScan
+      uid: ClusterAwareUpdating.Invoke-CauScan
+    - name: Register-CauPlugin
+      uid: ClusterAwareUpdating.Register-CauPlugin
+    - name: Remove-CauClusterRole
+      uid: ClusterAwareUpdating.Remove-CauClusterRole
+    - name: Save-CauDebugTrace
+      uid: ClusterAwareUpdating.Save-CauDebugTrace
+    - name: Set-CauClusterRole
+      uid: ClusterAwareUpdating.Set-CauClusterRole
+    - name: Stop-CauRun
+      uid: ClusterAwareUpdating.Stop-CauRun
+    - name: Test-CauSetup
+      uid: ClusterAwareUpdating.Test-CauSetup
+    - name: Unregister-CauPlugin
+      uid: ClusterAwareUpdating.Unregister-CauPlugin
+  - name: DcbQoS
+    uid: DcbQoS
+    items:
+    - name: Disable-NetQosFlowControl
+      uid: DcbQoS.Disable-NetQosFlowControl
+    - name: Enable-NetQosFlowControl
+      uid: DcbQoS.Enable-NetQosFlowControl
+    - name: Get-NetQosDcbxSetting
+      uid: DcbQoS.Get-NetQosDcbxSetting
+    - name: Get-NetQosFlowControl
+      uid: DcbQoS.Get-NetQosFlowControl
+    - name: Get-NetQosTrafficClass
+      uid: DcbQoS.Get-NetQosTrafficClass
+    - name: New-NetQosTrafficClass
+      uid: DcbQoS.New-NetQosTrafficClass
+    - name: Remove-NetQosTrafficClass
+      uid: DcbQoS.Remove-NetQosTrafficClass
+    - name: Set-NetQosDcbxSetting
+      uid: DcbQoS.Set-NetQosDcbxSetting
+    - name: Set-NetQosFlowControl
+      uid: DcbQoS.Set-NetQosFlowControl
+    - name: Set-NetQosTrafficClass
+      uid: DcbQoS.Set-NetQosTrafficClass
+  - name: Deduplication
+    uid: Deduplication
+    items:
+    - name: Disable-DedupVolume
+      uid: Deduplication.Disable-DedupVolume
+    - name: Enable-DedupVolume
+      uid: Deduplication.Enable-DedupVolume
+    - name: Get-DedupJob
+      uid: Deduplication.Get-DedupJob
+    - name: Get-DedupMetadata
+      uid: Deduplication.Get-DedupMetadata
+    - name: Get-DedupSchedule
+      uid: Deduplication.Get-DedupSchedule
+    - name: Get-DedupStatus
+      uid: Deduplication.Get-DedupStatus
+    - name: Get-DedupVolume
+      uid: Deduplication.Get-DedupVolume
+    - name: Measure-DedupFileMetadata
+      uid: Deduplication.Measure-DedupFileMetadata
+    - name: New-DedupSchedule
+      uid: Deduplication.New-DedupSchedule
+    - name: Remove-DedupSchedule
+      uid: Deduplication.Remove-DedupSchedule
+    - name: Set-DedupSchedule
+      uid: Deduplication.Set-DedupSchedule
+    - name: Set-DedupVolume
+      uid: Deduplication.Set-DedupVolume
+    - name: Start-DedupJob
+      uid: Deduplication.Start-DedupJob
+    - name: Stop-DedupJob
+      uid: Deduplication.Stop-DedupJob
+    - name: Update-DedupStatus
+      uid: Deduplication.Update-DedupStatus
+  - name: DFSN
+    uid: DFSN
+    items:
+    - name: Get-DfsnAccess
+      uid: DFSN.Get-DfsnAccess
+    - name: Get-DfsnFolder
+      uid: DFSN.Get-DfsnFolder
+    - name: Get-DfsnFolderTarget
+      uid: DFSN.Get-DfsnFolderTarget
+    - name: Get-DfsnRoot
+      uid: DFSN.Get-DfsnRoot
+    - name: Get-DfsnRootTarget
+      uid: DFSN.Get-DfsnRootTarget
+    - name: Get-DfsnServerConfiguration
+      uid: DFSN.Get-DfsnServerConfiguration
+    - name: Grant-DfsnAccess
+      uid: DFSN.Grant-DfsnAccess
+    - name: Move-DfsnFolder
+      uid: DFSN.Move-DfsnFolder
+    - name: New-DfsnFolder
+      uid: DFSN.New-DfsnFolder
+    - name: New-DfsnFolderTarget
+      uid: DFSN.New-DfsnFolderTarget
+    - name: New-DfsnRoot
+      uid: DFSN.New-DfsnRoot
+    - name: New-DfsnRootTarget
+      uid: DFSN.New-DfsnRootTarget
+    - name: Remove-DfsnAccess
+      uid: DFSN.Remove-DfsnAccess
+    - name: Remove-DfsnFolder
+      uid: DFSN.Remove-DfsnFolder
+    - name: Remove-DfsnFolderTarget
+      uid: DFSN.Remove-DfsnFolderTarget
+    - name: Remove-DfsnRoot
+      uid: DFSN.Remove-DfsnRoot
+    - name: Remove-DfsnRootTarget
+      uid: DFSN.Remove-DfsnRootTarget
+    - name: Revoke-DfsnAccess
+      uid: DFSN.Revoke-DfsnAccess
+    - name: Set-DfsnFolder
+      uid: DFSN.Set-DfsnFolder
+    - name: Set-DfsnFolderTarget
+      uid: DFSN.Set-DfsnFolderTarget
+    - name: Set-DfsnRoot
+      uid: DFSN.Set-DfsnRoot
+    - name: Set-DfsnRootTarget
+      uid: DFSN.Set-DfsnRootTarget
+    - name: Set-DfsnServerConfiguration
+      uid: DFSN.Set-DfsnServerConfiguration
+  - name: DhcpServer
+    uid: DhcpServer
+    items:
+    - name: Add-DhcpServerInDC
+      uid: DhcpServer.Add-DhcpServerInDC
+    - name: Add-DhcpServerv4Class
+      uid: DhcpServer.Add-DhcpServerv4Class
+    - name: Add-DhcpServerv4ExclusionRange
+      uid: DhcpServer.Add-DhcpServerv4ExclusionRange
+    - name: Add-DhcpServerv4Failover
+      uid: DhcpServer.Add-DhcpServerv4Failover
+    - name: Add-DhcpServerv4FailoverScope
+      uid: DhcpServer.Add-DhcpServerv4FailoverScope
+    - name: Add-DhcpServerv4Filter
+      uid: DhcpServer.Add-DhcpServerv4Filter
+    - name: Add-DhcpServerv4Lease
+      uid: DhcpServer.Add-DhcpServerv4Lease
+    - name: Add-DhcpServerv4OptionDefinition
+      uid: DhcpServer.Add-DhcpServerv4OptionDefinition
+    - name: Add-DhcpServerv4Policy
+      uid: DhcpServer.Add-DhcpServerv4Policy
+    - name: Add-DhcpServerv4PolicyIPRange
+      uid: DhcpServer.Add-DhcpServerv4PolicyIPRange
+    - name: Add-DhcpServerv4Reservation
+      uid: DhcpServer.Add-DhcpServerv4Reservation
+    - name: Add-DhcpServerv4Scope
+      uid: DhcpServer.Add-DhcpServerv4Scope
+    - name: Add-DhcpServerv4Superscope
+      uid: DhcpServer.Add-DhcpServerv4Superscope
+    - name: Add-DhcpServerv6Class
+      uid: DhcpServer.Add-DhcpServerv6Class
+    - name: Add-DhcpServerv6ExclusionRange
+      uid: DhcpServer.Add-DhcpServerv6ExclusionRange
+    - name: Add-DhcpServerv6Lease
+      uid: DhcpServer.Add-DhcpServerv6Lease
+    - name: Add-DhcpServerv6OptionDefinition
+      uid: DhcpServer.Add-DhcpServerv6OptionDefinition
+    - name: Add-DhcpServerv6Reservation
+      uid: DhcpServer.Add-DhcpServerv6Reservation
+    - name: Add-DhcpServerv6Scope
+      uid: DhcpServer.Add-DhcpServerv6Scope
+    - name: Backup-DhcpServer
+      uid: DhcpServer.Backup-DhcpServer
+    - name: Export-DhcpServer
+      uid: DhcpServer.Export-DhcpServer
+    - name: Get-DhcpServerAuditLog
+      uid: DhcpServer.Get-DhcpServerAuditLog
+    - name: Get-DhcpServerDatabase
+      uid: DhcpServer.Get-DhcpServerDatabase
+    - name: Get-DhcpServerInDC
+      uid: DhcpServer.Get-DhcpServerInDC
+    - name: Get-DhcpServerSetting
+      uid: DhcpServer.Get-DhcpServerSetting
+    - name: Get-DhcpServerv4Binding
+      uid: DhcpServer.Get-DhcpServerv4Binding
+    - name: Get-DhcpServerv4Class
+      uid: DhcpServer.Get-DhcpServerv4Class
+    - name: Get-DhcpServerv4DnsSetting
+      uid: DhcpServer.Get-DhcpServerv4DnsSetting
+    - name: Get-DhcpServerv4ExclusionRange
+      uid: DhcpServer.Get-DhcpServerv4ExclusionRange
+    - name: Get-DhcpServerv4Failover
+      uid: DhcpServer.Get-DhcpServerv4Failover
+    - name: Get-DhcpServerv4Filter
+      uid: DhcpServer.Get-DhcpServerv4Filter
+    - name: Get-DhcpServerv4FilterList
+      uid: DhcpServer.Get-DhcpServerv4FilterList
+    - name: Get-DhcpServerv4FreeIPAddress
+      uid: DhcpServer.Get-DhcpServerv4FreeIPAddress
+    - name: Get-DhcpServerv4Lease
+      uid: DhcpServer.Get-DhcpServerv4Lease
+    - name: Get-DhcpServerv4OptionDefinition
+      uid: DhcpServer.Get-DhcpServerv4OptionDefinition
+    - name: Get-DhcpServerv4OptionValue
+      uid: DhcpServer.Get-DhcpServerv4OptionValue
+    - name: Get-DhcpServerv4Policy
+      uid: DhcpServer.Get-DhcpServerv4Policy
+    - name: Get-DhcpServerv4PolicyIPRange
+      uid: DhcpServer.Get-DhcpServerv4PolicyIPRange
+    - name: Get-DhcpServerv4Reservation
+      uid: DhcpServer.Get-DhcpServerv4Reservation
+    - name: Get-DhcpServerv4Scope
+      uid: DhcpServer.Get-DhcpServerv4Scope
+    - name: Get-DhcpServerv4ScopeStatistics
+      uid: DhcpServer.Get-DhcpServerv4ScopeStatistics
+    - name: Get-DhcpServerv4Statistics
+      uid: DhcpServer.Get-DhcpServerv4Statistics
+    - name: Get-DhcpServerv4Superscope
+      uid: DhcpServer.Get-DhcpServerv4Superscope
+    - name: Get-DhcpServerv6Binding
+      uid: DhcpServer.Get-DhcpServerv6Binding
+    - name: Get-DhcpServerv6Class
+      uid: DhcpServer.Get-DhcpServerv6Class
+    - name: Get-DhcpServerv6DnsSetting
+      uid: DhcpServer.Get-DhcpServerv6DnsSetting
+    - name: Get-DhcpServerv6ExclusionRange
+      uid: DhcpServer.Get-DhcpServerv6ExclusionRange
+    - name: Get-DhcpServerv6FreeIPAddress
+      uid: DhcpServer.Get-DhcpServerv6FreeIPAddress
+    - name: Get-DhcpServerv6Lease
+      uid: DhcpServer.Get-DhcpServerv6Lease
+    - name: Get-DhcpServerv6OptionDefinition
+      uid: DhcpServer.Get-DhcpServerv6OptionDefinition
+    - name: Get-DhcpServerv6OptionValue
+      uid: DhcpServer.Get-DhcpServerv6OptionValue
+    - name: Get-DhcpServerv6Reservation
+      uid: DhcpServer.Get-DhcpServerv6Reservation
+    - name: Get-DhcpServerv6Scope
+      uid: DhcpServer.Get-DhcpServerv6Scope
+    - name: Get-DhcpServerv6ScopeStatistics
+      uid: DhcpServer.Get-DhcpServerv6ScopeStatistics
+    - name: Get-DhcpServerv6StatelessStatistics
+      uid: DhcpServer.Get-DhcpServerv6StatelessStatistics
+    - name: Get-DhcpServerv6StatelessStore
+      uid: DhcpServer.Get-DhcpServerv6StatelessStore
+    - name: Get-DhcpServerv6Statistics
+      uid: DhcpServer.Get-DhcpServerv6Statistics
+    - name: Get-DhcpServerVersion
+      uid: DhcpServer.Get-DhcpServerVersion
+    - name: Import-DhcpServer
+      uid: DhcpServer.Import-DhcpServer
+    - name: Invoke-DhcpServerv4FailoverReplication
+      uid: DhcpServer.Invoke-DhcpServerv4FailoverReplication
+    - name: Remove-DhcpServerInDC
+      uid: DhcpServer.Remove-DhcpServerInDC
+    - name: Remove-DhcpServerv4Class
+      uid: DhcpServer.Remove-DhcpServerv4Class
+    - name: Remove-DhcpServerv4ExclusionRange
+      uid: DhcpServer.Remove-DhcpServerv4ExclusionRange
+    - name: Remove-DhcpServerv4Failover
+      uid: DhcpServer.Remove-DhcpServerv4Failover
+    - name: Remove-DhcpServerv4FailoverScope
+      uid: DhcpServer.Remove-DhcpServerv4FailoverScope
+    - name: Remove-DhcpServerv4Filter
+      uid: DhcpServer.Remove-DhcpServerv4Filter
+    - name: Remove-DhcpServerv4Lease
+      uid: DhcpServer.Remove-DhcpServerv4Lease
+    - name: Remove-DhcpServerv4OptionDefinition
+      uid: DhcpServer.Remove-DhcpServerv4OptionDefinition
+    - name: Remove-DhcpServerv4OptionValue
+      uid: DhcpServer.Remove-DhcpServerv4OptionValue
+    - name: Remove-DhcpServerv4Policy
+      uid: DhcpServer.Remove-DhcpServerv4Policy
+    - name: Remove-DhcpServerv4PolicyIPRange
+      uid: DhcpServer.Remove-DhcpServerv4PolicyIPRange
+    - name: Remove-DhcpServerv4Reservation
+      uid: DhcpServer.Remove-DhcpServerv4Reservation
+    - name: Remove-DhcpServerv4Scope
+      uid: DhcpServer.Remove-DhcpServerv4Scope
+    - name: Remove-DhcpServerv4Superscope
+      uid: DhcpServer.Remove-DhcpServerv4Superscope
+    - name: Remove-DhcpServerv6Class
+      uid: DhcpServer.Remove-DhcpServerv6Class
+    - name: Remove-DhcpServerv6ExclusionRange
+      uid: DhcpServer.Remove-DhcpServerv6ExclusionRange
+    - name: Remove-DhcpServerv6Lease
+      uid: DhcpServer.Remove-DhcpServerv6Lease
+    - name: Remove-DhcpServerv6OptionDefinition
+      uid: DhcpServer.Remove-DhcpServerv6OptionDefinition
+    - name: Remove-DhcpServerv6OptionValue
+      uid: DhcpServer.Remove-DhcpServerv6OptionValue
+    - name: Remove-DhcpServerv6Reservation
+      uid: DhcpServer.Remove-DhcpServerv6Reservation
+    - name: Remove-DhcpServerv6Scope
+      uid: DhcpServer.Remove-DhcpServerv6Scope
+    - name: Restore-DhcpServer
+      uid: DhcpServer.Restore-DhcpServer
+    - name: Set-DhcpServerAuditLog
+      uid: DhcpServer.Set-DhcpServerAuditLog
+    - name: Set-DhcpServerDatabase
+      uid: DhcpServer.Set-DhcpServerDatabase
+    - name: Set-DhcpServerSetting
+      uid: DhcpServer.Set-DhcpServerSetting
+    - name: Set-DhcpServerv4Binding
+      uid: DhcpServer.Set-DhcpServerv4Binding
+    - name: Set-DhcpServerv4Class
+      uid: DhcpServer.Set-DhcpServerv4Class
+    - name: Set-DhcpServerv4DnsSetting
+      uid: DhcpServer.Set-DhcpServerv4DnsSetting
+    - name: Set-DhcpServerv4Failover
+      uid: DhcpServer.Set-DhcpServerv4Failover
+    - name: Set-DhcpServerv4FilterList
+      uid: DhcpServer.Set-DhcpServerv4FilterList
+    - name: Set-DhcpServerv4OptionDefinition
+      uid: DhcpServer.Set-DhcpServerv4OptionDefinition
+    - name: Set-DhcpServerv4OptionValue
+      uid: DhcpServer.Set-DhcpServerv4OptionValue
+    - name: Set-DhcpServerv4Policy
+      uid: DhcpServer.Set-DhcpServerv4Policy
+    - name: Set-DhcpServerv4Reservation
+      uid: DhcpServer.Set-DhcpServerv4Reservation
+    - name: Set-DhcpServerv4Scope
+      uid: DhcpServer.Set-DhcpServerv4Scope
+    - name: Set-DhcpServerv6Binding
+      uid: DhcpServer.Set-DhcpServerv6Binding
+    - name: Set-DhcpServerv6Class
+      uid: DhcpServer.Set-DhcpServerv6Class
+    - name: Set-DhcpServerv6DnsSetting
+      uid: DhcpServer.Set-DhcpServerv6DnsSetting
+    - name: Set-DhcpServerv6OptionDefinition
+      uid: DhcpServer.Set-DhcpServerv6OptionDefinition
+    - name: Set-DhcpServerv6OptionValue
+      uid: DhcpServer.Set-DhcpServerv6OptionValue
+    - name: Set-DhcpServerv6Reservation
+      uid: DhcpServer.Set-DhcpServerv6Reservation
+    - name: Set-DhcpServerv6Scope
+      uid: DhcpServer.Set-DhcpServerv6Scope
+    - name: Set-DhcpServerv6StatelessStore
+      uid: DhcpServer.Set-DhcpServerv6StatelessStore
+  - name: DirectAccessClientComponents
+    uid: DirectAccessClientComponents
+    items:
+    - name: Disable-DAManualEntryPointSelection
+      uid: DirectAccessClientComponents.Disable-DAManualEntryPointSelection
+    - name: Enable-DAManualEntryPointSelection
+      uid: DirectAccessClientComponents.Enable-DAManualEntryPointSelection
+    - name: Get-DAClientExperienceConfiguration
+      uid: DirectAccessClientComponents.Get-DAClientExperienceConfiguration
+    - name: Get-DAEntryPointTableItem
+      uid: DirectAccessClientComponents.Get-DAEntryPointTableItem
+    - name: New-DAEntryPointTableItem
+      uid: DirectAccessClientComponents.New-DAEntryPointTableItem
+    - name: Remove-DAEntryPointTableItem
+      uid: DirectAccessClientComponents.Remove-DAEntryPointTableItem
+    - name: Rename-DAEntryPointTableItem
+      uid: DirectAccessClientComponents.Rename-DAEntryPointTableItem
+    - name: Reset-DAClientExperienceConfiguration
+      uid: DirectAccessClientComponents.Reset-DAClientExperienceConfiguration
+    - name: Reset-DAEntryPointTableItem
+      uid: DirectAccessClientComponents.Reset-DAEntryPointTableItem
+    - name: Set-DAClientExperienceConfiguration
+      uid: DirectAccessClientComponents.Set-DAClientExperienceConfiguration
+    - name: Set-DAEntryPointTableItem
+      uid: DirectAccessClientComponents.Set-DAEntryPointTableItem
+  - name: DISM
+    uid: DISM
+    items:
+    - name: Add-AppxProvisionedPackage
+      uid: DISM.Add-AppxProvisionedPackage
+    - name: Add-WindowsDriver
+      uid: DISM.Add-WindowsDriver
+    - name: Add-WindowsPackage
+      uid: DISM.Add-WindowsPackage
+    - name: Clear-WindowsCorruptMountPoint
+      uid: DISM.Clear-WindowsCorruptMountPoint
+    - name: Disable-WindowsOptionalFeature
+      uid: DISM.Disable-WindowsOptionalFeature
+    - name: Dismount-WindowsImage
+      uid: DISM.Dismount-WindowsImage
+    - name: Enable-WindowsOptionalFeature
+      uid: DISM.Enable-WindowsOptionalFeature
+    - name: Get-AppxProvisionedPackage
+      uid: DISM.Get-AppxProvisionedPackage
+    - name: Get-WindowsDriver
+      uid: DISM.Get-WindowsDriver
+    - name: Get-WindowsEdition
+      uid: DISM.Get-WindowsEdition
+    - name: Get-WindowsImage
+      uid: DISM.Get-WindowsImage
+    - name: Get-WindowsOptionalFeature
+      uid: DISM.Get-WindowsOptionalFeature
+    - name: Get-WindowsPackage
+      uid: DISM.Get-WindowsPackage
+    - name: Mount-WindowsImage
+      uid: DISM.Mount-WindowsImage
+    - name: Remove-AppxProvisionedPackage
+      uid: DISM.Remove-AppxProvisionedPackage
+    - name: Remove-WindowsDriver
+      uid: DISM.Remove-WindowsDriver
+    - name: Remove-WindowsPackage
+      uid: DISM.Remove-WindowsPackage
+    - name: Repair-WindowsImage
+      uid: DISM.Repair-WindowsImage
+    - name: Save-WindowsImage
+      uid: DISM.Save-WindowsImage
+    - name: Set-WindowsEdition
+      uid: DISM.Set-WindowsEdition
+    - name: Set-WindowsProductKey
+      uid: DISM.Set-WindowsProductKey
+    - name: Use-WindowsUnattend
+      uid: DISM.Use-WindowsUnattend
+  - name: DnsClient
+    uid: DnsClient
+    items:
+    - name: Add-DnsClientNrptRule
+      uid: DnsClient.Add-DnsClientNrptRule
+    - name: Clear-DnsClientCache
+      uid: DnsClient.Clear-DnsClientCache
+    - name: Get-DnsClient
+      uid: DnsClient.Get-DnsClient
+    - name: Get-DnsClientCache
+      uid: DnsClient.Get-DnsClientCache
+    - name: Get-DnsClientGlobalSetting
+      uid: DnsClient.Get-DnsClientGlobalSetting
+    - name: Get-DnsClientNrptGlobal
+      uid: DnsClient.Get-DnsClientNrptGlobal
+    - name: Get-DnsClientNrptPolicy
+      uid: DnsClient.Get-DnsClientNrptPolicy
+    - name: Get-DnsClientNrptRule
+      uid: DnsClient.Get-DnsClientNrptRule
+    - name: Get-DnsClientServerAddress
+      uid: DnsClient.Get-DnsClientServerAddress
+    - name: Register-DnsClient
+      uid: DnsClient.Register-DnsClient
+    - name: Remove-DnsClientNrptRule
+      uid: DnsClient.Remove-DnsClientNrptRule
+    - name: Resolve-DnsName
+      uid: DnsClient.Resolve-DnsName
+    - name: Set-DnsClient
+      uid: DnsClient.Set-DnsClient
+    - name: Set-DnsClientGlobalSetting
+      uid: DnsClient.Set-DnsClientGlobalSetting
+    - name: Set-DnsClientNrptGlobal
+      uid: DnsClient.Set-DnsClientNrptGlobal
+    - name: Set-DnsClientNrptRule
+      uid: DnsClient.Set-DnsClientNrptRule
+    - name: Set-DnsClientServerAddress
+      uid: DnsClient.Set-DnsClientServerAddress
+  - name: DnsServer
+    uid: DnsServer
+    items:
+    - name: Add-DnsServerConditionalForwarderZone
+      uid: DnsServer.Add-DnsServerConditionalForwarderZone
+    - name: Add-DnsServerDirectoryPartition
+      uid: DnsServer.Add-DnsServerDirectoryPartition
+    - name: Add-DnsServerForwarder
+      uid: DnsServer.Add-DnsServerForwarder
+    - name: Add-DnsServerPrimaryZone
+      uid: DnsServer.Add-DnsServerPrimaryZone
+    - name: Add-DnsServerResourceRecord
+      uid: DnsServer.Add-DnsServerResourceRecord
+    - name: Add-DnsServerResourceRecordA
+      uid: DnsServer.Add-DnsServerResourceRecordA
+    - name: Add-DnsServerResourceRecordAAAA
+      uid: DnsServer.Add-DnsServerResourceRecordAAAA
+    - name: Add-DnsServerResourceRecordCName
+      uid: DnsServer.Add-DnsServerResourceRecordCName
+    - name: Add-DnsServerResourceRecordDnsKey
+      uid: DnsServer.Add-DnsServerResourceRecordDnsKey
+    - name: Add-DnsServerResourceRecordDS
+      uid: DnsServer.Add-DnsServerResourceRecordDS
+    - name: Add-DnsServerResourceRecordMX
+      uid: DnsServer.Add-DnsServerResourceRecordMX
+    - name: Add-DnsServerResourceRecordPtr
+      uid: DnsServer.Add-DnsServerResourceRecordPtr
+    - name: Add-DnsServerRootHint
+      uid: DnsServer.Add-DnsServerRootHint
+    - name: Add-DnsServerSecondaryZone
+      uid: DnsServer.Add-DnsServerSecondaryZone
+    - name: Add-DnsServerSigningKey
+      uid: DnsServer.Add-DnsServerSigningKey
+    - name: Add-DnsServerStubZone
+      uid: DnsServer.Add-DnsServerStubZone
+    - name: Add-DnsServerTrustAnchor
+      uid: DnsServer.Add-DnsServerTrustAnchor
+    - name: Add-DnsServerZoneDelegation
+      uid: DnsServer.Add-DnsServerZoneDelegation
+    - name: Clear-DnsServerCache
+      uid: DnsServer.Clear-DnsServerCache
+    - name: Clear-DnsServerStatistics
+      uid: DnsServer.Clear-DnsServerStatistics
+    - name: ConvertTo-DnsServerPrimaryZone
+      uid: DnsServer.ConvertTo-DnsServerPrimaryZone
+    - name: ConvertTo-DnsServerSecondaryZone
+      uid: DnsServer.ConvertTo-DnsServerSecondaryZone
+    - name: Disable-DnsServerSigningKeyRollover
+      uid: DnsServer.Disable-DnsServerSigningKeyRollover
+    - name: Enable-DnsServerSigningKeyRollover
+      uid: DnsServer.Enable-DnsServerSigningKeyRollover
+    - name: Export-DnsServerDnsSecPublicKey
+      uid: DnsServer.Export-DnsServerDnsSecPublicKey
+    - name: Export-DnsServerZone
+      uid: DnsServer.Export-DnsServerZone
+    - name: Get-DnsServer
+      uid: DnsServer.Get-DnsServer
+    - name: Get-DnsServerCache
+      uid: DnsServer.Get-DnsServerCache
+    - name: Get-DnsServerDiagnostics
+      uid: DnsServer.Get-DnsServerDiagnostics
+    - name: Get-DnsServerDirectoryPartition
+      uid: DnsServer.Get-DnsServerDirectoryPartition
+    - name: Get-DnsServerDnsSecZoneSetting
+      uid: DnsServer.Get-DnsServerDnsSecZoneSetting
+    - name: Get-DnsServerDsSetting
+      uid: DnsServer.Get-DnsServerDsSetting
+    - name: Get-DnsServerEDns
+      uid: DnsServer.Get-DnsServerEDns
+    - name: Get-DnsServerForwarder
+      uid: DnsServer.Get-DnsServerForwarder
+    - name: Get-DnsServerGlobalNameZone
+      uid: DnsServer.Get-DnsServerGlobalNameZone
+    - name: Get-DnsServerGlobalQueryBlockList
+      uid: DnsServer.Get-DnsServerGlobalQueryBlockList
+    - name: Get-DnsServerRecursion
+      uid: DnsServer.Get-DnsServerRecursion
+    - name: Get-DnsServerResourceRecord
+      uid: DnsServer.Get-DnsServerResourceRecord
+    - name: Get-DnsServerRootHint
+      uid: DnsServer.Get-DnsServerRootHint
+    - name: Get-DnsServerScavenging
+      uid: DnsServer.Get-DnsServerScavenging
+    - name: Get-DnsServerSetting
+      uid: DnsServer.Get-DnsServerSetting
+    - name: Get-DnsServerSigningKey
+      uid: DnsServer.Get-DnsServerSigningKey
+    - name: Get-DnsServerStatistics
+      uid: DnsServer.Get-DnsServerStatistics
+    - name: Get-DnsServerTrustAnchor
+      uid: DnsServer.Get-DnsServerTrustAnchor
+    - name: Get-DnsServerTrustPoint
+      uid: DnsServer.Get-DnsServerTrustPoint
+    - name: Get-DnsServerZone
+      uid: DnsServer.Get-DnsServerZone
+    - name: Get-DnsServerZoneAging
+      uid: DnsServer.Get-DnsServerZoneAging
+    - name: Get-DnsServerZoneDelegation
+      uid: DnsServer.Get-DnsServerZoneDelegation
+    - name: Import-DnsServerResourceRecordDS
+      uid: DnsServer.Import-DnsServerResourceRecordDS
+    - name: Import-DnsServerRootHint
+      uid: DnsServer.Import-DnsServerRootHint
+    - name: Import-DnsServerTrustAnchor
+      uid: DnsServer.Import-DnsServerTrustAnchor
+    - name: Invoke-DnsServerSigningKeyRollover
+      uid: DnsServer.Invoke-DnsServerSigningKeyRollover
+    - name: Invoke-DnsServerZoneSign
+      uid: DnsServer.Invoke-DnsServerZoneSign
+    - name: Invoke-DnsServerZoneUnsign
+      uid: DnsServer.Invoke-DnsServerZoneUnsign
+    - name: Register-DnsServerDirectoryPartition
+      uid: DnsServer.Register-DnsServerDirectoryPartition
+    - name: Remove-DnsServerDirectoryPartition
+      uid: DnsServer.Remove-DnsServerDirectoryPartition
+    - name: Remove-DnsServerForwarder
+      uid: DnsServer.Remove-DnsServerForwarder
+    - name: Remove-DnsServerResourceRecord
+      uid: DnsServer.Remove-DnsServerResourceRecord
+    - name: Remove-DnsServerRootHint
+      uid: DnsServer.Remove-DnsServerRootHint
+    - name: Remove-DnsServerSigningKey
+      uid: DnsServer.Remove-DnsServerSigningKey
+    - name: Remove-DnsServerTrustAnchor
+      uid: DnsServer.Remove-DnsServerTrustAnchor
+    - name: Remove-DnsServerZone
+      uid: DnsServer.Remove-DnsServerZone
+    - name: Remove-DnsServerZoneDelegation
+      uid: DnsServer.Remove-DnsServerZoneDelegation
+    - name: Reset-DnsServerZoneKeyMasterRole
+      uid: DnsServer.Reset-DnsServerZoneKeyMasterRole
+    - name: Restore-DnsServerPrimaryZone
+      uid: DnsServer.Restore-DnsServerPrimaryZone
+    - name: Restore-DnsServerSecondaryZone
+      uid: DnsServer.Restore-DnsServerSecondaryZone
+    - name: Resume-DnsServerZone
+      uid: DnsServer.Resume-DnsServerZone
+    - name: Set-DnsServer
+      uid: DnsServer.Set-DnsServer
+    - name: Set-DnsServerCache
+      uid: DnsServer.Set-DnsServerCache
+    - name: Set-DnsServerConditionalForwarderZone
+      uid: DnsServer.Set-DnsServerConditionalForwarderZone
+    - name: Set-DnsServerDiagnostics
+      uid: DnsServer.Set-DnsServerDiagnostics
+    - name: Set-DnsServerDnsSecZoneSetting
+      uid: DnsServer.Set-DnsServerDnsSecZoneSetting
+    - name: Set-DnsServerDsSetting
+      uid: DnsServer.Set-DnsServerDsSetting
+    - name: Set-DnsServerEDns
+      uid: DnsServer.Set-DnsServerEDns
+    - name: Set-DnsServerForwarder
+      uid: DnsServer.Set-DnsServerForwarder
+    - name: Set-DnsServerGlobalNameZone
+      uid: DnsServer.Set-DnsServerGlobalNameZone
+    - name: Set-DnsServerGlobalQueryBlockList
+      uid: DnsServer.Set-DnsServerGlobalQueryBlockList
+    - name: Set-DnsServerPrimaryZone
+      uid: DnsServer.Set-DnsServerPrimaryZone
+    - name: Set-DnsServerRecursion
+      uid: DnsServer.Set-DnsServerRecursion
+    - name: Set-DnsServerResourceRecord
+      uid: DnsServer.Set-DnsServerResourceRecord
+    - name: Set-DnsServerResourceRecordAging
+      uid: DnsServer.Set-DnsServerResourceRecordAging
+    - name: Set-DnsServerRootHint
+      uid: DnsServer.Set-DnsServerRootHint
+    - name: Set-DnsServerScavenging
+      uid: DnsServer.Set-DnsServerScavenging
+    - name: Set-DnsServerSecondaryZone
+      uid: DnsServer.Set-DnsServerSecondaryZone
+    - name: Set-DnsServerSetting
+      uid: DnsServer.Set-DnsServerSetting
+    - name: Set-DnsServerSigningKey
+      uid: DnsServer.Set-DnsServerSigningKey
+    - name: Set-DnsServerStubZone
+      uid: DnsServer.Set-DnsServerStubZone
+    - name: Set-DnsServerZoneAging
+      uid: DnsServer.Set-DnsServerZoneAging
+    - name: Set-DnsServerZoneDelegation
+      uid: DnsServer.Set-DnsServerZoneDelegation
+    - name: Show-DnsServerCache
+      uid: DnsServer.Show-DnsServerCache
+    - name: Show-DnsServerKeyStorageProvider
+      uid: DnsServer.Show-DnsServerKeyStorageProvider
+    - name: Start-DnsServerScavenging
+      uid: DnsServer.Start-DnsServerScavenging
+    - name: Start-DnsServerZoneTransfer
+      uid: DnsServer.Start-DnsServerZoneTransfer
+    - name: Suspend-DnsServerZone
+      uid: DnsServer.Suspend-DnsServerZone
+    - name: Sync-DnsServerZone
+      uid: DnsServer.Sync-DnsServerZone
+    - name: Test-DnsServer
+      uid: DnsServer.Test-DnsServer
+    - name: Test-DnsServerDnsSecZoneSetting
+      uid: DnsServer.Test-DnsServerDnsSecZoneSetting
+    - name: Unregister-DnsServerDirectoryPartition
+      uid: DnsServer.Unregister-DnsServerDirectoryPartition
+    - name: Update-DnsServerTrustPoint
+      uid: DnsServer.Update-DnsServerTrustPoint
+  - name: FailoverClusters
+    uid: FailoverClusters
+    items:
+    - name: Add-ClusterCheckpoint
+      uid: FailoverClusters.Add-ClusterCheckpoint
+    - name: Add-ClusterDisk
+      uid: FailoverClusters.Add-ClusterDisk
+    - name: Add-ClusterFileServerRole
+      uid: FailoverClusters.Add-ClusterFileServerRole
+    - name: Add-ClusterGenericApplicationRole
+      uid: FailoverClusters.Add-ClusterGenericApplicationRole
+    - name: Add-ClusterGenericScriptRole
+      uid: FailoverClusters.Add-ClusterGenericScriptRole
+    - name: Add-ClusterGenericServiceRole
+      uid: FailoverClusters.Add-ClusterGenericServiceRole
+    - name: Add-ClusterGroup
+      uid: FailoverClusters.Add-ClusterGroup
+    - name: Add-ClusteriSCSITargetServerRole
+      uid: FailoverClusters.Add-ClusteriSCSITargetServerRole
+    - name: Add-ClusterNode
+      uid: FailoverClusters.Add-ClusterNode
+    - name: Add-ClusterPrintServerRole
+      uid: FailoverClusters.Add-ClusterPrintServerRole
+    - name: Add-ClusterResource
+      uid: FailoverClusters.Add-ClusterResource
+    - name: Add-ClusterResourceDependency
+      uid: FailoverClusters.Add-ClusterResourceDependency
+    - name: Add-ClusterResourceType
+      uid: FailoverClusters.Add-ClusterResourceType
+    - name: Add-ClusterScaleOutFileServerRole
+      uid: FailoverClusters.Add-ClusterScaleOutFileServerRole
+    - name: Add-ClusterServerRole
+      uid: FailoverClusters.Add-ClusterServerRole
+    - name: Add-ClusterSharedVolume
+      uid: FailoverClusters.Add-ClusterSharedVolume
+    - name: Add-ClusterVirtualMachineRole
+      uid: FailoverClusters.Add-ClusterVirtualMachineRole
+    - name: Add-ClusterVMMonitoredItem
+      uid: FailoverClusters.Add-ClusterVMMonitoredItem
+    - name: Block-ClusterAccess
+      uid: FailoverClusters.Block-ClusterAccess
+    - name: Clear-ClusterDiskReservation
+      uid: FailoverClusters.Clear-ClusterDiskReservation
+    - name: Clear-ClusterNode
+      uid: FailoverClusters.Clear-ClusterNode
+    - name: Get-Cluster
+      uid: FailoverClusters.Get-Cluster
+    - name: Get-ClusterAccess
+      uid: FailoverClusters.Get-ClusterAccess
+    - name: Get-ClusterAvailableDisk
+      uid: FailoverClusters.Get-ClusterAvailableDisk
+    - name: Get-ClusterCheckpoint
+      uid: FailoverClusters.Get-ClusterCheckpoint
+    - name: Get-ClusterGroup
+      uid: FailoverClusters.Get-ClusterGroup
+    - name: Get-ClusterLog
+      uid: FailoverClusters.Get-ClusterLog
+    - name: Get-ClusterNetwork
+      uid: FailoverClusters.Get-ClusterNetwork
+    - name: Get-ClusterNetworkInterface
+      uid: FailoverClusters.Get-ClusterNetworkInterface
+    - name: Get-ClusterNode
+      uid: FailoverClusters.Get-ClusterNode
+    - name: Get-ClusterOwnerNode
+      uid: FailoverClusters.Get-ClusterOwnerNode
+    - name: Get-ClusterParameter
+      uid: FailoverClusters.Get-ClusterParameter
+    - name: Get-ClusterQuorum
+      uid: FailoverClusters.Get-ClusterQuorum
+    - name: Get-ClusterResource
+      uid: FailoverClusters.Get-ClusterResource
+    - name: Get-ClusterResourceDependency
+      uid: FailoverClusters.Get-ClusterResourceDependency
+    - name: Get-ClusterResourceDependencyReport
+      uid: FailoverClusters.Get-ClusterResourceDependencyReport
+    - name: Get-ClusterResourceType
+      uid: FailoverClusters.Get-ClusterResourceType
+    - name: Get-ClusterSharedVolume
+      uid: FailoverClusters.Get-ClusterSharedVolume
+    - name: Get-ClusterVMMonitoredItem
+      uid: FailoverClusters.Get-ClusterVMMonitoredItem
+    - name: Grant-ClusterAccess
+      uid: FailoverClusters.Grant-ClusterAccess
+    - name: Move-ClusterGroup
+      uid: FailoverClusters.Move-ClusterGroup
+    - name: Move-ClusterResource
+      uid: FailoverClusters.Move-ClusterResource
+    - name: Move-ClusterSharedVolume
+      uid: FailoverClusters.Move-ClusterSharedVolume
+    - name: Move-ClusterVirtualMachineRole
+      uid: FailoverClusters.Move-ClusterVirtualMachineRole
+    - name: New-Cluster
+      uid: FailoverClusters.New-Cluster
+    - name: Remove-Cluster
+      uid: FailoverClusters.Remove-Cluster
+    - name: Remove-ClusterAccess
+      uid: FailoverClusters.Remove-ClusterAccess
+    - name: Remove-ClusterCheckpoint
+      uid: FailoverClusters.Remove-ClusterCheckpoint
+    - name: Remove-ClusterGroup
+      uid: FailoverClusters.Remove-ClusterGroup
+    - name: Remove-ClusterNode
+      uid: FailoverClusters.Remove-ClusterNode
+    - name: Remove-ClusterResource
+      uid: FailoverClusters.Remove-ClusterResource
+    - name: Remove-ClusterResourceDependency
+      uid: FailoverClusters.Remove-ClusterResourceDependency
+    - name: Remove-ClusterResourceType
+      uid: FailoverClusters.Remove-ClusterResourceType
+    - name: Remove-ClusterSharedVolume
+      uid: FailoverClusters.Remove-ClusterSharedVolume
+    - name: Remove-ClusterVMMonitoredItem
+      uid: FailoverClusters.Remove-ClusterVMMonitoredItem
+    - name: Repair-ClusterSharedVolume
+      uid: FailoverClusters.Repair-ClusterSharedVolume
+    - name: Reset-ClusterVMMonitoredState
+      uid: FailoverClusters.Reset-ClusterVMMonitoredState
+    - name: Resume-ClusterNode
+      uid: FailoverClusters.Resume-ClusterNode
+    - name: Resume-ClusterResource
+      uid: FailoverClusters.Resume-ClusterResource
+    - name: Set-ClusterLog
+      uid: FailoverClusters.Set-ClusterLog
+    - name: Set-ClusterOwnerNode
+      uid: FailoverClusters.Set-ClusterOwnerNode
+    - name: Set-ClusterParameter
+      uid: FailoverClusters.Set-ClusterParameter
+    - name: Set-ClusterQuorum
+      uid: FailoverClusters.Set-ClusterQuorum
+    - name: Set-ClusterResourceDependency
+      uid: FailoverClusters.Set-ClusterResourceDependency
+    - name: Start-Cluster
+      uid: FailoverClusters.Start-Cluster
+    - name: Start-ClusterGroup
+      uid: FailoverClusters.Start-ClusterGroup
+    - name: Start-ClusterNode
+      uid: FailoverClusters.Start-ClusterNode
+    - name: Start-ClusterResource
+      uid: FailoverClusters.Start-ClusterResource
+    - name: Stop-Cluster
+      uid: FailoverClusters.Stop-Cluster
+    - name: Stop-ClusterGroup
+      uid: FailoverClusters.Stop-ClusterGroup
+    - name: Stop-ClusterNode
+      uid: FailoverClusters.Stop-ClusterNode
+    - name: Stop-ClusterResource
+      uid: FailoverClusters.Stop-ClusterResource
+    - name: Suspend-ClusterNode
+      uid: FailoverClusters.Suspend-ClusterNode
+    - name: Suspend-ClusterResource
+      uid: FailoverClusters.Suspend-ClusterResource
+    - name: Test-Cluster
+      uid: FailoverClusters.Test-Cluster
+    - name: Test-ClusterResourceFailure
+      uid: FailoverClusters.Test-ClusterResourceFailure
+    - name: Update-ClusterIPResource
+      uid: FailoverClusters.Update-ClusterIPResource
+    - name: Update-ClusterNetworkNameResource
+      uid: FailoverClusters.Update-ClusterNetworkNameResource
+    - name: Update-ClusterVirtualMachineConfiguration
+      uid: FailoverClusters.Update-ClusterVirtualMachineConfiguration
+  - name: FileServerResourceManager
+    uid: FileServerResourceManager
+    items:
+    - name: Get-FsrmAdrSetting
+      uid: FileServerResourceManager.Get-FsrmAdrSetting
+    - name: Get-FsrmAutoQuota
+      uid: FileServerResourceManager.Get-FsrmAutoQuota
+    - name: Get-FsrmClassification
+      uid: FileServerResourceManager.Get-FsrmClassification
+    - name: Get-FsrmClassificationPropertyDefinition
+      uid: FileServerResourceManager.Get-FsrmClassificationPropertyDefinition
+    - name: Get-FsrmClassificationRule
+      uid: FileServerResourceManager.Get-FsrmClassificationRule
+    - name: Get-FsrmEffectiveNamespace
+      uid: FileServerResourceManager.Get-FsrmEffectiveNamespace
+    - name: Get-FsrmFileGroup
+      uid: FileServerResourceManager.Get-FsrmFileGroup
+    - name: Get-FsrmFileManagementJob
+      uid: FileServerResourceManager.Get-FsrmFileManagementJob
+    - name: Get-FsrmFileScreen
+      uid: FileServerResourceManager.Get-FsrmFileScreen
+    - name: Get-FsrmFileScreenException
+      uid: FileServerResourceManager.Get-FsrmFileScreenException
+    - name: Get-FsrmFileScreenTemplate
+      uid: FileServerResourceManager.Get-FsrmFileScreenTemplate
+    - name: Get-FsrmMacro
+      uid: FileServerResourceManager.Get-FsrmMacro
+    - name: Get-FsrmMgmtProperty
+      uid: FileServerResourceManager.Get-FsrmMgmtProperty
+    - name: Get-FsrmQuota
+      uid: FileServerResourceManager.Get-FsrmQuota
+    - name: Get-FsrmQuotaTemplate
+      uid: FileServerResourceManager.Get-FsrmQuotaTemplate
+    - name: Get-FsrmRmsTemplate
+      uid: FileServerResourceManager.Get-FsrmRmsTemplate
+    - name: Get-FsrmSetting
+      uid: FileServerResourceManager.Get-FsrmSetting
+    - name: Get-FsrmStorageReport
+      uid: FileServerResourceManager.Get-FsrmStorageReport
+    - name: New-FsrmAction
+      uid: FileServerResourceManager.New-FsrmAction
+    - name: New-FsrmAutoQuota
+      uid: FileServerResourceManager.New-FsrmAutoQuota
+    - name: New-FsrmClassificationPropertyDefinition
+      uid: FileServerResourceManager.New-FsrmClassificationPropertyDefinition
+    - name: New-FsrmClassificationPropertyValue
+      uid: FileServerResourceManager.New-FsrmClassificationPropertyValue
+    - name: New-FsrmClassificationRule
+      uid: FileServerResourceManager.New-FsrmClassificationRule
+    - name: New-FsrmFileGroup
+      uid: FileServerResourceManager.New-FsrmFileGroup
+    - name: New-FsrmFileManagementJob
+      uid: FileServerResourceManager.New-FsrmFileManagementJob
+    - name: New-FsrmFileScreen
+      uid: FileServerResourceManager.New-FsrmFileScreen
+    - name: New-FsrmFileScreenException
+      uid: FileServerResourceManager.New-FsrmFileScreenException
+    - name: New-FsrmFileScreenTemplate
+      uid: FileServerResourceManager.New-FsrmFileScreenTemplate
+    - name: New-FsrmFmjAction
+      uid: FileServerResourceManager.New-FsrmFmjAction
+    - name: New-FsrmFmjCondition
+      uid: FileServerResourceManager.New-FsrmFmjCondition
+    - name: New-FsrmFMJNotification
+      uid: FileServerResourceManager.New-FsrmFMJNotification
+    - name: New-FsrmFmjNotificationAction
+      uid: FileServerResourceManager.New-FsrmFmjNotificationAction
+    - name: New-FsrmQuota
+      uid: FileServerResourceManager.New-FsrmQuota
+    - name: New-FsrmQuotaTemplate
+      uid: FileServerResourceManager.New-FsrmQuotaTemplate
+    - name: New-FsrmQuotaThreshold
+      uid: FileServerResourceManager.New-FsrmQuotaThreshold
+    - name: New-FsrmScheduledTask
+      uid: FileServerResourceManager.New-FsrmScheduledTask
+    - name: New-FsrmStorageReport
+      uid: FileServerResourceManager.New-FsrmStorageReport
+    - name: Remove-FsrmAutoQuota
+      uid: FileServerResourceManager.Remove-FsrmAutoQuota
+    - name: Remove-FsrmClassificationPropertyDefinition
+      uid: FileServerResourceManager.Remove-FsrmClassificationPropertyDefinition
+    - name: Remove-FsrmClassificationRule
+      uid: FileServerResourceManager.Remove-FsrmClassificationRule
+    - name: Remove-FsrmFileGroup
+      uid: FileServerResourceManager.Remove-FsrmFileGroup
+    - name: Remove-FsrmFileManagementJob
+      uid: FileServerResourceManager.Remove-FsrmFileManagementJob
+    - name: Remove-FsrmFileScreen
+      uid: FileServerResourceManager.Remove-FsrmFileScreen
+    - name: Remove-FsrmFileScreenException
+      uid: FileServerResourceManager.Remove-FsrmFileScreenException
+    - name: Remove-FsrmFileScreenTemplate
+      uid: FileServerResourceManager.Remove-FsrmFileScreenTemplate
+    - name: Remove-FsrmMgmtProperty
+      uid: FileServerResourceManager.Remove-FsrmMgmtProperty
+    - name: Remove-FsrmQuota
+      uid: FileServerResourceManager.Remove-FsrmQuota
+    - name: Remove-FsrmQuotaTemplate
+      uid: FileServerResourceManager.Remove-FsrmQuotaTemplate
+    - name: Remove-FsrmStorageReport
+      uid: FileServerResourceManager.Remove-FsrmStorageReport
+    - name: Reset-FsrmFileScreen
+      uid: FileServerResourceManager.Reset-FsrmFileScreen
+    - name: Reset-FsrmQuota
+      uid: FileServerResourceManager.Reset-FsrmQuota
+    - name: Send-FsrmTestEmail
+      uid: FileServerResourceManager.Send-FsrmTestEmail
+    - name: Set-FsrmAdrSetting
+      uid: FileServerResourceManager.Set-FsrmAdrSetting
+    - name: Set-FsrmAutoQuota
+      uid: FileServerResourceManager.Set-FsrmAutoQuota
+    - name: Set-FsrmClassification
+      uid: FileServerResourceManager.Set-FsrmClassification
+    - name: Set-FsrmClassificationPropertyDefinition
+      uid: FileServerResourceManager.Set-FsrmClassificationPropertyDefinition
+    - name: Set-FsrmClassificationRule
+      uid: FileServerResourceManager.Set-FsrmClassificationRule
+    - name: Set-FsrmFileGroup
+      uid: FileServerResourceManager.Set-FsrmFileGroup
+    - name: Set-FsrmFileManagementJob
+      uid: FileServerResourceManager.Set-FsrmFileManagementJob
+    - name: Set-FsrmFileScreen
+      uid: FileServerResourceManager.Set-FsrmFileScreen
+    - name: Set-FsrmFileScreenException
+      uid: FileServerResourceManager.Set-FsrmFileScreenException
+    - name: Set-FsrmFileScreenTemplate
+      uid: FileServerResourceManager.Set-FsrmFileScreenTemplate
+    - name: Set-FsrmMgmtProperty
+      uid: FileServerResourceManager.Set-FsrmMgmtProperty
+    - name: Set-FsrmQuota
+      uid: FileServerResourceManager.Set-FsrmQuota
+    - name: Set-FsrmQuotaTemplate
+      uid: FileServerResourceManager.Set-FsrmQuotaTemplate
+    - name: Set-FsrmSetting
+      uid: FileServerResourceManager.Set-FsrmSetting
+    - name: Set-FsrmStorageReport
+      uid: FileServerResourceManager.Set-FsrmStorageReport
+    - name: Start-FsrmClassification
+      uid: FileServerResourceManager.Start-FsrmClassification
+    - name: Start-FsrmFileManagementJob
+      uid: FileServerResourceManager.Start-FsrmFileManagementJob
+    - name: Start-FsrmStorageReport
+      uid: FileServerResourceManager.Start-FsrmStorageReport
+    - name: Stop-FsrmClassification
+      uid: FileServerResourceManager.Stop-FsrmClassification
+    - name: Stop-FsrmFileManagementJob
+      uid: FileServerResourceManager.Stop-FsrmFileManagementJob
+    - name: Stop-FsrmStorageReport
+      uid: FileServerResourceManager.Stop-FsrmStorageReport
+    - name: Update-FsrmAutoQuota
+      uid: FileServerResourceManager.Update-FsrmAutoQuota
+    - name: Update-FsrmClassificationPropertyDefinition
+      uid: FileServerResourceManager.Update-FsrmClassificationPropertyDefinition
+    - name: Update-FsrmQuota
+      uid: FileServerResourceManager.Update-FsrmQuota
+    - name: Wait-FsrmClassification
+      uid: FileServerResourceManager.Wait-FsrmClassification
+    - name: Wait-FsrmFileManagementJob
+      uid: FileServerResourceManager.Wait-FsrmFileManagementJob
+    - name: Wait-FsrmStorageReport
+      uid: FileServerResourceManager.Wait-FsrmStorageReport
+  - name: GroupPolicy
+    uid: GroupPolicy
+    items:
+    - name: Backup-GPO
+      uid: GroupPolicy.Backup-GPO
+    - name: Copy-GPO
+      uid: GroupPolicy.Copy-GPO
+    - name: Get-GPInheritance
+      uid: GroupPolicy.Get-GPInheritance
+    - name: Get-GPO
+      uid: GroupPolicy.Get-GPO
+    - name: Get-GPOReport
+      uid: GroupPolicy.Get-GPOReport
+    - name: Get-GPPermission
+      uid: GroupPolicy.Get-GPPermission
+    - name: Get-GPPrefRegistryValue
+      uid: GroupPolicy.Get-GPPrefRegistryValue
+    - name: Get-GPRegistryValue
+      uid: GroupPolicy.Get-GPRegistryValue
+    - name: Get-GPResultantSetOfPolicy
+      uid: GroupPolicy.Get-GPResultantSetOfPolicy
+    - name: Get-GPStarterGPO
+      uid: GroupPolicy.Get-GPStarterGPO
+    - name: Import-GPO
+      uid: GroupPolicy.Import-GPO
+    - name: Invoke-GPUpdate
+      uid: GroupPolicy.Invoke-GPUpdate
+    - name: New-GPLink
+      uid: GroupPolicy.New-GPLink
+    - name: New-GPO
+      uid: GroupPolicy.New-GPO
+    - name: New-GPStarterGPO
+      uid: GroupPolicy.New-GPStarterGPO
+    - name: Remove-GPLink
+      uid: GroupPolicy.Remove-GPLink
+    - name: Remove-GPO
+      uid: GroupPolicy.Remove-GPO
+    - name: Remove-GPPrefRegistryValue
+      uid: GroupPolicy.Remove-GPPrefRegistryValue
+    - name: Remove-GPRegistryValue
+      uid: GroupPolicy.Remove-GPRegistryValue
+    - name: Rename-GPO
+      uid: GroupPolicy.Rename-GPO
+    - name: Restore-GPO
+      uid: GroupPolicy.Restore-GPO
+    - name: Set-GPInheritance
+      uid: GroupPolicy.Set-GPInheritance
+    - name: Set-GPLink
+      uid: GroupPolicy.Set-GPLink
+    - name: Set-GPPermission
+      uid: GroupPolicy.Set-GPPermission
+    - name: Set-GPPrefRegistryValue
+      uid: GroupPolicy.Set-GPPrefRegistryValue
+    - name: Set-GPRegistryValue
+      uid: GroupPolicy.Set-GPRegistryValue
+  - name: Hyper-V
+    uid: Hyper-V
+    items:
+    - name: Add-VMDvdDrive
+      uid: Hyper-V.Add-VMDvdDrive
+    - name: Add-VMFibreChannelHba
+      uid: Hyper-V.Add-VMFibreChannelHba
+    - name: Add-VMHardDiskDrive
+      uid: Hyper-V.Add-VMHardDiskDrive
+    - name: Add-VMMigrationNetwork
+      uid: Hyper-V.Add-VMMigrationNetwork
+    - name: Add-VMNetworkAdapter
+      uid: Hyper-V.Add-VMNetworkAdapter
+    - name: Add-VMNetworkAdapterAcl
+      uid: Hyper-V.Add-VMNetworkAdapterAcl
+    - name: Add-VMRemoteFx3dVideoAdapter
+      uid: Hyper-V.Add-VMRemoteFx3dVideoAdapter
+    - name: Add-VMScsiController
+      uid: Hyper-V.Add-VMScsiController
+    - name: Add-VMStoragePath
+      uid: Hyper-V.Add-VMStoragePath
+    - name: Add-VMSwitch
+      uid: Hyper-V.Add-VMSwitch
+    - name: Add-VMSwitchExtensionPortFeature
+      uid: Hyper-V.Add-VMSwitchExtensionPortFeature
+    - name: Add-VMSwitchExtensionSwitchFeature
+      uid: Hyper-V.Add-VMSwitchExtensionSwitchFeature
+    - name: Checkpoint-VM
+      uid: Hyper-V.Checkpoint-VM
+    - name: Compare-VM
+      uid: Hyper-V.Compare-VM
+    - name: Complete-VMFailover
+      uid: Hyper-V.Complete-VMFailover
+    - name: Connect-VMNetworkAdapter
+      uid: Hyper-V.Connect-VMNetworkAdapter
+    - name: Connect-VMSan
+      uid: Hyper-V.Connect-VMSan
+    - name: Convert-VHD
+      uid: Hyper-V.Convert-VHD
+    - name: Disable-VMEventing
+      uid: Hyper-V.Disable-VMEventing
+    - name: Disable-VMIntegrationService
+      uid: Hyper-V.Disable-VMIntegrationService
+    - name: Disable-VMMigration
+      uid: Hyper-V.Disable-VMMigration
+    - name: Disable-VMRemoteFXPhysicalVideoAdapter
+      uid: Hyper-V.Disable-VMRemoteFXPhysicalVideoAdapter
+    - name: Disable-VMResourceMetering
+      uid: Hyper-V.Disable-VMResourceMetering
+    - name: Disable-VMSwitchExtension
+      uid: Hyper-V.Disable-VMSwitchExtension
+    - name: Disconnect-VMNetworkAdapter
+      uid: Hyper-V.Disconnect-VMNetworkAdapter
+    - name: Disconnect-VMSan
+      uid: Hyper-V.Disconnect-VMSan
+    - name: Dismount-VHD
+      uid: Hyper-V.Dismount-VHD
+    - name: Enable-VMEventing
+      uid: Hyper-V.Enable-VMEventing
+    - name: Enable-VMIntegrationService
+      uid: Hyper-V.Enable-VMIntegrationService
+    - name: Enable-VMMigration
+      uid: Hyper-V.Enable-VMMigration
+    - name: Enable-VMRemoteFXPhysicalVideoAdapter
+      uid: Hyper-V.Enable-VMRemoteFXPhysicalVideoAdapter
+    - name: Enable-VMReplication
+      uid: Hyper-V.Enable-VMReplication
+    - name: Enable-VMResourceMetering
+      uid: Hyper-V.Enable-VMResourceMetering
+    - name: Enable-VMSwitchExtension
+      uid: Hyper-V.Enable-VMSwitchExtension
+    - name: Export-VM
+      uid: Hyper-V.Export-VM
+    - name: Export-VMSnapshot
+      uid: Hyper-V.Export-VMSnapshot
+    - name: Get-VHD
+      uid: Hyper-V.Get-VHD
+    - name: Get-VM
+      uid: Hyper-V.Get-VM
+    - name: Get-VMBios
+      uid: Hyper-V.Get-VMBios
+    - name: Get-VMComPort
+      uid: Hyper-V.Get-VMComPort
+    - name: Get-VMConnectAccess
+      uid: Hyper-V.Get-VMConnectAccess
+    - name: Get-VMDvdDrive
+      uid: Hyper-V.Get-VMDvdDrive
+    - name: Get-VMFibreChannelHba
+      uid: Hyper-V.Get-VMFibreChannelHba
+    - name: Get-VMFloppyDiskDrive
+      uid: Hyper-V.Get-VMFloppyDiskDrive
+    - name: Get-VMHardDiskDrive
+      uid: Hyper-V.Get-VMHardDiskDrive
+    - name: Get-VMHost
+      uid: Hyper-V.Get-VMHost
+    - name: Get-VMHostNumaNode
+      uid: Hyper-V.Get-VMHostNumaNode
+    - name: Get-VMHostNumaNodeStatus
+      uid: Hyper-V.Get-VMHostNumaNodeStatus
+    - name: Get-VMIdeController
+      uid: Hyper-V.Get-VMIdeController
+    - name: Get-VMIntegrationService
+      uid: Hyper-V.Get-VMIntegrationService
+    - name: Get-VMMemory
+      uid: Hyper-V.Get-VMMemory
+    - name: Get-VMMigrationNetwork
+      uid: Hyper-V.Get-VMMigrationNetwork
+    - name: Get-VMNetworkAdapter
+      uid: Hyper-V.Get-VMNetworkAdapter
+    - name: Get-VMNetworkAdapterAcl
+      uid: Hyper-V.Get-VMNetworkAdapterAcl
+    - name: Get-VMNetworkAdapterFailoverConfiguration
+      uid: Hyper-V.Get-VMNetworkAdapterFailoverConfiguration
+    - name: Get-VMNetworkAdapterVlan
+      uid: Hyper-V.Get-VMNetworkAdapterVlan
+    - name: Get-VMProcessor
+      uid: Hyper-V.Get-VMProcessor
+    - name: Get-VMRemoteFx3dVideoAdapter
+      uid: Hyper-V.Get-VMRemoteFx3dVideoAdapter
+    - name: Get-VMRemoteFXPhysicalVideoAdapter
+      uid: Hyper-V.Get-VMRemoteFXPhysicalVideoAdapter
+    - name: Get-VMReplication
+      uid: Hyper-V.Get-VMReplication
+    - name: Get-VMReplicationAuthorizationEntry
+      uid: Hyper-V.Get-VMReplicationAuthorizationEntry
+    - name: Get-VMReplicationServer
+      uid: Hyper-V.Get-VMReplicationServer
+    - name: Get-VMResourcePool
+      uid: Hyper-V.Get-VMResourcePool
+    - name: Get-VMSan
+      uid: Hyper-V.Get-VMSan
+    - name: Get-VMScsiController
+      uid: Hyper-V.Get-VMScsiController
+    - name: Get-VMSnapshot
+      uid: Hyper-V.Get-VMSnapshot
+    - name: Get-VMStoragePath
+      uid: Hyper-V.Get-VMStoragePath
+    - name: Get-VMSwitch
+      uid: Hyper-V.Get-VMSwitch
+    - name: Get-VMSwitchExtension
+      uid: Hyper-V.Get-VMSwitchExtension
+    - name: Get-VMSwitchExtensionPortData
+      uid: Hyper-V.Get-VMSwitchExtensionPortData
+    - name: Get-VMSwitchExtensionPortFeature
+      uid: Hyper-V.Get-VMSwitchExtensionPortFeature
+    - name: Get-VMSwitchExtensionSwitchData
+      uid: Hyper-V.Get-VMSwitchExtensionSwitchData
+    - name: Get-VMSwitchExtensionSwitchFeature
+      uid: Hyper-V.Get-VMSwitchExtensionSwitchFeature
+    - name: Get-VMSystemSwitchExtension
+      uid: Hyper-V.Get-VMSystemSwitchExtension
+    - name: Get-VMSystemSwitchExtensionPortFeature
+      uid: Hyper-V.Get-VMSystemSwitchExtensionPortFeature
+    - name: Get-VMSystemSwitchExtensionSwitchFeature
+      uid: Hyper-V.Get-VMSystemSwitchExtensionSwitchFeature
+    - name: Grant-VMConnectAccess
+      uid: Hyper-V.Grant-VMConnectAccess
+    - name: Import-VM
+      uid: Hyper-V.Import-VM
+    - name: Import-VMInitialReplication
+      uid: Hyper-V.Import-VMInitialReplication
+    - name: Measure-VM
+      uid: Hyper-V.Measure-VM
+    - name: Measure-VMReplication
+      uid: Hyper-V.Measure-VMReplication
+    - name: Measure-VMResourcePool
+      uid: Hyper-V.Measure-VMResourcePool
+    - name: Merge-VHD
+      uid: Hyper-V.Merge-VHD
+    - name: Mount-VHD
+      uid: Hyper-V.Mount-VHD
+    - name: Move-VM
+      uid: Hyper-V.Move-VM
+    - name: Move-VMStorage
+      uid: Hyper-V.Move-VMStorage
+    - name: New-VFD
+      uid: Hyper-V.New-VFD
+    - name: New-VHD
+      uid: Hyper-V.New-VHD
+    - name: New-VM
+      uid: Hyper-V.New-VM
+    - name: New-VMReplicationAuthorizationEntry
+      uid: Hyper-V.New-VMReplicationAuthorizationEntry
+    - name: New-VMResourcePool
+      uid: Hyper-V.New-VMResourcePool
+    - name: New-VMSan
+      uid: Hyper-V.New-VMSan
+    - name: New-VMSwitch
+      uid: Hyper-V.New-VMSwitch
+    - name: Optimize-VHD
+      uid: Hyper-V.Optimize-VHD
+    - name: Remove-VM
+      uid: Hyper-V.Remove-VM
+    - name: Remove-VMDvdDrive
+      uid: Hyper-V.Remove-VMDvdDrive
+    - name: Remove-VMFibreChannelHba
+      uid: Hyper-V.Remove-VMFibreChannelHba
+    - name: Remove-VMHardDiskDrive
+      uid: Hyper-V.Remove-VMHardDiskDrive
+    - name: Remove-VMMigrationNetwork
+      uid: Hyper-V.Remove-VMMigrationNetwork
+    - name: Remove-VMNetworkAdapter
+      uid: Hyper-V.Remove-VMNetworkAdapter
+    - name: Remove-VMNetworkAdapterAcl
+      uid: Hyper-V.Remove-VMNetworkAdapterAcl
+    - name: Remove-VMRemoteFx3dVideoAdapter
+      uid: Hyper-V.Remove-VMRemoteFx3dVideoAdapter
+    - name: Remove-VMReplication
+      uid: Hyper-V.Remove-VMReplication
+    - name: Remove-VMReplicationAuthorizationEntry
+      uid: Hyper-V.Remove-VMReplicationAuthorizationEntry
+    - name: Remove-VMResourcePool
+      uid: Hyper-V.Remove-VMResourcePool
+    - name: Remove-VMSan
+      uid: Hyper-V.Remove-VMSan
+    - name: Remove-VMSavedState
+      uid: Hyper-V.Remove-VMSavedState
+    - name: Remove-VMScsiController
+      uid: Hyper-V.Remove-VMScsiController
+    - name: Remove-VMSnapshot
+      uid: Hyper-V.Remove-VMSnapshot
+    - name: Remove-VMStoragePath
+      uid: Hyper-V.Remove-VMStoragePath
+    - name: Remove-VMSwitch
+      uid: Hyper-V.Remove-VMSwitch
+    - name: Remove-VMSwitchExtensionPortFeature
+      uid: Hyper-V.Remove-VMSwitchExtensionPortFeature
+    - name: Remove-VMSwitchExtensionSwitchFeature
+      uid: Hyper-V.Remove-VMSwitchExtensionSwitchFeature
+    - name: Rename-VM
+      uid: Hyper-V.Rename-VM
+    - name: Rename-VMNetworkAdapter
+      uid: Hyper-V.Rename-VMNetworkAdapter
+    - name: Rename-VMResourcePool
+      uid: Hyper-V.Rename-VMResourcePool
+    - name: Rename-VMSan
+      uid: Hyper-V.Rename-VMSan
+    - name: Rename-VMSnapshot
+      uid: Hyper-V.Rename-VMSnapshot
+    - name: Rename-VMSwitch
+      uid: Hyper-V.Rename-VMSwitch
+    - name: Repair-VM
+      uid: Hyper-V.Repair-VM
+    - name: Reset-VMReplicationStatistics
+      uid: Hyper-V.Reset-VMReplicationStatistics
+    - name: Reset-VMResourceMetering
+      uid: Hyper-V.Reset-VMResourceMetering
+    - name: Resize-VHD
+      uid: Hyper-V.Resize-VHD
+    - name: Restart-VM
+      uid: Hyper-V.Restart-VM
+    - name: Restore-VMSnapshot
+      uid: Hyper-V.Restore-VMSnapshot
+    - name: Resume-VM
+      uid: Hyper-V.Resume-VM
+    - name: Resume-VMReplication
+      uid: Hyper-V.Resume-VMReplication
+    - name: Revoke-VMConnectAccess
+      uid: Hyper-V.Revoke-VMConnectAccess
+    - name: Save-VM
+      uid: Hyper-V.Save-VM
+    - name: Set-VHD
+      uid: Hyper-V.Set-VHD
+    - name: Set-VM
+      uid: Hyper-V.Set-VM
+    - name: Set-VMBios
+      uid: Hyper-V.Set-VMBios
+    - name: Set-VMComPort
+      uid: Hyper-V.Set-VMComPort
+    - name: Set-VMDvdDrive
+      uid: Hyper-V.Set-VMDvdDrive
+    - name: Set-VMFibreChannelHba
+      uid: Hyper-V.Set-VMFibreChannelHba
+    - name: Set-VMFloppyDiskDrive
+      uid: Hyper-V.Set-VMFloppyDiskDrive
+    - name: Set-VMHardDiskDrive
+      uid: Hyper-V.Set-VMHardDiskDrive
+    - name: Set-VMHost
+      uid: Hyper-V.Set-VMHost
+    - name: Set-VMMemory
+      uid: Hyper-V.Set-VMMemory
+    - name: Set-VMMigrationNetwork
+      uid: Hyper-V.Set-VMMigrationNetwork
+    - name: Set-VMNetworkAdapter
+      uid: Hyper-V.Set-VMNetworkAdapter
+    - name: Set-VMNetworkAdapterFailoverConfiguration
+      uid: Hyper-V.Set-VMNetworkAdapterFailoverConfiguration
+    - name: Set-VMNetworkAdapterVlan
+      uid: Hyper-V.Set-VMNetworkAdapterVlan
+    - name: Set-VMProcessor
+      uid: Hyper-V.Set-VMProcessor
+    - name: Set-VMRemoteFx3dVideoAdapter
+      uid: Hyper-V.Set-VMRemoteFx3dVideoAdapter
+    - name: Set-VMReplication
+      uid: Hyper-V.Set-VMReplication
+    - name: Set-VMReplicationAuthorizationEntry
+      uid: Hyper-V.Set-VMReplicationAuthorizationEntry
+    - name: Set-VMReplicationServer
+      uid: Hyper-V.Set-VMReplicationServer
+    - name: Set-VMResourcePool
+      uid: Hyper-V.Set-VMResourcePool
+    - name: Set-VMSan
+      uid: Hyper-V.Set-VMSan
+    - name: Set-VMSwitch
+      uid: Hyper-V.Set-VMSwitch
+    - name: Set-VMSwitchExtensionPortFeature
+      uid: Hyper-V.Set-VMSwitchExtensionPortFeature
+    - name: Set-VMSwitchExtensionSwitchFeature
+      uid: Hyper-V.Set-VMSwitchExtensionSwitchFeature
+    - name: Start-VM
+      uid: Hyper-V.Start-VM
+    - name: Start-VMFailover
+      uid: Hyper-V.Start-VMFailover
+    - name: Start-VMInitialReplication
+      uid: Hyper-V.Start-VMInitialReplication
+    - name: Stop-VM
+      uid: Hyper-V.Stop-VM
+    - name: Stop-VMFailover
+      uid: Hyper-V.Stop-VMFailover
+    - name: Stop-VMInitialReplication
+      uid: Hyper-V.Stop-VMInitialReplication
+    - name: Stop-VMReplication
+      uid: Hyper-V.Stop-VMReplication
+    - name: Suspend-VM
+      uid: Hyper-V.Suspend-VM
+    - name: Suspend-VMReplication
+      uid: Hyper-V.Suspend-VMReplication
+    - name: Test-VHD
+      uid: Hyper-V.Test-VHD
+    - name: Test-VMReplicationConnection
+      uid: Hyper-V.Test-VMReplicationConnection
+  - name: International
+    uid: International
+    items:
+    - name: Get-WinAcceptLanguageFromLanguageListOptOut
+      uid: International.Get-WinAcceptLanguageFromLanguageListOptOut
+    - name: Get-WinCultureFromLanguageListOptOut
+      uid: International.Get-WinCultureFromLanguageListOptOut
+    - name: Get-WinDefaultInputMethodOverride
+      uid: International.Get-WinDefaultInputMethodOverride
+    - name: Get-WinHomeLocation
+      uid: International.Get-WinHomeLocation
+    - name: Get-WinLanguageBarOption
+      uid: International.Get-WinLanguageBarOption
+    - name: Get-WinSystemLocale
+      uid: International.Get-WinSystemLocale
+    - name: Get-WinUILanguageOverride
+      uid: International.Get-WinUILanguageOverride
+    - name: Get-WinUserLanguageList
+      uid: International.Get-WinUserLanguageList
+    - name: New-WinUserLanguageList
+      uid: International.New-WinUserLanguageList
+    - name: Set-Culture
+      uid: International.Set-Culture
+    - name: Set-WinAcceptLanguageFromLanguageListOptOut
+      uid: International.Set-WinAcceptLanguageFromLanguageListOptOut
+    - name: Set-WinCultureFromLanguageListOptOut
+      uid: International.Set-WinCultureFromLanguageListOptOut
+    - name: Set-WinDefaultInputMethodOverride
+      uid: International.Set-WinDefaultInputMethodOverride
+    - name: Set-WinHomeLocation
+      uid: International.Set-WinHomeLocation
+    - name: Set-WinLanguageBarOption
+      uid: International.Set-WinLanguageBarOption
+    - name: Set-WinSystemLocale
+      uid: International.Set-WinSystemLocale
+    - name: Set-WinUILanguageOverride
+      uid: International.Set-WinUILanguageOverride
+    - name: Set-WinUserLanguageList
+      uid: International.Set-WinUserLanguageList
+  - name: IpamServer
+    uid: IpamServer
+    items:
+    - name: Add-IpamCustomField
+      uid: IpamServer.Add-IpamCustomField
+    - name: Add-IpamCustomValue
+      uid: IpamServer.Add-IpamCustomValue
+    - name: Export-IpamAddress
+      uid: IpamServer.Export-IpamAddress
+    - name: Export-IpamRange
+      uid: IpamServer.Export-IpamRange
+    - name: Get-IpamConfiguration
+      uid: IpamServer.Get-IpamConfiguration
+    - name: Get-IpamCustomField
+      uid: IpamServer.Get-IpamCustomField
+    - name: Import-IpamAddress
+      uid: IpamServer.Import-IpamAddress
+    - name: Import-IpamRange
+      uid: IpamServer.Import-IpamRange
+    - name: Invoke-IpamGpoProvisioning
+      uid: IpamServer.Invoke-IpamGpoProvisioning
+    - name: Set-IpamConfiguration
+      uid: IpamServer.Set-IpamConfiguration
+  - name: iSCSI
+    uid: iSCSI
+    items:
+    - name: Connect-IscsiTarget
+      uid: iSCSI.Connect-IscsiTarget
+    - name: Disconnect-IscsiTarget
+      uid: iSCSI.Disconnect-IscsiTarget
+    - name: Get-IscsiConnection
+      uid: iSCSI.Get-IscsiConnection
+    - name: Get-IscsiSession
+      uid: iSCSI.Get-IscsiSession
+    - name: Get-IscsiTarget
+      uid: iSCSI.Get-IscsiTarget
+    - name: Get-IscsiTargetPortal
+      uid: iSCSI.Get-IscsiTargetPortal
+    - name: New-IscsiTargetPortal
+      uid: iSCSI.New-IscsiTargetPortal
+    - name: Register-IscsiSession
+      uid: iSCSI.Register-IscsiSession
+    - name: Remove-IscsiTargetPortal
+      uid: iSCSI.Remove-IscsiTargetPortal
+    - name: Set-IscsiChapSecret
+      uid: iSCSI.Set-IscsiChapSecret
+    - name: Unregister-IscsiSession
+      uid: iSCSI.Unregister-IscsiSession
+    - name: Update-IscsiTarget
+      uid: iSCSI.Update-IscsiTarget
+    - name: Update-IscsiTargetPortal
+      uid: iSCSI.Update-IscsiTargetPortal
+  - name: IscsiTarget
+    uid: IscsiTarget
+    items:
+    - name: Add-IscsiVirtualDiskTargetMapping
+      uid: IscsiTarget.Add-IscsiVirtualDiskTargetMapping
+    - name: Checkpoint-IscsiVirtualDisk
+      uid: IscsiTarget.Checkpoint-IscsiVirtualDisk
+    - name: Convert-IscsiVirtualDisk
+      uid: IscsiTarget.Convert-IscsiVirtualDisk
+    - name: Dismount-IscsiVirtualDiskSnapshot
+      uid: IscsiTarget.Dismount-IscsiVirtualDiskSnapshot
+    - name: Expand-IscsiVirtualDisk
+      uid: IscsiTarget.Expand-IscsiVirtualDisk
+    - name: Export-IscsiVirtualDiskSnapshot
+      uid: IscsiTarget.Export-IscsiVirtualDiskSnapshot
+    - name: Get-IscsiServerTarget
+      uid: IscsiTarget.Get-IscsiServerTarget
+    - name: Get-IscsiTargetServerSetting
+      uid: IscsiTarget.Get-IscsiTargetServerSetting
+    - name: Get-IscsiVirtualDisk
+      uid: IscsiTarget.Get-IscsiVirtualDisk
+    - name: Get-IscsiVirtualDiskSnapshot
+      uid: IscsiTarget.Get-IscsiVirtualDiskSnapshot
+    - name: Import-IscsiVirtualDisk
+      uid: IscsiTarget.Import-IscsiVirtualDisk
+    - name: Mount-IscsiVirtualDiskSnapshot
+      uid: IscsiTarget.Mount-IscsiVirtualDiskSnapshot
+    - name: New-IscsiServerTarget
+      uid: IscsiTarget.New-IscsiServerTarget
+    - name: New-IscsiVirtualDisk
+      uid: IscsiTarget.New-IscsiVirtualDisk
+    - name: Remove-IscsiServerTarget
+      uid: IscsiTarget.Remove-IscsiServerTarget
+    - name: Remove-IscsiVirtualDisk
+      uid: IscsiTarget.Remove-IscsiVirtualDisk
+    - name: Remove-IscsiVirtualDiskSnapshot
+      uid: IscsiTarget.Remove-IscsiVirtualDiskSnapshot
+    - name: Remove-IscsiVirtualDiskTargetMapping
+      uid: IscsiTarget.Remove-IscsiVirtualDiskTargetMapping
+    - name: Restore-IscsiVirtualDisk
+      uid: IscsiTarget.Restore-IscsiVirtualDisk
+    - name: Set-IscsiServerTarget
+      uid: IscsiTarget.Set-IscsiServerTarget
+    - name: Set-IscsiTargetServerSetting
+      uid: IscsiTarget.Set-IscsiTargetServerSetting
+    - name: Set-IscsiVirtualDisk
+      uid: IscsiTarget.Set-IscsiVirtualDisk
+    - name: Set-IscsiVirtualDiskSnapshot
+      uid: IscsiTarget.Set-IscsiVirtualDiskSnapshot
+  - name: KDS
+    uid: KDS
+    items:
+    - name: Add-KdsRootKey
+      uid: KDS.Add-KdsRootKey
+    - name: Clear-KdsCache
+      uid: KDS.Clear-KdsCache
+    - name: Get-KdsConfiguration
+      uid: KDS.Get-KdsConfiguration
+    - name: Get-KdsRootKey
+      uid: KDS.Get-KdsRootKey
+    - name: Set-KdsConfiguration
+      uid: KDS.Set-KdsConfiguration
+    - name: Test-KdsRootKey
+      uid: KDS.Test-KdsRootKey
+  - name: MMAgent
+    uid: MMAgent
+    items:
+    - name: Disable-MMAgent
+      uid: MMAgent.Disable-MMAgent
+    - name: Enable-MMAgent
+      uid: MMAgent.Enable-MMAgent
+    - name: Get-MMAgent
+      uid: MMAgent.Get-MMAgent
+    - name: Set-MMAgent
+      uid: MMAgent.Set-MMAgent
+  - name: MPIO
+    uid: MPIO
+    items:
+    - name: Clear-MSDSMSupportedHW
+      uid: MPIO.Clear-MSDSMSupportedHW
+    - name: Disable-MSDSMAutomaticClaim
+      uid: MPIO.Disable-MSDSMAutomaticClaim
+    - name: Enable-MSDSMAutomaticClaim
+      uid: MPIO.Enable-MSDSMAutomaticClaim
+    - name: Get-MPIOAvailableHW
+      uid: MPIO.Get-MPIOAvailableHW
+    - name: Get-MPIOSetting
+      uid: MPIO.Get-MPIOSetting
+    - name: Get-MSDSMAutomaticClaimSettings
+      uid: MPIO.Get-MSDSMAutomaticClaimSettings
+    - name: Get-MSDSMGlobalDefaultLoadBalancePolicy
+      uid: MPIO.Get-MSDSMGlobalDefaultLoadBalancePolicy
+    - name: Get-MSDSMSupportedHW
+      uid: MPIO.Get-MSDSMSupportedHW
+    - name: New-MSDSMSupportedHW
+      uid: MPIO.New-MSDSMSupportedHW
+    - name: Remove-MSDSMSupportedHW
+      uid: MPIO.Remove-MSDSMSupportedHW
+    - name: Set-MPIOSetting
+      uid: MPIO.Set-MPIOSetting
+    - name: Set-MSDSMGlobalDefaultLoadBalancePolicy
+      uid: MPIO.Set-MSDSMGlobalDefaultLoadBalancePolicy
+    - name: Update-MPIOClaimedHW
+      uid: MPIO.Update-MPIOClaimedHW
+  - name: MsDTC
+    uid: MsDTC
+    items:
+    - name: Add-DtcClusterTMMapping
+      uid: MsDTC.Add-DtcClusterTMMapping
+    - name: Complete-DtcDiagnosticTransaction
+      uid: MsDTC.Complete-DtcDiagnosticTransaction
+    - name: Get-Dtc
+      uid: MsDTC.Get-Dtc
+    - name: Get-DtcAdvancedHostSetting
+      uid: MsDTC.Get-DtcAdvancedHostSetting
+    - name: Get-DtcAdvancedSetting
+      uid: MsDTC.Get-DtcAdvancedSetting
+    - name: Get-DtcClusterDefault
+      uid: MsDTC.Get-DtcClusterDefault
+    - name: Get-DtcClusterTMMapping
+      uid: MsDTC.Get-DtcClusterTMMapping
+    - name: Get-DtcDefault
+      uid: MsDTC.Get-DtcDefault
+    - name: Get-DtcLog
+      uid: MsDTC.Get-DtcLog
+    - name: Get-DtcNetworkSetting
+      uid: MsDTC.Get-DtcNetworkSetting
+    - name: Get-DtcTransaction
+      uid: MsDTC.Get-DtcTransaction
+    - name: Get-DtcTransactionsStatistics
+      uid: MsDTC.Get-DtcTransactionsStatistics
+    - name: Get-DtcTransactionsTraceSession
+      uid: MsDTC.Get-DtcTransactionsTraceSession
+    - name: Get-DtcTransactionsTraceSetting
+      uid: MsDTC.Get-DtcTransactionsTraceSetting
+    - name: Install-Dtc
+      uid: MsDTC.Install-Dtc
+    - name: Join-DtcDiagnosticResourceManager
+      uid: MsDTC.Join-DtcDiagnosticResourceManager
+    - name: New-DtcDiagnosticTransaction
+      uid: MsDTC.New-DtcDiagnosticTransaction
+    - name: Receive-DtcDiagnosticTransaction
+      uid: MsDTC.Receive-DtcDiagnosticTransaction
+    - name: Remove-DtcClusterTMMapping
+      uid: MsDTC.Remove-DtcClusterTMMapping
+    - name: Reset-DtcLog
+      uid: MsDTC.Reset-DtcLog
+    - name: Send-DtcDiagnosticTransaction
+      uid: MsDTC.Send-DtcDiagnosticTransaction
+    - name: Set-DtcAdvancedHostSetting
+      uid: MsDTC.Set-DtcAdvancedHostSetting
+    - name: Set-DtcAdvancedSetting
+      uid: MsDTC.Set-DtcAdvancedSetting
+    - name: Set-DtcClusterDefault
+      uid: MsDTC.Set-DtcClusterDefault
+    - name: Set-DtcClusterTMMapping
+      uid: MsDTC.Set-DtcClusterTMMapping
+    - name: Set-DtcDefault
+      uid: MsDTC.Set-DtcDefault
+    - name: Set-DtcLog
+      uid: MsDTC.Set-DtcLog
+    - name: Set-DtcNetworkSetting
+      uid: MsDTC.Set-DtcNetworkSetting
+    - name: Set-DtcTransaction
+      uid: MsDTC.Set-DtcTransaction
+    - name: Set-DtcTransactionsTraceSession
+      uid: MsDTC.Set-DtcTransactionsTraceSession
+    - name: Set-DtcTransactionsTraceSetting
+      uid: MsDTC.Set-DtcTransactionsTraceSetting
+    - name: Start-Dtc
+      uid: MsDTC.Start-Dtc
+    - name: Start-DtcDiagnosticResourceManager
+      uid: MsDTC.Start-DtcDiagnosticResourceManager
+    - name: Start-DtcTransactionsTraceSession
+      uid: MsDTC.Start-DtcTransactionsTraceSession
+    - name: Stop-Dtc
+      uid: MsDTC.Stop-Dtc
+    - name: Stop-DtcDiagnosticResourceManager
+      uid: MsDTC.Stop-DtcDiagnosticResourceManager
+    - name: Stop-DtcTransactionsTraceSession
+      uid: MsDTC.Stop-DtcTransactionsTraceSession
+    - name: Test-Dtc
+      uid: MsDTC.Test-Dtc
+    - name: Undo-DtcDiagnosticTransaction
+      uid: MsDTC.Undo-DtcDiagnosticTransaction
+    - name: Uninstall-Dtc
+      uid: MsDTC.Uninstall-Dtc
+    - name: Write-DtcTransactionsTraceSession
+      uid: MsDTC.Write-DtcTransactionsTraceSession
+  - name: MSMQ
+    uid: MSMQ
+    items:
+    - name: Clear-MsmqOutgoingQueue
+      uid: MSMQ.Clear-MsmqOutgoingQueue
+    - name: Clear-MsmqQueue
+      uid: MSMQ.Clear-MsmqQueue
+    - name: Enable-MsmqCertificate
+      uid: MSMQ.Enable-MsmqCertificate
+    - name: Get-MsmqCertificate
+      uid: MSMQ.Get-MsmqCertificate
+    - name: Get-MsmqOutgoingQueue
+      uid: MSMQ.Get-MsmqOutgoingQueue
+    - name: Get-MsmqQueue
+      uid: MSMQ.Get-MsmqQueue
+    - name: Get-MsmqQueueACL
+      uid: MSMQ.Get-MsmqQueueACL
+    - name: Get-MsmqQueueManager
+      uid: MSMQ.Get-MsmqQueueManager
+    - name: Get-MsmqQueueManagerACL
+      uid: MSMQ.Get-MsmqQueueManagerACL
+    - name: Move-MsmqMessage
+      uid: MSMQ.Move-MsmqMessage
+    - name: New-MsmqMessage
+      uid: MSMQ.New-MsmqMessage
+    - name: New-MsmqQueue
+      uid: MSMQ.New-MsmqQueue
+    - name: Receive-MsmqQueue
+      uid: MSMQ.Receive-MsmqQueue
+    - name: Remove-MsmqCertificate
+      uid: MSMQ.Remove-MsmqCertificate
+    - name: Remove-MsmqQueue
+      uid: MSMQ.Remove-MsmqQueue
+    - name: Resume-MsmqOutgoingQueue
+      uid: MSMQ.Resume-MsmqOutgoingQueue
+    - name: Send-MsmqQueue
+      uid: MSMQ.Send-MsmqQueue
+    - name: Set-MsmqQueue
+      uid: MSMQ.Set-MsmqQueue
+    - name: Set-MsmqQueueACL
+      uid: MSMQ.Set-MsmqQueueACL
+    - name: Set-MsmqQueueManager
+      uid: MSMQ.Set-MsmqQueueManager
+    - name: Set-MsmqQueueManagerACL
+      uid: MSMQ.Set-MsmqQueueManagerACL
+    - name: Suspend-MsmqOutgoingQueue
+      uid: MSMQ.Suspend-MsmqOutgoingQueue
+  - name: NetAdapter
+    uid: NetAdapter
+    items:
+    - name: Disable-NetAdapter
+      uid: NetAdapter.Disable-NetAdapter
+    - name: Disable-NetAdapterBinding
+      uid: NetAdapter.Disable-NetAdapterBinding
+    - name: Disable-NetAdapterChecksumOffload
+      uid: NetAdapter.Disable-NetAdapterChecksumOffload
+    - name: Disable-NetAdapterEncapsulatedPacketTaskOffload
+      uid: NetAdapter.Disable-NetAdapterEncapsulatedPacketTaskOffload
+    - name: Disable-NetAdapterIPsecOffload
+      uid: NetAdapter.Disable-NetAdapterIPsecOffload
+    - name: Disable-NetAdapterLso
+      uid: NetAdapter.Disable-NetAdapterLso
+    - name: Disable-NetAdapterPowerManagement
+      uid: NetAdapter.Disable-NetAdapterPowerManagement
+    - name: Disable-NetAdapterQos
+      uid: NetAdapter.Disable-NetAdapterQos
+    - name: Disable-NetAdapterRdma
+      uid: NetAdapter.Disable-NetAdapterRdma
+    - name: Disable-NetAdapterRsc
+      uid: NetAdapter.Disable-NetAdapterRsc
+    - name: Disable-NetAdapterRss
+      uid: NetAdapter.Disable-NetAdapterRss
+    - name: Disable-NetAdapterSriov
+      uid: NetAdapter.Disable-NetAdapterSriov
+    - name: Disable-NetAdapterVmq
+      uid: NetAdapter.Disable-NetAdapterVmq
+    - name: Enable-NetAdapter
+      uid: NetAdapter.Enable-NetAdapter
+    - name: Enable-NetAdapterBinding
+      uid: NetAdapter.Enable-NetAdapterBinding
+    - name: Enable-NetAdapterChecksumOffload
+      uid: NetAdapter.Enable-NetAdapterChecksumOffload
+    - name: Enable-NetAdapterEncapsulatedPacketTaskOffload
+      uid: NetAdapter.Enable-NetAdapterEncapsulatedPacketTaskOffload
+    - name: Enable-NetAdapterIPsecOffload
+      uid: NetAdapter.Enable-NetAdapterIPsecOffload
+    - name: Enable-NetAdapterLso
+      uid: NetAdapter.Enable-NetAdapterLso
+    - name: Enable-NetAdapterPowerManagement
+      uid: NetAdapter.Enable-NetAdapterPowerManagement
+    - name: Enable-NetAdapterQos
+      uid: NetAdapter.Enable-NetAdapterQos
+    - name: Enable-NetAdapterRdma
+      uid: NetAdapter.Enable-NetAdapterRdma
+    - name: Enable-NetAdapterRsc
+      uid: NetAdapter.Enable-NetAdapterRsc
+    - name: Enable-NetAdapterRss
+      uid: NetAdapter.Enable-NetAdapterRss
+    - name: Enable-NetAdapterSriov
+      uid: NetAdapter.Enable-NetAdapterSriov
+    - name: Enable-NetAdapterVmq
+      uid: NetAdapter.Enable-NetAdapterVmq
+    - name: Get-NetAdapter
+      uid: NetAdapter.Get-NetAdapter
+    - name: Get-NetAdapterAdvancedProperty
+      uid: NetAdapter.Get-NetAdapterAdvancedProperty
+    - name: Get-NetAdapterBinding
+      uid: NetAdapter.Get-NetAdapterBinding
+    - name: Get-NetAdapterChecksumOffload
+      uid: NetAdapter.Get-NetAdapterChecksumOffload
+    - name: Get-NetAdapterEncapsulatedPacketTaskOffload
+      uid: NetAdapter.Get-NetAdapterEncapsulatedPacketTaskOffload
+    - name: Get-NetAdapterHardwareInfo
+      uid: NetAdapter.Get-NetAdapterHardwareInfo
+    - name: Get-NetAdapterIPsecOffload
+      uid: NetAdapter.Get-NetAdapterIPsecOffload
+    - name: Get-NetAdapterLso
+      uid: NetAdapter.Get-NetAdapterLso
+    - name: Get-NetAdapterPowerManagement
+      uid: NetAdapter.Get-NetAdapterPowerManagement
+    - name: Get-NetAdapterQos
+      uid: NetAdapter.Get-NetAdapterQos
+    - name: Get-NetAdapterRdma
+      uid: NetAdapter.Get-NetAdapterRdma
+    - name: Get-NetAdapterRsc
+      uid: NetAdapter.Get-NetAdapterRsc
+    - name: Get-NetAdapterRss
+      uid: NetAdapter.Get-NetAdapterRss
+    - name: Get-NetAdapterSriov
+      uid: NetAdapter.Get-NetAdapterSriov
+    - name: Get-NetAdapterSriovVf
+      uid: NetAdapter.Get-NetAdapterSriovVf
+    - name: Get-NetAdapterStatistics
+      uid: NetAdapter.Get-NetAdapterStatistics
+    - name: Get-NetAdapterVmq
+      uid: NetAdapter.Get-NetAdapterVmq
+    - name: Get-NetAdapterVmqQueue
+      uid: NetAdapter.Get-NetAdapterVmqQueue
+    - name: Get-NetAdapterVPort
+      uid: NetAdapter.Get-NetAdapterVPort
+    - name: New-NetAdapterAdvancedProperty
+      uid: NetAdapter.New-NetAdapterAdvancedProperty
+    - name: Remove-NetAdapterAdvancedProperty
+      uid: NetAdapter.Remove-NetAdapterAdvancedProperty
+    - name: Rename-NetAdapter
+      uid: NetAdapter.Rename-NetAdapter
+    - name: Reset-NetAdapterAdvancedProperty
+      uid: NetAdapter.Reset-NetAdapterAdvancedProperty
+    - name: Restart-NetAdapter
+      uid: NetAdapter.Restart-NetAdapter
+    - name: Set-NetAdapter
+      uid: NetAdapter.Set-NetAdapter
+    - name: Set-NetAdapterAdvancedProperty
+      uid: NetAdapter.Set-NetAdapterAdvancedProperty
+    - name: Set-NetAdapterBinding
+      uid: NetAdapter.Set-NetAdapterBinding
+    - name: Set-NetAdapterChecksumOffload
+      uid: NetAdapter.Set-NetAdapterChecksumOffload
+    - name: Set-NetAdapterEncapsulatedPacketTaskOffload
+      uid: NetAdapter.Set-NetAdapterEncapsulatedPacketTaskOffload
+    - name: Set-NetAdapterIPsecOffload
+      uid: NetAdapter.Set-NetAdapterIPsecOffload
+    - name: Set-NetAdapterLso
+      uid: NetAdapter.Set-NetAdapterLso
+    - name: Set-NetAdapterPowerManagement
+      uid: NetAdapter.Set-NetAdapterPowerManagement
+    - name: Set-NetAdapterQos
+      uid: NetAdapter.Set-NetAdapterQos
+    - name: Set-NetAdapterRdma
+      uid: NetAdapter.Set-NetAdapterRdma
+    - name: Set-NetAdapterRsc
+      uid: NetAdapter.Set-NetAdapterRsc
+    - name: Set-NetAdapterRss
+      uid: NetAdapter.Set-NetAdapterRss
+    - name: Set-NetAdapterSriov
+      uid: NetAdapter.Set-NetAdapterSriov
+    - name: Set-NetAdapterVmq
+      uid: NetAdapter.Set-NetAdapterVmq
+  - name: NetConnection
+    uid: NetConnection
+    items:
+    - name: Get-NetConnectionProfile
+      uid: NetConnection.Get-NetConnectionProfile
+    - name: Set-NetConnectionProfile
+      uid: NetConnection.Set-NetConnectionProfile
+  - name: NetLbfo
+    uid: NetLbfo
+    items:
+    - name: Add-NetLbfoTeamMember
+      uid: NetLbfo.Add-NetLbfoTeamMember
+    - name: Add-NetLbfoTeamNic
+      uid: NetLbfo.Add-NetLbfoTeamNic
+    - name: Get-NetLbfoTeam
+      uid: NetLbfo.Get-NetLbfoTeam
+    - name: Get-NetLbfoTeamMember
+      uid: NetLbfo.Get-NetLbfoTeamMember
+    - name: Get-NetLbfoTeamNic
+      uid: NetLbfo.Get-NetLbfoTeamNic
+    - name: New-NetLbfoTeam
+      uid: NetLbfo.New-NetLbfoTeam
+    - name: Remove-NetLbfoTeam
+      uid: NetLbfo.Remove-NetLbfoTeam
+    - name: Remove-NetLbfoTeamMember
+      uid: NetLbfo.Remove-NetLbfoTeamMember
+    - name: Remove-NetLbfoTeamNic
+      uid: NetLbfo.Remove-NetLbfoTeamNic
+    - name: Rename-NetLbfoTeam
+      uid: NetLbfo.Rename-NetLbfoTeam
+    - name: Set-NetLbfoTeam
+      uid: NetLbfo.Set-NetLbfoTeam
+    - name: Set-NetLbfoTeamMember
+      uid: NetLbfo.Set-NetLbfoTeamMember
+    - name: Set-NetLbfoTeamNic
+      uid: NetLbfo.Set-NetLbfoTeamNic
+  - name: NetQoS
+    uid: NetQoS
+    items:
+    - name: Get-NetQosPolicy
+      uid: NetQoS.Get-NetQosPolicy
+    - name: New-NetQosPolicy
+      uid: NetQoS.New-NetQosPolicy
+    - name: Remove-NetQosPolicy
+      uid: NetQoS.Remove-NetQosPolicy
+    - name: Set-NetQosPolicy
+      uid: NetQoS.Set-NetQosPolicy
+  - name: NetSecurity
+    uid: NetSecurity
+    items:
+    - name: Copy-NetFirewallRule
+      uid: NetSecurity.Copy-NetFirewallRule
+    - name: Copy-NetIPsecMainModeCryptoSet
+      uid: NetSecurity.Copy-NetIPsecMainModeCryptoSet
+    - name: Copy-NetIPsecMainModeRule
+      uid: NetSecurity.Copy-NetIPsecMainModeRule
+    - name: Copy-NetIPsecPhase1AuthSet
+      uid: NetSecurity.Copy-NetIPsecPhase1AuthSet
+    - name: Copy-NetIPsecPhase2AuthSet
+      uid: NetSecurity.Copy-NetIPsecPhase2AuthSet
+    - name: Copy-NetIPsecQuickModeCryptoSet
+      uid: NetSecurity.Copy-NetIPsecQuickModeCryptoSet
+    - name: Copy-NetIPsecRule
+      uid: NetSecurity.Copy-NetIPsecRule
+    - name: Disable-NetFirewallRule
+      uid: NetSecurity.Disable-NetFirewallRule
+    - name: Disable-NetIPsecMainModeRule
+      uid: NetSecurity.Disable-NetIPsecMainModeRule
+    - name: Disable-NetIPsecRule
+      uid: NetSecurity.Disable-NetIPsecRule
+    - name: Enable-NetFirewallRule
+      uid: NetSecurity.Enable-NetFirewallRule
+    - name: Enable-NetIPsecMainModeRule
+      uid: NetSecurity.Enable-NetIPsecMainModeRule
+    - name: Enable-NetIPsecRule
+      uid: NetSecurity.Enable-NetIPsecRule
+    - name: Get-DAPolicyChange
+      uid: NetSecurity.Get-DAPolicyChange
+    - name: Get-NetFirewallAddressFilter
+      uid: NetSecurity.Get-NetFirewallAddressFilter
+    - name: Get-NetFirewallApplicationFilter
+      uid: NetSecurity.Get-NetFirewallApplicationFilter
+    - name: Get-NetFirewallInterfaceFilter
+      uid: NetSecurity.Get-NetFirewallInterfaceFilter
+    - name: Get-NetFirewallInterfaceTypeFilter
+      uid: NetSecurity.Get-NetFirewallInterfaceTypeFilter
+    - name: Get-NetFirewallPortFilter
+      uid: NetSecurity.Get-NetFirewallPortFilter
+    - name: Get-NetFirewallProfile
+      uid: NetSecurity.Get-NetFirewallProfile
+    - name: Get-NetFirewallRule
+      uid: NetSecurity.Get-NetFirewallRule
+    - name: Get-NetFirewallSecurityFilter
+      uid: NetSecurity.Get-NetFirewallSecurityFilter
+    - name: Get-NetFirewallServiceFilter
+      uid: NetSecurity.Get-NetFirewallServiceFilter
+    - name: Get-NetFirewallSetting
+      uid: NetSecurity.Get-NetFirewallSetting
+    - name: Get-NetIPsecDospSetting
+      uid: NetSecurity.Get-NetIPsecDospSetting
+    - name: Get-NetIPsecMainModeCryptoSet
+      uid: NetSecurity.Get-NetIPsecMainModeCryptoSet
+    - name: Get-NetIPsecMainModeRule
+      uid: NetSecurity.Get-NetIPsecMainModeRule
+    - name: Get-NetIPsecMainModeSA
+      uid: NetSecurity.Get-NetIPsecMainModeSA
+    - name: Get-NetIPsecPhase1AuthSet
+      uid: NetSecurity.Get-NetIPsecPhase1AuthSet
+    - name: Get-NetIPsecPhase2AuthSet
+      uid: NetSecurity.Get-NetIPsecPhase2AuthSet
+    - name: Get-NetIPsecQuickModeCryptoSet
+      uid: NetSecurity.Get-NetIPsecQuickModeCryptoSet
+    - name: Get-NetIPsecQuickModeSA
+      uid: NetSecurity.Get-NetIPsecQuickModeSA
+    - name: Get-NetIPsecRule
+      uid: NetSecurity.Get-NetIPsecRule
+    - name: New-NetFirewallRule
+      uid: NetSecurity.New-NetFirewallRule
+    - name: New-NetIPsecAuthProposal
+      uid: NetSecurity.New-NetIPsecAuthProposal
+    - name: New-NetIPsecDospSetting
+      uid: NetSecurity.New-NetIPsecDospSetting
+    - name: New-NetIPsecMainModeCryptoProposal
+      uid: NetSecurity.New-NetIPsecMainModeCryptoProposal
+    - name: New-NetIPsecMainModeCryptoSet
+      uid: NetSecurity.New-NetIPsecMainModeCryptoSet
+    - name: New-NetIPsecMainModeRule
+      uid: NetSecurity.New-NetIPsecMainModeRule
+    - name: New-NetIPsecPhase1AuthSet
+      uid: NetSecurity.New-NetIPsecPhase1AuthSet
+    - name: New-NetIPsecPhase2AuthSet
+      uid: NetSecurity.New-NetIPsecPhase2AuthSet
+    - name: New-NetIPsecQuickModeCryptoProposal
+      uid: NetSecurity.New-NetIPsecQuickModeCryptoProposal
+    - name: New-NetIPsecQuickModeCryptoSet
+      uid: NetSecurity.New-NetIPsecQuickModeCryptoSet
+    - name: New-NetIPsecRule
+      uid: NetSecurity.New-NetIPsecRule
+    - name: Open-NetGPO
+      uid: NetSecurity.Open-NetGPO
+    - name: Remove-NetFirewallRule
+      uid: NetSecurity.Remove-NetFirewallRule
+    - name: Remove-NetIPsecDospSetting
+      uid: NetSecurity.Remove-NetIPsecDospSetting
+    - name: Remove-NetIPsecMainModeCryptoSet
+      uid: NetSecurity.Remove-NetIPsecMainModeCryptoSet
+    - name: Remove-NetIPsecMainModeRule
+      uid: NetSecurity.Remove-NetIPsecMainModeRule
+    - name: Remove-NetIPsecMainModeSA
+      uid: NetSecurity.Remove-NetIPsecMainModeSA
+    - name: Remove-NetIPsecPhase1AuthSet
+      uid: NetSecurity.Remove-NetIPsecPhase1AuthSet
+    - name: Remove-NetIPsecPhase2AuthSet
+      uid: NetSecurity.Remove-NetIPsecPhase2AuthSet
+    - name: Remove-NetIPsecQuickModeCryptoSet
+      uid: NetSecurity.Remove-NetIPsecQuickModeCryptoSet
+    - name: Remove-NetIPsecQuickModeSA
+      uid: NetSecurity.Remove-NetIPsecQuickModeSA
+    - name: Remove-NetIPsecRule
+      uid: NetSecurity.Remove-NetIPsecRule
+    - name: Rename-NetFirewallRule
+      uid: NetSecurity.Rename-NetFirewallRule
+    - name: Rename-NetIPsecMainModeCryptoSet
+      uid: NetSecurity.Rename-NetIPsecMainModeCryptoSet
+    - name: Rename-NetIPsecMainModeRule
+      uid: NetSecurity.Rename-NetIPsecMainModeRule
+    - name: Rename-NetIPsecPhase1AuthSet
+      uid: NetSecurity.Rename-NetIPsecPhase1AuthSet
+    - name: Rename-NetIPsecPhase2AuthSet
+      uid: NetSecurity.Rename-NetIPsecPhase2AuthSet
+    - name: Rename-NetIPsecQuickModeCryptoSet
+      uid: NetSecurity.Rename-NetIPsecQuickModeCryptoSet
+    - name: Rename-NetIPsecRule
+      uid: NetSecurity.Rename-NetIPsecRule
+    - name: Save-NetGPO
+      uid: NetSecurity.Save-NetGPO
+    - name: Set-NetFirewallAddressFilter
+      uid: NetSecurity.Set-NetFirewallAddressFilter
+    - name: Set-NetFirewallApplicationFilter
+      uid: NetSecurity.Set-NetFirewallApplicationFilter
+    - name: Set-NetFirewallInterfaceFilter
+      uid: NetSecurity.Set-NetFirewallInterfaceFilter
+    - name: Set-NetFirewallInterfaceTypeFilter
+      uid: NetSecurity.Set-NetFirewallInterfaceTypeFilter
+    - name: Set-NetFirewallPortFilter
+      uid: NetSecurity.Set-NetFirewallPortFilter
+    - name: Set-NetFirewallProfile
+      uid: NetSecurity.Set-NetFirewallProfile
+    - name: Set-NetFirewallRule
+      uid: NetSecurity.Set-NetFirewallRule
+    - name: Set-NetFirewallSecurityFilter
+      uid: NetSecurity.Set-NetFirewallSecurityFilter
+    - name: Set-NetFirewallServiceFilter
+      uid: NetSecurity.Set-NetFirewallServiceFilter
+    - name: Set-NetFirewallSetting
+      uid: NetSecurity.Set-NetFirewallSetting
+    - name: Set-NetIPsecDospSetting
+      uid: NetSecurity.Set-NetIPsecDospSetting
+    - name: Set-NetIPsecMainModeCryptoSet
+      uid: NetSecurity.Set-NetIPsecMainModeCryptoSet
+    - name: Set-NetIPsecMainModeRule
+      uid: NetSecurity.Set-NetIPsecMainModeRule
+    - name: Set-NetIPsecPhase1AuthSet
+      uid: NetSecurity.Set-NetIPsecPhase1AuthSet
+    - name: Set-NetIPsecPhase2AuthSet
+      uid: NetSecurity.Set-NetIPsecPhase2AuthSet
+    - name: Set-NetIPsecQuickModeCryptoSet
+      uid: NetSecurity.Set-NetIPsecQuickModeCryptoSet
+    - name: Set-NetIPsecRule
+      uid: NetSecurity.Set-NetIPsecRule
+    - name: Show-NetFirewallRule
+      uid: NetSecurity.Show-NetFirewallRule
+    - name: Show-NetIPsecRule
+      uid: NetSecurity.Show-NetIPsecRule
+    - name: Sync-NetIPsecRule
+      uid: NetSecurity.Sync-NetIPsecRule
+    - name: Update-NetIPsecRule
+      uid: NetSecurity.Update-NetIPsecRule
+  - name: NetSwitchTeam
+    uid: NetSwitchTeam
+    items:
+    - name: Add-NetSwitchTeamMember
+      uid: NetSwitchTeam.Add-NetSwitchTeamMember
+    - name: Get-NetSwitchTeam
+      uid: NetSwitchTeam.Get-NetSwitchTeam
+    - name: Get-NetSwitchTeamMember
+      uid: NetSwitchTeam.Get-NetSwitchTeamMember
+    - name: New-NetSwitchTeam
+      uid: NetSwitchTeam.New-NetSwitchTeam
+    - name: Remove-NetSwitchTeam
+      uid: NetSwitchTeam.Remove-NetSwitchTeam
+    - name: Remove-NetSwitchTeamMember
+      uid: NetSwitchTeam.Remove-NetSwitchTeamMember
+    - name: Rename-NetSwitchTeam
+      uid: NetSwitchTeam.Rename-NetSwitchTeam
+  - name: NetTCPIP
+    uid: NetTCPIP
+    items:
+    - name: Get-NetIPAddress
+      uid: NetTCPIP.Get-NetIPAddress
+    - name: Get-NetIPConfiguration
+      uid: NetTCPIP.Get-NetIPConfiguration
+    - name: Get-NetIPInterface
+      uid: NetTCPIP.Get-NetIPInterface
+    - name: Get-NetIPv4Protocol
+      uid: NetTCPIP.Get-NetIPv4Protocol
+    - name: Get-NetIPv6Protocol
+      uid: NetTCPIP.Get-NetIPv6Protocol
+    - name: Get-NetNeighbor
+      uid: NetTCPIP.Get-NetNeighbor
+    - name: Get-NetOffloadGlobalSetting
+      uid: NetTCPIP.Get-NetOffloadGlobalSetting
+    - name: Get-NetPrefixPolicy
+      uid: NetTCPIP.Get-NetPrefixPolicy
+    - name: Get-NetRoute
+      uid: NetTCPIP.Get-NetRoute
+    - name: Get-NetTCPConnection
+      uid: NetTCPIP.Get-NetTCPConnection
+    - name: Get-NetTCPSetting
+      uid: NetTCPIP.Get-NetTCPSetting
+    - name: Get-NetTransportFilter
+      uid: NetTCPIP.Get-NetTransportFilter
+    - name: Get-NetUDPEndpoint
+      uid: NetTCPIP.Get-NetUDPEndpoint
+    - name: Get-NetUDPSetting
+      uid: NetTCPIP.Get-NetUDPSetting
+    - name: New-NetIPAddress
+      uid: NetTCPIP.New-NetIPAddress
+    - name: New-NetNeighbor
+      uid: NetTCPIP.New-NetNeighbor
+    - name: New-NetRoute
+      uid: NetTCPIP.New-NetRoute
+    - name: New-NetTransportFilter
+      uid: NetTCPIP.New-NetTransportFilter
+    - name: Remove-NetIPAddress
+      uid: NetTCPIP.Remove-NetIPAddress
+    - name: Remove-NetNeighbor
+      uid: NetTCPIP.Remove-NetNeighbor
+    - name: Remove-NetRoute
+      uid: NetTCPIP.Remove-NetRoute
+    - name: Remove-NetTransportFilter
+      uid: NetTCPIP.Remove-NetTransportFilter
+    - name: Set-NetIPAddress
+      uid: NetTCPIP.Set-NetIPAddress
+    - name: Set-NetIPInterface
+      uid: NetTCPIP.Set-NetIPInterface
+    - name: Set-NetIPv4Protocol
+      uid: NetTCPIP.Set-NetIPv4Protocol
+    - name: Set-NetIPv6Protocol
+      uid: NetTCPIP.Set-NetIPv6Protocol
+    - name: Set-NetNeighbor
+      uid: NetTCPIP.Set-NetNeighbor
+    - name: Set-NetOffloadGlobalSetting
+      uid: NetTCPIP.Set-NetOffloadGlobalSetting
+    - name: Set-NetRoute
+      uid: NetTCPIP.Set-NetRoute
+    - name: Set-NetTCPSetting
+      uid: NetTCPIP.Set-NetTCPSetting
+    - name: Set-NetUDPSetting
+      uid: NetTCPIP.Set-NetUDPSetting
+  - name: NetWNV
+    uid: NetWNV
+    items:
+    - name: Get-NetVirtualizationCustomerRoute
+      uid: NetWNV.Get-NetVirtualizationCustomerRoute
+    - name: Get-NetVirtualizationGlobal
+      uid: NetWNV.Get-NetVirtualizationGlobal
+    - name: Get-NetVirtualizationLookupRecord
+      uid: NetWNV.Get-NetVirtualizationLookupRecord
+    - name: Get-NetVirtualizationProviderAddress
+      uid: NetWNV.Get-NetVirtualizationProviderAddress
+    - name: Get-NetVirtualizationProviderRoute
+      uid: NetWNV.Get-NetVirtualizationProviderRoute
+    - name: New-NetVirtualizationCustomerRoute
+      uid: NetWNV.New-NetVirtualizationCustomerRoute
+    - name: New-NetVirtualizationLookupRecord
+      uid: NetWNV.New-NetVirtualizationLookupRecord
+    - name: New-NetVirtualizationProviderAddress
+      uid: NetWNV.New-NetVirtualizationProviderAddress
+    - name: New-NetVirtualizationProviderRoute
+      uid: NetWNV.New-NetVirtualizationProviderRoute
+    - name: Remove-NetVirtualizationCustomerRoute
+      uid: NetWNV.Remove-NetVirtualizationCustomerRoute
+    - name: Remove-NetVirtualizationLookupRecord
+      uid: NetWNV.Remove-NetVirtualizationLookupRecord
+    - name: Remove-NetVirtualizationProviderAddress
+      uid: NetWNV.Remove-NetVirtualizationProviderAddress
+    - name: Remove-NetVirtualizationProviderRoute
+      uid: NetWNV.Remove-NetVirtualizationProviderRoute
+    - name: Set-NetVirtualizationCustomerRoute
+      uid: NetWNV.Set-NetVirtualizationCustomerRoute
+    - name: Set-NetVirtualizationGlobal
+      uid: NetWNV.Set-NetVirtualizationGlobal
+    - name: Set-NetVirtualizationLookupRecord
+      uid: NetWNV.Set-NetVirtualizationLookupRecord
+    - name: Set-NetVirtualizationProviderAddress
+      uid: NetWNV.Set-NetVirtualizationProviderAddress
+    - name: Set-NetVirtualizationProviderRoute
+      uid: NetWNV.Set-NetVirtualizationProviderRoute
+  - name: NetworkConnectivity
+    uid: NetworkConnectivity
+    items:
+    - name: Get-DAConnectionStatus
+      uid: NetworkConnectivity.Get-DAConnectionStatus
+    - name: Get-NCSIPolicyConfiguration
+      uid: NetworkConnectivity.Get-NCSIPolicyConfiguration
+    - name: Reset-NCSIPolicyConfiguration
+      uid: NetworkConnectivity.Reset-NCSIPolicyConfiguration
+    - name: Set-NCSIPolicyConfiguration
+      uid: NetworkConnectivity.Set-NCSIPolicyConfiguration
+  - name: NetworkLoadBalancingClusters
+    uid: NetworkLoadBalancingClusters
+    items:
+    - name: Add-NlbClusterNode
+      uid: NetworkLoadBalancingClusters.Add-NlbClusterNode
+    - name: Add-NlbClusterNodeDip
+      uid: NetworkLoadBalancingClusters.Add-NlbClusterNodeDip
+    - name: Add-NlbClusterPortRule
+      uid: NetworkLoadBalancingClusters.Add-NlbClusterPortRule
+    - name: Add-NlbClusterVip
+      uid: NetworkLoadBalancingClusters.Add-NlbClusterVip
+    - name: Disable-NlbClusterPortRule
+      uid: NetworkLoadBalancingClusters.Disable-NlbClusterPortRule
+    - name: Enable-NlbClusterPortRule
+      uid: NetworkLoadBalancingClusters.Enable-NlbClusterPortRule
+    - name: Get-NlbCluster
+      uid: NetworkLoadBalancingClusters.Get-NlbCluster
+    - name: Get-NlbClusterDriverInfo
+      uid: NetworkLoadBalancingClusters.Get-NlbClusterDriverInfo
+    - name: Get-NlbClusterNode
+      uid: NetworkLoadBalancingClusters.Get-NlbClusterNode
+    - name: Get-NlbClusterNodeDip
+      uid: NetworkLoadBalancingClusters.Get-NlbClusterNodeDip
+    - name: Get-NlbClusterNodeNetworkInterface
+      uid: NetworkLoadBalancingClusters.Get-NlbClusterNodeNetworkInterface
+    - name: Get-NlbClusterPortRule
+      uid: NetworkLoadBalancingClusters.Get-NlbClusterPortRule
+    - name: Get-NlbClusterVip
+      uid: NetworkLoadBalancingClusters.Get-NlbClusterVip
+    - name: New-NlbCluster
+      uid: NetworkLoadBalancingClusters.New-NlbCluster
+    - name: New-NlbClusterIpv6Address
+      uid: NetworkLoadBalancingClusters.New-NlbClusterIpv6Address
+    - name: Remove-NlbCluster
+      uid: NetworkLoadBalancingClusters.Remove-NlbCluster
+    - name: Remove-NlbClusterNode
+      uid: NetworkLoadBalancingClusters.Remove-NlbClusterNode
+    - name: Remove-NlbClusterNodeDip
+      uid: NetworkLoadBalancingClusters.Remove-NlbClusterNodeDip
+    - name: Remove-NlbClusterPortRule
+      uid: NetworkLoadBalancingClusters.Remove-NlbClusterPortRule
+    - name: Remove-NlbClusterVip
+      uid: NetworkLoadBalancingClusters.Remove-NlbClusterVip
+    - name: Resume-NlbCluster
+      uid: NetworkLoadBalancingClusters.Resume-NlbCluster
+    - name: Resume-NlbClusterNode
+      uid: NetworkLoadBalancingClusters.Resume-NlbClusterNode
+    - name: Set-NlbCluster
+      uid: NetworkLoadBalancingClusters.Set-NlbCluster
+    - name: Set-NlbClusterNode
+      uid: NetworkLoadBalancingClusters.Set-NlbClusterNode
+    - name: Set-NlbClusterNodeDip
+      uid: NetworkLoadBalancingClusters.Set-NlbClusterNodeDip
+    - name: Set-NlbClusterPortRule
+      uid: NetworkLoadBalancingClusters.Set-NlbClusterPortRule
+    - name: Set-NlbClusterPortRuleNodeHandlingPriority
+      uid: NetworkLoadBalancingClusters.Set-NlbClusterPortRuleNodeHandlingPriority
+    - name: Set-NlbClusterPortRuleNodeWeight
+      uid: NetworkLoadBalancingClusters.Set-NlbClusterPortRuleNodeWeight
+    - name: Set-NlbClusterVip
+      uid: NetworkLoadBalancingClusters.Set-NlbClusterVip
+    - name: Start-NlbCluster
+      uid: NetworkLoadBalancingClusters.Start-NlbCluster
+    - name: Start-NlbClusterNode
+      uid: NetworkLoadBalancingClusters.Start-NlbClusterNode
+    - name: Stop-NlbCluster
+      uid: NetworkLoadBalancingClusters.Stop-NlbCluster
+    - name: Stop-NlbClusterNode
+      uid: NetworkLoadBalancingClusters.Stop-NlbClusterNode
+    - name: Suspend-NlbCluster
+      uid: NetworkLoadBalancingClusters.Suspend-NlbCluster
+    - name: Suspend-NlbClusterNode
+      uid: NetworkLoadBalancingClusters.Suspend-NlbClusterNode
+  - name: NetworkTransition
+    uid: NetworkTransition
+    items:
+    - name: Add-NetIPHttpsCertBinding
+      uid: NetworkTransition.Add-NetIPHttpsCertBinding
+    - name: Disable-NetDnsTransitionConfiguration
+      uid: NetworkTransition.Disable-NetDnsTransitionConfiguration
+    - name: Disable-NetIPHttpsProfile
+      uid: NetworkTransition.Disable-NetIPHttpsProfile
+    - name: Disable-NetNatTransitionConfiguration
+      uid: NetworkTransition.Disable-NetNatTransitionConfiguration
+    - name: Enable-NetDnsTransitionConfiguration
+      uid: NetworkTransition.Enable-NetDnsTransitionConfiguration
+    - name: Enable-NetIPHttpsProfile
+      uid: NetworkTransition.Enable-NetIPHttpsProfile
+    - name: Enable-NetNatTransitionConfiguration
+      uid: NetworkTransition.Enable-NetNatTransitionConfiguration
+    - name: Get-Net6to4Configuration
+      uid: NetworkTransition.Get-Net6to4Configuration
+    - name: Get-NetDnsTransitionConfiguration
+      uid: NetworkTransition.Get-NetDnsTransitionConfiguration
+    - name: Get-NetDnsTransitionMonitoring
+      uid: NetworkTransition.Get-NetDnsTransitionMonitoring
+    - name: Get-NetIPHttpsConfiguration
+      uid: NetworkTransition.Get-NetIPHttpsConfiguration
+    - name: Get-NetIPHttpsState
+      uid: NetworkTransition.Get-NetIPHttpsState
+    - name: Get-NetIsatapConfiguration
+      uid: NetworkTransition.Get-NetIsatapConfiguration
+    - name: Get-NetNatTransitionConfiguration
+      uid: NetworkTransition.Get-NetNatTransitionConfiguration
+    - name: Get-NetNatTransitionMonitoring
+      uid: NetworkTransition.Get-NetNatTransitionMonitoring
+    - name: Get-NetTeredoConfiguration
+      uid: NetworkTransition.Get-NetTeredoConfiguration
+    - name: Get-NetTeredoState
+      uid: NetworkTransition.Get-NetTeredoState
+    - name: New-NetIPHttpsConfiguration
+      uid: NetworkTransition.New-NetIPHttpsConfiguration
+    - name: New-NetNatTransitionConfiguration
+      uid: NetworkTransition.New-NetNatTransitionConfiguration
+    - name: Remove-NetIPHttpsCertBinding
+      uid: NetworkTransition.Remove-NetIPHttpsCertBinding
+    - name: Remove-NetIPHttpsConfiguration
+      uid: NetworkTransition.Remove-NetIPHttpsConfiguration
+    - name: Remove-NetNatTransitionConfiguration
+      uid: NetworkTransition.Remove-NetNatTransitionConfiguration
+    - name: Rename-NetIPHttpsConfiguration
+      uid: NetworkTransition.Rename-NetIPHttpsConfiguration
+    - name: Reset-Net6to4Configuration
+      uid: NetworkTransition.Reset-Net6to4Configuration
+    - name: Reset-NetDnsTransitionConfiguration
+      uid: NetworkTransition.Reset-NetDnsTransitionConfiguration
+    - name: Reset-NetIPHttpsConfiguration
+      uid: NetworkTransition.Reset-NetIPHttpsConfiguration
+    - name: Reset-NetIsatapConfiguration
+      uid: NetworkTransition.Reset-NetIsatapConfiguration
+    - name: Reset-NetTeredoConfiguration
+      uid: NetworkTransition.Reset-NetTeredoConfiguration
+    - name: Set-Net6to4Configuration
+      uid: NetworkTransition.Set-Net6to4Configuration
+    - name: Set-NetDnsTransitionConfiguration
+      uid: NetworkTransition.Set-NetDnsTransitionConfiguration
+    - name: Set-NetIPHttpsConfiguration
+      uid: NetworkTransition.Set-NetIPHttpsConfiguration
+    - name: Set-NetIsatapConfiguration
+      uid: NetworkTransition.Set-NetIsatapConfiguration
+    - name: Set-NetNatTransitionConfiguration
+      uid: NetworkTransition.Set-NetNatTransitionConfiguration
+    - name: Set-NetTeredoConfiguration
+      uid: NetworkTransition.Set-NetTeredoConfiguration
+  - name: NFS
+    uid: NFS
+    items:
+    - name: Disconnect-NfsSession
+      uid: NFS.Disconnect-NfsSession
+    - name: Get-NfsClientConfiguration
+      uid: NFS.Get-NfsClientConfiguration
+    - name: Get-NfsClientgroup
+      uid: NFS.Get-NfsClientgroup
+    - name: Get-NfsClientLock
+      uid: NFS.Get-NfsClientLock
+    - name: Get-NfsMappedIdentity
+      uid: NFS.Get-NfsMappedIdentity
+    - name: Get-NfsMappingStore
+      uid: NFS.Get-NfsMappingStore
+    - name: Get-NfsMountedClient
+      uid: NFS.Get-NfsMountedClient
+    - name: Get-NfsNetgroup
+      uid: NFS.Get-NfsNetgroup
+    - name: Get-NfsNetgroupStore
+      uid: NFS.Get-NfsNetgroupStore
+    - name: Get-NfsOpenFile
+      uid: NFS.Get-NfsOpenFile
+    - name: Get-NfsServerConfiguration
+      uid: NFS.Get-NfsServerConfiguration
+    - name: Get-NfsSession
+      uid: NFS.Get-NfsSession
+    - name: Get-NfsShare
+      uid: NFS.Get-NfsShare
+    - name: Get-NfsSharePermission
+      uid: NFS.Get-NfsSharePermission
+    - name: Get-NfsStatistics
+      uid: NFS.Get-NfsStatistics
+    - name: Grant-NfsSharePermission
+      uid: NFS.Grant-NfsSharePermission
+    - name: Install-NfsMappingStore
+      uid: NFS.Install-NfsMappingStore
+    - name: New-NfsClientgroup
+      uid: NFS.New-NfsClientgroup
+    - name: New-NfsMappedIdentity
+      uid: NFS.New-NfsMappedIdentity
+    - name: New-NfsNetgroup
+      uid: NFS.New-NfsNetgroup
+    - name: New-NfsShare
+      uid: NFS.New-NfsShare
+    - name: Remove-NfsClientgroup
+      uid: NFS.Remove-NfsClientgroup
+    - name: Remove-NfsMappedIdentity
+      uid: NFS.Remove-NfsMappedIdentity
+    - name: Remove-NfsNetgroup
+      uid: NFS.Remove-NfsNetgroup
+    - name: Remove-NfsShare
+      uid: NFS.Remove-NfsShare
+    - name: Rename-NfsClientgroup
+      uid: NFS.Rename-NfsClientgroup
+    - name: Reset-NfsStatistics
+      uid: NFS.Reset-NfsStatistics
+    - name: Resolve-NfsMappedIdentity
+      uid: NFS.Resolve-NfsMappedIdentity
+    - name: Revoke-NfsClientLock
+      uid: NFS.Revoke-NfsClientLock
+    - name: Revoke-NfsMountedClient
+      uid: NFS.Revoke-NfsMountedClient
+    - name: Revoke-NfsOpenFile
+      uid: NFS.Revoke-NfsOpenFile
+    - name: Revoke-NfsSharePermission
+      uid: NFS.Revoke-NfsSharePermission
+    - name: Set-NfsClientConfiguration
+      uid: NFS.Set-NfsClientConfiguration
+    - name: Set-NfsClientgroup
+      uid: NFS.Set-NfsClientgroup
+    - name: Set-NfsMappedIdentity
+      uid: NFS.Set-NfsMappedIdentity
+    - name: Set-NfsMappingStore
+      uid: NFS.Set-NfsMappingStore
+    - name: Set-NfsNetgroup
+      uid: NFS.Set-NfsNetgroup
+    - name: Set-NfsNetgroupStore
+      uid: NFS.Set-NfsNetgroupStore
+    - name: Set-NfsServerConfiguration
+      uid: NFS.Set-NfsServerConfiguration
+    - name: Set-NfsShare
+      uid: NFS.Set-NfsShare
+    - name: Test-NfsMappedIdentity
+      uid: NFS.Test-NfsMappedIdentity
+    - name: Test-NfsMappingStore
+      uid: NFS.Test-NfsMappingStore
+  - name: NPS
+    uid: NPS
+    items:
+    - name: Export-NpsConfiguration
+      uid: NPS.Export-NpsConfiguration
+    - name: Get-NpsRadiusClient
+      uid: NPS.Get-NpsRadiusClient
+    - name: Get-NpsRemediationServer
+      uid: NPS.Get-NpsRemediationServer
+    - name: Get-NpsRemediationServerGroup
+      uid: NPS.Get-NpsRemediationServerGroup
+    - name: Get-NpsSharedSecretTemplate
+      uid: NPS.Get-NpsSharedSecretTemplate
+    - name: Import-NpsConfiguration
+      uid: NPS.Import-NpsConfiguration
+    - name: New-NpsRadiusClient
+      uid: NPS.New-NpsRadiusClient
+    - name: New-NpsRemediationServer
+      uid: NPS.New-NpsRemediationServer
+    - name: New-NpsRemediationServerGroup
+      uid: NPS.New-NpsRemediationServerGroup
+    - name: Remove-NpsRadiusClient
+      uid: NPS.Remove-NpsRadiusClient
+    - name: Remove-NpsRemediationServer
+      uid: NPS.Remove-NpsRemediationServer
+    - name: Remove-NpsRemediationServerGroup
+      uid: NPS.Remove-NpsRemediationServerGroup
+    - name: Set-NpsRadiusClient
+      uid: NPS.Set-NpsRadiusClient
+  - name: pki
+    uid: pki
+    items:
+    - name: Add-CertificateEnrollmentPolicyServer
+      uid: pki.Add-CertificateEnrollmentPolicyServer
+    - name: Export-Certificate
+      uid: pki.Export-Certificate
+    - name: Export-PfxCertificate
+      uid: pki.Export-PfxCertificate
+    - name: Get-Certificate
+      uid: pki.Get-Certificate
+    - name: Get-CertificateAutoEnrollmentPolicy
+      uid: pki.Get-CertificateAutoEnrollmentPolicy
+    - name: Get-CertificateEnrollmentPolicyServer
+      uid: pki.Get-CertificateEnrollmentPolicyServer
+    - name: Get-CertificateNotificationTask
+      uid: pki.Get-CertificateNotificationTask
+    - name: Get-PfxData
+      uid: pki.Get-PfxData
+    - name: Import-Certificate
+      uid: pki.Import-Certificate
+    - name: Import-PfxCertificate
+      uid: pki.Import-PfxCertificate
+    - name: New-CertificateNotificationTask
+      uid: pki.New-CertificateNotificationTask
+    - name: New-SelfSignedCertificate
+      uid: pki.New-SelfSignedCertificate
+    - name: Remove-CertificateEnrollmentPolicyServer
+      uid: pki.Remove-CertificateEnrollmentPolicyServer
+    - name: Remove-CertificateNotificationTask
+      uid: pki.Remove-CertificateNotificationTask
+    - name: Set-CertificateAutoEnrollmentPolicy
+      uid: pki.Set-CertificateAutoEnrollmentPolicy
+    - name: Switch-Certificate
+      uid: pki.Switch-Certificate
+    - name: Test-Certificate
+      uid: pki.Test-Certificate
+  - name: PrintManagement
+    uid: PrintManagement
+    items:
+    - name: Add-Printer
+      uid: PrintManagement.Add-Printer
+    - name: Add-PrinterDriver
+      uid: PrintManagement.Add-PrinterDriver
+    - name: Add-PrinterPort
+      uid: PrintManagement.Add-PrinterPort
+    - name: Get-PrintConfiguration
+      uid: PrintManagement.Get-PrintConfiguration
+    - name: Get-Printer
+      uid: PrintManagement.Get-Printer
+    - name: Get-PrinterDriver
+      uid: PrintManagement.Get-PrinterDriver
+    - name: Get-PrinterPort
+      uid: PrintManagement.Get-PrinterPort
+    - name: Get-PrinterProperty
+      uid: PrintManagement.Get-PrinterProperty
+    - name: Get-PrintJob
+      uid: PrintManagement.Get-PrintJob
+    - name: Remove-Printer
+      uid: PrintManagement.Remove-Printer
+    - name: Remove-PrinterDriver
+      uid: PrintManagement.Remove-PrinterDriver
+    - name: Remove-PrinterPort
+      uid: PrintManagement.Remove-PrinterPort
+    - name: Remove-PrintJob
+      uid: PrintManagement.Remove-PrintJob
+    - name: Rename-Printer
+      uid: PrintManagement.Rename-Printer
+    - name: Restart-PrintJob
+      uid: PrintManagement.Restart-PrintJob
+    - name: Resume-PrintJob
+      uid: PrintManagement.Resume-PrintJob
+    - name: Set-PrintConfiguration
+      uid: PrintManagement.Set-PrintConfiguration
+    - name: Set-Printer
+      uid: PrintManagement.Set-Printer
+    - name: Set-PrinterProperty
+      uid: PrintManagement.Set-PrinterProperty
+    - name: Suspend-PrintJob
+      uid: PrintManagement.Suspend-PrintJob
+  - name: RemoteAccess
+    uid: RemoteAccess
+    items:
+    - name: Add-DAAppServer
+      uid: RemoteAccess.Add-DAAppServer
+    - name: Add-DAClient
+      uid: RemoteAccess.Add-DAClient
+    - name: Add-DAClientDnsConfiguration
+      uid: RemoteAccess.Add-DAClientDnsConfiguration
+    - name: Add-DAEntryPoint
+      uid: RemoteAccess.Add-DAEntryPoint
+    - name: Add-DAMgmtServer
+      uid: RemoteAccess.Add-DAMgmtServer
+    - name: Add-RemoteAccessLoadBalancerNode
+      uid: RemoteAccess.Add-RemoteAccessLoadBalancerNode
+    - name: Add-RemoteAccessRadius
+      uid: RemoteAccess.Add-RemoteAccessRadius
+    - name: Add-VpnIPAddressRange
+      uid: RemoteAccess.Add-VpnIPAddressRange
+    - name: Add-VpnS2SInterface
+      uid: RemoteAccess.Add-VpnS2SInterface
+    - name: Clear-RemoteAccessInboxAccountingStore
+      uid: RemoteAccess.Clear-RemoteAccessInboxAccountingStore
+    - name: Clear-VpnS2SInterfaceStatistics
+      uid: RemoteAccess.Clear-VpnS2SInterfaceStatistics
+    - name: Connect-VpnS2SInterface
+      uid: RemoteAccess.Connect-VpnS2SInterface
+    - name: Disable-DAMultiSite
+      uid: RemoteAccess.Disable-DAMultiSite
+    - name: Disable-DAOtpAuthentication
+      uid: RemoteAccess.Disable-DAOtpAuthentication
+    - name: Disconnect-VpnS2SInterface
+      uid: RemoteAccess.Disconnect-VpnS2SInterface
+    - name: Disconnect-VpnUser
+      uid: RemoteAccess.Disconnect-VpnUser
+    - name: Enable-DAMultiSite
+      uid: RemoteAccess.Enable-DAMultiSite
+    - name: Enable-DAOtpAuthentication
+      uid: RemoteAccess.Enable-DAOtpAuthentication
+    - name: Get-DAAppServer
+      uid: RemoteAccess.Get-DAAppServer
+    - name: Get-DAClient
+      uid: RemoteAccess.Get-DAClient
+    - name: Get-DAClientDnsConfiguration
+      uid: RemoteAccess.Get-DAClientDnsConfiguration
+    - name: Get-DAEntryPoint
+      uid: RemoteAccess.Get-DAEntryPoint
+    - name: Get-DAEntryPointDC
+      uid: RemoteAccess.Get-DAEntryPointDC
+    - name: Get-DAMgmtServer
+      uid: RemoteAccess.Get-DAMgmtServer
+    - name: Get-DAMultiSite
+      uid: RemoteAccess.Get-DAMultiSite
+    - name: Get-DANetworkLocationServer
+      uid: RemoteAccess.Get-DANetworkLocationServer
+    - name: Get-DAOtpAuthentication
+      uid: RemoteAccess.Get-DAOtpAuthentication
+    - name: Get-DAServer
+      uid: RemoteAccess.Get-DAServer
+    - name: Get-RemoteAccess
+      uid: RemoteAccess.Get-RemoteAccess
+    - name: Get-RemoteAccessAccounting
+      uid: RemoteAccess.Get-RemoteAccessAccounting
+    - name: Get-RemoteAccessConnectionStatistics
+      uid: RemoteAccess.Get-RemoteAccessConnectionStatistics
+    - name: Get-RemoteAccessConnectionStatisticsSummary
+      uid: RemoteAccess.Get-RemoteAccessConnectionStatisticsSummary
+    - name: Get-RemoteAccessHealth
+      uid: RemoteAccess.Get-RemoteAccessHealth
+    - name: Get-RemoteAccessLoadBalancer
+      uid: RemoteAccess.Get-RemoteAccessLoadBalancer
+    - name: Get-RemoteAccessRadius
+      uid: RemoteAccess.Get-RemoteAccessRadius
+    - name: Get-RemoteAccessUserActivity
+      uid: RemoteAccess.Get-RemoteAccessUserActivity
+    - name: Get-VpnAuthProtocol
+      uid: RemoteAccess.Get-VpnAuthProtocol
+    - name: Get-VpnS2SInterface
+      uid: RemoteAccess.Get-VpnS2SInterface
+    - name: Get-VpnS2SInterfaceStatistics
+      uid: RemoteAccess.Get-VpnS2SInterfaceStatistics
+    - name: Get-VpnServerIPsecConfiguration
+      uid: RemoteAccess.Get-VpnServerIPsecConfiguration
+    - name: Install-RemoteAccess
+      uid: RemoteAccess.Install-RemoteAccess
+    - name: Remove-DAAppServer
+      uid: RemoteAccess.Remove-DAAppServer
+    - name: Remove-DAClient
+      uid: RemoteAccess.Remove-DAClient
+    - name: Remove-DAClientDnsConfiguration
+      uid: RemoteAccess.Remove-DAClientDnsConfiguration
+    - name: Remove-DAEntryPoint
+      uid: RemoteAccess.Remove-DAEntryPoint
+    - name: Remove-DAMgmtServer
+      uid: RemoteAccess.Remove-DAMgmtServer
+    - name: Remove-RemoteAccessLoadBalancerNode
+      uid: RemoteAccess.Remove-RemoteAccessLoadBalancerNode
+    - name: Remove-RemoteAccessRadius
+      uid: RemoteAccess.Remove-RemoteAccessRadius
+    - name: Remove-VpnIPAddressRange
+      uid: RemoteAccess.Remove-VpnIPAddressRange
+    - name: Remove-VpnS2SInterface
+      uid: RemoteAccess.Remove-VpnS2SInterface
+    - name: Set-DAAppServerConnection
+      uid: RemoteAccess.Set-DAAppServerConnection
+    - name: Set-DAClient
+      uid: RemoteAccess.Set-DAClient
+    - name: Set-DAClientDnsConfiguration
+      uid: RemoteAccess.Set-DAClientDnsConfiguration
+    - name: Set-DAEntryPoint
+      uid: RemoteAccess.Set-DAEntryPoint
+    - name: Set-DAEntryPointDC
+      uid: RemoteAccess.Set-DAEntryPointDC
+    - name: Set-DAMultiSite
+      uid: RemoteAccess.Set-DAMultiSite
+    - name: Set-DANetworkLocationServer
+      uid: RemoteAccess.Set-DANetworkLocationServer
+    - name: Set-DAOtpAuthentication
+      uid: RemoteAccess.Set-DAOtpAuthentication
+    - name: Set-DAServer
+      uid: RemoteAccess.Set-DAServer
+    - name: Set-RemoteAccess
+      uid: RemoteAccess.Set-RemoteAccess
+    - name: Set-RemoteAccessAccounting
+      uid: RemoteAccess.Set-RemoteAccessAccounting
+    - name: Set-RemoteAccessInboxAccountingStore
+      uid: RemoteAccess.Set-RemoteAccessInboxAccountingStore
+    - name: Set-RemoteAccessLoadBalancer
+      uid: RemoteAccess.Set-RemoteAccessLoadBalancer
+    - name: Set-RemoteAccessRadius
+      uid: RemoteAccess.Set-RemoteAccessRadius
+    - name: Set-VpnAuthProtocol
+      uid: RemoteAccess.Set-VpnAuthProtocol
+    - name: Set-VpnAuthType
+      uid: RemoteAccess.Set-VpnAuthType
+    - name: Set-VpnIPAddressAssignment
+      uid: RemoteAccess.Set-VpnIPAddressAssignment
+    - name: Set-VpnS2SInterface
+      uid: RemoteAccess.Set-VpnS2SInterface
+    - name: Set-VpnServerIPsecConfiguration
+      uid: RemoteAccess.Set-VpnServerIPsecConfiguration
+    - name: Uninstall-RemoteAccess
+      uid: RemoteAccess.Uninstall-RemoteAccess
+    - name: Update-DAMgmtServer
+      uid: RemoteAccess.Update-DAMgmtServer
+  - name: RemoteDesktop
+    uid: RemoteDesktop
+    items:
+    - name: Add-RDServer
+      uid: RemoteDesktop.Add-RDServer
+    - name: Add-RDSessionHost
+      uid: RemoteDesktop.Add-RDSessionHost
+    - name: Add-RDVirtualDesktopToCollection
+      uid: RemoteDesktop.Add-RDVirtualDesktopToCollection
+    - name: Disable-RDVirtualDesktopADMachineAccountReuse
+      uid: RemoteDesktop.Disable-RDVirtualDesktopADMachineAccountReuse
+    - name: Disconnect-RDUser
+      uid: RemoteDesktop.Disconnect-RDUser
+    - name: Enable-RDVirtualDesktopADMachineAccountReuse
+      uid: RemoteDesktop.Enable-RDVirtualDesktopADMachineAccountReuse
+    - name: Export-RDPersonalVirtualDesktopAssignment
+      uid: RemoteDesktop.Export-RDPersonalVirtualDesktopAssignment
+    - name: Get-RDAvailableApp
+      uid: RemoteDesktop.Get-RDAvailableApp
+    - name: Get-RDCertificate
+      uid: RemoteDesktop.Get-RDCertificate
+    - name: Get-RDConnectionBrokerHighAvailability
+      uid: RemoteDesktop.Get-RDConnectionBrokerHighAvailability
+    - name: Get-RDDeploymentGatewayConfiguration
+      uid: RemoteDesktop.Get-RDDeploymentGatewayConfiguration
+    - name: Get-RDFileTypeAssociation
+      uid: RemoteDesktop.Get-RDFileTypeAssociation
+    - name: Get-RDLicenseConfiguration
+      uid: RemoteDesktop.Get-RDLicenseConfiguration
+    - name: Get-RDPersonalVirtualDesktopAssignment
+      uid: RemoteDesktop.Get-RDPersonalVirtualDesktopAssignment
+    - name: Get-RDPersonalVirtualDesktopPatchSchedule
+      uid: RemoteDesktop.Get-RDPersonalVirtualDesktopPatchSchedule
+    - name: Get-RDRemoteApp
+      uid: RemoteDesktop.Get-RDRemoteApp
+    - name: Get-RDRemoteDesktop
+      uid: RemoteDesktop.Get-RDRemoteDesktop
+    - name: Get-RDServer
+      uid: RemoteDesktop.Get-RDServer
+    - name: Get-RDSessionCollection
+      uid: RemoteDesktop.Get-RDSessionCollection
+    - name: Get-RDSessionCollectionConfiguration
+      uid: RemoteDesktop.Get-RDSessionCollectionConfiguration
+    - name: Get-RDSessionHost
+      uid: RemoteDesktop.Get-RDSessionHost
+    - name: Get-RDUserSession
+      uid: RemoteDesktop.Get-RDUserSession
+    - name: Get-RDVirtualDesktop
+      uid: RemoteDesktop.Get-RDVirtualDesktop
+    - name: Get-RDVirtualDesktopCollection
+      uid: RemoteDesktop.Get-RDVirtualDesktopCollection
+    - name: Get-RDVirtualDesktopCollectionConfiguration
+      uid: RemoteDesktop.Get-RDVirtualDesktopCollectionConfiguration
+    - name: Get-RDVirtualDesktopCollectionJobStatus
+      uid: RemoteDesktop.Get-RDVirtualDesktopCollectionJobStatus
+    - name: Get-RDVirtualDesktopConcurrency
+      uid: RemoteDesktop.Get-RDVirtualDesktopConcurrency
+    - name: Get-RDVirtualDesktopIdleCount
+      uid: RemoteDesktop.Get-RDVirtualDesktopIdleCount
+    - name: Get-RDVirtualDesktopTemplateExportPath
+      uid: RemoteDesktop.Get-RDVirtualDesktopTemplateExportPath
+    - name: Get-RDWorkspace
+      uid: RemoteDesktop.Get-RDWorkspace
+    - name: Grant-RDOUAccess
+      uid: RemoteDesktop.Grant-RDOUAccess
+    - name: Import-RDPersonalVirtualDesktopAssignment
+      uid: RemoteDesktop.Import-RDPersonalVirtualDesktopAssignment
+    - name: Invoke-RDUserLogoff
+      uid: RemoteDesktop.Invoke-RDUserLogoff
+    - name: Move-RDVirtualDesktop
+      uid: RemoteDesktop.Move-RDVirtualDesktop
+    - name: New-RDCertificate
+      uid: RemoteDesktop.New-RDCertificate
+    - name: New-RDPersonalVirtualDesktopPatchSchedule
+      uid: RemoteDesktop.New-RDPersonalVirtualDesktopPatchSchedule
+    - name: New-RDRemoteApp
+      uid: RemoteDesktop.New-RDRemoteApp
+    - name: New-RDSessionCollection
+      uid: RemoteDesktop.New-RDSessionCollection
+    - name: New-RDSessionDeployment
+      uid: RemoteDesktop.New-RDSessionDeployment
+    - name: New-RDVirtualDesktopCollection
+      uid: RemoteDesktop.New-RDVirtualDesktopCollection
+    - name: New-RDVirtualDesktopDeployment
+      uid: RemoteDesktop.New-RDVirtualDesktopDeployment
+    - name: Remove-RDPersonalVirtualDesktopAssignment
+      uid: RemoteDesktop.Remove-RDPersonalVirtualDesktopAssignment
+    - name: Remove-RDPersonalVirtualDesktopPatchSchedule
+      uid: RemoteDesktop.Remove-RDPersonalVirtualDesktopPatchSchedule
+    - name: Remove-RDRemoteApp
+      uid: RemoteDesktop.Remove-RDRemoteApp
+    - name: Remove-RDServer
+      uid: RemoteDesktop.Remove-RDServer
+    - name: Remove-RDSessionCollection
+      uid: RemoteDesktop.Remove-RDSessionCollection
+    - name: Remove-RDSessionHost
+      uid: RemoteDesktop.Remove-RDSessionHost
+    - name: Remove-RDVirtualDesktopCollection
+      uid: RemoteDesktop.Remove-RDVirtualDesktopCollection
+    - name: Remove-RDVirtualDesktopFromCollection
+      uid: RemoteDesktop.Remove-RDVirtualDesktopFromCollection
+    - name: Send-RDUserMessage
+      uid: RemoteDesktop.Send-RDUserMessage
+    - name: Set-RDActiveManagementServer
+      uid: RemoteDesktop.Set-RDActiveManagementServer
+    - name: Set-RDCertificate
+      uid: RemoteDesktop.Set-RDCertificate
+    - name: Set-RDClientAccessName
+      uid: RemoteDesktop.Set-RDClientAccessName
+    - name: Set-RDConnectionBrokerHighAvailability
+      uid: RemoteDesktop.Set-RDConnectionBrokerHighAvailability
+    - name: Set-RDDatabaseConnectionString
+      uid: RemoteDesktop.Set-RDDatabaseConnectionString
+    - name: Set-RDDeploymentGatewayConfiguration
+      uid: RemoteDesktop.Set-RDDeploymentGatewayConfiguration
+    - name: Set-RDFileTypeAssociation
+      uid: RemoteDesktop.Set-RDFileTypeAssociation
+    - name: Set-RDLicenseConfiguration
+      uid: RemoteDesktop.Set-RDLicenseConfiguration
+    - name: Set-RDPersonalVirtualDesktopAssignment
+      uid: RemoteDesktop.Set-RDPersonalVirtualDesktopAssignment
+    - name: Set-RDPersonalVirtualDesktopPatchSchedule
+      uid: RemoteDesktop.Set-RDPersonalVirtualDesktopPatchSchedule
+    - name: Set-RDRemoteApp
+      uid: RemoteDesktop.Set-RDRemoteApp
+    - name: Set-RDRemoteDesktop
+      uid: RemoteDesktop.Set-RDRemoteDesktop
+    - name: Set-RDSessionCollectionConfiguration
+      uid: RemoteDesktop.Set-RDSessionCollectionConfiguration
+    - name: Set-RDSessionHost
+      uid: RemoteDesktop.Set-RDSessionHost
+    - name: Set-RDVirtualDesktopCollectionConfiguration
+      uid: RemoteDesktop.Set-RDVirtualDesktopCollectionConfiguration
+    - name: Set-RDVirtualDesktopConcurrency
+      uid: RemoteDesktop.Set-RDVirtualDesktopConcurrency
+    - name: Set-RDVirtualDesktopIdleCount
+      uid: RemoteDesktop.Set-RDVirtualDesktopIdleCount
+    - name: Set-RDVirtualDesktopTemplateExportPath
+      uid: RemoteDesktop.Set-RDVirtualDesktopTemplateExportPath
+    - name: Set-RDWorkspace
+      uid: RemoteDesktop.Set-RDWorkspace
+    - name: Stop-RDVirtualDesktopCollectionJob
+      uid: RemoteDesktop.Stop-RDVirtualDesktopCollectionJob
+    - name: Test-RDOUAccess
+      uid: RemoteDesktop.Test-RDOUAccess
+    - name: Test-RDVirtualDesktopADMachineAccountReuse
+      uid: RemoteDesktop.Test-RDVirtualDesktopADMachineAccountReuse
+    - name: Update-RDVirtualDesktopCollection
+      uid: RemoteDesktop.Update-RDVirtualDesktopCollection
+  - name: ScheduledTasks
+    uid: ScheduledTasks
+    items:
+    - name: Disable-ScheduledTask
+      uid: ScheduledTasks.Disable-ScheduledTask
+    - name: Enable-ScheduledTask
+      uid: ScheduledTasks.Enable-ScheduledTask
+    - name: Export-ScheduledTask
+      uid: ScheduledTasks.Export-ScheduledTask
+    - name: Get-ClusteredScheduledTask
+      uid: ScheduledTasks.Get-ClusteredScheduledTask
+    - name: Get-ScheduledTask
+      uid: ScheduledTasks.Get-ScheduledTask
+    - name: Get-ScheduledTaskInfo
+      uid: ScheduledTasks.Get-ScheduledTaskInfo
+    - name: New-ScheduledTask
+      uid: ScheduledTasks.New-ScheduledTask
+    - name: New-ScheduledTaskAction
+      uid: ScheduledTasks.New-ScheduledTaskAction
+    - name: New-ScheduledTaskPrincipal
+      uid: ScheduledTasks.New-ScheduledTaskPrincipal
+    - name: New-ScheduledTaskSettingsSet
+      uid: ScheduledTasks.New-ScheduledTaskSettingsSet
+    - name: New-ScheduledTaskTrigger
+      uid: ScheduledTasks.New-ScheduledTaskTrigger
+    - name: Register-ClusteredScheduledTask
+      uid: ScheduledTasks.Register-ClusteredScheduledTask
+    - name: Register-ScheduledTask
+      uid: ScheduledTasks.Register-ScheduledTask
+    - name: Set-ClusteredScheduledTask
+      uid: ScheduledTasks.Set-ClusteredScheduledTask
+    - name: Set-ScheduledTask
+      uid: ScheduledTasks.Set-ScheduledTask
+    - name: Start-ScheduledTask
+      uid: ScheduledTasks.Start-ScheduledTask
+    - name: Stop-ScheduledTask
+      uid: ScheduledTasks.Stop-ScheduledTask
+    - name: Unregister-ClusteredScheduledTask
+      uid: ScheduledTasks.Unregister-ClusteredScheduledTask
+    - name: Unregister-ScheduledTask
+      uid: ScheduledTasks.Unregister-ScheduledTask
+  - name: SecureBoot
+    uid: SecureBoot
+    items:
+    - name: Confirm-SecureBootUEFI
+      uid: SecureBoot.Confirm-SecureBootUEFI
+    - name: Format-SecureBootUEFI
+      uid: SecureBoot.Format-SecureBootUEFI
+    - name: Get-SecureBootPolicy
+      uid: SecureBoot.Get-SecureBootPolicy
+    - name: Get-SecureBootUEFI
+      uid: SecureBoot.Get-SecureBootUEFI
+    - name: Set-SecureBootUEFI
+      uid: SecureBoot.Set-SecureBootUEFI
+  - name: ServerCore
+    uid: ServerCore
+    items:
+    - name: Get-DisplayResolution
+      uid: ServerCore.Get-DisplayResolution
+    - name: Set-DisplayResolution
+      uid: ServerCore.Set-DisplayResolution
+  - name: ServerManager
+    uid: ServerManager
+    items:
+    - name: Disable-ServerManagerStandardUserRemoting
+      uid: ServerManager.Disable-ServerManagerStandardUserRemoting
+    - name: Enable-ServerManagerStandardUserRemoting
+      uid: ServerManager.Enable-ServerManagerStandardUserRemoting
+    - name: Get-WindowsFeature
+      uid: ServerManager.Get-WindowsFeature
+    - name: Install-WindowsFeature
+      uid: ServerManager.Install-WindowsFeature
+    - name: Uninstall-WindowsFeature
+      uid: ServerManager.Uninstall-WindowsFeature
+  - name: ServerManagerTasks
+    uid: ServerManagerTasks
+    items:
+    - name: Get-SMCounterSample
+      uid: ServerManagerTasks.Get-SMCounterSample
+    - name: Get-SMPerformanceCollector
+      uid: ServerManagerTasks.Get-SMPerformanceCollector
+    - name: Get-SMServerBpaResult
+      uid: ServerManagerTasks.Get-SMServerBpaResult
+    - name: Get-SMServerClusterName
+      uid: ServerManagerTasks.Get-SMServerClusterName
+    - name: Get-SMServerEvent
+      uid: ServerManagerTasks.Get-SMServerEvent
+    - name: Get-SMServerFeature
+      uid: ServerManagerTasks.Get-SMServerFeature
+    - name: Get-SMServerInventory
+      uid: ServerManagerTasks.Get-SMServerInventory
+    - name: Get-SMServerService
+      uid: ServerManagerTasks.Get-SMServerService
+    - name: Remove-SMServerPerformanceLog
+      uid: ServerManagerTasks.Remove-SMServerPerformanceLog
+    - name: Start-SMPerformanceCollector
+      uid: ServerManagerTasks.Start-SMPerformanceCollector
+    - name: Stop-SMPerformanceCollector
+      uid: ServerManagerTasks.Stop-SMPerformanceCollector
+  - name: ServerMigrationCmdlets
+    uid: ServerMigrationCmdlets
+    items:
+    - name: Export-SmigServerSetting
+      uid: ServerMigrationCmdlets.Export-SmigServerSetting
+    - name: Get-SmigServerFeature
+      uid: ServerMigrationCmdlets.Get-SmigServerFeature
+    - name: Import-SmigServerSetting
+      uid: ServerMigrationCmdlets.Import-SmigServerSetting
+    - name: Receive-SmigServerData
+      uid: ServerMigrationCmdlets.Receive-SmigServerData
+    - name: Send-SmigServerData
+      uid: ServerMigrationCmdlets.Send-SmigServerData
+  - name: SmbShare
+    uid: SmbShare
+    items:
+    - name: Block-SmbShareAccess
+      uid: SmbShare.Block-SmbShareAccess
+    - name: Close-SmbOpenFile
+      uid: SmbShare.Close-SmbOpenFile
+    - name: Close-SmbSession
+      uid: SmbShare.Close-SmbSession
+    - name: Get-SmbClientConfiguration
+      uid: SmbShare.Get-SmbClientConfiguration
+    - name: Get-SmbClientNetworkInterface
+      uid: SmbShare.Get-SmbClientNetworkInterface
+    - name: Get-SmbConnection
+      uid: SmbShare.Get-SmbConnection
+    - name: Get-SmbMapping
+      uid: SmbShare.Get-SmbMapping
+    - name: Get-SmbMultichannelConnection
+      uid: SmbShare.Get-SmbMultichannelConnection
+    - name: Get-SmbMultichannelConstraint
+      uid: SmbShare.Get-SmbMultichannelConstraint
+    - name: Get-SmbOpenFile
+      uid: SmbShare.Get-SmbOpenFile
+    - name: Get-SmbServerConfiguration
+      uid: SmbShare.Get-SmbServerConfiguration
+    - name: Get-SmbServerNetworkInterface
+      uid: SmbShare.Get-SmbServerNetworkInterface
+    - name: Get-SmbSession
+      uid: SmbShare.Get-SmbSession
+    - name: Get-SmbShare
+      uid: SmbShare.Get-SmbShare
+    - name: Get-SmbShareAccess
+      uid: SmbShare.Get-SmbShareAccess
+    - name: Grant-SmbShareAccess
+      uid: SmbShare.Grant-SmbShareAccess
+    - name: New-SmbMapping
+      uid: SmbShare.New-SmbMapping
+    - name: New-SmbMultichannelConstraint
+      uid: SmbShare.New-SmbMultichannelConstraint
+    - name: New-SmbShare
+      uid: SmbShare.New-SmbShare
+    - name: Remove-SmbMapping
+      uid: SmbShare.Remove-SmbMapping
+    - name: Remove-SmbMultichannelConstraint
+      uid: SmbShare.Remove-SmbMultichannelConstraint
+    - name: Remove-SmbShare
+      uid: SmbShare.Remove-SmbShare
+    - name: Revoke-SmbShareAccess
+      uid: SmbShare.Revoke-SmbShareAccess
+    - name: Set-SmbClientConfiguration
+      uid: SmbShare.Set-SmbClientConfiguration
+    - name: Set-SmbServerConfiguration
+      uid: SmbShare.Set-SmbServerConfiguration
+    - name: Set-SmbShare
+      uid: SmbShare.Set-SmbShare
+    - name: Unblock-SmbShareAccess
+      uid: SmbShare.Unblock-SmbShareAccess
+    - name: Update-SmbMultichannelConnection
+      uid: SmbShare.Update-SmbMultichannelConnection
+  - name: SmbWitness
+    uid: SmbWitness
+    items:
+    - name: Get-SmbWitnessClient
+      uid: SmbWitness.Get-SmbWitnessClient
+    - name: Move-SmbWitnessClient
+      uid: SmbWitness.Move-SmbWitnessClient
+  - name: SMISConfig
+    uid: SMISConfig
+    items:
+    - name: Register-SmisProvider
+      uid: SMISConfig.Register-SmisProvider
+    - name: Search-SmisProvider
+      uid: SMISConfig.Search-SmisProvider
+    - name: Unregister-SmisProvider
+      uid: SMISConfig.Unregister-SmisProvider
+  - name: Storage
+    uid: Storage
+    items:
+    - name: Add-InitiatorIdToMaskingSet
+      uid: Storage.Add-InitiatorIdToMaskingSet
+    - name: Add-PartitionAccessPath
+      uid: Storage.Add-PartitionAccessPath
+    - name: Add-PhysicalDisk
+      uid: Storage.Add-PhysicalDisk
+    - name: Add-TargetPortToMaskingSet
+      uid: Storage.Add-TargetPortToMaskingSet
+    - name: Add-VirtualDiskToMaskingSet
+      uid: Storage.Add-VirtualDiskToMaskingSet
+    - name: Clear-Disk
+      uid: Storage.Clear-Disk
+    - name: Connect-VirtualDisk
+      uid: Storage.Connect-VirtualDisk
+    - name: Disable-PhysicalDiskIndication
+      uid: Storage.Disable-PhysicalDiskIndication
+    - name: Disconnect-VirtualDisk
+      uid: Storage.Disconnect-VirtualDisk
+    - name: Dismount-DiskImage
+      uid: Storage.Dismount-DiskImage
+    - name: Enable-PhysicalDiskIndication
+      uid: Storage.Enable-PhysicalDiskIndication
+    - name: Format-Volume
+      uid: Storage.Format-Volume
+    - name: Get-Disk
+      uid: Storage.Get-Disk
+    - name: Get-DiskImage
+      uid: Storage.Get-DiskImage
+    - name: Get-FileIntegrity
+      uid: Storage.Get-FileIntegrity
+    - name: Get-InitiatorId
+      uid: Storage.Get-InitiatorId
+    - name: Get-InitiatorPort
+      uid: Storage.Get-InitiatorPort
+    - name: Get-MaskingSet
+      uid: Storage.Get-MaskingSet
+    - name: Get-OffloadDataTransferSetting
+      uid: Storage.Get-OffloadDataTransferSetting
+    - name: Get-Partition
+      uid: Storage.Get-Partition
+    - name: Get-PartitionSupportedSize
+      uid: Storage.Get-PartitionSupportedSize
+    - name: Get-PhysicalDisk
+      uid: Storage.Get-PhysicalDisk
+    - name: Get-ResiliencySetting
+      uid: Storage.Get-ResiliencySetting
+    - name: Get-StorageJob
+      uid: Storage.Get-StorageJob
+    - name: Get-StoragePool
+      uid: Storage.Get-StoragePool
+    - name: Get-StorageProvider
+      uid: Storage.Get-StorageProvider
+    - name: Get-StorageReliabilityCounter
+      uid: Storage.Get-StorageReliabilityCounter
+    - name: Get-StorageSetting
+      uid: Storage.Get-StorageSetting
+    - name: Get-StorageSubsystem
+      uid: Storage.Get-StorageSubsystem
+    - name: Get-SupportedClusterSizes
+      uid: Storage.Get-SupportedClusterSizes
+    - name: Get-SupportedFileSystems
+      uid: Storage.Get-SupportedFileSystems
+    - name: Get-TargetPort
+      uid: Storage.Get-TargetPort
+    - name: Get-TargetPortal
+      uid: Storage.Get-TargetPortal
+    - name: Get-VirtualDisk
+      uid: Storage.Get-VirtualDisk
+    - name: Get-VirtualDiskSupportedSize
+      uid: Storage.Get-VirtualDiskSupportedSize
+    - name: Get-Volume
+      uid: Storage.Get-Volume
+    - name: Get-VolumeCorruptionCount
+      uid: Storage.Get-VolumeCorruptionCount
+    - name: Get-VolumeScrubPolicy
+      uid: Storage.Get-VolumeScrubPolicy
+    - name: Hide-VirtualDisk
+      uid: Storage.Hide-VirtualDisk
+    - name: Initialize-Disk
+      uid: Storage.Initialize-Disk
+    - name: Mount-DiskImage
+      uid: Storage.Mount-DiskImage
+    - name: New-MaskingSet
+      uid: Storage.New-MaskingSet
+    - name: New-Partition
+      uid: Storage.New-Partition
+    - name: New-StoragePool
+      uid: Storage.New-StoragePool
+    - name: New-StorageSubsystemVirtualDisk
+      uid: Storage.New-StorageSubsystemVirtualDisk
+    - name: New-VirtualDisk
+      uid: Storage.New-VirtualDisk
+    - name: New-VirtualDiskClone
+      uid: Storage.New-VirtualDiskClone
+    - name: New-VirtualDiskSnapshot
+      uid: Storage.New-VirtualDiskSnapshot
+    - name: Optimize-Volume
+      uid: Storage.Optimize-Volume
+    - name: Remove-InitiatorId
+      uid: Storage.Remove-InitiatorId
+    - name: Remove-InitiatorIdFromMaskingSet
+      uid: Storage.Remove-InitiatorIdFromMaskingSet
+    - name: Remove-MaskingSet
+      uid: Storage.Remove-MaskingSet
+    - name: Remove-Partition
+      uid: Storage.Remove-Partition
+    - name: Remove-PartitionAccessPath
+      uid: Storage.Remove-PartitionAccessPath
+    - name: Remove-PhysicalDisk
+      uid: Storage.Remove-PhysicalDisk
+    - name: Remove-StoragePool
+      uid: Storage.Remove-StoragePool
+    - name: Remove-TargetPortFromMaskingSet
+      uid: Storage.Remove-TargetPortFromMaskingSet
+    - name: Remove-VirtualDisk
+      uid: Storage.Remove-VirtualDisk
+    - name: Remove-VirtualDiskFromMaskingSet
+      uid: Storage.Remove-VirtualDiskFromMaskingSet
+    - name: Rename-MaskingSet
+      uid: Storage.Rename-MaskingSet
+    - name: Repair-FileIntegrity
+      uid: Storage.Repair-FileIntegrity
+    - name: Repair-VirtualDisk
+      uid: Storage.Repair-VirtualDisk
+    - name: Repair-Volume
+      uid: Storage.Repair-Volume
+    - name: Reset-PhysicalDisk
+      uid: Storage.Reset-PhysicalDisk
+    - name: Reset-StorageReliabilityCounter
+      uid: Storage.Reset-StorageReliabilityCounter
+    - name: Resize-Partition
+      uid: Storage.Resize-Partition
+    - name: Resize-VirtualDisk
+      uid: Storage.Resize-VirtualDisk
+    - name: Set-Disk
+      uid: Storage.Set-Disk
+    - name: Set-FileIntegrity
+      uid: Storage.Set-FileIntegrity
+    - name: Set-InitiatorPort
+      uid: Storage.Set-InitiatorPort
+    - name: Set-Partition
+      uid: Storage.Set-Partition
+    - name: Set-PhysicalDisk
+      uid: Storage.Set-PhysicalDisk
+    - name: Set-ResiliencySetting
+      uid: Storage.Set-ResiliencySetting
+    - name: Set-StoragePool
+      uid: Storage.Set-StoragePool
+    - name: Set-StorageSetting
+      uid: Storage.Set-StorageSetting
+    - name: Set-StorageSubsystem
+      uid: Storage.Set-StorageSubsystem
+    - name: Set-VirtualDisk
+      uid: Storage.Set-VirtualDisk
+    - name: Set-Volume
+      uid: Storage.Set-Volume
+    - name: Set-VolumeScrubPolicy
+      uid: Storage.Set-VolumeScrubPolicy
+    - name: Show-VirtualDisk
+      uid: Storage.Show-VirtualDisk
+    - name: Update-Disk
+      uid: Storage.Update-Disk
+    - name: Update-HostStorageCache
+      uid: Storage.Update-HostStorageCache
+    - name: Update-StorageProviderCache
+      uid: Storage.Update-StorageProviderCache
+  - name: TroubleshootingPack
+    uid: TroubleshootingPack
+    items:
+    - name: Get-TroubleshootingPack
+      uid: TroubleshootingPack.Get-TroubleshootingPack
+    - name: Invoke-TroubleshootingPack
+      uid: TroubleshootingPack.Invoke-TroubleshootingPack
+  - name: TrustedPlatformModule
+    uid: TrustedPlatformModule
+    items:
+    - name: Clear-Tpm
+      uid: TrustedPlatformModule.Clear-Tpm
+    - name: ConvertTo-TpmOwnerAuth
+      uid: TrustedPlatformModule.ConvertTo-TpmOwnerAuth
+    - name: Disable-TpmAutoProvisioning
+      uid: TrustedPlatformModule.Disable-TpmAutoProvisioning
+    - name: Enable-TpmAutoProvisioning
+      uid: TrustedPlatformModule.Enable-TpmAutoProvisioning
+    - name: Get-Tpm
+      uid: TrustedPlatformModule.Get-Tpm
+    - name: Import-TpmOwnerAuth
+      uid: TrustedPlatformModule.Import-TpmOwnerAuth
+    - name: Initialize-Tpm
+      uid: TrustedPlatformModule.Initialize-Tpm
+    - name: Set-TpmOwnerAuth
+      uid: TrustedPlatformModule.Set-TpmOwnerAuth
+    - name: Unblock-Tpm
+      uid: TrustedPlatformModule.Unblock-Tpm
+  - name: UpdateServices
+    uid: UpdateServices
+    items:
+    - name: Add-WsusComputer
+      uid: UpdateServices.Add-WsusComputer
+    - name: Approve-WsusUpdate
+      uid: UpdateServices.Approve-WsusUpdate
+    - name: Deny-WsusUpdate
+      uid: UpdateServices.Deny-WsusUpdate
+    - name: Get-WsusClassification
+      uid: UpdateServices.Get-WsusClassification
+    - name: Get-WsusComputer
+      uid: UpdateServices.Get-WsusComputer
+    - name: Get-WsusProduct
+      uid: UpdateServices.Get-WsusProduct
+    - name: Get-WsusServer
+      uid: UpdateServices.Get-WsusServer
+    - name: Get-WsusUpdate
+      uid: UpdateServices.Get-WsusUpdate
+    - name: Invoke-WsusServerCleanup
+      uid: UpdateServices.Invoke-WsusServerCleanup
+    - name: Set-WsusClassification
+      uid: UpdateServices.Set-WsusClassification
+    - name: Set-WsusProduct
+      uid: UpdateServices.Set-WsusProduct
+    - name: Set-WsusServerSynchronization
+      uid: UpdateServices.Set-WsusServerSynchronization
+  - name: UserAccessLogging
+    uid: UserAccessLogging
+    items:
+    - name: Disable-Ual
+      uid: UserAccessLogging.Disable-Ual
+    - name: Enable-Ual
+      uid: UserAccessLogging.Enable-Ual
+    - name: Get-Ual
+      uid: UserAccessLogging.Get-Ual
+    - name: Get-UalDailyAccess
+      uid: UserAccessLogging.Get-UalDailyAccess
+    - name: Get-UalDailyDeviceAccess
+      uid: UserAccessLogging.Get-UalDailyDeviceAccess
+    - name: Get-UalDailyUserAccess
+      uid: UserAccessLogging.Get-UalDailyUserAccess
+    - name: Get-UalDeviceAccess
+      uid: UserAccessLogging.Get-UalDeviceAccess
+    - name: Get-UalDns
+      uid: UserAccessLogging.Get-UalDns
+    - name: Get-UalHyperV
+      uid: UserAccessLogging.Get-UalHyperV
+    - name: Get-UalOverview
+      uid: UserAccessLogging.Get-UalOverview
+    - name: Get-UalServerDevice
+      uid: UserAccessLogging.Get-UalServerDevice
+    - name: Get-UalServerUser
+      uid: UserAccessLogging.Get-UalServerUser
+    - name: Get-UalSystemId
+      uid: UserAccessLogging.Get-UalSystemId
+    - name: Get-UalUserAccess
+      uid: UserAccessLogging.Get-UalUserAccess
+  - name: VAMT
+    uid: VAMT
+    items:
+    - name: Add-VamtProductKey
+      uid: VAMT.Add-VamtProductKey
+    - name: Export-VamtData
+      uid: VAMT.Export-VamtData
+    - name: Find-VamtManagedMachine
+      uid: VAMT.Find-VamtManagedMachine
+    - name: Get-VamtConfirmationId
+      uid: VAMT.Get-VamtConfirmationId
+    - name: Get-VamtProduct
+      uid: VAMT.Get-VamtProduct
+    - name: Get-VamtProductKey
+      uid: VAMT.Get-VamtProductKey
+    - name: Import-VamtData
+      uid: VAMT.Import-VamtData
+    - name: Initialize-VamtData
+      uid: VAMT.Initialize-VamtData
+    - name: Install-VamtConfirmationId
+      uid: VAMT.Install-VamtConfirmationId
+    - name: Install-VamtProductActivation
+      uid: VAMT.Install-VamtProductActivation
+    - name: Install-VamtProductKey
+      uid: VAMT.Install-VamtProductKey
+    - name: Update-VamtProduct
+      uid: VAMT.Update-VamtProduct
+  - name: VpnClient
+    uid: VpnClient
+    items:
+    - name: Add-VpnConnection
+      uid: VpnClient.Add-VpnConnection
+    - name: Get-VpnConnection
+      uid: VpnClient.Get-VpnConnection
+    - name: New-EapConfiguration
+      uid: VpnClient.New-EapConfiguration
+    - name: Remove-VpnConnection
+      uid: VpnClient.Remove-VpnConnection
+    - name: Set-VpnConnection
+      uid: VpnClient.Set-VpnConnection
+    - name: Set-VpnConnectionProxy
+      uid: VpnClient.Set-VpnConnectionProxy
+  - name: WasPSExt
+    uid: WasPSExt
+    items:
+    - name: Get-WASAssessment
+      uid: WasPSExt.Get-WASAssessment
+    - name: Get-WASComputer
+      uid: WasPSExt.Get-WASComputer
+    - name: Get-WASImage
+      uid: WasPSExt.Get-WASImage
+    - name: Get-WASJob
+      uid: WasPSExt.Get-WASJob
+    - name: Get-WASJobInstance
+      uid: WasPSExt.Get-WASJobInstance
+    - name: Get-WASJobInstanceStatus
+      uid: WasPSExt.Get-WASJobInstanceStatus
+    - name: Invoke-WASJob
+      uid: WasPSExt.Invoke-WASJob
+    - name: Register-WASImage
+      uid: WasPSExt.Register-WASImage
+    - name: Reset-WASComputer
+      uid: WasPSExt.Reset-WASComputer
+    - name: Resume-WASComputer
+      uid: WasPSExt.Resume-WASComputer
+    - name: Skip-WASJobInstance
+      uid: WasPSExt.Skip-WASJobInstance
+    - name: Stop-WASJobInstance
+      uid: WasPSExt.Stop-WASJobInstance
+    - name: Update-WASJob
+      uid: WasPSExt.Update-WASJob
+  - name: Wdac
+    uid: Wdac
+    items:
+    - name: Add-OdbcDsn
+      uid: Wdac.Add-OdbcDsn
+    - name: Disable-OdbcPerfCounter
+      uid: Wdac.Disable-OdbcPerfCounter
+    - name: Disable-WdacBidTrace
+      uid: Wdac.Disable-WdacBidTrace
+    - name: Enable-OdbcPerfCounter
+      uid: Wdac.Enable-OdbcPerfCounter
+    - name: Enable-WdacBidTrace
+      uid: Wdac.Enable-WdacBidTrace
+    - name: Get-OdbcDriver
+      uid: Wdac.Get-OdbcDriver
+    - name: Get-OdbcDsn
+      uid: Wdac.Get-OdbcDsn
+    - name: Get-OdbcPerfCounter
+      uid: Wdac.Get-OdbcPerfCounter
+    - name: Get-WdacBidTrace
+      uid: Wdac.Get-WdacBidTrace
+    - name: Remove-OdbcDsn
+      uid: Wdac.Remove-OdbcDsn
+    - name: Set-OdbcDriver
+      uid: Wdac.Set-OdbcDriver
+    - name: Set-OdbcDsn
+      uid: Wdac.Set-OdbcDsn
+  - name: WebAdministration
+    uid: WebAdministration
+    items:
+    - name: Add-WebConfiguration
+      uid: WebAdministration.Add-WebConfiguration
+    - name: Add-WebConfigurationLock
+      uid: WebAdministration.Add-WebConfigurationLock
+    - name: Add-WebConfigurationProperty
+      uid: WebAdministration.Add-WebConfigurationProperty
+    - name: Backup-WebConfiguration
+      uid: WebAdministration.Backup-WebConfiguration
+    - name: Clear-WebCentralCertProvider
+      uid: WebAdministration.Clear-WebCentralCertProvider
+    - name: Clear-WebConfiguration
+      uid: WebAdministration.Clear-WebConfiguration
+    - name: Clear-WebRequestTracingSetting
+      uid: WebAdministration.Clear-WebRequestTracingSetting
+    - name: Clear-WebRequestTracingSettings
+      uid: WebAdministration.Clear-WebRequestTracingSettings
+    - name: ConvertTo-WebApplication
+      uid: WebAdministration.ConvertTo-WebApplication
+    - name: Disable-WebCentralCertProvider
+      uid: WebAdministration.Disable-WebCentralCertProvider
+    - name: Disable-WebGlobalModule
+      uid: WebAdministration.Disable-WebGlobalModule
+    - name: Disable-WebRequestTracing
+      uid: WebAdministration.Disable-WebRequestTracing
+    - name: Enable-WebCentralCertProvider
+      uid: WebAdministration.Enable-WebCentralCertProvider
+    - name: Enable-WebGlobalModule
+      uid: WebAdministration.Enable-WebGlobalModule
+    - name: Enable-WebRequestTracing
+      uid: WebAdministration.Enable-WebRequestTracing
+    - name: Get-WebAppDomain
+      uid: WebAdministration.Get-WebAppDomain
+    - name: Get-WebApplication
+      uid: WebAdministration.Get-WebApplication
+    - name: Get-WebAppPoolState
+      uid: WebAdministration.Get-WebAppPoolState
+    - name: Get-WebBinding
+      uid: WebAdministration.Get-WebBinding
+    - name: Get-WebCentralCertProvider
+      uid: WebAdministration.Get-WebCentralCertProvider
+    - name: Get-WebConfigFile
+      uid: WebAdministration.Get-WebConfigFile
+    - name: Get-WebConfiguration
+      uid: WebAdministration.Get-WebConfiguration
+    - name: Get-WebConfigurationBackup
+      uid: WebAdministration.Get-WebConfigurationBackup
+    - name: Get-WebConfigurationLocation
+      uid: WebAdministration.Get-WebConfigurationLocation
+    - name: Get-WebConfigurationLock
+      uid: WebAdministration.Get-WebConfigurationLock
+    - name: Get-WebConfigurationProperty
+      uid: WebAdministration.Get-WebConfigurationProperty
+    - name: Get-WebFilePath
+      uid: WebAdministration.Get-WebFilePath
+    - name: Get-WebHandler
+      uid: WebAdministration.Get-WebHandler
+    - name: Get-WebItemState
+      uid: WebAdministration.Get-WebItemState
+    - name: Get-WebManagedModule
+      uid: WebAdministration.Get-WebManagedModule
+    - name: Get-WebRequest
+      uid: WebAdministration.Get-WebRequest
+    - name: Get-Website
+      uid: WebAdministration.Get-Website
+    - name: Get-WebsiteState
+      uid: WebAdministration.Get-WebsiteState
+    - name: Get-WebURL
+      uid: WebAdministration.Get-WebURL
+    - name: Get-WebVirtualDirectory
+      uid: WebAdministration.Get-WebVirtualDirectory
+    - name: New-WebApplication
+      uid: WebAdministration.New-WebApplication
+    - name: New-WebAppPool
+      uid: WebAdministration.New-WebAppPool
+    - name: New-WebBinding
+      uid: WebAdministration.New-WebBinding
+    - name: New-WebFtpSite
+      uid: WebAdministration.New-WebFtpSite
+    - name: New-WebGlobalModule
+      uid: WebAdministration.New-WebGlobalModule
+    - name: New-WebHandler
+      uid: WebAdministration.New-WebHandler
+    - name: New-WebManagedModule
+      uid: WebAdministration.New-WebManagedModule
+    - name: New-Website
+      uid: WebAdministration.New-Website
+    - name: New-WebVirtualDirectory
+      uid: WebAdministration.New-WebVirtualDirectory
+    - name: Remove-WebApplication
+      uid: WebAdministration.Remove-WebApplication
+    - name: Remove-WebAppPool
+      uid: WebAdministration.Remove-WebAppPool
+    - name: Remove-WebBinding
+      uid: WebAdministration.Remove-WebBinding
+    - name: Remove-WebConfigurationBackup
+      uid: WebAdministration.Remove-WebConfigurationBackup
+    - name: Remove-WebConfigurationLocation
+      uid: WebAdministration.Remove-WebConfigurationLocation
+    - name: Remove-WebConfigurationLock
+      uid: WebAdministration.Remove-WebConfigurationLock
+    - name: Remove-WebConfigurationProperty
+      uid: WebAdministration.Remove-WebConfigurationProperty
+    - name: Remove-WebGlobalModule
+      uid: WebAdministration.Remove-WebGlobalModule
+    - name: Remove-WebHandler
+      uid: WebAdministration.Remove-WebHandler
+    - name: Remove-WebManagedModule
+      uid: WebAdministration.Remove-WebManagedModule
+    - name: Remove-Website
+      uid: WebAdministration.Remove-Website
+    - name: Remove-WebVirtualDirectory
+      uid: WebAdministration.Remove-WebVirtualDirectory
+    - name: Rename-WebConfigurationLocation
+      uid: WebAdministration.Rename-WebConfigurationLocation
+    - name: Restart-WebAppPool
+      uid: WebAdministration.Restart-WebAppPool
+    - name: Restart-WebItem
+      uid: WebAdministration.Restart-WebItem
+    - name: Restore-WebConfiguration
+      uid: WebAdministration.Restore-WebConfiguration
+    - name: Select-WebConfiguration
+      uid: WebAdministration.Select-WebConfiguration
+    - name: Set-WebBinding
+      uid: WebAdministration.Set-WebBinding
+    - name: Set-WebCentralCertProvider
+      uid: WebAdministration.Set-WebCentralCertProvider
+    - name: Set-WebCentralCertProviderCredential
+      uid: WebAdministration.Set-WebCentralCertProviderCredential
+    - name: Set-WebConfiguration
+      uid: WebAdministration.Set-WebConfiguration
+    - name: Set-WebConfigurationProperty
+      uid: WebAdministration.Set-WebConfigurationProperty
+    - name: Set-WebGlobalModule
+      uid: WebAdministration.Set-WebGlobalModule
+    - name: Set-WebHandler
+      uid: WebAdministration.Set-WebHandler
+    - name: Set-WebManagedModule
+      uid: WebAdministration.Set-WebManagedModule
+    - name: Start-WebAppPool
+      uid: WebAdministration.Start-WebAppPool
+    - name: Start-WebCommitDelay
+      uid: WebAdministration.Start-WebCommitDelay
+    - name: Start-WebItem
+      uid: WebAdministration.Start-WebItem
+    - name: Start-Website
+      uid: WebAdministration.Start-Website
+    - name: Stop-WebAppPool
+      uid: WebAdministration.Stop-WebAppPool
+    - name: Stop-WebCommitDelay
+      uid: WebAdministration.Stop-WebCommitDelay
+    - name: Stop-WebItem
+      uid: WebAdministration.Stop-WebItem
+    - name: Stop-Website
+      uid: WebAdministration.Stop-Website
+  - name: WHEA
+    uid: WHEA
+    items:
+    - name: Get-WheaMemoryPolicy
+      uid: WHEA.Get-WheaMemoryPolicy
+    - name: Set-WheaMemoryPolicy
+      uid: WHEA.Set-WheaMemoryPolicy
+  - name: WindowsDeveloperLicense
+    uid: WindowsDeveloperLicense
+    items:
+    - name: Get-WindowsDeveloperLicense
+      uid: WindowsDeveloperLicense.Get-WindowsDeveloperLicense
+    - name: Show-WindowsDeveloperLicenseRegistration
+      uid: WindowsDeveloperLicense.Show-WindowsDeveloperLicenseRegistration
+    - name: Unregister-WindowsDeveloperLicense
+      uid: WindowsDeveloperLicense.Unregister-WindowsDeveloperLicense
+  - name: WindowsErrorReporting
+    uid: WindowsErrorReporting
+    items:
+    - name: Disable-WindowsErrorReporting
+      uid: WindowsErrorReporting.Disable-WindowsErrorReporting
+    - name: Enable-WindowsErrorReporting
+      uid: WindowsErrorReporting.Enable-WindowsErrorReporting
+    - name: Get-WindowsErrorReporting
+      uid: WindowsErrorReporting.Get-WindowsErrorReporting
+  - name: WindowsServerBackup
+    uid: WindowsServerBackup
+    items:
+    - name: Add-WBBackupTarget
+      uid: WindowsServerBackup.Add-WBBackupTarget
+    - name: Add-WBBareMetalRecovery
+      uid: WindowsServerBackup.Add-WBBareMetalRecovery
+    - name: Add-WBFileSpec
+      uid: WindowsServerBackup.Add-WBFileSpec
+    - name: Add-WBSystemState
+      uid: WindowsServerBackup.Add-WBSystemState
+    - name: Add-WBVirtualMachine
+      uid: WindowsServerBackup.Add-WBVirtualMachine
+    - name: Add-WBVolume
+      uid: WindowsServerBackup.Add-WBVolume
+    - name: Get-WBBackupSet
+      uid: WindowsServerBackup.Get-WBBackupSet
+    - name: Get-WBBackupTarget
+      uid: WindowsServerBackup.Get-WBBackupTarget
+    - name: Get-WBBackupVolumeBrowsePath
+      uid: WindowsServerBackup.Get-WBBackupVolumeBrowsePath
+    - name: Get-WBBareMetalRecovery
+      uid: WindowsServerBackup.Get-WBBareMetalRecovery
+    - name: Get-WBDisk
+      uid: WindowsServerBackup.Get-WBDisk
+    - name: Get-WBFileSpec
+      uid: WindowsServerBackup.Get-WBFileSpec
+    - name: Get-WBJob
+      uid: WindowsServerBackup.Get-WBJob
+    - name: Get-WBPerformanceConfiguration
+      uid: WindowsServerBackup.Get-WBPerformanceConfiguration
+    - name: Get-WBPolicy
+      uid: WindowsServerBackup.Get-WBPolicy
+    - name: Get-WBSchedule
+      uid: WindowsServerBackup.Get-WBSchedule
+    - name: Get-WBSummary
+      uid: WindowsServerBackup.Get-WBSummary
+    - name: Get-WBSystemState
+      uid: WindowsServerBackup.Get-WBSystemState
+    - name: Get-WBVirtualMachine
+      uid: WindowsServerBackup.Get-WBVirtualMachine
+    - name: Get-WBVolume
+      uid: WindowsServerBackup.Get-WBVolume
+    - name: Get-WBVssBackupOption
+      uid: WindowsServerBackup.Get-WBVssBackupOption
+    - name: New-WBBackupTarget
+      uid: WindowsServerBackup.New-WBBackupTarget
+    - name: New-WBFileSpec
+      uid: WindowsServerBackup.New-WBFileSpec
+    - name: New-WBPolicy
+      uid: WindowsServerBackup.New-WBPolicy
+    - name: Remove-WBBackupSet
+      uid: WindowsServerBackup.Remove-WBBackupSet
+    - name: Remove-WBBackupTarget
+      uid: WindowsServerBackup.Remove-WBBackupTarget
+    - name: Remove-WBBareMetalRecovery
+      uid: WindowsServerBackup.Remove-WBBareMetalRecovery
+    - name: Remove-WBCatalog
+      uid: WindowsServerBackup.Remove-WBCatalog
+    - name: Remove-WBFileSpec
+      uid: WindowsServerBackup.Remove-WBFileSpec
+    - name: Remove-WBPolicy
+      uid: WindowsServerBackup.Remove-WBPolicy
+    - name: Remove-WBSystemState
+      uid: WindowsServerBackup.Remove-WBSystemState
+    - name: Remove-WBVirtualMachine
+      uid: WindowsServerBackup.Remove-WBVirtualMachine
+    - name: Remove-WBVolume
+      uid: WindowsServerBackup.Remove-WBVolume
+    - name: Restore-WBCatalog
+      uid: WindowsServerBackup.Restore-WBCatalog
+    - name: Resume-WBBackup
+      uid: WindowsServerBackup.Resume-WBBackup
+    - name: Resume-WBVolumeRecovery
+      uid: WindowsServerBackup.Resume-WBVolumeRecovery
+    - name: Set-WBPerformanceConfiguration
+      uid: WindowsServerBackup.Set-WBPerformanceConfiguration
+    - name: Set-WBPolicy
+      uid: WindowsServerBackup.Set-WBPolicy
+    - name: Set-WBSchedule
+      uid: WindowsServerBackup.Set-WBSchedule
+    - name: Set-WBVssBackupOption
+      uid: WindowsServerBackup.Set-WBVssBackupOption
+    - name: Start-WBApplicationRecovery
+      uid: WindowsServerBackup.Start-WBApplicationRecovery
+    - name: Start-WBBackup
+      uid: WindowsServerBackup.Start-WBBackup
+    - name: Start-WBFileRecovery
+      uid: WindowsServerBackup.Start-WBFileRecovery
+    - name: Start-WBHyperVRecovery
+      uid: WindowsServerBackup.Start-WBHyperVRecovery
+    - name: Start-WBSystemStateRecovery
+      uid: WindowsServerBackup.Start-WBSystemStateRecovery
+    - name: Start-WBVolumeRecovery
+      uid: WindowsServerBackup.Start-WBVolumeRecovery
+    - name: Stop-WBJob
+      uid: WindowsServerBackup.Stop-WBJob
+  - name: WssCmdlets
+    uid: WssCmdlets
+    items:
+    - name: Add-WssBackupConfiguration
+      uid: WssCmdlets.Add-WssBackupConfiguration
+    - name: Add-WssBackupSchedule
+      uid: WssCmdlets.Add-WssBackupSchedule
+    - name: Add-WssBackupSystemRecovery
+      uid: WssCmdlets.Add-WssBackupSystemRecovery
+    - name: Add-WssBackupTarget
+      uid: WssCmdlets.Add-WssBackupTarget
+    - name: Add-WssBackupVolume
+      uid: WssCmdlets.Add-WssBackupVolume
+    - name: Add-WssComputerAccess
+      uid: WssCmdlets.Add-WssComputerAccess
+    - name: Add-WssDisksToSpacesPool
+      uid: WssCmdlets.Add-WssDisksToSpacesPool
+    - name: Add-WssFolder
+      uid: WssCmdlets.Add-WssFolder
+    - name: Add-WssLocalMachineCert
+      uid: WssCmdlets.Add-WssLocalMachineCert
+    - name: Add-WssRemoteWebAccessLink
+      uid: WssCmdlets.Add-WssRemoteWebAccessLink
+    - name: Add-WssUser
+      uid: WssCmdlets.Add-WssUser
+    - name: Clear-WssAlert
+      uid: WssCmdlets.Clear-WssAlert
+    - name: Copy-WssClientRecoveryImage
+      uid: WssCmdlets.Copy-WssClientRecoveryImage
+    - name: Disable-FolderRedirection
+      uid: WssCmdlets.Disable-FolderRedirection
+    - name: Disable-SecurityPolicy
+      uid: WssCmdlets.Disable-SecurityPolicy
+    - name: Disable-WssAlert
+      uid: WssCmdlets.Disable-WssAlert
+    - name: Disable-WssBackupPolicy
+      uid: WssCmdlets.Disable-WssBackupPolicy
+    - name: Disable-WssClientBackup
+      uid: WssCmdlets.Disable-WssClientBackup
+    - name: Disable-WssClientBackupVolume
+      uid: WssCmdlets.Disable-WssClientBackupVolume
+    - name: Disable-WssRemoteWebAccess
+      uid: WssCmdlets.Disable-WssRemoteWebAccess
+    - name: Enable-FolderRedirection
+      uid: WssCmdlets.Enable-FolderRedirection
+    - name: Enable-SecurityPolicy
+      uid: WssCmdlets.Enable-SecurityPolicy
+    - name: Enable-WssAlert
+      uid: WssCmdlets.Enable-WssAlert
+    - name: Enable-WssClientBackup
+      uid: WssCmdlets.Enable-WssClientBackup
+    - name: Enable-WssClientBackupVolume
+      uid: WssCmdlets.Enable-WssClientBackupVolume
+    - name: Enable-WssRemoteWebAccess
+      uid: WssCmdlets.Enable-WssRemoteWebAccess
+    - name: Exit-WssDomain
+      uid: WssCmdlets.Exit-WssDomain
+    - name: Get-WssAddIn
+      uid: WssCmdlets.Get-WssAddIn
+    - name: Get-WssAlert
+      uid: WssCmdlets.Get-WssAlert
+    - name: Get-WssAlertEmailSetting
+      uid: WssCmdlets.Get-WssAlertEmailSetting
+    - name: Get-WssBackupConfiguration
+      uid: WssCmdlets.Get-WssBackupConfiguration
+    - name: Get-WssBackupDisk
+      uid: WssCmdlets.Get-WssBackupDisk
+    - name: Get-WssBackupJob
+      uid: WssCmdlets.Get-WssBackupJob
+    - name: Get-WssBackupPolicy
+      uid: WssCmdlets.Get-WssBackupPolicy
+    - name: Get-WssBackupSchedule
+      uid: WssCmdlets.Get-WssBackupSchedule
+    - name: Get-WssBackupSet
+      uid: WssCmdlets.Get-WssBackupSet
+    - name: Get-WssBackupSystemRecovery
+      uid: WssCmdlets.Get-WssBackupSystemRecovery
+    - name: Get-WssBackupTarget
+      uid: WssCmdlets.Get-WssBackupTarget
+    - name: Get-WssBackupVolume
+      uid: WssCmdlets.Get-WssBackupVolume
+    - name: Get-WssBpaScanResult
+      uid: WssCmdlets.Get-WssBpaScanResult
+    - name: Get-WssClientBackup
+      uid: WssCmdlets.Get-WssClientBackup
+    - name: Get-WssClientBackupClient
+      uid: WssCmdlets.Get-WssClientBackupClient
+    - name: Get-WssClientBackupOperationStatus
+      uid: WssCmdlets.Get-WssClientBackupOperationStatus
+    - name: Get-WssClientBackupVolume
+      uid: WssCmdlets.Get-WssClientBackupVolume
+    - name: Get-WssClientBackupVolumeJob
+      uid: WssCmdlets.Get-WssClientBackupVolumeJob
+    - name: Get-WssComputer
+      uid: WssCmdlets.Get-WssComputer
+    - name: Get-WssDisk
+      uid: WssCmdlets.Get-WssDisk
+    - name: Get-WssDomainNameConfiguration
+      uid: WssCmdlets.Get-WssDomainNameConfiguration
+    - name: Get-WssDrive
+      uid: WssCmdlets.Get-WssDrive
+    - name: Get-WssDriveInUse
+      uid: WssCmdlets.Get-WssDriveInUse
+    - name: Get-WssFileHistoryConfiguration
+      uid: WssCmdlets.Get-WssFileHistoryConfiguration
+    - name: Get-WssFileHistoryManagementStatus
+      uid: WssCmdlets.Get-WssFileHistoryManagementStatus
+    - name: Get-WssFolder
+      uid: WssCmdlets.Get-WssFolder
+    - name: Get-WssGlobalClientBackupPolicy
+      uid: WssCmdlets.Get-WssGlobalClientBackupPolicy
+    - name: Get-WssMediaLibraryName
+      uid: WssCmdlets.Get-WssMediaLibraryName
+    - name: Get-WssMediaServerEnabled
+      uid: WssCmdlets.Get-WssMediaServerEnabled
+    - name: Get-WssMediaSharedFolder
+      uid: WssCmdlets.Get-WssMediaSharedFolder
+    - name: Get-WssMountVhd
+      uid: WssCmdlets.Get-WssMountVhd
+    - name: Get-WssPasswordPolicy
+      uid: WssCmdlets.Get-WssPasswordPolicy
+    - name: Get-WssRecoveryItem
+      uid: WssCmdlets.Get-WssRecoveryItem
+    - name: Get-WssRemoteConnection
+      uid: WssCmdlets.Get-WssRemoteConnection
+    - name: Get-WssRemoteWebAccessBackgroundImage
+      uid: WssCmdlets.Get-WssRemoteWebAccessBackgroundImage
+    - name: Get-WssRemoteWebAccessLink
+      uid: WssCmdlets.Get-WssRemoteWebAccessLink
+    - name: Get-WssRemoteWebAccessLogo
+      uid: WssCmdlets.Get-WssRemoteWebAccessLogo
+    - name: Get-WssRemoteWebAccessStatus
+      uid: WssCmdlets.Get-WssRemoteWebAccessStatus
+    - name: Get-WssRemoteWebAccessTitle
+      uid: WssCmdlets.Get-WssRemoteWebAccessTitle
+    - name: Get-WssRouterInformation
+      uid: WssCmdlets.Get-WssRouterInformation
+    - name: Get-WssServerConnectionOption
+      uid: WssCmdlets.Get-WssServerConnectionOption
+    - name: Get-WssSpacesPool
+      uid: WssCmdlets.Get-WssSpacesPool
+    - name: Get-WssUser
+      uid: WssCmdlets.Get-WssUser
+    - name: Get-WssWinSatCpuScore
+      uid: WssCmdlets.Get-WssWinSatCpuScore
+    - name: Get-WssWinSatCpuScoreUserConfigurable
+      uid: WssCmdlets.Get-WssWinSatCpuScoreUserConfigurable
+    - name: Import-WssUser
+      uid: WssCmdlets.Import-WssUser
+    - name: Initialize-WssBackupDisk
+      uid: WssCmdlets.Initialize-WssBackupDisk
+    - name: Initialize-WssDisk
+      uid: WssCmdlets.Initialize-WssDisk
+    - name: Install-WssAddIn
+      uid: WssCmdlets.Install-WssAddIn
+    - name: Install-WssVpnServer
+      uid: WssCmdlets.Install-WssVpnServer
+    - name: Invoke-WssBpaScan
+      uid: WssCmdlets.Invoke-WssBpaScan
+    - name: Join-WssDomain
+      uid: WssCmdlets.Join-WssDomain
+    - name: Measure-WssFolder
+      uid: WssCmdlets.Measure-WssFolder
+    - name: Move-WssFolder
+      uid: WssCmdlets.Move-WssFolder
+    - name: New-WssBackupConfiguration
+      uid: WssCmdlets.New-WssBackupConfiguration
+    - name: New-WssBackupTarget
+      uid: WssCmdlets.New-WssBackupTarget
+    - name: New-WssRecoveryOption
+      uid: WssCmdlets.New-WssRecoveryOption
+    - name: Remove-WssBackupConfiguration
+      uid: WssCmdlets.Remove-WssBackupConfiguration
+    - name: Remove-WssBackupSchedule
+      uid: WssCmdlets.Remove-WssBackupSchedule
+    - name: Remove-WssBackupSystemRecovery
+      uid: WssCmdlets.Remove-WssBackupSystemRecovery
+    - name: Remove-WssBackupTarget
+      uid: WssCmdlets.Remove-WssBackupTarget
+    - name: Remove-WssBackupVolume
+      uid: WssCmdlets.Remove-WssBackupVolume
+    - name: Remove-WssComputer
+      uid: WssCmdlets.Remove-WssComputer
+    - name: Remove-WssComputerAccess
+      uid: WssCmdlets.Remove-WssComputerAccess
+    - name: Remove-WssFolder
+      uid: WssCmdlets.Remove-WssFolder
+    - name: Remove-WssRemoteWebAccessLink
+      uid: WssCmdlets.Remove-WssRemoteWebAccessLink
+    - name: Remove-WssUser
+      uid: WssCmdlets.Remove-WssUser
+    - name: Repair-WssAlert
+      uid: WssCmdlets.Repair-WssAlert
+    - name: Repair-WssMediaStreamingMetadata
+      uid: WssCmdlets.Repair-WssMediaStreamingMetadata
+    - name: Repair-WssRemoteWebAccess
+      uid: WssCmdlets.Repair-WssRemoteWebAccess
+    - name: Repair-WssRouterConfiguration
+      uid: WssCmdlets.Repair-WssRouterConfiguration
+    - name: Resume-WssBackupPolicy
+      uid: WssCmdlets.Resume-WssBackupPolicy
+    - name: Select-WssMountVhd
+      uid: WssCmdlets.Select-WssMountVhd
+    - name: Set-WssAlertEmailSetting
+      uid: WssCmdlets.Set-WssAlertEmailSetting
+    - name: Set-WssBackupPolicy
+      uid: WssCmdlets.Set-WssBackupPolicy
+    - name: Set-WssClientBackup
+      uid: WssCmdlets.Set-WssClientBackup
+    - name: Set-WssClientBackupVolumeExcludedFolder
+      uid: WssCmdlets.Set-WssClientBackupVolumeExcludedFolder
+    - name: Set-WssDomainNameConfiguration
+      uid: WssCmdlets.Set-WssDomainNameConfiguration
+    - name: Set-WssDrive
+      uid: WssCmdlets.Set-WssDrive
+    - name: Set-WssFileHistoryConfiguration
+      uid: WssCmdlets.Set-WssFileHistoryConfiguration
+    - name: Set-WssFileHistoryManagementStatus
+      uid: WssCmdlets.Set-WssFileHistoryManagementStatus
+    - name: Set-WssFolder
+      uid: WssCmdlets.Set-WssFolder
+    - name: Set-WssGlobalClientBackupPolicy
+      uid: WssCmdlets.Set-WssGlobalClientBackupPolicy
+    - name: Set-WssImportGroup
+      uid: WssCmdlets.Set-WssImportGroup
+    - name: Set-WssMediaLibraryInclusion
+      uid: WssCmdlets.Set-WssMediaLibraryInclusion
+    - name: Set-WssMediaLibraryName
+      uid: WssCmdlets.Set-WssMediaLibraryName
+    - name: Set-WssMediaServerEnabled
+      uid: WssCmdlets.Set-WssMediaServerEnabled
+    - name: Set-WssRemoteWebAccessBackgroundImage
+      uid: WssCmdlets.Set-WssRemoteWebAccessBackgroundImage
+    - name: Set-WssRemoteWebAccessLogo
+      uid: WssCmdlets.Set-WssRemoteWebAccessLogo
+    - name: Set-WssRemoteWebAccessTitle
+      uid: WssCmdlets.Set-WssRemoteWebAccessTitle
+    - name: Set-WssServerConnectionOption
+      uid: WssCmdlets.Set-WssServerConnectionOption
+    - name: Set-WssUserAccess
+      uid: WssCmdlets.Set-WssUserAccess
+    - name: Set-WssWinSatCpuScore
+      uid: WssCmdlets.Set-WssWinSatCpuScore
+    - name: Start-WssBackupJob
+      uid: WssCmdlets.Start-WssBackupJob
+    - name: Start-WssClientBackup
+      uid: WssCmdlets.Start-WssClientBackup
+    - name: Start-WssClientBackupRepair
+      uid: WssCmdlets.Start-WssClientBackupRepair
+    - name: Start-WssServerFileRestore
+      uid: WssCmdlets.Start-WssServerFileRestore
+    - name: Start-WssServerVolumeRestore
+      uid: WssCmdlets.Start-WssServerVolumeRestore
+    - name: Stop-WssBackupJob
+      uid: WssCmdlets.Stop-WssBackupJob
+    - name: Stop-WssClientBackup
+      uid: WssCmdlets.Stop-WssClientBackup
+    - name: Stop-WssClientBackupRepair
+      uid: WssCmdlets.Stop-WssClientBackupRepair
+    - name: Suspend-WssBackupPolicy
+      uid: WssCmdlets.Suspend-WssBackupPolicy
+    - name: Sync-WssUser
+      uid: WssCmdlets.Sync-WssUser
+    - name: Test-WssAlertEmail
+      uid: WssCmdlets.Test-WssAlertEmail
+    - name: Test-WssDrive
+      uid: WssCmdlets.Test-WssDrive
+    - name: Test-WssHealth
+      uid: WssCmdlets.Test-WssHealth
+    - name: Test-WssVpnServerInstallation
+      uid: WssCmdlets.Test-WssVpnServerInstallation
+    - name: Uninstall-WssAddIn
+      uid: WssCmdlets.Uninstall-WssAddIn
+    - name: Uninstall-WssVpnServer
+      uid: WssCmdlets.Uninstall-WssVpnServer
+metadata:
+  universal_conceptual_toc: /powershell/winserver2012-ps/toc.json

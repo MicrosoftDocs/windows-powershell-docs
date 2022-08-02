@@ -1,0 +1,379 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets one or more StorageSubSystem objects.
+module: Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_InitiatorId" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an InitiatorID object to the **InitiatorID** parameter to get the storage subsystem associated with the object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_MaskingSet" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a MaskingSet object to the **MaskingSet** parameter to get the storage subsystem associated with the object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_OffloadDataTransferSetting" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an OffloadDataTransferSetting object to the **OffloadDataTransferSetting** parameter to get the storage subsystem associated with the object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a PhysicalDisk object to the **PhysicalDisk** parameter to get the storage subsystem associated with the object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageNode" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a StorageNode object to the StorageNode parameter to get the storage subsystem associated with the object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a StoragePool object to the **StoragePool** parameter to get the storage subsystem associated with the object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageProvider" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a StorageProvider object to the **StorageProvider** parameter to get the storage subsystem associated with the object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_TargetPort" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a TargetPort object to the **TargetPort** parameter to get the storage subsystem associated with the object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_TargetPortal" data-throw-if-not-resolved="False" />
+  description: |-
+    You can the pipeline operator to pass a TargetPortal object to the TargetPortal parameter to get the storage subsystem associated with the object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a VirtualDisk object to the **VirtualDisk** parameter to get the storage subsystem associated with the object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubSystem" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet outputs an object representing a storage subsystem.
+links:
+- text: Get-StorageProvider
+  href: ./Get-StorageProvider.yml
+- text: Set-StorageSubSystem
+  href: ./Set-StorageSubSystem.yml
+- text: Get-StorageNode
+  href: ./Get-StorageNode.yml
+syntaxes:
+- >-
+  Get-StorageSubSystem [[-FriendlyName] <String[]>] [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>]
+
+   [-Model <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-UniqueId <String[]>] [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>]
+
+   [-Model <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-Name <String[]>] [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>]
+
+   [-Model <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+
+   [-OffloadDataTransferSetting <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+
+   [-InitiatorId <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+
+   [-TargetPortal <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+
+   [-TargetPort <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+
+   [-MaskingSet <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+
+   [-VirtualDisk <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+
+   [-PhysicalDisk <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+
+   [-StoragePool <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+
+   [-StorageNode <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+
+   [-StorageEnclosure <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+- >-
+  Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+
+   [-StorageProvider <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all storage subsystems'
+  code: |-
+    PS C:\>Get-StorageSubSystem
+  description: |-
+    This example returns a list of all visible StorageSubSystem objects across all accessible StorageProvider objects.
+  summary: ""
+- title: 'Example 2: Get the Storage Spaces subsystem'
+  code: |-
+    PS C:\>Get-StorageSubSystem -Model "Storage Spaces"
+    FriendlyName                            HealthStatus                            OperationalStatus
+    ------------                            ------------                            -----------------
+    Storage Spaces on SRV1                  Healthy                                 OK
+  description: |-
+    This example returns only the StorageSubSystem object for the Storage Spaces provider.
+  summary: ""
+- title: 'Example 3: Get all unhealthy storage subsystems'
+  code: |-
+    PS C:\>Get-StorageSubSystem -HealthStatus Unhealthy
+  description: |-
+    This example gets all storage subsystems in an unhealthy state.
+  summary: ""
+- title: 'Example 4: Get storage subsystems that have SMPs that support ODX'
+  code: |-
+    PS C:\>Get-OffloadDataTransferSetting | Get-StorageSubSystem
+  description: |-
+    This example displays all storage subsystems on storage management providers that support Windows Offloaded Data Transfers (ODX).
+    Storage arrays that support ODX using the SMI-S protocol are not shown.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FriendlyName
+  description: |+
+    Specifies the friendly name of the storage subsystem to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HealthStatus" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HealthStatus
+  description: |+
+    Gets all storage subsystems that have the specified health status.
+    Acceptable values are Healthy, Warning, and Unhealthy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Healthy, Warning, Unhealthy
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InitiatorId
+  description: |+
+    Gets the storage subsystem associated with the specified InitiatorId object.
+    Enter an InitiatorID CIM object.
+    The InitiatorID object is exposed by the Get-InitiatorId cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Manufacturer
+  description: |+
+    Gets StorageSubSystem objects with the specified manufacturer name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: MaskingSet
+  description: |+
+    Gets the StorageSubSystem for the specified MaskingSet object.
+    Enter a MaskingSet CIM object.
+    The MaskingSet object is exposed by the Get-MaskingSet cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Model
+  description: |+
+    Gets the StorageSubSystem with the specified model string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Gets the StorageSubSystem with the specified name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: OffloadDataTransferSetting
+  description: |+
+    Gets the StorageSubSystem associated with the specified OffloadDataTransferSetting object.
+    The Offload Data Transfer Setting CIM object is exposed by the Get-OffloadDataTransferSetting cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: PhysicalDisk
+  description: |+
+    Gets the StorageSubSystem associated with the specified PhysicalDisk object.
+    The Physical Disk CIM object is exposed by the Get-PhysicalDisk cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageEnclosure
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageNode
+  description: |+
+    Specifies a storage node as a **CimInstance** object.
+    The cmdlet gets storage subsystems on the node that you specify.
+    To obtain a storage node object, use the Get-StorageNode cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StoragePool
+  description: |+
+    Gets the StorageSubSystem associated with the specified StoragePool object.
+    The Storage Pool CIM object is exposed by the Get-StoragePool cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: StorageProvider
+  description: |+
+    Gets the StorageSubSystem associated with the specified StorageProvider object.
+    The Storage Provider CIM object is exposed by the Get-StorageProvider cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: TargetPort
+  description: |+
+    Gets the StorageSubSystem associated with the specified TargetPort object.
+    The TargetPort CIM object is exposed by the Get-TargetPort cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: TargetPortal
+  description: |+
+    Gets the StorageSubSystem associated with the specified TargetPortal object.
+    The TargetPortal CIM object is exposed by the Get-TargetPortal cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UniqueId
+  description: |+
+    Gets the StorageSubSystem with the specified UniqueID value.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: VirtualDisk
+  description: |+
+    Gets the StorageSubSystem associated with the specified VirtualDisk object.
+    The Virtual Disk CIM object is exposed by the Get-VirtualDisk cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-StorageSubSystem
+name: Get-StorageSubSystem
+description: |-
+  The **Get-StorageSubSystem** cmdlet gets one or more StorageSubSystem objects.
+  If no parameters are specified, then all subsystems on the system will be returned.
+  If two parameters are specified that conflict with unique values, then no subsystem will be returned; since none match that criteria.
+metadata:
+  external help file: StorageSubSystem.cdxml-help.xml
+  Module Name: Storage
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/storage/get-storagesubsystem?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-StorageSubSystem

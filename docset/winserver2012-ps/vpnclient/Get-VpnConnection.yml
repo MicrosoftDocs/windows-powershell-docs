@@ -1,0 +1,222 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the specified VPN connection profile information.
+module: VpnClient
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnConnection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    The VpnConnection object contains the VpnConnection configuration settings.
+links:
+- text: Add-VpnConnection
+  href: ./Add-VpnConnection.yml
+- text: Set-VpnConnection
+  href: ./Set-VpnConnection.yml
+- text: Remove-VpnConnection
+  href: ./Remove-VpnConnection.yml
+- text: New-EapConfiguration
+  href: ./New-EapConfiguration.yml
+syntaxes:
+- >-
+  Get-VpnConnection [[-Name] <String[]>] [-AllUserConnection] [-AsJob] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>]
+examples:
+- title: 'Example 1: Get all available VPN connections'
+  code: |-
+    PS C:\> Get-VpnConnection
+    Name                  : Test1
+
+    ServerAddress         : 10.1.1.1
+
+    AllUserConnection     : False
+
+    Guid                  : {4B308E9B-C225-42CB-8158-307193429591}
+
+    TunnelType            : Automatic
+
+    AuthenticationMethod  : {MsChapv2}
+
+    EncryptionLevel       : Required
+
+    L2tpIPsecAuth         : Certificate
+
+    UseWinlogonCredential : False
+
+    EapConfigXmlStream    :
+
+    ConnectionStatus      : Disconnected
+
+    NapState              : NotConnected
+
+    RememberCredential    : False
+
+    SplitTunneling        : False
+  description: |-
+    This command returns a list of all available VPN connections in the user's local phone book.
+  summary: ""
+- title: 'Example 2: Get all available VPN connections from the global phonebook'
+  code: "PS C:\\>Get-VpnConnection -AllUserConnection\r\n\r\nName                  : Test3\r\n\r\nServerAddress         : 10.1.1.1\r\n\r\nAllUserConnection     : True\r\n\r\nGuid                  : {76746D4E-D72A-467D-A11F-3D4D9075F50D}\r\n\r\nTunnelType            : Pptp\r\n\r\nAuthenticationMethod  : {MsChapv2}\r\n\r\nEncryptionLevel       : Required\r\n\r\nL2tpIPsecAuth         :\r\n\r\nUseWinlogonCredential : True\r\n\r\nEapConfigXmlStream    :\r\n\r\nConnectionStatus      : Disconnected\r\n\r\nNapState              : NotConnected \r\n\r\nRememberCredential    : True \r\n\r\nSplitTunneling        : True \r\n\r\nName                  : Test4 \r\n\r\nServerAddress         : 10.1.1.2 \r\n\r\nAllUserConnection     : True\r\n \r\nGuid                  : {1D423FF3-E3D4-404A-B052-DB9130656D29} \r\n\r\nTunnelType            : L2tp \r\n\r\nAuthenticationMethod  : {Eap} \r\n\r\nEncryptionLevel       : Required\r\n \r\nL2tpIPsecAuth         : Psk \r\n\r\nUseWinlogonCredential : False \r\n\r\nEapConfigXmlStream    : #document \r\n\r\nConnectionStatus      : Disconnected \r\n\r\nNapState              : NotConnected \r\n\r\nRememberCredential    : True \r\n\r\nSplitTunneling        : True \r\n\r\nName                  : Test5 \r\n\r\nServerAddress         : 10.1.1.3\r\n \r\nAllUserConnection     : True \r\n\r\nGuid                  : {CF9F624F-D7DF-48BA-BD4B-D4E34AE05148} \r\n\r\nTunnelType            : L2tp \r\n\r\nAuthenticationMethod  : {Eap} \r\n\r\nEncryptionLevel       : Required\r\n \r\nL2tpIPsecAuth         : Certificate \r\n\r\nUseWinlogonCredential : False \r\n\r\nEapConfigXmlStream    : #document \r\n\r\nConnectionStatus      : Disconnected \r\n\r\nNapState              : NotConnected \r\n\r\nRememberCredential    : True \r\n\r\nSplitTunneling        : True"
+  description: |-
+    This command retrieves all the available VPN connections from the global phone book.
+  summary: ""
+- title: 'Example 3: Get a specific VPN connection from the global phone book'
+  code: "PS C:\\>Get-VpnConnection -Name \"Test3\" -AllUserConnection\r\n\r\nName                  : Test3 \r\n\r\nServerAddress         : 10.1.1.1 \r\n\r\nAllUserConnection     : True\r\n \r\nGuid                  : {76746D4E-D72A-467D-A11F-3D4D9075F50D}\r\n \r\nTunnelType            : Pptp \r\n\r\nAuthenticationMethod  : {MsChapv2} \r\n\r\nEncryptionLevel       : Required\r\n \r\nL2tpIPsecAuth         : \r\n\r\nUseWinlogonCredential : True \r\n\r\nEapConfigXmlStream    : \r\n\r\nConnectionStatus      : Disconnected\r\n \r\nNapState              : NotConnected \r\n\r\nRememberCredential    : True \r\n\r\nSplitTunneling        : True"
+  description: |-
+    This command retrieves the VPN connection named Test3 from the global phone book.
+  summary: ""
+- title: 'Example 4: Get multiple VPN connections'
+  code: |-
+    PS C:\>Get-VpnConnection -Name "Test3", "Test4", "test5" -AllUserConnection
+
+    Name                  : Test3 
+
+    ServerAddress         : 10.1.1.1 
+
+    AllUserConnection     : True 
+
+    Guid                  : {76746D4E-D72A-467D-A11F-3D4D9075F50D} 
+
+    TunnelType            : Pptp 
+
+    AuthenticationMethod  : {MsChapv2} 
+
+    EncryptionLevel       : Required 
+
+    L2tpIPsecAuth         : 
+
+    UseWinlogonCredential : True 
+
+    EapConfigXmlStream    : 
+
+    ConnectionStatus      : Disconnected 
+
+    NapState              : NotConnected 
+
+    RememberCredential    : True 
+
+    SplitTunneling        : True 
+
+    Name                  : Test4 
+
+    ServerAddress         : 10.1.1.2 
+
+    AllUserConnection     : True 
+
+    Guid                  : {1D423FF3-E3D4-404A-B052-DB9130656D29} 
+
+    TunnelType            : L2tp 
+
+    AuthenticationMethod  : {Eap} 
+
+    EncryptionLevel       : Required 
+
+    L2tpIPsecAuth         : Psk 
+
+    UseWinlogonCredential : False 
+
+    EapConfigXmlStream    : #document 
+
+    ConnectionStatus      : Disconnected 
+
+    NapState              : NotConnected 
+
+    RememberCredential    : True 
+
+    SplitTunneling        : True 
+
+    Name                  : test5 
+
+    ServerAddress         : 10.1.1.3 
+
+    AllUserConnection     : True 
+
+    Guid                  : {CF9F624F-D7DF-48BA-BD4B-D4E34AE05148} 
+
+    TunnelType            : L2tp 
+
+    AuthenticationMethod  : {Eap} 
+
+    EncryptionLevel       : Required 
+
+    L2tpIPsecAuth         : Certificate 
+
+    UseWinlogonCredential : False 
+
+    EapConfigXmlStream    : #document 
+
+    ConnectionStatus      : Disconnected 
+
+    NapState              : NotConnected 
+
+    RememberCredential    : True 
+
+    SplitTunneling        : True
+  description: |-
+    This command retrieves multiple specified VPN connections from the global phone book.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllUserConnection
+  description: |+
+    Indicates that the VPN connection is retrieved from the global phone book.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the VPN connection profile.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: VpnClient.Get-VpnConnection
+name: Get-VpnConnection
+description: |-
+  The **Get-VpnConnection** cmdlet retrieves the specified VPN connection profile and its properties.
+  If you do not specify a profile name, the cmdlet returns a list of all VPN connections in the phone book.
+metadata:
+  external help file: VpnClient_Cmdlets.xml
+  Module Name: VpnClient
+  online version: https://docs.microsoft.com/powershell/module/vpnclient/get-vpnconnection?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

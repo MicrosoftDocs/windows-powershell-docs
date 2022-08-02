@@ -1,0 +1,299 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the properties of the specified storage pool.
+module: Storage
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe one or more MSFT_StoragePool objects to the InputObject parameter.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-StoragePool
+  href: ./Get-StoragePool.yml
+- text: New-StoragePool
+  href: ./New-StoragePool.yml
+- text: Remove-StoragePool
+  href: ./Remove-StoragePool.yml
+syntaxes:
+- >-
+  Set-StoragePool [-AsJob] [-CimSession <CimSession[]>] [-ClearOnDeallocate <Boolean>]
+
+   [-IsPowerProtected <Boolean>] [-NewFriendlyName <String>] [-OtherUsageDescription <String>]
+
+   [-RetireMissingPhysicalDisks <RetireMissingPhysicalDisks>] [-ThinProvisioningAlertThresholds <UInt16[]>]
+
+   [-ThrottleLimit <Int32>] [-Usage <Usage>] -UniqueId <String>
+- >-
+  Set-StoragePool [-InputObject] <CimInstance[]> [-AsJob] [-CimSession <CimSession[]>] [-IsReadOnly <Boolean>]
+
+   [-ThrottleLimit <Int32>]
+- >-
+  Set-StoragePool [-FriendlyName] <String> [-AsJob] [-CimSession <CimSession[]>]
+
+   [-EnclosureAwareDefault <Boolean>] [-ProvisioningTypeDefault <ProvisioningType>]
+
+   [-ResiliencySettingNameDefault <String>] [-ThrottleLimit <Int32>]
+- >-
+  Set-StoragePool [-AsJob] [-CimSession <CimSession[]>] [-EnclosureAwareDefault <Boolean>]
+
+   [-ProvisioningTypeDefault <ProvisioningType>] [-ResiliencySettingNameDefault <String>]
+
+   [-ThrottleLimit <Int32>] -Name <String>
+- >-
+  Set-StoragePool [-AsJob] [-CimSession <CimSession[]>] [-ClearOnDeallocate <Boolean>]
+
+   [-IsPowerProtected <Boolean>] [-NewFriendlyName <String>] [-OtherUsageDescription <String>]
+
+   [-RetireMissingPhysicalDisks <RetireMissingPhysicalDisks>] [-ThinProvisioningAlertThresholds <UInt16[]>]
+
+   [-ThrottleLimit <Int32>] [-Usage <Usage>] -Name <String>
+- >-
+  Set-StoragePool [-FriendlyName] <String> [-AsJob] [-CimSession <CimSession[]>] [-IsReadOnly <Boolean>]
+
+   [-ThrottleLimit <Int32>]
+- >-
+  Set-StoragePool [-AsJob] [-CimSession <CimSession[]>] [-IsReadOnly <Boolean>] [-ThrottleLimit <Int32>]
+
+   -Name <String>
+- >-
+  Set-StoragePool [-AsJob] [-CimSession <CimSession[]>] [-IsReadOnly <Boolean>] [-ThrottleLimit <Int32>]
+
+   -UniqueId <String>
+- >-
+  Set-StoragePool [-InputObject] <CimInstance[]> [-AsJob] [-CimSession <CimSession[]>]
+
+   [-ClearOnDeallocate <Boolean>] [-IsPowerProtected <Boolean>] [-NewFriendlyName <String>]
+
+   [-OtherUsageDescription <String>] [-RetireMissingPhysicalDisks <RetireMissingPhysicalDisks>]
+
+   [-ThinProvisioningAlertThresholds <UInt16[]>] [-ThrottleLimit <Int32>] [-Usage <Usage>]
+- >-
+  Set-StoragePool [-AsJob] [-CimSession <CimSession[]>] [-EnclosureAwareDefault <Boolean>]
+
+   [-ProvisioningTypeDefault <ProvisioningType>] [-ResiliencySettingNameDefault <String>]
+
+   [-ThrottleLimit <Int32>] -UniqueId <String>
+- >-
+  Set-StoragePool [-InputObject] <CimInstance[]> [-AsJob] [-CimSession <CimSession[]>]
+
+   [-EnclosureAwareDefault <Boolean>] [-ProvisioningTypeDefault <ProvisioningType>]
+
+   [-ResiliencySettingNameDefault <String>] [-ThrottleLimit <Int32>]
+- >-
+  Set-StoragePool [-FriendlyName] <String> [-AsJob] [-CimSession <CimSession[]>] [-ClearOnDeallocate <Boolean>]
+
+   [-IsPowerProtected <Boolean>] [-NewFriendlyName <String>] [-OtherUsageDescription <String>]
+
+   [-RetireMissingPhysicalDisks <RetireMissingPhysicalDisks>] [-ThinProvisioningAlertThresholds <UInt16[]>]
+
+   [-ThrottleLimit <Int32>] [-Usage <Usage>]
+examples:
+- title: 'Example 1: Change the friendly name'
+  code: |-
+    PS C:\>Set-StoragePool -FriendlyName StoragePool -NewFriendlyName StoragePool2
+  description: |-
+    This example changes the friendly name of StoragePool to StoragePool2.
+  summary: ""
+- title: 'Example 2: Make a read-only storage pool writeable'
+  code: |-
+    PS C:\>Set-StoragePool -FriendlyName "Storage Pool 1" -IsReadOnly $False
+  description: |-
+    This example makes the storage pool named Storage Pool 1 writable when it is in a read-only state.
+  summary: ""
+- title: 'Example 3: Set the default resiliency and provisioning settings'
+  code: |-
+    PS C:\>Set-StoragePool -FriendlyName "Storage Pool 1" -ResiliencySettingsNameDefault Mirror -ProvisioningTypeDefault Thin
+  description: |-
+    This example makes any new virtual disks by default use the Mirror resiliency setting and thin provisioning.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ClearOnDeallocate
+  description: |+
+    Clears all blocks on the physical disks in the storage pool upon deallocation.
+    Clearing all blocks is more secure, but is much slower to deallocate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnclosureAwareDefault
+  description: |+
+    Specifies that the storage enclosure used by the storage pool supports SCSI Enclosure Services.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FriendlyName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the storage pool on which you want to set attributes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an object from the pipeline as input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsPowerProtected
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsReadOnly
+  description: |+
+    Sets the object to be read-only (`IsReadOnly $true`) or read-write (`IsReadOnly $false`).
+    **Note**: If the object is set to read-only (`IsReadOnly $true`), the object must be set to read-write (`IsReadOnly $false`) before using this cmdlet to set the **PartitionStyle** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the storage pool on which you want to set attributes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewFriendlyName
+  description: |+
+    Specifies the new friendly name for the storage pool.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OtherUsageDescription
+  description: |+
+    Specifies the OtherUsageDescription for the storage pool.
+
+  defaultValue: None
+  position: Named
+  aliases: NewOtherUsageDescription
+  parameterValueGroup: ""
+- type: <xref href="ProvisioningType" data-throw-if-not-resolved="False" />
+  name: ProvisioningTypeDefault
+  description: |+
+    Specifies the default type of provisioning to use for virtual disks created in the specified storage pool.
+    The acceptable values for this parameter are: **Fixed** or **Thin**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResiliencySettingNameDefault
+  description: |+
+    Specifies the default resiliency setting (also known as storage layout) to use for virtual disks the created in the specified storage pool.
+    The supported resiliency settings vary by storage subsystem.
+    Acceptable values for the Storage Spaces subsystem are Mirror, Parity, and Simple.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RetireMissingPhysicalDisks" data-throw-if-not-resolved="False" />
+  name: RetireMissingPhysicalDisks
+  description: |+
+    Specifies that Windows should set the Usage property of physical disks missing from a storage pool to Retired.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ThinProvisioningAlertThresholds
+  description: |+
+    Specifies how full a storage pool must get (in percent) before an alert is generated to add physical disks to the storage pool to support thinly provisioned virtual disks.
+
+  defaultValue: "70"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UniqueId
+  isRequired: true
+  description: |+
+    Specifies the UniqueID of the storage pool for which you want to set attributes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="Usage" data-throw-if-not-resolved="False" />
+  name: Usage
+  description: |+
+    Specifies the usage setting for the storage pool.
+    The acceptable values for this parameter are:Other, ReservedAsDeltaReplicaContainer, ReservedForComputerSystem, ReservedForLocalReplicationServices, ReservedForMigrationServices, ReservedForRemoteReplicationServices, ReservedForSparing, and Unrestricted.
+
+  defaultValue: None
+  position: Named
+  aliases: NewUsage
+  parameterValueGroup: ""
+uid: Storage.Set-StoragePool
+name: Set-StoragePool
+description: |-
+  The **Set-StoragePool** cmdlet modifies the properties of the specified storage pool.
+metadata:
+  external help file: Storage2_Cmdlets.xml
+  Module Name: Storage
+  online version: https://docs.microsoft.com/powershell/module/storage/set-storagepool?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

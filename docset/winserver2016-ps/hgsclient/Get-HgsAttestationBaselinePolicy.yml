@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generates an attestation baseline policy.
+module: HgsClient
+notes: ""
+outputs:
+- name: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+syntaxes:
+- Get-HgsAttestationBaselinePolicy -Path <String> [-Force] [-SkipValidation] [<CommonParameters>]
+- Get-HgsAttestationBaselinePolicy [-Console] [-SkipValidation] [<CommonParameters>]
+examples:
+- title: 'Example 1: Generate a baseline policy'
+  code: |-
+    PS C:\> Get-HgsAttestationBaselinePolicy -Path "C:\Logs\AttestationBaselinePolicy001" -Force
+  description: |-
+    This command generates a byte array that represents the baseline policy in the file C:\Logs\AttestationBaselinePolicy001.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Console
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet operates in console mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Indicates that this cmdlet overwrites an existing file that the **Output** object specifies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a file path.
+    This cmdlet writes the policy to the file that this parameter specifies.
+
+  defaultValue: None
+  position: Named
+  aliases: FilePath
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipValidation
+  description: |+
+    Indicates that this cmdlet skips validation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HgsClient.Get-HgsAttestationBaselinePolicy
+name: Get-HgsAttestationBaselinePolicy
+description: |-
+  The **Get-HgsAttestationBaselinePolicy** cmdlet generates an attestation baseline policy.
+  You can use the policy to configure the attestation service.
+
+  This cmdlet gets a byte array that represents the attestation baseline policy from the raw data of the last full boot from the Trusted Computing Group log of the Trusted Platform Module (TPM).
+
+  Be sure to run this cmdlet on a host that is known to have good configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.RemoteAttestation.Client.PowerShell.dll-Help.xml
+  Module Name: HgsClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsclient/get-hgsattestationbaselinepolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-HgsAttestationBaselinePolicy

@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a RADIUS client.
+module: NPS
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NpsRadiusClient
+  href: ./Get-NpsRadiusClient.yml
+- text: New-NpsRadiusClient
+  href: ./New-NpsRadiusClient.yml
+- text: Set-NpsRadiusClient
+  href: ./Set-NpsRadiusClient.yml
+syntaxes:
+- Remove-NpsRadiusClient [-Name] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a RADIUS client'
+  code: |-
+    PS C:\>Remove-NpsRadiusClient -Name "RadiusClient01"
+  description: |-
+    This command removes a RADIUS client named RadiusClient01.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the RADIUS client to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NPS.Remove-NpsRadiusClient
+name: Remove-NpsRadiusClient
+description: |-
+  The **Remove-NpsRadiusClient** cmdlet removes a Remote Authentication Dial-In User Service (RADIUS) client.
+  A RADIUS client uses a RADIUS server to manage authentication, authorization, and accounting requests that the client sends.
+  A RADIUS client can be an access server, such as a dial-up server or wireless access point, or a RADIUS proxy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NPS.Commands.dll-Help.xml
+  Module Name: NPS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nps/remove-npsradiusclient?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-NpsRadiusClient

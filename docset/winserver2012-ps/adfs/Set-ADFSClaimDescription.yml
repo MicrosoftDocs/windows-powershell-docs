@@ -1,0 +1,179 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the properties of an existing claim description.
+module: ADFS
+notes: |-
+  * All Set-* cmdlets have a positional parameter (at position 0) with a name that starts with Target*. This parameter defines the search criteria (and the parameter set). For example, Set-ADFSRelyingParty has the parameters TargetName, TargetIdentifierUri, and TargetRelyingParty. You can use only one of these Target* parameters to identify which RelyingParty will be modified. Because these parameters are positional, their name does not have be specified. Therefore, the following commands are identical in effect.
+
+  Changes the RelyingParty object whose name is RP1, setting its name to RP2 Set-ADFSRelyingParty -TargetName RP1Name -Name RP2Name  OR Set-ADFSRelyingParty RP1Name -Name RP2Name
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    A class structure for representing a claim description object for the Federation Service.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ADFSClaimDescription
+  href: ./Add-ADFSClaimDescription.yml
+- text: Get-ADFSClaimDescription
+  href: ./Get-ADFSClaimDescription.yml
+- text: Remove-ADFSClaimDescription
+  href: ./Remove-ADFSClaimDescription.yml
+syntaxes:
+- >-
+  Set-ADFSClaimDescription [-IsAccepted <Boolean>] [-IsOffered <Boolean>] [-IsRequired <Boolean>]
+
+   [-Notes <String>] [-Name <String>] [-ClaimType <String>] [-TargetName] <String> [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-ADFSClaimDescription [-IsAccepted <Boolean>] [-IsOffered <Boolean>] [-IsRequired <Boolean>]
+
+   [-Notes <String>] [-Name <String>] [-ClaimType <String>] [-TargetClaimType] <String> [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-ADFSClaimDescription [-IsAccepted <Boolean>] [-IsOffered <Boolean>] [-IsRequired <Boolean>]
+
+   [-Notes <String>] [-Name <String>] [-ClaimType <String>] [-TargetClaimDescription] <ClaimDescription>
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>Set-ADFSClaimDescription -TargetName "Role" -Name "New Role Claim Name"
+  description: |-
+    Description
+
+    -----------
+
+    Sets a new name for the "Role" claim description.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClaimType
+  description: |+
+    Specifies the claim type URI of the claim.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsAccepted
+  description: |+
+    Specifies that the claim should be published in federation metadata as a claim that is accepted by the federation service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsOffered
+  description: |+
+    Specifies that the claim should be published in federation metadata as a claim that is offered by the federation service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsRequired
+  description: |+
+    Specifies that the claim should be published in federation metadata as a claim that is required by the federation service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the friendly name of this claim.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notes
+  description: |+
+    Specifies any notes for this claim description.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Passes an object to the pipeline.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClaimDescription" data-throw-if-not-resolved="False" />
+  name: TargetClaimDescription
+  isRequired: true
+  description: |+
+    Specifies the claim description that will be modified by the cmdlet.
+    This value is typically taken from the pipeline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetClaimType
+  isRequired: true
+  description: |+
+    Specifies the claim type of the claim description that will be modified by the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the friendly name of the claim description that will be modified by the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-ADFSClaimDescription
+name: Set-ADFSClaimDescription
+description: |-
+  The Set-ADFSClaimDescription cmdlet sets properties on an existing AD FS claim description.
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsclaimdescription?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

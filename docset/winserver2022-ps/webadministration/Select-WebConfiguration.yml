@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns IIS configuration objects.
+module: WebAdministration
+notes: ""
+links:
+- text: Add-WebConfiguration
+  href: ./Add-WebConfiguration.yml
+- text: Backup-WebConfiguration
+  href: ./Backup-WebConfiguration.yml
+- text: Clear-WebConfiguration
+  href: ./Clear-WebConfiguration.yml
+- text: Get-WebConfiguration
+  href: ./Get-WebConfiguration.yml
+- text: Restore-WebConfiguration
+  href: ./Restore-WebConfiguration.yml
+- text: Set-WebConfiguration
+  href: ./Set-WebConfiguration.yml
+syntaxes:
+- Select-WebConfiguration [-Filter] <String[]> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get configuration settings'
+  code: |-
+    IIS:\> Select-WebConfiguration -Filter "get-config(MACHINE/WEBROOT/APPHOST/testSite)/appSettings"
+  description: |-
+    This command returns the configuration collection from the appSettings location.
+    If the specified location does not exist, the cmdlet returns an error.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Filter
+  isRequired: true
+  description: |+
+    Specifies an XPath filter expression.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Select-WebConfiguration
+name: Select-WebConfiguration
+description: |-
+  The **Select-WebConfiguration** cmdlet returns information about Internet Information Services (IIS) configuration objects.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/select-webconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Select-WebConfiguration

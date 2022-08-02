@@ -1,0 +1,60 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports a guardian that contains public keys.
+module: HgsClient
+notes: ""
+links:
+- text: Get-HgsGuardian
+  href: ./Get-HgsGuardian.yml
+- text: Import-HgsGuardian
+  href: ./Import-HgsGuardian.yml
+- text: New-HgsGuardian
+  href: ./New-HgsGuardian.yml
+- text: Remove-HgsGuardian
+  href: ./Remove-HgsGuardian.yml
+syntaxes:
+- Export-HgsGuardian [-InputObject] <CimInstance> [-Path] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Export a guardian'
+  code: |-
+    PS C:\> Get-HgsGuardian -Name "Guardian11" | Export-HGsGuardian -Path "C:\LocalHGSFiles\Guardian11.xml"
+  description: |-
+    This command uses the **Get-HgsGuardian** cmdlet to get the guardian named Guardian11, and then passes the object to the current cmdlet by using the pipeline operator.
+    That cmdlet exports the guardian to the specified file.
+  summary: ""
+parameters:
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Guardian
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path to the file to write an XML representation of the guardian.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: FilePath
+  parameterValueGroup: ""
+uid: HgsClient.Export-HgsGuardian
+name: Export-HgsGuardian
+description: |-
+  The **Export-HgsGuardian** cmdlet exports a guardian that contains public keys to an .xml file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: HgsClient-help.xml
+  Module Name: HgsClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsclient/export-hgsguardian?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-HgsGuardian

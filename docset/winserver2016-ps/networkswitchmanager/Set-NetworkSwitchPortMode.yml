@@ -1,0 +1,172 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the port mode on a network switch.
+module: NetworkSwitchManager
+notes: ""
+inputs:
+- name: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    You can pipe an array of **CimInstance** objects that correspond to a network switch port to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Get-NetworkSwitchEthernetPort
+  href: ./Get-NetworkSwitchEthernetPort.yml
+syntaxes:
+- >-
+  Set-NetworkSwitchPortMode -CimSession <CimSession> [-AccessMode] -VlanID <Int32> -InputObject <CimInstance[]>
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-NetworkSwitchPortMode -CimSession <CimSession> [-RouteMode] -IpAddress <String> -SubnetAddress <String>
+
+   -InputObject <CimInstance[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-NetworkSwitchPortMode -CimSession <CimSession> [-TrunkMode] -VlanIDs <UInt16[]>
+
+   -InputObject <CimInstance[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set a port to trunk mode'
+  code: |-
+    PS C:\>$Session = New-CimSession -ComputerName "NetworkSwitch08"
+    PS C:\> Set-NetworkSwitchPortMode -CimSession $Session -TrunkMode -VlanIDs 2,17,22
+  description: |-
+    The first command creates a **CimSession** for a network switch, and then stores it in the **$Session** variable.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+    The second command sets NetworkSwitch08 to use trunk mode by using the **$Session** object.
+    The command specifies IDs for three VLANs.
+  summary: ""
+- title: 'Example 2: Set a port to route mode'
+  code: |-
+    PS C:\>Set-NetworkSwitchPortMode -CimSession $Session -IpAddress "10.14.1.1" -RouteMode -SubnetAddress "255.255.0.0"
+  description: |-
+    This command sets the port to route mode.
+    The command specifies its IP address and the subnet mask.
+    The command includes a **CimSession**, similar to the first example.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AccessMode
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet sets the port to access mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  isRequired: true
+  description: |+
+    Specifies the **CimSession** that this cmdlet uses to connect to the network switch.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input object that is used in a pipeline command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IpAddress
+  isRequired: true
+  description: |+
+    Specifies an IP address to set for the port in route mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RouteMode
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet sets the port to route mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SubnetAddress
+  isRequired: true
+  description: |+
+    Specifies the subnet mask to set for the port in route mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TrunkMode
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet sets the port to trunk mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: VlanID
+  isRequired: true
+  description: |+
+    Specifies the virtual local area network (VLAN) ID of the VLAN to set for the port in access mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VlanIDs
+  isRequired: true
+  description: |+
+    Specifies the VLAN IDs of the VLANs to set for the port in trunk mode.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkSwitchManager.Set-NetworkSwitchPortMode
+name: Set-NetworkSwitchPortMode
+description: |-
+  The **Set-NetworkSwitchPortMode** cmdlet sets the port mode to access, trunk or route on a network switch.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: NetworkSwitchEthernetPort-help.xml
+  Module Name: NetworkSwitchManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkswitchmanager/set-networkswitchportmode?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NetworkSwitchPortMode

@@ -1,0 +1,260 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about the Network Load Balancing (NLB) driver on the local machine.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ClientExceptionRecord" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ClusterSettings" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ConvergenceHistoryRecord" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.DescriptorRecord" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.DriverInfo" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ExtendedAffinityRecord" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NlbCluster
+  href: ./Get-NlbCluster.yml
+- text: Get-NlbClusterNode
+  href: ./Get-NlbClusterNode.yml
+syntaxes:
+- Get-NlbClusterDriverInfo [-InterfaceName <String>] [-Params] [<CommonParameters>]
+- >-
+  Get-NlbClusterDriverInfo [-InterfaceName <String>] -Filter <Protocol> -ClientIP <IPAddress>
+
+   [-ClientPort <Int32>] -ServerIP <IPAddress> [-ServerPort <Int32>] [-Flags <Flags>] [<CommonParameters>]
+- Get-NlbClusterDriverInfo [-InterfaceName <String>] [-ConvergenceHistory] [<CommonParameters>]
+- Get-NlbClusterDriverInfo [-InterfaceName <String>] [-ExtendedAffinityList] [<CommonParameters>]
+- Get-NlbClusterDriverInfo [-InterfaceName <String>] [-ExtendedAffinityExceptionList] [<CommonParameters>]
+- Get-NlbClusterDriverInfo [-InterfaceName <String>] [-OpenConnections] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information about the NLB driver configuration'
+  code: |-
+    PS C:\>Get-NlbClusterDriverInfo
+    FullyQualifiedDomainName : cluster1.contoso.com 
+    ParametersVersion        : 6 
+    EffectiveNlbVersion      : 513 
+    HostId                   : 2 
+    ClusterName              : cluster1 
+    ClusterIPAddress         : 2001:4898:e8:3018:bd82:dde1:6615:7b0 
+    ClusterMacAddress        : 02-BF-FB-7E-A2-D1 
+    AliveMsgPeriod           : 1000 
+    MaxConnectionDescriptors : 262144 
+    IcmpFilteringEnabled     : False 
+    InitialHostState         : Started 
+    CurrentHostState         : Started 
+    PersistedHostStates      : True
+  description: |-
+    This command gets information about the NLB driver configuration.
+  summary: ""
+- title: 'Example 2: Get the history of convergence for the local node'
+  code: |-
+    PS C:\>Get-NlbClusterDriverInfo -ConvergenceHistory
+    Time                       FromState                  ToState 
+    ----                       ---------                  ------- 
+    11/5/2008 10:55:27 PM      StablePhase2               Converged 
+    11/5/2008 10:55:26 PM      ConvergingPhase2           StablePhase2 
+    11/5/2008 10:55:26 PM      StablePhase1               ConvergingPhase2 
+    11/5/2008 10:55:20 PM      ConvergingPhase1           StablePhase1 
+    11/5/2008 10:55:17 PM      Unknown                    ConvergingPhase1
+  description: |-
+    This command gets the history of convergence for the local node.
+  summary: ""
+- title: 'Example 3: Declare whether traffic in the given pattern is accepted on the local node'
+  code: |-
+    PS C:\>Get-NlbClusterDriverInfo -Filter TCP -ServerIP 2.53.4.222 -ServerPort 5001 -ClientIP 2.53.4.5 -ClientPort 5001
+    Result 
+    ------ 
+    ACCEPT_UNCONDITIONAL_OWNERSHIP
+  description: |-
+    This command declares whether traffic in the given pattern is accepted on the local node or not.
+  summary: ""
+- title: 'Example 4: Enumerate the client IP addresses that are on the extended affinity list on the cluster node'
+  code: |-
+    PS C:\>Get-NlbClusterDriverInfo -ExtendedAffinityList
+    IPAddress           References          VirtualIPAddress    StartPort 
+    ---------           ----------          ----------------    --------- 
+    2.53.4.5            0                   All                 0 
+    2.53.4.6            0                   All                 0 
+    2.53.4.7            1                   All                 0
+  description: |-
+    This command enumerates the client IP addresses that are on the extended affinity list on this cluster node.
+    This applies to port rules that have extended affinity timeout enabled.
+    The cmdlet also displays the number of active connections for each client.
+  summary: ""
+- title: 'Example 5: Enumerate the client IP addresses that are on the extended affinity exception list'
+  code: |-
+    PS C:\>Get-NlbClusterDriverInfo -ExtendedAffinityExceptionList
+    IPAddress           HostId              VirtualIPAddress    StartPort 
+    ---------           ------              ----------------    --------- 
+    2.53.4.6            2                   All                 0
+  description: |-
+    This command enumerates the client IP addresses that are on the extended affinity exception list.
+    This applies to port rules that have extended affinity timeout enabled.
+    Traffic from clients on this list will be picked up by another cluster node that has the host ID listed.
+  summary: ""
+- title: 'Example 6: Enumerate all open connections on the cluster node'
+  code: |-
+    PS C:\>Get-NlbClusterDriverInfo -OpenConnections
+    SourceIPAddress     SourcePort          DestinationIPAddres DestinationPorts
+
+    ---------------     ----------          ------------------- --------------- 
+    2.53.4.5            64945               2.53.4.222          5001 
+    2.53.4.15           64854               2.53.4.222          80
+  description: |-
+    This command enumerates all open connections on this cluster node.
+    This is useful to run when the draining operation takes a long time and the administrator wants to know which connections are on the node.
+  summary: ""
+parameters:
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: ClientIP
+  isRequired: true
+  description: |+
+    Specifies the connection client IP address that is used to check whether the current cluster node accepts or drops the traffic.
+
+  defaultValue: None
+  position: Named
+  aliases: CIP
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ClientPort
+  description: |+
+    Specifies the connection tuple client port that is used to check whether the current cluster node accepts or drops the traffic.
+    The acceptable values for this parameter are: 0 through 65535.
+
+  defaultValue: None
+  position: Named
+  aliases: CPT
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ConvergenceHistory
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets the history of convergences between the cluster nodes.
+
+  defaultValue: None
+  position: Named
+  aliases: History
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExtendedAffinityExceptionList
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets the extended affinity exception list on this cluster node.
+
+  defaultValue: None
+  position: Named
+  aliases: ExceptionList
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExtendedAffinityList
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets the extended affinity list on this cluster node.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Protocol" data-throw-if-not-resolved="False" />
+  name: Filter
+  isRequired: true
+  description: |+
+    Specifies whether or not a certain traffic pattern is picked by this cluster node.
+    The parameter specifies the protocol that is used to check whether the current cluster node accepts or drops the traffic.
+    The acceptable values for this parameter are:
+
+    - Gre
+    - Icmp
+    - Ipsec
+    - Pptp
+    - Tcp
+    - Udp
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Tcp, Pptp, Gre, Udp, Ipsec, Icmp
+- type: <xref href="Flags" data-throw-if-not-resolved="False" />
+  name: Flags
+  description: |+
+    Specifies the type of packet that is used to check whether the current cluster node accepts or drops the traffic.
+    The acceptable values for this parameter are:
+
+    - Fin
+    - Rst
+    - Syn
+
+  defaultValue: None
+  position: Named
+  aliases: FG
+  parameterValueGroup: Syn, Fin, Rst
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OpenConnections
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet gets the list of open connections to the cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: OpenConnection
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Params
+  description: |+
+    Indicates that the cmdlet gets the list information about the NLB driver on this node.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: ServerIP
+  isRequired: true
+  description: |+
+    Specifies the connection tuple server IP address used to check whether the current cluster node accepts or drops the traffic.
+
+  defaultValue: None
+  position: Named
+  aliases: SIP
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ServerPort
+  description: |+
+    Specifies the connection tuple server port used to check whether the current cluster node accepts or drops the traffic.
+    The acceptable values for this parameter are: 0 through 65535.
+
+  defaultValue: None
+  position: Named
+  aliases: SPT
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Get-NlbClusterDriverInfo
+name: Get-NlbClusterDriverInfo
+description: |-
+  The **Get-NlbClusterDriverInfo** cmdlet gets information about the Network Load Balancing (NLB) driver on the local machine.
+  This includes information about IP addresses, ports, convergence history, connections, extended affinity status, and protocols.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/get-nlbclusterdriverinfo?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NlbClusterDriverInfo

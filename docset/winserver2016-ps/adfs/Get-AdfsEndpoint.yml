@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves an endpoint in AD FS.
+module: ADFS
+notes: |-
+  * Endpoints provide access to the federation server functionality of AD FS, such as token issuance and the publication of federation metadata. Depending on the type of endpoint, you can enable or disable the endpoint or control whether the endpoint is published to Web Application Proxy.
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    System.Uri[]
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.Endpoint" data-throw-if-not-resolved="False" />
+  description: |-
+    AddressPath           string
+    ClientCredentialType  string
+    Enabled               bool
+    FullUrl               uri
+    Protocol              string
+    Proxy                 bool
+    SecurityMode          string
+    Version               string
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.Endpoint" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns class structure that represents the endpoints for the Federation Service.
+links:
+- text: Disable-AdfsEndpoint
+  href: ./Disable-AdfsEndpoint.yml
+- text: Enable-AdfsEndpoint
+  href: ./Enable-AdfsEndpoint.yml
+- text: Set-AdfsEndpoint
+  href: ./Set-AdfsEndpoint.yml
+syntaxes:
+- Get-AdfsEndpoint [[-AddressPath] <String[]>] [<CommonParameters>]
+- Get-AdfsEndpoint [-FullUrl] <Uri[]> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get an endpoint'
+  code: |-
+    PS C:\> Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/Windows"
+  description: |-
+    This command gets the WS-Trust 1.3 endpoint.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressPath
+  description: |+
+    Specifies an array of address paths that do not include the AD FS service name.
+    The cmdlet gets endpoints that correspond to the paths that you specify.
+    An example of such a path is /adfs/portal/updatepassword.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FullUrl
+  isRequired: true
+  description: |+
+    Specifies the full URL of the endpoint to retrieve.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsEndpoint
+name: Get-AdfsEndpoint
+description: |-
+  The **Get-AdfsEndpoint** cmdlet retrieves a specified endpoint from Active Directory Federation Services (AD FS).
+  The collection of **AdfsEndpoint** objects is a list of all the supported endpoints that are on the server.
+  You can use this list to view the configuration of endpoints and enable or disable them.
+  To see the full list of endpoints, use this cmdlet with no parameters.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsendpoint?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsEndpoint

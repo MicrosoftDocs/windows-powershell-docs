@@ -1,0 +1,135 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the virtual hard disk object associated with a virtual hard disk.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Vhd.PowerShell.VirtualHardDisk" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-VHD [-Path] <String[]> [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [<CommonParameters>]
+- >-
+  Get-VHD [-DiskNumber] <UInt32> [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [<CommonParameters>]
+- >-
+  Get-VHD [-VMId] <Guid[]> [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-VHD -Path C:\test\testvhdx.vhdx
+  description: |-
+    Gets the virtual hard disk where the path to the virtual hard disk file is `C:\test\testvhdx.vhdx`.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-VHD -DiskNumber 6
+  description: |-
+    Gets the virtual hard disk attached to the system with disk number 6.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-VM -VMName TestVM | Select-Object -Property VMId | Get-VHD
+  description: |-
+    Gets the virtual hard disk objects associated with virtual machine TestVM, using the pipeline feature for the VMId parameter.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Get-VM -VMName TestVM | Select-Object -Property VMId | Get-VHD
+  description: |-
+    Gets the virtual hard disk objects associated with virtual machine TestVM using the pipeline feature for the path parameter.
+  summary: ""
+- title: Example 5
+  code: |-
+    PS C:\> Get-ChildItem -Path C:\test -Recurse -Include *.vhd, *.vhdx, *.vhds, *.avhd, *.avhdx | Get-VHD
+  description: |-
+    Gets the virtual hard disk object for all the virtual hard disk files that are contained in the specified directory and its subdirectories.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which a virtual hard disk is to be retrieved.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DiskNumber
+  isRequired: true
+  description: |+
+    Specifies the disk number associated with the virtual hard disk to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Number
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path to the virtual hard disk file of the virtual hard disk to be retrieved.
+    If a filename or relative path is specified, the path is calculated relative to the current working directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: FullName
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMId
+  isRequired: true
+  description: |+
+    Specifies the virtual machine identifier of the virtual machine whose virtual hard disks are to be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Id
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VHD
+name: Get-VHD
+description: |-
+  The **Get-VHD** cmdlet gets the virtual hard disk object associated with a virtual hard disk.
+
+  > [!Note]
+  > When the VHD is in use (for example by a VM or mounted in the OS) and it is on shared storage, the **Get-VHD** cmdlet can only access it from the host that is using it. Any other server trying to run the **Get-VHD** cmdlet will get an error that it is in use.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vhd?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VHD

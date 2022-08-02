@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new organization information object.
+module: ADFS
+notes: |-
+  * You can publish this information by using the **Set-AdfsProperties** cmdlet.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.Organization" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a class structure that represents the organization object for the AD FS.
+links:
+- text: Get-AdfsProperties
+  href: ./Get-AdfsProperties.yml
+- text: Set-AdfsProperties
+  href: ./Set-AdfsProperties.yml
+syntaxes:
+- New-AdfsOrganization -DisplayName <String> -OrganizationUrl <Uri> [-Name <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a new organization'
+  code: |-
+    PS C:\> New-AdfsOrganization -DisplayName "Fabrikam" -OrganizationUrl http://fabrikam.com
+  description: |-
+    This command adds a new organization named Fabrikam in the AD FS.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    Specifies the display name of the organization.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the organization.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: OrganizationUrl
+  isRequired: true
+  description: |+
+    Specifies the URL of the organization.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.New-AdfsOrganization
+name: New-AdfsOrganization
+description: |-
+  The **New-AdfsOrganization** cmdlet creates an information object for an organization in Active Directory Federation Services (AD FS) 2.0.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/new-adfsorganization?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-AdfsOrganization

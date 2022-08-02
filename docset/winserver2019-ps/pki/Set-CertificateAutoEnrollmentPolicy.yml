@@ -1,0 +1,177 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets local certificate auto-enrollment policy.
+module: pki
+notes: ""
+inputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.AutoEnrollmentPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    The **AutoEnrollmentPolicy** object combines certificate auto-enrollment policy settings and exposes them as properties.
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.AutoEnrollmentPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    The **AutoEnrollmentPolicy** object combines certificate auto-enrollment policy settings and exposes them as properties.
+    Each property can be modified and piped into this cmdlet to be applied.
+links:
+- text: Get-CertificateAutoEnrollmentPolicy
+  href: ./Get-CertificateAutoEnrollmentPolicy.yml
+syntaxes:
+- >-
+  Set-CertificateAutoEnrollmentPolicy [-StoreName <String[]>] -PolicyState <PolicySetting>
+
+   [-ExpirationPercentage <Int32>] [-EnableTemplateCheck] [-EnableMyStoreManagement]
+
+   [-EnableBalloonNotifications] -context <Context> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Set-CertificateAutoEnrollmentPolicy [-EnableAll] -context <Context> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Set-CertificateAutoEnrollmentPolicy -PolicyState Enabled -EnableMyStoreManagement -EnableTemplateCheck -Context User
+  description: |-
+    This example enables local user certificate auto-enrollment policy with the Renew expired certificates, update pending certificates, and remove revoked certificates and Update certificates that use certificates templates options enabled.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Set-CertificateAutoEnrollmentPolicy -PolicyState NotConfigured -Context Machine
+  description: |-
+    This example sets local computer certificate auto-enrollment policy to Not Configured.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\>Set-CertificateAutoEnrollmentPolicy -ExpirationPercentage 15 -PolicyState Enabled -EnableExpirationNotification -Context Machine -StoreName "Remote Desktop"
+  description: |-
+    This example enables local computer certificate auto-enrollment policy with the Expiration notifications option enabled and set to 15 percent of the certificate lifetime.
+    This cmdlet also configures the Remote Desktop certificate store as an additional store to be monitored for certificate expiration.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    The example in detail.
+    PS C:\>Set-CertificateAutoEnrollmentPolicy -PolicyState Enabled -EnableMyStoreManagement -EnableTemplateCheck -EnableExpirationNotification -ExpirationPercentage 10 -Context User
+
+
+    The concise version of the same example.
+    PS C:\>Set-CertificateAutoEnrollmentPolicy -EnableAll -Context User
+  description: |-
+    This example performs the same task in two ways.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Context" data-throw-if-not-resolved="False" />
+  name: context
+  isRequired: true
+  description: |+
+    Specifies whether to set certificate auto-enrollment policy for the user or computer context.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Machine, User
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableAll
+  isRequired: true
+  description: |+
+    Enables all of the auto-enrollment policy settings and sets the value for the expiration percentage to 10 percent.
+    If this parameter is enabled, then only the **Context** parameter is required and all other parameters are optional.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableBalloonNotifications
+  description: |+
+    Enables the Expiration balloon notifications option for the certificate auto-enrollment policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableMyStoreManagement
+  description: |+
+    Enables the Renew expired certificates, update pending certificates, and remove revoked certificates option for the certificate auto-enrollment policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableTemplateCheck
+  description: |+
+    Verifies that existing certificates are based on the most recent version of a certificate template and updates them if they are not.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ExpirationPercentage
+  description: |+
+    Sets the percentage of the certificate lifetime at which close-to-expiration events are logged and auto-enrollment notifications start to appear.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PolicySetting" data-throw-if-not-resolved="False" />
+  name: PolicyState
+  isRequired: true
+  description: |+
+    Specifies the state of the certificate auto-enrollment policy configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NotConfigured, Enabled, Disabled
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: StoreName
+  description: |+
+    Specifies additional comma separated certificate stores to monitor for certificates that have expired or are expiring.
+    The MY store is always monitored.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: pki.Set-CertificateAutoEnrollmentPolicy
+name: Set-CertificateAutoEnrollmentPolicy
+description: |-
+  The **Set-CertificateAutoEnrollmentPolicy** cmdlet configures local certificate auto-enrollment policy for a user or computer.
+  The auto-enrollment policy can also be configured by using the Local Security Policy console.
+  These settings can be found in the following location. 
+
+   -- `\Security Settings\Public Key Policies\Certificate Services Client - Auto-Enrollment`.
+
+  Delegation may be required when using this cmdlet with Windows PowerShell® remoting and changing user configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  Module Name: pki
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/pki/set-certificateautoenrollmentpolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-CertificateAutoEnrollmentPolicy

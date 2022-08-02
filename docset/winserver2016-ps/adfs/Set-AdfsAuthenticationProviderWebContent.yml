@@ -1,0 +1,136 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a display name and description.
+module: ADFS
+notes: ""
+links:
+- text: Get-AdfsAuthenticationProviderWebContent
+  href: ./Get-AdfsAuthenticationProviderWebContent.yml
+- text: Remove-AdfsAuthenticationProviderWebContent
+  href: ./Remove-AdfsAuthenticationProviderWebContent.yml
+syntaxes:
+- >-
+  Set-AdfsAuthenticationProviderWebContent [-DisplayName <String>] [-Description <String>]
+
+   [-UserNotProvisionedErrorMessage <String>] [-PassThru] [[-Locale] <CultureInfo>] -Name <String> [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsAuthenticationProviderWebContent [-DisplayName <String>] [-Description <String>]
+
+   [-UserNotProvisionedErrorMessage <String>] [-PassThru] [-TargetWebContent] <AdfsAuthProviderWebContent>
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the authentication provider web content'
+  code: |-
+    PS C:\> Set-AdfsAuthenticationProviderWebContent -Name MultiFactorAuthentication -DisplayName "User Friendly Name for Multifactor Authentication" -Description "Description of your choice"
+  description: |-
+    This command modifies the display name and description for the authentication provider that the user sees in the Active Directory Federation Services (AD FS) logon pages.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description.
+    The cmdlet modifies the provider web content with the description that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Specifies a display name.
+    The cmdlet modifies the provider web content with the display name that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+  name: Locale
+  description: |+
+    Specifies a locale.
+    The cmdlet modifies the provider web content associated with the locale that you specify.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the authentication provider whose web content is being modified.
+    To find a list of available authentication providers, run the command `Get-AdfsAuthenticationProvider`.
+    Each returned provider has a **Name** property, and that value can be used with this parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AdfsAuthProviderWebContent" data-throw-if-not-resolved="False" />
+  name: TargetWebContent
+  isRequired: true
+  description: |+
+    Specifies an **AdfsAuthenticationProviderWebContent** object that is used by the pipeline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserNotProvisionedErrorMessage
+  description: |+
+    Specifies an error message for a user not provisioned result.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsAuthenticationProviderWebContent
+name: Set-AdfsAuthenticationProviderWebContent
+description: |-
+  The **Set-AdfsAuthenticationProviderWebContent** cmdlet modifies a display name and description.
+  Use this cmdlet to customize the name of the authentication provider to a user friendly and intuitive name.
+  You can choose to specify a locale, or use an empty string for the *Locale* parameter to specify an invariant locale.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsauthenticationproviderwebcontent?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsAuthenticationProviderWebContent

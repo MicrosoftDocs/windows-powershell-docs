@@ -1,0 +1,144 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Controls specific properties of an object in a failover cluster, such as a resource, a group, or a network.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNetwork" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNetworkInterface" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterParameter" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResourceType" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ClusterParameter
+  href: ./Get-ClusterParameter.yml
+syntaxes:
+- Set-ClusterParameter [-InputObject <PSObject>] [-Create] [-Delete] [-Cluster <String>] [<CommonParameters>]
+- >-
+  Set-ClusterParameter [-InputObject <PSObject>] [[-Name] <String>] [[-Value] <PSObject>] [-Create] [-Delete]
+
+   [-Cluster <String>] [<CommonParameters>]
+- >-
+  Set-ClusterParameter [-InputObject <PSObject>] [[-Multiple] <Hashtable>] [-Create] [-Delete]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterResource -Name cluster1FS | Set-ClusterParameter -Name HostRecordTTL -Value 300
+  description: |-
+    This example configures the clustered resource called cluster1FS on the local cluster, by setting the value of HostRecordTTL to 300.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterResource -Name "Cluster IP Address" | Set-ClusterParameter -Multiple @{"Address"="172.24.22.168";"Network"="Cluster Network 2";"EnableDhcp"=1}
+  description: |-
+    This example uses the **Multiple** parameter to configure the clustered resource called Cluster IP Address, by setting the **Address**, **Network**, and **EnableDhcp** parameters simultaneously.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> $res = Get-ClusterResource -Name "IP Address"
+
+
+
+    PS C:\> $param1 = New-Object -ComObject Microsoft.FailoverClusters.PowerShell.ClusterParameter -Property $res,Address,10.55.88.46
+
+
+
+    PS C:\> $param2 = New-Object -ComObject Microsoft.FailoverClusters.PowerShell.ClusterParameter -Property $res,SubnetMask,255.0.0.0
+
+
+
+    PS C:\> $params = $param1,$param2
+
+
+
+    PS C:\> $params | Set-ClusterParameter
+  description: |-
+    This example configures the clustered resource called IP Address to use a new static IP.
+    Because the new address and subnet mask are required, both parameters must be passed to this cmdlet together.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Create
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Delete
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Multiple
+  description: ""
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: ""
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Value
+  description: ""
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Set-ClusterParameter
+name: Set-ClusterParameter
+description: |-
+  The **Set-ClusterParameter** cmdlet controls specific properties of an object in a failover cluster, such as a resource, a group, or a network. 
+
+   -- For a disk resource, you can set the disk signature or GUID of a disk, and turn maintenance on or off for that disk. 
+
+   -- For a Network Name resource, you can set DNS-related information about the resource. 
+
+   -- For an IP address resource, you can set DHCP-related information about the IP Address resource. 
+
+   -- For resources used by virtual machines, you can set details about the settings for the virtual machines.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterparameter?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-ClusterParameter

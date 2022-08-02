@@ -1,0 +1,175 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a property to an IIS configuration section.
+module: WebAdministration
+notes: ""
+links:
+- text: Get-WebConfigurationProperty
+  href: ./Get-WebConfigurationProperty.yml
+- text: Remove-WebConfigurationProperty
+  href: ./Remove-WebConfigurationProperty.yml
+- text: Set-WebConfigurationProperty
+  href: ./Set-WebConfigurationProperty.yml
+syntaxes:
+- >-
+  Add-WebConfigurationProperty -Name <String> [-Type <String>] [-Value <PSObject>] [-Clr <String>]
+
+   [-AtElement <Hashtable>] [-AtIndex <Int32>] [-AtName <String>] [-Force] [-Location <String[]>]
+
+   [-Filter] <String[]> [[-PSPath] <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Adding a default document'
+  code: |-
+    IIS:\> Add-WebConfigurationProperty -Filter "//defaultDocument/files" -PSPath "IIS:\sites\Default Web Site" -AtIndex 0 -Name "Collection" -Value "new-index.html"
+  description: |-
+    This command adds a new default document named new-index.html to the top of the list of existing documents.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: AtElement
+  description: |+
+    Specifies the element at which this cmdlet inserts the value.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: AtIndex
+  description: |+
+    Specifies the index at which this cmdlet inserts the property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AtName
+  description: |+
+    Specifies the property name at which this cmdlet inserts the property.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Clr
+  description: |+
+    Specifies the version of the .NET Framework in the form vn.n, such as v4.0 or v2.0.
+    The default is v4.0.
+    Specify this parameter only when the *PSPath* parameter is set to either Machine or Machine/Webroot.
+    If *PSPath* is not set to one of these values and the *Clr* parameter is set, Windows PowerShell ignores the value of *Clr* and returns a warning.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Filter
+  isRequired: true
+  description: |+
+    Specifies the IIS configuration section or an XPath query that returns a configuration element.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the property to be written.
+    If a lock exists, the property is written at a level in the configuration above the lock.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Location
+  description: |+
+    Specifies the location of the configuration property setting.
+    Location tags are frequently used for configuration settings that must be set more precisely than per application or per virtual directory.
+    For example, a setting for a particular file or directory could use a location tag.
+    Location tags are also used if a particular section is locked.
+    In such an instance, the configuration system would have to use a location tag in one of the parent configuration files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the IIS configuration property to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies the configuration path.
+    This path can be either an IIS configuration path in the format computer name/webroot/apphost, or the IIS module path in the format IIS:\sites\Default Web Site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the type of property that this cmdlet adds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Value
+  description: |+
+    Specifies the value of the configuration property that this cmdlet adds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Add-WebConfigurationProperty
+name: Add-WebConfigurationProperty
+description: |-
+  The **Add-WebConfigurationProperty** cmdlet adds a property to an Internet Information Services (IIS) configuration section.
+  Globbing is supported.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/add-webconfigurationproperty?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-WebConfigurationProperty

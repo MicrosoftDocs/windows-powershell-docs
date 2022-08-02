@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Restores a configuration.
+module: DeviceHealthAttestation
+notes: ""
+links:
+- text: Backup-DHASConfiguration
+  href: ./Backup-DHASConfiguration.yml
+syntaxes:
+- Restore-DHASConfiguration [-Path] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the configuration file to restore.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DeviceHealthAttestation.Restore-DHASConfiguration
+name: Restore-DHASConfiguration
+description: |-
+  The **Restore-DHASConfiguration** cmdlet restores the Device Health Attestation service configuration from the specified file.
+
+  You must have administrator rights to run this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.DeviceHealthAttestation.PowerShell.dll-Help.xml
+  Module Name: DeviceHealthAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/devicehealthattestation/restore-dhasconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Restore-DHASConfiguration

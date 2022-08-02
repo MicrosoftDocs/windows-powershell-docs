@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an existing IIS configuration backup.
+module: WebAdministration
+notes: ""
+links:
+- text: Backup-WebConfiguration
+  href: ./Backup-WebConfiguration.yml
+- text: Get-WebConfigurationBackup
+  href: ./Get-WebConfigurationBackup.yml
+syntaxes:
+- Remove-WebConfigurationBackup [[-Name] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add and remove an IIS configuration backup'
+  code: |-
+    IIS:\> Backup-WebConfiguration -Name "MyNewBackup" 
+    IIS:\> Get-WebConfigurationBackup -Name "MyNewBackup" 
+    IIS:\> sleep 5 
+    IIS:\> Remove-WebConfigurationBackup -Name "MyNewBackup"
+  description: |-
+    This example creates a configuration backup, lists the backup created, sleeps for 5 seconds, and then removes the backup.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the configuration backup that this cmdlet removes.
+    This cmdlet deletes the folder with this name from the $env:Windir\system32\inetsrv\backup folder.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Remove-WebConfigurationBackup
+name: Remove-WebConfigurationBackup
+description: |-
+  The **Remove-WebConfigurationBackup** cmdlet removes an Internet Information Services (IIS) configuration backup that was created by using the Backup-WebConfiguration cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/remove-webconfigurationbackup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WebConfigurationBackup

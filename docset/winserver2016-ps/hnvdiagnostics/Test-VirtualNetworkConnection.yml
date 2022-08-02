@@ -1,0 +1,187 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests a virtual network connection.
+module: HNVDiagnostics
+notes: ""
+syntaxes:
+- >-
+  Test-VirtualNetworkConnection [-OperationId] <String> [[-HostName] <String>] [[-MgmtIp] <String>]
+
+   [[-Creds] <PSCredential>] [[-VMName] <String>] [[-VMNetworkAdapterName] <String>]
+
+   [[-VMNetworkAdapterProfileId] <String>] [-IsSender] <Boolean> [-SenderCAIP] <String> [-SenderVSID] <Int32>
+
+   [-ListenerCAIP] <String> [-ListenerVSID] <Int32> [-SequenceNumber] <Int32> [[-PayloadSize] <Int32>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Test a virtual network connection by sending'
+  code: |-
+    PS C:\> $cred = Get-Credential
+    PS C:\> Test-VirtualNetworkConnection -OperationId "27" -HostName "host1.corp.com" -MgmtIP "192.10.10.11" -Creds $creds -VMName "TennantVM1" -VMNetworkAdapterName "Tennant1VMAdapter1" -IsSender $True -SenderCAIP "10.123.176.108" -SenderVSID 6001 -ListenerCAIP "10.123.176.108" -ListenerVSID 6001 -SequenceNumber 33 -PayloadSize 1500
+  description: |-
+    The first command gets the credentials for the current user, and then stores them in the $cred variable.
+
+    The second command tests the specified virtual network connection.
+  summary: ""
+- title: 'Example 2: Test a virtual network connection by receiving'
+  code: |-
+    PS C:\> $password = ConvertTo-SecureString -String "password" -AsPlainText -Force
+    PS C:\> $cred = New-Object PSCredential -ArgumentList (".\administrator", $password) 
+    PS C:\> Test-VirtualNetworkConnection -OperationId "27" -HostName "host2.corp.com" -MgmtIP "192.10.10.12" -Creds $cred -VMName "TennantVM2" -VMNetworkAdapterName "Tennant1VMAdapter2" -SenderCAIP "10.123.176.108" -SenderVSID 6001 -ListenerCAIP "10.123.176.109" -ListenerVSID 6001
+  description: |-
+    The first command converts a plain text password to a secure string, and then stores it in the $password variable.
+
+    The second command creates a **PSCredential** object, and then stores it in the $cred variable.
+
+    The third command tests the specified virtual network connection.
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Creds
+  description: |+
+    Specifies the credentials for Network Controller.
+    Specify this parameter for Kerberos deployments.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the host on which to run the test.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsSender
+  isRequired: true
+  description: |+
+    Indicates whether this operation is for the sender or receiver.
+    One of each is required.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ListenerCAIP
+  isRequired: true
+  description: |+
+    Specifies the CAIP of the listener.
+
+  defaultValue: None
+  position: "10"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ListenerVSID
+  isRequired: true
+  description: |+
+    Specifies the VSID on which to initiate the test.
+
+  defaultValue: None
+  position: "11"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MgmtIp
+  description: |+
+    Specifies the IP of the management host on which to initiate the test.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OperationId
+  isRequired: true
+  description: |+
+    Specifies a unique ID for the test.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PayloadSize
+  description: |+
+    Specifies the size of the payload to carry in ICMP messages.
+
+  defaultValue: None
+  position: "13"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SenderCAIP
+  isRequired: true
+  description: |+
+    Specifies the CAIP of the sender.
+
+  defaultValue: None
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SenderVSID
+  isRequired: true
+  description: |+
+    Specifies the VSID of the sender.
+
+  defaultValue: None
+  position: "9"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SequenceNumber
+  isRequired: true
+  description: |+
+    Specifies the sequence number to use in the ICMP packets.
+
+  defaultValue: None
+  position: "12"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMName
+  description: |+
+    Specifies the name of a virtual machine.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapterName
+  description: |+
+    Specifies the name of the virtual machine with the desired CAIP.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapterProfileId
+  description: |+
+    Specifies the name of the adapter for the desired CAIP.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HNVDiagnostics.Test-VirtualNetworkConnection
+name: Test-VirtualNetworkConnection
+description: |-
+  The **Test-VirtualNetworkConnection** cmdlet tests connectivity over a virtual network by sending Internet Control Message Protocol (ICMP) packets between two Customer Address IP addresses (CAIPs).
+  The two nodes can reside on the same virtual subnet ID (VSID), or they can share a VSID.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Test-VirtualNetworkConnection-help.xml
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/test-virtualnetworkconnection?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-VirtualNetworkConnection

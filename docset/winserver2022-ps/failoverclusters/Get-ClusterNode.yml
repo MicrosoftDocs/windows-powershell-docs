@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about one or more nodes, or servers, in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterNode
+  href: ./Add-ClusterNode.yml
+- text: Get-ClusterResource
+  href: ./Get-ClusterResource.yml
+- text: Remove-ClusterNode
+  href: ./Remove-ClusterNode.yml
+- text: Resume-ClusterNode
+  href: ./Resume-ClusterNode.yml
+- text: Start-ClusterNode
+  href: ./Start-ClusterNode.yml
+- text: Stop-ClusterNode
+  href: ./Stop-ClusterNode.yml
+- text: Suspend-ClusterNode
+  href: ./Suspend-ClusterNode.yml
+syntaxes:
+- Get-ClusterNode [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-ClusterNode
+    Name           ID    State 
+    ----           --    ----- 
+    node1           1     Up 
+    node2           2     Up 
+    node3           3     Up 
+    node4           4     Up
+  description: |-
+    This example displays the name, id, and state of each node, or server, in the local cluster.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterNode -Cluster cluster1
+    Name           ID    State 
+    ----           --    ----- 
+    node1           1     Up 
+    node2           2     Up
+  description: |-
+    This example displays the name, id, and state of each node, or server, in the cluster named cluster1.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Get-ClusterNode -Name node1 | Get-ClusterResource
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    Cluster Disk 1      Online              Cluster Group       Physical Disk 
+    Cluster IP Address  Online              Cluster Group       IP Address 
+    Cluster IP Addre... Online              Cluster Group       IPv6 Address 
+    Cluster Name        Online              Cluster Group       Network Name 
+    File Share Witness  Offline             Cluster Group       File Share Witness
+  description: |-
+    This example lists all cluster resources that are currently owned by node named node1 on the local cluster.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to enumerate cluster nodes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster node to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterNode
+name: Get-ClusterNode
+description: |-
+  The **Get-ClusterNode** cmdlet gets information about one or more nodes, or servers, in a failover cluster.
+
+  Use this cmdlet to obtain information about the node status.
+  To see the resources currently owned by a particular node, specify that node in this cmdlet and then pipe the results through the **Get-ClusterResource** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterNode

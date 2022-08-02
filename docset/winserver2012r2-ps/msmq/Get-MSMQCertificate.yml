@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns certificates registered in Active Directory Domain Services.
+module: MSMQ
+notes: ""
+links:
+- text: Enable-MsmqCertificate
+  href: ./Enable-MSMQCertificate.yml
+- text: Remove-MsmqCertificate
+  href: ./Remove-MsmqCertificate.yml
+syntaxes:
+- Get-MsmqCertificate [[-ComputerName] <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-MsmqCertificate
+  description: ""
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-MsmqCertificate -ComputerName "Contoso27"
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a host or virtual server.
+    This cmdlet gets the certificates of the current user for the specified host or virtual server.
+    If you do not specify this parameter, this cmdlet gets the certificates of the current user for all hosts or virtual servers.
+    The default value is an empty string.
+
+  defaultValue: None
+  position: "0"
+  aliases: cn
+  parameterValueGroup: ""
+uid: MSMQ.Get-MSMQCertificate
+name: Get-MSMQCertificate
+description: |-
+  The **Get-MsmqCertificate** cmdlet returns an array of **System.Security.Cryptography.X509Certificates.X509Certificate** objects.
+  Each object represents a personal certificate that is currently registered in Active Directory® Domain Services.
+metadata:
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/msmq/get-msmqcertificate?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-MSMQCertificate

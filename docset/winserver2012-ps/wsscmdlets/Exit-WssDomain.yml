@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a server from a domain.
+module: WssCmdlets
+notes: ""
+links:
+- text: Join-WssDomain
+  href: ./Join-WssDomain.yml
+- text: Get-WssDomainNameConfiguration
+  href: ./Get-WssDomainNameConfiguration.yml
+- text: Set-WssDomainNameConfiguration
+  href: ./Set-WssDomainNameConfiguration.yml
+syntaxes:
+- Exit-WssDomain [-Force] [-Password <String>] [-UserName <String>]
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Specifies the password of a user account with permission to leave the domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  description: |+
+    Specifies the login name of a user account with permission to remove the server from the domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Exit-WssDomain
+name: Exit-WssDomain
+description: |-
+  The **Exit-WssDomain** cmdlet removes the server from the domain to which it is currently joined.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/exit-wssdomain?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

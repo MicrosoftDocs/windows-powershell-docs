@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the office_365_2 domain configuration.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.O365Integration.O365DomainConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a class that represents the domain configuration for office_365_2
+    When output: office_365_2 integration is enabled
+    AvailableDomains Property System.Collections.ObjectModel.ReadOnlyCollection\<O365Domain\>
+    PrimaryDomainName Property System.String
+    CustomDomainName Property System.String
+    CustomDomainStatus Property Microsoft.WindowsServerSolutions.O365Integration.O365DomainStatus
+links:
+- text: Set-O365Domain
+  href: ./Set-O365Domain.yml
+- text: Remove-O365Domain
+  href: ./Remove-O365Domain.yml
+syntaxes:
+- Get-O365DomainConfiguration [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the domain configuration'
+  code: |-
+    PS C:\> Get-O365DomainConfiguration
+  description: |-
+    This command gets the domain configuration for office_365_2.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+uid: WSSCmdlets.Get-O365DomainConfiguration
+name: Get-O365DomainConfiguration
+description: |-
+  The **Get-O365DomainConfiguration** cmdlet gets the domain configuration for office_365_1.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-o365domainconfiguration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-O365DomainConfiguration

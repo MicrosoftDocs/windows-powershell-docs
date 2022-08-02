@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a package to a computer running the App-V client.
+module: AppvClient
+notes: ""
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvPackage" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-AppvClientPackage
+  href: ./Get-AppvClientPackage.yml
+- text: Mount-AppvClientPackage
+  href: ./Mount-AppvClientPackage.yml
+- text: Publish-AppvClientPackage
+  href: ./Publish-AppvClientPackage.yml
+- text: Remove-AppvClientPackage
+  href: ./Remove-AppvClientPackage.yml
+- text: Repair-AppvClientPackage
+  href: ./Repair-AppvClientPackage.yml
+- text: Set-AppvClientPackage
+  href: ./Set-AppvClientPackage.yml
+- text: Stop-AppvClientPackage
+  href: ./Stop-AppvClientPackage.yml
+- text: Unpublish-AppvClientPackage
+  href: ./Unpublish-AppvClientPackage.yml
+syntaxes:
+- Add-AppvClientPackage [-Path] <String> [[-DynamicDeploymentConfiguration] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a package to the client'
+  code: |-
+    PS C:\> Add-AppvClientPackage -Path "http://MyServer/content/package.APPV"
+  description: |-
+    This command adds a new package to the client computer.
+    If the package is a different version of an already existing package, the App-V agent adds this new version, but does not modify any existing versions.
+    Since no computer policy is provided, the package receives the default computer policy.
+  summary: ""
+- title: 'Example 2: Add a package with a configuration file'
+  code: |-
+    PS C:\> Add-AppvClientPackage -Path "http://MyServer/content/package.appv" -DynamicDeploymentConfiguration "C:\MyConfigfiles\DynamicDeploymentConfig.xml"
+  description: |-
+    This command adds a package with a Dynamic Deployment Configuration file.
+  summary: ""
+- title: 'Example 3: Add a package to the client and store the result'
+  code: |-
+    PS C:\> $Package = Add-AppvClientPackage -Path "http://MyServer/content/package.APPV"
+  description: |-
+    This command adds a new package to the client and assigns the resulting **AppvClientPackage** object to the variable $Package.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DynamicDeploymentConfiguration
+  description: |+
+    Specifies the path of a dynamic deployment configuration file for the specified App-V package to be added.
+    The cmdlet uses the dynamic deployment configuration file to override the default configuration provided in the package manifest.
+
+    If you do not specify this parameter, the App-V client assigns the default computer policy to the App-V package to be added.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the location of the .appv file that contains the package to be added.
+    This value can be a local directory, a network directory, or an HTTP or HTTPS URL.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: PSPath
+  parameterValueGroup: ""
+uid: AppvClient.Add-AppvClientPackage
+name: Add-AppvClientPackage
+description: |-
+  The **Add-AppvClientPackage** cmdlet adds a new package to a computer that runs the Microsoft Application Virtualization (App-V) client.
+  You can also upgrade an existing package running on a computer that runs the App-V client.
+  The newly added package or package version is registered with the App-V client.
+
+  If the package already exists on the computer, but the package to be added is a different version, the new version is added.
+  Existing versions remain unchanged.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/add-appvclientpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-AppvClientPackage

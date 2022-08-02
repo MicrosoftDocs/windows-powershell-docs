@@ -1,0 +1,172 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a mapped identity.
+module: NFS
+notes: ""
+outputs:
+- name: <xref href="Nothing" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NfsMappedIdentity
+  href: ./Get-NfsMappedIdentity.yml
+- text: Get-NfsMappingStore
+  href: ./Get-NfsMappingStore.yml
+- text: Install-NfsMappingStore
+  href: ./Install-NfsMappingStore.yml
+- text: New-NfsMappedIdentity
+  href: ./New-NfsMappedIdentity.yml
+- text: Remove-NfsMappedIdentity
+  href: ./Remove-NfsMappedIdentity.yml
+- text: Resolve-NfsMappedIdentity
+  href: ./Resolve-NfsMappedIdentity.yml
+- text: Set-NfsMappingStore
+  href: ./Set-NfsMappingStore.yml
+- text: Test-NfsMappedIdentity
+  href: ./Test-NfsMappedIdentity.yml
+- text: Test-NfsMappingStore
+  href: ./Test-NfsMappingStore.yml
+syntaxes:
+- >-
+  Set-NfsMappedIdentity [-MappingStore <MappingStoreType>] [-Server <String>] [-LdapNamingContext <String>]
+
+   -UserName <String> [-UserIdentifier <Int32>] [-GroupIdentifier <Int32>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-NfsMappedIdentity [-MappingStore <MappingStoreType>] [-Server <String>] [-LdapNamingContext <String>]
+
+   -GroupName <String> -GroupIdentifier <Int32> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify a mapped identity that is stored in an AD LDS instance'
+  code: |-
+    PS C:\> Set-NfsMappedIdentity -MappingStore "LDAP" -GroupName "Administrators" -GroupIdentifier 600
+  description: |-
+    This command modifies a mapped identity that is stored in a configured AD LDS instance and that corresponds to the Windows group account Administrators.
+    The command resets the associated group identifier to 600.
+  summary: ""
+- title: 'Example 2: Modify a mapped identity that is stored in an Active Directory domain'
+  code: |-
+    PS C:\> Set-NfsMappedIdentity -Store "AD" -Server "Contoso"-UserName "JCool" -UserIdentifier 501 -GroupIdentifier 600
+  description: |-
+    This command modifies a mapped identity that is stored in a specified Active Directory domain and that corresponds to the user account JCool.
+    The command sets the user identifier to 501 and the group identifier to 600, and it updates the group membership of the user account JCool to make it a member of a group account that has GID 600.
+  summary: ""
+- title: 'Example 3: Modify a mapped identity that is stored in a configured LDAP store'
+  code: |-
+    PS C:\> Set-NfsMappedIdentity -Store "LDAP" -UserName "JCool" -UserIdentifier 501 -GroupIdentifier 600 -Server "MyLdapServer:389" -LdapNamingContext "CN=NFS,DC=NFS"
+  description: |-
+    This command modifies a mapped identity that is stored in the LDAP store on a specified server that is named MyLdapServer and that corresponds to the user account Contoso\JCool.
+    It sets the user identifier to 501 and the group identifier to 600.
+    The command also adds the user account JCool to GID 600.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: GroupIdentifier
+  isRequired: true
+  description: |+
+    Specifies the group identifier of a mapped identity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: GroupId, gid
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupName
+  isRequired: true
+  description: |+
+    Specifies the SAMAccountName of a Windows group account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: group
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LdapNamingContext
+  description: |+
+    Specifies the Lightweight Directory Access Protocol (LDAP) naming context (directory partition) of an NFS identity mapping store.
+    You can use this parameter to search for mapped identities in the specified naming context.
+
+  defaultValue: DefaultNamingContext
+  pipelineInput: true
+  position: Named
+  aliases: dn
+  parameterValueGroup: ""
+- type: <xref href="MappingStoreType" data-throw-if-not-resolved="False" />
+  name: MappingStore
+  description: |+
+    Specifies the type of identity mapping store in which the **Set-NfsMappedIdentity** cmdlet updates a mapped identity.
+    When this parameter is not specified, the **Set-NfsMappedIdentity** cmdlet gets the store configuration settings from the NFS server.
+    Valid values are AD and LDAP.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: store
+  parameterValueGroup: Ad, Ldap, Mapfiles
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the LDAP server name of a store that NFS server uses.
+    This can be a domain name, Active Directory Lightweight Directory Services (AD LDS) server name, or LDAP server name.
+    When this parameter is not specified, the cmdlet tries to connect to either the LDAP store on the local computer at port 389 when *MappingStore* is LDAP, or the Active Directory domain of the computer when *MappingStore* is Active Directory.
+
+  defaultValue: Localhost:389
+  pipelineInput: true
+  position: Named
+  aliases: LdapServer, ADDomainName
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: UserIdentifier
+  description: |+
+    Specifies a UID to assign to a user account that the *UserName* parameter specifies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: UserId, uid
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  isRequired: true
+  description: |+
+    Specifies the SAMAccountName of a user account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: user
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NFS.Set-NfsMappedIdentity
+name: Set-NfsMappedIdentity
+description: |-
+  The **Set-NfsMappedIdentity** cmdlet modifies a mapped identity that is stored in the Network File System (NFS) server mapping store.
+  The cmdlet also updates the group membership of the Windows user account to match its assigned group identifier (GID).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FileServices.Powershell.NFS.dll-Help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/set-nfsmappedidentity?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NfsMappedIdentity

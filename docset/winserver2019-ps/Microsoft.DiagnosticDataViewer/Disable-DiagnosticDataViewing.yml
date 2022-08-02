@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables diagnostic data viewing.
+module: Microsoft.DiagnosticDataViewer
+notes: |-
+  Requires Windows 10 version 17134 (1803) or higher
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Disable-DiagnosticDataViewing [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Disable-DiagnosticDataViewing
+  description: |-
+    Disable Diagnostic Data Viewing.
+  summary: ""
+uid: Microsoft.DiagnosticDataViewer.Disable-DiagnosticDataViewing
+name: Disable-DiagnosticDataViewing
+description: |-
+  This cmdlet disables diagnostic data viewing.
+  Once diagnostic data viewing is disabled, this tool will throw an error.
+  Note that disabling diagnostic data viewing will also delete the available history of diagnostic data on the device.
+metadata:
+  external help file: DDVCmdlets.dll-Help.xml
+  Module Name: Microsoft.DiagnosticDataViewer
+  online version: https://docs.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/disable-diagnosticdataviewing?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-DiagnosticDataViewing

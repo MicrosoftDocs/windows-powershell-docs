@@ -1,0 +1,228 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the basic network adapter properties.
+module: NetAdapter
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetAdapter" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Disable-NetAdapter
+  href: ./Disable-NetAdapter.yml
+- text: Enable-NetAdapter
+  href: ./Enable-NetAdapter.yml
+- text: Get-NetAdapter
+  href: ./Get-NetAdapter.yml
+- text: Rename-NetAdapter
+  href: ./Rename-NetAdapter.yml
+- text: Restart-NetAdapter
+  href: ./Restart-NetAdapter.yml
+- text: Set-NetAdapterAdvancedProperty
+  href: ./Set-NetAdapterAdvancedProperty.yml
+- text: Set-NetAdapterLso
+  href: ./Set-NetAdapterLso.yml
+- text: Set-NetAdapterRss
+  href: ./Set-NetAdapterRss.yml
+syntaxes:
+- >-
+  Set-NetAdapter [-Name] <String[]> [-IncludeHidden] [-VlanID <UInt16>] [-MacAddress <String>] [-NoRestart]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-NetAdapter -InterfaceDescription <String[]> [-IncludeHidden] [-VlanID <UInt16>] [-MacAddress <String>]
+
+   [-NoRestart] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-NetAdapter -InputObject <CimInstance[]> [-VlanID <UInt16>] [-MacAddress <String>] [-NoRestart]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the specified network adapter to a different VLAN ID'
+  code: |-
+    PS C:\> Set-NetAdapter -Name "Ethernet 1" -VlanID 10
+  description: |-
+    This command sets the network adapter named Ethernet 1 to have VLAN ID 10.
+  summary: ""
+- title: 'Example 2: Set the MAC address of the specified network adapter'
+  code: |-
+    PS C:\> Set-NetAdapter -Name "Ethernet 1" -MacAddress "00-10-18-57-1B-0D"
+  description: |-
+    This command sets the MAC address of the network adapter named Ethernet 1.
+  summary: ""
+- title: 'Example 3: Set the MAC address for network adapters matching an interface description with a specific pattern'
+  code: |-
+    PS C:\> Set-NetAdapter -InterfaceDescription "B*2" -MacAddress "00-10-18-57-1B-0D"
+  description: |-
+    This command sets the MAC address of a network adapter with the interface description matching the pattern B*2.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+    Use this parameter to run commands that take a long time to complete. 
+     The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+    You can continue to work in the session while the job completes.
+    To manage the job, use the `*-Job` cmdlets.
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+     For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeHidden
+  description: |+
+    Indicates that the cmdlet includes both visible and hidden network adapters in the operation.
+    By default only visible network adapters are included.
+    If a wildcard character is used in identifying a network adapter and this parameter has been specified, then the wildcard string is matched against both hidden and visible network adapters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceDescription
+  isRequired: true
+  description: |+
+    Specifies an array of network adapter interface descriptions.
+    For a physical network adapter this is typically the name of the vendor of the network adapter followed by a part number and description, such as `Contoso 12345 Gigabit Network Device`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ifDesc
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MacAddress
+  description: |+
+    Specifies the current MAC address of the network adapter.
+    Dashes are optional as part of the input.
+    Not all network adapters support setting the MAC address.
+    The address passed in is also saved in the network addresses property without dashes.
+
+  defaultValue: None
+  position: Named
+  aliases: LinkLayerAddress
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of network adapter names.
+
+  defaultValue: None
+  position: "0"
+  aliases: ifAlias, InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRestart
+  description: |+
+    Indicates that the cmdlet does not restart the network adapter after completing the operation.
+    Many advanced properties require restarting the network adapter before the new settings take effect.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: VlanID
+  description: |+
+    Specifies the VLAN ID of the network adapter.
+    Not all network adapters support setting the VLAN ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetAdapter.Set-NetAdapter
+name: Set-NetAdapter
+description: |-
+  The **Set-NetAdapter** cmdlet sets the basic properties of a network adapter such as virtual LAN (VLAN) identifier (ID) and MAC address.
+  These changes could disrupt proper networking functionality.
+  Other network adapter properties may be set by using a cmdlet such as the Set-NetAdapterRss, Set-NetAdapterLso, or Set-NetAdapterAdvancedProperty cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetAdapter.cmdletDefinition.cdxml-help.xml
+  Module Name: NetAdapter
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/netadapter/set-netadapter?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NetAdapter

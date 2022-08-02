@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the backup schedule from a scheduled backup policy.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssBackupSchedule
+  href: ./Get-WssBackupSchedule.yml
+- text: Remove-WssBackupSchedule
+  href: ./Remove-WssBackupSchedule.yml
+syntaxes:
+- Get-WssBackupSchedule [-BackupPolicy] <ScheduledBackupPolicy>
+examples:
+- title: 'Example 1: Get a backup schedule from a scheduled backup policy'
+  code: |-
+    PS C:\>$ContosoBUPolicy25 = Get-WssBackupPolicy PS C:\> Get-WssBackupSchedule -BackupPolicy $ContosoBUPolicy25
+  description: |-
+    This example gets the backup schedule from a scheduled backup policy.
+
+    The first command gets the backup policy for the computer and stores the result in the **$ContosoBUPolicy25** variable
+
+    The second command gets the backup schedule from the scheduled backup policy stored in $ContosoBUPolicy25$ContosoBUSched25.
+  summary: ""
+parameters:
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies the scheduled backup policy from which  to get the schedule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Get-WssBackupSchedule
+name: Get-WssBackupSchedule
+description: |-
+  The **Get-WssBackupSchedule** cmdlet gets the backup schedule from a scheduled backup policy.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssbackupschedule?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

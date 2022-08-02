@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the Host Guardian Service on the local node to the uninitialized state.
+module: HgsServer
+notes: ""
+links:
+- text: HGS Server Cmdlets
+  href: ./index.yml
+- text: Initialize-HgsServer
+  href: ./Initialize-HgsServer.yml
+syntaxes:
+- Clear-HgsServer [[-ClusterName] <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Clear all cluster initialization settings from the local node'
+  code: |-
+    PS C:\> Clear-HgsServer
+  description: |-
+    This command returns the HGS Server on the local node to a clean state to prepare it for the **Initialize-HgsServer** command.
+  summary: ""
+- title: 'Example 2: Clear all cluster initialization settings from the local node without confirmation'
+  code: |-
+    PS C:\> Clear-HgsServer -Force -Confirm:$False
+  description: |-
+    This command returns the HGS Server on the local node to a clean state to prepare it for the **Initialize-HgsServer** command and does not prompt for confirmation.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterName
+  description: |+
+    Specifies a cluster name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsServer.Clear-HgsServer
+name: Clear-HgsServer
+description: |-
+  The **Clear-HgsServer** cmdlet removes a local node from the Host Guardian Service (HGS).
+
+  This cmdlet makes the following infrastructure component changes on the additional HGS node: 
+
+  - Unregisters the Attestation service web application with the IIS service.
+  - Unregisters the Key Protection service web application with the IIS service.
+  - Disables Just Enough Administration on the local node.
+  - Removes the local node from the existing failover cluster.
+
+  This cmdlet makes the following infrastructure components changes on the last HGS node: 
+
+  - Unregisters the Attestation service web application with the IIS service.
+  - Unregisters the Key Protection service web application with the IIS service.
+  - Removes the Distributed Network Name resource corresponding to the Host Guardian Service name.
+  - Disables Just Enough Administration on the local node.
+  - Destroys the cluster on the local node.
+
+  For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: HgsServer-help.xml
+  Module Name: HgsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsserver/clear-hgsserver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-HgsServer

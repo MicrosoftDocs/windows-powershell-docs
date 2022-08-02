@@ -1,0 +1,220 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the IPv6 option values for one or more IPv6 options either for a specific reserved IP, scope or, server level.
+module: DhcpServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4OptionDefinition" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Policy" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Reservation" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv4Scope" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/DHCP/DhcpServerv6OptionValue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Remove-DhcpServerv6OptionValue
+  href: ./Remove-DhcpServerv6OptionValue.yml
+- text: Set-DhcpServerv6OptionValue
+  href: ./Set-DhcpServerv6OptionValue.yml
+syntaxes:
+- >-
+  Get-DhcpServerv6OptionValue [-ComputerName <String>] [-VendorClass <String>] [[-Prefix] <IPAddress>]
+
+   [-ReservedIP <IPAddress>] [-UserClass <String>] [[-OptionId] <UInt32[]>] [-All] [-Brief]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Get-DhcpServerv6OptionValue -ComputerName dhcpserver.contoso.com
+  description: |-
+    This example gets all of the standard DHCPv6 option values, non-class specific, configured at the server level.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> Get-DhcpServerv6OptionValue -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020::
+  description: |-
+    This example gets all of the standard DHCPv6 option values, non-class specific, configured for the specified scope.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    PS C:\> Get-DhcpServerv6OptionValue -ComputerName dhcpserver.contoso.com -ReservedIP 2001:4898:7020:1020::5
+  description: |-
+    This example gets all of the standard DHCPv6 option values, non-class specific, configured for the specified reservation.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    PS C:\> Get-DhcpServerv6OptionValue -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020:: -VendorClass MSUCClient
+  description: |-
+    This example gets all of the vendor class specific DHCPv6 option values configured on the specified scope for the specified vendor class.
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    PS C:\> Get-DhcpServerv6OptionValue -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020:: -OptionId 23
+  description: |-
+    This example gets the DHCPv6 option value configured on the specified scope for the specified option identifier.
+  summary: ""
+- title: EXAMPLE 6
+  code: |-
+    PS C:\> Get-DhcpServerv6OptionValue -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020:: -All
+  description: |-
+    This example gets all of the DHCPv6 option values configured on the specified scope.
+    The DHCPv6 option values that are returned include the standard as well as vendor class or user class specific options.
+  summary: ""
+- title: EXAMPLE 7
+  code: |-
+    PS C:\> Get-DhcpServerv6OptionValue -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020:: -Brief
+  description: |-
+    This example gets all of the standard DHCPv6 option values configured on the specified scope.
+    The object that is returned does not contain the name of the option.
+    The **Brief** parameter improves the performance of this cmdlet by not requesting the name of the option from the DHCP server service.
+  summary: ""
+- title: EXAMPLE 8
+  code: |-
+    PS C:\> Get-DhcpServerv6OptionValue -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020:: -UserClass LabComputer
+  description: |-
+    This example gets all of the user class specific DHCPv6 option values configured on the specified scope for the specified user class.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: "Gets the option values for a scope, server, or reservation.\r\nOption values can include vendor class and user class specific. \r\n                         \r\nIf only this parameter is specified, then this cmdlet will get all of the option values for the specified scope, reservation, or server. \r\n                         \r\nIf the **OptionId** parameter and this parameter are specified, then option values for the specified option ID for all of the vendor classes and user classes will be returned. \r\n                         \r\nIf the **VendorClass** parameter and this parameter are specified, then all of the option values for the specified vendor class including those for any user class would be returned. \r\n                         \r\nIf the **UserClass** parameter and this parameter are specified, then all of the option values for the specified user class including any vendor specific options would be returned.\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Brief
+  description: |+
+    Specifies that the name of the option is not returned in the option value object.
+    This parameter improves the performance of this cmdlet by not requesting the name of the option from the Dynamic Host Configuration Protocol (DHCP) server service.
+    For repeatedly fetching a large number of option values with this cmdlet, use of this parameter is recommended.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the DNS name, or IPv4 or IPv6 address, of the target computer running the DHCP server service.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OptionId
+  description: |+
+    Specifies the numerical identifier of the options for which one or more values are being requested.
+    If this parameter is not specified, then all option values configured are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: Prefix
+  description: |+
+    Specifies the IPv6 subnet prefix of the scope for which the option values are being requested.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: ReservedIP
+  description: |+
+    Specifies the reserved IPv6 address for which the option values are being requested.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: IPAddress
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserClass
+  description: |+
+    Specifies that the option values for the specified user class are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VendorClass
+  description: |+
+    Specifies that the option values for the specified vendor class are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DhcpServer.Get-DhcpServerv6OptionValue
+name: Get-DhcpServerv6OptionValue
+description: |-
+  The **Get-DhcpServerv6OptionValue** cmdlet returns the IPv6 option values for one or more IPv6 options either for a specific reserved IP, scope, or server level.
+  The option identifier (ID) can be a standard option or for a specified vendor class.
+  If the **OptionId** parameter is not specified, then all option values at the requested level, such as reservation, scope, server, are returned.
+
+  If the **ReservedIP** parameter is specified, then the option values set at the reservation level are returned.
+  If the **Prefix** parameter is specified, then the option values set at the specified scope level are returned.
+  If neither the **Prefix** nor the **ReservedIP** parameter is specified, then the option values set at the server level are returned.
+
+  If neither the **VendorClass** nor the **UserClass** parameter is specified, then this cmdlet returns the standard option values.
+metadata:
+  external help file: PS_DhcpServerV6OptionValue_v1.0.0.cdxml-help.xml
+  Module Name: DhcpServer
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/dhcpserver/get-dhcpserverv6optionvalue?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DhcpServerv6OptionValue

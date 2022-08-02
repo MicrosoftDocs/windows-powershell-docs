@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Terminates the enrollment of an AD RMS server with the Microsoft Federation Gateway.
+module: ADRMSAdmin
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Install-RmsMfgEnrollment
+  href: ./Install-RmsMfgEnrollment.yml
+syntaxes:
+- >-
+  Uninstall-RmsMfgEnrollment [-Force] [-GetDefaultCertificate] [-CertificateThumbprint <String>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Terminate enrollment to the Microsoft Federation Gateway with a specified thumbprint'
+  code: |-
+    PS C:\> Uninstall-RmsMfgEnrollment -CertificateThumbprint "a909502dd82ae41433e6f83886b00d4277a32a7b"
+  description: |-
+    This command removes support for Microsoft Federation Gateway from the AD RMS server using the specified certificate thumbprint.
+  summary: ""
+- title: 'Example 2: Terminate enrollment with the default certificate'
+  code: |-
+    PS C:\> Uninstall-RmsMfgEnrollment -GetDefaultCertificate
+  description: |-
+    This command removes support for Microsoft Federation Gateway from the AD RMS server by retrieving and using the certificate thumbprint hash for the AD RMS default certificate.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies a string containing the thumbprint hash of the certificate that was used to enroll AD RMS with the Microsoft Federation Gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the unenrollment process to be completed, even if there are issues.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GetDefaultCertificate
+  description: |+
+    Indicates that the thumbprint hash of the AD RMS default certificate should be retrieved and used during the removal of support for the AD RMS server to use the Microsoft Federation Gateway.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADRMSAdmin.Uninstall-RmsMfgEnrollment
+name: Uninstall-RmsMfgEnrollment
+description: |-
+  The **Uninstall-RmsMfgEnrollment** cmdlet terminates the enrollment of an Active Directory Rights Management Services (AD RMS) server with the Microsoft Federation Gateway.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adrmsadmin/uninstall-rmsmfgenrollment?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Uninstall-RmsMfgEnrollment

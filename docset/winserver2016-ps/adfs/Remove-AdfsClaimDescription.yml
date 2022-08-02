@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a claim description from the Federation Service.
+module: ADFS
+notes: |-
+  * Use claim descriptions to configure the list of claims that are available to be offered or accepted by the Active Directory Federation Services (AD FS).
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    A ClaimDescription object is received by the *TargetClaimDescription* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *TargetClaimType*, *TargetName*, and *TargetShortName* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the removed ClaimDescription object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-AdfsClaimDescription
+  href: ./Add-AdfsClaimDescription.yml
+- text: Get-AdfsClaimDescription
+  href: ./Get-AdfsClaimDescription.yml
+- text: Set-AdfsClaimDescription
+  href: ./Set-AdfsClaimDescription.yml
+syntaxes:
+- Remove-AdfsClaimDescription [-TargetName] <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Remove-AdfsClaimDescription [-TargetShortName] <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Remove-AdfsClaimDescription [-TargetClaimType] <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-AdfsClaimDescription [-TargetClaimDescription] <ClaimDescription> [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a claim description'
+  code: |-
+    PS C:\> Remove-AdfsClaimDescription -TargetName "Role"
+  description: |-
+    This command removes the claim description named Role.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ClaimDescription" data-throw-if-not-resolved="False" />
+  name: TargetClaimDescription
+  isRequired: true
+  description: |+
+    Specifies a **ClaimDescription** object.
+    The cmdlet removes the **ClaimDescription** object that you specify.
+    To obtain a claim description, use the **Get-AdfsClaimDescription** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetClaimType
+  isRequired: true
+  description: |+
+    Specifies the claim type of the claim description to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the claim description to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetShortName
+  isRequired: true
+  description: |+
+    Specifies the short name ID that AD FS uses to lookup an existing claim description.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Remove-AdfsClaimDescription
+name: Remove-AdfsClaimDescription
+description: |-
+  The **Remove-AdfsClaimDescription** cmdlet removes a claim description from the Federation Service.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfsclaimdescription?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AdfsClaimDescription

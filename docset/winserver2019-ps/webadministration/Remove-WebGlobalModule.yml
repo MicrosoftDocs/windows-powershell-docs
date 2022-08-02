@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an IIS module.
+module: WebAdministration
+notes: ""
+links:
+- text: Disable-WebGlobalModule
+  href: ./Disable-WebGlobalModule.yml
+- text: Enable-WebGlobalModule
+  href: ./Enable-WebGlobalModule.yml
+- text: Get-WebGlobalModule
+  href: ./Get-WebGlobalModule.yml
+- text: New-WebGlobalModule
+  href: ./New-WebGlobalModule.yml
+- text: Set-WebGlobalModule
+  href: ./Set-WebGlobalModule.yml
+syntaxes:
+- Remove-WebGlobalModule [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a module'
+  code: |-
+    IIS:\>Remove-WebGlobalModule -Name "testGlobalModule"
+  description: |-
+    This command removes the module named testGlobalModule from the default website.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the module to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WebAdministration.Remove-WebGlobalModule
+name: Remove-WebGlobalModule
+description: |-
+  The **Remove-WebGlobalModule** cmdlet removes an Internet Information Services (IIS) module.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/remove-webglobalmodule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WebGlobalModule

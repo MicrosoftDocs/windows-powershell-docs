@@ -1,0 +1,147 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Checks server prerequisites and validates parameters for an MBAM database.
+module: MBAM
+notes: ""
+outputs:
+- name: <xref href="bool" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Enable-MbamDatabase
+  href: enable-mbamdatabase.yml
+- text: Enable-MbamWebApplication
+  href: enable-mbamwebapplication.yml
+- text: Microsoft BitLocker Administration and Monitoring
+  href: https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/
+syntaxes:
+- >-
+  Test-MbamDatabase [-Detailed] -ConnectionString <String> [-DatabaseName <String>] -AccessAccount <String>
+
+   -ReportAccount <String> [-ComplianceAndAudit] [<CommonParameters>]
+- >-
+  Test-MbamDatabase [-Detailed] -ConnectionString <String> [-DatabaseName <String>] -AccessAccount <String>
+
+   [-Recovery] [<CommonParameters>]
+examples:
+- title: 'Example 1: Check prerequisites and validate parameters for the Compliance and Audit Database'
+  code: |-
+    PS C:\> Test-MbamDatabase -ComplianceAndAudit -ConnectionString "Integrated Security=SSPI;Data Source=MyDatabaseServer" -AccessAccount "MyDomain\MyAccessAccount" -ReportAccount "MyDomain\MyReportAccount" -DatabaseName "MyComplianceDatabaseName"
+  description: |-
+    This command checks the prerequisites and validates the parameters to enable the Compliance and Audit Database on MyDatabaseServer.
+    The name of the database is MyComplianceDatabaseName.
+    The domain account MyAccessAccount has read/write permission to the database, and MyReportAccount has read-only permission to the database for reporting purposes.
+    The command uses the current Windows account credentials for authentication.
+  summary: ""
+- title: 'Example 2: Check prerequisites and validate parameters for the Recovery Database'
+  code: |-
+    PS C:\> Test-MbamDatabase -Recovery -ConnectionString "Integrated Security=SSPI;Data Source=MyDatabaseServer" -AccessAccount "MyDomain\MyAccessAccount" -DatabaseName "MyRecoveryDatabaseName"
+  description: |-
+    This command checks the prerequisites and validates the parameters to enable the Recovery Database on MyRecoveryDatabaseServer.
+    The name of the database is MyRecoveryDatabaseName.
+    The domain account MyAccessAccount has read/write permission to the database.
+    The command uses the current Windows account credentials for authentication.
+  summary: ""
+- title: 'Example 3: Check prerequisites and validate parameters with detailed output'
+  code: |-
+    PS C:\> Test-MbamDatabase -ComplianceAndAudit -ConnectionString "Integrated Security=SSPI;Data Source=MyDatabaseServer" -AccessAccount "MyDomain\MyAccessAccount" -ReportAccount "MyDomain\MyReportAccount" -DatabaseName "MyComplianceDatabaseName" -Detailed
+
+
+    ID                              Type  Message
+    --                              ----  -------
+    ComplianceConnectionString      Error Cannot connect to the database with the provided connection string.
+    ComplianceDatabaseAccessAccount Error The user or group 'MyDomain\MyAccessAccount' cannot be found in Active Directory.
+  description: |-
+    This command checks the prerequisites and validates the parameters to enable the Compliance and Audit Database on MyDatabaseServer with detailed output.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessAccount
+  isRequired: true
+  description: |+
+    Specifies a domain user or group.
+    This domain user or group must have read/write permission to this database, which enables web applications to access the data and reports.
+    If the value is a domain user, the *WebServiceApplicationPoolCredential* parameter in the **Enable-MbamWebApplication** cmdlet must use the same user account.
+    If the value is a group, the domain account used by the *WebServiceApplicationPoolCredential* parameter must be a member of this group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ComplianceAndAudit
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet checks the server prerequisites and validates the parameter values for the Compliance and Audit Database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionString
+  isRequired: true
+  description: |+
+    Specifies the connection string used to connect to the data store.
+    The Integrated Security field must be in the connection string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  description: |+
+    Specifies the name of the database.
+    This parameter cannot contain leading or trailing spaces or non-printable characters.
+    If you do not specify a name, the Compliance and Audit Database is given the name MBAM Compliance Status, and the Recovery Database is given the name MBAM Recovery and Hardware.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Detailed
+  description: |+
+    Indicates that the cmdlet displays detailed information about the prerequisite check and parameter validation failures.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recovery
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet checks the server prerequisites and validates the parameter values for the Recovery Database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportAccount
+  isRequired: true
+  description: |+
+    Specifies a domain user or group.
+    This domain user or group must have read-only permission to this database, which enables reports to access the compliance and audit data.
+    If the value is a domain user, then the Compliance and Audit Database domain account of the report feature must be the same as the user.
+    If the value is a group, then the Compliance and Audit Database domain account of the report feature must be a member of this group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MBAM.Test-MbamDatabase
+name: Test-MbamDatabase
+description: |-
+  The **Test-MbamDatabase** cmdlet checks the server prerequisites and validates the parameters for the Microsoft BitLocker Administration and Monitoring (MBAM) database feature.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Test-MbamDatabase

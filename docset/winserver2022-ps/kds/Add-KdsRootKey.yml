@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generates a new root key for the Microsoft Group KdsSvc within Active Directory.
+module: KDS
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts no input objects.
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Clear-KdsCache
+  href: ./Clear-KdsCache.yml
+- text: Get-KdsConfiguration
+  href: ./Get-KdsConfiguration.yml
+- text: Get-KdsRootKey
+  href: ./Get-KdsRootKey.yml
+- text: Set-KdsConfiguration
+  href: ./Set-KdsConfiguration.yml
+- text: Test-KdsRootKey
+  href: ./Test-KdsRootKey.yml
+syntaxes:
+- Add-KdsRootKey [-LocalTestOnly] [[-EffectiveTime] <DateTime>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Add-KdsRootKey [-LocalTestOnly] [-EffectiveImmediately] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Generate a new root key'
+  code: |-
+    PS C:\> Add-KdsRootKey
+  description: |-
+    This command generates a new root key for the Microsoft Group KdsSvc within Active Directory.
+  summary: ""
+- title: 'Example 2: Generate a new root key for immediate use'
+  code: |-
+    PS C:\> Add-KdsRootKey -EffectiveImmediately
+  description: |-
+    This command generates a new root key immediately and adds it to the Microsoft Group KdsSvc.
+  summary: ""
+- title: 'Example 3: Generate a new root key which takes effect on a specific date'
+  code: |-
+    PS C:\> Add-KdsRootKey -EffectiveTime 03/06/2013
+  description: |-
+    This command generates a new root key for the Microsoft Group KdsSvc which takes effect on the date 03/06/2013.
+    Use the mm/dd/yyyy format.
+  summary: ""
+- title: 'Example 4: Generate a new root key on the local host only'
+  code: |-
+    PS C:\> Add-KdsRootKey -LocalTestOnly
+  description: |-
+    This command generates a new root key on the local host only.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EffectiveImmediately
+  isRequired: true
+  description: |+
+    Indicates that the Microsoft Group Key Distribution Service immediately uses the new root key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: EffectiveTime
+  description: |+
+    Specifies the date on which the newly generated root key takes effect.
+    If this parameter is not specified, the default date set is 10 days after the current date.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalTestOnly
+  description: |+
+    Indicates that the new root key is generated on the local host only.
+    This parameter is used with the **Set-KdsConfiguration** cmdlet to test the local server configuration.
+
+    If this parameter is specified, then the cmdlet returns a value that indicates whether the test passed.
+
+    If this parameter is not specified, then the cmdlet returns the identifier (ID) of the root key when the operation succeeds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: KDS.Add-KdsRootKey
+name: Add-KdsRootKey
+description: |-
+  The **Add-KdsRootKey** cmdlet generates a new root key for the Microsoft Group Key Distribution Service (KdsSvc) within Active Directory.
+  The Microsoft Group KdsSvc generates new group keys from the new root key. It is required to run this only once per forest.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
+  Module Name: KDS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/kds/add-kdsrootkey?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-KdsRootKey

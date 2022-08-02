@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Uninstalls a VPN server.
+module: WssCmdlets
+notes: ""
+links:
+- text: Install-WssVpnServer
+  href: ./Install-WssVpnServer.yml
+- text: Test-WssVpnServerInstallation
+  href: ./Test-WssVpnServerInstallation.yml
+syntaxes:
+- Uninstall-WssVpnServer [-Confirm] [-WhatIf]
+examples:
+- title: 'Example 1: Uninstall a VPN server'
+  code: |-
+    PS C:\> Uninstall-WssVpnServer
+  description: |-
+    This command uninstalls a VPN server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Uninstall-WssVpnServer
+name: Uninstall-WssVpnServer
+description: |-
+  The **Uninstall-WssVpnServer** cmdlet uninstalls a VPN server on sbs_sbs8_2 server.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/uninstall-wssvpnserver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

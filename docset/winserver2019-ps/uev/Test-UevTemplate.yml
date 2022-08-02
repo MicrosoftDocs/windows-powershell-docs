@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies whether a template complies with the schema for UE-V.
+module: UEV
+notes: ""
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    An array of paths to settings location templates.
+outputs:
+- name: <xref href="Microsoft.UEV.Commands.TestTemplateResult" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a **TestTemplateResult** object that contains the validation result for a settings location template.
+links:
+- text: Disable-UevTemplate
+  href: ./Disable-UevTemplate.yml
+- text: Enable-UevTemplate
+  href: ./Enable-UevTemplate.yml
+- text: Get-UevTemplate
+  href: ./Get-UevTemplate.yml
+- text: Register-UevTemplate
+  href: ./Register-UevTemplate.yml
+- text: Unregister-UevTemplate
+  href: ./Unregister-UevTemplate.yml
+- text: Update-UevTemplate
+  href: ./Update-UevTemplate.yml
+syntaxes:
+- Test-UevTemplate [-Path] <String[]> [<CommonParameters>]
+- Test-UevTemplate -LiteralPath <String[]> [<CommonParameters>]
+examples:
+- title: 'Example 1: Test a file'
+  code: |-
+    PS C:\> Test-UevTemplate -Path "MicrosoftWordpad.xml" | Format-Table -AutoSize
+    Path                                                                                     Status Message
+    ----                                                                                     ------ -------
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftWordpad.xml Valid  The template is valid.
+  description: |-
+    This command tests whether the specified file is a valid settings location template.
+    The command passes the results to the **Format-Table** cmdlet by using the pipeline operator.
+    For more information, type `Get-Help Format-Table`.
+  summary: ""
+- title: 'Example 2: Test several files'
+  code: |-
+    PS C:\> Test-UevTemplate -Path "*Microsoft*.xml" | Format-Table -AutoSize
+    Path                                                                                               Status Message
+    ----                                                                                               ------ -------
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftCalculator.xml        Valid  The template is valid.
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftInternetExplorer9.xml Valid  The template is valid.
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftLync2010.xml          Valid  The template is valid.
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftNotepad.xml           Valid  The template is valid.
+  description: |-
+    This command tests whether several files are valid settings location templates.
+    The command checks all .xml files that have names that contain the specified string.
+    The command passes the results to **Format-Table** by using the pipeline operator.
+  summary: ""
+- title: 'Example 3: Test a file specified by its literal path'
+  code: |-
+    PS C:\> Test-UevTemplate -LiteralPath "MicrosoftWordpad.xml" | Format-Table -AutoSize
+    Path                                                                                     Status Message
+    ----                                                                                     ------ -------
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftWordpad.xml Valid  The template is valid.
+  description: |-
+    This command tests whether the specified file is a valid settings location template file.
+    The command passes the results to **Format-Table** by using the pipeline operator.
+  summary: ""
+- title: 'Example 4: Test all the files in the current directory by using the pipeline'
+  code: |-
+    PS C:\> Test-UevTemplate -Path "*.xml" | Format-Table -AutoSize
+    Path                                                                                               Status Message
+    ----                                                                                               ------ -------
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftCalculator.xml        Valid  The template is valid.
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftInternetExplorer9.xml Valid  The template is valid.
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftLync2010.xml          Valid  The template is valid.
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftNotepad.xml           Valid  The template is valid.
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftOffice2010.xml        Valid  The template is valid.
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftVisualStudio2010.xml  Valid  The template is valid.
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftWindows7.xml          Valid  The template is valid.
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftWindows8.xml          Valid  The template is valid.
+    C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftWordpad.xml           Valid  The template is valid.
+  description: |-
+    This command uses a wildcard to test if each file is a settings location template, and then passes the results to **Format-Table** by using the pipeline operator.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LiteralPath
+  isRequired: true
+  description: |+
+    Specifies an array of literal file paths.
+    The cmdlet validates the settings location templates that have the literal paths that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: PSPath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies an array of file paths.
+    The cmdlet validates the settings location templates that have the paths that you specify.
+    Use wildcards to specify multiple files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Name
+  parameterValueGroup: ""
+uid: UEV.Test-UevTemplate
+name: Test-UevTemplate
+description: |-
+  The **Test-UevTemplate** cmdlet verifies whether a settings location template complies with the XML schema for Microsoft User Experience Virtualization (UE-V).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/test-uevtemplate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-UevTemplate

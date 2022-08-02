@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new transaction in a Transaction Manager on the local computer.
+module: MsDtc
+notes: ""
+links:
+- text: Complete-DtcDiagnosticTransaction
+  href: ./Complete-DtcDiagnosticTransaction.yml
+- text: Receive-DtcDiagnosticTransaction
+  href: ./Receive-DtcDiagnosticTransaction.yml
+- text: Send-DtcDiagnosticTransaction
+  href: ./Send-DtcDiagnosticTransaction.yml
+- text: Undo-DtcDiagnosticTransaction
+  href: ./Undo-DtcDiagnosticTransaction.yml
+syntaxes:
+- New-DtcDiagnosticTransaction [[-Timeout] <Int32>] [[-IsolationLevel] <IsolationLevel>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a diagnostic transaction'
+  code: |-
+    PS C:\> New-DtcDiagnosticTransaction -Timeout 60 -IsolationLevel Serializable
+    Id
+    --
+    4625a5a3-af35-465d-a331-f224d79e4c85
+  description: |-
+    This command creates a new serializable diagnostic transaction with a timeout of 60 seconds.
+  summary: ""
+parameters:
+- type: <xref href="IsolationLevel" data-throw-if-not-resolved="False" />
+  name: IsolationLevel
+  description: |+
+    Specifies the isolation level for a transaction.The acceptable values for this parameter are:
+
+    - Serializable 
+    - RepeatableRead
+    - ReadCommitted
+    - ReadUncommitted
+    - Snapshot
+    - Chaos 
+
+    If you do not specify this parameter, the cmdlet uses the default **IsolationLevel** value specified in the **System.Transactions.Transaction** object.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Serializable, RepeatableRead, ReadCommitted, ReadUncommitted, Snapshot, Chaos, Unspecified
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Timeout
+  description: |+
+    Specifies the timeout, in seconds, for the transaction.
+    If you do not specify this parameter, the cmdlet uses the default timeout value specified in the **System.Transactions.Transaction** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MsDtc.New-DtcDiagnosticTransaction
+name: New-DtcDiagnosticTransaction
+description: |-
+  The **New-DtcDiagnosticTransaction** cmdlet creates a new transaction in a Transaction Manager (TM) on the local computer.
+  By default it creates a transaction on the default transaction manager on the local computer.
+  This cmdlet returns a transaction object that you can pass to other cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dtc.PowerShell.dll-Help.xml
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/msdtc/new-dtcdiagnostictransaction?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-DtcDiagnosticTransaction

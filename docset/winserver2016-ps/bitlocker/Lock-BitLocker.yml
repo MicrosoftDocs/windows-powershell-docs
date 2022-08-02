@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Prevents access to encrypted data on a BitLocker volume.
+module: BitLocker
+notes: ""
+inputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" /><span>[</span><xref href="], String[" data-throw-if-not-resolved="False" /><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Disable-BitLocker
+  href: ./Disable-BitLocker.yml
+- text: Enable-BitLocker
+  href: ./Enable-BitLocker.yml
+- text: Get-BitLockerVolume
+  href: ./Get-BitLockerVolume.yml
+- text: Resume-BitLocker
+  href: ./Resume-BitLocker.yml
+- text: Suspend-BitLocker
+  href: ./Suspend-BitLocker.yml
+- text: Unlock-BitLocker
+  href: ./Unlock-BitLocker.yml
+syntaxes:
+- Lock-BitLocker [-MountPoint] <String[]> [-ForceDismount] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Lock a volume'
+  code: |-
+    PS C:\> Lock-BitLocker -MountPoint "E:" -ForceDismount
+  description: |-
+    This command locks the BitLocker volume specified with the *MountPoint* parameter.
+    The command uses the *ForceDismount* parameter, so the cmdlet attempts to lock the volume even if it is in use.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceDismount
+  description: |+
+    Indicates that the cmdlet attempts to lock a drive even if the drive is in use.
+
+  defaultValue: None
+  position: Named
+  aliases: fd
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MountPoint
+  isRequired: true
+  description: |+
+    Specifies an array of drive letters or BitLocker volume objects.
+    The cmdlet attempts to lock the volumes specified.
+    To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: BitLocker.Lock-BitLocker
+name: Lock-BitLocker
+description: |-
+  The **Lock-BitLocker** cmdlet prevents access to all encrypted data on a volume that uses BitLocker Drive Encryption.
+  You can use the **Unlock-BitLocker** cmdlet to restore access.
+
+  You can specify a volume to lock by drive letter, or you can specify a BitLocker volume object.
+  This cmdlet cannot lock a volume that hosts the operating system.
+  If you attempt to lock an already locked volume, this cmdlet does nothing.
+
+  For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BitLocker-help.xml
+  Module Name: BitLocker
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/bitlocker/lock-bitlocker?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Lock-BitLocker

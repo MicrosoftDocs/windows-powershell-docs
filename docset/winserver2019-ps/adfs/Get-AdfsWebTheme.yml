@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets web themes.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsWebTheme;Microsoft.IdentityServer.Management.Resources.AdfsWebTheme" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet generates a web customization object, **System.IdentityServer.Management.Resources.AdfsWebTheme**, or an array of these objects.
+    This object includes the following properties: 
+
+    - Name: **System.String**
+    - IsBuiltinTheme: **System.Boolean**
+    - StyleSheet: **IDictionary\<CultureInfo, byte\[\]\>**
+    - RTLStyleSheet: **byte\[\]**
+    - Logo: **IDictionary\<CultureInfo, byte\[\]\>**
+    - Illustration: **IDictionary\<CultureInfo, byte\[\]\>**
+    - AdditionalFileResources: **IDictionary\<string, byte\[\]\>**
+links:
+- text: Export-AdfsWebTheme
+  href: ./Export-AdfsWebTheme.yml
+- text: New-AdfsWebTheme
+  href: ./New-AdfsWebTheme.yml
+- text: Remove-AdfsWebTheme
+  href: ./Remove-AdfsWebTheme.yml
+- text: Set-AdfsWebTheme
+  href: ./Set-AdfsWebTheme.yml
+syntaxes:
+- Get-AdfsWebTheme [-Name <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all web themes'
+  code: |-
+    PS C:\> Get-AdfsWebTheme
+
+    Name                    : Default
+    IsBuiltinTheme          : True
+    StyleSheet              : {[, System.Byte[]]}
+    RTLStyleSheet           : {42, 32, 123, 13...}
+    Logo                    : {[, System.Byte[]]}
+    Illustration            : {[, System.Byte[]]}
+    AdditionalFileResources : {[/adfs/portal/script/onload.js, System.Byte[]], [/adfs/portal/images/idp/localsts.png, System.Byte[]], [/adfs/portal/images/idp/idp.png,
+    System.Byte[]], [/adfs/portal/images/idp/otherorganizations.png, System.Byte[]]}
+  description: |-
+    This command gets all the available web themes in Active Directory Federation Services (AD FS).
+  summary: ""
+- title: 'Example 2: Get a named web theme'
+  code: |-
+    PS C:\> Get-AdfsWebTheme -Name "Theme01"
+    Name                    : Theme01
+    IsBuiltinTheme          : False
+    StyleSheet              : {[, System.Byte[]]}
+    RTLStyleSheet           : {42, 32, 123, 13...}
+    Logo                    : {[, System.Byte[]]}
+    Illustration            : {[, System.Byte[]]}
+    AdditionalFileResources : {[/adfs/portal/script/onload.js, System.Byte[]], [/adfs/portal/images/idp/localsts.png, System.Byte[]], [/adfs/portal/images/idp/idp.png,
+    System.Byte[]], [/adfs/portal/images/idp/otherorganizations.png, System.Byte[]]}
+  description: |-
+    This command gets the theme named Theme01.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies a name.
+    The cmdlet gets the web theme that has the name that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsWebTheme
+name: Get-AdfsWebTheme
+description: |-
+  The **Get-AdfsWebTheme** cmdlet gets **AdfsWebTheme** objects.
+  Specify a web theme by name.
+  If you do not specify a name, the cmdlet gets all the **AdfsWebTheme** objects.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfswebtheme?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsWebTheme

@@ -1,0 +1,265 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes configuration settings for an NFS client.
+module: NFS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_NfsClientConfig" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NfsClientConfiguration
+  href: ./Get-NfsClientConfiguration.yml
+syntaxes:
+- >-
+  Set-NfsClientConfiguration [-InputObject <CimInstance[]>] [-TransportProtocol <String[]>] [-MountType <String>]
+
+   [-CaseSensitiveLookup <Boolean>] [-MountRetryAttempts <UInt32>] [-RpcTimeoutSec <UInt32>]
+
+   [-UseReservedPorts <Boolean>] [-ReadBufferSize <UInt32>] [-WriteBufferSize <UInt32>]
+
+   [-DefaultAccessMode <UInt32>] [-Authentication <String[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify configuration settings for an NFS client'
+  code: |-
+    PS C:\> Set-NfsClientConfig -DefaultAccessMode 755 -ReadBufferSize 64 -WriteBufferSize 64
+  description: |-
+    This command modifies configuration settings for an NFS client on the local computer.
+    This command sets the default permissions for newly created files to 755, and it sets the sizes of the read and write buffers to 64 kilobytes (KB).
+
+    The default permission of 755 sets read, write, and execute permissions (7 - rwx) for the owner, read and execute permissions (5 -- r-x) for the group, and read and execute permissions (5 -- r-x) for others.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Indicates that this cmdlet runs the command as a background job on a remote computer.
+    Use this parameter to run commands that take an extensive time to finish.
+
+    When you use the *AsJob* parameter, the command returns an object that represents the job, and then displays the command prompt.
+    You can continue to work in the session while the job finishes.
+    To manage the job, use the **Job** cmdlets.
+    To get the job results, use the Receive-Job cmdlet.
+
+    The *AsJob* parameter resembles using the Invoke-Command cmdlet to run a Start-Job command remotely.
+    However, with *AsJob*, the job is created on the local computer, even though the job runs on a remote computer, and the results of the remote job are automatically returned to the local computer.
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251) and [about_Remote_Jobs](https://go.microsoft.com/fwlink/?LinkID=135184).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Authentication
+  description: |+
+    Specifies one or more authentication types that an NFS client can use to access NFS shares.
+
+    The acceptable values for this parameter are:
+
+     -- Sys (AUTH_SYS authentication)
+    - Krb5 (Kerberos v5 authentication)
+    - Krb5i (Kerberos v5 authentication with integrity checking)
+    - Krb5p (Kerberos v5 authentication with privacy)
+    - All
+    - Default
+
+    If you specify All, Services for NFS configures Sys, Krb5, Krb5i, and Krb5p on the share.
+    If you specify Default, Services for NFS configures Sys, Krb5, and Krb5i on the share.
+
+  defaultValue: None
+  position: Named
+  aliases: Auth
+  parameterValueGroup: sys, krb5, krb5i, krb5p, default, all
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: CaseSensitiveLookup
+  description: |+
+    Specifies that the NFS client must perform case-sensitive lookups of file names for NFS shares that are mounted locally.
+
+  defaultValue: "0"
+  position: Named
+  aliases: casesensitive, csl
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DefaultAccessMode
+  description: |+
+    Specifies the default permission mode that an NFS client assigns for newly created files, in UNIX-style mode bits.
+    The permissions that this property specifies are set for all new files created on mounted shares.
+
+    With UNIX-style mode bits (also known as the three-digit octal notation), each numeral represents a different component of the permission set: user class, group class, and "others" class.
+
+    Each of these digits is the sum of its component bits.
+    As a result, specific bits add to the sum:
+
+    The read bit adds 4 to its total (in binary 100).
+    The write bit adds 2 to its total (in binary 010).
+    The execute bit adds 1 to its total (in binary 001).
+
+    Individual octal digit values represent the following:
+    0 -- no permission
+    1 -- x     execute
+    2 -- w     write
+    3 -- wx   write and execute
+    4 -- r      read
+    5 -- r-x   read and execute
+    6 -- rw    read and write
+    7 - rwx   read, write, and execute
+
+    The following are examples of UNIX-style mode bits:
+
+    777 = "-rwxrwxrwx" = rwx for all
+
+    754 = "-rwxr-xr--" = rwx for owner, r-x for group, r-- for other
+
+    124 = "--x-w-r--" = x for owner, w for group, r for other
+
+  defaultValue: None
+  position: Named
+  aliases: Access
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MountRetryAttempts
+  description: |+
+    Specifies the number of retries that the NFS client performs when it is attempting a soft mount.
+
+  defaultValue: "1"
+  position: Named
+  aliases: retry
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MountType
+  description: |+
+    Specifies the type of mount that the NFS client uses when it is mounting a share that an NFS server exported.
+    Valid values are Hard and Soft.
+
+  defaultValue: "1"
+  position: Named
+  aliases: mtype
+  parameterValueGroup: hard, soft
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ReadBufferSize
+  description: |+
+    Specifies the size of the read buffer (in kilobytes) that the NFS client uses.
+
+  defaultValue: "32"
+  position: Named
+  aliases: rsize
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: RpcTimeoutSec
+  description: |+
+    Specifies the time-out for a remote procedure call (RPC), in seconds, that the NFS client enforces for outstanding RPC calls.
+
+  defaultValue: "8"
+  position: Named
+  aliases: timeout, RpcTimeout
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TransportProtocol
+  description: |+
+    Specifies the transport protocol that the NFS client uses for NFS, Network Lock Manager (NLM), Port Mapper (PMAP), or MAPSVR protocols.
+
+    The acceptable values for this parameter are:
+
+    - TCP
+    - UDP
+    - TCP+UDP
+
+  defaultValue: "3"
+  position: Named
+  aliases: protocol
+  parameterValueGroup: tcp, udp
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseReservedPorts
+  description: |+
+    Specifies whether the NFS client uses network ports less than 1024.
+
+  defaultValue: "1"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: WriteBufferSize
+  description: |+
+    Specifies the size of the write buffer (in kilobytes) that the NFS client uses.
+
+  defaultValue: "32"
+  position: Named
+  aliases: wsize
+  parameterValueGroup: ""
+uid: NFS.Set-NfsClientConfiguration
+name: Set-NfsClientConfiguration
+description: |-
+  The **Set-NfsClientConfiguration** cmdlet changes configuration settings for a Network File System (NFS) client.
+  You can use the **Get-NfsClientConfiguration** cmdlet to get a configuration object for an NFS client.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NfsClientConfig.cmdletDefinition.cdxml-help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/set-nfsclientconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NfsClientConfiguration

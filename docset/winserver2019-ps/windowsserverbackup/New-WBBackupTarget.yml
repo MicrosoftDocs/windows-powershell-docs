@@ -1,0 +1,223 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a backup target object.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="NetworkPath string, Disk WBDisk, Volume WBVolume, VolumePath string" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet uses **NetworkPath**, **Disk**, **Volume**, and **VolumePath** objects to define where the server stores backups.
+    You can specify the *Credential* parameter to determine who can access the storage location.
+outputs:
+- name: <xref href="WBBackupTarget" data-throw-if-not-resolved="False" />
+  description: |-
+    The New-WBBackupTarget cmdlet creates a **WBBackupTarget** object, which you can use to configure a backup storage location in a **WBPolicy** object that contains a backup policy.
+links:
+- text: Add-WBBackupTarget
+  href: ./Add-WBBackupTarget.yml
+- text: Get-WBDisk
+  href: ./Get-WBDisk.yml
+- text: Get-WBVolume
+  href: ./Get-WBVolume.yml
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+syntaxes:
+- >-
+  New-WBBackupTarget [-Disk] <WBDisk> [[-Label] <String>] [[-PreserveExistingBackups] <Boolean>]
+
+   [<CommonParameters>]
+- New-WBBackupTarget [-Volume] <WBVolume> [<CommonParameters>]
+- New-WBBackupTarget [-VolumePath] <String> [<CommonParameters>]
+- New-WBBackupTarget [-NetworkPath] <String> [[-Credential] <PSCredential>] [-NonInheritAcl] [<CommonParameters>]
+- New-WBBackupTarget [-RemovableDrive] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Use a disk as a backup target'
+  code: |-
+    PS C:\> $Disks = Get-WBDisk
+    PS C:\> $DiskBackupLocation = New-WBBackupTarget -Disk $Disks[1] -Label "Backup Disk 1"
+  description: |-
+    This example creates a **WBBackupTarget** object that uses the disk labeled Backup Disk 1 as the backup target.
+
+    The first command gets the disks that are available for backup storage and stores them in a variable named $Disks.
+
+    The second command sets the first disk stored in the $Disks array as the backup target and assigns the label Backup Disk 1 to that disk.
+    The disk is available to store backups only after the server calls the [Set-WBPolicy](./Set-WBPolicy.yml) cmdlet and specifies the **WBPolicy** object to which it added the backup target.
+    You can add multiple storage disks to this backup policy.
+  summary: ""
+- title: 'Example 2: Use a remote shared folder as a backup target'
+  code: |-
+    PS C:\> $Cred = Get-Credential
+    PS C:\> $NetworkBackupLocation = New-WBBackupTarget -NetworkPath "\\Server01\BackupStorageLocation" -Credential $Cred
+  description: |-
+    This example creates a **WBBackupTarget** object that uses a remote shared folder named \\\\Server01\BackupStorageLocation as the backup storage location and stores permissions to the credentials in a variable named $Cred.
+    The server needs these credentials to access the shared folder.
+    If you use a remote shared folder, you can add only one backup location to the **WBPolicy** object that contains the backup policy.
+
+    The first command gets credentials and stores them in a variable named $Cred.
+
+    The second command specifies the remote shared folder named \\\\Server01\BackupStorageLocation as the backup target and the credentials in $Cred as the credentials for the operation.
+  summary: ""
+- title: 'Example 3: Specify a volume as a backup target by using a drive letter'
+  code: |-
+    PS C:\> $volumeBackupLocation = New-WBBackupTarget -VolumePath "D:"
+  description: |-
+    This command creates a **WBBackupTarget** object that uses a volume with drive letter D: as the backup storage location.
+    You can add multiple volumes for storage to the **WBPolicy** object that contains the backup policy.
+  summary: ""
+- title: 'Example 4: Specify a volume as a backup target by using an array element'
+  code: |-
+    PS C:\> $VolumeList = Get-WBVolume -AllVolumes
+    PS C:\> $VolumeBackupLocation = New-WBBackupTarget -Volume $VolumeList[3]
+  description: |-
+    This example creates a **WBBackupTarget** object that uses a volume whose name appears in an array element as the backup storage location.
+    You can add multiple volumes for storage to the **WBPolicy** object that contains the backup policy.
+
+    The first command stores the names of all volumes in an array variable named $VolumeList.
+
+    The second command creates the backup target by using the volume name stored in the third element of the $VolumeList array and stores the **WBBackupTarget** object in the variable named $VolumeBackupLocation.
+  summary: ""
+- title: 'Example 5: Specify a volume as a backup target by using the letter of a removable drive'
+  code: |-
+    PS C:\> $DvdBackupTarget = New-WBBackupTarget -RemovableDrive "G:"
+  description: |-
+    This command creates a **WBBackupTarget** object that uses a DVD drive, G:, as the backup storage location and stores the **WBBackupTarget** object in a variable named $DvdBackupTarget.
+
+    You can add only one DVD target as a backup policy to a **WBPolicy** object that contains a backup policy, and you can specify only volume backup and recovery when you use a DVD as a target type.
+  summary: ""
+parameters:
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a **PSCredential** object that contains the user name and password for a user account that has access permissions for a location where the server stores backups.
+
+    To obtain a credential object, use the **Get-Credential** cmdlet.
+    For more information, type `Get-Help Get-Credential`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBDisk" data-throw-if-not-resolved="False" />
+  name: Disk
+  isRequired: true
+  description: |+
+    Specifies a **WBDisk** object that contains the disk where the server stores backups.
+
+    Use this parameter if the storage location for the backup is a disk.
+    Use the Get-WBDisk cmdlet to see which disks are available, and then use this parameter to specify the disk that you want to use.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Label
+  description: |+
+    Specifies a label for the backup storage.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NetworkPath
+  isRequired: true
+  description: |+
+    Specifies the path to the remote shared folder in which the server stores backups.
+
+    Use this parameter if the storage location is a remote shared folder (on a network).
+    You can specify the *NonInheritAcl* parameter for this type of storage location, but only for one-time backups.
+    You can also use the *Credential* parameter to specify who can access the backups.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NonInheritAcl
+  description: |+
+    Indicates that the server applies access control list (ACL) permissions for the credentials that the parameter *Credential* specifies to \\\\ServerName\ShareName\WindowsImageBackup\ComputerBackedUp\BackupFolder.
+    To access the backup later, you must use these credentials or be a member of the Administrators group or the Backup Operators group on the computer that has the shared folder.
+
+    This parameter applies only to one-time backups and not to scheduled backups.
+
+    We recommend that you use this parameter to manage permissions for backups.
+    If you do not use this parameter, Windows Server Backup applies the ACL permissions from the remote shared folder to the ComputerBackedUp folder so that anyone who can access the remote shared folder can also access the backup.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: PreserveExistingBackups
+  description: |+
+    Indicates whether the server saves copies of previous backups each time it performs a new backup.
+
+    If you save a backup to a remote shared folder, the server overwrites that backup if you use the same folder to back up the same computer again.
+    In addition, if the backup operation fails and the server overwrites the older backup, the newer backup will not be usable.
+    To avoid this situation, specify this parameter, and create subfolders in the remote shared folder to organize your backups.
+    If you do this, the subfolders need twice the space of the parent folder.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemovableDrive
+  isRequired: true
+  description: |+
+    Specifies the drive letter of the DVD or removable drive that you use as a backup target.
+    You can back up only whole volumes to this media type, and volume recovery is the only available recovery type.
+    You cannot use this backup location to back up or recover system states, files, Hyper-V virtual servers, or applications.
+
+    The server detects a DVD drive as a valid target only if the drive contains a disc.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBVolume" data-throw-if-not-resolved="False" />
+  name: Volume
+  isRequired: true
+  description: |+
+    Specifies a **WBVolume** object that contains the volume that stores the backups.
+    To get a **WBVolume** object, use the Get-WBVolume cmdlet.
+
+    Use this parameter if the storage location is a volume.
+    You can get a list of all volumes available by using the `Get-WBVolume -AllVolumes` cmdlet.
+    Then, choose the **WBVolume** object for the storage location that you want to use.
+
+    This parameter provides the only way that you can specify Universal Naming Convention (UNC) path volumes, which are not mounted, as backup storage locations.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VolumePath
+  isRequired: true
+  description: |+
+    Specifies the drive letter of the volume that stores backups.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.New-WBBackupTarget
+name: New-WBBackupTarget
+description: |-
+  The **New-WBBackupTarget** cmdlet creates a backup target object for Windows Server Backup.
+  The backup target object defines the locations where the server stores backups.
+
+  To use this cmdlet, you must be a member of the Administrators or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/new-wbbackuptarget?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-WBBackupTarget

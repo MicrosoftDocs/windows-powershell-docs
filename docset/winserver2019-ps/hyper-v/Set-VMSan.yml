@@ -1,0 +1,155 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a virtual storage area network (SAN) on one or more Hyper-V hosts.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.SAN" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+syntaxes:
+- >-
+  Set-VMSan [-Name] <String> [-HostBusAdapter <CimInstance[]>] [-Note <String>] [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-VMSan [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Name] <String> -WorldWideNodeName <String[]> -WorldWidePortName <String[]> [-Note <String>] [-Passthru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-VMSan -Name Production -WorldWideNodeName C003FF0000FFFF22 -WorldWidePortName C003FF5778E50024
+  description: |-
+    Configures a virtual storage area network (SAN) named Production with the specified WorldWideNodeName and WorldWidePortName values.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which the virtual storage area network (SAN) is to be configured.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HostBusAdapter
+  description: |+
+    Specifies the host bus adapter (HBA) to associate with the virtual storage area network (SAN).
+    You can use the **Get-InitiatorPort** cmdlet to get this object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual storage area network (SAN) to be configured.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: SanName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Note
+  description: |+
+    Specifies the note to be associated with the virtual storage area network (SAN).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that an object is to be passed through to the pipeline representing the configured virtual storage area network (SAN).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: WorldWideNodeName
+  isRequired: true
+  description: |+
+    The World Wide Node name of the Fibre Channel host bus adapter to be associated with this virtual storage area network (SAN).
+
+  defaultValue: None
+  position: Named
+  aliases: Wwnn, NodeName, Wwnns, NodeNames, WorldWideNodeNames, NodeAddress
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: WorldWidePortName
+  isRequired: true
+  description: |+
+    The World Wide Port name of the Fibre Channel host bus adapter to be associated with this virtual storage area network (SAN).
+
+  defaultValue: None
+  position: Named
+  aliases: Wwpn, PortName, Wwpns, PortNames, WorldWidePortNames, PortAddress
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VMSan
+name: Set-VMSan
+description: |-
+  The **Set-VMSan** cmdlet configures a virtual storage area network (SAN) on one or more Hyper-V hosts.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmsan?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VMSan

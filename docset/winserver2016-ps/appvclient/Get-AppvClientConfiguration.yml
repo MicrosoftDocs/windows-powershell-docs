@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the configuration for the App-V client.
+module: AppvClient
+notes: ""
+outputs:
+- name: <xref href="Microsoft.AppV.AppvClientPowerShell.AppvClientConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    The cmdlet returns an **AppvClientConfiguration** object, if you do not specify the *Name* parameter.
+    The object is displayed as a two column table.
+    The first column contains the specific configuration and the second column contains the associated current value.
+
+    If you specify *Name*, the cmdlet returns the same two column table, but only for the configuration requested.
+links:
+- text: Set-AppvClientConfiguration
+  href: ./Set-AppvClientConfiguration.yml
+syntaxes:
+- Get-AppvClientConfiguration [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Display all configuration settings'
+  code: |-
+    PS C:\> Get-AppvClientConfiguration
+  description: |-
+    This command displays all of the App-V Client Configuration settings.
+  summary: ""
+- title: 'Example 2: Display a single configuration setting'
+  code: |-
+    PS C:\> Get-AppvClientConfiguration -Name "PackageSourceRoot"
+  description: |-
+    This command displays the value of the **PackageSourceRoot** setting.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of a setting.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppvClient.Get-AppvClientConfiguration
+name: Get-AppvClientConfiguration
+description: |-
+  The **Get-AppvClientConfiguration** cmdlet returns an object that contains all of the settings and permissions for the Microsoft Application Virtualization (App-V) client.
+  These settings include both App-V client settings and permissions.
+
+  If a particular setting is specified, the cmdlet returns the value for that setting.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appvclient/get-appvclientconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AppvClientConfiguration

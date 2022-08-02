@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets permissions for a DFS namespace folder.
+module: DFSN
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_DfsNamespaceAccess" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Grant-DfsnAccess
+  href: ./Grant-DfsnAccess.yml
+- text: Remove-DfsnAccess
+  href: ./Remove-DfsnAccess.yml
+- text: Revoke-DfsnAccess
+  href: ./Revoke-DfsnAccess.yml
+syntaxes:
+- >-
+  Get-DfsnAccess [-Path] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get permissions for a folder'
+  code: |-
+    PS C:\> Get-DfsnAccess -Path "\\Contoso\Software\Projects"
+  description: |-
+    This command gets permissions for a DFS namespace folder that has the path \\\\Contoso\Software\Projects.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a path for a DFS namespace folder.
+    This cmdlet gets permissions for the folder specified.
+    Provide a complete path for a folder, not a partial or relative path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DfsPath, FolderPath, NamespacePath
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DFSN.Get-DfsnAccess
+name: Get-DfsnAccess
+description: |-
+  The **Get-DfsnAccess** cmdlet gets account names and access types for users and groups that have permissions for a Distributed File System (DFS) namespace folder.
+  You can use the Grant-DfsnAccess cmdlet and the Revoke-DfsnAccess cmdlet to manage access for DFS namespace folders.
+
+  For more information about DFS namespaces, see Overview of DFS Namespaceshttp://technet.microsoft.com/library/cc730736 (http://technet.microsoft.com/library/cc730736) on TechNet.
+metadata:
+  external help file: DfsNamespaceAccess.cdxml-help.xml
+  Module Name: DFSN
+  online version: https://docs.microsoft.com/powershell/module/dfsn/get-dfsnaccess?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

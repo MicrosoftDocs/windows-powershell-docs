@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an IP filter for an interface.
+module: RemoteAccess
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#InterfaceIpFilter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Add-RemoteAccessIpFilter
+  href: ./Add-RemoteAccessIpFilter.yml
+- text: Get-RemoteAccessIpFilter
+  href: ./Get-RemoteAccessIpFilter.yml
+- text: Set-RemoteAccessIpFilter
+  href: ./Set-RemoteAccessIpFilter.yml
+syntaxes:
+- >-
+  Remove-RemoteAccessIpFilter [-InterfaceAlias] <String> [-Direction] <Direction> [-List] <String[]> [-PassThru]
+
+   [-Force] [-AddressFamily] <AddressFamily> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove an IP address filter'
+  code: |-
+    PS C:\> Remove-RoutingIpFilter -InterfaceAlias Interface01 -Direction Outbound -Force
+  description: |-
+    This command removes an IP filter for an interface named Interface01, and traffic that flows in a specific direction.
+    The command also displays the details of the removed filter.
+  summary: ""
+parameters:
+- type: <xref href="AddressFamily" data-throw-if-not-resolved="False" />
+  name: AddressFamily
+  isRequired: true
+  description: |+
+    Specifies the IP address family for which to remove filters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: IPv4, IPv6
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Direction" data-throw-if-not-resolved="False" />
+  name: Direction
+  isRequired: true
+  description: |+
+    Specifies the direction of traffic flow, such as inbound, outbound, or both.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: Inbound, OutBound
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceAlias
+  isRequired: true
+  description: |+
+    Specifies an alias for the interface for which to remove filters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: List
+  isRequired: true
+  description: |+
+    Specifies an array of filters to remove.
+    Use the format SourceIP/Subnet:DestinationIP/Subnet:Protocol:ProtocolData1:ProtocolData2 to specify, such as 10.0.0.0/16:10.1.2.3/16:TCP:1234:2345.
+    If the protocol is TCP or UDP, ProtocolData1 and ProtocolData2 are source and destination port numbers, respectively.
+    If the protocol is ICMP, ProtocolData1 is Code.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteAccess.Remove-RemoteAccessIpFilter
+name: Remove-RemoteAccessIpFilter
+description: |-
+  The **Remove-RemoteAccessIpFilter** cmdlet removes an IP filter for an interface.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_IPFilter_v1.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/remove-remoteaccessipfilter?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-RemoteAccessIpFilter

@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies properties of an attribute store.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsAttributeStore
+  href: ./Add-AdfsAttributeStore.yml
+- text: Get-AdfsAttributeStore
+  href: ./Get-AdfsAttributeStore.yml
+- text: Remove-AdfsAttributeStore
+  href: ./Remove-AdfsAttributeStore.yml
+syntaxes:
+- >-
+  Set-AdfsAttributeStore [-Name <String>] [-Configuration <Hashtable>] [-TargetName] <String> [-PassThru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsAttributeStore [-Name <String>] [-Configuration <Hashtable>] [-TargetAttributeStore] <AttributeStore>
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the configuration of an attribute store'
+  code: |-
+    PS C:\> Set-AdfsAttributeStore -TargetName "ContosoAttributeStore01" -Configuration @{"runmode" = "verbose"; configParaName2 = configParaValueNew}
+  description: |-
+    This command modifies the configuration for the custom attribute store named ContosoAttributeStore01.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Configuration
+  description: |+
+    Specifies the initialization parameters of the attribute store, such as a connection string.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the friendly name of this attribute store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AttributeStore" data-throw-if-not-resolved="False" />
+  name: TargetAttributeStore
+  isRequired: true
+  description: |+
+    Specifies an **AttributeStore** object.
+    The cmdlet modifies the attribute store that you specify.
+    To obtain an attribute store, use the **Get-AdfsAttributeStore** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the attribute store to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsAttributeStore
+name: Set-AdfsAttributeStore
+description: |-
+  The **Set-AdfsAttributeStore** cmdlet modifies properties of an attribute store in the Federation Service.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsattributestore?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsAttributeStore

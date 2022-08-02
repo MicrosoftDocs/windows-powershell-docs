@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Restores Bitlocker encryption for the specified volume.
+module: BitLocker
+notes: ""
+inputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" /><span>[</span><xref href="], String[" data-throw-if-not-resolved="False" /><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Disable-BitLocker
+  href: ./Disable-BitLocker.yml
+- text: Enable-BitLocker
+  href: ./Enable-BitLocker.yml
+- text: Get-BitLockerVolume
+  href: ./Get-BitLockerVolume.yml
+- text: Lock-BitLocker
+  href: ./Lock-BitLocker.yml
+- text: Suspend-BitLocker
+  href: ./Suspend-BitLocker.yml
+- text: Unlock-BitLocker
+  href: ./Unlock-BitLocker.yml
+syntaxes:
+- Resume-BitLocker [-MountPoint] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Resume protection for a volume'
+  code: |-
+    PS C:\> Resume-BitLocker -MountPoint "C:"
+  description: |-
+    This command resumes BitLocker protection for the C: drive.
+  summary: ""
+- title: 'Example 2: Resume protection for all volumes on a computer'
+  code: |-
+    PS C:\>Get-BitLockerVolume | Resume-BitLocker
+  description: |-
+    This command gets all the BitLocker volumes for the current computer by using the **Get-BitLockerVolume** cmdlet and passes them to **Resume-BitLocker** by using the pipeline operator.
+    The command restores protection for all BitLocker volumes.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MountPoint
+  isRequired: true
+  description: |+
+    Specifies an array of drive letters or BitLocker volume objects.
+    This cmdlet resumes protection for the volumes specified.
+    To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: BitLocker.Resume-BitLocker
+name: Resume-BitLocker
+description: |-
+  The **Resume-BitLocker** cmdlet restores encryption on a volume that uses BitLocker Drive Encryption.
+  You can use the **Suspend-BitLocker** cmdlet to allow users to access encrypted data temporarily.
+  Data written to the volume continues to be encrypted, but the key to unlock the operating system volume is in the open.
+
+  You can specify a volume by drive letter, or you can specify a BitLocker volume object.
+  If you specify a BitLocker volume that is not suspended, this cmdlet has no effect on that volume.
+
+  For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BitLocker-help.xml
+  Module Name: BitLocker
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/bitlocker/resume-bitlocker?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Resume-BitLocker

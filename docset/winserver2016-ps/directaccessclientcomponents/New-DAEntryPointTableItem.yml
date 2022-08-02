@@ -1,0 +1,227 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a new entry point for multisite DirectAccess.
+module: DirectAccessClientComponents
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/StandardCimv2/MSFT_DASiteTableEntry" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a CIM object which contains the new DA entry point table item.
+links:
+- text: Get-DAEntryPointTableItem
+  href: ./Get-DAEntryPointTableItem.yml
+- text: Remove-DAEntryPointTableItem
+  href: ./Remove-DAEntryPointTableItem.yml
+- text: Rename-DAEntryPointTableItem
+  href: ./Rename-DAEntryPointTableItem.yml
+- text: Reset-DAEntryPointTableItem
+  href: ./Reset-DAEntryPointTableItem.yml
+- text: Set-DAEntryPointTableItem
+  href: ./Set-DAEntryPointTableItem.yml
+syntaxes:
+- >-
+  New-DAEntryPointTableItem [-PolicyStore] <String> -EntryPointName <String> -ADSite <String>
+
+   -EntryPointRange <String[]> [-TeredoServerIP <String>] -EntryPointIPAddress <String> [-GslbIP <String>]
+
+   [-IPHttpsProfile <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  New-DAEntryPointTableItem -EntryPointName <String> -ADSite <String> -EntryPointRange <String[]>
+
+   [-TeredoServerIP <String>] -EntryPointIPAddress <String> [-GslbIP <String>] [-IPHttpsProfile <String>]
+
+   [-GPOSession] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example1: Create a new entry point'
+  code: |-
+    PS C:\> New-DAEntryPointTableItem -PolicyStore "GPO:Localhost" -ADSite "Paris" -EntryPointRange "2001::/16" -TeredoServerIP "131.107.1.1" -EntryPointIPAddress "200::1" -GslbIP "131.107.0.1" -EntryPointName "Paris"
+  description: |-
+    This cmdlet creates a simple entry point named Paris.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ADSite
+  isRequired: true
+  description: |+
+    Specifies the Active Directory Domain Services (AD DS) site name associated with the entry point.
+    When a client computer connects to an entry point, the computer becomes associated with the AD DS site specified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EntryPointIPAddress
+  isRequired: true
+  description: |+
+    Specifies the IPv6 address of the entry point to use for connectivity.
+    The cmdlet fails if the IP address specified is not within the IP address range specified by *EntryPointRange*.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EntryPointName
+  isRequired: true
+  description: |+
+    Specifies the name of the entry point.
+    The entry point name is usually the friendly name of the location, such as Redmond or Paris.
+
+    Specify the name of the entry point by using double quotes (" ").
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EntryPointRange
+  isRequired: true
+  description: |+
+    Specifies the IPv6 address range associated with computers connecting through this entry point.
+    Specify the IPv6 range in classless inter-domain routing (CIDR) notation.
+
+    The following is an example of an *EntryPointRange* entry: 
+
+    `{2001:4898:e0:305d::100:1/128, 2001:4898:e0:305d::100:2/128, 2001:4898:e0:3084::/64}`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GPOSession
+  isRequired: true
+  description: |+
+    Specifies the Group Policy session to send configuration information.
+    You can use *GPOSession* with the **NetGPO** cmdlets to aggregate multiple operations performed on a Group Policy Object.
+
+    *GPOSession* cannot be used in conjunction with *PolicyStore*.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GslbIP
+  description: |+
+    Specifies the IP address associated with the new entry point, if using DirectAccess in conjunction with global server load balancing (GSLB) site balancing.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPHttpsProfile
+  description: |+
+    Specifies the IPHTTPs profile name to be used for connectivity.
+    You specify the name of the profile in double quotes (" ").
+    **New-DAEntryPointTableItem** fails if the profile does not already exist in the GPO that contains the configuration.
+    For more information about IPHTTPs profiles, see the **NetIPHTTPsConfiguration** cmdlets in the **NetworkTransition** module.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  isRequired: true
+  description: |+
+    Specifies the policy store into which the cmdlet adds the entry point.
+
+    To add the entry point to a Group Policy Object, specify the GPO name using the following format: "Domain\GPOName"
+
+    To add the entry point information to a computer's local GPO, specify the computer's local GPO name in the following format: "GPO:\<computername\>"
+
+    *PolicyStore* cannot be used in conjunction with *GPOSession*.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TeredoServerIP
+  description: |+
+    Specifies the IP address of the Teredo server for the new entry point.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DirectAccessClientComponents.New-DAEntryPointTableItem
+name: New-DAEntryPointTableItem
+description: |-
+  The **New-DAEntryPointTableItem** cmdlet configures a new entry point for multisite DirectAccess.
+  The administrator distributes the new entry point to DirectAccess client computers by using Group Policy, and DirectAccess client computers use the new entry point when appropriate.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_DASiteTableEntry.cdxml-help.xml
+  Module Name: DirectAccessClientComponents
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/directaccessclientcomponents/new-daentrypointtableitem?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-DAEntryPointTableItem

@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the File History managed status of a user account.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-WssFileHistoryManagementStatus [-UserName] <String> [-UnManage] [-Delete] [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the File History managed status of a computer'
+  code: |-
+    PS C:\> Set-WssFileHistoryManagementStatus -UserName "DaveB" -UnManage -Delete
+  description: |-
+    This command changes the File History managed status of a user named DaveB to unmanaged, and deletes the File History Backup folder for that account.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Delete
+  description: |+
+    Indicates that the cmdlet also deletes the File History Backup folder for the user account when you specify the **UnManage** parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UnManage
+  description: |+
+    Indicates that the server no longer manages the File History of the user account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  isRequired: true
+  description: |+
+    Specifies the user name whose File History you want to manage.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: un
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WSSCmdlets.Set-WssFileHistoryManagementStatus
+name: Set-WssFileHistoryManagementStatus
+description: |-
+  The **Set-WssFileHistoryManagementStatus** cmdlet changes the File History managed status of a user account.
+  Specify the **UnManage** parameter if you do not want the server to manage the user account that you specify in the **UserName** parameter.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssfilehistorymanagementstatus?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WssFileHistoryManagementStatus

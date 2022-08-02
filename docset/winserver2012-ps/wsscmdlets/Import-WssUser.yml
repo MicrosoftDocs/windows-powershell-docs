@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports a user from Active Directory.
+module: WssCmdlets
+notes: ""
+links:
+- text: Add-WssUser
+  href: ./Add-WssUser.yml
+- text: Get-WssUser
+  href: ./Get-WssUser.yml
+- text: Remove-WssUser
+  href: ./Remove-WssUser.yml
+- text: Sync-WssUser
+  href: ./Sync-WssUser.yml
+syntaxes:
+- Import-WssUser -SamAccountName <String>
+examples:
+- title: 'Example 1: Import a user'
+  code: |-
+    PS C:\> Import-WssUser -Name "SarahJones"
+  description: |-
+    This command imports a user from AD.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SamAccountName
+  isRequired: true
+  description: |+
+    Specifies the Security Account Manager (SAM) name for a user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Import-WssUser
+name: Import-WssUser
+description: |-
+  The **Import-WssUser** cmdlet imports a user from Active Directory (AD).
+  Following the import, use the UI to manage the user in sbs_sbs8_2 server.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/import-wssuser?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

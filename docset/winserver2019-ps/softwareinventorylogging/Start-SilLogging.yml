@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts Software Inventory Logging daily logging.
+module: SoftwareInventoryLogging
+notes: ""
+links:
+- text: Get-SilLogging
+  href: ./Get-SilLogging.yml
+- text: Set-SilLogging
+  href: ./Set-SilLogging.yml
+- text: Stop-SilLogging
+  href: ./Stop-SilLogging.yml
+- text: Publish-SilData
+  href: ./Publish-SilData.yml
+syntaxes:
+- Start-SilLogging [[-CimSession] <CimSession[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start Software Inventory Logging for the current computer'
+  code: |-
+    PS C:\> Start-SilLogging
+  description: |-
+    This command starts Software Inventory Logging for the current computer.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: SoftwareInventoryLogging.Start-SilLogging
+name: Start-SilLogging
+description: |-
+  The **Start-SilLogging** cmdlet starts Software Inventory Logging daily logging.
+  If logging is started, Software Inventory Logging collects data daily from all Software Inventory Logging data sources, and then forwards this data over the network to an aggregation server.
+  Specify an aggregation server by using the Set-SilLogging cmdlet.
+  If you do not specify an aggregation server and the server is a virtual machine that runs on a Hyper-V host, then the daily collection forwards the Software Inventory Logging data to a location that its Windows Server host can access.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MsftSil_ManagementTasks-help.xml
+  Module Name: SoftwareInventoryLogging
+  ms.date: 01/24/2017
+  online version: https://docs.microsoft.com/powershell/module/softwareinventorylogging/start-sillogging?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-SilLogging

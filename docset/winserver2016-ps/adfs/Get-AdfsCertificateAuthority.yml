@@ -1,0 +1,28 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a certificate authority.
+module: ADFS
+notes: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsCertificateAuthority" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns an AdfsCertificateAuthority object that represents the certificate authority of the Federation Service.
+links:
+- text: Disable-AdfsCertificateAuthority
+  href: ./Disable-AdfsCertificateAuthority.yml
+- text: Set-AdfsCertificateAuthority
+  href: ./Set-AdfsCertificateAuthority.yml
+syntaxes:
+- Get-AdfsCertificateAuthority [<CommonParameters>]
+uid: ADFS.Get-AdfsCertificateAuthority
+name: Get-AdfsCertificateAuthority
+description: |-
+  The **Get-AdfsCertificateAuthority** cmdlet gets a certificate authority in Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfscertificateauthority?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsCertificateAuthority

@@ -1,0 +1,35 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the host name, port, and certificate hash for SSL bindings configured for AD FS and the device registration service.
+module: ADFS
+notes: ""
+links:
+- text: Set-AdfsSslCertificate
+  href: ./Set-AdfsSslCertificate.yml
+syntaxes:
+- Get-AdfsSslCertificate [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information for SSL bindings'
+  code: |-
+    PS C:\> Get-AdfsSslCertificate
+    HostName                           PortNumber  CertificateHash
+    --------                           ----------  ---------------
+    sts.contoso100.com                    443      4195EE03C2721F7478B67E94BD83BB373FE22D98
+    localhost                             443      4195EE03C2721F7478B67E94BD83BB373FE22D98
+    sts.contoso100.com                   49443     4195EE03C2721F7478B67E94BD83BB373FE22D98
+    EnterpriseRegistration.contoso...     443      4195EE03C2721F7478B67E94BD83BB373FE22D98
+  description: |-
+    This command gets the host names, ports, and certificate hashes for all configured SSL bindings.
+  summary: ""
+uid: ADFS.Get-AdfsSslCertificate
+name: Get-AdfsSslCertificate
+description: |-
+  The **Get-AdfsSslCertificate** cmdlet gets the host name, port, and certificate hash for all SSL bindings configured for Active Directory Federation Services (AD FS) and, if enabled, the device registration service.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfssslcertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsSslCertificate

@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about DNS zones from IPAM database.
+module: IpamServer
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an instance of the **IpamDnsZone** object.
+links:
+- text: Get-IpamDnsConditionalForwarder
+  href: ./Get-IpamDnsConditionalForwarder.yml
+- text: Get-IpamDnsResourceRecord
+  href: ./Get-IpamDnsResourceRecord.yml
+- text: Get-IpamDnsServer
+  href: ./Get-IpamDnsServer.yml
+syntaxes:
+- >-
+  Get-IpamDnsZone [-ZoneType] <ZoneType[]> [[-ZoneName] <String[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information about all forward zones'
+  code: |-
+    PS C:\> Get-IpamDnsZone -ZoneType "Forward"
+  description: |-
+    This command returns information about all the forward zones in the IPAM database.
+  summary: ""
+- title: 'Example 2: Get information about the forward zones in a specific DNS zone'
+  code: |-
+    PS C:\> Get-IpamDnsZone -ZoneType "Forward" -ZoneName "northamerica.contoso.com"
+  description: |-
+    This command returns information for the DNS zone named northamerica.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ZoneName
+  description: |+
+    Specifies the name of the DNS zone to be returned.
+    For example:
+
+    `-ZoneName "northamerica.contoso.com"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ZoneType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ZoneType
+  isRequired: true
+  description: |+
+    Specifies the type of DNS zone to be returned.
+
+    The acceptable values for this parameter are:
+
+    - Forward.
+    Resolves host names to IP addresses. 
+    - IPv4Reverse.
+    Resolves IPv4 addresses to host names. 
+    - IPv6Reverse.
+    Resolves IPv6 addresses to host names.
+
+    For example:
+
+    `-ZoneType "IPv4Reverse"`
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Forward, IPv4Reverse, IPv6Reverse
+uid: IpamServer.Get-IpamDnsZone
+name: Get-IpamDnsZone
+description: |-
+  The **Get-IpamDnsZone** cmdlet gets information about all the Domain Name System (DNS) zones in the IPAM (IP Address Management) server database.
+  A DNS zone is a distinct section of the domain name system for an organization.
+  For instance, the DNS zone northamerica.contoso.com would maintain DNS records for contoso.com's northamerica subdomain.
+  Likewise, the DNS zone southamerica.contoso.com would maintain DNS records for contoso.com's southamerica subdomain.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamDnsZone.cdxml-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/get-ipamdnszone?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-IpamDnsZone

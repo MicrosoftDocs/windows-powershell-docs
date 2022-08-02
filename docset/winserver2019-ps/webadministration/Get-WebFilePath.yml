@@ -1,0 +1,42 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the physical path to the location of the specified IIS module.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Get-WebFilePath [[-PSPath] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the physical path of the default website'
+  code: |-
+    IIS:\> Get-WebFilePath -PSPath "IIS:\Sites\Default Web Site"
+    Directory: Microsoft.PowerShell.Core\FileSystem::C:\inetpub
+
+    Mode    LastWriteTime        Length    Name
+    ----    -------------        ------    ----
+    d----   7/28/2008 9:40 PM              wwwroot
+  description: |-
+    This command retrieves the physical path for the default website.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PSPath
+  description: |+
+    Specifies an IIS configuration path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebFilePath
+name: Get-WebFilePath
+description: |-
+  The **Get-WebFilePath** cmdlet gets the physical path to the location of the specified Internet Information Services (IIS) module.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webfilepath?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebFilePath

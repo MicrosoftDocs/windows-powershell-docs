@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a server folder.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.Storage.Folder" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.Storage.Folder" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates an object that represents the removed folder.
+links:
+- text: Add-WssFolder
+  href: ./Add-WssFolder.yml
+- text: Get-WssFolder
+  href: ./Get-WssFolder.yml
+- text: Set-WssFolder
+  href: ./Set-WssFolder.yml
+- text: Move-WssFolder
+  href: ./Move-WssFolder.yml
+- text: Measure-WssFolder
+  href: ./Measure-WssFolder.yml
+syntaxes:
+- Remove-WssFolder -Name <String> [-Force] [-DeleteContents] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Remove-WssFolder -Folder <Folder> [-Force] [-DeleteContents] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Remove-WssFolder -ID <Guid> [-Force] [-DeleteContents] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a server folder'
+  code: |-
+    PS C:\> Remove-WssFolder -Name "ProjectsNorth" -DeleteContents
+  description: |-
+    This command removes the server folder named ProjectsNorth and deletes all the contents of the folder.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeleteContents
+  description: |+
+    Indicates that the cmdlet deletes the contents of the server folder.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Folder" data-throw-if-not-resolved="False" />
+  name: Folder
+  isRequired: true
+  description: |+
+    Specifies the name of a folder.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ID
+  isRequired: true
+  description: |+
+    Specifies the GUID for a folder.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a folder.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WSSCmdlets.Remove-WssFolder
+name: Remove-WssFolder
+description: |-
+  The **Remove-WssFolder** cmdlet removes a server folder.
+  If you specify the **DeleteContents** parameter, the cmdlet deletes the contents of the server folder that you specify.
+  If you do not specify the **DeleteContents** parameter, the cmdlet stops sharing the contents of the server folder.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/remove-wssfolder?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WssFolder

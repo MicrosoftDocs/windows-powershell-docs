@@ -1,0 +1,168 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a local claims provider trust.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsLocalClaimsProviderTrust
+  href: ./Add-AdfsLocalClaimsProviderTrust.yml
+- text: Disable-AdfsLocalClaimsProviderTrust
+  href: ./Disable-AdfsLocalClaimsProviderTrust.yml
+- text: Enable-AdfsLocalClaimsProviderTrust
+  href: ./Enable-AdfsLocalClaimsProviderTrust.yml
+- text: Get-AdfsLocalClaimsProviderTrust
+  href: ./Get-AdfsLocalClaimsProviderTrust.yml
+- text: Remove-AdfsLocalClaimsProviderTrust
+  href: ./Remove-AdfsLocalClaimsProviderTrust.yml
+syntaxes:
+- >-
+  Set-AdfsLocalClaimsProviderTrust [-AcceptanceTransformRules <String>] [-AcceptanceTransformRulesFile <String>]
+
+   [-Name <String>] [-Notes <String>] [-OrganizationalAccountSuffix <String[]>] [-Force]
+
+   -TargetClaimsProviderTrust <LocalClaimsProviderTrust> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsLocalClaimsProviderTrust [-AcceptanceTransformRules <String>] [-AcceptanceTransformRulesFile <String>]
+
+   [-Name <String>] [-Notes <String>] [-OrganizationalAccountSuffix <String[]>] [-Force]
+
+   -TargetIdentifier <String> [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-AdfsLocalClaimsProviderTrust [-AcceptanceTransformRules <String>] [-AcceptanceTransformRulesFile <String>]
+
+   [-Name <String>] [-Notes <String>] [-OrganizationalAccountSuffix <String[]>] [-Force] -TargetName <String>
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AcceptanceTransformRules
+  description: |+
+    Specifies the set of claim rules to configure on the local claims provider trust.
+    These rules determine the information that is accepted from the partner represented by the local claims provider trust.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AcceptanceTransformRulesFile
+  description: |+
+    Specifies the full path of a file that contains the set of claim rules to configure on the local claims provider trust.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies a name for the local claims provider trust.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notes
+  description: |+
+    Specifies notes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OrganizationalAccountSuffix
+  description: |+
+    Specifies an array of organizational account suffixes that administrator can configure for the claims provider trust for a Home Realm Discovery (HRD) scenario.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LocalClaimsProviderTrust" data-throw-if-not-resolved="False" />
+  name: TargetClaimsProviderTrust
+  isRequired: true
+  description: |+
+    Specifies the local claims provider trust to modify.
+    To obtain a **LocalClaimsProviderTrust** object, use the **Get-AdfsLocalClaimsProviderTrust** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the ID of the local claims provider trust to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the local claims provider trust to modify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Set-AdfsLocalClaimsProviderTrust
+name: Set-AdfsLocalClaimsProviderTrust
+description: |-
+  The **Set-AdfsLocalClaimsProviderTrust** cmdlet modifies a local claims provider trust.
+  For more information, see the **Add-AdfsLocalClaimsProviderTrust** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/set-adfslocalclaimsprovidertrust?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-AdfsLocalClaimsProviderTrust

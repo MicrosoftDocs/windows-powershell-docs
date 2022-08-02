@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Backs up the security descriptor of an item.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ACL
+  href: /powershell/module/microsoft.powershell.security/get-acl
+- text: New-ScheduledTaskTrigger
+  href: ../scheduledtasks/New-ScheduledTaskTrigger.yml
+- text: Restore-ACL
+  href: Restore-ACL.yml
+syntaxes:
+- >-
+  Backup-ACL [-Path] <String> [-DestinationPath] <String> [-LogPath] <String> [[-ScheduleTrigger] <Object>]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Back up the ACL for a file'
+  code: |-
+    Backup-ACL -Path "C:\file01.txt" -DestinationPath "C:\AclBackups\file01.xml" -LogPath "C:\AclBackupLogs\"
+  description: |-
+    This command backs up the ACL for the specified file.
+    The command also specifies the location for the backup and the log.
+  summary: ""
+- title: 'Example 2: Back up on a schedule'
+  code: |-
+    $TaskTrigger = New-ScheduledTaskTrigger -Daily -At 6am
+    Backup-ACL -Path "C:\file02.txt" -DestinationPath "C:\AclBackups\" -LogPath "C:\AclBackups\" -ScheduleTrigger $TaskTrigger
+  description: |-
+    This example backs up the ACL on a regular schedule.
+
+    The first command creates a scheduled task trigger by using the **New-ScheduledTaskTrigger** cmdlet and stores it in the `$TaskTrigger` variable.
+
+    The second command backs up the ACL according to the schedule object, in this case, daily at 6:00 AM.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationPath
+  isRequired: true
+  description: |+
+    Specifies a full path to store the permission backup.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  isRequired: true
+  description: |+
+    Specifies a full path for the log file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the full path of the object for which the cmdlet backs up permissions.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: ScheduleTrigger
+  description: |+
+    Specifies a **ScheduleTrigger** object.
+    A trigger creates pipeline runs periodically, on schedule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Backup-ACL
+name: Backup-ACL
+description: |-
+  The **Backup-Acl** cmdlet backs up the security descriptor of a specified item, such as a file or a registry key.
+
+  To back up an ACL, specify the **Path** parameter to identify the item. Use the **DestinationPath** parameter to specify the location for the backup.
+metadata:
+  description: The Backup-Acl cmdlet backs up the security descriptor of a specified item, such as a file or a registry key.
+  external help file: wsbcmdlet.dll-help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 09/10/2021
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/backup-acl?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Backup-ACL

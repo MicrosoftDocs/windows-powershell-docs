@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Initializes a disk for sbs_sbs8_2 storage.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.Storage.Disk" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates the disk for use in the Windows Server Essentials storage system to format and create volumes.
+links:
+- text: Get-WssDisk
+  href: ./Get-WssDisk.yml
+- text: Add-WssDisksToSpacesPool
+  href: ./Add-WssDisksToSpacesPool.yml
+syntaxes:
+- Initialize-WssDisk [-Force] [-Disk] <Disk> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Initialize a disk for Windows Server 2012 Essentials storage'
+  code: |-
+    PS C:\>$Disks = Get-WssDisk -ID "26a21bda-a627-11d7-9931-806e6f6e6963"
+    PS C:\> Initialize-WssDisk -Disk $Disks
+  description: |-
+    The first command gets the Disk object that has the ID 26a21bda-a627-11d7-9931-806e6f6e6963, and stores it in the **$Disks** variable.
+
+    The second command initializes the disk stored in the **$Disks** variable.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Disk" data-throw-if-not-resolved="False" />
+  name: Disk
+  isRequired: true
+  description: |+
+    Specifies a Disk object.
+    To obtain a Disk object, use the Get-WssDisk cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WSSCmdlets.Initialize-WssDisk
+name: Initialize-WssDisk
+description: |-
+  The **Initialize-WssDisk** cmdlet initializes a disk that you can use for the sbs_sbs8_1 storage system.
+  The cmdlet formats and creates volumes for sbs_sbs8_2 on the disk that you specify.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/initialize-wssdisk?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Initialize-WssDisk

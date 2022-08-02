@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets virtual IP addresses that are queried by the caller.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ClusterVip" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-NlbClusterVip
+  href: ./Add-NlbClusterVip.yml
+- text: Remove-NlbClusterVip
+  href: ./Remove-NlbClusterVip.yml
+- text: Set-NlbClusterVip
+  href: ./Set-NlbClusterVip.yml
+syntaxes:
+- Get-NlbClusterVip [-HostName <String>] [-InterfaceName <String>] [[-IP] <IPAddress>] [<CommonParameters>]
+- Get-NlbClusterVip -InputObject <Cluster[]> [[-IP] <IPAddress>] [<CommonParameters>]
+examples:
+- title: 'Example 1: List all virtual IP addresses on the local cluster'
+  code: |-
+    PS C:\>Get-NlbClusterVip
+    IPAddress                               SubnetMask 
+    ---------                               ---------- 
+    3.53.100.100                            255.0.0.0 
+    3.53.100.101                            255.0.0.0 
+    3.53.100.102                            255.0.0.0 
+    fe80::b349:6945:9449:d03c               ::
+  description: |-
+    This command lists all the virtual IP addresses on the local cluster.
+  summary: ""
+- title: 'Example 2: Get the specified virtual IP address on the local cluster'
+  code: |-
+    PS C:\>Get-NlbClusterVip -IP fe80::a20f:cca:4cd2:7ea0
+    IPAddress                               SubnetMask 
+    ---------                               ---------- 
+    fe80::a20f:cca:4cd2:7ea0               ::
+  description: |-
+    This command gets the specified virtual IP addresses on the local cluster.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: Named
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="Cluster" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the cluster for which this cmdlet enumerates virtual IP addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IP
+  description: |+
+    Specifies the IP address of the cluster for which this cmdlet enumerates virtual IP addresses.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Get-NlbClusterVip
+name: Get-NlbClusterVip
+description: |-
+  The **Get-NlbClusterVIP** cmdlet gets the virtual IP addresses that are queried by the caller.
+  This IP address is used to address the cluster as a whole, and is the IP address that maps to the full Internet name that you specify for the Network Load Balancing (NLB) cluster.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/get-nlbclustervip?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NlbClusterVip

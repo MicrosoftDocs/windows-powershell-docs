@@ -1,0 +1,36 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resumes a volume recovery operation from a removable device and specific media.
+module: WindowsServerBackup
+notes: ""
+outputs:
+- name: <xref href="System.String, System.Exception" data-throw-if-not-resolved="False" />
+  description: |-
+    If the requested media is not inserted, the cmdlet returns an error with the description of the requested media.
+    Otherwise, the recovery operation resumes and the cmdlet returns a confirmation message.
+links:
+- text: Start-WBVolumeRecovery
+  href: ./Start-WBVolumeRecovery.yml
+syntaxes:
+- Resume-WBVolumeRecovery [<CommonParameters>]
+examples:
+- title: 'Example 1: Resume a volume recovery operation'
+  code: |-
+    PS C:\> Resume-WBVolumeRecovery
+  description: |-
+    This command resumes the volume recovery operation.
+  summary: ""
+uid: WindowsServerBackup.Resume-WBVolumeRecovery
+name: Resume-WBVolumeRecovery
+description: |-
+  The **Resume-WBVolumeRecovery** cmdlet resumes a volume recovery operation performed from a removable device and specific media.
+  If the requested media is not inserted, the cmdlet returns an error with a description of the requested media.
+  Otherwise, the cmdlet returns confirmation that the recovery operation resumed.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/resume-wbvolumerecovery?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Resume-WBVolumeRecovery

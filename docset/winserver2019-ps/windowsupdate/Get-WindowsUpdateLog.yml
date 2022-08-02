@@ -1,0 +1,155 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Merges Windows Update .etl files into a single log file.
+module: WindowsUpdate
+notes: ""
+syntaxes:
+- >-
+  Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>] [[-SymbolServer] <String>]
+
+   [-ProcessingType <String>] [-ForceFlush] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Merge and convert Windows Update trace files'
+  code: |-
+    PS C:\> Get-WindowsUpdateLog
+    Converting C:\Windows\logs\WindowsUpdate into C:\Users\Admin\Desktop\WindowsUpdate.log 
+
+
+
+
+        Directory: C:\Users\admin\AppData\Local\Temp\WindowsUpdateLog
+
+
+    Mode                LastWriteTime         Length Name
+    ----                -------------         ------ ----
+    d-----        5/30/2015  10:02 PM                SymCache
+
+    Input
+    ----------------
+    File(s): 
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.112451.395.1.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.112502.723.1.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.112524.191.1.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.121921.075.1.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.122031.684.1.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.122432.434.1.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.122432.434.2.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.122432.434.3.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.122432.434.4.etl
+         C:\Windows\logs\WindowsUpdate\WindowsUpdate.20150529.122432.434.5.etl
+
+    0.00%8.33%16.67%25.00%33.33%41.67%50.00%58.33%66.67%75.00%83.33%91.67%100.00%
+
+    Output
+    ----------------
+    DumpFile:           C:\Users\admin\AppData\Local\Temp\WindowsUpdateLog\wuetl.CSV.tmp.0
+
+    The command completed successfully. 
+
+    WindowsUpdate.log written to C:\Users\admin\Desktop\WindowsUpdate.log
+  description: |-
+    This command merges and converts Windows Update trace files (.etl files) into a single readable WindowsUpdate.log file.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ETLPath
+  description: |+
+    Specifies an array of paths of Windows Update .etl files to convert into WindowsUpdate.log.
+    The default value for this parameter is the Windows Update trace file directory for the current device.
+    The acceptable values for this parameter are:
+
+    - The full path of a directory that contains one or more .etl files.
+    - The full path of a single .etl file.
+    - A comma-separated list of full paths of .etl files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: PsPath
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceFlush
+  description: |+
+    Indicates that this cmdlet forces the Windows Update Agent on the current device to flush all of its traces to .etl files.
+    This process stops the Update Orchestrator and Windows Update services.
+    Running this cmdlet with this parameter requires administrative credentials.
+    You can start Windows PowerShell with administrative credentials by using the Run as administrator command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the full path to which **Get-WindowsUpdateLog** writes WindowsUpdate.log.
+    The default value is WindowsUpdate.log in the Desktop folder of the current user.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProcessingType
+  description: |+
+    Specifies the file type that **Get-WindowsUpdateLog** uses for temporary files that are created during intermediate processing.
+    The acceptable values for this parameter are:
+
+    - CSV (comma-separated values)
+    - XML
+
+    By default, the value is CSV.
+    The temporary files are in $env:TEMP\WindowsUpdateLog.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: CSV, XML
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SymbolServer
+  description: |+
+    Specifies the URL of Microsoft Symbol Server.
+    By default, this value is the Microsoft public symbol server.
+
+    This switch is deprecated for Windows 1709 (OS Build 16299) and higher.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WindowsUpdate.Get-WindowsUpdateLog
+name: Get-WindowsUpdateLog
+description: |-
+  The **Get-WindowsUpdateLog** cmdlet merges and converts Windows Update .etl files into a single readable WindowsUpdate.log file.
+  Windows Update Agent uses Event Tracing for Windows (ETW) to generate diagnostic logs.
+  Windows Update no longer directly produces a WindowsUpdate.log file.
+  Instead, it produces .etl files that are not immediately readable as written.
+
+  For Windows 10 versions prior to 1709 (OS Build 16299), this cmdlet requires access to a Microsoft symbol server, and log decoding must be run from a Windows 10 version earlier than 1709. Logs from Windows 10, version 1709 onward do not require a Microsoft symbol server, and need to be decoded from Windows 10, versions 1709 or higher.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: WindowsUpdateLog-help.xml
+  Module Name: WindowsUpdate
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsupdate/get-windowsupdatelog?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WindowsUpdateLog

@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays configuration settings for Software Inventory Logging.
+module: SoftwareInventoryLogging
+notes: ""
+outputs:
+- name: <xref href="System.Management.Automation.PSCustomObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-SilLogging
+  href: ./Set-SilLogging.yml
+- text: Start-SilLogging
+  href: ./Start-SilLogging.yml
+- text: Stop-SilLogging
+  href: ./Stop-SilLogging.yml
+- text: Publish-SilData
+  href: ./Publish-SilData.yml
+syntaxes:
+- Get-SilLogging [[-CimSession] <CimSession[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get settings for the current computer'
+  code: |-
+    PS C:\> Get-SilLogging
+    SIL Running State      :  Started
+    SIL Time Of Day        :  01/01/2013 3:00:00AM
+    Target URI             :  https://log03.hosts.contoso.com
+    Certificate Thumbprint :
+  description: |-
+    This command displays the configuration settings for Software Inventory Logging.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: SoftwareInventoryLogging.Get-SilLogging
+name: Get-SilLogging
+description: |-
+  The **Get-SilLogging** cmdlet displays configuration settings for Software Inventory Logging.
+  If logging is started, Software Inventory Logging collects data daily from all Software Inventory Logging data sources, and then forwards this data over the network to an aggregation server.
+  Specify an aggregation server by using the Set-SilLogging cmdlet.
+  If you do not specify an aggregation server and the server is a virtual machine that runs on a Hyper-V host, then the daily collection forwards the Software Inventory Logging data to a location that its Windows Server host can access.
+  The cmdlet gets the state, either started or stopped, of the daily collection, the time of day that the daily collection runs, the uniform resource identifier (URI) of the aggregation server, and the certificate thumbprint to use for encryption.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MsftSil_ManagementTasks-help.xml
+  Module Name: SoftwareInventoryLogging
+  ms.date: 01/24/2017
+  online version: https://docs.microsoft.com/powershell/module/softwareinventorylogging/get-sillogging?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-SilLogging

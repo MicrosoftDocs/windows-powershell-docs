@@ -1,0 +1,273 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Automates the provisioning of IPAM server.
+module: IpamServer
+notes: ""
+links:
+- text: IP Address Management (IPAM) Server Cmdlets in Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Invoke-IpamServerProvisioning [-WidSchemaPath <String>] [-ProvisioningMethod <ProvisioningMethod>]
+
+   [-GpoPrefix <String>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Invoke-IpamServerProvisioning [-ProvisioningMethod <ProvisioningMethod>] [-GpoPrefix <String>] [-Force]
+
+   [-DatabaseServer] <String> [-DatabaseName] <String> [-DatabasePort] <UInt16> [-DatabaseAuthType <AuthType>]
+
+   [-DatabaseCredential <PSCredential>] [-UseExistingSchema] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Provision an IPAM server'
+  code: |-
+    PS C:\> Invoke-IpamServerProvisioning
+    This cmdlet will provision IPAM on ipam1.contoso.com. As a part of provisioning, this cmdlet will provision IPAM to use Windows Internal database. 
+    The cmdlet will create a new IPAM database at %WINDIR%\System32\IPAM\Database, create roles, and prepare IPAM for use. 
+    Infrastructure servers managed by IPAM will have to be manually provisioned to provide access to IPAM. Read the product documentation for details. 
+    Do you want to continue? Y
+  description: |-
+    This command provisions an IPAM server with default settings.
+    By default, IPAM server uses the Windows Internal Database.
+    The database files are stored in the default location, %WINDIR%\System32\IPAM\Database.
+    The managed servers are provisioned manually by default.
+  summary: ""
+- title: 'Example 2: Provision an IPAM server to use GPO-based provisioning'
+  code: |-
+    PS C:\> Invoke-IpamServerProvisioning -WidSchemaPath "D:\database" -ProvisioningMethod Automatic -GpoPrefix IPAM1
+    This cmdlet will provision IPAM on ipam1.contoso.com. As a part of provisioning, this cmdlet will provision IPAM to use Windows Internal database. 
+    The cmdlet will create a new IPAM database at D:\database, create roles, and prepare IPAM for use. 
+    IPAM will be configured to use Group Policy to provision the managed servers. Read the product documentation for details. 
+    Do you want to continue?Y
+  description: |-
+    This command provisions an IPAM server to use the Windows Internal Database and a GPO-based provisioning method for managed servers.
+    The command stores the database files at a custom location.
+  summary: ""
+- title: 'Example 3: Provision an IPAM server to use Microsoft SQL Server'
+  code: |-
+    PS C:\> Invoke-IpamServerProvisioning -DatabaseServer "Db1.Contoso.com" -DatabaseName "Ipamdb" -DatabasePort 1433
+    This cmdlet will provision IPAM on ipam1.Contoso.com. As a part of provisioning, this cmdlet will provision IPAM to use Microsoft SQL Server on Db1.Contoso.com. 
+    The cmdlet will create a new IPAM database, create roles, and prepare IPAM for use. 
+    Infrastructure servers managed by IPAM will have to be manually provisioned to provide access to IPAM. Read the product documentation for details. 
+    Do you want to continue?
+  description: |-
+    This command provisions an IPAM server to use a Microsoft SQL Server database residing on a database server named Db1.Contoso.com.
+    The example assumes the existence of a server named Db1.Contoso.com, configured with Microsoft SQL Server, an empty database instance named Ipamdb, and the IPAM computer has access permissions for that database instance.
+  summary: ""
+- title: 'Example 4: Provision an IPAM server to use a Microsoft SQL Server database provisioned by IPAM'
+  code: |-
+    PS C:\> $Credential = Get-Credential
+    PS C:\> Invoke-IpamServerProvisioning -DatabaseServer "Db1.Contoso.com" -DatabaseName "Ipamdb" -DatabasePort 1433 -ProvisioningMethod Automatic -GpoPrefix IPAM1 -DatabaseAuthType SQL -DatabaseCredential $Credential
+    This cmdlet will provision IPAM on ipam1.contoso.com. As a part of provisioning, this cmdlet will provision IPAM to use Microsoft SQL Server on db1.contoso.com. 
+    The cmdlet will create a new IPAM database, create roles, and prepare IPAM for use. 
+    IPAM will be configured to use Group Policy to provision the managed servers. Read the product documentation for details. 
+    Do you want to continue?
+  description: |-
+    The first command uses the **Get-Credential** cmdlet to get a credential, and stores the results in the $Credential variable.
+
+    The second command provisions an IPAM server to use a Microsoft SQL Server database that resides on a database server named Db1.Contoso.com.
+    The example assumes the existence of a server named Db1.Contoso.com, configured with Microsoft SQL Server, a database instance will be created by IPAM during provisioning, and the IPAM computer has db_datawriter, db_datareader, db_ddladmin, view database state, alter permissions on the database.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="AuthType" data-throw-if-not-resolved="False" />
+  name: DatabaseAuthType
+  description: |+
+    Specifies the type of authentication to use when connecting to the IPAM database.
+    If you specify Windows as the authentication type, IPAM uses the server computer account to connect to the database.
+    With SQL authentication, specify a username and password to connect to the database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Windows, SQL
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DatabaseCredential
+  description: |+
+    Specifies credentials, as a **PSCredential** object, for the computer that runs SQL Server.
+    To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+    For more information, type `Get-Help Get-Credential`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    Specifies the name of a SQL Server database.
+    The IPAM server connects to this database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: DatabasePort
+  isRequired: true
+  description: |+
+    Specifies the port that the IPAM server uses to connect to the database server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  isRequired: true
+  description: |+
+    Specifies the fully qualified domain name (FQDN) or IP address of the database server..
+    You can provide an IPv4 or IPv6 address, or a fully qualified domain name (FQDN).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GpoPrefix
+  description: |+
+    Specifies a unique Group Policy Object (GPO) prefix name that IPAM uses to create the group policy objects.
+    Use this parameter only when the *ProvisioningMethod* parameter has the value Automatic.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ProvisioningMethod" data-throw-if-not-resolved="False" />
+  name: ProvisioningMethod
+  description: |+
+    Specifies manual or automatic, GPO-based provisioning.
+    The acceptable values for this parameter are:Automatic and Manual.
+    In the case of manual provisioning, you must manually configure the managed servers to provide requisite access to IPAM.
+    In case of GPO-based, or automatic provisioning, you must create the GPOs in each of the managed domains through the **Invoke-IpamGpoProvisioning** cmdlet.
+    If you do not specify a provisioning method, it is assumed to be manual.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Automatic, Manual
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseExistingSchema
+  description: |+
+    Indicates that the IPAM server uses an existing schema on the database server, instead of creating a schema.
+    An error occurs if this flag is specified and a valid schema is not found on the server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WidSchemaPath
+  description: |+
+    Specifies the location on IPAM server where IPAM creates the Windows Internal Database (WID) schema.
+    To use an existing schema, specify the path to the folder containing the schema files.
+    If you do not specify a value for this parameter, IPAM tries to create the schema in the default path %SystemDrive%\Windows\System32\ipam\Database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: IpamServer.Invoke-IpamServerProvisioning
+name: Invoke-IpamServerProvisioning
+description: |-
+  The **Invoke-IpamServerProvisioning** cmdlet installs and configures IP Address Management (IPAM) server components on the host on which you run the cmdlet.
+  When you run the cmdlet locally on IPAM server or remotely from an RSAT, the cmdlet installs and configures IPAM components on the IPAM server to which the session is connected.
+  As a part of installation, the cmdlet performs the following functions:
+
+  1. Configures the WCF and WSMan settings, such as Port and App Pool configuration.
+
+  2. Creates and connects to an IPAM database.
+     The cmdlet attempts to create a database by using authentication credentials that the user specifies.
+     An error occurs if the database that you specify does not exist or the chosen credentials do not include permissions to create a database.
+
+  3. Creates IPAM Tasks to get data for IPAM views.
+
+  4. Creates default user roles for access control.
+     This includes RBAC roles in the database and any local security groups.
+
+  5. Configures a provisioning method.
+
+  6. By default, the cmdlet enables all available IPAM optional capabilities. 
+
+  You can choose to manually or automatically provision access to managed servers.
+  If you provisioned the managed servers by using group policy, make sure to create the corresponding GPOs in every managed domain by using the **Invoke-IpamGpoProvisioning** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamServerProvisioning.cdxml-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/invoke-ipamserverprovisioning?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Invoke-IpamServerProvisioning

@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: ""
+module: Storage
+notes: ""
+syntaxes:
+- Get-FileIntegrity [-FileName] <String> [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+examples:
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+- title: '2:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileName
+  isRequired: true
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: FullName
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Storage.Get-FileIntegrity
+name: Get-FileIntegrity
+description: ""
+metadata:
+  external help file: Storage2_Cmdlets.xml
+  Module Name: Storage
+  online version: https://docs.microsoft.com/powershell/module/storage/get-fileintegrity?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

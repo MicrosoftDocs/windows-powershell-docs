@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Turns off maintenance for a disk resource or Cluster Shared Volume within a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterResource
+  href: ./Add-ClusterResource.yml
+- text: Get-ClusterResource
+  href: ./Get-ClusterResource.yml
+- text: Move-ClusterResource
+  href: ./Move-ClusterResource.yml
+- text: Remove-ClusterResource
+  href: ./Remove-ClusterResource.yml
+- text: Start-ClusterResource
+  href: ./Start-ClusterResource.yml
+- text: Stop-ClusterResource
+  href: ./Stop-ClusterResource.yml
+- text: Suspend-ClusterResource
+  href: ./Suspend-ClusterResource.yml
+syntaxes:
+- >-
+  Resume-ClusterResource [[-Name] <String>] [-VolumeName <String>] [-InputObject <PSObject>] [-Cluster <String>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Resume-ClusterResource "Cluster Disk 2"
+    Name                State               Group               ResourceType 
+    ----                -----               -----               ------------ 
+    Cluster Disk 2      Online              Available Storage   Physical Disk
+  description: |-
+    This example turns off maintenance for the CSV named Cluster Disk 2.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-ClusterSharedVolume "Cluster Disk 5" | Resume-ClusterResource
+    Name                       State                      Node 
+    ----                       -----                      ---- 
+    Cluster Disk 5             Online                     node2
+  description: |-
+    This example turns off maintenance for all volumes on the CSV named Cluster Disk 5.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster resource to resume.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster resource to resume.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VolumeName
+  description: |+
+    Specifies the name of the volume to suspend.
+    This parameter is only applicable to Cluster Shared Volumes.
+    If this parameter is not specified, then the operation will be performed on all volumes on the Cluster Shared Volume.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Resume-ClusterResource
+name: Resume-ClusterResource
+description: |-
+  The **Resume-ClusterResource** cmdlet turns off maintenance for a disk resource or Cluster Shared Volume within a failover cluster.
+
+  This cmdlet applies to disks and Cluster Shared Volumes only.
+  We recommend that maintenance be turned off for a disk or Cluster Shared Volume as soon as the maintenance tasks have been completed.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/resume-clusterresource?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Resume-ClusterResource

@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a backup target to a scheduled backup.
+module: WssCmdlets
+notes: ""
+links:
+- text: Get-WssBackupTarget
+  href: ./Get-WssBackupTarget.yml
+- text: New-WssBackupTarget
+  href: ./New-WssBackupTarget.yml
+- text: Remove-WssBackupTarget
+  href: ./Remove-WssBackupTarget.yml
+syntaxes:
+- Add-WssBackupTarget [-BackupPolicy] <ScheduledBackupPolicy> [-BackupTarget] <BackupTarget> [-Force]
+examples:
+- title: 'Example 1: Add a backup target to a scheduled backup policy'
+  code: |-
+    PS C:\>$ContosoBUPolicy213 = Get-WssBackupPolicy PS C:\>$ContosoBUTarget05 = New-WBBackupTarget -VolumePath "F:\" PS C:\>Add-WssBackupTarget -BackupPolicy $ContosoBUPolicy213 -BackupTarget $ContosoBUTarget05
+  description: |-
+    This example adds a backup target to a backup policy.
+
+    The first command gets the current backup policy for the computer and stores it in the variable named **$ContosoBUPolicy213**.
+
+    The second command creates a new backup target from the volume on drive F: and stores it in the variable named **$ContosoBUTarget05**.
+
+    The third command adds the backup target that is stored in **$ContosoBUTarget05** to the backup policy that is stored in **$ContosoBUPolicy213**.
+  summary: ""
+parameters:
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies the scheduled backup policy to which to add the backup target.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="BackupTarget" data-throw-if-not-resolved="False" />
+  name: BackupTarget
+  isRequired: true
+  description: |+
+    Specifies the backup target  to add.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.Add-WssBackupTarget
+name: Add-WssBackupTarget
+description: |-
+  The **Add-WssBackupTarget** cmdlet adds a backup target to a scheduled backup policy.
+  A scheduled backup policy is a backup file specification that has a backup schedule associated with it.
+  When you add a backup target to the backup policy, the backup job adds the files in the backup policy that you specify to the new target location.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/add-wssbackuptarget?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

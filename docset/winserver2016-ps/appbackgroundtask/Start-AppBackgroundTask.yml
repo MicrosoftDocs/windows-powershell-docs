@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts a background task.
+module: AppBackgroundTask
+notes: ""
+links:
+- text: Get-AppBackgroundTask
+  href: ./Get-AppBackgroundTask.yml
+- text: Unregister-AppBackgroundTask
+  href: ./Unregister-AppBackgroundTask.yml
+syntaxes:
+- >-
+  Start-AppBackgroundTask -TaskID <String[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start a background task'
+  code: |-
+    PS C:\> Start-AppBackgroundTask -TaskID "6D99C4A8-839E-5440-BEFD-2A8DB30A6461"
+  description: |-
+    This command starts a registered background task that has the TaskID 6D99C4A8-839E-5440-BEFD-2A8DB30A6461.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TaskID
+  isRequired: true
+  description: |+
+    Specifies a TaskID, in GUID format, for a background task.
+    You can get the TaskID by using the **Get-AppBackgroundTask** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: tid
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: AppBackgroundTask.Start-AppBackgroundTask
+name: Start-AppBackgroundTask
+description: |-
+  The **Start-AppBackgroundTask** cmdlet starts a background task.
+  A background task performs an activity for an application, such as downloading a file.
+  You must have administrator access to start a background task.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_BackgroundTask.cdxml-help.xml
+  Module Name: AppBackgroundTask
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appbackgroundtask/start-appbackgroundtask?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-AppBackgroundTask

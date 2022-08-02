@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets connection pooling Performance Monitor counters.
+module: Wdac
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_OdbcPerfCounter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Disable-OdbcPerfCounter
+  href: ./Disable-OdbcPerfCounter.yml
+- text: Enable-OdbcPerfCounter
+  href: ./Enable-OdbcPerfCounter.yml
+syntaxes:
+- >-
+  Get-OdbcPerfCounter [[-Platform] <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get ODBC Performance Counter setting on a 32-bit platform'
+  code: |-
+    PS C:\> Get-OdbcPerfCounter -Platform "32-bit"
+  description: |-
+    This command gets the ODBC Performance Counter setting on a 32-bit platform.
+  summary: ""
+- title: 'Example 2: Get ODBC Performance Counter setting on both platforms'
+  code: |-
+    PS C:\> Get-OdbcPerfCounter
+  description: |-
+    This command gets the ODBC Performance Counter setting on both 32-bit and 64-bit platforms.
+  summary: ""
+- title: 'Example 3: Store ODBC Performance Counter setting for a 32-bit platform'
+  code: |-
+    PS C:\> $PerfCounter = Get-OdbcPerfCounter -Platform "32-bit"
+  description: |-
+    This command gets the ODBC Performance Counter setting on a 32-bit platform, and then stores the result in the $PerfCounter variable.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Platform
+  description: |+
+    Specifies the platform architecture.
+    This cmdlet gets the ODBC connection pooling Performance Monitor counters that belong to the architecture that this parameter specifies.
+    The acceptable values for this parameter are:
+
+    - 32-bit
+    - 64-bit
+    - All
+
+    The default value is All.
+    If you run this cmdlet in a remote CIM session, this parameter refers to the platform architecture on the remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: 32-bit, 64-bit, All
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Wdac.Get-OdbcPerfCounter
+name: Get-OdbcPerfCounter
+description: |-
+  The **Get-OdbcPerfCounter** cmdlet gets the Open Database Connectivity (ODBC) connection pooling performance monitor counters.
+
+  For more information about ODBC and performance counters, see [Microsoft Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) and [ODBC Performance Counters](https://msdn.microsoft.com/en-us/library/windows/desktop/ms709288.aspx) on the Microsoft Developer Network.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_OdbcPerfCounterTask_v1.0.cdxml-help.xml
+  Module Name: Wdac
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/wdac/get-odbcperfcounter?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-OdbcPerfCounter

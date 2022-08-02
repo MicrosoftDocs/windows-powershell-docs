@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a relying party trust for a non-claims-aware web application or service from the Federation Service.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Add-AdfsNonClaimsAwareRelyingPartyTrust.yml
+- text: Disable-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Disable-AdfsNonClaimsAwareRelyingPartyTrust.yml
+- text: Enable-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Enable-AdfsNonClaimsAwareRelyingPartyTrust.yml
+- text: Get-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Get-AdfsNonClaimsAwareRelyingPartyTrust.yml
+- text: Set-AdfsNonClaimsAwareRelyingPartyTrust
+  href: ./Set-AdfsNonClaimsAwareRelyingPartyTrust.yml
+syntaxes:
+- Remove-AdfsNonClaimsAwareRelyingPartyTrust [-TargetName] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- Remove-AdfsNonClaimsAwareRelyingPartyTrust -TargetIdentifier <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-AdfsNonClaimsAwareRelyingPartyTrust
+
+   -TargetNonClaimsAwareRelyingPartyTrust <NonClaimsAwareRelyingPartyTrust> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a non-claims-aware relying party trust by using a name'
+  code: |-
+    PS C:\> Remove-AdfsNonClaimsAwareRelyingPartyTrust -TargetName "ExpenseReport"
+  description: |-
+    This command removes the non-claims-aware relying party trust for the application named ExpenseReport.
+  summary: ""
+- title: 'Example 2: Remove a non-claims-aware relying party trust by using an identifier'
+  code: |-
+    PS C:\> Remove-AdfsNonClaimsAwareRelyingPartyTrust -TargetIdentifier "http://Contosoexpense/"
+  description: |-
+    This command removes the non-claims-aware relying party trust for the expense report application that has the identifier http://Contosoexpense.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetIdentifier
+  isRequired: true
+  description: |+
+    Specifies the identifier of the non-claims-aware relying party trust to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  isRequired: true
+  description: |+
+    Specifies the name of the non-claims-aware relying party trust to remove.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="NonClaimsAwareRelyingPartyTrust" data-throw-if-not-resolved="False" />
+  name: TargetNonClaimsAwareRelyingPartyTrust
+  isRequired: true
+  description: |+
+    Specifies a **NonClaimsAwareRelyingPartyTrust** object.
+    The cmdlet removes the non-claims-aware relying party trust that you specify.
+    To obtain a **NonClaimsAwareRelyingPartyTrust**, use the **Get-AdfsNonClaimsAwareRelyingPartyTrust** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Remove-AdfsNonClaimsAwareRelyingPartyTrust
+name: Remove-AdfsNonClaimsAwareRelyingPartyTrust
+description: |-
+  The **Remove-AdfsNonClaimsAwareRelyingPartyTrust** cmdlet removes a relying party trust for a non-claims-aware web application or service from the Federation Service.
+
+  A non-claims aware relying party trust is a relying party trust for web applications or services that do not rely directly on Active Directory Federation Services (AD FS) to issue tokens, but instead rely on a third party that accesses such tokens and transforms them into what applications understand.
+  A non-claims-aware relying party trust is useful for defining authentication and authorization policies for web applications and services that do not rely on AD FS tokens.
+  The Web Application Proxy requests such tokens for pre-authentication to web applications or services that have corresponding non-claims-aware relying party trusts for requests that come from outside the network through the proxy.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfsnonclaimsawarerelyingpartytrust?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-AdfsNonClaimsAwareRelyingPartyTrust

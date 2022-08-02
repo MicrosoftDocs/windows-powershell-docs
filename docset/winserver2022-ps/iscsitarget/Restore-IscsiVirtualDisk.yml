@@ -1,0 +1,112 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Restores a virtual disk from a snapshot.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Checkpoint-IscsiVirtualDisk
+  href: ./Checkpoint-IscsiVirtualDisk.yml
+- text: Convert-IscsiVirtualDisk
+  href: ./Convert-IscsiVirtualDisk.yml
+- text: Get-IscsiVirtualDisk
+  href: ./Get-IscsiVirtualDisk.yml
+- text: Get-IscsiVirtualDiskSnapshot
+  href: ./Get-IscsiVirtualDiskSnapshot.yml
+- text: Import-IscsiVirtualDisk
+  href: ./Import-IscsiVirtualDisk.yml
+- text: New-IscsiVirtualDisk
+  href: ./New-IscsiVirtualDisk.yml
+- text: Remove-IscsiVirtualDisk
+  href: ./Remove-IscsiVirtualDisk.yml
+- text: Set-IscsiVirtualDisk
+  href: ./Set-IscsiVirtualDisk.yml
+syntaxes:
+- >-
+  Restore-IscsiVirtualDisk [-SnapshotId] <String> [-ComputerName <String>] [-Credential <PSCredential>]
+
+   [<CommonParameters>]
+- >-
+  Restore-IscsiVirtualDisk -InputObject <IscsiVirtualDiskSnapshot> [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Restore a snapshot by using its ID'
+  code: |-
+    PS C:\> Restore-IscsiVirtualDisk -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}"
+  description: |-
+    This example restores a snapshot with the ID {E9A5BA03-85B9-40CA-85DF-DC1695690B40}.
+  summary: ""
+- title: 'Example 2: Restore a snapshot hosted on another computer'
+  code: |-
+    PS C:\> Restore-IscsiVirtualDisk -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}" -ComputerName "fs1.contoso.com"
+  description: |-
+    This example restores a snapshot with the ID {E9A5BA03-85B9-40CA-85DF-DC1695690B40} hosted on a computer named fs1.contoso.com.
+  summary: ""
+- title: 'Example 3: Restore a snapshot by using an input object'
+  code: |-
+    PS C:\> Restore-IscsiVirtualDisk -InputObject $vhd1snapshot
+  description: |-
+    This example uses the **Get-IscsiVirtualDiskSnapshot** cmdlet to retrieve a snapshot, and then assigns the snapshot object to a variable named $vhd1snapshot, and finally passes it to this cmdlet to restore the virtual disk.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an iSCSI Virtual Disk Snapshot object from the input pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SnapshotId
+  isRequired: true
+  description: |+
+    Specifies the identifier (ID) for the snapshot.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Restore-IscsiVirtualDisk
+name: Restore-IscsiVirtualDisk
+description: |-
+  The **Restore-IscsiVirtualDisk** cmdlet restores an iSCSI virtual disk using its snapshot.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/restore-iscsivirtualdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Restore-IscsiVirtualDisk

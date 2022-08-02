@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Opens a window connected to a virtual desktop template.
+module: MultipointVdi
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-WmsVirtualDesktop
+  href: ./Get-WmsVirtualDesktop.yml
+- text: Import-WmsVirtualDesktop
+  href: ./Import-WmsVirtualDesktop.yml
+- text: New-WmsVirtualDesktop
+  href: ./New-WmsVirtualDesktop.yml
+syntaxes:
+- >-
+  Open-WmsVirtualDesktop -TemplateVirtualMachineGuid <String> [-Domain <String>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Open a window to a virtual desktop template'
+  code: |-
+    PS C:\> Open-WmsVirtualDesktop -TemplateVirtualMachineGuid "53F56307-B6BF-11D0-94F2-00A0C91EFB8B"
+  description: |-
+    This command opens a window that is connected to the virtual desktop template with the ID 53F56307-B6BF-11D0-94F2-00A0C91EFB8B.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Specifies the name of the Active Directory domain that contains the virtual desktop template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TemplateVirtualMachineGuid
+  isRequired: true
+  description: |+
+    Specifies the Hyper-V virtual machine ID of the virtual desktop template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MultipointVdi.Open-WmsVirtualDesktop
+name: Open-WmsVirtualDesktop
+description: |-
+  The **Open-WmsVirtualDesktop** cmdlet opens a window connected to the specified virtual desktop template.
+  This enables you to customize the virtual desktop template in order to customize virtual desktops that you create.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPointVdi.dll-Help.xml
+  Module Name: MultipointVdi
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipointvdi/open-wmsvirtualdesktop?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Open-WmsVirtualDesktop

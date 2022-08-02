@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a virtual switch to an Ethernet resource pool.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    None by default; **Microsoft.HyperV.PowerShell.VMNetwork** if **-PassThru** is present.
+syntaxes:
+- >-
+  Add-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Name] <String[]> [-ResourcePoolName] <String[]> [<CommonParameters>]
+- Add-VMSwitch [-VMSwitch] <VMSwitch[]> [-ResourcePoolName] <String[]> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-VMSwitch -Name Test -ResourcePoolName "Engineering Department"
+  description: |-
+    Adds virtual switch Test to Ethernet resource pool Engineering Department.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-VMSwitch -Name Test | Add-VMSwitch -ResourcePoolName "Engineering Department"
+  description: |-
+    Adds virtual switch Test to Ethernet resource pool Engineering Department.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies an array of Hyper-V hosts.
+    The cmdlet adds the virtual switch on the Hyper-V hosts that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual switch to be added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: SwitchName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ResourcePoolName
+  isRequired: true
+  description: |+
+    Specifies the name of the resource pool to which the virtual switch is to be added.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitch" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMSwitch
+  isRequired: true
+  description: |+
+    Specifies the virtual switch to be added to the Ethernet resource pool.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Add-VMSwitch
+name: Add-VMSwitch
+description: |-
+  The **Add-VMSwitch** cmdlet adds a virtual switch to an Ethernet resource pool.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/add-vmswitch?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-VMSwitch

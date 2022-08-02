@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an app package from a user account.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Windows.Appx.PackageManager.Commands.AppxPackage" data-throw-if-not-resolved="False" />
+  description: |-
+    An **AppxPackage** object that contain information, including the full name of the app package.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: PackageManager class
+  href: https://go.microsoft.com/fwlink/?LinkId=245447
+- text: Sideload Apps with DISM
+  href: https://go.microsoft.com/fwlink/?LinkID=231020
+syntaxes:
+- Remove-AppxPackage [-Package] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove an app package'
+  code: |-
+    PS C:\>Remove-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe"
+  description: |-
+    This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbwe from the account of the current user.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Package
+  isRequired: true
+  description: |+
+    Specifies an **AppxPackage** object or the full name of a package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Appx.Remove-AppxPackage
+name: Remove-AppxPackage
+description: |-
+  The **Remove-AppxPackage** cmdlet removes an app package from a user account.
+  An app package has an .appx file name extension.
+metadata:
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: Appx
+  online version: https://docs.microsoft.com/powershell/module/appx/remove-appxpackage?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

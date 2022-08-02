@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generates reports for propagation test files in a replication group.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder, String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-DfsrPropagationTestFile
+  href: ./Remove-DfsrPropagationTestFile.yml
+- text: Start-DfsrPropagationTest
+  href: ./Start-DfsrPropagationTest.yml
+syntaxes:
+- >-
+  Write-DfsrPropagationReport [-GroupName] <String[]> [-FolderName] <String[]> [-ReferenceComputerName] <String>
+
+   [[-Path] <String>] [[-FileCount] <Int32>] [[-DomainName] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a propagation report for a specific group and replicated folder'
+  code: |-
+    PS C:\> Write-DfsrPropagationReport -GroupName "RG01" -FolderName "RF22" -ReferenceComputerName "SRV01" -Path "C:\Reports"
+  description: |-
+    This command creates a propagation report, as HTML and XML files, in the folder C:\Reports.
+    The command specifies SRV01 as reference computer and specifies group name and folder name.
+  summary: ""
+- title: 'Example 2: Create propagation reports for all groups and replicated folders by using wildcards'
+  code: |-
+    PS C:\> Write-DfsrPropagationReport -GroupName * -FolderName * -ReferenceComputerName "SRV01" -Verbose
+    VERBOSE: Performing operation "Write-DfsrPropagationReport" on Target "DFSR membership with domain: corp.contoso.com;
+    replication group: RG 1; replicated folder: RF 1; computer: SRV01; GUID: {966e2e84-7792-438f-8344-c8f76d214d06}.".
+    VERBOSE: Successfully saved the propagation report for DFSR membership with domain: corp.contoso.com; replication
+    group: RG 1; replicated folder: RF 1; computer: SRV01; GUID: {966e2e84-7792-438f-8344-c8f76d214d06}. The XML file is
+    located here: "C:\Propagation-RG 1-RF 1-04Apr2013-2109.xml". The HTML file is located here: "C:\Propagation-RG 1-RF
+    1-04Apr2013-2109.html".
+    VERBOSE: Performing operation "Write-DfsrPropagationReport" on Target "DFSR membership with domain: corp.contoso.com;
+    replication group: Branch Office 1; replicated folder: Data Distribution 1; computer: SRV01; GUID:
+    {dbaa3a16-f731-4428-8a4f-8278673e848a}.".
+    VERBOSE: Successfully saved the propagation report for DFSR membership with domain: corp.contoso.com; replication
+    group: Branch Office 1; replicated folder: Data Distribution 1; computer: SRV01; GUID:
+    {dbaa3a16-f731-4428-8a4f-8278673e848a}. The XML file is located here: "C:\Propagation-Branch Office 1-Data Distribution
+    1-04Apr2013-2109.xml". The HTML file is located here: "C:\Propagation-Branch Office 1-Data Distribution
+    1-04Apr2013-2109.html".
+  description: |-
+    This command creates propagation reports for all replicated folders in all replication groups by using a wildcard character (*) for the **GroupName** and **FolderName** parameters.
+    The command specifies SRV01 as the reference computer.
+    This command uses the *Verbose* parameter to display information to the console.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains the replication group.
+    If you do not specify this parameter, the cmdlet uses the domain of the current user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "100"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: FileCount
+  description: |+
+    Specifies the number of most recently generated propagation test files to use for generating the report.
+    If you do not specify this parameter, the cmdlet uses all files.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FolderName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replicated folders.
+    If you do not specify this parameter, the cmdlet applies to all participating replicated folders.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: RF, RfName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  isRequired: true
+  description: |+
+    Specifies an array of names of replication groups.
+    If you do not specify this parameter, the cmdlet applies to all participating replication groups.
+    You can use a comma separated list and the wildcard character (*).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies a folder for the report file.
+    If you do not specify this parameter, the cmdlet uses the current working directory.
+
+  defaultValue: None
+  position: "3"
+  aliases: FilePath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReferenceComputerName
+  isRequired: true
+  description: |+
+    Specifies the name of a reference computer in the replication group.
+    The cmdlet compares the replication test file from this reference computer to test files for all other members of the replication group.
+    If you do not specify this parameter, the cmdlet uses the current computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ReferenceMember, RefMem
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DFSR.Write-DfsrPropagationReport
+name: Write-DfsrPropagationReport
+description: |-
+  The **Write-DfsrPropagationReport** cmdlet generates reports for the replication progress of propagation test files in a replication group.
+  Specify the replication group, replicated folder, and a member computer to act as the reference computer.
+
+  The cmdlet creates files named Propagation-\<RG Name\>-\<Date\>-\<Time\>.html and Propagation-\<RG Name\>-\<Date\>-\<Time\>.xml.
+  You can specify a folder to save these files to, or use the current working directory.
+
+  Use the **Start-DfsrPropagationTest** cmdlet to create a propagation test file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/write-dfsrpropagationreport?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Write-DfsrPropagationReport

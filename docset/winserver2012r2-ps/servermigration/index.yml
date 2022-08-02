@@ -1,0 +1,23 @@
+### YamlMime:PowershellModule
+children:
+- title: ServerMigration
+  cmdlets:
+  - ServerMigration.Export-SmigServerSetting
+  - ServerMigration.Get-SmigServerFeature
+  - ServerMigration.Import-SmigServerSetting
+  - ServerMigration.Receive-SmigServerData
+  - ServerMigration.Send-SmigServerData
+uid: ServerMigration
+name: ServerMigration
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Server Migration cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+
+  Administrators can use the Windows Server Migration Tools cmdlets for Windows PowerShell to migrate server roles, features, operating system settings, and other data and shares to computers that are running the latest version of Windows Server.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
+  Help Version: '{{Please enter version of help manually (X.X.X.X) format}}'
+  Locale: en-US
+  Module Guid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  Module Name: ServerMigration
+  ms.date: 12/06/2017
+  title: ServerMigration

@@ -1,0 +1,369 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a file management job.
+module: FileServerResourceManager
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMFileManagementJob" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-FsrmFileManagementJob
+  href: ./Get-FsrmFileManagementJob.yml
+- text: New-FsrmFmjAction
+  href: ./New-FsrmFmjAction.yml
+- text: New-FsrmFmjCondition
+  href: ./New-FsrmFmjCondition.yml
+- text: New-FsrmFMJNotification
+  href: ./New-FsrmFMJNotification.yml
+- text: New-FsrmFmjNotificationAction
+  href: ./New-FsrmFmjNotificationAction.yml
+- text: New-FsrmScheduledTask
+  href: ./New-FsrmScheduledTask.yml
+- text: Remove-FsrmFileManagementJob
+  href: ./Remove-FsrmFileManagementJob.yml
+- text: Set-FsrmFileManagementJob
+  href: ./Set-FsrmFileManagementJob.yml
+- text: Start-FsrmFileManagementJob
+  href: ./Start-FsrmFileManagementJob.yml
+- text: Stop-FsrmFileManagementJob
+  href: ./Stop-FsrmFileManagementJob.yml
+- text: Wait-FsrmFileManagementJob
+  href: ./Wait-FsrmFileManagementJob.yml
+syntaxes:
+- >-
+  New-FsrmFileManagementJob [-Name] <String> [-Description <String>] -Namespace <String[]> [-Disabled]
+
+   [-Condition <CimInstance[]>] -Action <CimInstance> [-ReportFormat <FmjReportFormatsEnum[]>]
+
+   [-ReportLog <FmjReportLogsEnum[]>] [-MailTo <String>] [-Notification <CimInstance[]>] -Schedule <CimInstance>
+
+   [-Continuous] [-ContinuousLog] [-ContinuousLogSize <UInt64>] [-Parameters <String[]>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a file management job that expires data'
+  code: |-
+    The first command gets a **DateTime** object and stores it in the variable $date.
+    PS C:\> $date = Get-Date "12:00am"
+
+    This second command returns a **FsrmScheduledTask** object that runs the task at midnight on the first day of the month. The command stores results in the $task variable.
+    PS C:\> $task = New-FsrmScheduledTask -Time $date -Monthly 1
+
+    The third command returns an action object for a management job and stores the results in the $action variable. The command specifies an expiration action and specifies a path that the action uses to expire files.
+    PS C:\> $action = New-FsrmFmjAction -Type Expiration -ExpirationFolder "C:\Expire"
+
+    The fourth command creates a file management job named "Expire all data" for the folder C:\Share01. The command specifies the schedule stored in the $task variable and specifies the action stored in the $action variable.
+    PS C:\> New-FsrmFileManagementJob -Name "Expire all data" -Namespace @("C:\Share01") -Schedule $task -Action $action
+  description: |-
+    This example creates a file management job that expires all data in a namespace.
+  summary: ""
+- title: 'Example 2: Create a file management job that expires data continuously'
+  code: |-
+    The first command gets a **DateTime** object and stores it in the variable $date.
+    PS C:\> $date = Get-Date "12:00am"
+
+    This second command returns a **FsrmScheduledTask** object that runs the task at midnight on the first day of the month. The command stores results in the $task variable.
+    PS C:\> $task = New-FsrmScheduledTask -Time $date -Monthly 1
+
+    The third command returns an action object for a management job and stores the results in the $action variable. The command specifies an expiration action and specifies a path that the action uses to expire files.
+    PS C:\> $action = New-FsrmFmjAction -Type Expiration -ExpirationFolder "C:\Expire"
+
+    The fourth command creates a file management job named "Expire all data" for the folder C:\Share01. The command specifies the schedule stored in the $task variable, specifies the action stored in the $action variable, and specifies that the server continuously apply classification to files in the background.
+    PS C:\> New-FsrmFileManagementJob -Name "Expire all data" -Namespace @("C:\Share01") -Schedule $task -Action $action -Continuous
+  description: |-
+    This example creates a file management job that expires data in a namespace when the server runs the file management job and when a file is modified or classified.
+  summary: ""
+- title: 'Example 3: Create a file management job that sends notifications'
+  code: |-
+    The first command gets a **DateTime** object and stores it in the variable $date.
+    PS C:\> $date = Get-Date "12:00am"
+
+    This second command returns a **FsrmScheduledTask** object that runs the task at midnight on the first day of the month. The command stores results in the $task variable.
+    PS C:\> $task = New-FsrmScheduledTask -Time $date -Monthly 1
+
+    The third command returns an action object for a management job and stores the results in the $action variable. The command specifies an expiration action and specifies a path that the action uses to expire files.
+    PS C:\> $action = New-FsrmFmjAction -Type Expiration -ExpirationFolder "C:\Expire"
+
+    The fourth command returns a notification action object that sends the specified email message to the administrator and file owner. The command specifies that the action can attach a maximum of 1000 files to the message. The command stores the results in the $notificationaction variable.
+    PS C:\> $notificationaction = New-FsrmFmjNotificationAction -Type Email -MailTo "[Admin Email];[File Owner]" -Subject "Warning: Files will expire soon" -Body "The attached list of files will expire in 30 days." -AttachmentFileListSize 1000
+
+    The fifth command returns a notification object for a file management job that runs the notification action stored in the $notificationaction variable 30 days before the file management job acts. The command stores the results in the $notification variable.
+    PS C:\> $notification = New-FsrmFmjNotification -Days 30 -Action $notificationaction
+
+    The sixth command creates a file management job named "Expire all data" for the folder C:\Share01. The command specifies the schedule stored in the $task variable, specifies the action stored in the $action variable, and specifies the notification stored in the $notification variable.
+    PS C:\> New-FsrmFileManagementJob -Name "Expire all data" -Namespace @("C:\Share01") -Schedule $task -Action $action -Notification $notification
+  description: |-
+    This example creates a file management job that expires data in a namespace and sends an email notice to the file owner and administrator 30 days before the server runs the file management job.
+  summary: ""
+- title: 'Example 4: Create a conditional file management job'
+  code: |-
+    The first command gets a **DateTime** object and stores it in the variable $date.
+    PS C:\> $date = Get-Date "12:00am"
+
+    This second command returns an **FsrmScheduledTask** object that runs the task at midnight on the first day of the month. The command stores results in the $task variable.
+    PS C:\> $task = New-FsrmScheduledTask -Time $date -Monthly 1
+
+    The third command returns an action object for a management job and stores the results in the $action variable. The command specifies an expiration action and specifies a path that the action uses to expire files.
+    PS C:\> $action = New-FsrmFmjAction -Type Expiration -ExpirationFolder "C:\Expire"
+
+    The fourth command returns a condition object for file management job that verifies that a file has a PII classification property set to true. The command stores the results in the $condition variable.
+    PS C:\> $condition = New-FsrmFmjCondition -Property "PII" -Condition Equal -Value "1"
+
+    The fifth command creates a file management job named "Expire all data" for the folder C:\Share01. The command specifies the schedule stored in the $task variable, specifies the action stored in the $action variable, and specifies the condition stored in the $condition variable.
+    PS C:\> New-FsrmFileManagementJob -Name "Expire all data" -Namespace @("C:\Share01") -Schedule $task -Action $action -Condition $condition
+  description: |-
+    This example creates a file management job that expires all files that have the PII property set to true.
+  summary: ""
+parameters:
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Action
+  isRequired: true
+  description: |+
+    Specifies a **FsrmFmjAction** object.
+    You can use the **New-FsrmFmjAction** cmdlet to create a **FsrmFmjAction** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Condition
+  description: |+
+    Specifies a **FsrmFmjCondition** object.
+    You can use the **New-FsrmFmjCondition** cmdlet to create a **FsrmFmjCondition** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Continuous
+  description: |+
+    Indicates that the server continuously applies classification to files in the background.
+
+    If you specify this parameter, you cannot specify any notifications and the conditions that you specify cannot include any objects where the classification property is set to the following values:
+    - File.DateCreated
+    - File.DateLastModified
+    - File.DateLastAccessed
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ContinuousLog
+  description: |+
+    Indicates that the server maintains a log of continuous classification activities.
+    You must specify the *Continuous* parameter to log classification activities.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: ContinuousLogSize
+  description: |+
+    Specifies the maximum size of the log that contains continuous classification activity.
+    You must specify the *Continuous* parameter to log classification activities.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the file management job.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disabled
+  description: |+
+    Indicates that the file management job is disabled.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MailTo
+  description: |+
+    Specifies a semicolon-separated list of email addresses to which the file server sends the email.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name for the file management job.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Namespace
+  isRequired: true
+  description: |+
+    Specifies an array of namespaces that are part of the scope.
+    Each value must be either a value of the FolderType property defined on the server (in the format "\[Folder type property name=\<value\>\]") or a static path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Notification
+  description: |+
+    Specifies a **FsrmFmjNotificationAction** object.
+    You can use the **New-FsrmFmjNotificationAction** cmdlet to create a **FsrmFmjNotificationAction** object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Parameters
+  description: |+
+    Specifies an array of strings of the form \<name\>=\<value\>.
+    The File Classification Infrastructure and other management tools use these parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FmjReportFormatsEnum" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReportFormat
+  description: |+
+    Specifies an array of report formats that the file management job produces.
+    The acceptable values for this parameter are:
+
+    - DHTML
+    - HTML
+    - XML
+    - CSV
+    - Text
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: DHtml, Html, Text, Csv, XML
+- type: <xref href="FmjReportLogsEnum" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReportLog
+  description: |+
+    Specifies an array of report types that the file management job generates.
+    The acceptable values for this parameter are:
+
+    - Information
+    - Error
+    - Audit
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Error, Information, Audit
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Schedule
+  isRequired: true
+  description: |+
+    Specifies a File Server Resource Manager (FSRM) scheduled task object that describes the schedule for performing the continuous classification.
+    Use the **New-FsrmScheduledTask** cmdlet to create a scheduled task object.
+    Any duration information in the FSRM scheduled task object is ignored.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: FileServerResourceManager.New-FsrmFileManagementJob
+name: New-FsrmFileManagementJob
+description: |-
+  The **New-FsrmFileManagementJob** cmdlet creates a file management job on the server.
+  The job specifies a schedule, conditions, a command or actions to run if a file meets all the conditions, user notifications, and reporting.
+
+  To use this cmdlet to create a file management job, you must pass in a **FsrmScheduledTask** object, a **FsrmFmjAction** object, and a **FsrmFmjNotification** object.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: FSRMFileManagementJob.cdxml-help.xml
+  Module Name: FileServerResourceManager
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/new-fsrmfilemanagementjob?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-FsrmFileManagementJob

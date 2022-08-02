@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Merges test result information from several test collection files into a single test collection.
+module: HardwareCertification
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Windows.Kits.Hardware.Certification.TestCollectionRecord" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Export-HwCertTestCollectionToXml
+  href: ./Export-HwCertTestCollectionToXml.yml
+- text: Merge-HwCertTestCollectionFromPackage
+  href: ./Merge-HwCertTestCollectionFromPackage.yml
+- text: New-HwCertTestCollection
+  href: ./New-HwCertTestCollection.yml
+syntaxes:
+- >-
+  Merge-HwCertTestCollectionFromXml [-LiteralPath] <String[]> [-ValidationXmlPath <String>]
+
+   [-HckBuildVersion <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Merge two test collection files'
+  code: |-
+    PS C:\> Merge-HwCertTestCollectionFromXml -LiteralPath ("C:\Temp\BasicTest.xml", "C:\Temp\CertificationTest.xml")
+  description: |-
+    This command merges the results in two test collection files.
+    The command specifies files named BasicTest.xml and CertificationTest.xml.
+  summary: ""
+- title: 'Example 2: Merge two test collection files and export the result information'
+  code: |-
+    PS C:\> Merge-HwCertTestCollectionFromXml -LiteralPath ("C:\Temp\BasicTest.xml", "C:\Temp\CertificationTest.xml") | Export-HwCertTestCollectionToXml -Output "C:\Temp\Merged.xml"
+  description: |-
+    This command merges the results in two test collection files and exports the test result information to an .xml file named Merged.xml.
+    The command merges files named BasicTest.xml and CertificationTest.xml.
+    The command then passes the merged results to the **Export-HwCertTestCollectionToXml** cmdlet by using the pipeline operator.
+    That cmdlet exports the results.
+  summary: ""
+- title: 'Example 3: Merge several test collection files and export the result information'
+  code: |-
+    PS C:\> Get-ChildItem -Recurse "C:\Temp\*.xml" | Merge-HwCertTestCollectionFromXml | Export-HwCertTestCollectionToXml -Output "C:\Temp\Merged.xml"
+  description: |-
+    This command merges the results in all the test collection files in a specified folder and exports the merged test result information to an .xml file named Merged.xml.
+    The command uses the **Get-ChildItem** cmdlet to get all the .xml files in the C:\Temp folder.
+    For more information, type `Get-Help Get-ChildItem`.
+    The command then passes the .xml files to the **Merge-HwCertTestCollectionFromXml** cmdlet by using the pipeline operator.
+    That cmdlet merges the test results.
+    Finally, the command passes the merged results to the **Export-HwCertTestCollectionToXml** cmdlet.
+    That cmdlet exports the results.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HckBuildVersion
+  description: |+
+    Specifies an HCK build version.
+    This cmdlet merges the results that match this build version only.
+
+  defaultValue: None
+  position: Named
+  aliases: Build, Version
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LiteralPath
+  isRequired: true
+  description: |+
+    Specifies an array of file paths.
+    These are file paths to test collection .xml files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ValidationXmlPath
+  description: |+
+    Specifies the path of a test collection .xml file to use for validation.
+    The cmdlet checks the new test collection against the validation collection to ensure that at least one result exists.
+    Validation helps to determine that all the tests merged from child lab collections meet the goals of the original test collection.
+
+    To obtain a test collection file for validation, use the **New-HwCertTestCollection** cmdlet, along with the **Export-HwCertTestCollectionToXml** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: XML
+  parameterValueGroup: ""
+uid: HardwareCertification.Merge-HwCertTestCollectionFromXml
+name: Merge-HwCertTestCollectionFromXml
+description: |-
+  The **Merge-HwCertTestCollectionFromXml** cmdlet merges test result information from several test collection .xml files into a single test collection.
+  For more information, see [Windows Hardware Certification Kit downloads](https://go.microsoft.com/fwlink/?LinkId=614978) in the Microsoft Developer Network (MSDN) Library.
+
+  You can use the **Export-HwCertTestCollectionToXml** cmdlet to export the merged test collection as an .xml file.
+  You can use the **New-HwCertTestCollectionExcelReport** cmdlet to create a Microsoft Excel report of the test results.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: microsoft.windows.kits.hardware.certification.management.dll-Help.xml
+  Module Name: HardwareCertification
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hardwarecertification/merge-hwcerttestcollectionfromxml?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Merge-HwCertTestCollectionFromXml

@@ -1,0 +1,32 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a list of online hard disks that can be backup targets and can store server backups..
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.DataProtection.ServerBackup.ObjectModel.BackupDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the disks which can be used as server backup targets.
+links:
+- text: Initialize-WssBackupDisk
+  href: ./Initialize-WssBackupDisk.yml
+syntaxes:
+- Get-WssBackupDisk [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a list of backup targets'
+  code: |-
+    PS C:\> $ContosoBUDisk215 = Get-WssBackupDisk
+  description: |-
+    This command gets the list of currently available backup targets and stores the list in the variable named $ContosoBUDisk215.
+  summary: ""
+uid: WSSCmdlets.Get-WssBackupDisk
+name: Get-WssBackupDisk
+description: |-
+  The **Get-WssBackupDisk** cmdlet gets all online hard disks that can be  backup targets and can store server backups.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssbackupdisk?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WssBackupDisk

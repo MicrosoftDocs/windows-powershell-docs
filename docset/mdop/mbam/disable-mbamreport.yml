@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables the Reports feature.
+module: MBAM
+notes: ""
+links:
+- text: Enable-MbamReport
+  href: enable-mbamreport.yml
+- text: Get-MbamReport
+  href: get-mbamreport.yml
+- text: Test-MbamReport
+  href: test-mbamreport.yml
+syntaxes:
+- Disable-MbamReport [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable the Reports feature'
+  code: |-
+    PS C:\> Disable-MbamReport
+    Are you sure you want to perform this action?
+    Performing operation "Disable MBAM Reports feature"
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+  description: |-
+    This command disables the Reports feature.
+    The command does not specify the *Force* parameter, and, therefore, the command prompts you for confirmation.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Indicates that the cmdlet performs the operation without prompting you for confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MBAM.Disable-MbamReport
+name: Disable-MbamReport
+description: |-
+  The **Disable-MbamReport** cmdlet disables the Microsoft BitLocker Administration and Monitoring (MBAM) Reports feature.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Disable-MbamReport

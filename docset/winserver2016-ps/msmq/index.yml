@@ -1,0 +1,39 @@
+### YamlMime:PowershellModule
+children:
+- title: MSMQ
+  cmdlets:
+  - MSMQ.Clear-MSMQOutgoingQueue
+  - MSMQ.Clear-MSMQQueue
+  - MSMQ.Enable-MSMQCertificate
+  - MSMQ.Get-MSMQCertificate
+  - MSMQ.Get-MSMQOutgoingQueue
+  - MSMQ.Get-MsmqQueue
+  - MSMQ.Get-MsmqQueueACL
+  - MSMQ.Get-MsmqQueueManager
+  - MSMQ.Get-MsmqQueueManagerACL
+  - MSMQ.Move-MsmqMessage
+  - MSMQ.New-MsmqMessage
+  - MSMQ.New-MsmqQueue
+  - MSMQ.Receive-MsmqQueue
+  - MSMQ.Remove-MsmqCertificate
+  - MSMQ.Remove-MsmqQueue
+  - MSMQ.Resume-MsmqOutgoingQueue
+  - MSMQ.Send-MsmqQueue
+  - MSMQ.Set-MsmqQueue
+  - MSMQ.Set-MsmqQueueACL
+  - MSMQ.Set-MsmqQueueManager
+  - MSMQ.Set-MsmqQueueManagerACL
+  - MSMQ.Suspend-MsmqOutgoingQueue
+uid: MSMQ
+name: MSMQ
+description: |-
+  This reference provides cmdlet descriptions and syntax for all MSMQ-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 4.0.5.1
+  Locale: en-US
+  Module Guid: 33ca09b1-a7fe-42e0-8aa1-e7203746ca94
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  title: MSMQ

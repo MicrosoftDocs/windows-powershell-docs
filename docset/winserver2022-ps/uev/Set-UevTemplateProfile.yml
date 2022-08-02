@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies which profile to associate with an individual template.
+module: UEV
+notes: ""
+links:
+- text: Get-UevTemplate
+  href: ./Get-UevTemplate.yml
+- text: Restore-UevBackup
+  href: ./Restore-UevBackup.yml
+syntaxes:
+- Set-UevTemplateProfile -ID <String> -Profile <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Associate a template with the Backup profile'
+  code: |-
+    PS C:\>Set-UevTemplateProfile -ID "MicrosoftCalculator6" -Profile "Backup"
+  description: |-
+    This command associates a template with the backup profile.
+    Settings for the application back-up, instead of synchronizing between computers.
+  summary: ""
+- title: 'Example 2: Associate a template with the Roaming profile'
+  code: |-
+    PS C:\>Set-UevTemplateProfile -ID "MicrosoftCalculator6" -Profile "Roaming"
+  description: |-
+    This command associates a template with the roaming profile.
+    Settings for the application synchronize between computers.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ID
+  isRequired: true
+  description: |+
+    Specifies the ID of a settings location template.
+    If you specify an ID for a template that is not registered, this cmdlet returns an error.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: TemplateID
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Profile
+  isRequired: true
+  description: |+
+    Specifies the name of a profile.
+    The cmdlet associates the template with the specified profile.
+    Valid values are: 
+
+    - Roaming
+    - Backup
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Roaming, Backup, Vdi
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UEV.Set-UevTemplateProfile
+name: Set-UevTemplateProfile
+description: |-
+  The **Set-UevTemplateProfile** cmdlet modifies which profile to associate with an individual template.
+  You can associate a template with the roaming profile or with the backup profile.
+  If you have not specified the profile for a template, the template associates to the roaming profile.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/set-uevtemplateprofile?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-UevTemplateProfile

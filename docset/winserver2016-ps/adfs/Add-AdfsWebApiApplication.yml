@@ -1,0 +1,384 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a Web API application role to an application in AD FS.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *AccessControlPolicyName*, *AdditionalAuthenticationRules*, *ApplicationGroupIdentifier*, *DelegationAuthorizationRules*, *ImpersonationAuthorizationRules*, *IssuanceAuthorizationRules*, and *IssuanceTransformRules* parameters.
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    Objects are received by the *AccessControlPolicyParameters* parameter.
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: |-
+    SwitchParameter objects are received by the *AlwaysRequireAuthentication* and *RequestMFAFromClaimsProviders* parameters.
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.ApplicationGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    ApplicationGroup objects are received by the *ApplicationGroup* parameter.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.WebApiApplication" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the new WebApiApplication object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Get-AdfsWebApiApplication
+  href: ./Get-AdfsWebApiApplication.yml
+- text: Remove-AdfsWebApiApplication
+  href: ./Remove-AdfsWebApiApplication.yml
+- text: Set-AdfsWebApiApplication
+  href: ./Set-AdfsWebApiApplication.yml
+syntaxes:
+- >-
+  Add-AdfsWebApiApplication [-ApplicationGroupIdentifier] <String> -Name <String> -Identifier <String[]>
+
+   [-AllowedAuthenticationClassReferences <String[]>] [-ClaimsProviderName <String[]>]
+
+   [-IssuanceAuthorizationRules <String>] [-IssuanceAuthorizationRulesFile <String>]
+
+   [-DelegationAuthorizationRules <String>] [-DelegationAuthorizationRulesFile <String>]
+
+   [-ImpersonationAuthorizationRules <String>] [-ImpersonationAuthorizationRulesFile <String>]
+
+   [-IssuanceTransformRules <String>] [-IssuanceTransformRulesFile <String>]
+
+   [-AdditionalAuthenticationRules <String>] [-AdditionalAuthenticationRulesFile <String>]
+
+   [-AccessControlPolicyName <String>] [-AccessControlPolicyParameters <Object>] [-NotBeforeSkew <Int32>]
+
+   [-Description <String>] [-TokenLifetime <Int32>] [-AlwaysRequireAuthentication]
+
+   [-AllowedClientTypes <AllowedClientTypes>] [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>]
+
+   [-RefreshTokenProtectionEnabled <Boolean>] [-RequestMFAFromClaimsProviders] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Add-AdfsWebApiApplication [-ApplicationGroup] <ApplicationGroup> -Name <String> -Identifier <String[]>
+
+   [-AllowedAuthenticationClassReferences <String[]>] [-ClaimsProviderName <String[]>]
+
+   [-IssuanceAuthorizationRules <String>] [-IssuanceAuthorizationRulesFile <String>]
+
+   [-DelegationAuthorizationRules <String>] [-DelegationAuthorizationRulesFile <String>]
+
+   [-ImpersonationAuthorizationRules <String>] [-ImpersonationAuthorizationRulesFile <String>]
+
+   [-IssuanceTransformRules <String>] [-IssuanceTransformRulesFile <String>]
+
+   [-AdditionalAuthenticationRules <String>] [-AdditionalAuthenticationRulesFile <String>]
+
+   [-AccessControlPolicyName <String>] [-AccessControlPolicyParameters <Object>] [-NotBeforeSkew <Int32>]
+
+   [-Description <String>] [-TokenLifetime <Int32>] [-AlwaysRequireAuthentication]
+
+   [-AllowedClientTypes <AllowedClientTypes>] [-IssueOAuthRefreshTokensTo <RefreshTokenIssuanceDeviceTypes>]
+
+   [-RefreshTokenProtectionEnabled <Boolean>] [-RequestMFAFromClaimsProviders] [-PassThru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessControlPolicyName
+  description: |+
+    Specifies the name of an access control policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: AccessControlPolicyParameters
+  description: |+
+    Specifies the parameters of an access control policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRules
+  description: |+
+    Specifies additional authentication rules.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdditionalAuthenticationRulesFile
+  description: |+
+    Specifies a file that contains all the rules for additional authentication for this relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AllowedAuthenticationClassReferences
+  description: |+
+    Specifies an array of allow authentication class references.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AllowedClientTypes" data-throw-if-not-resolved="False" />
+  name: AllowedClientTypes
+  description: |+
+    Specifies allowed client types.
+    The acceptable values for this parameter are:
+
+    - None
+    - Public
+    - Confidential
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Public, Confidential
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AlwaysRequireAuthentication
+  description: |+
+    Indicates that this Web API application role always requires authentication, even if it previously authenticated credentials for access.
+    Specify this parameter to require users to always supply credentials to access sensitive resources.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ApplicationGroup" data-throw-if-not-resolved="False" />
+  name: ApplicationGroup
+  isRequired: true
+  description: |+
+    Specifies an application group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationGroupIdentifier
+  isRequired: true
+  description: |+
+    Specifies the ID of an application group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClaimsProviderName
+  description: |+
+    Specifies an array of claims provider names that you can configure for a relying party trust for Home Realm Discovery (HRD) scenario.
+
+    If claims provider names are specified for a relying party, the home realm discovery page shows only those claims providers for this relying party.
+    If only one claims provider name is specified, home realm discovery page is not shown.
+    The user is redirected to this claims provider for authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DelegationAuthorizationRules
+  description: |+
+    Specifies delegation authorization rules.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DelegationAuthorizationRulesFile
+  description: |+
+    Specifies a file that contains all the rules for delegation authentication for this relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identifier
+  isRequired: true
+  description: |+
+    Specifies an array of identifiers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImpersonationAuthorizationRules
+  description: |+
+    Specifies the impersonation authorization rules.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImpersonationAuthorizationRulesFile
+  description: |+
+    Specifies a file that contains all the rules for impersonation authentication for this relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceAuthorizationRules
+  description: |+
+    Specifies the issuance authorization rules.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceAuthorizationRulesFile
+  description: |+
+    Specifies a file that contains all the rules for issuance authentication for this relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceTransformRules
+  description: |+
+    Specifies the issuance transform rules.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IssuanceTransformRulesFile
+  description: |+
+    Specifies a file that contains all the rules for issuance transform for this relying party.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RefreshTokenIssuanceDeviceTypes" data-throw-if-not-resolved="False" />
+  name: IssueOAuthRefreshTokensTo
+  description: |+
+    Specifies the refresh token issuance device types.
+    The acceptable values for this parameter are:
+
+    - NoDevice
+    - WorkplaceJoinedDevices
+    - AllDevices
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoDevice, WorkplaceJoinedDevices, AllDevices
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NotBeforeSkew
+  description: |+
+    Specifies the not before skew value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RefreshTokenProtectionEnabled
+  description: |+
+    Indicates whether refresh token protection is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RequestMFAFromClaimsProviders
+  description: |+
+    Indicates that the request MFA from claims providers option is used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TokenLifetime
+  description: |+
+    Specifies the token lifetime.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Add-AdfsWebApiApplication
+name: Add-AdfsWebApiApplication
+description: |-
+  The **Add-AdfsWebApiApplication** cmdlet adds a Web API application role to an application in Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/add-adfswebapiapplication?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-AdfsWebApiApplication

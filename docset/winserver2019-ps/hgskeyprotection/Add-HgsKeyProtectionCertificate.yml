@@ -1,0 +1,147 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a key certificate to the Key Protection Service.
+module: HgsKeyProtection
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Get-HgsKeyProtectionCertificate
+  href: ./Get-HgsKeyProtectionCertificate.yml
+- text: Remove-HgsKeyProtectionCertificate
+  href: ./Remove-HgsKeyProtectionCertificate.yml
+- text: Set-HgsKeyProtectionCertificate
+  href: ./Set-HgsKeyProtectionCertificate.yml
+syntaxes:
+- >-
+  Add-HgsKeyProtectionCertificate -CertificateType <KeyCertificateType> -Thumbprint <String>
+
+   [-NoCertificateReplication] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Add-HgsKeyProtectionCertificate -CertificateType <KeyCertificateType> -CertificatePath <String>
+
+   [-CertificatePassword <SecureString>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add an encryption certificate'
+  code: |-
+    PS C:\> Add-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint "d39203a3b3544743ad552afe0615dc1f"
+  description: |-
+    This command adds a certificate reference to the Key Protection Service for use as an encryption certificate.
+  summary: ""
+- title: 'Example 2: Add an encryption certificate file with a password'
+  code: |-
+    PS C:\> Add-HgsKeyProtectionCertificate -CertificateType Encryption -CertificatePath "C:\example.pfx" -CertificatePassword $Password
+  description: |-
+    This command adds a certificate file to the Key Protection Service as an encryption certificate.
+    In this example, the certificate file is protected by a password stored as a SecureString in the variable $Password.
+  summary: ""
+parameters:
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: CertificatePassword
+  description: |+
+    Specifies the password which protects a certificate file.
+    If the certificate file is protected by a password, you must specify this value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificatePath
+  isRequired: true
+  description: |+
+    Specifies the path to the certificate which will be added to the Key Protection Service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="KeyCertificateType" data-throw-if-not-resolved="False" />
+  name: CertificateType
+  isRequired: true
+  description: |+
+    Specifies the type of the certificate that this cmdlet adds.
+    The acceptable values for this parameter are: 
+
+    - Signing
+    - Encryption
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Signing, Encryption
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoCertificateReplication
+  description: |+
+    This only applies when you use the `-Thumbprint` option to specify a certificate.
+    It is typically used for hardware security module (HSM) backed certificates but can be used for other certificates too.
+    Specifying `NoCertificateReplication` disables automatic replication of the certificate from LocalMachine\My certificate store to the same store on all other nodes in the cluster.
+    The HGS admin is then responsible for replicating that certificate manually to all other nodes in the cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  isRequired: true
+  description: |+
+    Specifies the thumbprint of the certificate to add.
+    You must add the certificate to the LocalMachine\My certificate store before you run the current cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsKeyProtection.Add-HgsKeyProtectionCertificate
+name: Add-HgsKeyProtectionCertificate
+description: |-
+  The **Add-HgsKeyProtectionCertificate** cmdlet adds a certificate to the Key Protection Service.
+  You can add a certificate as an encryption certificate or a signing certificate.
+  You can add a reference to a certificate stored in the Windows certificate store.
+  Before you add a certificate reference you must add the certificate to the LocalMachine\My certificate store.
+  The cmdlet looks up the certificate in the LocalMachine\My certificate store by using its thumbprint.
+  You can also add a full certificate stored in a file as a pfx.
+  If the file containing the pfx is protected by a password, you must specify the pfx password.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/add-hgskeyprotectioncertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-HgsKeyProtectionCertificate

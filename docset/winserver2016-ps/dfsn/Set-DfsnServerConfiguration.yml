@@ -1,0 +1,194 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes settings for a DFS namespace root server.
+module: DFSN
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_DfsNamespaceServerConfig" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DfsnServerConfiguration
+  href: ./Get-DfsnServerConfiguration.yml
+syntaxes:
+- >-
+  Set-DfsnServerConfiguration [-ComputerName] <String> [[-SyncIntervalSec] <UInt32>]
+
+   [[-EnableSiteCostedReferrals] <Boolean>] [[-EnableInsiteReferrals] <Boolean>] [[-LdapTimeoutSec] <UInt32>]
+
+   [[-PreferLogonDC] <Boolean>] [[-UseFqdn] <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set LDAP time-out for a DFS namespace server'
+  code: |-
+    PS C:\> Set-DfsnServerConfiguration -ComputerName "localhost" -LdapTimeoutSec 60
+  description: |-
+    This command sets an LDAP time-out value of 60 seconds for the local computer, which is a DFS namespace server.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  isRequired: true
+  description: |+
+    Specifies the host name or FQDN for the DFS namespace server for which the cmdlet modifies settings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Server, name, NamespaceServer
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableInsiteReferrals
+  description: |+
+    Indicates whether this server provides only in-site referrals.
+    If you assign a value of $True, the server returns only referrals for targets in the same site as the client.
+    If you assign a value of $False, the server returns in-site referrals and other referrals.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: insite
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableSiteCostedReferrals
+  description: |+
+    Indicates whether the server can use cost-based selection.
+    If you specify a value of $True, the DFS namespace server provides referrals for folder targets to clients in the following order: 
+
+    - Folder targets in the same site as a client, in random order. 
+    - Folder targets for which the DFS namespace server has information.
+    The referrals for the nearest site are first, in random order, followed by the next nearest site, in random order. 
+    - Targets for which DFS namespace server has no site information, in random order.
+
+    If you specify a value of $False, the DFS namespace server provides referrals for folder targets to clients in the following order: 
+
+    - Folder targets in the same site as the client, in random order. 
+    - Other folder targets, in random order.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: Sitecosted, SiteCostedReferrals
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LdapTimeoutSec
+  description: |+
+    Specifies a time-out value, in seconds, for Lightweight Directory Access Protocol (LDAP) requests for the DFS namespace server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: LdapTimeout
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: PreferLogonDC
+  description: |+
+    Indicates whether to prefer the logon domain controller in referrals.
+    If you specify a value of $True for this parameter, the DFS namespace server places referrals to the computer that hosts the logon domain controller at the top of the list of referrals.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SyncIntervalSec
+  description: |+
+    Specifies an interval, in seconds.
+    This interval controls how often domain-based DFS namespace root servers and domain controllers connect to the PDC emulator to get updates of DFS namespace metadata.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: SyncInterval
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseFqdn
+  description: |+
+    Indicates whether a DFS namespace server uses FQDNs in referrals.
+    If this parameter has a value of $True, the server uses FQDNs in referrals.
+    If this parameter has a value of $False, the server uses NetBIOS names.
+    The default for DFS namespace servers is to use NetBIOS names in referrals.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "6"
+  aliases: Fqdn, dfsdnsconfig, UseFullyQualifiedDomainNames
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DFSN.Set-DfsnServerConfiguration
+name: Set-DfsnServerConfiguration
+description: |-
+  The **Set-DfsnServerConfiguration** cmdlet changes settings for a Distributed File System (DFS) namespace root server.
+  A DFS namespace root server hosts one or more namespace root targets.
+
+  You can use this cmdlet to enable in-site referrals or to use cost in organizing referrals for targets in a site.
+  You can also change the synchronization interval for servers that connect to a primary domain controller (PDC) emulator and change the Lightweight Directory Access Protocol (LDAP) time-out.
+  You can specify whether referrals prefer the logon domain controller.
+  You can also specify whether the server provides referrals as fully qualified domain names (FQDN) or NETBios names.
+
+  To see current values for these settings, use the **Get-DfsnServerConfiguration** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsNamespaceServerConfig.cdxml-help.xml
+  Module Name: DFSN
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsn/set-dfsnserverconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DfsnServerConfiguration

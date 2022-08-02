@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets an app package installation log.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="System.Diagnostics.Eventing.Reader.EventLogRecord" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Package Manager API
+  href: https://go.microsoft.com/fwlink/?LinkId=245447
+- text: How to Add and Remove Apps
+  href: https://go.microsoft.com/fwlink/?LinkID=231020
+- text: Troubleshooting packaging, deployment, and query of Windows Store apps
+  href: https://go.microsoft.com/fwlink/?LinkId=271201
+- text: Get-AppxPackage
+  href: ./Get-AppxPackage.yml
+- text: Get-AppxPackageManifest
+  href: ./Get-AppxPackageManifest.yml
+- text: Get-AppxLastError
+  href: ./Get-AppxLastError.yml
+syntaxes:
+- Get-AppxLog [-All] [<CommonParameters>]
+- Get-AppxLog [-ActivityId <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get logs for the most recent deployment'
+  code: |-
+    PS C:\> Get-AppxLog
+  description: |-
+    This command gets the logs associated with the most recent deployment operation.
+  summary: ""
+- title: 'Example 2: Get logs for all logs'
+  code: |-
+    PS C:\> Get-AppxLog -All
+  description: |-
+    This command gets all the app package installation logs on the computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ActivityId
+  description: |+
+    Specifies an activity ID.
+    This cmdlet uses the ID to get the log for a particular app package installation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Indicates that the cmdlet gets all logs on the computer.
+    You can get additional information when you run this cmdlets from Windows PowerShell as an administrator.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Appx.Get-AppxLog
+name: Get-AppxLog
+description: |-
+  The **Get-AppxLog** cmdlet gets the app package installation log created during the deployment of an app package.
+  An app package has an .msix or .appx file name extension.
+  The log contains errors, warnings, and additional information about the processes initiated by cmdlets in the Appx Windows PowerShell® module.
+
+  When Add-AppxPackage or Remove-AppxPackage report a failure, they return the **ActivityID** to use with **Get-AppxLog**.
+
+  For more information about common error codes, see [Troubleshooting packaging, deployment, and query of Windows Store apps](https://go.microsoft.com/fwlink/?LinkId=271201).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+  Module Name: Appx
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/appx/get-appxlog?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AppxLog

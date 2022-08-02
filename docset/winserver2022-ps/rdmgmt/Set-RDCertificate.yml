@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports or applies a certificate to use with an RDS role.
+module: RDMgmt
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDCertificate
+  href: ./Get-RDCertificate.yml
+- text: New-RDCertificate
+  href: ./New-RDCertificate.yml
+- text: about_CommonParameters
+  href: https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-6
+syntaxes:
+- >-
+  Set-RDCertificate [-Role] <RDCertificateRole> [-Password <SecureString>] [-ConnectionBroker <String>] [-Force]
+
+   [<CommonParameters>]
+- >-
+  Set-RDCertificate [-Role] <RDCertificateRole> [-ImportPath <String>] [-Password <SecureString>]
+
+   [-ConnectionBroker <String>] [-Force] [<CommonParameters>]
+- >-
+  Set-RDCertificate [-Role] <RDCertificateRole> [-Thumbprint <String>] [-ConnectionBroker <String>] [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: import a certificate to use with RDS'
+  code: |-
+    PS C:\>$Password = ConvertTo-SecureString -String "Cups34Horses&&" -AsPlainText -Force
+    PS C:\>Set-RDCertificate -Role RDRedirector -ImportPath "C:\Certificates\Redirector07.pfx" -Password $Password -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    The first part of the example uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies and stores it in the **$Password** variable. For more information, see [ConvertTo-SecureString](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/ConvertTo-SecureString?view=powershell-6). You can also enter the `Get-Help ConvertTo-SecureString` cmdlet into your PowerShell window.
+
+    The second part of the example specifies the file name of the certificate to use for the redirector role for the RD Connection Broker named RDCB.Contoso.com. The cmdlet uses the secure string stored in the **$Password** variable to help secure the certificate.
+  summary: |+
+    The following example imports a certificate to use with an RDS role.
+- title: 'Example 2: apply a secure string to a certificate'
+  code: |-
+    PS C:\>$Password = ConvertTo-SecureString -String "Wings%%83Potato" -AsPlainText -Force
+    PS C:\>Set-RDCertificate -Role RDRedirector -Password $Password -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    The first part of the example uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies and stores it in the **$Password** variable.
+
+    The second part of the example uses the secure string stored in the **$Password** variable to secure the certificate used for the redirector role for the RD Connection Broker named RDCB.Contoso.com.
+  summary: |+
+    The following example cmdlet applies a new secure string to an RDS role certificate.
+- title: 'Example 3: apply an installed certificate to use with RDS'
+  code: |-
+    PS C:\>Set-RDCertificate -Role RDRedirector -Thumbprint fedd995b45e633d4ef30fcbc8f3a48b627e9a28b -ConnectionBroker "RDCB.Contoso.com"
+  description: |-
+    The first part of the example specifies the thumbprint of the certificate to use for the RD Connection Broker's redirector role, which in this example is named "RDCB.Contoso.com." The certificate must be installed in the "localmachine\my" store on each server running the specified RDS role. The `-Thumbprint` parameter is only available in Windows Server 2019.
+  summary: |+
+    The following example applies an existing certificate to use with an RDS role.
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    This parameter specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+
+    If you don't specify a value, the cmdlet uses the local computer's fully qualified domain name (FQDN).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    This parameter performs the action without a confirmation message.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImportPath
+  description: |+
+    This parameter specifies the location of a certificate as a file that has a .pfx extension.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    This parameter specifies a secure string used to help secure the certificate.
+
+    See the Examples section.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RDCertificateRole" data-throw-if-not-resolved="False" />
+  name: Role
+  isRequired: true
+  description: |+
+    This parameter specifies a certificate type associated with an RDS server role.
+
+    The acceptable values for this parameter are:
+
+    - RDGateway
+    - RDWebAccess
+    - RDRedirector
+    - RDPublishing
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: RDGateway, RDWebAccess, RDRedirector, RDPublishing
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  description: |+
+    This parameter specifies the thumbprint of the certificate to use. Currently, it is only available in Windows Server 2019.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Set-RDCertificate
+name: Set-RDCertificate
+description: |-
+  The **Set-RDCertificate** cmdlet imports a certificate or applies an installed certificate to use with a Remote Desktop Services (RDS) role. You can use this cmdlet to secure an existing certificate by using a secure string supplied by the user.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdcertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDCertificate

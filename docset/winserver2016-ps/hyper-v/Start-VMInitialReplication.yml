@@ -1,0 +1,221 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts replication of a virtual machine.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+syntaxes:
+- >-
+  Start-VMInitialReplication [-ComputerName <String[]>] [-VMName] <String[]> [-DestinationPath <String>]
+
+   [-InitialReplicationStartTime <DateTime>] [-UseBackup] [-AsJob] [-Passthru] [-CimSession <CimSession[]>]
+
+   [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-VMInitialReplication [-VM] <VirtualMachine[]> [-DestinationPath <String>]
+
+   [-InitialReplicationStartTime <DateTime>] [-UseBackup] [-AsJob] [-Passthru] [-CimSession <CimSession[]>]
+
+   [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Start-VMInitialReplication [-VMReplication] <VMReplication[]> [-DestinationPath <String>]
+
+   [-InitialReplicationStartTime <DateTime>] [-UseBackup] [-AsJob] [-Passthru] [-CimSession <CimSession[]>]
+
+   [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Start-VMInitialReplication VM01
+  description: |-
+    This example starts initial replication of virtual machine VM01 over the network.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Start-VMInitialReplication *
+  description: |-
+    This example starts initial replication over the network for all the virtual machines on the local Hyper-V host for which initial replication is pending.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\> Start-VMInitialReplication * -DestinationPath R:\IRLoc
+  description: |-
+    This example exports the initial replication of all virtual machines on the local Hyper-V host for which initial replication is pending, to the location R:\IRLoc.
+    This example assumes that the location is an external drive, which would be shipped to the Replica site so that the initial replication can be completed.
+  summary: ""
+- title: Example 4
+  code: |-
+    PS C:\> Enable-VMReplication VM01 -AsReplica -computername MyReplica.contoso.com
+    PS C:\> Enable-VMReplication VMO1 -ReplicaServerName ReplicaServer01 -ReplicaServerPort 80 -AuthenticationType Kerberos -computername MyPrimary.contoso.comPS
+    PS C:\> Start-VMInitialReplication VM01 -usebackup -computername MyPrimary.contoso.com
+  description: |-
+    This example uses several consecutive commands to start initial replication from backup.
+    First, it enables a restored copy of virtual machine VM01 on the Replica server as a Replica virtual machine.
+    Then, it enables replication for VM01 from the primary server.
+    Finally, it starts the initial replication to use the restored copy of VM01 on Replica server as the basis of the initial replication.
+  summary: ""
+- title: Example 5
+  code: |-
+    PS C:\> $VMRepl = Get-VMReplication -VMName MyVM 
+    PS C:\> Start-VMInitialReplication -VMReplication $VMRepl
+  description: |-
+    The first command returns a VMReplication object for the VM named MyVM and stores it in the variable $VMRepl.
+
+    The second cmdlet then uses this object to start the initial replication for the stored VM.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on which replication of a virtual machine is to be started.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationPath
+  description: |+
+    Specifies the path to use when copying the files for initial replication; assumes use of external media as the method for initial replication.
+    External media is typically a removable drive that is shipped to the location of the Replica server.
+    When the external media arrives at the Replica site, use the **Import-InitialVMReplication** cmdlet on the Replica virtual machine to copy the files.
+
+  defaultValue: None
+  position: Named
+  aliases: IRLoc
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: InitialReplicationStartTime
+  description: |+
+    Specifies the time to start the initial replication, when scheduling initial replication to occur later.
+    You can specify a time up to 7 days later.
+    When this parameter is not specified, initial replication occurs immediately.
+
+  defaultValue: None
+  position: Named
+  aliases: IRTime
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Specifies that a virtual machine object is to be passed through to the pipeline representing the virtual machine on which replication is to be started.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseBackup
+  description: |+
+    Indicates that you want to use a copy of this virtual machine on the Replica server as the basis for the initial replication.
+    Specify this option only if it was specified when replication was enabled on the primary virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine on which replication is to be started.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine on which replication is to be started.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMReplication" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMReplication
+  isRequired: true
+  description: |+
+    Specifies an object that represents the replication to be started.
+    You can get this object from the **Get-VMReplication** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Start-VMInitialReplication
+name: Start-VMInitialReplication
+description: |-
+  The **Start-VMInitialReplication** cmdlet starts replication of a virtual machine using the method you select.
+  You also can schedule replication to start up to 7 days later.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/start-vminitialreplication?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-VMInitialReplication

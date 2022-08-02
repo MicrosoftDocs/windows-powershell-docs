@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets entries showing users and the virtual machines to which they can connect on one or more Hyper-V hosts.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Virtualization.Powershell.VMConnectAce" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-VMConnectAccess [[-VMName] <String[]>] [-ComputerName <String[]>] [-UserName <String[]>]
+- Get-VMConnectAccess [-VMId] <Guid[]> [-ComputerName <String[]>] [-UserName <String[]>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Get-VMConnectAccess
+  description: |-
+    This command gets a list of all the users who have access to connect to any virtual machine on the local computer.
+    The example assumes that the Grant-VMConnectAccess has been run previously for at least one user account.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\>Get-VMConnectAccess -VMName VM1
+  description: |-
+    This command gets a list of all the users who have access to connect to virtual machine VM1.
+    The example assumes that the Grant-VMConnectAccess has been run previously for at least one user account for virtual machine VM1.
+  summary: ""
+- title: Example 3
+  code: |-
+    PS C:\>Get-VMConnectAccess -UserName CONTOSO\John
+  description: |-
+    This command gets a list of all the virtual machines on the local computer that user Contoso\John has access to connect to.
+    The example assumes that the Grant-VMConnectAccess has been run previously to grant access to Contoso\John.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more virtual machine hosts on which connect access entries are being sought.
+    NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+    The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserName
+  description: "Specifies the user or users for whom connect access entries are being sought, in one of the following forms:\r\n\r\nLocal User Account:\r\n    john\r\n    ComputerName\\john\r\n\r\n                         \r\nDomain User Account:\r\n    CONTOSO\\john\r\n    Contoso.com\\john\r\n\r\n                         \r\nUser Principal Name (UPN):\r\n    john@contoso.com\r\n\r\n                         \r\nSecurity Identifier:\r\n    S-1-5-21-3165297888-301567370-576410423-1103\r\n\r\n"
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMId
+  isRequired: true
+  description: |+
+    Specifies the unique identifier of a virtual machine for which connect access entries are being sought.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  description: |+
+    Specifies the name of the virtual machine for which connect access entries are being sought.
+
+  defaultValue: None
+  acceptWildcardCharacters: true
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMConnectAccess
+name: Get-VMConnectAccess
+description: |-
+  The **Get-VMConnectAccess** cmdlet gets entries showing users and the virtual machines to which they can connect on one or more Hyper-V hosts.
+  This cmdlet is intended for use in providing other applications with the appropriate permissions required to initiate a session with Virtual Machine Connection.
+  Examples of such applications are Virtual Machine Manager.
+metadata:
+  external help file: Hyper-V_Cmdlets.xml
+  Module Name: Hyper-V
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/get-vmconnectaccess?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

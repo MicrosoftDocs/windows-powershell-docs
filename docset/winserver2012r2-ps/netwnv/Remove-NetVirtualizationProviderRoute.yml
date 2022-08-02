@@ -1,0 +1,157 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes physical network routes for a virtualized network.
+module: NetWNV
+notes: ""
+links:
+- text: Get-NetVirtualizationProviderRoute
+  href: ./Get-NetVirtualizationProviderRoute.yml
+- text: New-NetVirtualizationProviderRoute
+  href: ./New-NetVirtualizationProviderRoute.yml
+- text: Set-NetVirtualizationProviderRoute
+  href: ./Set-NetVirtualizationProviderRoute.yml
+syntaxes:
+- >-
+  Remove-NetVirtualizationProviderRoute [-InterfaceIndex <UInt32[]>] [-DestinationPrefix <String[]>]
+
+   [-NextHop <String[]>] [-Metric <UInt32[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [<CommonParameters>]
+- >-
+  Remove-NetVirtualizationProviderRoute -InputObject <CimInstance[]> [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove all Provider Routes'
+  code: |-
+    PS C:\> Remove-NetVirtualizationProviderRoute
+  description: |-
+    This command removes all the Provider Routes for a hv_win8_2 host.
+  summary: ""
+- title: 'Example 2: Remove Provider Routes for a specified interface'
+  code: |-
+    PS C:\>Remove-NetVirtualizationProviderRoute -InterfaceIndex 12
+  description: |-
+    This command removes Provider Routes for an interface that has an index of 12.
+  summary: ""
+- title: 'Example 3: Remove Provider Routes'
+  code: |-
+    PS C:\>Remove-NetVirtualizationProviderRoute -DestinationPrefix "0.0.0.0/0" -NextHop "10.1.1.1" -InterfaceIndex 22
+  description: |-
+    This command removes a Provider Route for the specified interface, for all network addresses that has the specified next hop value.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DestinationPrefix
+  description: |+
+    Specifies an array of IP prefixes, as strings, for destination networks.
+    You can specify IPv4 and IPv6 addresses.
+    Use prefix notation: **0.0.0.0/0**.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceIndex
+  description: |+
+    Specifies an array of indexes for network interfaces that have hv_win8_2 Network Virtualization enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Metric
+  description: |+
+    Specifies an array of integer values.
+    Network Virtualization selects the route with the lowest metric value from a group of usable routes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NextHop
+  description: |+
+    Specifies an array of IP addresses for next hop gateways.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetWNV.Remove-NetVirtualizationProviderRoute
+name: Remove-NetVirtualizationProviderRoute
+description: |-
+  The **Remove-NetVirtualizationProviderRoute** cmdlet removes physical network routes for a hv_win8_1 virtual network.
+  Network Virtualization allows more than one virtual network to exist on the same physical network.
+  Computers can exchange network traffic with a virtual machine (VM) by using a Customer Address within the virtual network.
+  This cmdlet removes Provider Routes that Network Virtualization uses to direct network traffic on the physical network.
+  For more information, see Network Virtualization technical detailshttp://technet.microsoft.com/library/jj134174.aspx (http://technet.microsoft.com/library/jj134174.aspx) on TechNet.
+
+  You can use the Get-NetVirtualizationProviderRoute cmdlet to get routes to delete, or you can specify Provider Routes by using any combination of the following: 
+
+  - Destination. 
+  - Interface. 
+  - Metric. 
+  - Next hop gateway.
+metadata:
+  external help file: MSFT_NetVirtualizationProviderRouteSettingData.cdxml-help.xml
+  Module Name: NetWNV
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/netwnv/remove-netvirtualizationproviderroute?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-NetVirtualizationProviderRoute

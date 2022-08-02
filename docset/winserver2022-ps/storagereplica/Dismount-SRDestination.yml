@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Dismounts a test failover snapshot.
+module: StorageReplica
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Mount-SRDestination
+  href: Mount-SRDestination.yml
+syntaxes:
+- >-
+  Dismount-SRDestination [[-ComputerName] <String>] [-Name] <String> [-Force] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Dismount a snapshot of replicated storage'
+  code: |-
+    Dismount-SRDestination -ComputerName "SR-SRV05" -Name "ReplicationGroup01"
+  description: |-
+    This command dismounts the snapshot for the replication group `ReplicationGroup01` on the specified computer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a single replica host computer NetBIOS name or fully qualified domain name (FQDN).
+    The default value is the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: CN
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: "False"
+  position: "100"
+  aliases: F
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the replication group for which this cmdlet dismounts destination storage.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: N
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: "0"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: StorageReplica.Dismount-SRDestination
+name: Dismount-SRDestination
+description: |-
+  The **Dismount-SRDestination** cmdlet dismounts a test failover snapshot.
+metadata:
+  description: The Dismount-SRDestination cmdlet dismounts a test failover snapshot.
+  external help file: MSFT_WvrAdminTasks.cdxml-help.xml
+  Module Name: storagereplica
+  ms.date: 10/06/2021
+  online version: https://docs.microsoft.com/powershell/module/storagereplica/dismount-srdestination?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Dismount-SRDestination

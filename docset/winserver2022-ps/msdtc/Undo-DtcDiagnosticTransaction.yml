@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Invokes the Abort process on the specified transaction.
+module: MsDtc
+notes: ""
+links:
+- text: Complete-DtcDiagnosticTransaction
+  href: ./Complete-DtcDiagnosticTransaction.yml
+- text: New-DtcDiagnosticTransaction
+  href: ./New-DtcDiagnosticTransaction.yml
+- text: Receive-DtcDiagnosticTransaction
+  href: ./Receive-DtcDiagnosticTransaction.yml
+- text: Send-DtcDiagnosticTransaction
+  href: ./Send-DtcDiagnosticTransaction.yml
+syntaxes:
+- Undo-DtcDiagnosticTransaction [-Transaction] <DtcDiagnosticTransaction> [<CommonParameters>]
+examples:
+- title: 'Example 1: Undo a DTC diagnostic transaction'
+  code: |-
+    PS C:\> $Tx = New-DtcDiagnosticTransaction
+    PS C:\> Undo-DtcDiagnosticTransaction -Transaction $Tx
+  description: |-
+    This command creates a new diagnostic transaction and assigns it to a variable.
+
+    The second command undoes the transaction.
+  summary: ""
+parameters:
+- type: <xref href="DtcDiagnosticTransaction" data-throw-if-not-resolved="False" />
+  name: Transaction
+  isRequired: true
+  description: |+
+    Specifies the **DtcDiagnosticTransaction** object on which to invoke the Abort process.
+    You can use the pipeline operator to pass this parameter value to the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MsDtc.Undo-DtcDiagnosticTransaction
+name: Undo-DtcDiagnosticTransaction
+description: |-
+  The **Undo-DtcDiagnosticTransaction** cmdlet invokes the Abort process on the specified transaction.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dtc.PowerShell.dll-Help.xml
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/msdtc/undo-dtcdiagnostictransaction?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Undo-DtcDiagnosticTransaction

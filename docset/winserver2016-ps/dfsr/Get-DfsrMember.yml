@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets member computers in a replication group.
+module: DFSR
+notes: ""
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsrMember" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-DfsrMember
+  href: ./Add-DfsrMember.yml
+- text: Remove-DfsrMember
+  href: ./Remove-DfsrMember.yml
+- text: Set-DfsrMember
+  href: ./Set-DfsrMember.yml
+syntaxes:
+- >-
+  Get-DfsrMember [[-GroupName] <String[]>] [[-ComputerName] <String[]>] [[-DomainName] <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a member in a replication group'
+  code: |-
+    PS C:\> Get-DfsrMember -GroupName "RG07" -ComputerName "SRV01"
+
+    GroupName                    : RG07
+    ComputerName                 : SRV01
+    DomainName                   : corp.contoso.com
+    Identifier                   : 5ddc94cd-1602-477d-9e50-a66af5892b67
+    Description                  : Waukegan Branch Office Server
+    DnsName                      : SRV01.corp.contoso.com
+    Site                         : Default-First-Site-Name
+    NumberOfConnections          : 2
+    NumberOfInboundConnections   : 1
+    NumberOfOutboundConnections  : 1
+    NumberOfInterSiteConnections : -2
+    NumberOfIntraSiteConnections : 2
+    IsClusterNode                : False
+    State                        : Normal
+  description: |-
+    This command gets the member computer named SRV01 that belongs to the group named RG07.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies an array of names of member computers.
+    You can use a comma separated list and the wildcard character (*).
+    If you do not specify this parameter, the cmdlet gets all members of replication groups specified by using the **DomainName** and **GroupName** parameters.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: MemberList, MemList
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains a replication group.
+    If you do not specify this parameter, the cmdlet uses the domain of the current user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "100"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupName
+  description: |+
+    Specifies an array of names of replication groups.
+    You can use a comma separated list and the wildcard character (*).
+    If you do not specify this parameter, the cmdlet uses all participating replication groups.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RG, RgName
+  parameterValueGroup: ""
+uid: DFSR.Get-DfsrMember
+name: Get-DfsrMember
+description: |-
+  The **Get-DfsrMember** cmdlet gets member computers in a replication group.
+  Members of a replication group host replicated folders.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DfsrPowerShell.dll-Help.xml
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dfsr/get-dfsrmember?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DfsrMember

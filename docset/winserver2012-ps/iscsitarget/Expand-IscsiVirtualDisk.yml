@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Expands an iSCSI virtual disk.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Resize-Partition
+  href: ../storage/Resize-Partition.yml
+- text: Checkpoint-IscsiVirtualDisk
+  href: ./Checkpoint-IscsiVirtualDisk.yml
+- text: Convert-IscsiVirtualDisk
+  href: ./Convert-IscsiVirtualDisk.yml
+- text: Get-IscsiVirtualDisk
+  href: ./Get-IscsiVirtualDisk.yml
+- text: Import-IscsiVirtualDisk
+  href: ./Import-IscsiVirtualDisk.yml
+- text: New-IscsiVirtualDisk
+  href: ./New-IscsiVirtualDisk.yml
+- text: Remove-IscsiVirtualDisk
+  href: ./Remove-IscsiVirtualDisk.yml
+- text: Restore-IscsiVirtualDisk
+  href: ./Restore-IscsiVirtualDisk.yml
+- text: Set-IscsiVirtualDisk
+  href: ./Set-IscsiVirtualDisk.yml
+syntaxes:
+- >-
+  Expand-IscsiVirtualDisk [-Path] <String> [-Size] <UInt64> [-PassThru] [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+- >-
+  Expand-IscsiVirtualDisk -InputObject <IscsiVirtualDisk> [-Size] <UInt64> [-PassThru] [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Expand-IscsiVirtualDisk -Path "E:\temp\test.vhd" -Size 20GB
+  description: |-
+    This example expands the virtual disk with the path E:\temp\test.vhd to 20GB.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer. 
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Accepts an iSCSI Virtual Disk object from the input pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the virtual hard disk (VHD) file that is associated with the iSCSI virtual disk. 
+
+    Filter the iSCSI Virtual Disk object using this parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: DevicePath
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: Size
+  isRequired: true
+  description: |+
+    Specifies the size of the expanded iSCSI virtual disk. 
+    Note: This parameter takes a number and a unit as input, such as 10GB, 20MB, or 1TB. 
+
+    If this parameter is not provided, then a prompt for the input of this parameter with be displayed, as it is a required field.
+    At that time, the value will need to be provided in Bytes; since no unit can be entered at the prompt.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Expand-IscsiVirtualDisk
+name: Expand-IscsiVirtualDisk
+description: |-
+  The **Expand-IscsiVirtualDisk** cmdlet expands a virtual disk.
+  When the operation is online, the initiator can still access the virtual disk even while it is expanding. 
+
+  However, the initiator will not automatically see the expanded virtual disk.
+  To get access to the larger virtual disk, the initiator will need to use the Resize-Partition cmdlet to expand the volume hosted on the virtual disk.
+metadata:
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/expand-iscsivirtualdisk?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

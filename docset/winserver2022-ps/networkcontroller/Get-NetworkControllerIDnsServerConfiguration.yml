@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a configuration object for an iDNS server for a Network Controller.
+module: NetworkController
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-NetworkControllerIDnsServerConfiguration
+  href: New-NetworkControllerIDnsServerConfiguration.yml
+syntaxes:
+- >-
+  Get-NetworkControllerIDnsServerConfiguration [-ConnectionUri <Uri>] [-CertificateThumbprint <String>]
+
+   [-Credential <PSCredential>] [-PassInnerException] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the configuration for an IDNS server'
+  code: |-
+    Get-NetworkControllerIDnsServerConfiguration -ConnectionUri https://networkcontroller
+  description: |-
+    This example gets the iDNS server configuration for the specified Network Controller.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of a Network Controller.
+    The cmdlet gets iDNS configuration information for that controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.
+
+    This user must be present in the security group provided in the **ClientSecurityGroup** parameter in the `Install-NetworkController` cmdlet.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: |+
+    This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.Get-NetworkControllerIDnsServerConfiguration
+name: Get-NetworkControllerIDnsServerConfiguration
+description: |-
+  The **Get-NetworkControllerIDnsServerConfiguration** cmdlet gets a configuration object for an Internal DNS (iDNS) server for a Network Controller.
+
+  An iDNS server is a DNS Server available for tenant virtual machines.
+metadata:
+  description: The Get-NetworkControllerIDnsServerConfiguration cmdlet gets a configuration object for an iDNS server for a Network Controller.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 09/27/2021
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrolleridnsserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetworkControllerIDnsServerConfiguration

@@ -1,0 +1,144 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes MPIO settings.
+module: MPIO
+notes: ""
+links:
+- text: Get-MPIOSetting
+  href: ./Get-MPIOSetting.yml
+syntaxes:
+- >-
+  Set-MPIOSetting [[-NewPathVerificationPeriod] <Int32>] [[-NewPathVerificationState] <String>]
+
+   [[-NewPDORemovePeriod] <Int32>] [[-NewRetryCount] <Int32>] [[-NewRetryInterval] <Int32>]
+
+   [[-NewDiskTimeout] <Int32>] [[-CustomPathRecovery] <String>] [[-NewPathRecoveryInterval] <Int32>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the disk time-out'
+  code: |-
+    PS C:\> Set-MPIOSetting -NewDiskTimeout 30
+  description: |-
+    This command sets the disk time-out value to 30 seconds.
+    The system prompts you to restart after you change settings.
+
+    You can use the **Get-MPIOSetting** cmdlet to verify the change.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CustomPathRecovery
+  description: |+
+    Specifies whether MPIO performs custom path recovery.
+    The acceptable values for this parameter are: Enabled and Disabled.
+    The default value is Disabled.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NewDiskTimeout
+  description: |+
+    Specifies the disk time-out value, in seconds.
+    This value is the length of time the server waits before it marks the I/O request as timed out.
+    The default value for DiskTimeoutValue is 120.
+    We recommend a maximum value of 30.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NewPathRecoveryInterval
+  description: |+
+    Specifies a custom path recovery time, in seconds.
+    This is the length of time before the server tries path recovery.
+    The default value is 40.
+    This parameter is not relevant unless you specify Enabled for the *CustomPathRecovery* parameter.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NewPathVerificationPeriod
+  description: |+
+    Specifies a path verification period, in seconds.
+    This is the length of time for the server to verify every path.
+    This parameter is not relevant unless the path verification state has a value of Enabled.
+    The default value is 30.
+
+    You can set the path verification state by using the *NewPathVerificationState* parameter.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewPathVerificationState
+  description: |+
+    Specifies whether to enable path verification.
+    The acceptable values for this parameter are: Enabled and Disabled.
+    The default value is Disabled.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: Enabled, Disabled
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NewPDORemovePeriod
+  description: |+
+    Specifies a physical device object (PDO) removal period, in seconds.
+    This period is the length of time the server waits after all paths to a PDO have failed before it removes the PDO.
+    The default value is 20.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NewRetryCount
+  description: |+
+    Specifies the number of times to retry an I/O request.
+    The default value is three times.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NewRetryInterval
+  description: |+
+    Specifies a retry interval, in seconds.
+    This is the length of time after which the server retries a failed I/O request.
+    The default value is one second.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MPIO.Set-MPIOSetting
+name: Set-MPIOSetting
+description: |-
+  The **Set-MPIOSetting** cmdlet changes Microsoft Multipath I/O (MPIO) settings.
+  The settings are as follows: 
+
+  - PathVerificationState
+  - PathVerificationPeriod
+  - PDORemovePeriod
+  - RetryCount
+  - RetryInterval
+  - UseCustomPathRecoveryTime
+  - CustomPathRecoveryTime
+  - DiskTimeoutValue
+
+  You may be prompted to restart the computer for your changes to take effect.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Mpio-help.xml
+  Module Name: MPIO
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/mpio/set-mpiosetting?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-MPIOSetting

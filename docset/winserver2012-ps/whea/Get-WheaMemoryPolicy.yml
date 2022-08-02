@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets WHEA memory policies.
+module: WHEA
+notes: ""
+outputs:
+- name: <xref href="WheaMemoryPolicy" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-WheaMemoryPolicy [-ComputerName <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get WHEA memory policy settings from the local computer'
+  code: |-
+    PS C:\>Get-WHEAMemoryPolicy
+    DisableOffline : False 
+    DisablePFA : False 
+    PersistMemoryOffline : True 
+    PFAPageCount : 64 
+    PFAErrorThreshold : 16 
+    PFATimeOut : 86400
+  description: |-
+    This command gets WHEA memory policy values (as a **WheaMemoryPolicy** object) from the local computer.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the remote computer from which to get policy information.
+    If no computer name is specified, the command returns the policy of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: CN
+  parameterValueGroup: ""
+uid: WHEA.Get-WheaMemoryPolicy
+name: Get-WheaMemoryPolicy
+description: |-
+  The **Get-WheaMemoryPolicy** cmdlet gets the Windows Hardware Error Architecture (WHEA) memory policies in effect on a local or remote computer.
+metadata:
+  external help file: Microsoft.Windows.Whea.WheaMemoryPolicy.dll-Help.xml
+  Module Name: WHEA
+  online version: https://docs.microsoft.com/powershell/module/whea/get-wheamemorypolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

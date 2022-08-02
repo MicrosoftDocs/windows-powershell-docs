@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a description for a scope in AD FS.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *Name* parameter.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.OAuthScopeDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more OAuthScopeDescription objects that represent the scope descriptions for the Federation Service.
+links:
+- text: Add-AdfsScopeDescription
+  href: ./Add-AdfsScopeDescription.yml
+- text: Remove-AdfsScopeDescription
+  href: ./Remove-AdfsScopeDescription.yml
+- text: Set-AdfsScopeDescription
+  href: ./Set-AdfsScopeDescription.yml
+syntaxes:
+- Get-AdfsScopeDescription [[-Name] <String[]>] [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of names of scope description to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsScopeDescription
+name: Get-AdfsScopeDescription
+description: |-
+  The **Get-AdfsScopeDescription** cmdlet gets scope descriptions that represent the scope of access granted to resources and applications in Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsscopedescription?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsScopeDescription

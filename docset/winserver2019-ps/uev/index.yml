@@ -1,0 +1,42 @@
+### YamlMime:PowershellModule
+children:
+- title: UEV
+  cmdlets:
+  - UEV.Clear-UevAppxPackage
+  - UEV.Clear-UevConfiguration
+  - UEV.Disable-Uev
+  - UEV.Disable-UevAppxPackage
+  - UEV.Disable-UevTemplate
+  - UEV.Enable-Uev
+  - UEV.Enable-UevAppxPackage
+  - UEV.Enable-UevTemplate
+  - UEV.Export-UevConfiguration
+  - UEV.Export-UevPackage
+  - UEV.Get-UevAppxPackage
+  - UEV.Get-UevConfiguration
+  - UEV.Get-UevStatus
+  - UEV.Get-UevTemplate
+  - UEV.Get-UevTemplateProgram
+  - UEV.Import-UevConfiguration
+  - UEV.Register-UevTemplate
+  - UEV.Repair-UevTemplateIndex
+  - UEV.Restore-UevBackup
+  - UEV.Restore-UevUserSetting
+  - UEV.Set-UevConfiguration
+  - UEV.Set-UevTemplateProfile
+  - UEV.Test-UevTemplate
+  - UEV.Unregister-UevTemplate
+  - UEV.Update-UevTemplate
+uid: UEV
+name: UEV
+description: |-
+  The following list contains links to the help topics for the Microsoft User Experience Virtualization (UE-V) for Windows 10 Anniversary edition and Windows Server 2016 Microsoft User Experience Virtualization (UE-V) cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.1.1
+  Locale: en-US
+  Module Guid: d22e34c9-0a99-47d7-98f3-c0570257deb6
+  Module Name: UEV
+  ms.date: 12/20/2016
+  title: UEV

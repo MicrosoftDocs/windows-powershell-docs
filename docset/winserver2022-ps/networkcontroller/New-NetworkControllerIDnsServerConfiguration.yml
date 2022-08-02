@@ -1,0 +1,170 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an iDNS Server configuration for a Network Controller.
+module: NetworkController
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Windows.NetworkController.InternalDnsServerProperties" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NetworkControllerIDnsServerConfiguration
+  href: Get-NetworkControllerIDnsServerConfiguration.yml
+syntaxes:
+- >-
+  New-NetworkControllerIDnsServerConfiguration [[-Tags] <PSObject>] [-Properties] <InternalDnsServerProperties>
+
+   [[-Etag] <String>] [[-ResourceMetadata] <ResourceMetadata>] [[-ResourceId] <String>] [-Force]
+
+   -ConnectionUri <Uri> [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $iDNSProperties = New-Object Microsoft.Windows.NetworkController.InternalDNSServerProperties
+    New-NetworkControllerIDnsServerConfiguration -Properties $iDNSProperties -ResourceId "iDNSConfiguration" -ConnectionUri https://networkcontroller
+  description: |-
+    The first command creates an iDNS server properties object.
+    For a real deployment, you need to specify values in the object.
+    For more information, see [Internal DNS Service](/windows-server/networking/sdn/technologies/idns-for-sdn).
+
+    The second command creates the iDNS server configuration for the specified Network Controller.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller to configure.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.
+
+    This user must be present in the security group provided in the **ClientSecurityGroup** parameter in the `Install-NetworkController` cmdlet.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) parameter of the resource.
+    An ETag is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: |+
+    This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+    The thumbprint must be provided only if the network controller client authentication is X509 certificates.
+    **Get-NetworkController** retrieves that client authentication and authorization information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="InternalDnsServerProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    Specifies the properties of the iDNS server for the Network Controller.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  description: |+
+    Specifies the resource ID of the iDNS server configuration to create.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Tags
+  description: |+
+    Specifies tags.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkController.New-NetworkControllerIDnsServerConfiguration
+name: New-NetworkControllerIDnsServerConfiguration
+description: |-
+  The **New-NetworkControllerIDnsServerConfiguration** cmdlet creates an Internal DNS (iDNS) server configuration for a Network Controller.
+metadata:
+  description: The New-NetworkControllerIDnsServerConfiguration cmdlet creates an iDNS Server configuration for a Network Controller.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 09/27/2021
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrolleridnsserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkControllerIDnsServerConfiguration

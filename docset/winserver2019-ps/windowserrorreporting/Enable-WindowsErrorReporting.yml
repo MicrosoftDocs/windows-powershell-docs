@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables Windows Error Reporting.
+module: WindowsErrorReporting
+notes: ""
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    The **Enable-WindowsErrorReporting** cmdlet returns $True if it is successful.
+    Otherwise, it returns $False.
+links:
+- text: Disable-WindowsErrorReporting
+  href: ./Disable-WindowsErrorReporting.yml
+- text: Get-WindowsErrorReporting
+  href: ./Get-WindowsErrorReporting.yml
+syntaxes:
+- Enable-WindowsErrorReporting [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable Windows Error Reporting'
+  code: |-
+    PS C:\> Enable-WindowsErrorReporting
+  description: |-
+    This command enables Windows Error Reporting.
+  summary: ""
+uid: WindowsErrorReporting.Enable-WindowsErrorReporting
+name: Enable-WindowsErrorReporting
+description: |-
+  The **Enable-WindowsErrorReporting** cmdlet enables Windows Error Reporting (WER) on the server.
+
+  Windows Error Reporting is a flexible feedback infrastructure that gathers information about hardware and software problems, reports the information to Microsoft, and gives users any available solutions.
+  Windows Error Reporting generates reports in response to system events, such as application crashes or kernel faults.
+
+  To get the current WER status, use the [Get-WindowsErrorReporting](./Get-WindowsErrorReporting.yml) cmdlet.
+  If you enable WER, you can use the [Disable-WindowsErrorReporting](./Disable-WindowsErrorReporting.yml) cmdlet to disable it.
+  After you run this cmdlet, WER no longer sends information about application failures to Microsoft.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.WindowsErrorReporting.PowerShell.dll-Help.xml
+  Module Name: WindowsErrorReporting
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/windowserrorreporting/enable-windowserrorreporting?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-WindowsErrorReporting

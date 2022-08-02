@@ -1,0 +1,148 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new member (network adapter) to a specified NIC team.
+module: NetLbfo
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet takes no input objects.
+outputs:
+- name: <xref href="MSFT_NetLbfoTeamMember" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an array of **MSFT_NetLbfoTeamMember** objects consisting of the newly added member network adapter objects to the team.
+links:
+- text: Get-NetLbfoTeamMember
+  href: ./Get-NetLbfoTeamMember.yml
+- text: Remove-NetLbfoTeamMember
+  href: ./Remove-NetLbfoTeamMember.yml
+- text: Set-NetLbfoTeamMember
+  href: ./Set-NetLbfoTeamMember.yml
+syntaxes:
+- >-
+  Add-NetLbfoTeamMember [-Name] <WildcardPattern> [-Team] <String> [[-AdministrativeMode] <AdminModes>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a new team member'
+  code: |-
+    PS C:\> Add-NetLbfoTeamMember -Name "NIC1" -Team "Team1"
+  description: |-
+    This command adds a new member named NIC1 to the specified team named Team1.
+  summary: ""
+- title: 'Example 2: Add a new team member with initial status'
+  code: |-
+    PS C:\> Add-NetLbfoTeamMember -Name "NIC2" -Team "Team2" -AdministrativeMode Standby
+  description: |-
+    This command adds a new member named NIC2 to the specified team named Team2 with the initial status Standby.
+  summary: ""
+- title: 'Example 3: Add new team members using wildcard pattern'
+  code: |-
+    PS C:\> Add-NetLbfoTeamMember -Name "NIC*" -Team "Team1"
+  description: |-
+    This command adds new members whose name starts with NIC to the specified team named Team1.
+  summary: ""
+parameters:
+- type: <xref href="AdminModes" data-throw-if-not-resolved="False" />
+  name: AdministrativeMode
+  description: |+
+    Specifies the initial role of the new member (network adapter).
+    The acceptable values for this parameter are:
+
+    - Active.
+    Allows the team member to participate in the NIC team. 
+    - Standby.
+    Places the member in a standby state where it does not participate in the team.
+    The team member is automatically moved to the Active state if any other member of the team fails.
+
+    By default, the initial role of the team member is Active.
+
+    At most one member in a team can be in Standby mode.
+
+  defaultValue: None
+  position: "2"
+  aliases: am
+  parameterValueGroup: Active, Standby
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="WildcardPattern" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name (Interface Alias or Connection Name) of the network adapter to add.
+
+  defaultValue: None
+  position: "0"
+  aliases: ifAlias, InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Team
+  isRequired: true
+  description: |+
+    Specifies the name of the NIC team to which to add the new network adapter.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetLbfo.Add-NetLbfoTeamMember
+name: Add-NetLbfoTeamMember
+description: |-
+  The **Add-NetLbfoTeamMember** cmdlet adds a new network adapter as a member to the specified team.
+  You can use the *AdministrativeMode* parameter to specify the initial role of the new team member.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetLbfoTeamMember.cdxml-help.xml
+  Module Name: NetLbfo
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/netlbfo/add-netlbfoteammember?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-NetLbfoTeamMember

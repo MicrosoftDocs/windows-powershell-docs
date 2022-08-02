@@ -1,0 +1,223 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies a provider's enablement settings in an ETW or AutoLogger session.
+module: EventTracingManagement
+notes: ""
+links:
+- text: Configuring and Starting an AutoLogger Session
+  href: https://msdn.microsoft.com/library/windows/desktop/aa363687.aspx
+- text: Configuring and Starting an Event Tracing Session
+  href: https://msdn.microsoft.com/library/windows/desktop/aa363688.aspx
+- text: Add-EtwTraceProvider
+  href: ./Add-EtwTraceProvider.yml
+- text: Get-EtwTraceProvider
+  href: ./Get-EtwTraceProvider.yml
+- text: Remove-EtwTraceProvider
+  href: ./Remove-EtwTraceProvider.yml
+syntaxes:
+- >-
+  Set-EtwTraceProvider [[-Guid] <String[]>] [-AutologgerName <String[]>] [-Level <Byte>]
+
+   [-MatchAnyKeyword <UInt64>] [-MatchAllKeyword <UInt64>] [-Property <UInt32>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-EtwTraceProvider [[-Guid] <String[]>] [-SessionName <String[]>] [-Level <Byte>] [-MatchAnyKeyword <UInt64>]
+
+   [-MatchAllKeyword <UInt64>] [-Property <UInt32>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-EtwTraceProvider -InputObject <CimInstance[]> [-Level <Byte>] [-MatchAnyKeyword <UInt64>]
+
+   [-MatchAllKeyword <UInt64>] [-Property <UInt32>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify an ETW trace provider'
+  code: |-
+    PS C:\> set-EtwTraceProvider -Guid "{106B464A-8043-46B1-8CB8-E92A0CD7A560}" -AutologgerName "WFP-IPsec Trace" -Level 2
+    SessionName     : 
+    AutologgerName  : WFP-IPsec Trace
+    Guid            : {106B464A-8043-46B1-8CB8-E92A0CD7A560}
+    Level           : 2
+    MatchAnyKeyword : 0xFFFFFFFF
+    MatchAllKeyword : 0x0
+    Property        :
+  description: |-
+    This command modifies the ETW trace provider that has the specified GUID.
+    That provider is associated with a specified AutoLogger configuration named WFP-IPsec Trace.
+    The command sets the *Level* to have a value of 2, TRACE_LEVEL_ERROR.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AutologgerName
+  description: |+
+    Specifies the name of the target AutoLogger session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Guid
+  description: |+
+    Specifies the provider ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: Level
+  description: |+
+    Specifies the maximum event level to enable for a collection.
+
+    For more information about event levels, see [EnableTraceEx2 function](https://msdn.microsoft.com/en-us/library/windows/desktop/dd392305.aspx) in MSDN.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: MatchAllKeyword
+  description: |+
+    Specifies a bitmask of keywords an event must match in order to be logged to the session.
+
+    An event must match every keyword set by this parameter.
+
+    Most of the time the *MatchAnyKeyword* parameter is more suitable.
+
+    For more information about keywords, see [EnableTraceEx2 function](https://msdn.microsoft.com/en-us/library/windows/desktop/dd392305.aspx) for
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+  name: MatchAnyKeyword
+  description: |+
+    Specifies a bitmask of keywords an event must match in order to be logged to the session.
+
+    An event must match at least one keyword set by this parameter.
+
+    For more information about keywords, see [EnableTraceEx2 function](https://msdn.microsoft.com/en-us/library/windows/desktop/dd392305.aspx).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Indicates that this cmdlet returns an object that represents the item on which it operates.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Property
+  description: |+
+    Specifies the **EnableProperty** to use for events logged from this provider to the session.
+
+    For more information about **EnableProperty**, see [Configuring and Starting an AutoLogger Session](https://msdn.microsoft.com/en-us/library/windows/desktop/aa363687.aspx) in MSDN.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SessionName
+  description: |+
+    Specifies the name of the target ETW session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: EventTracingManagement.Set-EtwTraceProvider
+name: Set-EtwTraceProvider
+description: |-
+  The **Set-EtwTraceProvider** cmdlet modifies a provider's enablement settings in an Event Tracing for Windows (ETW) or AutoLogger session.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_EtwTraceProvider_v1.0.cdxml-help.xml
+  Module Name: EventTracingManagement
+  ms.date: 01/05/2017
+  online version: https://docs.microsoft.com/powershell/module/eventtracingmanagement/set-etwtraceprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-EtwTraceProvider

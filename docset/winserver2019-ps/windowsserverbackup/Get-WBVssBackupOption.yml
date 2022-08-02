@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a VSS setting from the backup policy.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet queries the **WBPolicy** object.
+outputs:
+- name: <xref href="Microsoft.Windows.ServerBackup.Commands.VssBackupOptions" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns either a **VssCopyBackup** or **VssFullBackup** object, depending on the option specified in the **WBPolicy** object.
+links:
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: New-WBPolicy
+  href: ./New-WBPolicy.yml
+- text: Set-WBVssBackupOption
+  href: ./Set-WBVssBackupOption.yml
+syntaxes:
+- Get-WBVssBackupOption [-Policy] <WBPolicy> [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the VSS setting from the backup policy'
+  code: |-
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Get-WBVssBackupOption -Policy $Policy
+  description: |-
+    This example gets the VSS setting, either VssCopyBackup or VssFullBackup.
+
+    The first command stores the result of the [Get-WBPolicy](./Get-WBPolicy.yml) cmdlet in the variable named $Policy.
+
+    The second command gets the VSS setting from the variable $Policy.
+  summary: ""
+parameters:
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies the **WBPolicy** object that this cmdlet gets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Get-WBVssBackupOption
+name: Get-WBVssBackupOption
+description: |-
+  The **Get-WBVSSBackupOption** cmdlet gets a setting that determines whether the backups created through the **WBPolicy** object are Volume Shadow Copy Service (VSS) copy backups or VSS full backups.
+  For more information about VSS copy backups and VSS full backups, or to change this setting, refer to the [Set-WBVssBackupOption](./Set-WBVssBackupOption.yml) cmdlet.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbvssbackupoption?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WBVssBackupOption

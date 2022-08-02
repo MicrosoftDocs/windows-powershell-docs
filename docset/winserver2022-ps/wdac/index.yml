@@ -1,0 +1,29 @@
+### YamlMime:PowershellModule
+children:
+- title: Wdac
+  cmdlets:
+  - Wdac.Add-OdbcDsn
+  - Wdac.Disable-OdbcPerfCounter
+  - Wdac.Disable-WdacBidTrace
+  - Wdac.Enable-OdbcPerfCounter
+  - Wdac.Enable-WdacBidTrace
+  - Wdac.Get-OdbcDriver
+  - Wdac.Get-OdbcDsn
+  - Wdac.Get-OdbcPerfCounter
+  - Wdac.Get-WdacBidTrace
+  - Wdac.Remove-OdbcDsn
+  - Wdac.Set-OdbcDriver
+  - Wdac.Set-OdbcDsn
+uid: Wdac
+name: Wdac
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Windows Data Access Components (Windows DAC) cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 78a7a38c-a446-43fe-b643-9abacf843112
+  Module Name: Wdac
+  ms.date: 12/20/2016
+  title: Wdac

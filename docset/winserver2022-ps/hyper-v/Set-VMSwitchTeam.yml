@@ -1,0 +1,186 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures a virtual switch team.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMSwitch" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **VMSwitch** object, if you specify the **Passthru** parameter.
+links:
+- text: Get-VMSwitchTeam
+  href: ./Get-VMSwitchTeam.yml
+- text: Get-VMSwitch
+  href: ./Get-VMSwitch.yml
+syntaxes:
+- >-
+  Set-VMSwitchTeam [-ComputerName <String[]>] [-Name] <String[]> [-NetAdapterName <String[]>]
+
+   [-TeamingMode <VMSwitchTeamingMode>] [-LoadBalancingAlgorithm <VMSwitchLoadBalancingAlgorithm>] [-Passthru]
+
+   [-CimSession <CimSession[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMSwitchTeam [-ComputerName <String[]>] [-Name] <String[]> [-NetAdapterInterfaceDescription <String[]>]
+
+   [-TeamingMode <VMSwitchTeamingMode>] [-LoadBalancingAlgorithm <VMSwitchLoadBalancingAlgorithm>] [-Passthru]
+
+   [-CimSession <CimSession[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMSwitchTeam [-ComputerName <String[]>] [-VMSwitch] <VMSwitch[]>
+
+   [-NetAdapterInterfaceDescription <String[]>] [-TeamingMode <VMSwitchTeamingMode>]
+
+   [-LoadBalancingAlgorithm <VMSwitchLoadBalancingAlgorithm>] [-Passthru] [-CimSession <CimSession[]>]
+
+   [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMSwitchTeam [-ComputerName <String[]>] [-VMSwitch] <VMSwitch[]> [-NetAdapterName <String[]>]
+
+   [-TeamingMode <VMSwitchTeamingMode>] [-LoadBalancingAlgorithm <VMSwitchLoadBalancingAlgorithm>] [-Passthru]
+
+   [-CimSession <CimSession[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure a switch team to user dynamic load balancing'
+  code: |-
+    PS C:\> Set-VMSwitchTeam -Name "SwitchTeam07" -LoadBalancingAlgorithm Dynamic
+  description: |-
+    This command configures the switch team named SwitchTeam07 to use a dynamic load balancing algorithm.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts that run this cmdlet.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: PSComputerName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitchLoadBalancingAlgorithm" data-throw-if-not-resolved="False" />
+  name: LoadBalancingAlgorithm
+  description: |+
+    Specifies the load balancing algorithm that this switch team uses.
+    The acceptable values for this parameter are: Dynamic and HyperVPort.
+    The default value is Dynamic.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: HyperVPort, Dynamic
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names of virtual switches that this cmdlet configures for teaming.
+
+  defaultValue: None
+  position: "0"
+  aliases: SwitchName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NetAdapterInterfaceDescription
+  description: |+
+    Specifies an array of interface descriptions of the virtual network adapters that this cmdlet includes in the switch team.
+    This value replaces the existing members.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NetAdapterName
+  description: |+
+    Specifies an array of names of the virtual network adapters that this cmdlet includes in the switch team.
+    This value replaces the existing members.
+
+  defaultValue: None
+  position: Named
+  aliases: InterfaceAlias
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Indicates that this cmdlet returns the **Microsoft.HyperV.PowerShell.VMSwitch** object that it configures.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMSwitchTeamingMode" data-throw-if-not-resolved="False" />
+  name: TeamingMode
+  description: |+
+    Specifies the teaming mode.
+    Currently, the only option is SwitchIndependent.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: SwitchIndependent
+- type: <xref href="VMSwitch" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMSwitch
+  isRequired: true
+  description: |+
+    Specifies an array of virtual switches that this cmdlet configures for teaming.
+    To obtain a **VMSwitch** object, use the **Get-VMSwitch** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VMSwitchTeam
+name: Set-VMSwitchTeam
+description: |-
+  The **Set-VMSwitchTeam** cmdlet configures a virtual switch team.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmswitchteam?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VMSwitchTeam

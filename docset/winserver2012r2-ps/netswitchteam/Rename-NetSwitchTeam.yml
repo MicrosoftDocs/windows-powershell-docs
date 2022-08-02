@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the name of a switch team.
+module: NetSwitchTeam
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NetSwitchTeam
+  href: ./Get-NetSwitchTeam.yml
+- text: New-NetSwitchTeam
+  href: ./New-NetSwitchTeam.yml
+- text: Remove-NetSwitchTeam
+  href: ./Remove-NetSwitchTeam.yml
+syntaxes:
+- >-
+  Rename-NetSwitchTeam [-Name] <String> [-NewName] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+
+   [-AsJob] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Rename-NetSwitchTeam -Name "MyTeam1" -NewName "SwitchTeam1"
+  description: |-
+    This example renames the switch team named MyTeam1 to the new name SwitchTeam1.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the current name of switch team to rename.
+    Wildcard characters may be used to specify the current switch team name, as long as the wildcard mask resolves to a single switch team.
+    The wildcard mask must not resolve to one than one switch team name.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewName
+  isRequired: true
+  description: |+
+    Specifies the new name to give to the switch team.
+    The new name must not already exist.
+    The new name cannot be an existing switch team or Load-Balancing/Fail-Over (LBFO) team name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetSwitchTeam.Rename-NetSwitchTeam
+name: Rename-NetSwitchTeam
+description: |-
+  The **Rename-NetSwitchTeam** cmdlet changes the name of a switch team.
+  Only the name of a switch team can be changed using this cmdlet.
+
+  The current switch team name may contain wildcard characters, as long as the wildcard mask resolves to a single switch team.
+
+  The new switch team name must not match an existing switch team name.
+metadata:
+  external help file: MSFT_NetSwitchTeam.cdxml-help.xml
+  Module Name: NetSwitchTeam
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/netswitchteam/rename-netswitchteam?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Rename-NetSwitchTeam

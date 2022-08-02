@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets attestation policies based on host groups.
+module: HgsAttestation
+notes: ""
+outputs:
+- name: <xref href="System.Collections.Specialized.StringCollection" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **StringCollection** object.
+links:
+- text: Add-HgsAttestationHostGroup
+  href: ./Add-HgsAttestationHostGroup.yml
+- text: Remove-HgsAttestationHostGroup
+  href: ./Remove-HgsAttestationHostGroup.yml
+syntaxes:
+- Get-HgsAttestationHostGroup [-Name <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get policies for all host groups'
+  code: |-
+    PS C:\> Get-HgsAttestationHostGroup
+  description: |-
+    This command gets policies for all host groups configured with the Attestation service.
+  summary: ""
+- title: 'Example 2: Get a specific policy for a host group'
+  code: |-
+    PS C:\> Get-HgsAttestationHostGroup -Name "TrustedADHostGroup14"
+  description: |-
+    This command gets the policy for the host group named TrustedADHostGroup14.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the friendly name of the host group for which this cmdlet gets the policy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: HgsAttestation.Get-HgsAttestationHostGroup
+name: Get-HgsAttestationHostGroup
+description: |-
+  The **Get-HgsAttestationHostGroup** cmdlet gets attestation policies that are based on the configuration of Active Directory host groups.
+  To obtain a particular host group policy, specify it by name.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsattestation/get-hgsattestationhostgroup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-HgsAttestationHostGroup

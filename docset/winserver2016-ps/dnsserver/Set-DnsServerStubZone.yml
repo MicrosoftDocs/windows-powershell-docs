@@ -1,0 +1,204 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes settings for a DNS server stub zone.
+module: DnsServer
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerStubZone" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-DnsServerStubZone
+  href: ./Add-DnsServerStubZone.yml
+syntaxes:
+- >-
+  Set-DnsServerStubZone [-Name] <String> [-ComputerName <String>] [-PassThru] [-MasterServers <IPAddress[]>]
+
+   [-LocalMasters <IPAddress[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-DnsServerStubZone [-Name] <String> [-ComputerName <String>] [-PassThru] [-DirectoryPartitionName <String>]
+
+   -ReplicationScope <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Change master servers for a stub zone'
+  code: |-
+    PS C:\> Set-DnsServerStubZone -Name "west03.contoso.com" -MasterServers 172.23.90.124,2001:4898:7020:f100:458f:e6a2:fcaf:698c
+  description: |-
+    This command changes the master servers for a stub zone named west03.contoso.com.
+  summary: ""
+- title: 'Example 2: Change replication scope for a stub zone'
+  code: |-
+    PS C:\> Set-DnsServerStubZone  -Name "west04.contoso.com" -ReplicationScope "Domain" -PassThru
+
+    ZoneName                            ZoneType        IsAutoCreated   IsDsIntegrated  IsReverseLookupZone  IsSigned
+    --------                            --------        -------------   --------------  -------------------  --------
+    west04.contoso.com                  Stub            False           True            False
+  description: |-
+    This command changes the replication scope for a stub zone named west04.contoso.com to all DNS servers in the domain.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    If you do not specify this parameter, the command runs on the local system.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), Hostname, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DirectoryPartitionName
+  description: |+
+    Specifies a directory partition on which to store the zone.
+    Use this parameter when the *ReplicationScope* parameter has a value of Custom.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LocalMasters
+  description: |+
+    Specifies a list of IP addresses of a zone's primary DNS servers used locally by this DNS server only.
+    If not configured, the *MasterServers* value is used; otherwise, this list is used in place of the *MasterServers* value.
+    This value is ignored if the zone type is not stub.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MasterServers
+  description: |+
+    Specifies a list of IP addresses of primary DNS servers for a zone.
+    This value must be non-empty for any zone of a type that requires primary DNS servers: secondary, stub, or forwarder.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a zone.
+    The cmdlet modifies settings for this zone.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ZoneName
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReplicationScope
+  isRequired: true
+  description: |+
+    Specifies a partition on which to store an Active Directory-integrated zone.
+    The acceptable values for this parameter are:
+
+    - Custom.
+    Any custom directory partition that a user creates.
+    Specify a custom directory partition by using the *DirectoryPartitionName* parameter.
+    - Domain.
+    The domain directory partition. 
+    - Forest.
+    The ForestDnsZone directory partition.
+    - Legacy.
+    A legacy directory partition.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Forest, Domain, Legacy, Custom
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DnsServer.Set-DnsServerStubZone
+name: Set-DnsServerStubZone
+description: |-
+  The **Set-DnsServerStubZone** cmdlet changes settings for an existing stub zone.
+  A stub zone is a copy of a Domain Name System (DNS) zone that contains only resource records that identify the authoritative DNS servers for that zone.
+
+  The stub zone can be a forward lookup zone or a reverse lookup zone.
+  The stub zone can be an Active Directory-integrated zone or a file-backed zone.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerStubZone_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverstubzone?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DnsServerStubZone

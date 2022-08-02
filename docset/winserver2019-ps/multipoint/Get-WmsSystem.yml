@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets MultiPoint Server system information.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **WmsSystem** collection as a **PSObject** collection.
+links:
+- text: Add-WmsSystem
+  href: ./Add-WmsSystem.yml
+- text: Remove-WmsSystem
+  href: ./Remove-WmsSystem.yml
+- text: Restart-WmsSystem
+  href: ./Restart-WmsSystem.yml
+- text: Search-WmsSystem
+  href: ./Search-WmsSystem.yml
+- text: Set-WmsSystem
+  href: ./Set-WmsSystem.yml
+- text: Stop-WmsSystem
+  href: ./Stop-WmsSystem.yml
+syntaxes:
+- Get-WmsSystem [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get system information'
+  code: |-
+    PS C:\> Get-WmsSystem
+    AttemptingToConnect        : False
+    RetryAttemptToConnect      : False
+    ProtocolVersion            : 1
+    WmsServerVersion           : 10.0.10586.0
+    WmsClientVersion           : 10.0.10586.0
+    NetJoinStatus              : NetSetupDomainName
+    DomainOrWorkgroupName      : TestDomain
+    SystemMode                 : Normal
+    DiskProtectionMode         : NotInstalled
+    ConnectionString           : 
+    ConnectionCount            : 1
+    LicenseCount               : 0
+    State                      : Connected
+    ConnectionError            : 0
+    ConnectionErrorMessage     :
+    ComputerName               : Test1
+    WindowsEdition             : Windows Server 2016 Standard
+    IsVirtualMachine           : False
+    ManagedSystemsType         : MultiPointServers
+    MonitoringSystemType       : Include
+    IsSingleSessionPerUser     : True
+    MultiPointServers          : {}
+    PersonalComputers          : {}
+    CloudServers               : {}
+    ExcludedMultiPointServers  : {}
+    ExcludedPersonalComputers  : {}
+    ExcludedCloudServers       : {}
+    IPAddresses                : 
+    ManagedServers             : 
+    ExcludedManagedServers     : {}
+    IsSQMOn                    : True
+    IsWatsonOn                 : True
+    IsIPPerSessionEnabled      : False
+    IsChatEnabled              : True
+    HasNonLoopbackAdapter      : True
+    IsDesktopMonitoringAllowed : True
+    IsWmsSvcRunning            : True
+    IsScheduledUpdateEnabled      : False
+    ScheduleUpdateRunWU           : False
+    ScheduleUpdateCustomScript    : 
+    MaxTimeAllowedForCustomScript : 0
+    ScheduledUpdatesReturnState   : __SUR_FIRST
+    TimeToScheduleUpdates         : 0
+    IsAllowRemoteManagementOn     : True
+    BootToConsoleMode             : False
+    SuppressPrivacyNotification   : False
+    SystemImage                   :
+  description: |-
+    This command gets MultiPoint Server system information.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+uid: MultiPoint.Get-WmsSystem
+name: Get-WmsSystem
+description: |-
+  The **Get-WmsSystem** cmdlet gets Windows MultiPoint Server system information.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/get-wmssystem?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WmsSystem

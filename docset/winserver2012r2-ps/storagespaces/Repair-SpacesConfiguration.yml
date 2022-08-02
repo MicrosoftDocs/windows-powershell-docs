@@ -1,0 +1,39 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Repairs unhealthy resources associated with a Storage Spaces storage pool.
+module: StorageSpaces
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Repair-SpacesConfiguration
+examples:
+- title: Example 1 - Repair Storage Spaces
+  code: |-
+    PS C:\>Repair-SpacesConfiguration
+  description: ""
+  summary: ""
+uid: StorageSpaces.Repair-SpacesConfiguration
+name: Repair-SpacesConfiguration
+description: |-
+  The Repair-SpacesConfiguration cmdlet repairs unhealthy Storage Spaces resources.
+  It performs the following operations:
+
+  Enumerate storage pools that are read-only and offer to recover them
+
+  Enumerate storage spaces that are set for manual attachment, and attach them
+
+  Enumerate and repair any unhealthy storage spaces
+
+  Enumerate and display any unhealthy physical disks
+metadata:
+  external help file: StorSpaces2_Cmdlets.xml
+  Module Name: StorageSpaces
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/storagespaces/repair-spacesconfiguration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Repair-SpacesConfiguration

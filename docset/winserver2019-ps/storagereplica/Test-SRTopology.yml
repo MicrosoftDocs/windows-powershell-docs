@@ -1,0 +1,208 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Validates a potential replication partnership.
+module: StorageReplica
+notes: ""
+syntaxes:
+- >-
+  Test-SRTopology -SourceComputerName <String> -SourceVolumeName <String[]> -SourceLogVolumeName <String>
+
+   -DestinationComputerName <String> -DestinationVolumeName <String[]> -DestinationLogVolumeName <String>
+
+   -DurationInMinutes <UInt32> -ResultPath <String> [-IgnorePerfTests] [<CommonParameters>]
+- Test-SRTopology [-GenerateReport] -DataPath <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Validate requirements'
+  code: |-
+    PS C:\>Test-SRTopology -SourceComputerName "SR-SRV05" -SourceVolumeName "D:" -SourceLogVolumeName "E:" -DestinationComputerName "SR-SRV06" -DestinationVolumeName "D:" -DestinationLogVolumeName "E:" -DurationInMinutes 1 -ResultPath "C:\temp" -IgnorePerfTests
+    Validating data and log volumes... 
+
+    Test completed. Result at c:\temp\TestSrTopologyReport-2016-10-11-16-13-43.html
+  description: |-
+    This command creates a report that validates the requirements.
+    It does not check performance.
+  summary: ""
+- title: 'Example 2: Validate requirements and performance'
+  code: |-
+    PS C:\>Test-SRTopology -SourceComputerName "SR-SRV05" -SourceVolumeName "D:" -SourceLogVolumeName "E:" -DestinationComputerName "SR-SRV06" -DestinationVolumeName "D:" -DestinationLogVolumeName "E:" -DurationInMinutes 10 -ResultPath "C:\temp"
+    Validating data and log volumes... 
+
+    Measuring Storage Replica recovery and initial synchronization performance... 
+
+    Measuring Storage Replica synchronous replication performance... 
+
+    Test completed. Result at c:\temp\TestSrTopologyReport-2016-10-11-16-14-50.html
+  description: |-
+    This command creates a report that validates requirements.
+    The command also measures initial sync and ongoing performance for a total of approximately ten minutes.
+  summary: ""
+- title: 'Example 3: Generate a report from previously generated data'
+  code: |-
+    PS C:\>Test-SRTopology -GenerateReport -DataPath "C:\temp" 
+    Report file c:\temp\files\TestSrTopologyReport-2016-09-22-18-32-48.html now includes data charts
+  description: |-
+    This command generates a complete report, which includes charts, from data generated previously on a Nano Server.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DataPath
+  isRequired: true
+  description: |+
+    Specifies a path of the raw report files created on  Nano Server with a previous run of this cmdlet.
+    This parameter is only required to finish generation of reports created on a Nano Server, which do not contain the HTML chart generation controls.
+    Specify a path of the files created in the *ResultPath* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationComputerName
+  isRequired: true
+  description: |+
+    Specifies a single replica host computer NetBIOS name or fully qualified domain name (FQDN) for the destination computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Destination
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationLogVolumeName
+  isRequired: true
+  description: |+
+    Specifies a drive letter, mount point path, or volume GUID where destination replication logs would be created.
+    The volume must contain an NTFS-formatted volume or ReFS-formatted volume.
+    The path must exist.
+    The path cannot be a mapped drive or UNC path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DestinationLogVolume
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DestinationVolumeName
+  isRequired: true
+  description: |+
+    Specifies an array of drive letters or mount point paths of the partitions for the replica.
+    The volume must exist.
+    The volume cannot be a mapped drive or UNC path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DestinationVolumes
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DurationInMinutes
+  isRequired: true
+  description: |+
+    Specifies the number of minutes to run this cmdlet.
+    This number is halved for initial sync testing and ongoing replication testing.
+    This cmdlet creates a 100MB test file during these tests and then removes it at the completion of the tests.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Duration
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: GenerateReport
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet converts the raw outputs into a readable HTML file.
+    This parameter is only required for a Nano Server, which does not contain the HTML chart generation controls.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IgnorePerfTests
+  description: |+
+    Indicates that this cmdlet only checks requirements.
+    It does not calculate performance numbers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResultPath
+  isRequired: true
+  description: |+
+    Specifies the output path for the measurement files and the finished HTML report.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: OutputResultPath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceComputerName
+  isRequired: true
+  description: |+
+    Specifies a single replica host computer NetBIOS name or FQDN for the source computer.
+    The default value is uses the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Source
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceLogVolumeName
+  isRequired: true
+  description: |+
+    Specifies a drive letter, mount point path, or volume GUID where source replication logs would be created.
+    The volume must contain an NTFS-formatted volume or ReFS-formatted volume.
+    The path must exist.
+    The path cannot be a mapped drive or UNC path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SourceLogVolume
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SourceVolumeName
+  isRequired: true
+  description: |+
+    Specifies an array of drive letters or mount point paths of the partitions for the replica.
+    The volume must exist.
+    The volume cannot be a mapped drive or UNC path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SourceVolumes
+  parameterValueGroup: ""
+uid: StorageReplica.Test-SRTopology
+name: Test-SRTopology
+description: |-
+  The **Test-SRTopology** cmdlet validates a potential replication partnership.
+  This cmdlet validate on the local host to the destination computer or remotely between source and destination computers.
+  To use Windows Server 2016 Nano Server, additional steps are required.
+  Review Storage Replica documentation on Microsoft TechNet.
+
+  This cmdlet performs the following validations: 
+
+  - SMB can be accessed over the network, which means that TCP port 445 and/or 5445 are open bi-directionally. 
+  - WS-MAN can be accessed over HTTP on the network, which means that TCP port 5985 and 5986 are open. 
+  - SR WMIv2 provider can be accessed and accepts requests. 
+  - The source and destination volumes exist and are writable. 
+  - The source and destination log volume exists with NTFS formatting or ReFS formatting and sufficient free space. 
+  - Storage is initialized in GPT format, not MBR, with matching sector sizes. 
+  - Measures round-trip latency of ICMP and reports the average. 
+  - Measures performance counters for write Input/Output and reports the average seen on that volume. 
+  - Measures estimated initial synchronization time.
+  - There is sufficient physical memory to run replication.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FileServices.SR.Powershell.dll-Help.xml
+  Module Name: StorageReplica
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-SRTopology

@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Obtains iSCSI targets and their associated properties.
+module: IscsiTarget
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiServerTarget" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiServerTarget" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-IscsiServerTarget
+  href: ./New-IscsiServerTarget.yml
+- text: Remove-IscsiServerTarget
+  href: ./Remove-IscsiServerTarget.yml
+- text: Set-IscsiServerTarget
+  href: ./Set-IscsiServerTarget.yml
+syntaxes:
+- >-
+  Get-IscsiServerTarget [-ClusterGroupName <String>] [[-TargetName] <String>] [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+- >-
+  Get-IscsiServerTarget [-ClusterGroupName <String>] [-Path <String>] [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+- >-
+  Get-IscsiServerTarget [-ClusterGroupName <String>] [-InitiatorId <InitiatorId>] [-ComputerName <String>]
+
+   [-Credential <PSCredential>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get targets on the local server'
+  code: |-
+    PS C:\> Get-IscsiServerTarget
+  description: |-
+    This example gets the iSCSI targets on the local server.
+  summary: ""
+- title: 'Example 2: Get targets on a remote server'
+  code: |-
+    PS C:\> Get-IscsiServerTarget -ComputerName "fs1.contoso.com"
+  description: |-
+    This example gets all of the iSCSI targets on the remote server named fs1.contoso.com.
+  summary: ""
+- title: 'Example 3: Get targets on a cluster'
+  code: |-
+    PS C:\> Get-IscsiServerTarget -ComputerName "fscluster.contoso.com" -ClusterGroupName "target1group"
+  description: |-
+    This example gets all of the iSCSI targets in the resource group named target1group on the cluster named fscluster.contoso.com.
+  summary: ""
+- title: 'Example 4: Get a target by using a path'
+  code: |-
+    PS C:\> Get-IscsiServerTarget -Path "E:\temp\test.vhdx"
+  description: |-
+    This example gets the iSCSI target associated with the VHD with the path E:\temp\test.vhdx.
+  summary: ""
+- title: 'Example 5: Get targets assigned to an initiator'
+  code: |-
+    PS C:\> Get-IscsiServerTarget -InitiatorId "DNSName:TargetSvr.Contoso.com"
+  description: |-
+    This example gets all of the iSCSI targets that have been assigned to the initiator with type DNSName, and value TargetSvr.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClusterGroupName
+  description: |+
+    Specifies the name of the resource group or network in the resource group on which this cmdlet runs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+    Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials when connecting to a remote computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="InitiatorId" data-throw-if-not-resolved="False" />
+  name: InitiatorId
+  description: |+
+    Specifies the iSCSI initiator identifiers (IDs) to which the iSCSI target is assigned.
+    Use this parameter to filter out the iSCSI Server Target object which can be accessed by the given iSCSI initiator.
+    The format of this parameter is IdType:Value.
+    The acceptable values for this parameter are: DNSName, IPAddress, IPv6Address, IQN, and MACAddress.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the path of the virtual hard disk (VHD) file that is associated with the iSCSI virtual disk.
+    Use this parameter to filter the iSCSI Target object that is associated with the virtual disks.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DevicePath
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  description: |+
+    Specifies the name of the iSCSI target.
+    Use this parameter to filter out the iSCSI Target object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IscsiTarget.Get-IscsiServerTarget
+name: Get-IscsiServerTarget
+description: |-
+  The **Get-IscsiServerTarget** cmdlet obtains iSCSI targets and their associated properties from the local server or specified computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iscsitarget/get-iscsiservertarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-IscsiServerTarget

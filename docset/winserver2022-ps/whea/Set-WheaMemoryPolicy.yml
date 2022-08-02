@@ -1,0 +1,144 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the WHEA memory policy for a computer.
+module: WHEA
+notes: ""
+links:
+- text: Get-WheaMemoryPolicy
+  href: ./Get-WheaMemoryPolicy.yml
+syntaxes:
+- >-
+  Set-WheaMemoryPolicy [-ComputerName <String>] [-DisableOffline <Boolean>] [-DisablePFA <Boolean>]
+
+   [-PersistMemoryOffline <Boolean>] [-PFAPageCount <UInt32>] [-PFAErrorThreshold <UInt32>]
+
+   [-PFATimeout <UInt32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable WHEA predictive failure analysis'
+  code: |-
+    PS C:\> Set-WheaMemoryPolicy -DisablePFA $False
+  description: |-
+    This command enables predictive failure analysis on the local computer.
+  summary: ""
+- title: 'Example 2: Change the memory time out policy on a remote computer'
+  code: |-
+    PS C:\> Set-WHEAMemoryPolicy -ComputerName "TestPC" -PFATimeout 600
+  description: |-
+    This command changes the WHEA memory policy on the remote computer named TestPC to use a timeout of 600 seconds.
+  summary: ""
+- title: 'Example 3: Get and set WHEA memory policy in a script'
+  code: |-
+    PS C:\> $X = Get-WheaMemoryPolicy
+    PS C:\> $X.DisableOffline = $True
+    PS C:\> $X | Set-WheaMemoryPolicy
+  description: |-
+    This command gets the memory policy in the variable $X, sets the value of X. DisableOffline to True, and then uses $X to set the memory policy.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies the name of the remote computer from which to retrieve policy information.
+    If you do not specify a computer name, the command returns the policy of the local computer.
+    The alias for *ComputerName* is cn.
+
+  defaultValue: None
+  position: Named
+  aliases: CN
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DisableOffline
+  description: |+
+    Disables WHEA from taking memory pages offline in response to corrected or uncorrected memory errors.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DisablePFA
+  description: |+
+    Disables the predictive failure analysis algorithm and stops WHEA from monitoring memory pages that have corrected errors.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: PersistMemoryOffline
+  description: |+
+    Indicates whether to persist memory-offline decisions across computer reboots.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: PFAErrorThreshold
+  description: |+
+    Specifies the number of corrected errors that must occur before a memory page in the PFA monitoring list is considered bad and is taken offline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: PFAPageCount
+  description: |+
+    Specifies the maximum size of the PFA monitoring list for pages that experience corrected memory errors.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: PFATimeout
+  description: |+
+    Specifies the number of seconds that WHEA monitors a memory page using PFA.
+    WHEA starts monitoring a memory page when the page has its first corrected error.
+    WHEA stops monitoring a memory page when one of the following events occurs:
+
+    - The monitoring interval exceeds the *PfaTimeout* value.
+
+    or
+
+    - The number of detected errors exceeds the *PfaErrorThreshold* value.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WHEA.Set-WheaMemoryPolicy
+name: Set-WheaMemoryPolicy
+description: |-
+  The **Set-WheaMemoryPolicy** cmdlet sets the elements of the WHEA (Windows Hardware Error Architecture) memory policy on the specified computer.
+
+  WHEA receives memory errors, corrected and uncorrected, from the platform and implements a Predictive Failure Analysis (PFA) algorithm based on corrected errors.
+  WHEA attempts to remove from the available system memory the pages that have uncorrected errors, or are predicted to fail based on corrected errors.
+  The removal decisions can be persisted across reboots.
+  You can change the WHEA decision criteria against memory errors by tuning the WHEA memory policy.
+  These policy elements can be set independently of each other.
+  The new policy element values take effect immediately.
+
+  WHEA memory policy elements are:
+
+  - DisableOffline. Disable decisions to take memory offline based on corrected or uncorrected errors.
+  - DisablePFA. Disable predictive failure analysis (PFA) of memory pages based on the number of corrected errors reported in the page.
+  - PersistMemoryOffline. Persist the decisions to take memory offline across reboots. This element applies to both corrected and uncorrected errors.
+  - PFAPageCount. The maximum number of memory pages that WHEA monitors using PFA.
+  - PFAErrorThreshold. The number of errors that need to occur within the timeout period for the page to be candidate for removal.
+  - PFATimeout. The number of seconds before PFA takes a page out of the monitoring list.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.Whea.WheaMemoryPolicy.dll-Help.xml
+  Module Name: WHEA
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/whea/set-wheamemorypolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WheaMemoryPolicy

@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the task definition object of a scheduled task that is registered on the local computer.
+module: ScheduledTasks
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_ScheduledTask" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Disable-ScheduledTask
+  href: ./Disable-ScheduledTask.yml
+- text: Enable-ScheduledTask
+  href: ./Enable-ScheduledTask.yml
+- text: Export-ScheduledTask
+  href: ./Export-ScheduledTask.yml
+- text: New-ScheduledTask
+  href: ./New-ScheduledTask.yml
+- text: Register-ScheduledTask
+  href: ./Register-ScheduledTask.yml
+- text: Set-ScheduledTask
+  href: ./Set-ScheduledTask.yml
+- text: Start-ScheduledTask
+  href: ./Start-ScheduledTask.yml
+- text: Stop-ScheduledTask
+  href: ./Stop-ScheduledTask.yml
+- text: Unregister-ScheduledTask
+  href: ./Unregister-ScheduledTask.yml
+syntaxes:
+- >-
+  Get-ScheduledTask [[-TaskName] <String[]>] [[-TaskPath] <String[]>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a scheduled task definition object'
+  code: |-
+    Get-ScheduledTask -TaskName "SystemScan"
+
+    TaskPath                          TaskName                        State
+    --------                          --------                        --------
+    \                                 SystemScan                      Ready
+  description: |-
+    This command gets the definition object of the SystemScan scheduled task in the root folder.
+  summary: ""
+- title: 'Example 2: Get an array of scheduled task definition objects'
+  code: |-
+    Get-ScheduledTask -TaskPath "\UpdateTasks\*"
+
+    TaskPath                          TaskName                        State
+    --------                          --------                        --------
+    \UpdateTasks                      UpdateApps                      Ready
+    \UpdateTasks                      UpdateDrivers                   Ready
+    \UpdateTasks                      UpdateOS                        Disabled
+    \UpdateTasks                      UpdateSignatures                Running
+  description: |-
+    This command gets an array of task definitions objects from the UpdateTasks folder.
+  summary: ""
+- title: 'Example 3: Get an array of scheduled task definition objects in multiple paths'
+  code: |-
+    Get-ScheduledTask -TaskPath "\Microsoft\Windows\Work Folders\","\Microsoft\Windows\Workplace Join\"
+
+    TaskPath                                       TaskName                          State
+    --------                                       --------                          -----
+    \Microsoft\Windows\Work Folders\               Work Folders Logon Synchroniza... Ready
+    \Microsoft\Windows\Work Folders\               Work Folders Maintenance Work     Ready
+    \Microsoft\Windows\Workplace Join\             Automatic-Device-Join             Disabled
+    \Microsoft\Windows\Workplace Join\             Device-Sync                       Disabled
+    \Microsoft\Windows\Workplace Join\             Recovery-Check                    Disabled
+  description: |-
+    This command gets task definition objects from multiple task paths
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TaskName
+  description: |+
+    Specifies an array of one or more names of a scheduled task. You can use **"*"** for a wildcard character query.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TaskPath
+  description: |+
+    Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace. You can use **"*"** for a wildcard character query.
+    You can use **\\*** for the root folder. To specify a full TaskPath you need to include the leading and trailing **\\**.
+    If you do not specify a path, the cmdlet uses the root folder.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ScheduledTasks.Get-ScheduledTask
+name: Get-ScheduledTask
+description: |-
+  The **Get-ScheduledTask** cmdlet gets the task definition object of a scheduled task that is
+  registered on a computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_ScheduledTask_v1.0.cdxml-help.xml
+  Module Name: ScheduledTasks
+  ms.date: 07/29/2021
+  online version: https://docs.microsoft.com/powershell/module/scheduledtasks/get-scheduledtask?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ScheduledTask

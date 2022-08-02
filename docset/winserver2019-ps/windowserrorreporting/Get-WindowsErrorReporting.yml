@@ -1,0 +1,41 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the Windows Error Reporting status.
+module: WindowsErrorReporting
+notes: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-WindowsErrorReporting
+  href: ./Disable-WindowsErrorReporting.yml
+- text: Enable-WindowsErrorReporting
+  href: ./Enable-WindowsErrorReporting.yml
+syntaxes:
+- Get-WindowsErrorReporting [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the Windows Error Reporting status'
+  code: |-
+    PS C:\> Get-WindowsErrorReporting
+  description: |-
+    This command gets the Windows Error Reporting status, which is either enabled or disabled.
+  summary: ""
+uid: WindowsErrorReporting.Get-WindowsErrorReporting
+name: Get-WindowsErrorReporting
+description: |-
+  The **Get-WindowsErrorReporting** cmdlet retrieves the Windows Error Reporting (WER) status for the server.
+
+  Windows Error Reporting is a flexible feedback infrastructure that gathers information about hardware and software problems, reports the information to Microsoft, and gives users any available solutions.
+  Windows Error Reporting generates reports in response to system events, such as application crashes or kernel faults.
+
+  Use [Enable-WindowsErrorReporting](./Enable-WindowsErrorReporting.yml) to enable Windows Error Reporting.
+  After you enable it, WER sends information about application failures to Microsoft.
+  Use [Disable-WindowsErrorReporting](./Disable-WindowsErrorReporting.yml) to disable WER.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.WindowsErrorReporting.PowerShell.dll-Help.xml
+  Module Name: WindowsErrorReporting
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/windowserrorreporting/get-windowserrorreporting?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WindowsErrorReporting

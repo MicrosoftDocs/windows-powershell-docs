@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Revokes trust for all federation server proxies configured for the Federation Service.
+module: ADFS
+notes: |-
+  * This cmdlet should only be used in the vent of a security breach in live deployment. If you wish to practice using this cmdlet, use of a test lab environment to rehearse or validate this lockdown operation is recommended.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Revoke-ADFSProxyTrust [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>Revoke-ADFSProxyTrust
+  description: |-
+    Description
+
+    -----------
+
+    Revokes all trust between the current federation server and any of its configured federation server proxies.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Revoke-ADFSProxyTrust
+name: Revoke-ADFSProxyTrust
+description: |-
+  Revokes trust for all federation server proxies by resetting the trust ID for the Federation Service.
+  This operation is provided for lockdown purposes in the event of an attack or confirmed possible threat to your deployment.
+  Once performed, operation effectively revokes trust to all configured proxies immediately.
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/revoke-adfsproxytrust?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

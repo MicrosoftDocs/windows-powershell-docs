@@ -1,0 +1,30 @@
+### YamlMime:PowershellModule
+children:
+- title: BitLocker
+  cmdlets:
+  - BitLocker.Add-BitLockerKeyProtector
+  - BitLocker.Backup-BitLockerKeyProtector
+  - BitLocker.Clear-BitLockerAutoUnlock
+  - BitLocker.Disable-BitLocker
+  - BitLocker.Disable-BitLockerAutoUnlock
+  - BitLocker.Enable-BitLocker
+  - BitLocker.Enable-BitLockerAutoUnlock
+  - BitLocker.Get-BitLockerVolume
+  - BitLocker.Lock-BitLocker
+  - BitLocker.Remove-BitLockerKeyProtector
+  - BitLocker.Resume-BitLocker
+  - BitLocker.Suspend-BitLocker
+  - BitLocker.Unlock-BitLocker
+uid: BitLocker
+name: BitLocker
+description: |-
+  This reference provides cmdlet descriptions and syntax for all BitLocker cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 0ff02bb8-300a-4262-ac08-e06dd810f1b6
+  Module Name: BitLocker
+  ms.date: 12/20/2016
+  title: BitLocker

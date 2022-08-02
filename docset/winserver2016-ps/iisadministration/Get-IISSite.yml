@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets configuration information for an IIS Web site.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="String, array of string" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Web.Administration.Site" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-IISSite
+  href: ./New-IISSite.yml
+- text: Remove-IISSite
+  href: ./Remove-IISSite.yml
+- text: Start-IISSite
+  href: ./Start-IISSite.yml
+- text: Stop-IISSite
+  href: ./Stop-IISSite.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- Get-IISSite [[-Name] <String[]>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get information about an IIS website'
+  code: |-
+    PS C:\> Get-IISSite "Default Web Site"
+  description: |-
+    This command gets the configuration information for the Default Web Site.
+  summary: ""
+- title: 'Example 2: Get information about all IIS websites'
+  code: |-
+    PS C:\> Get-IISSite
+    Name             ID   State      Physical Path                  Bindings
+    ----             --   -----      -------------                  --------
+    Default Web Site 1    Started    %SystemDrive%\inetpub\wwwroot  http *:80: 
+    PattiFul         2    Stopped    C:\inetpub\PattiFul            http *:8080: 
+                                                                    http *:8033: 
+    FTPSite          3               C:\inetpub\ftproot             ftp *:21: 
+    DavidChe         4    Started    c:\                            http *:8088: 
+    MyNewSite        6555 Started    C:\inetpub\wwwroot             http *:8099: 
+                                                                    http *:8022:
+  description: |-
+    This command gets all configuration information about all IIS websites
+  summary: ""
+- title: 'Example 3: Get an attribute for an IIS website'
+  code: |-
+    PS C:\> $Site = Get-IISSite "Default Web Site"
+    PS C:\> $Site.Attributes["ServerAutoStart"]
+    IsInheritedFromDefaultValue : True
+    IsProtected                 : False
+    Name                        : serverAutoStart
+    Schema                      : Microsoft.Web.Administration.ConfigurationAttributeSchema
+    Value                       : True
+  description: |-
+    This command gets the ServerAutoStart attribute for the IIS Default Web Site.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the IIS website to get configuration information.
+    If this parameter is not used, all sites are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.Get-IISSite
+name: Get-IISSite
+description: |-
+  The **Get-IISSite** cmdlet gets information about Internet Information Services (IIS) web sites and their current status and other key information. 
+  If you a request a specific site or a comma delimited list of sites, only those whose names are passed as an argument are returned.
+  Otherwise all the websites are returned.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/get-iissite?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-IISSite

@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new node to the Network Load Balancing (NLB) cluster.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NlbClusterNode
+  href: ./Get-NlbClusterNode.yml
+- text: Remove-NlbClusterNode
+  href: ./Remove-NlbClusterNode.yml
+- text: Resume-NlbClusterNode
+  href: ./Resume-NlbClusterNode.yml
+- text: Set-NlbClusterNode
+  href: ./Set-NlbClusterNode.yml
+- text: Stop-NlbClusterNode
+  href: ./Stop-NlbClusterNode.yml
+- text: Suspend-NlbClusterNode
+  href: ./Suspend-NlbClusterNode.yml
+syntaxes:
+- >-
+  Add-NlbClusterNode [-HostName <String>] -InterfaceName <String> [-NewNodeName] <String>
+
+   [-NewNodeInterface] <String> [-Force] [<CommonParameters>]
+- >-
+  Add-NlbClusterNode -InputObject <Cluster[]> [-NewNodeName] <String> [-NewNodeInterface] <String> [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a new node to an NLB cluster'
+  code: |-
+    PS C:\>Get-NlbCluster "Node001" | Add-NlbClusterNode -NewNodeName "Node002" -NewNodeInterface "Vlan-3"
+    Name                State               Interface           HostID 
+    ----                -----               ---------           ------ 
+    node2               Converged           vlan-3              2
+  description: |-
+    This command adds the host named Node002 to the cluster on the node named Node001 using the interface named Vlan-3.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: F
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: Named
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="Cluster" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of clusters to which the node is added.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  isRequired: true
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewNodeInterface
+  isRequired: true
+  description: |+
+    Specifies the interface name on the new cluster node.
+
+  defaultValue: None
+  position: "1"
+  aliases: NewInterface, NI
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewNodeName
+  isRequired: true
+  description: |+
+    Specifies the name of the new cluster node.
+
+  defaultValue: None
+  position: "0"
+  aliases: NewNode, NN
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Add-NlbClusterNode
+name: Add-NlbClusterNode
+description: |-
+  The **Add-NlbClusterNode** cmdlet adds a new node to the Network Load Balancing (NLB) cluster.
+  Once the new node settings are circulated through all of the NLB cluster nodes, the new cluster node will be in a running state in the cluster.
+
+  This cmdlet changes the configuration on all cluster nodes.
+  As a result, the NLB cluster will have to restart the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.
+  Any additional operations on the NLB cluster should not be initiated until all cluster nodes have completed the convergence process and are back to the converged state.
+
+  ps_nlbc_checkstate_remark
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/add-nlbclusternode?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-NlbClusterNode

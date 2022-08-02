@@ -1,0 +1,270 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports the Group Policy settings from a backed-up GPO into a specified GPO.
+module: GroupPolicy
+notes: |-
+  * You can use the **Import-GPO** to copy settings from a GPO backup in one domain to the same domain or another domain in the same or different forest.
+
+    You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+
+    If you do not explicitly specify the domain, the cmdlet uses a default domain.
+  The default domain is the domain that is used to access network resources by the security context under which the current session is running.
+  This domain is typically the domain of the user that is running the session for example, the domain of the user who started the session by opening Windows PowerShell or the domain of a user that is specified in a runas command.
+  However, computer startup and shutdown scripts run under the context of the LocalSystem account.
+  The LocalSystem account is a built-in local account, and it accesses network resources under the context of the computer account.
+  Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
+inputs:
+- name: <xref href="Microsoft.GroupPolicy.GpoBackup" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe an object that represents a GPO backup on the file system to this cmdlet.
+outputs:
+- name: <xref href="Microsoft.GroupPolicy.Gpo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents the GPO after the settings have been imported.
+links:
+- text: Backup-GPO
+  href: ./Backup-GPO.yml
+- text: Restore-GPO
+  href: ./Restore-GPO.yml
+syntaxes:
+- >-
+  Import-GPO -BackupId <Guid> -Path <String> [-TargetGuid <Guid>] [-TargetName <String>]
+
+   [-MigrationTable <String>] [-CreateIfNeeded] [-Domain <String>] [-Server <String>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Import-GPO -BackupGpoName <String> -Path <String> [-TargetGuid <Guid>] [-TargetName <String>]
+
+   [-MigrationTable <String>] [-CreateIfNeeded] [-Domain <String>] [-Server <String>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Import the settings from the latest backup to another directory in the same domain'
+  code: |-
+    PS C:\> import-gpo -BackupGpoName TestGPO -TargetName TestGPO -path c:\backups 
+
+    DisplayName      : TestGPO 
+    DomainName       : contoso.com 
+    Owner            : CONTOSO\Domain Admins 
+    Id               : 87d38d82-cc2d-4bf7-ad9f-4083a60316eb 
+    GpoStatus        : AllSettingsEnabled 
+    Description      : 
+    CreationTime     : 3/3/2009 1:03:28 PM 
+    ModificationTime : 3/6/2009 5:03:29 PM 
+    UserVersion      : AD Version: 9, SysVol Version: 9 
+    ComputerVersion  : AD Version: 5, SysVol Version: 5 
+    WmiFilter        :
+  description: |-
+    This command imports the settings from the most recent backup of the GPO named TestGPO in the c:\backups directory into a GPO of the same name in the current domain.
+    If a GPO named TestGPO does not exist in the current domain, the command fails because the CreateIfNeeded parameter is not specified.
+  summary: ""
+- title: 'Example 2: Import the settings from specified backup in the same directory in the same domain'
+  code: |-
+    PS C:\> import-gpo -BackupId A491D730-F3ED-464C-B8C9-F50562C536AA -TargetName TestGPO -path c:\backups -CreateIfNeeded 
+
+    DisplayName      : TestGPO 
+    DomainName       : contoso.com 
+    Owner            : CONTOSO\Domain Admins 
+    Id               : 87d38d82-cc2d-4bf7-ad9f-4083a60316eb 
+    GpoStatus        : AllSettingsEnabled 
+    Description      : 
+    CreationTime     : 3/3/2009 1:03:28 PM 
+    ModificationTime : 3/6/2009 5:11:49 PM 
+    UserVersion      : AD Version: 10, SysVol Version: 10 
+    ComputerVersion  : AD Version: 6, SysVol Version: 6 
+    WmiFilter        :
+  description: |-
+    This command imports the settings from the specified backup in the c:\backups directory into a GPO that is named TestGPO in the current domain.
+    The BackupId parameter is used to specify the GUID of the GPO backup to use.
+    Because the CreateIfNeeded parameter is specified, if a GPO named TestGPO does not exist in the current domain, one is created before the settings are imported.
+  summary: ""
+- title: 'Example 3: Import the settings from the latest backup to another directory to the current domain'
+  code: |-
+    PS C:\> Import-GPO -BackupGpoName TestGPO -Path D:\Backups -TargetName NewTestGPO -MigrationTable D:\Tables\Migtable1.migtable -CreateIfNeeded 
+
+    DisplayName      : NewTestGPO 
+    DomainName       : contoso.com 
+    Owner            : CONTOSO\Domain Admins 
+    Id               : 87d38d82-cc2d-4bf7-ad9f-4083a60316eb 
+    GpoStatus        : AllSettingsEnabled 
+    Description      : 
+    CreationTime     : 3/3/2009 1:03:28 PM 
+    ModificationTime : 3/6/2009 5:11:49 PM 
+    UserVersion      : AD Version: 1, SysVol Version: 1 
+    ComputerVersion  : AD Version: 1, SysVol Version: 1 
+    WmiFilter        :
+  description: |-
+    This command imports the settings from the most recent backup of the GPO named TestGPO from the d:\backups directory to a GPO named NewTestGPO in the current domain.
+    The specified migration table is used to migrate security principals and UNC paths to the new GPO.
+    Because the CreateIfNeeded parameter is specified, the GPO is created if it does not already exist.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: BackupGpoName
+  isRequired: true
+  description: |+
+    Specifies the display name of the backed-up GPO from which this cmdlet imports the settings.
+    The most recent backup of the GPO is used.
+    You can use the *BackupId* parameter to specify a particular version to use when multiple backups of the same GPO exist in the backup directory.
+
+    You can also refer to the *BackupGpoName* parameter by its built-in alias, displayname.
+    For more information, see about_Aliases.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DisplayName
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: BackupId
+  isRequired: true
+  description: |+
+    Specifies the backup ID of a GPO backup.
+    The backup ID is a globally unique identifier (GUID) that uniquely identifies the backup.
+    You can use this parameter to specify a particular version of a backed-up GPO in the backup directory.
+
+    The backup ID is different from the ID of the GPO that was backed up.
+
+    You can also refer to the *BackupId* parameter by its built-in alias, id.
+    For more information, see **about_Aliases**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CreateIfNeeded
+  description: |+
+    Indicates that the cmdlet creates a GPO from the backup if the specified target GPO does not exist.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Domain
+  description: |+
+    Specifies the domain for this cmdlet.
+    You must specify the fully qualified domain name (FQDN) of the domain.
+
+    For the **Import-GPO** cmdlet, this is the domain into which you want to import the GPO.
+
+    If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+    If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
+    For more information, see the Notes section in the full Help.
+
+    If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user, or the computer.
+
+    You can also refer to the *Domain* parameter by its built-in alias, domainname.
+    For more information, see **about_Aliases**.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DomainName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MigrationTable
+  description: |+
+    Specifies the path to a migration table file.
+    You can use a migration table to map security principals and UNC paths across domains.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path to the backup directory.
+
+    You can also refer to the *Path* parameter by its built-in aliases: backuplocation or backupdirectory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: backupLocation, BackupDirectory
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
+    You can specify either the fully qualified domain name (FQDN) or the host name
+
+    If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+
+    You can also refer to the *Server* parameter by its built-in alias, dc.
+
+  defaultValue: None
+  position: Named
+  aliases: DC
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: TargetGuid
+  description: |+
+    Specifies the GUID of the GPO into which this cmdlet imports the settings.
+    Use the *CreateIfNeeded* parameter to force the GPO to be created if it does not already exist in the domain.
+
+    You must specify either the *TargetGuid* parameter or the *TargetName* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetName
+  description: |+
+    Specifies the display name of the GPO into which the settings are to be imported.
+    Use the *CreateIfNeeded* parameter to force the GPO to be created if it does not already exist in the domain.
+
+    You must specify either the *TargetGuid* parameter or the *TargetName* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: GroupPolicy.Import-GPO
+name: Import-GPO
+description: |-
+  The **Import-GPO** cmdlet imports the settings from a Group Policy Object (GPO) backup into a specified target GPO.
+  The target GPO can be in a different domain or forest than the backup that was made and it does not have to exist prior to the operation.
+
+  Use the *Path* parameter to specify the location of the backup and then use the *BackupGpoName* parameter to specify the GPO name of the backup to use, or the *BackupId* parameter to specify the backup ID (GUID) of the backup to use.
+
+  If you specify a GPO name, the cmdlet imports the most recent backup.
+  To import an earlier version of a GPO backup, you must use the *BackupID* parameter to specify the unique backup ID for the particular version.
+  This is the GUID that uniquely identifies the backup within its backup directory.
+
+  Use the *TargetName* parameter or the *TargetGuid* parameter to specify the target GPO into which the settings should be imported.
+  Use the optional *MigrationTable* parameter to map security principals and Universal Naming Convention (UNC) paths across domains.
+  Use the *CreateIfNeeded* parameter to create a new GPO if the specified target GPO does not exist.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.GroupPolicy.Commands.dll-Help.xml
+  Module Name: GroupPolicy
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/grouppolicy/import-gpo?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-GPO

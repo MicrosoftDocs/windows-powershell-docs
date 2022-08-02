@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Marks one certificate as having been replaced by another certificate.
+module: pki
+notes: ""
+inputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.Certificate" data-throw-if-not-resolved="False" />
+  description: |-
+    The **Certificate** object can either be provided as a Path object to a certificate or an **X509Certificate2** object.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-ChildItem
+  href: https://go.microsoft.com/fwlink/?LinkId=290488
+- text: Set-Location
+  href: https://go.microsoft.com/fwlink/?LinkID=293912
+- text: Get-CertificateNotificationTask
+  href: ./Get-CertificateNotificationTask.yml
+- text: New-CertificateNotificationTask
+  href: ./New-CertificateNotificationTask.yml
+- text: Remove-CertificateNotificationTask
+  href: ./Remove-CertificateNotificationTask.yml
+syntaxes:
+- >-
+  Switch-Certificate [-NotifyOnly] [-NewCert] <Certificate> [-OldCert] <Certificate> [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Switch-Certificate -OldCert cert:\LocalMachine\My\E42DBC3B3F2771990A9B3E35D0C3C422779DACD7 -NewCert cert:\LocalMachine\My\4A346B4385F139CA843912D358D765AB8DEE9FD4
+  description: |-
+    This example sets the renewal property of the certificate with the thumbprint E42DBC3B3F2771990A9B3E35D0C3C422779DACD7 as renewed by the certificate with the thumbprint 4A346B4385F139CA843912D358D765AB8DEE9FD4 and generates a replace certificate notification.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Set-Location -Path cert:\LocalMachine\My
+
+    PS cert:\LocalMachine\My>$oldCert = Get-ChildItem -Path E42DBC3B3F2771990A9B3E35D0C3C422779DACD7
+
+    PS cert:\LocalMachine\My>$newCert = Get-ChildItem -Path 4A346B4385F139CA843912D358D765AB8DEE9FD4
+
+    PS cert:\LocalMachine\My>Switch-Certificate -OldCert $oldCert -NewCert $newCert -NotifyOnly
+  description: |-
+    This example locates two certificates in the machine MY store and assigns them the variables $oldCert and $newCert.
+    This cmdlet then generates a replacement notification without changing a renewal property of the old certificate.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Certificate" data-throw-if-not-resolved="False" />
+  name: NewCert
+  isRequired: true
+  description: |+
+    Specifies an X509 certificate or a certificate path for the certificate that replaces the certificate specified with the **OldCert** parameter.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NotifyOnly
+  description: |+
+    Creates a replacement certificate notification without replacing the **NewCert** parameter with the **OldCert** parameter. 
+    This mode is useful when testing a script that was registered with the New-CertificateNotificationTask cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Certificate" data-throw-if-not-resolved="False" />
+  name: OldCert
+  isRequired: true
+  description: |+
+    Specifies an X509 certificate or a certificate path in the certificate provider for the certificate to be replaced.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: pki.Switch-Certificate
+name: Switch-Certificate
+description: |-
+  The **Switch-Certificate** cmdlet marks one certificate as having been replaced by another certificate.
+  This cmdlet triggers a replace certificate notification and optionally sets the renewal property on the certificate being replaced.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  Module Name: pki
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/pki/switch-certificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Switch-Certificate

@@ -1,0 +1,28 @@
+### YamlMime:PowershellModule
+children:
+- title: adcsadministration
+  cmdlets:
+  - adcsadministration.Add-CAAuthorityInformationAccess
+  - adcsadministration.Add-CACrlDistributionPoint
+  - adcsadministration.Add-CATemplate
+  - adcsadministration.Backup-CARoleService
+  - adcsadministration.Confirm-CAEndorsementKeyInfo
+  - adcsadministration.Get-CAAuthorityInformationAccess
+  - adcsadministration.Get-CACrlDistributionPoint
+  - adcsadministration.Get-CATemplate
+  - adcsadministration.Remove-CAAuthorityInformationAccess
+  - adcsadministration.Remove-CACrlDistributionPoint
+  - adcsadministration.Remove-CATemplate
+  - adcsadministration.Restore-CARoleService
+uid: adcsadministration
+name: adcsadministration
+description: |-
+  This topic contains the brief descriptions of the Windows PowerShell® cmdlets that are for use in administering the Active Directory Certificate Services (AD CS) certification authority (CA) role service. Each cmdlet in the table is linked to additional information about that cmdlet.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
+  Help Version: 4.0.3.0
+  Locale: en-US
+  Module Guid: bcc14c75-ede8-486e-97a5-5bf775c4a221
+  Module Name: adcsadministration
+  ms.date: 10/30/2017
+  title: ADCSAdministration

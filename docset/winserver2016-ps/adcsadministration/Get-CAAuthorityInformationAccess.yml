@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the AIA and OCSP URI information set on the AIA extension of the CA properties.
+module: ADCSAdministration
+notes: ""
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Administration.Commands.CA.AuthorityInformationAccess" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an array of Authority Information Access (AIA) **Microsoft.CertificateServices.Management.Cmdlets.CA.AuthorityInformationAccess** objects.
+    Each object will contain URI and different Boolean properties as follows:
+
+    Name | Type
+    -----|------
+    Uri | String
+    AddToCertificateAia | Boolean
+    AddtoCertificateOCSP | Boolean
+links:
+- text: Add-CAAuthorityInformationAccess
+  href: ./Add-CAAuthorityInformationAccess.yml
+- text: Remove-CAAuthorityInformationAccess
+  href: ./Remove-CAAuthorityInformationAccess.yml
+syntaxes:
+- Get-CAAuthorityInformationAccess [<CommonParameters>]
+examples:
+- title: 'Example 1: Get AIA and OCSP URI information set on the AIA extension of the CA properties'
+  code: |-
+    PS C:\> Get-CAAuthorityInformationAccess
+  description: |-
+    This command gets the current AIA and OCSP settings information for the certification authority.
+  summary: ""
+uid: ADCSAdministration.Get-CAAuthorityInformationAccess
+name: Get-CAAuthorityInformationAccess
+description: |-
+  The **Get-CAAuthorityInformationAccess** cmdlet gets the Authority Information Access (AIA) and Online Certificate Status Protocol (OCSP) URI information set on the AIA extension of the certification authority (CA) properties.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+  Module Name: ADCSAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsadministration/get-caauthorityinformationaccess?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-CAAuthorityInformationAccess

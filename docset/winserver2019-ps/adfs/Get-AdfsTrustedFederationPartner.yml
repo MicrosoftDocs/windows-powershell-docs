@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a trusted federation partner in AD FS.
+module: ADFS
+notes: ""
+links:
+- text: Add-AdfsTrustedFederationPartner
+  href: ./Add-AdfsTrustedFederationPartner.yml
+- text: Remove-AdfsTrustedFederationPartner
+  href: ./Remove-AdfsTrustedFederationPartner.yml
+- text: Set-AdfsTrustedFederationPartner
+  href: ./Set-AdfsTrustedFederationPartner.yml
+syntaxes:
+- Get-AdfsTrustedFederationPartner [[-Name] <String[]>] [<CommonParameters>]
+- Get-AdfsTrustedFederationPartner [-FederationPartnerHostName] <Uri[]> [<CommonParameters>]
+parameters:
+- type: <xref href="Uri" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FederationPartnerHostName
+  isRequired: true
+  description: |+
+    Specifies an array of URIs of federation partners to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of names of federation partners to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Get-AdfsTrustedFederationPartner
+name: Get-AdfsTrustedFederationPartner
+description: |-
+  The **Get-AdfsTrustedFederationPartner** cmdlet gets federation partners that are trusted by this instance of Active Directory Federation Services (AD FS).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfstrustedfederationpartner?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-AdfsTrustedFederationPartner

@@ -1,0 +1,374 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Checks server prerequisites and validates parameter values for a web application feature.
+module: MBAM
+notes: ""
+outputs:
+- name: <xref href="bool" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-MbamWebApplication
+  href: disable-mbamwebapplication.yml
+- text: Enable-MbamWebApplication
+  href: enable-mbamwebapplication.yml
+- text: Get-MbamWebApplication
+  href: get-mbamwebapplication.yml
+- text: Microsoft BitLocker Administration and Monitoring
+  href: https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/
+syntaxes:
+- >-
+  Test-MbamWebApplication [-Detailed] [-ComplianceAndAuditDBConnectionString <String>]
+
+   [-RecoveryDBConnectionString <String>] -AdvancedHelpdeskAccessGroup <String> -HelpdeskAccessGroup <String>
+
+   -ReportsReadOnlyAccessGroup <String> [-Certificate <X509Certificate2>] [-HostName <String>] [-Port <Int32>]
+
+   -ReportUrl <Uri> [-VirtualDirectory <String>] [-InstallationPath <String>]
+
+   [-WebServiceApplicationPoolCredential <PSCredential>] [-CMIntegrationMode] [-AdministrationPortal]
+
+   [<CommonParameters>]
+- >-
+  Test-MbamWebApplication [-Detailed] [-ComplianceAndAuditDBConnectionString <String>]
+
+   [-RecoveryDBConnectionString <String>] [-Certificate <X509Certificate2>] [-HostName <String>] [-Port <Int32>]
+
+   [-VirtualDirectory <String>] [-InstallationPath <String>]
+
+   [-WebServiceApplicationPoolCredential <PSCredential>] [-CompanyName <String>] [-HelpdeskUrlText <String>]
+
+   [-HelpdeskUrl <Uri>] [-DisableNoticePage] [-NoticeTextPath <String>] [-SelfServicePortal] [<CommonParameters>]
+- >-
+  Test-MbamWebApplication [-Detailed] [-ComplianceAndAuditDBConnectionString <String>]
+
+   [-RecoveryDBConnectionString <String>] [-Certificate <X509Certificate2>] [-HostName <String>] [-Port <Int32>]
+
+   [-InstallationPath <String>] [-WebServiceApplicationPoolCredential <PSCredential>] [-CMIntegrationMode]
+
+   [-TpmLockoutAutoReset] [-DataMigrationAccessGroup <String>] [-AgentService] [<CommonParameters>]
+examples:
+- title: 'Example 1: Check prerequisites and validate parameters for Administration and Monitoring Website'
+  code: |-
+    PS C:\> Test-MbamWebApplication -AdministrationPortal -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -RecoveryDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Recovery and Hardware" -AdvancedHelpdeskAccessGroup "Contoso\AdvancedUserGroup" -HelpdeskAccessGroup "Contoso\StandardUserGroup" -ReportsReadOnlyAccessGroup "Contoso\ReportUserGroup" -ReportUrl "https://ContosoReportServer/ReportServer" -Port 443 -WebServiceApplicationPoolCredential (Get-Credential) -Certificate (dir cert:\LocalComputer\My\E2A7EA5533890D6567E40DFC46F53B3D31D6B689)
+    True
+  description: |-
+    This command checks the prerequisites and validates parameter values to enable the Administration and Monitoring Website web application on the current server.
+    The command tests a configuration of the website that uses the Compliance and Audit Database and the Recovery Database present in the ContosoDatabaseServer and the reports present in the ContosoReportsServer.
+  summary: ""
+- title: 'Example 2: Check prerequisites and validate parameters for Self-Service Portal'
+  code: |-
+    PS C:\> Test-MbamWebApplication -SelfServicePortal -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -RecoveryDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Recovery and Hardware" -Port 443 -WebServiceApplicationPoolCredential (Get-Credential) -Certificate (dir cert:\LocalComputer\My\E2A7EA5533890D6567E40DFC46F53B3D31D6B689) 
+    True
+  description: |-
+    This command checks the prerequisites and validates parameter values to enable the Self-Service Portal web application on this server.
+    The command checks the configuration of the Portal that uses the Compliance and Audit Database and the Recovery Database present in the ContosoDatabaseServer.
+  summary: ""
+- title: 'Example 3: Check prerequisites and validate parameters for Agent Services'
+  code: |-
+    PS C:\> Test-MbamWebApplication -AgentService -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -RecoveryDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Recovery and Hardware" -Port 443 -WebServiceApplicationPoolCredential (Get-Credential) -Certificate (dir cert:\LocalComputer\My\E2A7EA5533890D6567E40DFC46F53B3D31D6B689) 
+    True
+  description: |-
+    This command checks the prerequisites and validates parameter values to enable the Agent Services feature on the current server.
+    The cmdlets verify a configuration of services that uses the Compliance and Audit Database and the Recovery Database present in the ContosoDatabaseServer.
+  summary: ""
+- title: 'Example 4: View detailed information'
+  code: |-
+    PS C:\> Test-MbamWebApplication -AdministrationPortal -ComplianceAndAuditDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" -RecoveryDBConnectionString "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Recovery and Hardware" -AdvancedHelpdeskAccessGroup "Contoso\AdvancedUserGroup" -HelpdeskAccessGroup "Contoso\StandardUserGroup" -ReportsReadOnlyAccessGroup "Contoso\ReportUserGroup" -ReportUrl "https://ContosoReportServer/ReportServer" -Port 443 -WebServiceApplicationPoolCredential (Get-Credential) -Certificate (dir cert:\LocalComputer\My\E2A7EA5533890D6567E40DFC46F53B3D31D6B689) -Detailed
+    Type    Message
+    ----    -------
+    Error   Parameter "ComplianceAndAuditDBConnectionString" using value "Integrated Security=SSPI;Data Source=ContosoDatabaseServer;Initial Catalog=MBAM Compliance Status" is ...
+    Warning The application pool credential has a password that is set to expire.
+    Warning The application pool credential has administrator rights.
+    Warning Server communications have been configured without a certificate, which is not a secure configuration.
+    False
+  description: |-
+    This command checks the prerequisites and validates parameter values to enable the Administration and Monitoring Website on this server.
+    The command specifies the *Detailed* parameter, and, therefore, displays detailed information.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AdministrationPortal
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet acts on the Administration and Monitoring Website web application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdvancedHelpdeskAccessGroup
+  isRequired: true
+  description: |+
+    Specifies a domain user group.
+    This group has permissions for all areas of the Administration and Monitoring Website web application, except for reports.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: AdvancedHelpdeskGroup
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AgentService
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet acts on the Agent Services web application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: Certificate
+  description: |+
+    Specifies the certificate to use for encrypted web communications.
+    If you do not specify a certificate, web communications are not encrypted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CMIntegrationMode
+  description: |+
+    Indicates that all reports, except the Recovery Audit Report, are integrated into Microsoft Endpoint Configuration Manager.
+    If you enable the Configuration Manager Integration feature, specify this parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: CMMode
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CompanyName
+  description: |+
+    Specifies the company name associated with the web application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComplianceAndAuditDBConnectionString
+  description: |+
+    Specifies a connection string.
+    The web application uses the string that this parameter specifies to connect to the Compliance and Audit Database feature.
+    The connection string must contain values for the **Integrated Security** and **Initial Catalog** fields.
+
+    All of the web applications connect to the Compliance and Audit Database by using the same connection string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComplianceDB
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DataMigrationAccessGroup
+  description: |+
+    Specifies the domain user group that is authorized to migrate Recovery information to MBAM server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DataMigrationGroup
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Detailed
+  description: |+
+    Indicates that the cmdlet displays detailed information about the prerequisite check and parameter validation failures.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableNoticePage
+  description: |+
+    Indicates whether the Self-Service Portal notice text is turned on or off. By default, the notice text is turned on.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HelpdeskAccessGroup
+  isRequired: true
+  description: |+
+    Specifies the domain user group that has permissions for the Manage TPM and Drive Recovery areas of the Administration and Monitoring Website web application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: HelpdeskGroup
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: HelpdeskUrl
+  description: |+
+    Specifies the URL for the MBAM help desk site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HelpdeskUrlText
+  description: |+
+    Specifies the helpdesk link text that will be displayed on the self-service portal.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies a host name.
+    If you do not specify a host name, the cmdlet uses the fully qualified host name of the local computer.
+    Ensure that you specify the same host name for all of the web applications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InstallationPath
+  description: |+
+    Specifies the installation path of the web application.
+    The installation process creates a folder named Microsoft BitLocker Management Solution in the location that this parameter specifies.
+    If you do not specify a path, the cmdlet uses \<IIS inetpub path\>.
+    Specify the same installation path for all of the web applications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NoticeTextPath
+  description: |+
+    Specifies the absolute path to the text file (.txt) that contains the notice text.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies the web service port.
+    If you do not specify a port, unencrypted communications use port 80, and encrypted communications use port 443.
+    You need to specify the same value for all of the web applications.
+
+    You must configure your firewall to allow communication through the ports for the Self-Service Portal and the Administration and Monitoring Website web applications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RecoveryDBConnectionString
+  description: |+
+    Specifies a connection string.
+    The web application uses the string that this parameter specifies to connect to the Recovery Database.
+    The connection string must contain values for the **Integrated Security** and **Initial Catalog** fields.
+    You need to use the same connection string to ensure that all of the web applications connect to the Recovery Database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RecoveryDB
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportsReadOnlyAccessGroup
+  isRequired: true
+  description: |+
+    Specifies a domain user group.
+    You need to specify a group that has read permissions for the Reports area of the Administration and Monitoring Website web application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ReportsGroup
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ReportUrl
+  isRequired: true
+  description: |+
+    Specifies the URL for the reports that the Microsoft SQL Server Reporting Services instance publishes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SelfServicePortal
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet acts on the Self-Service Portal web application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TpmLockoutAutoReset
+  description: |+
+    Indicates that Agent Services allows TPM lockout resets.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VirtualDirectory
+  description: |+
+    Specifies a virtual directory for the web application.
+    If you do not specify a virtual directory, the cmdlet uses the value HelpDesk for Administration and Monitoring Website, or it uses the value SelfService for Self-Service Portal.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: WebServiceApplicationPoolCredential
+  description: |+
+    Specifies the domain user that the application pool for the web applications uses.
+
+    If you do not specify this parameter, the cmdlet uses the credentials that you previously specified for any enabled web application.
+    All of the web applications use the same application pool credentials.
+    If you specify credentials for web applications more than once, web applications use the most recent value.
+
+    Important: For improved security use an account that has limited user rights.
+    Also, you need to configure the account so that the password never expires.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: AppPoolCred
+  parameterValueGroup: ""
+uid: MBAM.Test-MbamWebApplication
+name: Test-MbamWebApplication
+description: |-
+  The **Test-MbamWebApplication** cmdlet checks server prerequisites and validates parameter values for a Microsoft BitLocker Administration and Monitoring (MBAM) web application feature.
+  The cmdlet validates the current computer for one of the following web applications: 
+
+  - Administration and Monitoring Website
+  - Agent Services
+  - Self-Service Portal
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Test-MbamWebApplication

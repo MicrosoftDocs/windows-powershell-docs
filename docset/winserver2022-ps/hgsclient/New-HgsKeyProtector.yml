@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a key protector.
+module: HgsClient
+notes: ""
+outputs:
+- name: <xref href="CimInstance#MSFT_HgsKeyProtector" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Grant-HgsKeyProtectorAccess
+  href: ./Grant-HgsKeyProtectorAccess.yml
+- text: Revoke-HgsKeyProtectorAccess
+  href: ./Revoke-HgsKeyProtectorAccess.yml
+- text: Get-HgsGuardian
+  href: ./Get-HgsGuardian.yml
+syntaxes:
+- >-
+  New-HgsKeyProtector [-Owner] <CimInstance> [[-Guardian] <CimInstance[]>] [-AllowExpired] [-AllowUntrustedRoot]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a key protector'
+  code: |-
+    PS C:\> $Owner = Get-HgsGuardian -Name "Guardian11"
+    PS C:\> $GuardianA = Get-HgsGuardian -Name "GuardianA" 
+    PS C:\> $GuardianB = Get-HgsGuardian -Name "GuardianB"
+    PS C:\> New-HgsKeyProtector -Owner $Owner -Guardians @($GuardianA, $GuardianB)
+  description: |-
+    The first command gets the guardian object named Guardian11 by using the **Get-HgsGuardian** cmdlet, and then stores that object in the **$Owner** variable.
+
+    The second and third commands get two guardians named GuardianA and GuardianB.
+    These commands store the guardians in the **$GuardianA** and **$GuardianB** variables.
+
+    The final command creates a key protector.
+    The command defines Guardian11 as the **Owner**.
+    The command also grants access to the guardians stored in **$GuardianA** and **$GuardianB**.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowExpired
+  description: |+
+    Indicates that this cmdlet can create a key protector by using certificates that are expired.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowUntrustedRoot
+  description: |+
+    Indicates that this cmdlet can create a key protector by using self-signed certificates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Guardian
+  description: |+
+    Specifies an array of guardians to grant access to the key in addition to the guardian specified by the **Owner** parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: Owner
+  isRequired: true
+  description: |+
+    Specifies a guardian for the new key protector.
+    The cmdlet grants access to this guardian.
+    This guardian cannot be changed for this key protector.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: HgsClient.New-HgsKeyProtector
+name: New-HgsKeyProtector
+description: |-
+  The **New-HgsKeyProtector** cmdlet creates a key protector.
+  This cmdlet generates a key and wraps it for the specified guardian owner.
+  You cannot change the owner for this key protector.
+  You can grant or revoke access to the key for other guardians by using the **Grant-HgsKeyProtectorAccess** and **Revoke-HgsKeyProtectorAccess** cmdlets.
+
+  This cmdlet can create a key protector based on the raw byte stream of an existing key protector.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: HgsClient-help.xml
+  Module Name: HgsClient
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-HgsKeyProtector

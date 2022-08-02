@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Clears outgoing queues.
+module: MSMQ
+notes: ""
+links:
+- text: Get-MsmqOutgoingQueue
+  href: ./Get-MSMQOutgoingQueue.yml
+- text: Resume-MsmqOutgoingQueue
+  href: ./Resume-MsmqOutgoingQueue.yml
+- text: Suspend-MsmqOutgoingQueue
+  href: ./Suspend-MsmqOutgoingQueue.yml
+syntaxes:
+- Clear-MsmqOutgoingQueue -InputObject <OutgoingQueue[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Clear outgoing message queues based on name'
+  code: |-
+    PS C:\> Get-MsmqOutgoingQueue -Name "Order*" | Clear-MsmqOutgoingQueue
+  description: |-
+    This command gets all the outgoing message queues that have names that start with the string Order by using the **Get-MsmqOutgoingQueue** cmdlet.
+    The command passes the results to the current cmdlet by using the pipeline operator.
+    The current cmdlet clears each queue.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="OutgoingQueue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of **MsmqOutgoingQueue** objects.
+    This cmdlet clears outgoing queues that this parameter specifies.
+    This parameter accepts pipeline input.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MSMQ.Clear-MSMQOutgoingQueue
+name: Clear-MSMQOutgoingQueue
+description: |-
+  The **Clear-MsmqOutgoingQueue** cmdlet clears outgoing queues.
+  Specify queues to clear by using **MsmqOutgoingQueue** objects.
+  This cmdlet returns an **MsmqOutgoingQueue** object that represents the cleared outgoing queue.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/clear-msmqoutgoingqueue?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-MSMQOutgoingQueue

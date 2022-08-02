@@ -1,0 +1,662 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies an IP address in IPAM.
+module: IpamServer
+notes: ""
+outputs:
+- name: <xref href="IpamAddress" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents an IP Address on the IPAM server.
+links:
+- text: Get-IpamAddress
+  href: ./Get-IpamAddress.yml
+- text: Add-IpamAddress
+  href: ./Add-IpamAddress.yml
+- text: Remove-IpamAddress
+  href: ./Remove-IpamAddress.yml
+- text: Import-IpamAddress
+  href: ./Import-IpamAddress.yml
+- text: Export-IpamAddress
+  href: ./Export-IpamAddress.yml
+syntaxes:
+- >-
+  Set-IpamAddress [-IpAddress] <IPAddress[]> [[-ManagedByService] <String[]>] [[-ServiceInstance] <String[]>]
+
+   [-NetworkType <VirtualizationType[]>] [-AddressSpace <String[]>] [-NewIPAddress <IPAddress>]
+
+   [-NewManagedByService <String>] [-NewServiceInstance <String>] [-NewNetworkType <VirtualizationType>]
+
+   [-NewAddressSpace <String>] [-DeviceType <String>] [-IpAddressState <String>]
+
+   [-AssignmentType <AddressAssignment>] [-AssignmentDate <DateTime>] [-MacAddress <String>]
+
+   [-ExpiryDate <DateTime>] [-Description <String>] [-Owner <String>] [-AssetTag <String>]
+
+   [-SerialNumber <String>] [-ClientId <String>] [-Duid <String>] [-Iaid <UInt32>] [-ReservationServer <String>]
+
+   [-ReservationName <String>] [-ReservationType <DhcpReservationType>] [-ReservationDescription <String>]
+
+   [-DeviceName <String>] [-ForwardLookupZone <String>] [-ForwardLookupPrimaryServer <String>]
+
+   [-ReverseLookupZone <String>] [-ReverseLookupPrimaryServer <String>] [-AddCustomConfiguration <String>]
+
+   [-RemoveCustomConfiguration <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-IpamAddress -InputObject <CimInstance[]> [-NewIPAddress <IPAddress>] [-NewManagedByService <String>]
+
+   [-NewServiceInstance <String>] [-NewNetworkType <VirtualizationType>] [-NewAddressSpace <String>]
+
+   [-DeviceType <String>] [-IpAddressState <String>] [-AssignmentType <AddressAssignment>]
+
+   [-AssignmentDate <DateTime>] [-MacAddress <String>] [-ExpiryDate <DateTime>] [-Description <String>]
+
+   [-Owner <String>] [-AssetTag <String>] [-SerialNumber <String>] [-ClientId <String>] [-Duid <String>]
+
+   [-Iaid <UInt32>] [-ReservationServer <String>] [-ReservationName <String>]
+
+   [-ReservationType <DhcpReservationType>] [-ReservationDescription <String>] [-DeviceName <String>]
+
+   [-ForwardLookupZone <String>] [-ForwardLookupPrimaryServer <String>] [-ReverseLookupZone <String>]
+
+   [-ReverseLookupPrimaryServer <String>] [-AddCustomConfiguration <String>]
+
+   [-RemoveCustomConfiguration <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Reassign an IP address'
+  code: |-
+    PS C:\> Get-IpamAddress -IpAddress 172.16.10.10 | Set-IpamAddress -NewManagedByService "VMM" -NewServiceInstance "vmm1.contoso.com" -DeviceType "VM" -PassThru
+    IpAddress        : 172.16.10.10
+
+    NetworkType      : NonVirtualized
+
+    Duplicate        : False
+
+    ExpiryStatus     : Static
+
+    MacAddress       :
+
+    ManagedByService : VMM
+
+    ServiceInstance  : vmm1.contoso.com
+
+    DeviceName       :
+
+    DeviceType       : VM
+
+    IpAddressState   : In-Use
+
+    AssignmentType   : Static
+  description: |-
+    This command gets an **IpamAddress** object that contains the IP address 172.16.10.10 that is managed by IPAM.
+    The command passes the **IpamAddress** object to the **Set-IpamAddress** cmdlet by using the pipeline operator.
+    The **Set-IpamAddress** cmdlet changes the service that manages the IP address to VMM, and changes the instance of the service that manages the IP address to vmm1.contoso.com.
+    The command assigns the address to the virtual machine device type.
+  summary: ""
+- title: 'Example 2: Add custom metadata to an IP address'
+  code: |-
+    PS C:\> Get-IpamAddress -IpAddress 172.16.10.10 | Set-IpamAddress -AddCustomConfiguration "ADSite=Main"
+  description: |-
+    This command adds custom metadata to the IP address 172.16.10.10.
+    The command adds the value Main to the custom field named ADSite.
+  summary: ""
+- title: 'Example 3: Convert the network type of an IP address from non-virtualized to provider'
+  code: |-
+    PS C:\> Set-IpamAddress -IpAddress 172.16.10.10 -AddressSpace "Default" -NetworkType NonVirtualized -NewNetworkType Provider
+
+
+    IpAddress        : 172.16.10.10
+
+    NetworkType      : Provider
+
+    Duplicate        : False
+
+    ExpiryStatus     : Static
+
+    MacAddress       :
+
+    ManagedByService : VMM
+
+    ServiceInstance  : vmm1.contoso.com
+
+    DeviceName       :
+
+    DeviceType       : Host
+
+    IpAddressState   : In-Use
+
+    AssignmentType   : Static
+  description: |-
+    This command converts the network type of the IP address 172.16.10.10 from non-virtualized to provider.
+    The command assigns the provider address to the default provider address space.
+  summary: ""
+- title: 'Example 4: Convert the network type of an IP address from provider to non-virtualized'
+  code: |-
+    PS C:\> Set-IpamAddress -IpAddress 172.16.10.10 -NetworkType Provider -NewNetworkType NonVirtualized -PassThru | Format-List IpAddress, NetworkType, ProviderAddressSpace, CustomerAddressSpace
+    IpAddress            : 172.16.10.10
+
+    NetworkType          : NonVirtualized
+
+    ProviderAddressSpace : Default
+
+    CustomerAddressSpace :
+  description: |-
+    This command converts the network type of the IP address 172.16.10.10 from provider to non-virtualized.
+    By default, the command assigns the non-virtualized address to the Default address space.
+    The command passes the output to the **Format-List** cmdlet by using the pipeline operator, and formats the output as a table.
+    For more information, type `Get-Help Format-List`.
+  summary: ""
+- title: 'Example 5: Assign an IP address to a new address space'
+  code: |-
+    PS C:\> Set-IpamAddress -IpAddress 172.16.10.10 -NetworkType NonVirtualized -NewNetworkType Provider -NewAddressSpace MainDataCenter -PassThru | Format-List IpAddress, NetworkType, ProviderAddressSpace, CustomerAddressSpace
+    IpAddress            : 172.16.10.10
+
+    NetworkType          : Provider
+
+    ProviderAddressSpace : MainDataCenter
+
+    CustomerAddressSpace :
+  description: |-
+    This command converts the network type of the IP address 172.16.10.10 from non-virtualized to provider.
+    The command assigns the IP address to the provider address space named MainDataCenter.
+    The command passes the output to the **Format-List** cmdlet by using the pipeline operator, and formats the output as a table.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AddCustomConfiguration
+  description: |+
+    Specifies semi-colon (;) separated name and value pairs of custom metadata.
+    The cmdlet adds the custom configuration metadata to the IP addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressSpace
+  description: |+
+    Specifies the address space that is associated with the IP address.
+    The default value is Default.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AssetTag
+  description: |+
+    Specifies the asset tag associated with the IP address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: AssignmentDate
+  description: |+
+    Specifies the date on which you assigned the IP address to a device.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AddressAssignment" data-throw-if-not-resolved="False" />
+  name: AssignmentType
+  description: |+
+    Specifies how IPAM assigns the addresses.
+    The default value is Static.
+
+    The acceptable values for this parameter are:
+
+    - Static
+    - Dynamic
+    - Auto
+    - VIP
+    - Reserved
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Static, Dynamic, Auto, VIP, Reserved
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientId
+  description: |+
+    Specifies the ID of the IPAM client.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description of the IP address assignment for a device.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DeviceName
+  description: |+
+    Specifies the name of the device to which you assigned the address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DeviceType
+  description: |+
+    Specifies the type of device to which you assigned the address.
+    Specify a value that exists in the built-in custom field **DeviceType**.
+
+    The acceptable values for this parameter are:
+
+    - VM
+    - Host
+
+    The default value is Host.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Duid
+  description: |+
+    Specifies the DHCP device unique identifier (DUID) for the client.
+    Clients use the DUID to get an IP address from a DHCPv6 server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: ExpiryDate
+  description: |+
+    Specifies an expiry date for the address.
+    IPAM alerts the administrator when the IP address expires.
+    IPAM does not reclaim expired addresses automatically.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ForwardLookupPrimaryServer
+  description: |+
+    Specifies the name of the Domain Name System (DNS) server that IPAM uses to resolve host names to IP addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ForwardLookupZone
+  description: |+
+    Specifies the name of the forward look up zone that contains mapping of host names to IP addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Iaid
+  description: |+
+    Specifies the identity association ID (IAID) of an IPv6 address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IpAddress
+  isRequired: true
+  description: |+
+    Specifies an array of IP addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IpAddressState
+  description: |+
+    Specifies the usage state of the IP address.
+    By default, the cmdlet sets the address as In-Use.
+
+    You can specify a valid custom value for this parameter.
+    Use the **Add-IpamCustomValue** cmdlet to add a custom value to a custom field in IPAM.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MacAddress
+  description: |+
+    Specifies the media access control (MAC) address of the device to which the address is assigned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ManagedByService
+  description: |+
+    Specifies the name of the service that manages the IP address.
+    The value that you specify for this parameter must exist in the set of values that you defined for the **ManagedByService** custom field in IPAM.
+
+    You can use the **Add-IpamCustomValue** cmdlet to add a value to the **ManagedByService** custom field in IPAM.
+    You can use the **Remove-IpamCustomValue** cmdlet to remove a value from the **ManagedByService** custom field in IPAM.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: MB
+  parameterValueGroup: ""
+- type: <xref href="VirtualizationType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NetworkType
+  description: |+
+    Specifies the network type of the address.
+
+    The acceptable values for this parameter are:
+
+    - Provider
+    - Customer
+    - NonVirtualized
+
+    The default value is NonVirtualized.If you specify Default for the *AddressSpace* parameter, the valid values for this parameter are Provider and NonVirtualized.
+    If you specify a provider type of address space for the *AddressSpace* parameter, you must specify Provider for this parameter.
+    If you specify a customer type of address space for the *AddressSpace* parameter, you must specify Customer for this parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NonVirtualized, Provider, Customer
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewAddressSpace
+  description: |+
+    Specifies the name of the new address space for the IP addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: NewIPAddress
+  description: |+
+    Specifies an IP address.
+    The cmdlet assigns the new IP address to the IP addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewManagedByService
+  description: |+
+    Specifies a new value for the service that manages the IP addresses.
+    The value that you specify for this parameter must exist in the set of values that you defined for the **ManagedByService** custom field in IPAM.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualizationType" data-throw-if-not-resolved="False" />
+  name: NewNetworkType
+  description: |+
+    Specifies a new value for network type for the IP addresses.
+    You can change the network type from NonVirtualized to Provider, and from Provider to NonVirtualized.
+    You cannot be change the network type from NonVirtualized or Provider to Customer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: NonVirtualized, Provider
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewServiceInstance
+  description: |+
+    Specifies a new value for the instance of the service that manages the IP addresses.
+    The value that you specify for this parameter must exist in the set of values that you defined for the **ServiceInstance** custom field in IPAM.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Owner
+  description: |+
+    Specifies the name of the owner of the IP addresses.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemoveCustomConfiguration
+  description: |+
+    Specifies a semi-colon (;) separated string of custom field names.
+    The cmdlet removes the custom field names from the IP addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReservationDescription
+  description: |+
+    Specifies a description for the DHCP reservation.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReservationName
+  description: |+
+    Specifies the name of the reservation on the DHCP server for the device.
+    You must specify a value for this parameter if you specify the *ReservationServer* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReservationServer
+  description: |+
+    Specifies the DHCP server on which the reservation is assigned.
+    The cmdlet stores the reservation data in IPAM.
+    The cmdlet does not create a reservation on the DHCP server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DhcpReservationType" data-throw-if-not-resolved="False" />
+  name: ReservationType
+  description: |+
+    Specifies the protocols supported by the reservation.
+    You must specify a value for this parameter if you specify the *ReservationServer* parameter.
+
+    The acceptable values for this parameter are:
+
+    - DHCP
+    - BootPr
+    - DHCP and BootPr
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Dhcp, Bootp, Both
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReverseLookupPrimaryServer
+  description: |+
+    Specifies the DNS server that IPAM uses to resolve IP addresses to host names.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReverseLookupZone
+  description: |+
+    Specifies the reverse lookup zone that contains mapping from IP addresses to fully qualified domain names (FQDN).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SerialNumber
+  description: |+
+    Specifies the serial number of the device to which you assigned the address.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ServiceInstance
+  description: |+
+    Specifies an array of instances of the services that manage the IP addresses.
+    Specify the instances of the services that you specified for the *ManagedByService* parameter.
+    If you specify this parameter, you must specify the *IpAddress* parameter.
+    The value that you specify for this parameter must exist in the set of values that you defined for the *ServiceInstance* parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: SI
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: IpamServer.Set-IpamAddress
+name: Set-IpamAddress
+description: |-
+  The **Set-IpamAddress** cmdlet modifies an IP address in IP Address Management (IPAM).
+  Specify the IP addresses to modify or use the *InputObject* parameter to specify an *IpamAddress* object to modify.
+
+  You can use the cmdlet to associate the Dynamic Host Configuration Protocol (DHCP) reservation properties with the IP address.
+  The cmdlet does not create a reservation on the DHCP server.
+  You can use Windows PowerShell for DHCP Server to create a reservation on the DHCP server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: IpamAddress.cdxml-help.xml
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/ipamserver/set-ipamaddress?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-IpamAddress

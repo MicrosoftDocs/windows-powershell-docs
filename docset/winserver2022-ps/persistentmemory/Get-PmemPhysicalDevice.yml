@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the physical devices associated with persistent memory.
+module: PersistentMemory
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Storage.PersistentMemory.Management.PmemDisk" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Storage.PersistentMemory.Management.PmemPhysicalDevice" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-PmemDisk
+  href: Get-PmemDisk.yml
+- text: Initialize-PmemPhysicalDevice
+  href: Initialize-PmemPhysicalDevice.yml
+syntaxes:
+- Get-PmemPhysicalDevice [<CommonParameters>]
+- Get-PmemPhysicalDevice [[-DeviceId] <String[]>] [<CommonParameters>]
+- Get-PmemPhysicalDevice [-LogicalDisk <PmemDisk>] [<CommonParameters>]
+- Get-PmemPhysicalDevice [-DiskNumber <UInt32>] [<CommonParameters>]
+- Get-PmemPhysicalDevice [-InputObject <CimInstance>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get physical devices that have persistent memory'
+  code: |-
+    Get-PmemPhysicalDevice
+
+    DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation FirmwareRevision Persistent memory size Volatile
+                                                                                                                          memory size
+    -------- ----------           ------------ ----------------- ---------------- ---------------- ---------------------- --------------
+    1020     Intel INVDIMM device Healthy      {Ok}              CPU2_DIMM_C1     102005310        126 GB                 0 GB
+    1120     Intel INVDIMM device Healthy      {Ok}              CPU2_DIMM_F1     102005310        126 GB                 0 GB
+    120      Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_F1     102005310        126 GB                 0 GB
+    20       Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_C1     102005310        126 GB                 0 GB
+  description: |-
+    This command gets all the physical devices with persistent memory.
+  summary: ""
+- title: 'Example 2: Get physical device for a persistent memory disk'
+  code: |-
+    (Get-PmemDisk)[0] | Get-PmemPhysicalDevice
+
+    DeviceId DeviceType           HealthStatus OperationalStatus PhysicalLocation FirmwareRevision Persistent memory size Volatile memory size
+    -------- ----------           ------------ ----------------- ---------------- ---------------- ---------------------- --------------------
+    20       Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_C1     102005310        126 GB                 0 GB
+    120      Intel INVDIMM device Healthy      {Ok}              CPU1_DIMM_F1     102005310        126 GB                 0 GB
+  description: |-
+    This example uses the **Get-PmemDisk** cmdlet to get a persistent memory disk and gets the physical device for that disk.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DeviceId
+  description: |+
+    Specifies the device ID of the physical device to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DiskNumber
+  description: |+
+    Specifies the disk number of persistent memory disk.
+    The cmdlet gets the physical device for that disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the input object that is used in a pipeline command.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PmemDisk" data-throw-if-not-resolved="False" />
+  name: LogicalDisk
+  description: |+
+    Specifies a logical persistent memory disk.
+    The cmdlet gets the physical device for that disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PersistentMemory.Get-PmemPhysicalDevice
+name: Get-PmemPhysicalDevice
+description: |-
+  The **Get-PmemPhysicalDevice** cmdlet gets the physical devices associated with persistent memory.
+metadata:
+  description: The Get-PmemPhysicalDevice cmdlet gets the physical devices associated with persistent memory.
+  external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
+  Module Name: PersistentMemory
+  online version: https://docs.microsoft.com/powershell/module/persistentmemory/get-pmemphysicaldevice?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  ms.date: 09/24/2021
+  title: Get-PmemPhysicalDevice

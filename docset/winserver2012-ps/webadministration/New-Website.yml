@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new IIS Web site.
+module: WebAdministration
+notes: ""
+syntaxes:
+- >-
+  New-Website [-Name] <String> [-Id <UInt32>] [-Port <UInt32>] [-IPAddress <String>] [-SslFlags <Int32>]
+
+   [-HostHeader <String>] [-PhysicalPath <String>] [-ApplicationPool <String>] [-Ssl] [-Force]
+
+   [<CommonParameters>]
+examples:
+- title: '-------------- EXAMPLE 1: Add a New Web Site --------------'
+  code: |-
+    IIS:\>New-WebSite -Name TestSite -Port 80 -HostHeader TestSite -PhysicalPath "$env:systemdrive\inetpub\testsite"
+  description: |-
+    Creates a new Web site named TestSite.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  description: |+
+    The application pool in which the new site executes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies that the user is not prompted for confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostHeader
+  description: |+
+    The host header to use for the new site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    The ID to use for the new site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IPAddress
+  description: |+
+    The IP address of the new site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the new site to create.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PhysicalPath
+  description: |+
+    The physical path to use for the new site.
+    The specified folder must already exist.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    The port to use for the new site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Ssl
+  description: |+
+    Including the Ssl parameter enables HTTPS binding on the site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SslFlags
+  description: |+
+    Indicates what type of certificate and/or certificate storage the new website supports.
+    Only the following values are valid: 0 (Regular certificate in Windows certificate storage), 1 (SNI certificate), 2 (central certificate store), or 3 (SNI certificate in central certificate store).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.New-Website
+name: New-Website
+description: |-
+  Creates a new IIS Web site with the settings specified in parameter values.
+metadata:
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  online version: https://docs.microsoft.com/powershell/module/webadministration/new-website?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

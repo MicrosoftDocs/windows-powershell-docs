@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Activates products online, using the local computer's Internet connection.
+module: VAMT
+notes: ""
+links:
+- text: Get-VamtProduct
+  href: ./Get-VamtProduct.yml
+syntaxes:
+- >-
+  Install-VamtProductActivation -Products <Product[]> [-Username <String>] [-Password <String>]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Activate products'
+  code: |-
+    PS C:\>Get-VamtProduct | Install-VamtProductActivation
+  description: |-
+    This command gets products and then activates them by using online activation.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Provides a password for password-protected environments.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Product" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Products
+  isRequired: true
+  description: |+
+    Specifies the product or products to be activated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Username
+  description: |+
+    Provides a user name for password-protected environments.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: VAMT.Install-VamtProductActivation
+name: Install-VamtProductActivation
+description: |-
+  The **Install-VamtProductActivation** cmdlet activates products online by using the Internet connection on the local computer.
+  You cannot use this cmdlet for proxy activation.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
+  Module Name: VAMT
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/vamt/install-vamtproductactivation?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Install-VamtProductActivation

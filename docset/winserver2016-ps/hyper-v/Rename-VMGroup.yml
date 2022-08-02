@@ -1,0 +1,148 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Renames virtual machine groups.
+module: Hyper-V
+notes: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **Microsoft.HyperV.PowerShell.VMGroup** object, if you specify the **Passthru** parameter.
+links:
+- text: Get-VMGroup
+  href: ./Get-VMGroup.yml
+- text: New-VMGroup
+  href: ./New-VMGroup.yml
+- text: Remove-VMGroup
+  href: ./Remove-VMGroup.yml
+syntaxes:
+- >-
+  Rename-VMGroup [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Name] <String[]> [-NewName] <String> [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Rename-VMGroup [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+
+   [-Id] <Guid> [-NewName] <String> [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- Rename-VMGroup [-VMGroup] <VMGroup[]> [-NewName] <String> [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Rename a group'
+  code: |-
+    PS C:\> Rename-VMGroup -Name "TestGroup" -NewName "Group01"
+  description: |-
+    This command renames the group named TestGroup to be Group01.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts that run this cmdlet.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+    The default is the local computer.
+    Use localhost or a dot (.) to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the unique ID of the virtual machine group that this cmdlet renames.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of names of virtual machine groups that this cmdlet renames.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewName
+  isRequired: true
+  description: |+
+    Specifies the new name for the virtual machine group.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Indicates that this cmdlet returns the **Microsoft.HyperV.PowerShell.VMGroup** object that it renames.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMGroup" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMGroup
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machine groups that this cmdlet renames.
+    To obtain a **VMGroup** object, use the **Get-VMGroup** cmdlet.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Rename-VMGroup
+name: Rename-VMGroup
+description: |-
+  The **Rename-VMGroup** cmdlet renames virtual machine groups.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/rename-vmgroup?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Rename-VMGroup

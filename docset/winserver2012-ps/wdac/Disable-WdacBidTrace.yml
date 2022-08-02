@@ -1,0 +1,202 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables Built-in Diagnostics Tracing (BidTrace) for troubleshooting WDAC components.
+module: Wdac
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_WdacBidTrace" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Enable-WdacBidTrace
+  href: ./Enable-WdacBidTrace.yml
+- text: Get-WdacBidTrace
+  href: ./Get-WdacBidTrace.yml
+syntaxes:
+- >-
+  Disable-WdacBidTrace [-InputObject] <CimInstance> [-AsJob] [-CimSession <CimSession>] [-PassThru]
+
+   [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+- >-
+  Disable-WdacBidTrace [-Path] <String> [-AsJob] [-CimSession <CimSession>] [-PassThru] [-Platform <String>]
+
+   [-ProcessId <UInt32>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+- >-
+  Disable-WdacBidTrace [-AsJob] [-CimSession <CimSession>] [-PassThru] [-Platform <String>]
+
+   [-ThrottleLimit <Int32>] -Folder <String> [-Confirm] [-WhatIf]
+- >-
+  Disable-WdacBidTrace [-AsJob] [-CimSession <CimSession>] [-PassThru] [-Platform <String>]
+
+   [-ThrottleLimit <Int32>] [-IncludeAllApplications] [-Confirm] [-WhatIf]
+examples:
+- title: '1:'
+  code: |-
+    PS C:\> Disable-WdacBidTrace -Path "C:\temp\abc.exe" -Platform 32-bit
+  description: |-
+    This command disables the BidTrace for the application "C:\temp\abc.exe" on the 32-bit platform:
+  summary: ""
+- title: '2:'
+  code: |-
+    PS C:\> Disable-WdacBidTrace -Path "C:\temp\abc.exe" -ProcessId 1234 -Platform 32-bit
+  description: |-
+    This command disables the BidTrace for the application "C:\temp\abc.exe" on the 32-bit platform and disables BidTrace for a particular instance of "abc.exe" (with Process ID = 1234):
+  summary: ""
+- title: '3:'
+  code: |-
+    PS C:\> Disable-WdacBidTrace -Folder "C:\temp"
+  description: |-
+    This command disables the BidTrace for all applications located inside C:\temp on the native platform:
+  summary: ""
+- title: '4:'
+  code: |-
+    PS C:\> Disable-WdacBidTrace -IncludeAllApplications -Platform 64-bit
+  description: |-
+    This command disables the BidTrace for all 64-bit applications:
+  summary: ""
+- title: '5:'
+  code: |-
+    PS C:\> $bidSetting = Enable-WdacBidTrace -Path "C:\temp\abc.exe" -Platform 64-bit -PassThru
+    <use C:\temp\abc.exe>
+    Disable-WdacBidTrace $bidSetting
+  description: |-
+    This command first enables the WDAC BidTrace for the 64-bit application "C:\temp\abc.exe".
+    It also saves the result into a PowerShell variable that can be reused in Disable-WdacBidTrace:
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Folder
+  isRequired: true
+  description: |+
+    Disable BidTrace for all applications under this folder.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeAllApplications
+  isRequired: true
+  description: |+
+    Disable BidTrace for all applications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: InputObject
+  isRequired: true
+  description: |+
+    Disable the BidTrace represented by the specified BidTrace setting objects.
+    Enter a variable that contains the objects, or type a command or expression that gets the objects.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Passes the object created by this cmdlet through the pipeline.
+    By default, this cmdlet does not pass any objects through the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Disable BidTrace for this application full path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Platform
+  description: |+
+    The platform architecture of the WDAC BidTrace setting.
+    Possible values are '32-bit', '64-bit' or 'All'.
+    The default is '32-bit' on a 32-bit process and '64-bit' on a 64-bit process.
+    This is the platform architecture on the remote machine if this command is executed on a remote CIM session.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: ProcessId
+  description: |+
+    Disable BidTrace only for this process ID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Wdac.Disable-WdacBidTrace
+name: Disable-WdacBidTrace
+description: |-
+  For more information about data access tracing (Bidtrace), see Data Access Tracing (Windows 8)http://msdn.microsoft.com/en-us/library/hh829624(VS.85).aspx.
+metadata:
+  external help file: WDAC_Cmdlets.xml
+  Module Name: Wdac
+  online version: https://docs.microsoft.com/powershell/module/wdac/disable-wdacbidtrace?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

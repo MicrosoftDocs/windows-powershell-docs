@@ -1,0 +1,236 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets configuration information of BGP routing policies.
+module: RemoteAccess
+notes: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#BgpRoutingPolicyConfig" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+links:
+- text: Set-BgpRoutingPolicy
+  href: ./Set-BgpRoutingPolicy.yml
+- text: Add-BgpRoutingPolicy
+  href: ./Add-BgpRoutingPolicy.yml
+- text: Remove-BgpRoutingPolicy
+  href: ./Remove-BgpRoutingPolicy.yml
+syntaxes:
+- >-
+  Get-BgpRoutingPolicy [[-Name] <String[]>] [-PolicyType <PolicyType>] [-RoutingDomain <String>]
+
+   [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+- >-
+  Get-BgpRoutingPolicy [-AllRoutingDomains] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get BGP routing policies by using a name'
+  code: |-
+    PS C:\> Get-BgpRoutingPolicy -Name "RTPolicy01", "RTPolicy02", "RTPolicy04", "RTPolicy07"
+
+
+    Get-BgpRoutingPolicy : Policy RTPolicy07 not found.
+    At line:1 char:1
+    + Get-BgpRoutingPolicy RTPolicy01, RTPolicy02, RTPolicy04, RTPolicy07
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (PS_BgpRoutingPolicy:root/Microsoft/...gpRoutingPolicy) [Get-BgpRoutingP
+    olicy], CimException
+    + FullyQualifiedErrorId : HRESULT 80070490,Get-BgpRoutingPolicy
+
+    PolicyName   : RTPolicy04
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchPrefix  : {10.1.4.0/24}
+    IgnorePrefix : {10.1.4.16/28}
+    SetClauses   : NewLocalPref : 400
+
+    PolicyName   : RTPolicy01
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchASNRange : {64522, 64555}
+    SetClauses   : NewMED       : 100
+    AddCommunity : {645:2}
+
+    PolicyName   : RTPolicy02
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchASNRange : {64522, 64555}
+    SetClauses   : NewMED       : 100
+    AddCommunity : {645:2}
+  description: |-
+    This command gets the BGP routing policies named RTPolicy01, RTPolicy02, RTPolicy04, and RTPolicy07.
+  summary: ""
+- title: 'Example 2: Get all BGP routing policies'
+  code: |-
+    PS C:\> Get-BgpRoutingPolicy
+
+
+
+
+    PolicyName   : RTPolicy04
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchPrefix  : {10.1.4.0/24}
+    IgnorePrefix : {10.1.4.16/28}
+    SetClauses   : NewLocalPref : 400
+
+    PolicyName   : RTPolicy05
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchCommunity : {100:500}
+    SetClauses   : NewMED : 500
+
+    PolicyName   : RTPolicy01
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchASNRange : {64522, 64555}
+    SetClauses   : NewMED       : 100
+    AddCommunity : {645:2}
+
+    PolicyName   : RTPolicy02
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchASNRange : {64522, 64555}
+    SetClauses   : NewMED       : 100
+    AddCommunity : {645:2}
+
+    PolicyName   : RTPolicy06
+    PolicyType   : Deny
+    MatchClauses : MatchASNRange  : {64545, 64555}
+    MatchCommunity : {100:500}
+    SetClauses   :
+  description: |-
+    This command gets all BGP Routing policies in the policy store.
+  summary: ""
+- title: 'Example 3: Get BGP Routing policies by using a policy type'
+  code: |-
+    PS C:\> Get-BgpRoutingPolicy -PolicyType ModifyAttribute
+
+
+
+
+    PolicyName   : RTPolicy04
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchPrefix  : {10.1.4.0/24}
+    IgnorePrefix : {10.1.4.16/28}
+    SetClauses   : NewLocalPref : 400
+
+    PolicyName   : RTPolicy05
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchCommunity : {100:500}
+    SetClauses   : NewMED : 500
+
+    PolicyName   : RTPolicy01
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchASNRange : {64522, 64555}
+    SetClauses   : NewMED       : 100
+    AddCommunity : {645:2}
+
+    PolicyName   : RTPolicy02
+    PolicyType   : ModifyAttribute
+    MatchClauses : MatchASNRange : {64522, 64555}
+    SetClauses   : NewMED       : 100
+    AddCommunity : {645:2}
+  description: |-
+    This command gets the BGP Routing policies in the policy store that are a ModifyAttribute type of policy.
+  summary: ""
+- title: 'Example 4: Get BGP Routing policies for a Routing Domain'
+  code: |-
+    PS C:\> Get-BgpRoutingPolicy -RoutingDomain "Rd_001" | ft
+
+
+
+    PolicyName                    PolicyType                    MatchClauses                  SetClauses
+    ----------                    ----------                    ------------                  ----------
+    RTPolicy04                    ModifyAttribute               MatchPrefix  : {10.1.4.0/24}  NewLocalPref : 300
+    IgnorePrefix : {10.1.4.16/28}
+  description: |-
+    This command gets all the BGP routing policies in the policy store for the routing domain named Rd_001 in a multi-tenant environment.
+    The command passes the results of the cmdlet to the **Format-Table** cmdlet by using the pipeline operator.
+    The **Format-Table** cmdlet formats the output as a table.
+    For more information, type `Get-Help Format-Table`.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllRoutingDomains
+  isRequired: true
+  description: |+
+    Use this command to retrieve details about all routing domains.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies an array of names of policies.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: PolicyList, PolicyId, PolicyName
+  parameterValueGroup: ""
+- type: <xref href="PolicyType" data-throw-if-not-resolved="False" />
+  name: PolicyType
+  description: |+
+    Specifies the type of BGP routing policy.
+    The acceptable values for this parameter are:
+
+    - ModifyAttribute
+    - Allow
+    - Deny
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Deny, Allow, ModifyAttribute
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RoutingDomain
+  description: |+
+    Specifies a name, as a string, of a routing domain.
+    The name of a routing domain is a unique user-defined alphanumeric string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RoutingDomainName
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RemoteAccess.Get-BgpRoutingPolicy
+name: Get-BgpRoutingPolicy
+description: |-
+  The **Get-BgpRoutingPolicy** cmdlet gets configuration information of BGP routing policies from the policy store.
+  You can specify the names and policy type of the routing policies to return.
+  If you do not specify the **Name** and **PolicyType** parameters, the cmdlet returns all routing policies of the local BGP router.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_BgpRoutingPolicy_v1.0.cdxml-help.xml
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/remoteaccess/get-bgproutingpolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-BgpRoutingPolicy

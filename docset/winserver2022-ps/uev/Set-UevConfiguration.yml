@@ -1,0 +1,440 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies UE-V configuration settings.
+module: UEV
+notes: ""
+links:
+- text: Get-UevConfiguration
+  href: ./Get-UevConfiguration.yml
+- text: Clear-UevConfiguration
+  href: ./Clear-UevConfiguration.yml
+- text: Import-UevConfiguration
+  href: ./Import-UevConfiguration.yml
+- text: Export-UevConfiguration
+  href: ./Export-UevConfiguration.yml
+syntaxes:
+- >-
+  Set-UevConfiguration [-CurrentComputerUser] [-MaxPackageSizeInBytes <Int32>] [-SettingsStoragePath <String>]
+
+   [-EnableSyncProviderPing] [-DisableSyncProviderPing] [-SyncTimeoutInMilliseconds <Int32>]
+
+   [-SyncMethod <String>] [-EnableSync] [-DisableSync] [-EnableSyncOverMeteredNetwork]
+
+   [-DisableSyncOverMeteredNetwork] [-EnableSyncOverMeteredNetworkWhenRoaming]
+
+   [-DisableSyncOverMeteredNetworkWhenRoaming] [-EnableSettingsImportNotify] [-DisableSettingsImportNotify]
+
+   [-SettingsImportNotifyDelayInSeconds <Int32>] [-EnableDontSyncWindows8AppSettings]
+
+   [-DisableDontSyncWindows8AppSettings] [-WaitForSyncTimeoutInMilliseconds <Int32>]
+
+   [-EnableWaitForSyncOnApplicationStart] [-DisableWaitForSyncOnApplicationStart] [-EnableWaitForSyncOnLogon]
+
+   [-DisableWaitForSyncOnLogon] [-EnableSyncUnlistedWindows8Apps] [-DisableSyncUnlistedWindows8Apps]
+
+   [-VdiCollectionName <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-UevConfiguration [-Computer] [-MaxPackageSizeInBytes <Int32>] [-SettingsStoragePath <String>]
+
+   [-SettingsTemplateCatalogPath <String>] [-EnableSyncProviderPing] [-DisableSyncProviderPing]
+
+   [-SyncTimeoutInMilliseconds <Int32>] [-SyncMethod <String>] [-EnableSync] [-DisableSync]
+
+   [-EnableSyncOverMeteredNetwork] [-DisableSyncOverMeteredNetwork] [-EnableSyncOverMeteredNetworkWhenRoaming]
+
+   [-DisableSyncOverMeteredNetworkWhenRoaming] [-EnableSettingsImportNotify] [-DisableSettingsImportNotify]
+
+   [-SettingsImportNotifyDelayInSeconds <Int32>] [-ContactITUrl <String>] [-ContactITDescription <String>]
+
+   [-EnableTrayIcon] [-DisableTrayIcon] [-EnableFirstUseNotification] [-DisableFirstUseNotification]
+
+   [-EnableDontSyncWindows8AppSettings] [-DisableDontSyncWindows8AppSettings]
+
+   [-WaitForSyncTimeoutInMilliseconds <Int32>] [-EnableWaitForSyncOnApplicationStart]
+
+   [-DisableWaitForSyncOnApplicationStart] [-EnableWaitForSyncOnLogon] [-DisableWaitForSyncOnLogon]
+
+   [-EnableSyncUnlistedWindows8Apps] [-DisableSyncUnlistedWindows8Apps] [-VdiCollectionName <String>] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the synchronization timeout setting for all users'
+  code: |-
+    PS C:\> Set-UevConfiguration -Computer -SyncTimeoutInMilliseconds 3000
+  description: |-
+    This command modifies the synchronization timeout setting to three seconds for all users on the computer.
+  summary: ""
+- title: 'Example 2: Modify the synchronization timeout setting for the current user'
+  code: |-
+    PS C:\> Set-UevConfiguration -CurrentComputerUser -SyncTimeoutInMilliseconds 3000
+  description: |-
+    This command modifies the synchronization timeout setting to three seconds for the current user on the computer.
+  summary: ""
+- title: 'Example 3: Modify the synchronization timeout setting for the current user by default'
+  code: |-
+    PS C:\> Set-UevConfiguration -SyncTimeoutInMilliseconds 3000
+  description: |-
+    This command modifies the synchronization timeout setting to three seconds by default for the current user on the computer.
+  summary: ""
+- title: 'Example 4: Modify multiple settings for the current user'
+  code: |-
+    PS C:\> Set-UevConfiguration -CurrentComputerUser -SyncTimeoutInMilliseconds 5000 -MaxPackageSizeInBytes 700000
+  description: |-
+    This command modifies the settings for the synchronization timeout and maximum package size for the current user on the computer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Computer
+  description: |+
+    Indicates that the cmdlet changes the settings that you specify for all users on the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContactITDescription
+  description: |+
+    Specifies a description for the Contact IT link.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContactITUrl
+  description: |+
+    Specifies a URL for the Contact IT link.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CurrentComputerUser
+  description: |+
+    Indicates that the cmdlet modifies the settings that you specify for the current user only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableDontSyncWindows8AppSettings
+  description: |+
+    Indicates that the cmdlet disables the setting for not synchronizing Windows® 8 app settings.
+    If you specify this parameter, UE-V synchronizes Windows 8 app settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableFirstUseNotification
+  description: |+
+    Indicates that the cmdlet disables the notification of first-use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableSettingsImportNotify
+  description: |+
+    Indicates that the cmdlet disables the notification of settings import.
+    If you specify this parameter, UE-V does not notify the user about the settings import.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableSync
+  description: |+
+    Indicates that the cmdlet disables the synchronization of settings.
+    If you specify this parameter, UE-V stops the synchronization of settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableSyncOverMeteredNetwork
+  description: |+
+    Indicates that the cmdlet disables the synchronization of settings over metered connections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableSyncOverMeteredNetworkWhenRoaming
+  description: |+
+    Indicates that the cmdlet disables the synchronization of settings over metered connections outside of the home provider network, for example, when connected by using a roaming connection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableSyncProviderPing
+  description: |+
+    Indicates that the cmdlet disables the synchronization provider from pinging the network before it synchronizes.
+    If you specify this parameter, UE-V attempts to synchronize settings, even if the network is not available.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableSyncUnlistedWindows8Apps
+  description: |+
+    Indicates that the cmdlet disables the synchronization of unlisted Windows 8 apps.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableTrayIcon
+  description: |+
+    Indicates that the cmdlet disables the icon in the notification area.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableWaitForSyncOnApplicationStart
+  description: |+
+    Indicates that the cmdlet disables UE-V from waiting for synchronization to finish before the user can start an application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableWaitForSyncOnLogon
+  description: |+
+    For internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableDontSyncWindows8AppSettings
+  description: |+
+    Indicates that the cmdlet enables the setting for not synchronizing Windows 8 app settings.
+    If you specify this parameter, UE-V does not synchronize Windows 8 app settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableFirstUseNotification
+  description: |+
+    Indicates that the cmdlet enables first use notification.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableSettingsImportNotify
+  description: |+
+    Indicates that the cmdlet enables the notification for settings import.
+    If the settings import takes longer than the amount of time that you specify for the *SettingsImportNotifyDelayInSecond* parameter, UE-V notifies the user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableSync
+  description: |+
+    Indicates that the cmdlet enables the synchronization of settings.
+    UE-V synchronizes the settings that are defined in the settings location templates that you have enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableSyncOverMeteredNetwork
+  description: |+
+    Indicates that the cmdlet enables the synchronization of settings over metered connections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableSyncOverMeteredNetworkWhenRoaming
+  description: |+
+    Indicates that the cmdlet enables the synchronization of settings over metered connections outside of the home provider network, for example, when connected by using a roaming connection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableSyncProviderPing
+  description: |+
+    Indicates that the cmdlet enables the synchronization provider to ping for network accessibility.
+    If you specify this parameter, UE-V attempts to synchronize settings only if the network is available.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableSyncUnlistedWindows8Apps
+  description: |+
+    Indicates that the cmdlet enables the synchronization of unlisted Windows 8 apps.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableTrayIcon
+  description: |+
+    Indicates that the cmdlet enables the icon in the notification area.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableWaitForSyncOnApplicationStart
+  description: |+
+    For internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableWaitForSyncOnLogon
+  description: |+
+    For internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxPackageSizeInBytes
+  description: |+
+    Specifies the maximum package size, in bytes.
+    If the size of a package exceeds the value that you specify, UE-V logs a warning.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SettingsImportNotifyDelayInSeconds
+  description: |+
+    Specifies the time, in seconds, before UE-V notifies the user about the settings import.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SettingsStoragePath
+  description: |+
+    Specifies the path of the location where UE-V stores the user settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SettingsTemplateCatalogPath
+  description: |+
+    Specifies the path of the location where UE-V stores the settings template catalog.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SyncMethod
+  description: |+
+    Specifies the method for the synchronization of settings.
+    Valid values are: 
+
+    - SyncProvider
+    - None
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SyncTimeoutInMilliseconds
+  description: |+
+    Specifies the time, in milliseconds, before UE-V synchronizes settings from the settings repository.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VdiCollectionName
+  description: |+
+    Specifies the name of the collection of computers that should share/sync settings.
+    Specify this parameter when you are performing synchronization in a pooled VDI-type environment when computers are not persistent.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: WaitForSyncTimeoutInMilliseconds
+  description: |+
+    For internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: UEV.Set-UevConfiguration
+name: Set-UevConfiguration
+description: |-
+  The **Set-UevConfiguration** cmdlet modifies Microsoft User Experience Virtualization (UE-V) configuration settings.
+  If you specify the *CurrentComputerUser* parameter, the cmdlet changes the settings that you specify for the current user only.
+  If you specify the *Computer* parameter, the cmdlet clears the settings that you specify for all users on the computer.
+  You must have administrative credentials to use this cmdlet to modify settings for all users on the computer.
+  If you do not specify the *CurrentComputerUser* or *Computer* parameter, the cmdlet changes the settings that you specify for the current user only.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/set-uevconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-UevConfiguration

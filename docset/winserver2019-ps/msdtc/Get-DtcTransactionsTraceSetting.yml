@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the DTC transactions trace setting of the host.
+module: MsDtc
+notes: ""
+outputs:
+- name: <xref href="DtcTransactionsTraceSettings" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object of DtcTransactionsTraceSettings containing the trace settings information.
+links:
+- text: Set-DtcTransactionsTraceSetting
+  href: ./Set-DtcTransactionsTraceSetting.yml
+syntaxes:
+- >-
+  Get-DtcTransactionsTraceSetting [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get DTC transactions trace setting'
+  code: |-
+    PS C:\> Get-DtcTransactionsTraceSetting
+    AbortedTransactionsTracingEnabled AllTransactionsTracingEnabled LongLivedTransactionsTracingEnabled PSComputerName
+    --------------------------------- ----------------------------- ----------------------------------- --------------
+    True                              False                         True
+  description: |-
+    This command queries the transactions trace setting on the local host.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: MsDtc.Get-DtcTransactionsTraceSetting
+name: Get-DtcTransactionsTraceSetting
+description: |-
+  The **Get-DtcTransactionsTraceSetting** cmdlet gets the Distributed Transaction Coordinator (DTC) transactions trace setting of the host.
+  Trace settings are shared by all DTC instances on a single host.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_DtcTransactionsTraceSettingTask_v1.0.cdxml-help.xml
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/msdtc/get-dtctransactionstracesetting?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-DtcTransactionsTraceSetting

@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generates the SQL scripts that can be used separately to create the AD FS database and to grant permissions.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="none" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Result object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Export-AdfsDeploymentSQLScript -DestinationFolder <String> -ServiceAccountName <String> [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>Export-AdfsDeploymentSQLScript -DestinationFolder ".\scriptfolder" -ServiceAccountName DOMAIN\adfsUser
+  description: |-
+    Description
+
+    -----------
+
+    Exports SQL deployment scripts for AD FS installation on behalf of the specified AD FS service account ("adfsUser").
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationFolder
+  isRequired: true
+  description: |+
+    Specifies the folder in which the generated SQL scripts will be saved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of the Active Directory account under which the AD FS service runs. 
+    All nodes in the farm must use the same service account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Export-AdfsDeploymentSQLScript
+name: Export-AdfsDeploymentSQLScript
+description: |-
+  The Export-AdfsDeploymentSQLScript cmdlet generates the SQL scripts that can be used separately to create the AD FS database and to grant permissions.
+metadata:
+  external help file: Microsoft.FederationServices.Deployment.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/export-adfsdeploymentsqlscript?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

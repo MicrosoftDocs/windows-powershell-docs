@@ -1,0 +1,176 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the traffic class settings.
+module: DcbQoS
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosTrafficClassSettingData" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: "The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.\r\nThe path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.\r\n                         \r\nThe MSFT_NetQosTrafficClassSettingData object contains a network traffic class."
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosTrafficClassSettingData" data-throw-if-not-resolved="False" />
+  description: "The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.\r\nThe path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.\r\n                         \r\nThe MSFT_NetQosTrafficClassSettingData object contains a network traffic class.\r\nOnly when the **PassThru** parameter is specified will the cmdlet return the MSFT_NetQosTrafficClassSettingData object."
+links:
+- text: Get-NetQosTrafficClass
+  href: ./Get-NetQosTrafficClass.yml
+- text: New-NetQosTrafficClass
+  href: ./New-NetQosTrafficClass.yml
+- text: Remove-NetQosTrafficClass
+  href: ./Remove-NetQosTrafficClass.yml
+- text: Set-NetQosDcbxSetting
+  href: ./Set-NetQosDcbxSetting.yml
+- text: Set-NetQosTrafficClass
+  href: ./Set-NetQosTrafficClass.yml
+syntaxes:
+- >-
+  Set-NetQosTrafficClass [[-Name] <String[]>] [-Algorithm <Algorithm>] [-BandwidthPercentage <Byte>]
+
+   [-Priority <Byte[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+- >-
+  Set-NetQosTrafficClass -InputObject <CimInstance[]> [-Algorithm <Algorithm>] [-BandwidthPercentage <Byte>]
+
+   [-Priority <Byte[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Set-NetQosTrafficClass -Name SMB -BandwidthPercentage 50
+  description: |-
+    This example changes the bandwidth allocation to traffic class named SMB to 50 percent.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> Get-NetQosTrafficClass -Name SMB | Set-NetQosTrafficClass -Priority 3,4
+  description: |-
+    This example gets the settings of the traffic class named SMB and changes the priority mapping setting so that traffic tagged with 3 or 4 are mapped to the traffic class named SMB.
+  summary: ""
+parameters:
+- type: <xref href="Algorithm" data-throw-if-not-resolved="False" />
+  name: Algorithm
+  description: |+
+    Specifies the transmission selection algorithm to assign to the traffic class, such as enhanced transmission selection (ETS).
+
+  defaultValue: Ets
+  pipelineInput: true
+  position: Named
+  aliases: tsa
+  parameterValueGroup: Strict, ETS
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" />
+  name: BandwidthPercentage
+  description: |+
+    Specifies the percent of total bandwidth to assign to the traffic class.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Bandwidth, bw
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specified the object which will be modified by this cmdlet.
+    The object must be piped to the cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  description: |+
+    Specifies the name of the traffic class.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Priority
+  description: |+
+    Specifies the IEEE 802.1p priority values.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: p, pri
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DcbQoS.Set-NetQosTrafficClass
+name: Set-NetQosTrafficClass
+description: |-
+  The **Set-NetQosTrafficClass** cmdlet modifies the settings of a traffic class, such as the mapping between 802.1p priority and traffic class, the transmission algorithm to be used, and the bandwidth allocation to the traffic class.
+  If Windows Server® 2012 or later is set to be not willing to accept configurations from a remote device, then Windows Server 2012 or later will send the updated settings to data center bridging (DCB)-capable network adapters in the computer.
+
+  For more information on remote device configurations, see the Set-NetQosDcbxSetting cmdlet.
+
+  For more information on traffic class, see the New-NetQosTrafficClass cmdlet.
+metadata:
+  external help file: MSFT_NetQosTrafficClass.cdxml-help.xml
+  Module Name: DcbQoS
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/dcbqos/set-netqostrafficclass?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NetQosTrafficClass

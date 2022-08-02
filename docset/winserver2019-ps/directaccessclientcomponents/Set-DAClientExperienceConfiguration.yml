@@ -1,0 +1,322 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the configuration of the specified DirectAccess client user experience.
+module: DirectAccessClientComponents
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/StandardCimv2/MSFT_DAClientExperienceConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts as input a CIM object that contains a DA client experience configuration.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-DAClientExperienceConfiguration
+  href: ./Get-DAClientExperienceConfiguration.yml
+- text: Reset-DAClientExperienceConfiguration
+  href: ./Reset-DAClientExperienceConfiguration.yml
+syntaxes:
+- >-
+  Set-DAClientExperienceConfiguration [-PolicyStore <String>] [-GPOSession <String>]
+
+   [[-CorporateResources] <String[]>] [[-IPsecTunnelEndpoints] <String[]>] [[-PreferLocalNamesAllowed] <Boolean>]
+
+   [[-UserInterface] <Boolean>] [[-SupportEmail] <String>] [[-FriendlyName] <String>]
+
+   [[-ManualEntryPointSelectionAllowed] <Boolean>] [[-GslbFqdn] <String>] [[-ForceTunneling] <ForceTunneling>]
+
+   [[-CustomCommands] <String[]>] [[-PassiveMode] <Boolean>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-DAClientExperienceConfiguration -InputObject <CimInstance[]> [[-CorporateResources] <String[]>]
+
+   [[-IPsecTunnelEndpoints] <String[]>] [[-PreferLocalNamesAllowed] <Boolean>] [[-UserInterface] <Boolean>]
+
+   [[-SupportEmail] <String>] [[-FriendlyName] <String>] [[-ManualEntryPointSelectionAllowed] <Boolean>]
+
+   [[-GslbFqdn] <String>] [[-ForceTunneling] <ForceTunneling>] [[-CustomCommands] <String[]>]
+
+   [[-PassiveMode] <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable the DirectAccess user interface'
+  code: |-
+    PS C:\>Set-DAClientExperienceConfiguration -PolicyStore "Contoso\GPO1" -UserInterface "False"
+  description: |-
+    This cmdlet disables the DirectAccess user interface.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CorporateResources
+  description: |+
+    Configures the connectivity tests that DirectAccess client computers use to determine connectivity.
+    Enter the values for this parameter in the form of a string array, with each entry surrounded by double quotes (" ") and separated by commas.
+    Use the following formats for each test type:
+
+    HTTP test: `"HTTP:http://computername"`
+
+    File test: `"FILE:\\fileserver\"`
+
+    Ping test: `"PING:testURL"`
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CustomCommands
+  description: |+
+    Configures any custom commands required by the administrator.
+    The custom commands are incorporated into the logs that are generated when there are problems.
+    Commands run in an elevated Windows PowerShell console sequentially.
+
+    Each item in the string array must be an individual command.
+
+  defaultValue: None
+  position: "10"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ForceTunneling" data-throw-if-not-resolved="False" />
+  name: ForceTunneling
+  description: |+
+    Configures the force tunneling setting on a DirectAccess client computer.
+    The acceptable values for this parameter are:
+
+    - Enabled
+    - Disabled
+    - Default
+
+    By default, force tunneling is disabled.
+
+  defaultValue: None
+  position: "9"
+  aliases: ""
+  parameterValueGroup: Default, Enabled, Disabled
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FriendlyName
+  description: |+
+    Specifies the name of the DirectAccess deployment to be shown in the client computer user interface.
+    It is recommended that the name be 15 characters or less.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GPOSession
+  description: |+
+    Specifies the Group Policy session to send configuration information.
+    You can use *GPOSession* with the **NetGPO** cmdlets to aggregate multiple operations performed on a Group Policy Object.
+
+    *GPOSession* cannot be used in conjunction with *PolicyStore*.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GslbFqdn
+  description: |+
+    Specifies the fully-qualified domain name (FQDN) used for DirectAccess multisite client computers.
+    The client computer resolves the FQDN to an IP address, and compares the IP address to the list of entry points.
+    Client computers use the matching entry point for connectivity.
+
+    Specify the value for *GslbFqdn* in double quotes (" ").
+
+  defaultValue: None
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPsecTunnelEndpoints
+  description: |+
+    Configures the IPsec tunnel endpoints to use for DirectAccess.
+    Client computers use this information to verify the availability of the DirectAccess servers and present that information to the user.
+
+    Specify the values for *IPsecTunnelEndpoints* in double quotes (" "), separated by commas, in the format:
+
+    "Ping: ipaddress"
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ManualEntryPointSelectionAllowed
+  description: |+
+    Specifies if the user of a client computer can change the site used for DirectAccess connectivity.
+    If *ManualEntryPointSelectionAllowed* is set to $True, then users can change the entry point configuration in the user interface.
+    If *ManualEntryPointSelectionAllowed* is set to $False, then users cannot change the entry point configuration in the user interface.
+    By default, *ManualEntryPointSelectionAllowed* is set to $True.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: PassiveMode
+  description: |+
+    Controls the passive mode setting on DirectAccess client computers.
+    In order to report DirectAccess status to the user, DirectAccess performs a set of tests frequently.
+    When *PassiveMode* is set to $True, those tests happen much less frequently.
+    However, enabling passive mode makes the client experience less responsive.
+
+    Valid values for *PassiveMode* are True or False.
+    By default, *PassiveMode* is set to False, which is the recommended setting.
+
+  defaultValue: None
+  position: "11"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Sends items from an interactive window down the pipeline as input to other cmdlets.
+    By default, this cmdlet does not generate any output.
+    However, to send items from the interactive window down the pipeline, click to select the items and then click OK.
+    Shift-click and Ctrl-click are supported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  description: |+
+    Specifies the policy store into which the cmdlet stores the configuration information.
+
+    To store the configuration information in a Group Policy Object, specify the GPO name using the format "Domain\GPOName".
+
+    To store the configuration information in a computer's local GPO, specify the computer's local GPO name in the format "GPO:\<computername\>".
+
+    *PolicyStore* cannot be used in conjunction with *GPOSession*.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: PreferLocalNamesAllowed
+  description: |+
+    Indicates whether users can disconnect DirectAccess.
+    Disconnecting DirectAccess temporarily deactivates the name resolution policy table.
+
+    Valid values for *PreferLocalNamesAllowed* are True or False.
+    If set to True, users can disconnect DirectAccess.
+    The default value is False.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SupportEmail
+  description: |+
+    Configures the email address displayed in the user interface for users to send logs and requests for assistance.
+    *SupportEmail* must be configured for logging to work.
+
+    Specify *SupportEmail* in the format of a valid email address.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UserInterface
+  description: |+
+    Enables or disables the user interface for DirectAccess on the client computers that receive the policy.
+
+    Valid values for *UserInterface* are True or False.
+    Setting *UserInterface* to False removes the user interface.
+    By default, *UserInterface* is set to True.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: DirectAccessClientComponents.Set-DAClientExperienceConfiguration
+name: Set-DAClientExperienceConfiguration
+description: |-
+  The **Set-DAClientExperienceConfiguration** cmdlet modifies the specified configuration properties of the DirectAccess client user experience.
+  The DirectAccess client configuration controls the user interface behavior, as well as what configuration options are available to the user.
+
+  This cmdlet can be used to change configuration properties stored in Group Policy Objects.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_DAClientExperienceConfiguration.cdxml-help.xml
+  Module Name: DirectAccessClientComponents
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/directaccessclientcomponents/set-daclientexperienceconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DAClientExperienceConfiguration

@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the list of backup file specifications associated with a backup policy.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet queries the **WBPolicy** object that contains the specified backup policy.
+outputs:
+- name: <xref href="WBFileSpec " data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: |-
+    This cmdlet returns a list of **WBFileSpec** objects that contain backup file specifications for a **WBPolicy** object that contains a backup policy.
+links:
+- text: Add-WBFileSpec
+  href: ./Add-WBFileSpec.yml
+- text: Get-WBFileSpec
+  href: ./Get-WBFileSpec.yml
+- text: New-WBPolicy
+  href: ./New-WBPolicy.yml
+- text: Remove-WBFileSpec
+  href: ./Remove-WBFileSpec.yml
+syntaxes:
+- Get-WBFileSpec [-Policy] <WBPolicy> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get backup file specifications for a backup policy'
+  code: |-
+    PS C:\> $Filespeclist = Get-WBFileSpec -Policy $Policy
+  description: |-
+    This command gets the list of file specifications in the **WBPolicy** object in the variable named $Policy and assigns them to the $Filespeclist array.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies the **WBPolicy** object that contains the backup policy for which to display backup file specifications.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Get-WBFileSpec
+name: Get-WBFileSpec
+description: |-
+  The **Get-WBFileSpec** cmdlet gets the list of **WBFileSpec** objects that contain backup file specifications for a **WBPolicy** object that contains a backup policy.
+  A **WBFileSpec** object defines the items to include in or exclude from backups that you create by using the backup policy.
+
+  Use the [New-WBFileSpec](./New-WBFileSpec.yml) and [Add-WBFileSpec](./Add-WBFileSpec.yml) cmdlets to define and apply changes to the backup policy.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbfilespec?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WBFileSpec

@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports the current associations between users and personal virtual desktops to a file.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDPersonalVirtualDesktopAssignment
+  href: ./Get-RDPersonalVirtualDesktopAssignment.yml
+- text: Import-RDPersonalVirtualDesktopAssignment
+  href: ./Import-RDPersonalVirtualDesktopAssignment.yml
+- text: Remove-RDPersonalVirtualDesktopAssignment
+  href: ./Remove-RDPersonalVirtualDesktopAssignment.yml
+- text: Set-RDPersonalVirtualDesktopAssignment
+  href: ./Set-RDPersonalVirtualDesktopAssignment.yml
+syntaxes:
+- >-
+  Export-RDPersonalVirtualDesktopAssignment [-CollectionName] <String> -Path <String>
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: 'Example1: Create a delimited text file of the current associations between users and personal virtual desktops'
+  code: |-
+    PS C:\> Export-RDPersonalVirtualDesktopAssignment -Path "c:\reports\VirtDeskAssignReport" -ConnectionBroker "Rdcb.Contoso.com"
+  description: |-
+    This command creates a text file in the path named c:\reports\VirtDeskAssignReport by using the RD Connection Broker server named Rdcb.Contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a personal virtual desktop collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for this Remote Desktop deployment.
+    If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path and file name of an output file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Export-RDPersonalVirtualDesktopAssignment
+name: Export-RDPersonalVirtualDesktopAssignment
+description: |-
+  The **Export-RDPersonalVirtualDesktopAssignment** cmdlet exports the current associations between users and personal virtual desktops to a text file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/export-rdpersonalvirtualdesktopassignment?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-RDPersonalVirtualDesktopAssignment

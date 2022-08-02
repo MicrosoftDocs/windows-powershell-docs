@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables a TLS session ticket key.
+module: TLS
+notes: ""
+links:
+- text: Enable-TlsSessionTicketKey
+  href: ./Enable-TlsSessionTicketKey.yml
+- text: New-TlsSessionTicketKey
+  href: ./New-TlsSessionTicketKey.yml
+- text: Export-TlsSessionTicketKey
+  href: ./Export-TlsSessionTicketKey.yml
+syntaxes:
+- Disable-TlsSessionTicketKey [-ServiceAccountName] <NTAccount> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable a TLS session ticket key.'
+  code: |-
+    PS C:\> Disable-TlsSessionTicketKey -ServiceAccountName "NetworkService"
+  description: |-
+    This command disables the TLS session ticket key for the service account named NetworkService.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="NTAccount" data-throw-if-not-resolved="False" />
+  name: ServiceAccountName
+  isRequired: true
+  description: |+
+    Specifies the name of a service account.
+    The cmdlet disables the TLS session ticket key for the service account.
+    Only System, LocalService, NetworkService, and SID of virtual accounts are supported.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: TLS.Disable-TlsSessionTicketKey
+name: Disable-TlsSessionTicketKey
+description: |-
+  The **Disable-TlsSessionTicketKey** cmdlet disables an administrator managed Transport Layer Security (TLS) session ticket key for the service account.
+  The cmdlet disables the key for the TLS session by deleting the key and the corresponding rule that uses the key.
+
+  When you disable a TLS session ticket key for the service account, the service account cannot decrypt existing TLS session tickets.
+  Disabling the TLS session ticket key can affect the performance of the TLS server.
+  The TLS server cannot create new session tickets and must negotiate session information between the client and the server every time the client connects to the TLS server.
+
+  TLS creates a session ticket by using the TLS Session Resumption without Server-Side State mechanism.
+  For more information, see New-TlsSessionTicketKey or type `Get-Help New-TlsSessionTicketKey`.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
+  Module Name: TLS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/tls/disable-tlssessionticketkey?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Disable-TlsSessionTicketKey

@@ -1,0 +1,117 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts an application recovery operation.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBBackupSet, WBApplication" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    If you do not specify the *Async* parameter, the recovery operation displays status messages at periodic intervals until the recovery is complete.
+    While the recovery operation is running, you can use the [Get-WBJob](./Get-WBJob.yml) cmdlet to get the status of the operation.
+    After the operation is complete you can use the `Get-WBJob -Previous 1` command to get the completed recovery status.
+links:
+- text: Get-WBBackupSet
+  href: ./Get-WBBackupSet.yml
+syntaxes:
+- >-
+  Start-WBApplicationRecovery [-BackupSet] <WBBackupSet> [-ApplicationInBackup] <WBApplication>
+
+   [[-RecoveryTarget] <String>] [-NoRollForward] [-Async] [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Start an application recovery operation'
+  code: |-
+    PS C:\> $Backup = Get-WBBackupSet
+    PS C:\> Start-WBApplicationRecovery -BackupSet $Backup -ApplicationInBackup $Backup.Application[0] -RecoveryTarget "F:\"
+    Warning
+    Start recovery of application Registry to F:\ ? 
+     [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+    Recovering component Registry : 
+    Recovering component Registry : Preparing to recover. 
+    Completed.
+  description: |-
+    This example recovers an application to a file path.
+
+    The first command gets the backup object from the system catalog and stores it in the variable named $Backup.
+
+    The second command starts the recovery by specifying $Backup as the backup set, and specifying the first element of the application array within the backup set.
+    The first element of the application array is the registry.
+  summary: ""
+parameters:
+- type: <xref href="WBApplication" data-throw-if-not-resolved="False" />
+  name: ApplicationInBackup
+  isRequired: true
+  description: |+
+    Specifies an application object that contains the application that this cmdlet recovers.
+    This application must exist in the backup set's application array.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Async
+  description: |+
+    Indicates that Windows PowerShell returns immediately after starting the backup without displaying status messages to the console.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBBackupSet" data-throw-if-not-resolved="False" />
+  name: BackupSet
+  isRequired: true
+  description: |+
+    Specifies a backup set object that contains the backup set from which to recover the application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRollForward
+  description: |+
+    Indicates that this cmdlet recovers applications from a previous point in time if you select the latest version of the application from the backups.
+    For versions of the application other than the latest version, the operation uses point-in-time recovery by default.
+
+  defaultValue: "False"
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RecoveryTarget
+  description: |+
+    Specifies the path to which the recovery operation recovers the application.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Start-WBApplicationRecovery
+name: Start-WBApplicationRecovery
+description: |-
+  The **Start-WBApplicationRecovery** cmdlet starts an application recovery operation.
+  To perform application recovery, you must specify the backup set from which to recover the application and the application to recover.
+  The application to recover must exist in the application array for the backup set specified.
+  If you do not specify a recovery target, the operation recovers the application to the application's original location.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/start-wbapplicationrecovery?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-WBApplicationRecovery

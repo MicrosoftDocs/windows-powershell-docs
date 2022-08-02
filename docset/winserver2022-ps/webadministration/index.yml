@@ -1,0 +1,95 @@
+### YamlMime:PowershellModule
+children:
+- title: WebAdministration
+  cmdlets:
+  - WebAdministration.Add-WebConfiguration
+  - WebAdministration.Add-WebConfigurationLock
+  - WebAdministration.Add-WebConfigurationProperty
+  - WebAdministration.Backup-WebConfiguration
+  - WebAdministration.Clear-WebCentralCertProvider
+  - WebAdministration.Clear-WebConfiguration
+  - WebAdministration.Clear-WebRequestTracingSetting
+  - WebAdministration.Clear-WebRequestTracingSettings
+  - WebAdministration.ConvertTo-WebApplication
+  - WebAdministration.Disable-WebCentralCertProvider
+  - WebAdministration.Disable-WebGlobalModule
+  - WebAdministration.Disable-WebRequestTracing
+  - WebAdministration.Enable-WebCentralCertProvider
+  - WebAdministration.Enable-WebGlobalModule
+  - WebAdministration.Enable-WebRequestTracing
+  - WebAdministration.Get-WebAppDomain
+  - WebAdministration.Get-WebApplication
+  - WebAdministration.Get-WebAppPoolState
+  - WebAdministration.Get-WebBinding
+  - WebAdministration.Get-WebCentralCertProvider
+  - WebAdministration.Get-WebConfigFile
+  - WebAdministration.Get-WebConfiguration
+  - WebAdministration.Get-WebConfigurationBackup
+  - WebAdministration.Get-WebConfigurationLocation
+  - WebAdministration.Get-WebConfigurationLock
+  - WebAdministration.Get-WebConfigurationProperty
+  - WebAdministration.Get-WebFilePath
+  - WebAdministration.Get-WebGlobalModule
+  - WebAdministration.Get-WebHandler
+  - WebAdministration.Get-WebItemState
+  - WebAdministration.Get-WebManagedModule
+  - WebAdministration.Get-WebRequest
+  - WebAdministration.Get-Website
+  - WebAdministration.Get-WebsiteState
+  - WebAdministration.Get-WebURL
+  - WebAdministration.Get-WebVirtualDirectory
+  - WebAdministration.New-WebApplication
+  - WebAdministration.New-WebAppPool
+  - WebAdministration.New-WebBinding
+  - WebAdministration.New-WebFtpSite
+  - WebAdministration.New-WebGlobalModule
+  - WebAdministration.New-WebHandler
+  - WebAdministration.New-WebManagedModule
+  - WebAdministration.New-Website
+  - WebAdministration.New-WebVirtualDirectory
+  - WebAdministration.Remove-WebApplication
+  - WebAdministration.Remove-WebAppPool
+  - WebAdministration.Remove-WebBinding
+  - WebAdministration.Remove-WebConfigurationBackup
+  - WebAdministration.Remove-WebConfigurationLocation
+  - WebAdministration.Remove-WebConfigurationLock
+  - WebAdministration.Remove-WebConfigurationProperty
+  - WebAdministration.Remove-WebGlobalModule
+  - WebAdministration.Remove-WebHandler
+  - WebAdministration.Remove-WebManagedModule
+  - WebAdministration.Remove-Website
+  - WebAdministration.Remove-WebVirtualDirectory
+  - WebAdministration.Rename-WebConfigurationLocation
+  - WebAdministration.Restart-WebAppPool
+  - WebAdministration.Restart-WebItem
+  - WebAdministration.Restore-WebConfiguration
+  - WebAdministration.Select-WebConfiguration
+  - WebAdministration.Set-WebBinding
+  - WebAdministration.Set-WebCentralCertProvider
+  - WebAdministration.Set-WebCentralCertProviderCredential
+  - WebAdministration.Set-WebConfiguration
+  - WebAdministration.Set-WebConfigurationProperty
+  - WebAdministration.Set-WebGlobalModule
+  - WebAdministration.Set-WebHandler
+  - WebAdministration.Set-WebManagedModule
+  - WebAdministration.Start-WebAppPool
+  - WebAdministration.Start-WebCommitDelay
+  - WebAdministration.Start-WebItem
+  - WebAdministration.Start-Website
+  - WebAdministration.Stop-WebAppPool
+  - WebAdministration.Stop-WebCommitDelay
+  - WebAdministration.Stop-WebItem
+  - WebAdministration.Stop-Website
+uid: WebAdministration
+name: WebAdministration
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Web Administration cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 4.0.3.1
+  Locale: en-US
+  Module Guid: 13c15630-959c-49e4-a977-758c5cc93408
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  title: WebAdministration

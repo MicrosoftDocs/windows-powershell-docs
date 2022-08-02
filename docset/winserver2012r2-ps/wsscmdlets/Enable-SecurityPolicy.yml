@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables predefined security group policies.
+module: WSSCmdlets
+notes: ""
+links:
+- text: Disable-SecurityPolicy
+  href: ./Disable-SecurityPolicy.yml
+syntaxes:
+- Enable-SecurityPolicy [-AllPolicy] [<CommonParameters>]
+- Enable-SecurityPolicy -Policy <String[]> [<CommonParameters>]
+examples:
+- title: 'Example 1: Enable predefined security group policies'
+  code: |-
+    PS C:\> Enable-SecurityPolicy -Policy "WindowsUpdate"
+  description: |-
+    This command enables the security group policy for Windows Update.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllPolicy
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet enables all pre-defined group policies for Windows Update, Windows Firewall, and Windows Defender.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Policy
+  isRequired: true
+  description: |+
+    Specifies an array of group policies to enable.
+    The acceptable values for this parameter are:
+
+    - WindowsUpdate
+    - Firewall
+    - WindowsDefender
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: WindowsUpdate, Firewall, WindowsDefender
+uid: WSSCmdlets.Enable-SecurityPolicy
+name: Enable-SecurityPolicy
+description: |-
+  The **Enable-SecurityPolicy** cmdlet enables pre-defined group policies for security features.
+  The cmdlet enables group policies for Windows Defender, Windows Update, and Windows Firewall.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/enable-securitypolicy?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Enable-SecurityPolicy

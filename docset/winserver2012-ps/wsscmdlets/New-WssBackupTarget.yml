@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a backup target from a backup disk.
+module: WssCmdlets
+notes: ""
+links:
+- text: Add-WssBackupTarget
+  href: ./Add-WssBackupTarget.yml
+- text: Get-WssBackupTarget
+  href: ./Get-WssBackupTarget.yml
+- text: Remove-WssBackupTarget
+  href: ./Remove-WssBackupTarget.yml
+syntaxes:
+- New-WssBackupTarget [-Disk] <BackupDisk> [[-Label] <String>] [-PreserveExistingBackups]
+examples:
+- title: 'Example 1: Create a backup target from a backup disk'
+  code: |-
+    PS C:\> New-WssBackupTarget -Disk $disks[1] -Label "Backup Disk 1" -PreserveExistingBackups
+  description: |-
+    This command creates a backup target labeled Backup Disk 1 from the second item, located in position 1, of the array that is stored in the **$disks** variable.
+  summary: ""
+parameters:
+- type: <xref href="BackupDisk" data-throw-if-not-resolved="False" />
+  name: Disk
+  isRequired: true
+  description: |+
+    Specifies the backup disk that stores backups.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Label
+  description: |+
+    Specifies the label for the backup storage location.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PreserveExistingBackups
+  description: |+
+    Indicates that the cmdlet keeps existing backups on the disk in the **BackupDisk** parameter when the cmdlet adds a new backup to the disk.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WssCmdlets.New-WssBackupTarget
+name: New-WssBackupTarget
+description: |-
+  The **New-WssBackupTarget** cmdlet creates a backup target from a backup disk.
+  A backup target defines storage locations for backups.
+metadata:
+  external help file: WSS_Cmdlets.xml
+  Module Name: WssCmdlets
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/new-wssbackuptarget?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

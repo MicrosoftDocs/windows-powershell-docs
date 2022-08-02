@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports shielding data.
+module: ShieldedVMDataFile
+notes: ""
+outputs:
+- name: <xref href="ShieldingDataFile, ExistingVMShieldingDataFile" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **ShieldingDataFile** object.
+    This object represents a .pdk file used to provision a shielded virtual machine.
+syntaxes:
+- Import-ShieldingDataFile [-ShieldingDataFilePath] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Provision a virtual machine by using an imported data file'
+  code: |-
+    PS C:\>Import-ShieldingDataFile -ShieldingDataFilePath "ShieldingFile02.pdk" | Protect-ShieldingDataFile -ShieldingDataFilePath "ShieldingDataFile07.pdk"
+  description: |-
+    This command creates a **ShieldingDataFile** object.
+    The command passes it to the Protect-ShieldingDataFile cmdlet.
+    That cmdlet specifies the output file name.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ShieldingDataFilePath
+  isRequired: true
+  description: |+
+    Specifies the path of a shielding data file.
+    The file has the .pdk file name extension.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ShieldedVMDataFile.Import-ShieldingDataFile
+name: Import-ShieldingDataFile
+description: |-
+  The **Import-ShieldingDataFile** cmdlet imports a **ShieldingDataFile** object from a shielding data file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
+  Module Name: ShieldedVMDataFile
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/shieldedvmdatafile/import-shieldingdatafile?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Import-ShieldingDataFile

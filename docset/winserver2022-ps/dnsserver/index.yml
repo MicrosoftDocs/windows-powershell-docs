@@ -1,0 +1,149 @@
+### YamlMime:PowershellModule
+children:
+- title: DnsServer
+  cmdlets:
+  - DnsServer.Add-DnsServerClientSubnet
+  - DnsServer.Add-DnsServerConditionalForwarderZone
+  - DnsServer.Add-DnsServerDirectoryPartition
+  - DnsServer.Add-DnsServerForwarder
+  - DnsServer.Add-DnsServerPrimaryZone
+  - DnsServer.Add-DnsServerQueryResolutionPolicy
+  - DnsServer.Add-DnsServerRecursionScope
+  - DnsServer.Add-DnsServerResourceRecord
+  - DnsServer.Add-DnsServerResourceRecordA
+  - DnsServer.Add-DnsServerResourceRecordAAAA
+  - DnsServer.Add-DnsServerResourceRecordCName
+  - DnsServer.Add-DnsServerResourceRecordDnsKey
+  - DnsServer.Add-DnsServerResourceRecordDS
+  - DnsServer.Add-DnsServerResourceRecordMX
+  - DnsServer.Add-DnsServerResourceRecordPtr
+  - DnsServer.Add-DnsServerResponseRateLimitingExceptionlist
+  - DnsServer.Add-DnsServerRootHint
+  - DnsServer.Add-DnsServerSecondaryZone
+  - DnsServer.Add-DnsServerSigningKey
+  - DnsServer.Add-DnsServerStubZone
+  - DnsServer.Add-DnsServerTrustAnchor
+  - DnsServer.Add-DnsServerVirtualizationInstance
+  - DnsServer.Add-DnsServerZoneDelegation
+  - DnsServer.Add-DnsServerZoneScope
+  - DnsServer.Add-DnsServerZoneTransferPolicy
+  - DnsServer.Clear-DnsServerCache
+  - DnsServer.Clear-DnsServerStatistics
+  - DnsServer.ConvertTo-DnsServerPrimaryZone
+  - DnsServer.ConvertTo-DnsServerSecondaryZone
+  - DnsServer.Disable-DnsServerPolicy
+  - DnsServer.Disable-DnsServerSigningKeyRollover
+  - DnsServer.Enable-DnsServerPolicy
+  - DnsServer.Enable-DnsServerSigningKeyRollover
+  - DnsServer.Export-DnsServerDnsSecPublicKey
+  - DnsServer.Export-DnsServerZone
+  - DnsServer.Get-DnsServer
+  - DnsServer.Get-DnsServerCache
+  - DnsServer.Get-DnsServerClientSubnet
+  - DnsServer.Get-DnsServerDiagnostics
+  - DnsServer.Get-DnsServerDirectoryPartition
+  - DnsServer.Get-DnsServerDnsSecZoneSetting
+  - DnsServer.Get-DnsServerDsSetting
+  - DnsServer.Get-DnsServerEDns
+  - DnsServer.Get-DnsServerForwarder
+  - DnsServer.Get-DnsServerGlobalNameZone
+  - DnsServer.Get-DnsServerGlobalQueryBlockList
+  - DnsServer.Get-DnsServerQueryResolutionPolicy
+  - DnsServer.Get-DnsServerRecursion
+  - DnsServer.Get-DnsServerRecursionScope
+  - DnsServer.Get-DnsServerResourceRecord
+  - DnsServer.Get-DnsServerResponseRateLimiting
+  - DnsServer.Get-DnsServerResponseRateLimitingExceptionlist
+  - DnsServer.Get-DnsServerRootHint
+  - DnsServer.Get-DnsServerScavenging
+  - DnsServer.Get-DnsServerSetting
+  - DnsServer.Get-DnsServerSigningKey
+  - DnsServer.Get-DnsServerStatistics
+  - DnsServer.Get-DnsServerTrustAnchor
+  - DnsServer.Get-DnsServerTrustPoint
+  - DnsServer.Get-DnsServerVirtualizationInstance
+  - DnsServer.Get-DnsServerZone
+  - DnsServer.Get-DnsServerZoneAging
+  - DnsServer.Get-DnsServerZoneDelegation
+  - DnsServer.Get-DnsServerZoneScope
+  - DnsServer.Get-DnsServerZoneTransferPolicy
+  - DnsServer.Import-DnsServerResourceRecordDS
+  - DnsServer.Import-DnsServerRootHint
+  - DnsServer.Import-DnsServerTrustAnchor
+  - DnsServer.Invoke-DnsServerSigningKeyRollover
+  - DnsServer.Invoke-DnsServerZoneSign
+  - DnsServer.Invoke-DnsServerZoneUnsign
+  - DnsServer.Register-DnsServerDirectoryPartition
+  - DnsServer.Remove-DnsServerClientSubnet
+  - DnsServer.Remove-DnsServerDirectoryPartition
+  - DnsServer.Remove-DnsServerForwarder
+  - DnsServer.Remove-DnsServerQueryResolutionPolicy
+  - DnsServer.Remove-DnsServerRecursionScope
+  - DnsServer.Remove-DnsServerResourceRecord
+  - DnsServer.Remove-DnsServerResponseRateLimitingExceptionlist
+  - DnsServer.Remove-DnsServerRootHint
+  - DnsServer.Remove-DnsServerSigningKey
+  - DnsServer.Remove-DnsServerTrustAnchor
+  - DnsServer.Remove-DnsServerVirtualizationInstance
+  - DnsServer.Remove-DnsServerZone
+  - DnsServer.Remove-DnsServerZoneDelegation
+  - DnsServer.Remove-DnsServerZoneScope
+  - DnsServer.Remove-DnsServerZoneTransferPolicy
+  - DnsServer.Reset-DnsServerZoneKeyMasterRole
+  - DnsServer.Restore-DnsServerPrimaryZone
+  - DnsServer.Restore-DnsServerSecondaryZone
+  - DnsServer.Resume-DnsServerZone
+  - DnsServer.Set-DnsServer
+  - DnsServer.Set-DnsServerCache
+  - DnsServer.Set-DnsServerClientSubnet
+  - DnsServer.Set-DnsServerConditionalForwarderZone
+  - DnsServer.Set-DnsServerDiagnostics
+  - DnsServer.Set-DnsServerDnsSecZoneSetting
+  - DnsServer.Set-DnsServerDsSetting
+  - DnsServer.Set-DnsServerEDns
+  - DnsServer.Set-DnsServerForwarder
+  - DnsServer.Set-DnsServerGlobalNameZone
+  - DnsServer.Set-DnsServerGlobalQueryBlockList
+  - DnsServer.Set-DnsServerPrimaryZone
+  - DnsServer.Set-DnsServerQueryResolutionPolicy
+  - DnsServer.Set-DnsServerRecursion
+  - DnsServer.Set-DnsServerRecursionScope
+  - DnsServer.Set-DnsServerResourceRecord
+  - DnsServer.Set-DnsServerResourceRecordAging
+  - DnsServer.Set-DnsServerResponseRateLimiting
+  - DnsServer.Set-DnsServerResponseRateLimitingExceptionlist
+  - DnsServer.Set-DnsServerRootHint
+  - DnsServer.Set-DnsServerScavenging
+  - DnsServer.Set-DnsServerSecondaryZone
+  - DnsServer.Set-DnsServerSetting
+  - DnsServer.Set-DnsServerSigningKey
+  - DnsServer.Set-DnsServerStubZone
+  - DnsServer.Set-DnsServerVirtualizationInstance
+  - DnsServer.Set-DnsServerZoneAging
+  - DnsServer.Set-DnsServerZoneDelegation
+  - DnsServer.Set-DnsServerZoneTransferPolicy
+  - DnsServer.Show-DnsServerCache
+  - DnsServer.Show-DnsServerKeyStorageProvider
+  - DnsServer.Start-DnsServerScavenging
+  - DnsServer.Start-DnsServerZoneTransfer
+  - DnsServer.Step-DnsServerSigningKeyRollover
+  - DnsServer.Suspend-DnsServerZone
+  - DnsServer.Sync-DnsServerZone
+  - DnsServer.Test-DnsServer
+  - DnsServer.Test-DnsServerDnsSecZoneSetting
+  - DnsServer.Unregister-DnsServerDirectoryPartition
+  - DnsServer.Update-DnsServerTrustPoint
+uid: DnsServer
+name: DnsServer
+description: |-
+  This reference provides cmdlet descriptions and syntax for all DNS Server cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+  DnsServer Module can be obtained either by installing DNS Server role or adding the DNS Server Tools part of Remote Server Administration Tools (RSAT) feature.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.5.2
+  Locale: en-US
+  Module Guid: 46f598e5-9907-42b2-afbb-68e5f7e34604
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  title: DnsServer

@@ -1,0 +1,198 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet adds a new service insertion resource to the Network Controller
+module: NetworkController
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Following properties for service insertion can be added/changed:
+    a.
+    For each service insertion rule, the following can be specified
+        1.
+    Description of rule
+        2.
+    Protocol
+        3.
+    Starting source port
+        4.
+    Ending source port
+        5.
+    Starting destination port
+        6.
+    Ending destination port
+        7.
+    Source subnet(s)
+        8.
+    Destination subnet(s)
+    b.
+    For each destination element where service insertion has to be applied
+        1.
+    Description
+        2.
+    Destination network interface
+        3.
+    Order of the element
+syntaxes:
+- >-
+  New-NetworkControllerServiceInsertion -ConnectionUri <Uri> -Properties <ServiceInsertionProperties>
+
+   -ResourceId <string> [-CertificateThumbPrint <string>] [-Credential <PSCredential>] [-Etag <string>] [-Force]
+
+   [-ResourceMetadata <ResourceMetadata>] [-Tags <psobject>]
+examples:
+- title: Example 1
+  code: |-
+    $dstNic = get-networkcontrollernetworkinterface -ConnectionUri https://networkcontroller -ResourceId "Appliance_Ethernet1"
+
+    $portmirror = [Microsoft.Windows.NetworkController.ServiceInsertionProperties]::new()
+    $portMirror.Priority = 1
+
+    //Create service insertion rules object to contain rules that must be matched in order for traffic to be sent to appliance
+    $portmirror.ServiceInsertionRules = [Microsoft.Windows.NetworkController.ServiceInsertionRule[]]::new(1)
+
+    $portmirror.ServiceInsertionRules[0] = [Microsoft.Windows.NetworkController.ServiceInsertionRule]::new()
+    $portmirror.ServiceInsertionRules[0].ResourceId = "Rule1"
+    $portmirror.ServiceInsertionRules[0].Properties = [Microsoft.Windows.NetworkController.ServiceInsertionRuleProperties]::new()
+
+    $portmirror.ServiceInsertionRules[0].Properties.Description = "Port Mirror Rule"
+    $portmirror.ServiceInsertionRules[0].Properties.Protocol = "All"
+    $portmirror.ServiceInsertionRules[0].Properties.SourcePortRangeStart = "0"
+    $portmirr
+  description: |-
+    Description
+
+
+
+    The above example creates a service insertion object that mirrors the traffic to the destination NIC specified by "Appliance_Ethernet1".
+    This objet can be applied to a network interface so that the traffic from that network interface is mirrored to "Appliance_Enternet1".
+  summary: ""
+parameters:
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: CertificateThumbPrint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.
+    This thumbprint must also be provided in the ClientCertificateThumbprint parameter in the Install-NetworkController or Set-NetworkController cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.This user must be present in the security group provided in the ClientSecurityGroup parameter in the Install-NetworkController cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) parameter of the resource.
+    An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="switch" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ServiceInsertionProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    Following properties for service insertion can be added/changed:
+    a.
+    For each service insertion rule, the following can be specified
+        1.
+    Description of rule
+        2.
+    Protocol
+        3.
+    Starting source port
+        4.
+    Ending source port
+        5.
+    Starting destination port
+        6.
+    Ending destination port
+        7.
+    Source subnet(s)
+        8.
+    Destination subnet(s)
+    b.
+    For each destination element where service insertion has to be applied
+        1.
+    Description
+        2.
+    Destination network interface
+        3.
+    Order of the element
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the ID of the resource to be created
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    This parameter contains metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="psobject" data-throw-if-not-resolved="False" />
+  name: Tags
+  description: |+
+    @{Text=}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.New-NetworkControllerServiceInsertion
+name: New-NetworkControllerServiceInsertion
+description: |-
+  This cmdlet adds a new service insertion resource to the Network Controller.
+  This is useful for cases like port mirroring, so that traffic from one VM can be mirrored to another VM, say for inspection purposes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrollerserviceinsertion?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkControllerServiceInsertion

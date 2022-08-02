@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the running log sessions.
+module: BootEventCollector
+notes: ""
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="SbecEtwTrace.TraceSessionInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    The **SbecEtwTrace.TraceSessionInfo** class is defined in $PsHome\Modules\BootEventCollector\SbecTraceHelpers.psm1.
+links:
+- text: Save-SbecLogSession
+  href: ./Save-SbecLogSession.yml
+- text: Set-SbecLogSession
+  href: ./Set-SbecLogSession.yml
+- text: Start-SbecLogSession
+  href: ./Start-SbecLogSession.yml
+- text: Start-SbecNtKernelLogSession
+  href: ./Start-SbecNtKernelLogSession.yml
+- text: Start-SbecSimpleLogSession
+  href: ./Start-SbecSimpleLogSession.yml
+- text: Stop-SbecLogSession
+  href: ./Stop-SbecLogSession.yml
+syntaxes:
+- Get-SbecLogSession [[-Name] <String>] [-KdOnly] [[-SimulateError] <Int32>] [<CommonParameters>]
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: KdOnly
+  description: |+
+    Indicates that this operation gets only log sessions that are configured to forward events through the kernel transport to the collector.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of a log session.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SimulateError
+  description: |+
+    Simulate a Windows error, and cause the function to throw.
+    You can specify this parameter to test error handling.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: BootEventCollector.Get-SbecLogSession
+name: Get-SbecLogSession
+description: |-
+  The **Get-SbecLogSession** cmdlet gets the ETW log sessions that are currently running.
+  This operation does not get log sessions defined in the registry for AutoLogger.
+
+  This cmdlet returns the **SbecEtwTrace.TraceSessionInfo** objects, whose properties contain most of the interesting information.
+  More details are available in the Trace property.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: BootEventCollector-help.xml
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/booteventcollector/get-sbeclogsession?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-SbecLogSession

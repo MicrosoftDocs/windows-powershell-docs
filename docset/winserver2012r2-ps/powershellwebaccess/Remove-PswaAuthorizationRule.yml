@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a specified authorization rule from Windows PowerShell® Web Access.
+module: PowerShellWebAccess
+notes: ""
+inputs:
+- name: <xref href="int" data-throw-if-not-resolved="False" /><span>[</span><xref href="], PswaAuthorizationRule[" data-throw-if-not-resolved="False" /><span>]</span>
+  description: |-
+    This cmdlet accepts either an array of integers or an array of PswaAuthorizationRule objects.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-PswaAuthorizationRule
+  href: ./Add-PswaAuthorizationRule.yml
+- text: Get-PswaAuthorizationRule
+  href: ./Get-PswaAuthorizationRule.yml
+- text: Test-PswaAuthorizationRule
+  href: ./Test-PswaAuthorizationRule.yml
+- text: Install-PswaWebApplication
+  href: ./Install-PswaWebApplication.yml
+syntaxes:
+- Remove-PswaAuthorizationRule [-Id] <Int32[]> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Remove-PswaAuthorizationRule [-Rule] <PswaAuthorizationRule[]> [-Force] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\> Remove-PswaAuthorizationRule -Id 2
+  description: |-
+    This example removes the authorization rule with an ID of 2.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\> Get-PswaAuthorizationRule | Remove-PswaAuthorizationRule -Confirm
+  description: |-
+    This example removes all authorization rules and also requires confirmation by the user.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Runs the cmdlet without prompting for confirmation.
+    By default the cmdlet asks for confirmation before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the identifiers (IDs) of one or more rules to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PswaAuthorizationRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Rule
+  isRequired: true
+  description: |+
+    Specifies the rules to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: PowerShellWebAccess.Remove-PswaAuthorizationRule
+name: Remove-PswaAuthorizationRule
+description: |-
+  Removes a specified authorization rule from Windows PowerShell Web Access.
+metadata:
+  external help file: Microsoft.Management.UI.PowWA.Commands.dll-Help.xml
+  Module Name: PowerShellWebAccess
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/powershellwebaccess/remove-pswaauthorizationrule?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-PswaAuthorizationRule

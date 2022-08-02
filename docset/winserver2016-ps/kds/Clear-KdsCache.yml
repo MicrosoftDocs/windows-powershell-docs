@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Clears the group key cache of the local computer.
+module: KDS
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts no input objects.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet produces no output.
+links:
+- text: Add-KdsRootKey
+  href: ./Add-KdsRootKey.yml
+- text: Get-KdsConfiguration
+  href: ./Get-KdsConfiguration.yml
+- text: Get-KdsRootKey
+  href: ./Get-KdsRootKey.yml
+- text: Set-KdsConfiguration
+  href: ./Set-KdsConfiguration.yml
+- text: Test-KdsRootKey
+  href: ./Test-KdsRootKey.yml
+syntaxes:
+- Clear-KdsCache [-CacheOwnerSid <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Clear the group key cache'
+  code: |-
+    PS C:\> Clear-KdsCache
+  description: |-
+    This command clears the group key cache of the local computer.
+  summary: ""
+- title: 'Example 2: Clear the group key cache of a specific user'
+  code: |-
+    PS C:\> Clear-KdsCache -CacheOwnerSid "s-1-1-0"
+  description: |-
+    This command clears the group key cache of the user with SID s-1-1-0.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CacheOwnerSid
+  description: |+
+    Specifies the security identifier (SID) for the user account whose cache this cmdlet clears.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: KDS.Clear-KdsCache
+name: Clear-KdsCache
+description: |-
+  The **Clear-KdsCache** cmdlet clears the group key cache of the local computer.
+
+  The local computer can be either a domain controller running the Microsoft Group Key Distribution Service (KdsSvc) or a client of the Microsoft Group KdsSvc.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
+  Module Name: KDS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/kds/clear-kdscache?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Clear-KdsCache

@@ -1,0 +1,164 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Begins aging of resource records in a specified DNS zone.
+module: DnsServer
+notes: ""
+links:
+- text: Get-DnsServerZoneAging
+  href: ./Get-DnsServerZoneAging.yml
+- text: Set-DnsServerZoneAging
+  href: ./Set-DnsServerZoneAging.yml
+syntaxes:
+- >-
+  Set-DnsServerResourceRecordAging [-ComputerName <String>] [-ZoneName] <String> [[-NodeName] <String>]
+
+   [-Recurse] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Age records in a zone'
+  code: |-
+    PS C:\> Set-DnsServerResourceRecordAging -ZoneName "contoso.com" -Force -Recurse
+  description: |-
+    This command ages all the records under contoso.com, recursively.
+    The *Force* parameter overrides the default confirmation message.
+  summary: ""
+- title: 'Example 2: Age records under a node'
+  code: |-
+    PS C:\> Set-DnsServerResourceRecordAging -NodeName "three.two" -ZoneName "contoso.com"
+  description: |-
+    This command ages all the records under the three.two node in the zone contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a DNS server.
+    If you do not specify this parameter, the command runs on the local system.
+    You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
+  defaultValue: None
+  position: Named
+  aliases: Cn
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Performs the action without a confirmation message.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NodeName
+  description: |+
+    Specifies a node or subtree in DNS zone.
+    The acceptable values for this parameter are:
+
+    - @ for root node.
+    - The FQDN of a node (the name with a period (.) at the end). 
+    - A single label for the name relative to the zone root.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recurse
+  description: |+
+    Indicates that the DNS server ages all the nodes under the specified node.
+    Use this parameter to age all records in a zone.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ZoneName
+  isRequired: true
+  description: |+
+    Specifies the name of a DNS zone.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: DnsServer.Set-DnsServerResourceRecordAging
+name: Set-DnsServerResourceRecordAging
+description: |-
+  The **Set-DnsServerResourceRecordAging** cmdlet ages Domain Name System (DNS) resource records in a DNS zone.
+  You must enable aging at the zone level by using the **Set-DnsServerZoneAging** cmdlet.
+
+  A resource record can remain after the resource is no longer part of the network.
+  Aging settings determine when a record can be removed as stale.
+  After that time, designated DNS servers can remove, or scavenge, a stale record.
+
+  This cmdlet sets a time stamp to the current time for records in a specified zone on the specified DNS server, if you have enabled aging for the zone.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: PS_DnsServerResourceRecordAging_v1.0.0.cdxml-help.xml
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverresourcerecordaging?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DnsServerResourceRecordAging

@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a backup volume from a scheduled backup policy.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.DataProtection.ServerBackup.ObjectModel.BackupVolume" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a backup volume.
+links:
+- text: Add-WssBackupVolume
+  href: ./Add-WssBackupVolume.yml
+- text: Get-WssBackupVolume
+  href: ./Get-WssBackupVolume.yml
+syntaxes:
+- >-
+  Remove-WssBackupVolume [-BackupPolicy] <ScheduledBackupPolicy> [-BackupVolume] <BackupVolume>
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a backup volume from a scheduled backup policy'
+  code: |-
+    PS C:\> Remove-WssBackupVolume -BackupPolicy $ContosoBUPolicy215 -BackupVolume $ContosoBUVol50
+  description: |-
+    This command removes the backup volume that is stored in the variable named **$ContosoBUVol50** from the scheduled backup policy that is stored in the variable named **$ContosoBUPolicy215**.
+  summary: ""
+parameters:
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies the scheduled backup policy from which to remove the backup volume.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="BackupVolume" data-throw-if-not-resolved="False" />
+  name: BackupVolume
+  isRequired: true
+  description: |+
+    Specifies the backup volume to remove from the scheduled backup policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Remove-WssBackupVolume
+name: Remove-WssBackupVolume
+description: |-
+  The **Remove-WssBackupVolume** cmdlet removes a backup volume from a scheduled backup policy.
+  When you remove a backup volume from a scheduled backup policy, backups that use the policy no longer back up the volume.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/remove-wssbackupvolume?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WssBackupVolume

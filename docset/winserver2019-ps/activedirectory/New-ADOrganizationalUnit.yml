@@ -1,0 +1,403 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an Active Directory organizational unit.
+module: ActiveDirectory
+notes: |-
+  * This cmdlet does not work with an Active Directory snapshot.
+  * This cmdlet does not work with a read-only domain controller.
+inputs:
+- name: <xref href="None or Microsoft.ActiveDirectory.Management.ADOrganizationalUnit" data-throw-if-not-resolved="False" />
+  description: |-
+    An OU object that is a template for the new OU object is received by the *Instance* parameter.
+outputs:
+- name: <xref href="None or Microsoft.ActiveDirectory.Management.ADOrganizationalUnit" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the new OU object when the *PassThru* parameter is specified.
+    By default, this cmdlet does not generate any output.
+links:
+- text: Get-ADOrganizationalUnit
+  href: ./Get-ADOrganizationalUnit.yml
+- text: Remove-ADOrganizationalUnit
+  href: ./Remove-ADOrganizationalUnit.yml
+- text: Set-ADOrganizationalUnit
+  href: ./Set-ADOrganizationalUnit.yml
+syntaxes:
+- >-
+  New-ADOrganizationalUnit [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-City <String>] [-Country <String>]
+
+   [-Credential <PSCredential>] [-Description <String>] [-DisplayName <String>]
+
+   [-Instance <ADOrganizationalUnit>] [-ManagedBy <ADPrincipal>] [-Name] <String> [-OtherAttributes <Hashtable>]
+
+   [-PassThru] [-Path <String>] [-PostalCode <String>] [-ProtectedFromAccidentalDeletion <Boolean>]
+
+   [-Server <String>] [-State <String>] [-StreetAddress <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Create an OU'
+  code: |-
+    PS C:\> New-ADOrganizationalUnit -Name "UserAccounts" -Path "DC=FABRIKAM,DC=COM"
+  description: |-
+    This command creates an OU named UserAccounts that is protected from accidental deletion.
+  summary: ""
+- title: 'Example 2: Create an OU that is not protected from accidental deletion'
+  code: |-
+    PS C:\> New-ADOrganizationalUnit -Name "UserAccounts" -Path "DC=FABRIKAM,DC=COM" -ProtectedFromAccidentalDeletion $False
+  description: |-
+    This command creates an OU named UserAccounts that is not protected from accidental deletion.
+  summary: ""
+- title: 'Example 3: Create an OU that is protected from accidental deletion'
+  code: |-
+    PS C:\> New-ADOrganizationalUnit -Name "UserAccounts" -Path "DC=FABRIKAM,DC=COM" -OtherAttributes @{seeAlso="CN=HumanResourceManagers,OU=Groups,OU=Managed,DC=Fabrikam,DC=com";managedBy="CN=TomC,DC=FABRIKAM,DC=COM"}
+  description: |-
+    This command creates an OU named UserAccounts that is protected from accidental deletion.
+    The **seeAlso** and **managedBy** properties are set to specified values.
+  summary: ""
+- title: 'Example 4: Create an OU from a template OU'
+  code: |-
+    PS C:\> $OuTemplate = Get-ADOrganizationalUnit -Identity "OU=UserAccounts,DC=Fabrikam,DC=com" -Properties seeAlso,managedBy 
+    PS C:\> New-ADOrganizationalUnit -Name "TomCReports" -Instance $OuTemplate
+  description: |-
+    This command uses the data from the OU OU=UserAccounts,DC=Fabrikam,DC=com as a template for another OU.
+  summary: ""
+- title: 'Example 5: Create an OU in an AD LDS instance'
+  code: |-
+    PS C:\> New-ADOrganizationalUnit -Name "Managed" -Path "DC=AppNC" -Server "FABRIKAM-SRV1:60000"
+  description: |-
+    This command creates an OU named Managed in an AD LDS instance.
+  summary: ""
+parameters:
+- type: <xref href="ADAuthType" data-throw-if-not-resolved="False" />
+  name: AuthType
+  description: |+
+    Specifies the authentication method to use.
+    The acceptable values for this parameter are:
+
+    - Negotiate or 0
+    - Basic or 1
+
+    The default authentication method is Negotiate.
+
+    A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Negotiate, Basic
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: City
+  description: |+
+    Specifies the town or city.
+    This parameter sets the **City** property of an OU object.
+    The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName**) of this property is l.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Country
+  description: |+
+    Specifies the country or region code.
+    This parameter sets the **Country** property of an OU object.
+    The LDAP display name (**ldapDisplayName**) of this property is c.
+    This value is not used by Windows 2000.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the user account credentials to use to perform this task.
+    The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory PowerShell provider drive.
+    If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
+
+    To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
+    If you specify a user name for this parameter, the cmdlet prompts for a password.
+
+    You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+    You can then set the *Credential* parameter to the **PSCredential** object.
+
+    If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description of the object.
+    This parameter sets the value of the **Description** property for the OU object.
+    The LDAP display name (**ldapDisplayName**) for this property is description.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Specifies the display name of the object.
+    This parameter sets the **DisplayName** property of the OU object.
+    The LDAP display name (**ldapDisplayName**) for this property is displayName.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADOrganizationalUnit" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Specifies an instance of an OU object to use as a template for a new OU object.
+
+    You can use an instance of an existing OU object as a template or you can construct a new OU object by using the Windows PowerShell command line or by using a script.
+
+    Method 1: Use an existing OU object as a template for a new object.
+    To retrieve an instance of an existing OU object use Get-ADOrganizationalUnit.
+    Then provide this object to the *Instance* parameter of the **New-ADOrganizationalUnit** cmdlet to create a new OU object.
+    You can override property values of the new object by setting the appropriate parameters.
+
+    Method 2: Create a new **ADOrganizationalUnit** object and set the property values by using the Windows PowerShell command line interface.
+    Then pass this object to the *Instance* parameter of the **New-ADOrganizationalUnit** cmdlet to create the new Active Directory OU object.
+
+    Note: Specified attributes are not validated, so attempting to set attributes that do not exist or cannot be set raises an error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ADPrincipal" data-throw-if-not-resolved="False" />
+  name: ManagedBy
+  description: |+
+    Specifies the user or group that manages the object by providing one of the following property values.
+    Note: The identifier in parentheses is the LDAP display name for the property.
+    The acceptable values for this parameter are:
+
+    - A distinguished name
+    - A GUID (objectGUID) 
+    - A security identifier (objectSid) 
+    - A SAM account name (sAMAccountName)
+
+    This parameter sets the Active Directory attribute with an LDAP display name of managedBy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the object.
+    This parameter sets the **Name** property of the OU object.
+    The LDAP display name (**ldapDisplayName**) of this property is name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: OtherAttributes
+  description: |+
+    Specifies object attribute values for attributes that are not represented by cmdlet parameters.
+    You can set one or more parameters at the same time with this parameter.
+    If an attribute takes more than one value, you can assign multiple values.
+    To identify an attribute, specify the LDAP display name (**ldapDisplayName**) defined for it in the Active Directory schema.
+
+    To specify a single value for an attribute:
+
+    `-OtherAttributes @{'AttributeLDAPDisplayName'=value}`
+
+    To specify multiple values for an attribute:
+
+    `-OtherAttributes @{'AttributeLDAPDisplayName'=value1,value2,...}`
+
+    To specify values for multiple attributes:
+
+    `-OtherAttributes @{'Attribute1LDAPDisplayName'=value; 'Attribute2LDAPDisplayName'=value1,value2;...}`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    Specifies the X.500 path of the OU or container where the new object is created.
+
+    In many cases, a default value is used for the *Path* parameter if no value is specified.
+    The rules for determining the default value are given below.
+    Note that rules listed first are evaluated first and when a default value can be determined, no further rules are evaluated.
+
+    In Active Directory Domain Services (AD DS) environments, a default value for *Path* is set in the following cases:
+
+    - If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current path of the provider drive. 
+    - If the cmdlet has a default path, this is used.
+    For example: in New-ADUser, the *Path* parameter defaults to the Users container. 
+    - If none of the previous cases apply, the default value of *Path*  is set to the default partition or naming context of the target domain.
+
+    In AD LDS environments, a default value for *Path*  is set in the following cases:
+
+    - If the cmdlet is run from an Active Directory module for PowerShell provider drive, the parameter is set to the current path of the provider drive. 
+    - If the cmdlet has a default path, this is used.
+    For example: in New-ADUser, the *Path* parameter defaults to the Users container. 
+    - If the target AD LDS instance has a default naming context, the default value of *Path* is set to the default naming context.
+    To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
+    - If none of the previous cases apply, the *Path* parameter does not take any default value.
+
+    Note: The Active Directory Provider cmdlets, such as **New-Item**, **Remove-Item**, **Remove-ItemProperty**, **Rename-Item**, and **Set-ItemProperty**, also contain a **Path** property.
+    However, for the Active Directory Provider cmdlets, the *Path* parameter identifies the path of the actual object rather than the container.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PostalCode
+  description: |+
+    Specifies the postal code or zip code.
+    This parameter sets the **PostalCode** property of an OU object.
+    The LDAP display name (**ldapDisplayName**) of this property is postalCode.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ProtectedFromAccidentalDeletion
+  description: |+
+    Indicates whether to prevent the object from being deleted.
+    When this property is set to $True, you cannot delete the corresponding object without changing the value of the property.
+    The acceptable values for this parameter are:
+
+    - $False or 0
+    - $True or 1
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the AD DS instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+    The service may be any of the following: AD LDS, AD DS, or Active Directory snapshot instance.
+
+    Specify the AD DS instance in one of the following ways:  
+
+    Domain name values:
+
+    - Fully qualified domain name
+    - NetBIOS name
+
+    Directory server values:  
+
+    - Fully qualified directory server name
+    - NetBIOS name
+    - Fully qualified directory server name and port
+
+    The default value for this parameter is determined by one of the following methods in the order that they are listed:
+
+    - By using the *Server* value from objects passed through the pipeline
+    - By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
+    - By using the domain of the computer running Windows PowerShell
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: State
+  description: |+
+    Specifies a state or province.
+    This parameter sets the **State** property of an OU object.
+    The LDAP display name (**ldapDisplayName**) of this property is st.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StreetAddress
+  description: |+
+    Specifies a street address.
+    This parameter sets the **StreetAddress** property of an OU object.
+    The LDAP display name (**ldapDisplayName**) of this property is street.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ActiveDirectory.New-ADOrganizationalUnit
+name: New-ADOrganizationalUnit
+description: |-
+  The **New-ADOrganizationalUnit** cmdlet creates an Active Directory organizational unit (OU).
+  You can set commonly used OU property values by using the cmdlet parameters.
+  **Property** values that are not associated with cmdlet parameters can be set by using the* OtherAttributes* parameter.
+
+  You must set the *Name* parameter to create a new OU.
+  If you do not specify the *Path* parameter, the cmdlet creates an OU under the default NC head for the domain.
+
+  The following methods describe how to create an object by using this cmdlet.
+
+  Method 1: Use the **New-ADOrganizationalUnit** cmdlet, specify the required parameters, and set any additional property values by using the cmdlet parameters.
+
+  Method 2: Use a template to create the new object.
+  To do this, create a new OU object or get a copy of an existing OU object and set the *Instance* parameter to this object.
+  The object provided to the *Instance* parameter is used as a template for the new object.
+  You can override property values from the template by setting cmdlet parameters.
+  For more information, see the *Instance* parameter description for this cmdlet.
+
+  Method 3: Use the **Import-Csv** cmdlet with the **New-ADOrganizationalUnit** cmdlet to create multiple Active Directory OU objects.
+  To do this, use the **Import-Csv** cmdlet to create the custom objects from a comma-separated value (CSV) file that contains a list of object properties.
+  Then pass these objects through the pipeline to the **New-ADOrganizationalUnit** cmdlet to create the OU objects.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+  Module Name: ActiveDirectory
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/activedirectory/new-adorganizationalunit?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-ADOrganizationalUnit

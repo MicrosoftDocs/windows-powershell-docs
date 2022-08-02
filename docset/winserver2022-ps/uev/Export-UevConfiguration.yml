@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports the UE-V configuration.
+module: UEV
+notes: ""
+links:
+- text: Get-UevConfiguration
+  href: ./Get-UevConfiguration.yml
+- text: Set-UevConfiguration
+  href: ./Set-UevConfiguration.yml
+- text: Clear-UevConfiguration
+  href: ./Clear-UevConfiguration.yml
+- text: Import-UevConfiguration
+  href: ./Import-UevConfiguration.yml
+syntaxes:
+- Export-UevConfiguration [-Path] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Export the UE-V configuration'
+  code: |-
+    PS C:\> Export-UevConfiguration -Path "ContosoUev.uev"
+  description: |-
+    This command exports the UE-V computer configuration to the settings migration file named ContosoUev.uev.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path of the settings migration file.
+    The cmdlet exports the UE-V configuration to the settings migration file that you specify.
+    The extension of the settings migration file must be .uev.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: UEV.Export-UevConfiguration
+name: Export-UevConfiguration
+description: |-
+  The **Export-UevConfiguration** cmdlet exports the Microsoft User Experience Virtualization (UE-V) computer configuration to a settings migration (.uev) file.
+  The cmdlet exports all UE-V agent settings for all users on the computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  Module Name: UEV
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/uev/export-uevconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-UevConfiguration

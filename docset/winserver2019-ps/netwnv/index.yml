@@ -1,0 +1,36 @@
+### YamlMime:PowershellModule
+children:
+- title: NetWNV
+  cmdlets:
+  - NetWNV.Get-NetVirtualizationCustomerRoute
+  - NetWNV.Get-NetVirtualizationGlobal
+  - NetWNV.Get-NetVirtualizationLookupRecord
+  - NetWNV.Get-NetVirtualizationProviderAddress
+  - NetWNV.Get-NetVirtualizationProviderRoute
+  - NetWNV.New-NetVirtualizationCustomerRoute
+  - NetWNV.New-NetVirtualizationLookupRecord
+  - NetWNV.New-NetVirtualizationProviderAddress
+  - NetWNV.New-NetVirtualizationProviderRoute
+  - NetWNV.Remove-NetVirtualizationCustomerRoute
+  - NetWNV.Remove-NetVirtualizationLookupRecord
+  - NetWNV.Remove-NetVirtualizationProviderAddress
+  - NetWNV.Remove-NetVirtualizationProviderRoute
+  - NetWNV.Select-NetVirtualizationNextHop
+  - NetWNV.Set-NetVirtualizationCustomerRoute
+  - NetWNV.Set-NetVirtualizationGlobal
+  - NetWNV.Set-NetVirtualizationLookupRecord
+  - NetWNV.Set-NetVirtualizationProviderAddress
+  - NetWNV.Set-NetVirtualizationProviderRoute
+uid: NetWNV
+name: NetWNV
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Network Virtualization cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.1.0
+  Locale: en-US
+  Module Guid: b47767ec-a4d6-488d-915d-5070791ac6d4
+  Module Name: NetWNV
+  ms.date: 12/20/2016
+  title: NetWNV

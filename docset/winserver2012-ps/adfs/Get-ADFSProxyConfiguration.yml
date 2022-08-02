@@ -1,0 +1,34 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the configuration properties of the federation server proxy.
+module: ADFS
+notes: |-
+  * This cmdlet works only when it is called on a federation server proxy.
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ProxyProperties" data-throw-if-not-resolved="False" />
+  description: |-
+    A class structure that represents the properties for a federation server proxy in AD FS.
+links:
+- text: Set-ADFSProxyConfiguration
+  href: ./Set-ADFSProxyConfiguration.yml
+syntaxes:
+- Get-ADFSProxyConfiguration [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    PS C:\>Get-ADFSProxyConfiguration
+  description: |-
+    Gets the configuration properties for a federation server proxy.
+  summary: ""
+uid: ADFS.Get-ADFSProxyConfiguration
+name: Get-ADFSProxyConfiguration
+description: |-
+  The Get-ADFSProxyConfiguration cmdlet retrieves the configuration properties of the federation server proxy in Active Directory Federation Services (AD FS).
+metadata:
+  external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsproxyconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the policy for an attestation signer certificates.
+module: HgsKeyProtection
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Get-HgsKeyProtectionAttestationSignerCertificate
+  href: ./Get-HgsKeyProtectionAttestationSignerCertificate.yml
+syntaxes:
+- >-
+  Set-HgsKeyProtectionAttestationSignerCertificatePolicy -DenyHealthCertificatesIssuedBefore <DateTime>
+
+   [-Thumbprint <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify the date on all attestation signer certificates'
+  code: |-
+    PS C:\> $DenyTime = Get-Date
+    PS C:\> Set-HgsKeyProtectionAttestationSignerCertificatePolicy -DenyHealthCertificatesIssuedBefore $DenyTime
+  description: |-
+    The first command creates a **DateTime** object by using the **Get-Date** cmdlet, and then stores it in the **$DenyTime** variable.
+
+    The second command modifies the date for all trusted attestation signer certificates to the value stored in **$DenyTime**.
+  summary: ""
+- title: 'Example 2: Modify the date on an attestation signer certificate'
+  code: |-
+    PS C:\> $DenyTime = Get-Date
+    PS C:\> Set-HgsKeyProtectionAttestationSignerCertificatePolicy -DenyHealthCertificatesIssuedBefore $DenyTime -Thumbprint "8bdc4fb5034c4adb86cb57a4465dc161"
+  description: |-
+    The first command creates a **DateTime** object, and then stores it in the **$DenyTime** variable.
+
+    The second command modifies the date for a specific trusted attestation signer certificate to the value stored in **$DenyTime**.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: DenyHealthCertificatesIssuedBefore
+  isRequired: true
+  description: |+
+    Specifies a date as a **DateTime** object.
+    The Key Protection Service rejects any health certificates signed by the specified attestation signer certificate and issued before this time.
+    To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet.
+    For more information, type `Get-Help Get-Date`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  description: |+
+    Specifies the thumbprint of the attestation signer certificate to which to apply the policy.
+    If you do not specify a value for this parameter, this cmdlet applies the policy to all signer certificates.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsKeyProtection.Set-HgsKeyProtectionAttestationSignerCertificatePolicy
+name: Set-HgsKeyProtectionAttestationSignerCertificatePolicy
+description: |-
+  The **Set-HgsKeyProtectionAttestationSignerCertificatePolicy** cmdlet modifies the policy for attestation signer certificates.
+  You can modify a date in the policy.
+  The Key Protection Service rejects health certificates signed by the specified attestation signer certificate and issued before the specified date.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/set-hgskeyprotectionattestationsignercertificatepolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-HgsKeyProtectionAttestationSignerCertificatePolicy

@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Converts licenses in a key pack to per-device or per-user licenses.
+module: RemoteDesktopServices
+notes: ""
+links:
+- text: Get-RDLicenseConfiguration
+  href: ../remotedesktop/Get-RDLicenseConfiguration.yml
+- text: Get-RDSessionHost
+  href: ../remotedesktop/Get-RDSessionHost.yml
+- text: Get-WmiObject
+  href: https://go.microsoft.com/fwlink/?LinkId=821595
+- text: Get-Member
+  href: https://go.microsoft.com/fwlink/?LinkId=821792
+syntaxes:
+- Convert-License -KeyPackId <UInt32> [-Count <UInt32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Convert all the licenses in a key pack'
+  code: |-
+    PS C:\> $KeyPack = Get-WmiObject -Class Win32_TSLicenseKeyPack
+    PS C:\> Convert-License -KeyPackId $KeyPack[2].KeyPackId
+  description: |-
+    This example converts all the unissued licenses in a key pack to per-device or per-user licenses.
+
+    The first command gets all the license key packs on the current computer by using the Get-WmiObject cmdlet, and then stores them as an array in the $KeyPack variable.
+    For more information, type `Get-Help Get-WmiObject`.
+
+    The second command uses standard array notation to specify the third member of the $KeyPack array.
+    The command specifies the **KeyPackId** property of that key pack as the value for the *KeyPackId* parameter.
+    The command converts the licenses in that key pack.
+    To see all the properties of a key pack, use the Get-Member cmdlet.
+    For more information, type `Get-Help Get-Member`.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Count
+  description: |+
+    Specifies the number of licenses that this cmdlet converts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: KeyPackId
+  isRequired: true
+  description: |+
+    Specifies the ID for a key pack.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: RemoteDesktopServices.Convert-License
+name: Convert-License
+description: |-
+  The **Convert-License** cmdlet converts licenses in a specified key pack.
+  A key pack contains a number of licenses that enable clients to connect to a Remote Desktop Session Host (RD Session Host) server.
+  Remote Desktop Licensing (RD Licensing) supports the following kinds of licenses:
+
+  - Per-device.
+  RD Licensing requires a license for each device that connects to an RD Session Host server.
+  - Per-user.
+  RD Licensing requires a license for each user that connects to an RD Session Host server.
+
+  If a key pack contains per-device licenses, this cmdlet converts them to per-user licenses.
+  If a key pack contains per-user licenses, this cmdlet converts them to per-device licenses.
+  This cmdlet returns an object corresponding to the new key pack.
+
+  You can specify how many licenses in the key pack to convert by using the *Count* parameter.
+  If the number that you specify is greater than the number of available unissued keys, the cmdlet raises an error.
+  If you do not specify a value for this parameter, this cmdlet converts all the licenses in the key pack.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: TSPSCmdlets.dll-Help.xml
+  Module Name: RemoteDesktopServices
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/remotedesktopservices/convert-license?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Convert-License

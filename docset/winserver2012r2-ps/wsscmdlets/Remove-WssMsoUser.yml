@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an online service account.
+module: WSSCmdlets
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    WssUserName
+    Type: System.String
+    Description: local network account name of user
+links:
+- text: Add-WssMsoUser
+  href: ./Add-WssMsoUser.yml
+- text: Disable-WssMsoUser
+  href: ./Disable-WssMsoUser.yml
+- text: Enable-WssMsoUser
+  href: ./Enable-WssMsoUser.yml
+- text: Get-WssMsoUser
+  href: ./Get-WssMsoUser.yml
+syntaxes:
+- Remove-WssMsoUser [-WssUserName] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove an online service account'
+  code: |-
+    PS C:\> Remove-WssMsoUser -WssUserName "EvanNarvaez"
+  description: |-
+    This command removes the online service account that is assigned to the local network account named EvanNarvaez.
+  summary: ""
+- title: '1:'
+  code: |-
+    PS C:\>
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WssUserName
+  isRequired: true
+  description: |+
+    Specifies the name of a user account.
+    The cmdlet removes the online service account that is assigned to the account that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Remove-WssMsoUser
+name: Remove-WssMsoUser
+description: |-
+  The **Remove-WssMsoUser** cmdlet removes an online service account from aad_1.
+  Specify the name of the local network user account that the account is assigned to.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/remove-wssmsouser?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-WssMsoUser

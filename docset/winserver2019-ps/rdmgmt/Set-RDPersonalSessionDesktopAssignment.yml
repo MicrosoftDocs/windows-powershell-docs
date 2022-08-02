@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Associates a personal session desktop assignment with a user.
+module: RDMgmt
+notes: ""
+links:
+- text: Get-RDPersonalSessionDesktopAssignment
+  href: ./Get-RDPersonalSessionDesktopAssignment.yml
+- text: Export-RDPersonalSessionDesktopAssignment
+  href: ./Export-RDPersonalSessionDesktopAssignment.yml
+- text: Import-RDPersonalSessionDesktopAssignment
+  href: ./Import-RDPersonalSessionDesktopAssignment.yml
+- text: Remove-RDPersonalSessionDesktopAssignment
+  href: ./Remove-RDPersonalSessionDesktopAssignment.yml
+syntaxes:
+- >-
+  Set-RDPersonalSessionDesktopAssignment [-CollectionName] <String> -User <String> -Name <String>
+
+   [-ConnectionBroker <String>] [<CommonParameters>]
+examples:
+- title: '1:'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollectionName
+  isRequired: true
+  description: |+
+    Specifies the name of a personal session desktop collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the personal session desktop assignment to set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    Specifies a user account in DOMAIN\user format.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Set-RDPersonalSessionDesktopAssignment
+name: Set-RDPersonalSessionDesktopAssignment
+description: |-
+  The **Set-RDPersonalSessionDesktopAssignment** cmdlet associates a personal session desktop assignment with a user.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdpersonalsessiondesktopassignment?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDPersonalSessionDesktopAssignment

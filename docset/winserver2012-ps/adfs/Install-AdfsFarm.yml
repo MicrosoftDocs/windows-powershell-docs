@@ -1,0 +1,185 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates the first node of a new federation server farm.
+module: ADFS
+notes: ""
+inputs:
+- name: <xref href="none" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Result object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Install-AdfsFarm -CertificateThumbprint <String> -FederationServiceName <String> [-OverwriteConfiguration]
+
+   -ServiceAccountCredential <PSCredential> [-SSLPort <Int32>] [<CommonParameters>]
+- >-
+  Install-AdfsFarm -CertificateThumbprint <String> -FederationServiceName <String> [-OverwriteConfiguration]
+
+   -ServiceAccountCredential <PSCredential> -SQLConnectionString <String> [-SSLPort <Int32>] [<CommonParameters>]
+- >-
+  Install-AdfsFarm -CertificateThumbprint <String> -DecryptionCertificateThumbprint <String>
+
+   -FederationServiceName <String> [-OverwriteConfiguration] -ServiceAccountCredential <PSCredential>
+
+   -SigningCertificateThumbprint <String> [-SSLPort <Int32>] [<CommonParameters>]
+- >-
+  Install-AdfsFarm -CertificateThumbprint <String> -DecryptionCertificateThumbprint <String>
+
+   -FederationServiceName <String> [-OverwriteConfiguration] -ServiceAccountCredential <PSCredential>
+
+   -SigningCertificateThumbprint <String> -SQLConnectionString <String> [-SSLPort <Int32>] [<CommonParameters>]
+examples:
+- title: '-------------------------- EXAMPLE 1 --------------------------'
+  code: |-
+    C:\PS>$fscredential = Get-Credential
+    C:\PS>Install-AdfsFarm -CertificateThumbprint 8169c52b4ec6e77eb2ae17f028fe5da4e35c0bed -FederationServiceName fs.corp.contoso.com -ServiceAccountCredential $fscredential
+  description: |-
+    Description
+
+    -----------
+
+    Creates the first node in a federation server farm that uses the Windows Internal Database (WID) on the local server computer.
+
+    In this example, a certificate thumbprint value is supplied for the CertificateThumbprint parameter. 
+    This certificate will be used as the SSL certificate and the service communications certificate. 
+    Automatically generated, self signed certificates will be used for the token signing and token decryption certificates.
+
+    To specify certificates for token signing and token decryption, specify thumbprint values for the SigningCertificateThumbprint and DecryptionCertificateThumbprint parameters.
+  summary: ""
+- title: '-------------------------- EXAMPLE 2 --------------------------'
+  code: |-
+    C:\PS>dir cert:\LocalMachine\My
+  description: |-
+    Description
+
+    -----------
+
+    Lists thumbprint values of currently installed certificates.
+  summary: ""
+- title: '-------------------------- EXAMPLE 3 --------------------------'
+  code: |-
+    C:\PS>$fscredential = Get-Credential
+    C:\PS>Install-AdfsFarm -CertificateThumbprint 8169c52b4ec6e77eb2ae17f028fe5da4e35c0bed -FederationServiceName fs.corp.contoso.com -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=SQLHost;Integrated Security=True"
+  description: |-
+    Description
+
+    -----------
+
+    Creates the first node in a federation server farm that uses a Microsoft SQL server database on a remote computer named "SQLHost".
+
+    In this example, a certificate thumbprint value is supplied for the CertificateThumbprint parameter. 
+    This certificate will be used as the SSL certificate and the service communications certificate. 
+    Automatically generated, self signed certificates will be used for the token signing and token decryption certificates.
+
+    To specify certificates for token signing and token decryption, specify thumbprint values for the SigningCertificateThumbprint and DecryptionCertificateThumbprint parameters.
+  summary: ""
+- title: '-------------------------- EXAMPLE 4 --------------------------'
+  code: |-
+    C:\PS>$fscredential = Get-Credential
+    C:\PS>Install-AdfsFarm -CertificateThumbprint 8169c52b4ec6e77eb2ae17f028fe5da4e35c0bed -FederationServiceName fs.corp.contoso.com -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=SQLHost;Integrated Security=True" -OverwriteConfiguration -SigningCertificateThumbprint 8169c52b4ec6e77eb2ae17f028fe5da4e35c0bed -DecryptionCertificateThumbprint cf2e5064c521d625c8d53536bc98aa8e08f5f2ad
+  description: |-
+    Description
+
+    -----------
+
+    Overwrites an existing AD FS configuration database and creates the first node in a federation server farm that uses a Microsoft SQL server database on a remote computer named "SQLHost".
+
+    In this example, certificate thumbprint values are specified for the token signing certificate and for the token encryption certificate using the SigningCertificateThumbprint and DecryptionCertificateThumbprint parameters respectively.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  isRequired: true
+  description: |+
+    Specifies the value of the certificate thumbprint of the certificate that should be used in the Secure Sockets Layer (SSL) binding of the Default Web Site in Internet Information Services (IIS).
+    This value should match the thumbprint of a valid certificate in the Local Computer certificate store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DecryptionCertificateThumbprint
+  isRequired: true
+  description: |+
+    Specifies the value of the certificate thumbprint of the certificate that should be used for token decryption.
+    If this parameter is used, the automatic certificate rollover feature will be disabled, and a token signing certificate must also be specified using the SigningCertificateThumbprint parameter.
+    This value should match the thumbprint of a valid certificate in the Local Computer certificate store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FederationServiceName
+  isRequired: true
+  description: |+
+    Specifies the DNS name of the federation service.
+    This value must match the subject name of the certificate configured on the SSL binding in IIS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverwriteConfiguration
+  description: |+
+    This parameter must be used to remove an existing AD FS configuration database and overwrite it with a new database.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ServiceAccountCredential
+  isRequired: true
+  description: |+
+    Specifies the Active Directory account under which the AD FS service runs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SigningCertificateThumbprint
+  isRequired: true
+  description: |+
+    Specifies the value of the certificate thumbprint of the certificate that should be used for token signing.
+    If this parameter is used, the automatic certificate rollover feature will be disabled, and a token decryption certificate must also be specified using the DecryptionCertificateThumbprint parameter.
+    This value should match the thumbprint of a valid certificate in the Local Computer certificate store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SQLConnectionString
+  isRequired: true
+  description: |+
+    Specifies the SQL Server database that will store the AD FS configuration settings. 
+    If not specified, the AD FS installer uses the Windows Internal Database to store configuration settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SSLPort
+  description: |+
+    Specifies the value of the port number of the SSL binding that the AD FS web site will use.
+
+  defaultValue: "443"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: ADFS.Install-AdfsFarm
+name: Install-AdfsFarm
+description: |-
+  The Install-Adfsfarm cmdlet creates the first node of a new federation server farm.
+metadata:
+  external help file: Microsoft.FederationServices.Deployment.dll-Help.xml
+  Module Name: ADFS
+  online version: https://docs.microsoft.com/powershell/module/adfs/install-adfsfarm?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

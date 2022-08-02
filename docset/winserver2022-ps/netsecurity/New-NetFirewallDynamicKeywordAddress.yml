@@ -1,0 +1,156 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a dynamic keyword address.
+module: NetSecurity
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NetFirewallDynamicKeywordAddress
+  href: Get-NetFirewallDynamicKeywordAddress.yml
+- text: Remove-NetFirewallDynamicKeywordAddress
+  href: Remove-NetFirewallDynamicKeywordAddress.yml
+- text: Update-NetFirewallDynamicKeywordAddress
+  href: Update-NetFirewallDynamicKeywordAddress.yml
+syntaxes:
+- >-
+  New-NetFirewallDynamicKeywordAddress [-Id <String>] [-Keyword <String>] [-Addresses <String>]
+
+   [-AutoResolve <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create dynamic keyword address with AutoResolve'
+  code: |-
+    $GUID = New-Guid
+    New-NetFirewallDynamicKeywordAddress -Id $('{' + $GUID + '}') -Keyword "ContosoSubnet" -AutoResolve $True
+  description: |-
+    This example creates an `AutoResolve` dynamic keyword address.
+
+    The first command creates a GUID and assigns it to `$GUID`.
+
+    The second command creates the dynamic address with the specified keyword.
+    The braces are required for the ID.
+  summary: ""
+- title: 'Example 2: Create dynamic keyword address'
+  code: |-
+    $GUID = New-Guid
+    New-NetFirewallDynamicKeywordAddress -Id $('{' + $GUID + '}') -Keyword "ContosoServerSubnet" -Addresses 10.0.0.21
+  description: |-
+    This example creates a non-`AutoResolve` dynamic keyword address.
+
+    The first command creates a GUID and assigns it to `$GUID`.
+
+    The second command creates a dynamic address with the specified keyword.
+    The address does not use AutoResolve.
+
+    You can use the form `-Address` instead of `Addresses` in the command, for clarity.
+    The braces are required for the ID.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Addresses
+  description: |+
+    Specifies the addresses for the dynamic keyword address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoResolve
+  description: |+
+    Whether the dynamic key address uses `AutoResolve`.
+    For `AutoResolve`, the keyword field represents a resolvable name and the IP addresses aren't defined when the dynamic key address is created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    Specifies a GUID for the dynamic keyword address.
+    Wrap the GUID value in braces.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Keyword
+  description: |+
+    Specifies the keyword for the dynamic keyword address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetSecurity.New-NetFirewallDynamicKeywordAddress
+name: New-NetFirewallDynamicKeywordAddress
+description: |-
+  The **New-NetFirewallDynamicKeywordAddress** cmdlet creates a dynamic keyword address.
+
+  A firewall rule can use dynamic keyword addresses instead of explicitly defining IP addresses for its remote address condition.
+metadata:
+  description: The New-NetFirewallDynamicKeywordAddress cmdlet creates a dynamic keyword address.
+  external help file: NetFirewallDynamicKeywordAddress.cmdletDefinition.cdxml-help.xml
+  Module Name: NetSecurity
+  ms.date: 10/20/2021
+  online version: https://docs.microsoft.com/powershell/module/netsecurity/new-netfirewalldynamickeywordaddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetFirewallDynamicKeywordAddress

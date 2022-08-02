@@ -1,0 +1,204 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets transport filters.
+module: NetTCPIP
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetTransportFilter" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-NetUDPSetting
+  href: ./Get-NetUDPSetting.yml
+- text: New-NetTransportFilter
+  href: ./New-NetTransportFilter.yml
+- text: Remove-NetTransportFilter
+  href: ./Remove-NetTransportFilter.yml
+- text: Set-NetTCPSetting
+  href: ./Set-NetTCPSetting.yml
+- text: Set-NetUDPSetting
+  href: ./Set-NetUDPSetting.yml
+syntaxes:
+- >-
+  Get-NetTransportFilter [-SettingName <String[]>] [-Protocol <Protocol[]>] [-LocalPortStart <UInt16[]>]
+
+   [-LocalPortEnd <UInt16[]>] [-RemotePortStart <UInt16[]>] [-RemotePortEnd <UInt16[]>]
+
+   [-DestinationPrefix <String[]>] [-AssociatedTCPSetting <CimInstance>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all transport filters'
+  code: |-
+    PS C:\>Get-NetTransportFilter
+  description: |-
+    This command gets all the transport filters on the computer.
+  summary: ""
+- title: 'Example 2: Get transport filters that apply specified settings'
+  code: |-
+    PS C:\>Get-NetTransportFilter -SettingName Internet
+  description: |-
+    This command gets transport filters that apply Internet settings.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedTCPSetting
+  description: |+
+    Specifies a **NetTCPSetting** object.
+    The cmdlet gets transport filters associated with the setting that you specify.
+    To obtain a **NetTCPSetting** object, use the Get-NetTCPSetting cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DestinationPrefix
+  description: |+
+    Specifies an array of destination prefixes of IP routes.
+    The cmdlet gets transport filters that have the prefixes that you specify.
+    A destination prefix consists of an IP address prefix and a prefix length, separated by a slash (/).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LocalPortEnd
+  description: |+
+    Specifies an array of upper bounds of ranges of local TCP ports.
+    The cmdlet removes transport filters that have the upper bounds that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LocalPortStart
+  description: |+
+    Specifies an array of lower bounds of ranges of local TCP ports.
+    The cmdlet removes transport filters that have the lower bounds that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Protocol" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Protocol
+  description: |+
+    Specifies an array of types of routing protocols. 
+    The cmdlet gets transport filters based on the protocols that you specify.
+    The acceptable values for this parameter are:
+
+    - Bbn
+    - Bgp
+    - Dhcp
+    - Dvmrp
+    - Egp
+    - Eigrp
+    - EsIs
+    - Ggp
+    - Hello
+    - Icmp
+    - Idpr
+    - Igrp
+    - IsIs
+    - Local
+    - NetMgmt
+    - Ospf
+    - Rip
+    - Rpl
+    - Other
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: TCP, UDP
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemotePortEnd
+  description: |+
+    Specifies an array of upper bounds of ranges of remote TCP ports.
+    The cmdlet removes transport filters that have the upper bounds that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemotePortStart
+  description: |+
+    Specifies an array of lower bounds of a ranges of remote TCP ports.
+    The cmdlet removes transport filters that have the lower bounds that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SettingName
+  description: |+
+    Specifies an array of setting names.
+    The cmdlet gets transport filters that have the settings that you specify.
+    The acceptable values for this parameter are:
+
+    - Internet
+    - Datacenter
+    - Compat
+    - Custom
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetTCPIP.Get-NetTransportFilter
+name: Get-NetTransportFilter
+description: |-
+  The **Get-NetTransportFilter** cmdlet gets transport filters.
+  A transport filter specifies the TCP settings, as a **NetTcpSetting** object, to apply to an IP address prefix or a TCP port range.
+  Use the cmdlet without parameters to get all transport filters for the computer.
+
+  Use the New-NetTransportFilter cmdlet to create transport filters, and use the Remove-NetTransportFilter cmdlet to remove filters.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetTransportFilter.cdxml-help.xml
+  Module Name: NetTCPIP
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nettcpip/get-nettransportfilter?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetTransportFilter

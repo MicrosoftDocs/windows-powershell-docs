@@ -1,0 +1,194 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the access rights of a queue manager.
+module: MSMQ
+notes: ""
+links:
+- text: Get-MsmqQueueManagerACL
+  href: ./Get-MsmqQueueManagerACL.yml
+syntaxes:
+- >-
+  Set-MsmqQueueManagerACL -UserName <String[]> [-Allow <QueueManagerAccessRights>]
+
+   [-Deny <QueueManagerAccessRights>] [-Remove <QueueManagerAccessRights>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Modify access rights for the local queue manager'
+  code: |-
+    PS C:\> Set-MsmqQueueManagerAcl -UserName "CONTOSO\DavidChew" -Allow DeleteMessage,PeekMessage -Deny TakeOwnership,SetPermissions
+  description: |-
+    This command modifies the access rights of the local queue manager.
+  summary: ""
+parameters:
+- type: <xref href="QueueManagerAccessRights" data-throw-if-not-resolved="False" />
+  name: Allow
+  description: |+
+    Specifies an array of permissions that this cmdlet grants to a user account or group.
+    The acceptable values for this parameter are:
+
+    - AllExtendedRights.
+    All extended rights for the specified queue manager. 
+    - CreateChildObjects.
+    Create child objects with the specified queue manager. 
+    - CreateQueue.
+    Create a queue with the specified queue manager. 
+    - Delete.
+    Delete queues of the specified queue manager. 
+    - DeleteChildObjects.
+    Delete child objects from the specified queue manager. 
+    - FullControl.
+    Full control of the specified queue manager. 
+    - GetPermissions.
+    Get the permissions of the specified queue manager. 
+    - GetProperties.
+    Get the properties of the specified queue manager. 
+    - ListContent.
+    List content stored in the queues of the specified queue manager. 
+    - PeekDeadLetter.
+    Peek a message from the specified queue manager system dead letter queue and transactional dead letter queue. 
+    - PeekJournal.
+    Peek a message from the specified queue manager system journal queue. 
+    - ReceiveDeadLetter.
+    Receive a message from the specified queue manager system dead letter queue and transactional dead letter queue. 
+    - ReceiveJournal.
+    Receive a message from the specified queue manager system journal queue. 
+    - SetPermissions.
+    Set the permissions of the specified queue manager. 
+    - SetProperties.
+    Set the properties of the specified queue manager. 
+    - TakeOwnership.
+    Assign a queue of the specified queue manager to oneself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: FullControl, CreateQueue, ReceiveDeadLetter, ReceiveComputerJournal, GetProperties, SetProperties, GetPermissions, SetPermissions, TakeOwnership, Delete, PeekDeadLetter, PeekComputerJournal, AllExtendedRights, CreateAllChildObjects, DeleteAllChildObjects, ListObjects
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="QueueManagerAccessRights" data-throw-if-not-resolved="False" />
+  name: Deny
+  description: |+
+    Specifies an array of permissions that the cmdlet revokes from a user account or group.
+    The acceptable values for this parameter are:
+
+    - AllExtendedRights.
+    All extended rights for the specified queue manager. 
+    - CreateChildObjects.
+    Create child objects with the specified queue manager. 
+    - CreateQueue.
+    Create a queue with the specified queue manager. 
+    - Delete.
+    Delete queues of the specified queue manager. 
+    - DeleteChildObjects.
+    Delete child objects from the specified queue manager. 
+    - FullControl.
+    Full control of the specified queue manager. 
+    - GetPermissions.
+    Get the permissions of the specified queue manager. 
+    - GetProperties.
+    Get the properties of the specified queue manager. 
+    - ListContent.
+    List content stored in the queues of the specified queue manager. 
+    - PeekDeadLetter.
+    Peek a message from the specified queue manager system dead letter queue and transactional dead letter queue. 
+    - PeekJournal.
+    Peek a message from the specified queue manager system journal queue. 
+    - ReceiveDeadLetter.
+    Receive a message from the specified queue manager system dead letter queue and transactional dead letter queue. 
+    - ReceiveJournal.
+    Receive a message from the specified queue manager system journal queue. 
+    - SetPermissions.
+    Set the permissions of the specified queue manager. 
+    - SetProperties.
+    Set the properties of the specified queue manager. 
+    - TakeOwnership.
+    Assign a queue of the specified queue manager to oneself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: FullControl, CreateQueue, ReceiveDeadLetter, ReceiveComputerJournal, GetProperties, SetProperties, GetPermissions, SetPermissions, TakeOwnership, Delete, PeekDeadLetter, PeekComputerJournal, AllExtendedRights, CreateAllChildObjects, DeleteAllChildObjects, ListObjects
+- type: <xref href="QueueManagerAccessRights" data-throw-if-not-resolved="False" />
+  name: Remove
+  description: |+
+    Specifies an array of permissions that this cmdlet removes from a user account or group.
+    The acceptable values for this parameter are:
+
+    - AllExtendedRights.
+    All extended rights for the specified queue manager. 
+    - CreateChildObjects.
+    Create child objects with the specified queue manager. 
+    - CreateQueue.
+    Create a queue with the specified queue manager. 
+    - Delete.
+    Delete queues of the specified queue manager. 
+    - DeleteChildObjects.
+    Delete child objects from the specified queue manager. 
+    - FullControl.
+    Full control of the specified queue manager. 
+    - GetPermissions.
+    Get the permissions of the specified queue manager. 
+    - GetProperties.
+    Get the properties of the specified queue manager. 
+    - ListContent.
+    List content stored in the queues of the specified queue manager. 
+    - PeekDeadLetter.
+    Peek a message from the specified queue manager system dead letter queue and transactional dead letter queue. 
+    - PeekJournal.
+    Peek a message from the specified queue manager system journal queue. 
+    - ReceiveDeadLetter.
+    Receive a message from the specified queue manager system dead letter queue and transactional dead letter queue. 
+    - ReceiveJournal.
+    Receive a message from the specified queue manager system journal queue. 
+    - SetPermissions.
+    Set the permissions of the specified queue manager. 
+    - SetProperties.
+    Set the properties of the specified queue manager. 
+    - TakeOwnership.
+    Assign a queue of the specified queue manager to oneself.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: FullControl, CreateQueue, ReceiveDeadLetter, ReceiveComputerJournal, GetProperties, SetProperties, GetPermissions, SetPermissions, TakeOwnership, Delete, PeekDeadLetter, PeekComputerJournal, AllExtendedRights, CreateAllChildObjects, DeleteAllChildObjects, ListObjects
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: UserName
+  isRequired: true
+  description: |+
+    Specifies the user account or group whose permissions the cmdlet changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: MSMQ.Set-MsmqQueueManagerACL
+name: Set-MsmqQueueManagerACL
+description: |-
+  The **Set-MsmqQueueManagerACL** cmdlet modifies the access rights of the local queue manager.
+  This cmdlet returns the updated **MsmqQueueManagerAcl** object.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/msmq/set-msmqqueuemanageracl?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-MsmqQueueManagerACL

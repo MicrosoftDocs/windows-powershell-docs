@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Instructs the IIS configuration system to resume the commitment of changes.
+module: IISAdministration
+notes: ""
+links:
+- text: Start-IISCommitDelay
+  href: ./Start-IISCommitDelay.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- Stop-IISCommitDelay [[-Commit] <Boolean>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Commit configuration changes'
+  code: |-
+    PS C:\> Stop-IISCommitDelay -Commit $True
+  description: |-
+    This command commits the configuration changes made since the **Start-IISCommitDelay** cmdlet was executed.
+  summary: ""
+- title: 'Example 2: Discard configuration changes'
+  code: |-
+    PS C:\> Stop-IISCommitDelay -Commit $False
+  description: |-
+    This command discards the configuration changes made since the **Start-IISCommitDelay** cmdlet was executed.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Commit
+  description: |+
+    Indicates that the cmdlet commits the changes if True; Otherwise, if False, the cmdlet discards the changes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.Stop-IISCommitDelay
+name: Stop-IISCommitDelay
+description: |-
+  The **Stop-IISCommitDelay** cmdlet instructs the Internet Information Services (IIS) configuration system to resume the commitment of changes.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/stop-iiscommitdelay?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Stop-IISCommitDelay

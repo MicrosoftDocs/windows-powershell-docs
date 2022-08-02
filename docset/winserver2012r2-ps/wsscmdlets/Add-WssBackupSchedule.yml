@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a date and time to a backup policy for use as a backup schedule.
+module: WSSCmdlets
+notes: ""
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.DataProtection.ServerBackup.ObjectModel.ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the BackupPolicy parameter.
+links:
+- text: Get-WssBackupSchedule
+  href: ./Get-WssBackupSchedule.yml
+- text: Remove-WssBackupSchedule
+  href: ./Remove-WssBackupSchedule.yml
+syntaxes:
+- Add-WssBackupSchedule [-BackupPolicy] <ScheduledBackupPolicy> [-BackupTime] <DateTime> [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a backup schedule to a backup policy'
+  code: |-
+    PS C:\>$ContosoBUPolicy25 = Get-WssBackupPolicy
+    PS C:\> Add-WssBackupSchedule -BackupPolicy $ContosoBUPolicy25 -BackupTime 5:00
+  description: |-
+    This example adds a backup schedule to a backup policy.
+
+    The first command gets the backup policy for the computer and stores it in the **$ContosoBUPolicy25** variable.
+
+    The second command adds 5:00 A.M.
+    daily as a backup schedule for the backup policy stored in **$ContosoBUPolicy25**.
+  summary: ""
+parameters:
+- type: <xref href="ScheduledBackupPolicy" data-throw-if-not-resolved="False" />
+  name: BackupPolicy
+  isRequired: true
+  description: |+
+    Specifies the backup policy to which to add the backup schedule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: BackupTime
+  isRequired: true
+  description: |+
+    Specifies the backup date and time to add to the scheduled backup policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WSSCmdlets.Add-WssBackupSchedule
+name: Add-WssBackupSchedule
+description: |-
+  The **Add-WssBackupSchedule** cmdlet adds a date and time to a backup policy.
+  The backup process uses this date and time as a backup schedule.
+metadata:
+  external help file: WssCmdlets.dll-Help.xml
+  Module Name: WSSCmdlets
+  ms.date: 12/05/2017
+  online version: https://docs.microsoft.com/powershell/module/wsscmdlets/add-wssbackupschedule?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-WssBackupSchedule

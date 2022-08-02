@@ -1,0 +1,172 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet adds/updates an inbound NAT rule associated with a load balancer resource.
+module: NetworkController
+notes: ""
+inputs:
+- name: <xref href=" " data-throw-if-not-resolved="False" />
+  description: |-
+    Following properties can be added/changed for an inbound NAT rule:
+    1.
+    Front end port
+    2.
+    Back end port
+    3.
+    Whether floating IP is enabled
+    4.
+    Idle timeout (in minutes)
+    5.
+    Protocol
+    6.
+    Back end IP addresses behind the NAT
+    7.
+    Front end IP for the NAT
+syntaxes:
+- >-
+  New-NetworkControllerLoadBalancerInboundNatRule -ConnectionUri <Uri> -LoadBalancerId <string>
+
+   -Properties <LoadBalancerInboundNatRuleProperties> -ResourceId <string> [-CertificateThumbPrint <string>]
+
+   [-Credential <PSCredential>] [-Etag <string>] [-Force] [-ResourceMetadata <ResourceMetadata>]
+examples:
+- title: Example 1
+  code: |-
+    //Retrieve the load balancer frontend IP configured beforehand
+    $frontEndIp=Get-NetworkControllerLoadBalancerFrontendIpConfiguration -ConnectionUri https://networkcontroller -LoadBalancerId lb1
+
+    //Retrieve the backend IPs for the NAT rule
+    $backEndIp=Get-NetworkControllerNetworkInterfaceIpConfiguration -ConnectionUri https://networkcontroller -NetworkInterfaceId nw1
+
+    //Define the properties of the NAT rule
+    $natRule = New-Object Microsoft.Windows.NetworkController.LoadBalancerInboundNatRuleProperties
+    $natRule.backEndIpConfiguration=$backEndIp
+    $natRule.backEndPort=3389
+    $natRule.FrontEndIpConfigurations=$frontEndIp
+    $natRule.FrontEndPort=3389
+    $natRule.IdleTimeoutInMinutes=5
+    $natRule.Protocol="TCP"
+    New-NetworkControllerLoadBalancerInboundNatRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId natRule1 -Properties $natRule
+  description: ""
+  summary: |+
+    This example creates an inbound NAT rule named natRule1 for a load balancer resource called lb1.
+    The NAT rule specifies frontend and backend port as 3389 and protocol as TCP
+
+
+parameters:
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: CertificateThumbPrint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    This is the certificate thumbprint of the certificate.
+    This thumbprint must also be provided in the ClientCertificateThumbprint parameter in the Install-NetworkController or Set-NetworkController cmdlet so that Network Controller can authorize this user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.This user must be present in the security group provided in the ClientSecurityGroup parameter in the Install-NetworkController cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) parameter of the resource.
+    An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="switch" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: LoadBalancerId
+  isRequired: true
+  description: |+
+    Specifies the load balancer resource where the inbound NAT rule belongs
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LoadBalancerInboundNatRuleProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    Specifies the properties of the inbound NAT rule:
+    1.
+    Front end port
+    2.
+    Back end port
+    3.
+    Whether floating IP is enabled
+    4.
+    Idle timeout (in minutes)
+    5.
+    Protocol
+    6.
+    Back end IP addresses behind the NAT
+    7.
+    Front end IP for the NAT
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  isRequired: true
+  description: |+
+    Specifies the unique ID of the inbound NAT rule
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    This parameter contains metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkController.New-NetworkControllerLoadBalancerInboundNatRule
+name: New-NetworkControllerLoadBalancerInboundNatRule
+description: |-
+  This cmdlet adds/updates an inbound NAT rule associated with a load balancer resource.
+  This can be used to forward external traffic to a specific VM in the virtual network
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrollerloadbalancerinboundnatrule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-NetworkControllerLoadBalancerInboundNatRule

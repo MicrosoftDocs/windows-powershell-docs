@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets configuration settings for the RD Gateway for a Remote Desktop deployment.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    Gatewaymode (String) - One of these values: Automatic, DoNotUse or Custom.
+
+    LogonMethod (String) - One of these values: Password, Smartcard or AllowUserToSelectRuntime.
+
+    GatewayExternalFQDN - External FQDN of the RD Gateway server specified for the deployment.
+links:
+- text: Set-RDDeploymentGatewayConfiguration
+  href: ./Set-RDDeploymentGatewayConfiguration.yml
+syntaxes:
+- Get-RDDeploymentGatewayConfiguration [[-ConnectionBroker] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get configuration settings for the RD Gateway'
+  code: |-
+    PS C:\> Get-RDDeploymentGatewayConfiguration -ConnectionBroker "rdcb.contoso.com"
+  description: |-
+    This command retrieves the configuration settings of the RD Gateway server associated with the RD Connection Broker server named rdcb.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for this Remote Desktop deployment.
+    If this parameter does not appear, the default value is the fully qualified domain name (FQDN) of the local host.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Get-RDDeploymentGatewayConfiguration
+name: Get-RDDeploymentGatewayConfiguration
+description: |-
+  The **Get-RDDeploymentGatewayConfiguration** cmdlet gets configuration settings for the Remote Desktop Gateway (RD Gateway) for a Remote Desktop deployment.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rddeploymentgatewayconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-RDDeploymentGatewayConfiguration

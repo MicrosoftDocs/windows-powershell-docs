@@ -1,0 +1,114 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a node (server) to a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterDisk
+  href: ./Add-ClusterDisk.yml
+- text: Get-ClusterAvailableDisk
+  href: ./Get-ClusterAvailableDisk.yml
+- text: Get-ClusterNode
+  href: ./Get-ClusterNode.yml
+- text: New-Cluster
+  href: ./New-Cluster.yml
+- text: Remove-ClusterNode
+  href: ./Remove-ClusterNode.yml
+- text: Resume-ClusterNode
+  href: ./Resume-ClusterNode.yml
+- text: Start-ClusterNode
+  href: ./Start-ClusterNode.yml
+- text: Stop-ClusterNode
+  href: ./Stop-ClusterNode.yml
+- text: Suspend-ClusterNode
+  href: ./Suspend-ClusterNode.yml
+- text: Test-Cluster
+  href: ./Test-Cluster.yml
+syntaxes:
+- >-
+  Add-ClusterNode [[-Name] <StringCollection>] [-NoStorage] [-InputObject <PSObject>] [-Cluster <String>]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Add-ClusterNode -Name node4
+    Name                                                                      State 
+    ----                                                                      ----- 
+    node4                                                                        Up
+  description: |-
+    This example adds node named node4 to the local cluster.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Get-Cluster -Name cluster1 | Add-ClusterNode -Name node3
+    Name                                                                      State 
+    ----                                                                      ----- 
+    node3                                                                        Up
+  description: |-
+    This example adds the node named node3 to cluster called cluster1.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster to which to add the new cluster node.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the cluster node to add.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoStorage
+  description: |+
+    Ensures that shared storage, on the node being joined to the cluster, will not be added to the cluster during the join operation.
+    Shared storage can be added by piping the ClusterDiskInfo object from the **Get-ClusterAvailableDisk** cmdlet into the **Add-ClusterDisk** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusterNode
+name: Add-ClusterNode
+description: |-
+  The **Add-ClusterNode** cmdlet adds a node, or server, to a failover cluster.
+  Before adding the new node, you should run validation tests on the existing nodes together with the proposed new node.
+
+  Before adding the new node, you should run validation tests on the existing nodes together with the proposed new node.
+  By running the validation tests, you can confirm that the server to be added is connected correctly to the networks and storage and that it contains the same software updates.
+
+  Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clusternode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ClusterNode

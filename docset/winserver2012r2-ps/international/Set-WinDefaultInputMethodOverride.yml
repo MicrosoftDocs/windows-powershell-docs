@@ -1,0 +1,42 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the default input method override for the current user account.
+module: International
+notes: ""
+inputs:
+- name: <xref href="InputTIP" data-throw-if-not-resolved="False" />
+  description: |-
+    A string that consists of a locale ID and a keyboard language ID (KLID).
+links:
+- text: Get-WinDefaultInputMethodOverride
+  href: ./Get-WinDefaultInputMethodOverride.yml
+syntaxes:
+- Set-WinDefaultInputMethodOverride [[-InputTip] <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\>Set-WinDefaultInputMethodOverride "0409:00000409"
+  description: |-
+    This command sets the default input method override to English (United States) - US.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InputTip
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: International.Set-WinDefaultInputMethodOverride
+name: Set-WinDefaultInputMethodOverride
+description: |-
+  The **Get-WinLanguageBarOption** cmdlet retrieves the default input method override setting, which specifies a default input method for the current user account. 
+  If no override setting is used, the input method is dynamically determined from the current user account's language list (see Get-WinUserLanguageList and Set-WinUserLanguageList).
+metadata:
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  Module Name: International
+  ms.date: 10/29/2017
+  online version: https://docs.microsoft.com/powershell/module/international/set-windefaultinputmethodoverride?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WinDefaultInputMethodOverride

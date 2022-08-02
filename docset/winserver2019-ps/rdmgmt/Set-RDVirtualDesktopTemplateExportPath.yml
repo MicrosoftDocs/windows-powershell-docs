@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the export path for virtual desktop templates.
+module: RDMgmt
+notes: ""
+outputs:
+- name: <xref href="Null" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-RDVirtualDesktopTemplateExportPath
+  href: ./Get-RDVirtualDesktopTemplateExportPath.yml
+syntaxes:
+- Set-RDVirtualDesktopTemplateExportPath [[-ConnectionBroker] <String>] [-Path] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the export path for virtual export templates'
+  code: |-
+    PS C:\> Set-RDVirtualDesktopTemplateExportPath -Path "\\rdsh-1\export"
+  description: |-
+    This command sets the export path for virtual desktop templates to \\\\rdsh-1\export.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionBroker
+  description: |+
+    Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+    If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path for exported virtual desktop templates.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: RDMgmt.Set-RDVirtualDesktopTemplateExportPath
+name: Set-RDVirtualDesktopTemplateExportPath
+description: |-
+  The **Set-RDVirtualDesktopTemplateExportPath** cmdlet sets the path that Remote Desktop Services uses to export virtual desktop templates for the virtual machine-based desktop deployment.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: RemoteDesktop.psm1-help.xml
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdvirtualdesktoptemplateexportpath?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-RDVirtualDesktopTemplateExportPath

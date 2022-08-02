@@ -1,0 +1,163 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts a file recovery operation.
+module: WindowsServerBackup
+notes: ""
+inputs:
+- name: <xref href="WBBackupSet, WBFileRecoveryOptions" data-throw-if-not-resolved="False" />
+  description: |-
+    The file recovery process specifies a backup set object that contains the backup set from which you recover files.
+    The recovery process uses file recovery options when you recover files to their original locations and the file that you recover is already present in the original location.
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    If you do not specify the *Async* parameter, the recovery operation displays status messages at periodic intervals until the recovery is complete.
+    While the recovery operation runs you can use the **Get-WBJob** cmdlet to get the status of the operation.
+    After the operation is complete, you can use the `Get-WBJob -Previous 1` command to get the completed recovery status.
+links:
+- text: Get-WBBackupVolumeBrowsePath
+  href: ./Get-WBBackupVolumeBrowsePath.yml
+- text: Get-WBJob
+  href: ./Get-WBJob.yml
+syntaxes:
+- >-
+  Start-WBFileRecovery [-BackupSet] <WBBackupSet> [-SourcePath] <String> [[-TargetPath] <String>]
+
+   [[-Option] <WBFileRecoveryOptions>] [-Recursive] [-NoRestoreAcl] [-Async] [-Force] [<CommonParameters>]
+examples:
+- title: Example 1 :Recover files to their original location
+  code: |-
+    PS C:\> Start-WBFileRecovery -BackupSet $Backup -FilePathToRecover "C:\Dir1" -Recursive -FileRecoveryOption CreateCopyIfExists -Force
+    Recovering files from C:\Dir1 : 
+    Completed.
+  description: |-
+    This command recovers the file at the path C:\Dir1 from the backup set named $Backup and restores it to its original location.
+    Because the command includes the *Force* parameter, the backup proceeds without confirmation prompts.
+  summary: ""
+- title: 'Example 2: Recover files to a new location'
+  code: |-
+    PS C:\> Get-WBBackupVolumeBrowsePath -BackupSet $Backup -VolumeInBackup $Backup.Volume[0]
+    \\Server01\WsbMountedVolumes\WsbMountedVolumeFile46_6fc68703-1c22-11e1-89cd-806e6f6e6963\ PS C:\> dir \\Server01\WsbMountedVolumes\WsbMountedVolumeFile46_6fc68703-1c22-11e1-89cd-806e6f6e6963\dir1\File1.txt
+    Directory: \\Server01\WsbMountedVolumes\WsbMountedVolumeFile46_6fc68703-1c22-11e1-89cd-806e6f6e6963\dir1
+    Mode                LastWriteTime     Length Name
+    ----                -------------     ------ ----
+    -a---        12/13/2011   2:35 PM          0 File1.txt PS C:\> Start-WBFileRecovery -BackupSet $Backup -FilePathToRecover "\\Server01\WsbMountedVolumes\WsbMountedVolumeFile46_6fc68703-1c22-11e1-89cd-806e6f6e6963\Dir1\File1.txt" -RecoveryTarget "F:\Dir1"
+    Warning
+    Start recovery of files from C:\Dir1\File1.txt to F:\Fir1 ? 
+     [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+
+    Recovering files from C:\Dir1\File1.txt : 
+    Completed.
+  description: |-
+    This example recovers the file named C:\Dir1\File1.txt to the alternate location F:\Dir1.
+
+    The first command uses the **Get-WBBackupVolumeBrowsePath** cmdlet to get the volume browse path for the file that you recover.
+    The first element of the Volume array within the backup set stored in the variable named $Backup specifies the volume from which to obtain the backup files.
+
+    The second command checks the path that you obtained from the first command for a file named File1.txt.
+
+    The third command restores the file named File1.txt to the path F:\Dir1.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Async
+  description: |+
+    Indicates that Windows PowerShell® returns immediately after it starts the backup and does not display status messages.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBBackupSet" data-throw-if-not-resolved="False" />
+  name: BackupSet
+  isRequired: true
+  description: |+
+    Specifies a backup set object that contains the backup set from which this cmdlet recover files.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoRestoreAcl
+  description: |+
+    Indicates that the cmdlet does not restore the security attributes for the files after recovery.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WBFileRecoveryOptions" data-throw-if-not-resolved="False" />
+  name: Option
+  description: |+
+    Specifies an object that contains file recovery options.
+    The options specify the action to take when a file that you recover already exists in the same location.
+    The acceptable values for this parameter are:
+
+    - **SkipIfExists**: Causes Windows Server Backup to skip the existing file and continue with recovery of the next file.
+    - **CreateCopyIfExists**: Causes Windows Server Backup to create a copy of the existing file and not overwrite it.
+    - **OverwriteIfExists**: Causes Windows Server Backup to overwrite the existing file with the file from the backup.
+
+    If you do not specify this parameter, the cmdlet uses the **CreateCopyIfExists** option by default.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: Default, SkipIfExists, CreateCopyIfExists, OverwriteIfExists
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recursive
+  description: |+
+    Indicates that Windows Server Backup recovers the files from the folders that you specify along with files in folders that are subordinate to those folders.
+    By default, the backup operation recovers only files that reside directly under the specified folders.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourcePath
+  isRequired: true
+  description: |+
+    Specifies the file path that this cmdlet recovers from the backup.
+    You can prefix the file path with a volume browse path that you get from the **Get-WBBackupVolumeBrowsePath** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetPath
+  description: |+
+    Specifies the location where recovered files reside after the recovery.
+    If you do not specify this parameter, the backup operation recovers files to their original locations.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WindowsServerBackup.Start-WBFileRecovery
+name: Start-WBFileRecovery
+description: |-
+  The **Start-WBFileRecovery** cmdlet starts a file recovery operation.
+  For file recovery, you must specify the backup set from which to recover the file, along with the file that you want to recover.
+
+  To browse the volumes in backup, use the [Get-WBBackupVolumeBrowsePath](./Get-WBBackupVolumeBrowsePath.yml) cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: wsbcmdlet.dll-Help.xml
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/start-wbfilerecovery?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Start-WBFileRecovery

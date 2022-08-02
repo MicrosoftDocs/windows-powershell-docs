@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Raises the behavior level of a farm.
+module: ADFS
+notes: ""
+links:
+- text: Restore-AdfsFarmBehaviorLevel
+  href: ./Restore-AdfsFarmBehaviorLevel.yml
+- text: Test-AdfsFarmBehaviorLevelRaise
+  href: ./Test-AdfsFarmBehaviorLevelRaise.yml
+- text: Test-AdfsFarmBehaviorLevelRestore
+  href: ./Test-AdfsFarmBehaviorLevelRestore.yml
+syntaxes:
+- >-
+  Invoke-AdfsFarmBehaviorLevelRaise [-Member <String[]>] [-Credential <PSCredential>]
+
+   [-ServiceAccountCredential <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Invoke-AdfsFarmBehaviorLevelRaise [-Member <String[]>] [-Credential <PSCredential>]
+
+   [-GroupServiceAccountIdentifier <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Raise the farm behavior level'
+  code: |-
+    PS C:\> Invoke-AdfsFarmBehaviorLevelRaise
+  description: |-
+    This command raises the farm behavior level from Windows Server 2012 R2 to the Windows Server 2016 level.
+    The command applies to the latest version available on your forest.
+    You not have to specify the level.
+  summary: ""
+- title: 'Example 2: Raise the farm behavior level for a farm that uses SQL Server'
+  code: |-
+    PS C:\> $Credentials = Get-Credential
+    PS C:\> Invoke-AdfsFarmBehaviorLevelRaise -Credential $Credentials
+  description: |-
+    The first command prompts you for user name and password by using the **Get-Credential** cmdlet.
+    The command stores the credentials in the $Credentials variable.
+
+    The second command raises the farm behavior level from Windows Server 2012 R2 to the Windows Server 2016 level.
+    The cmdlet specifies the necessary credentials stored in $Credentials.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies credentials necessary to run this cmdlet for an AD FS farm that uses SQL Server as the policy database.
+    The credentials provided must be an administrator on each AD FS server.
+    To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupServiceAccountIdentifier
+  description: |+
+    Specifies the ID of a group Managed Service Account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Member
+  description: |+
+    Specifies an array of members.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: ServiceAccountCredential
+  description: |+
+    Specifies credentials for a service account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: ADFS.Invoke-AdfsFarmBehaviorLevelRaise
+name: Invoke-AdfsFarmBehaviorLevelRaise
+description: |-
+  The **Invoke-AdfsFarmBehaviorLevelRaise** cmdlet raises the behavior level of an Active Directory Federation Services (AD FS) farm to enable the new features that are available in later versions of the Windows operating system.
+
+  To raise the behavior level of a farm that uses SQL Server as the policy database, specify the *Credential* parameter.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/adfs/invoke-adfsfarmbehaviorlevelraise?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Invoke-AdfsFarmBehaviorLevelRaise

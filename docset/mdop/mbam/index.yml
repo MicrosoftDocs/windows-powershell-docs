@@ -1,0 +1,39 @@
+### YamlMime:PowershellModule
+children:
+- title: MBAM
+  cmdlets:
+  - MBAM.Disable-MbamCMIntegration
+  - MBAM.Disable-MbamReport
+  - MBAM.Disable-MbamWebApplication
+  - MBAM.Enable-MbamCMIntegration
+  - MBAM.Enable-MbamDatabase
+  - MBAM.Enable-MbamReport
+  - MBAM.Enable-MbamWebApplication
+  - MBAM.Get-MbamBitLockerRecoveryKey
+  - MBAM.Get-MbamCMIntegration
+  - MBAM.Get-MbamReport
+  - MBAM.Get-MbamTPMOwnerPassword
+  - MBAM.Get-MbamWebApplication
+  - MBAM.Read-ADRecoveryInformation
+  - MBAM.Read-ADTpmInformation
+  - MBAM.Test-MbamCMIntegration
+  - MBAM.Test-MbamDatabase
+  - MBAM.Test-MbamReport
+  - MBAM.Test-MbamWebApplication
+  - MBAM.Write-MbamComputerUser
+  - MBAM.Write-MbamRecoveryInformation
+  - MBAM.Write-MbamTPMInformation
+uid: MBAM
+name: MBAM
+description: |-
+  The following list contains links to the help topics for the Microsoft BitLocker Administration and Monitoring (MBAM) cmdlets.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  Download Help Link: http://go.microsoft.com/fwlink/?LinkId=615114
+  Help Version: 4.0.2.0
+  Locale: en-US
+  Module Guid: CMDLETS
+  Module Name: MBAM
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  title: MBAM

@@ -1,0 +1,35 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables logging of notifications for Storage Spaces and removes existing logs.
+module: StorageSpaces
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-StorageSpacesEventLog
+  href: ./New-StorageSpacesEventLog.yml
+syntaxes:
+- Remove-StorageSpacesEventLog
+examples:
+- title: Example 1 - Disable logging
+  code: |-
+    PS C:\>Remove-StorageSpacesEventLog
+  description: ""
+  summary: ""
+uid: StorageSpaces.Remove-StorageSpacesEventLog
+name: Remove-StorageSpacesEventLog
+description: |-
+  The Remove-StorageSpacesEventLog cmdlet disables logging of notifications for Storage Spaces and removes existing logs created by running the New-StorageSpacesEventLog cmdlet.
+
+  This cmdlet requires administrative privileges.
+metadata:
+  external help file: StorSpaces2_Cmdlets.xml
+  Module Name: StorageSpaces
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/storagespaces/remove-storagespaceseventlog?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-StorageSpacesEventLog

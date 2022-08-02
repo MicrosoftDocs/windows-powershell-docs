@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet is not supported.
+module: ConfigCI
+notes: ""
+syntaxes:
+- >-
+  Edit-CIPolicyRule [-Id] <String> [-Name <String>] [-RType <String>] [-FileName <String>] [-Version <String>]
+
+   [-HashPath <String>] -FilePath <String> [<CommonParameters>]
+- >-
+  Edit-CIPolicyRule [-Id] <String> [-Name <String>] [-RType <String>] [-Root <String>] [-AddEkus <String[]>]
+
+   [-RemoveEkus <String[]>] [-Issuer <String>] [-Publisher <String>] [-OemId <String>]
+
+   [-AddExceptions <String[]>] [-RemoveExceptions <String[]>] -FilePath <String> [<CommonParameters>]
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddEkus
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddExceptions
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileName
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: f
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HashPath
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: h
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Issuer
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: n
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OemId
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Publisher
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemoveEkus
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemoveExceptions
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Root
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RType
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: t
+  parameterValueGroup: Allow, Deny, a, d
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: v
+  parameterValueGroup: ""
+uid: ConfigCI.Edit-CIPolicyRule
+name: Edit-CIPolicyRule
+description: |-
+  The **Edit-CIPolicyRule** cmdlet is not supported.
+  Do not use this cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/configci/edit-cipolicyrule?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Edit-CIPolicyRule

@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns App-V Server packages.
+module: AppVServer
+notes: ""
+outputs:
+- name: <xref href="AppvServer.AppvServerPackage" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Grant-AppvServerPackage
+  href: ./Grant-AppvServerPackage.yml
+- text: Import-AppvServerPackage
+  href: ./Import-AppvServerPackage.yml
+- text: Publish-AppvServerPackage
+  href: ./Publish-AppvServerPackage.yml
+- text: Remove-AppvServerPackage
+  href: ./Remove-AppvServerPackage.yml
+- text: Set-AppvServerPackage
+  href: ./Set-AppvServerPackage.yml
+- text: Unpublish-AppvServerPackage
+  href: ./Unpublish-AppvServerPackage.yml
+syntaxes:
+- Get-AppvServerPackage [[-Name] <String>] [[-Version] <String>] [<CommonParameters>]
+- Get-AppvServerPackage [-PackageID] <Guid> [[-VersionID] <Guid>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Return packages that include a partial name'
+  code: |-
+    PS C:\> Get-AppvServerPackage -Name "Office*"
+  description: |-
+    This command returns all packages that have a name that matches the criteria specified in the *Name* parameter.
+  summary: ""
+- title: 'Example 2: Return a single version of a package'
+  code: |-
+    PS C:\> Get-AppvServerPackage -Name "Office" -Version "2"
+  description: |-
+    This command returns the single package that has the specified name and version.
+  summary: ""
+- title: 'Example 3: Return all versions of a package'
+  code: |-
+    PS C:\> Get-AppvServerPackage -PackageID A12D32445F
+  description: |-
+    This command returns all versions of the package that have the specified package GUID.
+  summary: ""
+- title: 'Example 4: Return all the packages'
+  code: |-
+    PS C:\> Get-AppvServerPackage
+  description: |-
+    This command returns a list of all the packages on the system.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the friendly name of the package given when the package was created.
+    This value is obtained from the package manifest.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PackageID
+  isRequired: true
+  description: |+
+    Specifies the package GUID that uniquely identifies the package.
+    It can be found in the package manifest or by opening the package using the sequencer.
+    The Package GUID is shared by all versions of a package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    Specifies the version of an App-V package.
+    If you do not specify a version, the cmdlet acts on all versions saved on the computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VersionID
+  description: |+
+    Specifies a GUID that differentiates a package version from other versions.
+    If you do not specify a version GUID, the cmdlet operates on all versions of the package.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+uid: AppVServer.Get-AppvServerPackage
+name: Get-AppvServerPackage
+description: |-
+  The **Get-AppvServerPackage** cmdlet returns a set of Microsoft Application Virtualization (App-V) Server packages based on the criteria provided.
+metadata:
+  description: Use this topic to help manage MDOP technologies with Windows PowerShell.
+  external help file: AppVServerCmdlets.dll-Help.xml
+  ms.date: 12/05/2016
+  ms.devlang: powershell
+  schema: 2.0.0
+  title: Get-AppvServerPackage

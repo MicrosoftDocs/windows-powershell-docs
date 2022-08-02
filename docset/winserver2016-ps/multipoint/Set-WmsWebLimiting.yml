@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures web limiting for standard user sessions.
+module: MultiPoint
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Disable-WmsWebLimiting
+  href: ./Disable-WmsWebLimiting.yml
+- text: Enable-WmsWebLimiting
+  href: ./Enable-WmsWebLimiting.yml
+- text: Get-WmsWebLimiting
+  href: ./Get-WmsWebLimiting.yml
+syntaxes:
+- Set-WmsWebLimiting [-Allow] [-Sites] <String[]> [-Server <String>] [<CommonParameters>]
+- Set-WmsWebLimiting [-Block] [-Sites] <String[]> [-Server <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Block access to web sites'
+  code: |-
+    PS C:\> Set-WmsWebLimiting -Sites "www.test.com", "www.test1.com" -Block
+  description: |-
+    This command blocks access to the specified URLs.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Allow
+  isRequired: true
+  description: |+
+    Indicates that this operation allows the specified web sites.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Block
+  isRequired: true
+  description: |+
+    Indicates that this operation blocks the specified web sites.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+    The default is localhost.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ComputerName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Sites
+  isRequired: true
+  description: |+
+    Specifies an array of web sites.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: MultiPoint.Set-WmsWebLimiting
+name: Set-WmsWebLimiting
+description: |-
+  The **Set-WmsWebLimiting** cmdlet configures web limiting for standard user sessions on the current Windows MultiPoint Server system.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MultiPoint.dll-Help.xml
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/multipoint/set-wmsweblimiting?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-WmsWebLimiting

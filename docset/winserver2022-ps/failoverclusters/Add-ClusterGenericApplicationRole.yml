@@ -1,0 +1,182 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures high availability for an application that was not originally designed to run in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-ClusterGenericScriptRole
+  href: ./Add-ClusterGenericScriptRole.yml
+- text: Add-ClusterGenericServiceRole
+  href: ./Add-ClusterGenericServiceRole.yml
+- text: Get-ClusterGroup
+  href: ./Get-ClusterGroup.yml
+- text: Move-ClusterGroup
+  href: ./Move-ClusterGroup.yml
+- text: Remove-ClusterGroup
+  href: ./Remove-ClusterGroup.yml
+- text: Start-ClusterGroup
+  href: ./Start-ClusterGroup.yml
+- text: Stop-ClusterGroup
+  href: ./Stop-ClusterGroup.yml
+syntaxes:
+- >-
+  Add-ClusterGenericApplicationRole -CommandLine <String> [-Parameters <String>]
+
+   [-CheckpointKey <StringCollection>] [-Storage <StringCollection>] [-StaticAddress <StringCollection>]
+
+   [-IgnoreNetwork <StringCollection>] [[-Name] <String>] [-Wait <Int32>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Configure an application as a generic clustered application'
+  code: |-
+    PS C:\> Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe
+    Name                       OwnerNode                           State 
+    ----                       ---------                           ----- 
+    cluster1GenApp             node2                              Online
+  description: |-
+    This example configures NewApplication.exe as a generic clustered application.
+    A default name will be used for client access and this application requires no storage.
+  summary: ""
+- title: 'Example 2: Configure an application with storage and name'
+  code: |-
+    PS C:\> Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe -Storage "Cluster Disk 4" -Name NewApplication
+    Name                       OwnerNode                           State 
+    ----                       ---------                           ----- 
+    NewApplication                 node2                          Online
+  description: |-
+    This example configures NewApplication.exe as a generic clustered application using Cluster Disk 4, and assigns the name NewApplication.
+  summary: ""
+- title: 'Example 3: Configure application with no wait for resources'
+  code: |-
+    PS C:\> Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe -Wait 0
+    Name                       OwnerNode                           State 
+    ----                       ---------                           ----- 
+    cluster1GenApp             node2                             Pending
+  description: |-
+    This example configures NewApplication.exe as a generic clustered application and assigns the name NewApplication.
+    The cmdlet completes without waiting for all resources to come online.
+  summary: ""
+parameters:
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: CheckpointKey
+  description: |+
+    Specifies a comma-separated list of registry checkpoint keys to add for this highly available generic application.
+    All registry paths are relative to HKEY_LOCAL_MACHINE.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet.
+    If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CommandLine
+  isRequired: true
+  description: |+
+    Specifies the Windows PowerShell® command line to use for the highly available generic application.
+    If the full path is specified, then the current directory is parsed out of the Windows PowerShell command line.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: IgnoreNetwork
+  description: |+
+    Specifies one or more networks to ignore when running the cmdlet.
+    Networks with DHCP enabled are always included, but other networks need a static address to be specified using the *StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster on which to create the highly available application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the highly available application to create.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Parameters
+  description: |+
+    Specifies the parameters to use for the highly available generic application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: StaticAddress
+  description: |+
+    Specifies one or more static addresses to use when running the cmdlet.
+    Networks with DHCP enabled are always included, but other networks need a static address to be specified using the *StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Storage
+  description: |+
+    Specifies the cluster disk resource to be added to the created highly available application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Specifies the time in seconds to wait for the cmdlet.
+    If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+    If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Add-ClusterGenericApplicationRole
+name: Add-ClusterGenericApplicationRole
+description: |-
+  The **Add-ClusterGenericApplicationRole** cmdlet configures high availability for an application that was not originally designed to run in a failover cluster.
+
+  If an application is run as a Generic Application, the cluster software will start the application, then periodically query the operating system to see whether the application appears to be running.
+  If so, then it is presumed to be online and will not be restarted or failed over.
+
+  Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustergenericapplicationrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Add-ClusterGenericApplicationRole

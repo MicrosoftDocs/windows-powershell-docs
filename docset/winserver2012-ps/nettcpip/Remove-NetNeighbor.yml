@@ -1,0 +1,246 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes a neighbor cache entry for IPv4 or IPv6.
+module: NetTCPIP
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetNeighbor" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/p/?LinkId=113423
+- text: Get-NetNeighbor
+  href: ./Get-NetNeighbor.yml
+- text: New-NetNeighbor
+  href: ./New-NetNeighbor.yml
+- text: Set-NetNeighbor
+  href: ./Set-NetNeighbor.yml
+- text: Get-NetAdapter
+  href: ../netadapter/Get-NetAdapter.yml
+syntaxes:
+- >-
+  Remove-NetNeighbor [[-IPAddress] <String[]>] [-AddressFamily <AddressFamily[]>] [-AsJob]
+
+   [-AssociatedIPInterface <CimInstance>] [-CimSession <CimSession[]>] [-InterfaceAlias <String[]>]
+
+   [-InterfaceIndex <UInt32[]>] [-LinkLayerAddress <String[]>] [-PassThru] [-PolicyStore <String>]
+
+   [-State <State[]>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+- >-
+  Remove-NetNeighbor [-AsJob] [-CimSession <CimSession[]>] [-PassThru] [-ThrottleLimit <Int32>]
+
+   -InputObject <CimInstance[]> [-Confirm] [-WhatIf]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    PS C:\>Remove-NetNeighbor -State Unreachable
+  description: |-
+    This example deletes all neighbor cache entries that are unreachable.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    PS C:\>Get-NetAdapter | Where-Object -FilterScript {$_.LinkSpeed -Eq "100 Mbps"} | Remove-NetNeighbor -AddressFamily IPv4
+  description: |-
+    This example deletes all neighbor cache entries that have IPv4 addresses and are associated with a network adapter that has a link speed of 100 Mbps.
+  summary: ""
+parameters:
+- type: <xref href="AddressFamily" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressFamily
+  description: |+
+    Removes all neighbor cache entries that have a specific IP address family.
+    The acceptable values for this parameter are:
+
+     -- IPv4: Removes all of the neighbor cache entries that have IPv4 addresses. 
+
+     -- IPv6: Removes all of the neighbor cache entries that have IPv6 addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+  name: AssociatedIPInterface
+  description: |+
+    Removes all of the neighbor cache entries that are associated with a specific network IP interface CIM object.
+    This is typically as input through a pipeline.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet.
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceAlias
+  description: |+
+    Removes all of the neighbor cache entries that are connected to a specific interface, described by InterfaceAlias.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InterfaceIndex
+  description: |+
+    Removes all of the neighbor cache entries that are connected to a specific interface, described by InterfaceIndex.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IPAddress
+  description: |+
+    Removes all of the neighbor cache entries that have a specific IP address.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LinkLayerAddress
+  description: |+
+    Specifies the link-layer address of the neighbor cache entry.
+    This is also known as a MAC address.
+    A link-layer address that uses IPv4 address syntax is a tunnel technology that encapsulates packets over an IPv4 tunnel, such as ISATAP or Teredo.
+    A link-layer address of all zeroes indicates that the neighbor is unreachable and the neighbor cache entry does not have a link-layer address entry.
+    An empty link-layer address indicates that the link layer does not use link-layer addresses, such as on a loopback interface.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyStore
+  description: |+
+    Specifies the PolicyStore value.
+    The acceptable values for this parameter are:
+
+     -- ActiveStore: The IP address information is currently valid. 
+
+     -- PersistentStore: The IP address information is persistent across reboots.
+    When the computer starts, the PersistentStore settings are copied to the ActiveStore. 
+
+    The default value is ActiveStore.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="State" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: State
+  description: |+
+    Removes all of the neighbor cache entries that are in a specific state.
+    The neighbor cache contains information maintained by Neighbor Unreachability Detection.
+    A key piece of information is the reachability state of a neighbor.
+    The acceptable values for this parameter are:
+
+     -- Unreachable: The IP address is unreachable. 
+
+     -- Incomplete: Address resolution is in progress and the link-layer address of the neighbor has not yet been determined. 
+
+     -- Probe: The neighbor is no longer known to be reachable, and unicast Neighbor Solicitation probes are being sent to verify reachability. 
+
+     -- Delay: The neighbor is no longer known to be reachable, and traffic has recently been sent to the neighbor.
+    Rather than probe the neighbor immediately, however, the system will delay sending probes for a short while in order to give upper layer protocols a chance to provide reachability confirmation. 
+
+     -- Stale: The neighbor is no longer known to be reachable but until traffic is sent to the neighbor, no attempt should be made to verify its reachability. 
+
+     -- Reachable: The neighbor is known to have been reachable recently (within tens of seconds). 
+
+     -- Permanent: The neighbor is statically provisioned and will not expire unless deleted through configuration. 
+
+     -- Maximum: A maximum value for testing purposes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetTCPIP.Remove-NetNeighbor
+name: Remove-NetNeighbor
+description: |-
+  The **Remove-NetNeighbor** cmdlet deletes a neighbor cache entry for IPv4 or IPv6.
+  The neighbor cache maintains a list of information for each on-link neighbor, including the IP address and the associated MAC address.
+metadata:
+  external help file: NetTCPIP_Cmdlets.xml
+  Module Name: NetTCPIP
+  online version: https://docs.microsoft.com/powershell/module/nettcpip/remove-netneighbor?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

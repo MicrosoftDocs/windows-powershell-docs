@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the display resolution for a Server Core server.
+module: ServerCore
+notes: ""
+links:
+- text: Get-DisplayResolution
+  href: ./Get-DisplayResolution.yml
+syntaxes:
+- Set-DisplayResolution [-Width] <Object> [-Height] <Object> [-Force] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set resolution'
+  code: |-
+    PS C:\> Set-DisplayResolution -Width 1920 -Height 1200
+    setres will now attempt to apply the following display settings: 
+      Width:          1920
+      Height:         1200
+    Your screen may go blank for a moment. If your screen remains blank, press N
+    or restart your computer to revert the display settings. 
+    Do you want to save the display settings? 
+    [Y,N]?_
+  description: |-
+    This command sets the display resolution to a width of 1920 pixels and a height of 1200 pixels.
+    The system prompts you for confirmation.
+  summary: ""
+- title: 'Example 2: Set resolution without confirmation'
+  code: |-
+    PS C:\>Set-DisplayResolution -Width 1024 -Height 768 -Force
+    setres will now attempt to apply the following display settings: 
+      Width:          1024
+      Height:         768
+    The new display settings have been saved.
+  description: |-
+    This command sets the display resolution to a width of 1024 pixels and a height of 768 pixels.
+    Because the command uses the *Force* parameter, it makes the change without prompting you.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Height
+  isRequired: true
+  description: |+
+    Specifies a height, in pixels, for the display.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Object" data-throw-if-not-resolved="False" />
+  name: Width
+  isRequired: true
+  description: |+
+    Specifies a width, in pixels, for the display.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: ServerCore.Set-DisplayResolution
+name: Set-DisplayResolution
+description: |-
+  The **Set-DisplayResolution** cmdlet changes the display resolution for Windows Server® 2012 in Server Core mode.
+  Specify both the width and the height in pixels.
+  Unless you use the *Force* parameter, the cmdlet prompts you before it changes the settings.
+  You can use the Get-DisplayResolution cmdlet to view the current resolution.
+
+  For more information about Server Core mode, see [Configure and Manage Server Core Installations](https://technet.microsoft.com/en-us/library/jj574091).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: ServerCore-help.xml
+  Module Name: ServerCore
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/servercore/set-displayresolution?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DisplayResolution

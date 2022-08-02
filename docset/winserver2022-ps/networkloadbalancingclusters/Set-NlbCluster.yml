@@ -1,0 +1,149 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Edits the configuration of a NLB cluster.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NlbCluster
+  href: ./Get-NlbCluster.yml
+- text: New-NlbCluster
+  href: ./New-NlbCluster.yml
+- text: Remove-NlbCluster
+  href: ./Remove-NlbCluster.yml
+- text: Resume-NlbCluster
+  href: ./Resume-NlbCluster.yml
+- text: Start-NlbCluster
+  href: ./Start-NlbCluster.yml
+- text: Stop-NlbCluster
+  href: ./Stop-NlbCluster.yml
+- text: Suspend-NlbCluster
+  href: ./Suspend-NlbCluster.yml
+syntaxes:
+- >-
+  Set-NlbCluster [[-HostName] <String>] [-InterfaceName] <String> [-ClusterPrimaryIP <IPAddress>]
+
+   [-Name <String>] [-OperationMode <ClusterMode>] [<CommonParameters>]
+- >-
+  Set-NlbCluster -InputObject <Cluster[]> [-ClusterPrimaryIP <IPAddress>] [-Name <String>]
+
+   [-OperationMode <ClusterMode>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change the cluster name'
+  code: |-
+    PS C:\>Get-NlbCluster | Set-NlbCluster -Name " NewCluster001"
+    Name                IPAddress           SubnetMask          Mode 
+    ----                ---------           ----------          ---- 
+    NewCluster001       fe80::b349:6945:... ::                  UNICAST
+  description: |-
+    This command changes the cluster name to NewCluster001.
+  summary: ""
+- title: 'Example 2: Change the cluster operation mode'
+  code: |-
+    PS C:\>Get-NlbCluster | Set-NlbCluster -OperationMode MULTICAST
+    Name                IPAddress           SubnetMask          Mode 
+    ----                ---------           ----------          ---- 
+    newcluster          fe80::b349:6945:... ::                  MULTICAST
+  description: |-
+    This command changes the cluster operation mode to MULTICAST.
+  summary: ""
+- title: 'Example 3: Change the cluster primary IP address'
+  code: |-
+    PS C:\>Get-NlbCluster | Set-NlbCluster -ClusterPrimaryIP 2.53.0.120
+
+    Name                IPAddress           SubnetMask          Mode 
+    ----                ---------           ----------          ---- 
+    newcluster          2.53.0.120          255.0.0.0           MULTICAST
+  description: |-
+    This command changes the cluster primary IP address to one of the other cluster virtual IP addresses on the cluster.
+  summary: ""
+parameters:
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: ClusterPrimaryIP
+  description: |+
+    Specifies the IP address to use as the cluster primary IP address.
+    The IP address must be one of the existing virtual IP addresses on the cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: PrimaryIP, PIP
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: "0"
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="Cluster" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the cluster to set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  isRequired: true
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: "1"
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the new name of the cluster that this cmdlet sets.
+
+  defaultValue: None
+  position: Named
+  aliases: ClusterName
+  parameterValueGroup: ""
+- type: <xref href="ClusterMode" data-throw-if-not-resolved="False" />
+  name: OperationMode
+  description: |+
+    Specifies the new operation mode for the cluster.
+    The acceptable values for this parameter are:
+
+    - IGMPMULTICAST
+    - MULTICAST
+    - UNICAST
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unicast, Multicast, IgmpMulticast
+uid: NetworkLoadBalancingClusters.Set-NlbCluster
+name: Set-NlbCluster
+description: |-
+  The **Set-NlbCluster** cmdlet edits the configuration of a Network Load Balancing (NLB) cluster.
+  The configuration changes you can make include the cluster operation mode, the cluster name, and the cluster primary IP address.
+
+  This operation changes the configuration on all cluster nodes.
+  As a result, the NLB cluster restarts the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.
+  Any additional operations on the NLB cluster should not be initiated until all cluster nodes have completed the convergence process and are back to the converged state.
+
+  ps_nlbc_checkstate_remark
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/set-nlbcluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NlbCluster

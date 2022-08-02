@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies properties of a key certificate in the Key Protection Service.
+module: HgsKeyProtection
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+links:
+- text: Add-HgsKeyProtectionCertificate
+  href: ./Add-HgsKeyProtectionCertificate.yml
+- text: Get-HgsKeyProtectionCertificate
+  href: ./Get-HgsKeyProtectionCertificate.yml
+- text: Remove-HgsKeyProtectionCertificate
+  href: ./Remove-HgsKeyProtectionCertificate.yml
+syntaxes:
+- >-
+  Set-HgsKeyProtectionCertificate -CertificateType <KeyCertificateType> -Thumbprint <String>
+
+   [-IsEnabled <Boolean>] [-IsPrimary] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Disable a key certificate'
+  code: |-
+    PS C:\> Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint "a0e2650e25084961a24da956d132a5fa" -IsEnabled $False
+  description: |-
+    This command disables a signing key certificate.
+  summary: ""
+- title: 'Example 2: Designate a certificate as the primary certificate'
+  code: |-
+    PS C:\> Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint "a17dd68f4ecc499bbe65ee18718123da" -IsPrimary
+  description: |-
+    This command designates a certificate as the primary certificate.
+  summary: ""
+parameters:
+- type: <xref href="KeyCertificateType" data-throw-if-not-resolved="False" />
+  name: CertificateType
+  isRequired: true
+  description: |+
+    Specifies of the type of the certificate that this cmdlet modifies.
+    The acceptable values for this parameter are:
+
+    - Signing
+    - Encryption
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Signing, Encryption
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsEnabled
+  description: |+
+    Indicates whether to enable a certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IsPrimary
+  description: |+
+    Indicates that this cmdlet makes a certificate into the primary certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  isRequired: true
+  description: |+
+    Specifies the thumbprint of the certificate to modify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: HgsKeyProtection.Set-HgsKeyProtectionCertificate
+name: Set-HgsKeyProtectionCertificate
+description: |-
+  The **Set-HgsKeyProtectionCertificate** cmdlet modifies properties of a key certificate in the Key Protection Service.
+  You can make a certificate into the primary certificate.
+  The primary certificate is used to sign and encrypt new key protectors.
+  You can enable or disable a certificate.
+  You can use enabled certificates for either signing or encryption.
+  A disabled certificate cannot be the primary certificate.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/set-hgskeyprotectioncertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-HgsKeyProtectionCertificate

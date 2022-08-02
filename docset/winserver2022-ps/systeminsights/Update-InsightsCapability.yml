@@ -1,0 +1,107 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates an existing System Insights capability. Updating a capability will preserve all of the custom configuration information associated with a capability.
+module: SystemInsights
+inputs:
+- name: <xref href="Microsoft.SystemInsights.Management.PowerShell.Capability" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a capability object to the *Name* parameter.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-InsightsCapability
+  href: get-insightscapability.yml
+- text: Add-InsightsCapability
+  href: add-insightscapability.yml
+- text: Remove-InsightsCapability
+  href: remove-insightscapability.yml
+syntaxes:
+- >-
+  Update-InsightsCapability [-Name] <String> [-Library] <String> [[-ComputerName] <String>]
+
+   [-Credential <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Update-InsightsCapability -Name "Custom performance analysis" -Library "C:\Capabilities\perfAnalysisv2.dll"
+  description: |-
+    This example updates the **Custom performance analysis** capability using the **C:\Capabilities\perfAnalysisv2.dll** library.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ComputerName
+  description: |+
+    Specifies a fully qualified domain name (FQDN). If not specified, uses the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: CN
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credential for accessing the computer specified by the -ComputerName parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Library
+  isRequired: true
+  description: |+
+    Specifies the path to a .NET library (.dll), which contains the predictive model and defines additional capability metadata, such as the capability description, data sources, and default schedule.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies a capability using a capability name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: N
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: SystemInsights.Update-InsightsCapability
+name: Update-InsightsCapability
+description: |-
+  The **Update-InsightsCapability** cmdlet updates an existing System Insights capability. Updating a capability will preserve all of the custom configuration information associated with a capability.
+
+  >[!IMPORTANT]
+  >Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: http://go.microsoft.com
+  external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
+  Locale: en-US
+  Module Name: SystemInsights
+  ms.date: 06/18/2018
+  online version: https://docs.microsoft.com/powershell/module/systeminsights/update-insightscapability?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-InsightsCapability

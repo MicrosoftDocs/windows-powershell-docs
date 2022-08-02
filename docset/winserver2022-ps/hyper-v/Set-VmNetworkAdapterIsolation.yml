@@ -1,0 +1,264 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies isolation settings for a virtual network adapter.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMNetworkAdapterIsolationSetting" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-VmNetworkAdapterIsolation
+  href: ./Get-VmNetworkAdapterIsolation.yml
+- text: Get-VM
+  href: ./Get-VM.yml
+- text: Get-VMNetworkAdapter
+  href: ./Get-VMNetworkAdapter.yml
+- text: Set-VMNetworkAdapter
+  href: ./Set-VMNetworkAdapter.yml
+- text: Set-VMNetworkAdapterVlan
+  href: ./Set-VMNetworkAdapterVlan.yml
+syntaxes:
+- >-
+  Set-VMNetworkAdapterIsolation [-VMNetworkAdapterName <String>] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-VMName] <String[]>
+
+   [-IsolationMode <VMNetworkAdapterIsolationMode>] [-AllowUntaggedTraffic <Boolean>]
+
+   [-DefaultIsolationID <Int32>] [-MultiTenantStack <OnOffState>] [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-VMNetworkAdapterIsolation [-VMNetworkAdapter] <VMNetworkAdapterBase[]>
+
+   [-IsolationMode <VMNetworkAdapterIsolationMode>] [-AllowUntaggedTraffic <Boolean>]
+
+   [-DefaultIsolationID <Int32>] [-MultiTenantStack <OnOffState>] [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Set-VMNetworkAdapterIsolation [-ManagementOS] [-VMNetworkAdapterName <String>] [-CimSession <CimSession[]>]
+
+   [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-IsolationMode <VMNetworkAdapterIsolationMode>]
+
+   [-AllowUntaggedTraffic <Boolean>] [-DefaultIsolationID <Int32>] [-MultiTenantStack <OnOffState>] [-Passthru]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-VMNetworkAdapterIsolation [-VMNetworkAdapterName <String>] [-VM] <VirtualMachine[]>
+
+   [-IsolationMode <VMNetworkAdapterIsolationMode>] [-AllowUntaggedTraffic <Boolean>]
+
+   [-DefaultIsolationID <Int32>] [-MultiTenantStack <OnOffState>] [-Passthru] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set isolation mode for a virtual machine'
+  code: |-
+    PS C:\> Set-VMNetworkAdapterIsolation -VMName "TSQA01" -AllowUntaggedTraffic $False -IsolationMode NativeVirtualSubnet -MultiTenantStack On
+  description: |-
+    This command sets the isolation mode of the virtual machine named TSQA01 to NativeVirtualSubnet, which indicates Hyper-V Network Virtualization.
+    The virtual machine does not accept untagged traffic, but the **MultitenantStack** parameter has a value of On, so the virtual machine can provide services to multiple tenants.
+  summary: ""
+- title: 'Example 2: Set isolation mode and untagged traffic setting for a virtual machine'
+  code: |-
+    PS C:\> Set-VMNetworkAdapterIsolation -VMName "TSQA01" -AllowUntaggedTraffic $True -IsolationMode VLAN -DefaultIsolationID 1 -MultiTenantStack On
+  description: |-
+    This command sets the isolation mode for virtual machine named TSQA01 to be VLAN.
+    The virtual machine accepts untagged traffic, which is sent and received on VLAN 1, specified by the **DefaultIsolationID** parameter.
+    Untagged traffic goes to the default compartment in the virtual machine.
+    Multitenancy is enabled, therefore, the virtual machine receives isolation subnet and routing domain information.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowUntaggedTraffic
+  description: |+
+    Indicates whether the virtual machine sends and receives untagged traffic.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies an array of Hyper-V hosts.
+    The cmdlet modifies isolation settings for virtual machines hosted by the computers that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DefaultIsolationID
+  description: |+
+    Specifies the ID of the network for traffic to the default compartment on virtual machines that have multitenancy enabled.
+    The value that you specify applies only to untagged traffic.
+    This parameter has an effect only if you specify a value of $True for the *AllowUntaggedTraffic* parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterIsolationMode" data-throw-if-not-resolved="False" />
+  name: IsolationMode
+  description: |+
+    Specifies the isolation mode for the adapter.
+    The acceptable values for this parameter are:
+
+    - NativeVirtualSubnet.
+    Hyper-V Network Virtualization.
+    - ExternalVirtualSubnet.
+    A third party network virtualization solution. 
+    - VLAN.
+    - None. 
+
+    If you specify a value of None, the network adapter uses its default isolation mode.
+    Set the default isolation mode by using the **Set-VMNetworkAdapterVlan** cmdlet or the **Set-VMNetworkAdapter** cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, NativeVirtualSubnet, ExternalVirtualSubnet, Vlan
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagementOS
+  isRequired: true
+  description: |+
+    Indicates that the cmdlet operates on the parent or host operating system.
+    If you specify this parameter, this cmdlet modifies isolation settings for the parent or host operating system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="OnOffState" data-throw-if-not-resolved="False" />
+  name: MultiTenantStack
+  description: |+
+    Specifies whether to use multiple isolation IDs for the virtual machine.
+    The acceptable values for this parameter are:
+
+    - On.
+    Indicate isolation IDs so that the virtual machine provides services to multiple tenants on different isolation subnets. 
+    - Off.
+    Do not indicate isolation IDs to virtual machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: On, Off
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machine objects.
+    The cmdlet modifies isolation settings for adapters that belong to the virtual machines that you specify.
+    To obtain a virtual machine object, use the **Get-VM** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies an array of names of virtual machines.
+    The cmdlet modifies isolation settings for adapters that belong to the virtual machines that you specify.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMNetworkAdapterBase" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMNetworkAdapter
+  isRequired: true
+  description: |+
+    Specifies an array VM network adapters as **VMNetworkAdapterBase** objects.
+    The cmdlet modifies isolation settings for the adapters that you specify.
+    To obtain a network adapter, use the **Get-VMNetworkAdapter** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: VMNetworkAdapterName
+  description: |+
+    Specifies the name of a virtual network adapter.
+    The cmdlet modifies isolation settings for the adapters that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VmNetworkAdapterIsolation
+name: Set-VmNetworkAdapterIsolation
+description: |-
+  The **Set-VmNetworkAdapterIsolation** cmdlet modifies isolation settings for a virtual network adapter.
+  You can isolate a virtual machine adapter by using virtual local area network (VLAN), Hyper-V Network Virtualization or a third party virtualization solution.
+  You can specify the isolation method and modify other settings, which include multitenancy settings.
+  For more information about multitenancy, see the **Add-VmNetworkAdapterRoutingDomainMapping** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmnetworkadapterisolation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VmNetworkAdapterIsolation

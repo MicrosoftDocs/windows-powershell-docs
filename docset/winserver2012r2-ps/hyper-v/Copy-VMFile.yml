@@ -1,0 +1,147 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Copies a file to a virtual machine.
+module: Hyper-V
+notes: ""
+syntaxes:
+- >-
+  Copy-VMFile [-ComputerName <String[]>] [-Name] <String[]> [-SourcePath] <String> [-DestinationPath] <String>
+
+   -FileSource <CopyFileSourceType> [-Force] [-CreateFullPath] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Copy-VMFile [-SourcePath] <String> [-DestinationPath] <String> -FileSource <CopyFileSourceType> [-Force]
+
+   [-CreateFullPath] [-AsJob] [-VM] <VirtualMachine[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Copy-VMFile "Test VM" -SourcePath "D:\Test.txt" -DestinationPath "C:\Temp\Test.txt" -CreateFullPath -FileSource Host
+  description: |-
+    This example copies the file "test.txt" from the host operating system into the guest operating system of the virtual machine "Test VM".
+    It will create the directory "C:\Temp" inside the guest operating system if it does not exist already.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    ps_cimcommon_asjob
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies an array of Hyper-V hosts.
+    The cmdlet copies the file to the hosts you specify.
+
+  defaultValue: .
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: "False"
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CreateFullPath
+  description: |+
+    Indicates that when the cmdlet copies a file, it creates folders if the folder does not already exist.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationPath
+  isRequired: true
+  description: |+
+    Specifies a path.
+    The cmdlet copies the file to the destination path.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CopyFileSourceType" data-throw-if-not-resolved="False" />
+  name: FileSource
+  isRequired: true
+  description: |+
+    Specifies the type of a file source.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Host
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machine objects by name.
+    The cmdlet copies files to the virtual machines you specify.
+
+  defaultValue: None
+  position: "0"
+  aliases: VMName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourcePath
+  isRequired: true
+  description: |+
+    Specifies a path.
+    The cmdlet copies the file from the source path.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies an array of virtual machine objects.
+    The cmdlet copies files to the virtual machines you specify.
+    To obtain a virtual machine object, use the Get-VM cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: "False"
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Copy-VMFile
+name: Copy-VMFile
+description: |-
+  The **Copy-VMFile** cmdlet copies a file to a virtual machine.
+metadata:
+  external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/30/2017
+  online version: https://docs.microsoft.com/powershell/module/hyper-v/copy-vmfile?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Copy-VMFile

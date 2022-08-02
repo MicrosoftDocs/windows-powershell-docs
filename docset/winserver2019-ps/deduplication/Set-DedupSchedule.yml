@@ -1,0 +1,318 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes configuration settings for data deduplication schedules.
+module: Deduplication
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.DedupSchedule.Type" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Deduplication/MSFT_DedupJobSchedule" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Get-DedupSchedule
+  href: ./Get-DedupSchedule.yml
+- text: New-DedupSchedule
+  href: ./New-DedupSchedule.yml
+- text: Remove-DedupSchedule
+  href: ./Remove-DedupSchedule.yml
+syntaxes:
+- >-
+  Set-DedupSchedule [-Name] <String[]> [-Type <Type[]>] [-DurationHours <UInt32>] [-Enabled <Boolean>]
+
+   [-StopWhenSystemBusy <Boolean>] [-Memory <UInt32>] [-Cores <UInt32>] [-Priority <Priority>]
+
+   [-InputOutputThrottle <UInt32>] [-InputOutputThrottleLevel <InputOutputThrottleLevel>] [-Start <DateTime>]
+
+   [-Days <DayOfWeek[]>] [-Full <Boolean>] [-ReadOnly <Boolean>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+- >-
+  Set-DedupSchedule -InputObject <CimInstance[]> [-DurationHours <UInt32>] [-Enabled <Boolean>]
+
+   [-StopWhenSystemBusy <Boolean>] [-Memory <UInt32>] [-Cores <UInt32>] [-Priority <Priority>]
+
+   [-InputOutputThrottle <UInt32>] [-InputOutputThrottleLevel <InputOutputThrottleLevel>] [-Start <DateTime>]
+
+   [-Days <DayOfWeek[]>] [-Full <Boolean>] [-ReadOnly <Boolean>] [-CimSession <CimSession[]>]
+
+   [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+examples:
+- title: 'Example 1: Change settings of a data deduplication schedule for a garbage collection job'
+  code: |-
+    PS C:\> Set-DedupSchedule -Name "OffHoursGC" -Type GarbageCollection -Start 08:00 -DurationHours 5 -Days Sunday -Priority Normal
+  description: |-
+    This command changes the settings of a data deduplication schedule for a garbage collection job named OffHoursGC.
+    The job is scheduled to run on Sundays at 8:00 at normal priority.
+    The command specifies that the server cancels the job after 5 hours if the process has not ended.
+  summary: ""
+- title: 'Example 2: Change settings of a data deduplication schedule for a scrubbing job'
+  code: |-
+    PS C:\> Set-DedupSchedule -Name "OffHoursScrub" -Type Scrubbing -Start 23:00 -StopWhenSystemBusy -DurationHours 6 -Days Monday,Tuesday,Wednesday,Thursday,Friday -Priority Normal
+  description: |-
+    This command changes the settings of a data deduplication schedule for a scrubbing job named OffHoursScrub.
+    The command starts the scrubbing job at 23:00 on Monday through Friday at normal priority.
+    The **StopWhenSystemBusy** parameter specifies that the server stops the job when the system is busy and retries later.
+    The **DurationHours** parameter specifies that the server cancels the job after 6 hours if the process has not ended.
+  summary: ""
+- title: 'Example 3: Change settings of a data deduplication schedule for an optimization job'
+  code: |-
+    PS C:\> Set-DedupSchedule -Name "MyWeekendOptimization" -Type Optimization -Days Monday,Tuesday,Wednesday,Thursday,Friday -Start 08:00 -DurationHours 9
+  description: |-
+    This command changes the settings of a data deduplication schedule for an optimization job named MyWeekdayOptimization.
+    The optimization job runs at a normal priority every weekday evening at 8:00.
+    **DurationHours** specifies that the server cancels the job after 9 hours if the process has not ended.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+    The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+    You can continue to work in the session while the job completes. 
+    To manage the job, use the `*-Job` cmdlets. 
+    To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+    For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Cores
+  description: |+
+    Specifies the maximum percentage of physical cores that a job uses.
+
+  defaultValue: None
+  position: Named
+  aliases: MaximumCoresPercentage
+  parameterValueGroup: ""
+- type: <xref href="DayOfWeek" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Days
+  description: |+
+    Specifies an array of days of the week on which the server runs the data deduplication job.
+    The acceptable values for this parameter are:
+
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Sunday
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DurationHours
+  description: |+
+    Specifies the number of hours that the server runs the task before canceling it.
+    The value 0 indicates that the server runs the job to completion.
+    This cmdlet safely stops a data deduplication job and does not affect the files that the server is processing when it cancels the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enabled
+  description: |+
+    Indicates whether a data deduplication schedule is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Full
+  description: |+
+    Indicates that garbage collection jobs free up all deleted or unreferenced data on the volume, if you specify the value GarbageCollection for the **Type** parameter.
+    If you do not specify this parameter, garbage collection jobs free up space after a system threshold of delete data is exceeded.
+    We recommend that you run garbage collection regularly without specifying this parameter, and then once a month specify this parameter and run garbage collection again.
+
+    If you specify the value Scrubbing for the **Type** parameter, this parameter   indicates that scrubbing jobs validate the integrity of all data on the volume.
+    If you do not specify this parameter, the scrubbing job validates only critical metadata and data integrity issues that data deduplication previously encountered.
+    We recommend that you run scrubbing regularly without specifying this parameter, and then once a month specify this parameter and run scrubbing again.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies the input to this cmdlet. 
+    You can use this parameter, or you can pipe the input to this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: InputOutputThrottle
+  description: |+
+    Specifies the amount of input/output throttling applied to the deduplication job.
+    Throttling ensures that deduplication does not interfere with other I/O intensive processes.
+    The acceptable values for this parameter are: integers from 0 to 100.
+    If you specify this parameter and the **InputOutputThrottleLevel** parameter, **InputOutputThrottle** takes precedence.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="InputOutputThrottleLevel" data-throw-if-not-resolved="False" />
+  name: InputOutputThrottleLevel
+  description: |+
+    Specifies the amount of I/O throttling that the job provides to ensure that the job does not interfere with other I/O intensive processes.
+    The acceptable values for this parameter are:
+
+    - None
+    - Low
+    - Medium
+    - High
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Low, Medium, High, Maximum
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Memory
+  description: |+
+    Specifies the maximum percentage of physical computer memory that the data deduplication job can use.
+
+    For optimization jobs, we recommend that you set a range from 15 to 50, and a higher memory consumption for jobs that you schedule to run when you specify the **StopWhenSystemBusy** parameter.
+    For garbage collection and scrubbing jobs, which you typically schedule to run in off hours, you can set higher memory consumption, such as 50.
+
+  defaultValue: None
+  position: Named
+  aliases: MaximumMemoryPercentage
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of a data deduplication job schedule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Returns an object representing the item with which you are working.
+    By default, this cmdlet does not generate any output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Priority" data-throw-if-not-resolved="False" />
+  name: Priority
+  description: |+
+    Sets the CPU and I/O priority for the optimization job that you run by using this cmdlet.
+    For jobs that you run when you specify the **StopWhenSystemBusy** parameter, we recommend that you set this parameter to Low.
+    For typical optimization jobs, we recommend that you set this parameter to Normal.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Low, Normal, High
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ReadOnly
+  description: |+
+    Indicates whether the scrubbing job processes and reports on corruptions that it finds but does not run any repair actions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: Start
+  description: |+
+    Specifies a time to start this job.
+    The default value is 1:45am.
+
+    Type the date in a format that is standard for the system locale, such as dd-MM-yyyy (German \[Germany\]) or MM/dd/yyyy (English \[United States\]).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: StopWhenSystemBusy
+  description: |+
+    Indicates whether the server stops the job when the system is busy and retries later.
+    We recommend that you specify this parameter when you set a low priority for the job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Type" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Type
+  description: |+
+    Specifies an array of types of data deduplication jobs.
+    The acceptable values for this parameter are:
+
+    - Optimization
+    - GarbageCollection
+    - Scrubbing
+    - Unoptimization
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: Optimization, GarbageCollection, Scrubbing, Unoptimization
+uid: Deduplication.Set-DedupSchedule
+name: Set-DedupSchedule
+description: |-
+  The **Set-DedupSchedule** cmdlet changes configuration settings for one or more data deduplication schedules.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: DedupSchedule.cdxml-help.xml
+  Module Name: Deduplication
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/deduplication/set-dedupschedule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-DedupSchedule

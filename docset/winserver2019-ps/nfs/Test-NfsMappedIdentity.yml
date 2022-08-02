@@ -1,0 +1,164 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Verifies that a mapped identity is correctly configured.
+module: NFS
+notes: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NfsMappedIdentity
+  href: ./Get-NfsMappedIdentity.yml
+- text: Get-NfsMappingStore
+  href: ./Get-NfsMappingStore.yml
+- text: Install-NfsMappingStore
+  href: ./Install-NfsMappingStore.yml
+- text: New-NfsMappedIdentity
+  href: ./New-NfsMappedIdentity.yml
+- text: Remove-NfsMappedIdentity
+  href: ./Remove-NfsMappedIdentity.yml
+- text: Resolve-NfsMappedIdentity
+  href: ./Resolve-NfsMappedIdentity.yml
+- text: Set-NfsMappedIdentity
+  href: ./Set-NfsMappedIdentity.yml
+- text: Set-NfsMappingStore
+  href: ./Set-NfsMappingStore.yml
+- text: Test-NfsMappingStore
+  href: ./Test-NfsMappingStore.yml
+syntaxes:
+- >-
+  Test-NfsMappedIdentity [-MappingStore <MappingStoreType>] [-UserIdentifier <Int32>] [-GroupIdentifier <Int32>]
+
+   [-AccountName <String>] [-AccountType <AccountType>] [-SupplementaryGroups <String>] [<CommonParameters>]
+- >-
+  Test-NfsMappedIdentity -MappingStore <MappingStoreType> [-Server <String>] [-LdapNamingContext <String>]
+
+   [-UserIdentifier <Int32>] [-GroupIdentifier <Int32>] [-AccountName <String>] [-AccountType <AccountType>]
+
+   [-SupplementaryGroups <String>] [<CommonParameters>]
+- >-
+  Test-NfsMappedIdentity -MappingStore <MappingStoreType> [-MapFilesPath <String>] [-UserIdentifier <Int32>]
+
+   [-GroupIdentifier <Int32>] [-AccountName <String>] [-AccountType <AccountType>]
+
+   [-SupplementaryGroups <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Verify a mapped identity that is stored in a AD LDS instance'
+  code: |-
+    PS C:\> Test-NfsMappedIdentity -MappingStore "LDAP" -AccountName "JCool" -AccountType "User" -Verbose
+    VERBOSE: No errors found.
+  description: |-
+    This command verifies a mapped identity that is stored in a AD LDS instance on a server where this command is run..
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  description: |+
+    Specifies the SAMAccountName of the Windows user account or group account of a mapped identity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: aname, an
+  parameterValueGroup: ""
+- type: <xref href="AccountType" data-throw-if-not-resolved="False" />
+  name: AccountType
+  description: |+
+    Specifies the Windows account type of a mapped identity.
+    Valid values are: User and Group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: atype, at
+  parameterValueGroup: User, Group
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: GroupIdentifier
+  description: |+
+    Specifies the group identifier of a mapped identity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: GroupId, gid
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LdapNamingContext
+  description: |+
+    Specifies the Lightweight Directory Access Protocol (LDAP) naming context of an NFS identity mapping store.
+    You can use this parameter to search for mapped identities in a specified naming context.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: dn
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MapFilesPath
+  description: |+
+    Specifies the path of the passwd and group map files from which the **Test-NfsMappedIdentity** cmdlet obtains a mapped identity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="MappingStoreType" data-throw-if-not-resolved="False" />
+  name: MappingStore
+  isRequired: true
+  description: |+
+    Specifies the type of identity mapping store from which the **Test-NfsMappedIdentity** cmdlet gets a mapped identity.
+    When this parameter is not specified, the **Test-NfsMappedIdentity** cmdlet obtains the store configuration settings from the NFS server configuration.
+    Valid values are: AD, LDAP, and MapFiles.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: store
+  parameterValueGroup: Ad, Ldap, Mapfiles, Ad, Ldap, Mapfiles
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the LDAP server name of the store that NFS server uses.
+    This can be a domain name, Active Directory Lightweight Directory Services (AD LDS) server name, or LDAP server name.
+    When this parameter is not specified, the **Test-NfsMappedIdentity** cmdlet tries to connect to either the LDAP store on the local computer at port 389 when *MappingStore* is LDAP, or the Active Directory domain of the computer when *MappingStore* is Active Directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LdapServer, ADDomainName
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SupplementaryGroups
+  description: |+
+    Specifies a comma-separated list of group names to verify the group membership of an account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: sg
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: UserIdentifier
+  description: |+
+    Specifies the user identifier of a UNIX user account from which the **Test-NfsMappedIdentity** cmdlet obtains a mapped identity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: UserId, uid
+  parameterValueGroup: ""
+uid: NFS.Test-NfsMappedIdentity
+name: Test-NfsMappedIdentity
+description: |-
+  The **Test-NfsMappedIdentity** cmdlet verifies a mapped identity and confirms that it is configured correctly.
+  The **Test-NfsMappedIdentity** cmdlet checks a mapped identity for duplicate user identifiers (UIDs) or group identifiers (GIDs).
+  It also validates that the user accounts are members of the correct group account according to the GIDs that are assigned to them.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FileServices.Powershell.NFS.dll-Help.xml
+  Module Name: NFS
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nfs/test-nfsmappedidentity?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Test-NfsMappedIdentity

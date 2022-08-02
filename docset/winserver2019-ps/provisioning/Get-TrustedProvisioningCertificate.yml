@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Lists all installed trusted provisioning certificates.
+module: Provisioning
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-TrustedProvisioningCertificate [[-Thumbprint] <String>] [-LogsDirectoryPath <String>] [-WprpFile <String>]
+
+   [-ConnectedDevice] [<CommonParameters>]
+examples:
+- title: 'Example 1: List installed trusted provisioning certificates'
+  code: |-
+    PS C:\> Get-TrustedProvisioningCertificate
+
+    The operation completed successfully.
+
+    No certificates found in the trusted provisioners store
+  description: |-
+    Lists all installed trusted provisioning certificates.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ConnectedDevice
+  description: |+
+    If enabled, specifies that the device type is mobile.
+
+  defaultValue: None
+  position: Named
+  aliases: Device
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogsDirectoryPath
+  description: |+
+    Specifies the logs directory path.
+
+  defaultValue: None
+  position: Named
+  aliases: Logs
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  description: |+
+    Specifies the thumbprint of the certificate to retrieve.
+
+  defaultValue: None
+  position: "0"
+  aliases: Id
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WprpFile
+  description: |+
+    Specifies the location of the WPR profile file.
+
+  defaultValue: None
+  position: Named
+  aliases: Wprp
+  parameterValueGroup: ""
+uid: Provisioning.Get-TrustedProvisioningCertificate
+name: Get-TrustedProvisioningCertificate
+description: |-
+  Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the `Uninstall-TrustedProvisioningCertificate` cmdlet.
+
+  The **Get-TrustedProvisioningCertificate** cmdlet is supported on Windows 10 client operating system only.
+metadata:
+  description: Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the Uninstall-TrustedProvisioningCertificate cmdlet.
+  external help file: provcmdlets.dll-Help.xml
+  Module Name: Provisioning
+  ms.date: 11/29/2021
+  online version: https://docs.microsoft.com/powershell/module/provisioning/get-trustedprovisioningcertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-TrustedProvisioningCertificate

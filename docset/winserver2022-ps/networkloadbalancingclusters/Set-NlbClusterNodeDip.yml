@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Edits the dedicated IP address of a NLB cluster.
+module: NetworkLoadBalancingClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ClusterNodeDip" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ClusterNodeDip" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Add-NlbClusterNodeDip
+  href: ./Add-NlbClusterNodeDip.yml
+- text: Get-NlbClusterNodeDip
+  href: ./Get-NlbClusterNodeDip.yml
+- text: Remove-NlbClusterNodeDip
+  href: ./Remove-NlbClusterNodeDip.yml
+syntaxes:
+- >-
+  Set-NlbClusterNodeDip [-HostName <String>] -InterfaceName <String> [-IP] <IPAddress> -NewDip <IPAddress>
+
+   [<CommonParameters>]
+- Set-NlbClusterNodeDip -InputObject <ClusterNodeDip[]> -NewDip <IPAddress> [<CommonParameters>]
+examples:
+- title: 'Example 1: Change a cluster virtual IP'
+  code: |-
+    PS C:\>Get-NlbClusterNodeDip -IP fe80::a585:202d:f7f6:2636 | Set-NlbClusterNodeDip -NewDip fe80::a9cb:eafb:e841:d8cf
+    Node                       IPAddress                  SubnetMask 
+    ----                       ---------                  ---------- 
+    node2                      fe80::a9cb:eafb:e841:d8cf
+  description: |-
+    This command changes the cluster virtual IP from fe80::a585:202d:f7f6:2636 to fe80::a9cb:eafb:e841:d8cf.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostName
+  description: |+
+    Specifies the name of the cluster host against which this cmdlet is run.
+    If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+
+  defaultValue: None
+  position: Named
+  aliases: Host, HN, H
+  parameterValueGroup: ""
+- type: <xref href="ClusterNodeDip" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InputObject
+  isRequired: true
+  description: |+
+    Specifies an array of nodes of the cluster to which this cmdlet sets the dedicated IP.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InterfaceName
+  isRequired: true
+  description: |+
+    Specifies the interface to which NLB is bound.
+    This is the interface of the cluster against which this cmdlet is run.
+
+  defaultValue: None
+  position: Named
+  aliases: Interface, IN, I
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: IP
+  isRequired: true
+  description: |+
+    Specifies the IP address for the cluster node on which this cmdlet sets the dedicated IP.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+  name: NewDip
+  isRequired: true
+  description: |+
+    Specifies the new dedicated IP address for the cluster node.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetworkLoadBalancingClusters.Set-NlbClusterNodeDip
+name: Set-NlbClusterNodeDip
+description: |-
+  The **Set-NlbClusterNodeDIP** cmdlet edits the dedicated IP address of a Network Load Balancing (NLB) cluster.
+  This cmdlet can be used to edit the IP address and subnet mask for the dedicated IP address.
+
+  This operation changes the configuration on all cluster nodes.
+  As a result, the NLB cluster will have to restart the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.
+  Any additional operations on the NLB cluster should not be initiated until all cluster nodes have completed the convergence process and are back to the converged state.
+
+  ps_nlbc_checkstate_remark
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/set-nlbclusternodedip?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NlbClusterNodeDip

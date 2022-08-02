@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets HGS attestation policies.
+module: HgsAttestation
+notes: ""
+inputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe strings to this cmdlet.
+outputs:
+- name: <xref href="AttestationPolicyInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns attestation policy information.
+links:
+- text: Disable-HgsAttestationPolicy
+  href: ./Disable-HgsAttestationPolicy.yml
+- text: Enable-HgsAttestationPolicy
+  href: ./Enable-HgsAttestationPolicy.yml
+- text: Remove-HgsAttestationPolicy
+  href: ./Remove-HgsAttestationPolicy.yml
+syntaxes:
+- >-
+  Get-HgsAttestationPolicy [[-Name] <String>] [-State <AttestationPolicyState>]
+
+   [-PolicyType <AttestationPolicyType[]>] [-PolicyVersion <PolicyVersion>] [-Stage] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all policies'
+  code: |-
+    PS C:\> Get-HgsAttestationPolicy
+  description: |-
+    This command gets all policies that are currently configured for the Attestation service.
+  summary: ""
+- title: 'Example 2: Get a policy by name'
+  code: |-
+    PS C:\> Get-HgsAttestationPolicy -Name "BaselineTpmPolicy16"
+  description: |-
+    This command gets the policy named BaselineTpmPolicy16.
+  summary: ""
+- title: 'Example 3: Get policies by type'
+  code: |-
+    PS C:\> Get-HgsAttestationPolicy -PolicyType SecureBootSettings
+  description: |-
+    This command gets policies that have the type Tpm.
+  summary: ""
+- title: 'Example 4: Get all enabled policies'
+  code: |-
+    PS C:\> Get-HgsAttestationPolicy -State Enabled
+  description: |-
+    This command gets all enabled policies.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the policy that this cmdlet gets.
+    Use wildcard characters to get more than one policy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AttestationPolicyType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PolicyType
+  description: |+
+    Specifies the type of the policies that this cmdlet gets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, SecureBootEnabled, SecureBootSettings, CiPolicy, UefiDebugDisabled, FullBoot, VsmIdkPresent, BitLockerEnabled, IommuEnabled, PagefileEncryptionEnabled, HypervisorEnforcedCiPolicy, NoHibernation, NoDumps, DumpEncryption, DumpEncryptionKey
+- type: <xref href="PolicyVersion" data-throw-if-not-resolved="False" />
+  name: PolicyVersion
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, PolicyVersion1503, PolicyVersion1704
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Stage
+  description: |+
+    Reserved for future use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AttestationPolicyState" data-throw-if-not-resolved="False" />
+  name: State
+  description: |+
+    Specifies the state of the policies that this cmdlet gets.
+    The acceptable values for this parameter are:
+
+    - Enabled 
+    - Disabled  
+    - Locked
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled, Locked
+uid: HgsAttestation.Get-HgsAttestationPolicy
+name: Get-HgsAttestationPolicy
+description: |-
+  The **Get-HgsAttestationPolicy** cmdlet gets Host Guardian Service (HGS) attestation policies.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/hgsattestation/get-hgsattestationpolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-HgsAttestationPolicy

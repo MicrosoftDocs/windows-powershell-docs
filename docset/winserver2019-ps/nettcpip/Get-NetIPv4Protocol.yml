@@ -1,0 +1,309 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets IPv4 protocol configurations.
+module: NetTCPIP
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetIPv4Protocol" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+links:
+- text: Set-NetIPv4Protocol
+  href: ./Set-NetIPv4Protocol.yml
+- text: Get-NetIPv6Protocol
+  href: ./Get-NetIPv6Protocol.yml
+syntaxes:
+- >-
+  Get-NetIPv4Protocol [-DefaultHopLimit <UInt32[]>] [-NeighborCacheLimitEntries <UInt32[]>]
+
+   [-RouteCacheLimitEntries <UInt32[]>] [-ReassemblyLimitBytes <UInt32[]>] [-IcmpRedirects <IcmpRedirects[]>]
+
+   [-SourceRoutingBehavior <SourceRoutingBehavior[]>] [-DhcpMediaSense <DhcpMediaSense[]>]
+
+   [-MediaSenseEventLog <MediaSenseEventLog[]>] [-IGMPLevel <MldLevel[]>] [-IGMPVersion <MldVersion[]>]
+
+   [-MulticastForwarding <MulticastForwarding[]>] [-GroupForwardedFragments <GroupForwardedFragments[]>]
+
+   [-RandomizeIdentifiers <RandomizeIdentifiers[]>] [-AddressMaskReply <AddressMaskReply[]>]
+
+   [-MinimumMtu <UInt32[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all IPv4 protocol configurations'
+  code: |-
+    PS C:\>Get-NetIPv4Protocol
+  description: |-
+    This command gets the global settings for all the IPv4 protocol configurations for the computer.
+    The default output for the cmdlet does not include all properties of the **NetIPv4Protocol** object.
+  summary: ""
+- title: 'Example 2: Output all settings for IPv4 protocol configurations'
+  code: |-
+    PS C:\>Get-NetIPv4Protocol | Format-List -Property *
+  description: |-
+    This command gets the global settings for all IPv4 protocol configurations for the computer.
+    The command uses the Format-List cmdlet to display all the properties in the output in the form of a table.
+    For more information, type `Get-Help Format-Table`.
+  summary: ""
+parameters:
+- type: <xref href="AddressMaskReply" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddressMaskReply
+  description: |+
+    Specifies an array of values for address mask reply.
+    The cmdlet gets the IPv4 protocol configurations that have these values.
+    Address mask reply specifies how the computer responds to ICMP address mask packets.
+    The acceptable values for this parameter are:
+
+    - Enabled.
+    The computer responds to ICMP address mask packets. 
+    - Disabled.
+    The computer does not respond to ICMP address mask packets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DefaultHopLimit
+  description: |+
+    Specifies an array of values for the default hop limit.
+    The cmdlet gets the IPv4 protocol configurations that have these values.
+    The default hop limit is the default value for the **CurrentHopLimit** property in the IP interface.
+    The current hop limit is the value that the IP interface writes in the time-to-live (TTL) field in all outbound traffic.
+    When routers forward a packet, they decrement the hop limit by 1 and discard the packet when the hop limit is 0.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DhcpMediaSense" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DhcpMediaSense
+  description: |+
+    Specifies an array of values for Media Sense.
+    The cmdlet gets IPv4 protocol configurations that have these values.
+
+    Media Sense provides a mechanism for the network adapter to notify the protocol stack of media connect and disconnect events.
+    These events trigger the DHCP client to take an action, such as attempting to renew a DHCP lease or removing routes that are related to a disconnected network.
+    When Media Sense is enabled, the network parameters on the laptop of a roaming user are automatically and transparently updated without requiring a restart when the user moves from one location to another.
+    The acceptable values for this parameter are:
+
+    - Enabled
+    - Disabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="GroupForwardedFragments" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupForwardedFragments
+  description: |+
+    Specifies an array of values for group forwarded fragments.
+    The cmdlet gets IPv4 protocol configurations that have these values.
+    Group forwarded fragments specifies whether the IP interface collects fragments into groups before it forwards the fragments.
+    The acceptable values for this parameter are:
+
+    - Enabled.
+    The IP interface collects IPv4 protocol fragments into groups before it forwards the fragments. 
+    - Disabled.
+    The IP interface does not collect IPv4 protocol fragments into groups before it forwards the fragments.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="IcmpRedirects" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IcmpRedirects
+  description: |+
+    Specifies an array of values for ICMP redirects.
+    The cmdlet gets IPv4 protocol configurations that have these values.
+    ICMP redirects specifies whether to update the path cache in response to ICMP redirect packets.
+    The acceptable values for this parameter are:
+
+    - Enabled.
+    The IP interface updates the path cache in response to ICMP redirect packets. 
+    - Disabled.
+    The IP interface does not update the path cache in response to ICMP redirect packets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="MldLevel" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IGMPLevel
+  description: |+
+    Specifies an array of values for the Internet Group Management Protocol (IGMP) level.
+    The cmdlet gets IPv4 protocol configurations that have these values.
+    The IGMP level specifies the level of multicast support.
+    The acceptable values for this parameter are:
+
+    - None
+    - SendOnly
+    - All
+
+  defaultValue: None
+  position: Named
+  aliases: MldLevel
+  parameterValueGroup: None, SendOnly, All
+- type: <xref href="MldVersion" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IGMPVersion
+  description: |+
+    Specifies an array of the IGMP version numbers.
+    The cmdlet gets IPv4 protocol configurations that have these IGMP version numbers.
+    The IGMP version is the maximum IGMP version supported by the host of IPv4 protocol configuration.
+
+  defaultValue: None
+  position: Named
+  aliases: MldVersion
+  parameterValueGroup: Version1, Version2, Version3
+- type: <xref href="MediaSenseEventLog" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MediaSenseEventLog
+  description: |+
+    Specifies an array of values for Media Sense event log.
+    The cmdlet gets IPv4 protocol configurations that have these values.
+    Media Sense event log specifies whether the computer logs DHCP Media Sense events.
+    The acceptable values for this parameter are:
+
+    - Enabled.
+    The IP interface logs DHCP Media Sense events in the event log for troubleshooting purposes.
+    - Disabled.
+    The IP interface does not log DHCP Media Sense events in the event log.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MinimumMtu
+  description: |+
+    Specifies an array of values, in bytes, for network layer Maximum Transmission Unit (MTU).
+    The cmdlet gets settings that have the Mtu values that you specify.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="MulticastForwarding" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MulticastForwarding
+  description: |+
+    Specifies an array of values for multicast forwarding.
+    The cmdlet gets IPv4 protocol configurations that have these values.
+    The acceptable values for this parameter are:
+
+    - Enabled.
+    The computer can forward multicast packets.
+    - Disabled.
+    The computer cannot forward multicast packets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: NeighborCacheLimitEntries
+  description: |+
+    Specifies an array of values for the maximum number of neighbor cache entries.
+    The cmdlet gets IPv4 protocol configurations that have these values.
+
+  defaultValue: None
+  position: Named
+  aliases: NeighborCacheLimit
+  parameterValueGroup: ""
+- type: <xref href="RandomizeIdentifiers" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RandomizeIdentifiers
+  description: |+
+    Specifies an array of values for the randomization of identifiers.
+    The cmdlet gets IPv4 protocol configurations that have these values.
+    The acceptable values for this parameter are:
+
+    - Enabled.
+    The IP interface randomizes identifiers when it creates an IP address. 
+    - Disabled.
+    The IP interface does not randomize identifiers when it creates an IP address.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, Enabled
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReassemblyLimitBytes
+  description: |+
+    Specifies an array of values for the maximum size of the reassembly buffer.
+    The cmdlet gets IPv4 protocol configurations that have these values.
+
+  defaultValue: None
+  position: Named
+  aliases: ReassemblyLimit
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RouteCacheLimitEntries
+  description: |+
+    Specifies an array of values for the maximum number of route cache entries.
+    The cmdlet gets IPv4 protocol configurations that have these values.
+
+  defaultValue: None
+  position: Named
+  aliases: RouteCacheLimit
+  parameterValueGroup: ""
+- type: <xref href="SourceRoutingBehavior" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SourceRoutingBehavior
+  description: |+
+    Specifies an array of values for the behavior for source-routed packets.
+    The cmdlet gets IPv4 protocol configurations that have these values.
+    The acceptable values for this parameter are:
+
+    - DontForward.
+    The computer can receive but not forward source-routed packets. 
+    - Drop.
+    The computer drops source-routed packets.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Forward, DontForward, Drop
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+    If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: NetTCPIP.Get-NetIPv4Protocol
+name: Get-NetIPv4Protocol
+description: |-
+  The **Get-NetIPv4Protocol** cmdlet gets the global settings for IPv4 protocol configurations for the computer.
+  If you do not specify any parameters, the cmdlet gets the IPv4 protocol configuration settings for all network connections for the computer.
+  The cmdlet returns IPv4 protocol settings, such as the Internet Control Message Protocol (ICMP) setting, the default hop limit, the neighbor cache limit, and the multicast configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: MSFT_NetIPv4Protocol.cdxml-help.xml
+  Module Name: NetTCPIP
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/nettcpip/get-netipv4protocol?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-NetIPv4Protocol

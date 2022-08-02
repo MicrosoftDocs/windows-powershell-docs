@@ -1,0 +1,42 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the run-time state of an IIS application pool.
+module: WebAdministration
+notes: ""
+syntaxes:
+- Get-WebAppPoolState [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get the run-time state of the DefaultAppPool'
+  code: |-
+    IIS:\> Get-WebAppPoolState -Name "DefaultAppPool"
+    Value
+
+    -----
+
+    Started
+  description: |-
+    This command gets the run-time state of the DefaultAppPool.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the application pool for which the state is returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: WebAdministration.Get-WebAppPoolState
+name: Get-WebAppPoolState
+description: |-
+  The **Get-WebAppPoolState** cmdlet gets the run-time state of an Internet Information Services (IIS) application pool.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/webadministration/get-webapppoolstate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WebAppPoolState

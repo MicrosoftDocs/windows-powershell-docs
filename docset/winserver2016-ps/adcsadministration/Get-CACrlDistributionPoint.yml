@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets all the locations set on the CDP extension of the CA properties.
+module: ADCSAdministration
+notes: ""
+inputs:
+- name: <xref href="none" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Administration.Commands.CA.CrlDistributionPoint" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an array of **Microsoft.CertificateServices.Management.Cmdlets.CA.CrlDistributionPoint** objects.
+    Each object contains URI and different Boolean properties as follows:
+
+    Name | Type
+    -----|------
+    PublishToServer | Boolean
+    PublishDeltaToServer | Boolean
+    AddToCertificateCdp | Boolean
+    AddToFreshestCrl | Boolean
+    AddToCrlCdp | Boolean
+    AddToCrlIdp | Boolean
+    Uri | String
+links:
+- text: Add-CACrlDistributionPoint
+  href: ./Add-CACrlDistributionPoint.yml
+- text: Remove-CACrlDistributionPoint
+  href: ./Remove-CACrlDistributionPoint.yml
+syntaxes:
+- Get-CACrlDistributionPoint [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a CA certificate revocation list distribution point object'
+  code: |-
+    PS C:\> Get-CACrlDistributionPoint
+  description: |-
+    This command gets a CA certificate revocation list (CRL) distribution point (CDP) type object, which contains the settings information and uniform resource indicator (URI) that correspond to the CDP for the current CA.
+  summary: ""
+uid: ADCSAdministration.Get-CACrlDistributionPoint
+name: Get-CACrlDistributionPoint
+description: |-
+  The **Get-CACRLDistributionPoint** cmdlet gets all the locations set on the CRL distribution point (CDP) extension of the certification authority (CA) properties.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+  Module Name: ADCSAdministration
+  ms.date: 12/27/2016
+  online version: https://docs.microsoft.com/powershell/module/adcsadministration/get-cacrldistributionpoint?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-CACrlDistributionPoint

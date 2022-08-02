@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a configuration attribute value from an IIS configuration section or configuration element attribute.
+module: IISAdministration
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Web.Administration.ConfigurationElement, System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-IISConfigAttributeValue
+  href: ./Set-IISConfigAttributeValue.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: ./index.yml
+syntaxes:
+- >-
+  Get-IISConfigAttributeValue [-ConfigElement] <ConfigurationElement> [-AttributeName] <String>
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Get a configuration attribute from an IIS website'
+  code: |-
+    PS C:\> Get-IISSite "Default Web Site" | Get-IISConfigElement -ChildElementName "limits" | Get-IISConfigAttributeValue -AttributeName "MaxUrlSegments"
+  description: |-
+    This command gets the configuration attribute MaxUrlSegments for the Default Web Site.
+  summary: ""
+- title: 'Example 2: Get configuration attribute values from different parts of the configuration store'
+  code: |-
+    PS C:\> Get-IISConfigSection "system.webServer/asp" | Get-IISConfigAttributeValue -AttributeName "ScriptErrorMessage"
+    An error occurred on the server when processing the URL. Please contact the system administrator. <p/> If you are the system administrator please click <a href="https://go.microsoft.com/fwlink/?LinkID=82731">here</a> to find out more about this error.
+  description: |-
+    This command gets the global attribute value for ScriptErrorMessage
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AttributeName
+  isRequired: true
+  description: |+
+    Specifies the name of the attribute that will be retrieved.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ConfigurationElement" data-throw-if-not-resolved="False" />
+  name: ConfigElement
+  isRequired: true
+  description: |+
+    Specifies the IIS ConfigurationSection or ConfigurationElement for which the attribute value will be looked up.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+uid: IISAdministration.Get-IISConfigAttributeValue
+name: Get-IISConfigAttributeValue
+description: |-
+  The **Get-IISConfigAttributeValue** cmdlet gets a configuration attribute value from an Internet Information Services (IIS) configuration section attribute or a configuration element attribute.
+  The value returned is the value that can be extracted from the given **ConfigurationElement** and not necessarily the effective value for a given site / virtual directory / folder etc.
+  To obtain the effective attribute values, always retrieve the configuration element by specifying the commit path as the deepest level possible.
+  Even the configuration attribute is not defined at that level, the parent attributes are scanned and the effective configuration element is returned.
+  You can then work on this **ConfigurationElement** to get/set/remove configuration attribute values.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/iisadministration/get-iisconfigattributevalue?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-IISConfigAttributeValue

@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the list of all products currently available on WSUS.
+module: UpdateServices
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/?LinkID=113423
+- text: Set-WsusProduct
+  href: ./Set-WsusProduct.yml
+syntaxes:
+- Get-WsusProduct [-UpdateServer <IUpdateServer>] [-TitleIncludes <String>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Get all products for a WSUS server'
+  code: |-
+    PS C:\> Get-WsusProduct
+    Title                                                       ID
+    -----                                                       --
+    Antigen for Exchange/SMTP                                   5d6a452a-55ba-4e11-adac-85e180bda3d6
+    Antigen                                                     116a3557-3847-4858-9f03-38e94b977456
+  description: |-
+    This command gets all products defined by the WSUS server.
+  summary: ""
+- title: 'Example 2: Get products by title'
+  code: |-
+    PS C:\> Get-WsusProduct | Where-Object -FilterScript {$_.product.title -eq "Antigen"}
+    Title                                                       ID
+    -----                                                       --
+    Antigen                                                     116a3557-3847-4858-9f03-38e94b977456
+  description: |-
+    This command gets all products where the product title is equal to Antigen.
+  summary: ""
+- title: 'Example 3: Get products by partial title'
+  code: |-
+    PS C:\> Get-WsusProduct | Where-Object -FilterScript {$_.product.title -match "Office"}
+    Title                                                       ID
+    -----                                                       --
+    Office 2002/XP                                              6248b8b1-ffeb-dbd9-887a-2acf53b09dfe
+    Office 2003                                                 1403f223-a63f-f572-82ba-c92391218055
+    Office 2007                                                 041e4f9f-3a3d-4f58-8b2f-5e6fe95c4591
+    Office 2010                                                 84f5f325-30d7-41c4-81d1-87a0e6535b66
+    Office Communications Server 2007 R2                        22bf57a8-4fe1-425f-bdaa-32b4f655284b
+    Office Communications Server 2007                           e164fc3d-96be-4811-8ad5-ebe692be33dd
+    Office Communications Server And Office Communicator        504ae250-57c5-484a-8a10-a2c35ea0689b
+    Office Communicator 2007 R2                                 8bc19572-a4b6-4910-b70d-716fecffc1eb
+    Office                                                      477b856e-65c4-4473-b621-a8b230bb70d9
+    Visual Studio 2010 Tools for Office Runtime                 cbfd1e71-9d9e-457e-a8c5-500c47cfe9f3
+  description: |-
+    This command gets all products where the product title contains the word Office.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TitleIncludes
+  description: |+
+    Specifies the partial title of the product for which to search.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="IUpdateServer" data-throw-if-not-resolved="False" />
+  name: UpdateServer
+  description: |+
+    Specifies the object that contains the WSUS server. This value is obtained by calling the Get-WsusServer cmdlet and passing the resulting **IUpdateServer** object into this cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: UpdateServices.Get-WsusProduct
+name: Get-WsusProduct
+description: |-
+  The **Get-WsusProduct** cmdlet gets the list of all Windows Server Update Services (WSUS) products (categories).
+
+  This list can be filtered using the [Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423) cmdlet with the results passed into the [Set-WsusProduct](./Set-WsusProduct.yml) cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/updateservices/get-wsusproduct?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-WsusProduct

@@ -1,0 +1,242 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports a copy of the specified image to another image file.
+module: DISM
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.Dism.Commands.ImageObjectWithState" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Dism.Commands.OfflineImageObject" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Dismount-WindowsImage
+  href: ./Dismount-WindowsImage.yml
+- text: Export-WindowsImage
+  href: ./Export-WindowsImage.yml
+- text: Get-WindowsImage
+  href: ./Get-WindowsImage.yml
+- text: Mount-WindowsImage
+  href: ./Mount-WindowsImage.yml
+- text: New-WindowsImage
+  href: ./New-WindowsImage.yml
+- text: Remove-WindowsImage
+  href: ./Remove-WindowsImage.yml
+- text: Repair-WindowsImage
+  href: ./Repair-WindowsImage.yml
+- text: Save-WindowsImage
+  href: ./Save-WindowsImage.yml
+- text: Split-WindowsImage
+  href: ./Split-WindowsImage.yml
+syntaxes:
+- >-
+  Export-WindowsImage [-CheckIntegrity] [-CompressionType <String>] -DestinationImagePath <String>
+
+   [-DestinationName <String>] [-Setbootable] -SourceImagePath <String> -SourceName <String>
+
+   [-SplitImageFilePattern <String>] [-WIMBoot] [-LogPath <String>] [-ScratchDirectory <String>]
+
+   [-LogLevel <LogLevel>] [<CommonParameters>]
+- >-
+  Export-WindowsImage [-CheckIntegrity] [-CompressionType <String>] -DestinationImagePath <String>
+
+   [-DestinationName <String>] [-Setbootable] -SourceImagePath <String> -SourceIndex <UInt32>
+
+   [-SplitImageFilePattern <String>] [-WIMBoot] [-LogPath <String>] [-ScratchDirectory <String>]
+
+   [-LogLevel <LogLevel>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Export an image'
+  code: |-
+    PS C:\> Export-WindowsImage -SourceImagePath C:\imagestore\custom.wim -SourceIndex 1 -DestinationImagePath c:\imagestore\export.wim -DestinationName "Exported Image"
+  description: |-
+    This command exports the image at Index 1 of the file C:\imagestore\custom.wim to the file c:\imagestore\export.wim with the name Exported Image.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CheckIntegrity
+  description: |+
+    Detects and tracks .wim file corruption when used with the **Add-WindowsImage**, **Dismount-WindowsImage**, or **Save-WindowsImage** cmdlet.
+    CheckIntegrity stops the operation if DISM detects that the .wim file is corrupted when used with the **Expand-WindowsImage** or **Mount-WindowsImage** cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CompressionType
+  description: |+
+    Specifies the type of compression used for the initial capture operation. Acceptable values are:
+
+    - **"max" or "maximum":** Provides the high compression, but takes more time to capture the image
+    - **"fast:"** Provides faster image compression, but the resulting files are larger than those compressed by using the maximum option.
+    - **"none":** No compression is used at all. This is the default. 
+
+    > [!NOTE]
+    > This cmdlet does not support the "recovery" compression type. Use `dism.exe` instead.
+
+    the *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
+
+  defaultValue: '"none"'
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationImagePath
+  isRequired: true
+  description: |+
+    Specifies the location of the exported image file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DIP
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationName
+  description: |+
+    Specifies the name of the exported image in the exported image file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: DN
+  parameterValueGroup: ""
+- type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+  name: LogLevel
+  description: |+
+    Specifies the maximum output level shown in the logs.
+    The default log level is 3.
+    The accepted values are as follows:
+    - 1 = Errors only
+    - 2 = Errors and warnings
+    - 3 = Errors, warnings, and information
+    - 4 = All of the information listed previously, plus debug output
+
+  defaultValue: "3"
+  pipelineInput: true
+  position: Named
+  aliases: LL
+  parameterValueGroup: Errors, Warnings, WarningsInfo
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogPath
+  description: |+
+    Specifies the full path and file name to log to.
+    If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+    In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
+    The log file will automatically be archived.
+    The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
+    Each time the log file is archived the .bak file will be overwritten. 
+    When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: LP
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ScratchDirectory
+  description: |+
+    Specifies a temporary directory that will be used when extracting files for use during servicing.
+    The directory must exist locally.
+    If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+    Items in the scratch directory are deleted after each operation. 
+    You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
+    The directory used for extracting files for temporary usage during servicing should be a local directory.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Setbootable
+  description: |+
+    Marks a volume image as being a bootable image.
+    This argument is available only for Windows PE images.
+    Only one volume image can be marked as bootable in a .wim file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SB
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceImagePath
+  isRequired: true
+  description: |+
+    Specifies the location of the source image file. Must be used in conjunction with `-SourceIndex` or `-SourceName`. If the source file is a SWM file, `-SplitImageFilePattern` is also required.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SIP
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: SourceIndex
+  isRequired: true
+  description: |+
+    Specifies the index number of a Windows image in a WIM or VHD file.
+    For a VHD file, the Index must be 1.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SI
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceName
+  isRequired: true
+  description: |+
+    Specifies the name of the source image in the source image file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: SN
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SplitImageFilePattern
+  description: |+
+    Specifies the location and name of the base split image file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WIMBoot
+  description: |+
+    Specifies that the image will be formatted to install on a Windows image file boot (WIMBoot) system.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: DISM.Export-WindowsImage
+name: Export-WindowsImage
+description: |-
+  The **Export-WindowsImage** cmdlet exports a copy of the specified image to another image file.
+  The source and destination files must use the same compression type.
+
+  You can also optimize an image by exporting to a new image file with **Export-WindowsImage**.
+  When you modify an image, DISM stores additional resource files that increase the overall size of the image.
+  Exporting the image will remove unnecessary resource files.
+
+  This cmdlet does not apply to virtual hard disk (VHD) files.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+  Module Name: System.Object[]
+  ms.date: 12/21/2016
+  online version: https://docs.microsoft.com/powershell/module/dism/export-windowsimage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Export-WindowsImage

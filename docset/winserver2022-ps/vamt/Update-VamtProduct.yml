@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the VAMT database by querying the computers for their current status.
+module: VAMT
+notes: ""
+links:
+- text: Get-VamtProduct
+  href: ./Get-VamtProduct.yml
+syntaxes:
+- >-
+  Update-VamtProduct -Products <Product[]> [-DbConnectionString <String>] [-Username <String>]
+
+   [-Password <String>] [-DbCommandTimeout <Int32>] [<CommonParameters>]
+examples:
+- title: 'Example 1: Update all product information in database'
+  code: |-
+    PS C:\>Get-VamtProduct | Update-VamtProduct
+  description: |-
+    This command updates all of the product information in the database.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DbCommandTimeout
+  description: |+
+    Indicates how long dep_nextref_vamt waits for a response from the database before timing out.
+    The default value is 30 seconds.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DbConnectionString
+  description: |+
+    Specifies the database where the products are updated.
+    If no database connection string is provided, dep_nextref_vamt attempts to use the database that the dep_nextref_vamt user console used on the local computer.
+    If dep_nextref_vamt does not find a database, it returns an error.
+    You can find the connection string in the dep_nextref_vamt UI in the Preferences dialog box.
+    On the menu bar, click View, and then click Preferences to open the Volume Activation Management Tool Preferences dialog box.
+    The connection string is in the Database Settings section under Current connection string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Password
+  description: |+
+    Provides the password for password-protected environments.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Product" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Products
+  isRequired: true
+  description: |+
+    Specifies the product or products in the dep_nextref_vamt database that this cmdlet updates.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Username
+  description: |+
+    Provides the user name for password-protected environments.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: VAMT.Update-VamtProduct
+name: Update-VamtProduct
+description: |-
+  The **Update-VamtProduct** cmdlet updates the information in the dep_nextref_vamt database by querying the computers in the environment for their current status.
+  You can use this cmdlet in a script when product data in the database must be updated regularly.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
+  Module Name: VAMT
+  ms.date: 12/20/2016
+  online version: https://docs.microsoft.com/powershell/module/vamt/update-vamtproduct?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Update-VamtProduct

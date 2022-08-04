@@ -68,7 +68,7 @@ The first command creates a scheduled task action named Cmd and assig
  
 The second command creates scheduled task settings that sets a higher priority for the scheduled task, and assigns the **ScheduledTaskSettings** object to the $Stset variable.
 
-The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that have a priority setting of 9.
+The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that have a priority setting of 5.
 
 This example sets the priority of a scheduled task.
 

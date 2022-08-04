@@ -43,15 +43,15 @@ more information.
 | Deduplication | [Deduplication Cmdlets](/powershell/module/deduplication) |
 | DFSN | [DFSN Cmdlets](/powershell/module/dfsn) |
 | DhcpServer | [DHCP Cmdlets](/powershell/module/dfsr) |
-| DirectAccessClientComponents | [DirectAccess Client Cmdlets](/powershell/module/directaccessclient) |
+| DirectAccessClientComponents | [DirectAccess Client Cmdlets](/powershell/module/directaccessclientcomponents) |
 | Dism | [DISM Cmdlets](/powershell/module/dism) |
 | DnsClient | [DNS Client Cmdlets](/powershell/module/dnsclient) |
 | DnsServer | [DNS Server Cmdlets](/powershell/module/dnsserver) |
 | FailoverClusters | [Failover Clusters Cmdlets](/powershell/module/failoverclusters) |
-| FileServerResourceManager | [FSRM Cmdlets](/powershell/module/fsrm) |
+| FileServerResourceManager | [FSRM Cmdlets](/powershell/module/fileserverresourcemanager) |
 | GroupPolicy | [Group Policy Cmdlets](/powershell/module/grouppolicy) |
 | Hyper-V | [Hyper-V Cmdlets](/powershell/module/hyper-v) |
-| International | [International Settings Cmdlets](/powershell/module/international_cmdlets) |
+| International | [International Settings Cmdlets](/powershell/module/international) |
 | IpamServer | [IPAM Cmdlets](/powershell/module/ipamserver) |
 | iScsi | [iSCSI Cmdlets](/powershell/module/iscsi) |
 | iScsiTarget | [iSCSI Target Cmdlets](/powershell/module/iscsitarget) |
@@ -83,12 +83,12 @@ more information.
 | ServerCore | [Server Core Cmdlets](/powershell/module/servercore) |
 | ServerManager | [Server Manager Cmdlets](/powershell/module/servermanager) |
 | ServerManagerTasks | [Server Manager Tasks Cmdlets](/powershell/module/servermanagertasks) |
-| ServerMig_Cmdlets | [Server Migration Cmdlets](/powershell/module/servermig_cmdlets) |
+| ServerMig_Cmdlets | [Server Migration Cmdlets](/powershell/module/servermigrationcmdlets) |
 | SMBShare | [SMB Share Cmdlets](/powershell/module/smbshare) |
 | SMBWitness | [SMB Witness Cmdlets](/powershell/module/smbwitness) |
-| SMISConfig | [SMI-S Cmdlets](/powershell/module/smisconfiguration) |
+| SMISConfig | [SMI-S Cmdlets](/powershell/module/smisconfig) |
 | Storage | [Storage Cmdlets](/powershell/module/storage) |
-| TroubleshootingPack | [Troubleshooting Pack (TP) Cmdlets](/powershell/module/troubleshootingtack) |
+| TroubleshootingPack | [Troubleshooting Pack (TP) Cmdlets](/powershell/module/troubleshootingpack) |
 | TrustedPlatformModule | [Trusted Platform Module (TPM) Cmdlets](/powershell/module/trustedplatformmodule) |
 | UpdateServices | [Windows Server Update Services (WSUS) Cmdlets](/powershell/module/updateservices) |
 | UserAccessLogging | [User Access Logging (UAL) Cmdlets](/powershell/module/useraccesslogging) |

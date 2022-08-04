@@ -5201,6 +5201,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docset/winserver2022-ps/pkiclient/Export-PfxCertificate.md",
+      "redirect_url": "/powershell/module/pki/Export-PfxCertificate?view=windowsserver2022-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2022-ps/pkiclient/PKIClient.md",
+      "redirect_url": "/powershell/module/pki/?view=windowsserver2022-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2022-ps/pkiclient/New-SelfSignedCertificate.md",
+      "redirect_url": "/powershell/module/pki/New-SelfSignedCertificate?view=winserver2022-ps",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docset/winserver2022-ps/remotedesktop/Set-RDDeploymentGatewayConfiguration.md",
       "redirect_url": "/powershell/module/rdmgmt/Set-RDDeploymentGatewayConfiguration.md?view=windowsserver2022-ps",
       "redirect_document_id": false

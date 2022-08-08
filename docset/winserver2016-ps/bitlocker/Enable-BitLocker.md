@@ -603,12 +603,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Disable-BitLocker](./Disable-BitLocker.md)
-- [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-- [Lock-BitLocker](./Lock-BitLocker.md)
-- [Resume-BitLocker](./Resume-BitLocker.md)
-- [Suspend-BitLocker](./Suspend-BitLocker.md)
-- [Unlock-BitLocker](./Unlock-BitLocker.md)
+[Disable-BitLocker](./Disable-BitLocker.md)
 
+[Get-BitLockerVolume](./Get-BitLockerVolume.md)
+
+[Lock-BitLocker](./Lock-BitLocker.md)
+
+[Resume-BitLocker](./Resume-BitLocker.md)
+
+[Suspend-BitLocker](./Suspend-BitLocker.md)
+
+[Unlock-BitLocker](./Unlock-BitLocker.md)
+
+<!-- link references -->
 [1]: https://msrc.microsoft.com/update-guide/vulnerability/ADV180028
 [2]: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732774(v=ws.11)

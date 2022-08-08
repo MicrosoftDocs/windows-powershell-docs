@@ -261,7 +261,7 @@ Specifies an encryption method for the encrypted drive.
 ```yaml
 Type: BitLockerVolumeEncryptionMethodOnEnable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Aes128, Aes256, XtsAes128, XtsAes256
 
 Required: False
@@ -279,7 +279,7 @@ For further guidance, see the [ADV180028 Security Advisory][1].
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -297,7 +297,7 @@ To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -431,7 +431,7 @@ Indicates that the system account for this computer unlocks the encrypted volume
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AdAccountOrGroupProtector
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -603,12 +603,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Disable-BitLocker](./Disable-BitLocker.md)
-- [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-- [Lock-BitLocker](./Lock-BitLocker.md)
-- [Resume-BitLocker](./Resume-BitLocker.md)
-- [Suspend-BitLocker](./Suspend-BitLocker.md)
-- [Unlock-BitLocker](./Unlock-BitLocker.md)
+[Disable-BitLocker](./Disable-BitLocker.md)
 
+[Get-BitLockerVolume](./Get-BitLockerVolume.md)
+
+[Lock-BitLocker](./Lock-BitLocker.md)
+
+[Resume-BitLocker](./Resume-BitLocker.md)
+
+[Suspend-BitLocker](./Suspend-BitLocker.md)
+
+[Unlock-BitLocker](./Unlock-BitLocker.md)
+
+<!-- link references -->
 [1]: https://msrc.microsoft.com/update-guide/vulnerability/ADV180028
 [2]: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732774(v=ws.11)

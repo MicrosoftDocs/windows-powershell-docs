@@ -713,6 +713,14 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -ProxyBypass
+List Proxy Bypass desciption and settings 
+
+### -ProxyPacUrl
+List Proxy PacUrldesciption and settings 
+
+### -ProxyServer
+List Proxy Server desciption and settings 
 
 ### -QuarantinePurgeItemsAfterDelay
 Specifies the number of days to keep items in the Quarantine folder.

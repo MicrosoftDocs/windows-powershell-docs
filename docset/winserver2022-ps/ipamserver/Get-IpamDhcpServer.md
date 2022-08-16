@@ -26,14 +26,14 @@ DHCP servers lease IP addresses to client devices.
 
 ## EXAMPLES
 
-### Example 1: Get information about all DNS servers
+### Example 1: Get information about all DHCP servers
 ```
 PS C:\> Get-IpamDhcpServer
 ```
 
 This command returns information about all the DHCP servers in the IPAM database.
 
-### Example 2: Get information about a single DNS server
+### Example 2: Get information about a single DHCP server
 ```
 PS C:\> Get-IpamDhcpServer -ServerFqdn "dhcp.contoso.com"
 ```

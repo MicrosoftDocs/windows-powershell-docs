@@ -41,7 +41,7 @@ Specify a rule level and an array of **DriverFile** objects or the path of a dri
 
 ### Example 1: Create policy rules for drivers
 ```
-PS C:\> $DriverFiles = Get-SystemDriver -ScanPath '.\temp\' -UserPEs -OmitPaths '.\temp\ConfigCITestBinaries' -NoScript
+PS C:\> $DriverFiles = Get-SystemDriver -ScanPath '.\temp\' -OmitPaths '.\temp\ConfigCITestBinaries' -NoScript
 PS C:\> New-CIPolicyRule -Level FileName -DriverFiles $DriverFiles
 Scan completed successfully
 

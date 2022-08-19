@@ -138,7 +138,8 @@ We strongly recommend specifying the encryption method. By default, BitLocker us
 can opt XTS-AES-256 for stronger security. However, if you are encrypting a removable media and
 intend to use it on Windows 8.1 or Windows Server 2012 R2, you must opt either AES-128 or AES-256
 for backward compatibility. You may request hardware encryption but we strongly advise
-against it. For further guidance, see the [ADV180028 Security Advisory][1].
+against it. For further guidance, see the
+[ADV180028 Security Advisory](https://msrc.microsoft.com/update-guide/vulnerability/ADV180028).
 
 This cmdlet returns a BitLocker volume object. If you choose recovery password as your key protector
 but do not specify a 48-digit recovery password, this cmdlet generates a random one for you, and
@@ -161,7 +162,8 @@ It is common practice to add a recovery password for an operating system volume 
 **Backup-BitLockerKeyProtector** cmdlet, and then enable BitLocker on that volume. This procedure
 ensures that you have a recovery option.
 
-For an overview of BitLocker, see the [BitLocker Drive Encryption Overview][2].
+For an overview of BitLocker, see the
+[BitLocker Drive Encryption Overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732774(v=ws.11)).
 
 ## EXAMPLES
 
@@ -256,12 +258,13 @@ Accept wildcard characters: False
 
 ### -EncryptionMethod
 
-Specifies an encryption method for the encrypted drive.
+Specifies an encryption method for the encrypted drive. For further guidance, see the
+[ADV180028 Security Advisory](https://msrc.microsoft.com/update-guide/vulnerability/ADV180028).
 
 ```yaml
 Type: BitLockerVolumeEncryptionMethodOnEnable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Aes128, Aes256, XtsAes128, XtsAes256
 
 Required: False
@@ -274,12 +277,13 @@ Accept wildcard characters: False
 ### -HardwareEncryption
 
 Indicates that the volume uses hardware encryption. We strongly advise against hardware encryption.
-For further guidance, see the [ADV180028 Security Advisory][1].
+For further guidance, see the
+[ADV180028 Security Advisory](https://msrc.microsoft.com/update-guide/vulnerability/ADV180028).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -297,7 +301,7 @@ To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -431,7 +435,7 @@ Indicates that the system account for this computer unlocks the encrypted volume
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AdAccountOrGroupProtector
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -603,12 +607,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Disable-BitLocker](./Disable-BitLocker.md)
-- [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-- [Lock-BitLocker](./Lock-BitLocker.md)
-- [Resume-BitLocker](./Resume-BitLocker.md)
-- [Suspend-BitLocker](./Suspend-BitLocker.md)
-- [Unlock-BitLocker](./Unlock-BitLocker.md)
+[Disable-BitLocker](./Disable-BitLocker.md)
 
-[1]: https://msrc.microsoft.com/update-guide/vulnerability/ADV180028
-[2]: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732774(v=ws.11)
+[Get-BitLockerVolume](./Get-BitLockerVolume.md)
+
+[Lock-BitLocker](./Lock-BitLocker.md)
+
+[Resume-BitLocker](./Resume-BitLocker.md)
+
+[Suspend-BitLocker](./Suspend-BitLocker.md)
+
+[Unlock-BitLocker](./Unlock-BitLocker.md)

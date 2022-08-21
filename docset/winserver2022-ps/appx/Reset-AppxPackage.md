@@ -2,7 +2,7 @@
 description: Restores the Windows app to its initial configuration.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 09/01/2021
+ms.date: 08/21/2022
 online version: https://docs.microsoft.com/powershell/module/appx/reset-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Reset-AppxPackage
@@ -18,11 +18,8 @@ Restores the Windows app to its initial configuration.
 
 ## SYNTAX
 
-```PowerShell
-Reset-AppxPackage [-Package] <string>
-                  [-WhatIf]
-                  [-Confirm]
-                  [<CommonParameters>]
+```
+Reset-AppxPackage [-Package] <string> [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION

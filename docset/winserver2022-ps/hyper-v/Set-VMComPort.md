@@ -47,7 +47,7 @@ PS C:\> Set-VMComPort TestVM 2 \\.\pipe\TestPipe
 Configure the second COM port on virtual machine TestVM to connect to named pipe TestPipe on the local computer.
 
 > [!NOTE]
-> You can write your own application to access the named pipe, or use an application like PuTTY.
+> You can then access the named pipe using a third-party application or develop your own application.
 
 ## PARAMETERS
 

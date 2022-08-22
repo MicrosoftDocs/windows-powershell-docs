@@ -67,8 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDeviceAuthAsPrimaryForDomainJoinedDevices
-Specifying this parameter configures an external authentication provider, for second stage authentication, in the global policy.
-This is the first step in creating an AD FS policy that invokes an external authentication provider for multifactor authentication.
+Allows the use of device authentication as the primary type for domain-joined devices.
 
 ```yaml
 Type: Boolean
@@ -83,8 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAuthenticationMethods
-Specifying this parameter configures an external authentication provider, for second stage authentication, in the global policy.
-This is the first step in creating an AD FS policy that invokes an external authentication provider for multifactor authentication.
+Specifies the client authentication method.
 
 ```yaml
 Type: ClientAuthenticationMethod
@@ -115,8 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceAuthenticationMethod
-Specifying this parameter configures an external authentication provider, for second stage authentication, in the global policy.
-This is the first step in creating an AD FS policy that invokes an external authentication provider for multifactor authentication.
+Specifies the device authentication method.
 
 ```yaml
 Type: DeviceAuthenticationMethod

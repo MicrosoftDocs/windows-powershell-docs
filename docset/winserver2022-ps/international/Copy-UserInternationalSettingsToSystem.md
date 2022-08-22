@@ -11,11 +11,11 @@ ms.date: 09/08/2021
 ms.prod: w11
 ms.technology:
 ms.topic: reference
-online version: 
-schema: 2.1.0
+online version:
+schema: 2.0.0
 title: Copy-UserInternationalSettingsToSystem
 ms.reviewer:
-ms.assetid: 
+ms.assetid:
 ---
 
 # Copy-UserInternationalSettingsToSystem
@@ -24,6 +24,8 @@ ms.assetid:
 Copies the current user's international settings (Windows Display language, Input language, Regional Format/locale, and Location/GeoID) to one or both of the following:
 * Welcome screen and system accounts
 * New user accounts
+
+**Important:** Note that this PowerShell cmdlet is only available for Windows 11 and later.
 
 This is a system setting. It can only be changed by a user who has Administrator permissions. Changes take effect after the computer is restarted.
 
@@ -40,9 +42,6 @@ You can decide whether to copy these settings into the **Welcome screen and syst
 This cmdlet takes two parameters: **-WelcomeScreen** and **-NewUser**.
 
 When any of the parameters is set to $True, this cmdlet gets the current values from the current user and copies them to the system settings for the selected options based on the parameters that were set to $True.
-
-**Important:** Note that this PowerShell cmdlet is only available for Windows 11 and later.
-
 
 ## EXAMPLES
 

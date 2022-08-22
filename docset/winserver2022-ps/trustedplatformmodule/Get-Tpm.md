@@ -30,16 +30,28 @@ For more information on TPM, see the [Trusted Platform Module Technology Overvie
 ### Example 1: Display TPM information
 ```
 PS C:\> Get-Tpm
+```
+```output
+TpmPresent                : True
+TpmReady                  : True
+TpmEnabled                : True
+TpmActivated              : True
+TpmOwned                  : True
+RestartPending            : True
+ManufacturerId            : 1229870147
+ManufacturerIdTxt         : INTC
+ManufacturerVersion       : 402.1.0.0
+ManufacturerVersionFull20 : 402.1.0.0
 
-
-TpmReady           : False
-TpmPresent         : True
-ManagedAuthLevel   : Full
-OwnerAuth          :
-OwnerClearDisabled : True
-AutoProvisioning   : Enabled
-LockedOut          : False
-SelfTest           : {191, 191, 245, 191...}
+ManagedAuthLevel          : Full
+OwnerAuth                 :
+OwnerClearDisabled        : False
+AutoProvisioning          : Enabled
+LockedOut                 : False
+LockoutHealTime           : 10 minutes
+LockoutCount              : 0
+LockoutMax                : 31
+SelfTest                  : {}
 ```
 
 This command displays information about the TPM of the current computer.

@@ -26,7 +26,7 @@ Returns a list of the installed languages and related Language features installe
 
 ### Example 1: See what languages are installed on a device
 
-```PowerShell
+```powershell
 Get-InstalledLanguage
 ```
 
@@ -34,7 +34,7 @@ This command will show all of the language components that are installed on a de
 
 ### Example 2: See which language components are installed for a particular language
 
-```PowerShell
+```powershell
 Get-InstalledLanguage -language en-US
 ```
 

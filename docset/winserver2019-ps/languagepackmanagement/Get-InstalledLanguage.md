@@ -16,14 +16,12 @@ Returns information about the installed languages on a device.
 ## SYNTAX
 
 ```
-Get-InstalledLanguage
-   [-Language] <String> 
-   [<CommonParameters>]
+Get-InstalledLanguage [-Language] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
 Returns a list of the installed languages and related Language features installed on the device.
+
 ## EXAMPLES
 
 ### Example 1: See what languages are installed on a device

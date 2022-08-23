@@ -16,10 +16,7 @@ Uninstalls a language from a device.
 ## SYNTAX
 
 ```
-Uninstall-Language 
-   [-Language] <String> 
-   [-PassThru] 
-   [<CommonParameters>]
+Uninstall-Language [-Language] <String> [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

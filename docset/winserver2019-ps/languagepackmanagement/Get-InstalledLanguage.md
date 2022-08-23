@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.LanguagePackManagement.Powershell.Commands.dll-Help.xml
 Module Name: LanguagePackManagement
-online version: https://go.microsoft.com/fwlink/?linkid=2185383
+online version: https://docs.microsoft.com/powershell/module/languagepackmanagement/get-installedlanguage?view=windowsserver2019-ps
 schema: 2.0.0
 ms.date: 08/15/2022
 title: Get-InstalledLanguage

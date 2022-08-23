@@ -29,8 +29,8 @@ You can also change your Display Language by using the International module comm
 
 ### Example 1: Add a language to a device
 
-```
-PS C:\> Install-Language ja-JP
+```powershell
+Install-Language ja-JP
 ```
 
 This command adds the Japanese language to a device.

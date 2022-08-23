@@ -15,13 +15,8 @@ Installs a language onto a device.
 
 ## SYNTAX
 
-```PowerShell
-Install-Language 
-   [-Language] <String> 
-   [-CopyToSettings] 
-   [-ExcludeFeatures] 
-   [-AsJob] 
-   [<CommonParameters>]
+```
+Install-Language [-Language] <String> [-CopyToSettings] [-ExcludeFeatures] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +29,7 @@ You can also change your Display Language by using the International module comm
 
 ### Example 1: Add a language to a device
 
-```powershell
+```
 PS C:\> Install-Language ja-JP
 ```
 

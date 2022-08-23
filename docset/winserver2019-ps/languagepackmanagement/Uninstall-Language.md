@@ -11,12 +11,11 @@ description: The Uninstall-Language cmdlet lets you remove a language and its co
 # Uninstall-Language
 
 ## SYNOPSIS
-
 Uninstalls a language from a device.
 
 ## SYNTAX
 
-```PowerShell
+```
 Uninstall-Language 
    [-Language] <String> 
    [-PassThru] 
@@ -31,7 +30,7 @@ Uninstalls a language, including all language components, from a device. This op
 
 ### Example 1: Remove a language from a device
 
-```powershell
+```
 PS C:\> Uninstall-Language ja-jp
 ```
 

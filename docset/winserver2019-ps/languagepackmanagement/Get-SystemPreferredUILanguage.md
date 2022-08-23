@@ -15,9 +15,8 @@ Returns the current System Preferred Language.
 
 ## SYNTAX
 
-```PowerShell
-Get-SystemPreferredUILanguage 
-    [<CommonParameters>]
+```
+Get-SystemPreferredUILanguage [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,7 +27,7 @@ Returns the language that is set as the System Preferred Language
 
 ### Example 1
 
-```powershell
+```
 PS C:\> Get-SystemPrefferedUILanguage
 ```
 

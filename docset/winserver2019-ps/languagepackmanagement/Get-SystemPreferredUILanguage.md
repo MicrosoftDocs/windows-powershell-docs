@@ -4,7 +4,7 @@ Module Name: LanguagePackManagement
 online version: https://go.microsoft.com/fwlink/?linkid=2185384
 schema: 2.0.0
 ms.date: 08/15/2022
-title: Get-SystemPreferredUILanguage (LanguagePackManagement)
+title: Get-SystemPreferredUILanguage
 description: The Get-SystemPreferredUILanguage cmdlet lets you see which language is set as the System Preferred UI Language in a running Windows installation
 ---
 

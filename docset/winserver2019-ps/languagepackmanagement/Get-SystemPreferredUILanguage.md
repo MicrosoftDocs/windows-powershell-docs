@@ -27,8 +27,8 @@ Returns the language that is set as the System Preferred Language
 
 ### Example 1
 
-```
-PS C:\> Get-SystemPrefferedUILanguage
+```PowerShell
+Get-SystemPrefferedUILanguage
 ```
 
 This command returns the language that's currently set as the System Preferred UI Language

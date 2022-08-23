@@ -4,7 +4,7 @@ Module Name: LanguagePackManagement
 online version: https://go.microsoft.com/fwlink/?linkid=2185385
 schema: 2.0.0
 ms.date: 08/15/2022
-title: Set-SystemPreferredUILanguage (LanguagePackManagement)
+title: Set-SystemPreferredUILanguage
 description: The Set-SystemPreferredUILanguage cmdlet lets you set an installed language as the System Preferred UI Language in a running Windows installation
 ---
 

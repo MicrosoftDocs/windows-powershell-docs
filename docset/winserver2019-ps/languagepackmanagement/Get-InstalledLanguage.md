@@ -34,8 +34,8 @@ This command will show all of the language components that are installed on a de
 
 ### Example 2: See which language components are installed for a particular language
 
-```
-PS C:\> Get-InstalledLanguage -language en-US
+```PowerShell
+Get-InstalledLanguage -language en-US
 ```
 
 This command will show the language features that are installed for the en-US language.

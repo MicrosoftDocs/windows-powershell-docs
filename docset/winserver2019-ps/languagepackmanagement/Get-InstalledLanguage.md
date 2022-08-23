@@ -4,7 +4,7 @@ Module Name: LanguagePackManagement
 online version: https://go.microsoft.com/fwlink/?linkid=2185383
 schema: 2.0.0
 ms.date: 08/15/2022
-title: Get-InstalledLanguage (LanguagePackManagement)
+title: Get-InstalledLanguage
 description: The Get-InstalledLanguage cmdlet lets you see which languages are installed in a running Windows installation
 ---
 

@@ -15,7 +15,7 @@ Returns information about the installed languages on a device.
 
 ## SYNTAX
 
-```PowerShell
+```
 Get-InstalledLanguage
    [-Language] <String> 
    [<CommonParameters>]
@@ -27,14 +27,16 @@ Returns a list of the installed languages and related Language features installe
 ## EXAMPLES
 
 ### Example 1: See what languages are installed on a device
-```powershell
+
+```
 PS C:\> Get-InstalledLanguage
 ```
 
 This command will show all of the language components that are installed on a device.
 
 ### Example 2: See which language components are installed for a particular language
-```powershell
+
+```
 PS C:\> Get-InstalledLanguage -language en-US
 ```
 

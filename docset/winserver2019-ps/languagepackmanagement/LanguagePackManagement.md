@@ -1,7 +1,7 @@
 ---
 Module Name: LanguagePackManagement
 Module Guid: f42dbdd4-4358-4067-8155-a4567a0aaee5
-Download Help Link: https://aka.ms/winsvr-2019-pshelp
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
 ms.date: 08/15/2022

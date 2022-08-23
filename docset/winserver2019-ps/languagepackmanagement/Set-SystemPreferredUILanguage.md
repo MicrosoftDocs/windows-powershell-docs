@@ -16,10 +16,7 @@ Sets the provided language as the System Preferred UI Language.
 ## SYNTAX
 
 ```
-Set-SystemPreferredUILanguage 
-   [-Language] <String> 
-   [-PassThru] 
-   [<CommonParameters>]
+Set-SystemPreferredUILanguage [-Language] <String> [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -11,12 +11,11 @@ description: The Set-SystemPreferredUILanguage cmdlet lets you set an installed 
 # Set-SystemPreferredUILanguage
 
 ## SYNOPSIS
-
 Sets the provided language as the System Preferred UI Language.
 
 ## SYNTAX
 
-```PowerShell
+```
 Set-SystemPreferredUILanguage 
    [-Language] <String> 
    [-PassThru] 
@@ -33,7 +32,7 @@ After a language is set as the System Preferred UI Language, you have to restart
 
 ### Example 1: Set the System Preferred UI Language on a Windows installation
 
-```powershell
+```
 PS C:\> Set-SystemPreferredUILanguage ja-JP
 ```
 

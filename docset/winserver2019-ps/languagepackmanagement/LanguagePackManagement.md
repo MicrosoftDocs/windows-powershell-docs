@@ -22,21 +22,16 @@ This module can be used to easily [add languages](/windows-hardware/manufacture/
 
 ## LanguagePackManagement Cmdlets
 ### [Get-InstalledLanguage](Get-InstalledLanguage.md)
-
 Returns information about the installed languages on a device.
 
 ### [Get-SystemPreferredUILanguage](Get-SystemPreferredUILanguage.md)
-
 Returns the current System Preferred Language.
 
 ### [Install-Language](Install-Language.md)
-
 Installs a language onto a device.
 
 ### [Set-SystemPreferredUILanguage](Set-SystemPreferredUILanguage.md)
-
 Sets the provided language as the System Preferred UI Language.
 
 ### [Uninstall-Language](Uninstall-Language.md)
-
 Removes a language from a device.

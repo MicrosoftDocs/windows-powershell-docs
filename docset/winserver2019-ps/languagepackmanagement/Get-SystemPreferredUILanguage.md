@@ -11,7 +11,6 @@ description: The Get-SystemPreferredUILanguage cmdlet lets you see which languag
 # Get-SystemPreferredUILanguage
 
 ## SYNOPSIS
-
 Returns the current System Preferred Language.
 
 ## SYNTAX

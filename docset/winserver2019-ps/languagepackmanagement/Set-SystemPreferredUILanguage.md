@@ -29,8 +29,8 @@ After a language is set as the System Preferred UI Language, you have to restart
 
 ### Example 1: Set the System Preferred UI Language on a Windows installation
 
-```
-PS C:\> Set-SystemPreferredUILanguage ja-JP
+```powershell
+Set-SystemPreferredUILanguage ja-JP
 ```
 
 This command sets the System Preferred UI Language to Japanese.

@@ -118,5 +118,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[https://go.microsoft.com/fwlink/?linkid=2185611](https://go.microsoft.com/fwlink/?linkid=2185611)
+[UninstallLanguage](uninstall-language.md)
 

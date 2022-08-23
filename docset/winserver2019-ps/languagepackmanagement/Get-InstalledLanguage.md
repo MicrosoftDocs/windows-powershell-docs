@@ -74,5 +74,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[https://go.microsoft.com/fwlink/?linkid=2185383](https://go.microsoft.com/fwlink/?linkid=2185383)
+[Set-SystemPreferredUILanguage](Set-SystemPreferredUILanguage.md)
 

@@ -12,7 +12,7 @@ description: The LanguagePackManagement module includes cmdlets that help you ea
 # LanguagePackManagement Module
 ## Description
 
-This module can be used to easily [add languages](/windows-hardware/manufacture/desktop/available-language-packs-for-windows) and [related language features](/windows-hardware/manufacture/desktop/features-on-demand-language-fod?view=windows-11) and manage settings like System Preferred UI Language, System Locale, Input method (Keyboard), Locale, Speech Recognizer, User Preferred Language List using the new cmdlets.   
+This module can be used to easily [add languages](/windows-hardware/manufacture/desktop/available-language-packs-for-windows) and [related language features](/windows-hardware/manufacture/desktop/features-on-demand-language-fod) and manage settings like System Preferred UI Language, System Locale, Input method (Keyboard), Locale, Speech Recognizer, User Preferred Language List using the new cmdlets.   
 
 > [!NOTE]
 > - These cmdlets are supported on client operating system only. 

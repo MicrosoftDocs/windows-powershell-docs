@@ -11,7 +11,6 @@ description: The Get-InstalledLanguage cmdlet lets you see which languages are i
 # Get-InstalledLanguage
 
 ## SYNOPSIS
-
 Returns information about the installed languages on a device.
 
 ## SYNTAX

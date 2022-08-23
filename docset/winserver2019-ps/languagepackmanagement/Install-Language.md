@@ -11,7 +11,6 @@ description: The Install-Language cmdlet lets you add a language to a running Wi
 # Install-Language
 
 ## SYNOPSIS
-
 Installs a language onto a device.
 
 ## SYNTAX

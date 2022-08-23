@@ -27,8 +27,8 @@ Uninstalls a language, including all language components, from a device. This op
 
 ### Example 1: Remove a language from a device
 
-```
-PS C:\> Uninstall-Language ja-jp
+```powershell
+Uninstall-Language ja-jp
 ```
 
 This command removes the Japanese language from the device.

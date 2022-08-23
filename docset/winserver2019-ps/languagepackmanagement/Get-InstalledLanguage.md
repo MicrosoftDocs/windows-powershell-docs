@@ -68,7 +68,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Collections.Generic.List`1[[Microsoft.LanguagePackManagement.Powershell.Commands.InstalledLanguage, Microsoft.LanguagePackManagement.Powershell.Commands, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null]]
+### System.Collections.Generic.List<Microsoft.LanguagePackManagement.Powershell.Commands.InstalledLanguage>
 
 ## NOTES
 

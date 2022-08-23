@@ -4,7 +4,7 @@ Module Name: LanguagePackManagement
 online version: https://go.microsoft.com/fwlink/?linkid=2185386
 schema: 2.0.0
 ms.date: 08/15/2022
-title: Uninstall-Language (LanguagePackManagement)
+title: Uninstall-Language
 description: The Uninstall-Language cmdlet lets you remove a language and its components from a running Windows installation
 ---
 

@@ -176,14 +176,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBPolicy
-This cmdlet uses a **WBPolicy** object to determine what to include in the backup and where to store the backup.
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
 
 ## OUTPUTS
 
-### String
-If you do not specify the *Async* parameter, this cmdlet displays status messages from the currently running backup as strings.
-If you specify the *Async* parameter, you can use the Get-WBJob cmdlet to get the status of the currently running backup operation.
+### System.Object
 
 ## NOTES
 

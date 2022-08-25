@@ -5201,6 +5201,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docset/winserver2022-ps/pkiclient/Export-PfxCertificate.md",
+      "redirect_url": "/powershell/module/pki/Export-PfxCertificate?view=windowsserver2022-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2022-ps/pkiclient/PKIClient.md",
+      "redirect_url": "/powershell/module/pki/?view=windowsserver2022-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2022-ps/pkiclient/New-SelfSignedCertificate.md",
+      "redirect_url": "/powershell/module/pki/New-SelfSignedCertificate?view=winserver2022-ps",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docset/winserver2022-ps/remotedesktop/Set-RDDeploymentGatewayConfiguration.md",
       "redirect_url": "/powershell/module/rdmgmt/Set-RDDeploymentGatewayConfiguration.md?view=windowsserver2022-ps",
       "redirect_document_id": false
@@ -5353,6 +5368,56 @@
     {
       "source_path": "docset/winserver2022-ps/WindowsUpdate/WindowsUpdate.md",
       "redirect_url": "/powershell/module/windowsupdate/WindowsUpdate.md?view=windowsserver2022-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2022-ps/EventTracingManagement/Set-AutologgerConfig.md",
+      "redirect_url": "/powershell/module/eventtracingmanagement/Update-AutologgerConfig.md?view=windowsserver2022-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2016-ps/provisioning/Export-ProvisioningPackage.md",
+      "redirect_url": "/powershell/module/provisioning/Export-ProvisioningPackage.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2016-ps/provisioning/Export-Trace.md",
+      "redirect_url": "/powershell/module/provisioning/Export-Trace.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2016-ps/provisioning/Get-ProvisioningPackage.md",
+      "redirect_url": "/powershell/module/provisioning/Get-ProvisioningPackage.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2016-ps/provisioning/Get-TrustedProvisioningCertificate.md",
+      "redirect_url": "/powershell/module/provisioning/Get-TrustedProvisioningCertificate.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2016-ps/provisioning/Install-ProvisioningPackage.md",
+      "redirect_url": "/powershell/module/provisioning/Install-ProvisioningPackage.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2016-ps/provisioning/Install-TrustedProvisioningCertificate.md",
+      "redirect_url": "/powershell/module/provisioning/Install-TrustedProvisioningCertificate.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2016-ps/provisioning/Provisioning.md",
+      "redirect_url": "/powershell/module/provisioning/Provisioning.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2016-ps/provisioning/Uninstall-ProvisioningPackage.md",
+      "redirect_url": "/powershell/module/provisioning/Uninstall-ProvisioningPackage.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2016-ps/provisioning/Uninstall-TrustedProvisioningCertificate.md",
+      "redirect_url": "/powershell/module/provisioning/Uninstall-TrustedProvisioningCertificate.md",
       "redirect_document_id": false
     }
   ]

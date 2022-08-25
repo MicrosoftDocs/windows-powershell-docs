@@ -24,6 +24,10 @@ New-AdfsAccessControlPolicy -Name <String> [-SourceName <String>] [-Identifier <
 ## DESCRIPTION
 The **New-AdfsAccessControlPolicy** cmdlet creates an Active Directory Federation Services (AD FS) access control policy from a policy metadata file.
 
+**How to create a federation metadata file**
+
+The federation metadata document is an XML file that is available for [download](https://adfshelp.microsoft.com/MetadataExplorer/GetFederationMetadata). To retrieve your document, enter your federation service name, and then select the **Get federation metadata** button.
+
 ## EXAMPLES
 
 ### Example 1: Create a policy template from a policy metadata file
@@ -219,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

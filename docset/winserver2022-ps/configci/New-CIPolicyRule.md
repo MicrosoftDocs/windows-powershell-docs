@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
 Module Name: ConfigCI
-ms.date: 12/20/2016
+ms.date: 05/23/2022
 online version: https://docs.microsoft.com/powershell/module/configci/new-cipolicyrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-CIPolicyRule
@@ -18,24 +18,27 @@ Generates Code Integrity policy rules for user mode code and drivers.
 ### DriverFileList
 ```
 New-CIPolicyRule [-DriverFiles <DriverFile[]>] -Level <RuleLevel> [-Fallback <RuleLevel[]>] [-Deny]
- [-ScriptFileNames] [<CommonParameters>]
+ [-ScriptFileNames] [-AllowFileNameFallbacks] [-SpecificFileNameLevel <FileNameLevel>] [-UserWriteablePaths]
+ [<CommonParameters>]
 ```
 
 ### DriverFilePath
 ```
-New-CIPolicyRule -DriverFilePath <String> -Level <RuleLevel> [-Fallback <RuleLevel[]>] [-Deny]
- [-ScriptFileNames] [<CommonParameters>]
+New-CIPolicyRule -DriverFilePath <String[]> [-AppID <String>] -Level <RuleLevel> [-Fallback <RuleLevel[]>]
+ [-Deny] [-ScriptFileNames] [-AllowFileNameFallbacks] [-SpecificFileNameLevel <FileNameLevel>]
+ [-UserWriteablePaths] [<CommonParameters>]
 ```
 
-### FilePathRule
+### PackageFamilyName
 ```
-New-CIPolicyRule -FilePathRule <String> [-Deny]
- [-ScriptFileNames] [<CommonParameters>]
+New-CIPolicyRule [-Fallback <RuleLevel[]>] [-Deny] [-ScriptFileNames] [-AllowFileNameFallbacks]
+ [-SpecificFileNameLevel <FileNameLevel>] [-UserWriteablePaths] [-Package <AppxPackage>] [<CommonParameters>]
 ```
 
-### PackagedAppRule
+### ManualFilePath
 ```
-New-CIPolicyRule -Package <String> [-Deny] [<CommonParameters>]
+New-CIPolicyRule [-Fallback <RuleLevel[]>] [-Deny] [-ScriptFileNames] [-AllowFileNameFallbacks]
+ [-SpecificFileNameLevel <FileNameLevel>] [-UserWriteablePaths] [-FilePathRule <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -199,49 +202,122 @@ This command generates a filepath rule for the specific path verbatim string. Th
 
 ### Example 5: Create a policy rule for a packaged application and its dependencies
 ```
-PS C:\> $package = Get-AppxPackage -Name *Microsoft.Whiteboard*
-PS C:\> $package_dependencies = $package.Dependencies
+PS C:\> $packages = Get-AppxPackage -Name *Microsoft*
+PS C:\> $packages
 
-PS C:\> $package_rule = New-CIPolicyRule -Package $package
-PS C:\> $package_rule += New-CIPolicyRule -Package $dependency[0] # repeat for all dependencies in array
-```
-```output
-PS C:\> $package_rule
+Name              : Microsoft.NET.Native.Runtime.1.4
+Publisher         : CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+Architecture      : X86
+ResourceId        :
+Version           : 1.4.24201.0
+PackageFullName   : Microsoft.NET.Native.Runtime.1.4_1.4.24201.0_x86__8wekyb3d8bbwe
+InstallLocation   : C:\Program Files\WindowsApps\Microsoft.NET.Native.Runtime.1.4_1.4.24201.0_x86__8wekyb3d8bbwe
+IsFramework       : True
+PackageFamilyName : Microsoft.NET.Native.Runtime.1.4_8wekyb3d8bbwe
+PublisherId       : 8wekyb3d8bbwe
+IsResourcePackage : False
+IsBundle          : False
+IsDevelopmentMode : False
+NonRemovable      : False
+IsPartiallyStaged : False
+SignatureKind     : Store
+Status            : Ok
+...
+Name              : Microsoft.NET.Native.Runtime.1.4
+Publisher         : CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+Architecture      : X64
+ResourceId        :
+Version           : 1.4.24201.0
+PackageFullName   : Microsoft.NET.Native.Runtime.1.4_1.4.24201.0_x64__8wekyb3d8bbwe
+InstallLocation   : C:\Program Files\WindowsApps\Microsoft.NET.Native.Runtime.1.4_1.4.24201.0_x64__8wekyb3d8bbwe
+IsFramework       : True
+PackageFamilyName : Microsoft.NET.Native.Runtime.1.4_8wekyb3d8bbwe
+PublisherId       : 8wekyb3d8bbwe
+IsResourcePackage : False
+IsBundle          : False
+IsDevelopmentMode : False
+NonRemovable      : False
+IsPartiallyStaged : False
+SignatureKind     : Store
+Status            : Ok
 
+$package_dependencies = $packages.Dependencies
+$package_rule = New-CIPolicyRule -Package $packages[0] #repeat for all desired packages in the array
+$package_rule += New-CIPolicyRule -Package $package_dependencies[0] # repeat for all dependencies in the array
+$package_rule
 
-Name           : Microsoft.Whiteboard_8wekyb3d8bbwe FileRule
-Id             : ID_ALLOW_A_D
+Name           : Microsoft.NET.Native.Runtime.1.4_8wekyb3d8bbwe FileRule
+Id             : ID_ALLOW_A_1
 TypeId         : Allow
-Root           : 
-FileVersionRef : 
-AppIDRef       : 
+Root           :
+FileVersionRef :
+AppIDRef       :
 Wellknown      : False
-Ekus           : 
-Exceptions     : 
-FileAttributes : 
+Ekus           :
+Exceptions     :
+FileAttributes :
 FileException  : False
 UserMode       : True
-attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [PackageFamilyName, Microsoft.Whiteboard_8wekyb3d8bbwe], [PackageVersion, 21.10503.5662.0]}
+attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [PackageFamilyName,
+                 Microsoft.NET.Native.Runtime.1.4_8wekyb3d8bbwe], [PackageVersion, 1.4.24201.0]}
 
-Name           : Microsoft.NET.Native.Runtime.2.2_8wekyb3d8bbwe FileRule
-Id             : ID_ALLOW_A_E
+Name           : Microsoft.NET.Native.Framework.2.2_8wekyb3d8bbwe FileRule
+Id             : ID_ALLOW_A_2
 TypeId         : Allow
-Root           : 
-FileVersionRef : 
-AppIDRef       : 
+Root           :
+FileVersionRef :
+AppIDRef       :
 Wellknown      : False
-Ekus           : 
-Exceptions     : 
-FileAttributes : 
+Ekus           :
+Exceptions     :
+FileAttributes :
 FileException  : False
 UserMode       : True
-attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [PackageFamilyName, Microsoft.NET.Native.Runtime.2.2_8wekyb3d8bbwe], [PackageVersion, 2.2.28604.0]}
+attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [PackageFamilyName,
+                 Microsoft.NET.Native.Framework.2.2_8wekyb3d8bbwe], [PackageVersion, 2.2.29512.0]}
 ```
 
 This set of commands finds a packaged application matching the specified name and generates an allow rule for the packaged application and its dependencies. 
 
 
 ## PARAMETERS
+
+### -AllowFileNameFallbacks
+Indicates that files that do not have an `OriginalFileName` fall back in the following order:
+
+- InternalName
+- FileDescription
+- ProductName
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppID
+Specifies an app.
+This cmdlet creates per-app rules which control whether specific plug-ins, add-ins, and modules can run from specific apps.
+
+For more information, see [Use a Windows Defender Application Control policy to control specific plug-ins, add-ins, and modules](/windows/security/threat-protection/windows-defender-application-control/use-windows-defender-application-control-policy-to-control-specific-plug-ins-add-ins-and-modules).
+
+```yaml
+Type: String
+Parameter Sets: DriverFilePath
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Deny
 Indicates that this cmdlet creates deny rules instead of the default allow rules.
@@ -262,7 +338,7 @@ Accept wildcard characters: False
 Specifies the path of a driver on which this cmdlet bases a rule.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: DriverFilePath
 Aliases: 
 
@@ -314,23 +390,22 @@ This cmdlet will not check whether the filepath string is a valid filepath.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
-Accepted values: 
+Parameter Sets: ManualFilePath
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True
-Accept wildcard characters: True
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Level
-Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
+Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
 
 ```yaml
 Type: RuleLevel
-Parameter Sets: (All)
+Parameter Sets: DriverFileList, DriverFilePath
 Aliases: l
 Accepted values: None, Hash, FileName, FilePath, SignedVersion, PFN, Publisher, FilePublisher, LeafCertificate, PcaCertificate, RootCertificate, WHQL, WHQLPublisher, WHQLFilePublisher
 
@@ -346,13 +421,13 @@ Specifies the packaged app (MSIX/Appx) to base the rule.
 
 ```yaml
 Type: AppxPackage
-Parameter Sets: (All)
-Aliases: None
+Parameter Sets: PackageFamilyName
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -371,14 +446,29 @@ Accept wildcard characters: False
 ```
 
 ### -SpecificFileNameLevel
-Specifies the attribute of the file off which to base a file name rule. The -Level must be set to FileName for this option. 
-Refer to [File Name Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values. 
+Specifies the attribute of the file off which to base a file name rule. The -Level must be set to FileName for this option.
+Refer to [File Name Rules Info](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values.
+
+```yaml
+Type: FileNameLevel
+Parameter Sets: (All)
+Aliases: 
+Accepted values: None, OriginalFileName, InternalName, FileDescription, ProductName, PackageFamilyName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserWriteablePaths
+Indicates that this cmdlet includes files identified as user writeable in the policy.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Accepted values: None, OriginalFileName, InternalName, FileDescription, ProductName, PackageFamilyName
+Aliases:
 
 Required: False
 Position: Named

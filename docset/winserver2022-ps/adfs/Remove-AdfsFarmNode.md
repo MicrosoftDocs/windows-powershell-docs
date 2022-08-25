@@ -29,7 +29,7 @@ Remove-AdfsFarmNode -GroupServiceAccountIdentifier <String> [-Credential <PSCred
 ## DESCRIPTION
 The **Remove-AdfsFarmNode** cmdlet is deprecated in this release.
 Instead, use the [Uninstall-WindowsFeature](https://go.microsoft.com/fwlink/?LinkID=287572) cmdlet.
-For more information on the **Uninstall-WindowsFeature** cmdlet, type `Get-Help Uninstall-WindowsFeature`.
+For more information on the **Uninstall-WindowsFeature** cmdlet, type `Get-Help Uninstall-WindowsFeature`. Note that the **Uninstall-WindowsFeature** cmdlet removes only the server role but doesn't remove the node from the ADFS farm. For proper cleanup, use the **Set-AdfsFarmInformation** cmdlet with the `-RemoveNode` parameter.
 
 ## EXAMPLES
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -87,5 +87,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Uninstall-WindowsFeature](../Microsoft.Windows.ServerManager.Migration/Uninstall-WindowsFeature.md)
+[Uninstall-WindowsFeature](/powershell/module/Microsoft.Windows.ServerManager.Migration/Uninstall-WindowsFeature)
 

@@ -64,13 +64,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBPolicy
-This cmdlet queries the backup policy contained in the specified **WBPolicy** object.
+### Microsoft.Windows.ServerBackup.Commands.WBPolicy
 
 ## OUTPUTS
 
-### WBBackupTarget []
-This cmdlet returns a list of the storage locations that the backup policy object contains.
+### System.Object
 
 ## NOTES
 

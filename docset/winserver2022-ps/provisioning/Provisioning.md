@@ -12,30 +12,29 @@ title: Provisioning
 
 # Provisioning Module
 ## Description
-{{Manually Enter Description Here}}
+This reference cmdlet provides descriptions and syntax for all provisioning-specific cmdlets. It lists cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## provisioning Cmdlets
 ### [Export-ProvisioningPackage](Export-ProvisioningPackage.md)
-{{Manually Enter Export-ProvisioningPackage Description Here}}
+Extracts the contents of a provisioning package.
 
 ### [Export-Trace](Export-Trace.md)
-{{Manually Enter Export-Trace Description Here}}
+Exports trace events.
 
 ### [Get-ProvisioningPackage](Get-ProvisioningPackage.md)
-{{Manually Enter Get-ProvisioningPackage Description Here}}
+Gets information about the installed provisioning package.
 
 ### [Get-TrustedProvisioningCertificate](Get-TrustedProvisioningCertificate.md)
-{{Manually Enter Get-TrustedProvisioningCertificate Description Here}}
+Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the Uninstall-TrustedProvisioningCertificate cmdlet.
 
 ### [Install-ProvisioningPackage](Install-ProvisioningPackage.md)
-{{Manually Enter Install-ProvisioningPackage Description Here}}
+Installs .PPKG package onto the local machine.
 
 ### [Install-TrustedProvisioningCertificate](Install-TrustedProvisioningCertificate.md)
-{{Manually Enter Install-TrustedProvisioningCertificate Description Here}}
+Adds a certificate to the Trusted Certificate Store.
 
 ### [Uninstall-ProvisioningPackage](Uninstall-ProvisioningPackage.md)
-{{Manually Enter Uninstall-ProvisioningPackage Description Here}}
+Uninstalls .PPKG package from the local machine.
 
 ### [Uninstall-TrustedProvisioningCertificate](Uninstall-TrustedProvisioningCertificate.md)
-{{Manually Enter Uninstall-TrustedProvisioningCertificate Description Here}}
-
+Removes a previously installed provisioning certificate.

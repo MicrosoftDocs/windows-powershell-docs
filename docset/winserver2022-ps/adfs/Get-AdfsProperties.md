@@ -61,7 +61,7 @@ HostName                                   : sts.contoso.com
 HttpPort                                   : 80
 HttpsPort                                  : 443
 TlsClientPort                              : 49443
-Identifier                                 : http://sts.contoso.com/adfs/services/trust
+Identifier                                 : https://sts.contoso.com/adfs/services/trust
 InstalledLanguage                          : en-US
 LogLevel                                   : {Errors, Information, Verbose, Warnings}
 MonitoringInterval                         : 1440
@@ -94,7 +94,7 @@ This command retrieves the associated properties from AD FS.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

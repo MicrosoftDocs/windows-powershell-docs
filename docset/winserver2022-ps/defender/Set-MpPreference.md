@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 12/20/2016
+ms.date: 07/14/2022
 online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -17,30 +17,47 @@ Configures preferences for Windows Defender scans and updates.
 
 ```
 Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
- [-RealTimeScanDirection <ScanDirection>] [-QuarantinePurgeItemsAfterDelay <UInt32>]
- [-RemediationScheduleDay <Day>] [-RemediationScheduleTime <DateTime>]
- [-ReportingAdditionalActionTimeOut <UInt32>] [-ReportingCriticalFailureTimeOut <UInt32>]
- [-ReportingNonCriticalTimeOut <UInt32>] [-ScanAvgCPULoadFactor <Byte>]
- [-CheckForSignaturesBeforeRunningScan <Boolean>] [-ScanPurgeItemsAfterDelay <UInt32>]
- [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>] [-ScanScheduleDay <Day>]
- [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleTime <DateTime>] [-SignatureFirstAuGracePeriod <UInt32>]
- [-SignatureAuGracePeriod <UInt32>] [-SignatureDefinitionUpdateFileSharesSources <String>]
+ [-ExclusionIpAddress <String[]>] [-RealTimeScanDirection <ScanDirection>]
+ [-QuarantinePurgeItemsAfterDelay <UInt32>] [-RemediationScheduleDay <Day>]
+ [-RemediationScheduleTime <DateTime>] [-ReportingAdditionalActionTimeOut <UInt32>]
+ [-ReportingCriticalFailureTimeOut <UInt32>] [-ReportingNonCriticalTimeOut <UInt32>]
+ [-ScanAvgCPULoadFactor <Byte>] [-CheckForSignaturesBeforeRunningScan <Boolean>]
+ [-ScanPurgeItemsAfterDelay <UInt32>] [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>]
+ [-ScanScheduleDay <Day>] [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleOffset <UInt32>]
+ [-SignatureFirstAuGracePeriod <UInt32>] [-SignatureAuGracePeriod <UInt32>]
+ [-SignatureDefinitionUpdateFileSharesSources <String>]
  [-SignatureDisableUpdateOnStartupWithoutEngine <Boolean>] [-SignatureFallbackOrder <String>]
- [-SignatureScheduleDay <Day>] [-SignatureScheduleTime <DateTime>] [-SignatureUpdateCatchupInterval <UInt32>]
- [-SignatureUpdateInterval <UInt32>] [-MAPSReporting <MAPSReportingType>]
- [-SubmitSamplesConsent <SubmitSamplesConsentType>] [-DisableAutoExclusions <Boolean>]
- [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>] [-DisableBehaviorMonitoring <Boolean>]
- [-DisableIntrusionPreventionSystem <Boolean>] [-DisableIOAVProtection <Boolean>]
+ [-SharedSignaturesPath <String>] [-SignatureScheduleDay <Day>] [-SignatureScheduleTime <DateTime>]
+ [-SignatureUpdateCatchupInterval <UInt32>] [-SignatureUpdateInterval <UInt32>]
+ [-SignatureBlobUpdateInterval <UInt32>] [-SignatureBlobFileSharesSources <String>]
+ [-MeteredConnectionUpdates <Boolean>] [-AllowNetworkProtectionOnWinServer <Boolean>]
+ [-DisableDatagramProcessing <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>]
+ [-MAPSReporting <MAPSReportingType>] [-SubmitSamplesConsent <SubmitSamplesConsentType>]
+ [-DisableAutoExclusions <Boolean>] [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>]
+ [-SchedulerRandomizationTime <UInt32>] [-DisableBehaviorMonitoring <Boolean>]
  [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
- [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [- DisableCpuThrottleOnIdleScans <Boolean>] [-DisableEmailScanning <Boolean>]
+ [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
  [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
  [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-UnknownThreatDefaultAction <ThreatAction>]
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
- [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>]
+ [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>]
+ [-CloudBlockLevel <CloudBlockLevelType>] [-CloudExtendedTimeout <UInt32>]
+ [-EnableNetworkProtection <ASRRuleActionType>] [-EnableControlledFolderAccess <ControlledFolderAccessType>]
+ [-AttackSurfaceReductionOnlyExclusions <String[]>] [-ControlledFolderAccessAllowedApplications <String[]>]
+ [-ControlledFolderAccessProtectedFolders <String[]>] [-AttackSurfaceReductionRules_Ids <String[]>]
+ [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>] [-EnableLowCpuPriority <Boolean>]
+ [-EnableFileHashComputation <Boolean>] [-EnableFullScanOnBatteryPower <Boolean>] [-ProxyPacUrl <String>]
+ [-ProxyServer <String>] [-ProxyBypass <String[]>] [-ForceUseProxyOnly <Boolean>]
+ [-DisableTlsParsing <Boolean>] [-DisableHttpParsing <Boolean>] [-DisableDnsParsing <Boolean>]
+ [-DisableDnsOverTcpParsing <Boolean>] [-DisableSshParsing <Boolean>]
+ [-PlatformUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>]
+ [-SignaturesUpdatesChannel <UpdatesChannelType>] [-DisableGradualRelease <Boolean>]
+ [-AllowNetworkProtectionDownLevel <Boolean>] [-AllowDatagramProcessingOnWinServer <Boolean>]
+ [-EnableDnsSinkhole <Boolean>] [-DisableInboundConnectionFiltering <Boolean>] [-DisableRdpParsing <Boolean>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,7 +75,7 @@ The following table provides remediation action values for detected threats at l
 |3 |Remove the detected threat. |
 |6 |Allow the detected threat. |
 |8 |Allow the user to determine the action to take with the detected threat. |
-|9 |Do not take any action. |
+|9 |Don't take any action. |
 |10 |Block the detected threat. |
 |0 | (NULL)|Apply action based on the Security Intelligence Update (SIU). This is the default value. |
 
@@ -76,9 +93,54 @@ This command configures preferences to check for definition updates every day.
 PS C:\> Set-MpPreference -SignatureScheduleTime 120
 ```
 
-This command configures preferences to check for definition updates 120 minutes after midnight on days when it is scheduled to check.
+This command configures preferences to check for definition updates 120 minutes after midnight on days when it's scheduled to check.
 
 ## PARAMETERS
+
+### -AllowDatagramProcessingOnWinServer
+Specifies whether to disable inspection of UDP connections on Windows Server.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: adpows
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowNetworkProtectionDownLevel
+Specifies whether to allow network protection to be set to Enabled or Audit Mode on Windows versions before 1709.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: anpdl
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowNetworkProtectionOnWinServer
+Specifies whether to allow network protection to be set to Enabled or Audit Mode for Windows Server.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: anpws
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
@@ -93,6 +155,55 @@ For more information about Windows PowerShell background jobs, see [about_Jobs](
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttackSurfaceReductionOnlyExclusions
+Specifies the files and paths to exclude from Attack Surface Reduction (ASR) rules. Specify the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, ""C:\Windows"" will exclude all files in that directory. ""C:\Windows\App.exe"" will exclude only that specific file in that specific folder.
+
+For more information about excluding files and folders from [ASR rules](/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttackSurfaceReductionRules_Actions
+Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
+If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
+
+```yaml
+Type: ASRRuleActionType[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttackSurfaceReductionRules_Ids
+Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
+If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
 Aliases: 
 
 Required: False
@@ -105,8 +216,8 @@ Accept wildcard characters: False
 ### -CheckForSignaturesBeforeRunningScan
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of $True, Windows Defender checks for new definitions.
-If you specify $False or do not specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans and to scans that you start from the command line, but it does not affect scans that you start from the user interface.
+If you specify $False or don't specify a value, the scan begins with existing definitions.
+This value applies to scheduled scans and to scans that you start from the command line, but it doesn't affect scans that you start from the user interface.
 
 ```yaml
 Type: Boolean
@@ -129,6 +240,67 @@ The default is the current session on the local computer.
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CloudBlockLevel
+Specifies a cloud block level.
+This value determines how aggressive Microsoft Defender Antivirus is in blocking and scanning suspicious files.
+
+```yaml
+Type: CloudBlockLevelType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CloudExtendedTimeout
+Specifies the amount of extended time to block a suspicious file and scan it in the cloud. Standard time is 10 seconds. Extend by up to 50 seconds.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: cloudextimeout
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ControlledFolderAccessAllowedApplications
+Specifies applications that can make changes in controlled folders.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ControlledFolderAccessProtectedFolders
+Specifies more folders to protect.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -236,13 +408,61 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCpuThrottleOnIdleScans
-Indicates whether the CPU will be throttled for scheduled scans while the device is idle. This parameter is enabled by default, thus ensuring that the CPU will not be throttled for scheduled scans performed when the device is idle, regardless of what **ScanAvgCPULoadFactor** is set to. For all other scheduled scans, this flag does not have any impact and normal throttling will occur.
+Indicates whether the CPU will be throttled for scheduled scans while the device is idle. This parameter is enabled by default, thus ensuring that the CPU won't be throttled for scheduled scans performed when the device is idle, regardless of what **ScanAvgCPULoadFactor** is set to. For all other scheduled scans, this flag does not have any impact and normal throttling will occur.
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
 Aliases: None
+Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableDatagramProcessing
+Specifies whether to disable inspection of UDP connections.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: ddtgp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableDnsOverTcpParsing
+Specifies whether to disable inspection of DNS traffic that occurs over a TCP channel.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: ddnstcpp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableDnsParsing
+Specifies whether to disable inspection of DNS traffic that occurs over a UDP channel.
+Network protection inspects DNS traffic that occurs over a TCP channel to provide metadata for anti-malware behavior monitoring or to allow for DNS sink holing if the "-EnableDnsSinkhole" configuration is set. This can be disabled by setting this value to "$true".
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: ddnsp
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -256,6 +476,63 @@ If you specify a value of $False or do not specify a value, Windows Defender per
 Type: Boolean
 Parameter Sets: (All)
 Aliases: demsc
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableGradualRelease
+Specifies whether to disable gradual rollout of monthly and daily Windows Defender updates. 
+If you enable this option, devices are offered all updates after the gradual release cycle finishes.
+Consider this option for datacenter computers that only receive limited updates. 
+
+This setting applies to both monthly and daily updates.
+It overrides configured channel selections for platform and engine updates. 
+
+If you disable or do not configure this policy, the device remains in Current Channel (Default) unless specified otherwise in specific channels.
+The device stays up to date automatically during the gradual release cycle, which is suitable for most devices. 
+
+This policy is available starting with platform version 4.18.2106.5 and later.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dgr
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableHttpParsing
+Specifies whether disable inspection of HTTP traffic.
+If **EnableNetworkProtection** has the value `Enabled`, HTTP connections to malicious websites can be blocked.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dhttpp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableInboundConnectionFiltering
+Specifies whether to inspect only outbound connections.
+By default, Network Protection inspects both inbound and outbound connections.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dicf
 
 Required: False
 Position: Named
@@ -280,14 +557,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisableIntrusionPreventionSystem
-Indicates whether to configure network protection against exploitation of known vulnerabilities.
-If you specify a value of $False or do not specify a value, network protection is enabled.
+### -DisablePrivacyMode
+**This is a legacy setting that does not have any affect on current platforms**. The intent of this parameter was to disable privacy mode, which prevented users, other than administrators, from displaying threat history. When this parameter was in use, if you specified a value of $False or did not specify a value, privacy mode was enabled.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: dips
+Aliases: dpm
 
 Required: False
 Position: Named
@@ -296,15 +572,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisablePrivacyMode
-Indicates whether to disable privacy mode.
-Privacy mode prevents users, other than administrators, from displaying threat history.
-If you specify a value of $False or do not specify a value, privacy mode is enabled.
+### -DisableRdpParsing
+Specifies whether to inspect only outbound connections.
+By default, Network Protection inspects both inbound and outbound connections.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: dpm
+Aliases: drdpp
 
 Required: False
 Position: Named
@@ -408,8 +683,171 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableSshParsing
+Specifies whether to disable inspection of SSH traffic.
+By default, Network Protection inspects SSH traffic.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dsshp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableTlsParsing
+Specifies whether to disable inspection of TLS traffic.
+Network protection inspects TLS traffic (also known as HTTPS traffic) to see if a connection is being made to a malicious website, and to provide metadata to behavior monitoring. TLS connections to malicious websites can also be blocked if "-EnableNetworkProtection" is set to enabled. HTTP inspection can be disabled by setting this value to "$true". By default, network protection inspects TLS traffic.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dtlsp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableControlledFolderAccess
+Specifies the state for the controlled folder access feature. Valid values are Disabled, Enabled, and Audit Mode.
+
+```yaml
+Type: ControlledFolderAccessType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableDnsSinkhole
+Specifies whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks.
+Network protection can inspect the DNS traffic of a machine and, in conjunction with behavior monitoring, detect and sink hole DNS exfiltration attempts, and other DNS based malicious attacks. Set this configuration to "$true" to enable this feature.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: ednss
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableFileHashComputation
+Specifies whether to enable file hash computation.
+When this feature is enabled, Windows Defender computes hashes for files it scans.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: efhc
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableFullScanOnBatteryPower
+Specifies whether Windows Defender does a full scan while on battery power.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: efsobp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableLowCpuPriority
+Specifies whether Windows Defender uses low CPU priority for scheduled scans.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: elcp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableNetworkProtection
+Specifies how the network protection service handles web-based malicious threats, including phishing and malware.
+Possible values are Disabled, Enabled, and AuditMode.
+
+```yaml
+Type: ASRRuleActionType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EngineUpdatesChannel
+Specifies when devices receive Microsoft Defender engine updates during the monthly gradual rollout.
+
+Valid values are:
+
+- NotConfigured. Devices stay up to date automatically during the gradual release cycle. This value is suitable for most devices.
+- Beta. Devices are the first to receive new updates. Select Beta Channel to participate in identifying and reporting issues to Microsoft. Devices in the Windows Insider Program are subscribed to this channel by default. This value is for use in manual test environments only and a limited number of devices.
+- Broad. Devices are offered updates only after the gradual release cycle completes. This value is suggested for a broad set of devices in your production population, from 10 to 100 percent.
+- Preview. Devices are offered updates earliest during the monthly gradual release cycle. This value is suggested for pre-production or validation environments.
+- Staged. Devices are offered updates after the monthly gradual release cycle. This value is suggested for a small, representative part of your production population, around 10 percent.
+
+```yaml
+Type: UpdatesChannelType
+Parameter Sets: (All)
+Aliases: erelr
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExclusionExtension
 Specifies an array of file name extensions, such as obj or lib, to exclude from scheduled, custom, and real-time scanning.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExclusionIpAddress
+Specifies an array of IP addresses to exclude from scheduled and real-time scanning.
 
 ```yaml
 Type: String[]
@@ -464,7 +902,22 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceUseProxyOnly
+Specifies whether to force the device to use only the proxy.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: fupo
 
 Required: False
 Position: Named
@@ -498,8 +951,8 @@ Accept wildcard characters: False
 Specifies which automatic remediation action to take for a low level threat.
 The acceptable values for this parameter are:
 
-- Quarantine 
-- Remove 
+- Quarantine
+- Remove
 - Ignore
 
 ```yaml
@@ -523,7 +976,7 @@ The acceptable values for this parameter are:
 
 - 0: Disabled.
 Send no information to Microsoft.
-This is the default value. 
+This is the default value.
 - 1: Basic membership.
 Send basic information to Microsoft about detected software, including where the software came from, the actions that you apply or that apply automatically, and whether the actions succeeded. 
 - 2: Advanced membership.
@@ -539,6 +992,22 @@ Type: MAPSReportingType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Disabled, Basic, Advanced
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeteredConnectionUpdates
+Specifies whether to update managed devices to update through metered connections.
+Data charges may apply.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: mcupd
 
 Required: False
 Position: Named
@@ -568,7 +1037,77 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PlatformUpdatesChannel
+Specifies when devices receive Microsoft Defender platform updates during the monthly gradual rollout.
+
+Valid values are:
+
+- NotConfigured. Devices stay up to date automatically during the gradual release cycle. This value is suitable for most devices.
+- Beta. Devices are the first to receive new updates. Select Beta Channel to participate in identifying and reporting issues to Microsoft. Devices in the Windows Insider Program are subscribed to this channel by default. This value is for use in manual test environments only and a limited number of devices.
+- Broad. Devices are offered updates only after the gradual release cycle completes. This value is suggested for a broad set of devices in your production population, from 10 to 100 percent.
+- Preview. Devices are offered updates earliest during the monthly gradual release cycle. This value is suggested for pre-production or validation environments.
+- Staged. Devices are offered updates after the monthly gradual release cycle. This value is suggested for a small, representative part of your production population, around 10 percent.
+
+```yaml
+Type: UpdatesChannelType
+Parameter Sets: (All)
+Aliases: prelr
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyBypass
+Specifies proxy bypasses.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: proxbps
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyPacUrl
+Specifies the Privilege Attribute Certificate (PAC) proxy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ppurl
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProxyServer
+Specifies the proxy server.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: proxsrv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PUAProtection
+Specifies the level of detection for potentially unwanted applications.
+When potentially unwanted software is downloaded or attempts to install itself on your computer, you are warned.
 
 ```yaml
 Type: PUAProtectionType
@@ -878,6 +1417,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SchedulerRandomizationTime
+Specifies the randomization time for the scheduler.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: srt
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SevereThreatDefaultAction
 Specifies which automatic remediation action to take for a severe level threat.
 The acceptable values for this parameter are:
@@ -899,6 +1453,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SharedSignaturesPath
+Specifies the shared signatures path.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ssp, SecurityIntelligenceLocation, ssl
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SignatureAuGracePeriod
 Specifies a grace period, in minutes, for the definition.
 If a definition successfully updates within this period, Windows Defender abandons any service initiated updates.
@@ -907,6 +1476,36 @@ If a definition successfully updates within this period, Windows Defender abando
 Type: UInt32
 Parameter Sets: (All)
 Aliases: sigagp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignatureBlobFileSharesSources
+Specifies the file shares sources for signatures.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: sigbfs
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignatureBlobUpdateInterval
+Specifies the signature update interval.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: sigbui
 
 Required: False
 Position: Named
@@ -1036,6 +1635,29 @@ If you do not specify a value for this parameter, Windows Defender checks for de
 Type: DateTime
 Parameter Sets: (All)
 Aliases: sigst
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SignaturesUpdatesChannel
+Specifies when devices receive daily Microsoft Defender definition updates during the monthly gradual rollout.
+
+Valid values are:
+
+- NotConfigured. Devices stay up to date automatically during the gradual release cycle. This value is suitable for most devices.
+- Broad. Devices are offered updates only after the gradual release cycle completes. This value is suggested for a broad set of devices in your production population, from 10 to 100 percent.
+- Staged. Devices are offered updates after the monthly gradual release cycle. This value is suggested for a small, representative part of your production population, around 10 percent.
+
+This parameter name will be updated to **DefinitionUpdatesChannel** in a future release.
+
+```yaml
+Type: UpdatesChannelType
+Parameter Sets: (All)
+Aliases: srelr
 
 Required: False
 Position: Named

@@ -19,7 +19,7 @@ Updates settings of a query resolution policy on a DNS server.
 ```
 Set-DnsServerQueryResolutionPolicy [-PassThru] [-ComputerName <String>] -Name <String>
  [-TransportProtocol <String>] [-TimeOfDay <String>] [-RecursionScope <String>] [-ServerInterfaceIP <String>]
- [-QType <String>] [-ProcessingOrder <UInt32>] [-ClientSubnet <String>] [-Condition <String>]
+ [-QType <String>] [-ProcessingOrder <UInt32>] [-ECS <String>] [-ClientSubnet <String>] [-Condition <String>]
  [-InternetProtocol <String>] [-Fqdn <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -28,7 +28,7 @@ Set-DnsServerQueryResolutionPolicy [-PassThru] [-ComputerName <String>] -Name <S
 ```
 Set-DnsServerQueryResolutionPolicy [-PassThru] [-ComputerName <String>] [-ZoneName] <String> -Name <String>
  [-TransportProtocol <String>] [-TimeOfDay <String>] [-ServerInterfaceIP <String>] [-QType <String>]
- [-ProcessingOrder <UInt32>] [-ClientSubnet <String>] [-Condition <String>] [-InternetProtocol <String>]
+ [-ProcessingOrder <UInt32>] [-ECS <String>] [-ClientSubnet <String>] [-Condition <String>] [-InternetProtocol <String>]
  [-Fqdn <String>] [-ZoneScope <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -190,6 +190,22 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ECS
+
+This parameter is reserved for internal use.
+
+```yaml
+Type: String
+Parameter Sets: Server, Zone
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -391,7 +407,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

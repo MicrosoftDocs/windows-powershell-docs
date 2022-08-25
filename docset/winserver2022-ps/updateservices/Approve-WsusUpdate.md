@@ -44,7 +44,7 @@ This command approves for installation all unapproved updates with a status of f
 Specifies the action that clients should perform when applying the associated update. The acceptable values for this parameter are:
 
 - Install
-- Not Approved
+- NotApproved
 - Uninstall
 
 ```yaml

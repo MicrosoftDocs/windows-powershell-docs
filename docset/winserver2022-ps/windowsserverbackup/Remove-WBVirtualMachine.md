@@ -126,11 +126,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Windows.ServerBackup.Commands.WBPolicy
+### Microsoft.Windows.ServerBackup.Commands.WBVirtualMachine[]
 
 ## OUTPUTS
 
-### Windows.ServerBackup.Commands.WBVirtualMachine[]
+### System.Object
 
 ## NOTES
 

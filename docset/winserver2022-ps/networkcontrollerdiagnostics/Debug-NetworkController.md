@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: Debug-NetworkController-help.xml
+external help file: Debug-NetworkController.psm1-help.xml
 Module Name: NetworkControllerDiagnostics
 ms.date: 12/20/2016
 online version: https://docs.microsoft.com/powershell/module/networkcontrollerdiagnostics/debug-networkcontroller?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -18,7 +18,7 @@ Queries a Network Controller for detailed diagnostic information.
 ```
 Debug-NetworkController [-NetworkController] <String> [-SetupDiagnostics] [[-IncludeTraces] <Boolean>]
  [[-OutputDirectory] <String>] [[-Credential] <PSCredential>] [[-RestURI] <String>]
- [[-CertificateThumbprint] <String>] [[-DeviceCredentials] <Hashtable>] [<CommonParameters>]
+ [[-CertificateThumbprint] <String>] [[-DeviceCredentials] <Hashtable>] [-ExcludeSlbState] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,6 +106,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExcludeSlbState
+Indicates that this cmdlet excludes SLB State information.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IncludeTraces
 Indicates that this cmdlet includes Host Agent and Network Controller Traces.
 
@@ -188,7 +203,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

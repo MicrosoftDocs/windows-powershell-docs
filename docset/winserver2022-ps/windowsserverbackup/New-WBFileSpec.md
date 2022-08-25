@@ -41,7 +41,7 @@ PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample\1.jpg"
 
 This command creates a file specification and adds the file named C:\Sample\1.jpg to it.
 
-### Example 2: Add a volume recursively to a backup file specification
+### Example 2: Add a folder recursively to a backup file specification
 ```
 PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample"
 ```
@@ -49,7 +49,7 @@ PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample"
 This command creates a file specification and adds the contents of the C:\Sample folder to it.
 Because the cmdlet does not include the *NonRecursive* parameter, the backup includes the contents of this folder and its subfolders.
 
-### Example 3: Add a volume nonrecursively to a backup file specification
+### Example 3: Add a folder nonrecursively to a backup file specification
 ```
 PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample" -NonRecursive
 ```
@@ -119,13 +119,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Spec string, NonRecursive, Excluded flags
-This cmdlet uses *Spec*, *NonRecursive*, and *Excluded* parameters to create a list of items to include or exclude.
-The *Spec* parameter accepts string objects.
+### None
 
 ## OUTPUTS
 
-### WBFileSpec
+### System.Object
+
 This cmdlet returns a **WBFileSpec** object, which describes a file specification.
 You can add a **WBFileSpec** object to a **WBPolicy** object as a source for backup.
 

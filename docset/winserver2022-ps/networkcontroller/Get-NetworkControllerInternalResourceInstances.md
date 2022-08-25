@@ -11,7 +11,7 @@ title: Get-NetworkControllerInternalResourceInstances
 # Get-NetworkControllerInternalResourceInstances
 
 ## SYNOPSIS
-This cmdlet provides mapping between the user generated resource ID and the internal instance ID in the Network Controller
+Returns the mapping for instances IDs to REST resource IDs.
 
 ## SYNTAX
 
@@ -21,7 +21,8 @@ Get-NetworkControllerInternalResourceInstances [[-ResourceId] <String[]>] -Conne
 ```
 
 ## DESCRIPTION
-This cmdlet provides mapping between the user generated resource ID and the internal instance ID in the Network Controller
+The **Get-NetworkControllerInternalResourceInstances** cmdlet returns the mapping for instances IDs, which are GUIDs, to REST resource IDs, which are names. It is a reverse lookup mechanism.
+
 
 ## EXAMPLES
 
@@ -121,9 +122,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
-### 
+### System.Object
 
 The resource has the following output:
 1. Resource ID

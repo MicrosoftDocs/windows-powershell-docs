@@ -101,7 +101,7 @@ Accept wildcard characters: False
 
 ### -FileName
 Specifies a name for the export file.
-You can include a file path.
+The file will be created in the default DNS directory.
 
 ```yaml
 Type: String

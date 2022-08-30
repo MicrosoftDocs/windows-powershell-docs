@@ -842,19 +842,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -ScanScheduleOffset
-Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
-
-```yaml
-Type: UInt32
-Aliases: scso
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
->[!NOTE]
->The ScanScheduleTime setting has been deprecated and replaced by ScanScheduleOffset setting.
 
 ### -ScanScheduleQuickScanTime
 Specifies the time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
@@ -868,6 +855,20 @@ Parameter Sets: (All)
 Aliases: scsqst
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -ScanScheduleTime
+This setting is discontinued and replaced with -ScanScheduleOffset as of the January 2022 (version 4.18.2201.X) update to Microsoft Defender Antivirus.
+
+### -ScanScheduleOffset
+Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
+
+```yaml
+Type: UInt32
+Aliases: scso
 Position: Named
 Default value: None
 Accept pipeline input: False

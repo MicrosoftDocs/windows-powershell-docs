@@ -2,7 +2,7 @@
 description: Use this article to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 07/14/2022
+ms.date: 08/30/2022
 online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -862,7 +862,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleTime
-This setting is discontinued and replaced with **ScanScheduleOffset** as a part of Microsoft Defender Antivirus update.
+This setting is discontinued and replaced with **ScanScheduleOffset** as a part of a recent Microsoft Defender Antivirus update.
 
 ### -ScanScheduleOffset
 Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.

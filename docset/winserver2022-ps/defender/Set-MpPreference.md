@@ -1393,6 +1393,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+>[!NOTE]
+>The ScanScheduleTime setting has been deprecated and replaced by ScanScheduleOffset setting.
+
 ### -ScanScheduleQuickScanTime
 Specifies the time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
 The time refers to the local time on the computer.

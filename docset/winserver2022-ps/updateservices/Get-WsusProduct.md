@@ -47,7 +47,10 @@ PS C:\> Get-WsusProduct -TitleIncludes "Windows 10"
 Title                                                     ID                                  
 -----                                                     --                                  
 Windows 10 and later drivers                              05eebf61-148b-43cf-80da-1c99ab0b8699
+Windows 10 and later Dynamic Update                       e4b04398-adbd-4b69-93b9-477322331cd3
+Windows 10 and later GDR-DU                               abc45868-0c9c-4bc0-a36d-03d54113baf4
 ```
+
 This command gets all products where Title includes Windows 10
 
 ### Example 3: Get products by title
@@ -57,8 +60,6 @@ PS C:\> Get-WsusProduct | Where-Object -FilterScript {$_.product.title -eq "Anti
 Title                                                       ID
 -----                                                       --
 Antigen                                                     116a3557-3847-4858-9f03-38e94b977456
-Windows 10 and later Dynamic Update                         e4b04398-adbd-4b69-93b9-477322331cd3
-Windows 10 and later GDR-DU                                 abc45868-0c9c-4bc0-a36d-03d54113baf4
 ```
 
 This command gets all products where the product title is equal to Antigen.

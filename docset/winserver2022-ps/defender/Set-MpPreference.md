@@ -2,7 +2,7 @@
 description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 07/14/2022
+ms.date: 08/30/2022
 online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -1385,7 +1385,7 @@ Accept wildcard characters: False
 ### -ScanScheduleQuickScanTime
 Specifies the time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
 The time refers to the local time on the computer.
-If you do not specify a value for this parameter, a scheduled quick scan runs at the time specified by the **ScanScheduleTime** parameter.
+If you do not specify a value for this parameter, a scheduled quick scan runs at the time specified by the **ScanScheduleOffset** parameter.
 That parameter has a default time of two hours after midnight.
 
 ```yaml
@@ -1401,16 +1401,14 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleTime
-Specifies the time of day, as the number of minutes after midnight, to perform a scheduled scan.
-The time refers to the local time on the computer.
-If you do not specify a value for this parameter, a scheduled scan runs at a default time of two hours after midnight.
+This setting is discontinued and replaced with **ScanScheduleOffset** as a part of a recent Microsoft Defender Antivirus update.
+
+### -ScanScheduleOffset
+Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
 
 ```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: scst
-
-Required: False
+Type: UInt32
+Aliases: scso
 Position: Named
 Default value: None
 Accept pipeline input: False

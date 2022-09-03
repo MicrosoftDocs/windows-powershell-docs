@@ -20,7 +20,7 @@ Get-MpPreference [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] 
 ```
 
 ## DESCRIPTION
-The **Get-MpPreference** cmdlet gets preferences for the Windows Defender scans and updates. For more information about the preferences that this cmdlet retrieves, see [Windows Defender Preferences Class](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/dn455323(v=vs.85))
+The **Get-MpPreference** cmdlet gets preferences for the Windows Defender scans and updates. For more information about the preferences that this cmdlet retrieves, see [Windows Defender Preferences Class](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85))
 
 ## EXAMPLES
 
@@ -108,4 +108,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-MpPreference](./Remove-MpPreference.md)
 
 [Set-MpPreference](./Set-MpPreference.md)
-

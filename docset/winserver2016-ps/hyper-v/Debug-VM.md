@@ -230,4 +230,4 @@ Shielded virtual machines do not support debugging or nonmaskable interrupts.
 
 ## RELATED LINKS
 
-[Configuring Automatic Debugging](https://docs.microsoft.com/windows/win32/debug/configuring-automatic-debugging)
+[Configuring Automatic Debugging](/windows/win32/debug/configuring-automatic-debugging)

@@ -623,7 +623,7 @@ Accept wildcard characters: False
 ```
 
 ### -Provider
-Specifies the name of the KSP or CSP that this cmdlet uses to create the certificate. See [Cryptographic Providers](https://docs.microsoft.com/en-us/windows/desktop/SecCertEnroll/understanding-cryptographic-providers) for more information.
+Specifies the name of the KSP or CSP that this cmdlet uses to create the certificate. See [Cryptographic Providers](/windows/desktop/SecCertEnroll/understanding-cryptographic-providers) for more information.
 Some acceptable values include:
 
 - Microsoft Software Key Storage Provider
@@ -1010,4 +1010,4 @@ An **X509Certificate2** object for the certificate that has been created.
 
 ## RELATED LINKS
 
-[System Store Locations](https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations)
+[System Store Locations](/windows/desktop/seccrypto/system-store-locations)

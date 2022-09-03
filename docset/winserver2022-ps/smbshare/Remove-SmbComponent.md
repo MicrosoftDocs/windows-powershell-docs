@@ -21,7 +21,7 @@ Remove-SmbComponent [-Name] <String[]> [-CimSession <CimSession[]>] [-ThrottleLi
 ```
 
 ## DESCRIPTION
-The Remove-SmbComponent cmdlet removes SMB1 components. SMB1 is a deprecated and unsafe protocol that’s no longer installed by default in most versions of Windows and Windows Server. For more information, review [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709, and later versions](https://docs.microsoft.com/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows).
+The Remove-SmbComponent cmdlet removes SMB1 components. SMB1 is a deprecated and unsafe protocol that’s no longer installed by default in most versions of Windows and Windows Server. For more information, review [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709, and later versions](/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows).
 
 ## EXAMPLES
 

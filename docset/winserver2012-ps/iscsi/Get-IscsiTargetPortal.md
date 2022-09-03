@@ -273,7 +273,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[iSCSI Target Server Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848272(v=ws.11))
+[iSCSI Target Server Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848272(v=ws.11))
 
 [Get-IscsiConnection](./Get-IscsiConnection.md)
 

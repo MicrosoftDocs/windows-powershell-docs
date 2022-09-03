@@ -212,6 +212,6 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[iSCSI Target Server Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848272(v=ws.11))
+[iSCSI Target Server Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848272(v=ws.11))
 
 [Get-iSCSITarget](./Get-IscsiTarget.md)

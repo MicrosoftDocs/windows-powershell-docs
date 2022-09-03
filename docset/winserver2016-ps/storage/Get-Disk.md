@@ -14,7 +14,7 @@ title: Get-Disk
 Gets one or more disks visible to the operating system.
 
 > [!NOTE]
-> This cmdlet returns physical disk objects like basic disks and partitioned drive partitions.  Dynamic disks can span multiple pieces of physical media, so they will not be returned by Get-Disk. For more information, see [Basic and Dynamic Disks](https://docs.microsoft.com/windows/desktop/FileIO/basic-and-dynamic-disks).
+> This cmdlet returns physical disk objects like basic disks and partitioned drive partitions.  Dynamic disks can span multiple pieces of physical media, so they will not be returned by Get-Disk. For more information, see [Basic and Dynamic Disks](/windows/desktop/FileIO/basic-and-dynamic-disks).
 
 ## SYNTAX
 
@@ -401,4 +401,3 @@ This cmdlet outputs one or more objects representing disks.
 [Set-Disk](./Set-Disk.md)
 
 [Update-Disk](./Update-Disk.md)
-

@@ -24,7 +24,7 @@ The **Get-TlsCipherSuite** cmdlet gets an ordered collection of cipher suites fo
 
 For more information about the TLS cipher suites, see the documentation for the Enable-TlsCipherSuite cmdlet or type `Get-Help Enable-TlsCipherSuite`.
 
-For more information about protocol versions , see [BCRYPT_KDF_TLS_PRF (L"TLS_PRF")](https://docs.microsoft.com/windows/desktop/api/bcrypt/nf-bcrypt-bcryptderivekey#bcrypt_kdf_tls_prf-ltls_prf) .
+For more information about protocol versions , see [BCRYPT_KDF_TLS_PRF (L"TLS_PRF")](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptderivekey#bcrypt_kdf_tls_prf-ltls_prf) .
 
 ## EXAMPLES
 
@@ -138,4 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-TlsCipherSuite](./Disable-TlsCipherSuite.md)
 
 [Enable-TlsCipherSuite](./Enable-TlsCipherSuite.md)
-

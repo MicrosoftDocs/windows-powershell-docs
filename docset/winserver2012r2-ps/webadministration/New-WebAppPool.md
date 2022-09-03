@@ -19,7 +19,7 @@ New-WebAppPool [-Name] <String> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **New-WebAppPool** cmdlet creates an Internet Information Services (IIS) application pool. For changing different properties of the application pool after creation, see [PowerShell Snap-in: Making Configuration Changes to Websites and App Pools](https://docs.microsoft.com/iis/manage/powershell/powershell-snap-in-making-simple-configuration-changes-to-web-sites-and-application-pools).
+The **New-WebAppPool** cmdlet creates an Internet Information Services (IIS) application pool. For changing different properties of the application pool after creation, see [PowerShell Snap-in: Making Configuration Changes to Websites and App Pools](/iis/manage/powershell/powershell-snap-in-making-simple-configuration-changes-to-web-sites-and-application-pools).
 
 ## EXAMPLES
 

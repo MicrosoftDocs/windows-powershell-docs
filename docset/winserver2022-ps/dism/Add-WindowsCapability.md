@@ -240,10 +240,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-As of Windows 10 version 1709, you cannot use Windows Server Update Services (WSUS) to host Features on Demand (FOD) and language packs for Windows 10 clients. Instead, you can enforce a Group Policy setting that tells the clients to download them directly from Windows Update. You can also host FOD and language packs on a network share, but starting with Windows 10 version 1809, FOD and language packs can only be installed from Windows Update. For more information, see [How to make Features on Demand and language packs available when you're using WSUS/Configuration Manager](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).
+As of Windows 10 version 1709, you cannot use Windows Server Update Services (WSUS) to host Features on Demand (FOD) and language packs for Windows 10 clients. Instead, you can enforce a Group Policy setting that tells the clients to download them directly from Windows Update. You can also host FOD and language packs on a network share, but starting with Windows 10 version 1809, FOD and language packs can only be installed from Windows Update. For more information, see [How to make Features on Demand and language packs available when you're using WSUS/Configuration Manager](/windows/deployment/update/fod-and-lang-packs).
 
 ## RELATED LINKS
 
 [Get-WindowsCapability](./Get-WindowsCapability.md)
 [Remove-WindowsCapability](./Remove-WindowsCapability.md)
-

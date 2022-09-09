@@ -385,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePathRule
-Specifies the path of a folder for generating a rule with level set to FilePath. Refer to [Filepath Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#more-information-about-filepath-rules) for acceptable wildcard values and usage. 
+Specifies the path of a folder for generating a rule with level set to FilePath. Refer to [Filepath Rules Info](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#more-information-about-filepath-rules) for acceptable wildcard values and usage. 
 This cmdlet will not check whether the filepath string is a valid filepath. 
 
 ```yaml
@@ -492,4 +492,3 @@ This cmdlet returns the rules that it creates.
 ## RELATED LINKS
 
 [Get-SystemDriver](./Get-SystemDriver.md)
-

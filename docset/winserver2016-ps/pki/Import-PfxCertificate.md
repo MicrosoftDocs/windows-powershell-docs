@@ -176,4 +176,4 @@ The imported **X509Certificate2** object contained in the PFX file that is assoc
 
 [Export-PfxCertificate](./Export-PfxCertificate.md)
 
-[System Store Locations](https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations)
+[System Store Locations](/windows/desktop/seccrypto/system-store-locations)

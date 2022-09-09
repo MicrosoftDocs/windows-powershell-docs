@@ -274,5 +274,4 @@ The EnrollmentResult object contains the results of enrollment.
 
 [Set-Location](https://go.microsoft.com/fwlink/p/?LinkId=293912)
 
-[System Store Locations](https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations)
-
+[System Store Locations](/windows/desktop/seccrypto/system-store-locations)

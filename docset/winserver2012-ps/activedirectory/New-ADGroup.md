@@ -602,5 +602,4 @@ By default, this cmdlet does not generate any output.
 
 [Set-ADGroup](./Set-ADGroup.md)
 
-[Import-CSV](https://docs.microsoft.com/previous-versions/powershell/module/microsoft.powershell.utility/import-csv)
-
+[Import-CSV](/previous-versions/powershell/module/microsoft.powershell.utility/import-csv)

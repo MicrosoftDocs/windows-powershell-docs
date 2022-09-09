@@ -182,7 +182,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Import-RmsTUD](./Import-RmsTUD.md)
 
-[Read-Host](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/read-host)
+[Read-Host](/powershell/module/microsoft.powershell.utility/read-host)
 
 [ADRMSAdmin Module](./ADRMSAdmin.md)
-

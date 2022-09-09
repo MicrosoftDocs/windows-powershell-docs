@@ -4,8 +4,8 @@ Welcome! This repository houses the Windows 10, Windows Server 2016, and MDOP Po
 
 Edits to this content are published in the following places:
 
-- [Windows 10 and Windows Server 2016](https://docs.microsoft.com/powershell/windows/get-started?view=win10-ps)
-- [Microsoft Desktop Optimization Pack](https://docs.microsoft.com/powershell/mdop/get-started?view=win-mdop2-ps) 
+- [Windows 10 and Windows Server 2016](/powershell/windows/get-started?view=win10-ps&preserve-view=true)
+- [Microsoft Desktop Optimization Pack](/powershell/mdop/get-started) 
 
 ## PowerShell Updatable Help (CabGen) CI Build Status
 

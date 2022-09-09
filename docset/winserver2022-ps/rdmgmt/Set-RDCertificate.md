@@ -196,4 +196,4 @@ For more information, see [about_CommonParameters](/powershell/module/microsoft.
 
 [New-RDCertificate](./New-RDCertificate.md)
 
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-6)
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)

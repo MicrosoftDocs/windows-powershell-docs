@@ -156,7 +156,7 @@ PS C:\> $EAPXml = [xml]Get-Content -Path C:\eap-config.xml
 PS C:\> Add-VpnConnection -Name "Test6" -ServerAddress "10.1.1.1" -TunnelType "L2tp" -EncryptionLevel "Required" -AuthenticationMethod Eap -SplitTunneling -AllUserConnection -RememberCredential -EapConfigXmlStream $EAPXml
 ```
 
-This set of commands adds a VPN connection using an already generated EAP XML configuration. For more information about how to generate EAP XML configuration, see [EAP Configuration](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+This set of commands adds a VPN connection using an already generated EAP XML configuration. For more information about how to generate EAP XML configuration, see [EAP Configuration](/windows/client-management/mdm/eap-configuration).
 
 ## PARAMETERS
 
@@ -573,4 +573,3 @@ The VpnConnection object contains the VpnConnection configuration settings.
 [Remove-VpnConnection](./Remove-VpnConnection.md)
 
 [New-EapConfiguration](./New-EapConfiguration.md)
-

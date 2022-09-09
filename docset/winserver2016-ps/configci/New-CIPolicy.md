@@ -321,7 +321,7 @@ Accept wildcard characters: False
 ```
 
 ### -Level
-Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
+Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
 
 ```yaml
 Type: RuleLevel
@@ -488,4 +488,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Merge-CIPolicy](./Merge-CIPolicy.md)
 
 [New-CIPolicyRule](./New-CIPolicyRule.md)
-

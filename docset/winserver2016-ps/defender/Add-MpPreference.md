@@ -120,7 +120,7 @@ Specifies an array of processes, as paths to process images.
 This cmdlet excludes any files opened by the processes that you specify from scheduled and real-time scanning.
 Specifying this parameter excludes files opened by executable programs only.
 The cmdlet does not exclude the processes themselves.
-For more details, see [Configure exclusions for files opened by processes](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/configure-process-opened-file-exclusions-microsoft-defender-antivirus).
+For more details, see [Configure exclusions for files opened by processes](/windows/security/threat-protection/microsoft-defender-antivirus/configure-process-opened-file-exclusions-microsoft-defender-antivirus).
 
 ```yaml
 Type: String[]

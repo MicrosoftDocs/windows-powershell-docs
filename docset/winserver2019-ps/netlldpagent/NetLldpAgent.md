@@ -11,7 +11,7 @@ title: NetLldpAgent
 
 # NetLldpAgent Module
 ## Description
-This reference provides cmdlet descriptions and syntax for the Network Logical Link Discovery Protocol (LLDP) Agent. Use of the NetLldpAgent module requires the [DataCenterBridging](https://docs.microsoft.com/windows-server/networking/technologies/dcb/dcb-install) feature to be installed. The following cmdlets are covered by this reference:
+This reference provides cmdlet descriptions and syntax for the Network Logical Link Discovery Protocol (LLDP) Agent. Use of the NetLldpAgent module requires the [DataCenterBridging](/windows-server/networking/technologies/dcb/dcb-install) feature to be installed. The following cmdlets are covered by this reference:
 
 ## NetLldpAgent Cmdlets
 ### [Disable-NetLldpAgent](./Disable-NetLldpAgent.md)
@@ -22,5 +22,3 @@ Enables LLDP on a network interface on a computer.
 
 ### [Get-NetLldpAgent](./Get-NetLldpAgent.md)
 Gets the settings of the LLDP agent on a network interface on a host computer.
-
-

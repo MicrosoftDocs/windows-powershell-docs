@@ -32,7 +32,7 @@ Any encrypted data on the drive remains encrypted.
 
 We recommend you have at least one recovery password as key protector to a volume in case you need to recover a system.
 
-For an overview of BitLocker, see [Overview of BitLocker Device Encryption](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).
+For an overview of BitLocker, see [Overview of BitLocker Device Encryption](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).
 
 ## EXAMPLES
 

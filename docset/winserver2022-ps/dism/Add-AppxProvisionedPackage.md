@@ -41,7 +41,7 @@ For example, you must install the x86 dependency on the x86 image.
 You cannot install an app package (.appx) on an operating system that does not support Windows 8 apps.
 Apps are not supported on Server Core installations of Windows Server 2012, Windows Preinstallation Environment (Windows PE) 4.0, or on any versions of Windows older than Windows 8 and Windows Server 2012.
 
-To install and run apps on Windows Server 2016, you must install the [Install Server with Desktop Experience](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-with-desktop-experience).
+To install and run apps on Windows Server 2016, you must install the [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience).
 
 Use the *Online* parameter to specify the running operating system on your local computer, or use the *Path* parameter to specify the location of a mounted Windows image.
 
@@ -52,7 +52,7 @@ Use the *FolderPath* parameter to specify the location of a folder of unpacked a
 
 To add an app package (.appx) for a particular user, or to test a package while developing your app, use the **Add-AppxPackage** cmdlet instead.
 
-For more information, including requirements for app package provisioning, see [Sideload Apps with DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sideload-apps-with-dism-s14) and [How to develop an OEM app that uses a custom file](https://docs.microsoft.com/windows/win32/appxpkg/how-to-develop-oem-app-with-custom-file) in MicrosoftDocs.
+For more information, including requirements for app package provisioning, see [Sideload Apps with DISM](/windows-hardware/manufacture/desktop/sideload-apps-with-dism-s14) and [How to develop an OEM app that uses a custom file](/windows/win32/appxpkg/how-to-develop-oem-app-with-custom-file) in MicrosoftDocs.
 
 ## EXAMPLES
 

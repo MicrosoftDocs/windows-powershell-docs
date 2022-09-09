@@ -22,7 +22,7 @@ The **Get-DfsnFolderTarget** cmdlet gets settings for targets of a Distributed F
 You can specify a DFS namespace folder path to see all the targets for that path.
 You can specify a namespace path and a target path to see settings for a particular target.
 
-For more information about DFS namespaces, see [DFS Namespaces overview](https://docs.microsoft.com/windows-server/storage/dfs-namespaces/dfs-overview).
+For more information about DFS namespaces, see [DFS Namespaces overview](/windows-server/storage/dfs-namespaces/dfs-overview).
 
 ## EXAMPLES
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -146,4 +146,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-DfsnFolderTarget](./Remove-DfsnFolderTarget.md)
 
 [Set-DfsnFolderTarget](./Set-DfsnFolderTarget.md)
-

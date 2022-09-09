@@ -141,7 +141,7 @@ To display a list of certificates in the computer's My store and the thumbprint 
 
 `PS C:\\\> dir | format-list`
 
-For more information about certificate stores, see [Certificate stores](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10).
+For more information about certificate stores, see [Certificate stores](/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).
 
 ```yaml
 Type: String

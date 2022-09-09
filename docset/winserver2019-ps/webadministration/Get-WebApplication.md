@@ -84,4 +84,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-WebApplication](./Remove-WebApplication.md)
 
-[Microsoft.Web.Administration.ConfigurationElement#Application](https://docs.microsoft.com/dotnet/api/microsoft.web.administration.application?view=iis-dotnet)
+[Microsoft.Web.Administration.ConfigurationElement#Application](/dotnet/api/microsoft.web.administration.application?view=iis-dotnet)

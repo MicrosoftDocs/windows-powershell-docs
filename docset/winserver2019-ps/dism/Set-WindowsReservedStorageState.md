@@ -18,7 +18,7 @@ Set-WindowsReservedStorageState -State <ReservedStorageState> [-LogPath <String>
 ```
 
 ## DESCRIPTION
-Sets the state of reserved storage. This command line option is only supported for online Windows images. If reserved storage is in use, it may not be disabled, and the following error is returned: <i>This operation is not supported when reserved storage is in use. Please wait for any servicing operations to complete and then try again later. </i>Changes to reserved storage state are reflected in Sysprep generalized Windows images. For more information see [Sysprep (Generalize) a Windows installation](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)
+Sets the state of reserved storage. This command line option is only supported for online Windows images. If reserved storage is in use, it may not be disabled, and the following error is returned: <i>This operation is not supported when reserved storage is in use. Please wait for any servicing operations to complete and then try again later. </i>Changes to reserved storage state are reflected in Sysprep generalized Windows images. For more information, see [Sysprep (Generalize) a Windows installation](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).
 
 ## EXAMPLES
 

@@ -485,4 +485,4 @@ If **-PassThru** is specified.
 ## NOTES
 
 ## RELATED LINKS
-[Configure and View VLAN Settings on Hyper-V Virtual Switch Ports](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/configure-and-view-vlan-settings-on-hyper-v-virtual-switch-ports)
+[Configure and View VLAN Settings on Hyper-V Virtual Switch Ports](/windows-server/virtualization/hyper-v-virtual-switch/configure-and-view-vlan-settings-on-hyper-v-virtual-switch-ports)

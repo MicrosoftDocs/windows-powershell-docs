@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/New-CimSession) or [Get-CimSession](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/Get-CimSession) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/New-CimSession) or [Get-CimSession](/powershell/module/cimcmdlets/Get-CimSession) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -410,4 +410,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Set-NetRoute](./Set-NetRoute.md)
 
 [Set-NetIPInterface](./Set-NetIPInterface.md)
-

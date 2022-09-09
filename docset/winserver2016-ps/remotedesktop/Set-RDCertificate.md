@@ -46,7 +46,7 @@ PS C:\>$Password = ConvertTo-SecureString -String "Cups34Horses&&" -AsPlainText 
 PS C:\>Set-RDCertificate -Role RDRedirector -ImportPath "C:\Certificates\Redirector07.pfx" -Password $Password -ConnectionBroker "RDCB.Contoso.com"
 ```
 
-The first part of the example uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies and stores it in the **$Password** variable. For more information, see [ConvertTo-SecureString](/powershell/module/microsoft.powershell.security/ConvertTo-SecureString?view=powershell-6). You can also enter the `Get-Help ConvertTo-SecureString` cmdlet into your PowerShell window.
+The first part of the example uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies and stores it in the **$Password** variable. For more information, see [ConvertTo-SecureString](/powershell/module/microsoft.powershell.security/ConvertTo-SecureString). You can also enter the `Get-Help ConvertTo-SecureString` cmdlet into your PowerShell window.
 
 The second part of the example specifies the file name of the certificate to use for the redirector role for the RD Connection Broker named RDCB.Contoso.com. The cmdlet uses the secure string stored in the **$Password** variable to help secure the certificate.
 

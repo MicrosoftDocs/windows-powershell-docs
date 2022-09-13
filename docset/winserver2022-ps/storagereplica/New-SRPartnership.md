@@ -19,8 +19,8 @@ Creates a replication partnership between two replication groups.
 ```
 New-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String> [-DestinationComputerName] <String>
  [-DestinationRGName] <String> [[-ReplicationMode] <ReplicationMode>] [-PreventReplication] [-Seeded]
- [[-AsyncRPO] <UInt32>] [-EnableEncryption] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [<CommonParameters>]
+ [[-AsyncRPO] <UInt32>] [-EnableEncryption] [-EnableCompression] [-Force] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### CreateTopology
@@ -29,14 +29,22 @@ New-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String> [-So
  [-SourceLogVolumeName] <String> [[-SourceRGDescription] <String>] [-DestinationComputerName] <String>
  [-DestinationRGName] <String> [-DestinationVolumeName] <String[]> [-DestinationLogVolumeName] <String>
  [[-DestinationRGDescription] <String>] [[-ReplicationMode] <ReplicationMode>] [[-LogSizeInBytes] <UInt64>]
- [-PreventReplication] [-Seeded] [-EnableConsistencyGroups] [[-AsyncRPO] <UInt32>] [-EnableEncryption] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-PreventReplication] [-Seeded] [-EnableConsistencyGroups] [[-AsyncRPO] <UInt32>] [-EnableEncryption]
+ [-EnableCompression] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **New-SRPartnership** cmdlet creates a replication partnership between two new or existing replication groups.
 This cmdlet can create the complete replication topology.
 It can also tie together separately created replication groups.
+
+> [!NOTE]
+> The **EnableCompression** parameter is currently in PREVIEW beginning with TODO: 2022-08
+> Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems
+> ([KB5016693](https://support.microsoft.com/help/5016693)). Some information relates to prerelease
+> product that may be substantially modified before it's released. Microsoft makes no warranties,
+> express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 
@@ -275,6 +283,21 @@ Required: True
 Position: 7
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableCompression
+Indicates that the connections on this partnership should use compression.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ECMP
+
+Required: False
+Position: 99
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

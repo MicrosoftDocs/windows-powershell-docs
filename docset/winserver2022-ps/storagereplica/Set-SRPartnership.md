@@ -27,8 +27,8 @@ Set-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String>
 ```
 Set-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String> [-DestinationComputerName] <String>
  [-DestinationRGName] <String> [[-ReplicationMode] <ReplicationMode>] [[-LogSizeInBytes] <UInt64>]
- [[-AsyncRPO] <UInt32>] [[-Encryption] <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-AsyncRPO] <UInt32>] [[-Encryption] <Boolean>] [[-Compression] <Boolean>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ModifyPartnership
@@ -42,6 +42,13 @@ Set-SRPartnership [-SourceRGName] <String> [-DestinationComputerName] <String> [
 The **Set-SRPartnership** cmdlet modifies a replication partnership between two existing replication groups.
 You can use this cmdlet to add replicated volumes.
 You can also change the direction of replication which makes a source volume into a destination volume.
+
+> [!NOTE]
+> The **Compression** parameter is currently in PREVIEW beginning with TODO: 2022-08
+> Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems
+> ([KB5016693](https://support.microsoft.com/help/5016693)). Some information relates to prerelease
+> product that may be substantially modified before it's released. Microsoft makes no warranties,
+> express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 
@@ -226,6 +233,21 @@ Aliases: Session
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Compression
+Indicates that the connections on this partnership should use compression.
+
+```yaml
+Type: Boolean
+Parameter Sets: ModifySettings
+Aliases: CMP
+
+Required: False
+Position: 53
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -521,8 +543,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.String[]
+
+### System.UInt64
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

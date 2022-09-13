@@ -17,14 +17,22 @@ Creates a replication group.
 
 ```
 New-SRGroup [[-ComputerName] <String>] [-Name] <String> [-VolumeName] <String[]> [-LogVolumeName] <String>
- [[-LogSizeInBytes] <UInt64>] [[-Description] <String>] [-EnableConsistencyGroups] [-EnableEncryption] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [[-LogSizeInBytes] <UInt64>] [[-Description] <String>] [-EnableConsistencyGroups] [-EnableEncryption]
+ [-EnableCompression] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **New-SRGroup** cmdlet creates a replication group.
 A replication group contains one or more data volumes and an associated log volume.
 A replication group is the container for replication.
+
+> [!NOTE]
+> The **EnableCompression** parameter is currently in PREVIEW beginning with TODO: 2022-08
+> Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems
+> ([KB5016693](https://support.microsoft.com/help/5016693)). Some information relates to prerelease
+> product that may be substantially modified before it's released. Microsoft makes no warranties,
+> express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 
@@ -154,6 +162,21 @@ Aliases: D
 
 Required: False
 Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableCompression
+Indicates that the connections on this partnership should use compression.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ECMP
+
+Required: False
+Position: 9
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -312,7 +335,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### replicationgroup
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 

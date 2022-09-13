@@ -31,14 +31,21 @@ Set-SRGroup [[-ComputerName] <String>] [-Name] <String> [-Force] [-RemoveVolumeN
 ```
 Set-SRGroup [[-ComputerName] <String>] [-Name] <String> [-Force] [[-LogSizeInBytes] <UInt64>]
  [[-Description] <String>] [[-ReplicationMode] <ReplicationMode>] [[-Encryption] <Boolean>]
- [[-AllowVolumeResize] <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [[-Compression] <Boolean>] [[-AllowVolumeResize] <Boolean>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Set-SRGroup** cmdlet modifies settings of an existing replication group.
 A replication group contains one or more data volumes and an associated log volume.
 A replication group is the container for replication.
+
+> [!NOTE]
+> The **Compression** parameter is currently in PREVIEW beginning with TODO: 2022-08
+> Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems
+> ([KB5016693](https://support.microsoft.com/help/5016693)). Some information relates to prerelease
+> product that may be substantially modified before it's released. Microsoft makes no warranties,
+> express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 
@@ -132,6 +139,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Compression
+Indicates that the connections in this Storage Replica group should use compression.
+
+```yaml
+Type: Boolean
+Parameter Sets: ModifyConfig
+Aliases: CMP
+
+Required: False
+Position: 10
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -336,8 +358,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+### System.String[]
+
+### System.UInt64
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.SREnum.ReplicationMode
+
+### System.Boolean
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

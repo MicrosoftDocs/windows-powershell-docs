@@ -2,7 +2,7 @@
 description: Provides guidance on how to view the auto-update and repair settings of a Windows App.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
-ms.date: 06/07/2021
+ms.date: 01/07/2022
 online version: https://docs.microsoft.com/powershell/module/appx/Get-AppxPackageAutoUpdateSettings?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
@@ -15,7 +15,7 @@ Available in the Windows Insider Preview Builds of Windows 10, is the `Get-AppxP
 ## SYNTAX
 
 ```
-Get-AppxPackageAutoUpdateSettings [[-PackageFullName] <String>] [-ShowUpdateAvailability] [-AllUsers]
+Get-AppxPackageAutoUpdateSettings [-PackageFamilyName <String>] [-ShowUpdateAvailability] [-AllUsers]
  [<CommonParameters>]
 ```
 
@@ -40,27 +40,28 @@ This will return the Auto Update and Repair settings for all configured and inst
 
 ### Example 3: Get a single App Package Auto Update setting
 ```
-PS C:\> Get-AppxPackageAutoUpdateSettings -PackageFullName publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe
+PS C:\> Get-AppxPackageAutoUpdateSettings -PackageFamilyName publisher.package1__8wekyb3d8bbwe
 ```
 
 This will return the Auto Update and Repair settings for a specific Windows App that has been installed and registered to the signed-in user.
 
 ## PARAMETERS
 
-### -PackageFullName
-Specifies the Package Full Name of the app that is being queried.
+### -PackageFamilyName
+Specifies the Package Family Name of the app that is being queried.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: True
 ```
+
 
 ### -ShowUpdateAvailability
 Specifies to display available update information for a specific Windows App.

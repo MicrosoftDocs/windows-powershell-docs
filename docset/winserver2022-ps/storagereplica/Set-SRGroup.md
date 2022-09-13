@@ -84,7 +84,7 @@ Specifies an array of drive letters or mount point paths of partitions for the r
 group. The volumes must exist. The volumes cannot be mapped drives or UNC paths.
 
 This is an ordered list. The order of volumes determines the order of replication. For more
-information, see the *DestinationVolumeName* parameter of the New-SRPartnership cmdlet.
+information, see the **DestinationVolumeName** parameter of the New-SRPartnership cmdlet.
 
 ```yaml
 Type: String[]

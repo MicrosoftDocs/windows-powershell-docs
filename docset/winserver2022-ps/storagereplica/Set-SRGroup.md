@@ -18,13 +18,15 @@ Modifies settings of a replication group.
 ### AddVolumes (Default)
 ```
 Set-SRGroup [[-ComputerName] <String>] [-Name] <String> [-AddVolumeName] <String[]> [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+[<CommonParameters>]
 ```
 
 ### RemoveVolumes
 ```
 Set-SRGroup [[-ComputerName] <String>] [-Name] <String> [-Force] [-RemoveVolumeName] <String[]>
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+[<CommonParameters>]
 ```
 
 ### ModifyConfig
@@ -36,7 +38,7 @@ Set-SRGroup [[-ComputerName] <String>] [-Name] <String> [-Force] [[-LogSizeInByt
 ```
 
 ## DESCRIPTION
-The **Set-SRGroup** cmdlet modifies settings of an existing replication group.
+The `Set-SRGroup` cmdlet modifies settings of an existing replication group.
 A replication group contains one or more data volumes and an associated log volume.
 A replication group is the container for replication.
 
@@ -50,38 +52,39 @@ A replication group is the container for replication.
 ## EXAMPLES
 
 ### Example 1: Add a volume to a replication group
-```
-PS C:\>Set-SRGroup -Name "ReplicationGroup01" -AddVolumeName "F:"
+```powershell
+Set-SRGroup -Name "ReplicationGroup01" -AddVolumeName "F:"
 ```
 
-This command adds the F: volume to the existing replication group named ReplicationGroup01 on the local computer.
+This command adds the F: volume to the existing replication group named ReplicationGroup01 on the
+local computer.
 
 ### Example 2: Remove a volume from a replication group
-```
-PS C:\>Set-SRGroup -Name "ReplicationGroup01" -RemoveVolumeName "F:"
+```powershell
+Set-SRGroup -Name "ReplicationGroup01" -RemoveVolumeName "F:"
 ```
 
-This command removes the F: volume from the existing replication group ReplicationGroup01 on the local computer.
+This command removes the F: volume from the existing replication group ReplicationGroup01 on the
+local computer.
 
 ### Example 3: Resize volumes in a replication group
-```
-PS C:\>Set-SRGroup -Name "ReplicationGroup01" -AllowVolumeResize $True
+```powershell
+Set-SRGroup -Name "ReplicationGroup01" -AllowVolumeResize $True
 ```
 
-This command lets you resize volumes in the replication group named ReplicationGroup01 on the local computer.
-By default, the Storage Replica driver prevents volume resizes in order to protect from block mismatches.
-To grow a volume, enable this mode on both resource groups, increase the size of the volume on both servers to be the same size, and then disable this mode.
+This command lets you resize volumes in the replication group named ReplicationGroup01 on the local
+computer. By default, the Storage Replica driver prevents volume resizes in order to protect from
+block mismatches. To grow a volume, enable this mode on both resource groups, increase the size of
+the volume on both servers to be the same size, and then disable this mode.
 
 ## PARAMETERS
 
 ### -AddVolumeName
-Specifies an array of drive letters or mount point paths of partitions for the replica to add to the group.
-The volumes must exist.
-The volumes cannot be mapped drives or UNC paths.
+Specifies an array of drive letters or mount point paths of partitions for the replica to add to the
+group. The volumes must exist. The volumes cannot be mapped drives or UNC paths.
 
-This is an ordered list.
-The order of volumes determines the order of replication.
-For more information, see the *DestinationVolumeName* parameter of the New-SRPartnership cmdlet.
+This is an ordered list. The order of volumes determines the order of replication. For more
+information, see the *DestinationVolumeName* parameter of the New-SRPartnership cmdlet.
 
 ```yaml
 Type: String[]
@@ -111,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
 ```yaml
 Type: SwitchParameter
@@ -126,9 +130,10 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -158,8 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies a single replica host computer NetBIOS name or fully qualified domain name (FQDN) of a computer.
-The default value is the local computer.
+Specifies a single replica host computer NetBIOS name or fully qualified domain name (FQDN) of a
+computer. The default value is the local computer.
 
 ```yaml
 Type: String
@@ -204,9 +209,9 @@ Accept wildcard characters: False
 ```
 
 ### -Encryption
-Indicates this partnership should encrypt connections by using SMB AES-128-GCM.
-Enabling encryption can protect Storage Replica block transfers from man-in-the-middle interception or reading.
-Enabling encryption decreases performance.
+Indicates this partnership should encrypt connections by using SMB AES-128-GCM. Enabling encryption
+can protect Storage Replica block transfers from man-in-the-middle interception or reading. Enabling
+encryption decreases performance.
 
 ```yaml
 Type: Boolean
@@ -236,11 +241,12 @@ Accept wildcard characters: False
 ```
 
 ### -LogSizeInBytes
-Specifies the aggregate size of log files on each server in the replication group for the volumes that are associated with this replication group.
-The minimum size 512MB.
-You can specify a value by using the Windows PowerShell byte conversion capability, such as 4GB or 3200MB.
+Specifies the aggregate size of log files on each server in the replication group for the volumes
+that are associated with this replication group. The minimum size 512MB. You can specify a value by
+using the Windows PowerShell byte conversion capability, such as 4GB or 3200MB.
 
-A value that is too small may cause decreased replication performance or increased recovery time after an interruption between computers.
+A value that is too small may cause decreased replication performance or increased recovery time
+after an interruption between computers.
 
 ```yaml
 Type: UInt64
@@ -270,16 +276,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveVolumeName
-Specifies an array of drive letters or mount point paths of partitions for the replica to remove from the group.
-The volumes must exist.
-The volumes cannot be mapped drives or UNC paths.
+Specifies an array of drive letters or mount point paths of partitions for the replica to remove
+from the group. The volumes must exist. The volumes cannot be mapped drives or UNC paths.
 
-This is an ordered list.
-The order of volumes determines the order of replication.
-For more information, see the *DestinationVolumeName* parameter of the New-SRPartnership cmdlet.
+This is an ordered list. The order of volumes determines the order of replication. For more
+information, see the **DestinationVolumeName** parameter of the `New-SRPartnership` cmdlet.
 
-If there is a partnership already configured, before you change this replication group, you must remove the partnership by using the Set-SRPartnership cmdlet.
-Then you must remove the same volumes from the previously partnered replication group.
+If there is a partnership already configured, before you change this replication group, you must
+remove the partnership by using the `Set-SRPartnership` cmdlet. Then you must remove the same
+volumes from the previously partnered replication group.
 
 ```yaml
 Type: String[]
@@ -294,18 +299,17 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationMode
-Specifies the desired mode of replication for this source and destination pair.
-The acceptable values for this parameter are:
+Specifies the desired mode of replication for this source and destination pair. The acceptable
+values for this parameter are:
 
-- Synchronous or 1.
-The synchronous mode requires all writes to commit on the destination server and commit on the source server, which guarantees data integrity between computers. 
-- Asynchronous or 2.
-The asynchronous mode writes to the source server without waiting for the source server, which allows for replication over high latency, geographic networks. 
+- Synchronous or 1. The synchronous mode requires all writes to commit on the destination server and
+  commit on the source server, which guarantees data integrity between computers.
+- Asynchronous or 2. The asynchronous mode writes to the source server without waiting for the
+  source server, which allows for replication over high latency, geographic networks.
 
-The default value is synchronous.
-The default asynchronous recovery point alert time is 5 minutes.
-You can modify it by using the Set-SRPartnership cmdlet.
-The alert time has no effect on replication behavior, only on reporting.
+The default value is synchronous. The default asynchronous recovery point alert time is 5 minutes.
+You can modify it by using the Set-SRPartnership cmdlet. The alert time has no effect on replication
+behavior, only on reporting.
 
 ```yaml
 Type: ReplicationMode
@@ -321,9 +325,11 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
+computer.
 
 ```yaml
 Type: Int32
@@ -354,7 +360,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

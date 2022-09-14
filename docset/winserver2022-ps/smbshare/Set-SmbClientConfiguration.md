@@ -16,21 +16,22 @@ Sets the SMB client configuration.
 ## SYNTAX
 
 ```
-Set-SmbClientConfiguration [-ConnectionCountPerRssNetworkInterface <UInt32>]
- [-DirectoryCacheEntriesMax <UInt32>] [-DirectoryCacheEntrySizeMax <UInt32>]
- [-DirectoryCacheLifetime <UInt32>] [-DisableCompression <Boolean>] [-DormantFileLimit <UInt32>]
- [-EnableBandwidthThrottling <Boolean>] [-EnableByteRangeLockingOnReadOnlyFiles <Boolean>]
- [-EnableInsecureGuestLogons <Boolean>] [-EnableLargeMtu <Boolean>]
- [-EnableLoadBalanceScaleOut <Boolean>] [-EnableMultiChannel <Boolean>]
- [-EnableSecuritySignature <Boolean>] [-EncryptionCiphers <String>]
- [-ExtendedSessionTimeout <UInt32>] [-FileInfoCacheEntriesMax <UInt32>]
- [-FileInfoCacheLifetime <UInt32>] [-FileNotFoundCacheEntriesMax <UInt32>]
- [-FileNotFoundCacheLifetime <UInt32>] [-ForceSMBEncryptionOverQuic <Boolean>] [-KeepConn <UInt32>]
- [-MaxCmds <UInt32>] [-MaximumConnectionCountPerServer <UInt32>] [-OplocksDisabled <Boolean>]
- [-RequireSecuritySignature <Boolean>] [-SessionTimeout <UInt32>] [-SkipCertificateCheck <Boolean>]
- [-UseOpportunisticLocking <Boolean>] [-WindowSizeThreshold <UInt32>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-SmbClientConfiguration [-CompressibilitySamplingSize <UInt64>]
+[-CompressibleThreshold <UInt64>] [-ConnectionCountPerRssNetworkInterface <UInt32>]
+[-DirectoryCacheEntriesMax <UInt32>] [-DirectoryCacheEntrySizeMax <UInt32>]
+[-DirectoryCacheLifetime <UInt32>] [-DisableCompression <Boolean>] [-DormantFileLimit <UInt32>]
+[-EnableBandwidthThrottling <Boolean>] [-EnableByteRangeLockingOnReadOnlyFiles <Boolean>]
+[-EnableCompressibilitySampling <Boolean>] [-EnableInsecureGuestLogons <Boolean>]
+[-EnableLargeMtu <Boolean>] [-EnableLoadBalanceScaleOut <Boolean>] [-EnableMultiChannel <Boolean>]
+[-EnableSecuritySignature <Boolean>] [-EncryptionCiphers <String>]
+[-ExtendedSessionTimeout <UInt32>] [-FileInfoCacheEntriesMax <UInt32>]
+[-FileInfoCacheLifetime <UInt32>] [-FileNotFoundCacheEntriesMax <UInt32>]
+[-FileNotFoundCacheLifetime <UInt32>] [-ForceSMBEncryptionOverQuic <Boolean>] [-KeepConn <UInt32>]
+[-MaxCmds <UInt32>] [-MaximumConnectionCountPerServer <UInt32>] [-OplocksDisabled <Boolean>]
+[-RequestCompression <Boolean>] [-RequireSecuritySignature <Boolean>] [-SessionTimeout <UInt32>]
+[-SkipCertificateCheck <Boolean>] [-UseOpportunisticLocking <Boolean>]
+[-WindowSizeThreshold <UInt32>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+[-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -93,6 +94,36 @@ current session on the local computer.
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompressibilitySamplingSize
+{{ Fill CompressibilitySamplingSize Description }}
+
+```yaml
+Type: UInt64
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompressibleThreshold
+{{ Fill CompressibleThreshold Description }}
+
+```yaml
+Type: UInt64
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -214,8 +245,22 @@ Accept wildcard characters: False
 ```
 
 ### -EnableByteRangeLockingOnReadOnlyFiles
-
 Indicates that byte range locking on read-only files is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableCompressibilitySampling
+{{ Fill EnableCompressibilitySampling Description }}
 
 ```yaml
 Type: Boolean
@@ -487,8 +532,22 @@ Accept wildcard characters: False
 ```
 
 ### -OplocksDisabled
-
 Indicates that opportunistic locks are disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestCompression
+{{ Fill RequestCompression Description }}
 
 ```yaml
 Type: Boolean

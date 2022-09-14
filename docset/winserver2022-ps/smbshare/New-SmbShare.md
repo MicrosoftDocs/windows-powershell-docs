@@ -20,8 +20,8 @@ New-SmbShare [-Temporary] [-ContinuouslyAvailable <Boolean>] [-Description <Stri
  [-ConcurrentUserLimit <UInt32>] [-CATimeout <UInt32>] [-FolderEnumerationMode <FolderEnumerationMode>]
  [-CachingMode <CachingMode>] [-FullAccess <String[]>] [-ChangeAccess <String[]>] [-ReadAccess <String[]>]
  [-NoAccess <String[]>] [-SecurityDescriptor <String>] [-Path] <String> [-Name] <String>
- [[-ScopeName] <String>] [-EncryptData <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-ScopeName] <String>] [-EncryptData <Boolean>] [-CompressData <Boolean>] [-LeasingMode <LeasingMode>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

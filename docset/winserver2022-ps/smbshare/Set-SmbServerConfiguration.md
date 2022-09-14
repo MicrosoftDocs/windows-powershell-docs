@@ -17,25 +17,26 @@ Sets the Server Message Block (SMB) server configuration.
 
 ```
 Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean>]
- [-AsynchronousCredits <UInt32>] [-AuditSmb1Access <Boolean>] [-AutoDisconnectTimeout <UInt32>]
- [-AutoShareServer <Boolean>] [-AutoShareWorkstation <Boolean>] [-CachedOpenLimit <UInt32>]
- [-DisableSmbEncryptionOnSecureConnection <Boolean>] [-DurableHandleV2TimeoutInSeconds <UInt32>]
- [-EnableAuthenticateUserSharing <Boolean>] [-EnableDownlevelTimewarp <Boolean>]
- [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>] [-EnableMultiChannel <Boolean>]
- [-EnableOplocks <Boolean>] [-EnableSecuritySignature <Boolean>] [-EnableSMB1Protocol <Boolean>]
- [-EnableSMB2Protocol <Boolean>] [-EnableSMBQUIC <Boolean>] [-EnableStrictNameChecking <Boolean>]
- [-EncryptData <Boolean>] [-EncryptionCiphers <String>] [-IrpStackSize <UInt32>]
- [-KeepAliveTime <UInt32>] [-MaxChannelPerSession <UInt32>] [-MaxMpxCount <UInt32>]
- [-MaxSessionPerConnection <UInt32>] [-MaxThreadsPerQueue <UInt32>] [-MaxWorkItems <UInt32>]
- [-NullSessionPipes <String>] [-NullSessionShares <String>] [-OplockBreakWait <UInt32>]
- [-PendingClientTimeoutInSeconds <UInt32>] [-RejectUnencryptedAccess <Boolean>]
- [-RequireSecuritySignature <Boolean>] [-RestrictNamedpipeAccessViaQuic <Boolean>]
- [-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>] [-Smb2CreditsMin <UInt32>]
- [-SmbServerNameHardeningLevel <UInt32>] [-TreatHostAsStableStorage <Boolean>]
- [-ValidateAliasNotCircular <Boolean>] [-ValidateShareScope <Boolean>]
- [-ValidateShareScopeNotAliased <Boolean>] [-ValidateTargetName <Boolean>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+[-AsynchronousCredits <UInt32>] [-AuditSmb1Access <Boolean>] [-AutoDisconnectTimeout <UInt32>]
+[-AutoShareServer <Boolean>] [-AutoShareWorkstation <Boolean>] [-CachedOpenLimit <UInt32>]
+[-DisableCompression <Boolean>] [-DisableSmbEncryptionOnSecureConnection <Boolean>]
+[-DurableHandleV2TimeoutInSeconds <UInt32>] [-EnableAuthenticateUserSharing <Boolean>]
+[-EnableDownlevelTimewarp <Boolean>] [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>]
+[-EnableMultiChannel <Boolean>] [-EnableOplocks <Boolean>] [-EnableSecuritySignature <Boolean>]
+[-EnableSMB1Protocol <Boolean>] [-EnableSMB2Protocol <Boolean>] [-EnableSMBQUIC <Boolean>]
+[-EnableStrictNameChecking <Boolean>] [-EncryptData <Boolean>] [-EncryptionCiphers <String>]
+[-IrpStackSize <UInt32>] [-KeepAliveTime <UInt32>] [-MaxChannelPerSession <UInt32>]
+[-MaxMpxCount <UInt32>] [-MaxSessionPerConnection <UInt32>] [-MaxThreadsPerQueue <UInt32>]
+[-MaxWorkItems <UInt32>] [-NullSessionPipes <String>] [-NullSessionShares <String>]
+[-OplockBreakWait <UInt32>] [-PendingClientTimeoutInSeconds <UInt32>]
+[-RejectUnencryptedAccess <Boolean>] [-RequestCompression <Boolean>]
+[-RequireSecuritySignature <Boolean>] [-RestrictNamedpipeAccessViaQuic <Boolean>]
+[-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>] [-Smb2CreditsMin <UInt32>]
+[-SmbServerNameHardeningLevel <UInt32>] [-TreatHostAsStableStorage <Boolean>]
+[-ValidateAliasNotCircular <Boolean>] [-ValidateShareScope <Boolean>]
+[-ValidateShareScopeNotAliased <Boolean>] [-ValidateTargetName <Boolean>] [-Force]
+[-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -269,6 +270,21 @@ current session on the local computer.
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableCompression
+{{ Fill DisableCompression Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -714,9 +730,23 @@ Accept wildcard characters: False
 ```
 
 ### -RejectUnencryptedAccess
-
 Indicates whether the client that does not support encryption is denied access if it attempts to
 connect to an encrypted share.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestCompression
+{{ Fill RequestCompression Description }}
 
 ```yaml
 Type: Boolean

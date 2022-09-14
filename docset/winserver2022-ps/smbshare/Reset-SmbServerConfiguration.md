@@ -17,18 +17,18 @@ Resets the Server Message Block (SMB) server configuration parameters to their d
 
 ```
 Reset-SmbServerConfiguration [-All] [-AnnounceComment] [-AnnounceServer] [-AsynchronousCredits]
- [-AuditSmb1Access] [-AutoShareServer] [-AutoShareWorkstation] [-CachedOpenLimit]
- [-DisableSmbEncryptionOnSecureConnection] [-DurableHandleV2TimeoutInSeconds]
- [-EnableDownlevelTimewarp] [-EnableLeasing] [-EnableMultiChannel] [-EnableOplocks]
- [-EnableSMB2Protocol] [-EnableSMBQUIC] [-EnableStrictNameChecking] [-EncryptData]
- [-EncryptionCiphers] [-IrpStackSize] [-KeepAliveTime] [-MaxChannelPerSession] [-MaxMpxCount]
- [-MaxSessionPerConnection] [-MaxThreadsPerQueue] [-MaxWorkItems] [-NullSessionShares]
- [-OplockBreakWait] [-PendingClientTimeoutInSeconds] [-RejectUnencryptedAccess]
- [-RestrictNamedpipeAccessViaQuic] [-ServerHidden] [-Smb2CreditsMax] [-Smb2CreditsMin]
- [-SmbServerNameHardeningLevel] [-TreatHostAsStableStorage] [-ValidateAliasNotCircular]
- [-ValidateShareScope] [-ValidateShareScopeNotAliased] [-ValidateTargetName] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+[-AuditSmb1Access] [-AutoShareServer] [-AutoShareWorkstation] [-CachedOpenLimit]
+[-DisableCompression] [-DisableSmbEncryptionOnSecureConnection] [-DurableHandleV2TimeoutInSeconds]
+[-EnableDownlevelTimewarp] [-EnableLeasing] [-EnableMultiChannel] [-EnableOplocks]
+[-EnableSMB2Protocol] [-EnableSMBQUIC] [-EnableStrictNameChecking] [-EncryptData]
+[-EncryptionCiphers] [-IrpStackSize] [-KeepAliveTime] [-MaxChannelPerSession] [-MaxMpxCount]
+[-MaxSessionPerConnection] [-MaxThreadsPerQueue] [-MaxWorkItems] [-NullSessionShares]
+[-OplockBreakWait] [-PendingClientTimeoutInSeconds] [-RejectUnencryptedAccess]
+[-RequestCompression] [-RestrictNamedpipeAccessViaQuic] [-ServerHidden] [-Smb2CreditsMax]
+[-Smb2CreditsMin] [-SmbServerNameHardeningLevel] [-TreatHostAsStableStorage]
+[-ValidateAliasNotCircular] [-ValidateShareScope] [-ValidateShareScopeNotAliased]
+[-ValidateTargetName] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+[-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -213,6 +213,21 @@ current session on the local computer.
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableCompression
+{{ Fill DisableCompression Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -574,8 +589,22 @@ Accept wildcard characters: False
 ```
 
 ### -RejectUnencryptedAccess
-
 Resets the unencrypted access behavior to its default value.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestCompression
+{{ Fill RequestCompression Description }}
 
 ```yaml
 Type: SwitchParameter

@@ -16,16 +16,16 @@ Resets the Server Message Block (SMB) client configuration parameters to their d
 ## SYNTAX
 
 ```
-Reset-SmbClientConfiguration [-All] [-ConnectionCountPerRssNetworkInterface]
- [-DirectoryCacheEntriesMax] [-DirectoryCacheEntrySizeMax] [-DirectoryCacheLifetime]
- [-DisableCompression] [-DormantFileLimit] [-EnableBandwidthThrottling]
- [-EnableByteRangeLockingOnReadOnlyFiles] [-EnableLargeMtu] [-EnableLoadBalanceScaleOut]
- [-EnableMultiChannel] [-EncryptionCiphers] [-ExtendedSessionTimeout] [-FileInfoCacheEntriesMax]
- [-FileInfoCacheLifetime] [-FileNotFoundCacheEntriesMax] [-FileNotFoundCacheLifetime]
- [-ForceSMBEncryptionOverQuic] [-KeepConn] [-MaxCmds] [-MaximumConnectionCountPerServer]
- [-OplocksDisabled] [-SessionTimeout] [-SkipCertificateCheck] [-UseOpportunisticLocking]
- [-WindowSizeThreshold] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Reset-SmbClientConfiguration [-All] [-CompressibilitySampling]
+[-ConnectionCountPerRssNetworkInterface] [-DirectoryCacheEntriesMax] [-DirectoryCacheEntrySizeMax]
+[-DirectoryCacheLifetime] [-DisableCompression] [-DormantFileLimit] [-EnableBandwidthThrottling]
+[-EnableByteRangeLockingOnReadOnlyFiles] [-EnableLargeMtu] [-EnableLoadBalanceScaleOut]
+[-EnableMultiChannel] [-EncryptionCiphers] [-ExtendedSessionTimeout] [-FileInfoCacheEntriesMax]
+[-FileInfoCacheLifetime] [-FileNotFoundCacheEntriesMax] [-FileNotFoundCacheLifetime]
+[-ForceSMBEncryptionOverQuic] [-KeepConn] [-MaxCmds] [-MaximumConnectionCountPerServer]
+[-OplocksDisabled] [-RequestCompression] [-SessionTimeout] [-SkipCertificateCheck]
+[-UseOpportunisticLocking] [-WindowSizeThreshold] [-Force] [-CimSession <CimSession[]>]
+[-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,6 +95,21 @@ current session on the local computer.
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompressibilitySampling
+{{ Fill CompressibilitySampling Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -458,8 +473,22 @@ Accept wildcard characters: False
 ```
 
 ### -OplocksDisabled
-
 Resets the opportunistic locks disabled value to its default value.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestCompression
+{{ Fill RequestCompression Description }}
 
 ```yaml
 Type: SwitchParameter

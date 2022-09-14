@@ -74,8 +74,8 @@ Set-SRGroup -Name "ReplicationGroup01" -AllowVolumeResize $True
 
 This command lets you resize volumes in the replication group named ReplicationGroup01 on the local
 computer. By default, the Storage Replica driver prevents volume resizes in order to protect from
-block mismatches. To grow a volume, enable this mode on both resource groups, increase the size of
-the volume on both servers to be the same size, and then disable this mode.
+block mismatches. To grow a volume, enable the allow volume resize mode on both resource groups,
+increase the size of the volume on both servers to be the same size, then disable this mode.
 
 ## PARAMETERS
 

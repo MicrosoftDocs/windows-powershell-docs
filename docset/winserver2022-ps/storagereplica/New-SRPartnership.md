@@ -64,13 +64,12 @@ $Parameters = @{
 New-SRPartnership @Parameters
 ```
 
-This command creates a replication topology between servers SR-SRV05 and SR-SRV06.
-The SR-SRV05 server is the source and SR-SRV06 is the destination for the D: volume.
-The E: volume contains the logs for this partnership.
-The log has the default value of 8GB.
-The replication mode has the default value of synchronous.
-The command does not specify seeding, encryption, and consistency groups.
-Replication starts immediately.
+This command creates a replication topology between servers SR-SRV05 and SR-SRV06. The SR-SRV05
+server is the source and SR-SRV06 is the destination, with volume D: used as both the source and
+destination. The E: volume contains the logs for this partnership. The log has the default value of
+8GB. As the replication mode has not been specified, it will use the default value of synchronous.
+The command does not specify seeding, encryption, and consistency groups. Replication will start
+immediately.
 
 This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
@@ -88,7 +87,8 @@ New-SRGroup -ComputerName "SR-SRV06" -Name "ReplicationGroup02" -VolumeName "D:"
 New-SRPartnership @Parameters" 
 ```
 
-This example creates two replication groups separately and then pairs those groups.
+This example creates two replication groups separately and then creates a partnership between those
+groups.
 
 The example uses splatting to pass parameter values from the `$Parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
@@ -358,9 +358,8 @@ values for this parameter are:
 
 The default value is synchronous.
 
-The default asynchronous recovery point alert time is 5 minutes.
-You can modify it by using the Set-SRPartnership cmdlet.
-The alert time has no effect on replication behavior, only on reporting.
+The default asynchronous recovery point alert time is 5 minutes. You can modify it by using the
+Set-SRPartnership cmdlet. The alert time has no effect on replication behavior, only on reporting.
 
 ```yaml
 Type: ReplicationMode

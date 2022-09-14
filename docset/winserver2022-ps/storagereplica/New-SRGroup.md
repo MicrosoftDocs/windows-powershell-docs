@@ -42,7 +42,7 @@ New-SRGroup -ComputerName "SR-SRV05" -Name "ReplicationGroup01" -VolumeName "D:"
 
 This command creates a replication group for server named SR-SRV05. The command specifies the
 replicated volume and the log volume. Because this command does not specify other parameters, the
-replication group uses default values. Replication does not start until you run the
+replication group uses default values. Replication will not start until you run the
 `New-SRPartnership` cmdlet.
 
 ### Example 2: Create a replication group that uses custom properties
@@ -60,7 +60,7 @@ New-SRGroup @Parameters
 
 This command creates a replication group for server named SR-SRV05. The command specifies the
 replicated volume and the log volume. The command also specifies a custom log size in GB and enables
-replication traffic encryption. Replication does not start until you run `New-SRPartnership`.
+replication traffic encryption. Replication will not start until you run `New-SRPartnership`.
 
 This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).

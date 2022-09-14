@@ -50,6 +50,11 @@ then run `Test-Cluster`. After the tests are done, start the clustered roles, al
 >>>>>>> 680607f67 (Editorial checklist applied)
 resource groups, again.
 
+> [!NOTE]
+> To perform some of the Cluster Shared Volume (CSV) validation tests, the `Test-Cluster` command
+> creates a local user account named CliTest2 on each cluster node. The account is automatically
+> removed from your system after the cluster validation tests are completed.
+
 ## EXAMPLES
 
 ### Example 1: Validate local cluster

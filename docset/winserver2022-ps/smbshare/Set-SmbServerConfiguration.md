@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/24/2022
+ms.date: 09/15/2022
 online version: /powershell/module/smbshare/set-smbserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SmbServerConfiguration
@@ -47,10 +47,14 @@ For more information on SMB server and protocol specifications, see
 and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and 3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 > [!NOTE]
-> The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
+> - The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
 > Microsoft server operating system version 21H2 for x64-based Systems
 > ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
 > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+> - The **DisableCompression** and **RequestCompression** parameters are available beginning with
+> 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems
+> ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for Windows 11,
+> version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
 
 ## EXAMPLES
 
@@ -279,7 +283,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompression
-{{ Fill DisableCompression Description }}
+Indicated that the SMB server should never compress files even if client or application requested
+it.
 
 ```yaml
 Type: Boolean
@@ -746,7 +751,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequestCompression
-{{ Fill RequestCompression Description }}
+Indicates if SMB server should always request compression even if client or application didn't
+specify it.
 
 ```yaml
 Type: Boolean

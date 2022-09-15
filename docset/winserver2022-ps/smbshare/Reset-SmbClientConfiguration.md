@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbClientConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/24/2022
+ms.date: 09/15/2022
 online version: http://go.microsoft.com/fwlink/?LinkID=241959
 schema: 2.0.0
 title: Reset-SmbClientConfiguration
@@ -34,10 +34,14 @@ The `Reset-SmbClientConfiguration` cmdlet resets SMB client configuration parame
 default values.
 
 > [!NOTE]
-> This cmdlet is available beginning with 2022-06 Cumulative Update for Microsoft server operating
+> - This cmdlet is available beginning with 2022-06 Cumulative Update for Microsoft server operating
 > system version 21H2 for x64-based Systems
 > ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
 > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+> - The **CompressibilitySampling** and **RequestCompression** parameters are available beginning
+> with 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
+> Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
+> Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
 
 ## EXAMPLES
 
@@ -104,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompressibilitySampling
-{{ Fill CompressibilitySampling Description }}
+Resets the compression sampling behavior.
 
 ```yaml
 Type: SwitchParameter
@@ -488,7 +492,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestCompression
-{{ Fill RequestCompression Description }}
+Resets the SMB client request compression value to its default value.
 
 ```yaml
 Type: SwitchParameter

@@ -17,56 +17,68 @@ Creates an SMB share.
 
 ```
 New-SmbShare [-Temporary] [-ContinuouslyAvailable <Boolean>] [-Description <String>]
- [-ConcurrentUserLimit <UInt32>] [-CATimeout <UInt32>] [-FolderEnumerationMode <FolderEnumerationMode>]
- [-CachingMode <CachingMode>] [-FullAccess <String[]>] [-ChangeAccess <String[]>] [-ReadAccess <String[]>]
- [-NoAccess <String[]>] [-SecurityDescriptor <String>] [-Path] <String> [-Name] <String>
- [[-ScopeName] <String>] [-EncryptData <Boolean>] [-CompressData <Boolean>] [-LeasingMode <LeasingMode>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-ConcurrentUserLimit <UInt32>] [-CATimeout <UInt32>]
+[-FolderEnumerationMode <FolderEnumerationMode>] [-CachingMode <CachingMode>]
+[-FullAccess <String[]>] [-ChangeAccess <String[]>] [-ReadAccess <String[]>] [-NoAccess <String[]>]
+[-SecurityDescriptor <String>] [-Path] <String> [-Name] <String> [[-ScopeName] <String>]
+[-EncryptData <Boolean>] [-CompressData <Boolean>] [-LeasingMode <LeasingMode>]
+[-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **New-SmbShare** cmdlet exposes a file system folder to remote clients as a Server Message Block (SMB) share.
+The `New-SmbShare` cmdlet exposes a file system folder to remote clients as a Server Message Block
+(SMB) share.
 
-To delete a share that was created by this cmdlet, use the Remove-SmbShare cmdlet.
+To delete a share that was created by this cmdlet, use the `Remove-SmbShare` cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Create an SMB share
-```
-PS C:\>New-SmbShare -Name "VMSFiles" -Path "C:\ClusterStorage\Volume1\VMFiles" -FullAccess "Contoso\Administrator", "Contoso\Contoso-HV1$"
-Name                          ScopeName                     Path                          Description
-----                          ---------                     ----                          -----------
-VMSFiles                      Contoso-SO                    C:\ClusterStorage\Volume1\...
+```powershell
+$Parameters = @{
+    Name = 'VMSFiles'
+    Path = 'C:\ClusterStorage\Volume1\VMFiles'
+    FullAccess = 'Contoso\Administrator', 'Contoso\Contoso-HV1$'
+}
+New-SmbShare @Parameters
 ```
 
-This command creates an SMB share named "VMSFiles" and grants Full Access permissions to "Contoso\Administrator", and "Contoso\Contoso-HV1$".
+This command creates an SMB share named `VMSFiles` and grants Full Access permissions to
+`Contoso\Administrator`, and `Contoso\Contoso-HV1$`.
+
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 2: Create an encrypted SMB share
-```
-PS C:\>New-SmbShare -Name "Data" -Path "J:\Data" -EncryptData $True
-Name                          ScopeName                     Path                          Description
-----                          ---------                     ----                          -----------
-Data                          Contoso-FS                    J:\Data
+```powershell
+New-SmbShare -Name "Data" -Path "J:\Data" -EncryptData $True
 ```
 
 This command creates an encrypted SMB share.
 
 ### Example 3: Create an SMB share with Multiple Permissions
+```powershell
+$Parameters = @{
+    Name = 'VMSFiles'
+    Path = 'C:\ClusterStorage\Volume1\VMFiles'
+    ChangeAccess = 'Users'
+    FullAccess = 'Administrators'
+}
+New-SmbShare @Parameters
 ```
-PS C:\>New-SmbShare -Name "VMSFiles" -Path "C:\ClusterStorage\Volume1\VMFiles" -ChangeAccess "Users" -FullAccess "Administrators"
 
-Name                          ScopeName                     Path                          Description
-----                          ---------                     ----                          -----------
-VMSFiles                      Contoso-SO                    C:\ClusterStorage\Volume1\...
-```
+This command creates an SMB share named `VMSFiles` and grants Change permissions to the local
+`Users` group, and Full Access permissions to the local `Administrators` group.
 
-This command creates an SMB share named "VMSFiles" and grants Change permissions to the local "Users" group, and Full Access permissions to the local "Administrators" group.
-
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
 ```yaml
 Type: SwitchParameter
@@ -96,8 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -CachingMode
-Specifies the caching mode of the offline files for the SMB share.
-There are five caching modes:
+Specifies the caching mode of the offline files for the SMB share. There are five caching modes:
 
 - None.
 Prevents users from storing documents and programs offline.
@@ -139,8 +150,8 @@ Accept wildcard characters: False
 ```
 
 ### -ChangeAccess
-Specifies which users are granted modify permission to access the share.
-Multiple users can be specified by using a comma-separated list.
+Specifies which users are granted modify permission to access the share. Multiple users can be
+specified by using a comma-separated list.
 
 ```yaml
 Type: String[]
@@ -155,9 +166,10 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -188,8 +200,8 @@ Accept wildcard characters: False
 
 ### -ConcurrentUserLimit
 Specifies the maximum number of concurrently connected users that the new SMB share may accommodate.
-If this parameter is set to zero (0), then the number of users is unlimited.
-The default value is zero (0).
+If this parameter is set to zero (0), then the number of users is unlimited. The default value is
+zero (0).
 
 ```yaml
 Type: UInt32
@@ -219,10 +231,9 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies an optional description of the SMB share.
-A description of the share is displayed by running the Get-SmbShare cmdlet.
-The description may not contain more than 256 characters.
-The default value no description, or an empty description.
+Specifies an optional description of the SMB share. A description of the share is displayed by
+running the Get-SmbShare cmdlet. The description may not contain more than 256 characters. The
+default value no description, or an empty description.
 
 ```yaml
 Type: String
@@ -252,14 +263,14 @@ Accept wildcard characters: False
 ```
 
 ### -FolderEnumerationMode
-Specifies which files and folders in the SMB share are visible to users.
-The acceptable values for this parameter are:
+Specifies which files and folders in the SMB share are visible to users. The acceptable values for
+this parameter are:
 
-- AccessBased.
-SMB does not display the files and folders for a share to a user unless that user has rights to access the files and folders.
-By default, access-based enumeration is disabled for new SMB shares.
-- Unrestricted.
-SMB displays files and folders to a user even when the user does not have permission to access the items.
+- AccessBased. SMB does not display the files and folders for a share to a user unless that user has
+  rights to access the files and folders. By default, access-based enumeration is disabled for new
+  SMB shares.
+- Unrestricted. SMB displays files and folders to a user even when the user does not have permission
+  to access the items.
 
 The default value is Unrestricted.
 
@@ -277,9 +288,11 @@ Accept wildcard characters: False
 ```
 
 ### -FullAccess
-Specifies which accounts are granted full permission to access the share.
-Use a comma-separated list to specify multiple accounts.
-An account may not be specified more than once in the *FullAccess*, *ChangeAccess*, or *ReadAccess* parameter lists, but may be specified once in the *FullAccess*, *ChangeAccess*, or *ReadAccess* parameter list and once in the *NoAccess* parameter list.
+Specifies which accounts are granted full permission to access the share. Use a comma-separated list
+to specify multiple accounts. An account may not be specified more than once in the **FullAccess**,
+**ChangeAccess**, or **ReadAccess** parameter lists, but may be specified once in the
+**FullAccess**, **ChangeAccess**, or **ReadAccess** parameter list and once in the **NoAccess**
+parameter list.
 
 ```yaml
 Type: String[]
@@ -295,11 +308,12 @@ Accept wildcard characters: False
 
 ### -LeasingMode
 
-Specifies SMB leasing and oplock behaviors for application compatibility. The acceptable values for this parameter are: 
+Specifies SMB leasing and oplock behaviors for application compatibility. The acceptable values for
+this parameter are:
 
 - `Full:` Use default lease and oplock behaviors from SMB3.
 - `Shared:` Grant read-caching lease but not write or handle-caching.
-- `None:` = No oplocks or leases, behave like SMB1 (not recommended).
+- `None:` No oplocks or leases, behave like SMB1 (not recommended).
 
 ```yaml
 Type: LeasingMode
@@ -314,9 +328,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a name for the SMB share.
-The name may be composed of any valid file name characters, but must be less than 80 characters long.
-The names `pipe` and `mailslot` are reserved for use by the computer.
+Specifies a name for the SMB share. The name may be composed of any valid file name characters, but
+must be less than 80 characters long. The names `pipe` and `mailslot` are reserved for use by the
+computer.
 
 ```yaml
 Type: String
@@ -427,9 +441,11 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
+computer.
 
 ```yaml
 Type: Int32
@@ -477,7 +493,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -486,9 +505,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/SMB/MSFT_SmbShare
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
-The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
-This cmdlet returns a **MSFT_SmbShare** object that represents the SMB share.
+The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
+namespace and class name for the underlying WMI object. This cmdlet returns a **MSFT_SmbShare**
+object that represents the SMB share.
 
 ## NOTES
 

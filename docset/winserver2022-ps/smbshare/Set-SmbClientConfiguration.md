@@ -39,10 +39,15 @@ Set-SmbClientConfiguration [-CompressibilitySamplingSize <UInt64>]
 The `Set-SmbClientConfiguration` cmdlet sets the Server Message Block (SMB) client configuration.
 
 > [!NOTE]
-> The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
+> - The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
 > Microsoft server operating system version 21H2 for x64-based Systems
 > ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
 > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+> - The **CompressibilitySamplingSize**, **CompressibleThreshold**,
+> **EnableCompressibilitySampling**, and **RequestCompression** parameters are available beginning
+> with 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
+> Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
+> Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
 
 ## EXAMPLES
 
@@ -103,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompressibilitySamplingSize
-{{ Fill CompressibilitySamplingSize Description }}
+Specifies the size in bytes to sample in a file to look for compressible data.
 
 ```yaml
 Type: UInt64
@@ -118,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompressibleThreshold
-{{ Fill CompressibleThreshold Description }}
+Specifies the threshold in bytes in which to attempt to find compressible data.
 
 ```yaml
 Type: UInt64
@@ -260,7 +265,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCompressibilitySampling
-{{ Fill EnableCompressibilitySampling Description }}
+Controls the sampling behavior. SMB by default always attempts to compress the entire file when a
+client or server requests it, without using compression sampling. With EnableCompressibilitySampling
+set to '$true' SMB uses of an algorithm where it attempted to compress the first 524,288,000 bytes
+(500 MiB) of a file during transfer and track that at least 104,857,600 bytes (100 MiB) compressed
+within that 500 MiB range. If fewer than 100 MiB was compressible, SMB compression stopped trying to
+compress the rest of the file. If at least 100 MiB compressed, SMB compression attempted to compress
+the rest of the file.
 
 ```yaml
 Type: Boolean
@@ -547,7 +558,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequestCompression
-{{ Fill RequestCompression Description }}
+Indicates if SMB client should always request compression even if server or application didn't
+specify it.
 
 ```yaml
 Type: Boolean

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_WvrAdminTasks.cdxml-help.xml
 Module Name: StorageReplica
-ms.date: 12/20/2016
+ms.date: 10/04/2022
 online version: https://learn.microsoft.com/powershell/module/storagereplica/set-srpartnership?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SRPartnership
@@ -46,11 +46,11 @@ groups. You can use this cmdlet to add replicated volumes. You can also change t
 replication which makes a source volume into a destination volume.
 
 > [!NOTE]
-> The **Compression** parameter is currently in PREVIEW beginning with TODO: 2022-08
-> Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems
-> ([KB5016693](https://support.microsoft.com/help/5016693)). Some information relates to prerelease
-> product that may be substantially modified before it's released. Microsoft makes no warranties,
-> express or implied, with respect to the information provided here.
+> The **Compression** parameter is only available in
+> [Azure Stack HCI version 22H2](https://azure.microsoft.com/en-us/updates/public-preview-azure-stack-hci-version-22h2/) or later,
+> and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative Update for Microsoft
+> server operating system version 21H2 for x64-based Systems
+> ([KB5017381](https://support.microsoft.com/help/5017381)).
 
 ## EXAMPLES
 
@@ -191,7 +191,12 @@ Accept wildcard characters: False
 ```
 
 ### -Compression
-Indicates that the connections on this partnership should use compression.
+Indicates that the connections in this partnership should use SMB compression for data transfer.
+This parameter only applies to
+[Azure Stack HCI version 22H2](https://azure.microsoft.com/en-us/updates/public-preview-azure-stack-hci-version-22h2/)
+or later, and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative
+Update for Microsoft server operating system version 21H2 for x64-based Systems
+([KB5017381](https://support.microsoft.com/help/5017381)).
 
 ```yaml
 Type: Boolean

@@ -24,7 +24,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-ScanAvgCPULoadFactor <Byte>] [-CheckForSignaturesBeforeRunningScan <Boolean>]
  [-ScanPurgeItemsAfterDelay <UInt32>] [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>]
  [-ScanScheduleDay <Day>] [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleOffset <UInt32>]
- [-ScanScheduleTime <HH:MM:SS>] 
+ [-ScanScheduleTime <HH:MM:SS>]
  [-SignatureFirstAuGracePeriod <UInt32>] [-SignatureAuGracePeriod <UInt32>]
  [-SignatureDefinitionUpdateFileSharesSources <String>]
  [-SignatureDisableUpdateOnStartupWithoutEngine <Boolean>] [-SignatureFallbackOrder <String>]

@@ -5,7 +5,7 @@ Help Version: 5.0.0.1
 Locale: en-US
 Module Name: Microsoft.Windows.ServerManager.Migration
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/servermanager?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/servermanager?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 title: ServerManager
 ---
 

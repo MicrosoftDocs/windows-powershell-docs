@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: System.Object[]
-online version: https://docs.microsoft.com/powershell/module/dism/set-windowsreservedstoragestate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dism/set-windowsreservedstoragestate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

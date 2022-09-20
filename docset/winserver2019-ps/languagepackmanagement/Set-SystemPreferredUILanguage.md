@@ -1,11 +1,11 @@
 ---
+description: The Set-SystemPreferredUILanguage cmdlet lets you set an installed language as the System Preferred UI Language in a running Windows installation
 external help file: Microsoft.LanguagePackManagement.Powershell.Commands.dll-Help.xml
 Module Name: LanguagePackManagement
-online version: https://docs.microsoft.com/powershell/module/languagepackmanagement/set-systempreferreduilanguage?view=windowsserver2019-ps
-schema: 2.0.0
 ms.date: 08/15/2022
+online version: https://learn.microsoft.com/powershell/module/languagepackmanagement/set-systempreferreduilanguage?view=windowsserver2019-ps
+schema: 2.0.0
 title: Set-SystemPreferredUILanguage
-description: The Set-SystemPreferredUILanguage cmdlet lets you set an installed language as the System Preferred UI Language in a running Windows installation
 ---
 
 # Set-SystemPreferredUILanguage

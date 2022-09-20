@@ -1,7 +1,7 @@
 ---
 external help file: MMAgent_Cmdlets.xml
 Module Name: MMAgent
-online version: https://docs.microsoft.com/powershell/module/mmagent/disable-mmagent?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/mmagent/disable-mmagent?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

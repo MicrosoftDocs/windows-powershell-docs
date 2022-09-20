@@ -144,7 +144,7 @@ The second command creates scheduled task settings that specify if the task is n
 
 The third command registers the scheduled task Task01 to run the task action named Cmd, only then finish the task after one hour.
 
-Without the ExecutionTimeLimit setting defined, the time limit set to it's default of three days for the Task Scheduler is allowed to complete the task. To configure the time limit, see [New-TimeSpan](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan).
+Without the ExecutionTimeLimit setting defined, the time limit set to it's default of three days for the Task Scheduler is allowed to complete the task. To configure the time limit, see [New-TimeSpan](/powershell/module/microsoft.powershell.utility/new-timespan).
 
 
 ## PARAMETERS
@@ -651,4 +651,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-ScheduledTask](./Start-ScheduledTask.md)
 
 [Unregister-ScheduledTask](./Unregister-ScheduledTask.md)
-

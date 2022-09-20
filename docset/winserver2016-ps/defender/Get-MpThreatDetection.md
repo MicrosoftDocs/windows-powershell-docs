@@ -43,7 +43,7 @@ This command returns the list of past malware detections for the local computer.
 
 The following table lists the hexadecimal and decimal error codes for this cmdlet. Each hexadecimal error code has a 0x8050 prefix. Therefore, an ERROR_MP_BAD_SCANID error corresponds to error code 0x80508012. Additionally, an ERR_MP_REMOVE_FAILED error corresponds to error code 0x80508017. 
 
-For a list of error codes, along with possible reasons and resolutions, see [Windows Defender Antivirus client error codes](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus#windows-defender-antivirus-client-error-codes) in the topic [Review event logs and error codes to troubleshoot issues with Windows Defender Antivirus](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus#windows-defender-antivirus-client-error-codes).
+For a list of error codes, along with possible reasons and resolutions, see [Windows Defender Antivirus client error codes](/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus#windows-defender-antivirus-client-error-codes) in the topic [Review event logs and error codes to troubleshoot issues with Windows Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus#windows-defender-antivirus-client-error-codes).
 
 |Symbolic Name                       | Error Number (hexadecimal) | Error number (decimal) |
 |------------------------------------|----------------------------|------------------------|
@@ -174,4 +174,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-MpThreat](./Remove-MpThreat.md)
 
 [Get-MpThreatCatalog](./Get-MpThreatCatalog.md)
-

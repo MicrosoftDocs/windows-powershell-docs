@@ -155,7 +155,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -278,7 +278,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-[CIM_NetworkAdapter class](https://docs.microsoft.com/windows/win32/cimwin32prov/cim-networkadapter)
+[CIM_NetworkAdapter class](/windows/win32/cimwin32prov/cim-networkadapter)
 
 ## NOTES
 
@@ -293,4 +293,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Restart-NetAdapter](./Restart-NetAdapter.md)
 
 [Set-NetAdapter](./Set-NetAdapter.md)
-

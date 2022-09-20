@@ -234,7 +234,7 @@ Accept wildcard characters: False
 ### -HwThreadCountPerCore
 Specifies the number of virtual SMT threads exposed to the virtual machine. Setting this value to 0 indicates the virtual machine will inherit the host's number of threads per core. This setting may not exceed the host's number of threads per core.
 
-Note: Windows Server 2016 does not support setting HwThreadCountPerCore to 0. For more details, see [Configuring VM SMT settings using PowerShell](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/about-hyper-v-scheduler-type-selection#configuring-vm-smt-settings-using-powershell).
+Note: Windows Server 2016 does not support setting HwThreadCountPerCore to 0. For more details, see [Configuring VM SMT settings using PowerShell](/windows-server/virtualization/hyper-v/manage/about-hyper-v-scheduler-type-selection#configuring-vm-smt-settings-using-powershell).
 
 ```yaml
 Type: Int64
@@ -295,7 +295,7 @@ Accept wildcard characters: False
 ```
 
 ### -Perfmon
-Specifies the hardware to be Exposed for Performance Monitoring. For more information about requirements, visit [Enable Intel Performance Monitoring Hardware in a Hyper-V virtual machine](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/performance-monitoring-hardware).
+Specifies the hardware to be Exposed for Performance Monitoring. For more information about requirements, visit [Enable Intel Performance Monitoring Hardware in a Hyper-V virtual machine](/windows-server/virtualization/hyper-v/manage/performance-monitoring-hardware).
 
 
 ```yaml

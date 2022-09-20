@@ -131,4 +131,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Get-MpComputerStatus Properties](https://docs.microsoft.com/previous-versions/windows/desktop/defender/msft-mpcomputerstatus#properties)
+[Get-MpComputerStatus Properties](/previous-versions/windows/desktop/defender/msft-mpcomputerstatus#properties)

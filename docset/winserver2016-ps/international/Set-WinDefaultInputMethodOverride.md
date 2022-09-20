@@ -56,7 +56,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### InputTIP
-You can pipe a locale ID and a keyboard language ID (KLID). See [Default Input Profiles (Input Locales) in Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs)
+You can pipe a locale ID and a keyboard language ID (KLID). See [Default Input Profiles (Input Locales) in Windows](/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs).
 
 ## OUTPUTS
 
@@ -65,4 +65,3 @@ You can pipe a locale ID and a keyboard language ID (KLID). See [Default Input P
 ## RELATED LINKS
 
 [Get-WinDefaultInputMethodOverride](./Get-WinDefaultInputMethodOverride.md)
-

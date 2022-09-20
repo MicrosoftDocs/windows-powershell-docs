@@ -1,7 +1,7 @@
 ---
 external help file: WSUS_Cmdlets.xml
 Module Name: UpdateServices
-online version: https://docs.microsoft.com/powershell/module/updateservices/get-wsusupdate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/updateservices/get-wsusupdate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

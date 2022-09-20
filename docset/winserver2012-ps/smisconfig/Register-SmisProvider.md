@@ -1,7 +1,7 @@
 ---
 external help file: SMISConfig_Cmdlets.xml
 Module Name: SMISConfig
-online version: https://docs.microsoft.com/powershell/module/smisconfig/register-smisprovider?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/smisconfig/register-smisprovider?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

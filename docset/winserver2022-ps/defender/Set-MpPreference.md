@@ -3,7 +3,7 @@ description: The Set-MpPreference cmdlet configures preferences for Windows Defe
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
 ms.date: 09/20/2022
-online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
 ---

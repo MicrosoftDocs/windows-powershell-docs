@@ -2,7 +2,7 @@
 external help file: PS_BgpPeer_v1.0.cdxml-help.xml
 Module Name: RemoteAccess
 ms.date: 12/05/2017
-online version: https://docs.microsoft.com/powershell/module/remoteaccess/start-bgppeer?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/remoteaccess/start-bgppeer?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-BgpPeer
 ---

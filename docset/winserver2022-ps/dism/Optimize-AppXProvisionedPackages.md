@@ -3,7 +3,7 @@ description: Optimizes the total file size of provisioned packages on the image 
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: Dism
 ms.date: 10/13/2021
-online version: https://docs.microsoft.com/powershell/module/dism/optimize-appxprovisionedpackages?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dism/optimize-appxprovisionedpackages?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Optimize-AppXProvisionedPackages
 ---

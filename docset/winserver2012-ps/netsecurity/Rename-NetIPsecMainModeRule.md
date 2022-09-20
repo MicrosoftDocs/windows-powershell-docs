@@ -1,7 +1,7 @@
 ---
 external help file: NetSecurity_Function.xml
 Module Name: NetSecurity
-online version: https://docs.microsoft.com/powershell/module/netsecurity/rename-netipsecmainmoderule?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/netsecurity/rename-netipsecmainmoderule?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

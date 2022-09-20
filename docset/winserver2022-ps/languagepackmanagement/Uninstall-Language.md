@@ -1,11 +1,11 @@
 ---
+description: The Uninstall-Language cmdlet lets you remove a language and its components from a running Windows installation
 external help file: Microsoft.LanguagePackManagement.Powershell.Commands.dll-Help.xml
 Module Name: LanguagePackManagement
-online version: https://docs.microsoft.com/powershell/module/languagepackmanagement/uninstall-language?view=windowsserver2022-ps
-schema: 2.0.0
 ms.date: 08/15/2022
+online version: https://learn.microsoft.com/powershell/module/languagepackmanagement/uninstall-language?view=windowsserver2022-ps
+schema: 2.0.0
 title: Uninstall-Language
-description: The Uninstall-Language cmdlet lets you remove a language and its components from a running Windows installation
 ---
 
 # Uninstall-Language

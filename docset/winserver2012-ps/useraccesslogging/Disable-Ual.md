@@ -1,7 +1,7 @@
 ---
 external help file: MsftUal_Admin.cdxml-help.xml
 Module Name: UserAccessLogging
-online version: https://docs.microsoft.com/powershell/module/useraccesslogging/disable-ual?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/useraccesslogging/disable-ual?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

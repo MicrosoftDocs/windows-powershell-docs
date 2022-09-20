@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsErrorReporting.PowerShell.dll-Help.xml
 Module Name: WindowsErrorReporting
-online version: https://docs.microsoft.com/powershell/module/windowserrorreporting/disable-windowserrorreporting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/windowserrorreporting/disable-windowserrorreporting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

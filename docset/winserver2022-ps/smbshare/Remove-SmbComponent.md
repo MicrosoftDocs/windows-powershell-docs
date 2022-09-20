@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: SmbComponent.cdxml-help.xml
 Module Name: SmbShare
 ms.date: 08/31/2021
-online version: https://docs.microsoft.com/powershell/module/smbshare/remove-smbcomponent?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/smbshare/remove-smbcomponent?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-SmbComponent
 ---

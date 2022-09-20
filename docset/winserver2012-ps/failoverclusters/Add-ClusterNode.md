@@ -1,7 +1,7 @@
 ---
 external help file: Failoverv2_Cmdlets.xml
 Module Name: FailoverClusters
-online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clusternode?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clusternode?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

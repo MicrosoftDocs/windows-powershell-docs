@@ -2,7 +2,7 @@
 external help file: WmsCmdlets.dll-Help.xml
 Module Name: MultiPoint
 ms.date: 12/06/2017
-online version: https://docs.microsoft.com/powershell/module/multipoint/get-wmssystem?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/multipoint/get-wmssystem?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-WmsSystem
 ---

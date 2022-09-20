@@ -1415,7 +1415,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleTime
-Specify the time of day to run a scheduled scan. The time refers to the local time on the computer. Specify the number of minutes after midnight (for example, enter 60 for 1 a.m.). That parameter has a default time of two hours after midnight (2:00 a.m.).
+Specifies the time of day to run a scheduled scan. The time refers to the local time on the computer. Specify the number of minutes after midnight (for example, enter 60 for 1 a.m.). This parameter has a default time of two hours after midnight (2 a.m.).
 
 ```yaml
 Type: DateTime

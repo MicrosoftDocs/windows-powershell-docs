@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Windows.Diagnosis.TroubleshootingPack.dll-Help.xml
 Module Name: TroubleshootingPack
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/troubleshootingpack/invoke-troubleshootingpack?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/troubleshootingpack/invoke-troubleshootingpack?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-TroubleshootingPack
 ---

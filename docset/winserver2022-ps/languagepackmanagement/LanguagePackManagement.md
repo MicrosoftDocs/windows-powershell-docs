@@ -1,12 +1,12 @@
 ---
-Module Name: LanguagePackManagement
-Module Guid: f42dbdd4-4358-4067-8155-a4567a0aaee5
+description: The LanguagePackManagement module includes cmdlets that help you easily manage languages and language settings on a running Windows installation
 Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
+Module Guid: f42dbdd4-4358-4067-8155-a4567a0aaee5
+Module Name: LanguagePackManagement
 ms.date: 08/15/2022
 title: LanguagePackManagement module
-description: The LanguagePackManagement module includes cmdlets that help you easily manage languages and language settings on a running Windows installation
 ---
 
 # LanguagePackManagement Module

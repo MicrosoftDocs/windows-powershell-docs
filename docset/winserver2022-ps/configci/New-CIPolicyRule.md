@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
 Module Name: ConfigCI
 ms.date: 05/23/2022
-online version: https://docs.microsoft.com/powershell/module/configci/new-cipolicyrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/configci/new-cipolicyrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-CIPolicyRule
 ---

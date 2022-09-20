@@ -3,7 +3,7 @@ description: Provides one or more standard, non-Administrator users access to ev
 external help file: ServerManager-help.xml
 Module Name: ServerManager
 ms.date: 09/08/2021
-online version: https://docs.microsoft.com/powershell/module/servermanager/enable-servermanagerstandarduserremoting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/servermanager/enable-servermanagerstandarduserremoting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-ServerManagerStandardUserRemoting
 ---

@@ -3,7 +3,7 @@ description: A debugging tool that creates a new process in the context of a pac
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 Module Name: Appx
 ms.date: 05/19/2017
-online version: https://docs.microsoft.com/powershell/module/appx/invoke-commandindesktoppackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/appx/invoke-commandindesktoppackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-CommandInDesktopPackage
 ---

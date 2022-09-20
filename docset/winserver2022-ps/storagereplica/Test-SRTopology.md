@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.FileServices.SR.Powershell.dll-Help.xml
 Module Name: StorageReplica
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/storagereplica/test-srtopology?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-SRTopology
 ---

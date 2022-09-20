@@ -2,9 +2,9 @@
 description: The Remove-PmemDedicatedMemory cmdlet gets dedicated persistent memory.
 external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
 Module Name: PersistentMemory
-online version: https://docs.microsoft.com/powershell/module/persistentmemory/remove-pmemdedicatedmemory?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
-schema: 2.0.0
 ms.date: 09/24/2021
+online version: https://learn.microsoft.com/powershell/module/persistentmemory/remove-pmemdedicatedmemory?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 title: Remove-PmemDedicatedMemory
 ---
 

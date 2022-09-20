@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.RightsManagementServices.Configuration.dll-Help.xml
 Module Name: ADRMS
-online version: https://docs.microsoft.com/powershell/module/adrms/uninstall-adrms?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/adrms/uninstall-adrms?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

@@ -2,7 +2,7 @@
 external help file: MSFT_NetConnectionProfile.cdxml-help.xml
 Module Name: NetConnection
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/netconnectionprofile/get-netconnectionprofile?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/netconnectionprofile/get-netconnectionprofile?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetConnectionProfile
 ---

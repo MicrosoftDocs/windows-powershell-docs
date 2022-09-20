@@ -1,7 +1,7 @@
 ---
 external help file: ServerMig_Cmdlets.xml
 Module Name: ServerMigrationCmdlets
-online version: https://docs.microsoft.com/powershell/module/servermigrationcmdlets/receive-smigserverdata?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/servermigrationcmdlets/receive-smigserverdata?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

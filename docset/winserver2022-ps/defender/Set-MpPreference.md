@@ -575,7 +575,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRdpParsing
-The setting controls whether we parse RDP traffic to look for malicious attacks using the RDP protocol. It is not related to Inbound or Outbound.
+This setting controls whether to parse RDP traffic to look for malicious attacks using the RDP protocol. It is not related to Inbound or Outbound.
 
 ```yaml
 Type: Boolean

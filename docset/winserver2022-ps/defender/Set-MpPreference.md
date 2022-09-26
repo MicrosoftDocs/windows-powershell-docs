@@ -575,8 +575,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRdpParsing
-Specifies whether to inspect only outbound connections.
-By default, Network Protection inspects both inbound and outbound connections.
+The setting controls whether we parse RDP traffic to look for malicious attacks using the RDP protocol. It is not related to Inbound or Outbound.
 
 ```yaml
 Type: Boolean

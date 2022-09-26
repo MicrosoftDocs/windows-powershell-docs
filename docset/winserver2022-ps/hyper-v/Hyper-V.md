@@ -22,6 +22,9 @@ Adds a DVD drive to a virtual machine.
 ### [Add-VMFibreChannelHba](./Add-VMFibreChannelHba.md)
 Adds a virtual Fibre Channel host bus adapter to a virtual machine.
 
+### [Add-VMGpuPartitionAdapter](./Add-VMGpuPartitionAdapter.md)
+Add GPU Partition adapter to a virtual machine
+
 ### [Add-VMGroupMember](./Add-VMGroupMember.md)
 Adds group members to a virtual machine group.
 
@@ -187,6 +190,9 @@ Gets the firmware configuration of a virtual machine.
 ### [Get-VMFloppyDiskDrive](./Get-VMFloppyDiskDrive.md)
 Gets the floppy disk drives of a virtual machine or snapshot.
 
+### [Get-VMGpuPartitionAdapter](./Get-VMGpuPartitionAdapter.md)
+Gets the information of assigned GPU partitions to a virtual machine.
+
 ### [Get-VMGroup](./Get-VMGroup.md)
 Gets virtual machine groups.
 
@@ -198,6 +204,9 @@ Gets a Hyper-V host.
 
 ### [Get-VMHostCluster](./Get-VMHostCluster.md)
 Gets virtual machine host clusters.
+
+### [Get-VMHostPartitionableGpu](./Get-VMHostPartitionableGpu.md)
+Gets the host machine's partitionable GPU.
 
 ### [Get-VMHostNumaNode](./Get-VMHostNumaNode.md)
 Gets the NUMA topology of a virtual machine host.
@@ -388,6 +397,9 @@ Deletes a DVD drive from a virtual machine.
 ### [Remove-VMFibreChannelHba](./Remove-VMFibreChannelHba.md)
 Removes a Fibre Channel host bus adapter from a virtual machine.
 
+### [Remove-VMGpuPartitionAdapter](./Remove-VMGpuPartitionAdapter.md)
+Removes an assigned GPU partition from a virtual machine.
+
 ### [Remove-VMGroup](./Remove-VMGroup.md)
 Removes a virtual machine group.
 
@@ -537,6 +549,9 @@ Configures a Hyper-V host.
 
 ### [Set-VMHostCluster](./Set-VMHostCluster.md)
 Configures a virtual machine host cluster.
+
+### [Set-VMHostPartitionableGpu](./Set-VMHostPartitionableGpu.md)
+Configures host partitionable GPU to the number of partitions supported by the manufacturer.
 
 ### [Set-VMKeyProtector](./Set-VMKeyProtector.md)
 Configures a key protector for a virtual machine.

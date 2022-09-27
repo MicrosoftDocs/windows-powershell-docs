@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/export-caureport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-CauReport
@@ -32,8 +32,9 @@ cmdlet. For example, the *Last* parameter specifies the most recent Updating Run
 ## EXAMPLES
 
 ### Example 1: Get a detailed version of the last CAU report for the specified cluster
-```
-PS C:\> Get-CauReport -ClusterName "Contoso-FC1" -Last -Detailed | Export-CauReport -Format HTML -Path "C:\temp\contoso-fc1_last.html" -TimeZone ([system.timezoneinfo]::Utc)
+```powershell
+$CauReport = Get-CauReport -ClusterName "Contoso-FC1" -Last -Detailed
+$CauReport | Export-CauReport -Format HTML -Path "C:\temp\contoso-fc1_last.html" -TimeZone ([system.timezoneinfo]::Utc)
 ```
 
 This command gets a detailed version of the last CAU report for the cluster named Contoso-FC1, then

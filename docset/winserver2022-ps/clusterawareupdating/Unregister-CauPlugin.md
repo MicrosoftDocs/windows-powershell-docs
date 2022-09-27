@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/unregister-cauplugin?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unregister-CauPlugin
@@ -28,8 +28,8 @@ plug-ins, which are installed with CAU, cannot be unregistered.
 ## EXAMPLES
 
 ### Example 1: Unregister a plug-in that is used by CAU
-```
-PS C:\> Unregister-CauPlugin -Name "Plugin01"
+```powershell
+Unregister-CauPlugin -Name "Plugin01"
 ```
 
 This command removes the plug-in named Plugin01 from the list of plug-ins that are used by CAU.

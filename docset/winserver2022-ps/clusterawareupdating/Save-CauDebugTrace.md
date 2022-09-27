@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/save-caudebugtrace?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-CauDebugTrace
@@ -32,8 +32,8 @@ Compatibility Mode (HTTP-In)** firewall exception is enabled on each node.
 ## EXAMPLES
 
 ### Example 1: Save debug tracing information for the specified cluster
-```
-PS C:\> Save-CauDebugTrace -ClusterName "CONTOSO-FC1" -FilePath "C:\temp\testrun.zip"
+```powershell
+Save-CauDebugTrace -ClusterName "CONTOSO-FC1" -FilePath "C:\temp\testrun.zip"
 ```
 
 This command saves the debug tracing information for the cluster named CONTOSO-FC1, to a trace file

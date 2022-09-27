@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/get-caurun?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CauRun
@@ -45,9 +45,11 @@ Use this cmdlet to monitor current updating runs.
 ## EXAMPLES
 
 ### Example 1: Get status information about the updating run in progress from the specified cluster
+```powershell
+Get-CauRun -ClusterName "CONTOSO-FC1"
 ```
-PS C:\> Get-CauRun -ClusterName "CONTOSO-FC1"
 
+```output
 RunId                   : 834dd11e-584b-41f2-8d22-4c9c0471dbad 
 RunStartTime            : 10/13/2011 1:35:39 PM 
 CurrentOrchestrator     : NODE1 

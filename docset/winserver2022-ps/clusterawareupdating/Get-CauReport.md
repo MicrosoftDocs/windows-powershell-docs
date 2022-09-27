@@ -72,7 +72,7 @@ Get-CauReport "Contoso-FC1" -Report $CauReportSummary
 ```
 
 The first command gets the last updating run report summary from the cluster named Contoso-FC1 and
-stores the result in the variable named $CauReportSummary.
+stores the result in the variable named `$CauReportSummary`.
 
 The second command gets the detailed report from the information stored in the $CauReportSummary
 variable.

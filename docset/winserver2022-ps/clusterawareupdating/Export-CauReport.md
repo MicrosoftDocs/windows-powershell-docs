@@ -38,8 +38,8 @@ $CauReport | Export-CauReport -Format HTML -Path "C:\temp\contoso-fc1_last.html"
 ```
 
 This command gets a detailed version of the last CAU report for the cluster named Contoso-FC1, then
-exports that report in HTML format to the path C:\temp\contoso-fc1_last.html. The timestamps in the
-report are formatted in the Coordinated Universal Time (UTC) zone.
+exports that report in HTML format to the path `C:\temp\contoso-fc1_last.html`. The timestamps in
+the report are formatted in the Coordinated Universal Time (UTC) zone.
 
 ## PARAMETERS
 

@@ -37,7 +37,7 @@ Save-CauDebugTrace -ClusterName "CONTOSO-FC1" -FilePath "C:\temp\testrun.zip"
 ```
 
 This command saves the debug tracing information for the cluster named CONTOSO-FC1, to a trace file
-called testrun.zip in the C:\temp folder.
+called `testrun.zip` in the `C:\temp` folder.
 
 ## PARAMETERS
 

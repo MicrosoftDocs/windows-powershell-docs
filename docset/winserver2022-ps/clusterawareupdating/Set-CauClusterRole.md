@@ -84,7 +84,7 @@ restart is necessary. If the restart does not complete within this time, then th
 that node is marked as failed. Because the command specifies the *Force* parameter, the cmdlet runs
 without displaying confirmation prompts.
 
-This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 2: Configure settings for a CAU cluster role on the specified cluster on the second week of the month
@@ -122,7 +122,7 @@ leaves Maintenance mode. The script is located at the root of drive G: in cluste
 named verifyupdatesinstalled.ps1. Because the command specifies the *Force* parameter, the cmdlet
 runs without displaying confirmation prompts.
 
-This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 3: Initiate an updating run on the specified cluster
@@ -153,7 +153,7 @@ spans are specified for logging a warning or canceling the updating run if it is
 earliest date that an updating run can be triggered is 1/1/2012. Because the command specifies the
 *Force* parameter, the cmdlet runs without displaying confirmation prompts
 
-This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS

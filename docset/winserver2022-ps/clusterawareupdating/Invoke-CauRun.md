@@ -73,7 +73,7 @@ before marking the node as failed, and allows no more than one node to fail befo
 entire updating run as failed. Because the command specifies the *Force* parameter, the cmdlet runs
 without displaying confirmation prompts.
 
-This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 2: Preform a scan and a full updating run on the specified cluster using multiple plug-ins
@@ -103,7 +103,7 @@ applied by **Microsoft.HotfixPlugin plug-in**. If the installation of updates by
 **Microsoft.HotfixPlugin plug-in** installs updates. Because the command specifies the *Force*
 parameter, the cmdlet runs without displaying confirmation prompts.
 
-This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 3: Recover from a previous updating run that failed on the specified cluster

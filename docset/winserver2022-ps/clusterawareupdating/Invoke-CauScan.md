@@ -67,10 +67,10 @@ This example gets a detailed list of the initial set of updates that would curre
 each node in the cluster named CONTOSO-FC1. The list is based on the updates that would be applied
 by the **Microsoft.WindowsUpdatePlugin** plug-in, using a specified query string, and the
 **Microsoft.HotfixPlugin**, after the necessary hotfixes and the hotfix configuration file have been
-downloaded to \\\\CauHotfixSrv\shareName. This example also shows how to pass the administrative
+downloaded to `\\CauHotfixSrv\shareName`. This example also shows how to pass the administrative
 credentials for cluster CONTOSO-FC1 to the cmdlet.
 
-This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS

@@ -67,14 +67,14 @@ exception is enabled on each node.
 
 ### Example 1: Configure settings for a CAU cluster role on the specified cluster on the first and second weeks of the month
 ```powershell
-$Parameters = @{
+$parameters = @{
     ClusterName = 'CONTOSO-FC1'
     DaysOfWeek = 'Tuesday'
     WeeksOfMonth = '1,2'
     RebootTimeoutMinutes = '10'
     Force = $true
 }
-Set-CauClusterRole $Parameters
+Set-CauClusterRole $parameters
 ```
 
 This command configures settings for the CAU clustered role on the cluster named CONTOSO-FC1. The
@@ -89,7 +89,7 @@ Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/
 
 ### Example 2: Configure settings for a CAU cluster role on the specified cluster on the second week of the month
 ```powershell
-$Parameters = @{
+$parameters = @{
     ClusterName = 'CONTOSO-FC1'
     DaysOfWeek = 'Tuesday'
     WeeksOfMonth = '1,2'
@@ -98,7 +98,7 @@ $Parameters = @{
     PostUpdateScript = 'c:\verifyupdatesinstalled.ps1'
     Force = $true
 }
-Set-CauClusterRole $Parameters
+Set-CauClusterRole $parameters
 ```
 
 ```output

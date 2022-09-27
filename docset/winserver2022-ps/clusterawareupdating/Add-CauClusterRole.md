@@ -80,7 +80,7 @@ that cluster must be running. If it is not already enabled, the Remote Shutdown 
 rule group will be enabled on each cluster node. Because the command uses the *Force* parameter, the
 cmdlet runs without displaying confirmation prompts.
 
-This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 2: Add a CAU clustered role on the specified cluster at a specific interval
@@ -135,7 +135,7 @@ it is not already enabled, the Remote Shutdown Windows Firewall rule group is en
 cluster node. Because the command uses the *Force* parameter, the cmdlet runs without displaying
 confirmation prompts.
 
-This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS

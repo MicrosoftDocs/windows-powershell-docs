@@ -50,7 +50,7 @@ only after the initial updates are installed.
 ```powershell
 $SecPasswd = ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force 
 $Cred = New-Object System.Management.Automation.PSCredential ("username", $SecPasswd) 
-$Parameters = @{
+$parameters = @{
     ClusterName = 'CONTOSO-FC1'
     CauPluginName = 'Microsoft.WindowsUpdatePlugin',
                     'Microsoft.HotfixPlugin'
@@ -60,7 +60,7 @@ $Parameters = @{
     EnableFirewallRules = $true
     Force = $true
 }
-Invoke-CauScan $Parameters -Credential $Cred
+Invoke-CauScan $parameters -Credential $Cred
 ```
 
 This example gets a detailed list of the initial set of updates that would currently be applied to

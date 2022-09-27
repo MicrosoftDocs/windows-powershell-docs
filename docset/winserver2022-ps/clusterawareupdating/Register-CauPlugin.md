@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/register-cauplugin?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-CauPlugin
@@ -20,10 +20,10 @@ Register-CauPlugin [-Path] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Register-CauPlugin** cmdlet registers a Cluster-Aware Updating (CAU) software updating plug-in
+The `Register-CauPlugin` cmdlet registers a Cluster-Aware Updating (CAU) software updating plug-in
 on the local computer.
 
-CAU always uses a plug-in when performing updates, although you do not need to register a plug-in
+CAU always uses a plug-in when performing updates, although you don't need to register a plug-in
 because CAU uses the **Microsoft.WindowsUpdatePlugin** plug-in by default. This plug-in communicates
 with the Windows Update Agent software resident on each node, the same software that is used when
 updates are downloaded from Windows Update or Microsoft Update, or from a Windows Server Update
@@ -38,7 +38,7 @@ PS C:\> Register-CauPlugin -Path "C:\PluginDevelopment\Plugin01.dll" -Force
 ```
 
 The command registers a plug-in called Plugin01.dll located in the C:\PluginDevelopment folder.
-Because the command specifies the *Force* parameter, the cmdlet runs without displaying confirmation
+Because the command specifies the **Force** parameter, the cmdlet runs without displaying confirmation
 prompts.
 
 ## PARAMETERS
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

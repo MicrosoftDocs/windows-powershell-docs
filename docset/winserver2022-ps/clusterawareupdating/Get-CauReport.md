@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/get-caureport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CauReport
@@ -39,12 +39,12 @@ Get-CauReport [[-ClusterName] <String>] [-Report <CauReportSummary>] [-Credentia
 ```
 
 ## DESCRIPTION
-The **Get-CauReport** cmdlet gets the Updating Run reports for all known Updating Runs, or all
+The `Get-CauReport` cmdlet gets the Updating Run reports for all known Updating Runs, or all
 Updating Runs that match the specified dates or other specified parameters. This cmdlet can return a
-list of all Updating Run reports between the specified *StartDate* and *EndDate* parameters, or if
-the *Last* parameter is specified instead of dates, then the cmdlet returns the most recent Updating
+list of all Updating Run reports between the specified **StartDate** and **EndDate** parameters, or if
+the **Last** parameter is specified instead of dates, then the cmdlet returns the most recent Updating
 Run report. By default, the report contains summaries only, but more detail can be obtained with the
-*Detailed* parameter or by using the *Report* parameter and specifying a Cluster-Aware Updating
+**Detailed** parameter or by using the **Report** parameter and specifying a Cluster-Aware Updating
 (CAU) report summary object.
 
 ## EXAMPLES
@@ -72,16 +72,16 @@ PS C:\> Get-CauReport "Contoso-FC1" -Report $CauReportSummary
 ```
 
 The first command gets the last updating run report summary from the cluster named Contoso-FC1 and
-stores the result in the variable named $CauReportSummary.
+stores the result in the variable named `$CauReportSummary`.
 
-The second command gets the detailed report from the information stored in the $CauReportSummary
+The second command gets the detailed report from the information stored in the `$CauReportSummary`
 variable.
 
 ## PARAMETERS
 
 ### -ClusterName
 Specifies the name of the cluster for which this cmdlet gets reports. This parameter is only
-required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference
+required when this cmdlet isn't run on a failover cluster node, or this cmdlet is used to reference
 a failover cluster different from where the cmdlet is run.
 
 ```yaml

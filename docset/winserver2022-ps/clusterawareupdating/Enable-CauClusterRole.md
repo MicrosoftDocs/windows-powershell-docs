@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/enable-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-CauClusterRole
@@ -21,9 +21,9 @@ Enable-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [-F
 ```
 
 ## DESCRIPTION
-The **Enable-CauClusterRole** cmdlet re-enables the self-updating functionality on the specified
+The `Enable-CauClusterRole` cmdlet re-enables the self-updating functionality on the specified
 cluster. The self-updating functionality of the cluster can be disabled with the
-**Disable-CauClusterRole** cmdlet.
+`Disable-CauClusterRole` cmdlet.
 
 ## EXAMPLES
 
@@ -34,13 +34,13 @@ PS C:\> Enable-CauClusterRole -ClusterName "CONTOSO-FC1" -Force
 
 This command enables the CAU clustered role on the CONTOSO-FC1 cluster to begin performing Updating
 Runs. The cmdlet changes the status of the CAU clustered role to Running. Because the command
-specified the *Force* parameter, the cmdlet runs without displaying confirmation prompts.
+specified the **Force** parameter, the cmdlet runs without displaying confirmation prompts.
 
 ## PARAMETERS
 
 ### -ClusterName
 Specifies the name of the cluster on which to enable the self-updating functionality. This parameter
-is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to
+is only required when this cmdlet isn't run on a failover cluster node, or this cmdlet is used to
 reference a failover cluster different from where the cmdlet is run.
 
 ```yaml
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/get-cauplugin?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CauPlugin
@@ -21,7 +21,7 @@ Get-CauPlugin [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-CauPlugin** cmdlet gets information about one or more software updating plug-ins that are
+The `Get-CauPlugin` cmdlet gets information about one or more software updating plug-ins that are
 registered on the local computer. A plug-in can be specified or information can be retrieved about
 all registered plug-ins.
 

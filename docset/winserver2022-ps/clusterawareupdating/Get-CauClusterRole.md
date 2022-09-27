@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/get-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CauClusterRole
@@ -20,7 +20,7 @@ Get-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [<Comm
 ```
 
 ## DESCRIPTION
-The **Get-CauClusterRole** cmdlet gets configuration properties of the Cluster-Aware Updating (CAU)
+The `Get-CauClusterRole` cmdlet gets configuration properties of the Cluster-Aware Updating (CAU)
 clustered role on the specified cluster.
 
 ## EXAMPLES
@@ -48,7 +48,7 @@ This command gets information about the CAU clustered role on the cluster named 
 
 ### -ClusterName
 Specifies the name of the cluster for which the CAU clustered role information that this cmdlet
-gets. This parameter is only required when this cmdlet is not run on a failover cluster node, or
+gets. This parameter is only required when this cmdlet isn't run on a failover cluster node, or
 this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
 
 ```yaml

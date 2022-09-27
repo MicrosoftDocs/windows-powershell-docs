@@ -17,7 +17,7 @@ Stops an updating run that is in progress on a cluster.
 
 ```
 Stop-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-Wait] [-Force]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -19,7 +19,7 @@ updates that are applied to each node in a specified cluster.
 ```
 Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential]
 <PSCredential>] [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

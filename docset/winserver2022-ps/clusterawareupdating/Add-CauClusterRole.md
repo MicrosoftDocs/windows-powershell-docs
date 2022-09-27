@@ -16,29 +16,31 @@ Adds the CAU clustered role that provides the self-updating functionality to the
 ## SYNTAX
 
 ### MonthlyDayOfWeek (Default)
+
 ```
 Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>]
-[-StartDate <DateTime>] [-DaysOfWeek <Weekdays>] [-WeeksOfMonth <Int32[]>]
-[-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
-[-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
-[-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
-[-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
-[-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
-[-SuspendClusterNodeTimeoutMinutes <Int32>] [[-ClusterName] <String>] [[-Credential] <PSCredential>]
-[-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>] [-WeeksOfMonth <Int32[]>]
+ [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
+ [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
+ [-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
+ [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
+ [-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
+ [-SuspendClusterNodeTimeoutMinutes <Int32>] [[-ClusterName] <String>] [[-Credential] <PSCredential>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Weekly
+
 ```
 Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>]
-[-StartDate <DateTime>] [-DaysOfWeek <Weekdays>] [-IntervalWeeks <Int32>]
-[-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
-[-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
-[-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
-[-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
-[-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
-[-SuspendClusterNodeTimeoutMinutes <Int32>] [[-ClusterName] <String>] [[-Credential] <PSCredential>]
-[-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>] [-IntervalWeeks <Int32>]
+ [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
+ [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
+ [-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
+ [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
+ [-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
+ [-SuspendClusterNodeTimeoutMinutes <Int32>] [[-ClusterName] <String>] [[-Credential] <PSCredential>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

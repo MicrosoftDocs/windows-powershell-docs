@@ -17,7 +17,7 @@ Re-enables the self-updating functionality on the specified cluster.
 
 ```
 Enable-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [-Force] [-WhatIf]
-[-Confirm] [<CommonParameters>]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

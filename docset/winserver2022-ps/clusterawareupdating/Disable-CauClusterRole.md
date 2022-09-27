@@ -17,7 +17,7 @@ Suspends the self-updating functionality on the specified cluster.
 
 ```
 Disable-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [-Force] [-WhatIf]
-[-Confirm] [<CommonParameters>]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

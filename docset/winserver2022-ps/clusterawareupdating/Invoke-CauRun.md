@@ -16,21 +16,23 @@ Performs a scan of cluster nodes for applicable updates and installs those updat
 ## SYNTAX
 
 ### DefaultParamSet (Default)
+
 ```
 Invoke-CauRun [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>]
-[-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
-[-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
-[-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-EnableFirewallRules]
-[-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [-Force] [[-ClusterName]
+ [-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
+ [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
+ [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-EnableFirewallRules]
+ [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [-Force] [[-ClusterName]
 <String>] [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>]
-[-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [-WhatIf]
-[-Confirm] [<CommonParameters>]
+ [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### RecoverParamSet
+
 ```
 Invoke-CauRun [-ForceRecovery] [-Force] [[-ClusterName] <String>] [[-Credential] <PSCredential>]
-[-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -16,26 +16,30 @@ Gets status information about an updating run currently in progress.
 ## SYNTAX
 
 ### DefaultParamSet (Default)
+
 ```
 Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [<CommonParameters>]
 ```
 
 ### WaitForStart
+
 ```
 Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForStart]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### WaitForCompletion
+
 ```
 Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForCompletion]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### ShowClusterNodeState
+
 ```
 Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-ShowClusterNodeState]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

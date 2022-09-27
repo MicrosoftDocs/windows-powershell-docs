@@ -17,7 +17,7 @@ Exports one or more Updating Run reports into an HTML or CSV-formatted document.
 
 ```
 Export-CauReport [-InputReport] <CauReport[]> [-Format] <OutputType> [-Path] <String> [-PassThru]
-[-Force] [-TimeZone <TimeZoneInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Force] [-TimeZone <TimeZoneInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

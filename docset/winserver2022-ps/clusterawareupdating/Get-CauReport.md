@@ -17,22 +17,26 @@ specified dates or other specified parameters.
 ## SYNTAX
 
 ### AllParamsSet (Default)
+
 ```
 Get-CauReport [[-ClusterName] <String>] [-Detailed] [-Credential <PSCredential>] [<CommonParameters>]
 ```
 
 ### RangeParamSet
+
 ```
 Get-CauReport [[-ClusterName] <String>] [[-StartDate] <DateTime>] [[-EndDate] <DateTime>] [-Detailed]
  [-Credential <PSCredential>] [<CommonParameters>]
 ```
 
 ### LastParamSet
+
 ```
 Get-CauReport [[-ClusterName] <String>] [-Last] [-Detailed] [-Credential <PSCredential>] [<CommonParameters>]
 ```
 
 ### SpecificReportParamSet
+
 ```
 Get-CauReport [[-ClusterName] <String>] [-Report <CauReportSummary>] [-Credential <PSCredential>]
  [<CommonParameters>]

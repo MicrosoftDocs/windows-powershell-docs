@@ -17,7 +17,7 @@ Removes the CAU clustered role from the specified failover cluster.
 
 ```
 Remove-CauClusterRole [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf]
-[-Confirm] [<CommonParameters>]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

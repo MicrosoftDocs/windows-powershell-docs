@@ -16,15 +16,18 @@ Removes the CAU clustered role from the specified failover cluster.
 ## SYNTAX
 
 ```
-Remove-CauClusterRole [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-CauClusterRole [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf]
+[-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-CauClusterRole** cmdlet removes the Cluster-Aware Updating (CAU) clustered role from the specified failover cluster.
-To run CAU from a cluster, ensure that the CAU clustered role is configured in that cluster.
+The **Remove-CauClusterRole** cmdlet removes the Cluster-Aware Updating (CAU) clustered role from
+the specified failover cluster. To run CAU from a cluster, ensure that the CAU clustered role is
+configured in that cluster.
 
-The **Remove-CauClusterRole** cmdlet removes the virtual computer object (VCO) in Active Directory for the CAU clustered role, unless you previously prestaged or specified the VCO by using the **Add-CauClusterRole** cmdlet with the *VirtualComputerObjectName* parameter.
+The **Remove-CauClusterRole** cmdlet removes the virtual computer object (VCO) in Active Directory
+for the CAU clustered role, unless you previously prestaged or specified the VCO by using the
+**Add-CauClusterRole** cmdlet with the *VirtualComputerObjectName* parameter.
 
 ## EXAMPLES
 
@@ -33,14 +36,16 @@ The **Remove-CauClusterRole** cmdlet removes the virtual computer object (VCO) i
 PS C:\> Remove-CauClusterRole -ClusterName "CONTOSO-FC1" -Force
 ```
 
-This command removes the instance of the CAU clustered role that is configured on the cluster named CONTOSO-FC1.
-Because the command specifies the *Force* parameter, the cmdlet runs without displaying confirmation prompts.
+This command removes the instance of the CAU clustered role that is configured on the cluster named
+CONTOSO-FC1. Because the command specifies the *Force* parameter, the cmdlet runs without displaying
+confirmation prompts.
 
 ## PARAMETERS
 
 ### -ClusterName
-Specifies the name of the cluster from which to remove the CAU clustered role.
-This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+Specifies the name of the cluster from which to remove the CAU clustered role. This parameter is
+only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to
+reference a failover cluster different from where the cmdlet is run.
 
 ```yaml
 Type: String
@@ -116,7 +121,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

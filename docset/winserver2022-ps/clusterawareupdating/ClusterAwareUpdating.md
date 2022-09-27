@@ -11,8 +11,9 @@ title: ClusterAwareUpdating
 
 # ClusterAwareUpdating Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all Cluster-Aware Updating-specific cmdlets. 
-It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+This reference provides cmdlet descriptions and syntax for all Cluster-Aware Updating-specific
+cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the
+cmdlet.
 
 ## ClusterAwareUpdating Cmdlets
 ### [Add-CauClusterRole](./Add-CauClusterRole.md)
@@ -31,19 +32,23 @@ Exports one or more Updating Run reports into an HTML or CSV-formatted document.
 Gets configuration properties of the CAU clustered role on the specified cluster.
 
 ### [Get-CauPlugin](./Get-CauPlugin.md)
-Gets information about one or more software updating plug-ins that are registered on the local computer.
+Gets information about one or more software updating plug-ins that are registered on the local
+computer.
 
 ### [Get-CauReport](./Get-CauReport.md)
-Gets the Updating Run reports for all known Updating Runs, or all Updating Runs that match the specified dates or other specified parameters.
+Gets the Updating Run reports for all known Updating Runs, or all Updating Runs that match the
+specified dates or other specified parameters.
 
 ### [Get-CauRun](./Get-CauRun.md)
 Gets status information about an updating run currently in progress.
 
 ### [Invoke-CauRun](./Invoke-CauRun.md)
-Performs a scan of cluster nodes for applicable updates and installs those updates through an updating run on the specified cluster.
+Performs a scan of cluster nodes for applicable updates and installs those updates through an
+updating run on the specified cluster.
 
 ### [Invoke-CauScan](./Invoke-CauScan.md)
-Performs a scan of cluster nodes for applicable updates and gets a list of the initial set of updates that are applied to each node in a specified cluster.
+Performs a scan of cluster nodes for applicable updates and gets a list of the initial set of
+updates that are applied to each node in a specified cluster.
 
 ### [Register-CauPlugin](./Register-CauPlugin.md)
 Registers a CAU software updating plug-in on the local computer.

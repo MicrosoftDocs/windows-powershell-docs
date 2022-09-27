@@ -16,13 +16,14 @@ Suspends the self-updating functionality on the specified cluster.
 ## SYNTAX
 
 ```
-Disable-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Disable-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [-Force] [-WhatIf]
+[-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Disable-CauClusterRole** cmdlet suspends the self-updating functionality on the specified cluster.
-The self-updating functionality of the cluster can be re-enabled with the **Enable-CauClusterRole** cmdlet.
+The **Disable-CauClusterRole** cmdlet suspends the self-updating functionality on the specified
+cluster. The self-updating functionality of the cluster can be re-enabled with the
+**Enable-CauClusterRole** cmdlet.
 
 ## EXAMPLES
 
@@ -31,15 +32,16 @@ The self-updating functionality of the cluster can be re-enabled with the **Enab
 PS C:\> Disable-CauClusterRole -ClusterName CONTOSO-FC1 -Force
 ```
 
-This command prevents the CAU clustered role on the CONTOSO-FC1 cluster from performing Updating Runs.
-The cmdlet changes the status of the CAU clustered role to Offline.
-Because the command specified the *Force* parameter, the cmdlet runs without displaying confirmation prompts.
+This command prevents the CAU clustered role on the CONTOSO-FC1 cluster from performing Updating
+Runs. The cmdlet changes the status of the CAU clustered role to Offline. Because the command
+specified the *Force* parameter, the cmdlet runs without displaying confirmation prompts.
 
 ## PARAMETERS
 
 ### -ClusterName
-Specifies the name of the cluster on which to disable the self-updating functionality.
-This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+Specifies the name of the cluster on which to disable the self-updating functionality. This
+parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is
+used to reference a failover cluster different from where the cmdlet is run.
 
 ```yaml
 Type: String
@@ -115,7 +117,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

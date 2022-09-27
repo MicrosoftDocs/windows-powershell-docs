@@ -20,9 +20,10 @@ Unregister-CauPlugin [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Unregister-CauPlugin** cmdlet removes a software updating plug-in from the list of plug-ins that are used by Cluster-Aware Updating (CAU).
-The plug-in can be removed, but afterwards, it cannot be used for updating runs.
-The **Microsoft.WindowsUpdatePlugin** and **Microsoft.HotfixPlugin** plug-ins, which are installed with CAU, cannot be unregistered.
+The **Unregister-CauPlugin** cmdlet removes a software updating plug-in from the list of plug-ins
+that are used by Cluster-Aware Updating (CAU). The plug-in can be removed, but afterwards, it cannot
+be used for updating runs. The **Microsoft.WindowsUpdatePlugin** and **Microsoft.HotfixPlugin**
+plug-ins, which are installed with CAU, cannot be unregistered.
 
 ## EXAMPLES
 
@@ -82,7 +83,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

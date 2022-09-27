@@ -654,7 +654,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender does not scan network files. We do not recommend that you scan network files.
+Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender does not scan network files. 
 
 ```yaml
 Type: Boolean

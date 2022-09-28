@@ -23,16 +23,16 @@ Test-Cluster [[-Node] <StringCollection>] [-Disk <Object[]>] [-Pool <Object[]>]
 
 ## DESCRIPTION
 
-The `Test-Cluster` cmdlet runs validation tests for failover cluster hardware and settings.
-Tests can be run both before and after a cluster is set up.
+The `Test-Cluster` cmdlet runs validation tests for failover cluster hardware and settings. Tests
+can be run both before and after a cluster is set up.
 
 Test results are captured in a file with the file name that you specify. By running the validation
 tests, you can confirm that your hardware and settings are compatible with Failover Clustering.
 There are multiple types of tests, including Cluster, Inventory, Network, Storage, System, and other
 types of tests. Storage tests will not test online disks or storage pools that are in use by a
 clustered role. To test such disks, first run `Stop-ClusterGroup` to stop the clustered role, and
-then run `Test-Cluster`. After the tests are done, start the clustered roles, also known as
-resource groups, again.
+then run `Test-Cluster`. After the tests are done, start the clustered roles, also known as resource
+groups, again.
 
 > [!NOTE]
 > To perform some of the Cluster Shared Volume (CSV) validation tests, the `Test-Cluster` command
@@ -282,8 +282,8 @@ offline or failed state.
 The acceptable values for this parameter are:
 
 - **System.String**: A string that represents the name of the clustered storage pool or pools.
-- **ClusterResource**: A cluster resource object that represents a clustered storage pool. 
-- **CimInstance#MSFT_StoragePool**: An object returned from **Get-StoragePool**, from the Windows
+- **ClusterResource**: A cluster resource object that represents a clustered storage pool.
+- **CimInstance#MSFT_StoragePool**: An object returned from `Get-StoragePool`, from the Windows
   PowerShell storage module.
 
 ```yaml

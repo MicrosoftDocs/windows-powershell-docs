@@ -20,6 +20,7 @@ Register-CauPlugin [-Path] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The **Register-CauPlugin** cmdlet registers a Cluster-Aware Updating (CAU) software updating plug-in
 on the local computer.
 
@@ -33,6 +34,7 @@ Services (WSUS) server. For more information about how plug-ins work in CAU, see
 ## EXAMPLES
 
 ### Example 1: Register a specific plug-in located in the specified folder
+
 ```
 PS C:\> Register-CauPlugin -Path "C:\PluginDevelopment\Plugin01.dll" -Force
 ```
@@ -44,6 +46,7 @@ prompts.
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -59,6 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
 Specifies the path to the binary that implements the plug-in. Classes that implement the plug-in
 interface and are decorated with the plug-in attribute, are discovered through reflection and
 registered.
@@ -76,6 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -92,6 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

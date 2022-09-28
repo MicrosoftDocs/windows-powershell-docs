@@ -21,6 +21,7 @@ Disable-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [-
 ```
 
 ## DESCRIPTION
+
 The **Disable-CauClusterRole** cmdlet suspends the self-updating functionality on the specified
 cluster. The self-updating functionality of the cluster can be re-enabled with the
 **Enable-CauClusterRole** cmdlet.
@@ -28,6 +29,7 @@ cluster. The self-updating functionality of the cluster can be re-enabled with t
 ## EXAMPLES
 
 ### Example 1: Disable a CAU clustered role on the specified cluster
+
 ```
 PS C:\> Disable-CauClusterRole -ClusterName CONTOSO-FC1 -Force
 ```
@@ -39,6 +41,7 @@ specified the *Force* parameter, the cmdlet runs without displaying confirmation
 ## PARAMETERS
 
 ### -ClusterName
+
 Specifies the name of the cluster on which to disable the self-updating functionality. This
 parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is
 used to reference a failover cluster different from where the cmdlet is run.
@@ -56,6 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -71,6 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the administrative credentials for the target cluster.
 
 ```yaml
@@ -86,6 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -101,6 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -117,6 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

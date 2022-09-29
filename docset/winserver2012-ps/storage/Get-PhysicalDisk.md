@@ -1,7 +1,7 @@
 ---
 external help file: Storage2_Cmdlets.xml
 Module Name: Storage
-online version: https://docs.microsoft.com/powershell/module/storage/get-physicaldisk?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/storage/get-physicaldisk?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -410,4 +410,3 @@ The Get-PhysicalDisk cmdlet returns objects that represent physical disks.
 [Reset-PhysicalDisk](./Reset-PhysicalDisk.md)
 
 [Set-PhysicalDisk](./Set-PhysicalDisk.md)
-

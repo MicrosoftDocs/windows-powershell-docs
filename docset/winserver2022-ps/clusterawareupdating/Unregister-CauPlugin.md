@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/unregister-cauplugin?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/unregister-cauplugin?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unregister-CauPlugin
 ---
@@ -20,9 +20,10 @@ Unregister-CauPlugin [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Unregister-CauPlugin** cmdlet removes a software updating plug-in from the list of plug-ins that are used by Cluster-Aware Updating (CAU).
-The plug-in can be removed, but afterwards, it cannot be used for updating runs.
-The **Microsoft.WindowsUpdatePlugin** and **Microsoft.HotfixPlugin** plug-ins, which are installed with CAU, cannot be unregistered.
+The **Unregister-CauPlugin** cmdlet removes a software updating plug-in from the list of plug-ins
+that are used by Cluster-Aware Updating (CAU). The plug-in can be removed, but afterwards, it cannot
+be used for updating runs. The **Microsoft.WindowsUpdatePlugin** and **Microsoft.HotfixPlugin**
+plug-ins, which are installed with CAU, cannot be unregistered.
 
 ## EXAMPLES
 
@@ -82,7 +83,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

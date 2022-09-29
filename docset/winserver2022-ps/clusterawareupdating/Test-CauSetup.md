@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/test-causetup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/test-causetup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-CauSetup
 ---
@@ -20,9 +20,11 @@ Test-CauSetup [[-ClusterName] <String>] [[-Credential] <PSCredential>] [<CommonP
 ```
 
 ## DESCRIPTION
-The **Test-CauSetup** cmdlet tests whether a failover cluster is properly set up to apply software updates using Cluster-Aware Updating (CAU).
-The cmdlet performs a Best Practices Analyzer (BPA) scan of the failover cluster and network environment by invoking the ClusterAwareUpdating BPA model that is installed with CAU.
-To view the results of a BPA scan that is performed by **Test-CauSetup**, including possible problems and resolution steps, run the **Get-BpaResult** cmdlet.
+The **Test-CauSetup** cmdlet tests whether a failover cluster is properly set up to apply software
+updates using Cluster-Aware Updating (CAU). The cmdlet performs a Best Practices Analyzer (BPA) scan
+of the failover cluster and network environment by invoking the ClusterAwareUpdating BPA model that
+is installed with CAU. To view the results of a BPA scan that is performed by **Test-CauSetup**,
+including possible problems and resolution steps, run the **Get-BpaResult** cmdlet.
 
 You must run the **Test-CauSetup** cmdlet with local administrative credentials.
 
@@ -39,8 +41,9 @@ This example tests whether the failover cluster named CONTOSO-FC1 is properly se
 ## PARAMETERS
 
 ### -ClusterName
-Specifies the name of the cluster on which to test for proper setup.
-This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+Specifies the name of the cluster on which to test for proper setup. This parameter is only required
+when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a
+failover cluster different from where the cmdlet is run.
 
 ```yaml
 Type: String
@@ -70,7 +73,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

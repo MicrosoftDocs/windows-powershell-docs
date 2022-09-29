@@ -1,10 +1,10 @@
 ---
 description: Server Manager-specific PowerShell cmdlet descriptions and syntax.
-Module Name: ServerManager
-Module Guid: d8e0cae9-8e9b-45bc-bfed-0aad50938af0
 Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
+Module Guid: d8e0cae9-8e9b-45bc-bfed-0aad50938af0
+Module Name: ServerManager
 ms.date: 09/15/2021
 title: ServerManager
 ---

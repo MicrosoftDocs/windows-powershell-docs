@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/defender/remove-mppreference?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/defender/remove-mppreference?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-MpPreference
 ---
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ### -AttackSurfaceReductionOnlyExclusions
 Exclude files and paths from Attack Surface Reduction (ASR) rules. Specify the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, ""C:\Windows"" will exclude all files in that directory. ""C:\Windows\App.exe"" will exclude only that specific file in that specific folder.
 
-For more information about excluding files and folders from [ASR rules](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules).
+For more information about excluding files and folders from [ASR rules](/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules).
 
 ```yaml
 Type: String[]

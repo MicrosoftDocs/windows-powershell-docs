@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/stop-caurun?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/stop-caurun?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-CauRun
 ---
@@ -16,7 +16,8 @@ Stops an updating run that is in progress on a cluster.
 ## SYNTAX
 
 ```
-Stop-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-Wait] [-Force] [<CommonParameters>]
+Stop-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-Wait] [-Force]
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,15 +30,17 @@ The **Stop-CauRun** cmdlet stops an updating run that is in progress on a failov
 PS C:\> Stop-CauRun -ClusterName "CONTOSO-FC1" -Wait -Force
 ```
 
-This command stops the updating run that is being performed by the CAU Update Coordinator that is configured on the cluster named CONTOSO-FC1.
-The cmdlet waits to return until the canceled updating run has finished.
-Because the command specifies the *Force* parameter, the cmdlet runs without displaying confirmation prompts.
+This command stops the updating run that is being performed by the CAU Update Coordinator that is
+configured on the cluster named CONTOSO-FC1. The cmdlet waits to return until the canceled updating
+run has finished. Because the command specifies the *Force* parameter, the cmdlet runs without
+displaying confirmation prompts.
 
 ## PARAMETERS
 
 ### -ClusterName
-Specifies the name of the cluster on which to stop an updating run that is in progress.
-This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+Specifies the name of the cluster on which to stop an updating run that is in progress. This
+parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is
+used to reference a failover cluster different from where the cmdlet is run.
 
 ```yaml
 Type: String
@@ -82,8 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-Indicates that the cmdlet waits until after the canceled updating run has finished.
-Otherwise, returns as soon as the stop request has been acknowledged by the current Cluster-Aware Updating (CAU) Update Coordinator.
+Indicates that the cmdlet waits until after the canceled updating run has finished. Otherwise,
+returns as soon as the stop request has been acknowledged by the current Cluster-Aware Updating
+(CAU) Update Coordinator.
 
 ```yaml
 Type: SwitchParameter
@@ -98,7 +102,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

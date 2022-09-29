@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: DfsNamespaceRootTarget.cdxml-help.xml
 Module Name: DFSN
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/dfsn/set-dfsnroottarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dfsn/set-dfsnroottarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DfsnRootTarget
 ---

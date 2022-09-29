@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
 Module Name: ADRMSAdmin
-online version: https://docs.microsoft.com/powershell/module/adrmsadmin/export-rmstpd?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/adrmsadmin/export-rmstpd?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -182,7 +182,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Import-RmsTUD](./Import-RmsTUD.md)
 
-[Read-Host](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/read-host)
+[Read-Host](/powershell/module/microsoft.powershell.utility/read-host)
 
 [ADRMSAdmin Module](./ADRMSAdmin.md)
-

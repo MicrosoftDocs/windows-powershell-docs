@@ -1,7 +1,7 @@
 ---
 external help file: NLB_Cmdlets.xml
 Module Name: NetworkLoadBalancingClusters
-online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/remove-nlbcluster?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/networkloadbalancingclusters/remove-nlbcluster?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

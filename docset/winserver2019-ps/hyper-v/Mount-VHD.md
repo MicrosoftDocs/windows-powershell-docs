@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/hyper-v/mount-vhd?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/mount-vhd?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Mount-VHD
 ---
@@ -219,4 +219,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Mount-DiskImage](https://docs.microsoft.com/powershell/module/storage/mount-diskimage)
+[Mount-DiskImage](/powershell/module/storage/mount-diskimage)

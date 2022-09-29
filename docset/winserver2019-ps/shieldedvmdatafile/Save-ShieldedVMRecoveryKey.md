@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
 Module Name: ShieldedVMDataFile
-online version: https://docs.microsoft.com/powershell/module/shieldedvmdatafile/save-shieldedvmrecoverykey?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/shieldedvmdatafile/save-shieldedvmrecoverykey?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Save-ShieldedVMRecoveryKey
 ---

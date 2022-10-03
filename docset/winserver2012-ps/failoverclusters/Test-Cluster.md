@@ -153,8 +153,9 @@ Accept wildcard characters: False
 
 ### -Force
 
-Runs the cmdlet without prompting for confirmation.
-By default the cmdlet will ask for confirmation from the user before proceeding.
+Runs the cmdlet without prompting for confirmation. By default the cmdlet will ask for confirmation
+from the user before proceeding. When combined with the **Disk** or **Pool** parameters, the disks or
+storage pool is taken offline for the duration of the storage tests.
 
 ```yaml
 Type: SwitchParameter

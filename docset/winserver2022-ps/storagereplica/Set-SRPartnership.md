@@ -16,31 +16,35 @@ Modifies a replication partnership between two replication groups.
 ## SYNTAX
 
 ### AddVolumes (Default)
+
 ```
 Set-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String>
-[-SourceAddVolumePartnership] <String[]> [-DestinationComputerName] <String> [-DestinationRGName]
+ [-SourceAddVolumePartnership] <String[]> [-DestinationComputerName] <String> [-DestinationRGName]
 <String> [-DestinationAddVolumePartnership] <String[]> [-Seeded] [-Force]
-[-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
-[<CommonParameters>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ModifySettings
+
 ```
 Set-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String>
-[-DestinationComputerName] <String> [-DestinationRGName] <String> [[-ReplicationMode]
+ [-DestinationComputerName] <String> [-DestinationRGName] <String> [[-ReplicationMode]
 <ReplicationMode>] [[-LogSizeInBytes] <UInt64>] [[-AsyncRPO] <UInt32>] [[-Encryption] <Boolean>]
-[[-Compression] <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
-[-Confirm] [<CommonParameters>]
+ [[-Compression] <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ModifyPartnership
+
 ```
 Set-SRPartnership [-SourceRGName] <String> [-DestinationComputerName] <String> [-DestinationRGName]
 <String> [-Force] [[-NewSourceComputerName] <String>] [-CimSession <CimSession[]>]
-[-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The `Set-SRPartnership` cmdlet modifies a replication partnership between two existing replication
 groups. You can use this cmdlet to add replicated volumes. You can also change the direction of
 replication which makes a source volume into a destination volume.
@@ -55,6 +59,7 @@ replication which makes a source volume into a destination volume.
 ## EXAMPLES
 
 ### Example 1: Reverse replication direction
+
 ```powershell
 $Parameters = @{
     NewSourceComputerName = 'SR-SRV06'
@@ -76,6 +81,7 @@ This example uses splatting to pass parameter values from the `$Parameters` vari
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 2: Change size of log
+
 ```powershell
 $Parameters = @{
     SourceComputerName = 'SR-SRV05'
@@ -95,6 +101,7 @@ This example uses splatting to pass parameter values from the `$Parameters` vari
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 3: Change to asynchronous mode
+
 ```powershell
 $Parameters = @{
     SourceComputerName = 'SR-SRV05'
@@ -113,6 +120,7 @@ This example uses splatting to pass parameter values from the `$Parameters` vari
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 4: Display replicas after a change
+
 ```powershell
 $Parameters = @{
     SourceComputerName = 'SR-SRV05'
@@ -127,7 +135,7 @@ Set-SRPartnership @Parameters
 ```
 
 The first command changes the partnership for the servers named SR-SRV05 and SR-SRV06.The second
-command gets all replication groups for the current computer by using the Get-SRGroup cmdlet. The
+command gets all replication groups for the current computer by using the `Get-SRGroup` cmdlet. The
 command displays all the replicas.
 
 This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
@@ -136,6 +144,7 @@ Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/
 ## PARAMETERS
 
 ### -AsJob
+
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
 complete.
 
@@ -152,6 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsyncRPO
+
 Specifies the maximum difference in time that data for an asynchronous partnership can be different
 between source and destination. This is a Recovery Point Objective. The default value is 30 seconds.
 
@@ -173,6 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
+
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
 or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
@@ -191,6 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -Compression
+
 Indicates that the connections in this partnership should use SMB compression for data transfer.
 This parameter only applies to
 [Azure Stack HCI version 22H2](https://azure.microsoft.com/en-us/updates/public-preview-azure-stack-hci-version-22h2/)
@@ -211,6 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -226,6 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationAddVolumePartnership
+
 Specifies an array of drive letters or mount point paths of partitions to add to the existing
 replication group. You cannot specify paths already added to the replication group.
 
@@ -248,6 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationComputerName
+
 Specifies a single replica host computer NetBIOS name or fully qualified domain name (FQDN) of the
 destination computer.
 
@@ -264,6 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationRGName
+
 Specifies the name of the destination replication group.
 
 ```yaml
@@ -279,6 +295,7 @@ Accept wildcard characters: False
 ```
 
 ### -Encryption
+
 Indicates that the connections on this partnership should be encrypted by using SMB AES-128-GCM.
 Enabling encryption can protect Storage Replica block transfers from man-in-the-middle interception
 or reading. Enabling encryption can decrease replication and write Input/Output performance.
@@ -296,6 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -311,6 +329,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogSizeInBytes
+
 Specifies the aggregate size of log files on each server in the replication group for the volumes
 that are associated with this replication group. The minimum size 512MB. You can specify a value by
 using the Windows PowerShell byte conversion capability, such as 4GB or 3200MB. A value that is too
@@ -330,6 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewSourceComputerName
+
 Specifies the new source of replication. This parameter changes the direction of replication for the
 source computer and the source replication group. When changed, replication stops originating on the
 current source and moves to the new source.
@@ -353,6 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationMode
+
 Specifies the desired mode of replication for this source and destination pair. The acceptable
 values for this parameter are:
 
@@ -379,6 +400,7 @@ Accept wildcard characters: False
 ```
 
 ### -Seeded
+
 Indicates that the destination server contains a seeded copy of the data from the source server.
 Seeded data is defined as a copy of data from the source server that has a high similarity, such as
 mostly empty blocks, restoring a recent backup, or shipping cloned copies of disks to the
@@ -406,6 +428,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceAddVolumePartnership
+
 Specifies an array of drive letters or mount point paths of partitions to add to the existing
 replication group. You cannot specify paths already added to the replication group.
 
@@ -425,6 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceComputerName
+
 Specifies a single replica host computer NetBIOS name or FQDN of the source computer.
 The default value is the local computer.
 
@@ -453,6 +477,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceRGName
+
 Specifies the name of the source replication group.
 
 ```yaml
@@ -468,6 +493,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
+
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
 this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
@@ -487,6 +513,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -503,6 +530,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
@@ -519,6 +547,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
@@ -530,4 +559,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-SRPartnership](./New-SRPartnership.md)
 
 [Remove-SRPartnership](./Remove-SRPartnership.md)
-

@@ -18,11 +18,12 @@ Creates a replication group.
 ```
 New-SRGroup [[-ComputerName] <String>] [-Name] <String> [-VolumeName] <String[]> [-LogVolumeName]
 <String> [[-LogSizeInBytes] <UInt64>] [[-Description] <String>] [-EnableConsistencyGroups]
-[-EnableEncryption] [-EnableCompression] [-Force] [-CimSession <CimSession[]>]
-[-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-EnableEncryption] [-EnableCompression] [-Force] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The `New-SRGroup` cmdlet creates a replication group. A replication group contains one or more
 data volumes and an associated log volume. A replication group is the container for replication.
 
@@ -36,6 +37,7 @@ data volumes and an associated log volume. A replication group is the container 
 ## EXAMPLES
 
 ### Example 1: Create a replication group
+
 ```powershell
 New-SRGroup -ComputerName "SR-SRV05" -Name "ReplicationGroup01" -VolumeName "D:" -LogVolumeName "E:" 
 ```
@@ -46,6 +48,7 @@ replication group uses default values. Replication will not start until you run 
 `New-SRPartnership` cmdlet.
 
 ### Example 2: Create a replication group that uses custom properties
+
 ```powershell
 $Parameters = @{
     ComputerName = 'SR-SRV05'
@@ -68,6 +71,7 @@ Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/
 ## PARAMETERS
 
 ### -AsJob
+
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
 complete.
 
@@ -84,6 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
+
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
 or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
@@ -102,6 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
+
 Specifies a single replica host computer NetBIOS name or fully qualified domain name (FQDN) of a
 computer to belong to the replication group. The default value is the local computer.
 
@@ -118,6 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specifies a description for the replication group.
 
 ```yaml
@@ -133,6 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCompression
+
 Indicates that this Storage Replica group should use SMB compression for data transfer. This
 parameter only applies to
 [Azure Stack HCI version 22H2](https://azure.microsoft.com/en-us/updates/public-preview-azure-stack-hci-version-22h2/)
@@ -152,6 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableConsistencyGroups
+
 Indicates that consistency groups are enabled for the replication group that contains multiple
 volumes. Consistency groups provide write ordering. This can be important, for example, for
 replication of application data on multiple volumes.
@@ -171,6 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEncryption
+
 Indicates that this partnership should encrypt connection by using SMB AES-128-GCM. Enabling
 encryption can protect Storage Replica block transfers from man-in-the-middle interception or
 reading. Enabling encryption decreases performance.
@@ -188,6 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -203,6 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogSizeInBytes
+
 Specifies the aggregate size of log files on each server in the replication group for the volumes
 that are associated with this replication group. The minimum size 512MB. You can specify a value by
 using the Windows PowerShell byte conversion capability, such as 4GB or 3200MB.
@@ -223,6 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogVolumeName
+
 Specifies a drive letter, mount point path, or volume GUID where Storage Replication creates
 destination replication logs. The value must contain an NTFS-formatted volume or ReFS-formatted
 volume. The path must exist. The path cannot be a mapped drive or UNC path.
@@ -242,6 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies a name for the replication group.
 
 ```yaml
@@ -257,6 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
+
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
 this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
@@ -276,6 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -VolumeName
+
 Specifies an array of drive letters or mount point paths for the replica. The volumes must exist.
 The volumes cannot be mapped drives or UNC paths.
 
@@ -298,6 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
@@ -324,4 +341,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Suspend-SRGroup](./Suspend-SRGroup.md)
 
 [Sync-SRGroup](./Sync-SRGroup.md)
-

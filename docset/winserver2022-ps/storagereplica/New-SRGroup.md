@@ -29,7 +29,7 @@ data volumes and an associated log volume. A replication group is the container 
 
 > [!NOTE]
 > The **Compression** parameter is only available in
-> [Azure Stack HCI version 22H2](https://azure.microsoft.com/en-us/updates/public-preview-azure-stack-hci-version-22h2/) or later,
+> [Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/) or later,
 > and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative Update for Microsoft
 > server operating system version 21H2 for x64-based Systems
 > ([KB5017381](https://support.microsoft.com/help/5017381)).
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 
 Indicates that this Storage Replica group should use SMB compression for data transfer. This
 parameter only applies to
-[Azure Stack HCI version 22H2](https://azure.microsoft.com/en-us/updates/public-preview-azure-stack-hci-version-22h2/)
+[Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/)
 or later, and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative
 Update for Microsoft server operating system version 21H2 for x64-based Systems
 ([KB5017381](https://support.microsoft.com/help/5017381)).

@@ -19,8 +19,8 @@ Modifies a replication partnership between two replication groups.
 
 ```
 Set-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String>
- [-SourceAddVolumePartnership] <String[]> [-DestinationComputerName] <String> [-DestinationRGName]
-<String> [-DestinationAddVolumePartnership] <String[]> [-Seeded] [-Force]
+ [-SourceAddVolumePartnership] <String[]> [-DestinationComputerName] <String>
+ [-DestinationRGName] <String> [-DestinationAddVolumePartnership] <String[]> [-Seeded] [-Force]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -29,18 +29,19 @@ Set-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String>
 
 ```
 Set-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String>
- [-DestinationComputerName] <String> [-DestinationRGName] <String> [[-ReplicationMode]
-<ReplicationMode>] [[-LogSizeInBytes] <UInt64>] [[-AsyncRPO] <UInt32>] [[-Encryption] <Boolean>]
- [[-Compression] <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-DestinationComputerName] <String> [-DestinationRGName] <String>
+ [[-ReplicationMode] <ReplicationMode>] [[-LogSizeInBytes] <UInt64>] [[-AsyncRPO] <UInt32>]
+ [[-Encryption] <Boolean>] [[-Compression] <Boolean>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ModifyPartnership
 
 ```
-Set-SRPartnership [-SourceRGName] <String> [-DestinationComputerName] <String> [-DestinationRGName]
-<String> [-Force] [[-NewSourceComputerName] <String>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-SRPartnership [-SourceRGName] <String> [-DestinationComputerName] <String>
+ [-DestinationRGName] <String> [-Force] [[-NewSourceComputerName] <String>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +52,7 @@ replication which makes a source volume into a destination volume.
 
 > [!NOTE]
 > The **Compression** parameter is only available in
-> [Azure Stack HCI version 22H2](https://azure.microsoft.com/en-us/updates/public-preview-azure-stack-hci-version-22h2/) or later,
+> [Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/) or later,
 > and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative Update for Microsoft
 > server operating system version 21H2 for x64-based Systems
 > ([KB5017381](https://support.microsoft.com/help/5017381)).
@@ -205,7 +206,7 @@ Accept wildcard characters: False
 
 Indicates that the connections in this partnership should use SMB compression for data transfer.
 This parameter only applies to
-[Azure Stack HCI version 22H2](https://azure.microsoft.com/en-us/updates/public-preview-azure-stack-hci-version-22h2/)
+[Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/)
 or later, and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative
 Update for Microsoft server operating system version 21H2 for x64-based Systems
 ([KB5017381](https://support.microsoft.com/help/5017381)).

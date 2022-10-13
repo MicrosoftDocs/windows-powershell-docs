@@ -16,10 +16,10 @@ Creates a replication group.
 ## SYNTAX
 
 ```
-New-SRGroup [[-ComputerName] <String>] [-Name] <String> [-VolumeName] <String[]> [-LogVolumeName]
-<String> [[-LogSizeInBytes] <UInt64>] [[-Description] <String>] [-EnableConsistencyGroups]
- [-EnableEncryption] [-EnableCompression] [-Force] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+New-SRGroup [[-ComputerName] <String>] [-Name] <String> [-VolumeName] <String[]>
+ [-LogVolumeName] <String> [[-LogSizeInBytes] <UInt64>] [[-Description] <String>]
+ [-EnableConsistencyGroups] [-EnableEncryption] [-EnableCompression] [-Force]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

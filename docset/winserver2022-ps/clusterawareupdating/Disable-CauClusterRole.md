@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/disable-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-CauClusterRole
@@ -17,30 +17,33 @@ Suspends the self-updating functionality on the specified cluster.
 
 ```
 Disable-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [-Force] [-WhatIf]
-[-Confirm] [<CommonParameters>]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Disable-CauClusterRole** cmdlet suspends the self-updating functionality on the specified
+
+The `Disable-CauClusterRole` cmdlet suspends the self-updating functionality on the specified
 cluster. The self-updating functionality of the cluster can be re-enabled with the
-**Enable-CauClusterRole** cmdlet.
+`Enable-CauClusterRole` cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Disable a CAU clustered role on the specified cluster
-```
-PS C:\> Disable-CauClusterRole -ClusterName CONTOSO-FC1 -Force
+
+```powershell
+Disable-CauClusterRole -ClusterName CONTOSO-FC1 -Force
 ```
 
 This command prevents the CAU clustered role on the CONTOSO-FC1 cluster from performing Updating
 Runs. The cmdlet changes the status of the CAU clustered role to Offline. Because the command
-specified the *Force* parameter, the cmdlet runs without displaying confirmation prompts.
+specified the **Force** parameter, the cmdlet runs without displaying confirmation prompts.
 
 ## PARAMETERS
 
 ### -ClusterName
+
 Specifies the name of the cluster on which to disable the self-updating functionality. This
-parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is
+parameter is only required when this cmdlet isn't run on a failover cluster node, or this cmdlet is
 used to reference a failover cluster different from where the cmdlet is run.
 
 ```yaml
@@ -56,6 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -71,6 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the administrative credentials for the target cluster.
 
 ```yaml
@@ -86,6 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -101,8 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -117,6 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

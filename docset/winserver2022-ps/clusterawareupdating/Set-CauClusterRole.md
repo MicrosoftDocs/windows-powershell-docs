@@ -504,7 +504,7 @@ By default, CAU scans and stages the applicable updates for all plug-ins in para
 the configuration of this parameter, CAU installs the applicable updates for each plug-in
 sequentially.
 
-The parameter is valid only when multiple plug-ins are specified in **CauPluginName** parameter. If a
+The parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter. If a
 single plug-in is specified, a warning appears.
 
 ```yaml
@@ -597,7 +597,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuspendClusterNodeTimeoutMinutes
-Specifies the maximum amount of time CAU should wait for the Suspend-ClusterNodecmdlet to succeed if
+Specifies the maximum amount of time CAU should wait for the `Suspend-ClusterNode` cmdlet to succeed if
 the underlying clustered space is in degraded condition.
 
 If `Suspend-ClusterNode` fails with ERROR_CLUSTER_SPACE_DEGRADED error, CAU will keep retrying for

@@ -74,7 +74,7 @@ PS C:\> Invoke-CauRun -ClusterName CONTOSO-FC1 -CauPluginName Microsoft.WindowsU
 
 This command performs a scan and a full updating run on the cluster named CONTOSO-FC1. This cmdlet
 uses the **Microsoft.WindowsUpdatePlugin** plug-in with the default configuration, and the
-**Microsoft.HotfixPlugin** plug-in using the hotfix root folder \\\\CauHotfixSrv\shareName and the
+**Microsoft.HotfixPlugin** plug-in using the hotfix root folder `\\CauHotfixSrv\shareName` and the
 default hotfix configuration file. If it isn't already enabled, the **Remote Shutdown** Windows
 Firewall rule group is enabled on each cluster node before the updating run. If a failure occurs
 during the installation of updates on a node by **Microsoft.WindowsUpdatePlugin**, updates aren't
@@ -528,8 +528,7 @@ succeed if the underlying clustered space is in degraded condition.
 If `Suspend-ClusterNode` fails with ERROR_CLUSTER_SPACE_DEGRADED error, CAU will keep retrying for
 **SuspendClusterNodeTimeoutMinutes** or suspend the call if the command succeeds.
 
-The retries for this error don't count towards the **MaxRetriesPerNode** parameter set by the user
-parameter set by the user.
+The retries for this error don't count towards the **MaxRetriesPerNode** parameter set by the user.
 
 The timeout value is per cluster node. So CAU could potentially spend the amount of time specified
 for this value for every node in the cluster in the worst case.

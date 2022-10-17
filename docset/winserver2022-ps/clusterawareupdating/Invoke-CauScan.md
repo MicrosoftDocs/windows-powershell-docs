@@ -181,7 +181,7 @@ plug-in in the plug-in order passed into the **CauPluginName** parameter then mu
 used during a scan for updates
 
 By default, CAU scans and stages the applicable updates for all plug-ins in parallel.
-This parameter is valid only when multiple plug-ins are specified in **CauPluginName** parameter.
+This parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter.
 If a single plug-in is specified, a warning appears.
 
 ```yaml

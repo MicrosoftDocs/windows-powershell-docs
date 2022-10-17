@@ -91,7 +91,7 @@ PS C:\> Add-CauClusterRole -ClusterName "CONTOSO-FC1" -CauPluginName Microsoft.W
 This command adds the CAU clustered role, using a default name, on the cluster called CONTOSO-FC1.
 The CAU clustered role is configured to perform updates using the **Microsoft.WindowsUpdatePlugin**
 plug-in with the optional **IncludeRecommendedUpdates** parameter set to True, and using the
-**Microsoft.HotfixPlugin plug-in** using the hotfix root folder \\\\CauHotfixSrv\shareName and the
+**Microsoft.HotfixPlugin plug-in** using the hotfix root folder `\\CauHotfixSrv\shareName` and the
 default hotfix configuration file. If a failure occurs during the installation of updates on a node
 by **Microsoft.WindowsUpdatePlugin**, updates are applied by **Microsoft.HotfixPlugin plug-in**. If
 it isn't already enabled, the Remote Shutdown Windows Firewall rule group is enabled on each

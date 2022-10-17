@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/add-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-CauClusterRole
@@ -58,8 +58,21 @@ Mode (HTTP-In) firewall exception is enabled on each node.
 
 ### Example 1: Add a CAU clustered role on the specified cluster at a specific interval
 
-```
-PS C:\> Add-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday,Saturday -WeeksOfMonth 2,4 -MaxFailedNodes 2 -MaxRetriesPerNode 2 -PostUpdateScript \\CONTOSOFileShare\scripts\verifyupdatesinstalled.ps1 -RequireAllNodesOnline -EnableFirewallRules -Force
+```powershell
+$parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    DaysOfWeek = 'Tuesday',
+                    'Saturday'
+    WeeksOfMonth = '2',
+                    '4'
+    MaxFailedNodes = '2'
+    MaxRetriesPerNode = '2'
+    PostUpdateScript = '\\CONTOSOFileShare\scripts\verifyupdatesinstalled.ps1'
+    RequireAllNodesOnline = $true
+    EnableFirewallRules = $true
+    Force = $true
+}
+Add-CauClusterRole @parameters
 ```
 
 This command adds the CAU clustered role, using a default name, on the cluster called CONTOSO-FC1.
@@ -71,10 +84,23 @@ that cluster must be running. If it is not already enabled, the Remote Shutdown 
 rule group will be enabled on each cluster node. Because the command uses the *Force* parameter, the
 cmdlet runs without displaying confirmation prompts.
 
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+
 ### Example 2: Add a CAU clustered role on the specified cluster at a specific interval
 
-```
-PS C:\> Add-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday,Saturday -IntervalWeeks 3 -MaxFailedNodes 2 -MaxRetriesPerNode 2 -EnableFirewallRules -Force
+```powershell
+$parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    DaysOfWeek = 'Tuesday',
+                    'Saturday'
+    IntervalWeeks = '3'
+    MaxFailedNodes = '2'
+    MaxRetriesPerNode = '2'
+    EnableFirewallRules = $true
+    Force = $true
+}
+Add-CauClusterRole @parameters
 ```
 
 This command adds the CAU clustered role, using a default name, on the cluster called CONTOSO-FC1.
@@ -86,10 +112,23 @@ enabled, the Remote Shutdown Windows Firewall rule group will be enabled on each
 Because the command uses the *Force* parameter, the cmdlet runs without displaying confirmation
 prompts.
 
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+
 ### Example 3: Add a CAU clustered role on the specified cluster using plug-ins
 
-```
-PS C:\> Add-CauClusterRole -ClusterName "CONTOSO-FC1" -CauPluginName Microsoft.WindowsUpdatePlugin, Microsoft.HotfixPlugin -CauPluginArguments @{ 'IncludeRecommendedUpdates' = 'True' }, @{ 'HotfixRootFolderPath' = '\\CauHotfixSrv\shareName ' } -StopOnPluginFailure -EnableFirewallRules -Force
+```powershell
+$parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    CauPluginName = 'Microsoft.WindowsUpdatePlugin',
+                    'Microsoft.HotfixPlugin'
+    CauPluginArguments = @{'IncludeRecommendedUpdates' = 'True'},
+                         @{'HotfixRootFolderPath' = '\\CauHotfixSrv\shareName'}
+    StopOnPluginFailure = $true
+    EnableFirewallRules = $true
+    Force = $true
+}
+Add-CauClusterRole @parameters
 ```
 
 This command adds the CAU clustered role, using a default name, on the cluster called CONTOSO-FC1.
@@ -101,6 +140,9 @@ by **Microsoft.WindowsUpdatePlugin**, updates are applied by **Microsoft.HotfixP
 it is not already enabled, the Remote Shutdown Windows Firewall rule group is enabled on each
 cluster node. Because the command uses the *Force* parameter, the cmdlet runs without displaying
 confirmation prompts.
+
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/remove-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-CauClusterRole
@@ -34,8 +34,8 @@ for the CAU clustered role, unless you previously prestaged or specified the VCO
 
 ### Example 1: Remove an instance of a CAU clustered role configured on the specified cluster
 
-```
-PS C:\> Remove-CauClusterRole -ClusterName "CONTOSO-FC1" -Force
+```powershell
+Remove-CauClusterRole -ClusterName "CONTOSO-FC1" -Force
 ```
 
 This command removes the instance of the CAU clustered role that is configured on the cluster named

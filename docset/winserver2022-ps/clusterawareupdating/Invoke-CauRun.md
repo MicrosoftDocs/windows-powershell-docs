@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/invoke-caurun?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-CauRun
@@ -58,8 +58,16 @@ exception is enabled on each node.
 
 ### Example 1: Preform a scan and a full updating run on the specified cluster
 
-```
-PS C:\> Invoke-CauRun -ClusterName "CONTOSO-FC1" -CauPluginName "Microsoft.WindowsUpdatePlugin" -MaxFailedNodes 1 -MaxRetriesPerNode 3 -RequireAllNodesOnline -Force
+```powershell
+$parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    CauPluginName = 'Microsoft.WindowsUpdatePlugin'
+    MaxFailedNodes = '1'
+    MaxRetriesPerNode = '3'
+    RequireAllNodesOnline = $true
+    Force = $true
+}
+Invoke-CauRun @parameters
 ```
 
 This command performs a scan and a full updating run on the cluster named CONTOSO-FC1. This cmdlet
@@ -69,10 +77,24 @@ before marking the node as failed, and allows no more than one node to fail befo
 entire updating run as failed. Because the command specifies the *Force* parameter, the cmdlet runs
 without displaying confirmation prompts.
 
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+
 ### Example 2: Preform a scan and a full updating run on the specified cluster using multiple plug-ins
 
-```
-PS C:\> Invoke-CauRun -ClusterName CONTOSO-FC1 -CauPluginName Microsoft.WindowsUpdatePlugin, Microsoft.HotfixPlugin -CauPluginArguments @{ }, @{ 'HotfixRootFolderPath' = '\\CauHotfixSrv\shareName' } -EnableFirewallRules -StopOnPluginFailure -SeparateReboots -Force
+```powershell
+$parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    CauPluginName = 'Microsoft.WindowsUpdatePlugin',
+                    'Microsoft.HotfixPlugin'
+    CauPluginArguments = @{ },
+                         @{'HotfixRootFolderPath' = '\\CauHotfixSrv\shareName'}
+    StopOnPluginFailure = $true
+    EnableFirewallRules = $true
+    SeparateReboots = $true
+    Force = $true
+}
+Invoke-CauRun @parameters
 ```
 
 This command performs a scan and a full updating run on the cluster named CONTOSO-FC1. This cmdlet
@@ -86,10 +108,13 @@ applied by **Microsoft.HotfixPlugin plug-in**. If the installation of updates by
 **Microsoft.HotfixPlugin plug-in** installs updates. Because the command specifies the *Force*
 parameter, the cmdlet runs without displaying confirmation prompts.
 
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+
 ### Example 3: Recover from a previous updating run that failed on the specified cluster
 
-```
-PS C:\> Invoke-CauRun -ClusterName "CONTOSO-FC1"-ForceRecovery -Force
+```powershell
+Invoke-CauRun -ClusterName "CONTOSO-FC1"-ForceRecovery -Force
 ```
 
 This command recovers from a previous updating run that failed and left the cluster in a Locked

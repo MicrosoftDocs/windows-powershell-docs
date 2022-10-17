@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/set-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-CauClusterRole
@@ -72,8 +72,15 @@ exception is enabled on each node.
 
 ### Example 1: Configure settings for a CAU cluster role on the specified cluster on the first and second weeks of the month
 
-```
-PS C:\> Set-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday -WeeksOfMonth 1,2 -RebootTimeoutMinutes 10 -Force
+```powershell
+$parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    DaysOfWeek = 'Tuesday'
+    WeeksOfMonth = '1,2'
+    RebootTimeoutMinutes = '10'
+    Force = $true
+}
+Set-CauClusterRole $parameters
 ```
 
 This command configures settings for the CAU clustered role on the cluster named CONTOSO-FC1. The
@@ -83,11 +90,24 @@ restart is necessary. If the restart does not complete within this time, then th
 that node is marked as failed. Because the command specifies the *Force* parameter, the cmdlet runs
 without displaying confirmation prompts.
 
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+
 ### Example 2: Configure settings for a CAU cluster role on the specified cluster on the second week of the month
-
+```powershell
+$parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    DaysOfWeek = 'Tuesday'
+    WeeksOfMonth = '1,2'
+    IntervalWeeks = '2'
+    RebootTimeoutMinutes = '10'
+    PostUpdateScript = 'c:\verifyupdatesinstalled.ps1'
+    Force = $true
+}
+Set-CauClusterRole $parameters
 ```
-PS C:\> Set-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday -IntervalWeeks 2 -RebootTimeoutMinutes 10 -PostUpdateScript "c:\verifyupdatesinstalled.ps1" -Force
 
+```output
 Name                                                        Value 
 ----                                                        ----- 
 ResourceGroupName                                           CAUCAUCldy8 
@@ -108,10 +128,13 @@ leaves Maintenance mode. The script is located at the root of drive G: in cluste
 named verifyupdatesinstalled.ps1. Because the command specifies the *Force* parameter, the cmdlet
 runs without displaying confirmation prompts.
 
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+
 ### Example 3: Initiate an updating run on the specified cluster
 
-```
-PS C:\> Set-CauClusterRole -ClusterName "CONTOSO-FC1" -UpdateNow -Force
+```powershell
+Set-CauClusterRole -ClusterName "CONTOSO-FC1" -UpdateNow -Force
 ```
 
 This command causes the CAU clustered role to initiate an updating run immediately on the cluster
@@ -120,16 +143,26 @@ displaying confirmation prompts
 
 ### Example 4: Configure settings for a CAU cluster role on the specified cluster
 
-```
-PS C:\> $WarnAfter = New-TimeSpan -hour 1 -minute 90 -seconds 10
-PS C:\> $StopAfter = New-TimeSpan -hour 2 -minute 90 -seconds 10
-PS C:\> Set-CauClusterRole -ClusterName "CONTOSO-FC1" -WarnAfter $WarnAfter -StopAfter $StopAfter -StartDate 1/1/2012 -Force
+```powershell
+$WarnAfter = New-TimeSpan -hour 1 -minute 90 -seconds 10
+$StopAfter = New-TimeSpan -hour 2 -minute 90 -seconds 10
+$parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    WarnAfter = $WarnAfter
+    StopAfter = $StopAfter
+    StartDate = [DateTime] '1/1/2012'
+    Force = $true
+}
+Set-CauClusterRole @parameters
 ```
 
 This example configures settings for the CAU clustered role on the cluster named CONTOSO-FC1. Time
 spans are specified for logging a warning or canceling the updating run if it is not completed. The
 earliest date that an updating run can be triggered is 1/1/2012. Because the command specifies the
 *Force* parameter, the cmdlet runs without displaying confirmation prompts
+
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 

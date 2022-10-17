@@ -21,7 +21,7 @@ Get-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [<Comm
 
 ## DESCRIPTION
 
-The **Get-CauClusterRole** cmdlet gets configuration properties of the Cluster-Aware Updating (CAU)
+The `Get-CauClusterRole` cmdlet gets configuration properties of the Cluster-Aware Updating (CAU)
 clustered role on the specified cluster.
 
 ## EXAMPLES
@@ -39,7 +39,7 @@ This command gets information about the CAU clustered role on the cluster named 
 ### -ClusterName
 
 Specifies the name of the cluster for which the CAU clustered role information that this cmdlet
-gets. This parameter is only required when this cmdlet is not run on a failover cluster node, or
+gets. This parameter is only required when this cmdlet isn't run on a failover cluster node, or
 this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
 
 ```yaml

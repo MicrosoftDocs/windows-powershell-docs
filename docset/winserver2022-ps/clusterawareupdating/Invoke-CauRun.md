@@ -19,25 +19,25 @@ Performs a scan of cluster nodes for applicable updates and installs those updat
 
 ```
 Invoke-CauRun [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>]
-[-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
-[-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
-[-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-EnableFirewallRules]
-[-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [-Force] [[-ClusterName]
+ [-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
+ [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
+ [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-EnableFirewallRules]
+ [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [-Force] [[-ClusterName]
 <String>] [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>]
-[-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [-WhatIf]
-[-Confirm] [<CommonParameters>]
+ [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### RecoverParamSet
 
 ```
 Invoke-CauRun [-ForceRecovery] [-Force] [[-ClusterName] <String>] [[-Credential] <PSCredential>]
-[-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Invoke-CauRun** cmdlet performs a scan of cluster nodes for applicable updates and installs
+The `Invoke-CauRun` cmdlet performs a scan of cluster nodes for applicable updates and installs
 those updates through an updating run on the specified cluster. The updating run process includes
 the following:
 - Scanning for and downloading applicable updates on each cluster node. 
@@ -49,8 +49,8 @@ the following:
   updates that can only be installed after the initial set of updates are installed, and saving a
   report of the actions taken.
 
-To run this cmdlet with the *PostUpdateScript* or *PreUpdateScript* parameter, Windows PowerShell
-remoting must be enabled on each node. To do this, run the **Enable-PSRemoting** cmdlet. In
+To run this cmdlet with the **PostUpdateScript** or **PreUpdateScript** parameter, Windows PowerShell
+remoting must be enabled on each node. To do this, run the `Enable-PSRemoting` cmdlet. In
 addition, ensure that the **Windows Remote Management - Compatibility Mode (HTTP-In)** firewall
 exception is enabled on each node.
 
@@ -74,7 +74,7 @@ This command performs a scan and a full updating run on the cluster named CONTOS
 uses the **Microsoft.WindowsUpdatePlugin** plug-in and requires that all cluster nodes be online
 before the running this cmdlet. In addition, this cmdlet allows no more than three retries per node
 before marking the node as failed, and allows no more than one node to fail before marking the
-entire updating run as failed. Because the command specifies the *Force* parameter, the cmdlet runs
+entire updating run as failed. Because the command specifies the **Force** parameter, the cmdlet runs
 without displaying confirmation prompts.
 
 This example uses splatting to pass parameter values from the `$parameters` variable to the command.
@@ -99,13 +99,13 @@ Invoke-CauRun @parameters
 
 This command performs a scan and a full updating run on the cluster named CONTOSO-FC1. This cmdlet
 uses the **Microsoft.WindowsUpdatePlugin** plug-in with the default configuration, and the
-**Microsoft.HotfixPlugin** plug-in using the hotfix root folder \\\\CauHotfixSrv\shareName and the
-default hotfix configuration file. If it is not already enabled, the **Remote Shutdown** Windows
+**Microsoft.HotfixPlugin** plug-in using the hotfix root folder `\\CauHotfixSrv\shareName` and the
+default hotfix configuration file. If it isn't already enabled, the **Remote Shutdown** Windows
 Firewall rule group is enabled on each cluster node before the updating run. If a failure occurs
-during the installation of updates on a node by **Microsoft.WindowsUpdatePlugin**, updates are not
+during the installation of updates on a node by **Microsoft.WindowsUpdatePlugin**, updates aren't
 applied by **Microsoft.HotfixPlugin plug-in**. If the installation of updates by
 **Microsoft.WindowsUpdatePlugin** requires a node to restart, the node restarts before
-**Microsoft.HotfixPlugin plug-in** installs updates. Because the command specifies the *Force*
+**Microsoft.HotfixPlugin plug-in** installs updates. Because the command specifies the **Force**
 parameter, the cmdlet runs without displaying confirmation prompts.
 
 This example uses splatting to pass parameter values from the `$parameters` variable to the command.
@@ -118,7 +118,7 @@ Invoke-CauRun -ClusterName "CONTOSO-FC1"-ForceRecovery -Force
 ```
 
 This command recovers from a previous updating run that failed and left the cluster in a Locked
-state for the cluster named CONTOSO-FC1. Because the command specifies the *Force* parameter, the
+state for the cluster named CONTOSO-FC1. Because the command specifies the **Force** parameter, the
 recovery is performed without confirmation prompts.
 
 ## PARAMETERS
@@ -222,9 +222,9 @@ Accept wildcard characters: False
 ### -ConfigurationName
 
 Specifies the Windows PowerShell session configuration that defines the session in which scripts are
-run, specified by *PreUpdateScript* and *PostUpdateScript* parameters, and can limit the cmdlets
+run, specified by **PreUpdateScript** and **PostUpdateScript** parameters, and can limit the cmdlets
 that are available to run. If either a pre-update or post-update script is specified but a
-configuration name is not specified, then the default session configuration that is built into
+configuration name isn't specified, then the default session configuration that is built into
 Windows PowerShell is used.
 
 ```yaml
@@ -273,14 +273,14 @@ Accept wildcard characters: False
 
 ### -EnableFirewallRules
 
-Enables the **Remote Shutdown** Windows Firewall rule group on each cluster node, if it is not
-already enabled. If the *EnableFirewallRules* parameter is specified, CAU automatically re-enables
+Enables the **Remote Shutdown** Windows Firewall rule group on each cluster node, if it isn't
+already enabled. If the **EnableFirewallRules** parameter is specified, CAU automatically re-enables
 the **Remote Shutdown** rule group each time the CAU clustered role performs an updating run, in
 case the rules are disabled manually in the intervening time. Enabling this rule group permits
 inbound communication to each cluster node during each updating run that allows CAU to shut down and
 restart the node remotely (if the installation of an update requires a restart). If Windows Firewall
-is in use on the cluster nodes and the rule group is not enabled, the updating run will fail. The
-**Remote Shutdown** Windows Firewall rule group is not enabled when it will conflict with Group
+is in use on the cluster nodes and the rule group isn't enabled, the updating run will fail. The
+**Remote Shutdown** Windows Firewall rule group isn't enabled when it will conflict with Group
 Policy settings that are configured for Windows Firewall.
 
 ```yaml
@@ -435,7 +435,7 @@ begins, and before the node is put into Maintenance mode. The file name extensio
 the total length of the path plus the file name must be no longer than 260 characters. As a best
 practice, the script should be located on a disk in cluster storage, or at a highly available
 network share, to ensure that the script is always accessible to all the cluster nodes. If a
-pre-update script fails, the node is not updated.
+pre-update script fails, the node isn't updated.
 
 ```yaml
 Type: String
@@ -451,7 +451,7 @@ Accept wildcard characters: False
 
 ### -RebootTimeoutMinutes
 
-Specifies the time in minutes that CAU allows for the restarting of a node. If the restart does not
+Specifies the time in minutes that CAU allows for the restarting of a node. If the restart doesn't
 complete within this time, then the updating run on that node is marked as failed.
 
 ```yaml
@@ -485,12 +485,12 @@ Accept wildcard characters: False
 ### -RunPluginsSerially
 
 Indicates that CAU will scan each cluster node for applicable updates and stage the updates for each
-plug-in in the plug-in order passed into the *CauPluginName* parameter when multiple plug-ins are
+plug-in in the plug-in order passed into the **CauPluginName** parameter when multiple plug-ins are
 used during an updating run. By default, CAU scans and stages the applicable updates for all
 plug-ins in parallel. Regardless of the configuration of this parameter, CAU installs the applicable
 updates for each plug-in sequentially.
 
-The parameter is valid only when multiple plug-ins are specified for the *CauPluginName* parameter.
+The parameter is valid only when multiple plug-ins are specified for the **CauPluginName** parameter.
 If a single plug-in is specified, a warning appears.
 
 ```yaml
@@ -512,7 +512,7 @@ the node, if the installation of an update by a plug-in requires a restart when 
 are used during an updating run. By default, during an updating run, all plug-ins complete the
 installation of updates on a cluster node before the node restarts one time.
 
-The parameter is valid only when multiple plug-ins are specified for the *CauPluginName* parameter.
+The parameter is valid only when multiple plug-ins are specified for the **CauPluginName** parameter.
 If a single plug-in is specified, a warning appears.
 
 ```yaml
@@ -529,7 +529,7 @@ Accept wildcard characters: False
 
 ### -StopAfter
 
-Specifies the time in minutes after which the updating run is canceled if it has not completed. The
+Specifies the time in minutes after which the updating run is canceled if it hasn't completed. The
 time span can be expressed in the standard ways available in Windows PowerShell, for instance,
 01:30:00 represents one hour and thirty minutes. By default, the updating run is allowed an
 unlimited amount of time to complete.
@@ -553,10 +553,10 @@ Accept wildcard characters: False
 
 Indicates that if a failure occurs during the application of updates on a node by any plug-in,
 subsequent updates on the node that are coordinated by the remaining plug-ins are stopped when
-multiple plug-ins are used during an updating run. By default, a failure by one plug-in does not
+multiple plug-ins are used during an updating run. By default, a failure by one plug-in doesn't
 affect the application of updates on a node by other plug-ins.
 
-The parameter is valid only when multiple plug-ins are specified for the *CauPluginName* parameter.
+The parameter is valid only when multiple plug-ins are specified for the **CauPluginName** parameter.
 If a single plug-in is specified, a warning appears.
 
 ```yaml
@@ -573,14 +573,13 @@ Accept wildcard characters: False
 
 ### -SuspendClusterNodeTimeoutMinutes
 
-Specifies the maximum amount of time CAU should wait for the **Suspend-ClusterNode** cmdlet to
+Specifies the maximum amount of time CAU should wait for the `Suspend-ClusterNode` cmdlet to
 succeed if the underlying clustered space is in degraded condition.
 
-If **Suspend-ClusterNode** fails with ERROR_CLUSTER_SPACE_DEGRADED error, CAU will keep retrying for
-*SuspendClusterNodeTimeoutMinutes* or suspend the call if the command succeeds.
+If `Suspend-ClusterNode` fails with ERROR_CLUSTER_SPACE_DEGRADED error, CAU will keep retrying for
+**SuspendClusterNodeTimeoutMinutes** or suspend the call if the command succeeds.
 
-The retries for this error do not count towards the *MaxRetriesPerNode* parameter set by the user
-parameter set by the user.
+The retries for this error don't count towards the **MaxRetriesPerNode** parameter set by the user.
 
 The timeout value is per cluster node. So CAU could potentially spend the amount of time specified
 for this value for every node in the cluster in the worst case.
@@ -600,7 +599,7 @@ Accept wildcard characters: False
 ### -WarnAfter
 
 Specifies the time in minutes after which a warning is logged if the updating run, including any
-pre-update and post-update scripts, has not completed. By default, no warning is logged, regardless
+pre-update and post-update scripts, hasn't completed. By default, no warning is logged, regardless
 of the time taken by the updating run.
 
 ```yaml
@@ -618,7 +617,7 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

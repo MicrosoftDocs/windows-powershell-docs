@@ -19,16 +19,16 @@ updates that are applied to each node in a specified cluster.
 ```
 Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential]
 <PSCredential>] [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Invoke-CauScan** cmdlet performs a scan of cluster nodes for applicable updates and gets a
+The `Invoke-CauScan` cmdlet performs a scan of cluster nodes for applicable updates and gets a
 list of the initial set of updates that are applied to each node in a specified cluster. Generation
 of the list can take a few minutes to complete.
 
-The preview list includes only an initial set of updates. The list does not include updates that
+The preview list includes only an initial set of updates. The list doesn't include updates that
 might become applicable after the initial updates are installed.
 
 If the **Microsoft.HotfixPlugin** plug-in is specified, the scan gets only the list of hotfix files
@@ -45,7 +45,7 @@ Invoke-CauScan -ClusterName "CONTOSO-FC1" -CauPluginName "Microsoft.WindowsUpdat
 This command gets a detailed list of the initial set of updates that would currently be applied to
 each node in the cluster named CONTOSO-FC1. The list is based on the updates that would be applied
 by the **Microsoft.WindowsUpdatePlugin** plug-in, which is the default plug-in. The preview list
-includes only an initial set of updates, and does not include updates that might become applicable
+includes only an initial set of updates, and doesn't include updates that might become applicable
 only after the initial updates are installed.
 
 ### Example 2: Get a detailed list of the initial set of updates on the specified cluster using a query string
@@ -86,8 +86,8 @@ For instance, to specify a **Domain** argument for one plug-in:
 You can specify multiple pairs in a set separated with semicolons.
 For instance: 
 - `@{name1=value1;name2=value2;name3=value3}` These name=value pairs must be meaningful to the
-  *CauPluginName* parameter that you specify. If you specify arguments for more than one plug-in,
-  provide the sets of name=value pairs in the order that you pass values into the *CauPluginName*
+  **CauPluginName** parameter that you specify. If you specify arguments for more than one plug-in,
+  provide the sets of name=value pairs in the order that you pass values into the **CauPluginName**
   parameter, separated by commas. For instance:
 - `@{name1=value1;name2=value2;name3=value3},@{name4=value4;name5=value5}`
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ### -ClusterName
 
 Specifies the name of the cluster which should be scanned for applicable updates. This parameter is
-only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to
+only required when this cmdlet isn't run on a failover cluster node, or this cmdlet is used to
 reference a failover cluster different from where the cmdlet is run.
 
 ```yaml
@@ -198,11 +198,11 @@ Accept wildcard characters: False
 ### -RunPluginsSerially
 
 Indicates that CAU scans each cluster node for applicable updates and stages the updates for each
-plug-in in the plug-in order passed into the *CauPluginName* parameter then multiple plug-ins are
+plug-in in the plug-in order passed into the **CauPluginName** parameter then multiple plug-ins are
 used during a scan for updates
 
 By default, CAU scans and stages the applicable updates for all plug-ins in parallel.
-This parameter is valid only when multiple plug-ins are specified in *CauPluginName* parameter.
+This parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter.
 If a single plug-in is specified, a warning appears.
 
 ```yaml
@@ -223,7 +223,7 @@ Indicates that if a failure occurs during a scan on a node by any plug-in, subse
 node that are coordinated by the remaining plug-ins are stopped when multiple plug-ins are used
 during a scan for updates.
 
-The parameter is valid only when multiple plug-ins are specified in the *CauPluginName* parameter.
+The parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter.
 If a single plug-in is specified, a warning appears.
 
 ```yaml

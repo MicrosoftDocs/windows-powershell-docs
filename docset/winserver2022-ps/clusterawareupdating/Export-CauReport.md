@@ -17,18 +17,18 @@ Exports one or more Updating Run reports into an HTML or CSV-formatted document.
 
 ```
 Export-CauReport [-InputReport] <CauReport[]> [-Format] <OutputType> [-Path] <String> [-PassThru]
-[-Force] [-TimeZone <TimeZoneInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Force] [-TimeZone <TimeZoneInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Export-CauReport** cmdlet exports one or more Updating Run reports into an HTML or
+The `Export-CauReport` cmdlet exports one or more Updating Run reports into an HTML or
 CSV-formatted document. Each Run report summarizes both the node-level and cluster-level summary
 status for the Updating Run.
 
-Pipe one or more reports from the **Get-CauReport** cmdlet with the *Detailed* parameter, and
-control the content in the report by specifying appropriate parameters for the **Get-CauReport**
-cmdlet. For example, the *Last* parameter specifies the most recent Updating Run.
+Pipe one or more reports from the `Get-CauReport` cmdlet with the **Detailed** parameter, and
+control the content in the report by specifying appropriate parameters for the `Get-CauReport`
+cmdlet. For example, the **Last** parameter specifies the most recent Updating Run.
 
 ## EXAMPLES
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ### -InputReport
 
 Specifies an array of CAU report objects, such as generated from a call to Get-CauReport with the
-*Detailed* parameter.
+**Detailed** parameter.
 
 ```yaml
 Type: CauReport[]
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ### -PassThru
 
 Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+By default, this cmdlet doesn't generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

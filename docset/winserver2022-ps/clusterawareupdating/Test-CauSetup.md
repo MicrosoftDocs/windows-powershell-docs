@@ -21,13 +21,13 @@ Test-CauSetup [[-ClusterName] <String>] [[-Credential] <PSCredential>] [<CommonP
 
 ## DESCRIPTION
 
-The **Test-CauSetup** cmdlet tests whether a failover cluster is properly set up to apply software
+The `Test-CauSetup` cmdlet tests whether a failover cluster is properly set up to apply software
 updates using Cluster-Aware Updating (CAU). The cmdlet performs a Best Practices Analyzer (BPA) scan
 of the failover cluster and network environment by invoking the ClusterAwareUpdating BPA model that
-is installed with CAU. To view the results of a BPA scan that is performed by **Test-CauSetup**,
-including possible problems and resolution steps, run the **Get-BpaResult** cmdlet.
+is installed with CAU. To view the results of a BPA scan that is performed by `Test-CauSetup`,
+including possible problems and resolution steps, run the `Get-BpaResult` cmdlet.
 
-You must run the **Test-CauSetup** cmdlet with local administrative credentials.
+You must run the `Test-CauSetup` cmdlet with local administrative credentials.
 
 ## EXAMPLES
 
@@ -44,7 +44,7 @@ This example tests whether the failover cluster named CONTOSO-FC1 is properly se
 ### -ClusterName
 
 Specifies the name of the cluster on which to test for proper setup. This parameter is only required
-when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a
+when this cmdlet isn't run on a failover cluster node, or this cmdlet is used to reference a
 failover cluster different from where the cmdlet is run.
 
 ```yaml

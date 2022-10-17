@@ -19,52 +19,52 @@ Sets configuration properties for the CAU clustered role on the specified cluste
 
 ```
 Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>]
-[-WeeksOfMonth <Int32[]>] [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>]
-[-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>]
-[-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
-[-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
-[-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
-[-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
-[[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm]
-[<CommonParameters>]
+ [-WeeksOfMonth <Int32[]>] [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>]
+ [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>]
+ [-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
+ [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
+ [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
+ [-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
+ [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### UpdateNow
 
 ```
 Set-CauClusterRole [-UpdateNow] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
-[-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UseDefault
 
 ```
 Set-CauClusterRole [-UseDefault] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
-[-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Weekly
 
 ```
 Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>]
-[-IntervalWeeks <Int32>] [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>]
-[-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>]
-[-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
-[-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
-[-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
-[-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
-[[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm]
-[<CommonParameters>]
+ [-IntervalWeeks <Int32>] [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>]
+ [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>]
+ [-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
+ [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
+ [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-RunPluginsSerially] [-StopOnPluginFailure]
+ [-EnableFirewallRules] [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>]
+ [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Set-CauClusterRole** cmdlet sets configuration properties for the Cluster-Aware Updating (CAU)
+The `Set-CauClusterRole` cmdlet sets configuration properties for the Cluster-Aware Updating (CAU)
 clustered role on the specified cluster. This cmdlet can specify properties such as the updating
 schedule and updating run parameters.
 
-To run this cmdlet with the *PostUpdateScript* or *PreUpdateScript* parameters, Windows PowerShell
-remoting must be enabled on each node. To do this, use the **Enable-PSRemoting** cmdlet. In
+To run this cmdlet with the **PostUpdateScript** or **PreUpdateScript** parameters, Windows PowerShell
+remoting must be enabled on each node. To do this, use the `Enable-PSRemoting` cmdlet. In
 addition, ensure that the **Windows Remote Management - Compatibility Mode (HTTP-In)** firewall
 exception is enabled on each node.
 
@@ -86,8 +86,8 @@ Set-CauClusterRole $parameters
 This command configures settings for the CAU clustered role on the cluster named CONTOSO-FC1. The
 CAU clustered role is configured to perform updating runs on Tuesdays on the first and second weeks
 of each month. The CAU clustered role allows 10 minutes for the restarting of each node, if a
-restart is necessary. If the restart does not complete within this time, then the updating run on
-that node is marked as failed. Because the command specifies the *Force* parameter, the cmdlet runs
+restart is necessary. If the restart doesn't complete within this time, then the updating run on
+that node is marked as failed. Because the command specifies the **Force** parameter, the cmdlet runs
 without displaying confirmation prompts.
 
 This example uses splatting to pass parameter values from the `$parameters` variable to the command.
@@ -122,10 +122,10 @@ WeeksInterval                                               2
 This command configures settings for the CAU clustered role on the cluster named CONTOSO-FC1. The
 CAU clustered role is configured to perform updating runs on Tuesdays on the second week of each
 month. The CAU clustered role allows 10 minutes for the restarting of each node, if a restart is
-necessary. If the restart does not complete within this time, then the updating run on that node is
+necessary. If the restart doesn't complete within this time, then the updating run on that node is
 marked as failed. The CAU clustered role runs a script after updating completes, just after the node
 leaves Maintenance mode. The script is located at the root of drive G: in clustered storage and is
-named verifyupdatesinstalled.ps1. Because the command specifies the *Force* parameter, the cmdlet
+named verifyupdatesinstalled.ps1. Because the command specifies the **Force** parameter, the cmdlet
 runs without displaying confirmation prompts.
 
 This example uses splatting to pass parameter values from the `$parameters` variable to the command.
@@ -138,7 +138,7 @@ Set-CauClusterRole -ClusterName "CONTOSO-FC1" -UpdateNow -Force
 ```
 
 This command causes the CAU clustered role to initiate an updating run immediately on the cluster
-named CONTOSO-FC1. Because the command specifies the *Force* parameter, the cmdlet runs without
+named CONTOSO-FC1. Because the command specifies the **Force** parameter, the cmdlet runs without
 displaying confirmation prompts
 
 ### Example 4: Configure settings for a CAU cluster role on the specified cluster
@@ -157,9 +157,9 @@ Set-CauClusterRole @parameters
 ```
 
 This example configures settings for the CAU clustered role on the cluster named CONTOSO-FC1. Time
-spans are specified for logging a warning or canceling the updating run if it is not completed. The
+spans are specified for logging a warning or canceling the updating run if it isn't completed. The
 earliest date that an updating run can be triggered is 1/1/2012. Because the command specifies the
-*Force* parameter, the cmdlet runs without displaying confirmation prompts
+**Force** parameter, the cmdlet runs without displaying confirmation prompts
 
 This example uses splatting to pass parameter values from the `$parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
@@ -174,8 +174,8 @@ For instance, to specify a Domain argument for one plug-in:
 You can specify multiple pairs in a set separated with semicolons.
 For instance: 
 - `@{name1=value1;name2=value2;name3=value3}` These name=value pairs must be meaningful to the
-  *CauPluginName* parameter that you specify. If you specify arguments for more than one plug-in,
-  provide the sets of name=value pairs in the order that you pass values in *CauPluginName*,
+  **CauPluginName** parameter that you specify. If you specify arguments for more than one plug-in,
+  provide the sets of name=value pairs in the order that you pass values in **CauPluginName**,
   separated by commas. For instance:
 - `@{name1=value1;name2=value2;name3=value3},@{name4=value4;name5=value5}`
 
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ### -ClusterName
 
 Specifies the name of the cluster on which to configure the CAU clustered role. If not specified,
-then the current cluster is used. This parameter is only required when this cmdlet is not run on a
+then the current cluster is used. This parameter is only required when this cmdlet isn't run on a
 failover cluster node, or this cmdlet is used to reference a failover cluster different from where
 the cmdlet is run.
 
@@ -267,9 +267,9 @@ Accept wildcard characters: False
 ### -ConfigurationName
 
 Specifies the Windows PowerShell session configuration that defines the session in which scripts,
-specified by the *PreUpdateScript* and *PostUpdateScript* parameters, and cmdlets are run, and can
+specified by the **PreUpdateScript** and **PostUpdateScript** parameters, and cmdlets are run, and can
 limit the cmdlets that are available to be run. If either a pre-update or post-update script is
-specified but a configuration name is not specified, then the default session configuration that is
+specified but a configuration name isn't specified, then the default session configuration that is
 built into Windows PowerShell is used.
 
 ```yaml
@@ -350,11 +350,11 @@ Accept wildcard characters: False
 ### -EnableFirewallRules
 
 Indicates that this cmdlet enables the **Remote Shutdown** Windows Firewall rule group on each
-cluster node, if it is not already enabled, each time the CAU clustered role performs an Updating
+cluster node, if it isn't already enabled, each time the CAU clustered role performs an Updating
 Run. Enabling this rule group permits inbound communication to each cluster node during each
 Updating Run that allows CAU to shut down and restart the node remotely. If Windows Firewall is in
-use on the cluster nodes and the rule group is not enabled, the updating run will fail. The **Remote
-Shutdown** Windows Firewall rule group is not enabled when it will conflict with Group Policy
+use on the cluster nodes and the rule group isn't enabled, the updating run will fail. The **Remote
+Shutdown** Windows Firewall rule group isn't enabled when it will conflict with Group Policy
 settings that are configured for Windows Firewall.
 
 ```yaml
@@ -521,8 +521,8 @@ Accept wildcard characters: False
 
 ### -RebootTimeoutMinutes
 
-Specifies the time in minutes that CAU will allow for the restarting of a node. If the restart does
-not complete within this time, then the updating run on that node is marked as failed.
+Specifies the time in minutes that CAU will allow for the restarting of a node. If the restart doesn't
+complete within this time, then the updating run on that node is marked as failed.
 
 ```yaml
 Type: Int32
@@ -562,7 +562,7 @@ By default, CAU scans and stages the applicable updates for all plug-ins in para
 the configuration of this parameter, CAU installs the applicable updates for each plug-in
 sequentially.
 
-The parameter is valid only when multiple plug-ins are specified in *CauPluginName* parameter. If a
+The parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter. If a
 single plug-in is specified, a warning appears.
 
 ```yaml
@@ -584,7 +584,7 @@ node, if the installation of an update by a plug-in requires a restart that CAU 
 restart a cluster node after each plug-in installs updates on the node, if the installation of an
 update by a plug-in requires a restart
 
-The parameter is valid only when multiple plug-ins are specified in the *CauPluginName* parameter.
+The parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter.
 If a single plug-in is specified, a warning appears.
 
 ```yaml
@@ -617,7 +617,7 @@ Accept wildcard characters: False
 
 ### -StopAfter
 
-Specifies the time in minutes after which the updating run is canceled if it has not completed. The
+Specifies the time in minutes after which the updating run is canceled if it hasn't completed. The
 time span can be expressed in the standard ways available in Windows PowerShell, for instance,
 `01:30:00` represents one hour and thirty minutes. By default, the updating run is allowed an
 unlimited amount of time to complete.
@@ -643,7 +643,7 @@ Indicates that if a failure occurs during the application of updates on a node b
 subsequent updates on the node that are coordinated by the remaining plug-ins are stopped when
 multiple plug-ins are used during an updating run.
 
-The parameter is valid only when multiple plug-ins are specified for the *CauPluginName* parameter.
+The parameter is valid only when multiple plug-ins are specified for the **CauPluginName** parameter.
 If a single plug-in is specified, a warning appears.
 
 ```yaml
@@ -660,13 +660,13 @@ Accept wildcard characters: False
 
 ### -SuspendClusterNodeTimeoutMinutes
 
-Specifies the maximum amount of time CAU should wait for the Suspend-ClusterNodecmdlet to succeed if
+Specifies the maximum amount of time CAU should wait for the `Suspend-ClusterNode` cmdlet to succeed if
 the underlying clustered space is in degraded condition.
 
-If **Suspend-ClusterNode** fails with ERROR_CLUSTER_SPACE_DEGRADED error, CAU will keep retrying for
-*SuspendClusterNodeTimeoutMinutes* or suspend the call if the command succeeds.
+If `Suspend-ClusterNode` fails with ERROR_CLUSTER_SPACE_DEGRADED error, CAU will keep retrying for
+**SuspendClusterNodeTimeoutMinutes** or suspend the call if the command succeeds.
 
-These retries do not decrement the value of the *MaxRetriesPerNode* parameter set by the user.
+These retries don't decrement the value of the **MaxRetriesPerNode** parameter set by the user.
 
 The timeout value is per cluster node. So CAU could potentially spend the amount of time specified
 for this value for every node in the cluster in the worst case.
@@ -702,7 +702,7 @@ Accept wildcard characters: False
 
 ### -UseDefault
 
-Indicates that default values are used for all parameters that do not have specified values.
+Indicates that default values are used for all parameters that don't have specified values.
 
 ```yaml
 Type: SwitchParameter
@@ -719,7 +719,7 @@ Accept wildcard characters: False
 ### -WarnAfter
 
 Specifies the time in minutes after which a warning is logged if the updating run, including any
-pre-update and post-update scripts, has not completed. By default, no warning is logged, regardless
+pre-update and post-update scripts, hasn't completed. By default, no warning is logged, regardless
 of the time taken by the updating run.
 
 ```yaml
@@ -754,7 +754,7 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

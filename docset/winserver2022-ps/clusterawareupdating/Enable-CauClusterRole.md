@@ -17,14 +17,14 @@ Re-enables the self-updating functionality on the specified cluster.
 
 ```
 Enable-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [-Force] [-WhatIf]
-[-Confirm] [<CommonParameters>]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Enable-CauClusterRole** cmdlet re-enables the self-updating functionality on the specified
+The `Enable-CauClusterRole` cmdlet re-enables the self-updating functionality on the specified
 cluster. The self-updating functionality of the cluster can be disabled with the
-**Disable-CauClusterRole** cmdlet.
+`Disable-CauClusterRole` cmdlet.
 
 ## EXAMPLES
 
@@ -36,14 +36,14 @@ Enable-CauClusterRole -ClusterName "CONTOSO-FC1" -Force
 
 This command enables the CAU clustered role on the CONTOSO-FC1 cluster to begin performing Updating
 Runs. The cmdlet changes the status of the CAU clustered role to Running. Because the command
-specified the *Force* parameter, the cmdlet runs without displaying confirmation prompts.
+specified the **Force** parameter, the cmdlet runs without displaying confirmation prompts.
 
 ## PARAMETERS
 
 ### -ClusterName
 
 Specifies the name of the cluster on which to enable the self-updating functionality. This parameter
-is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to
+is only required when this cmdlet isn't run on a failover cluster node, or this cmdlet is used to
 reference a failover cluster different from where the cmdlet is run.
 
 ```yaml
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

@@ -25,26 +25,26 @@ Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [<CommonParame
 
 ```
 Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForStart]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### WaitForCompletion
 
 ```
 Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForCompletion]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### ShowClusterNodeState
 
 ```
 Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-ShowClusterNodeState]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Get-CauRun** cmdlet gets status information about an updating run currently in progress.
+The `Get-CauRun` cmdlet gets status information about an updating run currently in progress.
 Use this cmdlet to monitor current updating runs.
 
 ## EXAMPLES
@@ -82,7 +82,7 @@ named CONTOSO-FC1.
 ### -ClusterName
 
 Specifies the name of the cluster for which this cmdlet gets the updating run status. This parameter
-is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to
+is only required when this cmdlet isn't run on a failover cluster node, or this cmdlet is used to
 reference a failover cluster different from where the cmdlet is run.
 
 ```yaml

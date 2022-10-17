@@ -21,7 +21,7 @@ Unregister-CauPlugin [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 
 ## DESCRIPTION
 
-The **Unregister-CauPlugin** cmdlet removes a software updating plug-in from the list of plug-ins
+The `Unregister-CauPlugin` cmdlet removes a software updating plug-in from the list of plug-ins
 that are used by Cluster-Aware Updating (CAU). The plug-in can be removed, but afterwards, it cannot
 be used for updating runs. The **Microsoft.WindowsUpdatePlugin** and **Microsoft.HotfixPlugin**
 plug-ins, which are installed with CAU, cannot be unregistered.
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

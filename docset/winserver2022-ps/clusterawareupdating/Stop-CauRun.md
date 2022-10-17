@@ -17,12 +17,12 @@ Stops an updating run that is in progress on a cluster.
 
 ```
 Stop-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-Wait] [-Force]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Stop-CauRun** cmdlet stops an updating run that is in progress on a failover cluster.
+The `Stop-CauRun` cmdlet stops an updating run that is in progress on a failover cluster.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ Stop-CauRun -ClusterName "CONTOSO-FC1" -Wait -Force
 
 This command stops the updating run that is being performed by the CAU Update Coordinator that is
 configured on the cluster named CONTOSO-FC1. The cmdlet waits to return until the canceled updating
-run has finished. Because the command specifies the *Force* parameter, the cmdlet runs without
+run has finished. Because the command specifies the **Force** parameter, the cmdlet runs without
 displaying confirmation prompts.
 
 ## PARAMETERS
@@ -42,7 +42,7 @@ displaying confirmation prompts.
 ### -ClusterName
 
 Specifies the name of the cluster on which to stop an updating run that is in progress. This
-parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is
+parameter is only required when this cmdlet isn't run on a failover cluster node, or this cmdlet is
 used to reference a failover cluster different from where the cmdlet is run.
 
 ```yaml

@@ -21,6 +21,7 @@ Get-CauPlugin [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The `Get-CauPlugin` cmdlet gets information about one or more software updating plug-ins that are
 registered on the local computer. A plug-in can be specified or information can be retrieved about
 all registered plug-ins.
@@ -34,15 +35,9 @@ in CAU, see [How CAU Plug-ins Work](https://go.microsoft.com/fwlink/p/?LinkId=23
 ## EXAMPLES
 
 ### Example 1: Get information about software update plug-ins
-```
-PS C:\> Get-CauPlugin | Format-List -Property "*"
 
-Name       : Microsoft.WindowsUpdatePlugin
-BinaryPath : C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ClusterAwareUpdating\ClusterAwareUpdating.dll
-ClassName  : MS.Internal.ClusterAwareUpdating.WuaPlugin
-Name       : Microsoft.HotfixPlugin
-BinaryPath : C:\Windows\system32\WindowsPowerShell\v1.0\Modules\ClusterAwareUpdating\ClusterAwareUpdating.dll
-ClassName  : MS.Internal.ClusterAwareUpdating.HotfixPlugin
+```powershell
+Get-CauPlugin | Format-List -Property "*"
 ```
 
 This command gets information about the software updating plug-ins that are registered in the local
@@ -51,6 +46,7 @@ CAU tool.
 ## PARAMETERS
 
 ### -Name
+
 Specifies the name of the plug-in whose information this cmdlet gets.
 If not specified, then information for all the registered plug-ins is returned.
 
@@ -67,6 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

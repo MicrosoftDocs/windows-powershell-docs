@@ -21,13 +21,15 @@ Stop-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-Wait] [-For
 ```
 
 ## DESCRIPTION
+
 The `Stop-CauRun` cmdlet stops an updating run that is in progress on a failover cluster.
 
 ## EXAMPLES
 
 ### Example 1: Stop an updating run on the specified cluster
+
 ```
-PS C:\> Stop-CauRun -ClusterName "CONTOSO-FC1" -Wait -Force
+Stop-CauRun -ClusterName "CONTOSO-FC1" -Wait -Force
 ```
 
 This command stops the updating run that is being performed by the CAU Update Coordinator that is
@@ -38,6 +40,7 @@ displaying confirmation prompts.
 ## PARAMETERS
 
 ### -ClusterName
+
 Specifies the name of the cluster on which to stop an updating run that is in progress. This
 parameter is only required when this cmdlet isn't run on a failover cluster node, or this cmdlet is
 used to reference a failover cluster different from where the cmdlet is run.
@@ -55,6 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the administrative credentials for the target cluster.
 
 ```yaml
@@ -70,6 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -85,6 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
+
 Indicates that the cmdlet waits until after the canceled updating run has finished. Otherwise,
 returns as soon as the stop request has been acknowledged by the current Cluster-Aware Updating
 (CAU) Update Coordinator.
@@ -102,6 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

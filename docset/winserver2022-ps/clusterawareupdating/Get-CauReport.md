@@ -43,6 +43,7 @@ Get-CauReport [[-ClusterName] <String>] [-Report <CauReportSummary>] [-Credentia
 ```
 
 ## DESCRIPTION
+
 The `Get-CauReport` cmdlet gets the Updating Run reports for all known Updating Runs, or all
 Updating Runs that match the specified dates or other specified parameters. This cmdlet can return a
 list of all Updating Run reports between the specified **StartDate** and **EndDate** parameters, or if
@@ -54,25 +55,28 @@ Run report. By default, the report contains summaries only, but more detail can 
 ## EXAMPLES
 
 ### Example 1: Get a detailed list of updating runs from the specified cluster
-```
-PS C:\> Get-CauReport -ClusterName Contoso-FC1 -StartDate 01/01/2012 -Detailed
+
+```powershell
+Get-CauReport -ClusterName Contoso-FC1 -StartDate 01/01/2012 -Detailed
 ```
 
 This command gets a detailed list of the updating runs performed on the cluster named Contoso-FC1 on
 01/01/2012 or later.
 
 ### Example 2: Get a detailed list of updating runs from a date span from the specified cluster
-```
-PS C:\> Get-CauReport -ClusterName "Contoso-FC1" -StartDate 01/01/2012 -EndDate 04/01/2012 -Detailed
+
+```powershell
+Get-CauReport -ClusterName "Contoso-FC1" -StartDate 01/01/2012 -EndDate 04/01/2012 -Detailed
 ```
 
 This command gets a detailed list of the updating runs performed on the cluster called Contoso-FC1
 starting with updating runs on 01/01/2012 and ending with updating runs on 04/01/2012.
 
 ### Example 3: Get the last updating run summary from the specified cluster
-```
-PS C:\> $CauReportSummary = Get-CauReport "Contoso-FC1" -Last
-PS C:\> Get-CauReport "Contoso-FC1" -Report $CauReportSummary
+
+```powershell
+$CauReportSummary = Get-CauReport "Contoso-FC1" -Last
+Get-CauReport "Contoso-FC1" -Report $CauReportSummary
 ```
 
 The first command gets the last updating run report summary from the cluster named Contoso-FC1 and
@@ -84,6 +88,7 @@ variable.
 ## PARAMETERS
 
 ### -ClusterName
+
 Specifies the name of the cluster for which this cmdlet gets reports. This parameter is only
 required when this cmdlet isn't run on a failover cluster node, or this cmdlet is used to reference
 a failover cluster different from where the cmdlet is run.
@@ -101,6 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the administrative credentials for the target cluster.
 
 ```yaml
@@ -116,6 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Detailed
+
 Specifies that cmdlet gets full results for one or more runs, instead of just summary information.
 
 ```yaml
@@ -131,6 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
+
 Specifies that this cmdlet gets only the reports for runs before this time.
 
 ```yaml
@@ -146,6 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Last
+
 Indicates that this cmdlet gets only the most recent run report.
 
 ```yaml
@@ -161,6 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Report
+
 Specifies the report summary that this cmdlet gets detailed results for the run.
 
 ```yaml
@@ -176,6 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
+
 Specifies that this cmdlet gets only the reports for runs after this time.
 
 ```yaml
@@ -191,6 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

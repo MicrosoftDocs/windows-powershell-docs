@@ -21,6 +21,7 @@ Export-CauReport [-InputReport] <CauReport[]> [-Format] <OutputType> [-Path] <St
 ```
 
 ## DESCRIPTION
+
 The `Export-CauReport` cmdlet exports one or more Updating Run reports into an HTML or
 CSV-formatted document. Each Run report summarizes both the node-level and cluster-level summary
 status for the Updating Run.
@@ -32,17 +33,20 @@ cmdlet. For example, the **Last** parameter specifies the most recent Updating R
 ## EXAMPLES
 
 ### Example 1: Get a detailed version of the last CAU report for the specified cluster
-```
-PS C:\> Get-CauReport -ClusterName "Contoso-FC1" -Last -Detailed | Export-CauReport -Format HTML -Path "C:\temp\contoso-fc1_last.html" -TimeZone ([system.timezoneinfo]::Utc)
+
+```powershell
+$CauReport = Get-CauReport -ClusterName "Contoso-FC1" -Last -Detailed
+$CauReport | Export-CauReport -Format HTML -Path "C:\temp\contoso-fc1_last.html" -TimeZone ([system.timezoneinfo]::Utc)
 ```
 
 This command gets a detailed version of the last CAU report for the cluster named Contoso-FC1, then
-exports that report in HTML format to the path C:\temp\contoso-fc1_last.html. The timestamps in the
-report are formatted in the Coordinated Universal Time (UTC) zone.
+exports that report in HTML format to the path `C:\temp\contoso-fc1_last.html`. The timestamps in
+the report are formatted in the Coordinated Universal Time (UTC) zone.
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -58,6 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -73,6 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Format
+
 Specifies the format of the output report.
 The acceptable values for this parameter are: CSV or HTML.
 
@@ -90,6 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputReport
+
 Specifies an array of CAU report objects, such as generated from a call to Get-CauReport with the
 **Detailed** parameter.
 
@@ -106,6 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
 Returns an object representing the item with which you are working.
 By default, this cmdlet doesn't generate any output.
 
@@ -122,6 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
 Specifies the local or complete path of the file to save the exported report.
 
 ```yaml
@@ -137,6 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeZone
+
 Specifies the formatting of the report timestamps to match the specified time zone.
 
 ```yaml
@@ -152,6 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet isn't run.
 
@@ -168,6 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

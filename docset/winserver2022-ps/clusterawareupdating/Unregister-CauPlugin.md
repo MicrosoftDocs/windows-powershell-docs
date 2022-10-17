@@ -20,6 +20,7 @@ Unregister-CauPlugin [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The **Unregister-CauPlugin** cmdlet removes a software updating plug-in from the list of plug-ins
 that are used by Cluster-Aware Updating (CAU). The plug-in can be removed, but afterwards, it cannot
 be used for updating runs. The **Microsoft.WindowsUpdatePlugin** and **Microsoft.HotfixPlugin**
@@ -28,6 +29,7 @@ plug-ins, which are installed with CAU, cannot be unregistered.
 ## EXAMPLES
 
 ### Example 1: Unregister a plug-in that is used by CAU
+
 ```powershell
 Unregister-CauPlugin -Name "Plugin01"
 ```
@@ -37,6 +39,7 @@ This command removes the plug-in named Plugin01 from the list of plug-ins that a
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -52,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the plug-in that this cmdlet unregisters.
 
 ```yaml
@@ -67,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -83,6 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

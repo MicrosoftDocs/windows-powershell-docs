@@ -21,6 +21,7 @@ Remove-CauClusterRole [[-ClusterName] <String>] [[-Credential] <PSCredential>] [
 ```
 
 ## DESCRIPTION
+
 The **Remove-CauClusterRole** cmdlet removes the Cluster-Aware Updating (CAU) clustered role from
 the specified failover cluster. To run CAU from a cluster, ensure that the CAU clustered role is
 configured in that cluster.
@@ -32,6 +33,7 @@ for the CAU clustered role, unless you previously prestaged or specified the VCO
 ## EXAMPLES
 
 ### Example 1: Remove an instance of a CAU clustered role configured on the specified cluster
+
 ```
 PS C:\> Remove-CauClusterRole -ClusterName "CONTOSO-FC1" -Force
 ```
@@ -43,6 +45,7 @@ confirmation prompts.
 ## PARAMETERS
 
 ### -ClusterName
+
 Specifies the name of the cluster from which to remove the CAU clustered role. This parameter is
 only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to
 reference a failover cluster different from where the cmdlet is run.
@@ -60,6 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -75,6 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the administrative credentials for the target cluster.
 
 ```yaml
@@ -90,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -105,6 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -121,6 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

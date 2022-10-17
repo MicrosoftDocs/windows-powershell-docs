@@ -16,6 +16,7 @@ Sets configuration properties for the CAU clustered role on the specified cluste
 ## SYNTAX
 
 ### MonthlyDayOfWeek (Default)
+
 ```
 Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>]
 [-WeeksOfMonth <Int32[]>] [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>]
@@ -29,18 +30,21 @@ Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>
 ```
 
 ### UpdateNow
+
 ```
 Set-CauClusterRole [-UpdateNow] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
 [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UseDefault
+
 ```
 Set-CauClusterRole [-UseDefault] [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force]
 [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Weekly
+
 ```
 Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>]
 [-IntervalWeeks <Int32>] [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>]
@@ -54,6 +58,7 @@ Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>
 ```
 
 ## DESCRIPTION
+
 The **Set-CauClusterRole** cmdlet sets configuration properties for the Cluster-Aware Updating (CAU)
 clustered role on the specified cluster. This cmdlet can specify properties such as the updating
 schedule and updating run parameters.
@@ -66,6 +71,7 @@ exception is enabled on each node.
 ## EXAMPLES
 
 ### Example 1: Configure settings for a CAU cluster role on the specified cluster on the first and second weeks of the month
+
 ```
 PS C:\> Set-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday -WeeksOfMonth 1,2 -RebootTimeoutMinutes 10 -Force
 ```
@@ -78,6 +84,7 @@ that node is marked as failed. Because the command specifies the *Force* paramet
 without displaying confirmation prompts.
 
 ### Example 2: Configure settings for a CAU cluster role on the specified cluster on the second week of the month
+
 ```
 PS C:\> Set-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday -IntervalWeeks 2 -RebootTimeoutMinutes 10 -PostUpdateScript "c:\verifyupdatesinstalled.ps1" -Force
 
@@ -102,6 +109,7 @@ named verifyupdatesinstalled.ps1. Because the command specifies the *Force* para
 runs without displaying confirmation prompts.
 
 ### Example 3: Initiate an updating run on the specified cluster
+
 ```
 PS C:\> Set-CauClusterRole -ClusterName "CONTOSO-FC1" -UpdateNow -Force
 ```
@@ -111,6 +119,7 @@ named CONTOSO-FC1. Because the command specifies the *Force* parameter, the cmdl
 displaying confirmation prompts
 
 ### Example 4: Configure settings for a CAU cluster role on the specified cluster
+
 ```
 PS C:\> $WarnAfter = New-TimeSpan -hour 1 -minute 90 -seconds 10
 PS C:\> $StopAfter = New-TimeSpan -hour 2 -minute 90 -seconds 10
@@ -125,6 +134,7 @@ earliest date that an updating run can be triggered is 1/1/2012. Because the com
 ## PARAMETERS
 
 ### -CauPluginArguments
+
 Specifies a set of name=value pairs, as arguments, for each updating plug-in to use.
 For instance, to specify a Domain argument for one plug-in: 
 - `@{Domain=Domain.local}`
@@ -182,6 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -CauPluginName
+
 Specifies one or more plug-ins to use when performing scans or updates. You can specify multiple
 values separated with commas. The default is the Microsoft.WindowsUpdatePlugin plug-in. This plug-in
 coordinates the Windows Update Agent software resident on each cluster node, the same software that
@@ -202,6 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClusterName
+
 Specifies the name of the cluster on which to configure the CAU clustered role. If not specified,
 then the current cluster is used. This parameter is only required when this cmdlet is not run on a
 failover cluster node, or this cmdlet is used to reference a failover cluster different from where
@@ -220,6 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationName
+
 Specifies the Windows PowerShell session configuration that defines the session in which scripts,
 specified by the *PreUpdateScript* and *PostUpdateScript* parameters, and cmdlets are run, and can
 limit the cmdlets that are available to be run. If either a pre-update or post-update script is
@@ -239,6 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -254,6 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the administrative credentials for the target cluster.
 
 ```yaml
@@ -269,6 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -DaysOfWeek
+
 Specifies the days of the week on which the task will be triggered.
 Multiple values can be specified either separated with commas or as a hexadecimal sum. 
 
@@ -299,6 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFirewallRules
+
 Indicates that this cmdlet enables the **Remote Shutdown** Windows Firewall rule group on each
 cluster node, if it is not already enabled, each time the CAU clustered role performs an Updating
 Run. Enabling this rule group permits inbound communication to each cluster node during each
@@ -320,6 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -FailbackMode
+
 Specifies the method used to bring drained workloads back to the node, at the end of updating the
 node. Drained workloads are workloads that were previously running on the node, but were moved to
 another node. The acceptable values for this parameter are:
@@ -343,6 +361,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -358,6 +377,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntervalWeeks
+
 Specifies the interval between weeks when the task will be triggered.
 An interval of 1 produces a weekly schedule.
 An interval of 2 produces an every-other week schedule.
@@ -375,6 +395,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxFailedNodes
+
 Specifies the maximum number of nodes on which updating can fail.
 If one more than this number of nodes fails, then the Updating Run is stopped.
 The range is from 0 through 1 less than the number of cluster nodes.
@@ -393,6 +414,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxRetriesPerNode
+
 Specifies the maximum number of times that the update process, which includes any pre-update and
 post-update scripts, is retried per node. The maximum is 64and the default is 3.
 
@@ -409,6 +431,7 @@ Accept wildcard characters: False
 ```
 
 ### -NodeOrder
+
 Specifies an array of cluster node names in the order that they should be updated.
 
 ```yaml
@@ -424,6 +447,7 @@ Accept wildcard characters: False
 ```
 
 ### -PostUpdateScript
+
 Specifies the path and file name for a Windows PowerShell script to run after updating completes,
 just after the node leaves Maintenance mode. The file name extension must be .ps1 and the total
 length of the path plus the file name must be no longer than 260 characters. As a best practice, the
@@ -443,6 +467,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreUpdateScript
+
 Specifies the path and file name for a Windows PowerShell script to run on each node before updating
 begins, and before the node is put into Maintenance mode. The file name extension must be .ps1 and
 the total length of the path plus the file name must be no longer than 260 characters. As a best
@@ -462,6 +487,7 @@ Accept wildcard characters: False
 ```
 
 ### -RebootTimeoutMinutes
+
 Specifies the time in minutes that CAU will allow for the restarting of a node. If the restart does
 not complete within this time, then the updating run on that node is marked as failed.
 
@@ -478,6 +504,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireAllNodesOnline
+
 Indicates that all cluster nodes must be online and reachable before updating begins.
 
 ```yaml
@@ -493,6 +520,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunPluginsSerially
+
 Indicates that CAU scans each cluster node for applicable updates and stage the updates for each
 plug-in in the plug-in order passed into the*CauPluginName* parameter, when multiple plug-ins are
 used during an updating run.
@@ -517,6 +545,7 @@ Accept wildcard characters: False
 ```
 
 ### -SeparateReboots
+
 Indicates that CAU shuts down and restart a cluster node after each plug-in installs updates on the
 node, if the installation of an update by a plug-in requires a restart that CAU will shut down and
 restart a cluster node after each plug-in installs updates on the node, if the installation of an
@@ -538,6 +567,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
+
 Specifies the earliest date on which the updating run can be triggered.
 
 ```yaml
@@ -553,6 +583,7 @@ Accept wildcard characters: False
 ```
 
 ### -StopAfter
+
 Specifies the time in minutes after which the updating run is canceled if it has not completed. The
 time span can be expressed in the standard ways available in Windows PowerShell, for instance,
 `01:30:00` represents one hour and thirty minutes. By default, the updating run is allowed an
@@ -574,6 +605,7 @@ Accept wildcard characters: False
 ```
 
 ### -StopOnPluginFailure
+
 Indicates that if a failure occurs during the application of updates on a node by any plug-in,
 subsequent updates on the node that are coordinated by the remaining plug-ins are stopped when
 multiple plug-ins are used during an updating run.
@@ -594,6 +626,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuspendClusterNodeTimeoutMinutes
+
 Specifies the maximum amount of time CAU should wait for the Suspend-ClusterNodecmdlet to succeed if
 the underlying clustered space is in degraded condition.
 
@@ -618,6 +651,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateNow
+
 Instructs the CAU clustered role to immediately initiate an updating run using the configured
 settings.
 
@@ -634,6 +668,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDefault
+
 Indicates that default values are used for all parameters that do not have specified values.
 
 ```yaml
@@ -649,6 +684,7 @@ Accept wildcard characters: False
 ```
 
 ### -WarnAfter
+
 Specifies the time in minutes after which a warning is logged if the updating run, including any
 pre-update and post-update scripts, has not completed. By default, no warning is logged, regardless
 of the time taken by the updating run.
@@ -666,6 +702,7 @@ Accept wildcard characters: False
 ```
 
 ### -WeeksOfMonth
+
 Specifies the weeks of the month when the Updating Run should be run.
 The value 5 represents the last week of the month.
 
@@ -682,6 +719,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -698,6 +736,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

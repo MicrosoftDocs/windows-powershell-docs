@@ -40,7 +40,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
- [-DisableIOAVProtection <Boolean>] 
+ [-DisableIOAVProtection <Boolean>]
  [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
  [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-UnknownThreatDefaultAction <ThreatAction>]
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
@@ -1616,16 +1616,16 @@ The acceptable values for this parameter are:
 - 5: Thursday 
 - 6: Friday 
 - 7: Saturday 
-- 8: Never 
+- 8: Default 
 
-The default value is 8, never.
+The default value is 8, default.
 If you specify a value of 8 or do not specify a value, Windows Defender checks for definition updates by using a default frequency.
 
 ```yaml
 Type: Day
 Parameter Sets: (All)
 Aliases: sigsd
-Accepted values: Everyday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Never
+Accepted values: Everyday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Default
 
 Required: False
 Position: Named

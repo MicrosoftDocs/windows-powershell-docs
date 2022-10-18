@@ -79,6 +79,7 @@ Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/
 ## PARAMETERS
 
 ### -AttemptSoftReboot
+
 Indicates that command assumes a Kernel Soft Reboot (KSR) for the failover cluster.
 
 KSR bypasses BIOS/firmware initialization.
@@ -217,6 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -OsRollingUpgrade
+
 Indicates that the CAU cluster role scans for upgrades to the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. 
 
 ```yaml
@@ -232,6 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### -RebootMode
+
 {{ Fill RebootMode Description }}
 
 ```yaml
@@ -291,6 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

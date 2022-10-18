@@ -62,6 +62,7 @@ Set-CauClusterRole [-UseDefault] [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>
 ```
 
 ### Once
+
 ```
 Set-CauClusterRole [-UseDefault] [-RunOnce] [-CauPluginName <String[]>]
  [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>]
@@ -112,6 +113,7 @@ This example uses splatting to pass parameter values from the `$parameters` vari
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 2: Configure settings for a CAU cluster role on the specified cluster on the second week of the month
+
 ```powershell
 $parameters = @{
     ClusterName = 'CONTOSO-FC1'
@@ -185,6 +187,7 @@ Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/
 ## PARAMETERS
 
 ### -AttemptSoftReboot
+
 Indicates that the CAU clustered role attempts a Kernel Soft Reboot (KSR) for the failover cluster.
 
 KSR bypasses BIOS/firmware initialization.
@@ -447,6 +450,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForcePauseAndDrain
+
 Indicates that the CAU cluster role forces cluster nodes to pause and drain roles.
 
 A forced drain moves the roles off of the draining node even if the group cannot move.
@@ -465,6 +469,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForcePauseDrainAndReboot
+
 Indicates that the CAU cluster role forces cluster nodes to pause, drain roles, and restart.
 
 A forced drain moves the roles off of the draining node even if the group cannot move.
@@ -483,6 +488,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForcePauseNoDrain
+
 Indicates that the CAU cluster role forces cluster nodes to pause.
 The nodes are not drained.
 
@@ -499,6 +505,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntervalWeeks
+
 Specifies the interval between weeks when the task will be triggered. An interval of 1 produces a
 weekly schedule. An interval of 2 produces an every-other week schedule.
 
@@ -567,6 +574,7 @@ Accept wildcard characters: False
 ```
 
 ### -OsRollingUpgrade
+
 Indicates that the CAU cluster role upgrades the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. 
 
 ```yaml
@@ -622,6 +630,7 @@ Accept wildcard characters: False
 ```
 
 ### -RebootMode
+
 {{ Fill RebootMode Description }}
 
 ```yaml
@@ -671,6 +680,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunOnce
+
 {{ Fill RunOnce Description }}
 
 ```yaml
@@ -733,6 +743,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteAwareUpdatingOrder
+
 Specifies the order in which the CAU cluster role updates cluster nodes.
 
 By default, CAU selects the order of nodes to update based on the level of activity.
@@ -750,6 +761,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipUpdateChecks
+
 Indicates that the CAU cluster role skips update checks.
 
 ```yaml
@@ -934,6 +946,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

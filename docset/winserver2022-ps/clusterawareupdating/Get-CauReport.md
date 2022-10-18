@@ -20,28 +20,28 @@ specified dates or other specified parameters.
 
 ```
 Get-CauReport [[-ClusterName] <String>] [-Detailed] [-Credential <PSCredential>]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### RangeParamSet
 
 ```
 Get-CauReport [[-ClusterName] <String>] [[-StartDate] <DateTime>] [[-EndDate] <DateTime>]
-[-Detailed] [-Credential <PSCredential>] [<CommonParameters>]
+ [-Detailed] [-Credential <PSCredential>] [<CommonParameters>]
 ```
 
 ### LastParamSet
 
 ```
 Get-CauReport [[-ClusterName] <String>] [-Last] [-Detailed] [-Credential <PSCredential>]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ### SpecificReportParamSet
 
 ```
 Get-CauReport [[-ClusterName] <String>] [-Report <CauReportSummary>] [-Credential <PSCredential>]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -204,6 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

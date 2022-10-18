@@ -21,7 +21,8 @@ Get-CauDeviceInfoForFeatureUpdates [[-ClusterName] <String>] [-Credential <PSCre
 ```
 
 ## DESCRIPTION
-The **Get-CauDeviceInfoForFeatureUpdates** cmdlet gets device information for feature updates to use with Cluster-Aware Updating (CAU).
+
+The `Get-CauDeviceInfoForFeatureUpdates` cmdlet gets device information for feature updates to use with Cluster-Aware Updating (CAU).
 
 ## EXAMPLES
 
@@ -42,6 +43,7 @@ splatting to pass parameter values from the `$Parameters` variable to the comman
 ## PARAMETERS
 
 ### -ClusterName
+
 Specifies the name of the cluster fow which to get device information.
 
 ```yaml
@@ -57,6 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the administrative credentials for the target cluster.
 
 ```yaml
@@ -72,6 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -PathToDirectory
+
 Specifies a directory.
 
 ```yaml
@@ -87,6 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

@@ -19,47 +19,47 @@ Adds the Cluster Aware Updating (CAU) clustered role that provides the self-upda
 
 ```
 Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>]
-[-StartDate <DateTime>] [-DaysOfWeek <Weekdays>] [-WeeksOfMonth <Int32[]>]
-[-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
-[-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
-[-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
-[-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
-[-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
-[-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
-[-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
-[-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
-[[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>] [-WeeksOfMonth <Int32[]>]
+ [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
+ [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
+ [-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
+ [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
+ [-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
+ [-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+ [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
+ [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
+ [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Weekly
 
 ```
 Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>]
-[-StartDate <DateTime>] [-DaysOfWeek <Weekdays>] [-IntervalWeeks <Int32>]
-[-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
-[-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
-[-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
-[-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
-[-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
-[-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
-[-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
-[-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
-[[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StartDate <DateTime>] [-DaysOfWeek <Weekdays>] [-IntervalWeeks <Int32>]
+ [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
+ [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
+ [-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
+ [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
+ [-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
+ [-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+ [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
+ [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
+ [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Once
 
 ```
 Add-CauClusterRole [-VirtualComputerObjectName <String>] [-GroupName <String>] [-RunOnce]
-[-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
-[-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
-[-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
-[-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
-[-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
-[-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
-[-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
-[-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
-[[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CauPluginName <String[]>] [-CauPluginArguments <Hashtable[]>] [-MaxFailedNodes <Int32>]
+ [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>] [-PreUpdateScript <String>]
+ [-PostUpdateScript <String>] [-ConfigurationName <String>] [-RequireAllNodesOnline]
+ [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>] [-SeparateReboots]
+ [-RunPluginsSerially] [-StopOnPluginFailure] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
+ [-SuspendClusterNodeTimeoutMinutes <Int32>] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+ [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-SiteAwareUpdatingOrder <String[]>]
+ [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [[-ClusterName] <String>]
+ [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -166,6 +166,7 @@ Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/
 ## PARAMETERS
 
 ### -AttemptSoftReboot
+
 Indicates that the CAU clustered role attempts a Kernel Soft Reboot (KSR) for the failover cluster.
 
 KSR bypasses BIOS/firmware initialization. You can only use KSR for updates that do not require a
@@ -429,6 +430,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForcePauseAndDrain
+
 Indicates that the CAU cluster role forces cluster nodes to pause and drain roles.
 
 A forced drain moves the roles off of the draining node even if the group cannot move.
@@ -447,6 +449,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForcePauseDrainAndReboot
+
 Indicates that the CAU cluster role forces cluster nodes to pause, drain roles, and restart.
 
 A forced drain moves the roles off of the draining node even if the group cannot move.
@@ -465,6 +468,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForcePauseNoDrain
+
 Indicates that the CAU cluster role forces cluster nodes to pause.
 The nodes are not drained.
 
@@ -569,6 +573,7 @@ Accept wildcard characters: False
 ```
 
 ### -OsRollingUpgrade
+
 Indicates that the CAU cluster role upgrades the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. 
 
 ```yaml
@@ -625,6 +630,7 @@ Accept wildcard characters: False
 ```
 
 ### -RebootMode
+
 {{ Fill RebootMode Description }}
 
 ```yaml
@@ -675,6 +681,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunOnce
+
 {{ Fill RunOnce Description }}
 
 ```yaml
@@ -735,6 +742,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteAwareUpdatingOrder
+
 Specifies the order in which the CAU cluster role updates cluster nodes.
 
 By default, CAU selects the order of nodes to update based on the level of activity.
@@ -752,6 +760,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipUpdateChecks
+
 Indicates that the CAU cluster role skips update checks.
 
 ```yaml
@@ -824,6 +833,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuspendClusterNodeTimeoutMinutes
+
 Specifies the maximum amount of time CAU should wait for the `Suspend-ClusterNode` cmdlet to
 succeed if the underlying clustered space is in degraded condition.
 

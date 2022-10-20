@@ -110,7 +110,9 @@ Accept wildcard characters: False
 
 ### -CompressibilitySamplingSize
 
-Specifies the size in bytes to sample in a file to look for compressible data.
+Specifies the size in bytes to sample in a file to look for compressible data. Although the
+parameter type is **UInt64**, the sampling size can be specified up to a maximum of is 9,007,199,254,740,992
+(9 PiB).
 
 ```yaml
 Type: UInt64
@@ -126,7 +128,9 @@ Accept wildcard characters: False
 
 ### -CompressibleThreshold
 
-Specifies the threshold in bytes in which to attempt to find compressible data.
+Specifies the threshold in bytes in which to attempt to find compressible data. Although the
+parameter type is **UInt64**, the threshold can be specified up to a maximum of is 9,007,199,254,740,992
+(9 PiB).
 
 ```yaml
 Type: UInt64

@@ -17,18 +17,18 @@ Resets the Server Message Block (SMB) server configuration parameters to their d
 
 ```
 Reset-SmbServerConfiguration [-All] [-AnnounceComment] [-AnnounceServer] [-AsynchronousCredits]
-[-AuditSmb1Access] [-AutoShareServer] [-AutoShareWorkstation] [-CachedOpenLimit]
-[-DisableCompression] [-DisableSmbEncryptionOnSecureConnection] [-DurableHandleV2TimeoutInSeconds]
-[-EnableDownlevelTimewarp] [-EnableLeasing] [-EnableMultiChannel] [-EnableOplocks]
-[-EnableSMB2Protocol] [-EnableSMBQUIC] [-EnableStrictNameChecking] [-EncryptData]
-[-EncryptionCiphers] [-IrpStackSize] [-KeepAliveTime] [-MaxChannelPerSession] [-MaxMpxCount]
-[-MaxSessionPerConnection] [-MaxThreadsPerQueue] [-MaxWorkItems] [-NullSessionShares]
-[-OplockBreakWait] [-PendingClientTimeoutInSeconds] [-RejectUnencryptedAccess]
-[-RequestCompression] [-RestrictNamedpipeAccessViaQuic] [-ServerHidden] [-Smb2CreditsMax]
-[-Smb2CreditsMin] [-SmbServerNameHardeningLevel] [-TreatHostAsStableStorage]
-[-ValidateAliasNotCircular] [-ValidateShareScope] [-ValidateShareScopeNotAliased]
-[-ValidateTargetName] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
-[-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AuditSmb1Access] [-AutoShareServer] [-AutoShareWorkstation] [-CachedOpenLimit]
+ [-DisableCompression] [-DisableSmbEncryptionOnSecureConnection] [-DurableHandleV2TimeoutInSeconds]
+ [-EnableDownlevelTimewarp] [-EnableLeasing] [-EnableMultiChannel] [-EnableOplocks]
+ [-EnableSMB2Protocol] [-EnableSMBQUIC] [-EnableStrictNameChecking] [-EncryptData]
+ [-EncryptionCiphers] [-IrpStackSize] [-KeepAliveTime] [-MaxChannelPerSession] [-MaxMpxCount]
+ [-MaxSessionPerConnection] [-MaxThreadsPerQueue] [-MaxWorkItems] [-NullSessionShares]
+ [-OplockBreakWait] [-PendingClientTimeoutInSeconds] [-RejectUnencryptedAccess]
+ [-RequestCompression] [-RestrictNamedpipeAccessViaQuic] [-ServerHidden] [-Smb2CreditsMax]
+ [-Smb2CreditsMin] [-SmbServerNameHardeningLevel] [-TreatHostAsStableStorage]
+ [-ValidateAliasNotCircular] [-ValidateShareScope] [-ValidateShareScopeNotAliased]
+ [-ValidateTargetName] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,6 +43,7 @@ and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and3](/openspecs/w
 > system version 21H2 for x64-based Systems
 > ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
 > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+>
 > - The **DisableCompression** and **RequestCompression** parameters are available beginning with
 > 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems
 > ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for Windows 11,
@@ -226,6 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompression
+
 Resets the SMB compression behavior to its default value.
 
 ```yaml
@@ -593,6 +595,7 @@ Accept wildcard characters: False
 ```
 
 ### -RejectUnencryptedAccess
+
 Resets the unencrypted access behavior to its default value.
 
 ```yaml
@@ -608,6 +611,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestCompression
+
 Resets the SMB server request compression value to its default value.
 
 ```yaml
@@ -741,7 +745,7 @@ Accept wildcard characters: False
 
 ### -ValidateAliasNotCircular
 
-Resets whether the aliases that are not circular are validated to its default value.
+Resets whether the aliases that aren't circular are validated to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -821,7 +825,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

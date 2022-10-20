@@ -17,15 +17,15 @@ Resets the Server Message Block (SMB) client configuration parameters to their d
 
 ```
 Reset-SmbClientConfiguration [-All] [-CompressibilitySampling]
-[-ConnectionCountPerRssNetworkInterface] [-DirectoryCacheEntriesMax] [-DirectoryCacheEntrySizeMax]
-[-DirectoryCacheLifetime] [-DisableCompression] [-DormantFileLimit] [-EnableBandwidthThrottling]
-[-EnableByteRangeLockingOnReadOnlyFiles] [-EnableLargeMtu] [-EnableLoadBalanceScaleOut]
-[-EnableMultiChannel] [-EncryptionCiphers] [-ExtendedSessionTimeout] [-FileInfoCacheEntriesMax]
-[-FileInfoCacheLifetime] [-FileNotFoundCacheEntriesMax] [-FileNotFoundCacheLifetime]
-[-ForceSMBEncryptionOverQuic] [-KeepConn] [-MaxCmds] [-MaximumConnectionCountPerServer]
-[-OplocksDisabled] [-RequestCompression] [-SessionTimeout] [-SkipCertificateCheck]
-[-UseOpportunisticLocking] [-WindowSizeThreshold] [-Force] [-CimSession <CimSession[]>]
-[-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ConnectionCountPerRssNetworkInterface] [-DirectoryCacheEntriesMax] [-DirectoryCacheEntrySizeMax]
+ [-DirectoryCacheLifetime] [-DisableCompression] [-DormantFileLimit] [-EnableBandwidthThrottling]
+ [-EnableByteRangeLockingOnReadOnlyFiles] [-EnableLargeMtu] [-EnableLoadBalanceScaleOut]
+ [-EnableMultiChannel] [-EncryptionCiphers] [-ExtendedSessionTimeout] [-FileInfoCacheEntriesMax]
+ [-FileInfoCacheLifetime] [-FileNotFoundCacheEntriesMax] [-FileNotFoundCacheLifetime]
+ [-ForceSMBEncryptionOverQuic] [-KeepConn] [-MaxCmds] [-MaximumConnectionCountPerServer]
+ [-OplocksDisabled] [-RequestCompression] [-SessionTimeout] [-SkipCertificateCheck]
+ [-UseOpportunisticLocking] [-WindowSizeThreshold] [-Force] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,6 +38,7 @@ default values.
 > system version 21H2 for x64-based Systems
 > ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
 > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+>
 > - The **CompressibilitySampling** and **RequestCompression** parameters are available beginning
 > with 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
 > Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
@@ -108,6 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompressibilitySampling
+
 Resets the compression sampling behavior.
 
 ```yaml
@@ -477,6 +479,7 @@ Accept wildcard characters: False
 ```
 
 ### -OplocksDisabled
+
 Resets the opportunistic locks disabled value to its default value.
 
 ```yaml
@@ -492,6 +495,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestCompression
+
 Resets the SMB client request compression value to its default value.
 
 ```yaml
@@ -609,7 +613,7 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

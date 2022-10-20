@@ -17,21 +17,21 @@ Sets the SMB client configuration.
 
 ```
 Set-SmbClientConfiguration [-CompressibilitySamplingSize <UInt64>]
-[-CompressibleThreshold <UInt64>] [-ConnectionCountPerRssNetworkInterface <UInt32>]
-[-DirectoryCacheEntriesMax <UInt32>] [-DirectoryCacheEntrySizeMax <UInt32>]
-[-DirectoryCacheLifetime <UInt32>] [-DisableCompression <Boolean>] [-DormantFileLimit <UInt32>]
-[-EnableBandwidthThrottling <Boolean>] [-EnableByteRangeLockingOnReadOnlyFiles <Boolean>]
-[-EnableCompressibilitySampling <Boolean>] [-EnableInsecureGuestLogons <Boolean>]
-[-EnableLargeMtu <Boolean>] [-EnableLoadBalanceScaleOut <Boolean>] [-EnableMultiChannel <Boolean>]
-[-EnableSecuritySignature <Boolean>] [-EncryptionCiphers <String>]
-[-ExtendedSessionTimeout <UInt32>] [-FileInfoCacheEntriesMax <UInt32>]
-[-FileInfoCacheLifetime <UInt32>] [-FileNotFoundCacheEntriesMax <UInt32>]
-[-FileNotFoundCacheLifetime <UInt32>] [-ForceSMBEncryptionOverQuic <Boolean>] [-KeepConn <UInt32>]
-[-MaxCmds <UInt32>] [-MaximumConnectionCountPerServer <UInt32>] [-OplocksDisabled <Boolean>]
-[-RequestCompression <Boolean>] [-RequireSecuritySignature <Boolean>] [-SessionTimeout <UInt32>]
-[-SkipCertificateCheck <Boolean>] [-UseOpportunisticLocking <Boolean>]
-[-WindowSizeThreshold <UInt32>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
-[-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-CompressibleThreshold <UInt64>] [-ConnectionCountPerRssNetworkInterface <UInt32>]
+ [-DirectoryCacheEntriesMax <UInt32>] [-DirectoryCacheEntrySizeMax <UInt32>]
+ [-DirectoryCacheLifetime <UInt32>] [-DisableCompression <Boolean>] [-DormantFileLimit <UInt32>]
+ [-EnableBandwidthThrottling <Boolean>] [-EnableByteRangeLockingOnReadOnlyFiles <Boolean>]
+ [-EnableCompressibilitySampling <Boolean>] [-EnableInsecureGuestLogons <Boolean>]
+ [-EnableLargeMtu <Boolean>] [-EnableLoadBalanceScaleOut <Boolean>] [-EnableMultiChannel <Boolean>]
+ [-EnableSecuritySignature <Boolean>] [-EncryptionCiphers <String>]
+ [-ExtendedSessionTimeout <UInt32>] [-FileInfoCacheEntriesMax <UInt32>]
+ [-FileInfoCacheLifetime <UInt32>] [-FileNotFoundCacheEntriesMax <UInt32>]
+ [-FileNotFoundCacheLifetime <UInt32>] [-ForceSMBEncryptionOverQuic <Boolean>] [-KeepConn <UInt32>]
+ [-MaxCmds <UInt32>] [-MaximumConnectionCountPerServer <UInt32>] [-OplocksDisabled <Boolean>]
+ [-RequestCompression <Boolean>] [-RequireSecuritySignature <Boolean>] [-SessionTimeout <UInt32>]
+ [-SkipCertificateCheck <Boolean>] [-UseOpportunisticLocking <Boolean>]
+ [-WindowSizeThreshold <UInt32>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+ [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,6 +43,7 @@ The `Set-SmbClientConfiguration` cmdlet sets the Server Message Block (SMB) clie
 > Microsoft server operating system version 21H2 for x64-based Systems
 > ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
 > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+>
 > - The **CompressibilitySamplingSize**, **CompressibleThreshold**,
 > **EnableCompressibilitySampling**, and **RequestCompression** parameters are available beginning
 > with 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
@@ -108,6 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompressibilitySamplingSize
+
 Specifies the size in bytes to sample in a file to look for compressible data.
 
 ```yaml
@@ -123,6 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompressibleThreshold
+
 Specifies the threshold in bytes in which to attempt to find compressible data.
 
 ```yaml
@@ -250,6 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableByteRangeLockingOnReadOnlyFiles
+
 Indicates that byte range locking on read-only files is enabled.
 
 ```yaml
@@ -265,13 +269,19 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCompressibilitySampling
+
 Controls the sampling behavior. SMB by default always attempts to compress the entire file when a
-client or server requests it, without using compression sampling. With EnableCompressibilitySampling
-set to '$true' SMB uses of an algorithm where it attempted to compress the first 524,288,000 bytes
-(500 MiB) of a file during transfer and track that at least 104,857,600 bytes (100 MiB) compressed
-within that 500 MiB range. If fewer than 100 MiB was compressible, SMB compression stopped trying to
-compress the rest of the file. If at least 100 MiB compressed, SMB compression attempted to compress
-the rest of the file.
+client or server requests it. With **EnableCompressibilitySampling** set to `$true`, SMB uses the
+compression sampling algorithm where it attempts to compress the file based on the values
+configured in the **CompressibiltySamplingSize** and **CompressibleThreshold** parameters.
+
+With **EnableCompressibilitySampling** set to `$true` and if you don't use the
+**CompressibiltySamplingSize** and **CompressibleThreshold** parameters, the algorithm will by
+default attempt to compress the first 524,288,000 bytes (500 MiB) of a file during transfer. The
+algorithm will try to track that at least 104,857,600 bytes (100 MiB) compresses within that 500 MiB
+range. If fewer than 100 MiB was compressible, SMB compression stopped trying to compress the rest
+of the file. If at least 100 MiB compressed, SMB compression attempted to compress the rest of the
+file.
 
 ```yaml
 Type: Boolean
@@ -480,7 +490,7 @@ Accept wildcard characters: False
 ### -ForceSMBEncryptionOverQuic
 
 Specifies that the SMB client uses SMB encryption inside of the SMB over QUIC TLS 1.3 encrypted
-tunnel even if the SMB server does not require it.
+tunnel even if the SMB server doesn't require it.
 
 ```yaml
 Type: Boolean
@@ -543,6 +553,7 @@ Accept wildcard characters: False
 ```
 
 ### -OplocksDisabled
+
 Indicates that opportunistic locks are disabled.
 
 ```yaml
@@ -558,6 +569,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestCompression
+
 Indicates if SMB client should always request compression even if server or application didn't
 specify it.
 
@@ -677,7 +689,7 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

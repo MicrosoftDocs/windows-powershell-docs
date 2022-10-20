@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbShare.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 12/20/2016
+ms.date: 10/20/2022
 online version: https://learn.microsoft.com/powershell/module/smbshare/new-smbshare?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-SmbShare
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ### -Description
 
 Specifies an optional description of the SMB share. A description of the share is displayed by
-running the Get-SmbShare cmdlet. The description may not contain more than 256 characters. The
+running the `Get-SmbShare` cmdlet. The description may not contain more than 256 characters. The
 default value no description, or an empty description.
 
 ```yaml

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 09/15/2022
+ms.date: 10/20/2022
 online version: /powershell/module/smbshare/set-smbserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SmbServerConfiguration
@@ -71,9 +71,9 @@ This command sets the SMB Service configuration without user confirmation.
 
 ```powershell
 $Parameters = @{
-    RequireSecuritySignature = $True
-    EnableSecuritySignature = $True
-    EncryptData = $True
+    RequireSecuritySignature = $true
+    EnableSecuritySignature = $true
+    EncryptData = $true
     Confirm = $false
 }
 Set-SmbServerConfiguration @Parameters
@@ -86,7 +86,7 @@ splatting to pass parameter values from the `$Parameters` variable to the comman
 ### Example 3: Turn off the default server and workstations shares
 
 ```powershell
-Set-SmbServerConfiguration -AutoShareServer $False -AutoShareWorkstation $False -Confirm:$false
+Set-SmbServerConfiguration -AutoShareServer $false -AutoShareWorkstation $false -Confirm:$false
 ```
 
 This command turns off the default server and workstations shares without user confirmation.
@@ -94,7 +94,7 @@ This command turns off the default server and workstations shares without user c
 ### Example 4: Turn off server announcements
 
 ```powershell
-Set-SmbServerConfiguration -ServerHidden $False -AnnounceServer $False -Confirm:$false
+Set-SmbServerConfiguration -ServerHidden $false -AnnounceServer $false -Confirm:$false
 ```
 
 This command turns off server announcements without user confirmation.
@@ -788,7 +788,7 @@ Accept wildcard characters: False
 
 ### -RestrictNamedpipeAccessViaQuic
 
-Specifies that named pipes are allowed when using SMB over QUIC. A value of $TRUE prevents use of
+Specifies that named pipes are allowed when using SMB over QUIC. A value of `$true` prevents use of
 named pipes and is the default.
 
 ```yaml

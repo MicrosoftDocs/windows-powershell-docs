@@ -229,10 +229,14 @@ offline or failed state. The acceptable values for this parameter are:
 
 - Int32, Int64, Uint32, Uint64. A number that represents a master boot record (MBR) signature of the
   disk.
+
 - **System.String**. A string that represents a master boot record (MBR) signature of the disk,
   hexadecimal format is supported.
+
 - **System.String**. A string that represents the GUID of a GPT disk.
+
 - **ClusterResource**. A cluster resource object that represents a clustered disk.
+
 - **CimInstance#MSFT_Disk**. An object returned from Get-Disk, from the Windows PowerShell® storage
   module.
 
@@ -358,7 +362,9 @@ all storage pools that are available for use in the cluster or that are in the c
 offline or failed state. The acceptable values for this parameter are:
 
 - **System.String**: A string that represents the name of the clustered storage pool or pools.
+
 - **ClusterResource**: A cluster resource object that represents a clustered storage pool.
+
 - **CimInstance#MSFT_StoragePool**: An object returned from **Get-StoragePool**, from the Windows
   PowerShell storage module.
 

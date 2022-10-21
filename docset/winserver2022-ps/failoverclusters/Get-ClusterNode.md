@@ -16,18 +16,23 @@ Gets information about one or more nodes, or servers, in a failover cluster.
 ## SYNTAX
 
 ```
-Get-ClusterNode [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+Get-ClusterNode [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cluster <String>]
+ <CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-ClusterNode** cmdlet gets information about one or more nodes, or servers, in a failover cluster.
 
-Use this cmdlet to obtain information about the node status.
-To see the resources currently owned by a particular node, specify that node in this cmdlet and then pipe the results through the **Get-ClusterResource** cmdlet.
+The **Get-ClusterNode** cmdlet gets information about one or more nodes, or servers, in a failover
+cluster.
+
+Use this cmdlet to obtain information about the node status. To see the resources currently owned by
+a particular node, specify that node in this cmdlet and then pipe the results through the
+**Get-ClusterResource** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```
 PS C:\> Get-ClusterNode
 Name           ID    State 
@@ -41,6 +46,7 @@ node4           4     Up
 This example displays the name, id, and state of each node, or server, in the local cluster.
 
 ### Example 2
+
 ```
 PS C:\> Get-ClusterNode -Cluster cluster1
 Name           ID    State 
@@ -49,9 +55,11 @@ node1           1     Up
 node2           2     Up
 ```
 
-This example displays the name, id, and state of each node, or server, in the cluster named cluster1.
+This example displays the name, id, and state of each node, or server, in the cluster named
+cluster1.
 
 ### Example 3
+
 ```
 PS C:\> Get-ClusterNode -Name node1 | Get-ClusterResource
 Name                State               Group               ResourceType 
@@ -63,13 +71,15 @@ Cluster Name        Online              Cluster Group       Network Name
 File Share Witness  Offline             Cluster Group       File Share Witness
 ```
 
-This example lists all cluster resources that are currently owned by node named node1 on the local cluster.
+This example lists all cluster resources that are currently owned by node named node1 on the local
+cluster.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -84,6 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies the cluster on which to enumerate cluster nodes.
 
 ```yaml
@@ -99,6 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the cluster node to get.
 
 ```yaml
@@ -114,7 +126,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -141,4 +157,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-ClusterNode](./Stop-ClusterNode.md)
 
 [Suspend-ClusterNode](./Suspend-ClusterNode.md)
-

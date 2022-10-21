@@ -11,7 +11,8 @@ title: Get-ClusterResourceDependency
 # Get-ClusterResourceDependency
 
 ## SYNOPSIS
-Gets information about the dependencies that have been configured between clustered resources in a failover cluster.
+Gets information about the dependencies that have been configured between clustered resources in a
+failover cluster.
 
 ## SYNTAX
 
@@ -21,12 +22,15 @@ Get-ClusterResourceDependency [[-Resource] <StringCollection>] [-Guid] [-InputOb
 ```
 
 ## DESCRIPTION
-The **Get-ClusterResourceDependency** cmdlet gets information about the dependencies that have been configured between clustered resources in a failover cluster.
-Resource dependencies control the order in which resources are brought online or taken offline in the cluster.
+
+The **Get-ClusterResourceDependency** cmdlet gets information about the dependencies that have been
+configured between clustered resources in a failover cluster. Resource dependencies control the
+order in which resources are brought online or taken offline in the cluster.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```
 PS C:\> Get-ClusterResourceDependency -Resource cluster1FS12
 Resource                                DependencyExpression 
@@ -37,6 +41,7 @@ cluster1FS12                            [IP Address 172.24.11.0] or [IP Add ...
 This example displays the dependencies for the resource called cluster1FS12.
 
 ### Example 2
+
 ```
 PS C:\> Get-ClusterGroup -Name cluster1FS12 | Get-ClusterResource | Get-ClusterResourceDependency
 Resource                                DependencyExpression 
@@ -49,14 +54,15 @@ IP Address 2001:4898:9:2::
 IP Address 2002:9d38:31ca:8::
 ```
 
-This example displays the dependencies for each resource in the clustered file server ─resource group─ called cluster1FS12.
-Some resources do not have dependencies.
+This example displays the dependencies for each resource in the clustered file server ─resource
+group─ called cluster1FS12. Some resources do not have dependencies.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -71,6 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Causes the generated dependency expression to have the resource GUIDs instead of the resource names.
 
 ```yaml
@@ -86,6 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies the cluster resource for which to get the dependency expression.
 
 ```yaml
@@ -101,6 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
+
 Specifies the name of the cluster resource for which to get the dependency expression.
 
 ```yaml
@@ -116,7 +125,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -139,4 +152,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-ClusterResourceDependency](./Remove-ClusterResourceDependency.md)
 
 [Set-ClusterResourceDependency](./Set-ClusterResourceDependency.md)
-

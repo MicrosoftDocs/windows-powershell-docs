@@ -16,19 +16,24 @@ Moves a Cluster Shared Volume (CSV) to ownership by a different node in a failov
 ## SYNTAX
 
 ```
-Move-ClusterSharedVolume [[-Name] <String>] [[-Node] <String>] [-Wait <Int32>] [-InputObject <PSObject>]
- [-Cluster <String>] [<CommonParameters>]
+Move-ClusterSharedVolume [[-Name] <String>] [[-Node] <String>] [-Wait <Int32>]
+ [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Move-ClusterSharedVolume** cmdlet moves a Cluster Shared Volume (CSV) to ownership by a different node in a failover cluster.
 
-On a failover cluster that uses CSVs, at any given time, access to each CSV is controlled by a particular node, called the owner of that CSV.
-However, a single CSV can contain virtual hard disk (VHD) files used by multiple clustered virtual machines that are distributed across multiple cluster nodes.
+The **Move-ClusterSharedVolume** cmdlet moves a Cluster Shared Volume (CSV) to ownership by a
+different node in a failover cluster.
+
+On a failover cluster that uses CSVs, at any given time, access to each CSV is controlled by a
+particular node, called the owner of that CSV. However, a single CSV can contain virtual hard disk
+(VHD) files used by multiple clustered virtual machines that are distributed across multiple cluster
+nodes.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```
 PS C:\> Move-ClusterSharedVolume -Name "Cluster Disk 3"
 Name                       State                      Node 
@@ -39,6 +44,7 @@ Cluster Disk 3             Online                     node2
 This example moves the Cluster Shared Volume called Cluster Disk 3 to another cluster node.
 
 ### Example 2
+
 ```
 PS C:\> Move-ClusterSharedVolume -Name "Cluster Disk 3" -Node node1
 Name                       State                      Node 
@@ -51,8 +57,9 @@ This example moves the Cluster Shared Volume called Cluster Disk 3 to the node n
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -67,6 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies the Cluster Shared Volume to move.
 
 ```yaml
@@ -82,6 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the Cluster Shared Volume to move.
 
 ```yaml
@@ -97,6 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Node
+
 Specifies the name of the cluster node to which to move the Cluster Shared Volume.
 
 ```yaml
@@ -112,9 +122,10 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-Specifies the time in seconds to wait for the cmdlet.
-If the **Wait** parameter is not specified, then the cmdlet waits for completion.
-If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
+then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+cmdlet returns without waiting.
 
 ```yaml
 Type: Int32
@@ -129,7 +140,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -156,4 +171,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-ClusterResource](./Stop-ClusterResource.md)
 
 [Suspend-ClusterResource](./Suspend-ClusterResource.md)
-

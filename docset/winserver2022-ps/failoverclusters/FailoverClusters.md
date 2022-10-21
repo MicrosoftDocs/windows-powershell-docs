@@ -5,7 +5,7 @@ Help Version: 5.0.3.3
 Locale: en-US
 Module Guid: cc3e946b-9141-48c2-95d8-d9e56594416a
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 10/21/2022
 title: FailoverClusters
 ---
 

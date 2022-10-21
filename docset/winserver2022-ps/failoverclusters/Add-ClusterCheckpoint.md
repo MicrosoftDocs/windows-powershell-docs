@@ -22,15 +22,20 @@ Add-ClusterCheckpoint [[-ResourceName] <String>] [-CryptoCheckpointName <String>
 ```
 
 ## DESCRIPTION
-The **Add-ClusterCheckpoint** cmdlet adds a cryptographic key checkpoint or registry checkpoint for a resource.
 
-Checkpoints help provide failover support for applications that store configuration information locally instead of or in addition to storing information in the cluster configuration database.
-Applications might store information locally in two ways.
-One way is to store configuration information in the registry on the local server; another way is to use cryptographic keys on the local server.
+The **Add-ClusterCheckpoint** cmdlet adds a cryptographic key checkpoint or registry checkpoint for
+a resource.
+
+Checkpoints help provide failover support for applications that store configuration information
+locally instead of or in addition to storing information in the cluster configuration database.
+Applications might store information locally in two ways. One way is to store configuration
+information in the registry on the local server; another way is to use cryptographic keys on the
+local server.
 
 ## EXAMPLES
 
 ### Example 1: Add registry checkpoint
+
 ```
 PS C:\> Add-ClusterCheckpoint -ResourceName "Cluster Name" -RegistryCheckpoint "software\clusname"
 Resource                                                    Name 
@@ -38,9 +43,11 @@ Resource                                                    Name
 Cluster Name                                                software\clusname
 ```
 
-This example adds a registry checkpoint called software\clusname for the resource named cluster name.
+This example adds a registry checkpoint called software\clusname for the resource named cluster
+name.
 
 ### Example 2: Add cryptographic checkpoint
+
 ```
 PS C:\> Get-ClusterResource -Name "Cluster Name" | Add-ClusterCheckpoint -CryptoCheckpointName "Microsoft Base Cryptographic Provider v1.0"  -CryptoCheckpointType 1 -CryptoCheckpointKey "Crypto"
 Resource                      Name                          Type                          Key 
@@ -53,8 +60,9 @@ This example adds a cryptographic checkpoint for the resource named Cluster Name
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -69,6 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -CryptoCheckpointKey
+
 Specifies the key of a cryptographic key checkpoint to add.
 
 ```yaml
@@ -84,6 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -CryptoCheckpointName
+
 Specifies the name of a cryptographic key checkpoint to add.
 
 ```yaml
@@ -99,8 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -CryptoCheckpointType
-Specifies the type of a cryptographic key checkpoint to add.
-Options depend on the cryptographic provider.
+
+Specifies the type of a cryptographic key checkpoint to add. Options depend on the cryptographic
+provider.
 
 ```yaml
 Type: String
@@ -115,7 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the cluster on which to run the cmdlet or the cluster resource for which the checkpoint should be added.
+
+Specifies the cluster on which to run the cmdlet or the cluster resource for which the checkpoint
+should be added.
 
 ```yaml
 Type: PSObject
@@ -130,6 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistryCheckpoint
+
 Specifies the name of the registry checkpoint to add.
 
 ```yaml
@@ -145,6 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
+
 Specifies the resource for which a checkpoint should be added.
 
 ```yaml
@@ -160,7 +175,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -181,4 +200,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-ClusterResource](./Get-ClusterResource.md)
 
 [Remove-ClusterCheckpoint](./Remove-ClusterCheckpoint.md)
-

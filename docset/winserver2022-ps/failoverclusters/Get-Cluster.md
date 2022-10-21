@@ -20,9 +20,11 @@ Get-Cluster [[-Name] <String>] [-Domain <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The **Get-Cluster** cmdlet gets information about one or more failover clusters in a given domain.
 
-This cmdlet can obtain a variety of configuration and state information about a failover cluster, including the following items: 
+This cmdlet can obtain a variety of configuration and state information about a failover cluster,
+including the following items:
 
  -- State information about whether a backup is in progress. 
 
@@ -30,11 +32,13 @@ This cmdlet can obtain a variety of configuration and state information about a 
 
  -- Cross-network settings that are especially relevant for multi-site clusters.
 
-To set a common property for the cluster, use this cmdlet to get the cluster object and then set the appropriate property on that cluster object directly.
+To set a common property for the cluster, use this cmdlet to get the cluster object and then set the
+appropriate property on that cluster object directly.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```
 PS C:\> Get-Cluster | Format-List -Property *
 Domain                                  : contoso.com 
@@ -89,6 +93,7 @@ Id                                      : af5881ef-0ff7-4b5c-bfed-098decbbf762
 This example displays state and property information for the local cluster in the form of a list.
 
 ### Example 2
+
 ```
 PS C:\> Get-Cluster -Name cluster1
 Name 
@@ -99,6 +104,7 @@ cluster1
 This example gets information about a cluster named cluster1.
 
 ### Example 3
+
 ```
 PS C:\> Get-Cluster -Domain contoso.com
 Name 
@@ -111,6 +117,7 @@ cluster3
 This example gets information about each of the clusters in the contoso.com domain.
 
 ### Example 4
+
 ```
 PS C:\> Get-Cluster | ForEach-Object -Process {$_.CrossSubnetDelay = 1500}
 ```
@@ -118,6 +125,7 @@ PS C:\> Get-Cluster | ForEach-Object -Process {$_.CrossSubnetDelay = 1500}
 This example sets the common property called CrossSubnetDelay for the local cluster to 1500.
 
 ### Example 5
+
 ```
 PS C:\> (Get-Cluster).DynamicQuorum = 1
 ```
@@ -125,21 +133,26 @@ PS C:\> (Get-Cluster).DynamicQuorum = 1
 This example enables the Dynamic Quorum feature for the cluster.
 
 ### Example 6
+
 ```
 PS C:\> Get-Cluster | Format-List -Property Quarantine*
 QuarantineDuration  : 7200
 QuarantineThreshold : 3
 ```
 
-This example shows default values for QuarantineThreshold and QuarantineDuration for the local cluster.
+This example shows default values for QuarantineThreshold and QuarantineDuration for the local
+cluster.
 
- -- QuarantineThreshold: This is the number of times that a node can become isolated in an hour before the cluster will be quarantined. This is set to 3 by default.
+ -- QuarantineThreshold: This is the number of times that a node can become isolated in an hour
+ before the cluster will be quarantined. This is set to 3 by default.
 
- --QuarantineDuration: This setting, set to 7200 seconds or 2 hours by default, controls how long a host will remain quarantined.
+ --QuarantineDuration: This setting, set to 7200 seconds or 2 hours by default, controls how long a
+ host will remain quarantined.
 
 ## PARAMETERS
 
 ### -Domain
+
 Specifies the name of the domain in which to enumerate clusters.
 
 ```yaml
@@ -155,6 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the cluster to get.
 
 ```yaml
@@ -170,7 +184,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -195,4 +213,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-Cluster](./Stop-Cluster.md)
 
 [Test-Cluster](./Test-Cluster.md)
-

@@ -16,17 +16,20 @@ Adds a resource to a clustered role, or resource group, in a failover cluster.
 ## SYNTAX
 
 ```
-Add-ClusterResource [-Name] <String> [[-Group] <String>] [-ResourceType] <String> [-SeparateMonitor]
- [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+Add-ClusterResource [-Name] <String> [[-Group] <String>] [-ResourceType] <String>
+ [-SeparateMonitor] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-ClusterResource** cmdlet adds a resource to a clustered role, or resource group, in a failover cluster.
-Before adding the resource, obtain the resource type and the name of the group to which to add the resource.
+
+The **Add-ClusterResource** cmdlet adds a resource to a clustered role, or resource group, in a
+failover cluster. Before adding the resource, obtain the resource type and the name of the group to
+which to add the resource.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```
 PS C:\> Add-ClusterResource -Name resource1 -ResourceType "IP Address" -Group ClusterSrv1
 Name                State               Group               ResourceType 
@@ -34,14 +37,15 @@ Name                State               Group               ResourceType
 resource1           Offline             ClusterSrv1         IP Address
 ```
 
-This example creates a new IP Address resource called resource1 on the local cluster.
-The cmdlet configures the resource as part of the clustered role, or resource group, called ClusterSrv1.
+This example creates a new IP Address resource called resource1 on the local cluster. The cmdlet
+configures the resource as part of the clustered role, or resource group, called ClusterSrv1.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -56,6 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Group
+
 Specifies the name of the clustered role where the new resource is added.
 
 ```yaml
@@ -71,6 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies the clustered role where the new resource is added.
 
 ```yaml
@@ -86,6 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the cluster resource to create.
 
 ```yaml
@@ -101,6 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
+
 Specifies the name of the cluster resource type for the new cluster resource.
 
 ```yaml
@@ -116,6 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -SeparateMonitor
+
 Specifies that the new resource should run in a separate resource monitor.
 
 ```yaml
@@ -131,7 +140,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -158,4 +171,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-ClusterResource](./Stop-ClusterResource.md)
 
 [Suspend-ClusterResource](./Suspend-ClusterResource.md)
-

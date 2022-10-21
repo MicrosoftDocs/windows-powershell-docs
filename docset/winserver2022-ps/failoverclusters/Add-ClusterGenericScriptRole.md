@@ -24,7 +24,7 @@ Add-ClusterGenericScriptRole -ScriptFilePath <String> [-Storage <StringCollectio
 
 ## DESCRIPTION
 
-The **Add-ClusterGenericScriptRole** cmdlet configures an application controlled by a script that
+The `Add-ClusterGenericScriptRole` cmdlet configures an application controlled by a script that
 runs in Windows Script Host, within a failover cluster.
 
 The script provides the cluster software with information about the current state of the
@@ -46,7 +46,7 @@ cluster1GenScript          node2                              Online
 ```
 
 This example configures the script named script1.vbs to run within a failover cluster, using
-defaults for the name and IP address, and does not assign a disk.
+defaults for the name and IP address, and doesn't assign a disk.
 
 ### Example 2: Configure a script on a failover cluster and assign a clustered script name
 
@@ -70,7 +70,7 @@ cluster1GenScript          node2                             Pending
 ```
 
 This example configures the script called script1.vbs to run within a failover cluster, using
-defaults for the name and IP address, and does not assign a disk. The cmdlet completes without
+defaults for the name and IP address, and doesn't assign a disk. The cmdlet completes without
 waiting for all resources to come online.
 
 ## PARAMETERS
@@ -95,8 +95,9 @@ Accept wildcard characters: False
 ### -IgnoreNetwork
 
 Specifies one or more networks to ignore when running the cmdlet. Networks with DHCP enabled are
-always included, but other networks need a static address to be specified using the *StaticAddress*
-parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+always included, but other networks need a static address to be specified using the **StaticAddress**
+
+parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -162,7 +163,7 @@ Accept wildcard characters: False
 
 Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
 are always included, but other networks need a static address to be specified using the
-*StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -194,7 +195,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified, then
 the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 

@@ -31,7 +31,7 @@ Add-ClusterGroupSetDependency -InputObject <CimInstance[]> [-Provider] <String>
 
 ## DESCRIPTION
 
-The **Add-ClusterGroupSetDependency** cmdlet adds a dependency to a cluster set.
+The `Add-ClusterGroupSetDependency` cmdlet adds a dependency to a cluster set.
 
 ## EXAMPLES
 

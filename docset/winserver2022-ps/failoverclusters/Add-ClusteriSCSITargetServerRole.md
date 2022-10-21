@@ -23,7 +23,7 @@ Add-ClusteriSCSITargetServerRole -Storage <StringCollection> [-StaticAddress <St
 
 ## DESCRIPTION
 
-The **Add-ClusteriSCSITargetServerRole** cmdlet creates a highly available iSCSI Target server.
+The `Add-ClusteriSCSITargetServerRole` cmdlet creates a highly available iSCSI Target server.
 
 ## EXAMPLES
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
 then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 

@@ -28,7 +28,7 @@ Makes a new disk available for use in a failover cluster.
 Creates a clustered file server resource group.
 
 ### [Add-ClusterGenericApplicationRole](./Add-ClusterGenericApplicationRole.md)
-Configures high availability for an application that was not originally designed to run in a
+Configures high availability for an application that wasn't originally designed to run in a
 failover cluster.
 
 ### [Add-ClusterGenericScriptRole](./Add-ClusterGenericScriptRole.md)
@@ -36,7 +36,7 @@ Configures an application controlled by a script that runs in Windows Script Hos
 cluster.
 
 ### [Add-ClusterGenericServiceRole](./Add-ClusterGenericServiceRole.md)
-Configures high availability for a service that was not originally designed to run in a failover
+Configures high availability for a service that wasn't originally designed to run in a failover
 cluster.
 
 ### [Add-ClusterGroup](./Add-ClusterGroup.md)
@@ -103,7 +103,7 @@ Gets information about permissions that control access to a failover cluster.
 
 ### [Get-ClusterAvailableDisk](./Get-ClusterAvailableDisk.md)
 Gets information about the disks that can support Failover Clustering and are visible to all nodes,
-but are not yet part of the set of clustered disks.
+but aren't yet part of the set of clustered disks.
 
 ### [Get-ClusterCheckpoint](./Get-ClusterCheckpoint.md)
 Retrieves a cryptographic key checkpoint or registry checkpoint for a resource.
@@ -289,7 +289,7 @@ Sets S2D cache parameters.
 Configures the system to enable S2D to claim or not claim specific physical disks.
 
 ### [Start-Cluster](./Start-Cluster.md)
-Starts the Cluster service on all nodes of the cluster on which it is not yet started.
+Starts the Cluster service on all nodes of the cluster on which it isn't yet started.
 
 ### [Start-ClusterGroup](./Start-ClusterGroup.md)
 Starts one or more clustered roles, also known as resource groups, on a failover cluster.

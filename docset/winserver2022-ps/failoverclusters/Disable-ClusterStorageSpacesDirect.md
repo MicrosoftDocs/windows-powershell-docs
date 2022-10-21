@@ -22,7 +22,7 @@ Disable-ClusterStorageSpacesDirect [-CleanupCache <Boolean>] [-CimSession <CimSe
 
 ## DESCRIPTION
 
-The **Disable-ClusterStorageSpacesDirect** cmdlet disables highly available Storage Spaces that use
+The `Disable-ClusterStorageSpacesDirect` cmdlet disables highly available Storage Spaces that use
 direct attached storage Storage Spaces Direct (S2D) on a cluster.
 
 ## EXAMPLES
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

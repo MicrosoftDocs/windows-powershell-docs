@@ -22,7 +22,7 @@ Clear-ClusterDiskReservation [[-Node] <StringCollection>] -Disk <UInt32[]> [-For
 
 ## DESCRIPTION
 
-The **Clear-ClusterDiskReservation** cmdlet clears the persistent reservation on a disk in a
+The `Clear-ClusterDiskReservation` cmdlet clears the persistent reservation on a disk in a
 failover cluster. This cmdlet prompts for confirmation unless you specify the **Force** parameter.
 
 Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

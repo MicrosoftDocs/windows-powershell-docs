@@ -21,7 +21,7 @@ Get-Cluster [[-Name] <String>] [-Domain <String>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-The **Get-Cluster** cmdlet gets information about one or more failover clusters in a given domain.
+The `Get-Cluster` cmdlet gets information about one or more failover clusters in a given domain.
 
 This cmdlet can obtain a variety of configuration and state information about a failover cluster,
 including the following items:

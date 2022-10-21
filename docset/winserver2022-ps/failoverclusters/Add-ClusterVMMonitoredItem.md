@@ -42,7 +42,7 @@ Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>]
 
 ## DESCRIPTION
 
-The **Add-ClusterVMMonitoredItem** cmdlet configures monitoring for a service or an Event Tracing
+The `Add-ClusterVMMonitoredItem` cmdlet configures monitoring for a service or an Event Tracing
 for Windows (ETW) event so that it is monitored on a virtual machine. If the service fails or the
 event occurs, then the system responds by taking an action based on the failover configuration for
 the virtual machine resource. For example, the configuration might specify that the virtual machine
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ### -OverrideServiceRecoveryActions
 
 Specifies that the cluster service will fix, by overriding, the service recovery actions in the
-event that it is not properly configured for monitoring. To be configured for monitoring the
+event that it isn't properly configured for monitoring. To be configured for monitoring the
 following conditions need to be met:
 
 - None of the service recovery actions are set to Restart the computer.
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified, then
 the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 

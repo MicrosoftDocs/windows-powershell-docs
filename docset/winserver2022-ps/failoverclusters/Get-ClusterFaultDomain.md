@@ -22,7 +22,7 @@ Get-ClusterFaultDomain [[-Name] <String[]>] [-Type <FaultDomainType[]>] [-Id <St
 
 ## DESCRIPTION
 
-The **Get-ClusterFaultDomain** cmdlet gets the cluster fault domains in a cluster.
+The `Get-ClusterFaultDomain` cmdlet gets the cluster fault domains in a cluster.
 
 ## EXAMPLES
 

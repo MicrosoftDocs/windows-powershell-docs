@@ -23,9 +23,9 @@ Add-ClusterResourceDependency [[-Resource] <String>] [[-Provider] <String>]
 
 ## DESCRIPTION
 
-The **Add-ClusterResourceDependency** cmdlet adds a resource to the list of resources on which a
+The `Add-ClusterResourceDependency` cmdlet adds a resource to the list of resources on which a
 particular resource depends, using AND as the connector, within a failover cluster. Existing
-dependencies will remain on the list. If you specify the *InputObject* parameter, the *Resource*
+dependencies will remain on the list. If you specify the **InputObject** parameter, the **Resource**
 parameter will be ignored.
 
 A dependent resource is brought online after the resources on which it depends. A dependent resource

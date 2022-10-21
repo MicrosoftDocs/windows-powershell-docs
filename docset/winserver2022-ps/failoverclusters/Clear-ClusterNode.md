@@ -22,7 +22,7 @@ Clear-ClusterNode [[-Name] <StringCollection>] [-Force] [-Wait <Int32>] [-Cleanu
 
 ## DESCRIPTION
 
-The **Clear-ClusterNode** cmdlet clears the cluster configuration from a node that was evicted from
+The `Clear-ClusterNode` cmdlet clears the cluster configuration from a node that was evicted from
 a failover cluster. This cmdlet helps ensure that the failover cluster configuration has been
 completely removed from a node that was evicted.
 
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
 then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

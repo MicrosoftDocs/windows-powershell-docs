@@ -23,7 +23,7 @@ Add-ClusterGroup [-Name] <StringCollection> [[-GroupType] <GroupType>] [-InputOb
 
 ## DESCRIPTION
 
-The **Add-ClusterGroup** cmdlet adds an empty resource group to the failover cluster configuration,
+The `Add-ClusterGroup` cmdlet adds an empty resource group to the failover cluster configuration,
 in preparation for adding clustered resources to the group. A resource group, or a clustered role,
 is the unit of failover. During failover, all resources in the resource group move together.
 

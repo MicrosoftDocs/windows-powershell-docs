@@ -23,7 +23,7 @@ Add-ClusterVirtualMachineRole [-Name <String>] [[-VMName] <String>] [-VirtualMac
 
 ## DESCRIPTION
 
-The **Add-ClusterVirtualMachineRole** cmdlet creates a clustered virtual machine, that is, a virtual
+The `Add-ClusterVirtualMachineRole` cmdlet creates a clustered virtual machine, that is, a virtual
 machine that can be failed over if necessary to a different server in the failover cluster.
 
 By creating clustered virtual machines, you can consolidate multiple servers on one physical server
@@ -75,7 +75,7 @@ Name                                    OwnerNode                               
 print-VM1                               node1                                   Online
 ```
 
-This example queries for virtual machines matching the wildcard characters *print* and configures
+This example queries for virtual machines matching the wildcard characters **print** and configures
 them as clustered virtual machines.
 
 ## PARAMETERS

@@ -124,8 +124,10 @@ acceptable values for this parameter are:
 
 - ActiveDirectoryAndDns. The cmdlet creates an administrative access point for the cluster. The
   administrative access point is registered in DNS and enabled in Active Directory Domain Services.
+
 - Dns. The cmdlet creates an administrative access point for the cluster. The administrative access
   point is registered in DNS but is not enabled in Active Directory Domain Services.
+
 - None.
 
 The cmdlet does not create an administrative access point for the cluster. Some clustered roles and

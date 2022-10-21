@@ -161,20 +161,20 @@ Accept wildcard characters: False
 
 Specifies the type of migration to perform for the virtual machine. The options are as follows:
 
- -- Live: Transparently migrates the virtual machine without a dropped network connection or
- perceived downtime.
+- `Live`: Transparently migrates the virtual machine without a dropped network connection or
+  perceived downtime.
 
- -- Quick: Rapidly migrates a running virtual machine with minimal downtime.
+- `Quick`: Rapidly migrates a running virtual machine with minimal downtime.
 
- -- Shutdown: Performs an orderly shutdown of the operating system (waiting for all processes to
- close) on the virtual machine, and then migrates the virtual machine.
+- `Shutdown`: Performs an orderly shutdown of the operating system (waiting for all processes to
+  close) on the virtual machine, and then migrates the virtual machine.
 
- -- ShutdownForce: Shuts down the operating system on the virtual machine without waiting for slower
- processes to finish, and then migrates the virtual machine.
+- `ShutdownForce`: Shuts down the operating system on the virtual machine without waiting for slower
+  processes to finish, and then migrates the virtual machine.
 
- -- TurnOff: Turns off the virtual machine without shutting down the operating system first, then
- migrates the virtual machine. This is the same as turning off the power, which means that data loss
- may occur.
+- `TurnOff`: Turns off the virtual machine without shutting down the operating system first, then
+  migrates the virtual machine. This is the same as turning off the power, which means that data
+  loss may occur.
 
 ```yaml
 Type: VmMigrationType

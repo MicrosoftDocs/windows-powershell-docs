@@ -16,20 +16,24 @@ Removes a dependency between two resources in a clustered role within a failover
 ## SYNTAX
 
 ```
-Remove-ClusterResourceDependency [[-Resource] <String>] [[-Provider] <String>] [-InputObject <PSObject>]
- [-Cluster <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-ClusterResourceDependency [[-Resource] <String>] [[-Provider] <String>]
+ [-InputObject <PSObject>] [-Cluster <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterResourceDependency** cmdlet removes a dependency between two resources in a clustered role within a failover cluster.
 
-A dependent resource is brought online after the resources on which it depends.
-Likewise, a dependent resource is taken offline before the resources on which it depends.
-If no dependency is configured between clustered resources, then the order in which they are brought online or taken offline might vary.
+The **Remove-ClusterResourceDependency** cmdlet removes a dependency between two resources in a
+clustered role within a failover cluster.
+
+A dependent resource is brought online after the resources on which it depends. Likewise, a
+dependent resource is taken offline before the resources on which it depends. If no dependency is
+configured between clustered resources, then the order in which they are brought online or taken
+offline might vary.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```
 PS C:\> Remove-ClusterResourceDependency -Resource cluster1FS -Provider "IP Address 2001:4898:9:2:: (3)"
 Name                State               Group               ResourceType 
@@ -37,9 +41,11 @@ Name                State               Group               ResourceType
 cluster1FS          Online              cluster1FS          Network Name
 ```
 
-This example removes the dependency between cluster resource cluster1FS and the resource named IP Address 2001:4898:9:2:: (3).
+This example removes the dependency between cluster resource cluster1FS and the resource named IP
+Address 2001:4898:9:2:: (3).
 
 ### Example 2
+
 ```
 PS C:\> Get-ClusterResource -Name cluster1FS | Remove-ClusterResourceDependency -Provider "IP Address 2001:4898:9:2:: (3)"
 Name                State               Group               ResourceType 
@@ -47,13 +53,15 @@ Name                State               Group               ResourceType
 cluster1FS          Online              cluster1FS          Network Name
 ```
 
-This example removes the dependency between the cluster resource named cluster1FS and the resource named IP Address 2001:4898:9:2:: (3).
+This example removes the dependency between the cluster resource named cluster1FS and the resource
+named IP Address 2001:4898:9:2:: (3).
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -68,6 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -83,6 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies the cluster resource from which to remove the dependency.
 
 ```yaml
@@ -98,6 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Provider
+
 Specifies the cluster resource on which to remove a dependency.
 
 ```yaml
@@ -113,6 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
+
 Specifies the name of the cluster resource from which to remove the dependency.
 
 ```yaml
@@ -128,8 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -144,7 +156,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -163,4 +179,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-ClusterResourceDependency](./Get-ClusterResourceDependency.md)
 
 [Set-ClusterResourceDependency](./Set-ClusterResourceDependency.md)
-

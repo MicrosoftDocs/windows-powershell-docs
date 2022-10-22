@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell-help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterdiagnosticinfo?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterDiagnosticInfo
@@ -11,27 +11,33 @@ title: Get-ClusterDiagnosticInfo
 # Get-ClusterDiagnosticInfo
 
 ## SYNOPSIS
-Gets diagnostics for a cluster a cluster that contains VMs and produces a zip file containing the data.
+Gets diagnostics for a cluster a cluster that contains VMs and produces a zip file containing the
+data.
 
 ## SYNTAX
 
 ### Write
+
 ```
 Get-ClusterDiagnosticInfo [[-WriteToPath] <String>] [[-Cluster] <String>] [[-ZipPrefix] <String>]
  [-HoursOfEvents <Int32>] [-IncludeEvents] [<CommonParameters>]
 ```
 
 ### Read
+
 ```
 Get-ClusterDiagnosticInfo -ReadFromPath <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-ClusterDiagnosticInfo** cmdlet gets diagnostics for a cluster that contains virtual machines and produces a zip file containing the data.
+
+The **Get-ClusterDiagnosticInfo** cmdlet gets diagnostics for a cluster that contains virtual
+machines and produces a zip file containing the data.
 
 ## EXAMPLES
 
 ### Example 1: Write diagnostic info to the specified path
+
 ```
 PS C:\> Get-ClusterDiagnosticInfo -WriteToPath "C:\Users\MyUser\HealthTest\"
 Writing to path : C:\Users\MyUser\HealthTest\
@@ -42,6 +48,7 @@ This command gets and writes the cluster Diagnostics to the folder C:\Users\MyUs
 ## PARAMETERS
 
 ### -Cluster
+
 Specifies the name of the cluster the cmdlet gets.
 
 ```yaml
@@ -57,6 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -HoursOfEvents
+
 Specifies the number of hours in the past that this cmdlet gathers system event logs.
 
 ```yaml
@@ -72,6 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeEvents
+
 Indicates that this cmdlet gathers system event logs.
 
 ```yaml
@@ -87,6 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadFromPath
+
 Specifies the path to read from when examining previously collected log files.
 
 ```yaml
@@ -102,6 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -WriteToPath
+
 Specifies the path to create the ZIP file that contains all of the logs.
 
 ```yaml
@@ -117,6 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -ZipPrefix
+
 Specifies the name to prepend to the ZIP file that is produced.
 
 ```yaml
@@ -132,7 +144,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -143,4 +159,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Failover Clusters](./failoverclusters.md)
-

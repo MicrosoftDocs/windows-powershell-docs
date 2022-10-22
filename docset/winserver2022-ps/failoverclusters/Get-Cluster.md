@@ -138,8 +138,8 @@ QuarantineDuration  : 7200
 QuarantineThreshold : 3
 ```
 
-This example shows default values for QuarantineThreshold and QuarantineDuration for the local
-cluster.
+This example shows default values for **QuarantineThreshold** and **QuarantineDuration** for the
+local cluster.
 
 - **QuarantineThreshold**: This is the number of times that a node can become isolated in an hour
  before the cluster will be quarantined. This is set to 3 by default.

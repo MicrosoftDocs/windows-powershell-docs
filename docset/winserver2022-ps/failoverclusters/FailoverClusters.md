@@ -109,7 +109,8 @@ but aren't yet part of the set of clustered disks.
 Retrieves a cryptographic key checkpoint or registry checkpoint for a resource.
 
 ### [Get-ClusterDiagnosticInfo](./Get-ClusterDiagnosticInfo.md)
-Gets diagnostics for a cluster a cluster that contains VMs and produces a zip file containing the data.
+Gets diagnostics for a cluster a cluster that contains VMs and produces a zip file containing the
+data.
 
 ### [Get-ClusterFaultDomain](./Get-ClusterFaultDomain.md)
 Gets the cluster fault domains in a cluster.

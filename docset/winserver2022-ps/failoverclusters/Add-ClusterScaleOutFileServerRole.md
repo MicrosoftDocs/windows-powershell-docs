@@ -29,8 +29,9 @@ distributed across nodes for better throughput. This type of file server support
 Block (SMB) protocol. It doesn't support the Network File System (NFS) protocol, or certain role
 services such as File Server Resource Manager (FSRM) or Distributed File System (DFS) Replication.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
-authentication on the server computer.
+> [!NOTE]
+> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+> authentication on the server computer.
 
 ## EXAMPLES
 
@@ -144,8 +145,8 @@ Accept wildcard characters: False
 ### -Wait
 
 Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
-then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
-cmdlet returns without waiting.
+then the cmdlet waits for completion. If the value `0` is specified, then the call is initiated and
+the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32

@@ -26,11 +26,9 @@ The `Get-Cluster` cmdlet gets information about one or more failover clusters in
 This cmdlet can obtain a variety of configuration and state information about a failover cluster,
 including the following items:
 
- -- State information about whether a backup is in progress. 
-
- -- State information about whether the cluster is in a forced quorum state. 
-
- -- Cross-network settings that are especially relevant for multi-site clusters.
+- State information about whether a backup is in progress.
+- State information about whether the cluster is in a forced quorum state.
+- Cross-network settings that are especially relevant for multi-site clusters.
 
 To set a common property for the cluster, use this cmdlet to get the cluster object and then set the
 appropriate property on that cluster object directly.
@@ -143,11 +141,10 @@ QuarantineThreshold : 3
 This example shows default values for QuarantineThreshold and QuarantineDuration for the local
 cluster.
 
- -- QuarantineThreshold: This is the number of times that a node can become isolated in an hour
+- **QuarantineThreshold**: This is the number of times that a node can become isolated in an hour
  before the cluster will be quarantined. This is set to 3 by default.
-
- --QuarantineDuration: This setting, set to 7200 seconds or 2 hours by default, controls how long a
- host will remain quarantined.
+- **QuarantineDuration**: This setting, set to 7200 seconds or 2 hours by default, controls how long
+  a host will remain quarantined.
 
 ## PARAMETERS
 

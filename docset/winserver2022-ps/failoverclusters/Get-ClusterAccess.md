@@ -26,7 +26,7 @@ The `Get-ClusterAccess` cmdlet gets information about permissions that control a
 failover cluster.
 
 A cluster can allow full access or read-only access. Read-only access limits the user to Windows
-PowerShell® cmdlets that provide information about the cluster.
+PowerShell cmdlets that provide information about the cluster.
 
 ## EXAMPLES
 

@@ -97,8 +97,8 @@ Accept wildcard characters: False
 
 Indicates that this cmdlet that the pool should be automatically created and configured. When a pool
 already exists before Storage Spaces Direct is enabled the **AutoConfig** parameter becomes a no-op.
-**AutoConfig** is set to true by default. If you don't want the pool to be automatically created, but
-created manually, you should set **AutoConfig** to false.
+**AutoConfig** is set to true by default. If you don't want the pool to be automatically created,
+but created manually, you should set **AutoConfig** to false.
 
 ```yaml
 Type: Boolean
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

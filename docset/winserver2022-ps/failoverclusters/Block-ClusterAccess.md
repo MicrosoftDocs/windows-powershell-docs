@@ -24,7 +24,7 @@ Block-ClusterAccess [-User] <StringCollection> [-InputObject <PSObject>] [-Clust
 
 The `Block-ClusterAccess` cmdlet prevents the specified user or users from accessing a failover
 cluster. If you don't want to completely block access and instead want to limit a user to using
-Windows PowerShell® to view cluster settings (not change settings), then use the
+Windows PowerShell to view cluster settings (not change settings), then use the
 `Grant-ClusterAccess` cmdlet with the **Readonly** parameter.
 
 ## EXAMPLES

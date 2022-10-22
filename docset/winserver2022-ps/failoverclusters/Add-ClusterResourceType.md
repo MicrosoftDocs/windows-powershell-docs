@@ -30,8 +30,9 @@ The failover cluster software provides Resource DLL files for the most common ty
 Using the application programming interface (API) provided in the Microsoft Platform Software
 Development Kit (SDK), other vendors can add support for other resource types.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
-authentication on the server computer.
+> [!NOTE]
+> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+> authentication on the server computer.
 
 ## EXAMPLES
 

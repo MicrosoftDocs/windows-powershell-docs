@@ -29,8 +29,9 @@ Before adding the new node, you should run validation tests on the existing node
 proposed new node. By running the validation tests, you can confirm that the server to be added is
 connected correctly to the networks and storage and that it contains the same software updates.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
-authentication on the server computer.
+> [!NOTE]
+> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+> authentication on the server computer.
 
 ## EXAMPLES
 

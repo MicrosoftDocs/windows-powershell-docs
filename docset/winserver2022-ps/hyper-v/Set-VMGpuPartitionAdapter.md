@@ -1,5 +1,5 @@
 ---
-description: Configures host partitionable GPU to the number of partitions supported by the manufacturer
+description: Assigns a partition of a GPU to a virtual machine.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 09/22/2022
@@ -11,7 +11,7 @@ schema: 2.0.0
 # Set-VMGpuPartitionAdapter
 
 ## SYNOPSIS
-Configures host partitionable GPU to the number of partitions supported by the manufacturer
+Assigns a partition of a GPU to a virtual machine.
 
 ## SYNTAX
 
@@ -47,29 +47,22 @@ Set-VMGpuPartitionAdapter [-VMGpuPartitionAdapter] <VMGpuPartitionAdapter[]> [-P
 ```
 
 ## DESCRIPTION
-The **Set-VMGpuPartitionAdapter** cmdlet Configures host partitionable GPU to the number of partitions supported by the manufacturer.
+The 'Set-VMGpuPartitionAdapter' cmdlet assigns a partition of a GPU to a virtual machine. Running the command against a virtual machine assigns a full partition. Additional parameters exist to assign more specific options to a VM.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Set-VMHostPartitionableGpu -ComputerName �SampleHost� -partitioncount 8
+$vm = get-vm test
+Set-VMGpuPartitionAdapter -VM $vm
 ```
 
-Partition a GPU in a specific host
-
-### Example 2
-```powershell
-PS C:\> $GPU = Get-VMHostPartitionableGpu -name "SampleGPUDeviceIDName"
-Set-VMHostPartitionableGpu -Name $GPU -partitionCount 4
-```
-
-Partition a GPU in a host using the GPU Device ID Name:
+Assign a partition to a VM passing a VM object.
 
 ## PARAMETERS
 
 ### -AdapterId
-The virtual machine graphic processing unit partition identification number that you are interested in displaying.
+A VM's GPU partition identification number used to display the GPU information assigned to a VM.
 
 ```yaml
 Type: String
@@ -84,8 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -101,10 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved.
-NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS names, IP addresses, and fully qualified domain names are allowed.
 The default is the local computer.
-Use localhost or a dot (.) to specify the local computer explicitly.
+Use localhost or a dot ('.') to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -135,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionCompute
- Maximum number of compute assigned by the Host GPU. This is defined by the manufacturer driver.
+ The maximum number of compute assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -150,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionDecode
-Maximum number of decoders assigned by the Host GPU. This is defined by the manufacturer driver.
+The maximum number of decoders assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -165,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionEncode
-Maximum number of encoders assigned by the Host GPU. This is defined by the manufacturer driver.
+The maximum number of encoders assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -180,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionVRAM
-Maximum VRAM supported by the Host GPU. This is defined by the manufacturer driver.
+The maximum VRAM supported by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -195,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinPartitionCompute
-Minimum number of compute assigned by the Host GPU. This is defined by the manufacturer driver.
+The minimum number of compute assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -210,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinPartitionDecode
-Minimum number of decoders assigned by the Host GPU. This is defined by the manufacturer driver.
+The minimum number of decoders assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -225,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinPartitionEncode
-Minimum number of encoders assigned by the Host GPU. This is defined by the manufacturer driver.
+The minimum number of encoders assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -240,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinPartitionVRAM
-Minimum VRAM supported by the Host GPU. This is defined by the manufacturer driver.
+The minimum VRAM supported by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -255,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptimalPartitionCompute
-Optimal number of compute assigned by the Host GPU. This is defined by the manufacturer driver.
+The optimal number of compute assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -270,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptimalPartitionDecode
-Optimal number of decoders assigned by the Host GPU. This is defined by the manufacturer driver.
+The optimal number of decoders assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -285,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptimalPartitionEncode
-Optimal number of encoders assigned by the Host GPU. This is defined by the manufacturer driver.
+The optimal number of encoders assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -300,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptimalPartitionVRAM
-Optimal VRAM supported by the Host GPU. This is defined by the manufacturer driver.
+The optimal VRAM supported by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -330,8 +321,7 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-Specifies the virtual machine whose virtual network adapters are to be retrieved.
-. The asterisk, "*", is the wildcard.
+Specifies the virtual machine whose virtual network adapters are to be retrieved. The asterisk, ('*'), is the wildcard.
 If it is specified the cmdlet returns virtual network adapters from every virtual machine in the system.
 
 ```yaml
@@ -347,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMGpuPartitionAdapter
-GPU partition object obtained from **Microsoft.HyperV.PowerShell.Get-VMGpuPartitionAdapter**.
+GPU partition object obtained from 'Get-VMGpuPartitionAdapter''
 
 ```yaml
 Type: VMGpuPartitionAdapter[]
@@ -408,7 +398,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

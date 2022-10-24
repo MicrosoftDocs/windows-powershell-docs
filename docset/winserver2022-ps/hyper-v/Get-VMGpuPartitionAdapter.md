@@ -26,22 +26,22 @@ Get-VMGpuPartitionAdapter [-VM] <VirtualMachine[]> [-AdapterId <String>] [<Commo
 ```
 
 ## DESCRIPTION
-The **Get-VMGpuPartitionAdapter** cmdlet gets the information of assigned graphic processing unit partitions to a virtual machine.
+The 'Get-VMGpuPartitionAdapter' cmdlet gets the information of assigned graphic processing unit partitions to a virtual machine.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> $testvm = get-VM "TestVM"
+$testvm = get-VM "TestVM"
 Get-VMGpuPartitionAdapter -VM $testvm
 ```
 
-Display the GPU information assigned to a VM object
+Displays the GPU information assigned to a VM object
 
 ## PARAMETERS
 
 ### -AdapterId
-Virtual machine GPU partition identification number that you are interested in displaying
+A VM's GPU partition identification number used to display the GPU information assigned to a VM
 
 ```yaml
 Type: String
@@ -73,10 +73,10 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved.
-NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+Specifies that one or more Hyper-V hosts on the virtual network adapters are to be retrieved.
+NetBIOS names, IP addresses, and fully qualified domain names are allowed.
 The default is the local computer.
-Use localhost or a dot (.) to specify the local computer explicitly.
+Use localhost or a dot ('.') to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 ### -VM
 Specifies the virtual machine whose virtual network adapters are to be retrieved.
-. The asterisk, "*", is the wildcard.
+. The asterisk, ('*'), is the wildcard.
 If it is specified the cmdlet returns virtual network adapters from every virtual machine in the system.
 
 ```yaml
@@ -120,7 +120,7 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
+Accept wildcard characters: true
 ```
 
 ### -VMName
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

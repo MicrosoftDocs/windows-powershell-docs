@@ -26,31 +26,31 @@ Get-VMHostPartitionableGpu [-CimSession] <CimSession[]> [-Name <String>] [<Commo
 ```
 
 ## DESCRIPTION
-The Get-VMHostPartitionableGpu cmdlet get the host machine’s partitionable Graphic Processing Unit.
-This displays the information of the GPU as provided by the manufacturer driver.
+The 'Get-VMHostPartitionableGpu' cmdlet gets the host machine’s partitionable graphic processing unit.
+This displays the information of the GPU as provided by the manufacturer's driver.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> Get-VMHostPartitionableGpu
+Get-VMHostPartitionableGpu
 ```
 
 Gets the details of the local partitionable graphic processing unit on the host
 
 ### Example 2
 ```powershell
-PS C:\> Get-VMHostPartitionableGpu -ComputerName "SampleHost"
+Get-VMHostPartitionableGpu -ComputerName "SampleHost"
 ```
 
-Display a partitionable GPU by using the Host Name. This command will display all the GPU devices available for partitioning in the host:
+Displays a partitionable GPU by using the host name. This command will display all the GPU devices available for partitioning in the host.
 
 ### Example 3
 ```powershell
-PS C:\> Get-VMHostPartitionableGpu -name "SampleGPUDeviceIDName"
+Get-VMHostPartitionableGpu -name "SampleGPUDeviceIDName"
 ```
 
-Display a partitionable GPU by using the specific GPU Device Name. The result will show the details of the specific GPU listed:
+Displays a partitionable GPU by using the specific GPU device name. The result will show the details of the specific GPU listed.
 
 ## PARAMETERS
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 Specifies one or more Hyper-V hosts that run this cmdlet.
 NetBIOS names, IP addresses, and fully qualified domain names are allowable.
 The default is the local computer.
-Use localhost or a dot (.) to specify the local computer explicitly.
+Use localhost or a dot ('.') to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the graphic processing unit to be retrieved
+Specifies the name of the graphic processing unit to be retrieved.
 
 ```yaml
 Type: String
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

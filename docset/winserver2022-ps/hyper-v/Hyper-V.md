@@ -23,7 +23,7 @@ Adds a DVD drive to a virtual machine.
 Adds a virtual Fibre Channel host bus adapter to a virtual machine.
 
 ### [Add-VMGpuPartitionAdapter](./Add-VMGpuPartitionAdapter.md)
-Add GPU Partition adapter to a virtual machine
+Adds a GPU partition adapter to a virtual machine.
 
 ### [Add-VMGroupMember](./Add-VMGroupMember.md)
 Adds group members to a virtual machine group.
@@ -541,6 +541,9 @@ Sets the firmware configuration of a virtual machine.
 ### [Set-VMFloppyDiskDrive](./Set-VMFloppyDiskDrive.md)
 Configures a virtual floppy disk drive.
 
+### [Set-VMGpuPartitionAdapter](./Set-VMGpuPartitionAdapter.md)
+Assigns a partition of a GPU to a virtual machine.
+
 ### [Set-VMHardDiskDrive](./Set-VMHardDiskDrive.md)
 Configures a virtual hard disk.
 
@@ -551,7 +554,7 @@ Configures a Hyper-V host.
 Configures a virtual machine host cluster.
 
 ### [Set-VMHostPartitionableGpu](./Set-VMHostPartitionableGpu.md)
-Configures host partitionable GPU to the number of partitions supported by the manufacturer.
+Configures a host partitionable GPU to the number of partitions supported by the manufacturer.
 
 ### [Set-VMKeyProtector](./Set-VMKeyProtector.md)
 Configures a key protector for a virtual machine.

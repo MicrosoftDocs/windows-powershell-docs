@@ -35,21 +35,21 @@ Remove-VMGpuPartitionAdapter [-VMGpuPartitionAdapter] <VMGpuPartitionAdapter[]> 
 ```
 
 ## DESCRIPTION
-The **Remove-VMGpuPartitionAdapter** cmdlet removes an assigned graphic processing unit partition from a virtual machine and releases that partition back to the host GPU.
+The 'Remove-VMGpuPartitionAdapter' cmdlet removes an assigned graphic processing unit partition from a virtual machine and releases that partition back to the host GPU.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> $testvm = Get-VM "TestVM"
+$testvm = Get-VM "TestVM"
 Remove-VMGpuPartitionAdapter -VM $testvm
 ```
 
-Remove a partition assigned to a specific VM Object
+Removes a partition assigned to a specific VM Object.
 
 ### Example 2
 ```powershell
-PS C:\> $testvm = Get-VM "TestVM"
+$testvm = Get-VM "TestVM"
 $GPUpartition = Get-VMGpuPartitionAdapter -VM $testvm
 Remove-VMGpuPartitionAdapter -VM $testvm -AdapterId $GPUpartiton[0].id
 ```
@@ -59,7 +59,7 @@ Remove a specific partition in a VM
 ## PARAMETERS
 
 ### -AdapterId
-The virtual machine graphic processing unit partition identification number that you are interested in displaying.
+A VM's GPU partition identification number used to remove a GPU from a VM.
 
 ```yaml
 Type: String
@@ -91,10 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved.
-NetBIOS names, IP addresses, and fully qualified domain names are allowable.
-The default is the local computer.
-Use localhost or a dot (.) to specify the local computer explicitly.
+Specifies that one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS names, IP addresses, and fully qualified domain names are allowed.
+The default is the local computer.Use localhost or a dot ('.') to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -140,8 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-Specifies the virtual machine whose virtual network adapters are to be retrieved.
-. The asterisk, "*", is the wildcard.
+Specifies the virtual machine whose virtual network adapters are to be retrieved. The asterisk, ('*'), is the wildcard.
 If it is specified the cmdlet returns virtual network adapters from every virtual machine in the system.
 
 ```yaml
@@ -157,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMGpuPartitionAdapter
-GPU partition object obtained from **Microsoft.HyperV.PowerShell.Get-VMGpuPartitionAdapter**.
+GPU partition object obtained from 'Get-VMGpuPartitionAdapter'.
 
 ```yaml
 Type: VMGpuPartitionAdapter[]
@@ -218,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

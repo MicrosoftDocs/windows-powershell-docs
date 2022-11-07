@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -ComputerName
 Specifies one or more Hyper-V hosts that run this cmdlet.
-NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+NetBIOS names, IP addresses, and fully qualified domain names are allowed.
 The default is the local computer.
 Use localhost or a dot ('.') to specify the local computer explicitly.
 

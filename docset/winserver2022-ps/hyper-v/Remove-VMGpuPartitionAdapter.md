@@ -45,7 +45,7 @@ $testvm = Get-VM "TestVM"
 Remove-VMGpuPartitionAdapter -VM $testvm
 ```
 
-Removes a partition assigned to a specific VM Object.
+Removes a partition assigned to a specific VM object.
 
 ### Example 2
 ```powershell
@@ -54,12 +54,12 @@ $GPUpartition = Get-VMGpuPartitionAdapter -VM $testvm
 Remove-VMGpuPartitionAdapter -VM $testvm -AdapterId $GPUpartiton[0].id
 ```
 
-Remove a specific partition in a VM
+Remove a specific partition in a VM.
 
 ## PARAMETERS
 
 ### -AdapterId
-A VM's GPU partition identification number used to remove a GPU from a VM.
+This is a  VM's GPU partition identification number used to remove a GPU from a VM.
 
 ```yaml
 Type: String
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies that one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS names, IP addresses, and fully qualified domain names are allowed.
+Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS names, IP addresses, and fully qualified domain names are allowed.
 The default is the local computer.Use localhost or a dot ('.') to specify the local computer explicitly.
 
 ```yaml
@@ -107,8 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies one or more user accounts that have permission to perform this action.
-The default is the current user.
+Specifies one or more user accounts that have permission to perform this action. The default is the current user.
 
 ```yaml
 Type: PSCredential[]

@@ -46,7 +46,7 @@ $vm = Get-VM -name "TestVM"
 Add-VMGpuPartitionAdapter -VM $vm
 ```
 
-Assigns a partition to a specific VM object. If you want to assign multiple GPU partitions run this command the number of times equal to the number of GPU partitions needed.
+Assigns a partition to a specific VM object.
 
 ### Example 2
 ```powershell
@@ -381,7 +381,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](httpS://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

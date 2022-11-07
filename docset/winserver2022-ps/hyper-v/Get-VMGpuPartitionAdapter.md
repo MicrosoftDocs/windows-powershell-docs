@@ -36,12 +36,12 @@ $testvm = get-VM "TestVM"
 Get-VMGpuPartitionAdapter -VM $testvm
 ```
 
-Displays the GPU information assigned to a VM object
+Displays the GPU information assigned to a VM object.
 
 ## PARAMETERS
 
 ### -AdapterId
-A VM's GPU partition identification number used to display the GPU information assigned to a VM
+This is a VM's GPU partition identification number used to display the GPU information assigned to a VM.
 
 ```yaml
 Type: String
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies that one or more Hyper-V hosts on the virtual network adapters are to be retrieved.
+Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved.
 NetBIOS names, IP addresses, and fully qualified domain names are allowed.
 The default is the local computer.
 Use localhost or a dot ('.') to specify the local computer explicitly.
@@ -107,8 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-Specifies the virtual machine whose virtual network adapters are to be retrieved.
-. The asterisk, ('*'), is the wildcard.
+Specifies the virtual machine whose virtual network adapters are to be retrieved. The asterisk, ('*'), is the wildcard.
 If it is specified the cmdlet returns virtual network adapters from every virtual machine in the system.
 
 ```yaml
@@ -120,7 +119,7 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
-Accept wildcard characters: true
+Accept wildcard characters: True
 ```
 
 ### -VMName

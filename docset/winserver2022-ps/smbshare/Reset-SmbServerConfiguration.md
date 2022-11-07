@@ -45,9 +45,9 @@ and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and3](/openspecs/w
 > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
 >
 > - The **DisableCompression** and **RequestCompression** parameters are available beginning with
-> 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems
-> ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for Windows 11,
-> version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
+>   2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
+>   Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
+>   Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
 
 ## EXAMPLES
 

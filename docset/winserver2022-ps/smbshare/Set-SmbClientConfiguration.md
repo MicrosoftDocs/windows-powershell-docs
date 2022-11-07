@@ -45,10 +45,10 @@ The `Set-SmbClientConfiguration` cmdlet sets the Server Message Block (SMB) clie
 > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
 >
 > - The **CompressibilitySamplingSize**, **CompressibleThreshold**,
-> **EnableCompressibilitySampling**, and **RequestCompression** parameters are available beginning
-> with 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
-> Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
-> Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
+>   **EnableCompressibilitySampling**, and **RequestCompression** parameters are available beginning
+>   with 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
+>   Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
+>   Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
 
 ## EXAMPLES
 
@@ -111,8 +111,8 @@ Accept wildcard characters: False
 ### -CompressibilitySamplingSize
 
 Specifies the size in bytes to sample in a file to look for compressible data. Although the
-parameter type is **UInt64**, the sampling size can be specified up to a maximum of is 9,007,199,254,740,992
-(9 PiB).
+parameter type is **UInt64**, the sampling size can be specified up to a maximum of
+`9,007,199,254,740,992` (9 PiB).
 
 ```yaml
 Type: UInt64
@@ -129,8 +129,8 @@ Accept wildcard characters: False
 ### -CompressibleThreshold
 
 Specifies the threshold in bytes in which to attempt to find compressible data. Although the
-parameter type is **UInt64**, the threshold can be specified up to a maximum of is 9,007,199,254,740,992
-(9 PiB).
+parameter type is **UInt64**, the threshold can be specified up to a maximum of
+`9,007,199,254,740,992` (9 PiB).
 
 ```yaml
 Type: UInt64
@@ -279,13 +279,12 @@ client or server requests it. With **EnableCompressibilitySampling** set to `$tr
 compression sampling algorithm where it attempts to compress the file based on the values
 configured in the **CompressibiltySamplingSize** and **CompressibleThreshold** parameters.
 
-With **EnableCompressibilitySampling** set to `$true` and if you don't use the
-**CompressibiltySamplingSize** and **CompressibleThreshold** parameters, the algorithm will by
-default attempt to compress the first 524,288,000 bytes (500 MiB) of a file during transfer. The
-algorithm will try to track that at least 104,857,600 bytes (100 MiB) compresses within that 500 MiB
-range. If fewer than 100 MiB was compressible, SMB compression stopped trying to compress the rest
-of the file. If at least 100 MiB compressed, SMB compression attempted to compress the rest of the
-file.
+When you specify **EnableCompressibilitySampling** as `$true` and don't specify either the
+**CompressibiltySamplingSize** or **CompressibleThreshold** parameters, the algorithm attempts to
+compress the first `524,288,000` bytes (500 MiB) of a file during transfer. The algorithm tries to
+track that at least `104,857,600` bytes (100 MiB) compresses within that 500 MiB range. If fewer
+than 100 MiB was compressible, SMB compression stops trying to compress the rest of the file. If at
+least 100 MiB compressed, SMB compression attempts to compress the rest of the file.
 
 ```yaml
 Type: Boolean
@@ -574,7 +573,7 @@ Accept wildcard characters: False
 
 ### -RequestCompression
 
-Indicates if SMB client should always request compression even if server or application didn't
+Indicates if an SMB client should always request compression even if the server or application didn't
 specify it.
 
 ```yaml

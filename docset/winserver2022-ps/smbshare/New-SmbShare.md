@@ -247,7 +247,7 @@ Accept wildcard characters: False
 
 Specifies an optional description of the SMB share. A description of the share is displayed by
 running the `Get-SmbShare` cmdlet. The description may not contain more than 256 characters. The
-default value no description, or an empty description.
+default value is no description or an empty description.
 
 ```yaml
 Type: String
@@ -282,13 +282,13 @@ Accept wildcard characters: False
 Specifies which files and folders in the SMB share are visible to users. The acceptable values for
 this parameter are:
 
-- AccessBased. SMB doesn't display the files and folders for a share to a user unless that user has
-  rights to access the files and folders. By default, access-based enumeration is disabled for new
-  SMB shares.
-- Unrestricted. SMB displays files and folders to a user even when the user doesn't have permission
-  to access the items.
+- `AccessBased`. SMB doesn't display the files and folders for a share to a user unless that user
+  has rights to access the files and folders. By default, access-based enumeration is disabled for
+  new SMB shares.
+- `Unrestricted`. SMB displays files and folders to a user even when the user doesn't have
+  permission to access the items.
 
-The default value is Unrestricted.
+The default value is `Unrestricted`.
 
 ```yaml
 Type: FolderEnumerationMode
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 
 Specifies a name for the SMB share. The names `pipe` and `mailslot` are reserved for use by the
 computer. Share names can be up to a maximum of 80 characters long. The SMB share name can use any
-character allowed by Windows for files and directories, to learn more about naming conventions for
+character allowed by Windows for files and directories. To learn more about naming conventions for
 files read the [Naming Files, Paths, and Namespaces](/windows/win32/fileio/naming-a-file) articles.
 
 ```yaml
@@ -382,8 +382,7 @@ Accept wildcard characters: False
 
 ### -Path
 
-Specifies the path of the location of the folder to share.
-The path must be fully qualified.
+Specifies the path of the location of the folder to share. The path must be fully qualified.
 Relative paths or paths that contain wildcard characters aren't permitted.
 
 ```yaml
@@ -468,7 +467,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.
@@ -535,7 +534,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/SMB/MSFT_SmbShare
 
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object. This cmdlet returns a **MSFT_SmbShare**
 object that represents the SMB share.

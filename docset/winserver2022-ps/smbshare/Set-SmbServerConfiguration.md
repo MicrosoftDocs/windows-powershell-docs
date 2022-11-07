@@ -53,9 +53,9 @@ and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and 3](/openspecs/
 > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
 >
 > - The **DisableCompression** and **RequestCompression** parameters are available beginning with
-> 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems
-> ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for Windows 11,
-> version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
+>   2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
+>   Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
+>   Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
 
 ## EXAMPLES
 
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 
 ### -DisableCompression
 
-Indicated that the SMB server should never compress files even if client or application requested
+Indicates that the SMB server should never compress files even if client or application requested
 it.
 
 ```yaml
@@ -738,7 +738,7 @@ Accept wildcard characters: False
 
 ### -RejectUnencryptedAccess
 
-Indicates whether the client that doesn't support encryption is denied access if it attempts to
+Indicates whether a client that doesn't support encryption is denied access if it attempts to
 connect to an encrypted share.
 
 ```yaml
@@ -755,8 +755,9 @@ Accept wildcard characters: False
 
 ### -RequestCompression
 
-Indicates if SMB server should always request compression even if client or application didn't
-specify it.
+```suggestion
+Indicates whether the SMB server should always request compression even if client or application
+didn't specify it.
 
 ```yaml
 Type: Boolean

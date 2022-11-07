@@ -154,7 +154,7 @@ The acceptable values for this parameter are:
   hexadecimal format is supported.
 - **System.String**. A string that represents the GUID of a GPT disk.
 - **ClusterResource**. A cluster resource object that represents a clustered disk.
-- **CimInstance#MSFT_Disk**. An object returned from Get-Disk, from the Windows PowerShell® storage
+- **CimInstance#MSFT_Disk**. An object returned from Get-Disk, from the Windows PowerShell storage
   module.
 
 ```yaml
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ### -Force
 
 Runs the cmdlet without prompting for confirmation. By default the cmdlet will ask for confirmation
-from the user before proceeding. When combine with the **Disk** or **Pool** parameters, the disks or
+from the user before proceeding. When combined with the **Disk** or **Pool** parameters, the disks or
 storage pool is taken offline for the duration of the storage tests.
 
 ```yaml
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 ### -Ignore
 
-Specifies which tests or category of tests to ignore during the validation test run. All others
+Specifies which tests or category of tests to ignore during the validation test run. All other
 tests or category of tests will run.
 
 ```yaml

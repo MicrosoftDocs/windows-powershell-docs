@@ -66,14 +66,15 @@ This command creates an encrypted SMB share.
 $Parameters = @{
     Name = 'VMSFiles'
     Path = 'C:\ClusterStorage\Volume1\VMFiles'
-    ChangeAccess = 'Users'
+    ChangeAccess = 'CONTOSO\Finance Users','CONTOSO\HR Users'
     FullAccess = 'Administrators'
 }
 New-SmbShare @Parameters
 ```
 
-This command creates an SMB share named `VMSFiles` and grants Change permissions to the local
-`Users` group, and Full Access permissions to the local `Administrators` group.
+This command creates an SMB share named `VMSFiles` and grants Change permissions to the domain
+groups `CONTOSO\Finance Users` and `CONTOSO\HR Users`. Full Access permissions to the builtin
+`Administrators` group.
 
 This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
@@ -160,7 +161,8 @@ Accept wildcard characters: False
 ### -ChangeAccess
 
 Specifies which users are granted modify permission to access the share. Multiple users can be
-specified by using a comma-separated list.
+specified by using a comma-separated list. Each entry in the comma-separated list must be contained
+within single or double quotes, for example `'CONTOSO\Finance Users','CONTOSO\HR Users'`.
 
 ```yaml
 Type: String[]
@@ -306,10 +308,12 @@ Accept wildcard characters: False
 ### -FullAccess
 
 Specifies which accounts are granted full permission to access the share. Use a comma-separated list
-to specify multiple accounts. An account may not be specified more than once in the **FullAccess**,
-**ChangeAccess**, or **ReadAccess** parameter lists, but may be specified once in the
-**FullAccess**, **ChangeAccess**, or **ReadAccess** parameter list and once in the **NoAccess**
-parameter list.
+to specify multiple accounts. Each entry in the comma-separated list must be contained within single
+or double quotes, for example `'CONTOSO\Finance Users','CONTOSO\HR Users'`.
+
+An account may not be specified more than once in the **FullAccess**, **ChangeAccess**, or
+**ReadAccess** parameter lists, but may be specified once in the **FullAccess**, **ChangeAccess**,
+or **ReadAccess** parameter list and once in the **NoAccess** parameter list.
 
 ```yaml
 Type: String[]
@@ -365,8 +369,9 @@ Accept wildcard characters: False
 
 ### -NoAccess
 
-Specifies which accounts are denied access to the SMB share.
-Multiple accounts can be specified by supplying a comma-separated list.
+Specifies which accounts are denied access to the SMB share. Multiple accounts can be specified by
+supplying a comma-separated list. Each entry in the comma-separated list must be contained within
+single or double quotes, for example `'CONTOSO\Finance Users','CONTOSO\HR Users'`.
 
 ```yaml
 Type: String[]
@@ -399,8 +404,9 @@ Accept wildcard characters: False
 
 ### -ReadAccess
 
-Specifies which users are granted read permission to access the share.
-Multiple users can be specified by supplying a comma-separated list.
+Specifies which users are granted read permission to access the share. Multiple users can be
+specified by supplying a comma-separated list. Each entry in the comma-separated list must be
+contained within single or double quotes, for example `'CONTOSO\Finance Users','CONTOSO\HR Users'`.
 
 ```yaml
 Type: String[]

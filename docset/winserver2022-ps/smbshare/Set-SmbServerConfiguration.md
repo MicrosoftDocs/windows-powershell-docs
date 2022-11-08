@@ -738,7 +738,7 @@ Accept wildcard characters: False
 
 ### -RejectUnencryptedAccess
 
-Indicates whether a client that doesn't support encryption is denied access if it attempts to
+Indicates whether the client that doesn't support encryption is denied access if it attempts to
 connect to an encrypted share.
 
 ```yaml
@@ -755,9 +755,8 @@ Accept wildcard characters: False
 
 ### -RequestCompression
 
-```suggestion
-Indicates whether the SMB server should always request compression even if client or application
-didn't specify it.
+Indicates if SMB server should always request compression even if client or application didn't
+specify it.
 
 ```yaml
 Type: Boolean

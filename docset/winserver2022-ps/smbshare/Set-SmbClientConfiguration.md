@@ -573,8 +573,8 @@ Accept wildcard characters: False
 
 ### -RequestCompression
 
-Indicates if an SMB client should always request compression even if the server or application didn't
-specify it.
+Indicates if an SMB client should always request compression even if the server or application
+didn't specify it.
 
 ```yaml
 Type: Boolean

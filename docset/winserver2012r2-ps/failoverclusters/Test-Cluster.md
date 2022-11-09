@@ -275,10 +275,10 @@ Accept wildcard characters: False
 Specifies the clustered storage pool or pools for which to run the cmdlet. When the specified
 storage pool is online and a virtual disk in the storage pool is assigned to a clustered role or
 Cluster Shared Volume, you must also specify the **Force** parameter to take the storage pool
-offline for the duration of the storage tests. Otherwise, the specified storage pool must be taken
-offline before the storage tests. If the **Pool** parameter is not specified, storage tests run on
-all storage pools that are available for use in the cluster or that are in the cluster resource
-offline or failed state.
+offline for the duration of the storage tests. Otherwise, command will exit with an error. The
+specified storage pool must be taken offline before running the storage tests. If the **Pool**
+parameter is not specified, storage tests run on all storage pools that are available for use in the
+cluster or that are in the cluster resource offline or failed state.
 
 The acceptable values for this parameter are:
 

@@ -510,7 +510,8 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs.
 The cmdlet isn't run.
 
-NOTE: The **WhatIf** switch doesn't work with this cmdlet.
+> [!NOTE]
+> The **WhatIf** switch doesn't work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter

@@ -48,9 +48,9 @@ and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and 3](/openspecs/
 
 > [!NOTE]
 > - The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
-> Microsoft server operating system version 21H2 for x64-based Systems
-> ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
-> version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+>   Microsoft server operating system version 21H2 for x64-based Systems
+>   ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
+>   version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
 >
 > - The **DisableCompression** and **RequestCompression** parameters are available beginning with
 >   2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based

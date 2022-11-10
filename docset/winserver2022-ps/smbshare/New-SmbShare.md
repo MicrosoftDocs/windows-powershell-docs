@@ -454,9 +454,8 @@ Accept wildcard characters: False
 
 ### -Temporary
 
-Specifies the lifetime of the new SMB share.
-A temporary share doesn't persist beyond the next restart of the computer.
-By default, new SMB shares are persistent, and non-temporary.
+Specifies the new SMB share is temporary and will not persist beyond the next restart of the
+computer. By default, new SMB shares aren't temporary.
 
 ```yaml
 Type: SwitchParameter
@@ -511,7 +510,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs.
 The cmdlet isn't run.
 
-NOTE: The WhatIf switch doesn't work with this cmdlet.
+NOTE: The **WhatIf** switch doesn't work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter

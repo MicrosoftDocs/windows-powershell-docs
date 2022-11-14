@@ -5,6 +5,7 @@ Module Name: Hyper-V
 ms.date: 09/22/2022
 online version: https://learn.microsoft.com/en-us/powershell/module/hyper-v/add-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Add-VMGpuPartitionAdapter
 ---
 
 # Add-VMGpuPartitionAdapter

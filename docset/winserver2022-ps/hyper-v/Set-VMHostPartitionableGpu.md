@@ -1,10 +1,11 @@
 ---
-description: Assigns a partition of a GPU to a virtual machine.
+description: Configures host partitionable GPU to the number of partitions supported by the manufacturer.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 10/21/2022
 online version: https://learn.microsoft.com/en-us/powershell/module/hyper-v/set-vmhostpartitionablegpu?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Set-VMHostPartitionableGpu
 ---
 
 # Set-VMHostPartitionableGpu

@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionDecode
-the maximum number of decoders assigned by the host GPU. This is defined by the manufacturer's driver.
+The maximum number of decoders assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64

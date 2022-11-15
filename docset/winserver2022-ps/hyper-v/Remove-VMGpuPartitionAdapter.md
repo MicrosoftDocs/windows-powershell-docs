@@ -3,7 +3,7 @@ description: Removes an assigned GPU partition from a virtual machine.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 09/22/2022
-online version: https://learn.microsoft.com/en-us/powershell/module/hyper-v/remove-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/remove-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-VMGpuPartitionAdapter
 ---
@@ -45,7 +45,7 @@ $testvm = Get-VM "TestVM"
 Remove-VMGpuPartitionAdapter -VM $testvm
 ```
 
-Removes a partition assigned to a specific VM object.
+This example removes a partition assigned to a specific VM object.
 
 ### Example 2
 ```powershell
@@ -54,7 +54,7 @@ $GPUpartition = Get-VMGpuPartitionAdapter -VM $testvm
 Remove-VMGpuPartitionAdapter -VM $testvm -AdapterId $GPUpartiton[0].id
 ```
 
-Remove a specific partition in a VM.
+This example removes a specific partition object from a specific VM.
 
 ## PARAMETERS
 

@@ -1,9 +1,9 @@
 ---
-description: Configures host partitionable GPU to the number of partitions supported by the manufacturer.
+description: Configures the host partitionable GPU to the number of partitions supported by the manufacturer.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 10/21/2022
-online version: https://learn.microsoft.com/en-us/powershell/module/hyper-v/set-vmhostpartitionablegpu?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmhostpartitionablegpu?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-VMHostPartitionableGpu
 ---
@@ -11,7 +11,7 @@ title: Set-VMHostPartitionableGpu
 # Set-VMHostPartitionableGpu
 
 ## SYNOPSIS
-Configures host partitionable GPU to the number of partitions supported by the manufacturer
+Configures the host partitionable GPU to the number of partitions supported by the manufacturer.
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ Set-VMHostPartitionableGpu [-Passthru] [-Name <String>] [-PartitionCount <UInt16
 ```
 
 ## DESCRIPTION
-The `Set-VMHostPartitionableGpu` cmdlet Configures host partitionable GPU to the number of partitions supported by the manufacturer.
+The `Set-VMHostPartitionableGpu` cmdlet configures the host partitionable GPU to the number of partitions supported by the manufacturer.
 
 ## EXAMPLES
 
@@ -48,7 +48,7 @@ The `Set-VMHostPartitionableGpu` cmdlet Configures host partitionable GPU to the
 Set-VMHostPartitionableGpu -ComputerName SampleHost -partitioncount 8
 ```
 
-Partitions a GPU in a specific host.
+This example partitions a GPU in a specific host into eight partitions.
 
 ### Example 2
 ```powershell
@@ -56,7 +56,7 @@ $GPU = Get-VMHostPartitionableGpu -name "SampleGPUDeviceIDName"
 Set-VMHostPartitionableGpu -Name $GPU -partitionCount 4
 ```
 
-Partitions a GPU in a host using the GPU device ID name.
+This example partitions a GPU in a host into four partitions by using the GPU device ID name.
 
 ## PARAMETERS
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostPartitionableGpu
-Full GPU object, obtained by executing Get-VMHostPartitionableGpu.
+Full GPU object, obtained by executing 'Get-VMHostPartitionableGpu'.
 
 ```yaml
 Type: VMHostPartitionableGpu[]

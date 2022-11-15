@@ -3,7 +3,7 @@ description: Gets the information of assigned GPU partitions to a virtual machin
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 09/22/2022
-online version: https://learn.microsoft.com/en-us/powershell/module/hyper-v/get-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/get-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-VMGpuPartitionAdapter
 ---
@@ -37,7 +37,7 @@ $testvm = get-VM "TestVM"
 Get-VMGpuPartitionAdapter -VM $testvm
 ```
 
-Displays the GPU information assigned to a VM object.
+This example gets the GPU information assigned to a VM object.
 
 ## PARAMETERS
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-Specifies the virtual machine whose virtual network adapters are to be retrieved. The asterisk, ('*'), is the wildcard.
+Specifies the virtual machine whose virtual network adapters are to be retrieved. The asterisk ('*') is the wildcard.
 If it is specified the cmdlet returns virtual network adapters from every virtual machine in the system.
 
 ```yaml

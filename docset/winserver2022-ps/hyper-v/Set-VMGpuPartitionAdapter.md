@@ -3,7 +3,7 @@ description: Assigns a partition of a GPU to a virtual machine.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 09/22/2022
-online version: https://learn.microsoft.com/en-us/powershell/module/hyper-v/set-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-VMGpuPartitionAdapter
 ---
@@ -57,7 +57,7 @@ $vm = get-vm test
 Set-VMGpuPartitionAdapter -VM $vm
 ```
 
-Assign a partition to a VM passing a VM object.
+This example assign a partition to a VM passing a VM object.
 
 ## PARAMETERS
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionCompute
- The maximum number of compute assigned by the host GPU. This is defined by the manufacturer's driver.
+The maximum number of compute assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionVRAM
-The maximum VRAM supported by the host GPU. This is defined by the manufacturer's driver.
+The maximum VRAM in byte supported by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinPartitionVRAM
-The minimum VRAM supported by the host GPU. This is defined by the manufacturer's driver.
+The minimum VRAM in byte supported by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptimalPartitionVRAM
-The optimal VRAM supported by the host GPU. This is defined by the manufacturer's driver.
+The optimal VRAM in byte supported by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMGpuPartitionAdapter
-GPU partition object obtained from 'Get-VMGpuPartitionAdapter''
+GPU partition object obtained from 'Get-VMGpuPartitionAdapter'.
 
 ```yaml
 Type: VMGpuPartitionAdapter[]

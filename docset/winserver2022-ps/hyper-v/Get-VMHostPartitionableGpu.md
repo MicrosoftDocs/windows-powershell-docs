@@ -3,7 +3,7 @@ description: Gets the host machine’s partitionable GPU.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 09/22/2022
-online version: https://learn.microsoft.com/en-us/powershell/module/hyper-v/get-vmhostpartitionablegpu?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/get-vmhostpartitionablegpu?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-VMHostPartitionableGpu
 ---
@@ -37,14 +37,14 @@ This displays the information of the GPU as provided by the manufacturer's drive
 Get-VMHostPartitionableGpu
 ```
 
-Gets the details of the local partitionable graphic processing unit on the host
+This example gets the details of the local partitionable graphic processing unit on the host.
 
 ### Example 2
 ```powershell
 Get-VMHostPartitionableGpu -ComputerName "SampleHost"
 ```
 
-Displays a partitionable GPU by using the host name. This command will display all the GPU devices available for partitioning in the host.
+This example gets a partitionable GPU by using the host name. This command will display all the GPU devices available for partitioning in the host.
 
 ### Example 3
 ```powershell
@@ -91,8 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies one or more user accounts that have permission to perform this action.
-The default is the current user.
+Specifies one or more user accounts that have permission to perform this action. The default is the current user.
 
 ```yaml
 Type: PSCredential[]

@@ -3,7 +3,7 @@ description: Adds a GPU partition adapter to a virtual machine.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 09/22/2022
-online version: https://learn.microsoft.com/en-us/powershell/module/hyper-v/add-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/add-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-VMGpuPartitionAdapter
 ---
@@ -47,7 +47,7 @@ $vm = Get-VM -name "TestVM"
 Add-VMGpuPartitionAdapter -VM $vm
 ```
 
-Assigns a partition to a specific VM object.
+This example assigns a partition to a specific VM object.
 
 ### Example 2
 ```powershell
@@ -55,7 +55,7 @@ $vm = Get-VM -name "TestVM"
 Add-VMGpuPartitionAdapter -VM $vm -Instancepath "SampleGPUInstancePath"
 ```
 
-Assigns a partition from a specific GPU to a VM where the instance path is the GPU device ID name on the host.
+This example assigns a partition from a specific GPU to a VM where the instance path is the GPU device ID name on the host.
 
 ## PARAMETERS
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstancePath
-Represents the Device Instance path of a GPU in the host. This value can be obtained from the  "Name" property of the command Get-VMHostPartitionableGpu
+Represents the Device Instance path of a GPU in the host. This value can be obtained from the  "Name" property of the command 'Get-VMHostPartitionableGpu'.
 
 ```yaml
 Type: String
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionEncode
-the maximum number of encoders assigned by the host GPU. This is defined by the manufacturer's driver.
+The maximum number of encoders assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionVRAM
-the maximum VRAM supported by the host GPU. This is defined by the manufacturer's driver.
+The maximum VRAM in byte supported by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinPartitionCompute
-the minimum number of compute assigned by the host GPU. This is defined by the manufacturer's driver.
+The minimum number of compute assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinPartitionDecode
-the minimum number of decoders assigned by the host GPU. This is defined by the manufacturer's driver.
+The minimum number of decoders assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinPartitionEncode
-the minimum number of encoders assigned by the host GPU. This is defined by the manufacturer's driver.
+The minimum number of encoders assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinPartitionVRAM
-the minimum VRAM supported by the host GPU. This is defined by the manufacturer's driver.
+The minimum VRAM in byte supported by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptimalPartitionCompute
-the optimal number of compute assigned by the host GPU. This is defined by the manufacturer's driver.
+The optimal number of compute assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -260,8 +260,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -the optimalPartitionDecode
-the optimal number of decoders assigned by the host GPU. This is defined by the manufacturer's driver.
+### -OptimalPartitionDecode
+The optimal number of decoders assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptimalPartitionEncode
-the optimal number of encoders assigned by the host GPU. This is defined by the manufacturer's driver.
+The optimal number of encoders assigned by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptimalPartitionVRAM
-the optimal VRAM supported by the host GPU. This is defined by the manufacturer's driver.
+The optimal VRAM in byte supported by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64

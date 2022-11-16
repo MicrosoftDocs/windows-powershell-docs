@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionVRAM
-The maximum VRAM in byte supported by the host GPU. This is defined by the manufacturer's driver.
+The maximum VRAM in bytes supported by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinPartitionVRAM
-The minimum VRAM in byte supported by the host GPU. This is defined by the manufacturer's driver.
+The minimum VRAM in bytes supported by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptimalPartitionVRAM
-The optimal VRAM in byte supported by the host GPU. This is defined by the manufacturer's driver.
+The optimal VRAM in bytes supported by the host GPU. This is defined by the manufacturer's driver.
 
 ```yaml
 Type: UInt64

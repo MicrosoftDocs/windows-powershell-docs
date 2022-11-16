@@ -1,6 +1,6 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Quality Contributions
+  - name: What's the Quality Contributions Project?
     url: https://learn.microsoft.com/powershell/scripting/community/contributing/quality-improvements
     about: >-
       If you'd like to commit to improving quality for the documentation, before filing an issue,

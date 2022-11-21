@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clustergroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterGroup
@@ -22,7 +22,7 @@ Remove-ClusterGroup [-VMId <Guid>] [[-Name] <StringCollection>] [-Force] [-Remov
 
 ## DESCRIPTION
 
-The **Remove-ClusterGroup** cmdlet removes a clustered role. also called a resource group, from a
+The `Remove-ClusterGroup` cmdlet removes a clustered role. also called a resource group, from a
 failover cluster.
 
 Use this cmdlet to delete a group. If the group still has resources in it, then either remove the
@@ -46,7 +46,7 @@ PS C:\> Remove-ClusterGroup -Name MyFileServer -Force
 ```
 
 This example removes the clustered role named MyFileServer, if the resources have first been removed
-from it. The cmdlet does not prompt for confirmation.
+from it. The cmdlet doesn't prompt for confirmation.
 
 ### Example 3
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

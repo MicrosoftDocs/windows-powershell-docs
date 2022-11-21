@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterlog?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterLog
@@ -22,7 +22,7 @@ Set-ClusterLog [-Size <Int32>] [-Level <Int32>] [-InputObject <PSObject>] [-Clus
 
 ## DESCRIPTION
 
-The **Set-ClusterLog** cmdlet sets the size and level of detail for the cluster log. The default
+The `Set-ClusterLog` cmdlet sets the size and level of detail for the cluster log. The default
 level, `3`, includes errors, warnings, and additional information.
 
 ## EXAMPLES
@@ -86,8 +86,8 @@ Accept wildcard characters: False
 
 ### -Level
 
-Specifies the log level to set for the cluster. The acceptable values for this parameter are:`0` to
-`5`.
+Specifies the log level to set for the cluster. The acceptable values for this parameter are: **0**
+to **5**.
 
 | Level  | Error  | Warning  | Info  | Verbose | Debug |
 |:-----|:-----|:-----|:-----|:-----|:-----|
@@ -113,8 +113,8 @@ Accept wildcard characters: False
 ### -Size
 
 Specifies the log size to set for the cluster. The acceptable values for this parameter in Windows
-2016 are:`8` MB to `1024` MB. The acceptable values for this parameter in Windows 2019 are:`8` MB to
-`2048` MB.
+2016 are: **8** MB to **1024** MB. The acceptable values for this parameter in Windows 2019 are:
+**8** MB to **2048** MB.
 
 ```yaml
 Type: Int32

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/stop-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-ClusterNode
@@ -22,9 +22,9 @@ Stop-ClusterNode [[-Name] <StringCollection>] [-Wait <Int32>] [-InputObject <PSO
 
 ## DESCRIPTION
 
-The **Stop-ClusterNode** cmdlet stops the Cluster service on a node in a failover cluster. If
-stopping the node brings the cluster below quorum, the operation is not permitted. To stop the
-cluster, use the **Stop-Cluster** cmdlet instead.
+The `Stop-ClusterNode` cmdlet stops the Cluster service on a node in a failover cluster. If
+stopping the node brings the cluster below quorum, the operation isn't permitted. To stop the
+cluster, use the `Stop-Cluster` cmdlet instead.
 
 Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
 authentication on the server computer.
@@ -122,8 +122,8 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 
 ```yaml
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

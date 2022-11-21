@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/stop-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-Cluster
@@ -32,7 +32,7 @@ Stop-Cluster [-Force] [-Wait <Int32>] [-InputObject <PSObject>] [-WhatIf] [-Conf
 
 ## DESCRIPTION
 
-The **Stop-Cluster** cmdlet stops the Cluster service on all nodes in a failover cluster, which will
+The `Stop-Cluster` cmdlet stops the Cluster service on all nodes in a failover cluster, which will
 stop all services and applications configured in the cluster. A node can only function as part of
 the cluster when the Cluster service is running on that node.
 
@@ -126,8 +126,8 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 
 ```yaml
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

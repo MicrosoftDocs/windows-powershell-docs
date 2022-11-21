@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/test-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-Cluster
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 Specifies the disk number or disks for which to run the cmdlet. If the specified disk is online and
 is assigned to a clustered role or Cluster Shared Volume, you must also specify the **Force**
 parameter to take the disk offline for the duration of the storage tests. Otherwise, the specified
-disk must be offline before the cmdlet is run. If the **Disk** parameter is not specified, storage
+disk must be offline before the cmdlet is run. If the **Disk** parameter isn't specified, storage
 tests run on all disks that are available for use in the cluster or that are in the cluster resource
 offline or failed state.
 
@@ -155,7 +155,7 @@ The acceptable values for this parameter are:
   hexadecimal format is supported.
 - **System.String**. A string that represents the GUID of a GPT disk.
 - **ClusterResource**. A cluster resource object that represents a clustered disk.
-- **CimInstance#MSFT_Disk**. An object returned from Get-Disk, from the Windows PowerShell storage
+- **CimInstance#MSFT_Disk**. An object returned from `Get-Disk`, from the Windows PowerShell storage
   module.
 
 ```yaml
@@ -173,8 +173,8 @@ Accept wildcard characters: False
 ### -Force
 
 Runs the cmdlet without prompting for confirmation. By default the cmdlet will ask for confirmation
-from the user before proceeding. When combined with the **Disk** or **Pool** parameters, the disks or
-storage pool is taken offline for the duration of the storage tests.
+from the user before proceeding. When combined with the **Disk** or **Pool** parameters, the disks
+or storage pool is taken offline for the duration of the storage tests.
 
 ```yaml
 Type: SwitchParameter
@@ -278,7 +278,7 @@ storage pool is online and a virtual disk in the storage pool is assigned to a c
 Cluster Shared Volume, you must also specify the **Force** parameter to take the storage pool
 offline for the duration of the storage tests. Otherwise, command will exit with an error. The
 specified storage pool must be taken offline before running the storage tests. If the **Pool**
-parameter is not specified, storage tests run on all storage pools that are available for use in the
+parameter isn't specified, storage tests run on all storage pools that are available for use in the
 cluster or that are in the cluster resource offline or failed state.
 
 The acceptable values for this parameter are:
@@ -318,7 +318,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

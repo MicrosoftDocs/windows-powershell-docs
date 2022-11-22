@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterparameter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterParameter
@@ -22,7 +22,7 @@ Get-ClusterParameter [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cl
 
 ## DESCRIPTION
 
-The **Get-ClusterParameter** cmdlet gets detailed information about an object in a failover cluster,
+The `Get-ClusterParameter` cmdlet gets detailed information about an object in a failover cluster,
 such as a cluster resource. This cmdlet is used to manage private properties for a cluster object.
 To get and set common properties for a cluster object, use the appropriate Get-Cluster* cmdlet to
 get the cluster object of interest and then set the property of interest on that cluster object
@@ -31,17 +31,17 @@ directly.
 The type of detailed information you can obtain with this cmdlet depends on the cmdlet you combine
 with it. For example:
 
-- If you use this cmdlet with the **Get-ClusterResource** cmdlet for a disk resource, then you can
+- If you use this cmdlet with the `Get-ClusterResource` cmdlet for a disk resource, then you can
   obtain the disk signature or GUID of a disk and information about whether maintenance is turned on
   for that disk.
 
-- If you use this cmdlet with the **Get-ClusterResource** cmdlet for a Network Name resource, then
+- If you use this cmdlet with the `Get-ClusterResource` cmdlet for a Network Name resource, then
   you can obtain DNS-related information about the resource.
 
-- If you use this cmdlet with the **Get-ClusterResource** cmdlet for an IP address resource, then
+- If you use this cmdlet with the `Get-ClusterResource` cmdlet for an IP address resource, then
   you can obtain DHCP-related information about the IP Address resource.
 
-- If you use this cmdlet with the **Get-ClusterResource** cmdlet for resources used by virtual
+- If you use this cmdlet with the `Get-ClusterResource` cmdlet for resources used by virtual
   machines, then you can obtain details about the settings for the virtual machines.
 
 ## EXAMPLES

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/move-clustervirtualmachinerole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Move-ClusterVirtualMachineRole
@@ -23,11 +23,11 @@ Move-ClusterVirtualMachineRole [[-Name] <String>] [[-Node] <String>] [-Cancel]
 
 ## DESCRIPTION
 
-The **Move-ClusterVirtualMachineRole** cmdlet moves the ownership of a clustered virtual machine to
+The `Move-ClusterVirtualMachineRole` cmdlet moves the ownership of a clustered virtual machine to
 a different node.
 
 This cmdlet is used to live migrate a clustered virtual machine. For quick migration, use
-Move-ClusterGroup after using Get-ClusterResource and Set-ClusterParameter to set the
+`Move-ClusterGroup` after using `Get-ClusterResource` and `Set-ClusterParameter` to set the
 **OfflineAction** parameter of the virtual machine resource to save state, or a value of 1.
 
 Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
@@ -45,7 +45,7 @@ Virtual Machine1           node2                              Online
 ```
 
 This example performs a live migration of the clustered virtual machine named Virtual Machine1 to
-the node named node2. The Windows PowerShell® prompt does not return until the action is complete.
+the node named node2. The Windows PowerShell prompt doesn't return until the action is complete.
 
 ### Example 2
 
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
 then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 

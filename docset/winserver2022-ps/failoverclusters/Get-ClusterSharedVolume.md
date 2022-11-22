@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clustersharedvolume?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterSharedVolume
@@ -22,7 +22,7 @@ Get-ClusterSharedVolume [[-Name] <StringCollection>] [-InputObject <PSObject>] [
 
 ## DESCRIPTION
 
-The **Get-ClusterSharedVolume** cmdlet gets information about Cluster Shared Volumes in a failover
+The `Get-ClusterSharedVolume` cmdlet gets information about Cluster Shared Volumes in a failover
 cluster.
 
 ## EXAMPLES

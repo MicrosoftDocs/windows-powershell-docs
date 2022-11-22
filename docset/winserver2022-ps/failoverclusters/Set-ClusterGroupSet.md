@@ -196,7 +196,7 @@ Specifies the startup setting when the set is deemed ready. When delay it is whe
 specified in the **StartupCount** parameter are in pending in addition to the **StartupDelay**
 parameter. If it is online it is when **StartupCount** groups reach online in addition to the delay.
 
-The acceptable values for this parameter are: **Delay** or **Online**.
+The acceptable values for this parameter are: `Delay` or `Online`.
 
 ```yaml
 Type: StartupSettingType

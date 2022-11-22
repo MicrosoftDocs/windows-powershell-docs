@@ -67,9 +67,9 @@ Accept wildcard characters: False
 
 Specifies the cache mode of the hard disk drive. The acceptable values for this parameter are:
 
-- **ReadOnly**
-- **WriteOnly**
-- **ReadWrite**
+- `ReadOnly``
+- `WriteOnly``
+- `ReadWrite`
 
 ```yaml
 Type: CacheModeType
@@ -88,9 +88,9 @@ Accept wildcard characters: False
 
 Specifies the cache mode of the solid state drive. The acceptable values for this parameter are:
 
-- **ReadOnly**
-- **WriteOnly**
-- **ReadWrite**
+- `ReadOnly``
+- `WriteOnly``
+- `ReadWrite`
 
 ```yaml
 Type: CacheModeType
@@ -107,8 +107,8 @@ Accept wildcard characters: False
 
 ### -CacheState
 
-Specifies the S2D cache state. The acceptable values for this parameter are: **Enabled** or
-**Disabled**. The default value is **Enabled**.
+Specifies the S2D cache state. The acceptable values for this parameter are: `Enabled` or
+`Disabled`. The default value is `Enabled`.
 
 ```yaml
 Type: CacheStateType

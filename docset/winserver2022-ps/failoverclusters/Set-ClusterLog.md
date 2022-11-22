@@ -86,8 +86,8 @@ Accept wildcard characters: False
 
 ### -Level
 
-Specifies the log level to set for the cluster. The acceptable values for this parameter are: **0**
-to **5**.
+Specifies the log level to set for the cluster. The acceptable values for this parameter are: `0`
+to `5`.
 
 | Level  | Error  | Warning  | Info  | Verbose | Debug |
 |:-----|:-----|:-----|:-----|:-----|:-----|
@@ -113,8 +113,8 @@ Accept wildcard characters: False
 ### -Size
 
 Specifies the log size to set for the cluster. The acceptable values for this parameter in Windows
-2016 are: **8** MB to **1024** MB. The acceptable values for this parameter in Windows 2019 are:
-**8** MB to **2048** MB.
+2016 are: `8` MB to `1024` MB. The acceptable values for this parameter in Windows 2019 are:
+`8` MB to `2048` MB.
 
 ```yaml
 Type: Int32

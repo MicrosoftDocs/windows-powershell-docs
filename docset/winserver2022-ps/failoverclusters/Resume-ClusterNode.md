@@ -96,8 +96,11 @@ Accept wildcard characters: False
 ### -Failback
 
 Sets the policy to bring back drained workloads to the node. The acceptable values for this
-parameter are: **NoFailback**, **Immediate**, and **Policy**. Policy can be configured to not
-**failback**, **failback immediately**, or **failback** only during specific hours.
+parameter are:
+
+- `NoFailBack` - Don't failback at all.
+- `Immediate` - Failback immediately.
+- `Policy` - Failback only during specific hours.
 
 ```yaml
 Type: ResumeClusterNodeFailbackType

@@ -31,7 +31,7 @@ Add-ClusterGroupToSet -InputObject <CimInstance[]> [-Group] <String> [-CimSessio
 
 ## DESCRIPTION
 
-The **Add-ClusterGroupToSet** cmdlet adds a group to a set. A group can only belong to one set.
+The `Add-ClusterGroupToSet` cmdlet adds a group to a set. A group can only belong to one set.
 
 ## EXAMPLES
 

@@ -23,15 +23,16 @@ Add-ClusterResourceType [-Name] <String> [-Dll] <String> [[-DisplayName] <String
 
 ## DESCRIPTION
 
-The **Add-ClusterResourceType** cmdlet adds a resource type to a failover cluster, and specifies
+The `Add-ClusterResourceType` cmdlet adds a resource type to a failover cluster, and specifies
 information such as the dynamic-link library (DLL) to use with that resource type.
 
 The failover cluster software provides Resource DLL files for the most common types of resources.
 Using the application programming interface (API) provided in the Microsoft Platform Software
 Development Kit (SDK), other vendors can add support for other resource types.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
-authentication on the server computer.
+> [!NOTE]
+> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+> authentication on the server computer.
 
 ## EXAMPLES
 

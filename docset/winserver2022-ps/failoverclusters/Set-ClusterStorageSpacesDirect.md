@@ -67,8 +67,8 @@ Accept wildcard characters: False
 
 Specifies the cache mode of the hard disk drive. The acceptable values for this parameter are:
 
-- `ReadOnly``
-- `WriteOnly``
+- `ReadOnly`
+- `WriteOnly`
 - `ReadWrite`
 
 ```yaml
@@ -88,8 +88,8 @@ Accept wildcard characters: False
 
 Specifies the cache mode of the solid state drive. The acceptable values for this parameter are:
 
-- `ReadOnly``
-- `WriteOnly``
+- `ReadOnly`
+- `WriteOnly`
 - `ReadWrite`
 
 ```yaml

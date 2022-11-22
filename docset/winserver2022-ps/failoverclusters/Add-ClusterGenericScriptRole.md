@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustergenericscriptrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGenericScriptRole
@@ -53,7 +53,7 @@ Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Storage "Cluster Dis
 ```
 
 This example configures the script named `script1.vbs` to run within a failover cluster and use
-Cluster Disk 4. The cmdlet assigns the clustered script the name script1.
+`Cluster Disk 4`. The cmdlet assigns the clustered script the name script1.
 
 ### Example 3: Configure a script to run on a fail over cluster without waiting for resources
 

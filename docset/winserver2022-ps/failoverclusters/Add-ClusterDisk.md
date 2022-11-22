@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clusterdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterDisk
@@ -56,8 +56,8 @@ specific SCSI address, and adds it to Available Storage cluster group.
 Get-Disk -Number 11 | Add-ClusterDisk
 ```
 
-This example clusters a physical disk. This cmdlet adds a physical disk to the cluster _Available
-Storage _.
+This example clusters a physical disk. This cmdlet adds a physical disk to the cluster 
+_Available Storage_.
 
 ## PARAMETERS
 

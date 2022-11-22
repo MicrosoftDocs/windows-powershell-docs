@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustergenericservicerole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGenericServiceRole
@@ -52,7 +52,7 @@ address, and doesn't assign a disk.
 Add-ClusterGenericServiceRole -ServiceName "Service1" -Storage "Cluster Disk 6"
 ```
 
-This example configures Service1 as a generic clustered service using Cluster Disk 6, and assigns
+This example configures Service1 as a generic clustered service using `Cluster Disk 6`, and assigns
 defaults for the name and IP address.
 
 ## PARAMETERS

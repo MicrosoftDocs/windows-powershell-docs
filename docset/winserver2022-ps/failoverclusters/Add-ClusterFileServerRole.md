@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clusterfileserverrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterFileServerRole
@@ -42,7 +42,7 @@ clustered file server should use.
 Add-ClusterFileServerRole -Storage "Cluster Disk 8"
 ```
 
-This example creates a clustered file server using Cluster Disk 8, and assigns a default name.
+This example creates a clustered file server using `Cluster Disk 8`, and assigns a default name.
 
 ### Example 2: Create and name a clustered file server
 
@@ -50,7 +50,7 @@ This example creates a clustered file server using Cluster Disk 8, and assigns a
 Add-ClusterFileServerRole -Storage "Cluster Disk 6" -Name cluster1FS12
 ```
 
-This example creates a clustered file server using Cluster Disk 6, and assigns the name
+This example creates a clustered file server using `Cluster Disk 6`, and assigns the name
 `cluster1FS12`.
 
 ### Example 3: Create a clustered file server with no waiting for resources
@@ -59,7 +59,7 @@ This example creates a clustered file server using Cluster Disk 6, and assigns t
 Add-ClusterFileServerRole -Storage "Cluster Disk 8" -Wait 0
 ```
 
-This example creates a clustered file server using Cluster Disk 8, and assigns a default name.
+This example creates a clustered file server using `Cluster Disk 8`, and assigns a default name.
 The cmdlet completes without waiting for all resources to come online.
 
 ## PARAMETERS

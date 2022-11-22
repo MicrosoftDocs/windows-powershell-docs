@@ -37,25 +37,19 @@ connected correctly to the networks and storage and that it contains the same so
 
 ### Example 1
 
-```
-PS C:\> Add-ClusterNode -Name node4
-Name                                                                      State 
-----                                                                      ----- 
-node4                                                                        Up
+```powershell
+Add-ClusterNode -Name node4
 ```
 
-This example adds node named node4 to the local cluster.
+This example adds node named `node4` to the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Get-Cluster -Name cluster1 | Add-ClusterNode -Name node3
-Name                                                                      State 
-----                                                                      ----- 
-node3                                                                        Up
+```powershell
+Get-Cluster -Name cluster1 | Add-ClusterNode -Name node3
 ```
 
-This example adds the node named node3 to cluster called cluster1.
+This example adds the node named `node3` to cluster called `cluster1`.
 
 ## PARAMETERS
 

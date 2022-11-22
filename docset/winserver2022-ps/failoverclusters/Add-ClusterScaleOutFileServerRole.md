@@ -38,29 +38,18 @@ services such as File Server Resource Manager (FSRM) or Distributed File System 
 ### Example 1
 
 ```powershell
-PS C:\> Add-ClusterScaleOutFileServerRole
+Add-ClusterScaleOutFileServerRole
 ```
-```output
-Name                                    OwnerNode                               State 
-----                                    ---------                               ----- 
-clusterSOFS                             CLUSTER-N2                              Online
-```
-
 This example creates a highly available scale-out file server role.
 
 ### Example 2
 
 ```powershell
-PS C:\> Add-ClusterScaleOutFileServerRole -Wait 0
-```
-```output
-Name                                    OwnerNode                               State 
-----                                    ---------                               ----- 
-clusterSOFS                             CLUSTER-N2                              Pending
+Add-ClusterScaleOutFileServerRole -Wait 0
 ```
 
-This example creates a highly available scale out file server role. The cmdlet completes without
-waiting for all resources to come online.
+This example creates a highly available scale out file server role.
+The cmdlet completes without waiting for all resources to come online.
 
 ### Example 3
 

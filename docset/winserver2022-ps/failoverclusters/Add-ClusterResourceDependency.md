@@ -35,15 +35,12 @@ is taken offline before the resources on which it depends.
 
 ### Example 1
 
-```
-PS C:\> Add-ClusterResourceDependency -Resource "FileServer-(cluster1FS12)" -Provider "Cluster Disk 4"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-FileServer-(clus... Online              cluster1FS12        File Server
+```powershell
+Add-ClusterResourceDependency -Resource "FileServer-(cluster1FS12)" -Provider "Cluster Disk 4"
 ```
 
-This example adds the resource named "Cluster Disk 4" to the list of resources on which the resource
-called "FileServer-(cluster1FS12)" depends, using AND as the connector.
+This example adds the resource named Cluster Disk 4 to the list of resources on which the resource
+called `FileServer-(cluster1FS12)` depends.
 
 ## PARAMETERS
 

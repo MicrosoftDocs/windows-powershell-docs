@@ -37,105 +37,48 @@ appropriate property on that cluster object directly.
 
 ### Example 1
 
-```
-PS C:\> Get-Cluster | Format-List -Property *
-Domain                                  : contoso.com 
-Name                                    : cluster1 
-AddEvictDelay                           : 60 
-BackupInProgress                        : 0 
-ClusSvcHangTimeout                      : 60 
-ClusSvcRegroupOpeningTimeout            : 5 
-ClusSvcRegroupPruningTimeout            : 5 
-ClusSvcRegroupStageTimeout              : 5 
-ClusSvcRegroupTickInMilliseconds        : 300 
-ClusterGroupWaitDelay                   : 120 
-MinimumNeverPreemptPriority             : 3000 
-MinimumPreemptorPriority                : 1 
-ClusterEnforcedAntiAffinity             : 0 
-ClusterLogLevel                         : 3 
-ClusterLogSize                          : 300 
-CrossSubnetDelay                        : 1000 
-CrossSubnetThreshold                    : 5 
-DefaultNetworkRole                      : 2 
-Description                             : 
-FixQuorum                               : 0 
-HangRecoveryAction                      : 3 
-IgnorePersistentStateOnStartup          : 0 
-LogResourceControls                     : 0 
-PlumbAllCrossSubnetRoutes               : 0 
-PreventQuorum                           : 0 
-QuarantineDuration                      : 7200
-QuarantineThreshold                     : 3
-QuorumArbitrationTimeMax                : 20 
-RequestReplyTimeout                     : 60 
-RootMemoryReserved                      : 4294967295 
-RouteHistoryLength                      : 0 
-SameSubnetDelay                         : 1000 
-SameSubnetThreshold                     : 5 
-SecurityLevel                           : 1 
-SharedVolumeCompatibleFilters           : {} 
-SharedVolumeIncompatibleFilters         : {} 
-SharedVolumesRoot                       : C:\ClusterStorage 
-SharedVolumeSecurityDescriptor          : {1, 0, 4, 128...} 
-ShutdownTimeoutInMinutes                : 20 
-UseNetftForSharedVolumes                : 1 
-UseClientAccessNetworksForSharedVolumes : 0 
-SharedVolumeBlockCacheSizeInMB          : 0 
-WitnessDatabaseWriteTimeout             : 300 
-WitnessRestartInterval                  : 15 
-EnableSharedVolumes                     : Enabled 
-DynamicQuorum                           : 1 
-Id                                      : af5881ef-0ff7-4b5c-bfed-098decbbf762
+```powershell
+Get-Cluster | Format-List -Property *
 ```
 
 This example displays state and property information for the local cluster in the form of a list.
 
 ### Example 2
 
-```
-PS C:\> Get-Cluster -Name cluster1
-Name 
----- 
-cluster1
+```powershell
+Get-Cluster -Name cluster1
 ```
 
-This example gets information about a cluster named cluster1.
+This example gets information about a cluster named `cluster1`.
 
 ### Example 3
 
-```
-PS C:\> Get-Cluster -Domain contoso.com
-Name 
----- 
-cluster1 
-cluster2 
-cluster3
+```powershell
+Get-Cluster -Domain contoso.com
 ```
 
-This example gets information about each of the clusters in the contoso.com domain.
+This example gets information about each of the clusters in the `contoso.com` domain.
 
 ### Example 4
 
-```
-PS C:\> Get-Cluster | ForEach-Object -Process {$_.CrossSubnetDelay = 1500}
+```powershell
+Get-Cluster | ForEach-Object -Process {$_.CrossSubnetDelay = 1500}
 ```
 
-This example sets the common property called CrossSubnetDelay for the local cluster to 1500.
+This example sets the common property called `CrossSubnetDelay` for the local cluster to `1500`.
 
 ### Example 5
 
-```
-PS C:\> (Get-Cluster).DynamicQuorum = 1
+```powershell
+(Get-Cluster).DynamicQuorum = 1
 ```
 
 This example enables the Dynamic Quorum feature for the cluster.
 
 ### Example 6
 
-```
-PS C:\> Get-Cluster | Format-List -Property Quarantine*
-QuarantineDuration  : 7200
-QuarantineThreshold : 3
+```powershell
+Get-Cluster | Format-List -Property Quarantine*
 ```
 
 This example shows default values for **QuarantineThreshold** and **QuarantineDuration** for the

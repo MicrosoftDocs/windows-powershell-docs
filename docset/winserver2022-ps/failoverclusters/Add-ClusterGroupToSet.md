@@ -37,11 +37,11 @@ The `Add-ClusterGroupToSet` cmdlet adds a group to a set. A group can only belon
 
 ### Example 1: Add a cluster group to a set
 
-```
-PS C:\> Add-ClusterGroupToSet -Name "Set001" -Group "Group001"
+```powershell
+Add-ClusterGroupToSet -Name "Set001" -Group "Group001"
 ```
 
-This command adds the cluster group named Group001 to the set named Set001.
+This command adds the cluster group named `Group001` to the set named `Set001`.
 
 ## PARAMETERS
 

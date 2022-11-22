@@ -28,11 +28,8 @@ The `Get-ClusterFaultDomain` cmdlet gets the cluster fault domains in a cluster.
 
 ### Example 1: Get all fault domains in the cluster
 
-```
-PS C:\> Get-ClusterFaultDomain
-Name            Type ParentName ChildrenNames
-----            ---- ---------- -------------
-CONTOSO-VM-1101 Node
+```powershell
+Get-ClusterFaultDomain
 ```
 
 This command gets all the fault domains in the cluster.

@@ -31,11 +31,11 @@ Windows PowerShell to view cluster settings (not change settings), then use the
 
 ### Example 1
 
-```
-PS C:\> Block-ClusterAccess -User contoso\johnj99
+```powershell
+Block-ClusterAccess -User contoso\johnj99
 ```
 
-This example prevents the user named johnj99 on the contoso domain from gaining access to the local
+This example prevents the user named `johnj99` on the `contoso` domain from gaining access to the local
 cluster.
 
 ## PARAMETERS

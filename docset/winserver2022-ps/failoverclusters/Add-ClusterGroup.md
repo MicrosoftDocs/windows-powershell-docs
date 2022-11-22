@@ -31,11 +31,8 @@ is the unit of failover. During failover, all resources in the resource group mo
 
 ### Example 1: Add a resource group
 
-```
-PS C:\> Add-ClusterGroup -Name "Group1"
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-Group1                     node1                                         Online
+```powershell
+Add-ClusterGroup -Name "Group1"
 ```
 
 This example adds an empty resource group called Group1 to the failover cluster.

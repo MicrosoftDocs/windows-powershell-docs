@@ -34,12 +34,8 @@ information about disks that you can add to the cluster.
 
 ### Example 1: Add available disks to the Available Storage group
 
-```
-PS C:\> Get-ClusterAvailableDisk | Add-ClusterDisk
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 7      OnlinePending       Available Storage   Physical Disk 
-Cluster Disk 8      OnlinePending       Available Storage   Physical Disk
+```powershell
+Get-ClusterAvailableDisk | Add-ClusterDisk
 ```
 
 This example identifies the disks that are ready to be added to the cluster, and then adds them to
@@ -47,11 +43,8 @@ Available Storage cluster group.
 
 ### Example 2: Add a specific available disk to Available Storage
 
-```
-PS C:\> Get-ClusterAvailableDisk | Where-Object -FilterScript { $_.ScsiAddress -Eq 50331651 } | Add-ClusterDisk
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 4      OnlinePending       Available Storage   Physical Disk
+```powershell
+Get-ClusterAvailableDisk | Where-Object -FilterScript { $_.ScsiAddress -Eq 50331651 } | Add-ClusterDisk
 ```
 
 This example examines disks that are ready to be added to the cluster, finds the disk with a
@@ -59,15 +52,12 @@ specific SCSI address, and adds it to Available Storage cluster group.
 
 ### Example 3: Cluster a physical disk
 
-```
-PS C:\> Get-Disk -Number 11 | Add-ClusterDisk
-Name                          State                         OwnerGroup                    ResourceType 
-----                          -----                         ----------                    ------------ 
-Cluster Disk 5                OnlinePending                 Available Storage             Physical Disk
+```powershell
+Get-Disk -Number 11 | Add-ClusterDisk
 ```
 
-This example clusters a physical disk. This cmdlet adds a physical disk to the **Available Storage**
-for the cluster.
+This example clusters a physical disk. This cmdlet adds a physical disk to the cluster _Available
+Storage _.
 
 ## PARAMETERS
 

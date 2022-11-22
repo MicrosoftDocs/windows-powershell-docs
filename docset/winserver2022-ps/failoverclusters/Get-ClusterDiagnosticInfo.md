@@ -38,12 +38,11 @@ machines and produces a zip file containing the data.
 
 ### Example 1: Write diagnostic info to the specified path
 
-```
-PS C:\> Get-ClusterDiagnosticInfo -WriteToPath "C:\Users\MyUser\HealthTest\"
-Writing to path : C:\Users\MyUser\HealthTest\
+```powershell
+Get-ClusterDiagnosticInfo -WriteToPath "C:\Users\MyUser\HealthTest\"
 ```
 
-This command gets and writes the cluster Diagnostics to the folder C:\Users\MyUser\HealthTest\.
+This command gets and writes the cluster Diagnostics to the folder `C:\Users\MyUser\HealthTest\`.
 
 ## PARAMETERS
 

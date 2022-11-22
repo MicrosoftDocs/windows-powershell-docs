@@ -53,7 +53,7 @@ directly attached storage Storage Spaces Direct (S2D) on a cluster.
 ### Example 1: Enable Storage Spaces Direct
 
 ```powershell
-PS C:\> Enable-ClusterStorageSpacesDirect
+Enable-ClusterStorageSpacesDirect
 ```
 
 This command enables S2D on the cluster.
@@ -61,10 +61,10 @@ This command enables S2D on the cluster.
 ### Example 2: Enable Storage Spaces Direct specifying a Friendly Name
 
 ```powershell
-PS C:\> Enable-ClusterStorageSpacesDirect -PoolFriendlyName 'Sales'
+Enable-ClusterStorageSpacesDirect -PoolFriendlyName 'Sales'
 ```
 
-This command enables S2d on the cluster and sets a friendly name for the Storage Spaces Direct pool.
+This command enables S2D on the cluster and sets a friendly name for the Storage Spaces Direct pool.
 
 ## PARAMETERS
 

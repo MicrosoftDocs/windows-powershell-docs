@@ -32,16 +32,8 @@ PowerShell cmdlets that provide information about the cluster.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterAccess
-IdentityReference              AccessControlType        ClusterRights 
------------------              -----------------        ------------- 
-CONTOSO\user1                               Deny                 Full 
-NT AUTHORITY\SYSTEM                        Allow                 Full 
-NT AUTHORITY\NETWORK SE...                 Allow                 Full 
-BUILTIN\Administrators                     Allow                 Full 
-CONTOSO\user2                              Allow                 Read 
-NT SERVICE\MSDTC                           Allow                 Full
+```powershell
+Get-ClusterAccess
 ```
 
 This example lists the level of permissions that have been assigned to users of this cluster,

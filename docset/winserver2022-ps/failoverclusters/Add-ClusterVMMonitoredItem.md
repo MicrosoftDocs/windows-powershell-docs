@@ -52,22 +52,24 @@ be restarted.
 
 ### Example 1
 
-```
-PS C:\> Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -EventLog "Microsoft-Windows-FailoverClustering-Manager/Admin" -EventSource "Microsoft-Windows-FailoverClustering-Manager" -EventId 4708
-Name 
----- 
-Microsoft-Windows-FailoverClustering-Manager+Admin,Microsoft-Windows-FailoverClustering-Manager,4708
+```powershell
+$parameters = @{
+    VirtualMachine = 'test-VM11'
+    EventLog = 'Microsoft-Windows-FailoverClustering-Manager/Admin'
+    EventSource = 'Microsoft-Windows-FailoverClustering-Manager'
+    EventId = '4708'
+}
+Add-ClusterVMMonitoredItem @parameters
 ```
 
-This example adds monitoring for the ETW event ID 4708.
+This example adds monitoring for the ETW event ID `4708`. This example uses splatting to pass
+parameter values from the `$Parameters` variable to the command. Learn more about
+[Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 2
 
-```
-PS C:\> Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -Service spooler
-Name 
----- 
-Spooler
+```powershell
+Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -Service spooler
 ```
 
 This example configures monitoring for the print spooler service.

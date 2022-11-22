@@ -30,15 +30,12 @@ which to add the resource.
 
 ### Example 1
 
-```
-PS C:\> Add-ClusterResource -Name resource1 -ResourceType "IP Address" -Group ClusterSrv1
-Name                State               Group               ResourceType 
-----                -----               -----               ------------        
-resource1           Offline             ClusterSrv1         IP Address
+```powershell
+Add-ClusterResource -Name resource1 -ResourceType "IP Address" -Group ClusterSrv1
 ```
 
-This example creates a new IP Address resource called resource1 on the local cluster. The cmdlet
-configures the resource as part of the clustered role, or resource group, called ClusterSrv1.
+This example creates a new IP Address resource called `resource1` on the local cluster. The cmdlet
+configures the resource as part of the clustered role, or resource group, called `ClusterSrv1`.
 
 ## PARAMETERS
 

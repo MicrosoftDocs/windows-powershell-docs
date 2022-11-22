@@ -37,12 +37,12 @@ The `Add-ClusterGroupSetDependency` cmdlet adds a dependency to a cluster set.
 
 ### Example 1: Add a dependency to a provider set
 
-```
-PS C:\> Add-ClusterGroupSetDependency -Name "Set001" -Provider "Provider002"
+```powershell
+Add-ClusterGroupSetDependency -Name "Set001" -Provider "Provider002"
 ```
 
-This command adds the set named Provider002 as a provider to the set named Set001. Both sets cannot
-be empty.
+This command adds the set named `Provider002` as a provider to the set named `Set001`.
+Both sets cannot be empty.
 
 ## PARAMETERS
 

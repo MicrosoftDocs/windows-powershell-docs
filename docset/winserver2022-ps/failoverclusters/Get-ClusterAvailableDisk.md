@@ -35,35 +35,16 @@ disk, and shouldn't be exposed to any other servers.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterAvailableDisk
-Cluster     : cluster1 
-Id          : 2654136007 
-Name        : Cluster Disk 4 
-Number      : 7 
-ScsiAddress : 50331651 
-Size        : 2097152000 
-Partitions  : {\\?\GLOBALROOT\Device\Harddisk7\Partition1\} 
- 
-Cluster     : cluster1 
-Id          : 2654136015 
-Name        : Cluster Disk 5 
-Number      : 9 
-ScsiAddress : 67108867 
-Size        : 2097152000 
-Partitions  : {\\?\GLOBALROOT\Device\Harddisk9\Partition1\}
+```powershell
+Get-ClusterAvailableDisk
 ```
 
 This example lists the disks that are ready to be added to the cluster.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterAvailableDisk | Add-ClusterDisk
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 4      OnlinePending       Available Storage   Physical Disk 
-Cluster Disk 5      OnlinePending       Available Storage   Physical Disk
+```powershell
+Get-ClusterAvailableDisk | Add-ClusterDisk
 ```
 
 This example adds all disks that are ready to be added to the local cluster.

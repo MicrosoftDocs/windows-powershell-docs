@@ -29,8 +29,8 @@ direct attached storage Storage Spaces Direct (S2D) on a cluster.
 
 ### Example 1: Disable Storage Spaces Direct
 
-```
-PS C:\> Disable-ClusterStorageSpacesDirect
+```powershell
+Disable-ClusterStorageSpacesDirect
 ```
 
 This command disables S2D on the cluster.

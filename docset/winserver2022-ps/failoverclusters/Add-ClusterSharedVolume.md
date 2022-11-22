@@ -30,14 +30,11 @@ is, disks that have been added to the cluster but not assigned to a specific use
 
 ### Example 1
 
-```
-PS C:\> Add-ClusterSharedVolume -Name "Cluster Disk 4"
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 4             Online                     node2
+```powershell
+Add-ClusterSharedVolume -Name "Cluster Disk 4"
 ```
 
-This example adds Cluster Disk 4 to the Cluster Shared Volumes on the local cluster.
+This example adds `Cluster Disk 4` to the Cluster Shared Volumes on the local cluster.
 
 ## PARAMETERS
 

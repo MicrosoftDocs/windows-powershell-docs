@@ -23,7 +23,7 @@ Get-ClusterCheckpoint [[-ResourceName] <StringCollection>] [-CheckpointName <Str
 
 ## DESCRIPTION
 
-The **Get-ClusterCheckpoint** cmdlet retrieves a cryptographic key checkpoint or registry checkpoint
+The `Get-ClusterCheckpoint` cmdlet retrieves a cryptographic key checkpoint or registry checkpoint
 for a resource.
 
 Checkpoints help provide failover support for applications that store configuration information

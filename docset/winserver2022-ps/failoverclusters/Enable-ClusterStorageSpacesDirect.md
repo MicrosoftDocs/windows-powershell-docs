@@ -45,7 +45,7 @@ Enable-ClusterStorageSpacesDirect [-PoolFriendlyName <String>] [-Autoconfig <Boo
 
 ## DESCRIPTION
 
-The **Enable-ClusterStorageSpacesDirect** cmdlet enables highly available Storage Spaces that use
+The `Enable-ClusterStorageSpacesDirect` cmdlet enables highly available Storage Spaces that use
 directly attached storage Storage Spaces Direct (S2D) on a cluster.
 
 ## EXAMPLES
@@ -96,9 +96,9 @@ Accept wildcard characters: False
 ### -Autoconfig
 
 Indicates that this cmdlet that the pool should be automatically created and configured. When a pool
-already exists before Storage Spaces Direct is enabled the *AutoConfig* parameter becomes a no-op.
-*AutoConfig* is set to true by default. If you do not want the pool to be automatically created, but
-created manually, you should set *AutoConfig* to false.
+already exists before Storage Spaces Direct is enabled the **AutoConfig** parameter becomes a no-op.
+**AutoConfig** is set to true by default. If you don't want the pool to be automatically created,
+but created manually, you should set **AutoConfig** to false.
 
 ```yaml
 Type: Boolean
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ### -CacheState
 
 Specifies the Storage Spaces Direct cache state. The acceptable values for this parameter are:
-Enabled or Disabled. The default value is Enabled.
+`Enabled` or `Disabled`. The default value is `Enabled`.
 
 ```yaml
 Type: CacheStateType
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

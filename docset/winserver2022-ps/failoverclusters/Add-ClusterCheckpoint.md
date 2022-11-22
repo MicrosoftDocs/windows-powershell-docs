@@ -23,7 +23,7 @@ Add-ClusterCheckpoint [[-ResourceName] <String>] [-CryptoCheckpointName <String>
 
 ## DESCRIPTION
 
-The **Add-ClusterCheckpoint** cmdlet adds a cryptographic key checkpoint or registry checkpoint for
+The `Add-ClusterCheckpoint` cmdlet adds a cryptographic key checkpoint or registry checkpoint for
 a resource.
 
 Checkpoints help provide failover support for applications that store configuration information

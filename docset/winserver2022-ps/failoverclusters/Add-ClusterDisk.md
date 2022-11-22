@@ -21,13 +21,13 @@ Add-ClusterDisk [-InputObject] <PSObject[]> [-Cluster <String>] [<CommonParamete
 
 ## DESCRIPTION
 
-The **Add-ClusterDisk** cmdlet makes a new disk available for use in a failover cluster. The disk
-(LUN) must be exposed to all nodes in the failover cluster, and should not be exposed to any other
+The `Add-ClusterDisk` cmdlet makes a new disk available for use in a failover cluster. The disk
+(LUN) must be exposed to all nodes in the failover cluster, and shouldn't be exposed to any other
 servers.
 
 When adding a disk, make sure that the configuration of the storage allows the operating system to
 recognize and mount the disk as needed. The disk must be a basic disk, not a dynamic disk, and
-should not be exposed to servers outside the cluster. The **Get-ClusterAvailableDisk** cmdlet gets
+shouldn't be exposed to servers outside the cluster. The `Get-ClusterAvailableDisk` cmdlet gets
 information about disks that you can add to the cluster.
 
 ## EXAMPLES
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ### -InputObject
 
 Specifies the list of shared disks to add to the cluster. The list of disks is generated with the
-**Get-ClusterAvailableDisk** cmdlet.
+`Get-ClusterAvailableDisk` cmdlet.
 
 ```yaml
 Type: PSObject[]
@@ -118,7 +118,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
-This object is output from the Get-Disk and the **Get-VirtualDisk** cmdlets.
+This object is output from the `Get-Disk` and the `Get-VirtualDisk` cmdlets.
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Disk
 

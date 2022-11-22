@@ -31,7 +31,7 @@ Get-ClusterDiagnosticInfo -ReadFromPath <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-The **Get-ClusterDiagnosticInfo** cmdlet gets diagnostics for a cluster that contains virtual
+The `Get-ClusterDiagnosticInfo` cmdlet gets diagnostics for a cluster that contains virtual
 machines and produces a zip file containing the data.
 
 ## EXAMPLES

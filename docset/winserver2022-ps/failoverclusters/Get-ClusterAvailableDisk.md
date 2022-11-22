@@ -12,7 +12,7 @@ title: Get-ClusterAvailableDisk
 
 ## SYNOPSIS
 Gets information about the disks that can support Failover Clustering and are visible to all nodes,
-but are not yet part of the set of clustered disks.
+but aren't yet part of the set of clustered disks.
 
 ## SYNTAX
 
@@ -23,13 +23,13 @@ Get-ClusterAvailableDisk [[-Cluster] <String>] [-Disk <CimInstance>] [-All]
 
 ## DESCRIPTION
 
-The **Get-ClusterAvailableDisk** cmdlet gets information about the disks that can support Failover
-Clustering and are visible to all nodes, but are not yet part of the set of clustered disks.
+The `Get-ClusterAvailableDisk` cmdlet gets information about the disks that can support Failover
+Clustering and are visible to all nodes, but aren't yet part of the set of clustered disks.
 
 If a disk is unexpectedly missing from the list of disks that are available for use in the cluster,
 then make sure that the configuration of the storage allows the operating system on all clustered
 servers to recognize and mount the disk as needed. The disk must be a basic disk, not a dynamic
-disk, and should not be exposed to any other servers.
+disk, and shouldn't be exposed to any other servers.
 
 ## EXAMPLES
 

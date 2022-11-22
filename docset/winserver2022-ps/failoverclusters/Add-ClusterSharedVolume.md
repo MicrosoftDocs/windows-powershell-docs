@@ -22,7 +22,7 @@ Add-ClusterSharedVolume [[-Name] <StringCollection>] [-InputObject <PSObject>] [
 
 ## DESCRIPTION
 
-The **Add-ClusterSharedVolume** cmdlet makes a volume available in the Cluster Shared Volumes in a
+The `Add-ClusterSharedVolume` cmdlet makes a volume available in the Cluster Shared Volumes in a
 failover cluster. The Cluster Shared Volume must be chosen from the disks in Available Storage (that
 is, disks that have been added to the cluster but not assigned to a specific use in the cluster).
 

@@ -23,15 +23,16 @@ Add-ClusterFileServerRole -Storage <StringCollection> [-StaticAddress <StringCol
 
 ## DESCRIPTION
 
-The **Add-ClusterFileServerRole** cmdlet creates a clustered file server resource group that
+The `Add-ClusterFileServerRole` cmdlet creates a clustered file server resource group that
 includes one or more disks, on which shared folders can be created for users.
 
 When adding a clustered file server, specify a name for the file server, any IP address information
-that is not automatically supplied by your DHCP settings, and the storage volume or volumes that the
+that isn't automatically supplied by your DHCP settings, and the storage volume or volumes that the
 clustered file server should use.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
-authentication on the server computer.
+> [!NOTE]
+> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+> authentication on the server computer.
 
 ## EXAMPLES
 
@@ -92,8 +93,8 @@ Accept wildcard characters: False
 ### -IgnoreNetwork
 
 Specifies one or more networks to ignore when running the cmdlet. Networks with DHCP enabled are
-always included, but other networks need a static address to be specified using the *StaticAddress*
-parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+always included, but other networks need a static address to be specified using the
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -143,7 +144,7 @@ Accept wildcard characters: False
 
 Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
 are always included, but other networks need a static address to be specified using the
-*StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -175,9 +176,9 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
-cmdlet returns without waiting.
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If the value `0` is specified, then the call is initiated and
+the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32

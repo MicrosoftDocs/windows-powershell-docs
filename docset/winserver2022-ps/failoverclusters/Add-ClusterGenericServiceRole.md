@@ -11,7 +11,7 @@ title: Add-ClusterGenericServiceRole
 # Add-ClusterGenericServiceRole
 
 ## SYNOPSIS
-Configures high availability for a service that was not originally designed to run in a failover
+Configures high availability for a service that wasn't originally designed to run in a failover
 cluster.
 
 ## SYNTAX
@@ -25,14 +25,15 @@ Add-ClusterGenericServiceRole -ServiceName <String> [-CheckpointKey <StringColle
 
 ## DESCRIPTION
 
-The **Add-ClusterGenericServiceRole** cmdlet configures high availability for a service that was not
+The `Add-ClusterGenericServiceRole` cmdlet configures high availability for a service that wasn't
 originally designed to run in a failover cluster. The cluster software will start the service, then
 periodically query the Service Controller, which is a feature of the operating system, to determine
 whether the service appears to be running. If so, then it is presumed to be online, and will not be
 restarted or failed over.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
-authentication on the server computer.
+> [!NOTE]
+> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+> authentication on the server computer.
 
 ## EXAMPLES
 
@@ -46,7 +47,7 @@ cluster1GenSvc             node1                              Online
 ```
 
 This example configures Service1 as a generic clustered service, using defaults for the name and IP
-address, and does not assign a disk.
+address, and doesn't assign a disk.
 
 ### Example 2: Configure a service that uses default values and a specified disk
 
@@ -99,8 +100,8 @@ Accept wildcard characters: False
 ### -IgnoreNetwork
 
 Specifies one or more networks to ignore when running the cmdlet. Networks with DHCP enabled are
-always included, but other networks need a static address to be specified using the *StaticAddress*
-parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+always included, but other networks need a static address to be specified using the
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -166,7 +167,7 @@ Accept wildcard characters: False
 
 Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
 are always included, but other networks need a static address to be specified using the
-*StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -198,9 +199,9 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
-cmdlet returns without waiting.
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If the value `0` is specified, then the call is initiated and
+the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32

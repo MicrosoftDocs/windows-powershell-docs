@@ -22,7 +22,7 @@ Add-ClusterResource [-Name] <String> [[-Group] <String>] [-ResourceType] <String
 
 ## DESCRIPTION
 
-The **Add-ClusterResource** cmdlet adds a resource to a clustered role, or resource group, in a
+The `Add-ClusterResource` cmdlet adds a resource to a clustered role, or resource group, in a
 failover cluster. Before adding the resource, obtain the resource type and the name of the group to
 which to add the resource.
 

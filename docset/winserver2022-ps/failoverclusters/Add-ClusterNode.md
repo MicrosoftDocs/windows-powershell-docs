@@ -22,15 +22,16 @@ Add-ClusterNode [[-Name] <StringCollection>] [-NoStorage] [-InputObject <PSObjec
 
 ## DESCRIPTION
 
-The **Add-ClusterNode** cmdlet adds a node, or server, to a failover cluster. Before adding the new
+The `Add-ClusterNode` cmdlet adds a node, or server, to a failover cluster. Before adding the new
 node, you should run validation tests on the existing nodes together with the proposed new node.
 
 Before adding the new node, you should run validation tests on the existing nodes together with the
 proposed new node. By running the validation tests, you can confirm that the server to be added is
 connected correctly to the networks and storage and that it contains the same software updates.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
-authentication on the server computer.
+> [!NOTE]
+> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+> authentication on the server computer.
 
 ## EXAMPLES
 
@@ -111,7 +112,7 @@ Accept wildcard characters: False
 
 Ensures that shared storage, on the node being joined to the cluster, will not be added to the
 cluster during the join operation. Shared storage can be added by piping the ClusterDiskInfo object
-from the **Get-ClusterAvailableDisk** cmdlet into the **Add-ClusterDisk** cmdlet.
+from the `Get-ClusterAvailableDisk` cmdlet into the `Add-ClusterDisk` cmdlet.
 
 ```yaml
 Type: SwitchParameter

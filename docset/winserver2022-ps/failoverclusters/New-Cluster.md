@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/new-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Cluster
@@ -23,7 +23,7 @@ New-Cluster [-Name] <String> [-Node <StringCollection>] [-StaticAddress <StringC
 
 ## DESCRIPTION
 
-The **New-Cluster** cmdlet creates a new failover cluster. Before creating a cluster, the hardware
+The `New-Cluster` cmdlet creates a new failover cluster. Before creating a cluster, the hardware
 (servers, networks, and storage) must be connected, and the validation tests must be run.
 
 Use Test-Cluster to run the validation tests. The tests will confirm that the hardware and settings
@@ -57,8 +57,8 @@ cluster1
 ```
 
 This example creates a two-node cluster named cluster1. The cluster will not have any clustered
-storage, or disk resources. Storage can be added using the **Get-ClusterAvailableDisk** cmdlet with
-the **Add-ClusterDisk** cmdlet.
+storage, or disk resources. Storage can be added using the `Get-ClusterAvailableDisk` cmdlet with
+the `Add-ClusterDisk` cmdlet.
 
 ### Example 3
 
@@ -99,7 +99,7 @@ cluster1
 ```
 
 This example creates a four-node cluster named cluster1. The cluster uses default settings for IP
-addressing, and does not use the network 2.0.0.0/8.
+addressing, and doesn't use the network 2.0.0.0/8.
 
 ### Example 6
 
@@ -113,7 +113,7 @@ cluster1
 ```
 
 This example creates a four-node cluster named cluster1. The cluster uses the static IP address
-2.0.0.123, and does not use the network 3.0.0.0/8.
+2.0.0.123, and doesn't use the network 3.0.0.0/8.
 
 ## PARAMETERS
 
@@ -122,17 +122,17 @@ This example creates a four-node cluster named cluster1. The cluster uses the st
 Specifies the type of administrative access point that the cmdlet creates for the cluster. The
 acceptable values for this parameter are:
 
-- ActiveDirectoryAndDns. The cmdlet creates an administrative access point for the cluster. The
+- **ActiveDirectoryAndDns**. The cmdlet creates an administrative access point for the cluster. The
   administrative access point is registered in DNS and enabled in Active Directory Domain Services.
 
-- Dns. The cmdlet creates an administrative access point for the cluster. The administrative access
-  point is registered in DNS but is not enabled in Active Directory Domain Services.
+- **Dns**. The cmdlet creates an administrative access point for the cluster. The administrative
+  access point is registered in DNS but isn't enabled in Active Directory Domain Services.
 
-- None.
+- **None**.
 
-The cmdlet does not create an administrative access point for the cluster. Some clustered roles and
-functionality might not be available for a cluster that does not have an administrative access
-point. Also, you cannot use Failover Cluster Manager to manage a cluster that does not have an
+The cmdlet doesn't create an administrative access point for the cluster. Some clustered roles and
+functionality might not be available for a cluster that doesn't have an administrative access
+point. Also, you cannot use Failover Cluster Manager to manage a cluster that doesn't have an
 administrative access point.
 
 ```yaml
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 
 Specifies that shared storage is ignored during the cluster creation. The cluster created at the end
 of the operation will not have shared storage. Shared storage can later be added by piping the
-**ClusterDiskInfo** object from the **Get-ClusterAvailableDisk** cmdlet into the **Add-ClusterDisk**
+**ClusterDiskInfo** object from the `Get-ClusterAvailableDisk` cmdlet into the `Add-ClusterDisk`
 cmdlet.
 
 ```yaml
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 ### -Node
 
 Specifies a comma-separated list of cluster node names, or server names, on which to create the
-cluster. If this parameter is not specified, then a one node cluster is created on the local
+cluster. If this parameter isn't specified, then a one node cluster is created on the local
 physical computer.
 
 ```yaml
@@ -271,9 +271,9 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`,
-`-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`,
-`-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable,
+-Verbose, -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

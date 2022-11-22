@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/grant-clusteraccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Grant-ClusterAccess
@@ -30,19 +30,19 @@ parameter.
 
 ### Example 1
 
-```
-PS C:\> Grant-ClusterAccess -User contoso\johnj99 -Full
+```powershell
+Grant-ClusterAccess -User contoso\johnj99 -Full
 ```
 
-This example grants full access to the local cluster to johnj99 in the contoso domain.
+This example grants full access to the local cluster to `johnj99` in the `contoso` domain.
 
 ### Example 2
 
-```
-PS C:\> Grant-ClusterAccess -User contoso\johnj99 -ReadOnly
+```powershell
+Grant-ClusterAccess -User contoso\johnj99 -ReadOnly
 ```
 
-This example grants read-only access to the local cluster to johnj99 in the contoso domain.
+This example grants read-only access to the local cluster to `johnj99` in the `contoso` domain.
 
 ## PARAMETERS
 

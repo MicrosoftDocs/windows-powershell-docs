@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/move-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Move-ClusterResource
@@ -30,15 +30,12 @@ clustered resource will then fail over with that clustered role.
 
 ### Example 1
 
-```
-PS C:\> Move-ClusterResource -Name resource1 -Group group2
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-resource1           Offline             group2              IP Address
+```powershell
+Move-ClusterResource -Name resource1 -Group group2
 ```
 
-This command moves the cluster resource called resource1 to the resource group called group2 on the
-local cluster.
+This command moves the cluster resource called `resource1` to the resource group called `group2` on
+the local cluster.
 
 ## PARAMETERS
 

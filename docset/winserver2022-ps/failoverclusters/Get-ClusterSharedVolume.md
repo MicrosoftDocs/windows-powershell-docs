@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clustersharedvolume?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterSharedVolume
@@ -29,37 +29,27 @@ cluster.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterSharedVolume
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 3             Online                     node1 
-Cluster Disk 4             Online                     node2
+```powershell
+Get-ClusterSharedVolume
 ```
 
 This example lists all the Cluster Shared Volumes on the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterSharedVolume -Cluster cluster1
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 1             Online                     node4
+```powershell
+Get-ClusterSharedVolume -Cluster cluster1
 ```
 
-This example lists all the Cluster Shared Volumes on the cluster named cluster1.
+This example lists all the Cluster Shared Volumes on the cluster named `cluster1`.
 
 ### Example 3
 
-```
-PS C:\> Get-ClusterSharedVolume -Name "Cluster Disk 4"
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 4             Online                     node2
+```powershell
+Get-ClusterSharedVolume -Name "Cluster Disk 4"
 ```
 
-This example displays the state of the Cluster Shared Volume called Cluster Disk 4.
+This example displays the state of the Cluster Shared Volume called `Cluster Disk 4`.
 
 ## PARAMETERS
 

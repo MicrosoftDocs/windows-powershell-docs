@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterresourcedependency?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterResourceDependency
@@ -31,31 +31,20 @@ order in which resources are brought online or taken offline in the cluster.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterResourceDependency -Resource cluster1FS12
-Resource                                DependencyExpression 
---------                                -------------------- 
-cluster1FS12                            [IP Address 172.24.11.0] or [IP Add ...
+```powershell
+Get-ClusterResourceDependency -Resource cluster1FS12
 ```
 
-This example displays the dependencies for the resource called cluster1FS12.
+This example displays the dependencies for the resource called `cluster1FS12`.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterGroup -Name cluster1FS12 | Get-ClusterResource | Get-ClusterResourceDependency
-Resource                                DependencyExpression 
---------                                -------------------- 
-cluster1FS12                            [IP Address 172.24.11.0] or [IP Add ... 
- 
-Cluster Disk 6 
-IP Address 157.56.48.0 
-IP Address 2001:4898:9:2:: 
-IP Address 2002:9d38:31ca:8::
+```powershell
+Get-ClusterGroup -Name cluster1FS12 | Get-ClusterResource | Get-ClusterResourceDependency
 ```
 
-This example displays the dependencies for each resource in the clustered file server ─resource
-group─ called cluster1FS12. Some resources don't have dependencies.
+This example displays the dependencies for each resource in the clustered file server resource
+group called `cluster1FS12`. Some resources don't have dependencies.
 
 ## PARAMETERS
 

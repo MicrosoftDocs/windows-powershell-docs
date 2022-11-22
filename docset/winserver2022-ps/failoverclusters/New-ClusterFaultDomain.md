@@ -124,10 +124,10 @@ Specifies the type of the fault domain that this cmdlet creates.
 
 The acceptable values for this parameter are:
 
-- **Site**
-- **Rack**
-- **Chassis**
-- **Node**
+- `Site`
+- `Rack`
+- `Chassis`
+- `Node`
 
 ```yaml
 Type: FaultDomainType

@@ -45,7 +45,7 @@ Virtual Machine1           node2                              Online
 ```
 
 This example performs a live migration of the clustered virtual machine named Virtual Machine1 to
-the node named node2. The Windows PowerShell® prompt doesn't return until the action is complete.
+the node named node2. The Windows PowerShell prompt doesn't return until the action is complete.
 
 ### Example 2
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterNode
@@ -23,7 +23,7 @@ Remove-ClusterNode [[-Name] <StringCollection>] [-Force] [-Wait <Int32>]
 
 ## DESCRIPTION
 
-The **Remove-ClusterNode** cmdlet removes a node from a failover cluster. After the node is removed,
+The `Remove-ClusterNode` cmdlet removes a node from a failover cluster. After the node is removed,
 the node no longer functions as part of the cluster unless the node is added back to the cluster.
 Removing a node is also called evicting a node from the cluster.
 
@@ -116,8 +116,8 @@ Accept wildcard characters: False
 
 ### -IgnoreStorageConnectivityLoss
 
-Indicates that this cmdlet does not check whether the cluster node contains non-shared storage, if
-Storage Spaces Direct is enabled. If you do not specify this parameter, the cmdlet checks whether
+Indicates that this cmdlet doesn't check whether the cluster node contains non-shared storage, if
+Storage Spaces Direct is enabled. If you don't specify this parameter, the cmdlet checks whether
 this node has any Storage Spaces Direct storage. If this cmdlet finds Storage Spaces Direct storage,
 it prompts you for confirmation before it removes the node.
 
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
 then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterFaultDomain.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterfaultdomain?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterFaultDomain
@@ -33,9 +33,9 @@ Set-ClusterFaultDomain -InputObject <CimInstance[]> [-NewName <String>] [-Locati
 
 ## DESCRIPTION
 
-The **Set-ClusterFaultDomain** cmdlet update an existing cluster fault domain. The *Name* parameter
-should identify the current name. The *NewName* parameter should be specified only when renaming the
-fault domain.
+The `Set-ClusterFaultDomain` cmdlet update an existing cluster fault domain. The **Name** parameter
+should identify the current name. The **NewName** parameter should be specified only when renaming
+the fault domain.
 
 ## EXAMPLES
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ### -FaultDomain
 
 Specifies the name of the fault domain that is the parent of this one. You should specify Empty if
-the fault domain does not have a parent.
+the fault domain doesn't have a parent.
 
 ```yaml
 Type: String
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet does not
+Returns an object representing the item with which you are working. By default, this cmdlet doesn't
 generate any output.
 
 ```yaml

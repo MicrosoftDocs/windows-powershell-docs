@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterCollection.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-clustergroupset?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterGroupSet
@@ -33,9 +33,9 @@ Set-ClusterGroupSet -InputObject <CimInstance[]> [-StartupSetting <StartupSettin
 
 ## DESCRIPTION
 
-The **Set-ClusterGroupSet** cmdlet updates a cluster group set. To update the groups in the set, use
-the Add-ClusterGroupToSet and Remove-ClusterGroupFromSet cmdlets. To update the dependencies, use
-the Add-ClusterGroupSetDependency and Remove-ClusterGroupSetDependency cmdlets.
+The `Set-ClusterGroupSet` cmdlet updates a cluster group set. To update the groups in the set, use
+the `Add-ClusterGroupToSet` and `Remove-ClusterGroupFromSet` cmdlets. To update the dependencies,
+use the `Add-ClusterGroupSetDependency` and `Remove-ClusterGroupSetDependency` cmdlets.
 
 ## EXAMPLES
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet does not
+Returns an object representing the item with which you are working. By default, this cmdlet doesn't
 generate any output.
 
 ```yaml
@@ -193,10 +193,10 @@ Accept wildcard characters: False
 ### -StartupSetting
 
 Specifies the startup setting when the set is deemed ready. When delay it is when the groups
-specified in the *StartupCount* parameter are in pending in addition to the *StartupDelay*
-parameter. If it is online it is when *StartupCount* groups reach online in addition to the delay.
+specified in the **StartupCount** parameter are in pending in addition to the **StartupDelay**
+parameter. If it is online it is when **StartupCount** groups reach online in addition to the delay.
 
-The acceptable values for this parameter are: Delay or Online.
+The acceptable values for this parameter are: `Delay` or `Online`.
 
 ```yaml
 Type: StartupSettingType

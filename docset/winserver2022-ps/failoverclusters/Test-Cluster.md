@@ -149,7 +149,7 @@ offline or failed state.
 
 The acceptable values for this parameter are:
 
-- **Int32, Int64, Uint32, Uint64**. A number that represents a master boot record (MBR) signature of
+- **Int32, Int64, Uint32, or Uint64**. A number that represents a master boot record (MBR) signature of
   the disk.
 - **System.String**. A string that represents a master boot record (MBR) signature of the disk,
   hexadecimal format is supported.

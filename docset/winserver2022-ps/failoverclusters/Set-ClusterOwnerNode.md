@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterownernode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterOwnerNode
@@ -32,21 +32,21 @@ failure of a resource or a clustered role.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterResource -Name "Cluster Disk 3" | Set-ClusterOwnerNode -Owners node1,node2
+```powershell
+Get-ClusterResource -Name "Cluster Disk 3" | Set-ClusterOwnerNode -Owners node1,node2
 ```
 
-This example sets the possible owners for cluster named Cluster Disk 3 on the local cluster to the
-nodes named node1 and node2.
+This example sets the possible owners for cluster named `Cluster Disk 3` on the local cluster to the
+nodes named `node1` and `node2`.
 
 ### Example 2
 
-```
-PS C:\> Set-ClusterOwnerNode -Group cluster12FS -Owners node3,node2
+```powershell
+Set-ClusterOwnerNode -Group cluster12FS -Owners node3,node2
 ```
 
-This example sets the preferred owners for the clustered service named cluster12FS to the node named
-node3 followed by the node named node2 on the local cluster.
+This example sets the preferred owners for the clustered service named `cluster12FS` to the node
+named `node3` followed by the node named `node2` on the local cluster.
 
 ## PARAMETERS
 

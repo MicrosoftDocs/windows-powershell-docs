@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clusterresourcedependency?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterResourceDependency
@@ -34,27 +34,26 @@ offline might vary.
 
 ### Example 1
 
-```
-PS C:\> Remove-ClusterResourceDependency -Resource cluster1FS -Provider "IP Address 2001:4898:9:2:: (3)"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-cluster1FS          Online              cluster1FS          Network Name
+```powershell
+Remove-ClusterResourceDependency -Resource cluster1FS -Provider "IP Address 2001:4898:9:2:: (3)"
 ```
 
-This example removes the dependency between cluster resource cluster1FS and the resource named IP
-Address 2001:4898:9:2:: (3).
+This example removes the dependency between cluster resource `cluster1FS` and the resource named IP
+Address `2001:4898:9:2:: (3)`.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterResource -Name cluster1FS | Remove-ClusterResourceDependency -Provider "IP Address 2001:4898:9:2:: (3)"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-cluster1FS          Online              cluster1FS          Network Name
+```powershell
+$parameters = @{
+    Provider = 'IP Address 2001:4898:9:2:: (3)'
+}
+Get-ClusterResource -Name cluster1FS | Remove-ClusterResourceDependency @parameters
 ```
 
-This example removes the dependency between the cluster resource named cluster1FS and the resource
-named IP Address 2001:4898:9:2:: (3).
+This example removes the dependency between the cluster resource named `cluster1FS` and the resource
+named IP Address `2001:4898:9:2:: (3)`. This example uses splatting to pass parameter values from
+the `$Parameters` variable to the command. Learn more about
+[Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 

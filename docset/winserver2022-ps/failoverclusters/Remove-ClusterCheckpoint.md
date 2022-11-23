@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clustercheckpoint?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterCheckpoint
@@ -36,20 +36,13 @@ local server.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterResource "Cluster Name" | Remove-ClusterCheckpoint -RegistryCheckpoint
-
-
-
-PS C:\> Remove-ClusterCheckpoint
-Are you sure you want to remove registry checkpoint 'software\clusname' on resource 'Cluster Name'? 
-
-
-[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+```powershell
+Get-ClusterResource "Cluster Name" | Remove-ClusterCheckpoint -RegistryCheckpoint
+Remove-ClusterCheckpoint -Confirm:$false
 ```
 
-This example removes the registry checkpoint called software\clusname for the resource named Cluster
-Name.
+This example removes the registry checkpoint called `software\clusname` for the resource named
+`Cluster Name` without user confirmation.
 
 ## PARAMETERS
 

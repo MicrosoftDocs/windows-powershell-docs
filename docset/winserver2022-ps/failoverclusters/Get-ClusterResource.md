@@ -69,7 +69,9 @@ on the local cluster.
 ### Example 5
 
 ```powershell
-Get-ClusterResource -Name "Cluster Disk 2" | ForEach-Object -Process {$_.RestartDelay = 600}
+Get-ClusterResource -Name "Cluster Disk 2" | ForEach-Object -Process {
+    $_.RestartDelay = 600
+}
 ```
 
 This example sets the common property `RestartDelay` for the `Cluster Disk 2` resource on the local
@@ -90,7 +92,7 @@ Get-ClusterResource -Name *print-VM1 | Get-VM | Stop-VM -Verbose -Confirm:$false
 ```
 
 This example enumerates the cluster resources for wildcard characters `*print-VM1` and stops the
-corresponding virtual machines without user confirmation.. Verbose mode is turned on for details of
+corresponding virtual machines without user confirmation. Verbose mode is turned on for details of
 the operation.
 
 ## PARAMETERS

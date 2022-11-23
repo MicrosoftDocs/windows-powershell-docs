@@ -71,7 +71,7 @@ ForEach-Object -InputObject $groups -Process { $_ | Move-ClusterVirtualMachineRo
 
 This example performs a live migration of all clustered virtual machines that are currently owned by
 the node named node1 to the node named node2. The migration of each virtual machine should complete
-before the next migration is startqed. Use this cmdlet before performing maintenance on the
+before the next migration is started. Use this cmdlet before performing maintenance on the
 specified node.
 
 ## PARAMETERS

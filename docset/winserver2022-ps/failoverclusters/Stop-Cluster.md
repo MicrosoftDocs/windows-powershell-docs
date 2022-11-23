@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/stop-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-Cluster
@@ -40,8 +40,8 @@ the cluster when the Cluster service is running on that node.
 
 ### Example 1: Stop Cluster service on all nodes of the local cluster
 
-```
-PS C:\> Stop-Cluster
+```powershell
+Stop-Cluster
 ```
 
 This example stops the Cluster service on all nodes in the local cluster, which will stop all
@@ -49,11 +49,11 @@ services and applications configured in the cluster.
 
 ### Example 2: Stop Cluster service on all nodes of a cluster
 
-```
-PS C:\> Stop-Cluster -Name cluster1
+```powershell
+Stop-Cluster -Name cluster1
 ```
 
-This example stops the Cluster service on all nodes in the cluster named cluster1, which will stop
+This example stops the Cluster service on all nodes in the cluster named `cluster1`, which will stop
 all services and applications configured in the cluster.
 
 ## PARAMETERS

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/update-clusterfunctionallevel?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-ClusterFunctionalLevel
@@ -59,11 +59,8 @@ Repeat these steps for each node of the cluster.
 
 ### Example 1: Test a possible update
 
-```
-PS C:\> Update-ClusterFunctionalLevel -WhatIf
-Name
-----
-cluster_17
+```powershell
+Update-ClusterFunctionalLevel -WhatIf
 ```
 
 This command tests whether an update would finish successfully. Because the command includes the
@@ -71,15 +68,12 @@ This command tests whether an update would finish successfully. Because the comm
 
 ### Example 2: Update a cluster functional level
 
-```
-PS C:\> Update-ClusterFunctionalLevel -Cluster "cluster_17"
-Name
-----
-cluster_17
+```powershell
+Update-ClusterFunctionalLevel -Cluster "cluster_17"
 ```
 
-This command updates the cluster functional level of the cluster named cluster_17. All of the nodes
-of this cluster must already be updated before you run this command.
+This command updates the cluster functional level of the cluster named `cluster_17`. All of the
+nodes of this cluster must already be updated before you run this command.
 
 ## PARAMETERS
 

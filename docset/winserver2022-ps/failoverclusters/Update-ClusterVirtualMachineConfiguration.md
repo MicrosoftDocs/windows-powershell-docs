@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/update-clustervirtualmachineconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-ClusterVirtualMachineConfiguration
@@ -31,27 +31,21 @@ virtual memory, are being changed for a clustered virtual machine.
 
 ### Example 1: Refresh a clustered virtual machine on the local cluster
 
-```
-PS C:\> Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM1"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Virtual Machine ... Online              Virtual Machine     Virtual Machine ...
+```powershell
+Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM1"
 ```
 
-This example refreshes the clustered virtual machine named Virtual Machine Configuration VM1 on the
-local cluster.
+This example refreshes the clustered virtual machine named `Virtual Machine Configuration VM1` on
+the local cluster.
 
 ### Example 2: Refresh a clustered virtual machine on a cluster
 
-```
-PS C:\> Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM2" -Cluster cluster1
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Virtual Machine ... Online              Virtual Machine     Virtual Machine
+```powershell
+Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM2" -Cluster cluster1
 ```
 
-This example refreshes the clustered virtual machine named Virtual Machine Configuration VM2 on the
-cluster named cluster1.
+This example refreshes the clustered virtual machine named `Virtual Machine Configuration VM2` on
+the cluster named `cluster1`.
 
 ## PARAMETERS
 

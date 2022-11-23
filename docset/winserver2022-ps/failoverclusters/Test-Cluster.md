@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/test-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-Cluster
@@ -55,8 +55,9 @@ This example runs all applicable cluster validation tests on the local cluster.
 Test-Cluster -Node "node1", "node2"
 ```
 
-This example runs all cluster validation tests on the nodes named node1 and node2. If either node1
-or node2 is already a member of a cluster, then the tests will include all nodes in that cluster.
+This example runs all cluster validation tests on the nodes named `node1` and `node2`. If either
+`node1` or `node2` is already a member of a cluster, then the tests will include all nodes in that
+cluster.
 
 ### Example 3: View tests and categories in cluster validation
 

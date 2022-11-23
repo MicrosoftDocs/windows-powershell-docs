@@ -11,6 +11,8 @@ title: Remove-ClusterGroupSetDependency
 # Remove-ClusterGroupSetDependency
 
 ## SYNOPSIS
+Removes a dependency from a group set.
+
 ## SYNTAX
 
 ### Query (cdxml) (Default)
@@ -32,6 +34,8 @@ Remove-ClusterGroupSetDependency -InputObject <CimInstance[]> [-Provider] <Strin
 The `Remove-ClusterGroupSetDependency` cmdlet removes a dependency from a group set.
 
 ## EXAMPLES
+
+### Example 1: Remove a group set dependency on another group set
 
 ```powershell
 Remove-ClusterGroupSetDependency -Name "Set001" -Provider "Set002"

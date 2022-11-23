@@ -39,7 +39,8 @@ DHCP assigned.
 ### Example 2: Update DHCP leases for all clustered IP resources
 
 ```powershell
-Get-ClusterResource | Where-Object -FilterScript {$_.ResourceType.Name -eq "IP Address"} | Update-ClusterIPResource
+$clusterIP = Get-ClusterResource | Where-Object {$_.ResourceType.Name -eq "IP Address"}
+$clusterIP | Update-ClusterIPResource
 ```
 
 This example updates the DHCP lease for all of the clustered IP resources that are DHCP assigned.

@@ -41,11 +41,17 @@ the local cluster.
 ### Example 2: Refresh a clustered virtual machine on a cluster
 
 ```powershell
-Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM2" -Cluster cluster1
+$parameters = @{
+    Name = 'Virtual Machine Configuration VM2'
+    Cluster = 'cluster1'
+}
+Update-ClusterVirtualMachineConfiguration @parameters
 ```
 
 This example refreshes the clustered virtual machine named `Virtual Machine Configuration VM2` on
-the cluster named `cluster1`.
+the cluster named `cluster1`. The example uses splatting to pass parameter values from
+the `$Parameters` variable to the command. Learn more about
+[Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 

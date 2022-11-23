@@ -55,7 +55,8 @@ This example pauses the node named `node2` on the cluster named `cluster2`.
 Suspend-ClusterNode -Name "node1" -Target "node2" -Drain
 ```
 
-This example pauses the node named `node1` and moves the workloads from it to the node named `node2`.
+This example pauses the node named `node1` and moves the workloads from it to the node named
+`node2`.
 
 ### Example 4: Preview a pause operation
 

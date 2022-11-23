@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustersharedvolume?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterSharedVolume
@@ -30,14 +30,11 @@ is, disks that have been added to the cluster but not assigned to a specific use
 
 ### Example 1
 
-```
-PS C:\> Add-ClusterSharedVolume -Name "Cluster Disk 4"
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 4             Online                     node2
+```powershell
+Add-ClusterSharedVolume -Name "Cluster Disk 4"
 ```
 
-This example adds Cluster Disk 4 to the Cluster Shared Volumes on the local cluster.
+This example adds `Cluster Disk 4` to the Cluster Shared Volumes on the local cluster.
 
 ## PARAMETERS
 

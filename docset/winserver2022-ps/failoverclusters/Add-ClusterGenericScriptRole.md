@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustergenericscriptrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGenericScriptRole
@@ -39,38 +39,29 @@ script, the application will be restarted or failed over.
 
 ### Example 1: Configure a script to run on a failover cluster
 
-```
-PS C:\> Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs"
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1GenScript          node2                              Online
+```powershell
+Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs"
 ```
 
-This example configures the script named script1.vbs to run within a failover cluster, using
+This example configures the script named `script1.vbs` to run within a failover cluster, using
 defaults for the name and IP address, and doesn't assign a disk.
 
 ### Example 2: Configure a script on a failover cluster and assign a clustered script name
 
-```
-PS C:\> Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Storage "Cluster Disk 4" -Name "script1"
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-script1                    node2                              Online
+```powershell
+Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Storage "Cluster Disk 4" -Name "script1"
 ```
 
-This example configures the script named script1.vbs to run within a failover cluster and use
-Cluster Disk 4. The cmdlet assigns the clustered script the name script1.
+This example configures the script named `script1.vbs` to run within a failover cluster and use
+`Cluster Disk 4`. The cmdlet assigns the clustered script the name script1.
 
 ### Example 3: Configure a script to run on a fail over cluster without waiting for resources
 
-```
-PS C:\> Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Wait 0
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1GenScript          node2                             Pending
+```powershell
+Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Wait 0
 ```
 
-This example configures the script called script1.vbs to run within a failover cluster, using
+This example configures the script called `script1.vbs` to run within a failover cluster, using
 defaults for the name and IP address, and doesn't assign a disk. The cmdlet completes without
 waiting for all resources to come online.
 

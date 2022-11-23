@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/suspend-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-ClusterNode
@@ -23,8 +23,8 @@ Suspend-ClusterNode [[-Name] <StringCollection>] [-Drain] [-ForceDrain] [-Wait]
 
 ## DESCRIPTION
 
-The **Suspend-ClusterNode** cmdlet suspends activity on a failover cluster node, that is, pauses the
-node. If you use the *Drain* parameter, clustered roles currently running on the node will be
+The `Suspend-ClusterNode` cmdlet suspends activity on a failover cluster node, that is, pauses the
+node. If you use the **Drain** parameter, clustered roles currently running on the node will be
 drained before the node is paused.
 
 Pausing, or suspending, a node is usually done when applying software updates to the node. If you
@@ -199,10 +199,10 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the call is initiated and the cmdlet returns without waiting. If specified with no value, then the
-cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the cmdlet
-returns without waiting.
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the call is initiated and the cmdlet returns without waiting. If specified with no value, then
+the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+cmdlet returns without waiting.
 
 ```yaml
 Type: SwitchParameter
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

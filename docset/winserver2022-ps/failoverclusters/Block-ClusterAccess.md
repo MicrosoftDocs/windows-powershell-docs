@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/block-clusteraccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Block-ClusterAccess
@@ -31,11 +31,11 @@ Windows PowerShell to view cluster settings (not change settings), then use the
 
 ### Example 1
 
-```
-PS C:\> Block-ClusterAccess -User contoso\johnj99
+```powershell
+Block-ClusterAccess -User contoso\johnj99
 ```
 
-This example prevents the user named johnj99 on the contoso domain from gaining access to the local
+This example prevents the user named `johnj99` on the `contoso` domain from gaining access to the local
 cluster.
 
 ## PARAMETERS

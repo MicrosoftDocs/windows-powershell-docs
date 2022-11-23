@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterCollection.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustergrouptoset?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGroupToSet
@@ -37,11 +37,11 @@ The `Add-ClusterGroupToSet` cmdlet adds a group to a set. A group can only belon
 
 ### Example 1: Add a cluster group to a set
 
-```
-PS C:\> Add-ClusterGroupToSet -Name "Set001" -Group "Group001"
+```powershell
+Add-ClusterGroupToSet -Name "Set001" -Group "Group001"
 ```
 
-This command adds the cluster group named Group001 to the set named Set001.
+This command adds the cluster group named `Group001` to the set named `Set001`.
 
 ## PARAMETERS
 

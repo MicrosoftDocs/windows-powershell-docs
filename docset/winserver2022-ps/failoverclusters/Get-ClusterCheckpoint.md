@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clustercheckpoint?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterCheckpoint
@@ -36,26 +36,19 @@ local server.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterCheckpoint
-Resource                      Name                          Type                          Key 
---------                      ----                          ----                          --- 
-Cluster Name                  Microsoft Enhanced Cryptog...                               b5a571f2-c28b-48fa-b82f-a8... 
-Cluster Name                  software\clusname
+```powershell
+Get-ClusterCheckpoint
 ```
 
 This example retrieves all cluster checkpoints.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterResource -ResourceName "Cluster Name" | Get-ClusterCheckpoint -CryptoCheckpoint
-Resource                      Name                          Type                          Key 
---------                      ----                          ----                          --- 
-Cluster Name                  Microsoft Enhanced Cryptog...                               b5a571f2-c28b-48fa-b82f-a8...
+```powershell
+Get-ClusterResource -ResourceName "Cluster Name" | Get-ClusterCheckpoint -CryptoCheckpoint
 ```
 
-This example retrieves the cryptographic checkpoints for the resource named Cluster Name.
+This example retrieves the cryptographic checkpoints for the resource named `Cluster Name`.
 
 ## PARAMETERS
 

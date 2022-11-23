@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/stop-clustergroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-ClusterGroup
@@ -22,7 +22,7 @@ Stop-ClusterGroup [[-Name] <String>] [-IgnoreLocked] [-Wait <Int32>] [-InputObje
 
 ## DESCRIPTION
 
-The **Stop-ClusterGroup** cmdlet stops one or more clustered roles, also known as resource groups,
+The `Stop-ClusterGroup` cmdlet stops one or more clustered roles, also known as resource groups,
 on a failover cluster.
 
 If maintenance on a clustered role is needed, the clustered role can be stopped in an orderly
@@ -110,8 +110,8 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 
 ```yaml

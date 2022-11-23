@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clusterresourcetype?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterResourceType
@@ -38,27 +38,21 @@ Development Kit (SDK), other vendors can add support for other resource types.
 
 ### Example 1
 
-```
-PS C:\> Add-ClusterResourceType -Name ResType3 -InputObject C:\res3.dll
-Name                                    DisplayName 
-----                                    ----------- 
-ResType3                                ResType3
+```powershell
+Add-ClusterResourceType -Name ResType3 -InputObject C:\res3.dll
 ```
 
-This example creates ResType3 on the local cluster using res3.dll located on the provided resource
-DLL file path C:\.
+This example creates `ResType3` on the local cluster using `res3.dll` located on the provided
+resource DLL file path `C:\`.
 
 ### Example 2
 
-```
-PS C:\> Add-ClusterResourceType -Name ResType4 -InputObject C:\res4.dll -DisplayName "Resource Type 4"
-Name                                    DisplayName 
-----                                    ----------- 
-ResType4                                Resource Type 4
+```powershell
+Add-ClusterResourceType -Name ResType4 -InputObject C:\res4.dll -DisplayName "Resource Type 4"
 ```
 
-This example creates ResType4 on the local cluster using res4.dll located on the provided resource
-DLL file path C:\. The display name of the resource type is Resource Type 4.
+This example creates `ResType4` on the local cluster using `res4.dll` located on the provided
+resource DLL file path `C:\`. The display name of the resource type is `Resource Type 4`.
 
 ## PARAMETERS
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustercheckpoint?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterCheckpoint
@@ -36,26 +36,27 @@ local server.
 
 ### Example 1: Add registry checkpoint
 
-```
-PS C:\> Add-ClusterCheckpoint -ResourceName "Cluster Name" -RegistryCheckpoint "software\clusname"
-Resource                                                    Name 
---------                                                    ---- 
-Cluster Name                                                software\clusname
+```powershell
+Add-ClusterCheckpoint -ResourceName "Cluster Name" -RegistryCheckpoint "software\clusname"
 ```
 
-This example adds a registry checkpoint called software\clusname for the resource named cluster
+This example adds a registry checkpoint called `software\clusname` for the resource named cluster
 name.
 
 ### Example 2: Add cryptographic checkpoint
 
-```
-PS C:\> Get-ClusterResource -Name "Cluster Name" | Add-ClusterCheckpoint -CryptoCheckpointName "Microsoft Base Cryptographic Provider v1.0"  -CryptoCheckpointType 1 -CryptoCheckpointKey "Crypto"
-Resource                      Name                          Type                          Key 
---------                      ----                          ----                          --- 
-Cluster Name                  Microsoft Base Cryptograph... 1                             Crypto
+```powershell
+$parameters = @{
+    CryptoCheckpointName = 'Microsoft Base Cryptographic Provider v1.0'
+    CryptoCheckpointType = '1'
+    CryptoCheckpointKey = 'Crypto'
+}
+Get-ClusterResource -Name "Cluster Name" | Add-ClusterCheckpoint @parameters
 ```
 
-This example adds a cryptographic checkpoint for the resource named Cluster Name.
+This example adds a cryptographic checkpoint for the resource named Cluster Name. This example uses
+splatting to pass parameter values from the `$Parameters` variable to the command. Learn more about
+[Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 

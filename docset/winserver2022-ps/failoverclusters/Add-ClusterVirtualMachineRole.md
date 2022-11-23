@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustervirtualmachinerole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterVirtualMachineRole
@@ -46,35 +46,24 @@ virtual machine must be on the clustered disk used by that virtual machine.
 
 ### Example 1
 
-```
-PS C:\> Add-ClusterVirtualMachineRole -VirtualMachine VM1
-Name                       OwnerNode                            State 
-----                       ---------                            ----- 
-Virtual Machine            node1                              Offline
+```powershell
+Add-ClusterVirtualMachineRole -VirtualMachine VM1
 ```
 
-This example configures VM1 as a clustered virtual machine, and assigns a default name.
+This example configures `VM1` as a clustered virtual machine, and assigns a default name.
 
 ### Example 2
 
-```
-PS C:\> Add-ClusterVirtualMachineRole -VirtualMachine VM1 -Name "MainServer1"
-Name                       OwnerNode                            State 
-----                       ---------                            ----- 
-MainServer1                 node1                              Offline
+```powershell
+Add-ClusterVirtualMachineRole -VirtualMachine VM1 -Name "MainServer1"
 ```
 
-This example configures VM1 as a clustered virtual machine, and assigns the name MainServer1.
+This example configures `VM1` as a clustered virtual machine, and assigns the name `MainServer1`.
 
 ### Example 3
 
-```
-PS C:\> Get-VM -Name *print* | Add-ClusterVirtualMachineRole
-Report file location: C:\Windows\cluster\Reports\Highly Available Virtual Machine 0ce88dce-eb6b-4c17-a512-d13bdbe5fcba on2011.11.28 At 15.37.33.mht 
- 
-Name                                    OwnerNode                               State 
-----                                    ---------                               ----- 
-print-VM1                               node1                                   Online
+```powershell
+Get-VM -Name *print* | Add-ClusterVirtualMachineRole
 ```
 
 This example queries for virtual machines matching the wildcard characters `*print*` and configures

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustergroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGroup
@@ -31,11 +31,8 @@ is the unit of failover. During failover, all resources in the resource group mo
 
 ### Example 1: Add a resource group
 
-```
-PS C:\> Add-ClusterGroup -Name "Group1"
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-Group1                     node1                                         Online
+```powershell
+Add-ClusterGroup -Name "Group1"
 ```
 
 This example adds an empty resource group called Group1 to the failover cluster.

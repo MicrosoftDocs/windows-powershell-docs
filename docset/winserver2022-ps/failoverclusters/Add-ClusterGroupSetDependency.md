@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterCollection.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustergroupsetdependency?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGroupSetDependency
@@ -37,12 +37,12 @@ The `Add-ClusterGroupSetDependency` cmdlet adds a dependency to a cluster set.
 
 ### Example 1: Add a dependency to a provider set
 
-```
-PS C:\> Add-ClusterGroupSetDependency -Name "Set001" -Provider "Provider002"
+```powershell
+Add-ClusterGroupSetDependency -Name "Set001" -Provider "Provider002"
 ```
 
-This command adds the set named Provider002 as a provider to the set named Set001. Both sets cannot
-be empty.
+This command adds the set named `Provider002` as a provider to the set named `Set001`.
+Both sets cannot be empty.
 
 ## PARAMETERS
 

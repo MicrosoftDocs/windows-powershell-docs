@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustergenericapplicationrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGenericApplicationRole
@@ -40,38 +40,36 @@ If so, then it is presumed to be online and will not be restarted or failed over
 
 ### Example 1: Configure an application as a generic clustered application
 
-```
-PS C:\> Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1GenApp             node2                              Online
+```powershell
+Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe
 ```
 
-This example configures NewApplication.exe as a generic clustered application. A default name will
-be used for client access and this application requires no storage.
+This example configures `NewApplication.exe` as a generic clustered application.
+A default name will be used for client access and this application requires no storage.
 
 ### Example 2: Configure an application with storage and name
 
-```
-PS C:\> Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe -Storage "Cluster Disk 4" -Name NewApplication
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-NewApplication                 node2                          Online
+```powershell
+$parameters = @{
+    CommandLine = 'NewApplication.exe'
+    Storage = 'Cluster Disk 4'
+    Name = 'NewApplication'
+}
+Add-ClusterGenericApplicationRole @parameters
 ```
 
-This example configures NewApplication.exe as a generic clustered application using Cluster Disk 4,
-and assigns the name NewApplication.
+This example configures `NewApplication.exe` as a generic clustered application using Cluster Disk 4,
+and assigns the name NewApplication. This example uses splatting to pass parameter values from the
+`$Parameters` variable to the command. Learn more about
+[Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 3: Configure application with no wait for resources
 
-```
-PS C:\> Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe -Wait 0
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1GenApp             node2                             Pending
+```powershell
+Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe -Wait 0
 ```
 
-This example configures NewApplication.exe as a generic clustered application and assigns the name
+This example configures `NewApplication.exe` as a generic clustered application and assigns the name
 NewApplication. The cmdlet completes without waiting for all resources to come online.
 
 ## PARAMETERS

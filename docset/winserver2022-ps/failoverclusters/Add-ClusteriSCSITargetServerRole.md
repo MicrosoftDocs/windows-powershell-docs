@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clusteriscsitargetserverrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusteriSCSITargetServerRole
@@ -29,38 +29,29 @@ The `Add-ClusteriSCSITargetServerRole` cmdlet creates a highly available iSCSI T
 
 ### Example 1: Create a clustered target server
 
-```
-PS C:\> Add-ClusteriSCSITargetServerRole -Storage "Cluster Disk 5"
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-CLiSCSITarget              node1                                          Online
+```powershell
+Add-ClusteriSCSITargetServerRole -Storage "Cluster Disk 5"
 ```
 
-This example creates a clustered iSCSI Target server using Cluster Disk 5, and assigns a default
+This example creates a clustered iSCSI Target server using `Cluster Disk 5`, and assigns a default
 name.
 
 ### Example 2
 
-```
-PS C:\> Add-ClusteriSCSITargetServerRole -Storage "Cluster Disk 5" -Name MyiSCSITarget
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-MyiSCSITarget              node1                                          Online
+```powershell
+Add-ClusteriSCSITargetServerRole -Storage "Cluster Disk 5" -Name MyiSCSITarget
 ```
 
-This example creates a clustered iSCSI Target server using Cluster Disk 5, and assigns the name
-MyiSCSITarget.
+This example creates a clustered iSCSI Target server using `Cluster Disk 5`, and assigns the name
+`MyiSCSITarget`.
 
 ### Example 3
 
-```
-PS C:\> Add-ClusteriSCSITargetServerRole -Storage "Cluster Disk 5" -Wait 0
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-CLiSCSITarget              node1                                          Pending
+```powershell
+Add-ClusteriSCSITargetServerRole -Storage "Cluster Disk 5" -Wait 0
 ```
 
-This example creates a clustered iSCSI Target server using Cluster Disk 5, and assigns a default
+This example creates a clustered iSCSI Target server using `Cluster Disk 5`, and assigns a default
 name. The cmdlet completes without waiting for all resources to come online.
 
 ## PARAMETERS

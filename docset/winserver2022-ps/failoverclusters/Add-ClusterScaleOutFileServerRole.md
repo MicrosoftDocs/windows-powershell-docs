@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clusterscaleoutfileserverrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterScaleOutFileServerRole
@@ -38,29 +38,18 @@ services such as File Server Resource Manager (FSRM) or Distributed File System 
 ### Example 1
 
 ```powershell
-PS C:\> Add-ClusterScaleOutFileServerRole
+Add-ClusterScaleOutFileServerRole
 ```
-```output
-Name                                    OwnerNode                               State 
-----                                    ---------                               ----- 
-clusterSOFS                             CLUSTER-N2                              Online
-```
-
 This example creates a highly available scale-out file server role.
 
 ### Example 2
 
 ```powershell
-PS C:\> Add-ClusterScaleOutFileServerRole -Wait 0
-```
-```output
-Name                                    OwnerNode                               State 
-----                                    ---------                               ----- 
-clusterSOFS                             CLUSTER-N2                              Pending
+Add-ClusterScaleOutFileServerRole -Wait 0
 ```
 
-This example creates a highly available scale out file server role. The cmdlet completes without
-waiting for all resources to come online.
+This example creates a highly available scale out file server role.
+The cmdlet completes without waiting for all resources to come online.
 
 ### Example 3
 

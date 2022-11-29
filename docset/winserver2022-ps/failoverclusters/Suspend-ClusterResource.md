@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/suspend-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-ClusterResource
@@ -34,26 +34,20 @@ dependent resources offline, which interrupts client access. For other disks, Lo
 
 ### Example 1: Turn on maintenance for a CSV
 
-```
-PS C:\> Suspend-ClusterResource -Name "Cluster Disk 2"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 2      Online(Maintenance) Available Storage   Physical Disk
+```powershell
+Suspend-ClusterResource -Name "Cluster Disk 2"
 ```
 
-This example turns on maintenance for CSV named Cluster Disk 2 so that you can run a disk
+This example turns on maintenance for CSV named `Cluster Disk 2` so that you can run a disk
 maintenance tool without triggering failover.
 
 ### Example 2: Turn on maintenance for multiple volumes
 
-```
-PS C:\> Get-ClusterSharedVolume -Name "Cluster Disk 5" | Suspend-ClusterResource
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 5             Online                     node2
+```powershell
+Get-ClusterSharedVolume -Name "Cluster Disk 5" | Suspend-ClusterResource
 ```
 
-This example turns on maintenance for all volumes on the CSV named Cluster Disk 5.
+This example turns on maintenance for all volumes on the CSV named `Cluster Disk 5`.
 
 ## PARAMETERS
 

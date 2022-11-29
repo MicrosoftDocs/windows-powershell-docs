@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/test-clusterresourcefailure?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-ClusterResourceFailure
@@ -32,14 +32,11 @@ can be used to simulate what actions the Cluster service will take when a resour
 
 ### Example 1: Simulate a failure
 
-```
-PS C:\> Test-ClusterResourceFailure -Name "Cluster Disk 4"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 4      Failed              cluster12FS         Physical Disk
+```powershell
+Test-ClusterResourceFailure -Name "Cluster Disk 4"
 ```
 
-This example simulates a failure in cluster resource named Cluster Disk 4.
+This example simulates a failure in cluster resource named `Cluster Disk 4`.
 
 ## PARAMETERS
 

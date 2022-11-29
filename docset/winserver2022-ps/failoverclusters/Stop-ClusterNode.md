@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/stop-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-ClusterNode
@@ -33,25 +33,19 @@ authentication on the server computer.
 
 ### Example 1: Stop Cluster service on a local cluster node
 
-```
-PS C:\> Stop-ClusterNode -Name "node3"
-Name                                                                      State 
-----                                                                      ----- 
-node3                                                                      Down
+```powershell
+Stop-ClusterNode -Name "node3"
 ```
 
-This example stops the Cluster service on the node named node3 of the local cluster.
+This example stops the Cluster service on the node named `node3` of the local cluster.
 
 ### Example 2: Stop Cluster service on a cluster node
 
-```
-PS C:\> Stop-ClusterNode -Name "node1" -Cluster "cluster2"
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                      Down
+```powershell
+Stop-ClusterNode -Name "node1" -Cluster "cluster2"
 ```
 
-This example stops the Cluster service on the node named node1 on the cluster named cluster2.
+This example stops the Cluster service on the node named `node1` on the cluster named `cluster2`.
 
 ## PARAMETERS
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/stop-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-ClusterResource
@@ -29,15 +29,12 @@ resource is taken offline, any resources that depend on it are taken offline.
 
 ### Example 1: Take a resource offline
 
-```
-PS C:\> Stop-ClusterResource "IP Address 10.24.11.0"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-IP Address 10.2...  Offline             cluster1FS12        IP Address
+```powershell
+Stop-ClusterResource "IP Address 10.24.11.0"
 ```
 
-This example takes the resource called IP Address 10.24.11.0 offline on the local cluster. Before
-taking the resource offline, it takes offline any dependent resources.
+This example takes the resource called `IP Address 10.24.11.0` offline on the local cluster.
+Before taking the resource offline, it takes offline any dependent resources.
 
 ## PARAMETERS
 

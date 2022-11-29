@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/update-clusternetworknameresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-ClusterNetworkNameResource
@@ -30,11 +30,8 @@ DNS server in a way that doesn't interrupt cluster availability.
 
 ### Example 1: Register name resources with a DNS server
 
-```
-PS C:\> Get-ClusterResource -Name "Cluster Name" | Update-ClusterNetworkNameResource
-Name                          State                         OwnerGroup                    ResourceType 
-----                          -----                         ----------                    ------------ 
-Cluster Name                  Online                        Cluster Group                 Network Name
+```powershell
+Get-ClusterResource -Name "Cluster Name" | Update-ClusterNetworkNameResource
 ```
 
 This example registers the Network Name resources of the local cluster with a DNS server.

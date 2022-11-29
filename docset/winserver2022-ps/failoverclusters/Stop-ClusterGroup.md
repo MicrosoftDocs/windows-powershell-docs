@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/stop-clustergroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-ClusterGroup
@@ -32,14 +32,11 @@ fashion by using this cmdlet.
 
 ### Example 1: Stop a clustered role on the local cluster
 
-```
-PS C:\> Stop-ClusterGroup FileServer1
-Name                       OwnerNode                            State 
-----                       ---------                            ----- 
-FileServer1                 node1                              Offline
+```powershell
+Stop-ClusterGroup FileServer1
 ```
 
-This example stops the clustered role, or resource group, called FileServer1 on the local cluster.
+This example stops the clustered role, or resource group, called `FileServer1` on the local cluster.
 
 ## PARAMETERS
 

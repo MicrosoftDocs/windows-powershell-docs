@@ -30,14 +30,23 @@ The **Export-StartLayout** cmdlet exports the layout of the tiles on Start of th
 You can export layout and use Import-StartLayout as well as other management policies for the Start layout.
 Specify the .xml file name extension in the name of the file.
 
+**Note:** In Windows 11, this cmdlet exports the Start Menu layout in JSON (.json) file format. 
+
 ## EXAMPLES
 
-### Example 1: Export the layout
+### Example 1: Export the layout (Windows 10)
 ```
 PS C:\> Export-StartLayout -Path "C:\Layouts\Marketing.xml"
 ```
 
-This command exports the layout of the tiles on Start to a file named Marketing.xml in the C:\Layouts folder.
+This command exports the layout of the tiles on Start to a file named `Marketing.xml` in the C:\Layouts folder.
+
+### Example 2: Export the layout (Windows 11)
+```
+PS C:\> Export-StartLayout -Path "$env:USERPROFILE\Desktop\CurrentLayout.json"
+```
+
+This command exports the layout of the tiles on Start to a file named `CurrentLayout.json` in the current user's `Desktop` folder.
 
 ## PARAMETERS
 
@@ -58,7 +67,7 @@ Accept wildcard characters: False
 
 ### -LiteralPath
 Specifies a literal path to a layout file.
-Include the file .xml file name extension.
+If on Windows 10, include the `.xml` file name extension. If on Windows 11, include the `.json` file name extension.
 This parameter does not accept the wildcard character (*).
 If the path includes an escape character (\\), enclose the string in single quotes (').
 

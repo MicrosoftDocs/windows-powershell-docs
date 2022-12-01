@@ -53,10 +53,10 @@ This example sets the number of VFs available to 31 on the network adapter named
 
 ### EXAMPLE 2
 ```
-PS C:\>Set-NetAdapterSriov -Name "Ethernet 2" -NumVFs 31 -VPorts 64 -NumQueuePairsForDefaultVPort 2 -NumQueuePairsForNonDefaultVPort 2
+PS C:\>Set-NetAdapterSriov -Name "Ethernet 2" -NumVFs 31 -NumQueuePairsForDefaultVPort 2 -NumQueuePairsForNonDefaultVPort 2
 ```
 
-This example sets the number of VFs to 31 and the total number of VPorts to 64.
+This example sets the number of VFs to 31.
 This will result in 31 VF and `32` virtual machine queue (VMQ), plus 1 used by the physical function (PF).
 Since the number of queue pair is set to 2 for both default and non-default ports, the total number of queue pairs used will be `128`.
 

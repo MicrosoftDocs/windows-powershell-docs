@@ -53,8 +53,8 @@ By default, this command does not return the driver object if the "PassThru" par
 
 ### 4:
 ```
-C:\PS> $dsnArr = Get-OdbcDsn -DriverName 'SQL Server Native Client 10.0'
-C:\PS> foreach ($dsn in $dsnArr) {
+C:\PS> $DsnArray = Get-OdbcDsn -DriverName 'SQL Server Native Client 10.0'
+C:\PS> foreach ($dsn in $DsnArray) {
           Remove-OdbcDsn $dsn 
           # You can change the property array as well, 
           # if DSN attributes have been changed in the new driver version

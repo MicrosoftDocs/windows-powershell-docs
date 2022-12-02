@@ -94,7 +94,9 @@ Accept wildcard characters: False
 
 ### -AutoReusePortRangeStartPort
 
-This parameter sets the starting port to send and receive TCP traffic, which is a port range used for local ephemeral port selection by outbound TCP connections for which either SO_REUSE_UNICASTPORT has been set on the socket, or for which connect() has been called without calling bind() on the socket.
+Specifies the starting port for the auto-reuse port range, which is a port range used for local ephemeral port selection by outbound TCP connections for which either SO_REUSE_UNICASTPORT has been set on the socket, or for which connect() has been called without calling bind() on the socket.
+
+This parameter is required if you specify a value other than 0 for the AutoReusePortRangeStartPort parameter.
 
 ```yaml
 Type: UInt16

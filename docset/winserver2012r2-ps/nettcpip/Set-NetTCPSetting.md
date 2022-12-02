@@ -93,7 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -AutoReusePortRangeStartPort
-Specifies the starting port for the auto-reuse port range.
 
 This parameter sets the starting port to send and receive TCP traffic, which is a port range used for local ephemeral port selection by outbound TCP connections for which either SO_REUSE_UNICASTPORT has been set on the socket, or for which connect() has been called without calling bind() on the socket.
 

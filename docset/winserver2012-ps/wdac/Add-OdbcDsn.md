@@ -51,7 +51,7 @@ PS C:\> $newDsn = Add-OdbcDsn MyPayroll -DriverName "SQL Server Native Client 10
 This command is equivalent to example 2, but it saves the newly-created System DSN object into a PowerShell variable for future use.
 By default, this command does not return the driver object if the "PassThru" parameter is not specified:
 
-### 4:
+### Example 4: Migrates DSNs to a newer version of a driver
 ```
 C:\PS> $DsnArray = Get-OdbcDsn -DriverName 'SQL Server Native Client 10.0'
 C:\PS> foreach ($dsn in $DsnArray) {

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-NetAdapterSriov
 
 ## SYNOPSIS
-Sets the Single-Root I/O Virtualization (SR-IOV) properties of the network adapter, such as the number of virtual functions (VFs), the number of virtual ports (VPorts), and the number of queue pairs for default and non-default VPorts.
+Sets the Single-Root I/O Virtualization (SR-IOV) properties of the network adapter, such as the number of virtual functions (VFs), and the number of queue pairs for default and non-default VPorts.
 
 ## SYNTAX
 

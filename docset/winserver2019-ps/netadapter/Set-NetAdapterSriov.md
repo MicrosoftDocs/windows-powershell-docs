@@ -38,7 +38,7 @@ Set-NetAdapterSriov -InputObject <CimInstance[]> [-NumVFs <UInt32>] [-Enabled <B
 
 ## DESCRIPTION
 The **Set-NetAdapterSriov** cmdlet sets the Single-Root I/O Virtualization (SR-IOV) properties of the network adapter.
-The properties include the number of virtual functions, the number of virtual ports (VPorts), and the number of queue pairs for default and non-default VPorts.
+The properties include the number of virtual functions, and the number of queue pairs for default and non-default VPorts.
 The enabled state of SR-IOV can also be set with the cmdlet.
 
 The network adapter for these actions can be specified with the adapter name, interface description, or piped as an input object.

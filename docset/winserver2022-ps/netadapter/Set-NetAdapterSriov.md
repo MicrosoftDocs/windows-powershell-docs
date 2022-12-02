@@ -11,7 +11,7 @@ title: Set-NetAdapterSriov
 # Set-NetAdapterSriov
 
 ## SYNOPSIS
-Sets the SR-IOV properties of the network adapter, such as the number of virtual functions, the number of VPorts, and the number of queue pairs for default and non-default VPorts.
+Sets the SR-IOV properties of the network adapter, such as the number of virtual functions, and the number of queue pairs for default and non-default VPorts.
 
 ## SYNTAX
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clustergroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterGroup
@@ -21,42 +21,48 @@ Remove-ClusterGroup [-VMId <Guid>] [[-Name] <StringCollection>] [-Force] [-Remov
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterGroup** cmdlet removes a clustered role.
-also called a resource group, from a failover cluster.
 
-Use this cmdlet to delete a group.
-If the group still has resources in it, then either remove the resources first, or specify the **RemoveResources** parameter.
+The `Remove-ClusterGroup` cmdlet removes a clustered role. also called a resource group, from a
+failover cluster.
+
+Use this cmdlet to delete a group. If the group still has resources in it, then either remove the
+resources first, or specify the **RemoveResources** parameter.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```
 PS C:\> Remove-ClusterGroup -Name MyFileServer
 ```
 
-This example prompts the user for confirmation and then removes the clustered role named MyFileServer, if the resources have first been removed from it.
+This example prompts the user for confirmation and then removes the clustered role named
+MyFileServer, if the resources have first been removed from it.
 
 ### Example 2
+
 ```
 PS C:\> Remove-ClusterGroup -Name MyFileServer -Force
 ```
 
-This example removes the clustered role named MyFileServer, if the resources have first been removed from it.
-The cmdlet does not prompt for confirmation.
+This example removes the clustered role named MyFileServer, if the resources have first been removed
+from it. The cmdlet doesn't prompt for confirmation.
 
 ### Example 3
+
 ```
 PS C:\> Remove-ClusterGroup -Name MyFileServer -Force -RemoveResources
 ```
 
-This example removes the clustered  role named MyFileServer, without prompting for confirmation.
-All cluster resources in MyFileServer will be deleted.
+This example removes the clustered role named MyFileServer, without prompting for confirmation. All
+cluster resources in MyFileServer will be deleted.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -71,6 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -86,8 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Runs the cmdlet without prompting for confirmation.
-By default the cmdlet will ask for confirmation from the user before proceeding.
+
+Runs the cmdlet without prompting for confirmation. By default the cmdlet will ask for confirmation
+from the user before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -102,6 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies the clustered role to remove.
 
 ```yaml
@@ -117,6 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the clustered role to remove.
 
 ```yaml
@@ -132,6 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveResources
+
 Causes the cmdlet to delete all resources in the clustered role before removing the clustered role.
 
 ```yaml
@@ -147,6 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMId
+
 Specifies the virtual machine identifier (ID).
 
 ```yaml
@@ -162,8 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -178,7 +190,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -201,4 +217,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-ClusterGroup](./Start-ClusterGroup.md)
 
 [Stop-ClusterGroup](./Stop-ClusterGroup.md)
-

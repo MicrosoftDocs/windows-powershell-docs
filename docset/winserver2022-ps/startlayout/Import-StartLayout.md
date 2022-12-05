@@ -35,17 +35,18 @@ Before you use this cmdlet, mount the Windows image file to import the layout in
 You must have administrator rights to import a layout.
 
 In Windows 10, the Export-StartLayout cmdlet exports layouts as .xml files, and the **Import-StartLayout** cmdlet imports only .xml files.
+In Windows 11, the Export-StartLayout cmdlet exports layouts as .json files, and the **Import-StartLayout** cmdlet imports only .json files.
 
 ## EXAMPLES
 
-### Example 1: Import a layout into a Windows image
+### Example 1: Import a layout into a Windows 10 image
 ```
 PS C:\> Import-StartLayout -LayoutPath "Layout.xml" -MountPath "C:\"
 ```
 
 This command imports a layout of the Start screen into a Windows image.
 
-### Example 2: Validate the layout file and Windows image
+### Example 2: Validate the layout file and Windows 10 image
 ```
 PS C:\> Import-StartLayout -LayoutPath "Layout.xml" -MountPath " C:\" -WhatIf
 ```

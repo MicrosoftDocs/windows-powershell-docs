@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/disable-clusterstoragespacesdirect?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-ClusterStorageSpacesDirect
@@ -22,15 +22,15 @@ Disable-ClusterStorageSpacesDirect [-CleanupCache <Boolean>] [-CimSession <CimSe
 
 ## DESCRIPTION
 
-The **Disable-ClusterStorageSpacesDirect** cmdlet disables highly available Storage Spaces that use
+The `Disable-ClusterStorageSpacesDirect` cmdlet disables highly available Storage Spaces that use
 direct attached storage Storage Spaces Direct (S2D) on a cluster.
 
 ## EXAMPLES
 
 ### Example 1: Disable Storage Spaces Direct
 
-```
-PS C:\> Disable-ClusterStorageSpacesDirect
+```powershell
+Disable-ClusterStorageSpacesDirect
 ```
 
 This command disables S2D on the cluster.
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

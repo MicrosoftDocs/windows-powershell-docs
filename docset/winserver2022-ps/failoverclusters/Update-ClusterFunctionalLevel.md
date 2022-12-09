@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/update-clusterfunctionallevel?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-ClusterFunctionalLevel
@@ -22,36 +22,36 @@ Update-ClusterFunctionalLevel [-Force] [-WhatIf] [-InputObject <PSObject>] [-Clu
 
 ## DESCRIPTION
 
-The **Update-ClusterFunctionalLevel** cmdlet updates the functional level of a mixed-version
+The `Update-ClusterFunctionalLevel` cmdlet updates the functional level of a mixed-version
 cluster. You can update the cluster after all nodes have been updated.
 
 Starting with Windows Server 2016, you can add a node that runs a more recent version of the Windows
 operating system into a cluster of nodes that run a previous version of the Windows operating
-system. To add a cluster node, use the **Add-ClusterNode** cmdlet.
+system. To add a cluster node, use the `Add-ClusterNode` cmdlet.
 
 After you add a node that runs a different version of the Windows operating system, the cluster
 becomes a mixed-version cluster. You can implement a mixed-version cluster to continue to run while
 you upgrade the operating system on each node in the cluster.
 
-We recommend that you upgrade all nodes in the cluster within a month. We do not recommend using a
+We recommend that you upgrade all nodes in the cluster within a month. We don't recommend using a
 mixed-version cluster permanently.
 
 You can use this cmdlet to support a rolling operating system upgrade for a cluster. If you use
 cluster that runs Hyper-V in which all the nodes run Windows Server 2012 R2, you can upgrade the
 nodes of that cluster without downtime for your virtual machines.
 
-First, drain one cluster node by specifying the *Drain* parameter of the **Suspend-ClusterNode**
+First, drain one cluster node by specifying the **Drain** parameter of the `Suspend-ClusterNode`
 cmdlet. This cmdlet causes all virtual machines to live-migrate to one of the other hosts.
 
-Next, remove the host from the cluster by using the **Remove-ClusterNode** cmdlet.
+Next, remove the host from the cluster by using the `Remove-ClusterNode` cmdlet.
 
-Next, install a new version of the operating system. Do not perform an upgrade or in-place
+Next, install a new version of the operating system. Don't perform an upgrade or in-place
 installation.
 
 Next, add the Hyper-V role and the **Failover Clustering** feature by using the
-**Install-WindowsFeature** cmdlet. For more information, type `Get-Help Install-WindowsFeature`.
+`Install-WindowsFeature` cmdlet. For more information, type `Get-Help Install-WindowsFeature`.
 
-Finally, add the node into the cluster by using the **Add-ClusterNode** cmdlet.
+Finally, add the node into the cluster by using the `Add-ClusterNode` cmdlet.
 
 Repeat these steps for each node of the cluster.
 
@@ -59,27 +59,21 @@ Repeat these steps for each node of the cluster.
 
 ### Example 1: Test a possible update
 
-```
-PS C:\> Update-ClusterFunctionalLevel -WhatIf
-Name
-----
-cluster_17
+```powershell
+Update-ClusterFunctionalLevel -WhatIf
 ```
 
 This command tests whether an update would finish successfully. Because the command includes the
-*WhatIf* common parameter, the command does not perform the update.
+**WhatIf** common parameter, the command doesn't perform the update.
 
 ### Example 2: Update a cluster functional level
 
-```
-PS C:\> Update-ClusterFunctionalLevel -Cluster "cluster_17"
-Name
-----
-cluster_17
+```powershell
+Update-ClusterFunctionalLevel -Cluster "cluster_17"
 ```
 
-This command updates the cluster functional level of the cluster named cluster_17. All of the nodes
-of this cluster must already be updated before you run this command.
+This command updates the cluster functional level of the cluster named `cluster_17`. All of the
+nodes of this cluster must already be updated before you run this command.
 
 ## PARAMETERS
 
@@ -135,7 +129,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

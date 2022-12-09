@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterstoragespacesdirect?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterStorageSpacesDirect
@@ -23,7 +23,7 @@ Set-ClusterStorageSpacesDirect [-CacheState <CacheStateType>] [-CacheModeHDD <Ca
 
 ## DESCRIPTION
 
-The **Set-ClusterStorageSpacesDirect** cmdlet sets Storage Spaces Direct (S2D) cache parameters.
+The `Set-ClusterStorageSpacesDirect` cmdlet sets Storage Spaces Direct (S2D) cache parameters.
 
 ## EXAMPLES
 
@@ -67,9 +67,9 @@ Accept wildcard characters: False
 
 Specifies the cache mode of the hard disk drive. The acceptable values for this parameter are:
 
-- ReadOnly
-- WriteOnly
-- ReadWrite
+- `ReadOnly`
+- `WriteOnly`
+- `ReadWrite`
 
 ```yaml
 Type: CacheModeType
@@ -88,9 +88,9 @@ Accept wildcard characters: False
 
 Specifies the cache mode of the solid state drive. The acceptable values for this parameter are:
 
-- ReadOnly
-- WriteOnly
-- ReadWrite
+- `ReadOnly`
+- `WriteOnly`
+- `ReadWrite`
 
 ```yaml
 Type: CacheModeType
@@ -107,8 +107,8 @@ Accept wildcard characters: False
 
 ### -CacheState
 
-Specifies the S2D cache state. The acceptable values for this parameter are: Enabled or Disabled.
-The default value is Enabled.
+Specifies the S2D cache state. The acceptable values for this parameter are: `Enabled` or
+`Disabled`. The default value is `Enabled`.
 
 ```yaml
 Type: CacheStateType
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ### -SkipEligibilityChecks
 
 Indicates that the cmdlet skips cache eligibility checks. If cache stores are found with data
-partitions on them, then you can use Enable-ClusterStorageSpacesDirect with the cache state as
+partitions on them, then you can use `Enable-ClusterStorageSpacesDirect` with the cache state as
 Disabled but not as ReadOnly or ReadWrite.
 
 ```yaml

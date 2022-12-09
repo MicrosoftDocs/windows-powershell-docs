@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/update-clusteripresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-ClusterIPResource
@@ -22,46 +22,37 @@ Update-ClusterIPResource [[-Name] <String>] [-Renew] [-Release] [-InputObject <P
 
 ## DESCRIPTION
 
-The **Update-ClusterIPResource** cmdlet renews or releases the DHCP lease for an IP address resource
+The `Update-ClusterIPResource` cmdlet renews or releases the DHCP lease for an IP address resource
 in a failover cluster. This cmdlet applies only to IP address resources that use DHCP.
 
 ## EXAMPLES
 
 ### Example 1: Update DHCP lease
 
-```
-PS C:\> Update-ClusterIPResource -Name "Cluster IP Address"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster IP Address  Online              Cluster Group       IP Address
+```powershell
+Update-ClusterIPResource -Name "Cluster IP Address"
 ```
 
-This example updates the DHCP lease for the resource called Cluster IP Address if this resource is
+This example updates the DHCP lease for the resource called `Cluster IP Address` if this resource is
 DHCP assigned.
 
 ### Example 2: Update DHCP leases for all clustered IP resources
 
-```
-PS C:\> Get-ClusterResource | Where-Object -FilterScript {$_.ResourceType.Name -eq "IP Address"} | Update-ClusterIPResource
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster IP Address  Online              Cluster Group       IP Address 
-IP Address 172.2... Online              cluster1-Other      IP Address 
-IP Address 172.2... Online              cluster1-FS         IP Address
+```powershell
+$clusterIP = Get-ClusterResource | Where-Object {$_.ResourceType.Name -eq "IP Address"}
+$clusterIP | Update-ClusterIPResource
 ```
 
 This example updates the DHCP lease for all of the clustered IP resources that are DHCP assigned.
 
 ### Example 3: Take a resource offline and release its lease
 
-```
-PS C:\> Get-ClusterResource -Name "IP Address 10.24.11.0" | Stop-ClusterResource | Update-ClusterIPResource -Release
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-IP Address 10.2...  Offline             cluster1-Other      IP Address
+```powershell
+$clusterResource = Get-ClusterResource -Name "IP Address 10.24.11.0"
+$clusterResource | Stop-ClusterResource | Update-ClusterIPResource -Release
 ```
 
-This example takes the resource named IP Address 172.24.11.0 offline, and releases the DHCP lease
+This example takes the resource named `IP Address 172.24.11.0` offline, and releases the DHCP lease
 for that resource.
 
 ## PARAMETERS

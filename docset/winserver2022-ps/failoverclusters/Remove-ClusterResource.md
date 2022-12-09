@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterResource
@@ -22,7 +22,7 @@ Remove-ClusterResource [[-Name] <StringCollection>] [-Force] [-InputObject <PSOb
 
 ## DESCRIPTION
 
-The **Remove-ClusterResource** cmdlet removes a clustered resource from the failover cluster. Before
+The `Remove-ClusterResource` cmdlet removes a clustered resource from the failover cluster. Before
 removing a resource, be sure to review whether any other resource is dependent on that resource.
 
 ## EXAMPLES
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

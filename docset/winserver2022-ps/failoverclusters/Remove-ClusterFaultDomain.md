@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterFaultDomain.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clusterfaultdomain?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterFaultDomain
@@ -33,7 +33,7 @@ Remove-ClusterFaultDomain -InputObject <CimInstance[]> [-Flags <UInt32>]
 
 ## DESCRIPTION
 
-The **Remove-ClusterFaultDomain** cmdlet removes a fault domain. The fault domain cannot be empty.
+The `Remove-ClusterFaultDomain` cmdlet removes a fault domain. The fault domain cannot be empty.
 
 ## EXAMPLES
 
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet does not
+Returns an object representing the item with which you are working. By default, this cmdlet doesn't
 generate any output.
 
 ```yaml
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

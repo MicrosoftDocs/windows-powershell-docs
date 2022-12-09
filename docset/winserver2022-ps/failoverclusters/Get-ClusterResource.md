@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterResource
@@ -22,13 +22,13 @@ Get-ClusterResource [[-Name] <StringCollection>] [-VMId <Guid>] [-InputObject <P
 
 ## DESCRIPTION
 
-The **Get-ClusterResource** cmdlet gets information about one or more resources in a failover
+The `Get-ClusterResource` cmdlet gets information about one or more resources in a failover
 cluster.
 
 To set a common property for a clustered resource, use this cmdlet to get the object for the
 clustered resource, and then set the appropriate property on that object directly. To get and set
-more specific information about a clustered resource, use this cmdlet with Get-ClusterParameter and
-Set-ClusterParameter.
+more specific information about a clustered resource, use this cmdlet with `Get-ClusterParameter`
+and `Set-ClusterParameter`.
 
 ## EXAMPLES
 

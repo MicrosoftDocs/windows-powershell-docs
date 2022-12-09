@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/start-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ClusterNode
@@ -23,12 +23,12 @@ Start-ClusterNode [[-Name] <StringCollection>] [-ForceQuorum] [-ClearQuarantine]
 
 ## DESCRIPTION
 
-The **Start-ClusterNode** cmdlet starts the Cluster service on a node in a failover cluster. If this
+The `Start-ClusterNode` cmdlet starts the Cluster service on a node in a failover cluster. If this
 is the first node started, then it will wait for other nodes to join. The cluster will begin to run
 when a quorum has formed.
 
 This cmdlet with the **FixQuorum** parameter can be used to force quorum, that is, force the start
-of a cluster node even if quorum has not been achieved. When quorum is forced on a given node, the
+of a cluster node even if quorum hasn't been achieved. When quorum is forced on a given node, the
 copy of the cluster configuration that is on that node will be treated as the authoritative copy and
 will be replicated to all other nodes. Therefore, forcing quorum should be considered a last resort,
 because some cluster configuration changes could be lost. The ability to force quorum can be
@@ -74,8 +74,8 @@ Name                                                                      State
 node1                                                                   Joining
 ```
 
-This example forces the local node and the local cluster to start, even if quorum has not been
-achieved. If quorum has not been achieved, then the copy of the cluster configuration that is on the
+This example forces the local node and the local cluster to start, even if quorum hasn't been
+achieved. If quorum hasn't been achieved, then the copy of the cluster configuration that is on the
 local node will be treated as the authoritative copy and will be replicated to all other nodes. This
 cmdlet should be considered a last resort, because some cluster configuration changes could be lost,
 such as recovery options for cluster service.
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 ### -ForceQuorum
 
-Indicates that the cmdlet forces the start of a cluster node regardless if quorum is not formed.
+Indicates that the cmdlet forces the start of a cluster node regardless if quorum isn't formed.
 
 ```yaml
 Type: SwitchParameter
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
 then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 

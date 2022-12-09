@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterlog?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterLog
@@ -23,7 +23,7 @@ Get-ClusterLog [[-Node] <StringCollection>] [-Destination <String>] [-TimeSpan <
 
 ## DESCRIPTION
 
-The **Get-ClusterLog** cmdlet creates a log file for all nodes, or a specific a node, in a failover
+The `Get-ClusterLog` cmdlet creates a log file for all nodes, or a specific a node, in a failover
 cluster.
 
 When creating a log file for the cluster, you can specify the timespan that you want logged
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 
 ### -SkipClusterState
 
-Indicates that the cmdlet does not add additional cluster state information to the cluster logs.
+Indicates that the cmdlet doesn't add additional cluster state information to the cluster logs.
 
 ```yaml
 Type: SwitchParameter

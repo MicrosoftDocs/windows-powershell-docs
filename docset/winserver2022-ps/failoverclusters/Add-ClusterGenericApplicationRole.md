@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustergenericapplicationrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGenericApplicationRole
@@ -11,7 +11,7 @@ title: Add-ClusterGenericApplicationRole
 # Add-ClusterGenericApplicationRole
 
 ## SYNOPSIS
-Configures high availability for an application that was not originally designed to run in a
+Configures high availability for an application that wasn't originally designed to run in a
 failover cluster.
 
 ## SYNTAX
@@ -25,52 +25,51 @@ Add-ClusterGenericApplicationRole -CommandLine <String> [-Parameters <String>]
 
 ## DESCRIPTION
 
-The **Add-ClusterGenericApplicationRole** cmdlet configures high availability for an application
-that was not originally designed to run in a failover cluster.
+The `Add-ClusterGenericApplicationRole` cmdlet configures high availability for an application
+that wasn't originally designed to run in a failover cluster.
 
 If an application is run as a Generic Application, the cluster software will start the application,
 then periodically query the operating system to see whether the application appears to be running.
 If so, then it is presumed to be online and will not be restarted or failed over.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
-authentication on the server computer.
+> [!NOTE]
+> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+> authentication on the server computer.
 
 ## EXAMPLES
 
 ### Example 1: Configure an application as a generic clustered application
 
-```
-PS C:\> Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1GenApp             node2                              Online
+```powershell
+Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe
 ```
 
-This example configures NewApplication.exe as a generic clustered application. A default name will
-be used for client access and this application requires no storage.
+This example configures `NewApplication.exe` as a generic clustered application.
+A default name will be used for client access and this application requires no storage.
 
 ### Example 2: Configure an application with storage and name
 
-```
-PS C:\> Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe -Storage "Cluster Disk 4" -Name NewApplication
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-NewApplication                 node2                          Online
+```powershell
+$parameters = @{
+    CommandLine = 'NewApplication.exe'
+    Storage = 'Cluster Disk 4'
+    Name = 'NewApplication'
+}
+Add-ClusterGenericApplicationRole @parameters
 ```
 
-This example configures NewApplication.exe as a generic clustered application using Cluster Disk 4,
-and assigns the name NewApplication.
+This example configures `NewApplication.exe` as a generic clustered application using Cluster Disk 4,
+and assigns the name NewApplication. This example uses splatting to pass parameter values from the
+`$Parameters` variable to the command. Learn more about
+[Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 3: Configure application with no wait for resources
 
-```
-PS C:\> Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe -Wait 0
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1GenApp             node2                             Pending
+```powershell
+Add-ClusterGenericApplicationRole -CommandLine NewApplication.exe -Wait 0
 ```
 
-This example configures NewApplication.exe as a generic clustered application and assigns the name
+This example configures `NewApplication.exe` as a generic clustered application and assigns the name
 NewApplication. The cmdlet completes without waiting for all resources to come online.
 
 ## PARAMETERS
@@ -111,7 +110,7 @@ Accept wildcard characters: False
 
 ### -CommandLine
 
-Specifies the Windows PowerShell® command line to use for the highly available generic application.
+Specifies the Windows PowerShell command line to use for the highly available generic application.
 If the full path is specified, then the current directory is parsed out of the Windows PowerShell
 command line.
 
@@ -130,8 +129,8 @@ Accept wildcard characters: False
 ### -IgnoreNetwork
 
 Specifies one or more networks to ignore when running the cmdlet. Networks with DHCP enabled are
-always included, but other networks need a static address to be specified using the *StaticAddress*
-parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+always included, but other networks need a static address to be specified using the
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -197,7 +196,7 @@ Accept wildcard characters: False
 
 Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
 are always included, but other networks need a static address to be specified using the
-*StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -229,9 +228,9 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
-cmdlet returns without waiting.
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If the value `0` is specified, then the call is initiated and
+the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32

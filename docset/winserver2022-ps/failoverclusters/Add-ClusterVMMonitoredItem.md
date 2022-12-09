@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustervmmonitoreditem?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterVMMonitoredItem
@@ -42,7 +42,7 @@ Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>]
 
 ## DESCRIPTION
 
-The **Add-ClusterVMMonitoredItem** cmdlet configures monitoring for a service or an Event Tracing
+The `Add-ClusterVMMonitoredItem` cmdlet configures monitoring for a service or an Event Tracing
 for Windows (ETW) event so that it is monitored on a virtual machine. If the service fails or the
 event occurs, then the system responds by taking an action based on the failover configuration for
 the virtual machine resource. For example, the configuration might specify that the virtual machine
@@ -52,22 +52,24 @@ be restarted.
 
 ### Example 1
 
-```
-PS C:\> Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -EventLog "Microsoft-Windows-FailoverClustering-Manager/Admin" -EventSource "Microsoft-Windows-FailoverClustering-Manager" -EventId 4708
-Name 
----- 
-Microsoft-Windows-FailoverClustering-Manager+Admin,Microsoft-Windows-FailoverClustering-Manager,4708
+```powershell
+$parameters = @{
+    VirtualMachine = 'test-VM11'
+    EventLog = 'Microsoft-Windows-FailoverClustering-Manager/Admin'
+    EventSource = 'Microsoft-Windows-FailoverClustering-Manager'
+    EventId = '4708'
+}
+Add-ClusterVMMonitoredItem @parameters
 ```
 
-This example adds monitoring for the ETW event ID 4708.
+This example adds monitoring for the ETW event ID `4708`. This example uses splatting to pass
+parameter values from the `$Parameters` variable to the command. Learn more about
+[Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 2
 
-```
-PS C:\> Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -Service spooler
-Name 
----- 
-Spooler
+```powershell
+Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -Service spooler
 ```
 
 This example configures monitoring for the print spooler service.
@@ -159,7 +161,7 @@ Accept wildcard characters: False
 ### -OverrideServiceRecoveryActions
 
 Specifies that the cluster service will fix, by overriding, the service recovery actions in the
-event that it is not properly configured for monitoring. To be configured for monitoring the
+event that it isn't properly configured for monitoring. To be configured for monitoring the
 following conditions need to be met:
 
 - None of the service recovery actions are set to Restart the computer.
@@ -233,9 +235,9 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
-cmdlet returns without waiting.
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If the value `0` is specified, then the call is initiated and
+the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32

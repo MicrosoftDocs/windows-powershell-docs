@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/start-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-Cluster
@@ -11,7 +11,7 @@ title: Start-Cluster
 # Start-Cluster
 
 ## SYNOPSIS
-Starts the Cluster service on all nodes of the cluster on which it is not yet started.
+Starts the Cluster service on all nodes of the cluster on which it isn't yet started.
 
 ## SYNTAX
 
@@ -21,9 +21,9 @@ Start-Cluster [[-Name] <String>] [-IgnorePersistentState] [-Wait <Int32>] [<Comm
 
 ## DESCRIPTION
 
-The **Start-Cluster** cmdlet starts the Cluster service on all nodes of the cluster on which it is
-not yet started. A node can function as part of the cluster only when the Cluster service is running
-on that node.
+The `Start-Cluster` cmdlet starts the Cluster service on all nodes of the cluster on which it isn't
+yet started. A node can function as part of the cluster only when the Cluster service is running on
+that node.
 
 Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
 authentication on the server computer.
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If this parameter is not specified, then the
+Specifies the time in seconds to wait for the cmdlet. If this parameter isn't specified, then the
 cmdlet will not return until quorum is achieved. If the value of `0` is specified, the cmdlet will
 attempt to start the Cluster service on all nodes and then return without waiting.
 

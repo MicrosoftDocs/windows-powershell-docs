@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/clear-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-ClusterNode
@@ -22,28 +22,29 @@ Clear-ClusterNode [[-Name] <StringCollection>] [-Force] [-Wait <Int32>] [-Cleanu
 
 ## DESCRIPTION
 
-The **Clear-ClusterNode** cmdlet clears the cluster configuration from a node that was evicted from
+The `Clear-ClusterNode` cmdlet clears the cluster configuration from a node that was evicted from
 a failover cluster. This cmdlet helps ensure that the failover cluster configuration has been
 completely removed from a node that was evicted.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
-authentication on the server computer.
+> [!NOTE]
+> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+> authentication on the server computer.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
-PS C:\> Clear-ClusterNode -Name node4 -Force
+```powershell
+Clear-ClusterNode -Name node4 -Force
 ```
 
-This example removes cluster configuration information from the node named node4 without asking for
+This example removes cluster configuration information from the node named `node4` without asking for
 user confirmation.
 
 ### Example 2
 
-```
-PS C:\> Clear-ClusterNode
+```powershell
+Clear-ClusterNode
 ```
 
 This example removes cluster configuration information from the local node after prompting for
@@ -149,9 +150,9 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
-then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
-cmdlet returns without waiting.
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If the value `0` is specified, then the call is initiated and
+the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32
@@ -167,7 +168,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

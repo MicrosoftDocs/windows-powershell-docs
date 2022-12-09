@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterNode
@@ -22,12 +22,12 @@ Get-ClusterNode [[-Name] <StringCollection>] [-InputObject <PSObject>] [-Cluster
 
 ## DESCRIPTION
 
-The **Get-ClusterNode** cmdlet gets information about one or more nodes, or servers, in a failover
+The `Get-ClusterNode` cmdlet gets information about one or more nodes, or servers, in a failover
 cluster.
 
 Use this cmdlet to obtain information about the node status. To see the resources currently owned by
 a particular node, specify that node in this cmdlet and then pipe the results through the
-**Get-ClusterResource** cmdlet.
+`Get-ClusterResource` cmdlet.
 
 ## EXAMPLES
 

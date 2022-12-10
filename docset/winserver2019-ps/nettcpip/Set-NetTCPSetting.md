@@ -104,9 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -AutoReusePortRangeStartPort
-Specifies the number of ports for the auto-reuse port range, which is a port range used for local ephemeral port selection by outbound TCP connections for which either SO_REUSE_UNICASTPORT has been set on the socket, or for which connect() has been called without calling bind() on the socket.
+Specifies the starting port for the auto-reuse port range.
 
-If you specify 0, the auto-reuse feature is disabled and ephemeral ports are drawn instead from the dynamic port range as specified by *DynamicPortRangeStartPort* and *DynamicPortRangeNumberOfPorts*, even if SO_REUSE_UNICASTPORT is set on a socket.
+This parameter sets the starting port to send and receive TCP traffic, which is a port range used for local ephemeral port selection by outbound TCP connections for which either SO_REUSE_UNICASTPORT has been set on the socket, or for which connect() has been called without calling bind() on the socket.
 
 ```yaml
 Type: UInt16

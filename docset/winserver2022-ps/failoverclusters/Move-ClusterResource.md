@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/failoverclusters/move-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 11/21/2022
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/move-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Move-ClusterResource
 ---
@@ -16,17 +16,20 @@ Moves a clustered resource from one clustered role to another within a failover 
 ## SYNTAX
 
 ```
-Move-ClusterResource [[-Name] <String>] [[-Group] <String>] [-InputObject <PSObject>] [-Cluster <String>]
- [<CommonParameters>]
+Move-ClusterResource [[-Name] <String>] [[-Group] <String>] [-InputObject <PSObject>]
+ [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Move-ClusterResource** cmdlet moves a clustered resource from one clustered role to another within a failover cluster.
-When a clustered resource is moved to a different clustered role, the clustered resource will then fail over with that clustered role.
+
+The `Move-ClusterResource` cmdlet moves a clustered resource from one clustered role to another
+within a failover cluster. When a clustered resource is moved to a different clustered role, the
+clustered resource will then fail over with that clustered role.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```
 PS C:\> Move-ClusterResource -Name resource1 -Group group2
 Name                State               Group               ResourceType 
@@ -34,13 +37,15 @@ Name                State               Group               ResourceType
 resource1           Offline             group2              IP Address
 ```
 
-This command moves the cluster resource called resource1 to the resource group called group2 on the local cluster.
+This command moves the cluster resource called resource1 to the resource group called group2 on the
+local cluster.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -55,6 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Group
+
 Specifies the name of the cluster group to which to move the resource.
 
 ```yaml
@@ -70,6 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies the cluster resource to move.
 
 ```yaml
@@ -85,6 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the cluster resource to move.
 
 ```yaml
@@ -100,7 +108,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -127,4 +139,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-ClusterResource](./Stop-ClusterResource.md)
 
 [Suspend-ClusterResource](./Suspend-ClusterResource.md)
-

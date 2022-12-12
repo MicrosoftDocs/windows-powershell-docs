@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 11/21/2022
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterResource
 ---
@@ -16,19 +16,24 @@ Gets information about one or more resources in a failover cluster.
 ## SYNTAX
 
 ```
-Get-ClusterResource [[-Name] <StringCollection>] [-VMId <Guid>] [-InputObject <PSObject>] [-Cluster <String>]
- [<CommonParameters>]
+Get-ClusterResource [[-Name] <StringCollection>] [-VMId <Guid>] [-InputObject <PSObject>]
+ [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-ClusterResource** cmdlet gets information about one or more resources in a failover cluster.
 
-To set a common property for a clustered resource, use this cmdlet to get the object for the clustered resource, and then set the appropriate property on that object directly.
-To get and set more specific information about a clustered resource, use this cmdlet with Get-ClusterParameter and Set-ClusterParameter.
+The `Get-ClusterResource` cmdlet gets information about one or more resources in a failover
+cluster.
+
+To set a common property for a clustered resource, use this cmdlet to get the object for the
+clustered resource, and then set the appropriate property on that object directly. To get and set
+more specific information about a clustered resource, use this cmdlet with `Get-ClusterParameter`
+and `Set-ClusterParameter`.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```
 PS C:\> Get-ClusterResource
 Name                State               Group               ResourceType 
@@ -48,6 +53,7 @@ Cluster Name        Online              Cluster Group       Network Name
 This example lists all cluster resources on the local cluster.
 
 ### Example 2
+
 ```
 PS C:\> Get-ClusterResource -Name "Cluster Disk 2" | Format-List -Property *
 Cluster                :  cluster1 
@@ -80,6 +86,7 @@ Id                     :  6e394089-145a-4279-b75d-b14015cc36e4
 This example displays information about Cluster Disk 2, on the local cluster, in the form of a list.
 
 ### Example 3
+
 ```
 PS C:\> Get-ClusterResource -Name "Cluster Disk 2" | Get-ClusterParameter
 Object              Name                Value               Type 
@@ -102,6 +109,7 @@ Cluster Disk 2      DiskPnpUpdate       {0, 0, 0, 0...}     ByteArray
 This example displays detailed parameters for Cluster Disk 2 on the local cluster.
 
 ### Example 4
+
 ```
 PS C:\> Get-ClusterGroup -Name FileServer1 | Get-ClusterResource
 Name                State               Group               ResourceType 
@@ -112,16 +120,20 @@ Cluster IP Addre... Online              FileServer1         IPv6 Address
 FileServer1         Online              FileServer1         Network Name
 ```
 
-This example lists cluster resources in cluster group named FileServer1, a clustered file server on the local cluster.
+This example lists cluster resources in cluster group named FileServer1, a clustered file server on
+the local cluster.
 
 ### Example 5
+
 ```
 PS C:\> Get-ClusterResource -Name "Cluster Disk 2" | ForEach-Object -Process {$_.RestartDelay = 600}
 ```
 
-This example sets the common property RestartDelay for the Cluster Disk 2 resource on the local cluster to 600.
+This example sets the common property RestartDelay for the Cluster Disk 2 resource on the local
+cluster to 600.
 
 ### Example 6
+
 ```
 PS C:\> Get-ClusterResource -Name "cluster pool 1" | Format-List -Property OwnerNode
 OwnerNode : cluster-node1
@@ -130,6 +142,7 @@ OwnerNode : cluster-node1
 This example shows how to display the owner of a cluster pooled disk.
 
 ### Example 7
+
 ```
 PS C:\> Get-ClusterResource -Name *print-VM1 | Get-VM | Stop-VM -Verbose
 VERBOSE: Current VMobject  = Microsoft.HyperV.PowerShell.VirtualMachine[] 
@@ -144,14 +157,15 @@ virtual machine, but data loss might occur.
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
 ```
 
-This example enumerates the cluster resources for wildcard characters *print-VM1 and stops the corresponding virtual machines.
-Verbose mode is turned on for details of the operation.
+This example enumerates the cluster resources for wildcard characters *print-VM1 and stops the
+corresponding virtual machines. Verbose mode is turned on for details of the operation.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -166,6 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies the cluster node or cluster group on which to enumerate cluster resources.
 
 ```yaml
@@ -181,6 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the cluster resource to get.
 
 ```yaml
@@ -196,6 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMId
+
 Specifies the virtual machine identifier (ID).
 
 ```yaml
@@ -211,7 +228,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -246,4 +267,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-ClusterResource](./Stop-ClusterResource.md)
 
 [Suspend-ClusterResource](./Suspend-ClusterResource.md)
-

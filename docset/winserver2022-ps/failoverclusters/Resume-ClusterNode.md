@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/failoverclusters/resume-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 11/21/2022
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/resume-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Resume-ClusterNode
 ---
@@ -21,12 +21,16 @@ Resume-ClusterNode [[-Name] <StringCollection>] [[-Failback] <ResumeClusterNodeF
 ```
 
 ## DESCRIPTION
-The **Resume-ClusterNode** cmdlet resumes activity on a failover cluster node after it has been suspended, or paused, or brings back drained workloads to the node, or both.
-When a node is resumed, clustered roles that were drained from the node are returned to it, and clustered roles or resources that are currently offline can be brought online on that node.
+
+The `Resume-ClusterNode` cmdlet resumes activity on a failover cluster node after it has been
+suspended, or paused, or brings back drained workloads to the node, or both. When a node is resumed,
+clustered roles that were drained from the node are returned to it, and clustered roles or resources
+that are currently offline can be brought online on that node.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```
 PS C:\> Resume-ClusterNode node1
 Name                                                                      State 
@@ -37,6 +41,7 @@ node1                                                                        Up
 This example resumes node1 on the local cluster.
 
 ### Example 2
+
 ```
 PS C:\> Resume-ClusterNode node2 -Cluster mycluster
 Name                                                                      State 
@@ -47,6 +52,7 @@ node2                                                                        Up
 This example resumes node2 on the cluster called mycluster.
 
 ### Example 3
+
 ```
 PS C:\> Get-ClusterNode | Resume-ClusterNode
 Name                                                                      State 
@@ -57,6 +63,7 @@ node1                                                                        Up
 This example resumes all cluster nodes that are suspended, or paused, on the local cluster.
 
 ### Example 4
+
 ```
 PS C:\> Get-ClusterNode | Resume-ClusterNode -Failback Immediate
 Name                                                                      State 
@@ -64,13 +71,15 @@ Name                                                                      State
 node2                                                                        Up
 ```
 
-This example resumes all cluster nodes that are suspended, or paused, on the local cluster and immediately brings back the workloads drained from the nodes.
+This example resumes all cluster nodes that are suspended, or paused, on the local cluster and
+immediately brings back the workloads drained from the nodes.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -85,9 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -Failback
-Sets the policy to bring back drained workloads to the node.
-The acceptable values for this parameter are:NoFailback, Immediate, and Policy.
-Policy can be configured to not failback, failback immediately, or failback only during specific hours.
+
+Sets the policy to bring back drained workloads to the node. The acceptable values for this
+parameter are:
+
+- `NoFailBack` - Don't failback at all.
+- `Immediate` - Failback immediately.
+- `Policy` - Failback only during specific hours.
 
 ```yaml
 Type: ResumeClusterNodeFailbackType
@@ -103,6 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies the group, node, resource, or service for which or cluster on which to run the cmdlet.
 
 ```yaml
@@ -118,7 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the group, node, resource, or service for which or cluster on which to run the cmdlet.
+
+Specifies the name of the group, node, resource, or service for which or cluster on which to run the
+cmdlet.
 
 ```yaml
 Type: StringCollection
@@ -133,7 +149,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -160,4 +180,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-ClusterNode](./Stop-ClusterNode.md)
 
 [Suspend-ClusterNode](./Suspend-ClusterNode.md)
-

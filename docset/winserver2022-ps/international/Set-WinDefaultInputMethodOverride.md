@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 Module Name: International
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/international/set-windefaultinputmethodoverride?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/international/set-windefaultinputmethodoverride?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-WinDefaultInputMethodOverride
 ---
@@ -56,7 +56,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### InputTIP
-You can pipe a locale ID and a keyboard language ID (KLID). See [Default Input Profiles (Input Locales) in Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs)
+You can pipe a locale ID and a keyboard language ID (KLID). See [Default Input Profiles (Input Locales) in Windows](/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs)
 
 ## OUTPUTS
 
@@ -65,4 +65,3 @@ You can pipe a locale ID and a keyboard language ID (KLID). See [Default Input P
 ## RELATED LINKS
 
 [Get-WinDefaultInputMethodOverride](./Get-WinDefaultInputMethodOverride.md)
-

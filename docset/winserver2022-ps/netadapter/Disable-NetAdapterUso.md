@@ -1,9 +1,9 @@
-﻿---
+---
 description: Disables USO properties of the network adapter.
 external help file: MSFT_NetAdapterUso.cdxml-help.xml
 Module Name: NetAdapter
 ms.date: 09/20/2021
-online version: https://docs.microsoft.com/powershell/module/netadapter/disable-netadapteruso?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/netadapter/disable-netadapteruso?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-NetAdapterUso
 ---

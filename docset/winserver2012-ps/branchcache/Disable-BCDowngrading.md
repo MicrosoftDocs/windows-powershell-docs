@@ -1,7 +1,7 @@
 ---
 external help file: BranchCacheOrchestrator.cdxml-help.xml
 Module Name: BranchCache
-online version: https://docs.microsoft.com/powershell/module/branchcache/disable-bcdowngrading?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/branchcache/disable-bcdowngrading?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

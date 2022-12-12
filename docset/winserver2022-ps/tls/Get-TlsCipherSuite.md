@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
 Module Name: TLS
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/tls/get-tlsciphersuite?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/tls/get-tlsciphersuite?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-TlsCipherSuite
 ---
@@ -24,7 +24,7 @@ The **Get-TlsCipherSuite** cmdlet gets an ordered collection of cipher suites fo
 
 For more information about the TLS cipher suites, see the documentation for the Enable-TlsCipherSuite cmdlet or type `Get-Help Enable-TlsCipherSuite`.
 
-For more information about protocol versions , see [BCRYPT_KDF_TLS_PRF (L"TLS_PRF")](https://docs.microsoft.com/windows/desktop/api/bcrypt/nf-bcrypt-bcryptderivekey#bcrypt_kdf_tls_prf-ltls_prf) .
+For more information about protocol versions , see [BCRYPT_KDF_TLS_PRF (L"TLS_PRF")](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptderivekey#bcrypt_kdf_tls_prf-ltls_prf).
 
 ## EXAMPLES
 

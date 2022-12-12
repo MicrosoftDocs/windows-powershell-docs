@@ -3,7 +3,7 @@ description: Removes an app package from one or more user accounts.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 Module Name: Appx
 ms.date: 09/01/2021
-online version: https://docs.microsoft.com/powershell/module/appx/remove-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/appx/remove-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-AppxPackage
 ---
@@ -163,7 +163,7 @@ If you specify this parameter, the cmdlet removes the app package for only the u
 > [!NOTE]
 >
 > - This parameter only accepts user SIDs
-> - Use the **whoami /user** command to display the current SID of a user. See [whoami syntax](https://docs.microsoft.com/windows-server/administration/windows-commands/whoami) for details.
+> - Use the **whoami /user** command to display the current SID of a user. See [whoami syntax](/windows-server/administration/windows-commands/whoami) for details.
 
 
 

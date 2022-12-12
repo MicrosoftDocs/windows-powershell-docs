@@ -1,7 +1,7 @@
 ---
 external help file: ClusterAware_Cmdlets.xml
 Module Name: ClusterAwareUpdating
-online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/unregister-cauplugin?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/unregister-cauplugin?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

@@ -3,7 +3,7 @@ description: The Mount-SRDestination cmdlet mounts a snapshot of replicated stor
 external help file: MSFT_WvrAdminTasks.cdxml-help.xml
 Module Name: storagereplica
 ms.date: 10/06/2021
-online version: https://docs.microsoft.com/powershell/module/storagereplica/mount-srdestination?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/storagereplica/mount-srdestination?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Mount-SRDestination
 ---

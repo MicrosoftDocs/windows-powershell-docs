@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterparameter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 11/21/2022
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterparameter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterParameter
 ---
@@ -11,55 +11,69 @@ title: Set-ClusterParameter
 # Set-ClusterParameter
 
 ## SYNOPSIS
-Controls specific properties of an object in a failover cluster, such as a resource, a group, or a network.
+Controls specific properties of an object in a failover cluster, such as a resource, a group, or a
+network.
 
 ## SYNTAX
 
 ### NoMultiple (Default)
+
 ```
-Set-ClusterParameter [-InputObject <PSObject>] [-Create] [-Delete] [-Cluster <String>] [<CommonParameters>]
+Set-ClusterParameter [-InputObject <PSObject>] [-Create] [-Delete] [-Cluster <String>]
+ [<CommonParameters>]
 ```
 
 ### Single Parameter
+
 ```
-Set-ClusterParameter [-InputObject <PSObject>] [[-Name] <String>] [[-Value] <PSObject>] [-Create] [-Delete]
- [-Cluster <String>] [<CommonParameters>]
+Set-ClusterParameter [-InputObject <PSObject>] [[-Name] <String>] [[-Value] <PSObject>] [-Create]
+ [-Delete] [-Cluster <String>] [<CommonParameters>]
 ```
 
 ### Multiple Parameter
+
 ```
 Set-ClusterParameter [-InputObject <PSObject>] [[-Multiple] <Hashtable>] [-Create] [-Delete]
  [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-ClusterParameter** cmdlet controls specific properties of an object in a failover cluster, such as a resource, a group, or a network. 
 
- -- For a disk resource, you can set the disk signature or GUID of a disk, and turn maintenance on or off for that disk. 
+The `Set-ClusterParameter` cmdlet controls specific properties of an object in a failover cluster,
+such as a resource, a group, or a network.
 
- -- For a Network Name resource, you can set DNS-related information about the resource. 
+- For a disk resource, you can set the disk signature or GUID of a disk, and turn maintenance on
+  or off for that disk.
 
- -- For an IP address resource, you can set DHCP-related information about the IP Address resource. 
+- For a Network Name resource, you can set DNS-related information about the resource.
 
- -- For resources used by virtual machines, you can set details about the settings for the virtual machines.
+- For an IP address resource, you can set DHCP-related information about the IP Address resource.
+
+- For resources used by virtual machines, you can set details about the settings for the virtual
+  machines.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```
 PS C:\> Get-ClusterResource -Name cluster1FS | Set-ClusterParameter -Name HostRecordTTL -Value 300
 ```
 
-This example configures the clustered resource called cluster1FS on the local cluster, by setting the value of HostRecordTTL to 300.
+This example configures the clustered resource called cluster1FS on the local cluster, by setting
+the value of HostRecordTTL to 300.
 
 ### Example 2
+
 ```
 PS C:\> Get-ClusterResource -Name "Cluster IP Address" | Set-ClusterParameter -Multiple @{"Address"="172.24.22.168";"Network"="Cluster Network 2";"EnableDhcp"=1}
 ```
 
-This example uses the **Multiple** parameter to configure the clustered resource called Cluster IP Address, by setting the **Address**, **Network**, and **EnableDhcp** parameters simultaneously.
+This example uses the **Multiple** parameter to configure the clustered resource called Cluster IP
+Address, by setting the **Address**, **Network**, and **EnableDhcp** parameters simultaneously.
 
 ### Example 3
+
 ```
 PS C:\> $res = Get-ClusterResource -Name "IP Address"
 
@@ -80,13 +94,12 @@ PS C:\> $params = $param1,$param2
 PS C:\> $params | Set-ClusterParameter
 ```
 
-This example configures the clustered resource called IP Address to use a new static IP.
-Because the new address and subnet mask are required, both parameters must be passed to this cmdlet together.
+This example configures the clustered resource called IP Address to use a new static IP. Because the
+new address and subnet mask are required, both parameters must be passed to this cmdlet together.
 
 ## PARAMETERS
 
 ### -Cluster
-
 
 ```yaml
 Type: String
@@ -102,7 +115,6 @@ Accept wildcard characters: False
 
 ### -Create
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -116,7 +128,6 @@ Accept wildcard characters: False
 ```
 
 ### -Delete
-
 
 ```yaml
 Type: SwitchParameter
@@ -132,7 +143,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
@@ -146,7 +156,6 @@ Accept wildcard characters: False
 ```
 
 ### -Multiple
-
 
 ```yaml
 Type: Hashtable
@@ -162,7 +171,6 @@ Accept wildcard characters: False
 
 ### -Name
 
-
 ```yaml
 Type: String
 Parameter Sets: Single Parameter
@@ -177,7 +185,6 @@ Accept wildcard characters: False
 
 ### -Value
 
-
 ```yaml
 Type: PSObject
 Parameter Sets: Single Parameter
@@ -191,7 +198,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -220,4 +231,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-ClusterParameter](./Get-ClusterParameter.md)
-

@@ -54,7 +54,7 @@ from it. The cmdlet doesn't prompt for confirmation.
 Remove-ClusterGroup -Name MyFileServer -Force -RemoveResources
 ```
 
-This example removes the clustered  role named `MyFileServer`, without prompting for confirmation.
+This example removes the clustered role named `MyFileServer`, without prompting for confirmation.
 All cluster resources in `MyFileServer` will be deleted.
 
 ## PARAMETERS

@@ -38,8 +38,7 @@ S2D. Alternatively, you can run this cmdlet after you enable S2D.
 $parameters = @{
     CimSession = 'K0619-C1.contoso.com'
     CanBeClaimed = $False
-    PhysicalDiskIds = '55CD2E404B75A3FC',
-                      '50014EE05950DD7C'
+    PhysicalDiskIds = '55CD2E404B75A3FC', '50014EE05950DD7C'
 }
 Set-ClusterStorageSpacesDirectDisk @parameters
 ```

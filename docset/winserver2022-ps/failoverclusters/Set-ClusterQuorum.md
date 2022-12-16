@@ -62,8 +62,9 @@ using the disk resource at `\\fileserver\fsw` for the file share witness.
 ```powershell
 $parameters = @{
     CloudWitness = $true
-    AccountName = '<AzureStorageAccountName>'
-    AccessKey = '<AzureStorageAccountAccessKey>'
+    AccountName  = '<AzureStorageAccountName>'
+    AccessKey    = '<AzureStorageAccountAccessKey>'
+}
 Set-ClusterQuorum @parameters
 ```
 

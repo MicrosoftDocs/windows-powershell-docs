@@ -46,7 +46,7 @@ This example makes the resource called cluster1FS12 dependent on `[IP Address 15
 ```powershell
 $parameters = @{
     Resource = 'cluster1FS12'
-    Dependency = '[IP Address 151.56.48.0]'
+    Dependency = '[IP Address 151.56.48.0] or [New IP Address]'
 }
 Set-ClusterResourceDependency @parameters
 ```

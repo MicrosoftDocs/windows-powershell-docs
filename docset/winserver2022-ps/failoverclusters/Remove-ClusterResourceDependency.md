@@ -38,8 +38,8 @@ offline might vary.
 Remove-ClusterResourceDependency -Resource cluster1FS -Provider "IP Address 2001:4898:9:2:: (3)"
 ```
 
-This example removes the dependency between cluster resource `cluster1FS` and the resource named IP
-Address `2001:4898:9:2:: (3)`.
+This example removes the dependency between cluster resource `cluster1FS` and the resource named
+`IP Address 2001:4898:9:2:: (3)`.
 
 ### Example 2
 
@@ -51,7 +51,7 @@ Get-ClusterResource -Name cluster1FS | Remove-ClusterResourceDependency @paramet
 ```
 
 This example removes the dependency between the cluster resource named `cluster1FS` and the resource
-named IP Address `2001:4898:9:2:: (3)`. This example uses splatting to pass parameter values from
+named `IP Address 2001:4898:9:2:: (3)`. This example uses splatting to pass parameter values from
 the `$Parameters` variable to the command. Learn more about
 [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 

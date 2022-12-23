@@ -39,7 +39,7 @@ Set-RDSessionCollectionConfiguration [-CollectionName] <String> [-DisableUserPro
 ```
 Set-RDSessionCollectionConfiguration [-CollectionName] <String> [-EnableUserProfileDisk]
  [-IncludeFolderPath <String[]>] [-ExcludeFolderPath <String[]>] [-IncludeFilePath <String[]>]
- [-ExcludeFilePath <String[]>] -MaxUserProfileDiskSizeGB <Int32> -DiskPath <String>
+ [-ExcludeFilePath <String[]>] [-MaxUserProfileDiskSizeGB <Int32>] [-DiskPath <String>]
  [-ConnectionBroker <String>] [<CommonParameters>]
 ```
 

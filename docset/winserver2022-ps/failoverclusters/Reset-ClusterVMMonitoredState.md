@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 11/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/reset-clustervmmonitoredstate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Reset-ClusterVMMonitoredState
@@ -11,7 +11,8 @@ title: Reset-ClusterVMMonitoredState
 # Reset-ClusterVMMonitoredState
 
 ## SYNOPSIS
-Resets the Application Critical state of a virtual machine, so that the virtual machine is no longer marked as being in a critical state in the cluster.
+Resets the Application Critical state of a virtual machine, so that the virtual machine is no longer
+marked as being in a critical state in the cluster.
 
 ## SYNTAX
 
@@ -20,12 +21,16 @@ Reset-ClusterVMMonitoredState [-Wait <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Reset-ClusterVMMonitoredState** cmdlet resets the Application Critical state of a virtual machine, so that the virtual machine is no longer marked as being in a critical state in the cluster.
-Note: This cmdlet can only be run locally on the virtual machine or through Windows PowerShell® remoting to the virtual machine.
+
+The `Reset-ClusterVMMonitoredState` cmdlet resets the Application Critical state of a virtual
+machine, so that the virtual machine is no longer marked as being in a critical state in the
+cluster. Note: This cmdlet can only be run locally on the virtual machine or through Windows
+PowerShell® remoting to the virtual machine.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```
 PS C:\> Reset-ClusterVMMoniteredState
 ```
@@ -35,9 +40,10 @@ This example resets the state of the virtual machine and clears the critical sta
 ## PARAMETERS
 
 ### -Wait
-Specifies the time in seconds to wait for the cmdlet.
-If the *Wait* parameter is not specified, then the cmdlet waits for completion.
-If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+cmdlet returns without waiting.
 
 ```yaml
 Type: Int32
@@ -52,7 +58,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -71,4 +81,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-ClusterVMMonitoredItem](./Get-ClusterVMMonitoredItem.md)
 
 [Remove-ClusterVMMonitoredItem](./Remove-ClusterVMMonitoredItem.md)
-

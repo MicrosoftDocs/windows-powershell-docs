@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/unregister-cauplugin?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unregister-CauPlugin
@@ -20,7 +20,8 @@ Unregister-CauPlugin [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Unregister-CauPlugin** cmdlet removes a software updating plug-in from the list of plug-ins
+
+The `Unregister-CauPlugin` cmdlet removes a software updating plug-in from the list of plug-ins
 that are used by Cluster-Aware Updating (CAU). The plug-in can be removed, but afterwards, it cannot
 be used for updating runs. The **Microsoft.WindowsUpdatePlugin** and **Microsoft.HotfixPlugin**
 plug-ins, which are installed with CAU, cannot be unregistered.
@@ -28,8 +29,9 @@ plug-ins, which are installed with CAU, cannot be unregistered.
 ## EXAMPLES
 
 ### Example 1: Unregister a plug-in that is used by CAU
-```
-PS C:\> Unregister-CauPlugin -Name "Plugin01"
+
+```powershell
+Unregister-CauPlugin -Name "Plugin01"
 ```
 
 This command removes the plug-in named Plugin01 from the list of plug-ins that are used by CAU.
@@ -37,6 +39,7 @@ This command removes the plug-in named Plugin01 from the list of plug-ins that a
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -52,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the plug-in that this cmdlet unregisters.
 
 ```yaml
@@ -67,8 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -83,6 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

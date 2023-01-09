@@ -65,7 +65,12 @@ Machine1`.
 ### Example 4
 
 ```powershell
-$groups = Get-ClusterNode -Name node1 | Get-ClusterGroup | Where-Object -FilterScript {$_ | Get-ClusterResource | Where-Object -FilterScript {$_.ResourceType -Like "Virtual Machine"}}
+$vmGroups = Get-ClusterNode -Name node1 |
+    Get-ClusterGroup |
+    Where-Object -FilterScript {
+        Get-ClusterResource -InputObject $_ |
+            Where-Object ResourceType -Like "Virtual Machine"
+    }
 ForEach-Object -InputObject $groups -Process { $_ | Move-ClusterVirtualMachineRole -Node node2 }
 ```
 

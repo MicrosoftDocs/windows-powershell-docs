@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/resume-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Resume-ClusterResource
@@ -32,25 +32,19 @@ turned off for a disk or Cluster Shared Volume as soon as the maintenance tasks 
 
 ### Example 1
 
-```
-PS C:\> Resume-ClusterResource "Cluster Disk 2"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 2      Online              Available Storage   Physical Disk
+```powershell
+Resume-ClusterResource "Cluster Disk 2"
 ```
 
-This example turns off maintenance for the CSV named Cluster Disk 2.
+This example turns off maintenance for the CSV named `Cluster Disk 2`.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterSharedVolume "Cluster Disk 5" | Resume-ClusterResource
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 5             Online                     node2
+```powershell
+Get-ClusterSharedVolume "Cluster Disk 5" | Resume-ClusterResource
 ```
 
-This example turns off maintenance for all volumes on the CSV named Cluster Disk 5.
+This example turns off maintenance for all volumes on the CSV named `Cluster Disk 5`.
 
 ## PARAMETERS
 

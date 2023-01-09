@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/start-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ClusterNode
@@ -45,33 +45,24 @@ authentication on the server computer.
 
 ### Example 1
 
-```
-PS C:\> Start-ClusterNode -Name node3
-Name                                                                      State 
-----                                                                      ----- 
-node3                                                                   Joining
+```powershell
+Start-ClusterNode -Name node3
 ```
 
-This example starts the Cluster service on the node named node3 on the local cluster.
+This example starts the Cluster service on the node named `node3` on the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Start-ClusterNode -Name node1 -Cluster cluster2
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                   Joining
+```powershell
+Start-ClusterNode -Name node1 -Cluster cluster2
 ```
 
-This example starts the Cluster service on the node named node1 on the cluster named cluster2.
+This example starts the Cluster service on the node named `node1` on the cluster named `cluster2`.
 
 ### Example 3
 
-```
-PS C:\> Start-ClusterNode -FixQuorum
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                   Joining
+```powershell
+Start-ClusterNode -FixQuorum
 ```
 
 This example forces the local node and the local cluster to start, even if quorum hasn't been

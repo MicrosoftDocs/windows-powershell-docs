@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterresourcedependency?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterResourceDependency
@@ -35,28 +35,35 @@ deployments.
 
 ### Example 1
 
-```
-PS C:\> Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency "[IP Address 151.56.48.0]"
+```powershell
+Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency "[IP Address 151.56.48.0]"
 ```
 
-This example makes the resource called cluster1FS12 dependent on \[IP Address 151.56.48.0\].
+This example makes the resource called cluster1FS12 dependent on `[IP Address 151.56.48.0]`.
 
 ### Example 2
 
-```
-C:\PS>Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency "[IP Address 151.56.48.0] or [New IP Address]"
+```powershell
+$parameters = @{
+    Resource = 'cluster1FS12'
+    Dependency = '[IP Address 151.56.48.0] or [New IP Address]'
+}
+Set-ClusterResourceDependency @parameters
 ```
 
-This example makes the resource called cluster1FS12 dependent on either \[IP Address 151.56.48.0\]
-or \[New IP Address\].
+This example makes the resource called `cluster1FS12` dependent on either `[IP Address 151.56.48.0]`
+or `[New IP Address]`.
+
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ### Example 3
 
-```
-C:\PS>Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency ""
+```powershell
+Set-ClusterResourceDependency -Resource cluster1FS12 -Dependency ""
 ```
 
-This example clears the dependency list for the resource named cluster1FS12, so that it no longer
+This example clears the dependency list for the resource named `cluster1FS12`, so that it no longer
 depends on any other resources.
 
 ## PARAMETERS

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterResource
@@ -29,20 +29,20 @@ removing a resource, be sure to review whether any other resource is dependent o
 
 ### Example 1
 
-```
-PS C:\> Remove-ClusterResource -Name "Cluster Disk 4"
+```powershell
+Remove-ClusterResource -Name "Cluster Disk 4"
 ```
 
-This example prompts the user for confirmation and then deletes the cluster named Cluster Disk 4
+This example prompts the user for confirmation and then deletes the cluster named `Cluster Disk 4`
 from the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Remove-ClusterResource -Name "Cluster Disk 5" -Force
+```powershell
+Remove-ClusterResource -Name "Cluster Disk 5" -Force
 ```
 
-This example deletes the cluster named Cluster Disk 5 from the local cluster without prompting for
+This example deletes the cluster named `Cluster Disk 5` from the local cluster without prompting for
 confirmation.
 
 ## PARAMETERS

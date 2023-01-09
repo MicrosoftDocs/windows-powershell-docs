@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/reset-clustervmmonitoredstate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Reset-ClusterVMMonitoredState
@@ -25,14 +25,14 @@ Reset-ClusterVMMonitoredState [-Wait <Int32>] [<CommonParameters>]
 The `Reset-ClusterVMMonitoredState` cmdlet resets the Application Critical state of a virtual
 machine, so that the virtual machine is no longer marked as being in a critical state in the
 cluster. Note: This cmdlet can only be run locally on the virtual machine or through Windows
-PowerShell® remoting to the virtual machine.
+PowerShell remoting to the virtual machine.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
-PS C:\> Reset-ClusterVMMoniteredState
+```powershell
+Reset-ClusterVMMoniteredState
 ```
 
 This example resets the state of the virtual machine and clears the critical state.

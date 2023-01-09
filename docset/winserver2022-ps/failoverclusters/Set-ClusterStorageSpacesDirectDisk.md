@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterstoragespacesdirectdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterStorageSpacesDirectDisk
@@ -34,13 +34,22 @@ S2D. Alternatively, you can run this cmdlet after you enable S2D.
 
 ### Example 1: Configure disks not to be claimed
 
-```
-PS C:\> Set-ClusterStorageSpacesDirectDisk -CimSession "K0619-C1.contoso.com" -CanBeClaimed:$False -PhysicalDiskIds "55CD2E404B75A3FC","50014EE05950DD7C"
+```powershell
+$parameters = @{
+    CimSession = 'K0619-C1.contoso.com'
+    CanBeClaimed = $False
+    PhysicalDiskIds = '55CD2E404B75A3FC', '50014EE05950DD7C'
+}
+Set-ClusterStorageSpacesDirectDisk @parameters
 ```
 
 This command configures the system that physical disks that have the IDs `55CD2E404B75A3FC` and
-`50014EE05950DD7C` cannot be claimed by S2D. In this example, the **CanBeClaimed** parameter is
+`50014EE05950DD7C` cannot be claimed by S2D. In this example, the `CanBeClaimed` parameter is
 explicitly specified as `$False`. Omitting that parameter has the same effect.
+
+
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 
@@ -142,7 +151,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

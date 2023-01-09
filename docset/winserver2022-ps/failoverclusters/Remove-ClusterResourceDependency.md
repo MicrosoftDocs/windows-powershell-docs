@@ -35,7 +35,11 @@ offline might vary.
 ### Example 1
 
 ```powershell
-Remove-ClusterResourceDependency -Resource cluster1FS -Provider "IP Address 2001:4898:9:2:: (3)"
+$parameters = @{
+    Resource = 'cluster1FS'
+    Provider = 'IP Address 2001:4898:9:2:: (3)'
+}
+Remove-ClusterResourceDependency @parameters
 ```
 
 This example removes the dependency between cluster resource `cluster1FS` and the resource named

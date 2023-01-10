@@ -71,13 +71,15 @@ $vmGroups = Get-ClusterNode -Name node1 |
         Get-ClusterResource -InputObject $_ |
             Where-Object ResourceType -Like "Virtual Machine"
     }
-ForEach-Object -InputObject $groups -Process { $_ | Move-ClusterVirtualMachineRole -Node node2 }
+ForEach-Object -InputObject $vmGroups -Process { $_ | Move-ClusterVirtualMachineRole -Node node2 }
 ```
 
-This example performs a live migration of all clustered virtual machines that are currently owned by
-the node named node1 to the node named node2. The migration of each virtual machine should complete
-before the next migration is started. Use this cmdlet before performing maintenance on the
-specified node.
+This example queries a specific cluster node, `node1`, to find the currently owned groups. The
+example further filters the owned groups where there resource type is a virtual machine cluster
+resource. The filtered groups are stored in the `$vmGroups` variable. For each cluster group in the
+variable, the command will perform a live migration of all clustered virtual machines to the node
+named `node2`. The migration of each virtual machine will complete before the next migration is
+started.
 
 ## PARAMETERS
 

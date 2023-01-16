@@ -67,7 +67,7 @@ Accept wildcard characters: False
 
 ### -LiteralPath
 Specifies a literal path to a layout file.
-If on Windows 10, include the `.xml` file name extension. If on Windows 11, include the `.json` file name extension.
+In Windows 10, include the `.xml` file name extension. In Windows 11, include the `.json` file name extension.
 This parameter does not accept the wildcard character (*).
 If the path includes an escape character (\\), enclose the string in single quotes (').
 

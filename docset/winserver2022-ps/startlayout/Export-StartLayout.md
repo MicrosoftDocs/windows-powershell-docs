@@ -46,7 +46,7 @@ This command exports the layout of the tiles on Start to a file named `Marketing
 PS C:\> Export-StartLayout -Path "$env:USERPROFILE\Desktop\CurrentLayout.json"
 ```
 
-This command exports the layout of the tiles on Start to a file named `CurrentLayout.json` in the current user's `Desktop` folder.
+This command exports the layout of the tiles on Start to a file named `CurrentLayout.json` in the current user's Desktop folder.
 
 ## PARAMETERS
 

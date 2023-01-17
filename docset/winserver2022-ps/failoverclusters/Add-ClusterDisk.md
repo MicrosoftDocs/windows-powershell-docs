@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clusterdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterDisk
@@ -21,25 +21,21 @@ Add-ClusterDisk [-InputObject] <PSObject[]> [-Cluster <String>] [<CommonParamete
 
 ## DESCRIPTION
 
-The **Add-ClusterDisk** cmdlet makes a new disk available for use in a failover cluster. The disk
-(LUN) must be exposed to all nodes in the failover cluster, and should not be exposed to any other
+The `Add-ClusterDisk` cmdlet makes a new disk available for use in a failover cluster. The disk
+(LUN) must be exposed to all nodes in the failover cluster, and shouldn't be exposed to any other
 servers.
 
 When adding a disk, make sure that the configuration of the storage allows the operating system to
 recognize and mount the disk as needed. The disk must be a basic disk, not a dynamic disk, and
-should not be exposed to servers outside the cluster. The **Get-ClusterAvailableDisk** cmdlet gets
+shouldn't be exposed to servers outside the cluster. The `Get-ClusterAvailableDisk` cmdlet gets
 information about disks that you can add to the cluster.
 
 ## EXAMPLES
 
 ### Example 1: Add available disks to the Available Storage group
 
-```
-PS C:\> Get-ClusterAvailableDisk | Add-ClusterDisk
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 7      OnlinePending       Available Storage   Physical Disk 
-Cluster Disk 8      OnlinePending       Available Storage   Physical Disk
+```powershell
+Get-ClusterAvailableDisk | Add-ClusterDisk
 ```
 
 This example identifies the disks that are ready to be added to the cluster, and then adds them to
@@ -47,11 +43,8 @@ Available Storage cluster group.
 
 ### Example 2: Add a specific available disk to Available Storage
 
-```
-PS C:\> Get-ClusterAvailableDisk | Where-Object -FilterScript { $_.ScsiAddress -Eq 50331651 } | Add-ClusterDisk
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 4      OnlinePending       Available Storage   Physical Disk
+```powershell
+Get-ClusterAvailableDisk | Where-Object -FilterScript { $_.ScsiAddress -Eq 50331651 } | Add-ClusterDisk
 ```
 
 This example examines disks that are ready to be added to the cluster, finds the disk with a
@@ -59,15 +52,12 @@ specific SCSI address, and adds it to Available Storage cluster group.
 
 ### Example 3: Cluster a physical disk
 
-```
-PS C:\> Get-Disk -Number 11 | Add-ClusterDisk
-Name                          State                         OwnerGroup                    ResourceType 
-----                          -----                         ----------                    ------------ 
-Cluster Disk 5                OnlinePending                 Available Storage             Physical Disk
+```powershell
+Get-Disk -Number 11 | Add-ClusterDisk
 ```
 
-This example clusters a physical disk. This cmdlet adds a physical disk to the **Available Storage**
-for the cluster.
+This example clusters a physical disk. This cmdlet adds a physical disk to the cluster 
+_Available Storage_.
 
 ## PARAMETERS
 
@@ -91,7 +81,7 @@ Accept wildcard characters: False
 ### -InputObject
 
 Specifies the list of shared disks to add to the cluster. The list of disks is generated with the
-**Get-ClusterAvailableDisk** cmdlet.
+`Get-ClusterAvailableDisk` cmdlet.
 
 ```yaml
 Type: PSObject[]
@@ -118,7 +108,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
-This object is output from the Get-Disk and the **Get-VirtualDisk** cmdlets.
+This object is output from the `Get-Disk` and the `Get-VirtualDisk` cmdlets.
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Disk
 

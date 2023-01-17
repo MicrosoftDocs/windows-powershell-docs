@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/suspend-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-ClusterNode
@@ -23,8 +23,8 @@ Suspend-ClusterNode [[-Name] <StringCollection>] [-Drain] [-ForceDrain] [-Wait]
 
 ## DESCRIPTION
 
-The **Suspend-ClusterNode** cmdlet suspends activity on a failover cluster node, that is, pauses the
-node. If you use the *Drain* parameter, clustered roles currently running on the node will be
+The `Suspend-ClusterNode` cmdlet suspends activity on a failover cluster node, that is, pauses the
+node. If you use the **Drain** parameter, clustered roles currently running on the node will be
 drained before the node is paused.
 
 Pausing, or suspending, a node is usually done when applying software updates to the node. If you
@@ -35,45 +35,36 @@ stop, not pause, the Cluster service on that node.
 
 ### Example 1: Pause a node of the local cluster
 
-```
-PS C:\> Suspend-ClusterNode -Name "node1"
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                    Paused
+```powershell
+Suspend-ClusterNode -Name "node1"
 ```
 
-This example pauses the node named node1 on the local cluster.
+This example pauses the node named `node1` on the local cluster.
 
 ### Example 2: Pause a node of a cluster
 
-```
-PS C:\> Suspend-ClusterNode "node2" -Cluster "cluster2"
-Name                                                                      State 
-----                                                                      ----- 
-node2                                                                    Paused
+```powershell
+Suspend-ClusterNode "node2" -Cluster "cluster2"
 ```
 
-This example pauses the node named node2 on the cluster named cluster2.
+This example pauses the node named `node2` on the cluster named `cluster2`.
 
 ### Example 3: Pause a node and move its workloads
 
-```
-PS C:\> Suspend-ClusterNode -Name "node1" -Target "node2" -Drain
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                    Paused
+```powershell
+Suspend-ClusterNode -Name "node1" -Target "node2" -Drain
 ```
 
-This example pauses the node named node1 and moves the workloads from it to the node named node2.
+This example pauses the node named `node1` and moves the workloads from it to the node named
+`node2`.
 
 ### Example 4: Preview a pause operation
 
-```
-PS C:\> Suspend-ClusterNode node1 -Drain -WhatIf
-What if: Performing operation "Suspend-ClusterNode" on Target "node1".
+```powershell
+Suspend-ClusterNode node1 -Drain -WhatIf
 ```
 
-This example provides a preview of the operation that will be performed on the node named node1.
+This example provides a preview of the operation that will be performed on the node named `node1`.
 
 ## PARAMETERS
 
@@ -199,10 +190,10 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the call is initiated and the cmdlet returns without waiting. If specified with no value, then the
-cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the cmdlet
-returns without waiting.
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the call is initiated and the cmdlet returns without waiting. If specified with no value, then
+the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+cmdlet returns without waiting.
 
 ```yaml
 Type: SwitchParameter
@@ -218,7 +209,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

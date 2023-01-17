@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/clear-clusterdiskreservation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-ClusterDiskReservation
@@ -22,30 +22,31 @@ Clear-ClusterDiskReservation [[-Node] <StringCollection>] -Disk <UInt32[]> [-For
 
 ## DESCRIPTION
 
-The **Clear-ClusterDiskReservation** cmdlet clears the persistent reservation on a disk in a
+The `Clear-ClusterDiskReservation` cmdlet clears the persistent reservation on a disk in a
 failover cluster. This cmdlet prompts for confirmation unless you specify the **Force** parameter.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
-authentication on the server computer.
+> [!NOTE]
+> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+> authentication on the server computer.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
-PS C:\> Clear-ClusterDiskReservation -Disk 5
+```powershell
+Clear-ClusterDiskReservation -Disk 5
 ```
 
-This example clears the persistent reservation on Disk 5 on the local node after asking for user
+This example clears the persistent reservation on `Disk 5` on the local node after asking for user
 confirmation.
 
 ### Example 2
 
-```
-C:\PS>Clear-ClusterDiskReservation -Disk 6 -Node node2 -Force
+```powershell
+Clear-ClusterDiskReservation -Disk 6 -Node node2 -Force
 ```
 
-This example clears the persistent reservation on Disk 6 on the node named node2 without asking for
+This example clears the persistent reservation on `Disk 6` on the node named `node2` without asking for
 user confirmation.
 
 ## PARAMETERS
@@ -118,7 +119,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

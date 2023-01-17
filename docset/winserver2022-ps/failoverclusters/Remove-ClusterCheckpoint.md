@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 01/09/2023
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clustercheckpoint?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterCheckpoint
@@ -23,7 +23,7 @@ Remove-ClusterCheckpoint [[-ResourceName] <String>] [-Force] [-CheckpointName <S
 
 ## DESCRIPTION
 
-The **Remove-ClusterCheckpoint** cmdlet removes a cryptographic key checkpoint or registry
+The `Remove-ClusterCheckpoint` cmdlet removes a cryptographic key checkpoint or registry
 checkpoint for a resource.
 
 Checkpoints help provide failover support for applications that store configuration information
@@ -36,20 +36,13 @@ local server.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterResource "Cluster Name" | Remove-ClusterCheckpoint -RegistryCheckpoint
-
-
-
-PS C:\> Remove-ClusterCheckpoint
-Are you sure you want to remove registry checkpoint 'software\clusname' on resource 'Cluster Name'? 
-
-
-[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+```powershell
+$checkpoint = Get-ClusterCheckpoint -ResourceName "Cluster Name" -RegistryCheckpoint
+$checkpoint | Remove-ClusterCheckpoint -Confirm:$false
 ```
 
-This example removes the registry checkpoint called software\clusname for the resource named Cluster
-Name.
+This example returns all registry checkpoints for the resource named `Cluster Name`, then removes
+them without user confirmation.
 
 ## PARAMETERS
 
@@ -186,7 +179,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

@@ -33,20 +33,20 @@ Set-ClusterFaultDomain -InputObject <CimInstance[]> [-NewName <String>] [-Locati
 
 ## DESCRIPTION
 
-The **Set-ClusterFaultDomain** cmdlet update an existing cluster fault domain. The *Name* parameter
-should identify the current name. The *NewName* parameter should be specified only when renaming the
-fault domain.
+The `Set-ClusterFaultDomain` cmdlet update an existing cluster fault domain. The **Name** parameter
+should identify the current name. The **NewName** parameter should be specified only when renaming
+the fault domain.
 
 ## EXAMPLES
 
 ### Example 1: Update an existing fault domain
 
-```
-PS C:\> Set-ClusterFaultDomain -Name "NMALIWA-VM-1101" -FaultDomain "Rack1"
+```powershell
+Set-ClusterFaultDomain -Name "VM-1101" -FaultDomain "Rack1"
 ```
 
-This command sets the parent of the fault domain named NMALIWA-VM-1101 to the fault domain named
-Rack1.
+This command sets the parent of the fault domain named `VM-1101` to the fault domain named
+`Rack1`.
 
 ## PARAMETERS
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ### -FaultDomain
 
 Specifies the name of the fault domain that is the parent of this one. You should specify Empty if
-the fault domain does not have a parent.
+the fault domain doesn't have a parent.
 
 ```yaml
 Type: String
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet does not
+Returns an object representing the item with which you are working. By default, this cmdlet doesn't
 generate any output.
 
 ```yaml
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

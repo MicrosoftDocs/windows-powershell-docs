@@ -23,7 +23,7 @@ Remove-ClusterSharedVolume [[-Name] <StringCollection>] [-InputObject <PSObject>
 
 ## DESCRIPTION
 
-The **Remove-ClusterSharedVolume** cmdlet removes a volume from the Cluster Shared Volumes in a
+The `Remove-ClusterSharedVolume` cmdlet removes a volume from the Cluster Shared Volumes in a
 failover cluster, and places it in Available Storage in the cluster. After placing a volume in
 Available Storage, you can use the volume when you configure a new clustered role.
 
@@ -31,26 +31,20 @@ Available Storage, you can use the volume when you configure a new clustered rol
 
 ### Example 1
 
-```
-PS C:\> Remove-ClusterSharedVolume -Name "Cluster Disk 3"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 3      Online              Available Storage   Physical Disk
+```powershell
+Remove-ClusterSharedVolume -Name "Cluster Disk 3"
 ```
 
-This example removes the CSV named Cluster Disk 3 from the Cluster Shared Volumes on the local
+This example removes the CSV named `Cluster Disk 3` from the Cluster Shared Volumes on the local
 cluster, and places it in Available Storage.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterSharedVolume -Name "Cluster Disk 4" | Remove-ClusterSharedVolume
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 4      Online              Available Storage   Physical Disk
+```powershell
+Get-ClusterSharedVolume -Name "Cluster Disk 4" | Remove-ClusterSharedVolume
 ```
 
-This example removes the CSV named Cluster Disk 4 from the Cluster Shared Volumes on the local
+This example removes the CSV named `Cluster Disk 4` from the Cluster Shared Volumes on the local
 cluster, and places it in Available Storage.
 
 ## PARAMETERS
@@ -122,7 +116,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

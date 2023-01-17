@@ -23,7 +23,7 @@ Set-ClusterQuorum [-DiskOnly <String>] [-NoWitness] [-DiskWitness <String>]
 
 ## DESCRIPTION
 
-The **Set-ClusterQuorum** cmdlet configures quorum options for a failover cluster. The quorum
+The `Set-ClusterQuorum` cmdlet configures quorum options for a failover cluster. The quorum
 configuration in a failover cluster determines the number of failures that the cluster can sustain.
 If an additional failure occurs, the cluster must stop running. The relevant failures in this
 context are failures of nodes or, in some cases, of a disk witness (which contains a copy of the
@@ -33,44 +33,46 @@ cluster configuration) or file share witness.
 
 ### Example 1
 
-```
-PS C:\> Set-ClusterQuorum -NodeMajority
-Cluster                    QuorumResource                  QuorumType 
--------                    --------------                  ---------- 
-cluster1                                                 NodeMajority
+```powershell
+Set-ClusterQuorum -NodeMajority
 ```
 
 This example changes the quorum configuration to Node Majority on the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Set-ClusterQuorum -DiskWitness "Cluster Disk 7"
-Cluster                    QuorumResource                  QuorumType 
--------                    --------------                  ---------- 
-cluster1                   Cluster Disk 7         NodeAndDiskMajority
+```powershell
+Set-ClusterQuorum -DiskWitness "Cluster Disk 7"
 ```
 
 This example changes the quorum configuration to Node and Disk Majority on the local cluster, using
-the disk resource named Cluster Disk 7 for the disk witness.
+the disk resource named `Cluster Disk 7` for the disk witness.
 
 ### Example 3
 
-```
-PS C:\> Set-ClusterQuorum -NodeAndFileShareMajority \\fileserver\fsw
-Cluster               QuorumResource                       QuorumType 
--------               --------------                       ---------- 
-cluster1              File Share Witness     NodeAndFileShareMajority
+```powershell
+Set-ClusterQuorum -NodeAndFileShareMajority \\fileserver\fsw
 ```
 
 This example changes the quorum configuration to Node and File Share Majority on the local cluster,
-using the disk resource at \\\\fileserver\fsw for the file share witness.
+using the disk resource at `\\fileserver\fsw` for the file share witness.
 
 ### Example 4
 
+```powershell
+$parameters = @{
+    CloudWitness = $true
+    AccountName  = '<AzureStorageAccountName>'
+    AccessKey    = '<AzureStorageAccountAccessKey>'
+}
+Set-ClusterQuorum @parameters
 ```
-PS C:\> Set-ClusterQuorum -CloudWitness -AccountName <AzureStorageAccountName> -AccessKey <AzureStorageAccountAccessKey>
-```
+
+This example changes the quorum configuration to use an Azure Storage Account to use as a Cloud
+Witness.
+
+The example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 
@@ -135,7 +137,7 @@ Accept wildcard characters: False
 
 ### -DiskOnly
 
-Causes the cluster quorum to be set to disk only type. This is not recommended as it creates a
+Causes the cluster quorum to be set to disk only type. This isn't recommended as it creates a
 single point of failure for the cluster.
 
 ```yaml

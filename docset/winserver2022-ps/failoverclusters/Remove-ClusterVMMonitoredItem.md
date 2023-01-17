@@ -31,7 +31,7 @@ Remove-ClusterVMMonitoredItem [-InputObject <PSObject>] [-Service <StringCollect
 
 ## DESCRIPTION
 
-The **Remove-ClusterVMMonitoredItem** cmdlet removes monitoring of a service or event that is
+The `Remove-ClusterVMMonitoredItem` cmdlet removes monitoring of a service or event that is
 currently being monitored. After removal, if the service fails or the event occurs, the system will
 no longer take an action, such as restarting the virtual machine.
 
@@ -39,19 +39,19 @@ no longer take an action, such as restarting the virtual machine.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterVMMonitoredItem -VirtualMachine VM1 | Remove-ClusterVMMonitoredItem -VirtualMachine VM1
+```powershell
+Get-ClusterVMMonitoredItem -VirtualMachine VM1 | Remove-ClusterVMMonitoredItem -VirtualMachine VM1
 ```
 
-This example removes all of the items being monitored on the virtual machine named VM1.
+This example removes all of the items being monitored on the virtual machine named `VM1`.
 
 ### Example 2
 
-```
-PS C:\> Remove-ClusterVMMonitoredItem -VirtualMachine VM1 -Service spooler
+```powershell
+Remove-ClusterVMMonitoredItem -VirtualMachine VM1 -Service spooler
 ```
 
-This example removes monitoring on the print spooler service on the virtual machine named VM1.
+This example removes monitoring on the print spooler service on the virtual machine named `VM1`.
 
 ## PARAMETERS
 
@@ -190,8 +190,8 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 
 ```yaml

@@ -55,7 +55,7 @@ VMS1                          *                             I:\VMS
 
 This command retrieves information about the SMB share named 'VMS1' on the local computer.
 
-### Example 3: Display information about the SMB shares on a remote computer.
+### Example 3: Display information about the SMB shares on a remote computer
 ```
 PS C:\>get-smbshare -CimSession "NEDFS1"
 

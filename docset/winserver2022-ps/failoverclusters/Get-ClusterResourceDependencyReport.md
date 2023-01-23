@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterresourcedependencyreport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterResourceDependencyReport
@@ -33,33 +33,30 @@ specify a destination folder into which to copy the report.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterResourceDependencyReport -Group cluster1FS12
-Mode                LastWriteTime     Length Name 
-----                -------------     ------ ---- 
--a---        10/15/2008   6:29 PM      59299 fb509e66-8d02-4881-8184-6be5b1bfa4c2.mht
+```powershell
+Get-ClusterResourceDependencyReport -Group cluster1FS12
 ```
 
 This example creates a dependency report file for the clustered file server, or resource group,
-named cluster1FS12 on the local cluster.
+named `cluster1FS12` on the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterResourceDependencyReport -Group cluster1FS12 | Copy-Item -Destination C:\users\user1
+```powershell
+Get-ClusterResourceDependencyReport -Group cluster1FS12 | Copy-Item -Destination C:\users\user1
 ```
 
 This example creates a dependency report file for the clustered file server, or resource group,
-named cluster1FS12 on the local cluster. The dependency report is copied to C:\users\user1.
+named `cluster1FS12` on the local cluster. The dependency report is copied to `C:\users\user1`.
 
 ### Example 3
 
-```
-PS C:\> Get-ClusterGroup | Get-ClusterResourceDependencyReport | Copy-Item -Destination \\fileserver\share
+```powershell
+Get-ClusterGroup | Get-ClusterResourceDependencyReport | Copy-Item -Destination \\fileserver\share
 ```
 
 This example creates a dependency report file for each clustered role, or resource group, on the
-local cluster, and copies all reports to \\\\fileserver\share.
+local cluster, and copies all reports to `\\fileserver\share`.
 
 ## PARAMETERS
 

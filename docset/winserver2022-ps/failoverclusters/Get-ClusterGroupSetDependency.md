@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterCollection.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clustergroupsetdependency?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterGroupSetDependency
@@ -30,19 +30,11 @@ relationships. You can get all sets that are dependent on a specific set.
 
 ### Example 1: Get all the group sets that are provided by the specified set
 
-```
-PS C:\> Get-ClusterGroupSetDependency -Provider "Set2"
-
-Name                : Set1
-GroupNames          : {g1}
-ProviderNames       : {Set2}
-StartupDelayTrigger : Delay
-StartupCount        : 4294967295
-IsGlobal            : False
-StartupDelay        : 20
+```powershell
+Get-ClusterGroupSetDependency -Provider "Set2"
 ```
 
-This command gets all the group sets that are provided by set named Set2.
+This command gets all the group sets that are provided by set named `Set2`.
 
 ## PARAMETERS
 
@@ -157,7 +149,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

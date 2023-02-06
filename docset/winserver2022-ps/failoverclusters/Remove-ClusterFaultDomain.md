@@ -33,17 +33,17 @@ Remove-ClusterFaultDomain -InputObject <CimInstance[]> [-Flags <UInt32>]
 
 ## DESCRIPTION
 
-The **Remove-ClusterFaultDomain** cmdlet removes a fault domain. The fault domain cannot be empty.
+The `Remove-ClusterFaultDomain` cmdlet removes a fault domain. The fault domain cannot be empty.
 
 ## EXAMPLES
 
 ### Example 1: Remove a cluster fault domain
 
-```
-PS C:\> Remove-ClusterFaultDomain -Name "Rack001"
+```powershell
+Remove-ClusterFaultDomain -Name "Rack001"
 ```
 
-This command removes the cluster fault domain named Rack001.
+This command removes the cluster fault domain named `Rack001`.
 
 ## PARAMETERS
 
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet does not
+Returns an object representing the item with which you are working. By default, this cmdlet doesn't
 generate any output.
 
 ```yaml
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

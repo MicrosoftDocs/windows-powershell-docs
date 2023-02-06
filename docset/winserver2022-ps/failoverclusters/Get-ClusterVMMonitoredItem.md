@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clustervmmonitoreditem?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterVMMonitoredItem
@@ -37,7 +37,7 @@ Get-ClusterVMMonitoredItem [-Wait <Int32>] [-InputObject <PSObject>] [-Cluster <
 
 ## DESCRIPTION
 
-The **Get-ClusterVMMonitoredItem** cmdlet gets the list of services and events currently being
+The `Get-ClusterVMMonitoredItem` cmdlet gets the list of services and events currently being
 monitored in the virtual machine. If one of those services fails or one of the events occurs, then
 the system responds by taking an action based on the failover configuration for the virtual machine
 resource. For example, the configuration might specify that the virtual machine be restarted.
@@ -46,16 +46,12 @@ resource. For example, the configuration might specify that the virtual machine 
 
 ### Example 1
 
-```
-PS C:\> Get-Cluster -Name Cluster1 | Get-ClusterVMMonitoredItem -VirtualMachine vm1
-Name 
----- 
-Microsoft-Windows-FailoverClustering-Manager+Admin,Microsoft-Windows-FailoverClustering-Manager,4708 
-Spooler
+```powershell
+Get-Cluster -Name Cluster1 | Get-ClusterVMMonitoredItem -VirtualMachine vm1
 ```
 
-This example returns the services and events being monitored in the virtual machine named vm1 on the
-cluster named Cluster1.
+This example returns the services and events being monitored in the virtual machine named `vm1` on
+the cluster named `Cluster1`.
 
 ## PARAMETERS
 
@@ -129,8 +125,8 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 
 ```yaml

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/start-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ClusterResource
@@ -22,35 +22,29 @@ Start-ClusterResource [[-Name] <String>] [-IgnoreLocked] [-ChooseBestNode] [-Wai
 
 ## DESCRIPTION
 
-The **Start-ClusterResource** cmdlet brings a resource online in a failover cluster. Before the
+The `Start-ClusterResource` cmdlet brings a resource online in a failover cluster. Before the
 resource is brought online, any resources that it depends are brought online.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
-PS C:\> Start-ClusterResource -Name "IP Address 172.24.11.0"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-IP Address 172.2...  Online              cluster1FS12        IP Address
+```powershell
+Start-ClusterResource -Name "IP Address 172.24.11.0"
 ```
 
-This example brings the resource called IP Address 172.24.11.0 online on the local cluster. Before
+This example brings the resource called `IP Address 172.24.11.0` online on the local cluster. Before
 bringing the resource online, this cmdlet brings online any resources on which the resource depends.
 
 ### Example 2
 
-```
-PS C:\> Start-ClusterResource -Name "IP Address 172.24.11.0" -Wait 0
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-IP Address 172.2...  OnlinePending       cluster1FS12        IP Address
+```powershell
+Start-ClusterResource -Name "IP Address 172.24.11.0" -Wait 0
 ```
 
-This example brings the resource called IP Address 172.24.11.0 online on the local cluster. Before
+This example brings the resource called `IP Address 172.24.11.0` online on the local cluster. Before
 bringing the resource online, this cmdlet brings online any resources on which the resource depends.
-The Windows PowerShell® prompt returns as soon as the action has been initiated.
+The Windows PowerShell prompt returns as soon as the action has been initiated.
 
 ## PARAMETERS
 
@@ -136,7 +130,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
 then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 

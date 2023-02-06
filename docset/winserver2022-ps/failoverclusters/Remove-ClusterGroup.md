@@ -22,7 +22,7 @@ Remove-ClusterGroup [-VMId <Guid>] [[-Name] <StringCollection>] [-Force] [-Remov
 
 ## DESCRIPTION
 
-The **Remove-ClusterGroup** cmdlet removes a clustered role. also called a resource group, from a
+The `Remove-ClusterGroup` cmdlet removes a clustered role. also called a resource group, from a
 failover cluster.
 
 Use this cmdlet to delete a group. If the group still has resources in it, then either remove the
@@ -32,30 +32,30 @@ resources first, or specify the **RemoveResources** parameter.
 
 ### Example 1
 
-```
-PS C:\> Remove-ClusterGroup -Name MyFileServer
+```powershell
+Remove-ClusterGroup -Name MyFileServer
 ```
 
 This example prompts the user for confirmation and then removes the clustered role named
-MyFileServer, if the resources have first been removed from it.
+`MyFileServer`, if the resources have first been removed from it.
 
 ### Example 2
 
-```
-PS C:\> Remove-ClusterGroup -Name MyFileServer -Force
+```powershell
+Remove-ClusterGroup -Name MyFileServer -Force
 ```
 
-This example removes the clustered role named MyFileServer, if the resources have first been removed
-from it. The cmdlet does not prompt for confirmation.
+This example removes the clustered role named `MyFileServer`, if the resources have first been removed
+from it. The cmdlet doesn't prompt for confirmation.
 
 ### Example 3
 
-```
-PS C:\> Remove-ClusterGroup -Name MyFileServer -Force -RemoveResources
+```powershell
+Remove-ClusterGroup -Name MyFileServer -Force -RemoveResources
 ```
 
-This example removes the clustered role named MyFileServer, without prompting for confirmation. All
-cluster resources in MyFileServer will be deleted.
+This example removes the clustered role named `MyFileServer`, without prompting for confirmation.
+All cluster resources in `MyFileServer` will be deleted.
 
 ## PARAMETERS
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

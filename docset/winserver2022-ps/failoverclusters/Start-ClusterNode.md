@@ -23,12 +23,12 @@ Start-ClusterNode [[-Name] <StringCollection>] [-ForceQuorum] [-ClearQuarantine]
 
 ## DESCRIPTION
 
-The **Start-ClusterNode** cmdlet starts the Cluster service on a node in a failover cluster. If this
+The `Start-ClusterNode` cmdlet starts the Cluster service on a node in a failover cluster. If this
 is the first node started, then it will wait for other nodes to join. The cluster will begin to run
 when a quorum has formed.
 
 This cmdlet with the **FixQuorum** parameter can be used to force quorum, that is, force the start
-of a cluster node even if quorum has not been achieved. When quorum is forced on a given node, the
+of a cluster node even if quorum hasn't been achieved. When quorum is forced on a given node, the
 copy of the cluster configuration that is on that node will be treated as the authoritative copy and
 will be replicated to all other nodes. Therefore, forcing quorum should be considered a last resort,
 because some cluster configuration changes could be lost. The ability to force quorum can be
@@ -45,37 +45,28 @@ authentication on the server computer.
 
 ### Example 1
 
-```
-PS C:\> Start-ClusterNode -Name node3
-Name                                                                      State 
-----                                                                      ----- 
-node3                                                                   Joining
+```powershell
+Start-ClusterNode -Name node3
 ```
 
-This example starts the Cluster service on the node named node3 on the local cluster.
+This example starts the Cluster service on the node named `node3` on the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Start-ClusterNode -Name node1 -Cluster cluster2
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                   Joining
+```powershell
+Start-ClusterNode -Name node1 -Cluster cluster2
 ```
 
-This example starts the Cluster service on the node named node1 on the cluster named cluster2.
+This example starts the Cluster service on the node named `node1` on the cluster named `cluster2`.
 
 ### Example 3
 
-```
-PS C:\> Start-ClusterNode -FixQuorum
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                   Joining
+```powershell
+Start-ClusterNode -FixQuorum
 ```
 
-This example forces the local node and the local cluster to start, even if quorum has not been
-achieved. If quorum has not been achieved, then the copy of the cluster configuration that is on the
+This example forces the local node and the local cluster to start, even if quorum hasn't been
+achieved. If quorum hasn't been achieved, then the copy of the cluster configuration that is on the
 local node will be treated as the authoritative copy and will be replicated to all other nodes. This
 cmdlet should be considered a last resort, because some cluster configuration changes could be lost,
 such as recovery options for cluster service.
@@ -115,7 +106,7 @@ Accept wildcard characters: False
 
 ### -ForceQuorum
 
-Indicates that the cmdlet forces the start of a cluster node regardless if quorum is not formed.
+Indicates that the cmdlet forces the start of a cluster node regardless if quorum isn't formed.
 
 ```yaml
 Type: SwitchParameter
@@ -196,7 +187,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
 then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 

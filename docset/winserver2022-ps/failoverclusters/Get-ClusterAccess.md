@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusteraccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterAccess
@@ -22,26 +22,18 @@ Get-ClusterAccess [[-User] <StringCollection>] [-InputObject <PSObject>] [-Clust
 
 ## DESCRIPTION
 
-The **Get-ClusterAccess** cmdlet gets information about permissions that control access to a
+The `Get-ClusterAccess` cmdlet gets information about permissions that control access to a
 failover cluster.
 
 A cluster can allow full access or read-only access. Read-only access limits the user to Windows
-PowerShell® cmdlets that provide information about the cluster.
+PowerShell cmdlets that provide information about the cluster.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterAccess
-IdentityReference              AccessControlType        ClusterRights 
------------------              -----------------        ------------- 
-CONTOSO\user1                               Deny                 Full 
-NT AUTHORITY\SYSTEM                        Allow                 Full 
-NT AUTHORITY\NETWORK SE...                 Allow                 Full 
-BUILTIN\Administrators                     Allow                 Full 
-CONTOSO\user2                              Allow                 Read 
-NT SERVICE\MSDTC                           Allow                 Full
+```powershell
+Get-ClusterAccess
 ```
 
 This example lists the level of permissions that have been assigned to users of this cluster,

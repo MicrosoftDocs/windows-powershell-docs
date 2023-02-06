@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterquorum?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterQuorum
@@ -21,7 +21,7 @@ Get-ClusterQuorum [[-Cluster] <String>] [-InputObject <PSObject>] [<CommonParame
 
 ## DESCRIPTION
 
-The **Get-ClusterQuorum** cmdlet gets information about the quorum configuration of a failover
+The `Get-ClusterQuorum` cmdlet gets information about the quorum configuration of a failover
 cluster.
 
 The quorum configuration in a failover cluster determines the number of failures that the cluster
@@ -33,25 +33,19 @@ a copy of the cluster configuration) or file share witness.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterQuorum
-Cluster                    QuorumResource                            QuorumType 
--------                    --------------                            ---------- 
-cluster1                   Cluster Disk 1                   NodeAndDiskMajority
+```powershell
+Get-ClusterQuorum
 ```
 
 This example displays the quorum configuration for the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterQuorum -Cluster Cluster1
-Cluster                    QuorumResource                            QuorumType 
--------                    --------------                            ---------- 
-mycluster                                                          NodeMajority
+```powershell
+Get-ClusterQuorum -Cluster Cluster1
 ```
 
-This example displays the quorum configuration for the cluster named Cluster1.
+This example displays the quorum configuration for the cluster named `Cluster1`.
 
 ## PARAMETERS
 

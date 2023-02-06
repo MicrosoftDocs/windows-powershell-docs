@@ -11,6 +11,8 @@ title: Remove-ClusterGroupSetDependency
 # Remove-ClusterGroupSetDependency
 
 ## SYNOPSIS
+Removes a dependency from a group set.
+
 ## SYNTAX
 
 ### Query (cdxml) (Default)
@@ -29,18 +31,18 @@ Remove-ClusterGroupSetDependency -InputObject <CimInstance[]> [-Provider] <Strin
 
 ## DESCRIPTION
 
-The **Remove-ClusterGroupSetDependency** cmdlet removes a dependency from a group set.
+The `Remove-ClusterGroupSetDependency` cmdlet removes a dependency from a group set.
 
 ## EXAMPLES
 
 ### Example 1: Remove a group set dependency on another group set
 
-```
-PS C:\> Remove-ClusterGroupSetDependency -Name "Set001" -Provider "Set002"
+```powershell
+Remove-ClusterGroupSetDependency -Name "Set001" -Provider "Set002"
 ```
 
-This command removes the group set named Set002 from being a provider for the group set named
-Set001.
+This command removes the group set named `Set002` from being a provider for the group set named
+`Set001`.
 
 ## PARAMETERS
 
@@ -122,7 +124,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet does not
+Returns an object representing the item with which you are working. By default, this cmdlet doesn't
 generate any output.
 
 ```yaml
@@ -156,7 +158,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

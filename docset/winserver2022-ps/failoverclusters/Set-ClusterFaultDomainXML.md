@@ -22,16 +22,15 @@ Set-ClusterFaultDomainXML [-XML] <String> [-Flags <UInt32>] [-CimSession <CimSes
 
 ## DESCRIPTION
 
-The **Set-ClusterFaultDomainXML** cmdlet sets the cluster fault domain using XML.
+The `Set-ClusterFaultDomainXML` cmdlet sets the cluster fault domain using XML.
 
 ## EXAMPLES
 
-### Example 1:
+### Example 1
 
-```
-PS C:\> Set-ClusterFaultDomainXML -XML @"
+```powershell
+Set-ClusterFaultDomainXML -XML @"
 <Topology>
-
  <Site Name="site1" Description="Site 1 with 4 nodes" Location="Site 1">
   <rack name="rack1_in_site_1" description="the only rack in site 1">
    <Node Name="K0617-VM02"/>
@@ -40,7 +39,6 @@ PS C:\> Set-ClusterFaultDomainXML -XML @"
    <Node Name="K0617-VM05"/>
   </rack>
  </Site>
-
  <Site Name="site2" Description="Site 2 with 4 nodes" Location="Site 2">
   <rack name="rack1_in_site_2" description="the only rack in site 2">
    <Node Name="K0617-VM12"/>
@@ -49,7 +47,6 @@ PS C:\> Set-ClusterFaultDomainXML -XML @"
    <Node Name="K0617-VM15"/>
   </rack>
  </Site>
-
  <Site Name="site3" Description="Site 3 with 4 nodes" Location="Site 3">
   <rack name="rack1_in_site_3" description="the only rack in site 3">
    <Node Name="K0621-VM17"/>
@@ -58,7 +55,6 @@ PS C:\> Set-ClusterFaultDomainXML -XML @"
    <Node Name="K0621-VM20"/>
   </rack>
  </Site>
-
  <Site Name="site4" Description="Site 4 with 4 nodes" Location="Site 4">
   <rack name="rack1_in_site_4" description="the only rack in site 4">
    <Node Name="K0629-VM07"/>
@@ -67,7 +63,6 @@ PS C:\> Set-ClusterFaultDomainXML -XML @"
    <Node Name="K0629-VM10"/>
   </rack>
  </Site>
-
 </Topology>
 "@
 ```
@@ -139,7 +134,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustergenericservicerole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGenericServiceRole
@@ -11,7 +11,7 @@ title: Add-ClusterGenericServiceRole
 # Add-ClusterGenericServiceRole
 
 ## SYNOPSIS
-Configures high availability for a service that was not originally designed to run in a failover
+Configures high availability for a service that wasn't originally designed to run in a failover
 cluster.
 
 ## SYNTAX
@@ -25,39 +25,34 @@ Add-ClusterGenericServiceRole -ServiceName <String> [-CheckpointKey <StringColle
 
 ## DESCRIPTION
 
-The **Add-ClusterGenericServiceRole** cmdlet configures high availability for a service that was not
+The `Add-ClusterGenericServiceRole` cmdlet configures high availability for a service that wasn't
 originally designed to run in a failover cluster. The cluster software will start the service, then
 periodically query the Service Controller, which is a feature of the operating system, to determine
 whether the service appears to be running. If so, then it is presumed to be online, and will not be
 restarted or failed over.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
-authentication on the server computer.
+> [!NOTE]
+> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP)
+> authentication on the server computer.
 
 ## EXAMPLES
 
 ### Example 1: Configure a service that uses default values
 
-```
-PS C:\> Add-ClusterGenericServiceRole -ServiceName "Service1"
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1GenSvc             node1                              Online
+```powershell
+Add-ClusterGenericServiceRole -ServiceName "Service1"
 ```
 
 This example configures Service1 as a generic clustered service, using defaults for the name and IP
-address, and does not assign a disk.
+address, and doesn't assign a disk.
 
 ### Example 2: Configure a service that uses default values and a specified disk
 
-```
-PS C:\> Add-ClusterGenericServiceRole -ServiceName "Service1" -Storage "Cluster Disk 6"
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-cluster1GenSvc             node1                              Online
+```powershell
+Add-ClusterGenericServiceRole -ServiceName "Service1" -Storage "Cluster Disk 6"
 ```
 
-This example configures Service1 as a generic clustered service using Cluster Disk 6, and assigns
+This example configures Service1 as a generic clustered service using `Cluster Disk 6`, and assigns
 defaults for the name and IP address.
 
 ## PARAMETERS
@@ -99,8 +94,8 @@ Accept wildcard characters: False
 ### -IgnoreNetwork
 
 Specifies one or more networks to ignore when running the cmdlet. Networks with DHCP enabled are
-always included, but other networks need a static address to be specified using the *StaticAddress*
-parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+always included, but other networks need a static address to be specified using the
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -166,7 +161,7 @@ Accept wildcard characters: False
 
 Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
 are always included, but other networks need a static address to be specified using the
-*StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
 Type: StringCollection
@@ -198,9 +193,9 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
-cmdlet returns without waiting.
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If the value `0` is specified, then the call is initiated and
+the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32

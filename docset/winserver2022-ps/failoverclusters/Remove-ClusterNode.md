@@ -23,7 +23,7 @@ Remove-ClusterNode [[-Name] <StringCollection>] [-Force] [-Wait <Int32>]
 
 ## DESCRIPTION
 
-The **Remove-ClusterNode** cmdlet removes a node from a failover cluster. After the node is removed,
+The `Remove-ClusterNode` cmdlet removes a node from a failover cluster. After the node is removed,
 the node no longer functions as part of the cluster unless the node is added back to the cluster.
 Removing a node is also called evicting a node from the cluster.
 
@@ -34,19 +34,20 @@ authentication on the server computer.
 
 ### Example 1
 
-```
-PS C:\> Remove-ClusterNode -Name node4
+```powershell
+Remove-ClusterNode -Name node4
 ```
 
-This example removes the node named node4 from the local cluster.
+This example removes the node named `node4` from the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Remove-ClusterNode -Name node4 -Force
+```powershell
+Remove-ClusterNode -Name node4 -Force
 ```
 
-This example removes the node named node4 from the local cluster without prompting for confirmation.
+This example removes the node named `node4` from the local cluster without prompting for
+confirmation.
 
 ## PARAMETERS
 
@@ -116,8 +117,8 @@ Accept wildcard characters: False
 
 ### -IgnoreStorageConnectivityLoss
 
-Indicates that this cmdlet does not check whether the cluster node contains non-shared storage, if
-Storage Spaces Direct is enabled. If you do not specify this parameter, the cmdlet checks whether
+Indicates that this cmdlet doesn't check whether the cluster node contains non-shared storage, if
+Storage Spaces Direct is enabled. If you don't specify this parameter, the cmdlet checks whether
 this node has any Storage Spaces Direct storage. If this cmdlet finds Storage Spaces Direct storage,
 it prompts you for confirmation before it removes the node.
 
@@ -167,7 +168,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
 then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 
@@ -185,7 +186,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

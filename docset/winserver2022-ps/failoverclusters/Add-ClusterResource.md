@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterResource
@@ -22,7 +22,7 @@ Add-ClusterResource [-Name] <String> [[-Group] <String>] [-ResourceType] <String
 
 ## DESCRIPTION
 
-The **Add-ClusterResource** cmdlet adds a resource to a clustered role, or resource group, in a
+The `Add-ClusterResource` cmdlet adds a resource to a clustered role, or resource group, in a
 failover cluster. Before adding the resource, obtain the resource type and the name of the group to
 which to add the resource.
 
@@ -30,15 +30,12 @@ which to add the resource.
 
 ### Example 1
 
-```
-PS C:\> Add-ClusterResource -Name resource1 -ResourceType "IP Address" -Group ClusterSrv1
-Name                State               Group               ResourceType 
-----                -----               -----               ------------        
-resource1           Offline             ClusterSrv1         IP Address
+```powershell
+Add-ClusterResource -Name resource1 -ResourceType "IP Address" -Group ClusterSrv1
 ```
 
-This example creates a new IP Address resource called resource1 on the local cluster. The cmdlet
-configures the resource as part of the clustered role, or resource group, called ClusterSrv1.
+This example creates a new IP Address resource called `resource1` on the local cluster. The cmdlet
+configures the resource as part of the clustered role, or resource group, called `ClusterSrv1`.
 
 ## PARAMETERS
 

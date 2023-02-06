@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterResource
@@ -34,131 +34,66 @@ and `Set-ClusterParameter`.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterResource
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 1      Online              Cluster Group       Physical Disk 
-Cluster Disk 2      Online              Available Storage   Physical Disk 
-Cluster Disk 3      Online              Available Storage   Physical Disk 
-Cluster Disk 4      Online              Available Storage   Physical Disk 
-Cluster Disk 5      Online              Available Storage   Physical Disk 
-Cluster Disk 6      Online              Available Storage   Physical Disk 
-Cluster Disk 7      Online              Available Storage   Physical Disk 
-Cluster IP Address  Online              Cluster Group       IP Address 
-Cluster IP Addre... Online              Cluster Group       IPv6 Address 
-Cluster Name        Online              Cluster Group       Network Name
+```powershell
+Get-ClusterResource
 ```
 
 This example lists all cluster resources on the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterResource -Name "Cluster Disk 2" | Format-List -Property *
-Cluster                :  cluster1 
-IsCoreResource         : False 
-IsNetworkClassResource : False 
-IsStorageClassResource : True 
-OwnerNode              :  node2 
-ResourceType           : Physical Disk 
-State                  : Online 
-OwnerGroup             : Available Storage 
-Name                   :  Cluster Disk 2 
-MaintenanceMode        : False 
-MonitorProcessId       : 524 
-Description            : 
-SeparateMonitor        : False 
-PersistentState        : 1 
-LooksAlivePollInterval : 4294967295 
-IsAlivePollInterval    : 4294967295 
-RestartAction          : 2 
-RestartThreshold       : 1 
-RestartDelay           : 500 
-RestartPeriod          : 900000 
-RetryPeriodOnFailure   : 3600000 
-PendingTimeout         : 180000 
-DeadlockTimeout        : 300000 
-ResourceSpecificStatus : 
-Id                     :  6e394089-145a-4279-b75d-b14015cc36e4
+```powershell
+Get-ClusterResource -Name "Cluster Disk 2" | Format-List -Property *
 ```
 
-This example displays information about Cluster Disk 2, on the local cluster, in the form of a list.
+This example displays information about `Cluster Disk 2`, on the local cluster, in the form of a
+list.
 
 ### Example 3
 
-```
-PS C:\> Get-ClusterResource -Name "Cluster Disk 2" | Get-ClusterParameter
-Object              Name                Value               Type 
-------              ----                -----               ---- 
-Cluster Disk 2      DiskIdType          0                   UInt32 
-Cluster Disk 2      DiskSignature       2654136047          UInt32 
-Cluster Disk 2      DiskIdGuid                              String 
-Cluster Disk 2      DiskRunChkDsk       0                   UInt32 
-Cluster Disk 2      DiskUniqueIds       {16, 0, 0, 0...}    ByteArray 
-Cluster Disk 2      DiskVolumeInfo      {1, 0, 0, 0...}     ByteArray 
-Cluster Disk 2      DiskArbInterval     3                   UInt32 
-Cluster Disk 2      DiskPath                                String 
-Cluster Disk 2      DiskReload          0                   UInt32 
-Cluster Disk 2      MaintenanceMode     0                   UInt32 
-Cluster Disk 2      MaxIoLatency        1000                UInt32 
-Cluster Disk 2      CsvEnforseWriteT... 0                   UInt32 
-Cluster Disk 2      DiskPnpUpdate       {0, 0, 0, 0...}     ByteArray
+```powershell
+Get-ClusterResource -Name "Cluster Disk 2" | Get-ClusterParameter
 ```
 
-This example displays detailed parameters for Cluster Disk 2 on the local cluster.
+This example displays detailed parameters for `Cluster Disk 2` on the local cluster.
 
 ### Example 4
 
-```
-PS C:\> Get-ClusterGroup -Name FileServer1 | Get-ClusterResource
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 1      Online              FileServer1         Physical Disk 
-Cluster IP Address  Online              FileServer1         IP Address 
-Cluster IP Addre... Online              FileServer1         IPv6 Address 
-FileServer1         Online              FileServer1         Network Name
+```powershell
+Get-ClusterGroup -Name FileServer1 | Get-ClusterResource
 ```
 
-This example lists cluster resources in cluster group named FileServer1, a clustered file server on
-the local cluster.
+This example lists cluster resources in cluster group named `FileServer1`, a clustered file server
+on the local cluster.
 
 ### Example 5
 
-```
-PS C:\> Get-ClusterResource -Name "Cluster Disk 2" | ForEach-Object -Process {$_.RestartDelay = 600}
+```powershell
+Get-ClusterResource -Name "Cluster Disk 2" | ForEach-Object -Process {
+    $_.RestartDelay = 600
+}
 ```
 
-This example sets the common property RestartDelay for the Cluster Disk 2 resource on the local
-cluster to 600.
+This example sets the common property `RestartDelay` for the `Cluster Disk 2` resource on the local
+cluster to `600`.
 
 ### Example 6
 
-```
-PS C:\> Get-ClusterResource -Name "cluster pool 1" | Format-List -Property OwnerNode
-OwnerNode : cluster-node1
+```powershell
+Get-ClusterResource -Name "cluster pool 1" | Format-List -Property OwnerNode
 ```
 
 This example shows how to display the owner of a cluster pooled disk.
 
 ### Example 7
 
-```
-PS C:\> Get-ClusterResource -Name *print-VM1 | Get-VM | Stop-VM -Verbose
-VERBOSE: Current VMobject  = Microsoft.HyperV.PowerShell.VirtualMachine[] 
-VERBOSE: Stop-VM will shutdown the virtual machine "print-VM1". 
- 
-Confirm 
-Hyper-V cannot shut down virtual machine print-VM1 because the Shutdown integration service is unavailable. To avoid 
-potential data loss, you can pause or save the state of the virtual machine. The other option is to turn off the 
-virtual machine, but data loss might occur. 
-
-
-[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+```powershell
+Get-ClusterResource -Name *print-VM1 | Get-VM | Stop-VM -Verbose -Confirm:$false
 ```
 
-This example enumerates the cluster resources for wildcard characters *print-VM1 and stops the
-corresponding virtual machines. Verbose mode is turned on for details of the operation.
+This example enumerates the cluster resources for wildcard characters `*print-VM1` and stops the
+corresponding virtual machines without user confirmation. Verbose mode is turned on for details of
+the operation.
 
 ## PARAMETERS
 

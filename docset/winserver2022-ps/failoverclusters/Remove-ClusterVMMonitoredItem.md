@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clustervmmonitoreditem?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterVMMonitoredItem
@@ -39,19 +39,19 @@ no longer take an action, such as restarting the virtual machine.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterVMMonitoredItem -VirtualMachine VM1 | Remove-ClusterVMMonitoredItem -VirtualMachine VM1
+```powershell
+Get-ClusterVMMonitoredItem -VirtualMachine VM1 | Remove-ClusterVMMonitoredItem -VirtualMachine VM1
 ```
 
-This example removes all of the items being monitored on the virtual machine named VM1.
+This example removes all of the items being monitored on the virtual machine named `VM1`.
 
 ### Example 2
 
-```
-PS C:\> Remove-ClusterVMMonitoredItem -VirtualMachine VM1 -Service spooler
+```powershell
+Remove-ClusterVMMonitoredItem -VirtualMachine VM1 -Service spooler
 ```
 
-This example removes monitoring on the print spooler service on the virtual machine named VM1.
+This example removes monitoring on the print spooler service on the virtual machine named `VM1`.
 
 ## PARAMETERS
 

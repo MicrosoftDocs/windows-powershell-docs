@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_NetAdapterSriov.cdxml-help.xml
 Module Name: NetAdapter
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/netadapter/set-netadaptersriov?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/netadapter/set-netadaptersriov?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NetAdapterSriov
 ---
@@ -11,7 +11,7 @@ title: Set-NetAdapterSriov
 # Set-NetAdapterSriov
 
 ## SYNOPSIS
-Sets the SR-IOV properties of the network adapter, such as the number of virtual functions, the number of VPorts, and the number of queue pairs for default and non-default VPorts.
+Sets the SR-IOV properties of the network adapter, such as the number of virtual functions, and the number of queue pairs for default and non-default VPorts.
 
 ## SYNTAX
 
@@ -54,10 +54,10 @@ This command sets the number of virtual functions available to 31 on the network
 
 ### Example 2: Set the number of virtual functions and VPorts on the specified network adapter
 ```
-PS C:\> Set-NetAdapterSriov -Name "Ethernet 2" -NumVFs 31 -VPorts 64 -NumQueuePairsForDefaultVPort 2 -NumQueuePairsForNonDefaultVPort 2
+PS C:\> Set-NetAdapterSriov -Name "Ethernet 2" -NumVFs 31 -NumQueuePairsForDefaultVPort 2 -NumQueuePairsForNonDefaultVPort 2
 ```
 
-This command sets the number of virtual functions to 31 and the total number of VPorts to 64.
+This command sets the number of virtual functions to 31.
 This results in 31 virtual functions and 32 virtual machine queues (VMQ), plus 1 used by the physical function.
 Since the number of queue pair is set to 2 for both default and non-default ports, the total number of queue pairs used is 128.
 

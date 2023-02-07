@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrinterConfiguration_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 9/20/2021
-online version: https://docs.microsoft.com/powershell/module/printmanagement/get-printconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 09/20/2021
+online version: https://learn.microsoft.com/powershell/module/printmanagement/get-printconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PrintConfiguration
 ---
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -182,4 +182,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-PrintConfiguration](./Set-PrintConfiguration.md)
-

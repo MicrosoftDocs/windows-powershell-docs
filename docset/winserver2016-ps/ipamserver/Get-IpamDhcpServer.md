@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: IpamDhcpServer.cdxml-help.xml
 Module Name: IpamServer
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/ipamserver/get-ipamdhcpserver?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/ipamserver/get-ipamdhcpserver?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-IpamDhcpServer
 ---
@@ -26,14 +26,14 @@ DHCP servers lease IP addresses to client devices.
 
 ## EXAMPLES
 
-### Example 1: Get information about all DNS servers
+### Example 1: Get information about all DHCP servers
 ```
 PS C:\> Get-IpamDhcpServer
 ```
 
 This command returns information about all the DHCP servers in the IPAM database.
 
-### Example 2: Get information about a single DNS server
+### Example 2: Get information about a single DHCP server
 ```
 PS C:\> Get-IpamDhcpServer -ServerFqdn "dhcp.contoso.com"
 ```

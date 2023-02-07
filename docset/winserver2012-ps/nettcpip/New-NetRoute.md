@@ -1,7 +1,7 @@
 ---
 external help file: NetTCPIP_Cmdlets.xml
 Module Name: NetTCPIP
-online version: https://docs.microsoft.com/powershell/module/nettcpip/new-netroute?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/nettcpip/new-netroute?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/New-CimSession) or [Get-CimSession](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/Get-CimSession) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/New-CimSession) or [Get-CimSession](/powershell/module/cimcmdlets/Get-CimSession) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

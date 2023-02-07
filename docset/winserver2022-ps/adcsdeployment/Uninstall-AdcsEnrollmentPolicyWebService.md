@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
 Module Name: ADCSDeployment
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/adcsdeployment/uninstall-adcsenrollmentpolicywebservice?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/adcsdeployment/uninstall-adcsenrollmentpolicywebservice?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Uninstall-AdcsEnrollmentPolicyWebService
 ---

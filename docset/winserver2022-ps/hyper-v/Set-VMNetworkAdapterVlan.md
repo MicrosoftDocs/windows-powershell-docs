@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmnetworkadaptervlan?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmnetworkadaptervlan?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-VMNetworkAdapterVlan
 ---
@@ -485,4 +485,4 @@ If **-PassThru** is specified.
 ## NOTES
 
 ## RELATED LINKS
-[Configure and View VLAN Settings on Hyper-V Virtual Switch Ports](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/configure-and-view-vlan-settings-on-hyper-v-virtual-switch-ports)
+[Configure and View VLAN Settings on Hyper-V Virtual Switch Ports](/windows-server/virtualization/hyper-v-virtual-switch/configure-and-view-vlan-settings-on-hyper-v-virtual-switch-ports)

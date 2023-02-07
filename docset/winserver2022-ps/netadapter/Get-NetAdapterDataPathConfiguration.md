@@ -1,9 +1,9 @@
-﻿---
+---
 description: Gets the name of the network adapter, profile, and the profile source.
 external help file: MSFT_NetAdapterDataPathConfiguration.cdxml-help.xml
 Module Name: NetAdapter
 ms.date: 09/23/2021
-online version: https://docs.microsoft.com/powershell/module/netadapter/get-netadapterdatapathconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/netadapter/get-netadapterdatapathconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetAdapterDataPathConfiguration
 ---

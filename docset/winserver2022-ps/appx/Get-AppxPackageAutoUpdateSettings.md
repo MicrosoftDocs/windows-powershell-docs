@@ -3,7 +3,7 @@ description: Provides guidance on how to view the auto-update and repair setting
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
 ms.date: 06/07/2021
-online version: https://docs.microsoft.com/powershell/module/appx/Get-AppxPackageAutoUpdateSettings?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/appx/Get-AppxPackageAutoUpdateSettings?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

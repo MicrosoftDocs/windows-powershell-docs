@@ -3,7 +3,7 @@ description: Disables access for specified standard users to event, service, per
 external help file: ServerManager-help.xml
 Module Name: ServerManager
 ms.date: 09/15/2021
-online version: https://docs.microsoft.com/powershell/module/servermanager/disable-servermanagerstandarduserremoting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/servermanager/disable-servermanagerstandarduserremoting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-ServerManagerStandardUserRemoting
 ---

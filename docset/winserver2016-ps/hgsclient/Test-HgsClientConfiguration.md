@@ -1,7 +1,7 @@
 ---
 external help file: HgsClient-help.xml
 Module Name: HgsClient
-online version: https://docs.microsoft.com/powershell/module/hgsclient/test-hgsclientconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hgsclient/test-hgsclientconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-HgsClientConfiguration
 ---

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
 Module Name: HgsAttestation
-online version: https://docs.microsoft.com/powershell/module/hgsattestation/add-hgsattestationcipolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hgsattestation/add-hgsattestationcipolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-HgsAttestationCIPolicy
 ---

@@ -1,9 +1,9 @@
 ---
-description: Creates a custom FOD repository that includes packages that support the installation of the specified capabilities. 
+description: Creates a custom FOD repository that includes packages that support the installation of the specified capabilities.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: Dism
 ms.date: 10/07/2021
-online version: https://docs.microsoft.com/powershell/module/dism/export-windowscapabilitysource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dism/export-windowscapabilitysource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-WindowsCapabilitySource
 ---

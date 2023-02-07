@@ -145,6 +145,4 @@ The TPM owner password.
 
 [Write-MbamTPMInformation](write-mbamtpminformation.md)
 
-[Microsoft BitLocker Administration and Monitoring](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/)
-
-
+[Microsoft BitLocker Administration and Monitoring](/microsoft-desktop-optimization-pack/mbam-v25/)

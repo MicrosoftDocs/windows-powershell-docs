@@ -3,7 +3,7 @@ description: Modifies an existing AutoLogger session configuration.
 external help file: MSFT_AutologgerConfig_v1.0.cdxml-help.xml
 Module Name: EventTracingManagement
 ms.date: 10/01/2021
-online version: https://docs.microsoft.com/powershell/module/eventtracingmanagement/update-autologgerconfig?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/eventtracingmanagement/update-autologgerconfig?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-AutologgerConfig
 ---

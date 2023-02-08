@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/22/2022
+ms.date: 02/08/2023
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Cluster
@@ -88,6 +88,18 @@ local cluster.
  before the cluster will be quarantined. This is set to 3 by default.
 - **QuarantineDuration**: This setting, set to 7200 seconds or 2 hours by default, controls how long
   a host will remain quarantined.
+
+### Example 7
+
+```powershell
+(Get-Cluster).MaximumParallelMigrations = 2
+```
+
+This example sets the cluster property MaximumParallelMigrations to a value of `2`, limiting the
+number of live migrations that a cluster node can participate in. Both existing and new cluster
+nodes inherit this value of `2` because it's a cluster property. Setting the cluster
+property overrides any values configured using the [Set-VMHost](../hyper-v/Set-VMHost.md)
+command.
 
 ## PARAMETERS
 

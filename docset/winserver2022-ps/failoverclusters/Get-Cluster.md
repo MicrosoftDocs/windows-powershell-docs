@@ -95,6 +95,11 @@ local cluster.
 (Get-Cluster).MaximumParallelMigrations = 2
 ```
 
+Beginning with the 2022-09 Cumulative Update, you can now configure the number of parallel live
+migrations within a cluster. For more information, see
+[KB5017381](https://support.microsoft.com/help/5017381) for Windows Server 2022 and
+[KB5017382](https://support.microsoft.com/help/5017382) for Azure Stack HCI, version 21H2.
+
 This example sets the cluster property MaximumParallelMigrations to a value of `2`, limiting the
 number of live migrations that a cluster node can participate in. Both existing and new cluster
 nodes inherit this value of `2` because it's a cluster property. Setting the cluster

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusternetwork?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterNetwork
@@ -29,24 +29,19 @@ A failover cluster requires network connectivity among nodes and between clients
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterNetwork
-Name                                                                      State 
-----                                                                      ----- 
-Cluster Network 1                                                            Up 
-Cluster Network 2                                                            Up 
-Cluster Network 3                                                            Up
+```powershell
+Get-ClusterNetwork
 ```
 
 This example gets information about the networks used by the local cluster.
 
 ### Example 2
 
-```
-PS C:\> (Get-ClusterNetwork -Name "Cluster Network 1").Name = "Cluster Network 3"
+```powershell
+(Get-ClusterNetwork -Name "Cluster Network 1").Name = "Cluster Network 3"
 ```
 
-This example renames Cluster Network 1 to Cluster Network 3.
+This example renames `Cluster Network 1` to `Cluster Network 3`.
 
 ## PARAMETERS
 

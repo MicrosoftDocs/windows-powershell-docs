@@ -32,7 +32,7 @@ System Configuration, Network, Storage, and other types of tests.
 
 > [!TIP]
 > You should run the `New-Cluster` command from a cluster node or client that is the same version as
-> the cluster nodes. Running `New-Cluster` from a lower-level (down-level) client machine may
+> the cluster nodes. Running `New-Cluster` from a lower-level (down-level) client computer may
 > require `Update-ClusterFunctionalLevel` to be run after `New-Cluster` has been run.
 
 ## EXAMPLES

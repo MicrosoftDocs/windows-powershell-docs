@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -Delay
-Specifies the frequency of queries, in seconds. PowerShell queries the service specified by the For parameter to determine whether the service is available after the computer is restarted. This parameter is valid only together with the `-Wait` and `-For` parameters. If the Delay parameter isn't specified, **Restart-VM** uses a five second delay.
+Specifies the frequency of queries, in seconds. PowerShell queries the service specified by the `-For` parameter to determine whether the service is available after the computer is restarted. This parameter is valid only with the `-Wait` and `-For` parameters. If the `-Delay` parameter isn't specified, **Restart-VM** uses a five-second delay.
 
 ```yaml
 Type: UInt16

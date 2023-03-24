@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterstoragespacesdirect?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterStorageSpacesDirect
@@ -22,35 +22,27 @@ Get-ClusterStorageSpacesDirect [-Node <String>] [-CimSession <CimSession[]>]
 
 ## DESCRIPTION
 
-The **Get-ClusterStorageSpacesDirect** cmdlet gets the Storage Spaces Direct (S2D) settings from a
+The `Get-ClusterStorageSpacesDirect` cmdlet gets the Storage Spaces Direct (S2D) settings from a
 cluster.
 
 ## EXAMPLES
 
 ### Example 1: Get the Storage Spaces Direct settings from a cluster
 
-```
-PS C:\> Get-ClusterStorageSpacesDirect -Node "K0617-C1.contoso.com"
-S2DCacheBehavior             : Default
-S2DCacheDesiredState         : ReadWrite
-S2DCacheMetadataReserveBytes : 34359738368
-S2DEnabled                   : 1
+```powershell
+Get-ClusterStorageSpacesDirect -Node "K0617-C1.contoso.com"
 ```
 
-This command sets the S2D settings from the K0617-C1.contoso.com cluster.
+This command sets the S2D settings from the `K0617-C1.contoso.com` cluster.
 
-### Example 2: Get the Storage Spaces Direct settings from a cluster by using the pipeline operator for input
+### Example 2: Get the Storage Spaces Direct settings from a cluster
 
-```
-PS C:\> Get-Cluster "K0617-C1.contoso.com" | Get-ClusterStorageSpacesDirect
-S2DCacheBehavior             : Default
-S2DCacheDesiredState         : ReadWrite
-S2DCacheMetadataReserveBytes : 34359738368
-S2DEnabled                   : 1
+```powershell
+Get-Cluster "K0617-C1.contoso.com" | Get-ClusterStorageSpacesDirect
 ```
 
-This command gets the S2D settings from cluster K0617-C1.contoso.com and pipes the cluster object to
-**Get-ClusterStorageSpacesDirect**.
+This command gets the S2D settings from cluster `K0617-C1.contoso.com` and pipes the cluster object
+to `Get-ClusterStorageSpacesDirect`.
 
 ## PARAMETERS
 
@@ -117,7 +109,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/23/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/suspend-clusterresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-ClusterResource
@@ -23,7 +23,7 @@ Suspend-ClusterResource [[-Name] <String>] [-VolumeName <String>] [-RedirectedAc
 
 ## DESCRIPTION
 
-The **Suspend-ClusterResource** cmdlet turns on maintenance for a disk resource or Cluster Shared
+The `Suspend-ClusterResource` cmdlet turns on maintenance for a disk resource or Cluster Shared
 Volume (CSV) so that a disk maintenance tool can be run without triggering failover.
 
 This cmdlet only applies to disks and CSVs. For Cluster Shared Volumes, turning on maintenance takes
@@ -34,26 +34,20 @@ dependent resources offline, which interrupts client access. For other disks, Lo
 
 ### Example 1: Turn on maintenance for a CSV
 
-```
-PS C:\> Suspend-ClusterResource -Name "Cluster Disk 2"
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 2      Online(Maintenance) Available Storage   Physical Disk
+```powershell
+Suspend-ClusterResource -Name "Cluster Disk 2"
 ```
 
-This example turns on maintenance for CSV named Cluster Disk 2 so that you can run a disk
+This example turns on maintenance for CSV named `Cluster Disk 2` so that you can run a disk
 maintenance tool without triggering failover.
 
 ### Example 2: Turn on maintenance for multiple volumes
 
-```
-PS C:\> Get-ClusterSharedVolume -Name "Cluster Disk 5" | Suspend-ClusterResource
-Name                       State                      Node 
-----                       -----                      ---- 
-Cluster Disk 5             Online                     node2
+```powershell
+Get-ClusterSharedVolume -Name "Cluster Disk 5" | Suspend-ClusterResource
 ```
 
-This example turns on maintenance for all volumes on the CSV named Cluster Disk 5.
+This example turns on maintenance for all volumes on the CSV named `Cluster Disk 5`.
 
 ## PARAMETERS
 
@@ -158,7 +152,7 @@ Accept wildcard characters: False
 ### -VolumeName
 
 Specifies the name of the volume to suspend. This parameter is only applicable to CSVs. If this
-parameter is not specified, then the operation will be performed on all volumes on the CSV.
+parameter isn't specified, then the operation will be performed on all volumes on the CSV.
 
 ```yaml
 Type: String
@@ -174,7 +168,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

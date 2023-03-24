@@ -22,7 +22,7 @@ Start-ClusterGroup [[-Name] <String>] [-IgnoreLocked] [-ChooseBestNode] [-Wait <
 
 ## DESCRIPTION
 
-The **Start-ClusterGroup** cmdlet starts one or more clustered roles, also known as resource groups,
+The `Start-ClusterGroup` cmdlet starts one or more clustered roles, also known as resource groups,
 on a failover cluster. With this cmdlet, a clustered role can be started again after stopping it for
 maintenance or diagnosis.
 
@@ -30,26 +30,20 @@ maintenance or diagnosis.
 
 ### Example 1
 
-```
-PS C:\> Start-ClusterGroup FileServer1
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-FileServer1                node1                                         Online
+```powershell
+Start-ClusterGroup FileServer1
 ```
 
-This example starts the clustered file server, or resource group, called FileServer1.
+This example starts the clustered file server, or resource group, called `FileServer1`.
 
 ### Example 2
 
-```
-PS C:\> Start-ClusterGroup FileServer1 -Wait 0
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-FileServer1                node1                                        Pending
+```powershell
+Start-ClusterGroup FileServer1 -Wait 0
 ```
 
-This example starts the clustered file server, or resource group, called FileServer1. The Windows
-PowerShell® prompt returns as soon as the action has been initiated.
+This example starts the clustered file server, or resource group, called `FileServer1`.
+The Windows PowerShell prompt returns as soon as the action has been initiated.
 
 ## PARAMETERS
 
@@ -134,7 +128,7 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter is not specified,
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
 then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 

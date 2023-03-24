@@ -37,11 +37,11 @@ Removes a group set from the cluster. The group set cannot be a provider for ano
 
 ### Example 1: Remove a group set from the cluster
 
-```
-PS C:\> Remove-ClusterGroupSet -Name "Set001"
+```powershell
+Remove-ClusterGroupSet -Name "Set001"
 ```
 
-This command removes the group set named Set001 from the cluster.
+This command removes the group set named `Set001` from the cluster.
 
 ## PARAMETERS
 
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet does not
+Returns an object representing the item with which you are working. By default, this cmdlet doesn't
 generate any output.
 
 ```yaml
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

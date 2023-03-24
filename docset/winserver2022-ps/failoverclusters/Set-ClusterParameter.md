@@ -39,7 +39,7 @@ Set-ClusterParameter [-InputObject <PSObject>] [[-Multiple] <Hashtable>] [-Creat
 
 ## DESCRIPTION
 
-The **Set-ClusterParameter** cmdlet controls specific properties of an object in a failover cluster,
+The `Set-ClusterParameter` cmdlet controls specific properties of an object in a failover cluster,
 such as a resource, a group, or a network.
 
 - For a disk resource, you can set the disk signature or GUID of a disk, and turn maintenance on
@@ -56,46 +56,21 @@ such as a resource, a group, or a network.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterResource -Name cluster1FS | Set-ClusterParameter -Name HostRecordTTL -Value 300
+```powershell
+Get-ClusterResource -Name "Cluster Disk 3" | Set-ClusterOwnerNode -Owners node1,node2
 ```
 
-This example configures the clustered resource called cluster1FS on the local cluster, by setting
-the value of HostRecordTTL to 300.
+This example sets the possible owners for cluster named `Cluster Disk 3` on the local cluster to the
+nodes named `node1` and `node2`.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterResource -Name "Cluster IP Address" | Set-ClusterParameter -Multiple @{"Address"="172.24.22.168";"Network"="Cluster Network 2";"EnableDhcp"=1}
-```
-
-This example uses the **Multiple** parameter to configure the clustered resource called Cluster IP
-Address, by setting the **Address**, **Network**, and **EnableDhcp** parameters simultaneously.
-
-### Example 3
-
-```
-PS C:\> $res = Get-ClusterResource -Name "IP Address"
-
-
-
-PS C:\> $param1 = New-Object -ComObject Microsoft.FailoverClusters.PowerShell.ClusterParameter -Property $res,Address,10.55.88.46
-
-
-
-PS C:\> $param2 = New-Object -ComObject Microsoft.FailoverClusters.PowerShell.ClusterParameter -Property $res,SubnetMask,255.0.0.0
-
-
-
-PS C:\> $params = $param1,$param2
-
-
-
-PS C:\> $params | Set-ClusterParameter
+```powershell
+Set-ClusterOwnerNode -Group cluster12FS -Owners node3,node2
 ```
 
-This example configures the clustered resource called IP Address to use a new static IP. Because the
-new address and subnet mask are required, both parameters must be passed to this cmdlet together.
+This example sets the preferred owners for the clustered service named `cluster12FS` to the node
+named `node3` followed by the node named `node2` on the local cluster.
 
 ## PARAMETERS
 

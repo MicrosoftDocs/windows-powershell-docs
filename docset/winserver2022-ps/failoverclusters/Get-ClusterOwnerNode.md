@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterownernode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterOwnerNode
@@ -23,7 +23,7 @@ Get-ClusterOwnerNode [-Resource <String>] [-Group <String>] [-ResourceType <Stri
 
 ## DESCRIPTION
 
-The **Get-ClusterOwnerNode** cmdlet gets information about which nodes can own a resource in a
+The `Get-ClusterOwnerNode` cmdlet gets information about which nodes can own a resource in a
 failover cluster or information about the order of preference among owner nodes for a clustered
 role.
 
@@ -34,26 +34,20 @@ failure of a resource or a clustered role.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterResource -Cluster "Cluster Disk 1" | Get-ClusterOwnerNode
-ClusterObject                           OwnerNodes 
--------------                           ---------- 
-Cluster Disk 1                          {node1, node2}
+```powershell
+Get-ClusterResource -Cluster "Cluster Disk 1" | Get-ClusterOwnerNode
 ```
 
-This example lists the possible owners for the cluster named Cluster Disk 1 in the local cluster.
+This example lists the possible owners for the cluster named `Cluster Disk 1` in the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterGroup -Group cluster1FS12 | Get-ClusterOwnerNode
-ClusterObject                           OwnerNodes 
--------------                           ---------- 
-cluster1FS12                            {}
+```powershell
+Get-ClusterGroup -Group cluster1FS12 | Get-ClusterOwnerNode
 ```
 
 This example lists the preferred owners for the clustered file server, or resource group, called
-cluster1FS12 on the local cluster.
+`cluster1FS12` on the local cluster.
 
 ## PARAMETERS
 

@@ -22,29 +22,23 @@ Set-ClusterLog [-Size <Int32>] [-Level <Int32>] [-InputObject <PSObject>] [-Clus
 
 ## DESCRIPTION
 
-The **Set-ClusterLog** cmdlet sets the size and level of detail for the cluster log. The default
+The `Set-ClusterLog` cmdlet sets the size and level of detail for the cluster log. The default
 level, `3`, includes errors, warnings, and additional information.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
-PS C:\> Set-ClusterLog -Level 1
-Name 
----- 
-cluster1
+```powershell
+Set-ClusterLog -Level 1
 ```
 
-This example sets the cluster log to a detail level of 1.
+This example sets the cluster log to a detail level of `1`.
 
 ### Example 2
 
-```
-PS C:\> Set-ClusterLog -Size 1024
-Name 
----- 
-cluster1
+```powershell
+Set-ClusterLog -Size 1024
 ```
 
 This example sets the cluster log size to 1024 MB.
@@ -86,8 +80,8 @@ Accept wildcard characters: False
 
 ### -Level
 
-Specifies the log level to set for the cluster. The acceptable values for this parameter are:`0` to
-`5`.
+Specifies the log level to set for the cluster. The acceptable values for this parameter are: `0`
+to `5`.
 
 | Level  | Error  | Warning  | Info  | Verbose | Debug |
 |:-----|:-----|:-----|:-----|:-----|:-----|
@@ -113,8 +107,8 @@ Accept wildcard characters: False
 ### -Size
 
 Specifies the log size to set for the cluster. The acceptable values for this parameter in Windows
-2016 are:`8` MB to `1024` MB. The acceptable values for this parameter in Windows 2019 are:`8` MB to
-`2048` MB.
+2016 are: `8` MB to `1024` MB. The acceptable values for this parameter in Windows 2019 are:
+`8` MB to `2048` MB.
 
 ```yaml
 Type: Int32

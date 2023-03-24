@@ -2,7 +2,7 @@
 description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 09/20/2022
+ms.date: 03/22/2023
 online version: https://learn.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -46,6 +46,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
  [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>]
+ [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>] [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>][-CloudBlockLevel <CloudBlockLevelType>][-ServiceHealthReportInterval <UInt32>]
  [-CloudBlockLevel <CloudBlockLevelType>] [-CloudExtendedTimeout <UInt32>]
  [-EnableNetworkProtection <ASRRuleActionType>] [-EnableControlledFolderAccess <ControlledFolderAccessType>]
  [-AttackSurfaceReductionOnlyExclusions <String[]>] [-ControlledFolderAccessAllowedApplications <String[]>]
@@ -654,7 +655,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender does not scan network files. We do not recommend that you scan network files.
+Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender does not scan network files. 
 
 ```yaml
 Type: Boolean
@@ -1436,6 +1437,23 @@ Aliases: srt
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceHealthReportInterval
+This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints. These are for Microsoft Defender Antivirus events 1150 and 1151. For more information, see [Microsoft Defender Antivirus event IDs](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus#microsoft-defender-antivirus-event-ids).
+
+If you do not configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour). 
+If you configure this setting to 0, no service health reports will be sent.
+The maximum value allowed to be set is 14400 minutes (ten days).
+
+```yaml
+Type: UInt32
+Aliases: shri
+Accepted values: 0-14400
+Position: Named
+Default value: 60
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

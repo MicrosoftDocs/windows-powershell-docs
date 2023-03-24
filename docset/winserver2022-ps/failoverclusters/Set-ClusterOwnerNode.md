@@ -23,7 +23,7 @@ Set-ClusterOwnerNode [-Resource <String>] [-Group <String>] -Owners <StringColle
 
 ## DESCRIPTION
 
-The **Set-ClusterOwnerNode** cmdlet specifies which nodes can own a resource in a failover cluster
+The `Set-ClusterOwnerNode` cmdlet specifies which nodes can own a resource in a failover cluster
 or specifies the order of preference among owner nodes for a clustered role, or resource group. The
 settings that control the possible or preferred owners affect the way the cluster responds to the
 failure of a resource or a clustered role.
@@ -32,21 +32,21 @@ failure of a resource or a clustered role.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterResource -Name "Cluster Disk 3" | Set-ClusterOwnerNode -Owners node1,node2
+```powershell
+Get-ClusterResource -Name "Cluster Disk 3" | Set-ClusterOwnerNode -Owners node1,node2
 ```
 
-This example sets the possible owners for cluster named Cluster Disk 3 on the local cluster to the
-nodes named node1 and node2.
+This example sets the possible owners for cluster named `Cluster Disk 3` on the local cluster to the
+nodes named `node1` and `node2`.
 
 ### Example 2
 
-```
-PS C:\> Set-ClusterOwnerNode -Group cluster12FS -Owners node3,node2
+```powershell
+Set-ClusterOwnerNode -Group cluster12FS -Owners node3,node2
 ```
 
-This example sets the preferred owners for the clustered service named cluster12FS to the node named
-node3 followed by the node named node2 on the local cluster.
+This example sets the preferred owners for the clustered service named `cluster12FS` to the node
+named `node3` followed by the node named `node2` on the local cluster.
 
 ## PARAMETERS
 

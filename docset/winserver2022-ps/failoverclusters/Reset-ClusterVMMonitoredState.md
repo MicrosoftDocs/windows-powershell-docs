@@ -22,17 +22,17 @@ Reset-ClusterVMMonitoredState [-Wait <Int32>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-The **Reset-ClusterVMMonitoredState** cmdlet resets the Application Critical state of a virtual
+The `Reset-ClusterVMMonitoredState` cmdlet resets the Application Critical state of a virtual
 machine, so that the virtual machine is no longer marked as being in a critical state in the
 cluster. Note: This cmdlet can only be run locally on the virtual machine or through Windows
-PowerShell® remoting to the virtual machine.
+PowerShell remoting to the virtual machine.
 
 ## EXAMPLES
 
 ### Example 1
 
-```
-PS C:\> Reset-ClusterVMMoniteredState
+```powershell
+Reset-ClusterVMMoniteredState
 ```
 
 This example resets the state of the virtual machine and clears the critical state.
@@ -41,8 +41,8 @@ This example resets the state of the virtual machine and clears the critical sta
 
 ### -Wait
 
-Specifies the time in seconds to wait for the cmdlet. If the *Wait* parameter is not specified, then
-the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
 cmdlet returns without waiting.
 
 ```yaml

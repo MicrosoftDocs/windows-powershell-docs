@@ -145,7 +145,7 @@ The acceptable values for this parameter are:
 - ServiceAccount
 - InteractiveOrPassword
    
-For more information on LogonType values, see [Principal.LogonType](/windows/win32/taskschd/principal-logontype#property-value)
+For more information about LogonType values, see [Principal.LogonType](/windows/win32/taskschd/principal-logontype#property-value)
 
 ```yaml
 Type: LogonTypeEnum

@@ -140,7 +140,7 @@ The acceptable values for this parameter are:
 - None
 - Password
 - S4U
-- - Interactive
+- Interactive
 - Group
 - ServiceAccount
 - InteractiveOrPassword

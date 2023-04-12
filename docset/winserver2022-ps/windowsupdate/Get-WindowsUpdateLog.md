@@ -151,7 +151,7 @@ The acceptable values for this parameter are:
 - CSV (comma-separated values)
 - XML
 
-By default, the value is CSV.
+By default, the value is XML.
 The temporary files are in $env:TEMP\WindowsUpdateLog.
 
 ```yaml

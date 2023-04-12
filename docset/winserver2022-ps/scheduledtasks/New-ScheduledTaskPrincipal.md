@@ -144,6 +144,8 @@ The acceptable values for this parameter are:
 - Group
 - ServiceAccount
 - InteractiveOrPassword
+   
+For more information about LogonType values, see [Principal.LogonType](/windows/win32/taskschd/principal-logontype#property-value)
 
 ```yaml
 Type: LogonTypeEnum
@@ -271,4 +273,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-ScheduledTaskTrigger](./New-ScheduledTaskTrigger.md)
 
 [Register-ScheduledTask](./Register-ScheduledTask.md)
+
 

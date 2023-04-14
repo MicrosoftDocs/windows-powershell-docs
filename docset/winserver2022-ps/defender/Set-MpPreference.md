@@ -145,6 +145,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
+### -AllowSwitchToAsyncInspection
+
+Specifies whether to enable a performance optimization that allows synchronously inspected network flows to switch to async inspection once they've been checked and validated.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
 

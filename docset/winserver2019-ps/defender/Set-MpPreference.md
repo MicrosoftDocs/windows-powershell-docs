@@ -24,7 +24,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-CheckForSignaturesBeforeRunningScan <Boolean>] [-ScanPurgeItemsAfterDelay <UInt32>]
  [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>] [-ScanScheduleDay <Day>]
  [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleOffset <UInt32>] [-SignatureFirstAuGracePeriod <UInt32>]
- [-ScanScheduleTime <HH:MM:SS>]
+ [-ScanScheduleTime <HH:MM:SS>] [-AllowSwitchToAsyncInspection <Boolean>]
  [-SignatureAuGracePeriod <UInt32>] [-SignatureDefinitionUpdateFileSharesSources <String>]
  [-SignatureDisableUpdateOnStartupWithoutEngine <Boolean>] [-SignatureFallbackOrder <String>]
  [-SignatureScheduleDay <Day>] [-SignatureScheduleTime <DateTime>] [-SignatureUpdateCatchupInterval <UInt32>]
@@ -84,6 +84,23 @@ PS C:\> Set-MpPreference -SignatureScheduleTime 02:00:00
 This command configures preferences to check for definition updates 120 minutes after midnight on days when it’s scheduled to check.
 
 ## PARAMETERS
+
+### -AllowSwitchToAsyncInspection
+
+Specifies whether to enable a performance optimization that allows synchronously inspected network flows to switch to async inspection once they've been checked and validated.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 

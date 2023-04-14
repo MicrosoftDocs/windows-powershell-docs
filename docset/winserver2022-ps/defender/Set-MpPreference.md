@@ -220,7 +220,7 @@ Accept wildcard characters: False
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of $True, Windows Defender checks for new definitions.
 If you specify $False or don't specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans and to scans that you start from the command line, but it doesn't affect scans that you start from the user interface.
+This setting applies to scheduled scans, but it has no effect on scans initiated manually from the user interface or to the ones started from the command line using "mpcmdrun -Scan"
 
 ```yaml
 Type: Boolean

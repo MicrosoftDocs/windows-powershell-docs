@@ -12,20 +12,19 @@ title: Set-LapsADPasswordExpirationTime
 # Set-LapsADPasswordExpirationTime
 
 ## SYNOPSIS
-
 Sets the Windows Local Administrator Password Solution (LAPS) password expiration timestamp on an
 Active Directory computer or domain controller object.
 
 ## SYNTAX
 
 ```
-Set-LapsADPasswordExpirationTime [-Credential <PSCredential>] -Identity <String[]> [-WhenEffective <DateTime>]
- [-Domain <String>] [-DomainController <String>] [<CommonParameters>]
+Set-LapsADPasswordExpirationTime [-Credential <PSCredential>] -Identity <String[]>
+ [-WhenEffective <DateTime>] [-Domain <String>] [-DomainController <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Set-LapsADPasswordExpirationTime** cmdlet is used by administrators to configure the LAPS
+The `Set-LapsADPasswordExpirationTime` cmdlet is used by administrators to configure the LAPS
 password expiration time on an Active Directory computer or domain controller object.
 
 > [!TIP]

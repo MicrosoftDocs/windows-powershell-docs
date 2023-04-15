@@ -12,20 +12,20 @@ title: Set-LapsADComputerSelfPermission
 # Set-LapsADComputerSelfPermission
 
 ## SYNOPSIS
-
 Configures permissions on an Active Directory Organizational Unit to enable computers in that OU to
 update their Windows Local Administrator Password Solution (LAPS) passwords.
 
 ## SYNTAX
 
 ```
-Set-LapsADComputerSelfPermission -Identity <String[]> [-Domain <String>] [-DomainController <String>]
- [-Credential <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-LapsADComputerSelfPermission -Identity <String[]> [-Domain <String>]
+ [-DomainController <String>] [-Credential <PSCredential>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Set-LapsADComputerSelfPermission** cmdlet is used by administrators to configure security
+The `Set-LapsADComputerSelfPermission` cmdlet is used by administrators to configure security
 permissions on an Active Directory Organizational Unit (OU) to allow computers in that OU to update
 their LAPS passwords.
 
@@ -101,8 +101,8 @@ Specifies which Active Directory Organizational Unit to update.
 This parameter accepts several different name formats which influence the criteria used in the
 resultant Active Directory search. The supported name formats are as follows:
 
-distinguishedName (begins with a "CN=")
-name (for all other inputs)
+- distinguishedName (begins with a "CN=")
+- name (for all other inputs)
 
 ```yaml
 Type: System.String[]

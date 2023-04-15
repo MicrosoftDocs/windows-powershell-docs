@@ -12,7 +12,6 @@ title: Find-LapsADExtendedRights
 # Find-LapsADExtendedRights
 
 ## SYNOPSIS
-
 Queries Active Directory to find principals that have been granted permission to read Windows Local
 Administrator Password Solution (LAPS) password attributes.
 
@@ -25,7 +24,7 @@ Find-LapsADExtendedRights [-Credential <PSCredential>] -Identity <String[]> [-Do
 
 ## DESCRIPTION
 
-The **Find-LapsADExtendedRights** cmdlet is used by administrators to query which principals have
+The `Find-LapsADExtendedRights` cmdlet is used by administrators to query which principals have
 been granted permissions to read the LAPS password attributes.
 
 ## EXAMPLES
@@ -100,8 +99,8 @@ Specifies which Active Directory Organizational Unit to query.
 This parameter accepts several different name formats which influence the criteria used in the
 resultant Active Directory search. The supported name formats are as follows:
 
-distinguishedName (begins with a "CN=")
-name (for all other inputs)
+- distinguishedName (begins with a "CN=")
+- name (for all other inputs)
 
 ```yaml
 Type: System.String[]

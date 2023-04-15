@@ -12,24 +12,23 @@ title: Get-LapsAADPassword
 # Get-LapsAADPassword
 
 ## SYNOPSIS
-
 Queries Azure Active Directory for the Windows Local Administrator Password Solution (LAPS)
 credentials on a specified Azure AD device.
 
 ## SYNTAX
 
-```s
+```
 Get-LapsAADPassword -DeviceIds <String[]> [-IncludePasswords] [-IncludeHistory] [-AsPlainText]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Get-LapsAADPassword** cmdlet allows administrators to retrieve LAPS passwords and password
+The `Get-LapsAADPassword` cmdlet allows administrators to retrieve LAPS passwords and password
 history for an Azure Active Directory-joined device. This is implemented by sending queries to
 Microsoft Graph over the deviceLocalCredentials collection.
 
-The **Get-LapsAADPassword** cmdlet supports two basic modes when querying LAPS passwords:
+The `Get-LapsAADPassword` cmdlet supports two basic modes when querying LAPS passwords:
 
 The first mode queries for non-sensitive metadata, for example time the password was backed up to
 Azure and the expected expiration time of a password. This mode requires that the client be granted
@@ -39,7 +38,7 @@ The second mode queries for all password information including both the metadata
 described above and the clear-text form of the password(s). This mode requires that the client be
 granted the Microsoft Graph `DeviceLocalCredential.Read.All` permission.
 
-The '-DeviceIds' parameter accepts either device names or device IDs, but the underlying Microsoft
+The **DeviceIds** parameter accepts either device names or device IDs, but the underlying Microsoft
 Graph queries only supports querying by device ID. To support this the cmdlet will map a device name
 input to its corresponding device ID by issuing a separate Microsoft Graph query. This extra query
 requires the `Device.Read.All` permission. If the target is a Microsoft Managed Desktop device, the
@@ -50,14 +49,14 @@ requires the `Device.Read.All` permission. If the target is a Microsoft Managed 
 > workaround is to input the device ID directly.
 
 > [!IMPORTANT]
-> The **Get-LapsAADPassword** cmdlet is implemented as a wrapper around the Microsoft Graph
-> PowerShell library which must be manually installed on the device before **Get-LapsAADPassword**
+> The `Get-LapsAADPassword` cmdlet is implemented as a wrapper around the Microsoft Graph
+> PowerShell library which must be manually installed on the device before `Get-LapsAADPassword`
 > can work. Additional configuration steps are required in your Azure Active Directory tenant to
 > enable authentication to Microsoft Graph and to grant the necessary Microsoft Graph permissions as
 > described above. See the following topic for more information:
 > [Get started with Windows LAPS and Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2233704)
 
-The -Verbose parameter may be used to get additional information about the cmdlet's operation.
+The **Verbose** may be used to get additional information about the cmdlet's operation.
 
 ## EXAMPLES
 
@@ -171,7 +170,7 @@ Accept wildcard characters: False
 
 ### -DeviceIds
 
-Specifies the device name or device ID  to query LAPS credentials.
+Specifies the device name or device ID to query LAPS credentials.
 
 ```yaml
 Type: System.String[]

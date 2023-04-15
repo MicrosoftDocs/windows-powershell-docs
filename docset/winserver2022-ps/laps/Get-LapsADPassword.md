@@ -12,7 +12,6 @@ title: Get-LapsADPassword
 # Get-LapsADPassword
 
 ## SYNOPSIS
-
 Queries Windows Local Administrator Password Solution (LAPS) credentials from Active Directory on a
 specified AD computer or domain controller object.
 
@@ -21,15 +20,15 @@ specified AD computer or domain controller object.
 ### NormalMode (Default)
 
 ```
-Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>] [-IncludeHistory]
- [-AsPlainText] [-Identity] <String[]> [<CommonParameters>]
+Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>]
+ [-IncludeHistory] [-AsPlainText] [-Identity] <String[]> [<CommonParameters>]
 ```
 
 ### DomainMode
 
 ```
-Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>] [-IncludeHistory]
- [-AsPlainText] [-Identity] <String[]> -Domain <String> [<CommonParameters>]
+Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>]
+ [-IncludeHistory] [-AsPlainText] [-Identity] <String[]> -Domain <String> [<CommonParameters>]
 ```
 
 ### DomainControllerMode
@@ -42,33 +41,35 @@ Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCreden
 ### SnapshotBrowserMode
 
 ```
-Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>] [-IncludeHistory]
- [-AsPlainText] -Port <Int32> [-Identity] <String[]> [-DomainController <String>] [<CommonParameters>]
+Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>]
+ [-IncludeHistory] [-AsPlainText] -Port <Int32> [-Identity] <String[]> [-DomainController <String>]
+ [<CommonParameters>]
 ```
 
 ### RecoveryMode
 
 ```
-Get-LapsADPassword [-IncludeHistory] [-AsPlainText] [-RecoveryMode] [-Identity] <String[]> [<CommonParameters>]
+Get-LapsADPassword [-IncludeHistory] [-AsPlainText] [-RecoveryMode] [-Identity] <String[]>
+ [<CommonParameters>]
 ```
 
 ### SnapshotBrowserRecoveryMode
 
 ```
-Get-LapsADPassword [-IncludeHistory] [-AsPlainText] [-RecoveryMode] -Port <Int32> [-Identity] <String[]>
- [<CommonParameters>]
+Get-LapsADPassword [-IncludeHistory] [-AsPlainText] [-RecoveryMode] -Port <Int32>
+ [-Identity] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Get-LapsADPassword** cmdlet allows administrators to retrieve LAPS passwords and password
+The `Get-LapsADPassword` cmdlet allows administrators to retrieve LAPS passwords and password
 history for an Active Directory computer or domain controller object. Depending on policy
 configuration, LAPS passwords may be stored in either clear-text form or encrypted form. The
-**Get-LapsADPassword** cmdlet will automatically perform decryption of encrypted passwords.
+`Get-LapsADPassword` cmdlet will automatically perform decryption of encrypted passwords.
 
-The **Get-LapsADPassword** cmdlet may also be used to connected to a mounted Active Directory snapshot.
+The `Get-LapsADPassword` cmdlet may also be used to connected to a mounted Active Directory snapshot.
 
-The -Verbose parameter may be used to get additional information about the cmdlet's operation.
+The **Verbose** may be used to get additional information about the cmdlet's operation.
 
 ## EXAMPLES
 

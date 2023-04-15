@@ -12,7 +12,6 @@ title: Set-LapsADAuditing
 # Set-LapsADAuditing
 
 ## SYNOPSIS
-
 Configures an Active Directory Organizational Unit to enable auditing on the Windows Local
 Administrator Password Solution (LAPS) password schema attributes.
 
@@ -140,8 +139,8 @@ Specifies which Active Directory Organizational Unit to update.
 This parameter accepts several different name formats which influence the criteria used in the
 resultant Active Directory search. The supported name formats are as follows:
 
-distinguishedName (begins with a "CN=")
-name (for all other inputs)
+- distinguishedName (begins with a "CN=")
+- name (for all other inputs)
 
 ```yaml
 Type: System.String[]

@@ -12,23 +12,23 @@ title: Get-LapsDiagnostics
 # Get-LapsDiagnostics
 
 ## SYNOPSIS
-
 Collects Windows Local Administrator Password Solution (LAPS) logs and tracing from the local
 machine.
 
 ## SYNTAX
 
 ```
-Get-LapsDiagnostics [[-OutputFolder] <String>] [-CollectNetworkTrace] [-ResetPassword] [<CommonParameters>]
+Get-LapsDiagnostics [[-OutputFolder] <String>] [-CollectNetworkTrace] [-ResetPassword]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Get-LapsDiagnostics** cmdlet collects LAPS logs and tracing from the local machine, and copies
-them into a .zip file. This cmdlet is primarily intended for support and testing scenarios but of
-course may be used at any time. The name of the resultant .zip file includes the machine name and
-current timestamp, and by default is written under the %TEMP%\LapsDiagnostics folder. The output
-folder may be customized using the -OutputFolder parameter.
+The `Get-LapsDiagnostics` cmdlet collects LAPS logs and tracing from the local machine, and copies
+them into a `.zip` file. This cmdlet is primarily intended for support and testing scenarios but of
+course may be used at any time. The name of the resultant `.zip` file includes the machine name and
+current timestamp, and by default is written under the `$env:TEMP\LapsDiagnostics` folder. The
+output folder may be customized using the **OutputFolder**.
 
 ## EXAMPLES
 
@@ -82,7 +82,7 @@ tracing.
 
 ### -CollectNetworkTrace
 
-Specifies that network tracing should also be collected and included in the resultant .zip file.
+Specifies that network tracing should also be collected and included in the resultant `.zip` file.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 ### -OutputFolder
 
-Specifies that the resultant .zip file should be placed under the specified folder.
+Specifies that the resultant `.zip` file should be placed under the specified folder.
 
 ```yaml
 Type: System.String
@@ -116,10 +116,10 @@ Accept wildcard characters: False
 
 Specifies that logs and tracing should be collected across a forced password reset for the currently
 managed local account. In this mode the cmdlet collects tracing across a call to the
-**Reset-LapsPassword** cmdlet.
+`Reset-LapsPassword` cmdlet.
 
 If this parameter is not specified, the cmdlet collects tracing across a call to the
-**Invoke-LapsProcessingCycle** cmdlet.
+`Invoke-LapsProcessingCycle` cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

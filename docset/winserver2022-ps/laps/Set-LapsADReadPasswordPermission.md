@@ -12,7 +12,6 @@ title: Set-LapsADReadPasswordPermission
 # Set-LapsADReadPasswordPermission
 
 ## SYNOPSIS
-
 Configures security on an Active Directory Organizational Unit to grant specific users or groups
 permission to query Windows Local Administrator Password Solution (LAPS) passwords.
 
@@ -26,11 +25,11 @@ Set-LapsADReadPasswordPermission [-Credential <PSCredential>] -Identity <String[
 
 ## DESCRIPTION
 
-The **Set-LapsADReadPasswordPermission** cmdlet is used by administrators to configure security
+The `Set-LapsADReadPasswordPermission` cmdlet is used by administrators to configure security
 permissions on an Active Directory Organizational Unit (OU) to allow specific users or groups to
 query LAPS passwords on computers in that OU. Users and groups must be fully qualified with both
-domain and user name components; the only exception to this is when the specified name resolves to a
-built-in principal (for example "Domain Admins").
+domain and user name components. The only exception to this is when the specified name resolves to a
+built-in principal, such as `Domain Admins`.
 
 ## EXAMPLES
 
@@ -69,8 +68,8 @@ Name       DistinguishedName
 LapsTestOU OU=LapsTestOU,DC=laps,DC=com
 ```
 
-This example shows how to run the cmdlet specifying two fully qualified user names (in different
-formats) as input.
+This example shows how to run the cmdlet specifying two fully qualified user names in different
+formats.
 
 ### Example 4
 
@@ -87,7 +86,7 @@ At line:1 char:1
 
 This example shows a failure caused by specifying an isolated name that did not resolve to a
 well-known or built-in account. The fix for this error would be to add a domain name qualifier to
-the input name, for example "LapsAdministratorsGroup@laps.com".
+the input name, for example `LapsAdministratorsGroup@laps.com`.
 
 ## PARAMETERS
 
@@ -165,8 +164,8 @@ Specifies which Active Directory Organizational Unit to update.
 This parameter accepts several different name formats which influence the criteria used in the
 resultant Active Directory search. The supported name formats are as follows:
 
-distinguishedName (begins with a "CN=")
-name (for all other inputs)
+- distinguishedName (begins with a "CN=")
+- name (for all other inputs)
 
 ```yaml
 Type: System.String[]

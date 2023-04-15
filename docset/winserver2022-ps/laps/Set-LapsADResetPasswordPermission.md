@@ -18,7 +18,7 @@ permission to set the Windows Local Administrator Password Solution (LAPS) passw
 
 ## SYNTAX
 
-```powershell
+```
 Set-LapsADResetPasswordPermission [-Credential <PSCredential>] -Identity <String[]>
  -AllowedPrincipals <String[]> [-Domain <String>] [-DomainController <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]

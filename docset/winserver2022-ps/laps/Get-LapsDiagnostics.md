@@ -18,7 +18,7 @@ machine.
 
 ## SYNTAX
 
-```powershell
+```
 Get-LapsDiagnostics [[-OutputFolder] <String>] [-CollectNetworkTrace] [-ResetPassword] [<CommonParameters>]
 ```
 

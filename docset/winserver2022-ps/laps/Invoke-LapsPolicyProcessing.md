@@ -17,7 +17,7 @@ Causes Windows Local Administrator Password Solution (LAPS) to process the curre
 
 ## SYNTAX
 
-```powershell
+```
 Invoke-LapsPolicyProcessing [<CommonParameters>]
 ```
 

@@ -20,41 +20,41 @@ specified AD computer or domain controller object.
 
 ### NormalMode (Default)
 
-```powershell
+```
 Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>] [-IncludeHistory]
  [-AsPlainText] [-Identity] <String[]> [<CommonParameters>]
 ```
 
 ### DomainMode
 
-```powershell
+```
 Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>] [-IncludeHistory]
  [-AsPlainText] [-Identity] <String[]> -Domain <String> [<CommonParameters>]
 ```
 
 ### DomainControllerMode
 
-```powershell
+```
 Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>] [-IncludeHistory]
  [-AsPlainText] [-Identity] <String[]> -DomainController <String> [<CommonParameters>]
 ```
 
 ### SnapshotBrowserMode
 
-```powershell
+```
 Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>] [-IncludeHistory]
  [-AsPlainText] -Port <Int32> [-Identity] <String[]> [-DomainController <String>] [<CommonParameters>]
 ```
 
 ### RecoveryMode
 
-```powershell
+```
 Get-LapsADPassword [-IncludeHistory] [-AsPlainText] [-RecoveryMode] [-Identity] <String[]> [<CommonParameters>]
 ```
 
 ### SnapshotBrowserRecoveryMode
 
-```powershell
+```
 Get-LapsADPassword [-IncludeHistory] [-AsPlainText] [-RecoveryMode] -Port <Int32> [-Identity] <String[]>
  [<CommonParameters>]
 ```
@@ -141,7 +141,7 @@ AuthorizedDecryptor : LAPS\LAPS Admins
 
 This example demonstrates querying the current LAPS password for the 'lapsClient2' computer, in a
 specific Active Directory domain ('laps.com'), requesting that the password be displayed in
-clear-text form. The password was stored in Active Directory in encrypted form and was successfully  
+clear-text form. The password was stored in Active Directory in encrypted form and was successfully
 decrypted.
 
 Note that ExpirationTimestamp will always be empty for any older LAPS passwords returned.
@@ -164,7 +164,7 @@ AuthorizedDecryptor : LAPS\Domain Admins
 
 This example demonstrates querying the current LAPS password for the 'lapsDC.laps.com' domain
 controller, requesting that the password be displayed in clear-text form. The password was stored in
-Active Directory in encrypted form and was successfully decrypted.  
+Active Directory in encrypted form and was successfully decrypted.
 
 ### Example 5
 

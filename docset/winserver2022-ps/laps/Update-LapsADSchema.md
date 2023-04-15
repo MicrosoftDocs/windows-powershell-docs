@@ -18,7 +18,7 @@ schema attributes.
 
 ## SYNTAX
 
-```powershell
+```
 Update-LapsADSchema [-Credential <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

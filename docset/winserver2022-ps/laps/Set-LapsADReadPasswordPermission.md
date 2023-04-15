@@ -18,7 +18,7 @@ permission to query Windows Local Administrator Password Solution (LAPS) passwor
 
 ## SYNTAX
 
-```powershell
+```
 Set-LapsADReadPasswordPermission [-Credential <PSCredential>] -Identity <String[]>
  -AllowedPrincipals <String[]> [-Domain <String>] [-DomainController <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]

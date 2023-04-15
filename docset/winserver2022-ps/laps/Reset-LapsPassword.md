@@ -18,7 +18,7 @@ the currently managed local account.
 
 ## SYNTAX
 
-```powershell
+```
 Reset-LapsPassword [<CommonParameters>]
 ```
 

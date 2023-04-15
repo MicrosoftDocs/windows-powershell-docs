@@ -18,7 +18,7 @@ Active Directory computer or domain controller object.
 
 ## SYNTAX
 
-```powershell
+```
 Set-LapsADPasswordExpirationTime [-Credential <PSCredential>] -Identity <String[]> [-WhenEffective <DateTime>]
  [-Domain <String>] [-DomainController <String>] [<CommonParameters>]
 ```

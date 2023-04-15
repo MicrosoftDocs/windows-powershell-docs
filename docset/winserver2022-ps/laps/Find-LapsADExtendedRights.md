@@ -18,7 +18,7 @@ Administrator Password Solution (LAPS) password attributes.
 
 ## SYNTAX
 
-```powershell
+```
 Find-LapsADExtendedRights [-Credential <PSCredential>] -Identity <String[]> [-Domain <String>]
  [-DomainController <String>] [-IncludeComputers] [<CommonParameters>]
 ```

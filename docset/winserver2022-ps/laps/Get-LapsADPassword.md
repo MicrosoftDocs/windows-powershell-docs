@@ -76,8 +76,10 @@ The **Verbose** may be used to get additional information about the cmdlet's ope
 ### Example 1
 
 ```powershell
-PS C:\> Get-LapsADPassword lapsClient
+Get-LapsADPassword lapsClient
+```
 
+```Output
 ComputerName        : LAPSCLIENT
 DistinguishedName   : CN=LAPSCLIENT,OU=LapsTestOU,DC=laps,DC=com
 Account             : Administrator
@@ -96,7 +98,7 @@ decryption. The password was returned wrapped in a SecureString object.
 ### Example 2
 
 ```powershell
-PS C:\> Get-LapsADPassword -Identity lapsClient -DomainController lapsDC -AsPlainText
+Get-LapsADPassword -Identity lapsClient -DomainController lapsDC -AsPlainText
 
 ComputerName        : LAPSCLIENT
 DistinguishedName   : CN=LAPSCLIENT,OU=LapsTestOU,DC=laps,DC=com
@@ -117,7 +119,7 @@ The password was returned in clear-text form.
 ### Example 3
 
 ```powershell
-PS C:\> Get-LapsADPassword -Identity $lapsClient2 -Domain laps.com -AsPlainText -IncludeHistory
+Get-LapsADPassword -Identity $lapsClient2 -Domain laps.com -AsPlainText -IncludeHistory
 
 ComputerName        : LAPSCLIENT2
 DistinguishedName   : CN=LAPSCLIENT2,OU=LapsTestEncryptedOU,DC=laps,DC=com
@@ -150,7 +152,7 @@ Note that ExpirationTimestamp will always be empty for any older LAPS passwords 
 ### Example 4
 
 ```powershell
-PS C:\> Get-LapsADPassword -Identity lapsDC.laps.com -AsPlainText
+Get-LapsADPassword -Identity lapsDC.laps.com -AsPlainText
 
 ComputerName        : LAPSDC
 DistinguishedName   : CN=LAPSDC,OU=Domain Controllers,DC=laps,DC=com
@@ -170,7 +172,7 @@ Active Directory in encrypted form and was successfully decrypted.
 ### Example 5
 
 ```powershell
-PS C:\> Get-LapsADPassword lapsClient2
+Get-LapsADPassword lapsClient2
 
 ComputerName        : LAPSDC
 DistinguishedName   : CN=LAPSDC,OU=Domain Controllers,DC=laps,DC=com
@@ -189,7 +191,7 @@ the user does not have permissions to decrypt the LAPS DSRM password.
 ### Example 6
 
 ```powershell
-PS C:\> Get-LapsADPassword lapsLegacyClient -AsPlainText
+Get-LapsADPassword lapsLegacyClient -AsPlainText
 
 ComputerName        : LAPSLEGACYCLIENT
 DistinguishedName   : CN=LAPSLEGACYCLIENT,OU=LegacyLapsOU,DC=laps,DC=com
@@ -209,7 +211,7 @@ passwords, the Account and PasswordUpdateTime fields will always be unavailable.
 ### Example 7
 
 ```powershell
-PS C:\> Get-LapsADPassword -Identity lapsClient -Port 50000 -AsPlainText
+Get-LapsADPassword -Identity lapsClient -Port 50000 -AsPlainText
 
 ComputerName        : LAPSCLIENT
 DistinguishedName   : CN=LAPSCLIENT,OU=LapsTestOU,DC=laps,DC=com
@@ -427,4 +429,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Windows LAPS Overview](https://go.microsoft.com/fwlink/?linkid=2233901)
+
 [Get started with Windows LAPS and Windows Server Active Directory](https://go.microsoft.com/fwlink/?linkid=2233705)

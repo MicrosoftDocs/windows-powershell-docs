@@ -36,8 +36,10 @@ specified name resolves to a built-in principal (for example "Domain Admins").
 ### Example 1
 
 ```powershell
-PS C:\> Set-LapsADResetPasswordPermission -Identity LapsTestOU -AllowedPrincipals "Domain Admins"
+Set-LapsADResetPasswordPermission -Identity LapsTestOU -AllowedPrincipals "Domain Admins"
+```
 
+```Output
 Name       DistinguishedName
 ----       -----------------
 LapsTestOU OU=LapsTestOU,DC=laps,DC=com
@@ -49,8 +51,10 @@ well-known user or group.
 ### Example 2
 
 ```powershell
-PS C:\> Set-LapsADResetPasswordPermission -Identity LapsTestOU -AllowedPrincipals @("S-1-5-21-2889755270-1324585639-743026605-1215")
+Set-LapsADResetPasswordPermission -Identity LapsTestOU -AllowedPrincipals @("S-1-5-21-2889755270-1324585639-743026605-1215")
+```
 
+```Output
 Name       DistinguishedName
 ----       -----------------
 LapsTestOU OU=LapsTestOU,DC=laps,DC=com
@@ -61,8 +65,10 @@ This example shows how to run the cmdlet specifying a user SID as input.
 ### Example 3
 
 ```powershell
-PS C:\> Set-LapsADResetPasswordPermission -Identity 'OU=LapsTestOU,DC=laps,DC=com' -AllowedPrincipals @("laps.com\LapsAdmin1", "LapsAdmin2@laps.com")
+Set-LapsADResetPasswordPermission -Identity 'OU=LapsTestOU,DC=laps,DC=com' -AllowedPrincipals @("laps.com\LapsAdmin1", "LapsAdmin2@laps.com")
+```
 
+```Output
 Name       DistinguishedName
 ----       -----------------
 LapsTestOU OU=LapsTestOU,DC=laps,DC=com
@@ -74,9 +80,13 @@ formats) as input.
 ### Example 4
 
 ```powershell
-PS C:\> Set-LapsADResetPasswordPermission -Identity LapsTestOU -AllowedPrincipals @("LapsAdministratorsGroup")
-Set-LapsADReadPasswordPermission : The 'LapsAdministratorsGroup' account appears to be an isolated name but is not a well-known name. Please use a
-fully qualified name instead, such as "LapsAdministratorsGroup@contoso.com" or "contoso\LapsAdministratorsGroup"
+Set-LapsADResetPasswordPermission -Identity LapsTestOU -AllowedPrincipals @("LapsAdministratorsGroup")
+```
+
+```Output
+Set-LapsADReadPasswordPermission : The 'LapsAdministratorsGroup' account appears to be an isolated
+name but is not a well-known name. Please use a fully qualified name instead, such as
+"LapsAdministratorsGroup@contoso.com" or "contoso\LapsAdministratorsGroup"
 At line:1 char:1
 + Set-LapsADReadPasswordPermission -Identity LapsTestOU -AllowedPrincip ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

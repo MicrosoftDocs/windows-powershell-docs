@@ -63,9 +63,12 @@ The **Verbose** may be used to get additional information about the cmdlet's ope
 ### Example 1
 
 ```powershell
-PS C:\> Connect-MgGraph -TenantId b20f5886-bddf-43bb-aee6-dda0c87c5fa2 -ClientId
-9fa98e34-277f-47fa-9847-e36bdf6bca1f Welcome To Microsoft Graph! PS C:\> Get-LapsAADPassword
--DeviceIds LAPSAAD
+Connect-MgGraph -TenantId b20f5886-bddf-43bb-aee6-dda0c87c5fa2 -ClientId 9fa98e34-277f-47fa-9847-e36bdf6bca1f
+Get-LapsAADPassword -DeviceIds LAPSAAD
+```
+
+```Output
+Welcome To Microsoft Graph!
 
 DeviceName DeviceId                             PasswordExpirationTime
 ---------- --------                             ----------------------
@@ -78,9 +81,9 @@ is specified by device name.
 ### Example 2
 
 ```powershell
-PS C:\> Connect-MgGraph -TenantId b20f5886-bddf-43bb-aee6-dda0c87c5fa2 -ClientId 9fa98e34-277f-47fa-9847-e36bdf6bca1f
+Connect-MgGraph -TenantId b20f5886-bddf-43bb-aee6-dda0c87c5fa2 -ClientId 9fa98e34-277f-47fa-9847-e36bdf6bca1f
 Welcome To Microsoft Graph!
-PS C:\> Get-LapsAADPassword -DeviceIds dfc6d5f0-225a-4b46-adcf-73a349a31e70 -IncludePasswords
+Get-LapsAADPassword -DeviceIds dfc6d5f0-225a-4b46-adcf-73a349a31e70 -IncludePasswords
 
 DeviceName             : LAPSAAD
 DeviceId               : dfc6d5f0-225a-4b46-adcf-73a349a31e70
@@ -96,9 +99,9 @@ specified by device ID.
 ### Example 3
 
 ```powershell
-PS C:\> Connect-MgGraph -TenantId b20f5886-bddf-43bb-aee6-dda0c87c5fa2 -ClientId 9fa98e34-277f-47fa-9847-e36bdf6bca1f
+Connect-MgGraph -TenantId b20f5886-bddf-43bb-aee6-dda0c87c5fa2 -ClientId 9fa98e34-277f-47fa-9847-e36bdf6bca1f
 Welcome To Microsoft Graph!
-PS C:\> Get-LapsAADPassword -DeviceIds dfc6d5f0-225a-4b46-adcf-73a349a31e70 -IncludePasswords -AsPlainText
+Get-LapsAADPassword -DeviceIds dfc6d5f0-225a-4b46-adcf-73a349a31e70 -IncludePasswords -AsPlainText
 
 DeviceName             : LAPSAAD
 DeviceId               : dfc6d5f0-225a-4b46-adcf-73a349a31e70
@@ -114,9 +117,9 @@ specified by device ID, and displaying the password in clear-text form.
 ### Example 4
 
 ```powershell
-PS C:\> Connect-MgGraph -TenantId b20f5886-bddf-43bb-aee6-dda0c87c5fa2 -ClientId 9fa98e34-277f-47fa-9847-e36bdf6bca1f
+Connect-MgGraph -TenantId b20f5886-bddf-43bb-aee6-dda0c87c5fa2 -ClientId 9fa98e34-277f-47fa-9847-e36bdf6bca1f
 Welcome To Microsoft Graph!
-PS C:\> Get-LapsAADPassword -DeviceIds lapsAAD -IncludePasswords -AsPlainText -IncludeHistory
+Get-LapsAADPassword -DeviceIds lapsAAD -IncludePasswords -AsPlainText -IncludeHistory
 
 DeviceName             : LAPSAAD
 DeviceId               : dfc6d5f0-225a-4b46-adcf-73a349a31e70
@@ -236,4 +239,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Windows LAPS Overview](https://go.microsoft.com/fwlink/?linkid=2233901)
+
 [Get started with Windows LAPS and Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2233704)

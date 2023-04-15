@@ -31,7 +31,7 @@ Set-LapsADAuditing [-Credential <PSCredential>] -Identity <String[]> -AuditedPri
 ### Example 1
 
 ```powershell
-PS C:\> Set-LapsADAuditing -Identity LapsTestOU -AuditedPrincipals "laps.com\LapsAdmin" -AuditType Success
+Set-LapsADAuditing -Identity LapsTestOU -AuditedPrincipals "laps.com\LapsAdmin" -AuditType Success
 OU=LapsTestOU,DC=laps,DC=com
 ```
 
@@ -40,7 +40,7 @@ This example demonstrates configuring Success audits on an OU.
 ### Example 2
 
 ```powershell
-PS C:\> Set-LapsADAuditing -Identity LapsTestOU -AuditedPrincipals "laps.com\LapsAdminsGroup" -AuditType Failure
+Set-LapsADAuditing -Identity LapsTestOU -AuditedPrincipals "laps.com\LapsAdminsGroup" -AuditType Failure
 OU=LapsTestOU,DC=laps,DC=com
 ```
 

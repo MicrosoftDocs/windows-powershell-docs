@@ -34,8 +34,10 @@ their LAPS passwords.
 ### Example 1
 
 ```powershell
-PS C:\> Set-LapsADComputerSelfPermission -Identity LapsTestOU
+Set-LapsADComputerSelfPermission -Identity LapsTestOU
+```
 
+```Output
 Name       DistinguishedName
 ----       -----------------
 LapsTestOU OU=LapsTestOU,DC=laps,DC=com

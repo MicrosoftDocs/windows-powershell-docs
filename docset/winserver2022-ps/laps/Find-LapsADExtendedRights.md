@@ -32,8 +32,10 @@ been granted permissions to read the LAPS password attributes.
 ### Example 1
 
 ```powershell
-PS C:\> Find-LapsADExtendedRights -Identity LapsTestOU
+Find-LapsADExtendedRights -Identity LapsTestOU
+```
 
+```Output
 ObjectDN                     ExtendedRightHolders
 --------                     --------------------
 OU=LapsTestOU,DC=laps,DC=com {NT AUTHORITY\SYSTEM, LAPS\Domain Admins, LAPS\LapsAdmins}

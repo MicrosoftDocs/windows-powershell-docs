@@ -37,8 +37,10 @@ password expiration time on an Active Directory computer or domain controller ob
 ### Example 1
 
 ```powershell
-PS C:\> Set-LapsADPasswordExpirationTime -Identity lapsClient
+Set-LapsADPasswordExpirationTime -Identity lapsClient
+```
 
+```Output
 DistinguishedName                           Status
 -----------------                           ------
 CN=LAPSCLIENT,OU=LapsTestOU,DC=laps,DC=com  PasswordReset
@@ -50,8 +52,10 @@ expiring the password immediately).
 ### Example 2
 
 ```powershell
-PS C:\> Set-LapsADPasswordExpirationTime -Identity lapsFe -WhenEffective (Get-Date -Date "07/04/2023 13:00:00")
+Set-LapsADPasswordExpirationTime -Identity lapsClient -WhenEffective (Get-Date -Date "07/04/2023 13:00:00")
+```
 
+```Output
 DistinguishedName                           Status
 -----------------                           ------
 CN=LAPSCLIENT,OU=LapsTestOU,DC=laps,DC=com  PasswordReset
@@ -62,8 +66,10 @@ This examples show setting the LAPS password expiration time to a specific date.
 ### Example 3
 
 ```powershell
-PS C:\> Set-LapsADPasswordExpirationTime -Identity lapsFe -WhenEffective (DateTime::Now.AddDays(1))
+Set-LapsADPasswordExpirationTime -Identity lapsClient -WhenEffective (DateTime::Now.AddDays(1))
+```
 
+```Output
 DistinguishedName                           Status
 -----------------                           ------
 CN=LAPSCLIENT,OU=LapsTestOU,DC=laps,DC=com  PasswordReset
@@ -130,10 +136,10 @@ expiration time on.
 This parameter accepts several different name formats which influence the criteria used when
 searching Active Directory for the target device. The supported name formats are as follows:
 
-distinguishedName (begins with a "CN=")
-samAccountName (begins with a '$")
-dnsHostName (contains at least one '.' character)
-name (for all other inputs)
+- distinguishedName (begins with a "CN=")
+- samAccountName (begins with a `$`)
+- dnsHostName (contains at least one `.` character)
+- name (for all other inputs)
 
 ```yaml
 Type: System.String[]

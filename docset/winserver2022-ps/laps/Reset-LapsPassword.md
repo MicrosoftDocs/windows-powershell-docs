@@ -43,10 +43,10 @@ of the operation.
 ### Example 1
 
 ```powershell
-PS C:\> Reset-LapsPassword
+Reset-LapsPassword
 ```
 
-This example shows how to run the Reset-LapsPassword cmdlet.
+This example forces immediate rotation of the managed local account.
 
 ## PARAMETERS
 

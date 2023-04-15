@@ -36,10 +36,10 @@ of the operation.
 ### Example 1
 
 ```powershell
-PS C:\> Invoke-LapsPolicyProcessing
+Invoke-LapsPolicyProcessing
 ```
 
-This example shows how to run the Invoke-LapsPolicyProcessing cmdlet.
+This example starts the processing of the configured LAPS policy.
 
 ## PARAMETERS
 

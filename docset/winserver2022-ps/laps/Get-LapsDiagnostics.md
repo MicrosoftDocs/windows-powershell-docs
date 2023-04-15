@@ -35,7 +35,10 @@ output folder may be customized using the **OutputFolder**.
 ### Example 1
 
 ```powershell
-PS C:\> Get-LapsDiagnostics
+Get-LapsDiagnostics
+```
+
+```Output
 Get-LapsDiagnostics: all data for this run was written to the following zip file:
 
 C:\Users\ADMINI~1\AppData\Local\Temp\LapsDiagnostics\LapsDiagnostics_LAPSCLIENT_2023041004_072649.zip
@@ -46,7 +49,10 @@ This example demonstrates basic collection of LAPS diagnostic info using all def
 ### Example 2
 
 ```powershell
-PS C:\> Get-LapsDiagnostics -OutputFolder c:\LapsDiagFolder
+Get-LapsDiagnostics -OutputFolder c:\LapsDiagFolder
+```
+
+```Output
 Get-LapsDiagnostics: all data for this run was written to the following zip file:
 
 c:\LapsDiagFolder\LapsDiagnostics_LAPSCLIENT_2023041004_072702.zip
@@ -57,7 +63,10 @@ This example demonstrates basic collection of LAPS diagnostic info to a specific
 ### Example 3
 
 ```powershell
-PS C:\> Get-LapsDiagnostics -OutputFolder c:\LapsDiagFolder -ResetPassword
+Get-LapsDiagnostics -OutputFolder c:\LapsDiagFolder -ResetPassword
+```
+
+```Output
 Get-LapsDiagnostics: all data for this run was written to the following zip file:
 
 c:\LapsDiagFolder\LapsDiagnostics_LAPSCLIENT_2023041004_072709.zip
@@ -69,7 +78,10 @@ operation to a specific output folder.
 ### Example 4
 
 ```powershell
-PS C:\> Get-LapsDiagnostics -CollectNetworkTrace
+Get-LapsDiagnostics -CollectNetworkTrace
+```
+
+```Output
 Get-LapsDiagnostics: all data for this run was written to the following zip file:
 
 C:\Users\ADMINI~1\AppData\Local\Temp\LapsDiagnostics\LapsDiagnostics_LAPSCLIENT_2023041004_072719.zip

@@ -23,7 +23,7 @@ Update-LapsADSchema [-Credential <PSCredential>] [-WhatIf] [-Confirm] [<CommonPa
 
 ## DESCRIPTION
 
-The `Update-LapsADSchema` cmdlet extends the Active Directory schema with the Windows Local
+The `Update-LapsADSchema` cmdlet extends the Active Directory (AD) schema with the Windows Local
 Administrator Password Solution (LAPS) schema attributes. The specific nature of the schema
 extensions is documented in
 [Windows LAPS schema extensions reference](https://go.microsoft.com/fwlink/?linkid=2233804).
@@ -35,14 +35,16 @@ The **Verbose** may be used to get additional information about the cmdlet's ope
 ### Example 1
 
 ```powershell
-PS C:\> Update-LapsADSchema
+Update-LapsADSchema
+```
 
+```Output
 The 'ms-LAPS-Password' schema attribute needs to be added to the AD schema.
 Do you want to proceed?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): A
 ```
 
-This example shows how to run the Update-LapsADSchema cmdlet.
+This example extends the AD schema to add the LAPS attributes.
 
 ## PARAMETERS
 
@@ -115,4 +117,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Windows LAPS Overview](https://go.microsoft.com/fwlink/?linkid=2233901)
+
 [Windows LAPS schema extensions reference](https://go.microsoft.com/fwlink/?linkid=2233804)

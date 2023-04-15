@@ -29,8 +29,8 @@ password expiration time on an Active Directory computer or domain controller ob
 
 > [!TIP]
 > Running this cmdlet sets the LAPS password expiration time on the Active Directory computer or
-> domain controller object, but the new expiration time will not be honored until the next time the
-> target device executes a LAPS policy processing cycle.
+> domain controller object, but the new expiration time isn't honored until the next time the target
+> device executes a LAPS policy processing cycle.
 
 ## EXAMPLES
 
@@ -46,8 +46,8 @@ DistinguishedName                           Status
 CN=LAPSCLIENT,OU=LapsTestOU,DC=laps,DC=com  PasswordReset
 ```
 
-This examples show setting the LAPS password expiration time to the current time (or in other words,
-expiring the password immediately).
+This example shows setting the LAPS password expiration time to the current time, which expires the
+password immediately.
 
 ### Example 2
 
@@ -81,8 +81,8 @@ This examples show setting the LAPS password expiration time to one day in the f
 
 ### -Credential
 
-Specifies the credentials to use when updating Active Directory. If not specified the current user's
-credentials will be used.
+Specifies the credentials to use when updating Active Directory. If not specified, the current
+user's credentials are used.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -133,10 +133,10 @@ Accept wildcard characters: False
 Specifies which Active Directory computer or domain controller object to set the LAPS password
 expiration time on.
 
-This parameter accepts several different name formats which influence the criteria used when
+This parameter accepts several different name formats that influence the criteria used when
 searching Active Directory for the target device. The supported name formats are as follows:
 
-- distinguishedName (begins with a "CN=")
+- distinguishedName (begins with a `CN=`)
 - samAccountName (begins with a `$`)
 - dnsHostName (contains at least one `.` character)
 - name (for all other inputs)
@@ -155,8 +155,8 @@ Accept wildcard characters: False
 
 ### -WhenEffective
 
-Specifies the new LAPS password expiration time. If not specified the current time will be used, in
-other words the password is immediately expired.
+Specifies the new LAPS password expiration time. If not specified, the current time is used, which
+expires the password is immediately.
 
 ```yaml
 Type: System.DateTime

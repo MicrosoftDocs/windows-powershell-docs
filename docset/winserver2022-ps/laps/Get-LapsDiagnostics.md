@@ -130,7 +130,7 @@ Specifies that logs and tracing should be collected across a forced password res
 managed local account. In this mode the cmdlet collects tracing across a call to the
 `Reset-LapsPassword` cmdlet.
 
-If this parameter is not specified, the cmdlet collects tracing across a call to the
+If this parameter isn't specified, the cmdlet collects tracing across a call to the
 `Invoke-LapsProcessingCycle` cmdlet.
 
 ```yaml

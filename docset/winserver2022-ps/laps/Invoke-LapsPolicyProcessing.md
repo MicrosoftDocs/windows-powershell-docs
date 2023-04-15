@@ -26,7 +26,7 @@ Invoke-LapsPolicyProcessing [<CommonParameters>]
 The `Invoke-LapsPolicyProcessing` cmdlet tells Windows Local Administrator Password Solution
 (LAPS) to process the currently configured LAPS policy.
 
-The cmdlet does not return detailed information about the results of the operation. See
+The cmdlet doesn't return detailed information about the results of the operation. See
 [Use Windows LAPS event logs](https://go.microsoft.com/fwlink/?linkid=2234103) for more
 information on querying the resultant event log entries to get specific information on the outcome
 of the operation.

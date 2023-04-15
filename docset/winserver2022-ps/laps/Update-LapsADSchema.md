@@ -50,8 +50,8 @@ This example extends the AD schema to add the LAPS attributes.
 
 ### -Credential
 
-Specifies a set of credentials to use when extending the schema. If not specified the current user's
-credentials will be used.
+Specifies a set of credentials to use when extending the schema. If not specified, the current
+user's credentials are used.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

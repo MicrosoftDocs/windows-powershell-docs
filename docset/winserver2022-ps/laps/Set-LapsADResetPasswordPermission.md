@@ -12,8 +12,9 @@ title: Set-LapsADResetPasswordPermission
 # Set-LapsADResetPasswordPermission
 
 ## SYNOPSIS
-Configures security on an Active Directory Organizational Unit to grant specific users or groups
-permission to set the Windows Local Administrator Password Solution (LAPS) password expiration time.
+Configures security on an Active Directory (AD) Organizational Unit (OU) to grant specific users or
+groups permission to set the Windows Local Administrator Password Solution (LAPS) password
+expiration time.
 
 ## SYNTAX
 
@@ -26,10 +27,10 @@ Set-LapsADResetPasswordPermission [-Credential <PSCredential>] -Identity <String
 ## DESCRIPTION
 
 The `Set-LapsADResetPasswordPermission` cmdlet is used by administrators to configure security
-permissions on an Active Directory Organizational Unit (OU) to allow specific users or groups to
-reset the LAPS password expiration time on computers in that OU. Users and groups must be fully
-qualified with both domain and user name components; the only exception to this is when the
-specified name resolves to a built-in principal (for example "Domain Admins").
+permissions on an OU to allow specific users or groups to reset the LAPS password expiration time on
+computers in that OU. Users and groups must be fully qualified with both domain and user name
+components. The only exception to this is when the specified name resolves to a built-in principal,
+such as `Domain Admins`.
 
 ## EXAMPLES
 
@@ -94,7 +95,7 @@ At line:1 char:1
     + FullyQualifiedErrorId : Invalid principal specified,Microsoft.Windows.LAPS.SetLapsADReadPasswordPermission
 ```
 
-This example shows a failure caused by specifying an isolated name that did not resolve to a
+This example shows a failure caused by specifying an isolated name that didn't resolve to a
 well-known or built-in account. The fix for this error would be to add a domain name qualifier to
 the input name, for example "LapsAdministratorsGroup@laps.com".
 
@@ -120,8 +121,8 @@ Accept wildcard characters: False
 
 ### -Credential
 
-Specifies the credentials to use when updating Active Directory. If not specified the current user's
-credentials will be used.
+Specifies the credentials to use when updating Active Directory. If not specified, the current
+user's credentials are used.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -171,10 +172,10 @@ Accept wildcard characters: False
 
 Specifies which Active Directory Organizational Unit to update.
 
-This parameter accepts several different name formats which influence the criteria used in the
+This parameter accepts several different name formats that influence the criteria used in the
 resultant Active Directory search. The supported name formats are as follows:
 
-- distinguishedName (begins with a "CN=")
+- distinguishedName (begins with a `CN=`)
 - name (for all other inputs)
 
 ```yaml
@@ -207,7 +208,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

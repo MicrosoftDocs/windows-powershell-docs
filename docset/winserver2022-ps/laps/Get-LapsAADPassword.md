@@ -39,21 +39,21 @@ described above and the clear-text form of the password(s). This mode requires t
 granted the Microsoft Graph `DeviceLocalCredential.Read.All` permission.
 
 The **DeviceIds** parameter accepts either device names or device IDs, but the underlying Microsoft
-Graph queries only supports querying by device ID. To support this the cmdlet will map a device name
-input to its corresponding device ID by issuing a separate Microsoft Graph query. This extra query
-requires the `Device.Read.All` permission. If the target is a Microsoft Managed Desktop device, the
-`DeviceManagementManagedDevices.Read.All` permission may also be required.
+Graph queries only supports querying by device ID. To support this query, the cmdlet maps a device
+name input to its corresponding device ID by issuing a separate Microsoft Graph query. This extra
+query requires the `Device.Read.All` permission. If the target is a Microsoft Managed Desktop
+device, the `DeviceManagementManagedDevices.Read.All` permission may also be required.
 
 > [!TIP]
-> If there are multiple devices in the tenant with the same name, the cmdlet will fail. The
-> workaround is to input the device ID directly.
+> If there are multiple devices in the tenant with the same name, the cmdlet fails. The workaround
+> is to input the device ID directly.
 
 > [!IMPORTANT]
-> The `Get-LapsAADPassword` cmdlet is implemented as a wrapper around the Microsoft Graph
-> PowerShell library which must be manually installed on the device before `Get-LapsAADPassword`
-> can work. Additional configuration steps are required in your Azure Active Directory tenant to
-> enable authentication to Microsoft Graph and to grant the necessary Microsoft Graph permissions as
-> described above. See the following topic for more information:
+> The `Get-LapsAADPassword` cmdlet is implemented as a wrapper around the Microsoft Graph PowerShell
+> library, which must be manually installed on the device before `Get-LapsAADPassword` can work.
+> Additional configuration steps are required in your Azure Active Directory tenant to enable
+> authentication to Microsoft Graph and to grant the necessary Microsoft Graph permissions. For more
+> information, see
 > [Get started with Windows LAPS and Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2233704)
 
 The **Verbose** may be used to get additional information about the cmdlet's operation.
@@ -75,7 +75,7 @@ DeviceName DeviceId                             PasswordExpirationTime
 LAPSAAD    dfc6d5f0-225a-4b46-adcf-73a349a31e70 4/22/2023 8:45:29 AM
 ```
 
-This example shows how to query basic LAPS password metadata information for the target device which
+This example shows how to query basic LAPS password metadata information for the target device that
 is specified by device name.
 
 ### Example 2
@@ -93,15 +93,18 @@ PasswordExpirationTime : 4/22/2023 8:45:29 AM
 PasswordUpdateTime     : 4/11/2023 8:45:29 AM
 ```
 
-This example shows how to query the full LAPS password information for the target device which is
+This example shows how to query the full LAPS password information for the target device that is
 specified by device ID.
 
 ### Example 3
 
 ```powershell
 Connect-MgGraph -TenantId b20f5886-bddf-43bb-aee6-dda0c87c5fa2 -ClientId 9fa98e34-277f-47fa-9847-e36bdf6bca1f
-Welcome To Microsoft Graph!
 Get-LapsAADPassword -DeviceIds dfc6d5f0-225a-4b46-adcf-73a349a31e70 -IncludePasswords -AsPlainText
+```
+
+```Output
+Welcome To Microsoft Graph!
 
 DeviceName             : LAPSAAD
 DeviceId               : dfc6d5f0-225a-4b46-adcf-73a349a31e70
@@ -111,15 +114,18 @@ PasswordExpirationTime : 4/22/2023 8:45:29 AM
 PasswordUpdateTime     : 4/11/2023 8:45:29 AM
 ```
 
-This example shows how to query the full LAPS password information for the target device which is
+This example shows how to query the full LAPS password information for the target device that is
 specified by device ID, and displaying the password in clear-text form.
 
 ### Example 4
 
 ```powershell
 Connect-MgGraph -TenantId b20f5886-bddf-43bb-aee6-dda0c87c5fa2 -ClientId 9fa98e34-277f-47fa-9847-e36bdf6bca1f
-Welcome To Microsoft Graph!
 Get-LapsAADPassword -DeviceIds lapsAAD -IncludePasswords -AsPlainText -IncludeHistory
+```
+
+```Output
+Welcome To Microsoft Graph!
 
 DeviceName             : LAPSAAD
 DeviceId               : dfc6d5f0-225a-4b46-adcf-73a349a31e70
@@ -143,7 +149,7 @@ PasswordExpirationTime :
 PasswordUpdateTime     : 4/11/2023 8:45:29 AM
 ```
 
-This example shows how to query the full LAPS password information for the target device which is
+This example shows how to query the full LAPS password information for the target device that is
 specified by device name, requesting password history, and displaying the passwords in clear-text
 form.
 
@@ -152,7 +158,7 @@ form.
 ### -AsPlainText
 
 Specify this parameter to return the LAPS passwords in clear-text format. The default behavior is to
-return the LAPS passwords wrapped in a .NET SecureString object.
+return the LAPS passwords wrapped in a .NET **SecureString** object.
 
 > [!IMPORTANT]
 > Using this parameter exposes the returned clear-text password to casual viewing and may pose a

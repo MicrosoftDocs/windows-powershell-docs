@@ -85,8 +85,8 @@ Accept wildcard characters: False
 
 ### -Credential
 
-Specifies the credentials to use when updating Active Directory. If not specified the current user's
-credentials will be used.
+Specifies the credentials to use when updating Active Directory. If not specified, the current
+user's credentials are used.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -136,10 +136,10 @@ Accept wildcard characters: False
 
 Specifies which Active Directory Organizational Unit to update.
 
-This parameter accepts several different name formats which influence the criteria used in the
+This parameter accepts several different name formats that influence the criteria used in the
 resultant Active Directory search. The supported name formats are as follows:
 
-- distinguishedName (begins with a "CN=")
+- distinguishedName (begins with a `CN=`)
 - name (for all other inputs)
 
 ```yaml
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

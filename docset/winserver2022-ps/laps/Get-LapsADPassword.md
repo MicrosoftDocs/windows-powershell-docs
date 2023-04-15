@@ -232,9 +232,10 @@ been previously started on the local machine listening on an LDAP port of 50000.
 Specify this parameter to return the LAPS passwords in clear-text format. The default behavior is to
 return the LAPS passwords wrapped in a .NET SecureString object.
 
-> [!IMPORTANT] Using this parameter exposes the returned clear-text password to casual viewing and
-> may pose a security risk. This parameter should be used with caution and only in support or
-> testing situations.
+> [!IMPORTANT]
+> Using this parameter exposes the returned clear-text password to casual viewing and may pose a
+> security risk. This parameter should be used with caution and only in support or testing
+> situations.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

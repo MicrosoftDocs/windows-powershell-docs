@@ -12,7 +12,7 @@ title: Set-LapsADAuditing
 # Set-LapsADAuditing
 
 ## SYNOPSIS
-Configures an Active Directory Organizational Unit to enable auditing on the Windows Local
+Configures an Active Directory (AD) Organizational Unit (OU) to enable auditing on the Windows Local
 Administrator Password Solution (LAPS) password schema attributes.
 
 ## SYNTAX
@@ -35,7 +35,7 @@ Set-LapsADAuditing -Identity LapsTestOU -AuditedPrincipals "laps.com\LapsAdmin" 
 OU=LapsTestOU,DC=laps,DC=com
 ```
 
-This example demonstrates configuring Success audits on an OU.
+This example demonstrates configuring `Success` audits on an OU.
 
 ### Example 2
 
@@ -44,15 +44,15 @@ Set-LapsADAuditing -Identity LapsTestOU -AuditedPrincipals "laps.com\LapsAdminsG
 OU=LapsTestOU,DC=laps,DC=com
 ```
 
-This example demonstrates configuring Failure audits on an OU.
+This example demonstrates configuring `Failure` audits on an OU.
 
 ## PARAMETERS
 
 ### -AuditedPrincipals
 
-Specifies which users or groups should be configured for auditing. Users or groups may be specified
-in either name or SID format. If specified in name format, the name must always include the
-identifying domain name portion unless the name maps to a well-known or built-in account.
+Specifies the name of the users or groups should be configured for auditing. Users or groups may be
+specified in either name or SID format. If specified in name format, the name must always include
+the identifying domain name portion unless the name maps to a well-known or built-in account.
 
 ```yaml
 Type: System.String[]
@@ -85,8 +85,8 @@ Accept wildcard characters: False
 
 ### -Credential
 
-Specifies the credentials to use when updating Active Directory. If not specified, the current
-user's credentials are used.
+Specifies the credentials to use when updating AD. If not specified, the current user's credentials
+are used.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -Domain
 
-Specifies which Active Directory domain to connect to.
+Specifies the name of the domain to connect to.
 
 ```yaml
 Type: System.String
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-Specifies which Active Directory domain controller to connect to.
+Specifies the name of the domain controller to connect to.
 
 ```yaml
 Type: System.String
@@ -134,10 +134,10 @@ Accept wildcard characters: False
 
 ### -Identity
 
-Specifies which Active Directory Organizational Unit to update.
+Specifies the name of the OU to update.
 
 This parameter accepts several different name formats that influence the criteria used in the
-resultant Active Directory search. The supported name formats are as follows:
+resultant AD search. The supported name formats are as follows:
 
 - distinguishedName (begins with a `CN=`)
 - name (for all other inputs)

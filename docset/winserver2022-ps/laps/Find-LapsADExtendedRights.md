@@ -12,8 +12,8 @@ title: Find-LapsADExtendedRights
 # Find-LapsADExtendedRights
 
 ## SYNOPSIS
-Queries Active Directory to find principals that have been granted permission to read Windows Local
-Administrator Password Solution (LAPS) password attributes.
+Queries Active Directory (AD) to find principals that have been granted permission to read Windows
+Local Administrator Password Solution (LAPS) password attributes.
 
 ## SYNTAX
 
@@ -47,7 +47,7 @@ This example shows how to run the cmdlet.
 
 ### -Credential
 
-Specifies the credentials to use when updating Active Directory. If not specified, the current
+Specifies the credentials to use when updating AD. If not specified, the current
 user's credentials are used.
 
 ```yaml
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 
 ### -Domain
 
-Specifies which Active Directory domain to connect to.
+Specifies the name of the domain to connect to.
 
 ```yaml
 Type: System.String
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-Specifies which Active Directory domain controller to connect to.
+Specifies the name of the domain controller to connect to.
 
 ```yaml
 Type: System.String
@@ -96,10 +96,10 @@ Accept wildcard characters: False
 
 ### -Identity
 
-Specifies which Active Directory Organizational Unit to query.
+Specifies the name of the OU to query.
 
 This parameter accepts several different name formats that influence the criteria used in the
-resultant Active Directory search. The supported name formats are as follows:
+resultant AD search. The supported name formats are as follows:
 
 - distinguishedName (begins with a `CN=`)
 - name (for all other inputs)

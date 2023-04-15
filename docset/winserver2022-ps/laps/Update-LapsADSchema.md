@@ -12,8 +12,8 @@ title: Update-LapsADSchema
 # Update-LapsADSchema
 
 ## SYNOPSIS
-Extends the Active Directory schema with the Windows Local Administrator Password Solution (LAPS)
-schema attributes.
+Extends the Active Directory (AD) schema with the Windows Local Administrator Password Solution
+(LAPS) schema attributes.
 
 ## SYNTAX
 
@@ -23,9 +23,8 @@ Update-LapsADSchema [-Credential <PSCredential>] [-WhatIf] [-Confirm] [<CommonPa
 
 ## DESCRIPTION
 
-The `Update-LapsADSchema` cmdlet extends the Active Directory (AD) schema with the Windows Local
-Administrator Password Solution (LAPS) schema attributes. The specific nature of the schema
-extensions is documented in
+The `Update-LapsADSchema` cmdlet extends the AD schema with the LAPS schema attributes. The specific
+nature of the schema extensions is documented in
 [Windows LAPS schema extensions reference](https://go.microsoft.com/fwlink/?linkid=2233804).
 
 The **Verbose** may be used to get additional information about the cmdlet's operation.

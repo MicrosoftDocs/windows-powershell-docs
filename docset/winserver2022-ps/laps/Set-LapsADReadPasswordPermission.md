@@ -12,8 +12,8 @@ title: Set-LapsADReadPasswordPermission
 # Set-LapsADReadPasswordPermission
 
 ## SYNOPSIS
-Configures security on an Active Directory Organizational Unit to grant specific users or groups
-permission to query Windows Local Administrator Password Solution (LAPS) passwords.
+Configures security on an Active Directory (AD) Organizational Unit (OU) to grant specific users or
+groups permission to query Windows Local Administrator Password Solution (LAPS) passwords.
 
 ## SYNTAX
 
@@ -26,10 +26,10 @@ Set-LapsADReadPasswordPermission [-Credential <PSCredential>] -Identity <String[
 ## DESCRIPTION
 
 The `Set-LapsADReadPasswordPermission` cmdlet is used by administrators to configure security
-permissions on an Active Directory Organizational Unit (OU) to allow specific users or groups to
-query LAPS passwords on computers in that OU. Users and groups must be fully qualified with both
-domain and user name components. The only exception to this is when the specified name resolves to a
-built-in principal, such as `Domain Admins`.
+permissions on an OU to allow specific users or groups to query LAPS passwords on computers in that
+OU. Users and groups must be fully qualified with both domain and user name components. The only
+exception to this is when the specified name resolves to a built-in principal, such as
+`Domain Admins`.
 
 ## EXAMPLES
 
@@ -102,9 +102,9 @@ the input name, for example `LapsAdministratorsGroup@laps.com`.
 
 ### -AllowedPrincipals
 
-Specifies which users or groups should be granted the permissions. Users or groups may be specified
-in either name or SID format. If specified in name format, the name must always include the
-identifying domain name portion unless the name maps to a well-known or built-in account.
+Specifies the name of the users or groups should be granted the permissions. Users or groups may be
+specified in either name or SID format. If specified in name format, the name must always include
+the identifying domain name portion unless the name maps to a well-known or built-in account.
 
 ```yaml
 Type: System.String[]
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 
 ### -Credential
 
-Specifies the credentials to use when updating Active Directory. If not specified, the current
+Specifies the credentials to use when updating AD. If not specified, the current
 user's credentials are used.
 
 ```yaml
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -Domain
 
-Specifies which Active Directory domain to connect to.
+Specifies the name of the domain to connect to.
 
 ```yaml
 Type: System.String
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-Specifies which Active Directory domain controller to connect to.
+Specifies the name of the domain controller to connect to.
 
 ```yaml
 Type: System.String
@@ -169,10 +169,10 @@ Accept wildcard characters: False
 
 ### -Identity
 
-Specifies which Active Directory Organizational Unit to update.
+Specifies the name of the OU to update.
 
 This parameter accepts several different name formats that influence the criteria used in the
-resultant Active Directory search. The supported name formats are as follows:
+resultant AD search. The supported name formats are as follows:
 
 - distinguishedName (begins with a `CN=`)
 - name (for all other inputs)

@@ -12,7 +12,7 @@ title: Invoke-LapsPolicyProcessing
 # Invoke-LapsPolicyProcessing
 
 ## SYNOPSIS
-Causes Windows Local Administrator Password Solution (LAPS) to process the currently configured LAPS
+Causes Windows Local Administrator Password Solution (LAPS) to process the currently configured
 policy.
 
 ## SYNTAX
@@ -23,13 +23,12 @@ Invoke-LapsPolicyProcessing [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Invoke-LapsPolicyProcessing` cmdlet tells Windows Local Administrator Password Solution
-(LAPS) to process the currently configured LAPS policy.
+The `Invoke-LapsPolicyProcessing` cmdlet tells LAPS to process the currently configured policy.
 
 The cmdlet doesn't return detailed information about the results of the operation. See
-[Use Windows LAPS event logs](https://go.microsoft.com/fwlink/?linkid=2234103) for more
-information on querying the resultant event log entries to get specific information on the outcome
-of the operation.
+[Use Windows LAPS event logs](https://go.microsoft.com/fwlink/?linkid=2234103) for more information
+on querying the resultant event log entries to get specific information on the outcome of the
+operation.
 
 ## EXAMPLES
 

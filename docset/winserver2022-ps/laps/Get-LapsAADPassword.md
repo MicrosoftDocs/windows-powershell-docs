@@ -12,7 +12,7 @@ title: Get-LapsAADPassword
 # Get-LapsAADPassword
 
 ## SYNOPSIS
-Queries Azure Active Directory for the Windows Local Administrator Password Solution (LAPS)
+Queries Azure Active Directory (AAD) for the Windows Local Administrator Password Solution (LAPS)
 credentials on a specified Azure AD device.
 
 ## SYNTAX
@@ -25,8 +25,8 @@ Get-LapsAADPassword -DeviceIds <String[]> [-IncludePasswords] [-IncludeHistory] 
 ## DESCRIPTION
 
 The `Get-LapsAADPassword` cmdlet allows administrators to retrieve LAPS passwords and password
-history for an Azure Active Directory-joined device. This is implemented by sending queries to
-Microsoft Graph over the deviceLocalCredentials collection.
+history for an AAD-joined device. This is implemented by sending queries to Microsoft Graph over the
+deviceLocalCredentials collection.
 
 The `Get-LapsAADPassword` cmdlet supports two basic modes when querying LAPS passwords:
 
@@ -51,7 +51,7 @@ device, the `DeviceManagementManagedDevices.Read.All` permission may also be req
 > [!IMPORTANT]
 > The `Get-LapsAADPassword` cmdlet is implemented as a wrapper around the Microsoft Graph PowerShell
 > library, which must be manually installed on the device before `Get-LapsAADPassword` can work.
-> Additional configuration steps are required in your Azure Active Directory tenant to enable
+> Additional configuration steps are required in your AAD tenant to enable
 > authentication to Microsoft Graph and to grant the necessary Microsoft Graph permissions. For more
 > information, see
 > [Get started with Windows LAPS and Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2233704)
@@ -82,8 +82,11 @@ is specified by device name.
 
 ```powershell
 Connect-MgGraph -TenantId b20f5886-bddf-43bb-aee6-dda0c87c5fa2 -ClientId 9fa98e34-277f-47fa-9847-e36bdf6bca1f
-Welcome To Microsoft Graph!
 Get-LapsAADPassword -DeviceIds dfc6d5f0-225a-4b46-adcf-73a349a31e70 -IncludePasswords
+```
+
+```Output
+Welcome To Microsoft Graph!
 
 DeviceName             : LAPSAAD
 DeviceId               : dfc6d5f0-225a-4b46-adcf-73a349a31e70

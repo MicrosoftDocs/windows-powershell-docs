@@ -23,10 +23,9 @@ Reset-LapsPassword [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Reset-LapsPassword` cmdlet tells Windows Local Administrator Password Solution (LAPS) to
-immediately rotate the password for the currently managed local account. This operation is performed
-regardless of the state of the current password, for example it doesn't matter whether the current
-password is considered expired or not.
+The `Reset-LapsPassword` cmdlet tells LAPS to immediately rotate the password for the currently
+managed local account. This operation is performed regardless of the state of the current password,
+for example it doesn't matter whether the current password is considered expired or not.
 
 > [!IMPORTANT]
 > This cmdlet is intended and recommended only for rare situations that require an
@@ -34,9 +33,9 @@ password is considered expired or not.
 > Excessively frequent usage of this cmdlet isn't recommended.
 
 The cmdlet doesn't return detailed information about the results of the operation. See
-[Use Windows LAPS event logs](https://go.microsoft.com/fwlink/?linkid=2234103) for more
-information on querying the resultant event log entries to get specific information on the outcome
-of the operation.
+[Use Windows LAPS event logs](https://go.microsoft.com/fwlink/?linkid=2234103) for more information
+on querying the resultant event log entries to get specific information on the outcome of the
+operation.
 
 ## EXAMPLES
 

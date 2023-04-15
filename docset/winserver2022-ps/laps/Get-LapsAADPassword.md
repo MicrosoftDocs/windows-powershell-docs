@@ -18,7 +18,7 @@ credentials on a specified Azure AD device.
 
 ## SYNTAX
 
-```s
+```
 Get-LapsAADPassword -DeviceIds <String[]> [-IncludePasswords] [-IncludeHistory] [-AsPlainText]
  [<CommonParameters>]
 ```

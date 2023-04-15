@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Queries Active Directory (AD) to find principals that have been granted permission to read Windows Local Administrator Password Solution (LAPS) password attributes.
 external help file: lapspsh.dll-Help.xml
 Module Name: LAPS
 online version: https://learn.microsoft.com/powershell/module/laps/find-lapsadextendedrights?view=windowsserver2022-ps&wt.mc_id=ps-gethelp

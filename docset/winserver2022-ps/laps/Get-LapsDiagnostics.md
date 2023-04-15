@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Collects Windows Local Administrator Password Solution (LAPS) logs and tracing from the local machine.
 external help file: LAPS-help.xml
 Module Name: LAPS
 online version: https://learn.microsoft.com/powershell/module/laps/get-lapsdiagnostics?view=windowsserver2022-ps&wt.mc_id=ps-gethelp

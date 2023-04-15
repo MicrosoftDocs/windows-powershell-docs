@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Configures permissions on an Active Directory (AD) Organizational Unit (OU) to enable computers in that OU to update their Windows Local Administrator Password Solution (LAPS) passwords.
 external help file: lapspsh.dll-Help.xml
 Module Name: LAPS
 online version: https://learn.microsoft.com/powershell/module/laps/set-lapsadcomputerselfpermission?view=windowsserver2022-ps&wt.mc_id=ps-gethelp

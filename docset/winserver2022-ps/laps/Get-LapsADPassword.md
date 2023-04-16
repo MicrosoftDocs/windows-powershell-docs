@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Queries Windows Local Administrator Password Solution (LAPS) credentials from Active Directory (AD) on a specified AD computer or domain controller object.
 external help file: lapspsh.dll-Help.xml
 Module Name: LAPS
 online version: https://learn.microsoft.com/powershell/module/laps/get-lapsadpassword?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -12,71 +12,76 @@ title: Get-LapsADPassword
 # Get-LapsADPassword
 
 ## SYNOPSIS
-
-Queries Windows Local Administrator Password Solution (LAPS) credentials from Active Directory on a
-specified AD computer or domain controller object.
+Queries Windows Local Administrator Password Solution (LAPS) credentials from Active Directory (AD)
+on a specified AD computer or domain controller object.
 
 ## SYNTAX
 
 ### NormalMode (Default)
 
 ```
-Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>] [-IncludeHistory]
- [-AsPlainText] [-Identity] <String[]> [<CommonParameters>]
+Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>]
+ [-IncludeHistory] [-AsPlainText] [-Identity] <String[]> [<CommonParameters>]
 ```
 
 ### DomainMode
 
 ```
-Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>] [-IncludeHistory]
- [-AsPlainText] [-Identity] <String[]> -Domain <String> [<CommonParameters>]
+Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>]
+ [-IncludeHistory] [-AsPlainText] [-Identity] <String[]> -Domain <String> [<CommonParameters>]
 ```
 
 ### DomainControllerMode
 
 ```
-Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>] [-IncludeHistory]
- [-AsPlainText] [-Identity] <String[]> -DomainController <String> [<CommonParameters>]
+Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>]
+ [-IncludeHistory] [-AsPlainText] [-Identity] <String[]> -DomainController <String>
+ [<CommonParameters>]
 ```
 
 ### SnapshotBrowserMode
 
 ```
-Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>] [-IncludeHistory]
- [-AsPlainText] -Port <Int32> [-Identity] <String[]> [-DomainController <String>] [<CommonParameters>]
+Get-LapsADPassword [-Credential <PSCredential>] [-DecryptionCredential <PSCredential>]
+ [-IncludeHistory] [-AsPlainText] -Port <Int32> [-Identity] <String[]> [-DomainController <String>]
+ [<CommonParameters>]
 ```
 
 ### RecoveryMode
 
 ```
-Get-LapsADPassword [-IncludeHistory] [-AsPlainText] [-RecoveryMode] [-Identity] <String[]> [<CommonParameters>]
+Get-LapsADPassword [-IncludeHistory] [-AsPlainText] [-RecoveryMode] [-Identity] <String[]>
+ [<CommonParameters>]
 ```
 
 ### SnapshotBrowserRecoveryMode
 
 ```
-Get-LapsADPassword [-IncludeHistory] [-AsPlainText] [-RecoveryMode] -Port <Int32> [-Identity] <String[]>
- [<CommonParameters>]
+Get-LapsADPassword [-IncludeHistory] [-AsPlainText] [-RecoveryMode] -Port <Int32>
+ [-Identity] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Get-LapsADPassword** cmdlet allows administrators to retrieve LAPS passwords and password
+The `Get-LapsADPassword` cmdlet allows administrators to retrieve LAPS passwords and password
 history for an Active Directory computer or domain controller object. Depending on policy
 configuration, LAPS passwords may be stored in either clear-text form or encrypted form. The
-**Get-LapsADPassword** cmdlet will automatically perform decryption of encrypted passwords.
+`Get-LapsADPassword` cmdlet automatically decrypts encrypted passwords.
 
-The **Get-LapsADPassword** cmdlet may also be used to connected to a mounted Active Directory snapshot.
+The `Get-LapsADPassword` cmdlet may also be used to connected to a mounted AD
+snapshot.
 
-The -Verbose parameter may be used to get additional information about the cmdlet's operation.
+The **Verbose** may be used to get additional information about the cmdlet's operation.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Get-LapsADPassword lapsClient
+Get-LapsADPassword LAPSCLIENT
+```
 
+```Output
 ComputerName        : LAPSCLIENT
 DistinguishedName   : CN=LAPSCLIENT,OU=LapsTestOU,DC=laps,DC=com
 Account             : Administrator
@@ -88,15 +93,17 @@ DecryptionStatus    : NotApplicable
 AuthorizedDecryptor : NotApplicable
 ```
 
-This example demonstrates querying the current LAPS password for the 'lapsClient' computer in the
-current domain. The password was stored in Active Directory in clear-text form and did not require
-decryption. The password was returned wrapped in a SecureString object.
+This example demonstrates querying the current LAPS password for the `LAPSCLIENT` computer in the
+current domain. The password was stored in AD in clear-text form and didn't require decryption. The
+password was returned wrapped in a **SecureString** object.
 
 ### Example 2
 
 ```powershell
-PS C:\> Get-LapsADPassword -Identity lapsClient -DomainController lapsDC -AsPlainText
+Get-LapsADPassword -Identity LAPSCLIENT -DomainController lapsDC -AsPlainText
+```
 
+```Output
 ComputerName        : LAPSCLIENT
 DistinguishedName   : CN=LAPSCLIENT,OU=LapsTestOU,DC=laps,DC=com
 Account             : Administrator
@@ -109,15 +116,17 @@ AuthorizedDecryptor : NotApplicable
 ```
 
 This example demonstrates querying the current LAPS password on a specific domain controller
-('lapsDC'), for the 'lapsClient' computer, requesting that the password be displayed in clear-text
-form. The password was stored in Active Directory in clear-text form and did not require decryption.
-The password was returned in clear-text form.
+(`lapsDC`), for the `LAPSCLIENT` computer, requesting that the password be displayed in clear-text
+form. The password was stored in AD in clear-text form and didn't require decryption. The password
+was returned in clear-text form.
 
 ### Example 3
 
 ```powershell
-PS C:\> Get-LapsADPassword -Identity $lapsClient2 -Domain laps.com -AsPlainText -IncludeHistory
+Get-LapsADPassword -Identity LAPSCLIENT2 -Domain laps.com -AsPlainText -IncludeHistory
+```
 
+```Output
 ComputerName        : LAPSCLIENT2
 DistinguishedName   : CN=LAPSCLIENT2,OU=LapsTestEncryptedOU,DC=laps,DC=com
 Account             : Administrator
@@ -139,18 +148,21 @@ DecryptionStatus    : Success
 AuthorizedDecryptor : LAPS\LAPS Admins
 ```
 
-This example demonstrates querying the current LAPS password for the 'lapsClient2' computer, in a
-specific Active Directory domain ('laps.com'), requesting that the password be displayed in
-clear-text form. The password was stored in Active Directory in encrypted form and was successfully
+This example demonstrates querying the current LAPS password for the `LAPSCLIENT2` computer, in a
+specific AD domain (`laps.com`), requesting that the password be displayed in
+clear-text form. The password was stored in AD in encrypted form and was successfully
 decrypted.
 
-Note that ExpirationTimestamp will always be empty for any older LAPS passwords returned.
+> [!NOTE]
+> **ExpirationTimestamp** is always empty for any older LAPS passwords returned.
 
 ### Example 4
 
 ```powershell
-PS C:\> Get-LapsADPassword -Identity lapsDC.laps.com -AsPlainText
+Get-LapsADPassword -Identity lapsDC.laps.com -AsPlainText
+```
 
+```Output
 ComputerName        : LAPSDC
 DistinguishedName   : CN=LAPSDC,OU=Domain Controllers,DC=laps,DC=com
 Account             : Administrator
@@ -162,15 +174,17 @@ DecryptionStatus    : Success
 AuthorizedDecryptor : LAPS\Domain Admins
 ```
 
-This example demonstrates querying the current LAPS password for the 'lapsDC.laps.com' domain
+This example demonstrates querying the current LAPS password for the `lapsDC.laps.com` domain
 controller, requesting that the password be displayed in clear-text form. The password was stored in
-Active Directory in encrypted form and was successfully decrypted.
+AD in encrypted form and was successfully decrypted.
 
 ### Example 5
 
 ```powershell
-PS C:\> Get-LapsADPassword lapsClient2
+Get-LapsADPassword LAPSCLIENT2
+```
 
+```Output
 ComputerName        : LAPSDC
 DistinguishedName   : CN=LAPSDC,OU=Domain Controllers,DC=laps,DC=com
 Account             :
@@ -182,14 +196,16 @@ DecryptionStatus    : Unauthorized
 AuthorizedDecryptor : LAPS\Domain Admins
 ```
 
-This example demonstrates querying the current LAPS password for the 'lapsDC' domain controller when
-the user does not have permissions to decrypt the LAPS DSRM password.
+This example demonstrates querying the current LAPS password for the `lapsDC` domain controller when
+the user doesn't have permissions to decrypt the LAPS DSRM password.
 
 ### Example 6
 
 ```powershell
-PS C:\> Get-LapsADPassword lapsLegacyClient -AsPlainText
+Get-LapsADPassword lapsLegacyClient -AsPlainText
+```
 
+```Output
 ComputerName        : LAPSLEGACYCLIENT
 DistinguishedName   : CN=LAPSLEGACYCLIENT,OU=LegacyLapsOU,DC=laps,DC=com
 Account             :
@@ -202,14 +218,19 @@ AuthorizedDecryptor : NotApplicable
 ```
 
 This example demonstrates querying the current LAPS password for the 'lapsLegacyClient' machine
-which is currently running in legacy LAPS emulation mode. Note that when querying legacy LAPS-style
-passwords, the Account and PasswordUpdateTime fields will always be unavailable.
+which is currently running in legacy LAPS emulation mode.
+
+> [!NOTE]
+> When querying legacy LAPS-style passwords, the **Account** and **PasswordUpdateTime** fields are
+> always unavailable.
 
 ### Example 7
 
 ```powershell
-PS C:\> Get-LapsADPassword -Identity lapsClient -Port 50000 -AsPlainText
+Get-LapsADPassword -Identity LAPSCLIENT -Port 50000 -AsPlainText
+```
 
+```Output
 ComputerName        : LAPSCLIENT
 DistinguishedName   : CN=LAPSCLIENT,OU=LapsTestOU,DC=laps,DC=com
 Account             : Administrator
@@ -221,16 +242,16 @@ DecryptionStatus    : NotApplicable
 AuthorizedDecryptor : NotApplicable
 ```
 
-This example demonstrates querying an Active Directory Snapshot browser instance for the current
-LAPS password for the 'LAPSCLIENT' machine. This example assumes that that the snapshot browser has
-been previously started on the local machine listening on an LDAP port of 50000.
+This example demonstrates querying an AD Snapshot browser instance for the current LAPS password for
+the `LAPSCLIENT` machine. This example assumes that that the snapshot browser has been previously
+started on the local machine listening on an LDAP port of `50000`.
 
 ## PARAMETERS
 
 ### -AsPlainText
 
 Specify this parameter to return the LAPS passwords in clear-text format. The default behavior is to
-return the LAPS passwords wrapped in a .NET SecureString object.
+return the LAPS passwords wrapped in a .NET **SecureString** object.
 
 > [!IMPORTANT]
 > Using this parameter exposes the returned clear-text password to casual viewing and may pose a
@@ -251,8 +272,8 @@ Accept wildcard characters: False
 
 ### -Credential
 
-Specifies a set of credentials to use when querying Active Directory for the LAPS credentials. If
-not specified the current user's credentials will be used.
+Specifies a set of credentials to use when querying AD for the LAPS credentials. If not specified,
+the current user's credentials are used.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -268,8 +289,8 @@ Accept wildcard characters: False
 
 ### -DecryptionCredential
 
-Specifies a set of credentials to use when decrypting encrypted LAPS credentials. If not specified
-the current user's credentials will be used.
+Specifies a set of credentials to use when decrypting encrypted LAPS credentials. If not specified,
+the current user's credentials are used.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -285,7 +306,7 @@ Accept wildcard characters: False
 
 ### -Domain
 
-Specifies which Active Directory domain to connect to.
+Specifies the name of the domain to connect to.
 
 ```yaml
 Type: System.String
@@ -301,8 +322,8 @@ Accept wildcard characters: False
 
 ### -DomainController
 
-Specifies which Active Directory domain controller to connect to, or the remote server on which an
-Active Directory snapshot browser is running.
+Specifies the name of the domain controller to connect to, or the remote server on which an AD
+Snapshot Browser is running.
 
 ```yaml
 Type: System.String
@@ -330,16 +351,15 @@ Accept wildcard characters: False
 
 ### -Identity
 
-Specifies which Active Directory computer or domain controller object to retrieve LAPS credentials
-from.
+Specifies the name of the computer or domain controller object to retrieve LAPS credentials from.
 
-This parameter accepts several different name formats which influence the criteria used when
-searching Active Directory for the target device. The supported name formats are as follows:
+This parameter accepts several different name formats that influence the criteria used when
+searching AD for the target device. The supported name formats are as follows:
 
-distinguishedName (begins with a "CN=")
-samAccountName (begins with a '$")
-dnsHostName (contains at least one '.' character)
-name (for all other inputs)
+- distinguishedName (begins with a `CN=`)
+- samAccountName (begins with a '$")
+- dnsHostName (contains at least one '.' character)
+- name (for all other inputs)
 
 ```yaml
 Type: System.String[]
@@ -371,7 +391,7 @@ Accept wildcard characters: False
 
 ### -Port
 
-Specifies which Active Directory Snapshot Browser port to connect to.
+Specifies the name of the AD Snapshot Browser port to connect to.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -387,12 +407,13 @@ Accept wildcard characters: False
 
 ### -RecoveryMode
 
-This parameter provides a last-ditch option when it is no longer possible to decrypt a given LAPS
+This parameter provides a last-ditch option when it's no longer possible to decrypt a given LAPS
 credential via the normal mechanisms. For example, this might be necessary if a LAPS credential was
-encrypted against a group which has since been deleted.
+encrypted against a group that has since been deleted.
 
 >[!IMPORTANT]
->When specifying this parameter, you MUST be logged-in locally as a Domain Administrator on a writable domain controller.
+> When specifying this parameter, you must be logged-in locally as a Domain Administrator on a
+> writable domain controller.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -426,4 +447,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Windows LAPS Overview](https://go.microsoft.com/fwlink/?linkid=2233901)
+
 [Get started with Windows LAPS and Windows Server Active Directory](https://go.microsoft.com/fwlink/?linkid=2233705)

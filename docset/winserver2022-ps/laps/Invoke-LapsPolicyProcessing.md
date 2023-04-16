@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Causes Windows Local Administrator Password Solution (LAPS) to process the currently configured policy.
 external help file: lapspsh.dll-Help.xml
 Module Name: LAPS
 online version: https://learn.microsoft.com/powershell/module/laps/invoke-lapspolicyprocessing?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -12,8 +12,8 @@ title: Invoke-LapsPolicyProcessing
 # Invoke-LapsPolicyProcessing
 
 ## SYNOPSIS
-
-Causes Windows Local Administrator Password Solution (LAPS) to process the currently configured LAPS policy.
+Causes Windows Local Administrator Password Solution (LAPS) to process the currently configured
+policy.
 
 ## SYNTAX
 
@@ -23,23 +23,22 @@ Invoke-LapsPolicyProcessing [<CommonParameters>]
 
 ## DESCRIPTION
 
-The **Invoke-LapsPolicyProcessing** cmdlet tells Windows Local Administrator Password Solution
-(LAPS) to process the currently configured LAPS policy.
+The `Invoke-LapsPolicyProcessing` cmdlet tells LAPS to process the currently configured policy.
 
-The cmdlet does not return detailed information about the results of the operation. See
-[Use Windows LAPS event logs](https://go.microsoft.com/fwlink/?linkid=2234103) for more
-information on querying the resultant event log entries to get specific information on the outcome
-of the operation.
+The cmdlet doesn't return detailed information about the results of the operation. See
+[Use Windows LAPS event logs](https://go.microsoft.com/fwlink/?linkid=2234103) for more information
+on querying the resultant event log entries to get specific information on the outcome of the
+operation.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Invoke-LapsPolicyProcessing
+Invoke-LapsPolicyProcessing
 ```
 
-This example shows how to run the Invoke-LapsPolicyProcessing cmdlet.
+This example starts the processing of the configured LAPS policy.
 
 ## PARAMETERS
 

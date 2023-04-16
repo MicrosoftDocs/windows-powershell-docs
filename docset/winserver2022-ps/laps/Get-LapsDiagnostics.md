@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Collects Windows Local Administrator Password Solution (LAPS) logs and tracing from the local machine.
 external help file: LAPS-help.xml
 Module Name: LAPS
 online version: https://learn.microsoft.com/powershell/module/laps/get-lapsdiagnostics?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -12,30 +12,33 @@ title: Get-LapsDiagnostics
 # Get-LapsDiagnostics
 
 ## SYNOPSIS
-
 Collects Windows Local Administrator Password Solution (LAPS) logs and tracing from the local
 machine.
 
 ## SYNTAX
 
 ```
-Get-LapsDiagnostics [[-OutputFolder] <String>] [-CollectNetworkTrace] [-ResetPassword] [<CommonParameters>]
+Get-LapsDiagnostics [[-OutputFolder] <String>] [-CollectNetworkTrace] [-ResetPassword]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The **Get-LapsDiagnostics** cmdlet collects LAPS logs and tracing from the local machine, and copies
-them into a .zip file. This cmdlet is primarily intended for support and testing scenarios but of
-course may be used at any time. The name of the resultant .zip file includes the machine name and
-current timestamp, and by default is written under the %TEMP%\LapsDiagnostics folder. The output
-folder may be customized using the -OutputFolder parameter.
+The `Get-LapsDiagnostics` cmdlet collects LAPS logs and tracing from the local machine, and copies
+them into a `.zip` file. This cmdlet is primarily intended for support and testing scenarios but of
+course may be used at any time. The name of the resultant `.zip` file includes the machine name and
+current timestamp, and by default is written under the `$env:TEMP\LapsDiagnostics` folder. The
+output folder may be customized using the **OutputFolder**.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Get-LapsDiagnostics
+Get-LapsDiagnostics
+```
+
+```Output
 Get-LapsDiagnostics: all data for this run was written to the following zip file:
 
 C:\Users\ADMINI~1\AppData\Local\Temp\LapsDiagnostics\LapsDiagnostics_LAPSCLIENT_2023041004_072649.zip
@@ -46,7 +49,10 @@ This example demonstrates basic collection of LAPS diagnostic info using all def
 ### Example 2
 
 ```powershell
-PS C:\> Get-LapsDiagnostics -OutputFolder c:\LapsDiagFolder
+Get-LapsDiagnostics -OutputFolder c:\LapsDiagFolder
+```
+
+```Output
 Get-LapsDiagnostics: all data for this run was written to the following zip file:
 
 c:\LapsDiagFolder\LapsDiagnostics_LAPSCLIENT_2023041004_072702.zip
@@ -57,7 +63,10 @@ This example demonstrates basic collection of LAPS diagnostic info to a specific
 ### Example 3
 
 ```powershell
-PS C:\> Get-LapsDiagnostics -OutputFolder c:\LapsDiagFolder -ResetPassword
+Get-LapsDiagnostics -OutputFolder c:\LapsDiagFolder -ResetPassword
+```
+
+```Output
 Get-LapsDiagnostics: all data for this run was written to the following zip file:
 
 c:\LapsDiagFolder\LapsDiagnostics_LAPSCLIENT_2023041004_072709.zip
@@ -69,7 +78,10 @@ operation to a specific output folder.
 ### Example 4
 
 ```powershell
-PS C:\> Get-LapsDiagnostics -CollectNetworkTrace
+Get-LapsDiagnostics -CollectNetworkTrace
+```
+
+```Output
 Get-LapsDiagnostics: all data for this run was written to the following zip file:
 
 C:\Users\ADMINI~1\AppData\Local\Temp\LapsDiagnostics\LapsDiagnostics_LAPSCLIENT_2023041004_072719.zip
@@ -82,7 +94,7 @@ tracing.
 
 ### -CollectNetworkTrace
 
-Specifies that network tracing should also be collected and included in the resultant .zip file.
+Specifies that network tracing should also be collected and included in the resultant `.zip` file.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -98,7 +110,7 @@ Accept wildcard characters: False
 
 ### -OutputFolder
 
-Specifies that the resultant .zip file should be placed under the specified folder.
+Specifies that the resultant `.zip` file should be placed under the specified folder.
 
 ```yaml
 Type: System.String
@@ -116,10 +128,10 @@ Accept wildcard characters: False
 
 Specifies that logs and tracing should be collected across a forced password reset for the currently
 managed local account. In this mode the cmdlet collects tracing across a call to the
-**Reset-LapsPassword** cmdlet.
+`Reset-LapsPassword` cmdlet.
 
-If this parameter is not specified, the cmdlet collects tracing across a call to the
-**Invoke-LapsProcessingCycle** cmdlet.
+If this parameter isn't specified, the cmdlet collects tracing across a call to the
+`Invoke-LapsProcessingCycle` cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

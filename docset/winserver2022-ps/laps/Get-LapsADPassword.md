@@ -68,10 +68,10 @@ history for an Active Directory computer or domain controller object. Depending 
 configuration, LAPS passwords may be stored in either clear-text form or encrypted form. The
 `Get-LapsADPassword` cmdlet automatically decrypts encrypted passwords.
 
-The `Get-LapsADPassword` cmdlet may also be used to connected to a mounted AD
+The `Get-LapsADPassword` cmdlet may also be used to connect to a mounted AD
 snapshot.
 
-The **Verbose** may be used to get additional information about the cmdlet's operation.
+The **Verbose** parameter may be used to get additional information about the cmdlet's operation.
 
 ## EXAMPLES
 
@@ -181,7 +181,7 @@ AD in encrypted form and was successfully decrypted.
 ### Example 5
 
 ```powershell
-Get-LapsADPassword LAPSCLIENT2
+Get-LapsADPassword LAPSDC
 ```
 
 ```Output
@@ -196,13 +196,13 @@ DecryptionStatus    : Unauthorized
 AuthorizedDecryptor : LAPS\Domain Admins
 ```
 
-This example demonstrates querying the current LAPS password for the `lapsDC` domain controller when
+This example demonstrates querying the current LAPS password for the `LAPSDC` domain controller when
 the user doesn't have permissions to decrypt the LAPS DSRM password.
 
 ### Example 6
 
 ```powershell
-Get-LapsADPassword lapsLegacyClient -AsPlainText
+Get-LapsADPassword LAPSLEGACYCLIENT -AsPlainText
 ```
 
 ```Output
@@ -217,7 +217,7 @@ DecryptionStatus    : NotApplicable
 AuthorizedDecryptor : NotApplicable
 ```
 
-This example demonstrates querying the current LAPS password for the 'lapsLegacyClient' machine
+This example demonstrates querying the current LAPS password for the 'LAPSLEGACYCLIENT' machine
 which is currently running in legacy LAPS emulation mode.
 
 > [!NOTE]
@@ -391,7 +391,7 @@ Accept wildcard characters: False
 
 ### -Port
 
-Specifies the name of the AD Snapshot Browser port to connect to.
+Specifies the AD Snapshot Browser port to connect to.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]

@@ -28,7 +28,7 @@ The `Update-LapsADSchema` cmdlet extends the AD schema with the LAPS schema attr
 nature of the schema extensions is documented in
 [Windows LAPS schema extensions reference](https://go.microsoft.com/fwlink/?linkid=2233804).
 
-The **Verbose** may be used to get additional information about the cmdlet's operation.
+The **Verbose** parameter may be used to get additional information about the cmdlet's operation.
 
 ## EXAMPLES
 

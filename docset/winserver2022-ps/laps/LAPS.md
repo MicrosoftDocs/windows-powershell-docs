@@ -14,7 +14,7 @@ title: LAPS
 
 ## Description
 
-This reference provides cmdlet descriptions and syntax for all Windows Local Administrator Password
+This reference provides cmdlet descriptions and syntax for the Windows Local Administrator Password
 Solution (LAPS) module. It lists the cmdlets in alphabetical order.
 
 ## LAPS Cmdlets

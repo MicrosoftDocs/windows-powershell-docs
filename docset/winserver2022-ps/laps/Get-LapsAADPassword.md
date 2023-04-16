@@ -51,12 +51,11 @@ device, the `DeviceManagementManagedDevices.Read.All` permission may also be req
 > [!IMPORTANT]
 > The `Get-LapsAADPassword` cmdlet is implemented as a wrapper around the Microsoft Graph PowerShell
 > library, which must be manually installed on the device before `Get-LapsAADPassword` can work.
-> Additional configuration steps are required in your AAD tenant to enable
-> authentication to Microsoft Graph and to grant the necessary Microsoft Graph permissions. For more
-> information, see
+> Additional configuration steps are required in your AAD tenant to enable authentication to
+> Microsoft Graph and to grant the necessary Microsoft Graph permissions. For more information, see
 > [Get started with Windows LAPS and Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2233704)
 
-The **Verbose** may be used to get additional information about the cmdlet's operation.
+The **Verbose** parameter may be used to get additional information about the cmdlet's operation.
 
 ## EXAMPLES
 

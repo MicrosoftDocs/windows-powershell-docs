@@ -148,7 +148,7 @@ Accept wildcard characters: False
 
 ### -AllowSwitchToAsyncInspection
 
-Specifies whether to enable a performance optimization that allows synchronously inspected network flows to switch to async inspection once they've been checked and validated.
+Specifies whether to enable a performance optimization that allows synchronously inspected network flows to switch to async inspection once they have been checked and validated.
 
 ```yaml
 Type: Boolean

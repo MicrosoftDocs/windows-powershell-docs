@@ -67,8 +67,6 @@ Get-LapsAADPassword -DeviceIds LAPSAAD
 ```
 
 ```Output
-Welcome To Microsoft Graph!
-
 DeviceName DeviceId                             PasswordExpirationTime
 ---------- --------                             ----------------------
 LAPSAAD    dfc6d5f0-225a-4b46-adcf-73a349a31e70 4/22/2023 8:45:29 AM
@@ -85,8 +83,6 @@ Get-LapsAADPassword -DeviceIds dfc6d5f0-225a-4b46-adcf-73a349a31e70 -IncludePass
 ```
 
 ```Output
-Welcome To Microsoft Graph!
-
 DeviceName             : LAPSAAD
 DeviceId               : dfc6d5f0-225a-4b46-adcf-73a349a31e70
 Account                : LapsAdmin
@@ -106,8 +102,6 @@ Get-LapsAADPassword -DeviceIds dfc6d5f0-225a-4b46-adcf-73a349a31e70 -IncludePass
 ```
 
 ```Output
-Welcome To Microsoft Graph!
-
 DeviceName             : LAPSAAD
 DeviceId               : dfc6d5f0-225a-4b46-adcf-73a349a31e70
 Account                : LapsAdmin
@@ -127,8 +121,6 @@ Get-LapsAADPassword -DeviceIds lapsAAD -IncludePasswords -AsPlainText -IncludeHi
 ```
 
 ```Output
-Welcome To Microsoft Graph!
-
 DeviceName             : LAPSAAD
 DeviceId               : dfc6d5f0-225a-4b46-adcf-73a349a31e70
 Account                : LapsAdmin

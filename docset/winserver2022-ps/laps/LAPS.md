@@ -1,6 +1,5 @@
 ---
-description: This reference provides cmdlet descriptions and syntax for the Windows Local Administrator Password
-Solution (LAPS) module.
+description: This reference provides cmdlet descriptions and syntax for the Windows Local Administrator Password Solution (LAPS) module.
 Module Name: LAPS
 Module Guid: 8eb7ddf9-7890-49ae-9af1-3b41d7e63c41
 Download Help Link: https://aka.ms/winsvr-2022-pshelp

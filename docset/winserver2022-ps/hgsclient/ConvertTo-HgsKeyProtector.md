@@ -62,7 +62,7 @@ For more information about Windows PowerShell background jobs, see
 [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -79,7 +79,7 @@ Specifies the existing key protector as a byte array. This cmdlet generates a ke
 from the existing key protector that this parameter specifies.
 
 ```yaml
-Type: Byte[]
+Type: System.Byte[]
 Parameter Sets: (All)
 Aliases:
 

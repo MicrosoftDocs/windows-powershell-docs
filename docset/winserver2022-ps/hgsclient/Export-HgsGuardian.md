@@ -59,7 +59,7 @@ Accept wildcard characters: False
 Specifies the path to the file to write an XML representation of the guardian.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: FilePath
 

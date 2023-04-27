@@ -104,7 +104,7 @@ This command creates an **inetOrgPerson**-class user named ChewDavid on an AD LD
 ### Example 4: Create a user and set password
 
 ```powershell
-New-ADUser -Name "ChewDavid" -Accountpassword (Read-Host -AsSecureString "AccountPassword") -Enabled $true
+New-ADUser -Name "ChewDavid" -AccountPassword (Read-Host -AsSecureString "AccountPassword") -Enabled $true
 ```
 
 This command creates a new user named ChewDavid and sets the account password.

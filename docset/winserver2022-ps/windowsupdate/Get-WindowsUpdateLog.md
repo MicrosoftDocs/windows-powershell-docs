@@ -102,7 +102,7 @@ Accept wildcard characters: False
 
 ### -ETLPath
 
-Specifies an array of paths of Windows Update .etl files to convert into WindowsUpdate.log. The
+Specifies an array of paths of Windows Update `.etl` files to convert into `WindowsUpdate.log`. The
 default value for this parameter is the Windows Update trace file directory for the current device.
 The acceptable values for this parameter are:
 

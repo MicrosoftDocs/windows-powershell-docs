@@ -25,7 +25,7 @@ Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>]
 
 The `Get-WindowsUpdateLog` cmdlet merges and converts Windows Update .etl files into a single
 readable `WindowsUpdate.log` file. Windows Update Agent uses Event Tracing for Windows (ETW) to
-generate diagnostic logs. Windows Update no longer directly produces a WindowsUpdate.log file.
+generate diagnostic logs. Windows Update no longer directly produces a `WindowsUpdate.log` file.
 Instead, it produces .etl files that are not immediately readable as written.
 
 For Windows 10 versions prior to 1709 (OS Build 16299), this cmdlet requires access to a Microsoft

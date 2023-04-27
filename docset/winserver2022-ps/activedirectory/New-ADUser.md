@@ -509,7 +509,7 @@ If the acting credentials do not have directory-level permission to perform the 
 Directory PowerShell returns a terminating error.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 

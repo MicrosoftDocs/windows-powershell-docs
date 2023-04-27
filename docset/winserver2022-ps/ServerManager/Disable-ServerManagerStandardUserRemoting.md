@@ -14,7 +14,7 @@ title: Disable-ServerManagerStandardUserRemoting
 
 Disables access for specified standard users to event, service, performance counter, and role and
 feature inventory data that is collected by Server Manager for a server. This cmdlet performs the
-opposite action, for specified users, of the Enable-ServerManagerStandardUserRemoting cmdlet.
+opposite action, for specified users, of the `Enable-ServerManagerStandardUserRemoting` cmdlet.
 
 ## SYNTAX
 

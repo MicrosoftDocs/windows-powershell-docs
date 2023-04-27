@@ -51,7 +51,7 @@ For more information about Windows PowerShell background jobs, see
 [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Diagnostics.Switch
 Parameter Sets: (All)
 Aliases:
 
@@ -70,7 +70,7 @@ or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. Th
 current session on the local computer.
 
 ```yaml
-Type: CimSession[]
+Type: Microsoft.Management.Infrastructure.CimSession[]
 Parameter Sets: (All)
 Aliases: Session
 
@@ -90,7 +90,7 @@ computer. The throttle limit applies only to the current cmdlet, not to the sess
 computer.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 

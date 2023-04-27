@@ -52,7 +52,7 @@ This command generates a byte array that represents the baseline policy in the f
 Indicates that this cmdlet operates in console mode.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Console
 Aliases:
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet overwrites an existing file that the **Output** object specifies.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: File
 Aliases:
 
@@ -85,7 +85,7 @@ Specifies a file path.
 This cmdlet writes the policy to the file that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: File
 Aliases: FilePath
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet skips validation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Diagnostics.Switch
 Parameter Sets: (All)
 Aliases:
 

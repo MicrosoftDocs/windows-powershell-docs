@@ -61,7 +61,7 @@ The final command grants access to the guardian stored in `$Guardian01` for the 
 Indicates that this cmdlet can grant permissions to a guardian that contains certificates that are expired.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet can grant permissions to a guardian that uses self-signed certificates.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 

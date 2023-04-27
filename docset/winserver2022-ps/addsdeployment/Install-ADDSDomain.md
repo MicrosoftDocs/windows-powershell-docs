@@ -72,7 +72,7 @@ operations to prepare Active Directory prior to the installation of this domain.
 **Get-Credential** cmdlet to prompt the user to supply a password.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 Indicates that the cmdlet recreates an existing domain.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -122,7 +122,7 @@ install along with the domain controller. Valid for Active Directory-integrated 
 default is computed automatically based on the environment.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -139,7 +139,7 @@ Specifies the user name and password that corresponds to the account used to ins
 controller. Use the **Get-Credential** cmdlet to prompt the user to supply a password.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -157,7 +157,7 @@ disk of the local computer that contains the domain database, for instance, `C:\
 default is `%SYSTEMROOT%\NTDS`.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -175,7 +175,7 @@ parameter is skipped if the value for the _CreateDnsDelegation_ parameter is eit
 computed to be $false.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -206,7 +206,7 @@ The domain functional level cannot be lower than the forest functional level, bu
 The default is automatically computed and set.
 
 ```yaml
-Type: DomainMode
+Type: System.DirectoryServices.ActiveDirectory.DomainMode
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Win2008, Win2008R2, Win2012, Win2012R2, WinThreshold, Default
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -268,7 +268,7 @@ corp.contoso.com, Active Directory performs an SOA query for corp.contoso.com an
 zone name in the response is corp.contoso.com.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -286,7 +286,7 @@ that contains the domain log files, for instance, `C:\Windows\Logs`. The default
 `%SYSTEMROOT%\NTDS`.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -305,7 +305,7 @@ name (FQDN) for the new domain tree. If the value set for the _DomainType_ param
 ChildDomain, this parameter can be used to specify a single label domain name for the child domain.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -334,7 +334,7 @@ Note that if the name value given for this parameter is a name of 16 characters 
 domain installation will fail.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -359,7 +359,7 @@ this parameter, ensure that TCP/IP client settings are first configured with a p
 address.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -376,7 +376,7 @@ Specifies that the read-only domain controller (RODC) will not be a global catal
 By default, the domain controller that you are installing is a global catalog server.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -396,7 +396,7 @@ purposes because once configuration has completed the server will not function c
 member server or a DC until it is rebooted.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -412,7 +412,7 @@ Accept wildcard characters: False
 Specifies the fully qualified domain name (FQDN) of an existing parent domain.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -430,7 +430,7 @@ for replicating to this domain. The default value for this parameter is automati
 the environment.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -457,7 +457,7 @@ password to be configured. Another available advanced option is to use the
 which is also not a recommended security best practice in production deployments.
 
 ```yaml
-Type: SecureString
+Type: System.Security.SecureString
 Parameter Sets: (All)
 Aliases: 
 
@@ -475,7 +475,7 @@ value is the site that is associated with the subnet that includes the IP addres
 no such site exists, the default is the site of the replication source domain controller.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -492,7 +492,7 @@ Indicates that the cmdlet skips automatic configuration of DNS client settings, 
 hints. This parameter is in effect only if the DNS Server service is already installed.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -514,7 +514,7 @@ the section ADPrep and Prerequisite Checking Architecture in
 [AD DS Simplified Administration](https://go.microsoft.com/fwlink/?LinkID=237244).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -531,7 +531,7 @@ Specifies the fully qualified, non-UNC path to a directory on a fixed disk of th
 for example, `C:\Windows\SYSVOL`. The default is `%SYSTEMROOT%\SYSVOL`.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -548,7 +548,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

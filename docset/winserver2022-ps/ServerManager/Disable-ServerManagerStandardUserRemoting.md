@@ -59,7 +59,7 @@ Disable-ServerManagerStandardUserRemoting -User JennyL -WhatIf
 ```
 
 In this example, the administrator views the outcome of running a command to deny a standard user
-named JennyL access to event, performance counter, service status, and role and feature inventory
+named `JennyL` access to event, performance counter, service status, and role and feature inventory
 data for a server that is being managed by using the Server Manager console running on either the
 local or a remote computer. The **WhatIf** parameter is added, meaning that the command actions are
 not carried out.

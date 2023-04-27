@@ -14,7 +14,7 @@ Gets the list of Elliptic Curve Cryptography (ECC) cipher suites available for T
 
 ## SYNTAX
 
-```powershell
+```
 Get-TlsEccCurve [[-Name] <String>] [<CommonParameters>]
 ```
 

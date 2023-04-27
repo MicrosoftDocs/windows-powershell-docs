@@ -15,7 +15,7 @@ Enables Elliptic Curve Cryptography (ECC) cipher suites available for TLS.
 
 ## SYNTAX
 
-```powershell
+```
 Enable-TlsEccCurve [[-Position] <UInt32>] [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

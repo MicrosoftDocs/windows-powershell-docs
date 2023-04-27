@@ -16,7 +16,7 @@ Security) for a computer.
 
 ## SYNTAX
 
-```powershell
+```
 Disable-TlsEccCurve [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

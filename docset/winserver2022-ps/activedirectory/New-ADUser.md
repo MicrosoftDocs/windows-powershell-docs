@@ -79,7 +79,11 @@ through the pipeline to the `New-ADUser` cmdlet to create the user objects.
 ### Example 1: Create a user with an imported certificate
 
 ```powershell
-New-ADUser -Name "ChewDavid" -Certificate (New-Object System.Security.Cryptography.X509Certificates.X509Certificate -ArgumentList "Export.cer")
+$splat = @{
+    Name = 'ChewDavid'
+    Certificate = (New-Object System.Security.Cryptography.X509Certificates.X509Certificate -ArgumentList "Export.cer")
+}
+New-ADUser @splat
 ```
 
 This command creates a user named ChewDavid with a certificate imported from the file Export.cer.
@@ -104,7 +108,12 @@ This command creates an **inetOrgPerson**-class user named ChewDavid on an AD LD
 ### Example 4: Create a user and set password
 
 ```powershell
-New-ADUser -Name "ChewDavid" -AccountPassword (Read-Host -AsSecureString "AccountPassword") -Enabled $true
+$splat = @{
+    Name = "ChewDavid"
+    AccountPassword = (Read-Host -AsSecureString "AccountPassword")
+    Enabled = $true
+}
+New-ADUser @splat
 ```
 
 This command creates a new user named ChewDavid and sets the account password.

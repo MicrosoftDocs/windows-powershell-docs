@@ -79,7 +79,7 @@ through the pipeline to the `New-ADUser` cmdlet to create the user objects.
 ### Example 1: Create a user with an imported certificate
 
 ```powershell
-PS C:\> New-ADUser -Name "ChewDavid" -Certificate (New-Object System.Security.Cryptography.X509Certificates.X509Certificate -ArgumentList "Export.cer")
+New-ADUser -Name "ChewDavid" -Certificate (New-Object System.Security.Cryptography.X509Certificates.X509Certificate -ArgumentList "Export.cer")
 ```
 
 This command creates a user named ChewDavid with a certificate imported from the file Export.cer.
@@ -87,7 +87,7 @@ This command creates a user named ChewDavid with a certificate imported from the
 ### Example 2: Create a user and set properties
 
 ```powershell
-PS C:\> New-ADUser -Name "ChewDavid" -OtherAttributes @{'title'="director";'mail'="chewdavid@fabrikam.com"}
+New-ADUser -Name "ChewDavid" -OtherAttributes @{'title'="director";'mail'="chewdavid@fabrikam.com"}
 ```
 
 This command creates a new user named ChewDavid and sets the **title** and **mail** properties on
@@ -96,7 +96,7 @@ the new object.
 ### Example 3: Create an inetOrgPerson user
 
 ```powershell
-PS C:\> New-ADUser -Name "ChewDavid" -Type iNetOrgPerson -Path "DC=AppNC" -Server lds.Fabrikam.com:50000
+New-ADUser -Name "ChewDavid" -Type iNetOrgPerson -Path "DC=AppNC" -Server lds.Fabrikam.com:50000
 ```
 
 This command creates an **inetOrgPerson**-class user named ChewDavid on an AD LDS instance.
@@ -104,7 +104,7 @@ This command creates an **inetOrgPerson**-class user named ChewDavid on an AD LD
 ### Example 4: Create a user and set password
 
 ```powershell
-PS C:\> New-ADUser -Name "ChewDavid" -Accountpassword (Read-Host -AsSecureString "AccountPassword") -Enabled $true
+New-ADUser -Name "ChewDavid" -Accountpassword (Read-Host -AsSecureString "AccountPassword") -Enabled $true
 ```
 
 This command creates a new user named ChewDavid and sets the account password.

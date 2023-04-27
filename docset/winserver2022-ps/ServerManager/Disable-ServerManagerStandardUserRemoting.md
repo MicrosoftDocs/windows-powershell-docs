@@ -30,7 +30,7 @@ Manager. The cmdlet restores the default, administrator-only access to this data
 locally on the server that is being managed by using Server Manager. The cmdlet works by performing
 the following actions:
 
-- Deletes access rights for specified standard users to the root\cimv2 namespace on the local server
+- Deletes access rights for specified standard users to the `root\cimv2` namespace on the local server
   (for access to role and feature inventory information).
 
 - Removes specified standard users from user groups (Remote Management Users, Event Log Readers, and

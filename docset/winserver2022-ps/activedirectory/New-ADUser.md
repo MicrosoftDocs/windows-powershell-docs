@@ -11,6 +11,7 @@ title: New-ADUser
 # New-ADUser
 
 ## SYNOPSIS
+
 Creates an Active Directory user.
 
 ## SYNTAX
@@ -37,6 +38,7 @@ New-ADUser [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNot
 ```
 
 ## DESCRIPTION
+
 The **New-ADUser** cmdlet creates an Active Directory user.
 You can set commonly used user property values by using the cmdlet parameters.
 
@@ -68,7 +70,9 @@ Then pass these objects through the pipeline to the **New-ADUser** cmdlet to cre
 
 ## EXAMPLES
 
+
 ### Example 1: Create a user with an imported certificate
+
 ```
 PS C:\> New-ADUser -Name "ChewDavid" -Certificate (New-Object System.Security.Cryptography.X509Certificates.X509Certificate -ArgumentList "Export.cer")
 ```
@@ -76,6 +80,7 @@ PS C:\> New-ADUser -Name "ChewDavid" -Certificate (New-Object System.Security.Cr
 This command creates a user named ChewDavid with a certificate imported from the file Export.cer.
 
 ### Example 2: Create a user and set properties
+
 ```
 PS C:\> New-ADUser -Name "ChewDavid" -OtherAttributes @{'title'="director";'mail'="chewdavid@fabrikam.com"}
 ```
@@ -83,6 +88,7 @@ PS C:\> New-ADUser -Name "ChewDavid" -OtherAttributes @{'title'="director";'mail
 This command creates a new user named ChewDavid and sets the **title** and **mail** properties on the new object.
 
 ### Example 3: Create an inetOrgPerson user
+
 ```
 PS C:\> New-ADUser -Name "ChewDavid" -Type iNetOrgPerson -Path "DC=AppNC" -Server lds.Fabrikam.com:50000
 ```
@@ -90,6 +96,7 @@ PS C:\> New-ADUser -Name "ChewDavid" -Type iNetOrgPerson -Path "DC=AppNC" -Serve
 This command creates an **inetOrgPerson**-class user named ChewDavid on an AD LDS instance.
 
 ### Example 4: Create a user and set password
+
 ```
 PS C:\> New-ADUser -Name "ChewDavid" -Accountpassword (Read-Host -AsSecureString "AccountPassword") -Enabled $true
 ```
@@ -99,6 +106,7 @@ This command creates a new user named ChewDavid and sets the account password.
 ## PARAMETERS
 
 ### -AccountExpirationDate
+
 Specifies the expiration date for an account.
 This parameter sets the **AccountExpirationDate** property of an account object.
 The LDAP display name (**ldapDisplayName**) for this property is accountExpires.
@@ -121,6 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountNotDelegated
+
 Indicates whether the security context of the user is delegated to a service.
 When this parameter is set to $True, the security context of the account is not delegated to a service even when the service account is set as trusted for Kerberos delegation.
 This parameter sets the **AccountNotDelegated** property for an Active Directory account.
@@ -143,6 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountPassword
+
 Specifies a new password value for an account.
 This value is stored as an encrypted string.
 
@@ -172,6 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowReversiblePasswordEncryption
+
 Indicates whether reversible password encryption is allowed for the account.
 This parameter sets the **AllowReversiblePasswordEncryption** property of the account.
 This parameter also sets the **ADS_UF_ENCRYPTED_TEXT_PASSWORD_ALLOWED** flag of the Active Directory User Account Control (UAC) attribute.
@@ -195,6 +206,7 @@ Accept wildcard characters: False
 
 
 ### -AuthenticationPolicy
+
 Specifies an Active Directory Domain Services authentication policy object.
 Specify the authentication policy object in one of the following formats: 
 
@@ -220,6 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationPolicySilo
+
 Specifies an Active Directory Domain Services authentication policy silo object.
 Specify the authentication policy silo object in one of the following formats: 
 
@@ -245,6 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthType
+
 Specifies the authentication method to use.
 The acceptable values for this parameter are:
 
@@ -269,6 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -CannotChangePassword
+
 Indicates whether the account password can be changed.
 This parameter sets the **CannotChangePassword** property of an account.
 The acceptable values for this parameter are:
@@ -289,6 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### -Certificates
+
 Specifies the DER-encoded X.509v3 certificates of the account. These certificates include the public key certificates issued to this account by the Microsoft Certificate Service. This parameter sets the Certificates property of the account object. The LDAP display name (ldapDisplayName) for this property is userCertificate. 
 
 ```yaml
@@ -304,6 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChangePasswordAtLogon
+
 Indicates whether a password must be changed during the next logon attempt.
 The acceptable values for this parameter are:
 
@@ -325,6 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -City
+
 Specifies the user's town or city.
 This parameter sets the **City** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is l.
@@ -342,6 +360,7 @@ Accept wildcard characters: False
 ```
 
 ### -Company
+
 Specifies the user's company.
 This parameter sets the **Company** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is company.
@@ -359,6 +378,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompoundIdentitySupported
+
 Specifies whether an account supports Kerberos service tickets which includes the authorization data for the user's device.
 This value sets the compound identity supported flag of the Active Directory **msDS-SupportedEncryptionTypes** attribute.
 The acceptable values for this parameter are:
@@ -382,6 +402,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -397,6 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -Country
+
 Specifies the country or region code for the user's language of choice.
 This parameter sets the **Country** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is c.
@@ -415,6 +437,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the user account credentials to use to perform this task.
 The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory PowerShell provider drive.
 If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
@@ -440,6 +463,7 @@ Accept wildcard characters: False
 ```
 
 ### -Department
+
 Specifies the user's department.
 This parameter sets the **Department** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is department.
@@ -457,6 +481,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specifies a description of the object.
 This parameter sets the value of the **Description** property for the user object.
 The LDAP display name (**ldapDisplayName**) for this property is description.
@@ -474,6 +499,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
+
 Specifies the display name of the object.
 This parameter sets the **DisplayName** property of the user object.
 The LDAP display name (**ldapDisplayName**) for this property is displayName.
@@ -491,6 +517,7 @@ Accept wildcard characters: False
 ```
 
 ### -Division
+
 Specifies the user's division.
 This parameter sets the **Division** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is division.
@@ -508,6 +535,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
+
 Specifies the user's e-mail address.
 This parameter sets the **EmailAddress** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is mail.
@@ -525,6 +553,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmployeeID
+
 Specifies the user's employee ID.
 This parameter sets the **EmployeeID** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is employeeID.
@@ -542,6 +571,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmployeeNumber
+
 Specifies the user's employee number.
 This parameter sets the **EmployeeNumber** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is employeeNumber.
@@ -559,6 +589,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
+
 Specifies if an account is enabled.
 An enabled account requires a password.
 This parameter sets the **Enabled** property for an account object.
@@ -581,6 +612,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fax
+
 Specifies the user's fax phone number.
 This parameter sets the **Fax** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is facsimileTelephoneNumber.
@@ -598,6 +630,7 @@ Accept wildcard characters: False
 ```
 
 ### -GivenName
+
 Specifies the user's given name.
 This parameter sets the **GivenName** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is givenName.
@@ -615,6 +648,7 @@ Accept wildcard characters: False
 ```
 
 ### -HomeDirectory
+
 Specifies a user's home directory.
 This parameter sets the **HomeDirectory** property of a user object.
 The LDAP display name (**ldapDisplayName**) for this property is homeDirectory.
@@ -632,6 +666,7 @@ Accept wildcard characters: False
 ```
 
 ### -HomeDrive
+
 Specifies a drive that is associated with the UNC path defined by the **HomeDirectory** property.
 The drive letter is specified as `<DriveLetter>`: where `<DriveLetter>` indicates the letter of the drive to associate.
 The `<DriveLetter>` must be a single, uppercase letter and the colon is required.
@@ -651,6 +686,7 @@ Accept wildcard characters: False
 ```
 
 ### -HomePage
+
 Specifies the URL of the home page of the object.
 This parameter sets the **homePage** property of a user object.
 The LDAP display name (**ldapDisplayName**) for this property is wWWHomePage.
@@ -668,6 +704,7 @@ Accept wildcard characters: False
 ```
 
 ### -HomePhone
+
 Specifies the user's home telephone number.
 This parameter sets the **HomePhone** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is homePhone.
@@ -685,6 +722,7 @@ Accept wildcard characters: False
 ```
 
 ### -Initials
+
 Specifies the initials that represent part of a user's name.
 You can use this value for the user's middle initial.
 This parameter sets the **Initials** property of a user object.
@@ -703,6 +741,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
+
 Specifies an instance of a user object to use as a template for a new user object.
 
 You can use an instance of an existing user object as a template or you can construct a new user object for template use.
@@ -731,6 +770,7 @@ Accept wildcard characters: False
 ```
 
 ### -KerberosEncryptionType
+
 Specifies whether an account supports Kerberos encryption types which are used during creation of service tickets.
 This value sets the encryption types supported flags of the Active Directory **msDS-SupportedEncryptionTypes** attribute.
 Possible values for this parameter are:
@@ -762,6 +802,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogonWorkstations
+
 Specifies the computers that the user can access.
 To specify more than one computer, create a single comma-separated list.
 You can identify a computer by using the Security Account Manager (SAM) account name (sAMAccountName) or the DNS host name of the computer.
@@ -782,6 +823,7 @@ Accept wildcard characters: False
 ```
 
 ### -Manager
+
 Specifies the user's manager.
 This parameter sets the **Manager** property of a user object.
 This parameter is set by providing one of the following property values.
@@ -806,6 +848,7 @@ Accept wildcard characters: False
 ```
 
 ### -MobilePhone
+
 Specifies the user's mobile phone number.
 This parameter sets the **MobilePhone** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is mobile.
@@ -823,6 +866,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the object.
 This parameter sets the **Name** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is name.
@@ -840,6 +884,7 @@ Accept wildcard characters: False
 ```
 
 ### -Office
+
 Specifies the location of the user's office or place of business.
 This parameter sets the **Office** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is physicalDeliveryOfficeName.
@@ -857,6 +902,7 @@ Accept wildcard characters: False
 ```
 
 ### -OfficePhone
+
 Specifies the user's office telephone number.
 This parameter sets the **OfficePhone** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is telephoneNumber.
@@ -874,6 +920,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
+
 Specifies the user's organization.
 This parameter sets the **Organization** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is o.
@@ -891,6 +938,7 @@ Accept wildcard characters: False
 ```
 
 ### -OtherAttributes
+
 Specifies object attribute values for attributes that are not represented by cmdlet parameters.
 You can set one or more parameters at the same time with this parameter.
 If an attribute takes more than one value, you can assign multiple values.
@@ -921,6 +969,7 @@ Accept wildcard characters: False
 ```
 
 ### -OtherName
+
 Specifies a name in addition to a user's given name and surname, such as the user's middle name.
 This parameter sets the **OtherName** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is middleName.
@@ -938,6 +987,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
 Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
@@ -954,6 +1004,7 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordNeverExpires
+
 Specifies whether the password of an account can expire.
 This parameter sets the **PasswordNeverExpires** property of an account object.
 This parameter also sets the **ADS_UF_DONT_EXPIRE_PASSWD** flag of the Active Directory User Account Control attribute.
@@ -977,6 +1028,7 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordNotRequired
+
 Specifies whether the account requires a password.
 A password is not required for a new account.
 This parameter sets the **PasswordNotRequired** property of an account object.
@@ -994,6 +1046,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
 Specifies the X.500 path of the OU or container where the new object is created.
 
 In many cases, a default value is used for the *Path* parameter if no value is specified.
@@ -1031,6 +1084,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 ### -POBox
+
 Specifies the user's post office box number.
 This parameter sets the **POBox** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is postOfficeBox.
@@ -1047,6 +1101,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 ### -PostalCode
+
 Specifies the user's postal code or zip code.
 This parameter sets the **PostalCode** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is postalCode.
@@ -1064,6 +1119,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrincipalsAllowedToDelegateToAccount
+
 Specifies an array of principal objects.
 This parameter sets the **msDS-AllowedToActOnBehalfOfOtherIdentity** attribute of a computer account object.
 
@@ -1080,6 +1136,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfilePath
+
 Specifies a path to the user's profile.
 This value can be a local absolute path or a Universal Naming Convention (UNC) path.
 This parameter sets the **ProfilePath** property of the user object.
@@ -1098,6 +1155,7 @@ Accept wildcard characters: False
 ```
 
 ### -SamAccountName
+
 Specifies the Security Account Manager (SAM) account name of the user, group, computer, or service account.
 The maximum length of the description is 256 characters.
 To be compatible with older operating systems, create a SAM account name that is 20 characters or less.
@@ -1119,6 +1177,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptPath
+
 Specifies a path to the user's log on script.
 This value can be a local absolute path or a Universal Naming Convention (UNC) path.
 This parameter sets the **ScriptPath** property of the user object.
@@ -1137,6 +1196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the AD DS instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following: AD LDS, AD DS, or Active Directory snapshot instance.
 
@@ -1172,6 +1232,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalNames
+
 Specifies the service principal names for the account.
 This parameter sets the **ServicePrincipalNames** property of the account.
 The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
@@ -1190,6 +1251,7 @@ Accept wildcard characters: False
 ```
 
 ### -SmartcardLogonRequired
+
 Specifies whether a smart card is required to logon.
 This parameter sets the **SmartCardLoginRequired** property for a user object.
 This parameter also sets the **ADS_UF_SMARTCARD_REQUIRED** flag of the Active Directory User Account Control attribute.
@@ -1211,6 +1273,7 @@ Accept wildcard characters: False
 ```
 
 ### -State
+
 Specifies the user's or Organizational Unit's state or province.
 This parameter sets the **State** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is st.
@@ -1228,6 +1291,7 @@ Accept wildcard characters: False
 ```
 
 ### -StreetAddress
+
 Specifies the user's street address.
 This parameter sets the **StreetAddress** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is streetAddress.
@@ -1245,6 +1309,7 @@ Accept wildcard characters: False
 ```
 
 ### -Surname
+
 Specifies the user's last name or surname.
 This parameter sets the **Surname** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is sn.
@@ -1262,6 +1327,7 @@ Accept wildcard characters: False
 ```
 
 ### -Title
+
 Specifies the user's title.
 This parameter sets the **Title** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is title.
@@ -1279,6 +1345,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedForDelegation
+
 Indicates whether an account is trusted for Kerberos delegation.
 A service that runs under an account that is trusted for Kerberos delegation can assume the identity of a client requesting the service.
 This parameter sets the **TrustedForDelegation** property of an account object.
@@ -1301,6 +1368,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
+
 Specifies the type of object to create.
 Set the *Type* parameter to the LDAP display name of the Active Directory schema class that represents the type of object that you want to create.
 The selected type must be a subclass of the User schema class.
@@ -1319,6 +1387,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
+
 Specifies a user principal name (UPN) in the format `<user>@<DNS-domain-name>`.
 A UPN is a friendly name assigned by an administrator that is shorter than the LDAP distinguished name used by the system and easier to remember.
 The UPN is independent of the user object's distinguished name, so a user object can be moved or renamed without affecting the user logon name.
@@ -1337,6 +1406,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -1353,20 +1423,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADUser
+
 A user object that is a template for the new user object is received by the *Instance* parameter.
 
 ## OUTPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADUser
+
 Returns the new user object when the *PassThru* parameter is specified.
 By default, this cmdlet does not generate any output.
 
 ## NOTES
+
 * This cmdlet does not work with an Active Directory snapshot.
 * This cmdlet does not work with a read-only domain controller.
 

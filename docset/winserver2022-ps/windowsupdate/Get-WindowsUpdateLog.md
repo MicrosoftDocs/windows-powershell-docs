@@ -12,7 +12,7 @@ title: Get-WindowsUpdateLog
 
 ## SYNOPSIS
 
-Merges Windows Update .etl files into a single log file.
+Merges Windows Update `.etl` files into a single log file.
 
 ## SYNTAX
 
@@ -23,10 +23,10 @@ Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>]
 
 ## DESCRIPTION
 
-The `Get-WindowsUpdateLog` cmdlet merges and converts Windows Update .etl files into a single
+The `Get-WindowsUpdateLog` cmdlet merges and converts Windows Update `.etl` files into a single
 readable `WindowsUpdate.log` file. Windows Update Agent uses Event Tracing for Windows (ETW) to
 generate diagnostic logs. Windows Update no longer directly produces a `WindowsUpdate.log` file.
-Instead, it produces .etl files that are not immediately readable as written.
+Instead, it produces `.etl` files that are not immediately readable as written.
 
 For Windows 10 versions prior to 1709 (OS Build 16299), this cmdlet requires access to a Microsoft
 symbol server, and log decoding must be run from a Windows 10 version earlier than 1709. Logs from
@@ -106,9 +106,9 @@ Specifies an array of paths of Windows Update `.etl` files to convert into `Wind
 default value for this parameter is the Windows Update trace file directory for the current device.
 The acceptable values for this parameter are:
 
-- The full path of a directory that contains one or more .etl files.
-- The full path of a single .etl file.
-- A comma-separated list of full paths of .etl files.
+- The full path of a directory that contains one or more `.etl` files.
+- The full path of a single `.etl` file.
+- A comma-separated list of full paths of `.etl` files.
 
 ```yaml
 Type: String[]
@@ -143,8 +143,8 @@ Accept wildcard characters: False
 
 ### -LogPath
 
-Specifies the full path to which **Get-WindowsUpdateLog** writes WindowsUpdate.log.
-The default value is WindowsUpdate.log in the Desktop folder of the current user.
+Specifies the full path to which `Get-WindowsUpdateLog` writes `WindowsUpdate.log`.
+The default value is `WindowsUpdate.log` in the Desktop folder of the current user.
 
 ```yaml
 Type: String
@@ -163,11 +163,11 @@ Accept wildcard characters: False
 Specifies the file type that `Get-WindowsUpdateLog` uses for temporary files that are created
 during intermediate processing. The acceptable values for this parameter are:
 
-- CSV (comma-separated values)
-- XML
+- `CSV` (comma-separated values)
+- `XML`
 
-By default, the value is XML.
-The temporary files are in $env:TEMP\WindowsUpdateLog.
+By default, the value is `XML`.
+The temporary files are in `$env:TEMP\WindowsUpdateLog`.
 
 ```yaml
 Type: String

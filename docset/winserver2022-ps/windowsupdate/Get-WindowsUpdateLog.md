@@ -160,7 +160,7 @@ Accept wildcard characters: False
 
 ### -ProcessingType
 
-Specifies the file type that **Get-WindowsUpdateLog** uses for temporary files that are created
+Specifies the file type that `Get-WindowsUpdateLog` uses for temporary files that are created
 during intermediate processing. The acceptable values for this parameter are:
 
 - CSV (comma-separated values)

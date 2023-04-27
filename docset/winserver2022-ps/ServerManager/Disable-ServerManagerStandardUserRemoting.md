@@ -70,7 +70,7 @@ not carried out.
 Disable-ServerManagerStandardUserRemoting -User JennyL -Confirm
 ```
 
-In this example, the administrator denies a standard user named JennyL access to event, performance
+In this example, the administrator denies a standard user named `JennyL` access to event, performance
 counter, service status, and role and feature inventory data for a server that is being managed by
 using the Server Manager console running on either the local or a remote computer. The **Confirm**
 parameter is added, meaning that the command prompts for confirmation before performing the action.

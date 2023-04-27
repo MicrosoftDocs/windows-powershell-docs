@@ -97,7 +97,7 @@ Computer to the Trusted Host List" in
 [about_Remote_Troubleshooting](https://go.microsoft.com/fwlink/p/?LinkID=135188).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Cn
 
@@ -120,12 +120,12 @@ Quotation marks are optional.
 -- "Domain\User"
 -- "User@Domain.com"
 -- A Credential object returned by the
-    [Get-Credential](https://go.microsoft.com/fwlink/p/?LinkID=113311) cmdlet.
+ [Get-Credential](https://go.microsoft.com/fwlink/p/?LinkID=113311) cmdlet.
 
 If a user name is entered, then a prompt for a password is displayed.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -142,7 +142,7 @@ Specifies a name and path to a log file.
 Add this parameter if the results of this cmdlet must be stored in a log.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 Specifies the command IDs of roles, role services, or features about which to return information.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -191,7 +191,7 @@ Any local path, such as D:\myFolder, that is specified by using this parameter i
 the target computer.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

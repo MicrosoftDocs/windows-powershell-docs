@@ -90,6 +90,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Enable-TlsEccCurve](./Enable-TlsEccCurv.md)
+[Enable-TlsEccCurve](./Enable-TlsEccCurve.md)
 
 [Disable-TlsEccCurve](./Disable-TlsEccCurve.md)

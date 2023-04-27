@@ -126,6 +126,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-TlsEccCurve](./Get-TlsEccCurv.md)
+[Get-TlsEccCurve](./Get-TlsEccCurve.md)
 
 [Disable-TlsEccCurve](./Disable-TlsEccCurve.md)

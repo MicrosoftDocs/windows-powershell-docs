@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ### -ForceFlush
 
 Indicates that this cmdlet forces the Windows Update Agent on the current device to flush all of its
-traces to .etl files. This process stops the Update Orchestrator and Windows Update services.
+traces to `.etl` files. This process stops the Update Orchestrator and Windows Update services.
 Running this cmdlet with this parameter requires administrative credentials. You can start Windows
 PowerShell with administrative credentials by using the Run as administrator command.
 

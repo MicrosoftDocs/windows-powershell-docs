@@ -33,7 +33,7 @@ TLS(Transport Layer Security) for a computer.
 Disable-TlsEccCurve -Name curve25519
 ```
 
-This will disable the ECC Curve 'curve25519'.
+This will disable the ECC Curve `curve25519`.
 
 ## PARAMETERS
 

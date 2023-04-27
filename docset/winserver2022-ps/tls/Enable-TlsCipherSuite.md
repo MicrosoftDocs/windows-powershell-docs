@@ -32,7 +32,7 @@ cipher suite is not used.
 This cmdlet is based on Cryptography Next Generation (CNG) Cryptographic Configuration. Schannel
 registry settings and settings specified by means of Security Support Provider Interface (SSPI) by
 each app can override CNG Cryptographic Configuration. Other settings under
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL can also configure
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL` can also configure
 cipher suites. These settings can impact whether a cipher suite can be used. For example, disabling
 of SHA hashes supported by TLS disables the corresponding cipher suites. Additionally, applications
 can limit the algorithms using SSPI. For more information about TLS settings, see

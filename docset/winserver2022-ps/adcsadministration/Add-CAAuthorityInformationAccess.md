@@ -40,32 +40,20 @@ An AIA URI should specify either an AIA extension or an OCSP extension, but not 
 ## EXAMPLES
 
 ### Example 1: Add AIA to the specified authority
-```
-PS C:\> Add-CAAuthorityInformationAccess -AddToCertificateAia -Uri http://ca1.corp.contoso.com/pki
+
+```powershell
+Add-CAAuthorityInformationAccess -AddToCertificateAia -Uri http://ca1.corp.contoso.com/pki
 ```
 
 This command adds Authority Information Access (AIA) for the specified certification authority to 'http://ca1.corp.contoso.com/pki'.
 
 ### Example 2: Add AIA for OCSP
-```
-PS C:\> Add-CAAuthorityInformationAccess -AddToCertificateOcsp -Uri http://www.corp.contoso.com/ocsp.
+
+```powershell
+Add-CAAuthorityInformationAccess -AddToCertificateOcsp -Uri http://www.corp.contoso.com/ocsp.
 ```
 
 This command adds AIA for OCSP pointing to `http://www.corp.contoso.com/ocsp`.
-
-### Example 3: Remove all AIA entries
-```
-PS C:\> $AIA = Get-CAAuthorityInformationAccess
-
-
-PS C:\> $AIA | Remove-CAAuthorityInformationAccess
-```
-
-This example removes all AIA entries
-
-The first command gets the certificate authority information and stores the information in the variable named $AIA.
-
-The second command removes all the AIA entries that are stored in the $AIA variable.
 
 ## PARAMETERS
 

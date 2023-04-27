@@ -30,8 +30,6 @@ Gets the list of Elliptic Curve Cryptography (ECC) cipher suites available for T
 Get-TlsEccCurve
 ```
 
-This generates the following output:
-
 ```output
 curve25519
 NistP256
@@ -45,8 +43,6 @@ This command gets all ECC curves for the computer.
 ```powershell
 Get-TlsEccCurve -Name 'Nist'
 ```
-
-This generates the following output:
 
 ```output
 NistP256

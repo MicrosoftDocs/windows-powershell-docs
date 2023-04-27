@@ -36,12 +36,7 @@ The `Install-ADDSDomain` cmdlet installs an Active Directory domain configuratio
 ### Example 1: Install a new child domain
 
 ```
-Install-ADDSDomain -Credential (Get-Credential CORP\EnterpriseAdmin1) `
--NewDomainName child -ParentDomainName "corp.contoso.com" -InstallDNS `
--CreateDNSDelegation -DomainMode Win2003 `
--ReplicationSourceDC "DC1.corp.contoso.com" -SiteName "Houston" `
--DatabasePath "D:\NTDS" -SYSVOLPath "D:\SYSVOL" -LogPath "E:\Logs" `
--NoRebootOnCompletion
+Install-ADDSDomain -Credential (Get-Credential CORP\EnterpriseAdmin1) -NewDomainName child -ParentDomainName "corp.contoso.com" -InstallDNS -CreateDNSDelegation -DomainMode Win2003 -ReplicationSourceDC "DC1.corp.contoso.com" -SiteName "Houston" -DatabasePath "D:\NTDS" -SYSVOLPath "D:\SYSVOL" -LogPath "E:\Logs" -NoRebootOnCompletion
 ```
 
 This command installs a new child domain named child.corp.contoso.com using credentials of

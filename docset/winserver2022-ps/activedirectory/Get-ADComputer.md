@@ -62,7 +62,10 @@ For more information about the how to determine the properties for computer obje
 ### Example 1: Get specific computer that shows all properties
 
 ```powershell
-PS C:\> Get-ADComputer -Identity "User01-SRV1" -Properties *
+Get-ADComputer -Identity "User01-SRV1" -Properties *
+```
+
+```Output
 
 
 AccountExpirationDate              : 
@@ -148,7 +151,11 @@ This command gets a specific computer showing all the properties.
 ### Example 2: Get all computers with a name starting with a particular string
 
 ```powershell
-PS C:\> Get-ADComputer -Filter 'Name -like "User01*"' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
+Get-ADComputer -Filter 'Name -like "User01*"' -Properties IPv4Address | 
+    Format-Table Name,DNSHostName,IPv4Address -AutoSize
+```
+
+```Output
 name        dnshostname            ipv4address
 ----        -----------            -----------
 User01-SRV1 User01-SRV1.User01.com 10.194.99.181
@@ -160,8 +167,12 @@ This command gets all the computers with a name starting with a particular strin
 ### Example 3: Gets all computers that have changed their password in specific time frame
 
 ```powershell
-PS C:\> $Date = [DateTime]::Today.AddDays(-90) 
-PS C:\> Get-ADComputer -Filter 'PasswordLastSet -ge $Date' -Properties PasswordLastSet | FT Name,PasswordLastSet
+$Date = [DateTime]::Today.AddDays(-90) 
+Get-ADComputer -Filter 'PasswordLastSet -ge $Date' -Properties PasswordLastSet | 
+    Format-Table Name,PasswordLastSet
+```
+
+```Output
 Name                                                      PasswordLastSet
 ----                                                      ---------------
 USER01-SRV4                                               3/12/2009 6:40:37 PM
@@ -173,7 +184,10 @@ This command gets all the computers that have changed their password in the last
 ### Example 4: Get computer accounts in a specific location using an LDAPFilter
 
 ```powershell
-PS C:\> Get-ADComputer -LDAPFilter "(name=*laptop*)" -SearchBase "CN=Computers,DC= User01,DC=com"
+Get-ADComputer -LDAPFilter "(name=*laptop*)" -SearchBase "CN=Computers,DC= User01,DC=com"
+```
+
+```Output
 name
 ----
 pattiful-laptop
@@ -185,7 +199,7 @@ This command gets the computer accounts in the location CN=Computers,DC=User01,D
 ### Example 5: Get all computer accounts using a filter
 
 ```powershell
-PS C:\> Get-ADComputer -Filter *
+Get-ADComputer -Filter *
 ```
 
 This command gets all computer accounts.
@@ -193,7 +207,11 @@ This command gets all computer accounts.
 ### Example 6: Get all computers with a name starting with Computer01 or Computer02
 
 ```powershell
-PS C:\> Get-ADComputer -Filter 'Name -like "Computer01*" -or Name -like "Computer02*"' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
+Get-ADComputer -Filter 'Name -like "Computer01*" -or Name -like "Computer02*"' -Properties IPv4Address |
+    Format-Table Name,DNSHostName,IPv4Address -AutoSize
+```
+
+```Output
 name        dnshostname            ipv4address
 ----        -----------            -----------
 Computer01-SRV1 Computer01-SRV1.Computer01.com 10.194.99.181
@@ -203,8 +221,12 @@ Computer02-SRV2 Computer02-SRV2.Computer02.com 10.194.100.3
 ### Example 7: Get all computers with a name starting with a string AND password last set before 30 days
 
 ```powershell
-PS C:\> $Date = [DateTime]::Today.AddDays(-30)
-PS C:\> Get-ADComputer -Filter 'Name -like "Computer01*" -and PasswordLastSet -ge $Date' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
+$Date = [DateTime]::Today.AddDays(-30)
+Get-ADComputer -Filter 'Name -like "Computer01*" -and PasswordLastSet -ge $Date' -Properties IPv4Address | 
+    Format-Table Name,DNSHostName,IPv4Address -AutoSize
+```
+
+```Output
 name        dnshostname            ipv4address
 ----        -----------            -----------
 Computer01-SRV1 Computer01-SRV1.Computer01.com 10.194.99.181

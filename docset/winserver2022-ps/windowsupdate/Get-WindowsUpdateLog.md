@@ -79,8 +79,8 @@ The command completed successfully.
 WindowsUpdate.log written to C:\Users\admin\Desktop\WindowsUpdate.log
 ```
 
-This command merges and converts Windows Update trace files (.etl files) into a single readable
-WindowsUpdate.log file.
+This command merges and converts Windows Update trace files (`.etl` files) into a single readable
+`WindowsUpdate.log` file.
 
 ## PARAMETERS
 

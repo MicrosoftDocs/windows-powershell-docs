@@ -39,7 +39,7 @@ New-ADUser [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNot
 
 ## DESCRIPTION
 
-The **New-ADUser** cmdlet creates an Active Directory user.
+The `New-ADUser` cmdlet creates an Active Directory user.
 You can set commonly used user property values by using the cmdlet parameters.
 
 You can set property values that are not associated with cmdlet parameters by using the _OtherAttributes_ parameter.
@@ -47,7 +47,7 @@ When using this parameter, be sure to place single quotes around the attribute n
 
 You must specify the _SamAccountName_ parameter to create a user.
 
-You can use the **New-ADUser** cmdlet to create different types of user accounts such as iNetOrgPerson accounts.
+You can use the `New-ADUser` cmdlet to create different types of user accounts such as iNetOrgPerson accounts.
 To do this in Active Directory Domain Services (AD DS), set the _Type_ parameter to the Lightweight Directory Access Protocol (LDAP) display name for the type of account you want to create.
 This type can be any class in the Active Directory schema that is a subclass of user and that has an object category of person.
 
@@ -56,7 +56,7 @@ When you do not specify the _Path_ parameter, the cmdlet creates a user object i
 
 The following methods explain different ways to create an object by using this cmdlet.
 
-Method 1: Use the **New-ADUser** cmdlet, specify the required parameters, and set any additional property values by using the cmdlet parameters.
+Method 1: Use the `New-ADUser` cmdlet, specify the required parameters, and set any additional property values by using the cmdlet parameters.
 
 Method 2: Use a template to create the new object.
 To do this, create a new user object or retrieve a copy of an existing user object and set the _Instance_ parameter to this object.
@@ -64,9 +64,9 @@ The object provided to the _Instance_ parameter is used as a template for the ne
 You can override property values from the template by setting cmdlet parameters.
 For examples and more information, see the _Instance_ parameter description for this cmdlet.
 
-Method 3: Use the Import-Csv cmdlet with the **New-ADUser** cmdlet to create multiple Active Directory user objects.
-To do this, use the **Import-Csv** cmdlet to create the custom objects from a comma-separated value (CSV) file that contains a list of object properties.
-Then pass these objects through the pipeline to the **New-ADUser** cmdlet to create the user objects.
+Method 3: Use the Import-Csv cmdlet with the `New-ADUser` cmdlet to create multiple Active Directory user objects.
+To do this, use the `Import-Csv` cmdlet to create the custom objects from a comma-separated value (CSV) file that contains a list of object properties.
+Then pass these objects through the pipeline to the `New-ADUser` cmdlet to create the user objects.
 
 ## EXAMPLES
 
@@ -380,14 +380,14 @@ Accept wildcard characters: False
 ### -CompoundIdentitySupported
 
 Specifies whether an account supports Kerberos service tickets which includes the authorization data for the user's device.
-This value sets the compound identity supported flag of the Active Directory **msDS-SupportedEncryptionTypes** attribute.
+This value sets the compound identity supported flag of the Active Directory `msDS-SupportedEncryptionTypes` attribute.
 The acceptable values for this parameter are:
 
 - $False or 0
 - $True or 1
 
-Warning: Domain-joined Windows systems and services such as clustering manage their own **msDS-SupportedEncryptionTypes** attribute.
-Therefore any changes to the flag on the **msDS-SupportedEncryptionTypes** attribute are overwritten by the service or system that manages the setting.
+Warning: Domain-joined Windows systems and services such as clustering manage their own `msDS-SupportedEncryptionTypes` attribute.
+Therefore any changes to the flag on the `msDS-SupportedEncryptionTypes` attribute are overwritten by the service or system that manages the setting.
 
 ```yaml
 Type: Boolean
@@ -445,7 +445,7 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+You can also create a **PSCredential** object by using a script or by using the `Get-Credential` cmdlet.
 You can then set the _Credential_ parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.
@@ -748,12 +748,12 @@ You can use an instance of an existing user object as a template or you can cons
 You can construct a new user object using the Windows PowerShell command line or by using a script.
 
 Method 1: Use an existing user object as a template for a new object.
-To retrieve an instance of an existing user object, use a cmdlet such as **Get-ADUser**.
-Then provide this object to the _Instance_ parameter of the **New-ADUser** cmdlet to create a new user object.
+To retrieve an instance of an existing user object, use a cmdlet such as `Get-ADUser`.
+Then provide this object to the _Instance_ parameter of the `New-ADUser` cmdlet to create a new user object.
 You can override property values of the new object by setting the appropriate parameters.
 
 Method 2: Create a new **ADUser** object and set the property values by using the Windows PowerShell command line interface.
-Then pass this object to the _Instance_ parameter of the **New-ADUser** cmdlet to create the new Active Directory user object.
+Then pass this object to the _Instance_ parameter of the `New-ADUser` cmdlet to create the new Active Directory user object.
 
 Note: Specified attributes are not validated, so attempting to set attributes that do not exist or cannot be set raises an error.
 
@@ -772,7 +772,7 @@ Accept wildcard characters: False
 ### -KerberosEncryptionType
 
 Specifies whether an account supports Kerberos encryption types which are used during creation of service tickets.
-This value sets the encryption types supported flags of the Active Directory **msDS-SupportedEncryptionTypes** attribute.
+This value sets the encryption types supported flags of the Active Directory `msDS-SupportedEncryptionTypes` attribute.
 Possible values for this parameter are:
 
 - None
@@ -785,8 +785,8 @@ None removes all encryption types from the account, resulting in the KDC being u
 
 DES is a weak encryption type that is not supported by default since Windows 7 and Windows Server 2008 R2.
 
-Warning: Domain-joined Windows systems and services such as clustering manage their own **msDS-SupportedEncryptionTypes** attribute.
-Therefore any changes to the flag on the **msDS-SupportedEncryptionTypes** attribute are overwritten by the service or system that manages the setting.
+Warning: Domain-joined Windows systems and services such as clustering manage their own `msDS-SupportedEncryptionTypes` attribute.
+Therefore any changes to the flag on the `msDS-SupportedEncryptionTypes` attribute are overwritten by the service or system that manages the setting.
 
 ```yaml
 Type: ADKerberosEncryptionType
@@ -1064,9 +1064,9 @@ In AD LDS environments, a default value for _Path_ is set in the following cases
 
 - If the cmdlet is run from an Active Directory module for PowerShell provider drive, the parameter is set to the current path of the provider drive. 
 - If the cmdlet has a default path, this is used.
-For example: in **New-ADUser**, the _Path_ parameter defaults to the Users container. 
+For example: in `New-ADUser`, the _Path_ parameter defaults to the Users container. 
 - If the target AD LDS instance has a default naming context, the default value of _Path_ is set to the default naming context.
-To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
+To specify a default naming context for an AD LDS environment, set the `msDS-defaultNamingContext` property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
 - If none of the previous cases apply, the _Path_ parameter does not take any default value.
 
 Note: The Active Directory Provider cmdlets, such New-Item, Remove-Item, Remove-ItemProperty, *Rename-Item*, and Set-ItemProperty also contain a _Path_ property.
@@ -1121,7 +1121,7 @@ Accept wildcard characters: False
 ### -PrincipalsAllowedToDelegateToAccount
 
 Specifies an array of principal objects.
-This parameter sets the **msDS-AllowedToActOnBehalfOfOtherIdentity** attribute of a computer account object.
+This parameter sets the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute of a computer account object.
 
 ```yaml
 Type: ADPrincipal[]

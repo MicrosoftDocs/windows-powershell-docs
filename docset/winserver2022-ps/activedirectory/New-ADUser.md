@@ -42,27 +42,27 @@ New-ADUser [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNot
 The **New-ADUser** cmdlet creates an Active Directory user.
 You can set commonly used user property values by using the cmdlet parameters.
 
-You can set property values that are not associated with cmdlet parameters by using the *OtherAttributes* parameter.
+You can set property values that are not associated with cmdlet parameters by using the _OtherAttributes_ parameter.
 When using this parameter, be sure to place single quotes around the attribute name.
 
-You must specify the *SamAccountName* parameter to create a user.
+You must specify the _SamAccountName_ parameter to create a user.
 
 You can use the **New-ADUser** cmdlet to create different types of user accounts such as iNetOrgPerson accounts.
-To do this in Active Directory Domain Services (AD DS), set the *Type* parameter to the Lightweight Directory Access Protocol (LDAP) display name for the type of account you want to create.
+To do this in Active Directory Domain Services (AD DS), set the _Type_ parameter to the Lightweight Directory Access Protocol (LDAP) display name for the type of account you want to create.
 This type can be any class in the Active Directory schema that is a subclass of user and that has an object category of person.
 
-The *Path* parameter specifies the container or organizational unit (OU) for the new user.
-When you do not specify the *Path* parameter, the cmdlet creates a user object in the default container for user objects in the domain.
+The _Path_ parameter specifies the container or organizational unit (OU) for the new user.
+When you do not specify the _Path_ parameter, the cmdlet creates a user object in the default container for user objects in the domain.
 
 The following methods explain different ways to create an object by using this cmdlet.
 
 Method 1: Use the **New-ADUser** cmdlet, specify the required parameters, and set any additional property values by using the cmdlet parameters.
 
 Method 2: Use a template to create the new object.
-To do this, create a new user object or retrieve a copy of an existing user object and set the *Instance* parameter to this object.
-The object provided to the *Instance* parameter is used as a template for the new object.
+To do this, create a new user object or retrieve a copy of an existing user object and set the _Instance_ parameter to this object.
+The object provided to the _Instance_ parameter is used as a template for the new object.
 You can override property values from the template by setting cmdlet parameters.
-For examples and more information, see the *Instance* parameter description for this cmdlet.
+For examples and more information, see the _Instance_ parameter description for this cmdlet.
 
 Method 3: Use the Import-Csv cmdlet with the **New-ADUser** cmdlet to create multiple Active Directory user objects.
 To do this, use the **Import-Csv** cmdlet to create the custom objects from a comma-separated value (CSV) file that contains a list of object properties.
@@ -446,7 +446,7 @@ To specify this parameter, you can type a user name, such as User1 or Domain01\U
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
 You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
-You can then set the *Credential* parameter to the **PSCredential** object.
+You can then set the _Credential_ parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.
 
@@ -749,11 +749,11 @@ You can construct a new user object using the Windows PowerShell command line or
 
 Method 1: Use an existing user object as a template for a new object.
 To retrieve an instance of an existing user object, use a cmdlet such as **Get-ADUser**.
-Then provide this object to the *Instance* parameter of the **New-ADUser** cmdlet to create a new user object.
+Then provide this object to the _Instance_ parameter of the **New-ADUser** cmdlet to create a new user object.
 You can override property values of the new object by setting the appropriate parameters.
 
 Method 2: Create a new **ADUser** object and set the property values by using the Windows PowerShell command line interface.
-Then pass this object to the *Instance* parameter of the **New-ADUser** cmdlet to create the new Active Directory user object.
+Then pass this object to the _Instance_ parameter of the **New-ADUser** cmdlet to create the new Active Directory user object.
 
 Note: Specified attributes are not validated, so attempting to set attributes that do not exist or cannot be set raises an error.
 
@@ -1049,28 +1049,28 @@ Accept wildcard characters: False
 
 Specifies the X.500 path of the OU or container where the new object is created.
 
-In many cases, a default value is used for the *Path* parameter if no value is specified.
+In many cases, a default value is used for the _Path_ parameter if no value is specified.
 The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and when a default value can be determined, no further rules are evaluated.
 
-In Active Directory Domain Services (AD DS) environments, a default value for *Path* is set in the following cases:
+In Active Directory Domain Services (AD DS) environments, a default value for _Path_ is set in the following cases:
 
 - If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current path of the provider drive. 
 - If the cmdlet has a default path, this is used.
-For example: in New-ADUser, the *Path* parameter defaults to the Users container. 
-- If none of the previous cases apply, the default value of *Path* is set to the default partition or naming context of the target domain.
+For example: in New-ADUser, the _Path_ parameter defaults to the Users container. 
+- If none of the previous cases apply, the default value of _Path_ is set to the default partition or naming context of the target domain.
 
-In AD LDS environments, a default value for *Path* is set in the following cases:
+In AD LDS environments, a default value for _Path_ is set in the following cases:
 
 - If the cmdlet is run from an Active Directory module for PowerShell provider drive, the parameter is set to the current path of the provider drive. 
 - If the cmdlet has a default path, this is used.
-For example: in **New-ADUser**, the *Path* parameter defaults to the Users container. 
-- If the target AD LDS instance has a default naming context, the default value of *Path* is set to the default naming context.
+For example: in **New-ADUser**, the _Path_ parameter defaults to the Users container. 
+- If the target AD LDS instance has a default naming context, the default value of _Path_ is set to the default naming context.
 To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
-- If none of the previous cases apply, the *Path* parameter does not take any default value.
+- If none of the previous cases apply, the _Path_ parameter does not take any default value.
 
-Note: The Active Directory Provider cmdlets, such New-Item, Remove-Item, Remove-ItemProperty, *Rename-Item*, and Set-ItemProperty also contain a *Path* property.
-However, for the Active Directory Provider cmdlets, the *Path* parameter identifies the path of the actual object rather than the container.
+Note: The Active Directory Provider cmdlets, such New-Item, Remove-Item, Remove-ItemProperty, *Rename-Item*, and Set-ItemProperty also contain a _Path_ property.
+However, for the Active Directory Provider cmdlets, the _Path_ parameter identifies the path of the actual object rather than the container.
 
 ```yaml
 Type: String
@@ -1215,7 +1215,7 @@ Directory server values:
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 
-- By using the *Server* value from objects passed through the pipeline
+- By using the _Server_ value from objects passed through the pipeline
 - By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
 
@@ -1370,7 +1370,7 @@ Accept wildcard characters: False
 ### -Type
 
 Specifies the type of object to create.
-Set the *Type* parameter to the LDAP display name of the Active Directory schema class that represents the type of object that you want to create.
+Set the _Type_ parameter to the LDAP display name of the Active Directory schema class that represents the type of object that you want to create.
 The selected type must be a subclass of the User schema class.
 If this parameter is not specified it defaults to User.
 
@@ -1430,13 +1430,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None or Microsoft.ActiveDirectory.Management.ADUser
 
-A user object that is a template for the new user object is received by the *Instance* parameter.
+A user object that is a template for the new user object is received by the _Instance_ parameter.
 
 ## OUTPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADUser
 
-Returns the new user object when the *PassThru* parameter is specified.
+Returns the new user object when the _PassThru_ parameter is specified.
 By default, this cmdlet does not generate any output.
 
 ## NOTES

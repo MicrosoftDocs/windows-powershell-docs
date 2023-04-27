@@ -16,9 +16,9 @@ Merges Windows Update .etl files into a single log file.
 
 ## SYNTAX
 
-```powershell
-Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>] [-ProcessingType <String>] [-ForceFlush]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>] 
+[-ProcessingType <String>] [-ForceFlush] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

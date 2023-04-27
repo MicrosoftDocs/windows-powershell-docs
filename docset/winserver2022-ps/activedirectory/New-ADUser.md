@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ### -AccountNotDelegated
 
 Indicates whether the security context of the user is delegated to a service. When this parameter is
-set to $True, the security context of the account is not delegated to a service even when the
+set to `$True`, the security context of the account is not delegated to a service even when the
 service account is set as trusted for Kerberos delegation.
 
 This parameter sets the **AccountNotDelegated** property for an Active Directory account.
@@ -152,8 +152,8 @@ Control (UAC) attribute.
 
 The acceptable values for this parameter are:
 
-- $False or 0
-- $True or 1
+- `$False` or 0
+- `$True` or 1
 
 ```yaml
 Type: Boolean
@@ -186,7 +186,7 @@ User accounts, by default, are created without a password. If you provide a pass
 will be made to set that password however, this can fail due to password policy restrictions. The
 user account will still be created and you may use Set-ADAccountPassword to set the password on that
 account. In order to ensure that accounts remain secure, user accounts will never be enabled unless
-a valid password is set or **PasswordNotRequired** is set to $True.
+a valid password is set or **PasswordNotRequired** is set to `$True`.
 
 The account is created if the password fails for any reason.
 
@@ -213,8 +213,8 @@ User Account Control (UAC) attribute.
 
 The acceptable values for this parameter are:
 
-- $False or 0
-- $True or 1
+- `$False` or 0
+- `$True` or 1
 
 ```yaml
 Type: Boolean
@@ -319,8 +319,8 @@ This parameter sets the **CannotChangePassword** property of an account.
 
 The acceptable values for this parameter are:
 
-- $False or 0
-- $True or 1
+- `$False` or 0
+- `$True` or 1
 
 ```yaml
 Type: Boolean
@@ -359,11 +359,11 @@ Indicates whether a password must be changed during the next logon attempt.
 
 The acceptable values for this parameter are:
 
-- $False or 0
-- $True or 1
+- `$False` or 0
+- `$True` or 1
 
-This parameter cannot be set to $True or 1 for an account that also has the **PasswordNeverExpires**
-property set to $True.
+This parameter cannot be set to `$True` or 1 for an account that also has the
+**PasswordNeverExpires** property set to `$True`.
 
 ```yaml
 Type: Boolean
@@ -427,8 +427,8 @@ This value sets the compound identity supported flag of the Active Directory
 
 The acceptable values for this parameter are:
 
-- $False or 0
-- $True or 1
+- `$False` or 0
+- `$True` or 1
 
 Warning: Domain-joined Windows systems and services such as clustering manage their own
 `msDS-SupportedEncryptionTypes` attribute. Therefore any changes to the flag on the
@@ -673,8 +673,8 @@ Control (UAC) attribute.
 
 The acceptable values for this parameter are:
 
-- $False or 0
-- $True or 1
+- `$False` or 0
+- `$True` or 1
 
 ```yaml
 Type: Boolean
@@ -1159,11 +1159,11 @@ Control attribute.
 
 The acceptable values for this parameter are:
 
-- $False or 0
-- $True or 1
+- `$False` or 0
+- `$True` or 1
 
-Note: This parameter cannot be set to $True or 1 for an account that also has the
-**ChangePasswordAtLogon** property set to $True.
+Note: This parameter cannot be set to `$True` or 1 for an account that also has the
+**ChangePasswordAtLogon** property set to `$True`.
 
 ```yaml
 Type: Boolean
@@ -1453,8 +1453,8 @@ Control attribute.
 
 The acceptable values for this parameter are:
 
-- $False or 0
-- $True or 1
+- `$False` or 0
+- `$True` or 1
 
 ```yaml
 Type: Boolean
@@ -1562,8 +1562,8 @@ Control attribute.
 
 The acceptable values for this parameter are:
 
-- $False or 0
-- $True or 1
+- `$False` or 0
+- `$True` or 1
 
 ```yaml
 Type: Boolean

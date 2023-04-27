@@ -1,0 +1,33 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the current System Preferred Language.
+module: LanguagePackManagement
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-SystemPreferredUILanguage
+  href: set-systempreferreduilanguage.yml
+- text: InstallLanguage
+  href: install-language.yml
+syntaxes:
+- Get-SystemPreferredUILanguage [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SystemPrefferedUILanguage
+  description: |-
+    This command returns the language that's currently set as the System Preferred UI Language
+  summary: ""
+uid: LanguagePackManagement.Get-SystemPreferredUILanguage
+name: Get-SystemPreferredUILanguage
+description: |-
+  Returns the language that is set as the System Preferred Language
+metadata:
+  description: The Get-SystemPreferredUILanguage cmdlet lets you see which language is set as the System Preferred UI Language in a running Windows installation
+  external help file: Microsoft.LanguagePackManagement.Powershell.Commands.dll-Help.xml
+  Module Name: LanguagePackManagement
+  ms.date: 08/15/2022
+  online version: https://learn.microsoft.com/powershell/module/languagepackmanagement/get-systempreferreduilanguage?view=windowsserver2022-ps
+  schema: 2.0.0
+  title: Get-SystemPreferredUILanguage

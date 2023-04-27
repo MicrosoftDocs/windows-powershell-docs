@@ -1,0 +1,50 @@
+### YamlMime:PowershellModule
+children:
+- title: BranchCache
+  cmdlets:
+  - BranchCache.Add-BCDataCacheExtension
+  - BranchCache.Clear-BCCache
+  - BranchCache.Disable-BC
+  - BranchCache.Disable-BCDowngrading
+  - BranchCache.Disable-BCServeOnBattery
+  - BranchCache.Enable-BCDistributed
+  - BranchCache.Enable-BCDowngrading
+  - BranchCache.Enable-BCHostedClient
+  - BranchCache.Enable-BCHostedServer
+  - BranchCache.Enable-BCLocal
+  - BranchCache.Enable-BCServeOnBattery
+  - BranchCache.Export-BCCachePackage
+  - BranchCache.Export-BCSecretKey
+  - BranchCache.Get-BCClientConfiguration
+  - BranchCache.Get-BCContentServerConfiguration
+  - BranchCache.Get-BCDataCache
+  - BranchCache.Get-BCDataCacheExtension
+  - BranchCache.Get-BCHashCache
+  - BranchCache.Get-BCHostedCacheServerConfiguration
+  - BranchCache.Get-BCNetworkConfiguration
+  - BranchCache.Get-BCStatus
+  - BranchCache.Import-BCCachePackage
+  - BranchCache.Import-BCSecretKey
+  - BranchCache.Publish-BCFileContent
+  - BranchCache.Publish-BCWebContent
+  - BranchCache.Remove-BCDataCacheExtension
+  - BranchCache.Reset-BC
+  - BranchCache.Set-BCAuthentication
+  - BranchCache.Set-BCCache
+  - BranchCache.Set-BCDataCacheEntryMaxAge
+  - BranchCache.Set-BCMinSMBLatency
+  - BranchCache.Set-BCSecretKey
+uid: BranchCache
+name: BranchCache
+description: |-
+  This reference provides cmdlet descriptions and syntax for all BranchCache **Manageability-specific** cmdlets. 
+  It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: d57aee1e-6fe7-4bbc-8c57-8675a3a83e0d
+  Module Name: BranchCache
+  ms.date: 12/20/2016
+  title: BranchCache

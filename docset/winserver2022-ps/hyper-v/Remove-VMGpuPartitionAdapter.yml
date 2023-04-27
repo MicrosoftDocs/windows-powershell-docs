@@ -1,0 +1,158 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an assigned GPU partition from a virtual machine.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.HyperV.PowerShell.VMGpuPartitionAdapter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMGpuPartitionAdapter" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Remove-VMGpuPartitionAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+
+   [-Credential <PSCredential[]>] [-VMName] <String[]> [-Passthru] [-AdapterId <String>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-VMGpuPartitionAdapter [-VM] <VirtualMachine[]> [-Passthru] [-AdapterId <String>] [-WhatIf] [-Confirm]
+
+   [<CommonParameters>]
+- >-
+  Remove-VMGpuPartitionAdapter [-VMGpuPartitionAdapter] <VMGpuPartitionAdapter[]> [-Passthru] [-WhatIf]
+
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $testvm = Get-VM "TestVM"
+    Remove-VMGpuPartitionAdapter -VM $testvm
+  description: |-
+    This example removes a partition assigned to a specific VM object.
+  summary: ""
+- title: Example 2
+  code: |-
+    $testvm = Get-VM "TestVM"
+    $GPUpartition = Get-VMGpuPartitionAdapter -VM $testvm
+    Remove-VMGpuPartitionAdapter -VM $testvm -AdapterId $GPUpartiton[0].id
+  description: |-
+    This example removes a specific partition object from a specific VM.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdapterId
+  description: |+
+    This is a  VM's GPU partition identification number used to remove a GPU from a VM.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS names, IP addresses, and fully qualified domain names are allowed.
+    The default is the local computer.Use localhost or a dot ('.') to specify the local computer explicitly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action. The default is the current user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object for each process that the cmdlet started.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VM
+  isRequired: true
+  description: |+
+    Specifies the virtual machine whose virtual network adapters are to be retrieved. The asterisk (`*`)
+    is the wildcard. If it is specified the cmdlet returns virtual network adapters from every virtual
+    machine in the system.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMGpuPartitionAdapter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMGpuPartitionAdapter
+  isRequired: true
+  description: |+
+    GPU partition object obtained from 'Get-VMGpuPartitionAdapter'.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: VMName
+  isRequired: true
+  description: |+
+    Specifies the name of the virtual machine whose network adapters are to be retrieved.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: Hyper-V.Remove-VMGpuPartitionAdapter
+name: Remove-VMGpuPartitionAdapter
+description: |-
+  The 'Remove-VMGpuPartitionAdapter' cmdlet removes an assigned graphic processing unit partition from a virtual machine and releases that partition back to the host GPU.
+metadata:
+  description: Removes an assigned GPU partition from a virtual machine.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 09/22/2022
+  online version: https://learn.microsoft.com/powershell/module/hyper-v/remove-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Remove-VMGpuPartitionAdapter

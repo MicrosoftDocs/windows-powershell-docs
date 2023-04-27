@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about one or more clustered roles (resource groups) in a failover cluster.
+module: FailoverClusters
+notes: ""
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Format-List
+  href: https://go.microsoft.com/fwlink/?LinkID=113302
+- text: Add-ClusterGroup
+  href: ./Add-ClusterGroup.yml
+- text: Move-ClusterGroup
+  href: ./Move-ClusterGroup.yml
+- text: Remove-ClusterGroup
+  href: ./Remove-ClusterGroup.yml
+- text: Start-ClusterGroup
+  href: ./Start-ClusterGroup.yml
+- text: Stop-ClusterGroup
+  href: ./Stop-ClusterGroup.yml
+syntaxes:
+- >-
+  Get-ClusterGroup [[-Name] <StringCollection>] [-VMId <Guid>] [-InputObject <PSObject>]
+
+   [-Cluster <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-ClusterGroup
+  description: |-
+    This example lists the state and owner node of each clustered role, or resource group, in the local
+    cluster.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-ClusterGroup -Name "Cluster Group" | Get-ClusterResource
+  description: |-
+    This example lists the resources in `Cluster Group` on the local cluster.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-ClusterNode -Name node1 | Get-ClusterGroup
+  description: |-
+    This example lists the clustered services and applications, or resource groups, that are currently
+    owned by `node1` in the local cluster.
+  summary: ""
+- title: Example 4
+  code: |-
+    Get-ClusterGroup -Name FileServer1 | Format-List -Property *
+  description: |-
+    This example displays the properties of a clustered file server, or resource group, called
+    `FileServer1`, in the form of a list.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Cluster
+  description: |+
+    Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+    `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the cluster or cluster node on which to enumerate the clustered roles.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the clustered role to get.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: VMId
+  description: |+
+    Specifies the virtual machine identifier (ID).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: FailoverClusters.Get-ClusterGroup
+name: Get-ClusterGroup
+description: |-
+  The `Get-ClusterGroup` cmdlet gets information about one or more clustered roles (resource groups)
+  in a failover cluster.
+
+  A resource group is the unit of failover. During failover, all resources in the resource group move
+  together.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  Module Name: FailoverClusters
+  ms.date: 11/22/2022
+  online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clustergroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-ClusterGroup

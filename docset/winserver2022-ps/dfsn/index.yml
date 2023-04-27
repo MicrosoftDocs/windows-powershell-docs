@@ -1,0 +1,41 @@
+### YamlMime:PowershellModule
+children:
+- title: DFSN
+  cmdlets:
+  - DFSN.Get-DfsnAccess
+  - DFSN.Get-DfsnFolder
+  - DFSN.Get-DfsnFolderTarget
+  - DFSN.Get-DfsnRoot
+  - DFSN.Get-DfsnRootTarget
+  - DFSN.Get-DfsnServerConfiguration
+  - DFSN.Grant-DfsnAccess
+  - DFSN.Move-DfsnFolder
+  - DFSN.New-DfsnFolder
+  - DFSN.New-DfsnFolderTarget
+  - DFSN.New-DfsnRoot
+  - DFSN.New-DfsnRootTarget
+  - DFSN.Remove-DfsnAccess
+  - DFSN.Remove-DfsnFolder
+  - DFSN.Remove-DfsnFolderTarget
+  - DFSN.Remove-DfsnRoot
+  - DFSN.Remove-DfsnRootTarget
+  - DFSN.Revoke-DfsnAccess
+  - DFSN.Set-DfsnFolder
+  - DFSN.Set-DfsnFolderTarget
+  - DFSN.Set-DfsnRoot
+  - DFSN.Set-DfsnRootTarget
+  - DFSN.Set-DfsnServerConfiguration
+uid: DFSN
+name: DFSN
+description: |-
+  This reference provides cmdlet descriptions and syntax for all DFS Namespace cmdlets. 
+  It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.100.1
+  Locale: en-US
+  Module Guid: d94cf4d4-f7f8-4967-8d7c-1c9ffef8da12
+  Module Name: DFSN
+  ms.date: 12/20/2016
+  title: DFSN

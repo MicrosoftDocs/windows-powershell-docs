@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Modifies the SecureSettings within the Code Integrity policy.
+module: ConfigCI
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-CIPolicy
+  href: New-CIPolicy.yml
+- text: New-CIPolicyRule
+  href: New-CIPolicyRule.yml
+syntaxes:
+- >-
+  Set-CIPolicySetting [-FilePath] <String> -Provider <String> -Key <String> -ValueName <String>
+
+   -ValueType <String> -Value <String> [<CommonParameters>]
+- >-
+  Set-CIPolicySetting [-FilePath] <String> -Provider <String> -Key <String> -ValueName <String> [-Delete]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Set the Code Integrity policy'
+  code: |-
+    Set-CIPolicySetting -FilePath C:\Policies\WDAC_policy.xml -Key "{12345678-9abc-def0-1234-56789abcdef0}" -Provider WSH -Value $True -ValueName EnterpriseDefinedClsId -ValueType Boolean
+  description: |-
+    This command sets the Code Integrity policy to allow for the specified **Provider**, **Key** and **ValueName**.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Delete
+  isRequired: true
+  description: |+
+    Indicates that this cmdlet removes a Secure Setting from the Code Integrity policy identified by **Provider**, **Key** and **ValueName**.
+
+  defaultValue: None
+  position: Named
+  aliases: d
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Specifies the full path of the policy .xml file.
+
+  defaultValue: None
+  position: "0"
+  aliases: f
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Key
+  isRequired: true
+  description: |+
+    Specifies the Secure Setting key.
+    The key is the GUID of the program to run in this format:
+
+    {33333333-4444-4444-1616-161616161616}
+
+  defaultValue: None
+  position: Named
+  aliases: k
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Provider
+  isRequired: true
+  description: |+
+    Specifies the Secure Setting provider.
+    The provider is the platform on which the code runs.
+
+  defaultValue: None
+  position: Named
+  aliases: p
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Value
+  isRequired: true
+  description: |+
+    Specifies the Secure Setting value.
+    Specify `$True` to allow or `$False` to deny.
+
+    Specify $False, or deny, only for base policies, not supplemental policies.
+
+  defaultValue: None
+  position: Named
+  aliases: v
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ValueName
+  isRequired: true
+  description: |+
+    Specifies the value name.
+
+  defaultValue: None
+  position: Named
+  aliases: vn
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ValueType
+  isRequired: true
+  description: |+
+    Specifies the value type. Valid values are:
+
+    - Boolean
+    - DWord
+    - Binary
+    - String
+
+  defaultValue: None
+  position: Named
+  aliases: vt
+  parameterValueGroup: Boolean, DWord, Binary, String
+uid: ConfigCI.Set-CIPolicySetting
+name: Set-CIPolicySetting
+description: |-
+  The **Set-CIPolicySetting** cmdlet modifies the Secure Settings within a Code Integrity policy.
+  Specify the .xml file of the policy to modify.
+  Secure Settings are queried by Windows APIs to set security behaviors.
+metadata:
+  description: The Set-CIPolicySetting cmdlet modifies the SecureSettings within the Code Integrity policy.
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  Module Name: ConfigCI
+  ms.date: 10/20/2021
+  online version: https://learn.microsoft.com/powershell/module/configci/set-cipolicysetting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-CIPolicySetting

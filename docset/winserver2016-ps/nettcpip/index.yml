@@ -1,0 +1,51 @@
+### YamlMime:PowershellModule
+children:
+- title: NetTCPIP
+  cmdlets:
+  - NetTCPIP.Find-NetRoute
+  - NetTCPIP.Get-NetCompartment
+  - NetTCPIP.Get-NetIPAddress
+  - NetTCPIP.Get-NetIPConfiguration
+  - NetTCPIP.Get-NetIPInterface
+  - NetTCPIP.Get-NetIPv4Protocol
+  - NetTCPIP.Get-NetIPv6Protocol
+  - NetTCPIP.Get-NetNeighbor
+  - NetTCPIP.Get-NetOffloadGlobalSetting
+  - NetTCPIP.Get-NetPrefixPolicy
+  - NetTCPIP.Get-NetRoute
+  - NetTCPIP.Get-NetTCPConnection
+  - NetTCPIP.Get-NetTCPSetting
+  - NetTCPIP.Get-NetTransportFilter
+  - NetTCPIP.Get-NetUDPEndpoint
+  - NetTCPIP.Get-NetUDPSetting
+  - NetTCPIP.New-NetIPAddress
+  - NetTCPIP.New-NetNeighbor
+  - NetTCPIP.New-NetRoute
+  - NetTCPIP.New-NetTransportFilter
+  - NetTCPIP.Remove-NetIPAddress
+  - NetTCPIP.Remove-NetNeighbor
+  - NetTCPIP.Remove-NetRoute
+  - NetTCPIP.Remove-NetTransportFilter
+  - NetTCPIP.Set-NetIPAddress
+  - NetTCPIP.Set-NetIPInterface
+  - NetTCPIP.Set-NetIPv4Protocol
+  - NetTCPIP.Set-NetIPv6Protocol
+  - NetTCPIP.Set-NetNeighbor
+  - NetTCPIP.Set-NetOffloadGlobalSetting
+  - NetTCPIP.Set-NetRoute
+  - NetTCPIP.Set-NetTCPSetting
+  - NetTCPIP.Set-NetUDPSetting
+  - NetTCPIP.Test-NetConnection
+uid: NetTCPIP
+name: NetTCPIP
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Net TCP/IP-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.4.1
+  Locale: en-US
+  Module Guid: 2d0b6c7f-16a0-4185-843f-ae47b6db4551
+  Module Name: NetTCPIP
+  ms.date: 12/20/2016
+  title: NetTCPIP

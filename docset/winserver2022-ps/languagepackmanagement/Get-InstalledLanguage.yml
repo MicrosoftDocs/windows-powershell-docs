@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns information about the installed languages on a device.
+module: LanguagePackManagement
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Collections.Generic.List<Microsoft.LanguagePackManagement.Powershell.Commands.InstalledLanguage>" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-SystemPreferredUILanguage
+  href: Set-SystemPreferredUILanguage.yml
+syntaxes:
+- Get-InstalledLanguage [-Language] <String> [<CommonParameters>]
+examples:
+- title: 'Example 1: See what languages are installed on a device'
+  code: |-
+    Get-InstalledLanguage
+  description: |-
+    This command will show all of the language components that are installed on a device.
+  summary: ""
+- title: 'Example 2: See which language components are installed for a particular language'
+  code: |-
+    Get-InstalledLanguage -language en-US
+  description: |-
+    This command will show the language features that are installed for the en-US language.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Language
+  description: |+
+    Shows the language components that are installed for the specified language.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: LanguageId, LanguageTag
+  parameterValueGroup: ""
+uid: LanguagePackManagement.Get-InstalledLanguage
+name: Get-InstalledLanguage
+description: |-
+  Returns a list of the installed languages and related Language features installed on the device.
+metadata:
+  description: The Get-InstalledLanguage cmdlet lets you see which languages are installed in a running Windows installation
+  external help file: Microsoft.LanguagePackManagement.Powershell.Commands.dll-Help.xml
+  Module Name: LanguagePackManagement
+  ms.date: 08/15/2022
+  online version: https://learn.microsoft.com/powershell/module/languagepackmanagement/get-installedlanguage?view=windowsserver2022-ps
+  schema: 2.0.0
+  title: Get-InstalledLanguage

@@ -1,0 +1,178 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets firewall auditing settings on Network Controller.
+module: NetworkController
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Windows.NetworkController.AuditingSettingsProperties" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-NetworkControllerAuditingSettingsConfiguration
+  href: Get-NetworkControllerAuditingSettingsConfiguration.yml
+syntaxes:
+- >-
+  Set-NetworkControllerAuditingSettingsConfiguration [[-Tags] <PSObject>]
+
+   [-Properties] <AuditingSettingsProperties> [[-Etag] <String>] [[-ResourceMetadata] <ResourceMetadata>]
+
+   [[-ResourceId] <String>] [-Force] -ConnectionUri <Uri> [-CertificateThumbprint <String>]
+
+   [-Credential <PSCredential>] [-PassInnerException] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Set auditing properties on a NetWork Controller'
+  code: |-
+    $AuditProperties = New-Object Microsoft.Windows.NetworkController.AuditingSettingsProperties
+    $AuditProperties.OutputDirectory = "C:\test\log1"
+    Set-NetworkControllerAuditingSettingsConfiguration -Properties $AuditProperties  -ConnectionUri https://networkcontroller
+  description: |-
+    This example sets a log location for a network controller.
+
+    The first command creates an auditing settings properties object.
+
+    The second command assigns a value for an output directory to the object.
+
+    The third command sets the properties in the **AuditingSettingsProperties** object for the Network Controller.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateThumbprint
+  description: |+
+    Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: ConnectionUri
+  isRequired: true
+  description: |+
+    Specifies the Uniform Resource Identifier (URI) of a Network Controller.
+    The cmdlet gets configuration for auditing settings for that controller.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies a user credential that has permission to perform this action.
+    The default value is the current user.
+
+    This user must be present in the security group provided in the **ClientSecurityGroup** parameter in the `Install-NetworkController` cmdlet.
+    Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Etag
+  description: |+
+    Specifies the entity tag (ETag) parameter of the resource.
+    An ETag is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+    The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassInnerException
+  description: |+
+    This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+    The thumbprint must be provided only if the network controller client authentication is X509 certificates.
+    **Get-NetworkController** retrieves that client authentication and authorization information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AuditingSettingsProperties" data-throw-if-not-resolved="False" />
+  name: Properties
+  isRequired: true
+  description: |+
+    Specifies the properties of the Network Controller auditing settings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceId
+  description: |+
+    Specifies the resource ID of the auditing settings configuration to set.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+  name: ResourceMetadata
+  description: |+
+    Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: Tags
+  description: |+
+    Specifies tags.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: NetworkController.Set-NetworkControllerAuditingSettingsConfiguration
+name: Set-NetworkControllerAuditingSettingsConfiguration
+description: |-
+  The **Set-NetworkControllerAuditingSettingsConfiguration** cmdlet sets firewall auditing settings on Network Controller.
+
+  Firewall auditing records any flow processed by Software Defined Networking (SDN) firewall rules.
+  It records all ACLs that have logging enabled.
+  These logs can be used for diagnostics or archived for later analysis.
+metadata:
+  description: The Set-NetworkControllerAuditingSettingsConfiguration cmdlet sets firewall auditing settings on Network Controller.
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  Module Name: NetworkController
+  ms.date: 09/27/2021
+  online version: https://learn.microsoft.com/powershell/module/networkcontroller/set-networkcontrollerauditingsettingsconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-NetworkControllerAuditingSettingsConfiguration

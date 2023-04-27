@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Installs a language onto a device.
+module: LanguagePackManagement
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.LanguagePackManagement.Powershell.Commands.InstallLanguage+InstallLanguageJob" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.Collections.Generic.List<Microsoft.LanguagePackManagement.Powershell.Commands.InstalledLanguage>" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: UninstallLanguage
+  href: uninstall-language.yml
+syntaxes:
+- Install-Language [-Language] <String> [-CopyToSettings] [-ExcludeFeatures] [-AsJob] [<CommonParameters>]
+examples:
+- title: 'Example 1: Add a language to a device'
+  code: |-
+    Install-Language ja-JP
+  description: |-
+    This command adds the Japanese language to a device.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    If specified, this parameter will execute the language installation as an [async PowerShell job](/powershell/module/microsoft.powershell.core/about/about_jobs).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CopyToSettings
+  description: |+
+    If specified, this parameter sets the System and Default Device Settings (Windows Display Language, regional and locale formats) to the installed language following the installation. 
+
+    After a language is added with this command, you have to restart the device or login again for changes to take effect. Once you log back in, you can change your Windows Display Language in  Settings App to change the device UI language. 
+
+  defaultValue: None
+  position: Named
+  aliases: ApplyToSettings, ApplyToInternationalSettings, CopyToInternationalSettings
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExcludeFeatures
+  description: |+
+    If specified, the associated language Features on Demand won't be installed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Language
+  isRequired: true
+  description: |+
+    The bcp47 tag of the language that you're installing.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: LanguageId, LanguageTag
+  parameterValueGroup: ""
+uid: LanguagePackManagement.Install-Language
+name: Install-Language
+description: |-
+  Downloads and installs the available language components for the specified language onto a device. 
+
+  You can also change your Display Language by using the International module commands (`Set-WinUILanguageOverride <lnstalled Language>`)
+metadata:
+  description: The Install-Language cmdlet lets you add a language to a running Windows installation
+  external help file: Microsoft.LanguagePackManagement.Powershell.Commands.dll-Help.xml
+  Module Name: LanguagePackManagement
+  ms.date: 08/15/2022
+  online version: https://learn.microsoft.com/powershell/module/languagepackmanagement/install-language?view=windowsserver2019-ps
+  schema: 2.0.0
+  title: Install-Language

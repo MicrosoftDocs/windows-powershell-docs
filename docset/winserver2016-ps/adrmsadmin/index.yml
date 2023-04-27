@@ -1,0 +1,38 @@
+### YamlMime:PowershellModule
+children:
+- title: ADRMSAdmin
+  cmdlets:
+  - ADRMSAdmin.Export-RmsReportDefinitionLanguage
+  - ADRMSAdmin.Export-RmsTPD
+  - ADRMSAdmin.Export-RmsTUD
+  - ADRMSAdmin.Get-RmsCertChain
+  - ADRMSAdmin.Get-RmsCertInfo
+  - ADRMSAdmin.Get-RmsChildCert
+  - ADRMSAdmin.Get-RmsEncryptedIL
+  - ADRMSAdmin.Get-RmsRequestInfo
+  - ADRMSAdmin.Get-RmsSvcAccount
+  - ADRMSAdmin.Get-RmsSystemHealthReport
+  - ADRMSAdmin.Get-RmsUserRequestReport
+  - ADRMSAdmin.Import-RmsTPD
+  - ADRMSAdmin.Import-RmsTUD
+  - ADRMSAdmin.Initialize-RmsCryptoMode2
+  - ADRMSAdmin.Install-RmsMfgEnrollment
+  - ADRMSAdmin.Install-RmsMfgSupport
+  - ADRMSAdmin.Set-RmsSvcAccount
+  - ADRMSAdmin.Uninstall-RmsMfgEnrollment
+  - ADRMSAdmin.Uninstall-RmsMfgSupport
+  - ADRMSAdmin.Update-RmsCluster
+  - ADRMSAdmin.Update-RmsMfgEnrollment
+uid: ADRMSAdmin
+name: ADRMSAdmin
+description: |-
+  This topic contains brief descriptions of the Windows PowerShell cmdlets that are for use in administering Active Directory Rights Management Services (AD RMS) in Windows Server 2016. Each cmdlet in the table is linked to additional information about that cmdlet. These cmdlets give you the ability to administer an AD RMS cluster using PowerShell.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.1.1
+  Locale: en-US
+  Module Guid: beb3db13-eed6-4f7b-8420-079e395b58f9
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  title: ADRMSAdmin

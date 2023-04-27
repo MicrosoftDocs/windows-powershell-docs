@@ -1,0 +1,19 @@
+### YamlMime:PowershellModule
+children:
+- title: SmbWitness
+  cmdlets:
+  - SmbWitness.Get-SmbWitnessClient
+  - SmbWitness.Move-SmbWitnessClient
+uid: SmbWitness
+name: SmbWitness
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Server Message Block (SMB) Witness-specific cmdlets. It lists the cmdlets in alphabetical order.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: ef018256-3318-4e74-a823-158022778487
+  Module Name: SmbWitness
+  ms.date: 12/20/2016
+  title: SmbWitness

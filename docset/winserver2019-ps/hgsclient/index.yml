@@ -1,0 +1,28 @@
+### YamlMime:PowershellModule
+children:
+- title: HgsClient
+  cmdlets:
+  - HgsClient.ConvertTo-HgsKeyProtector
+  - HgsClient.Export-HgsGuardian
+  - HgsClient.Get-HgsAttestationBaselinePolicy
+  - HgsClient.Get-HgsClientConfiguration
+  - HgsClient.Get-HgsGuardian
+  - HgsClient.Grant-HgsKeyProtectorAccess
+  - HgsClient.Import-HgsGuardian
+  - HgsClient.New-HgsGuardian
+  - HgsClient.New-HgsKeyProtector
+  - HgsClient.Remove-HgsGuardian
+  - HgsClient.Revoke-HgsKeyProtectorAccess
+  - HgsClient.Set-HgsClientConfiguration
+  - HgsClient.Test-HgsClientConfiguration
+uid: HgsClient
+name: HgsClient
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Host Guardian Service client cmdlets. This table lists the cmdlets in alphabetical order.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.2
+  Locale: en-US
+  Module Guid: de3e9b0f-0845-4b05-8cb1-65669405130c
+  Module Name: HgsClient
+  title: HgsClient

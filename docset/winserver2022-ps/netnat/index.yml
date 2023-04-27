@@ -1,0 +1,30 @@
+### YamlMime:PowershellModule
+children:
+- title: NetNat
+  cmdlets:
+  - NetNat.Add-NetNatExternalAddress
+  - NetNat.Add-NetNatStaticMapping
+  - NetNat.Get-NetNat
+  - NetNat.Get-NetNatExternalAddress
+  - NetNat.Get-NetNatGlobal
+  - NetNat.Get-NetNatSession
+  - NetNat.Get-NetNatStaticMapping
+  - NetNat.New-NetNat
+  - NetNat.Remove-NetNat
+  - NetNat.Remove-NetNatExternalAddress
+  - NetNat.Remove-NetNatStaticMapping
+  - NetNat.Set-NetNat
+  - NetNat.Set-NetNatGlobal
+uid: NetNat
+name: NetNat
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Network Address Translation cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: e5439f56-42aa-4fdf-8705-50c782a89345
+  Module Name: NetNat
+  ms.date: 12/20/2016
+  title: NetNat

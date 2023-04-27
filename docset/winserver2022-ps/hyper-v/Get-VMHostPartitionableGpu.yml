@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the host machine’s partitionable GPU.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMHostPartitionableGpu" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-VMHostPartitionableGpu [[-ComputerName] <String[]>] [[-Credential] <PSCredential[]>] [-Name <String>]
+
+   [<CommonParameters>]
+- Get-VMHostPartitionableGpu [-CimSession] <CimSession[]> [-Name <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-VMHostPartitionableGpu
+  description: |-
+    This example gets the details of the local partitionable graphic processing unit on the host.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-VMHostPartitionableGpu -ComputerName "SampleHost"
+  description: |-
+    This example gets a partitionable GPU by using the host name. This command will display all the GPU devices available for partitioning in the host.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-VMHostPartitionableGpu -name "SampleGPUDeviceIDName"
+  description: |-
+    Displays a partitionable GPU by using the specific GPU device name. The result will show the details of the specific GPU listed.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  isRequired: true
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer.
+    Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts that run this cmdlet.
+    NetBIOS names, IP addresses, and fully qualified domain names are allowed.
+    The default is the local computer.
+    Use localhost or a dot ('.') to specify the local computer explicitly.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action. The default is the current user.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the graphic processing unit to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Get-VMHostPartitionableGpu
+name: Get-VMHostPartitionableGpu
+description: |-
+  The 'Get-VMHostPartitionableGpu' cmdlet gets the host machine’s partitionable graphic processing unit.
+  This displays the information of the GPU as provided by the manufacturer's driver.
+metadata:
+  description: Gets the host machine’s partitionable GPU.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 09/22/2022
+  online version: https://learn.microsoft.com/powershell/module/hyper-v/get-vmhostpartitionablegpu?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Get-VMHostPartitionableGpu

@@ -1,0 +1,45 @@
+### YamlMime:PowershellModule
+children:
+- title: GroupPolicy
+  cmdlets:
+  - GroupPolicy.Backup-GPO
+  - GroupPolicy.Copy-GPO
+  - GroupPolicy.Get-GPInheritance
+  - GroupPolicy.Get-GPO
+  - GroupPolicy.Get-GPOReport
+  - GroupPolicy.Get-GPPermission
+  - GroupPolicy.Get-GPPrefRegistryValue
+  - GroupPolicy.Get-GPRegistryValue
+  - GroupPolicy.Get-GPResultantSetOfPolicy
+  - GroupPolicy.Get-GPStarterGPO
+  - GroupPolicy.Import-GPO
+  - GroupPolicy.Invoke-GPUpdate
+  - GroupPolicy.New-GPLink
+  - GroupPolicy.New-GPO
+  - GroupPolicy.New-GPStarterGPO
+  - GroupPolicy.Remove-GPLink
+  - GroupPolicy.Remove-GPO
+  - GroupPolicy.Remove-GPPrefRegistryValue
+  - GroupPolicy.Remove-GPRegistryValue
+  - GroupPolicy.Rename-GPO
+  - GroupPolicy.Restore-GPO
+  - GroupPolicy.Set-GPInheritance
+  - GroupPolicy.Set-GPLink
+  - GroupPolicy.Set-GPPermission
+  - GroupPolicy.Set-GPPrefRegistryValue
+  - GroupPolicy.Set-GPRegistryValue
+uid: GroupPolicy
+name: GroupPolicy
+description: |-
+  This topic contains the brief descriptions of the Windows PowerShell cmdlets that are for use in administering Group Policy in Windows Server and Windows client with Remote Server Administration Tools (RSAT) installed. (RSAT includes the GPMC and the Group Policy cmdlets.)
+
+  Each cmdlet in the table is linked to additional information about that cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 03e49e3a-be77-4422-9d97-8fe355c2284c
+  Module Name: GroupPolicy
+  ms.date: 12/20/2016
+  title: GroupPolicy

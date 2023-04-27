@@ -1,0 +1,62 @@
+### YamlMime:PowershellModule
+children:
+- title: DFSR
+  cmdlets:
+  - DFSR.Add-DfsrConnection
+  - DFSR.Add-DfsrMember
+  - DFSR.ConvertFrom-DfsrGuid
+  - DFSR.Export-DfsrClone
+  - DFSR.Get-DfsrBacklog
+  - DFSR.Get-DfsrCloneState
+  - DFSR.Get-DfsrConnection
+  - DFSR.Get-DfsrConnectionSchedule
+  - DFSR.Get-DfsrDelegation
+  - DFSR.Get-DfsReplicatedFolder
+  - DFSR.Get-DfsReplicationGroup
+  - DFSR.Get-DfsrFileHash
+  - DFSR.Get-DfsrGroupSchedule
+  - DFSR.Get-DfsrIdRecord
+  - DFSR.Get-DfsrMember
+  - DFSR.Get-DfsrMembership
+  - DFSR.Get-DfsrPreservedFiles
+  - DFSR.Get-DfsrServiceConfiguration
+  - DFSR.Get-DfsrState
+  - DFSR.Grant-DfsrDelegation
+  - DFSR.Import-DfsrClone
+  - DFSR.New-DfsReplicatedFolder
+  - DFSR.New-DfsReplicationGroup
+  - DFSR.Remove-DfsrConnection
+  - DFSR.Remove-DfsReplicatedFolder
+  - DFSR.Remove-DfsReplicationGroup
+  - DFSR.Remove-DfsrMember
+  - DFSR.Remove-DfsrPropagationTestFile
+  - DFSR.Reset-DfsrCloneState
+  - DFSR.Restore-DfsrPreservedFiles
+  - DFSR.Revoke-DfsrDelegation
+  - DFSR.Set-DfsrConnection
+  - DFSR.Set-DfsrConnectionSchedule
+  - DFSR.Set-DfsReplicatedFolder
+  - DFSR.Set-DfsReplicationGroup
+  - DFSR.Set-DfsrGroupSchedule
+  - DFSR.Set-DfsrMember
+  - DFSR.Set-DfsrMembership
+  - DFSR.Set-DfsrServiceConfiguration
+  - DFSR.Start-DfsrPropagationTest
+  - DFSR.Suspend-DfsReplicationGroup
+  - DFSR.Sync-DfsReplicationGroup
+  - DFSR.Update-DfsrConfigurationFromAD
+  - DFSR.Write-DfsrHealthReport
+  - DFSR.Write-DfsrPropagationReport
+uid: DFSR
+name: DFSR
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Distributed File System (DFS) Replication cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: c3f81f5f-6555-43cb-802a-aef7aa5a11cb
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  title: DFSR

@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets information about the shared package container.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-AppSharedPackageContainer [[-Name] <String>] [[-Id] <String>] [-AllUsers] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-AppSharedPackageContainer -Name Contoso*
+
+
+    Name               : ContosoTestContainer
+    Id                 : ContosoTestContainer_1
+    PackageFamilyNames : {Contoso.SpellCheckPlugin.1.0.0.0_7pneu3d8sswe, Notepad++.2.0.0.1_ohjis898f1}
+
+    Name               : ContosoTestContainer
+    Id                 : ContosoTestContainer_2
+    PackageFamilyNames : {Contoso.SpellCheckPlugin2.1.0.0.0_7pneu3d8sswe, Notepad++.2.0.0.1_ohjis898f1}
+  description: |-
+    This command shows the packages in any shared package container that has a prefix of Contoso.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllUsers
+  description: |+
+    Unsupported. Will result in "-AllUsers functionality is not yet implemented" error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    Id of the container. Can be acquired by running `Get-AppSharedPackageContainer`.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the container.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Appx.Get-AppSharedPackageContainer
+name: Get-AppSharedPackageContainer
+description: |-
+  The cmdlet shows information about any shared package container.
+  In particular, it will show what packages are inside the shared package container.
+metadata:
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: appx
+  online version: https://learn.microsoft.com/powershell/module/appx/get-appsharedpackagecontainer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

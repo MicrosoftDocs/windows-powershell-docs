@@ -1,0 +1,519 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the Server Message Block (SMB) server configuration parameters to their default values.
+module: SmbShare
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-SmbServerConfiguration
+  href: ./Get-SmbServerConfiguration.yml
+- text: Set-SmbServerConfiguration
+  href: ./Set-SmbServerConfiguration.yml
+syntaxes:
+- >-
+  Reset-SmbServerConfiguration [-All] [-AnnounceComment] [-AnnounceServer] [-AsynchronousCredits]
+
+   [-AuditSmb1Access] [-AutoShareServer] [-AutoShareWorkstation] [-CachedOpenLimit]
+
+   [-DisableCompression] [-DisableSmbEncryptionOnSecureConnection] [-DurableHandleV2TimeoutInSeconds]
+
+   [-EnableDownlevelTimewarp] [-EnableLeasing] [-EnableMultiChannel] [-EnableOplocks]
+
+   [-EnableSMB2Protocol] [-EnableSMBQUIC] [-EnableStrictNameChecking] [-EncryptData]
+
+   [-EncryptionCiphers] [-IrpStackSize] [-KeepAliveTime] [-MaxChannelPerSession] [-MaxMpxCount]
+
+   [-MaxSessionPerConnection] [-MaxThreadsPerQueue] [-MaxWorkItems] [-NullSessionShares]
+
+   [-OplockBreakWait] [-PendingClientTimeoutInSeconds] [-RejectUnencryptedAccess]
+
+   [-RequestCompression] [-RestrictNamedpipeAccessViaQuic] [-ServerHidden] [-Smb2CreditsMax]
+
+   [-Smb2CreditsMin] [-SmbServerNameHardeningLevel] [-TreatHostAsStableStorage]
+
+   [-ValidateAliasNotCircular] [-ValidateShareScope] [-ValidateShareScopeNotAliased]
+
+   [-ValidateTargetName] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: 'Example 1: Reset the unencrypted access behavior'
+  code: |-
+    Reset-SmbServerConfiguration -RejectUnencryptedAccess -Confirm:$false
+  description: |-
+    This commands resets only the unencrypted access behavior to its default value without user
+    confirmation.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Resets all the SMB server configuration parameters to their default values.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AnnounceComment
+  description: |+
+    Resets the SMB server announce comment to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AnnounceServer
+  description: |+
+    Resets the SMB server announce server to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsJob
+  description: |+
+    Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+    complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsynchronousCredits
+  description: |+
+    Resets the asynchronous credits to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AuditSmb1Access
+  description: |+
+    Resets the auditing of SMB version 1 protocol behavior to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AutoShareServer
+  description: |+
+    Resets the automatic sharing behavior for default server shares to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AutoShareWorkstation
+  description: |+
+    Resets the automatic sharing behavior for default workstation shares to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CachedOpenLimit
+  description: |+
+    Resets the cache open file limit to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+    object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+    or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+    current session on the local computer.
+
+  defaultValue: None
+  position: Named
+  aliases: Session
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableCompression
+  description: |+
+    Resets the SMB compression behavior to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableSmbEncryptionOnSecureConnection
+  description: |+
+    Resets the disable SMB encryption on secure connection behavior to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DurableHandleV2TimeoutInSeconds
+  description: |+
+    Resets the durable handle v2 time-out period value to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableDownlevelTimewarp
+  description: |+
+    Resets the down-level timewarp support behavior to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableLeasing
+  description: |+
+    Resets the enable leasing behavior to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableMultiChannel
+  description: |+
+    Resets the enable multi-channel behavior to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableOplocks
+  description: |+
+    Resets the opportunistic locks behavior to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableSMB2Protocol
+  description: |+
+    Resets whether the SMB2 protocol is enabled to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableSMBQUIC
+  description: |+
+    Resets whether the SMB over QUIC protocol is enabled to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableStrictNameChecking
+  description: |+
+    Resets the strict name checking on incoming connections behavior to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EncryptData
+  description: |+
+    Resets the session encryption behavior to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EncryptionCiphers
+  description: |+
+    Resets the encryption ciphers used by the SMB client to its default value and order.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the command to run without asking for user confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IrpStackSize
+  description: |+
+    Resets the IRP stack size default to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: KeepAliveTime
+  description: |+
+    Resets the keep alive time to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MaxChannelPerSession
+  description: |+
+    Resets the maximum channels per session to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MaxMpxCount
+  description: |+
+    Resets the maximum MPX count for SMB1 to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MaxSessionPerConnection
+  description: |+
+    Resets the maximum sessions per connection to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MaxThreadsPerQueue
+  description: |+
+    Resets the maximum threads per queue to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MaxWorkItems
+  description: |+
+    Resets the maximum SMB1 work items to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NullSessionShares
+  description: |+
+    Resets the null session pipes to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OplockBreakWait
+  description: |+
+    Resets how long the create caller waits for an opportunistic lock break to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PendingClientTimeoutInSeconds
+  description: |+
+    Resets the pending client time-out period to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RejectUnencryptedAccess
+  description: |+
+    Resets the unencrypted access behavior to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RequestCompression
+  description: |+
+    Resets the SMB server request compression value to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RestrictNamedpipeAccessViaQuic
+  description: |+
+    Resets the named pipes behavior when using SMB over QUIC to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ServerHidden
+  description: |+
+    Resets whether the server announces itself to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Smb2CreditsMax
+  description: |+
+    Resets the maximum SMB2 credits to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Smb2CreditsMin
+  description: |+
+    Resets the minimum SMB2 credits to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SmbServerNameHardeningLevel
+  description: |+
+    Resets the SMB Service name hardening level to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ThrottleLimit
+  description: |+
+    Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+    this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
+    optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+    computer.
+
+    The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TreatHostAsStableStorage
+  description: |+
+    Resets whether the host is treated as the stable storage to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ValidateAliasNotCircular
+  description: |+
+    Resets whether the aliases that aren't circular are validated to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ValidateShareScope
+  description: |+
+    Resets whether the existence of share scopes is checked during share creation to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ValidateShareScopeNotAliased
+  description: |+
+    Resets whether the share scope being aliased is validated to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ValidateTargetName
+  description: |+
+    Resets whether the target name is validated to its default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: SmbShare.Reset-SmbServerConfiguration
+name: Reset-SmbServerConfiguration
+description: |-
+  The `Reset-SmbServerConfiguration` cmdlet resets SMB server configuration parameters to their
+  default values. For more information on SMB server and protocol specifications, see
+  [Overview of file sharing using the SMB 3 protocol in Windows Server](/windows-server/storage/file-server/file-server-smb-overview)
+  and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
+
+  > [!NOTE]
+  > - This cmdlet is available beginning with 2022-06 Cumulative Update for Microsoft server operating
+  > system version 21H2 for x64-based Systems
+  > ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
+  > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+  >
+  > - The **DisableCompression** and **RequestCompression** parameters are available beginning with
+  >   2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
+  >   Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
+  >   Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  external help file: SmbServerConfiguration.cdxml-help.xml
+  Module Name: SmbShare
+  ms.date: 10/20/2022
+  online version: http://go.microsoft.com/fwlink/?LinkID=241959
+  schema: 2.0.0
+  title: Reset-SmbServerConfiguration

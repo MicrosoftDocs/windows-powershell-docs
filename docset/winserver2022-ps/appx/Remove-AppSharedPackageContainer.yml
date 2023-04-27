@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the shared package container.
+module: Appx
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Remove-AppSharedPackageContainer [-Name] <String> [-ForceApplicationShutdown] [-AllUsers] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Remove-AppSharedPackageContainer -Name ContosoTestContainer
+  description: |-
+    This command removes the shared package container definition with the name ContosoTestContainer.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllUsers
+  description: |+
+    Unsupported. Will result in "-AllUsers functionality is not yet implemented" error.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceApplicationShutdown
+  description: |+
+    Closes all packages in the Shared Package Container.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the container.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Appx.Remove-AppSharedPackageContainer
+name: Remove-AppSharedPackageContainer
+description: |-
+  The cmdlet removes the shared package container definition for the particular user.
+metadata:
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  Module Name: appx
+  online version: https://learn.microsoft.com/powershell/module/appx/remove-appsharedpackagecontainer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0

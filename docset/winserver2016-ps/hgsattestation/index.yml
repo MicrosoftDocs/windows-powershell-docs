@@ -1,0 +1,29 @@
+### YamlMime:PowershellModule
+children:
+- title: HgsAttestation
+  cmdlets:
+  - HgsAttestation.Add-HgsAttestationCIPolicy
+  - HgsAttestation.Add-HgsAttestationDumpPolicy
+  - HgsAttestation.Add-HgsAttestationHostGroup
+  - HgsAttestation.Add-HgsAttestationTpmHost
+  - HgsAttestation.Add-HgsAttestationTpmPolicy
+  - HgsAttestation.Disable-HgsAttestationPolicy
+  - HgsAttestation.Enable-HgsAttestationPolicy
+  - HgsAttestation.Get-HgsAttestationHostGroup
+  - HgsAttestation.Get-HgsAttestationPolicy
+  - HgsAttestation.Get-HgsAttestationSignerCertificate
+  - HgsAttestation.Get-HgsAttestationTpmHost
+  - HgsAttestation.Remove-HgsAttestationHostGroup
+  - HgsAttestation.Remove-HgsAttestationPolicy
+  - HgsAttestation.Remove-HgsAttestationTpmHost
+uid: HgsAttestation
+name: HgsAttestation
+description: |-
+  This reference provides cmdlet descriptions and syntax for the Host Guardian Service (HGS) Attestation. These cmdlets belong to the HgsAttestation module.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.0.2
+  Locale: en-US
+  Module Guid: b0121942-ed2d-4a2b-959e-f0cfa64b48a9
+  Module Name: HgsAttestation
+  title: HgsAttestation

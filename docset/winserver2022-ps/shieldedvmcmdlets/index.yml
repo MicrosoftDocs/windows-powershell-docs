@@ -1,0 +1,20 @@
+### YamlMime:PowershellModule
+children:
+- title: ShieldedVmCmdlets
+  cmdlets:
+  - ShieldedVmCmdlets.Get-KeyProtectorFromShieldingDataFile
+  - ShieldedVmCmdlets.Get-ShieldedVMProvisioningStatus
+  - ShieldedVmCmdlets.Initialize-ShieldedVM
+  - ShieldedVmCmdlets.New-ShieldedVMSpecializationDataFile
+  - ShieldedVmCmdlets.Test-ShieldingDataApplicability
+uid: ShieldedVmCmdlets
+name: ShieldedVmCmdlets
+description: |-
+  This reference provides cmdlet descriptions and syntax for shielded virtual machine provisioning file cmdlets. This table lists the cmdlets in alphabetical order.
+metadata:
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.1.1
+  Locale: en-US
+  Module Guid: 20acb5fb-7322-411f-a933-49a79b25f2c1
+  Module Name: ShieldedVmCmdlets
+  title: ShieldedVMProvisioning

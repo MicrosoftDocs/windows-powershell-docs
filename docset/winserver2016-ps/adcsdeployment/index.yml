@@ -1,0 +1,29 @@
+### YamlMime:PowershellModule
+children:
+- title: ADCSDeployment
+  cmdlets:
+  - ADCSDeployment.Install-AdcsCertificationAuthority
+  - ADCSDeployment.Install-AdcsEnrollmentPolicyWebService
+  - ADCSDeployment.Install-AdcsEnrollmentWebService
+  - ADCSDeployment.Install-AdcsNetworkDeviceEnrollmentService
+  - ADCSDeployment.Install-AdcsOnlineResponder
+  - ADCSDeployment.Install-AdcsWebEnrollment
+  - ADCSDeployment.Uninstall-AdcsCertificationAuthority
+  - ADCSDeployment.Uninstall-AdcsEnrollmentPolicyWebService
+  - ADCSDeployment.Uninstall-AdcsEnrollmentWebService
+  - ADCSDeployment.Uninstall-AdcsNetworkDeviceEnrollmentService
+  - ADCSDeployment.Uninstall-AdcsOnlineResponder
+  - ADCSDeployment.Uninstall-AdcsWebEnrollment
+uid: ADCSDeployment
+name: ADCSDeployment
+description: |-
+  This topic contains the brief descriptions of the Windows PowerShell® cmdlets that are for use in deploying Active Directory Certificate Services (AD CS). Each cmdlet in the table is linked to additional information about that cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 4.0.2.1
+  Locale: en-US
+  Module Guid: 5919a3cb-977e-464f-a221-421c270218b4
+  Module Name: ADCSDeployment
+  ms.date: 12/27/2016
+  title: ADCSDeployment

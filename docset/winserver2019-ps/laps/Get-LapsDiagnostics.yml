@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Collects Windows Local Administrator Password Solution (LAPS) logs and tracing from the local
+  machine.
+module: LAPS
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Windows LAPS Overview
+  href: https://go.microsoft.com/fwlink/?linkid=2233901
+syntaxes:
+- >-
+  Get-LapsDiagnostics [[-OutputFolder] <String>] [-CollectNetworkTrace] [-ResetPassword]
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-LapsDiagnostics
+
+    Get-LapsDiagnostics: all data for this run was written to the following zip file:
+
+    C:\Users\ADMINI~1\AppData\Local\Temp\LapsDiagnostics\LapsDiagnostics_LAPSCLIENT_2023041004_072649.zip
+  description: |-
+    This example demonstrates basic collection of LAPS diagnostic info using all default parameters.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-LapsDiagnostics -OutputFolder c:\LapsDiagFolder
+
+    Get-LapsDiagnostics: all data for this run was written to the following zip file:
+
+    c:\LapsDiagFolder\LapsDiagnostics_LAPSCLIENT_2023041004_072702.zip
+  description: |-
+    This example demonstrates basic collection of LAPS diagnostic info to a specific output folder.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-LapsDiagnostics -OutputFolder c:\LapsDiagFolder -ResetPassword
+
+    Get-LapsDiagnostics: all data for this run was written to the following zip file:
+
+    c:\LapsDiagFolder\LapsDiagnostics_LAPSCLIENT_2023041004_072709.zip
+  description: |-
+    This example demonstrates basic collection of LAPS diagnostic info across a forced password reset
+    operation to a specific output folder.
+  summary: ""
+- title: Example 4
+  code: |-
+    Get-LapsDiagnostics -CollectNetworkTrace
+
+    Get-LapsDiagnostics: all data for this run was written to the following zip file:
+
+    C:\Users\ADMINI~1\AppData\Local\Temp\LapsDiagnostics\LapsDiagnostics_LAPSCLIENT_2023041004_072719.zip
+  description: |-
+    This example demonstrates basic collection of LAPS diagnostic info while also collecting network
+    tracing.
+  summary: ""
+parameters:
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CollectNetworkTrace
+  description: |+
+    Specifies that network tracing should also be collected and included in the resultant `.zip` file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.String" data-throw-if-not-resolved="False" />
+  name: OutputFolder
+  description: |+
+    Specifies that the resultant `.zip` file should be placed under the specified folder.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ResetPassword
+  description: |+
+    Specifies that logs and tracing should be collected across a forced password reset for the currently
+    managed local account. In this mode the cmdlet collects tracing across a call to the
+    `Reset-LapsPassword` cmdlet.
+
+    If this parameter isn't specified, the cmdlet collects tracing across a call to the
+    `Invoke-LapsProcessingCycle` cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: LAPS.Get-LapsDiagnostics
+name: Get-LapsDiagnostics
+description: |-
+  The `Get-LapsDiagnostics` cmdlet collects LAPS logs and tracing from the local machine, and copies
+  them into a `.zip` file. This cmdlet is primarily intended for support and testing scenarios but of
+  course may be used at any time. The name of the resultant `.zip` file includes the machine name and
+  current timestamp, and by default is written under the `$env:TEMP\LapsDiagnostics` folder. The
+  output folder may be customized using the **OutputFolder**.
+metadata:
+  description: Collects Windows Local Administrator Password Solution (LAPS) logs and tracing from the local machine.
+  external help file: LAPS-help.xml
+  Module Name: LAPS
+  online version: https://learn.microsoft.com/powershell/module/laps/get-lapsdiagnostics?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  Locale: en-US
+  ms.date: 04/10/2023
+  title: Get-LapsDiagnostics

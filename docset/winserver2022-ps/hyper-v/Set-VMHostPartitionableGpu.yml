@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the host partitionable GPU to the number of partitions supported by the manufacturer.
+module: Hyper-V
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+- name: <xref href="Microsoft.HyperV.PowerShell.VMHostPartitionableGpu" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMHostPartitionableGpu" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-VMHostPartitionableGpu [[-ComputerName] <String[]>] [[-Credential] <PSCredential[]>] [-Passthru]
+
+   [-PartitionCount <UInt16>] [<CommonParameters>]
+- >-
+  Set-VMHostPartitionableGpu [-CimSession] <CimSession[]> [-Passthru] [-PartitionCount <UInt16>]
+
+   [<CommonParameters>]
+- >-
+  Set-VMHostPartitionableGpu [-HostPartitionableGpu] <VMHostPartitionableGpu[]> [-Passthru]
+
+   [-PartitionCount <UInt16>] [<CommonParameters>]
+- Set-VMHostPartitionableGpu [-Passthru] [-Name <String>] [-PartitionCount <UInt16>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-VMHostPartitionableGpu -ComputerName SampleHost -partitioncount 8
+  description: |-
+    This example partitions a GPU in a specific host into eight partitions.
+  summary: ""
+- title: Example 2
+  code: |-
+    $GPU = Get-VMHostPartitionableGpu -name "SampleGPUDeviceIDName"
+    Set-VMHostPartitionableGpu -Name $GPU -partitionCount 4
+  description: |-
+    This example partitions a GPU in a host into four partitions by using the GPU device ID name.
+  summary: ""
+parameters:
+- type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CimSession
+  isRequired: true
+  description: |+
+    Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+    The default is the current session on the local computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ComputerName
+  description: |+
+    Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS names, IP addresses, and fully qualified domain names are allowed.
+    The default is the local computer.
+    Use localhost or a dot ('.') to specify the local computer explicitly.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Credential
+  description: |+
+    Specifies one or more user accounts that have permission to perform this action.
+    The default is the current user.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="VMHostPartitionableGpu" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: HostPartitionableGpu
+  isRequired: true
+  description: |+
+    Full GPU object, obtained by executing 'Get-VMHostPartitionableGpu'.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the GPU.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+  name: PartitionCount
+  description: |+
+    Specifies the number of partitions that the GPU will assign. The number of partitions is defined by the manufacturer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Passthru
+  description: |+
+    Returns an object for each process that the cmdlet started.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Hyper-V.Set-VMHostPartitionableGpu
+name: Set-VMHostPartitionableGpu
+description: |-
+  The `Set-VMHostPartitionableGpu` cmdlet configures the host partitionable GPU to the number of partitions supported by the manufacturer.
+metadata:
+  description: Configures the host partitionable GPU to the number of partitions supported by the manufacturer.
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  Module Name: Hyper-V
+  ms.date: 10/21/2022
+  online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmhostpartitionablegpu?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: Set-VMHostPartitionableGpu

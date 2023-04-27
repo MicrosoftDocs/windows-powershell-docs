@@ -1,0 +1,58 @@
+### YamlMime:PowershellModule
+children:
+- title: MsDtc
+  cmdlets:
+  - MsDtc.Add-DtcClusterTMMapping
+  - MsDtc.Complete-DtcDiagnosticTransaction
+  - MsDtc.Get-Dtc
+  - MsDtc.Get-DtcAdvancedHostSetting
+  - MsDtc.Get-DtcAdvancedSetting
+  - MsDtc.Get-DtcClusterDefault
+  - MsDtc.Get-DtcClusterTMMapping
+  - MsDtc.Get-DtcDefault
+  - MsDtc.Get-DtcLog
+  - MsDtc.Get-DtcNetworkSetting
+  - MsDtc.Get-DtcTransaction
+  - MsDtc.Get-DtcTransactionsStatistics
+  - MsDtc.Get-DtcTransactionsTraceSession
+  - MsDtc.Get-DtcTransactionsTraceSetting
+  - MsDtc.Install-Dtc
+  - MsDtc.Join-DtcDiagnosticResourceManager
+  - MsDtc.New-DtcDiagnosticTransaction
+  - MsDtc.Receive-DtcDiagnosticTransaction
+  - MsDtc.Remove-DtcClusterTMMapping
+  - MsDtc.Reset-DtcLog
+  - MsDtc.Send-DtcDiagnosticTransaction
+  - MsDtc.Set-DtcAdvancedHostSetting
+  - MsDtc.Set-DtcAdvancedSetting
+  - MsDtc.Set-DtcClusterDefault
+  - MsDtc.Set-DtcClusterTMMapping
+  - MsDtc.Set-DtcDefault
+  - MsDtc.Set-DtcLog
+  - MsDtc.Set-DtcNetworkSetting
+  - MsDtc.Set-DtcTransaction
+  - MsDtc.Set-DtcTransactionsTraceSession
+  - MsDtc.Set-DtcTransactionsTraceSetting
+  - MsDtc.Start-Dtc
+  - MsDtc.Start-DtcDiagnosticResourceManager
+  - MsDtc.Start-DtcTransactionsTraceSession
+  - MsDtc.Stop-Dtc
+  - MsDtc.Stop-DtcDiagnosticResourceManager
+  - MsDtc.Stop-DtcTransactionsTraceSession
+  - MsDtc.Test-Dtc
+  - MsDtc.Undo-DtcDiagnosticTransaction
+  - MsDtc.Uninstall-Dtc
+  - MsDtc.Write-DtcTransactionsTraceSession
+uid: MsDtc
+name: MsDtc
+description: |-
+  This reference provides information about the Windows PowerShell cmdlets provided with Microsoft Distributed Transaction Coordinator (MSDTC). The cmdlet help topics in this section are in alphabetical order.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 52923875-f2e3-4ad2-8e0c-96c7b10e2e3d
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  title: MsDtc

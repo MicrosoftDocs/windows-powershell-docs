@@ -1,0 +1,32 @@
+### YamlMime:PowershellModule
+children:
+- title: NetLbfo
+  cmdlets:
+  - NetLbfo.Add-NetLbfoTeamMember
+  - NetLbfo.Add-NetLbfoTeamNic
+  - NetLbfo.Get-NetLbfoTeam
+  - NetLbfo.Get-NetLbfoTeamMember
+  - NetLbfo.Get-NetLbfoTeamNic
+  - NetLbfo.New-NetLbfoTeam
+  - NetLbfo.Remove-NetLbfoTeam
+  - NetLbfo.Remove-NetLbfoTeamMember
+  - NetLbfo.Remove-NetLbfoTeamNic
+  - NetLbfo.Rename-NetLbfoTeam
+  - NetLbfo.Set-NetLbfoTeam
+  - NetLbfo.Set-NetLbfoTeamMember
+  - NetLbfo.Set-NetLbfoTeamNic
+uid: NetLbfo
+name: NetLbfo
+description: |-
+  This reference provides cmdlet descriptions and syntax for all NIC Teaming (NetLBFO)-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+
+  NOTE: The NIC Teaming feature is available only on Windows Server 2012 and later server operating systems. This feature is not available on Windows 10 or any other client operating systems. The NIC Teaming Windows PowerShell cmdlets are available on Windows 10 and other client operating systems to enable the management of NIC teams on remote computers that are running Windows Server 2016, Windows Server 2012, R2 and Windows Server 2012.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 80cf4c6d-30b7-4b0f-a035-dbb23a65ef1d
+  Module Name: NetLbfo
+  ms.date: 12/20/2016
+  title: NetLbfo

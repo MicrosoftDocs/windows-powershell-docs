@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Uninstalls a language from a device.
+module: LanguagePackManagement
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+  description: ""
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: InstallLanguage
+  href: Install-Language.yml
+syntaxes:
+- Uninstall-Language [-Language] <String> [-PassThru] [<CommonParameters>]
+examples:
+- title: 'Example 1: Remove a language from a device'
+  code: |-
+    Uninstall-Language ja-jp
+  description: |-
+    This command removes the Japanese language from the device.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Language
+  isRequired: true
+  description: |+
+    The bcp47 tag of the language to install.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: LanguageId, LanguageTag
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    If specified, this parameter returns the bcp47 tag of the newly installed language upon successful installation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: LanguagePackManagement.Uninstall-Language
+name: Uninstall-Language
+description: |-
+  Uninstalls a language, including all language components, from a device. This operation runs asynchronously.
+metadata:
+  description: The Uninstall-Language cmdlet lets you remove a language and its components from a running Windows installation
+  external help file: Microsoft.LanguagePackManagement.Powershell.Commands.dll-Help.xml
+  Module Name: LanguagePackManagement
+  ms.date: 08/15/2022
+  online version: https://learn.microsoft.com/powershell/module/languagepackmanagement/uninstall-language?view=windowsserver2022-ps
+  schema: 2.0.0
+  title: Uninstall-Language

@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a persistent memory disk in an unused persistent memory region.
+module: PersistentMemory
+notes: ""
+inputs:
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-PmemDisk
+  href: Get-PmemDisk.yml
+- text: Get-PmemUnusedRegion
+  href: Get-PmemUnusedRegion.yml
+- text: Remove-PmemDisk
+  href: Remove-PmemDisk.yml
+syntaxes:
+- >-
+  New-PmemDisk -RegionId <UInt32[]> [-FriendlyName <String[]>] [-DiskSizeInBytes <UInt64[]>]
+
+   [-AtomicityType <NAMESPACE_ATOMICITY_TYPE[]>] [<CommonParameters>]
+- >-
+  New-PmemDisk -DiskSizeInBytes <UInt64[]> [-AtomicityType <NAMESPACE_ATOMICITY_TYPE[]>] [-Simulated]
+
+   [<CommonParameters>]
+examples:
+- title: 'Example 1: Create a disk'
+  code: |-
+    New-PmemDisk -RegionId 1 -AtomicityType BlockTranslationTable
+  description: |-
+    This example creates a disk in the specified persistent memory region.
+    The disk uses a block transfer table.
+  summary: ""
+- title: 'Example 2: Create a simulated persistent memory disk'
+  code: |-
+    New-PmemDisk -DiskSizeInBytes 270582939648 -Simulated
+  description: |-
+    This example creates a simulated persistent memory disk of the specified size.
+  summary: ""
+- title: 'Example 3: Create multiple disks'
+  code: |-
+    Get-PmemUnusedRegion | New-PmemDisk
+  description: |-
+    This example gets an unused persistent memory region.
+    The command creates multiple persistent memory disks in the unused regions.
+  summary: ""
+parameters:
+- type: <xref href="NAMESPACE_ATOMICITY_TYPE" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AtomicityType
+  description: |+
+    Specifies whether to use a block translation table.
+    A block translation table enables block-like sector writes.
+    Applications can avoid mixing old and new data in a failure scenario.
+
+    Valid values are `None` and `BlockTranslationTable`. The default value is `None`.
+
+    You can't change the atomicity type after you create a disk. 
+
+    We strongly recommend `BlockTranslationTable` in nearly all cases.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, BlockTranslationTable
+- type: <xref href="UInt64" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DiskSizeInBytes
+  description: |+
+    Specifies the size of the persistent memory disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: FriendlyName
+  description: |+
+    Specifies a friendly name for the persistent memory disk.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RegionId
+  isRequired: true
+  description: |+
+    Specifies the ID of the region for the persistent memory disk.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Simulated
+  isRequired: true
+  description: |+
+    Indicates that the command creates a simulated persistent memory disk.
+    You can create a simulated disk without persistent memory hardware.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PersistentMemory.New-PmemDisk
+name: New-PmemDisk
+description: |-
+  The **New-PmemDisk** cmdlet creates a persistent memory disk in an unused persistent memory region.
+  A persistent memory is a contiguously addressed range of non-volatile memory.
+  You can think of it as a hard disk partition or LUN.
+
+  The cmdlet can also create a simulated persistent memory disk that isn't in persistent memory.
+metadata:
+  description: The New-PmemDisk cmdlet creates a persistent memory disk in an unused persistent memory region or a simulated persistent memory disk.
+  external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
+  Module Name: PersistentMemory
+  ms.date: 09/24/2021
+  online version: https://learn.microsoft.com/powershell/module/persistentmemory/new-pmemdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  schema: 2.0.0
+  title: New-PmemDisk

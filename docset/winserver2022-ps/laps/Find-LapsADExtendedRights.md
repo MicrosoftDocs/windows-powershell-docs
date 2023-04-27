@@ -12,20 +12,21 @@ title: Find-LapsADExtendedRights
 # Find-LapsADExtendedRights
 
 ## SYNOPSIS
-Queries Active Directory (AD) to find principals that have been granted permission to read Windows
-Local Administrator Password Solution (LAPS) password attributes.
+
+Queries Active Directory (AD) to find principals that have been granted permission to read
+Windows Local Administrator Password Solution (LAPS) password attributes.
 
 ## SYNTAX
 
 ```
-Find-LapsADExtendedRights [-Credential <PSCredential>] -Identity <String[]> [-Domain <String>]
- [-DomainController <String>] [-IncludeComputers] [<CommonParameters>]
+Find-LapsADExtendedRights [-Credential <PSCredential>] -Identity <String[]> 
+[-Domain <String>] [-DomainController <String>] [-IncludeComputers] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Find-LapsADExtendedRights` cmdlet is used by administrators to query which principals have
-been granted permissions to read the LAPS password attributes.
+The `Find-LapsADExtendedRights` cmdlet is used by administrators to query which principals
+have been granted permissions to read the LAPS password attributes.
 
 ## EXAMPLES
 
@@ -47,8 +48,8 @@ This example shows how to run the cmdlet.
 
 ### -Credential
 
-Specifies the credentials to use when updating AD. If not specified, the current
-user's credentials are used.
+Specifies the credentials to use when updating AD. If not specified, the current user's
+credentials are used.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -98,8 +99,8 @@ Accept wildcard characters: False
 
 Specifies the name of the OU to query.
 
-This parameter accepts several different name formats that influence the criteria used in the
-resultant AD search. The supported name formats are as follows:
+This parameter accepts several different name formats that influence the criteria used in
+the resultant AD search. The supported name formats are as follows:
 
 - distinguishedName (begins with a `CN=`)
 - name (for all other inputs)
@@ -135,8 +136,8 @@ Accept wildcard characters: False
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
--InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
--WarningAction, and -WarningVariable. For more information, see
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable,
+-Verbose, -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

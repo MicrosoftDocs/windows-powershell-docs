@@ -1,0 +1,21 @@
+### YamlMime:PowershellModule
+children:
+- title: AppvSequencer
+  cmdlets:
+  - AppvSequencer.Expand-AppvSequencerPackage
+  - AppvSequencer.New-AppvPackageAccelerator
+  - AppvSequencer.New-AppvSequencerPackage
+  - AppvSequencer.Update-AppvSequencerPackage
+uid: AppvSequencer
+name: AppvSequencer
+description: |-
+  The following list contains links to the help topics for the Microsoft Application Virtualization (App-V) Sequencer cmdlets.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2019-pshelp
+  Help Version: 5.0.1.1
+  Locale: en-US
+  Module Guid: 120c1a42-e4b5-4fcf-9dbd-d416bd3b41f5
+  Module Name: AppvSequencer
+  ms.date: 12/20/2016
+  title: AppvSequencer

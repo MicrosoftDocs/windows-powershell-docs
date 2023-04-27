@@ -1,0 +1,35 @@
+### YamlMime:PowershellModule
+children:
+- title: SystemInsights
+  cmdlets:
+  - SystemInsights.Add-InsightsCapability
+  - SystemInsights.Disable-InsightsCapability
+  - SystemInsights.Disable-InsightsCapabilitySchedule
+  - SystemInsights.Enable-InsightsCapability
+  - SystemInsights.Enable-InsightsCapabilitySchedule
+  - SystemInsights.Get-InsightsCapability
+  - SystemInsights.Get-InsightsCapabilityAction
+  - SystemInsights.Get-InsightsCapabilityResult
+  - SystemInsights.Get-InsightsCapabilitySchedule
+  - SystemInsights.Invoke-InsightsCapability
+  - SystemInsights.Remove-InsightsCapability
+  - SystemInsights.Remove-InsightsCapabilityAction
+  - SystemInsights.Set-InsightsCapabilityAction
+  - SystemInsights.Set-InsightsCapabilitySchedule
+  - SystemInsights.Update-InsightsCapability
+uid: SystemInsights
+name: SystemInsights
+description: |-
+  The System Insights module contains the PowerShell cmdlets for [System Insights](https://aka.ms/SystemInsights), a predictive analytics feature for Windows Server 2019.
+
+  >[!IMPORTANT]
+  >Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: b55fd86f-287c-470c-9ac6-647dc76c15ce
+  Module Name: SystemInsights
+  ms.date: 06/18/2018
+  title: SystemInsights

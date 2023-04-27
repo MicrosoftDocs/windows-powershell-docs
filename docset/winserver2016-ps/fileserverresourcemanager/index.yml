@@ -1,0 +1,96 @@
+### YamlMime:PowershellModule
+children:
+- title: FileServerResourceManager
+  cmdlets:
+  - FileServerResourceManager.Get-FsrmAdrSetting
+  - FileServerResourceManager.Get-FsrmAutoQuota
+  - FileServerResourceManager.Get-FsrmClassification
+  - FileServerResourceManager.Get-FsrmClassificationPropertyDefinition
+  - FileServerResourceManager.Get-FsrmClassificationRule
+  - FileServerResourceManager.Get-FsrmEffectiveNamespace
+  - FileServerResourceManager.Get-FsrmFileGroup
+  - FileServerResourceManager.Get-FsrmFileManagementJob
+  - FileServerResourceManager.Get-FsrmFileScreen
+  - FileServerResourceManager.Get-FsrmFileScreenException
+  - FileServerResourceManager.Get-FsrmFileScreenTemplate
+  - FileServerResourceManager.Get-FsrmMacro
+  - FileServerResourceManager.Get-FsrmMgmtProperty
+  - FileServerResourceManager.Get-FsrmQuota
+  - FileServerResourceManager.Get-FsrmQuotaTemplate
+  - FileServerResourceManager.Get-FsrmRmsTemplate
+  - FileServerResourceManager.Get-FsrmSetting
+  - FileServerResourceManager.Get-FsrmStorageReport
+  - FileServerResourceManager.New-FsrmAction
+  - FileServerResourceManager.New-FsrmAutoQuota
+  - FileServerResourceManager.New-FsrmClassificationPropertyDefinition
+  - FileServerResourceManager.New-FsrmClassificationPropertyValue
+  - FileServerResourceManager.New-FsrmClassificationRule
+  - FileServerResourceManager.New-FsrmFileGroup
+  - FileServerResourceManager.New-FsrmFileManagementJob
+  - FileServerResourceManager.New-FsrmFileScreen
+  - FileServerResourceManager.New-FsrmFileScreenException
+  - FileServerResourceManager.New-FsrmFileScreenTemplate
+  - FileServerResourceManager.New-FsrmFmjAction
+  - FileServerResourceManager.New-FsrmFmjCondition
+  - FileServerResourceManager.New-FsrmFMJNotification
+  - FileServerResourceManager.New-FsrmFmjNotificationAction
+  - FileServerResourceManager.New-FsrmQuota
+  - FileServerResourceManager.New-FsrmQuotaTemplate
+  - FileServerResourceManager.New-FsrmQuotaThreshold
+  - FileServerResourceManager.New-FsrmScheduledTask
+  - FileServerResourceManager.New-FsrmStorageReport
+  - FileServerResourceManager.Remove-FsrmAutoQuota
+  - FileServerResourceManager.Remove-FsrmClassificationPropertyDefinition
+  - FileServerResourceManager.Remove-FsrmClassificationRule
+  - FileServerResourceManager.Remove-FsrmFileGroup
+  - FileServerResourceManager.Remove-FsrmFileManagementJob
+  - FileServerResourceManager.Remove-FsrmFileScreen
+  - FileServerResourceManager.Remove-FsrmFileScreenException
+  - FileServerResourceManager.Remove-FsrmFileScreenTemplate
+  - FileServerResourceManager.Remove-FsrmMgmtProperty
+  - FileServerResourceManager.Remove-FsrmQuota
+  - FileServerResourceManager.Remove-FsrmQuotaTemplate
+  - FileServerResourceManager.Remove-FsrmStorageReport
+  - FileServerResourceManager.Reset-FsrmFileScreen
+  - FileServerResourceManager.Reset-FsrmQuota
+  - FileServerResourceManager.Send-FsrmTestEmail
+  - FileServerResourceManager.Set-FsrmAdrSetting
+  - FileServerResourceManager.Set-FsrmAutoQuota
+  - FileServerResourceManager.Set-FsrmClassification
+  - FileServerResourceManager.Set-FsrmClassificationPropertyDefinition
+  - FileServerResourceManager.Set-FsrmClassificationRule
+  - FileServerResourceManager.Set-FsrmFileGroup
+  - FileServerResourceManager.Set-FsrmFileManagementJob
+  - FileServerResourceManager.Set-FsrmFileScreen
+  - FileServerResourceManager.Set-FsrmFileScreenException
+  - FileServerResourceManager.Set-FsrmFileScreenTemplate
+  - FileServerResourceManager.Set-FsrmMgmtProperty
+  - FileServerResourceManager.Set-FsrmQuota
+  - FileServerResourceManager.Set-FsrmQuotaTemplate
+  - FileServerResourceManager.Set-FsrmSetting
+  - FileServerResourceManager.Set-FsrmStorageReport
+  - FileServerResourceManager.Start-FsrmClassification
+  - FileServerResourceManager.Start-FsrmFileManagementJob
+  - FileServerResourceManager.Start-FsrmStorageReport
+  - FileServerResourceManager.Stop-FsrmClassification
+  - FileServerResourceManager.Stop-FsrmFileManagementJob
+  - FileServerResourceManager.Stop-FsrmStorageReport
+  - FileServerResourceManager.Update-FsrmAutoQuota
+  - FileServerResourceManager.Update-FsrmClassificationPropertyDefinition
+  - FileServerResourceManager.Update-FsrmQuota
+  - FileServerResourceManager.Wait-FsrmClassification
+  - FileServerResourceManager.Wait-FsrmFileManagementJob
+  - FileServerResourceManager.Wait-FsrmStorageReport
+uid: FileServerResourceManager
+name: FileServerResourceManager
+description: |-
+  This reference provides cmdlet descriptions and syntax for all File Server Resource Manager (FSRM) cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  Download Help Link: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.1.1
+  Locale: en-US
+  Module Guid: faa199b6-c378-4aad-9d4d-f0e99f3f4845
+  Module Name: FileServerResourceManager
+  ms.date: 12/20/2016
+  title: FileServerResourceManager

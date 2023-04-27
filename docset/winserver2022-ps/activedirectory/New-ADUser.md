@@ -386,7 +386,7 @@ This parameter sets the **City** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is l.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -406,7 +406,7 @@ This parameter sets the **Company** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is company.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -474,7 +474,7 @@ The LDAP display name (**ldapDisplayName**) of this property is c.
 This value is not used by Windows 2000.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -529,7 +529,7 @@ This parameter sets the **Department** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is department.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -549,7 +549,7 @@ This parameter sets the value of the **Description** property for the user objec
 The LDAP display name (**ldapDisplayName**) for this property is description.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -569,7 +569,7 @@ This parameter sets the **DisplayName** property of the user object.
 The LDAP display name (**ldapDisplayName**) for this property is displayName.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -589,7 +589,7 @@ This parameter sets the **Division** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is division.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -609,7 +609,7 @@ This parameter sets the **EmailAddress** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is mail.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -629,7 +629,7 @@ This parameter sets the **EmployeeID** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is employeeID.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -649,7 +649,7 @@ This parameter sets the **EmployeeNumber** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is employeeNumber.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -697,7 +697,7 @@ This parameter sets the **Fax** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is facsimileTelephoneNumber.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -717,7 +717,7 @@ This parameter sets the **GivenName** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is givenName.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -737,7 +737,7 @@ This parameter sets the **HomeDirectory** property of a user object.
 The LDAP display name (**ldapDisplayName**) for this property is homeDirectory.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -762,7 +762,7 @@ This parameter sets the **HomeDrive** property of the user object.
 The LDAP display name (**ldapDisplayName**) for this property is homeDrive.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -782,7 +782,7 @@ This parameter sets the **homePage** property of a user object.
 The LDAP display name (**ldapDisplayName**) for this property is wWWHomePage.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -802,7 +802,7 @@ This parameter sets the **HomePhone** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is homePhone.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -824,7 +824,7 @@ This parameter sets the **Initials** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is initials.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -929,7 +929,7 @@ The SAM account name is the same as the NetBIOS name of the computer.
 The LDAP display name (**ldapDisplayName**) for this property is userWorkStations.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -978,7 +978,7 @@ This parameter sets the **MobilePhone** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is mobile.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -998,7 +998,7 @@ This parameter sets the **Name** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is name.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1018,7 +1018,7 @@ This parameter sets the **Office** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is physicalDeliveryOfficeName.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1038,7 +1038,7 @@ This parameter sets the **OfficePhone** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is telephoneNumber.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1058,7 +1058,7 @@ This parameter sets the **Organization** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is o.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1119,7 +1119,7 @@ This parameter sets the **OtherName** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is middleName.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1237,7 +1237,7 @@ However, for the Active Directory Provider cmdlets, the _Path_ parameter identif
 actual object rather than the container.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1256,7 +1256,7 @@ This parameter sets the **POBox** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is postOfficeBox.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1275,7 +1275,7 @@ This parameter sets the **PostalCode** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is postalCode.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1316,7 +1316,7 @@ This parameter sets the **ProfilePath** property of the user object.
 The LDAP display name (**ldapDisplayName**) for this property is profilePath.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1345,7 +1345,7 @@ Note: If the string value provided is not terminated with a $ character, the sys
 needed.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1367,7 +1367,7 @@ This parameter sets the **ScriptPath** property of the user object.
 The LDAP display name (**ldapDisplayName**) for this property is scriptPath.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1407,7 +1407,7 @@ they are listed:
 - By using the domain of the computer running Windows PowerShell
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1431,7 +1431,7 @@ contain spaces or otherwise require quotation marks, use the following syntax:
 `"<value1>","<value2>",..."<valueX>"`."
 
 ```yaml
- System.String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -1477,7 +1477,7 @@ This parameter sets the **State** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is st.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1497,7 +1497,7 @@ This parameter sets the **StreetAddress** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is streetAddress.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1517,7 +1517,7 @@ This parameter sets the **Surname** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is sn.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1537,7 +1537,7 @@ This parameter sets the **Title** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is title.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1589,7 +1589,7 @@ The selected type must be a subclass of the User schema class.
 If this parameter is not specified it defaults to User.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -1614,7 +1614,7 @@ When logging on using a UPN, users no longer have to choose a domain from a list
 box.
 
 ```yaml
- System.String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

@@ -118,8 +118,8 @@ the local computer's `IIS_USRS` group. The command also specifies several non-de
 
 ### -ApplicationPoolIdentity
 
-Indicates that the cmdlet the identity that the Network Device Enrollment Service (NDES) uses when
-communicating with the certification authority (CA). This parameter is only valid when NDES is using
+Indicates the identity that the Network Device Enrollment Service (NDES) uses when communicating
+with the certification authority (CA). This parameter is only valid when NDES is using
 a remote CA. If the CA is local, the application pool identity account cannot be used.
 
 ```yaml

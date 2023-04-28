@@ -41,7 +41,7 @@ The `Disable-ScheduledTask` cmdlet disables a scheduled task.
 Disable-ScheduledTask -TaskName 'SystemScan'
 ```
 
-```output
+```Output
 TaskPath                    TaskName                    State
 --------                    --------                    --------
 \                           SystemScan                   Disabled

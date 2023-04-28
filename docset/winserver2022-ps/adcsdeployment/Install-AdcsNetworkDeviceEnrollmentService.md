@@ -136,7 +136,7 @@ Accept wildcard characters: False
 
 ### -CAConfig
 
-Specifies remote certification authority (CA) that the Network Device Enrollment Service uses. This
+Specifies the remote certification authority (CA) that the Network Device Enrollment Service uses. This
 parameter is mandatory when used within the **ApplicationPoolIdentity** parameter. Do not use this
 parameter when a local CA is installed.
 

@@ -689,6 +689,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyAppId 
+Specifies WDAC policy tag that matches with this rule.  The tag can contain any alphanumeric characters and any of the characters ":", "/", ".", and "_". The tag should match the AppIdTags specified in a WDAC tagging policy and so it would be in the process token security attributes of the tagged applications this rule would be enforced on.
+
+```yaml
+Type: string
+Default value: null
+Accept pipeline input: false
+Accept wildcard characters: false
+
 ### -PolicyStore
 Specifies the policy store from which to retrieve the rules to be created. 
 A policy store is a container for firewall and IPsec policy. 
@@ -964,6 +973,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## INPUTS
 

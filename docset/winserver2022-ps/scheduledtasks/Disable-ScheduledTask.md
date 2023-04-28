@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ### -TaskPath
 
 Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace. You can use
-`*` for a wildcard character query. You can use `\` for the root folder. To specify a full TaskPath
+`*` for a wildcard character query. You can use `\` for the root folder. To specify a full **TaskPath**
 you need to include the leading and trailing `\`. If you do not specify a path, the cmdlet uses the
 root folder.
 

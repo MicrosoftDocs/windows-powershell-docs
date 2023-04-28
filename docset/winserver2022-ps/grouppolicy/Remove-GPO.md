@@ -54,7 +54,7 @@ Because the *KeepLinks* parameter is not specified, links between the GPO and al
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -74,7 +74,7 @@ If you do not specify the *Domain* parameter, the domain of the computer that yo
 If you specify a domain that differs from the domain of your user object, a trust must exist between the domain from which you want to remove the GPO and the domain of your user object.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainName
 
@@ -89,8 +89,8 @@ Accept wildcard characters: False
 Specifies the GPO to remove by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, id.
-For more information, see about_Aliases.
+You can also refer to the *Guid* parameter by its built-in alias, **Id**.
+For more information, see [about_Aliases](????????????).
 
 ```yaml
 Type: Guid
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 Indicates that the cmdlet preserves the links to the GPO in the specified domain, including OUs, and all sites when the GPO is removed.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -126,11 +126,11 @@ The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain an error occurs.
 You can use the *Guid* parameter to uniquely identify a GPO.
 
-You can also refer to the *Name* parameter by its built-in alias, displayname.
+You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: DisplayName
 
@@ -147,11 +147,11 @@ You can specify either the fully qualified domain name (FQDN) or the host name.
 
 If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
 
-You can also refer to the *Server* parameter by its built-in alias, dc.
+You can also refer to the *Server* parameter by its built-in alias, **DC**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -163,11 +163,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -179,6 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -193,6 +195,7 @@ Collections that contain GPOs from different domains are not supported.
 This cmdlet does not generate any output.
 
 ## NOTES
+
 * When you remove a GPO, by default, all links to that GPO in the domain of the GPO are deleted. To remove a link to a GPO, you must have permission to link Group Policy Objects for the organizational unit or domain. If you do not have rights to delete a link, the GPO is deleted, but the link remains. Links from other domains and sites are not removed. The link to a deleted GPO appears in the GPMC as Not Found. To remove Not Found links, you must either have permission on the site, domain, or organizational unit containing the link, or ask someone with sufficient rights to delete it.
 
 ## RELATED LINKS

@@ -91,7 +91,7 @@ You can specify the computer name in one of the following formats:
 - Computer name (host name): for instance, computer-01.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,10 +106,10 @@ Accept wildcard characters: False
 Specifies the path to the report file; for instance, c:\Reports\GpRsopReport.xml.
 
 You can also refer to the *Path* parameter by its built-in alias, filepath.
-For more information, see about_Aliases.
+For more information, see [about_Aliases](????????????).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -151,7 +151,7 @@ You can specify the user name in one of the following formats:
 - User name: for example, someuser.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -163,6 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -176,6 +177,7 @@ This cmdlet does not take any object as input.
 This cmdlet returns an RSoP object.
 
 ## NOTES
+
 * This cmdlet provides only the logging results for a specified computer and user. You must use the GPMC to generate RSoP modeling information.
 
 ## RELATED LINKS

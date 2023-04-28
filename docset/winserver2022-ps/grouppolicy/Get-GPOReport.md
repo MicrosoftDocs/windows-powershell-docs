@@ -74,7 +74,7 @@ Because no *Path* parameter is supplied, the report is written to the display.
 Indicates that the cmdlet generates a report for all GPOs in the domain.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ReportAll
 Aliases: 
 
@@ -101,11 +101,11 @@ For more information, see the Notes section in the full Help.
 
 If you specify a domain that is different from the domain of the user that is running the current session or, (for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user or the computer.
 
-You can also refer to Domain by its built-in alias, domainname.
-For more information, see about_Aliases.
+You can also refer to Domain by its built-in alias, **DomainName**.
+For more information, see [about_Aliases](????????????).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainName
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 Specifies the GPO for which to generate the report by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, id.
+You can also refer to the *Guid* parameter by its built-in alias, **Id**.
 For more information, see **about_Aliases**.
 
 ```yaml
@@ -142,11 +142,11 @@ The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain an error occurs.
 You can use the *Guid* parameter to uniquely identify a GPO.
 
-You can also refer to the *Name* parameter by its built-in alias, displayname.
+You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: DisplayName
 
@@ -162,7 +162,7 @@ Specifies the path to the report file; for instance, c:\Reports\GpoReport.xml.
 If no path is specified, the report is printed to the display.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -199,11 +199,11 @@ You can specify either the fully qualified domain name (FQDN) or the host name.
 
 If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
 
-You can refer to this parameter by its built-in alias, dc.
+You can refer to this parameter by its built-in alias, **DC**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -215,6 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -229,6 +230,7 @@ Collections that contain GPOs from different domains are not supported.
 This cmdlet does not generate any output.
 
 ## NOTES
+
 * You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.

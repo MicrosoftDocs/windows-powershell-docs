@@ -140,7 +140,7 @@ By using the *Additive* parameter for a registry-based policy setting, you can s
 You cannot specify the *Disable* parameter with this parameter.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -183,7 +183,7 @@ To remove a policy setting from a GPO without affecting existing registry keys o
 You cannot specify the *Additive*, *Type*, *Value*, or *ValuePrefix* parameters with the *Disable* parameter.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -206,11 +206,11 @@ For more information, see the Notes section in the full Help.
 
 If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user or the computer.
 
-You can also refer to the *Domain* parameter by its built-in alias, domainname.
-For more information, see about_Aliases.
+You can also refer to the **Domain** parameter by its built-in alias, **DomainName**.
+For more information, see [about_Aliases](????????????).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainName
 
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 Specifies the GPO in which to configure the registry-based policy setting by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, id.
+You can also refer to the *Guid* parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: Guid
@@ -251,7 +251,7 @@ The key must be in one of the two following registry hives:
 You can also refer to the Key parameter by its built-in alias, FullKeyPath.
 
 ```yaml
-Type: String
+Type: System.String.String
 Parameter Sets: (All)
 Aliases: FullKeyPath
 
@@ -269,10 +269,10 @@ The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain, an error occurs.
 You can use the *Guid* parameter to uniquely identify a GPO.
 
-You can also refer to the *Name* parameter by its built-in alias, displayname.
+You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: DisplayName
 
@@ -289,10 +289,10 @@ You can specify either the fully qualified domain name (FQDN) or the host name.
 
 If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
 
-You can also refer to the *Server* parameter by its built-in alias, dc.
+You can also refer to the *Server* parameter by its built-in alias, **DC**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -367,7 +367,7 @@ Only the String and ExpandString data types are supported for an array of values
 You cannot specify this parameter with the *ValuePrefix* parameter.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -394,7 +394,7 @@ Only the String and ExpandString data types are supported with the *ValuePrefix*
 You cannot specify this parameter with the *ValueName* parameter or the *Disable* parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -406,11 +406,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -422,6 +423,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -433,9 +435,11 @@ Collections that contain GPOs from different domains are not supported.
 ## OUTPUTS
 
 ### Microsoft.GroupPolicy.Gpo
+
 This cmdlet returns the GPO in which the registry-based policy setting has been configured.
 
 ## NOTES
+
 * The hive of the registry key that you specify, HKEY_LOCAL_MACHINE (HKLM) or HKEY_CURRENT_USER (HKCU), determines whether the registry-based policy setting is in Computer Configuration or User Configuration.
 
   You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.

@@ -79,7 +79,7 @@ For instance, the Default Domain Policy GPO is linked at the domain level.
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -103,11 +103,11 @@ For more information, see the Notes section in the full Help.
 
 If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user or the computer.
 
-You can also refer to the *Domain* parameter by its built-in alias, domainname.
-For more information, see about_Aliases.
+You can also refer to the **Domain** parameter by its built-in alias, **DomainName**.
+For more information, see [about_Aliases](????????????).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainName
 
@@ -143,10 +143,10 @@ You can specify either the fully qualified domain name (FQDN) or the host name.
 
 If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
 
-You can also refer to the Server parameter by its built-in alias, dc.
+You can also refer to the **Server** parameter by its built-in alias, **DC**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -164,7 +164,7 @@ For instance, the MyOU organizational unit in the contoso.com domain is specifie
 You can also refer to the *Target* parameter by its built-in alias, path.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: path
 
@@ -176,11 +176,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -192,6 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -207,6 +209,7 @@ The properties of this object that are displayed by default describe the Group P
 The **GpoInheritanceBlocked** property indicates whether inheritance is blocked.
 
 ## NOTES
+
 * GPO links that are enforced cannot be blocked. This cmdlet should be used sparingly. Casual use of this cmdlet can complicate troubleshooting.
 
   You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.

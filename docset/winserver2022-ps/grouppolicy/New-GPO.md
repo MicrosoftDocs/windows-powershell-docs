@@ -102,7 +102,7 @@ Use the comment to document the GPO and its implementation in your environment.
 Or, if you insert keywords in the comment, you can use the keyword filter to find GPOs that have matching keywords.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -144,11 +144,11 @@ For more information, see the Notes section in the full help.
 
 If you specify a domain that is different from the domain of the user running the current session (or the computer for a startup or shutdown script), then a trust must exist between that domain and the domain of the user, or computer.
 
-You can also refer to the *Domain* by its built-in alias, domainname.
-For more information, see about_Aliases.
+You can also refer to the *Domain* by its built-in alias, **DomainName**.
+For more information, see [about_Aliases](????????????).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainName
 
@@ -164,11 +164,11 @@ Specifies a display name for the new GPO.
 
 If another GPO with the same display name exists in the domain an error occurs.
 
-You can also refer to the *Name* parameter by its built-in alias, displayname.
+You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DisplayName
 
@@ -185,11 +185,11 @@ You can specify either the fully qualified domain name (FQDN) or the host name.
 
 If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
 
-You can also refer to the *Server* parameter by its built-in alias, dc.
+You can also refer to the *Server* parameter by its built-in alias, **DC**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -205,7 +205,7 @@ Specifies a Starter GPO by its globally unique identifier (GUID).
 The GUID uniquely identifies the Starter GPO.
 If a Starter GPO is specified, the GPO is created with its settings.
 
-You can also refer to the *StarterGpoGuid* parameter by its built-in alias, id.
+You can also refer to the **StarterGpoGuid* *parameter by its built-in alias, **Id**.
 For more information, see **about_Aliases**.
 
 ```yaml
@@ -228,13 +228,13 @@ If a Starter GPO is specified, the GPO is created with its settings.
 
 The display name is not guaranteed to be unique in the domain.
 If another Starter GPO with the same display name exists in the domain, an error occurs.
-You can use the *StarterGpoGuid* parameter to uniquely identify a Starter GPO.
+You can use the **StarterGpoGuid* *parameter to uniquely identify a Starter GPO.
 
-You can also refer to the *Name* parameter by its built-in alias, displayname.
+You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: NewStarterName
 Aliases: 
 
@@ -246,11 +246,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -262,30 +263,37 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.GroupPolicy.StarterGpo
+
 You can pipe a Starter GPO that has predefined settings to this cmdlet.
 
 ## OUTPUTS
 
 ### Microsoft.GroupPolicy.Gpo
+
 This cmdlet returns the GPO that was created.
 
 ## NOTES
-* Only domain administrators, enterprise administrators, and members of the Group Policy creator owners group can create GPOs. These users must run Windows PowerShell in an elevated state.
+
+* Only domain administrators, enterprise administrators, and members of the Group Policy creator
+  owners group can create GPOs. These users must run Windows PowerShell in an elevated state.
 
   You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
 
-  If you do not explicitly specify the domain, the cmdlet uses a default domain.
-The default domain is the domain that is used to access network resources by the security context under which the current session is running.
-This domain is typically the domain of the user that is running the session.
-For instance, the domain of the user who started the session by opening Windows PowerShell from the Program Files menu, or the domain of a user that is specified in a RunAs command.
-However, computer startup and shutdown scripts run under the context of the LocalSystem account.
-The LocalSystem account is a built-in local account, and it accesses network resources under the context of the computer account.
-Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
+  If you do not explicitly specify the domain, the cmdlet uses a default domain. The default domain
+  is the domain that is used to access network resources by the security context under which the
+  current session is running. This domain is typically the domain of the user that is running the
+  session. For instance, the domain of the user who started the session by opening Windows
+  PowerShell from the Program Files menu, or the domain of a user that is specified in a RunAs
+  command. However, computer startup and shutdown scripts run under the context of the LocalSystem
+  account. The LocalSystem account is a built-in local account, and it accesses network resources
+  under the context of the computer account. Therefore, when this cmdlet is run from a startup or
+  shutdown script, the default domain is the domain to which the computer is joined.
 
 ## RELATED LINKS
 

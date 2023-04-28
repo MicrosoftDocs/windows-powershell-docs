@@ -114,11 +114,11 @@ Specifies the display name of the backed-up GPO from which this cmdlet imports t
 The most recent backup of the GPO is used.
 You can use the *BackupId* parameter to specify a particular version to use when multiple backups of the same GPO exist in the backup directory.
 
-You can also refer to the *BackupGpoName* parameter by its built-in alias, displayname.
-For more information, see about_Aliases.
+You can also refer to the *BackupGpoName* parameter by its built-in alias, **DisplayName**.
+For more information, see [about_Aliases](????????????).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ImportName
 Aliases: DisplayName
 
@@ -136,7 +136,7 @@ You can use this parameter to specify a particular version of a backed-up GPO in
 
 The backup ID is different from the ID of the GPO that was backed up.
 
-You can also refer to the *BackupId* parameter by its built-in alias, id.
+You can also refer to the *BackupId* parameter by its built-in alias, **Id**.
 For more information, see **about_Aliases**.
 
 ```yaml
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 Indicates that the cmdlet creates a GPO from the backup if the specified target GPO does not exist.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -193,11 +193,11 @@ For more information, see the Notes section in the full Help.
 
 If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user, or the computer.
 
-You can also refer to the *Domain* parameter by its built-in alias, domainname.
+You can also refer to the **Domain** parameter by its built-in alias, **DomainName**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainName
 
@@ -213,7 +213,7 @@ Specifies the path to a migration table file.
 You can use a migration table to map security principals and UNC paths across domains.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -230,7 +230,7 @@ Specifies the path to the backup directory.
 You can also refer to the *Path* parameter by its built-in aliases: backuplocation or backupdirectory.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: backupLocation, BackupDirectory
 
@@ -247,10 +247,10 @@ You can specify either the fully qualified domain name (FQDN) or the host name
 
 If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
 
-You can also refer to the *Server* parameter by its built-in alias, dc.
+You can also refer to the *Server* parameter by its built-in alias, **DC**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -286,7 +286,7 @@ Use the *CreateIfNeeded* parameter to force the GPO to be created if it does not
 You must specify either the *TargetGuid* parameter or the *TargetName* parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -298,11 +298,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -314,6 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -324,9 +326,11 @@ You can pipe an object that represents a GPO backup on the file system to this c
 ## OUTPUTS
 
 ### Microsoft.GroupPolicy.Gpo
+
 This cmdlet returns an object that represents the GPO after the settings have been imported.
 
 ## NOTES
+
 * You can use the **Import-GPO** to copy settings from a GPO backup in one domain to the same domain or another domain in the same or different forest.
 
   You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.

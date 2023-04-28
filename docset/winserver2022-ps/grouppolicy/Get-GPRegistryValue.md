@@ -110,11 +110,11 @@ For more information, see the Notes section in the full Help.
 
 If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user or the computer.
 
-You can also refer to Domain by its built-in alias, domainname.
-For more information, see about_Aliases.
+You can also refer to Domain by its built-in alias, **DomainName**.
+For more information, see [about_Aliases](????????????).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainName
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 Specifies the GPO from which to retrieve the registry-based policy setting by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, id.
+You can also refer to the *Guid* parameter by its built-in alias, **Id**.
 For more information, see **about_Aliases**.
 
 ```yaml
@@ -164,7 +164,7 @@ You can also refer to the *Key* parameter by its built-in alias FullKeyPath.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: FullKeyPath
 
@@ -182,11 +182,11 @@ The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain an error occurs.
 You can use the *Guid* parameter to uniquely identify a GPO.
 
-You can also refer to the *Name* parameter by its built-in alias, displayname.
+You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetByName
 Aliases: DisplayName
 
@@ -204,7 +204,7 @@ You can specify either the fully qualified domain name (FQDN) or the host name.
 If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -223,7 +223,7 @@ For the default value of a registry key, specify "(default)" or an empty string 
 You must also specify the *Key* parameter with this parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -235,6 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -254,6 +255,7 @@ These objects can be piped into the following cmdlets:
 - Remove-GPRegistryValue
 
 ## NOTES
+
 * The hive of the registry key that you specify (HKLM or HKCU) indicates whether the registry-based policy setting is retrieved from Computer Configuration or User Configuration.
 
   If the specified registry key cannot be located in policy (the registry key is not configured), a corresponding error message is displayed.

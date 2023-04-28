@@ -62,7 +62,7 @@ To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?L
  For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -80,7 +80,7 @@ This is required for those Group Policy client side extensions (CSEs) that do no
 This parameter has no effect if there are no CSEs called that require a restart.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,7 +106,7 @@ You can specify the computer name in one of the following formats:
 If the computer name is not specified, the computer in which this cmdlet is run will have its Group Policy settings refreshed.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DNSHostName
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: NonSyncSet
 Aliases: 
 
@@ -140,7 +140,7 @@ Examples include per-user Software Installation policy settings and the Folder R
 This parameter has no effect if there are no CSEs called that require a logoff.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -182,7 +182,7 @@ On a client computer, by default, Group Policy processes synchronously at comput
 On a server, by default, Group Policy processes synchronously at computer startup and at user logon.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: SyncSet
 Aliases: 
 
@@ -205,7 +205,7 @@ The acceptable values for this parameter are:
 If the *Target* parameter is not specified both user and computer policy settings are refreshed.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -217,6 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -230,6 +231,7 @@ This cmdlet does not take any object as input.
 This cmdlet does not generate any output.
 
 ## NOTES
+
 * This cmdlet does not support scheduling a Group Policy refresh for computers running Windows XP or earlier.
 * In order to successfully schedule a Group Policy refresh for computers using this cmdlet, the following Firewall rules must be set on each client computer to allow the following connections:
 

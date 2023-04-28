@@ -100,7 +100,7 @@ The GPOs for which links have been removed are returned.
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -129,11 +129,11 @@ For more information, see the Notes section in the full Help.
 
 If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user, or the computer.
 
-You can also refer to the *Domain* parameter by its built-in alias, domainname.
-For more information, see about_Aliases.
+You can also refer to the **Domain** parameter by its built-in alias, **DomainName**.
+For more information, see [about_Aliases](????????????).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainName
 
@@ -170,11 +170,11 @@ The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain an error occurs.
 You can use the *Guid* parameter to uniquely identify a GPO.
 
-You can also refer to the *Name* parameter by its built-in alias, displayname.
+You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: LinkbyName
 Aliases: DisplayName
 
@@ -191,11 +191,11 @@ You can specify either the fully qualified domain name (FQDN) or the host name.
 
 If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
 
-You can also refer to the *Server* parameter by its built-in alias, dc.
+You can also refer to the *Server* parameter by its built-in alias, **DC**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -211,7 +211,7 @@ Specifies the Lightweight Directory Access Protocol (LDAP) distinguished name of
 For instance, for the MyOU organizational unit in the contoso.com domain, the LDAP distinguished name is ou=MyOU,dc=contoso,dc=com.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -223,11 +223,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
+nt.Automation.SwitchParameter
+
 Parameter Sets: (All)
 Aliases: wi
 
@@ -239,6 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -249,6 +253,7 @@ This cmdlet accepts an object that represents the link between a GPO and a site,
 ## OUTPUTS
 
 ### Microsoft.GroupPolicy.Gpo
+
 This cmdlet returns the GPO for which the link has been removed.
 
 ## NOTES

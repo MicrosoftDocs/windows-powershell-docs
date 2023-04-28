@@ -193,7 +193,7 @@ can specify either the fully qualified domain name (FQDN) or the host name.
 If you do not specify the name by using the **Server** parameter, the primary domain controller
 (PDC) emulator is contacted.
 
-You can also refer to the **Server** parameter by its built-in alias, dc.
+You can also refer to the **Server** parameter by its built-in alias, **DC**.
 
 ```yaml
 Type: System.String

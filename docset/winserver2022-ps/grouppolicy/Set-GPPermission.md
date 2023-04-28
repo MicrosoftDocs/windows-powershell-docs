@@ -112,7 +112,7 @@ For more information about the *ErrorAction* parameter, see about_CommonParamete
 Specifies that the permission level is set for the specified security principal for all GPOs in the domain.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: PermissionAll
 Aliases: 
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -151,10 +151,10 @@ For more information, see the Notes section in the full Help.
 If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user or the computer.
 
 You can also refer to the *DomainName* parameter by its built-in alias, domain.
-For more information, see about_Aliases.
+For more information, see [about_Aliases](????????????).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Domain
 
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 Specifies the GPO for which to set the permission level by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, id.
+You can also refer to the *Guid* parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: Guid
@@ -190,10 +190,10 @@ The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain, an error occurs.
 You can use the *Guid* parameter to uniquely identify a GPO.
 
-You can also refer to the Name parameter by its built-in alias, displayname.
+You can also refer to the Name parameter by its built-in alias, **DisplayName**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: PermissionOne(Name)
 Aliases: DisplayName
 
@@ -233,7 +233,7 @@ Specifies that the existing permission level for the group or user is removed be
 If a security principal is already granted a permission level that is higher than the specified permission level and you do not use the *Replace* parameter, no change is made.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -250,10 +250,10 @@ You can specify either the fully qualified domain name (FQDN) or the host name.
 
 If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
 
-You can also refer to the *Server* parameter by its built-in alias, dc.
+You can also refer to the *Server* parameter by its built-in alias, **DC**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -278,7 +278,7 @@ For instance, in the contoso.com domain, to specify:
 - The computer "computer-01", use "contoso\computer-01" or "computer-01".
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -313,11 +313,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -329,6 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -340,9 +342,11 @@ Collections that contain GPOs from different domains are not supported.
 ## OUTPUTS
 
 ### Microsoft.GroupPolicy.Gpo
+
 This cmdlet returns an object that represents the GPO for which the permission level was set.
 
 ## NOTES
+
 * You can use the *DomainName* parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.

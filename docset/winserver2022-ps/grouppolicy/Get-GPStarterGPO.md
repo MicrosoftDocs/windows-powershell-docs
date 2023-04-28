@@ -83,7 +83,7 @@ The command uses the **Get-SPStarterGPO** cmdlet to get the Starter GPO and is t
 Returns all the Starter GPOs in the domain.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,11 +106,11 @@ For more information, see the Notes section in the full Help.
 
 If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user, or the computer.
 
-You can also refer to the *Domain* parameter by its built-in alias, domainname.
-For more information, see about_Aliases.
+You can also refer to the **Domain** parameter by its built-in alias, **DomainName**.
+For more information, see [about_Aliases](????????????).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainName
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 Specifies the Starter GPO that this cmdlet gets by its globally unique identifier (GUID).
 The GUID uniquely identifies the Starter GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, id.
+You can also refer to the *Guid* parameter by its built-in alias, **Id**.
 For more information, see **about_Aliases**.
 
 ```yaml
@@ -147,11 +147,11 @@ The display name is not guaranteed to be unique in the domain.
 If another Starter GPO with the same display name exists in the domain an error occurs.
 You can use the *Guid* parameter to uniquely identify a Starter GPO.
 
-You can also refer to the *Name* parameter by its built-in alias, displayname.
+You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByName
 Aliases: DisplayName
 
@@ -168,11 +168,11 @@ You can specify either the fully qualified domain name (FQDN) or the host name.
 
 If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
 
-You can also refer to the *Server* parameter by its built-in alias, dc.
+You can also refer to the *Server* parameter by its built-in alias, **DC**.
 For more information, see **about_Aliases**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -184,11 +184,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.GroupPolicy.StarterGpo
+
 You can pipe a Starter GPO to this cmdlet.
 
 ## OUTPUTS
@@ -197,6 +199,7 @@ You can pipe a Starter GPO to this cmdlet.
 This cmdlet returns a Starter GPO object.
 
 ## NOTES
+
 * You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.

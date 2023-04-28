@@ -95,7 +95,7 @@ Indicates that the cmdlet restores all GPOs in the domain that have backups in t
 Each GPO is restored from its most recent backup in the directory.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: RestoreAll
 Aliases: 
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -153,11 +153,11 @@ For more information, see the Notes section in the full Help.
 
 If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user or the computer.
 
-You can also refer to the *Domain* parameter by its built-in alias, domainname.
-For more information, see about_Aliases.
+You can also refer to the **Domain** parameter by its built-in alias, **DomainName**.
+For more information, see [about_Aliases](????????????).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainName
 
@@ -175,7 +175,7 @@ The GUID uniquely identifies the GPO.
 The GPO is restored from its most recent backup in the backup directory.
 To specify a different backup than the most recent backup, use the *BackupId* parameter.
 
-You can also refer to the *Guid* parameter by its built-in alias, id.
+You can also refer to the *Guid* parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: Guid
@@ -198,10 +198,10 @@ The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain an error occurs.
 You can use the *Guid* parameter to uniquely identify a GPO.
 
-You can also refer to the Name parameter by its built-in alias, displayname.
+You can also refer to the Name parameter by its built-in alias, **DisplayName**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: RestoreFromGpo(Name)
 Aliases: DisplayName
 
@@ -218,7 +218,7 @@ Specifies the path to the backup directory.
 You can also refer to the *Path* parameter by its built-in alias, backuplocation.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: backupLocation, BackupDirectory
 
@@ -235,10 +235,10 @@ You can specify either the fully qualified domain name (FQDN) or the host name.
 
 If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
 
-You can also refer to the *Server* parameter by its built-in alias, dc.
+You can also refer to the *Server* parameter by its built-in alias, **DC**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -250,11 +250,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -266,6 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -276,9 +278,11 @@ You can pipe a GPO backup, a separate file that holds the settings of a GPO that
 ## OUTPUTS
 
 ### Microsoft.GroupPolicy.Gpo
+
 This cmdlet returns the restored GPO.
 
 ## NOTES
+
 * You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.

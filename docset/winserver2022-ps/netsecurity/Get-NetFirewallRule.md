@@ -585,6 +585,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PolicyAppId 
+Specifies that matching firewall rules of the indicated PolicyAppId are retrieved. This parameter specifies the WDAC policy tag that would be found in the WDAC tagging policy under AppIdTags.
+
+Type: string
+Default value: null
+Accept pipeline input: false
+Accept wildcard characters: false
+
+
 ### -PolicyStore
 Targets the policy store from which to retrieve the rules. 
 A policy store is a container for firewall and IPsec policy. 
@@ -740,6 +749,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).

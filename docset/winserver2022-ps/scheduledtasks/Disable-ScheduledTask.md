@@ -55,7 +55,7 @@ This command disables the SystemScan task in the root folder.
 Get-ScheduledTask -TaskPath '\UpdateTasks\' | Disable-ScheduledTask
 ```
 
-```output
+```Output
 TaskPath                          TaskName                        State
 --------                          --------                        --------
 \UpdateTasks\                     UpdateApps                      Disabled

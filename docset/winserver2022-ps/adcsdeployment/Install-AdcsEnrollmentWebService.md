@@ -19,10 +19,10 @@ Performs the initial configuration of the Certificate Enrollment Web service.
 
 ```
 Install-AdcsEnrollmentWebService [-CAConfig <String>]
-[-ApplicationPoolIdentity] [-AuthenticationType <AuthenticationType>]
-[-SSLCertThumbprint <String>] [-RenewalOnly] [-AllowKeyBasedRenewal]
-[-Force] [-Credential <PSCredential>] [-WhatIf] [-Confirm]
-[<CommonParameters>]
+ [-ApplicationPoolIdentity] [-AuthenticationType <AuthenticationType>]
+ [-SSLCertThumbprint <String>] [-RenewalOnly] [-AllowKeyBasedRenewal]
+ [-Force] [-Credential <PSCredential>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ServiceAccountParameterSet

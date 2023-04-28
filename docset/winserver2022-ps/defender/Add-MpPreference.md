@@ -190,7 +190,7 @@ Accept wildcard characters: False
 
 ### -ExclusionExtension
 
-Specifies an array of file name extensions, such as obj or lib, to exclude from scheduled, custom,
+Specifies an array of file name extensions, such as `obj` or `lib`, to exclude from scheduled, custom,
 and real-time scanning. This cmdlet adds these file name extensions to the exclusions.
 
 ```yaml
@@ -278,13 +278,13 @@ Accept wildcard characters: False
 Specifies an array of the actions to take for the IDs specified by using the
 **ThreatIDDefaultAction_Ids** parameter. The acceptable values for this parameter are:
 
-- 1: Clean
-- 2: Quarantine
-- 3: Remove
-- 6: Allow
-- 8: UserDefined
-- 9: NoAction
-- 10: Block
+- `1`: Clean
+- `2`: Quarantine
+- `3`: Remove
+- `6`: Allow
+- `8`: UserDefined
+- `9`: NoAction
+- `10`: Block
 
 ```yaml
 Type: ThreatAction[]

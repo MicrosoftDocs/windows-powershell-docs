@@ -178,7 +178,7 @@ Accept wildcard characters: False
 Specifies the GPO to backup by its globally unique identifier (GUID).
 The `GUID` uniquely identifies the GPO.
 
-You can also refer to the **Guid** parameter by its built-in alias, id.
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
 For more information, see [about_Aliases](????????????).
 
 ```yaml

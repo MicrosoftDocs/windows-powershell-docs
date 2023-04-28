@@ -170,7 +170,7 @@ Accept wildcard characters: False
 
 ### -Credential
 
-Specifies a **PSCredential** object that this cmdlet use to connect to the NDES role service. To
+Specifies a **PSCredential** object that this cmdlet uses to connect to the NDES role service. To
 obtain a credential object, use the `Get-Credential` cmdlet. For more information, type
 `Get-Help Get-Credential`. The NDES must be installed on a server that is a member of an Active
 Directory Domain Services (AD DS) domain. If NDES is configured to use a Standalone CA, then an

@@ -51,7 +51,7 @@ This command gets the Provider Address for the interface with the specified inde
 Get-NetVirtualizationProviderAddress -ProviderAddress '172.16.2.3'
 ```
 
-This command gets the Provider Address that has the IP address 172.16.2.3.
+This command gets the Provider Address that has the IP address `172.16.2.3`.
 
 ## PARAMETERS
 
@@ -59,16 +59,11 @@ This command gets the Provider Address that has the IP address 172.16.2.3.
 
 Specifies an array of states of Provider Addresses. The acceptable values for this parameter are:
 
-- Preferred.
-  The address is unique.
-- Tentative.
-  The address is not yet verified.
-- Duplicate.
-  There is a duplicate address on the network.
-- Invalid.
-  The address lifetime has expired.
-- Deprecated.
-  The address cannot start new connections.
+- `Preferred` - The address is unique.
+- `Tentative` - The address is not yet verified.
+- `Duplicate` - There is a duplicate address on the network.
+- `Invalid` - The address lifetime has expired.
+- `Deprecated` - The address cannot start new connections.
 
 ```yaml
 Type: AddressState    []
@@ -154,10 +149,10 @@ Accept wildcard characters: False
 
 ### -ManagedByCluster
 
-Specifies an array of Boolean values that determines whether a highly available Provider Address
+Specifies an array of **Boolean** values that determines whether a highly available Provider Address
 configuration entry exists on a Hyper-V Network Virtualization gateway. If you use a Provider
-Address cluster resource, this value is $True; otherwise, the value is $False. This parameter is a
-read-only parameter, used by an administrator to diagnose problems.
+Address cluster resource, this value is `$true`. Otherwise, the value is `$false`. This parameter is
+a read-only parameter, used by an administrator to diagnose problems.
 
 ```yaml
 Type: System.Boolean[]

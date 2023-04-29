@@ -33,7 +33,7 @@ The `Install-ADDSForest` cmdlet installs an Active Directory forest configuratio
 
 ### Example 1: Install a new forest
 
-```
+```powershell
 Install-ADDSForest -DomainName "corp.contoso.com" -InstallDNS
 ```
 
@@ -43,7 +43,7 @@ also be installed during the forest installation process.
 
 ### Example 2: Install a new forest and a DNS delegation
 
-```
+```powershell
 $HashArguments = @{
     CreateDNSDelegation = $true
     DatabasePath        = "d:\NTDS"

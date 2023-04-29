@@ -1,3 +1,6 @@
 ADCS
+Dcpromo
+DSRM
 NTDS
 RODC
+Sysvol

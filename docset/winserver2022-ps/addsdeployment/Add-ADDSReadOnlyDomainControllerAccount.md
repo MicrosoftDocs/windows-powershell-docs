@@ -34,7 +34,7 @@ account that can be used to install an RODC in Active Directory.
 
 ### Example 1: Add a RODC account
 
-```
+```powershell
 $HashArguments = @{
     DomainControllerAccountName = "RODC1"
     DomainName                  = "corp.contoso.com"

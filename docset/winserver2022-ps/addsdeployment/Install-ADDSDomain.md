@@ -69,7 +69,7 @@ the installation of the domain in Active Directory.
 
 Specifies the user name and password that corresponds to the account to be used for running
 operations to prepare Active Directory prior to the installation of this domain. Use the
-**Get-Credential** cmdlet to prompt the user to supply a password.
+`Get-Credential` cmdlet to prompt the user to supply a password.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ### -Credential
 
 Specifies the user name and password that corresponds to the account used to install the domain
-controller. Use the **Get-Credential** cmdlet to prompt the user to supply a password.
+controller. Use the `Get-Credential` cmdlet to prompt the user to supply a password.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -453,7 +453,7 @@ This is the preferred usage when running the cmdlet interactively. If there are 
 specified with the cmdlet, you are prompted to enter a masked password for this parameter but no
 confirmation of the password entered is made. This is not recommended as it could allow a mistyped
 password to be configured. Another available advanced option is to use the
-**ConvertTo-SecureString** cmdlet and specify the password string inline as unmasked console input,
+`ConvertTo-SecureString` cmdlet and specify the password string inline as unmasked console input,
 which is also not a recommended security best practice in production deployments.
 
 ```yaml

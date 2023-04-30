@@ -42,7 +42,12 @@ configuration, Group Policy, and local policy for the user context.
 ### EXAMPLE 2
 
 ```powershell
-Get-CertificateEnrollmentPolicyServer -Url http://www.contoso.com/Policy/service.svc -Scope All -Context Machine
+$params = @{
+    Url = 'http://www.contoso.com/Policy/service.svc'
+    Scope = 'All'
+    Context = 'Machine'
+}
+Get-CertificateEnrollmentPolicyServer @params
 ```
 
 This example returns all of the enrollment policy URL configurations that have the given URL for the
@@ -134,4 +139,3 @@ Describes the enrollment policy obtained from the specified URL.
 [Add-CertificateEnrollmentPolicyServer](./Add-CertificateEnrollmentPolicyServer.md)
 
 [Remove-CertificateNotificationTask](./Remove-CertificateNotificationTask.md)
-

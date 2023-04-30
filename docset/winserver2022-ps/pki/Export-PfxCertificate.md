@@ -47,7 +47,7 @@ user configuration.
 ### EXAMPLE 1
 
 ```powershell
-$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
+$mypwd = ConvertTo-SecureString -String '1234' -Force -AsPlainText
 
 Get-ChildItem -Path Cert:\LocalMachine\My\5F98EBBFE735CDDAE00E33E0FD69050EF9220254 |
     Export-PfxCertificate -FilePath C:\mypfx.pfx -Password $mypwd
@@ -59,7 +59,7 @@ entire chain and all external properties.
 ### EXAMPLE 2
 
 ```powershell
-$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
+$mypwd = ConvertTo-SecureString -String '1234' -Force -AsPlainText
 
 Get-ChildItem -Path Cert:\LocalMachine\My |
     Export-PfxCertificate -FilePath C:\mypfx.pfx -Password $mypwd
@@ -71,7 +71,7 @@ This example exports all certificates under the My store for the machine account
 ### EXAMPLE 3
 
 ``` powershell
-$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
+$mypwd = ConvertTo-SecureString -String '1234' -Force -AsPlainText
 
 $params = @{
     Cert = 'Cert:\CurrentUser\My\5F98EBBFE735CDDAE00E33E0FD69050EF9220254'
@@ -108,7 +108,7 @@ required for key distribution.
 ```powershell
 $a = Get-ChildItem -Path Cert:\LocalMachine\My
 
-$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
+$mypwd = ConvertTo-SecureString -String '1234' -Force -AsPlainText
 
 $params = @{
     Cert = $a[1]
@@ -126,7 +126,7 @@ password. A Windows Server 2012 or later domain controller is required for key d
 ### EXAMPLE 6
 
 ```powershell
-$NewPwd = ConvertTo-SecureString -String "abcd" -Force -AsPlainText
+$NewPwd = ConvertTo-SecureString -String 'abcd' -Force -AsPlainText
 
 $mypfx = Get-PfxData -FilePath C:\mypfx.pfx -Password $Oldpwd
 
@@ -254,6 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoClobber
+
 Specifies that if the PFX file already exists, it should not be over written. This parameter takes
 precedence over the **Force** parameter, which permits this cmdlet to overwrite a PFX file even if
 it has the Read-only attribute set.
@@ -323,6 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectTo
+
 Specifies an array of strings for the username or group name that can access the private key of PFX
 file without any password. This requires a Windows Server 2012 or later domain controller. Either
 the **Password** or this parameter must be specified, or an error will be displayed.

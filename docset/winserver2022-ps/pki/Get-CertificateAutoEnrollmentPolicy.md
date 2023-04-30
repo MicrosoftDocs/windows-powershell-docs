@@ -23,7 +23,7 @@ Get-CertificateAutoEnrollmentPolicy -Scope <AutoEnrollmentPolicyScope> -Context 
 
 ## DESCRIPTION
 
-The **Get-CertificateAutoEnrollmentPolicy** cmdlet gets certificate auto-enrollment policy settings
+The `Get-CertificateAutoEnrollmentPolicy` cmdlet gets certificate auto-enrollment policy settings
 for the user or computer. This cmdlet can return the settings configured in local policy or that are
 being applied from either local or domain policy.
 

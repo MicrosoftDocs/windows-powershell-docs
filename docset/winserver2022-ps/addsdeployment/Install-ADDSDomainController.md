@@ -365,10 +365,10 @@ Accept wildcard characters: False
 ### -InstallDns
 
 Indicates the cmdlet installs and configures the DNS Server service on the domain controller. For
-domain controller installation, if this parameter is left unspecified and the current domain already
-hosts and stores the DNS names for the domain, then the default for this parameter is $True and the
-DNS server is installed. Otherwise, if DNS domain names are hosted outside of Active Directory, the
-default is `$False` and no DNS server is installed.
+domain controller installation, if this parameter is left unspecified and the current domain
+already hosts and stores the DNS names for the domain, then the default for this parameter is
+`$true` and the DNS server is installed. Otherwise, if DNS domain names are hosted outside of
+Active Directory, the default is `$false` and no DNS server is installed.
 
 To test if DNS domain names are hosted outside of Active Directory, this cmdlet uses a start of
 authority (SOA) type DNS query. For instance, if the value of **DomainName** is `corp.contoso.com`,

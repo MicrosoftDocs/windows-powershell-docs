@@ -53,8 +53,8 @@ would use the North America site as the source site for the replication source d
 ### -AllowPasswordReplicationAccountName
 
 Specifies the names of user accounts, group accounts, and computer accounts whose passwords can be
-replicated to this RODC. Use None if you want to keep the value empty. By default, only the Allowed
-RODC Password Replication Group is allowed, and it is originally created empty.
+replicated to this RODC. Use `None` if you want to keep the value empty. By default, only the
+Allowed RODC Password Replication Group is allowed, and it is originally created empty.
 
 ```yaml
 Type: System.String[]

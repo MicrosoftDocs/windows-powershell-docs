@@ -98,7 +98,7 @@ Test-ADDSDomainControllerInstallation -InstallDns -DomainName "corp.contoso.com"
 ```
 
 This command runs the prerequisites to determine if installing a domain controller along with the
-DNS server in the corp.contoso.com domain. The command also prompts the user to enter and confirm
+DNS server in the `corp.contoso.com` domain. The command also prompts the user to enter and confirm
 the DSRM password.
 
 ### Example 3: Test if installation of domain controller is possible using Administrator credentials

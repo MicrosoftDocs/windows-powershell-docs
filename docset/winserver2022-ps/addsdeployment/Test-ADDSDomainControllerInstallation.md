@@ -309,7 +309,7 @@ Accept wildcard characters: False
 
 Specifies the user name and password for creating DNS delegation. The cmdlet will skip the parameter
 if the value for the `-CreateDnsDelegation` parameter is either specified or computed to be
-`$False`.
+`$false`.
 
 ```yaml
 Type: System.Management.Automation.PSCredential

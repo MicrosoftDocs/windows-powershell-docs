@@ -11,6 +11,7 @@ title: Remove-GPPrefRegistryValue
 # Remove-GPPrefRegistryValue
 
 ## SYNOPSIS
+
 Removes one or more Registry preference items from either Computer Configuration or User Configuration in a GPO.
 
 ## SYNTAX
@@ -50,8 +51,8 @@ This cmdlet can take input from the pipeline:
 ## EXAMPLES
 
 ### Example 1: Remove all registry preference item under the specified registry
-```
-PS C:\> Remove-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" 
+```powershell
+Remove-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" 
 DisplayName      : TestGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -68,8 +69,8 @@ WmiFilter        :
 This command removes all Registry preference items that configure the registry value HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey ValueOne from User Configuration in the GPO named TestGPO.
 
 ### Example 2: Remove registry preference items that configure first-level values
-```
-PS C:\> Remove-GPPrefRegistryValue -Name "TestGPO" -Context "Computer" -Key "HKLM\SOFTWARE\Microsoft\ExampleKey" 
+```powershell
+Remove-GPPrefRegistryValue -Name "TestGPO" -Context "Computer" -Key "HKLM\SOFTWARE\Microsoft\ExampleKey" 
 DisplayName      : TestGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -86,8 +87,8 @@ WmiFilter        :
 This command removes Registry preference items that configure any first-level values under the registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey or the key itself from Computer Configuration in the GPO named TestGPO.
 
 ### Example 3: Remove any registry preference items for all GPOs
-```
-PS C:\> Get-GPO -All | Remove-GPPrefRegistryValue -Context "User" -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" -ErrorAction SilentlyContinue 
+```powershell
+Get-GPO -All | Remove-GPPrefRegistryValue -Context "User" -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" -ErrorAction SilentlyContinue 
 DisplayName      : TestGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -124,6 +125,7 @@ For more information about the *ErrorAction* parameter, see about_CommonParamete
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -156,12 +158,13 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for which this cmdlet runs the operation.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
 For the **Remove-GPPrefRegistryValue** cmdlet, the GPO from which to remove the Registry preference item or items must exist in this domain.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current session is used.
 (If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.) For more information, see the Notes section in the full Help.
 
 If you specify a domain that is different from the domain of the user that is running the current session, a trust must exist between that domain and the domain of the user or the computer.
@@ -182,10 +185,11 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Specifies the GPO from which to remove the Registry preference item by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, **Id**.
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: Guid
@@ -262,10 +266,11 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
 
@@ -334,7 +339,7 @@ This cmdlet returns the GPO from which the Registry preference item or items tha
 
 ## NOTES
 
-* You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+* You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.
 The default domain is the domain that is used to access network resources by the security context under which the current session is running.

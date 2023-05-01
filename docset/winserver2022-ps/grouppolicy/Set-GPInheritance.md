@@ -11,6 +11,7 @@ title: Set-GPInheritance
 # Set-GPInheritance
 
 ## SYNOPSIS
+
 Blocks or unblocks inheritance for a specified domain or organizational unit.
 
 ## SYNTAX
@@ -32,8 +33,8 @@ You use the *Target* parameter to specify the Lightweight Directory Access Proto
 ## EXAMPLES
 
 ### Example 1: Block inheritance for a OU in a domain
-```
-PS C:\> Set-GPInheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked Yes 
+```powershell
+Set-GPInheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked Yes 
 Name                  : myou 
 ContainerType         : OU 
 Path                  : ou=myou,dc=contoso,dc=com 
@@ -48,16 +49,16 @@ GPOs that are linked to higher-level sites or domains, or to OUs that are parent
 Because inheritance is blocked, only GPOs that are linked directly to the MyOU, and those that are enforced at higher-level containers, appear in the InheritedGpoLinks list.
 
 ### Example 2: Unblock inheritance for a domain
-```
-PS C:\> Set-GPInheritance -Target "dc=northwest, dc=contoso, dc=com" -IsBlocked No
+```powershell
+Set-GPInheritance -Target "dc=northwest, dc=contoso, dc=com" -IsBlocked No
 ```
 
 This command unblocks inheritance for the northwest.contoso.com domain.
 GPOs linked to higher-level sites or domains are applied to this domain when Group Policy is processed on the client.
 
 ### Example 3: Unblock inheritance for an OU in a domain
-```
-PS C:\> Set-GPInheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked No 
+```powershell
+Set-GPInheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked No 
 
 Name                  : myou 
 ContainerType         : OU 
@@ -76,6 +77,7 @@ For instance, the Default Domain Policy GPO is linked at the domain level.
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -91,13 +93,14 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
 For the **Set-GPInheritance** cmdlet, this is typically the domain of the Active Directory container (domain or OU) for which you want to block or unblock inheritance.
 If the domain for the cmdlet is different than the domain of the container, a trust must exist between the two domains.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current session is used.
 If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
 For more information, see the Notes section in the full Help.
 
@@ -138,10 +141,11 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the **Server** parameter by its built-in alias, **DC**.
 
@@ -212,7 +216,7 @@ The **GpoInheritanceBlocked** property indicates whether inheritance is blocked.
 
 * GPO links that are enforced cannot be blocked. This cmdlet should be used sparingly. Casual use of this cmdlet can complicate troubleshooting.
 
-  You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+  You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.
 The default domain is the domain that is used to access network resources by the security context under which the current session is running.

@@ -11,6 +11,7 @@ title: Rename-GPO
 # Rename-GPO
 
 ## SYNOPSIS
+
 Assigns a new display name to a GPO.
 
 ## SYNTAX
@@ -34,8 +35,8 @@ This cmdlet has no effect on the GUID of the GPO.
 ## EXAMPLES
 
 ### Example 1: Rename a GPO
-```
-PS C:\> Rename-GPO -Name "SampleGPO" -TargetName "SecurityGPO"
+```powershell
+Rename-GPO -Name "SampleGPO" -TargetName "SecurityGPO"
 DisplayName      : securityGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -54,6 +55,7 @@ This command renames the GPO named SampleGPO to SecurityGPO.
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -69,12 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
 For the **Rename-GPO** cmdlet, this is the domain of the GPO that you want to rename.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current session is used.
 If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
 For more information, see the Notes section in the full Help.
 
@@ -96,10 +99,11 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Specifies the GPO to rename by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, **Id**.
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: Guid
@@ -118,7 +122,7 @@ Specifies the GPO to rename by its current display name.
 
 The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain, an error occurs.
-You can use the *Guid* parameter to uniquely identify a GPO.
+You can use the **Guid** parameter to uniquely identify a GPO.
 
 You can also refer to the Name parameter by its built-in alias, **DisplayName**.
 
@@ -135,10 +139,11 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
 
@@ -205,7 +210,7 @@ This cmdlet returns the GPO with the new display name.
 
 ## NOTES
 
-* You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+* You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.
 The default domain is the domain that is used to access network resources by the security context under which the current session is running.

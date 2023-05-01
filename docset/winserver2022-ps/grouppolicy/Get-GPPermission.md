@@ -29,16 +29,16 @@ Get-GPPermission [-Name] <String> [-TargetName <String>] [-TargetType <Permissio
 
 ## DESCRIPTION
 The **Get-GPPermission** cmdlet gets the permission level for one or more security principals on the specified Group Policy Object (GPO).
-You can use the *TargetName* and *TargetType* parameters to specify a user, security group, or computer for which to get the permission level.
-You can use the *All* parameter to get the permission level for each security principal that includes: user, security group, or computer.
+You can use the **TargetName** and *TargetType* parameters to specify a user, security group, or computer for which to get the permission level.
+You can use the **All** parameter to get the permission level for each security principal that includes: user, security group, or computer.
 This only works for a user, security group, or computer that has permissions on the GPO.
 You can specify the GPO by its display name or by its GUID.
 
 ## EXAMPLES
 
 ### Example 1: Get the permission level for group on the specified GPO
-```
-PS C:\> Get-GPPermission -Name "TestGpo" -TargetName "Domain Users" -TargetType Group 
+```powershell
+Get-GPPermission -Name "TestGpo" -TargetName "Domain Users" -TargetType Group 
 Trustee         : Domain Users 
 
 TrusteeType     : Group 
@@ -51,8 +51,8 @@ Inherited       : False
 This command gets the permission level for the Domain Users group on the GPO named TestGpo.
 
 ### Example 2: Get the permission level for group on the specified GPO with the specified GUID
-```
-PS C:\> Get-GPPermission -Domain "Sales.Contoso.com" -Server "DC1" -GUID fa4a9473-6e2a-4b87-ab78-175e68d97bde -TargetName "Domain Admins" -TargetType Group
+```powershell
+Get-GPPermission -Domain "Sales.Contoso.com" -Server "DC1" -GUID fa4a9473-6e2a-4b87-ab78-175e68d97bde -TargetName "Domain Admins" -TargetType Group
 ```
 
 This command gets the permission level for the Domain Admins group on the GPO with the GUID fa4a9473-6e2a-4b78-175e68d97bde in the Sales.Contoso.com domain.
@@ -61,8 +61,8 @@ The DC1.sales.contoso.com domain controller is contacted to complete the operati
 If the domain of the user that is running the session (or, for startup and shutdown scripts, the computer) is different from the sales.contoso.com domain, a trust must exist between the two domains, or the command fails.
 
 ### Example 3: Get the permission level for all security principals on the specified GPO
-```
-PS C:\> Get-GPPermission -Name "TestGPO" -All 
+```powershell
+Get-GPPermission -Name "TestGPO" -All 
 
 Trustee     : Authenticated Users 
 TrusteeType : WellKnownGroup 
@@ -93,8 +93,8 @@ Inherited   : False
 This command gets the permission level for each security principal that has permissions on the GPO named TestGPO.
 
 ### Example 4: Get the display name of each GPO for a specific permissions
-```
-PS C:\> Get-GPO -All | foreach-object { if($_ | Get-GPPermission -TargetName "contoso\Domain Admins" -TargetType Group -ErrorAction SilentlyContinue) {$_.DisplayName}} 
+```powershell
+Get-GPO -All | foreach-object { if($_ | Get-GPPermission -TargetName "contoso\Domain Admins" -TargetType Group -ErrorAction SilentlyContinue) {$_.DisplayName}} 
 
 Default Domain Policy 
 TestGPO-1 
@@ -118,6 +118,7 @@ For more information about the ErrorAction parameter, see about_CommonParameters
 ## PARAMETERS
 
 ### -All
+
 Indicates that the cmdlet gets the permission level for each user, group, or computer that has permissions on the GPO.
 
 ```yaml
@@ -138,7 +139,7 @@ You must specify the fully qualified domain name (FQDN) of the domain.
 
 For the **Get-GPPermission** cmdlet, the GPO for which to get the permission level must exist in this domain. 
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current session is used.
 If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
 For more information, see the Notes section in the full Help. 
 
@@ -160,11 +161,12 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Specifies the GPO from which to retrieve the permission level by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, **Id**.
-For more information, see **about_Aliases**.
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: Guid
@@ -183,10 +185,10 @@ Specifies the GPO from which to retrieve the permission level by its display nam
 
 The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain an error occurs.
-You can use the *Guid* parameter to uniquely identify a GPO.
+You can use the **Guid** parameter to uniquely identify a GPO.
 
 You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -201,13 +203,14 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the PDC emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the PDC emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String

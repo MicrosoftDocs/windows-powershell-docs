@@ -11,6 +11,7 @@ title: New-GPStarterGPO
 # New-GPStarterGPO
 
 ## SYNOPSIS
+
 Creates a Starter GPO.
 
 ## SYNTAX
@@ -27,8 +28,8 @@ If the Starter GPOs folder does not exist in the SYSVOL when the **New-GPStarter
 ## EXAMPLES
 
 ### Example 1: Create a Starter GPO
-```
-PS C:\> New-GPStarterGPO -Name StarterSecurity -Comment "Security Template"
+```powershell
+New-GPStarterGPO -Name StarterSecurity -Comment "Security Template"
 ```
 
 This command creates a Starter GPO with the display name StarterSecurity.
@@ -53,6 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -68,13 +70,14 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
 Cross-domain creation of Starter GPOs is not supported.
 If you specify a domain that is different from the domain of the user that is running the current session, an error occurs.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current session is used.
 
 You can also refer to the **Domain** parameter by its built-in alias, **DomainName**.
 For more information, see [about_Aliases](????????????).
@@ -97,7 +100,7 @@ Specifies the display name for the new Starter GPO.
 If another Starter GPO with the same display name exists in the domain, an error occurs.
 
 You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -112,13 +115,14 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String

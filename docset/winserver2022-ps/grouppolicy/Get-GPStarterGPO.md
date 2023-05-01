@@ -11,6 +11,7 @@ title: Get-GPStarterGPO
 # Get-GPStarterGPO
 
 ## SYNOPSIS
+
 Gets one Starter GPO or all Starter GPOs in a domain.
 
 ## SYNTAX
@@ -32,15 +33,15 @@ Get-GPStarterGPO [-Domain <String>] [-Server <String>] [-All] [<CommonParameters
 
 ## DESCRIPTION
 The **Get-GPStarterGPO** cmdlet gets one Starter Group Policy Object (GPO) or all Starter GPOs in a domain.
-You can specify the Starter GPO to get either by display name or by GUID, or you can specify the *All* parameter to get all the Starter GPOs in the domain.
+You can specify the Starter GPO to get either by display name or by GUID, or you can specify the **All** parameter to get all the Starter GPOs in the domain.
 
 You can use this cmdlet to get information about a StarterGPO, or you can create a new GPO from a specified Starter GPO by piping the output of this cmdlet into the **New-GPO** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Get a Starter GPO by name
-```
-PS C:\> Get-GPStarterGPO -Name "Windows Vista EC User" 
+```powershell
+Get-GPStarterGPO -Name "Windows Vista EC User" 
 DisplayName       : Windows Vista EC User 
 Id                : 8780588e-ef91-442b-bd5f-2d50de7abf76 
 Owner             : BUILTIN\Administrators 
@@ -59,8 +60,8 @@ For more information about each of these settings, see the [Windows Vista Securi
 This command gets the Starter GPO named Windows Vista EC User.
 
 ### Example 2: Get a Starter GPO by name using the pipeline operator
-```
-PS C:\> Get-GPStarterGPO -Name "Windows Vista EC User" | New-GPO -Name "TestGPO" -Comment "Create a GPO by using a Starter GPO" 
+```powershell
+Get-GPStarterGPO -Name "Windows Vista EC User" | New-GPO -Name "TestGPO" -Comment "Create a GPO by using a Starter GPO" 
 DisplayName       : TestGPO 
 DomainName        : contoso.com 
 Owner             : CONTOSO\Domain Admins 
@@ -95,12 +96,13 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
 For the **Get-GPStarterGPO** cmdlet, the Starter GPO must exist in this domain.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current session is used.
 If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
 For more information, see the Notes section in the full Help.
 
@@ -125,8 +127,8 @@ Accept wildcard characters: False
 Specifies the Starter GPO that this cmdlet gets by its globally unique identifier (GUID).
 The GUID uniquely identifies the Starter GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, **Id**.
-For more information, see **about_Aliases**.
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: Guid
@@ -145,10 +147,10 @@ Specifies the display name of the Starter GPO that this cmdlet.
 
 The display name is not guaranteed to be unique in the domain.
 If another Starter GPO with the same display name exists in the domain an error occurs.
-You can use the *Guid* parameter to uniquely identify a Starter GPO.
+You can use the **Guid** parameter to uniquely identify a Starter GPO.
 
 You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -163,13 +165,14 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -200,7 +203,7 @@ This cmdlet returns a Starter GPO object.
 
 ## NOTES
 
-* You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+* You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.
 The default domain is the domain that is used to access network resources by the security context under which the current session is running.

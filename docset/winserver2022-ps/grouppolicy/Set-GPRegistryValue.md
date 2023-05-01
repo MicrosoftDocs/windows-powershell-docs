@@ -11,6 +11,7 @@ title: Set-GPRegistryValue
 # Set-GPRegistryValue
 
 ## SYNOPSIS
+
 Configures one or more registry-based policy settings under either Computer Configuration or User Configuration in a GPO.
 
 ## SYNTAX
@@ -61,8 +62,8 @@ No subkeys, or their values, are deleted on the client.
 ## EXAMPLES
 
 ### Example 1: Configure a registry-based policy setting for a registry value
-```
-PS C:\> Set-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop" -ValueName "ScreenSaveTimeOut" -Type DWORD -Value 900
+```powershell
+Set-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop" -ValueName "ScreenSaveTimeOut" -Type DWORD -Value 900
 DisplayName      : TestGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -80,8 +81,8 @@ This command configures a registry-based policy setting for the registry value "
 This policy setting sets the Screen Saver timeout to 900 seconds (15 minutes) when Group Policy is applied on the client.
 
 ### Example 1: Configure a registry-based policy settings for multiple registry values
-```
-PS C:\> Set-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey" -ValueName "ValueOne", "ValueTwo", "ValueThree" -Type String -Value "String 1", "String 2", "String 3"
+```powershell
+Set-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey" -ValueName "ValueOne", "ValueTwo", "ValueThree" -Type String -Value "String 1", "String 2", "String 3"
 ```
 
 This command configures registry-based policy settings to set three registry values.
@@ -95,8 +96,8 @@ When the GPO is applied on the client, the following registry values are set:
 "HKCU\Software\Policies\Microsoft\ExampleKey ValueThree" "String 3"
 
 ### Example 3: Configure a registry-based policy setting to set a list of registry values
-```
-PS C:\> Set-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey" -ValuePrefix "MyValue" -Type String -Value "String 1", "String 2", "String 3"
+```powershell
+Set-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey" -ValuePrefix "MyValue" -Type String -Value "String 1", "String 2", "String 3"
 ```
 
 This command configures a registry-based policy setting to set a list of three registry values.
@@ -113,16 +114,16 @@ If you specify the *Additive* parameter, the list values are added to the existi
 The actual value names assigned to the list values depends on the number of existing list values on the client.
 
 ### Example 4: Disable registry-based policy settings for specific registry values
-```
-PS C:\> Set-GPRegistryValue -Disable -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey" -ValueName "ValueOne", "ValueTwo", "ValueThree"
+```powershell
+Set-GPRegistryValue -Disable -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey" -ValueName "ValueOne", "ValueTwo", "ValueThree"
 ```
 
 This command disables the registry-based policy settings, in the User Configuration section, for the specified registry values.
 When the GPO is applied on the client, the registry values are deleted from the registry on the client.
 
 ### Example 5: Disable registry-based policy settings for a specific registry key
-```
-PS C:\> Set-GPRegistryValue -Disable -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey"
+```powershell
+Set-GPRegistryValue -Disable -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey"
 ```
 
 This command disables the registry-based policy setting, in the User Configuration section, for the specified registry key.
@@ -152,6 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -195,12 +197,13 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
 For the **Set-GPRegistryValue** cmdlet, the GPO in which to configure the registry-based policy setting must exist in this domain.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current session is used.
 If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
 For more information, see the Notes section in the full Help.
 
@@ -222,10 +225,11 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Specifies the GPO in which to configure the registry-based policy setting by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, **Id**.
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: Guid
@@ -267,7 +271,7 @@ Specifies the GPO in which to configure the registry-based policy setting by its
 
 The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain, an error occurs.
-You can use the *Guid* parameter to uniquely identify a GPO.
+You can use the **Guid** parameter to uniquely identify a GPO.
 
 You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 
@@ -284,10 +288,11 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
 
@@ -442,7 +447,7 @@ This cmdlet returns the GPO in which the registry-based policy setting has been 
 
 * The hive of the registry key that you specify, HKEY_LOCAL_MACHINE (HKLM) or HKEY_CURRENT_USER (HKCU), determines whether the registry-based policy setting is in Computer Configuration or User Configuration.
 
-  You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+  You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.
 The default domain is the domain that is used to access network resources by the security context under which the current session is running.

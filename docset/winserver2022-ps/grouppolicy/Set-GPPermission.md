@@ -11,6 +11,7 @@ title: Set-GPPermission
 # Set-GPPermission
 
 ## SYNOPSIS
+
 Grants a level of permissions to a security principal for one GPO or all the GPOs in a domain.
 
 ## SYNTAX
@@ -37,8 +38,8 @@ Set-GPPermission -PermissionLevel <GPPermissionType> -TargetName <String> -Targe
 
 ## DESCRIPTION
 The **Set-GPPermission** cmdlet grants a level of permissions to a security principal (user, security group, or computer) for one Group Policy Object (GPO) or all the GPOs in a domain.
-You use the *TargetName* and *TargetType* parameters to specify a user, security group, or computer for which to set the permission level.
-You can use the *Name* or the *Guid* parameter to set the permission level for the security principal on a single GPO, or you can use the *All* parameter to set the permission level for the security principal on all GPOs in the domain.
+You use the **TargetName** and *TargetType* parameters to specify a user, security group, or computer for which to set the permission level.
+You can use the *Name* or the **Guid** parameter to set the permission level for the security principal on a single GPO, or you can use the **All** parameter to set the permission level for the security principal on all GPOs in the domain.
 
 By default, if the security principal already has a higher permission level than the specified permission level, the change is not applied.
 You can specify the *Replace* parameter, to remove the existing permission level from the GPO before the new permission level is set.
@@ -47,16 +48,16 @@ This ensures that the existing permission level is replaced by the new permissio
 ## EXAMPLES
 
 ### Example 1: Set the permission level for a security group belonging to a GPO
-```
-PS C:\> Set-GPPermission -Name TestGpo -TargetName "Domain Users" -TargetType Group -PermissionLevel GpoRead
+```powershell
+Set-GPPermission -Name TestGpo -TargetName "Domain Users" -TargetType Group -PermissionLevel GpoRead
 ```
 
 This command sets the permission level for the Domain Users security group to GpoRead for the GPO named TestGpo.
 Because the *Replace* parameter is not specified, if the group already has a permission level higher than GpoRead, such as GpoEdit, no action is taken.
 
 ### Example 2: Set the permission level for a security group that belongs to all GPOs
-```
-PS C:\> Set-GPPermission -All -TargetName "Marketing Admins" -TargetType Group -PermissionLevel GpoEdit -Replace
+```powershell
+Set-GPPermission -All -TargetName "Marketing Admins" -TargetType Group -PermissionLevel GpoEdit -Replace
 ```
 
 This command sets the permission level for the Marketing Admins security group to GpoEdit on all GPOs in the domain.
@@ -64,8 +65,8 @@ This includes GPOs that are not linked to any site, domain, or OU.
 Because the *Replace* parameter is specified, the new permission level overwrites the existing permissions set for the group.
 
 ### Example 3: Replace the permission level of a security group for all GPOs on which the group has permissions
-```
-PS C:\> Get-GPO -All | ForEach-Object { if($_ | Get-GPPermission -TargetName "Marketing Admins" -TargetType Group -ErrorAction SilentlyContinue) {$_ | Set-GPPermission -Replace -PermissionLevel GpoApply -TargetName "Marketing Admins" -TargetType Group }}
+```powershell
+Get-GPO -All | ForEach-Object { if($_ | Get-GPPermission -TargetName "Marketing Admins" -TargetType Group -ErrorAction SilentlyContinue) {$_ | Set-GPPermission -Replace -PermissionLevel GpoApply -TargetName "Marketing Admins" -TargetType Group }}
 DisplayName      : TestGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -124,6 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -166,10 +168,11 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Specifies the GPO for which to set the permission level by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, **Id**.
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: Guid
@@ -184,11 +187,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the GPO for which to set the permission level by its display name.
 
 The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain, an error occurs.
-You can use the *Guid* parameter to uniquely identify a GPO.
+You can use the **Guid** parameter to uniquely identify a GPO.
 
 You can also refer to the Name parameter by its built-in alias, **DisplayName**.
 
@@ -245,10 +249,11 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
 

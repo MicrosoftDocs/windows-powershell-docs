@@ -11,6 +11,7 @@ title: Restore-GPO
 # Restore-GPO
 
 ## SYNOPSIS
+
 Restores one GPO or all GPOs in a domain from one or more GPO backup files.
 
 ## SYNTAX
@@ -45,9 +46,9 @@ If the original domain is not available, or if the GPO no longer exists in the d
 
 You can:
 
-- Use the *Guid* parameter or the *Name* parameter to restore a GPO from its most recent backup.
+- Use the **Guid** parameter or the *Name* parameter to restore a GPO from its most recent backup.
 
-- Use the *All* parameter to restore all GPOs in the domain from their most recent backups.
+- Use the **All** parameter to restore all GPOs in the domain from their most recent backups.
 
 - Use the *BackupId* parameter to restore a GPO from a specific backup.
 This parameter enables you to restore a GPO from a backup prior to the most recent one.
@@ -55,24 +56,24 @@ This parameter enables you to restore a GPO from a backup prior to the most rece
 ## EXAMPLES
 
 ### Example 1: Restore a GPO from a directory
-```
-PS C:\> Restore-GPO -Name "TestGPO" -Path "\\Server1\Backups"
+```powershell
+Restore-GPO -Name "TestGPO" -Path "\\Server1\Backups"
 ```
 
 This command restores the GPO named TestGPO from the \\\\Server1\Backups directory.
 The most recent backup is restored.
 
 ### Example 2: Restore a GPO from a directory using the GPOs GUID
-```
-PS C:\> Restore-GPO -GUID fa4a9473-6e2a-4b87-ab78-175e68d97bde -Path "\\Server1\Backups"
+```powershell
+Restore-GPO -GUID fa4a9473-6e2a-4b87-ab78-175e68d97bde -Path "\\Server1\Backups"
 ```
 
 This command restores the GPO with the GUID fa4a9473-6e2a-4b87-ab78-175e68d97bde from the \\\\Server1\Backups directory.
 The most recent backup is restored.
 
 ### Example 3: Restore all GPOs in a domain that were previously backed up to a directory
-```
-PS C:\> Restore-GPO -All -Domain "contoso.com" -Path "\\Server1\Backups"
+```powershell
+Restore-GPO -All -Domain "contoso.com" -Path "\\Server1\Backups"
 ```
 
 This command restores all of the GPOs in the contoso.com domain previously backed up to \\\\Server1\Backup.
@@ -81,8 +82,8 @@ Each GPO is restored using its most recent backup.
 If the domain of user that is running the session (or, for a startup or shutdown script, the domain of the computer) is different from the contoso.com domain, a trust must exist between the two domains or the command fails.
 
 ### Example 4: Restore a GPO using its backup ID
-```
-PS C:\> Restore-GPO -BackupId 0fc29b3c-fb83-4076-babb-6194c1b4fc26 -Path "\\Server1\Backups"
+```powershell
+Restore-GPO -BackupId 0fc29b3c-fb83-4076-babb-6194c1b4fc26 -Path "\\Server1\Backups"
 ```
 
 This command restores a GPO from the backup specified by the *BackupId* parameter.
@@ -91,6 +92,7 @@ The *BackupId* parameter can be used to restore a GPO from a backup prior to the
 ## PARAMETERS
 
 ### -All
+
 Indicates that the cmdlet restores all GPOs in the domain that have backups in the backup directory.
 Each GPO is restored from its most recent backup in the directory.
 
@@ -126,6 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -141,13 +144,14 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
 For the **Restore-GPO** cmdlet, this is the domain in which you want to restore the GPO.
 This must be the domain from which the GPO was backed up.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current session is used.
 If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
 For more information, see the Notes section in the full Help.
 
@@ -169,13 +173,14 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Specifies the GPO to restore by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
 The GPO is restored from its most recent backup in the backup directory.
 To specify a different backup than the most recent backup, use the *BackupId* parameter.
 
-You can also refer to the *Guid* parameter by its built-in alias, **Id**.
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: Guid
@@ -196,7 +201,7 @@ To specify a different backup than the most recent backup, use the BackupId para
 
 The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain an error occurs.
-You can use the *Guid* parameter to uniquely identify a GPO.
+You can use the **Guid** parameter to uniquely identify a GPO.
 
 You can also refer to the Name parameter by its built-in alias, **DisplayName**.
 
@@ -213,9 +218,10 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
 Specifies the path to the backup directory.
 
-You can also refer to the *Path* parameter by its built-in alias, backuplocation.
+You can also refer to the **Path** parameter by its built-in alias, backuplocation.
 
 ```yaml
 Type: System.String
@@ -230,10 +236,11 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
 
@@ -283,7 +290,7 @@ This cmdlet returns the restored GPO.
 
 ## NOTES
 
-* You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+* You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.
 The default domain is the domain that is used to access network resources by the security context under which the current session is running.

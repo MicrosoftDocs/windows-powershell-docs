@@ -11,25 +11,31 @@ title: Invoke-GPUpdate
 # Invoke-GPUpdate
 
 ## SYNOPSIS
+
 Schedules a remote Group Policy refresh on the specified computer.
 
 ## SYNTAX
 
 ### NonSyncSet (Default)
+
 ```
-Invoke-GPUpdate [-AsJob] [-Boot] [[-Computer] <String>] [[-RandomDelayInMinutes] <Int32>] [-Force] [-LogOff]
- [-Target <String>] [<CommonParameters>]
+Invoke-GPUpdate [-AsJob] [-Boot] [[-Computer] <String>] [[-RandomDelayInMinutes] <Int32>] [-Force]
+[-LogOff] [-Target <String>] [<CommonParameters>]
 ```
 
 ### SyncSet
+
 ```
 Invoke-GPUpdate [-AsJob] [-Boot] [[-Computer] <String>] [[-RandomDelayInMinutes] <Int32>] [-LogOff]
- [-Target <String>] [-Sync] [<CommonParameters>]
+[-Target <String>] [-Sync] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Invoke-GPUpdate** cmdlet refreshes Group Policy settings, including security settings that are set on remote computers by scheduling the running of the Gpupdate command on a remote computer.
-You can combine this cmdlet in a scripted fashion to schedule the Gpupdate command on a group of computers.
+
+The **Invoke-GPUpdate** cmdlet refreshes Group Policy settings, including security settings that are
+set on remote computers by scheduling the running of the Gpupdate command on a remote computer. You
+can combine this cmdlet in a scripted fashion to schedule the Gpupdate command on a group of
+computers.
 
 The refresh can be scheduled to immediately start a refresh of policy settings or wait for a specified period of time, up to a maximum of 31 days.
 To avoid putting a load on the network, the refresh times will be offset by a random delay.
@@ -37,15 +43,15 @@ To avoid putting a load on the network, the refresh times will be offset by a ra
 ## EXAMPLES
 
 ### Example 1: Schedule a Group Policy refresh on the current computer
-```
-PS C:\> Invoke-GPUpdate
+```powershell
+Invoke-GPUpdate
 ```
 
 This command schedules a Group Policy refresh on the computer on which you are running the **Invoke-GPUpdate** cmdlet.
 
 ### Example 2: Schedule a Group Policy refresh on a remote computer
-```
-PS C:\> Invoke-GPUpdate -Computer "CONTOSO\COMPUTER-02" -Target "User"
+```powershell
+Invoke-GPUpdate -Computer "CONTOSO\COMPUTER-02" -Target "User"
 ```
 
 This command schedules a Group Policy refresh on a remote computer named CONTOSO\COMPUTER-02 that only schedule to update the user policy settings in synchronous mode.
@@ -228,6 +234,7 @@ This cmdlet does not take any object as input.
 ## OUTPUTS
 
 ### None
+
 This cmdlet does not generate any output.
 
 ## NOTES

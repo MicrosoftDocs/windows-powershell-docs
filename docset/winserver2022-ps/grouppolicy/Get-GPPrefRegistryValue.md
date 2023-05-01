@@ -44,8 +44,8 @@ You can use this information to browse for Registry preference items.
 ## EXAMPLES
 
 ### Example 1: Get the Registry preference item value
-```
-PS C:\> Get-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne"
+```powershell
+Get-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne"
 KeyPath            : SOFTWARE\Microsoft\ExampleKey 
 FullKeyPath        : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey 
 Hive               : LocalMachine 
@@ -62,8 +62,8 @@ HasValue           : True
 This command gets the Registry preference item that is configured for the registry value HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey with value name ValueOne from User Configuration in the GPO named TestGPO.
 
 ### Example 2: Get all Registry preference items
-```
-PS C:\> Get-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey"
+```powershell
+Get-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey"
 KeyPath            : SOFTWARE\Microsoft\ExampleKey 
 FullKeyPath        : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey 
 Hive               : LocalMachine 
@@ -126,12 +126,13 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
 For the **Get-GPPrefRegistryValue** cmdlet, the GPO for which to get the Registry preference item must exist in this domain.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current session is used.
 If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
 For more information, see the Notes section in the full Help.
 
@@ -153,11 +154,12 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Specifies the GPO from which this cmdlet gets the Registry preference item by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, **Id**.
-For more information, see **about_Aliases**.
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: Guid
@@ -191,7 +193,7 @@ The *Key* parameter can be specified with or without the *ValueName* parameter:
 - If the *ValueName* parameter is not specified, all Registry preference items that configure the registry key and any of its first-level values are retrieved.
 
 You can also refer to the Key parameter by its built-in alias, FullKeyPath.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -210,7 +212,7 @@ Specifies the GPO from which this cmdlet gets the Registry preference item by it
 
 The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain an error occurs.
-You can use the *Guid* parameter to uniquely identify a GPO.
+You can use the **Guid** parameter to uniquely identify a GPO.
 
 You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 For more information, **see about_Aliases**.
@@ -243,13 +245,14 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
 If you do not specify the name through the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -307,7 +310,7 @@ You can pipe these objects to the following cmdlets:
 
 * If a Registry preference item for the specified registry key or value is not found, a non-terminating error occurs.
 
-  You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+  You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.
 The default domain is the domain that is used to access network resources by the security context under which the current session is running.

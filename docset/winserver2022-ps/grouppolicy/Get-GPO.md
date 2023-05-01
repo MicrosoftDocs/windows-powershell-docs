@@ -235,7 +235,7 @@ This cmdlet returns an object that represents the requested GPO.
 
 ## NOTES
 
-* You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+* You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.
 The default domain is the domain that is used to access network resources by the security context under which the current session is running.
@@ -247,7 +247,7 @@ Therefore, when this cmdlet is run from a startup or shutdown script, the defaul
 
   Only one domain can be used by an instance of this cmdlet.
 If you pipe a collection of GPO (Microsoft.GroupPolicy.Gpo) objects to this cmdlet, the DomainName property of the first GPO object in the collection specifies the domain for the cmdlet.
-This is because domainname is a built-in alias for the *Domain* parameter, and the *Domain* parameter can take its value by property name from the pipeline.
+This is because domainname is a built-in alias for the **Domain** parameter, and the **Domain** parameter can take its value by property name from the pipeline.
 A non-terminating error occurs for any GPOs in the collection that are not in this domain.
 If this domain is different from the domain of the user account (for startup or shutdown scripts, the computer account), a trust must exist between the two domains.
 

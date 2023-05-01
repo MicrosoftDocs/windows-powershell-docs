@@ -11,6 +11,7 @@ title: New-GPO
 # New-GPO
 
 ## SYNOPSIS
+
 Creates a GPO.
 
 ## SYNTAX
@@ -44,8 +45,8 @@ The cmdlet returns a **GPO** object, which represents the created GPO that you c
 ## EXAMPLES
 
 ### Example 1: Create a GPO in the domain of the user
-```
-PS C:\> New-GPO -Name TestGPO -Comment "This is a test GPO." 
+```powershell
+New-GPO -Name TestGPO -Comment "This is a test GPO." 
 DisplayName      : TestGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -63,16 +64,16 @@ This command creates a GPO in the domain of the user.
 The GPO is created with the specified comment.
 
 ### Example 2: Create a GPO in the domain of the user that is pre-populated with the settings of the Starter GPO
-```
-PS C:\> New-GPO -Name "FromStarterGPO" -StarterGPOName "Windows Vista EC Computer Starter GPO"
+```powershell
+New-GPO -Name "FromStarterGPO" -StarterGPOName "Windows Vista EC Computer Starter GPO"
 ```
 
 This command creates a GPO named FromStarterGPO in the domain of the user.
 The GPO is pre-populated with the settings of the Starter GPO.
 
 ### Example 3: Create a GPO in the domain of the user and link it to an OU
-```
-PS C:\> new-gpo -name TestGPO | new-gplink -target "ou=marketing,dc=contoso,dc=com" | set-gppermissions -permissionlevel gpoedit -targetname "Marketing Admins" -targettype group 
+```powershell
+new-gpo -name TestGPO | new-gplink -target "ou=marketing,dc=contoso,dc=com" | set-gppermissions -permissionlevel gpoedit -targetname "Marketing Admins" -targettype group 
 
 DisplayName      : TestGPO 
 DomainName       : contoso.com 
@@ -114,6 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -129,6 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
@@ -138,7 +141,7 @@ For the **New-GPO** cmdlet:
 
 - If a Starter GPO is specified, it must exist in this domain.
 
-If you do not specify the *Domain* parameter, then the domain of the user running the current session is used.
+If you do not specify the **Domain** parameter, then the domain of the user running the current session is used.
 If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
 For more information, see the Notes section in the full help.
 
@@ -165,7 +168,7 @@ Specifies a display name for the new GPO.
 If another GPO with the same display name exists in the domain an error occurs.
 
 You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -180,13 +183,14 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -206,7 +210,7 @@ The GUID uniquely identifies the Starter GPO.
 If a Starter GPO is specified, the GPO is created with its settings.
 
 You can also refer to the **StarterGpoGuid* *parameter by its built-in alias, **Id**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: Guid
@@ -231,7 +235,7 @@ If another Starter GPO with the same display name exists in the domain, an error
 You can use the **StarterGpoGuid* *parameter to uniquely identify a Starter GPO.
 
 You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -283,7 +287,7 @@ This cmdlet returns the GPO that was created.
 * Only domain administrators, enterprise administrators, and members of the Group Policy creator
   owners group can create GPOs. These users must run Windows PowerShell in an elevated state.
 
-  You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+  You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain. The default domain
   is the domain that is used to access network resources by the security context under which the

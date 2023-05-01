@@ -11,6 +11,7 @@ title: Remove-GPRegistryValue
 # Remove-GPRegistryValue
 
 ## SYNOPSIS
+
 Removes one or more registry-based policy settings from either Computer Configuration or User Configuration in a GPO.
 
 ## SYNTAX
@@ -49,8 +50,8 @@ This cmdlet can take input from the pipeline:
 ## EXAMPLES
 
 ### Example 1: Remove a registry-based policy setting under the specified registry key
-```
-PS C:\> Remove-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop" -ValueName "ScreenSaveTimeOut"
+```powershell
+Remove-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop" -ValueName "ScreenSaveTimeOut"
 DisplayName      : TestGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -70,8 +71,8 @@ Removing a policy setting does not delete the registry value on a client.
 To delete the registry value when the GPO is applied on a client, you must disable the policy setting by using the **Set-GPRegistryValue** cmdlet.
 
 ### Example 2: Remove all the registry-based policy settings under the specified registry key
-```
-PS C:\> Remove-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey"
+```powershell
+Remove-GPRegistryValue -Name "TestGPO" -Key "HKCU\Software\Policies\Microsoft\ExampleKey"
 ```
 
 This command removes all the registry-based policy settings that configure first-level registry values under the key HKEY_CURRENT_USER\Software\Policies\Microsoft\ExampleKey from User Configuration in the GPO named TestGPO.
@@ -80,6 +81,7 @@ If there are registry-based policy settings in User Configuration that configure
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -95,12 +97,13 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
 For the **Remove-GPRegistryValue** cmdlet, the GPO from which to remove the registry-based policy setting must exist in this domain.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current session is used.
 If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
 For more information, see the Notes section in the full Help.
 
@@ -122,10 +125,11 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Specifies the GPO from which to remove the registry-based policy setting by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, **Id**.
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: Guid
@@ -174,7 +178,7 @@ Specifies the GPO from which to remove the registry-based policy setting by its 
 
 The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain an error occurs.
-You can use the *Guid* parameter to uniquely identify a GPO.
+You can use the **Guid** parameter to uniquely identify a GPO.
 
 You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 
@@ -191,10 +195,11 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
 
@@ -265,7 +270,7 @@ This cmdlet returns the GPO from which the registry-based policy setting (or set
 
   If a value for the registry key cannot be located (the registry key is not configured) or if subkeys are present, an error occurs and a corresponding error message is displayed.
 
-  You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+  You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.
 The default domain is the domain that is used to access network resources by the security context under which the current session is running.

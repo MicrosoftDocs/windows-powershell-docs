@@ -11,6 +11,7 @@ title: Remove-GPLink
 # Remove-GPLink
 
 ## SYNOPSIS
+
 Removes a GPO link from a site, domain or OU.
 
 ## SYNTAX
@@ -34,8 +35,8 @@ This cmdlet does not delete the actual GPO or any other links between the specif
 ## EXAMPLES
 
 ### Example 1: Remove the specified GPO link
-```
-PS C:\> Remove-GPLink -Name "MyGPO" -Target "OU=MyOU,dc=contoso,dc=com" 
+```powershell
+Remove-GPLink -Name "MyGPO" -Target "OU=MyOU,dc=contoso,dc=com" 
 DisplayName      : MyGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -52,15 +53,15 @@ WmiFilter        :
 This command removes the link between the GPO named MyGPO and the MyOU organizational unit in the contoso.com domain.
 
 ### Example 2: Remove the link between the specified GPO and the default site
-```
-PS C:\> Remove-GPLink -Name "MyGPO" -Target "Default-First-Site-Name"
+```powershell
+Remove-GPLink -Name "MyGPO" -Target "Default-First-Site-Name"
 ```
 
 This command removes the link between the GPO named MyGPO and the default site.
 
 ### Example 3: Remove the links for all GPOs that are linked to the specified organizational unit
-```
-PS C:\> (Get-GPInheritance -Target "ou=myou,dc=contoso,dc=com").GpoLinks | Remove-GPLink 
+```powershell
+(Get-GPInheritance -Target "ou=myou,dc=contoso,dc=com").GpoLinks | Remove-GPLink 
 DisplayName      : TestGPO-3 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -97,6 +98,7 @@ The GPOs for which links have been removed are returned.
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -112,6 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
@@ -145,11 +148,12 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Specifies the GPO for which to remove the link by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in aliases, id and gpoid.
-For more information, see **about_Aliases**.
+You can also refer to the **Guid** parameter by its built-in aliases, id and gpoid.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: Guid
@@ -164,14 +168,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the GPO for which to remove the link by its display name.
 
 The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain an error occurs.
-You can use the *Guid* parameter to uniquely identify a GPO.
+You can use the **Guid** parameter to uniquely identify a GPO.
 
 You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -186,13 +191,14 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String

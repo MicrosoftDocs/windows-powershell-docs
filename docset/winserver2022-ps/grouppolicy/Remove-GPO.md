@@ -11,6 +11,7 @@ title: Remove-GPO
 # Remove-GPO
 
 ## SYNOPSIS
+
 Removes a GPO.
 
 ## SYNTAX
@@ -33,16 +34,16 @@ The **Remove-GPO** cmdlet removes the Group Policy Object (GPO) container and da
 ## EXAMPLES
 
 ### Example 1: Remove a GPO by GUID
-```
-PS C:\> Remove-GPO -Guid 50cc3e45-0b14-46dd-8b4d-afa012bc331c -Domain "contoso.com" -KeepLinks
+```powershell
+Remove-GPO -Guid 50cc3e45-0b14-46dd-8b4d-afa012bc331c -Domain "contoso.com" -KeepLinks
 ```
 
 This command removes the GPO that has the GUID 50cc3e45-0b14-46dd-8b4d-afa012bc331c from the contoso.com domain.
 Because the *KeepLinks* parameter is specified, links between the GPO and all sites, and links between the GPO and all containers in the domain are preserved.
 
 ### Example 2: Remove a GPO by name
-```
-PS C:\> Remove-GPO -Name "TestGPO"
+```powershell
+Remove-GPO -Name "TestGPO"
 ```
 
 This command removes the GPO named TestGPO from the domain of the user that is running the session.
@@ -51,6 +52,7 @@ Because the *KeepLinks* parameter is not specified, links between the GPO and al
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -69,7 +71,7 @@ Accept wildcard characters: False
 Specifies the domain in which you want to remove a GPO.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
-If you do not specify the *Domain* parameter, the domain of the computer that you are logged on to is used.
+If you do not specify the **Domain** parameter, the domain of the computer that you are logged on to is used.
 
 If you specify a domain that differs from the domain of your user object, a trust must exist between the domain from which you want to remove the GPO and the domain of your user object.
 
@@ -86,10 +88,11 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Specifies the GPO to remove by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, **Id**.
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
 For more information, see [about_Aliases](????????????).
 
 ```yaml
@@ -124,10 +127,10 @@ Specifies the GPO that this cmdlet removes by its display name.
 
 The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain an error occurs.
-You can use the *Guid* parameter to uniquely identify a GPO.
+You can use the **Guid** parameter to uniquely identify a GPO.
 
 You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -142,13 +145,14 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -192,6 +196,7 @@ Collections that contain GPOs from different domains are not supported.
 ## OUTPUTS
 
 ### None
+
 This cmdlet does not generate any output.
 
 ## NOTES

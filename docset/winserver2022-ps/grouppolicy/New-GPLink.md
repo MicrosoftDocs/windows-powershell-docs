@@ -11,6 +11,7 @@ title: New-GPLink
 # New-GPLink
 
 ## SYNOPSIS
+
 Links a GPO to a site, domain, or OU.
 
 ## SYNTAX
@@ -38,8 +39,8 @@ You can use other parameters to specify whether the link is enabled, whether the
 ## EXAMPLES
 
 ### Example 1: Create and link a GPO to a domain
-```
-PS C:\> New-GPO -Name "MyGPO" | New-GPLink -Target "ou=MyOU,dc=contoso,dc=com" -LinkEnabled Yes 
+```powershell
+New-GPO -Name "MyGPO" | New-GPLink -Target "ou=MyOU,dc=contoso,dc=com" -LinkEnabled Yes 
 GpoId       : c25daa3e-5d05-43b3-87ca-0a237882fd63 
 DisplayName : MyGPO 
 Enabled     : True 
@@ -55,8 +56,8 @@ Because this command can take a GPO as input, you can insert any command that re
 For instance, you can insert **Set-GPPermissions** commands to set permissions on the GPO, Set-GPRegistryValue cmdlet to configure one or more registry-based policy settings for the GPO, or the **Set-GPPrefRegistryValue** cmdlet to configure one or more Registry preference items for the GPO.
 
 ### Example 2: Link a GPO in the domain of the user
-```
-PS C:\> New-GPLink -Name "TestGPO" -Target "dc=contoso,dc=com" 
+```powershell
+New-GPLink -Name "TestGPO" -Target "dc=contoso,dc=com" 
 GpoId       : d5a3b4e7-e37a-4070-846c-568689eaa838 
 DisplayName : TestGPO 
 Enabled     : True 
@@ -69,8 +70,8 @@ This command links the TestGPO GPO in the domain of the user (or, for a startup 
 If the domain of the user, or the computer, is different than contoso.com, a trust relationship must exist between the two domains.
 
 ### Example 3: Link a GPO to a site and enforce the link
-```
-PS C:\> New-GPLink -name "TestGPO" -Target "Test-Site" -Enforced Yes 
+```powershell
+New-GPLink -name "TestGPO" -Target "Test-Site" -Enforced Yes 
 GpoId       : d5a3b4e7-e37a-4070-846c-568689eaa838 
 DisplayName : TestGPO 
 Enabled     : True 
@@ -84,6 +85,7 @@ This command links the TestGPO GPO to the site named Test-Site and sets the link
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -99,6 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
@@ -110,7 +113,7 @@ For the **New-GPLink** cmdlet:
 
 To specify a domain to link to, use the *Target* parameter.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current session is used.
 If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
 For more information, see the Notes section in the full Help.
 
@@ -158,11 +161,12 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Specifies the GPO to link by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO in the domain.
 
 You can also refer to the Guid parameter by its built-in alias, **Id**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: Guid
@@ -204,10 +208,10 @@ Specifies the GPO to link by its display name.
 
 The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain, an error occurs.
-You can use the *Guid* parameter to uniquely identify a GPO.
+You can use the **Guid** parameter to uniquely identify a GPO.
 
 You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -247,13 +251,14 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the FQDN or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
-For more information, see **about_Aliases**.
+For more information, see [about_Aliases](????????).
 
 ```yaml
 Type: System.String
@@ -319,7 +324,7 @@ This cmdlet returns an object that represents the link between the GPO and the s
 
 * To link a GPO to a site, domain, or OU, you must have Link GPOs permission on that site, domain, or OU. By default, only domain administrators and enterprise administrators have this privilege for domains and OUs. Enterprise administrators and domain administrators of the forest root domain have this privilege for sites.
 
-  You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+  You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.
 The default domain is the domain that is used to access network resources by the security context under which the current session is running.

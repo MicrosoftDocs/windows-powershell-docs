@@ -11,6 +11,7 @@ title: Set-GPPrefRegistryValue
 # Set-GPPrefRegistryValue
 
 ## SYNOPSIS
+
 Configures a Registry preference item under either Computer Configuration or User Configuration in a GPO.
 
 ## SYNTAX
@@ -55,8 +56,8 @@ This cmdlet can take input from the pipeline:
 ## EXAMPLES
 
 ### Example 1: Configure a Registry preference item for a registry value for a GPO
-```
-PS C:\> Set-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKCU\Software\Policies\Microsoft\Windows\Control Panel" -ValueName "ScreenSaveIsSecure" -Value "1" -Type String -Action Update 
+```powershell
+Set-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKCU\Software\Policies\Microsoft\Windows\Control Panel" -ValueName "ScreenSaveIsSecure" -Value "1" -Type String -Action Update 
 DisplayName      : TestGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -74,24 +75,24 @@ This command configures a Registry preference item for the registry value HKCU\S
 When the GPO is applied on a client, the registry value is updated with a data type of String (REG_SZ) and value data 1.
 
 ### Example 2: Configure a Registry preference item for a registry value for a GPO
-```
-PS C:\> Set-GPPrefRegistryValue -Name "TestGPO" -Context User -Action Create -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" -Value "NewData" -Type String
+```powershell
+Set-GPPrefRegistryValue -Name "TestGPO" -Context User -Action Create -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" -Value "NewData" -Type String
 ```
 
 This command configures a Registry preference item for the registry value HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey ValueOne in User Configuration for the GPO named TestGPO.
 When the GPO is applied on a client, the registry value is created with a data type of String (REG_SZ) and value data "NewData".
 
 ### Example 3: Configure a Registry preference item for a registry value for a GPO specified by GUID
-```
-PS C:\> Set-GPPrefRegistryValue -Guid 35c12ab3-956c-45d5-973b-46b17d225f47 -Context Computer -Action Create -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey\ExampleKey2"
+```powershell
+Set-GPPrefRegistryValue -Guid 35c12ab3-956c-45d5-973b-46b17d225f47 -Context Computer -Action Create -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey\ExampleKey2"
 ```
 
 This command configures a Registry preference item for the registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey\ExampleKey2 in Computer Configuration in the GPO that has ID 35c12ab3-956c-45d5-973b-46b17d225f47.
 When the GPO is applied on a client, the registry key is created.
 
 ### Example 4: Create a disabled Registry preference item for a registry value for a GPO
-```
-PS C:\> Remove-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKLM\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" | Set-GPPrefRegistryValue -Context User -Action Create -Disable -Key "HKLM\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" -Value "SomeData" -Type String
+```powershell
+Remove-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKLM\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" | Set-GPPrefRegistryValue -Context User -Action Create -Disable -Key "HKLM\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" -Value "SomeData" -Type String
 ```
 
 This command creates a disabled Registry preference item for the registry value HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey ValueOne in User Configuration in the GPO named TestGPO.
@@ -104,13 +105,13 @@ You can suppress the error message by supplying the *ErrorAction* parameter to *
 For more information about the ErrorAction parameter, see about_CommonParameters.
 
 ### Example 5: Configure a Registry preference item for a registry value for all GPOs
-```
-PS C:\> Get-GPO -All | Remove-GPPrefRegistryValue -Context User -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" -ErrorAction SilentlyContinue | Set-GPPrefRegistryValue -Context User -Action Update -Key "HKLM\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" -Value "SomeData" -Type String
+```powershell
+Get-GPO -All | Remove-GPPrefRegistryValue -Context User -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" -ErrorAction SilentlyContinue | Set-GPPrefRegistryValue -Context User -Action Update -Key "HKLM\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" -Value "SomeData" -Type String
 ```
 
 This command configures a Registry preference item to update the registry value HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey ValueOne for every GPO in the domain that previously had a Registry preference item configured for that value in User Configuration.
 
-The command is invoked with the *All* parameter to get all the GPOs in the domain.
+The command is invoked with the **All** parameter to get all the GPOs in the domain.
 These GPOs are piped into the **Remove-GPPrefRegistryValue** cmdlet.
 If the GPO contains any Registry preference items configured for the specified key, they are removed.
 **Remove-GPPrefRegistryValue** only outputs a GPO to the pipeline if it removes a Registry preference item from a GPO.
@@ -120,8 +121,8 @@ If a GPO passed to **Remove-GPPrefRegistryValue** does not have a Registry prefe
 The *ErrorAction* parameter is set to SilentlyContinue to suppress the error message.
 
 ### Example 6: Copy all Registry preference items for a registry value for a GPO
-```
-PS C:\> Get-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKLM\Software\Microsoft\ExampleKey" | Set-GPPrefRegistryValue -Name "TestGPO-1" -Context Computer -Order 1 -ErrorAction SilentlyContinue 
+```powershell
+Get-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKLM\Software\Microsoft\ExampleKey" | Set-GPPrefRegistryValue -Name "TestGPO-1" -Context Computer -Order 1 -ErrorAction SilentlyContinue 
 DisplayName      : TestGPO-1 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -193,6 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -248,12 +250,13 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
+
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
 For the **Set-GPPrefRegistryValue** cmdlet, the GPO for which to configure the Registry preference item must exist in this domain.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current session is used.
 If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
 For more information, see the Notes section in the full Help.
 
@@ -275,10 +278,11 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
+
 Specifies the GPO in which to configure the Registry preference item by its globally unique identifier (GUID).
 The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, **Id**.
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: Guid
@@ -321,7 +325,7 @@ Specifies the GPO in which to configure the Registry preference item by its disp
 
 The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain, an error occurs.
-You can use the *Guid* parameter to uniquely identify a GPO.
+You can use the **Guid** parameter to uniquely identify a GPO.
 
 You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 
@@ -361,10 +365,11 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
 You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+If you do not specify the name by using the **Server** parameter, the primary domain controller (PDC) emulator is contacted.
 
 You can also refer to the *Server* parameter by its built-in alias, **DC**.
 
@@ -485,7 +490,7 @@ This cmdlet returns the GPO in which the Registry preference item was configured
 
 ## NOTES
 
-* You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+* You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.
 The default domain is the domain that is used to access network resources by the security context under which the current session is running.

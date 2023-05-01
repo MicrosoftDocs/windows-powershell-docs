@@ -250,7 +250,7 @@ by using the **Set-GPInheritance** cmdlet.
 
 ## NOTES
 
-* You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+* You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain. The default domain
   is the domain that is used to access network resources by the security context under which the

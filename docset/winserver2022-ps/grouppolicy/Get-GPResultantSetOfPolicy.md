@@ -11,6 +11,7 @@ title: Get-GPResultantSetOfPolicy
 # Get-GPResultantSetOfPolicy
 
 ## SYNOPSIS
+
 Gets and writes the RSoP information for a user, a computer, or both to a file.
 
 ## SYNTAX
@@ -26,8 +27,8 @@ The **Get-GPResultantSetOfPolicy** cmdlet gets and writes the Resultant Set of P
 ## EXAMPLES
 
 ### Example 1: Generate a report for the default user that is running on the current session
-```
-PS C:\> Get-GPResultantSetOfPolicy -ReportType Xml -Path "c:\reports\LocalUserAndComputerReport.xml"
+```powershell
+Get-GPResultantSetOfPolicy -ReportType Xml -Path "c:\reports\LocalUserAndComputerReport.xml"
 RsopMode        : Logging 
 Namespace       : \\COMPUTER-02-PC\Root\Rsop\NS2BBE3F29_794F_4EAE_B9DB_0A2310622534 
 LoggingComputer : COMPUTER-02 
@@ -39,8 +40,8 @@ This command generates a report for the default user that is running on the curr
 The report is generated in XML format, and is written to the specified file.
 
 ### Example 2: Generate a report for the specified computer
-```
-PS C:\> Get-GPResultantSetOfPolicy -ReportType Xml -Computer "computer-08.contso.com" -Path "c:\reports\computer-08.xml"
+```powershell
+Get-GPResultantSetOfPolicy -ReportType Xml -Computer "computer-08.contso.com" -Path "c:\reports\computer-08.xml"
 RsopMode        : Logging 
 Namespace       : \\computer-08.contoso.com\Root\Rsop\NS643B2E66_8F54_4407_A813_7D47173B0922 
 LoggingComputer : computer-08.contoso.com 
@@ -53,8 +54,8 @@ The computer is specified by its fully qualified domain name (FQDN), computer-08
 The report is generated in XML format, and is written to the specified file.
 
 ### Example 3: Generate a report for the specified user in HTML format and save it to the specified file
-```
-PS C:\> Get-GPResultantSetOfPolicy -User "Contoso\PattiFul" -ReportType Html -Path "c:\reports\UserReport.html" 
+```powershell
+Get-GPResultantSetOfPolicy -User "Contoso\PattiFul" -ReportType Html -Path "c:\reports\UserReport.html" 
 RsopMode        : Logging 
 Namespace       : \\COMPUTER-02\Root\Rsop\NS78355E76_C754_41B5_8F5E_B61551837A62 
 LoggingComputer : COMPUTER-02 
@@ -65,8 +66,8 @@ LoggingMode     : User
 This command generates a report for the specified user (contoso\someuser) in HTML format and saves it to the specified file.
 
 ### Example 4: Generate a report for the specified computer and user in HTML format and save it to the specified file
-```
-PS C:\> Get-GPResultantSetOfPolicy -user someuser -computer contoso.com\computer-08 -reporttype html -path c:\reports\UserAndComputerReport.html 
+```powershell
+Get-GPResultantSetOfPolicy -user someuser -computer contoso.com\computer-08 -reporttype html -path c:\reports\UserAndComputerReport.html 
 RsopMode        : Logging 
 Namespace       : \\computer-08\Root\Rsop\NS72116C25_6570_4586_9B79_FC4F71372E57 
 LoggingComputer : contoso.com\computer-08 
@@ -103,9 +104,10 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
 Specifies the path to the report file; for instance, c:\Reports\GpRsopReport.xml.
 
-You can also refer to the *Path* parameter by its built-in alias, filepath.
+You can also refer to the **Path** parameter by its built-in alias, filepath.
 For more information, see [about_Aliases](????????????).
 
 ```yaml
@@ -121,6 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportType
+
 Specifies the format of the RSoP report.
 You must specify either Html (for HTML format) or Xml (for XML format).
 These values are not case sensitive.

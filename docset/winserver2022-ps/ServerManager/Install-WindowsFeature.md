@@ -349,7 +349,7 @@ the computer account of the computer that you are using to mount the VHD must ha
 permissions (Read/Write permissions in the File Sharing dialog box or Full Control on the Security
 tab of the folder Properties dialog box) on the shared folder or the VHD will not be accessible.
 Local loopback UNC paths are not supported. Use either of the following formats for the computer
-account: DOMAIN\SERVERNAME$ or SERVERNAME$.
+account: `DOMAIN\SERVERNAME$` or `SERVERNAME$`.
 
 Add the **ComputerName** parameter to specify the target computer you want to use to mount the VHD.
 If the **ComputerName** parameter is not specified, then the local computer is used. The computer that

@@ -50,7 +50,7 @@ Disable-ServerManagerStandardUserRemoting -User JennyL
 
 In this example, the administrator disables access to event, performance counter, service
 status, and role and feature inventory data for a server that is being managed by using either a
-local or remote Server Manager console, and for which there is a standard user named JennyL.
+local or remote Server Manager console, and for which there is a standard user named `JennyL`.
 
 ### Example 2
 
@@ -146,7 +146,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

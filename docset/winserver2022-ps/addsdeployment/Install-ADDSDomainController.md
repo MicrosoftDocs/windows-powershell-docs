@@ -74,8 +74,8 @@ The `Install-ADDSDomainController` cmdlet installs a domain controller in Active
 Install-ADDSDomainController -InstallDns -DomainName "corp.contoso.com"
 ```
 
-This command installs a domain controller and DNS server in the corp.contoso.com domain using
-CORP\Administrator credentials and prompts the user to provide and confirm the Directory Services
+This command installs a domain controller and DNS server in the `corp.contoso.com` domain using
+`CORP\Administrator` credentials and prompts the user to provide and confirm the Directory Services
 Restore Mode (DSRM) password.
 
 ### Example 2: Install a domain controller and DNS server using administrator credentials

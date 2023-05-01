@@ -103,10 +103,10 @@ Accept wildcard characters: False
 
 ### -DnsDelegationRemovalCredential
 
-Specifies the account credentials to use when you create or remove the DNS delegation. If you do not
-specify a value, the account credentials that you specify for the AD DS installation or removal are
-used to remove the DNS delegation. As an alternative, you can specify the asterisk (*) to prompt the
-user to enter credentials.
+Specifies the account credentials to use when you create or remove the DNS delegation. If you do
+not specify a value, the account credentials that you specify for the AD DS installation or removal
+are used to remove the DNS delegation. As an alternative, you can specify the asterisk (`*`) to
+prompt the user to enter credentials.
 
 ```yaml
 Type: System.Management.Automation.PSCredential

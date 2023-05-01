@@ -27,8 +27,8 @@ Test-ADDSReadOnlyDomainControllerAccountCreation -DomainControllerAccountName <S
 
 The `Test-ADDSReadOnlyDomainControllerAccountCreation` cmdlet runs the prerequisite checks which
 would be performed if you were to add a read-only domain controller (RODC) account in Active
-Directory using the Add-ADDSReadOnlyDomainControllerAccount cmdlet. It differs from using the
-`-WhatIf` parameter with the `Add-ADDSReadOnlyDomainControllerAccount` cmdlet in that instead of
+Directory using the `Add-ADDSReadOnlyDomainControllerAccount` cmdlet. It differs from using the
+**WhatIf** parameter with the `Add-ADDSReadOnlyDomainControllerAccount` cmdlet in that instead of
 summarizing the changes that would occur during the account creation process, this cmdlet actually
 tests whether those changes are possible given the current environment.
 

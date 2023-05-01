@@ -214,8 +214,8 @@ Accept wildcard characters: False
 ### -DomainType
 
 Specifies the type of domain that this cmdlet creates: a new domain tree in an existing forest
-(supported values are TreeDomain or tree), a child of an existing domain (supported values are
-ChildDomain or child). The default is ChildDomain.
+(supported values are `TreeDomain` or `tree`), a child of an existing domain (supported values are
+`ChildDomain` or `child`). The default is `ChildDomain`.
 
 ```yaml
 Type: DomainType

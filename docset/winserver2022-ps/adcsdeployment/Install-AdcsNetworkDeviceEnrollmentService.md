@@ -111,7 +111,7 @@ $params = @{
 Install-AdcsNetworkDeviceEnrollmentService @params
 ```
 
-This command installs the NDES using a service account named `"CONTOSO\svcNDES"` that is a member of
+This command installs the NDES using a service account named `CONTOSO\svcNDES` that is a member of
 the local computer's `IIS_USRS` group. The command also specifies several non-default parameters.
 
 ## PARAMETERS

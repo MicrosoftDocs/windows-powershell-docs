@@ -507,11 +507,11 @@ Accept wildcard characters: False
 ### -SkipPreChecks
 
 Indicates that the cmdlet performs only a base set of validations. This behavior is equivalent to
-the validations that were performed when using Dcpromo.exe in earlier versions of Windows Server to
-add a new domain. When this switch parameter is set, it specifies that additional preliminary checks
-should be bypassed. For more information on the scope of these additional preliminary checks that
-the ADDSDeployment module performs by default when using Windows Server 2012, refer to the table in
-the section ADPrep and Prerequisite Checking Architecture in
+the validations that were performed when using `Dcpromo.exe` in earlier versions of Windows Server
+to add a new domain. When this switch parameter is set, it specifies that additional preliminary
+checks should be bypassed. For more information on the scope of these additional preliminary checks
+that the **ADDSDeployment** module performs by default when using Windows Server 2012, refer to the
+table in the section ADPrep and Prerequisite Checking Architecture in
 [AD DS Simplified Administration](https://go.microsoft.com/fwlink/?LinkID=237244).
 
 ```yaml

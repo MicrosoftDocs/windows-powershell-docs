@@ -243,7 +243,7 @@ The acceptable values for this parameter are:
 
 The default forest functional level in Windows Server is typically the same as the version you are
 running. However, the default forest functional level in Windows Server 2008 R2 when you create a
-new forest is Windows Server 2003 or 2.
+new forest is Windows Server 2003 or `2`.
 
 ```yaml
 Type: System.DirectoryServices.ActiveDirectory.ForestMode

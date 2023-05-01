@@ -37,7 +37,7 @@ The `Install-ADDSForest` cmdlet installs an Active Directory forest configuratio
 Install-ADDSForest -DomainName "corp.contoso.com" -InstallDNS
 ```
 
-This command installs a new forest named corp.contoso.com, causes the user to be prompted to provide
+This command installs a new forest named `corp.contoso.com`, causes the user to be prompted to provide
 and confirm the Directory Services Restore Mode (DSRM) password and specifies a DNS server should
 also be installed during the forest installation process.
 

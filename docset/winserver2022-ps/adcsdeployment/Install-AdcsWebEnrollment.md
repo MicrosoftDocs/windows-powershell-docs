@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -Credential
 
-Specifies a `PSCredential` object for the CA Web Enrollment. To obtain a credential object, use the
+Specifies a **PSCredential** object for the CA Web Enrollment. To obtain a credential object, use the
 `Get-Credential` cmdlet. For more information, type `Get-Help Get-Credential`. If the Web Enrollment
 service is configured to use Standalone CA, then an account that is a member of the local
 Administrators on the CA is required. If the Web Enrollment service is configured to use an

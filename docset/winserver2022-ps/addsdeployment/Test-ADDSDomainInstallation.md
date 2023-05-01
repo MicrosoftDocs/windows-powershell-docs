@@ -164,9 +164,9 @@ Accept wildcard characters: False
 
 ### -DnsDelegationCredential
 
-Specifies the user name and password for the user that creates the DNS delegation. This parameter is
-skipped if the value for the `-CreateDnsDelegation` parameter is either specified or computed to be
-`$False`.
+Specifies the user name and password for the user that creates the DNS delegation. This parameter
+is skipped if the value for the **CreateDnsDelegation** parameter is either specified or computed
+to be `$false`.
 
 ```yaml
 Type: System.Management.Automation.PSCredential

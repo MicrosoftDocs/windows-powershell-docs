@@ -201,9 +201,9 @@ Accept wildcard characters: False
 ### -CreateDnsDelegation
 
 Indicates that the cmdlet creates a DNS delegation that references the new DNS server that this
-cmdlet installs along with the domain controller. Valid for Active Directory-integrated DNS only. If
-this parameter is specified then the DNS delegation is created. If the value of $False is specified
-then no DNS delegation is created. By default, the value for this parameter is computed
+cmdlet installs along with the domain controller. Valid for Active Directory-integrated DNS only.
+If this parameter is specified then the DNS delegation is created. If the value of `$False` is
+specified then no DNS delegation is created. By default, the value for this parameter is computed
 automatically based on the environment.
 
 ```yaml

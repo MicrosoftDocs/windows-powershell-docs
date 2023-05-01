@@ -43,7 +43,7 @@ $HashArguments = @{
 Add-ADDSReadOnlyDomainControllerAccount @HashArguments
 ```
 
-This command adds a RODC account to the corp.contoso.com domain using the North America site as the
+This command adds a RODC account to the `corp.contoso.com` domain using the North America site as the
 source site for the replication source domain controller.
 
 ## PARAMETERS

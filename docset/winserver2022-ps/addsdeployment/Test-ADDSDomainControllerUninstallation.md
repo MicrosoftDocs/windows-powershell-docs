@@ -38,13 +38,13 @@ Test-ADDSDomainControllerUninstallation [-LocalAdministratorPassword <SecureStri
 ## DESCRIPTION
 
 The `Test-ADDSDomainControllerUninstallation` cmdlet runs those prerequisite checks which would be
-performed if you were to use the Uninstall-ADDSDomainController cmdlet to uninstall a domain
-controller in Active Directory. It differs from using the `-WhatIf` parameter with the
+performed if you were to use the `Uninstall-ADDSDomainController` cmdlet to uninstall a domain
+controller in Active Directory. It differs from using the **WhatIf** parameter with the
 `Uninstall-ADDSDomainController` cmdlet in that instead of summarizing the changes that would occur
 during the uninstallation process, this cmdlet actually tests whether those changes are possible
 given the current environment.
 
-For more information on the scope of these prerequisite checks that the ADDSDeployment module
+For more information on the scope of these prerequisite checks that the **ADDSDeployment** module
 performs when using this cmdlet see the section ADPrep and Prerequisite Checking Architecture in
 [AD DS Simplified Administration](https://go.microsoft.com/fwlink/?LinkID=237244).
 

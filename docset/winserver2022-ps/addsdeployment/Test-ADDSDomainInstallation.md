@@ -63,14 +63,15 @@ Test-ADDSDomainInstallation @HashArguments
 ```
 
 This command runs the prerequisites to determine if installing a new child domain named
-child.corp.contoso.com using credentials of CORP\EnterpriseAdmin1 is possible. This command also
-installs a DNS server, creates a DNS delegation in the corp.contoso.com domain, sets the domain
-functional level to Windows Server 2003, makes the domain controller a global catalog server in a
-site named Houston, and uses DC1.corp.contoso.com as the replication source domain controller. The
-command also installs the Active Directory database and SYSVOL on the `D:\` drive, installs the log
-files on the `E:\` drive, has the server not automatically restart after the domain installation is
-complete and prompts the user to provide and confirm the Directory Services Restore Mode (DSRM)
-password to complete and commit the installation of the domain in Active Directory.
+`child.corp.contoso.com` using credentials of `CORP\EnterpriseAdmin1` is possible. This command
+also installs a DNS server, creates a DNS delegation in the `corp.contoso.com` domain, sets the
+domain functional level to Windows Server 2003, makes the domain controller a global catalog server
+in a site named `Houston`, and uses `DC1.corp.contoso.com` as the replication source domain
+controller. The command also installs the Active Directory database and SYSVOL on the `D:\` drive,
+installs the log files on the `E:\` drive, has the server not automatically restart after the
+domain installation is complete and prompts the user to provide and confirm the Directory Services
+Restore Mode (DSRM) password to complete and commit the installation of the domain in Active
+Directory.
 
 ## PARAMETERS
 

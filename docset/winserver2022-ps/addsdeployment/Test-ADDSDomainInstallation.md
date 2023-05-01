@@ -31,11 +31,12 @@ Test-ADDSDomainInstallation -NewDomainName <String> -ParentDomainName <String>
 
 The `Test-ADDSDomainInstallation` cmdlet runs those prerequisite checks which would be performed if
 you were to use the `Install-ADDSDomainController` cmdlet to install a new Active Directory domain
-configuration. It differs from using the `-WhatIf` parameter with the `Install-ADDSDomainController`
-cmdlet in that instead of summarizing the changes that would occur during the installation process,
-this cmdlet actually tests whether those changes are possible given the current environment.
+configuration. It differs from using the **WhatIf** parameter with the
+`Install-ADDSDomainController` cmdlet in that instead of summarizing the changes that would occur
+during the installation process, this cmdlet actually tests whether those changes are possible
+given the current environment.
 
-For more information on the scope of these prerequisite checks that the ADDSDeployment module
+For more information on the scope of these prerequisite checks that the **ADDSDeployment** module
 performs when using this cmdlet see the section ADPrep and Prerequisite Checking Architecture in
 [AD DS Simplified Administration](https://go.microsoft.com/fwlink/?LinkID=237244).
 

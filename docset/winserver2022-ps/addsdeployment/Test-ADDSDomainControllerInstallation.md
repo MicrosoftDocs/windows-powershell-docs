@@ -565,10 +565,10 @@ Accept wildcard characters: False
 ### -SiteName
 
 Specifies the name of an existing site where you can place the new domain controller. The default
-value depends on the type of installation. For a new forest, the default is Default-First-Site-Name.
-For all other installations, the default is the site that is associated with the subnet that
-includes the IP address of this server. If no such site exists, the default is the site of the
-replication source domain controller.
+value depends on the type of installation. For a new forest, the default is
+`Default-First-Site-Name`. For all other installations, the default is the site that is associated
+with the subnet that includes the IP address of this server. If no such site exists, the default is
+the site of the replication source domain controller.
 
 ```yaml
 Type: System.String

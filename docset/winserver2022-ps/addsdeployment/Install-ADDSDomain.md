@@ -324,7 +324,7 @@ parameter they must be single label names of 15 characters or less.
 
 If this parameter is set with a valid NetBIOS name value, then promotion continues with the name
 specified. If this parameter is not set, then the default is automatically computed from the value
-of the _NewDomainName_ parameter.
+of the **NewDomainName** parameter.
 
 For instance, if this parameter is not specified and a single-label prefix domain name of 15
 characters or less is specified within the value of the _NewDomainName_ parameter, then promotion

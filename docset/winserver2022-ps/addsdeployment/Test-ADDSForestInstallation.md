@@ -64,11 +64,12 @@ $HashArguments = @{
 Test-ADDSForestInstallation @HashArguments
 ```
 
-This command runs the prerequisites for installing a new forest that will create a DNS delegation in
-the contoso.com domain, set the domain functional level to Windows Server 2008 R2 and sets forest
-functional level to Windows Server 2008 R2. The command also installs the Active Directory database
-and SYSVOL on the D: drive, installs the log files on the E: drive and has the server automatically
-restart after AD DS installation. The user is prompted to provide and confirm the DSRM password.
+This command runs the prerequisites for installing a new forest that will create a DNS delegation
+in the `contoso.com` domain, set the domain functional level to Windows Server 2008 R2 and sets
+forest functional level to Windows Server 2008 R2. The command also installs the Active Directory
+database and SYSVOL on the `D:` drive, installs the log files on the `E:` drive and has the server
+automatically restart after AD DS installation. The user is prompted to provide and confirm the
+DSRM password.
 
 ## PARAMETERS
 

@@ -76,7 +76,7 @@ Install-AdcsNetworkDeviceEnrollmentService @params
 ```
 
 This command displays the default settings when NDES is using a service account without making any
-changes to the configuration. This command uses the service account named `"CONTOSO\svcNDES"` that
+changes to the configuration. This command uses the service account named `CONTOSO\svcNDES` that
 is a member of the local computer's `IIS_USRS` group.
 
 ### Example 3: Install NDES using the application pool identity

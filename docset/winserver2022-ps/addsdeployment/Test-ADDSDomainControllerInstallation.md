@@ -417,8 +417,8 @@ Accept wildcard characters: False
 
 ### -MoveInfrastructureOperationMasterRoleIfNecessary
 
-Indicates that the cmdlet transfers the infrastructure master role to the domain controller that you
-create in case the transfer is needed. You cannot use the `-NoGlobalCatalog` parameter when
+Indicates that the cmdlet transfers the infrastructure master role to the domain controller that
+you create in case the transfer is needed. You cannot use the **NoGlobalCatalog** parameter when
 specifying this parameter. Do not specify this parameter if you want the infrastructure master role
 to remain where it currently is.
 

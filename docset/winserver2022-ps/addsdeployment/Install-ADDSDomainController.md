@@ -293,7 +293,7 @@ Accept wildcard characters: False
 ### -DenyPasswordReplicationAccountName
 
 Specifies the names of user accounts, group accounts, and computer accounts whose passwords are not
-to be replicated to this RODC. Use an empty string ("") if you do not want to deny the replication
+to be replicated to this RODC. Use an empty string (`""`) if you do not want to deny the replication
 of credentials of any users or computers. By default, Administrators, Server Operators, Backup
 Operators, Account Operators, and the Denied RODC Password Replication Group are denied. By default,
 the Denied RODC Password Replication Group includes Cert Publishers, Domain Admins, Enterprise

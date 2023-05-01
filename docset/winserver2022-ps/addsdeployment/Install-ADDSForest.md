@@ -191,9 +191,9 @@ the name specified. If this parameter is not set, then the default is automatica
 the value of the **DomainName** parameter.
 
 For example, if this parameter is not specified and a single-label prefix domain name of 15
-characters or less is specified within the value of the `-DomainName` parameter, then promotion
-continues with an automatically generated NetBIOS domain name. For example, the prefix label corp
-within a full domain name value of corp.contoso.com would be a successful name choice.
+characters or less is specified within the value of the **DomainName** parameter, then promotion
+continues with an automatically generated NetBIOS domain name. For example, the prefix label `corp`
+within a full domain name value of `corp.contoso.com` would be a successful name choice.
 
 Note that if the name value given for this parameter is a name of 16 characters or more, then the
 forest installation fails.

@@ -66,10 +66,10 @@ Administrator password prior to completing the uninstallation process.
 
 Specifies the user name and password that corresponds to the account used to install the domain
 controller. To prompt the user to supply a password, use Runs the prerequisites (only) to determine
-if installing a domain controller is possible that includes a DNS server for the corp.contoso.com
+if installing a domain controller is possible that includes a DNS server for the `corp.contoso.com`
 domain, using domain administrator credentials, and then prompts the user to correctly specify the
 Directory Services Restore Mode (DSRM) password. Use the `Get-Credential` cmdlet in place of an
-existing _PSCredential_ type. This parameter will cause Windows PowerShell to prompt the user to
+existing **PSCredential** type. This parameter will cause Windows PowerShell to prompt the user to
 enter credentials using the Windows security login UI.
 
 ```yaml

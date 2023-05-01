@@ -105,7 +105,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 - To uninstall the CA role service, ensure you run Windows PowerShell as an administrator. You can
-  run the command with the *Force* parameter to bypass the prompt for confirmation.
+  run the command with the **Force** parameter to bypass the prompt for confirmation.
 
 ## RELATED LINKS
 

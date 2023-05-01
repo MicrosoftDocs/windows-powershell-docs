@@ -238,8 +238,8 @@ The acceptable values for this parameter are:
 - Windows Server 2008:  3 or Win2008
 - Windows Server 2008 R2:  4 or Win2008R2
 - Windows Server 2012:  5 or Win2012
-- Windows Server 2012 R2:  6 or Win2012R2
-- Windows Server 2016: 7 or WinThreshold
+- Windows Server 2012 R2:  `6` or `Win2012R2`
+- Windows Server 2016: `7` or `WinThreshold`
 
 The default forest functional level in Windows Server is typically the same as the version you are
 running. However, the default forest functional level in Windows Server 2008 R2 when you create a

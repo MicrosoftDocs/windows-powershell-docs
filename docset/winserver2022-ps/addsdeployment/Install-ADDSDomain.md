@@ -299,10 +299,11 @@ Accept wildcard characters: False
 
 ### -NewDomainName
 
-Specifies the new domain name that this cmdlet installs. If the value set for the _DomainType_
-parameter is set to TreeDomain, this parameter can be used to specify the fully qualified domain
-name (FQDN) for the new domain tree. If the value set for the _DomainType_ parameter is set to
-ChildDomain, this parameter can be used to specify a single label domain name for the child domain.
+Specifies the new domain name that this cmdlet installs. If the value set for the **DomainType**
+parameter is set to `TreeDomain`, this parameter can be used to specify the fully qualified domain
+name (FQDN) for the new domain tree. If the value for the **DomainType** parameter is set to
+`ChildDomain`, this parameter can be used to specify a single label domain name for the child
+domain.
 
 ```yaml
 Type: System.String

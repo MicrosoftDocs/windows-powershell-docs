@@ -53,15 +53,15 @@ $params = @{
 Install-ADDSDomain @HashArguments
 ```
 
-This command installs a new child domain named child.corp.contoso.com using credentials of
-CORP\EnterpriseAdmin1. This command also installs a DNS server, creates a DNS delegation in the
-corp.contoso.com domain, sets the domain functional level to Windows Server 2003, makes the domain
-controller a global catalog server in a site named Houston, uses DC1.corp.contoso.com as the
-replication source domain controller, installs the Active Directory database and SYSVOL on the `D:\`
-drive. Additionally this command also installs the log files on the `E:\` drive, has the server not
-automatically restart after the domain installation is complete and causes the user to be prompted
-to provide and confirm the Directory Services Restore Mode (DSRM) password to complete and commit
-the installation of the domain in Active Directory.
+This command installs a new child domain named `child.corp.contoso.com` using credentials of
+`CORP\EnterpriseAdmin1`. This command also installs a DNS server, creates a DNS delegation in the
+`corp.contoso.com` domain, sets the domain functional level to Windows Server 2003, makes the
+domain controller a global catalog server in a site named Houston, uses `DC1.corp.contoso.com` as
+the replication source domain controller, installs the Active Directory database and SYSVOL on the
+`D:\` drive. Additionally this command also installs the log files on the `E:\` drive, has the
+server not automatically restart after the domain installation is complete and causes the user to
+be prompted to provide and confirm the Directory Services Restore Mode (DSRM) password to complete
+and commit the installation of the domain in Active Directory.
 
 ## PARAMETERS
 

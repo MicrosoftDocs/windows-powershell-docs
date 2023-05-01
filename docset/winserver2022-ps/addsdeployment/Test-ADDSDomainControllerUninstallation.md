@@ -157,14 +157,14 @@ Accept wildcard characters: False
 ### -IgnoreLastDCInDomainMismatch
 
 Indicates that Windows PowerShell ignores any inconsistency that it detects with the value that you
-specify for the `-LastDomainControllerInDomain` parameter. For instance, if you specify
-`-LastDomainControllerInDomain` but Windows PowerShell detects that there is actually another active
-domain controller in the domain, you can specify the `-IgnoreLastDCInDomainMismatch` parameter to
-have Windows PowerShell continue the removal of AD DS from the domain controller despite the
-inconsistency that it has detected. Similarly, if you do not specify `-LastDomainControllerInDomain`
-but Windows PowerShell is unable to detect that another domain controller is in the domain, you can
-specify `-IgnoreLastDCInDomainMismatch` to have Windows PowerShell continue to remove AD DS from the
-domain controller.
+specify for the **LastDomainControllerInDomain** parameter. For instance, if you specify
+**LastDomainControllerInDomain** but Windows PowerShell detects that there is actually another
+active domain controller in the domain, you can specify the **IgnoreLastDCInDomainMismatch**
+parameter to have Windows PowerShell continue the removal of AD DS from the domain controller
+despite the inconsistency that it has detected. Similarly, if you do not specify
+**LastDomainControllerInDomain** but Windows PowerShell is unable to detect that another domain
+controller is in the domain, you can specify **IgnoreLastDCInDomainMismatch** to have Windows
+PowerShell continue to remove AD DS from the domain controller.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

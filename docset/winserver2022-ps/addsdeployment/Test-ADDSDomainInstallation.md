@@ -318,13 +318,13 @@ parameter they must be single label names of 15 characters or less.
 
 If this parameter is set with a valid NetBIOS name value, then promotion continues with the name
 specified. If this parameter is not set, then the default is automatically computed from the value
-of the `-NewDomainName` parameter.
+of the **NewDomainName** parameter.
 
 For instance, if this parameter is not specified and a single-label prefix domain name of 15
-characters or less is specified within the value of the `-NewDomainName` parameter, then promotion
+characters or less is specified within the value of the **NewDomainName** parameter, then promotion
 continues with an automatically generated NetBIOS domain name. For example, the prefix label corp
-within a full domain name value of corp.contoso.com would be a successful name choice. If the label
-is more than 16 characters, the operation will fail.
+within a full domain name value of `corp.contoso.com` would be a successful name choice. If the
+label is more than 16 characters, the operation will fail.
 
 ```yaml
 Type: System.String

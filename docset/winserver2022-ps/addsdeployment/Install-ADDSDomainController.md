@@ -371,9 +371,9 @@ DNS server is installed. Otherwise, if DNS domain names are hosted outside of Ac
 default is `$False` and no DNS server is installed.
 
 To test if DNS domain names are hosted outside of Active Directory, this cmdlet uses a start of
-authority (SOA) type DNS query. For instance, if the value of _DomainName_ is corp.contoso.com,
-Active Directory performs an SOA query for corp.contoso.com and ensures that the zone name in the
-response is corp.contoso.com.
+authority (SOA) type DNS query. For instance, if the value of **DomainName** is `corp.contoso.com`,
+Active Directory performs an SOA query for `corp.contoso.com` and ensures that the zone name in the
+response is `corp.contoso.com`.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

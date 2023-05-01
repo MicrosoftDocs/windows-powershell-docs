@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ### -AllowPasswordReplicationAccountName
 
 Specifies an array of names of user accounts, group accounts, and computer accounts whose passwords
-can be replicated to this RODC. Use an empty string ("") if you want to keep the value empty. By
+can be replicated to this RODC. Use an empty string (`""`) if you want to keep the value empty. By
 default, only the Allowed read-only domain controller (RODC) Password Replication Group is allowed.
 
 ```yaml

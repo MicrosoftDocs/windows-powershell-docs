@@ -74,8 +74,8 @@ Accept wildcard characters: False
 
 Specifies the user name and password that corresponds to the account used to install the domain
 controller. Use the `Get-Credential` cmdlet to prompt the user to supply a password in place of an
-existing _System.Management.Automation.PSCredential_ type. This causes Windows PowerShell to prompt
-the user to enter credentials using the Windows security login UI.
+existing **System.Management.Automation.PSCredential** type. This causes Windows PowerShell to
+prompt the user to enter credentials using the Windows security login UI.
 
 ```yaml
 Type: System.Management.Automation.PSCredential

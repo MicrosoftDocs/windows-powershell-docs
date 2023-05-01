@@ -292,11 +292,12 @@ Accept wildcard characters: False
 
 ### -NewDomainName
 
-Specifies the new name of the domain. If the value set for `-DomainType` is set to TreeDomain, this
-parameter can be used to specify the fully qualified domain name (FQDN) for the new domain tree (for
-example, contoso.com). If the value set for `-DomainType` is set to ChildDomain, this parameter can
-be used to specify a single label domain name for the child domain (for example, specify corp to
-make a new domain corp.contoso.com if the new domain is in the contoso.com domain tree).
+Specifies the new name of the domain. If the value set for **DomainType** is set to `TreeDomain`,
+this parameter can be used to specify the fully qualified domain name (FQDN) for the new domain
+tree (for example, `contoso.com`). If the value set for **DomainType** is set to `ChildDomain`,
+this parameter can be used to specify a single label domain name for the child domain (for example,
+specify corp to make a new domain `corp.contoso.com` if the new domain is in the `contoso.com`
+domain tree).
 
 ```yaml
 Type: System.String

@@ -70,7 +70,7 @@ To include the Certification Authority and Certificate Templates consoles in a C
 must use the **IncludeManagementTools** parameter at the end of the
 `Install-WindowsFeature Adcs-Cert-Authority` command.
 
-Int is equivalent to Int32 in the
+**Int** is equivalent to **Int32** in the
 [.NET Framework](/dotnet/csharp/language-reference/builtin-types/built-in-types).
 
 ## EXAMPLES

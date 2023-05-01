@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ### -InstallDns
 
 Indicates that this cmdlet installs and configures the DNS Server service for the new forest.
-For forest installation, the default is $True.
+For forest installation, the default is `$true`.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

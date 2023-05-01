@@ -279,9 +279,10 @@ Accept wildcard characters: False
 Indicates that the cmdlet preserves DNS delegations that point to this DNS server from the parent
 DNS zone.
 
-By default, this parameter is set to false, which means DNS delegations that point to this server
-from the parent DNS zone will not be retained after uninstallation of the domain controller. This
-setting corresponds to the earlier `Dcpromo.exe` parameter default of `/RemoveDNSDelegation:Yes`.
+By default, this parameter is set to `$false`, which means DNS delegations that point to this
+server from the parent DNS zone will not be retained after uninstallation of the domain controller.
+This setting corresponds to the earlier `Dcpromo.exe` parameter default of
+`/RemoveDNSDelegation:Yes`.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

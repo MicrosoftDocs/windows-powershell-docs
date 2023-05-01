@@ -132,7 +132,7 @@ Accept wildcard characters: False
 Specifies the domain functional level of the first domain in the creation of a new forest. Supported
 values for this parameter can be either a valid integer or a corresponding enumerated string value.
 For instance, to set the domain mode level to Windows Server 2008 R2, you can specify either a value
-of 4 or Win2008R2.
+of `4` or `Win2008R2`.
 
 The acceptable values for this parameter are:
 

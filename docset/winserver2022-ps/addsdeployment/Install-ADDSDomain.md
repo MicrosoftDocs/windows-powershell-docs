@@ -36,7 +36,7 @@ The `Install-ADDSDomain` cmdlet installs an Active Directory domain configuratio
 ### Example 1: Install a new child domain
 
 ```powershell
-$HashArguments = @{
+$params = @{
     Credential = (Get-Credential CORP\EnterpriseAdmin1)
     NewDomainName = "child"
     ParentDomainName = "corp.contoso.com"

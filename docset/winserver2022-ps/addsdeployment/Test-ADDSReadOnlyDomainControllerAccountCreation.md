@@ -45,7 +45,7 @@ $HashArguments = @{
 Test-ADDSReadOnlyDomainControllerAccountCreation @HashArguments
 ```
 
-This command runs the prerequisites for adding an RODC account to the corp.contoso.com domain that
+This command runs the prerequisites for adding an RODC account to the `corp.contoso.com` domain that
 would use the North America site as the source site for the replication source domain controller.
 
 ## PARAMETERS

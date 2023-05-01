@@ -10,6 +10,7 @@ title: Test-ADDSReadOnlyDomainControllerAccountCreation
 
 # Test-ADDSReadOnlyDomainControllerAccountCreation
 
+## SYNOPSIS
 Runs the prerequisites for adding a RODC account.
 
 ## SYNTAX

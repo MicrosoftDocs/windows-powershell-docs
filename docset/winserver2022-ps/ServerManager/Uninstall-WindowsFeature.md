@@ -41,7 +41,7 @@ services, and features from a computer that is running Windows Server or from an
 hard disk (VHD) on which Windows Server is installed. This cmdlet works similarly to the
 uninstallation of roles and features in Server Manager with an important exception: by default,
 management tools are not uninstalled when you run the `Uninstall-WindowsFeature` cmdlet; you must
-add the `IncludeManagementTools` parameter to uninstall associated management tools.
+add the **IncludeManagementTools** parameter to uninstall associated management tools.
 
 This cmdlet requires elevation; you must be running a Windows PowerShell session as an administrator
 to use this cmdlet.

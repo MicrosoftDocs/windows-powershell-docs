@@ -45,9 +45,9 @@ performs when using this cmdlet see the section ADPrep and Prerequisite Checking
 Test-ADDSForestInstallation -DomainName "corp.contoso.com" -NoRebootOnCompletion
 ```
 
-This command runs the prerequisites for installing a new forest named corp.contoso.com and specifies
-not to reboot after the new forest is created. The user is prompted to provide and confirm the
-Directory Services Restore Mode (DSRM) password.
+This command runs the prerequisites for installing a new forest named `corp.contoso.com` and
+specifies not to reboot after the new forest is created. The user is prompted to provide and
+confirm the Directory Services Restore Mode (DSRM) password.
 
 ### Example 2: Test the install of a forest to confirm if it is possible
 

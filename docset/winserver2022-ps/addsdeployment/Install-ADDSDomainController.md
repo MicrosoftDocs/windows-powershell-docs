@@ -89,7 +89,7 @@ $HashArguments = @{
 Install-ADDSDomainController @HashArguments
 ```
 
-This command installs a domain controller and DNS server in the corp.contoso.com domain using
+This command installs a domain controller and DNS server in the `corp.contoso.com` domain using
 Administrator credentials and prompts the user to provide and confirm the DSRM password.
 
 ### Example 3: Install a domain controller and DNS server that uses domain promotion

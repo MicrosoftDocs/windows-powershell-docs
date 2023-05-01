@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ### -ApplicationPartitionsToReplicate
 
 Specifies an array of application directory partitions that DCPromo replicates. Use the following
-format: "partition1" "partition2" "partitionN". Use * to replicate all application directory
+format: `"partition1" "partition2" "partitionN"`. Use `*` to replicate all application directory
 partitions.
 
 ```yaml

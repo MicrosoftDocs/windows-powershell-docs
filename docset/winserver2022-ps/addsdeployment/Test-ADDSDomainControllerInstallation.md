@@ -87,7 +87,7 @@ Test-ADDSDomainControllerInstallation @HashArguments
 ```
 
 This command runs the prerequisites to determine if installing a domain controller is possible that
-includes a DNS server for the corp.contoso.com domain using domain administrator credentials. The
+includes a DNS server for the `corp.contoso.com` domain using domain administrator credentials. The
 command also prompts the user to enter and confirm the Directory Services Restore Mode (DSRM)
 password.
 

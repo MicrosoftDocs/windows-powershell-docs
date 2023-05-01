@@ -424,9 +424,9 @@ Accept wildcard characters: False
 ### -MoveInfrastructureOperationMasterRoleIfNecessary
 
 Indicates that the cmdlet transfers the infrastructure master role to the domain controller being
-installed. To successfully complete the transfer, the _NoGlobalCatalog_ parameter must be included
-as well. Do not specify this parameter if you want the infrastructure master role to remain where it
-currently is.
+installed. To successfully complete the transfer, the **NoGlobalCatalog** parameter must be
+included as well. Do not specify this parameter if you want the infrastructure master role to
+remain where it currently is.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

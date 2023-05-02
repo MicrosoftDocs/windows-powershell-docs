@@ -11,7 +11,6 @@ title: Test-ADDSDomainControllerUninstallation
 # Test-ADDSDomainControllerUninstallation
 
 ## SYNOPSIS
-
 Runs the prerequisites for uninstalling a domain controller in Active Directory.
 
 ## SYNTAX

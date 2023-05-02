@@ -11,7 +11,6 @@ title: Install-ADDSDomainController
 # Install-ADDSDomainController
 
 ## SYNOPSIS
-
 Installs a new domain controller in an Active Directory domain.
 
 ## SYNTAX

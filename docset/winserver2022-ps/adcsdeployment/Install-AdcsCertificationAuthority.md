@@ -517,7 +517,7 @@ Accept wildcard characters: False
 ### -ValidityPeriod
 
 Specifies the validity period of the certification authority (CA) certificate in hours, days, weeks,
-months or years. If this is a subordinate CA, do not use this parameter, because the validity period
+months, or years. If this is a subordinate CA, do not use this parameter, because the validity period
 is determined by the parent CA.
 
 ```yaml

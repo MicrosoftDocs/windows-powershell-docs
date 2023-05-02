@@ -30,7 +30,7 @@ The **Get-RemoteAccessRoutingDomain** cmdlet retrieves routing domain configurat
 Get-RemoteAccessRoutingDomain -Name Rd_01
 ```
 
-```output
+```Output
 
 RoutingDomain                  : Rd_01
 RoutingDomainID                : {11111111-1111-1111-1111-111111111001}

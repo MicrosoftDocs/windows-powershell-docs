@@ -29,6 +29,7 @@ Use the Set-RoutingProtocolPreference cmdlet to modify preferences.
 ## EXAMPLES
 
 ### Example 1: Display preferences
+
 ```powershell
 Get-RoutingProtocolPreference
 ```

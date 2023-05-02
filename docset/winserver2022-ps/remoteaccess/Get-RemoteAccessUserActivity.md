@@ -52,6 +52,7 @@ However, only one of these filters can be used at a time.
 ## EXAMPLES
 
 ### EXAMPLE 1
+
 ```powershell
 $startdate = Get-Date -Date "12/16/2011"
 
@@ -83,6 +84,7 @@ This example shows historic access details for a particular user.
 Query the accounting store for user activity details for User1 between the start date and end date.
 
 ### EXAMPLE 2
+
 ```powershell
 Get-RemoteAccessUserActivity -UserName "contoso\User1" -ComputerName edge1.corp.contoso.com
 ```

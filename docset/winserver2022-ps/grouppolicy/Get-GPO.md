@@ -147,7 +147,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
-For the **Get-GPO** cmdlet, the GPO (or GPOs) to that this cmdlet gets must exist in this domain.
+For the `Get-GPO` cmdlet, the GPO (or GPOs) to that this cmdlet gets must exist in this domain.
 
 If you do not specify the **Domain** parameter, the domain of the user that is running the current
 session is used.

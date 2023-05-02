@@ -11,7 +11,6 @@ title: New-CertificateNotificationTask
 # New-CertificateNotificationTask
 
 ## SYNOPSIS
-
 Creates a new task in the Task Scheduler that will be triggered when a certificate is replaced,
 expired, or about to expired.
 

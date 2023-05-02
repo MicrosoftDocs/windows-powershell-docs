@@ -41,7 +41,7 @@ single GPO, or you can get all the GPOs in the domain through the **All** parame
 
 This cmdlet returns one or more objects that represent the requested GPOs.
 By default, properties of the requested GPOs are printed to the display; however, you can also pipe
-the output of the **Get-GPO** cmdlet to other Group Policy cmdlets.
+the output of the `Get-GPO` cmdlet to other Group Policy cmdlets.
 
 ## EXAMPLES
 

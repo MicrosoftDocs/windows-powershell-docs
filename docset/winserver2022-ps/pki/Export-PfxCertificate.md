@@ -252,7 +252,7 @@ Accept wildcard characters: False
 
 ### -NoClobber
 
-Specifies that if the PFX file already exists, it should not be over written. This parameter takes
+Specifies that if the PFX file already exists, it should not be overwritten. This parameter takes
 precedence over the **Force** parameter, which permits this cmdlet to overwrite a PFX file even if
 it has the Read-only attribute set.
 

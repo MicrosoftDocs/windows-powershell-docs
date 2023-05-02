@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ### -DemoteOperationMasterRole
 
 Indicates that forced demotion should continue even if an operations master role is discovered on
-domain controller from which AD DS is being removed.
+the domain controller from which AD DS is being removed.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

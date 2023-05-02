@@ -79,8 +79,8 @@ The cmdlet will run for all currently logged on users in the user contexts.
 Sets the channel of the **CertificateServicesClient-Notifications** log that will be monitored for
 certificate lifecycle events. The acceptable values for this parameter are:
 
- -- `System`: The **Operation-System** channel will be used. This channel should be used to modify
- system certificate bindings that use computer certificates.
+- `System`: The **Operation-System** channel will be used. This channel should be used to modify
+  system certificate bindings that use computer certificates.
 
  -- `User`: The **Operational-User** channel will be used. This channel should be used to modify
  user certificate bindings.

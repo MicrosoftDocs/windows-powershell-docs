@@ -25,8 +25,12 @@ The **Get-VpnAuthProtocol** cmdlet retrieves VPN authentication parameters for i
 ## EXAMPLES
 
 ### EXAMPLE 1
+
+```powershell
+Get-VpnAuthProtocol
 ```
-PS C:\>Get-VpnAuthProtocol
+
+```output
 UserAuthProtocolAccepted      : {EAP, MsChapv2} 
 TunnelAuthProtocolsAdvertised : Certificates 
 RootCertificateNameToAccept   : 

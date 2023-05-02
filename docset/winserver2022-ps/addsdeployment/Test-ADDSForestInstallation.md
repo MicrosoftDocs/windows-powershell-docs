@@ -11,7 +11,6 @@ title: Test-ADDSForestInstallation
 # Test-ADDSForestInstallation
 
 ## SYNOPSIS
-
 Runs the prerequisites for installing a new forest in Active Directory.
 
 ## SYNTAX

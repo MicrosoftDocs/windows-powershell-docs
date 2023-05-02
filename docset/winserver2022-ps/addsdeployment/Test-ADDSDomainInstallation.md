@@ -11,7 +11,6 @@ title: Test-ADDSDomainInstallation
 # Test-ADDSDomainInstallation
 
 ## SYNOPSIS
-
 Runs the prerequisites for installing a new Active Directory domain configuration.
 
 ## SYNTAX

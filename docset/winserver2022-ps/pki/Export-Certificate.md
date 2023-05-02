@@ -165,9 +165,8 @@ Accept wildcard characters: False
 
 Specifies the type of output file for the certificate export as follows.
 
- -- `SST`: A Microsoft serialized certificate store (.sst) file format which can contain one or
- more certificates. This is the default value for multiple certificates.
-
+- `SST`: A Microsoft serialized certificate store (`.sst`) file format which can contain one or
+  more certificates. This is the default value for multiple certificates.
  -- `CERT`: A .cer file format which contains a single DER-encoded certificate. This is the
  default value for one certificate.
 

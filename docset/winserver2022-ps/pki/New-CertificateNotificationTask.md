@@ -82,7 +82,7 @@ certificate lifecycle events. The acceptable values for this parameter are:
 - `System`: The **Operation-System** channel will be used. This channel should be used to modify
   system certificate bindings that use computer certificates.
 
- -- `User`: The **Operational-User** channel will be used. This channel should be used to modify
+- `User`: The **Operational-User** channel will be used. This channel should be used to modify
  user certificate bindings.
 
 ```yaml

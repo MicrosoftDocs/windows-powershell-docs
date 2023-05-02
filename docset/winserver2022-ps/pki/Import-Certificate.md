@@ -99,9 +99,9 @@ Accept wildcard characters: False
 
 ### -FilePath
 
-Specifies the path to a certificate file to be imported. Acceptable formats include .sst, .p7b, and
-.cert files. If the file contains multiple certificates, then each certificate will be imported to
-the destination store.
+Specifies the path to a certificate file to be imported. Acceptable formats include `.sst`, `.p7b`,
+and `.cert` files. If the file contains multiple certificates, then each certificate will be
+imported to the destination store.
 
 ```yaml
 Type: System.String

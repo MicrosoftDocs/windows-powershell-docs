@@ -164,8 +164,8 @@ The acceptable values for this parameter are:
   store.
 - `EndEntityCertOnly`: Only end entity certificates are exported without any chain. This option is
   valid for both the **PfxData** and the **Cert** parameters.
- -- `PfxDataOnly`: Certificates contained in **PFXData** objects will be exported with no chain
- building. This option is only valid when the **PfxData** parameter is used.
+- `PfxDataOnly`: Certificates contained in **PFXData** objects will be exported with no chain
+  building. This option is only valid when the **PfxData** parameter is used.
 
 ```yaml
 Type: Microsoft.CertificateServices.Commands.ExportChainOption

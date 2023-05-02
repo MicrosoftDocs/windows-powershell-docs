@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 Specifies the policies that will be applied to verify the certificate. The acceptable values for
 this parameter are: `AUTHENTICODE`, `BASE`, `NTAUTH`, and `SSL`. If this parameter is not specified,
-then the BASE policy is used.
+then the `BASE` policy is used.
 
 ```yaml
 Type: Microsoft.CertificateServices.Commands.TestCertificatePolicy

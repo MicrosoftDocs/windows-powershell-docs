@@ -340,7 +340,7 @@ value, the value must be a secure string.
 
 If this parameter is not specified, the cmdlet prompts you to enter and confirm a masked password.
 This is the preferred usage when running the cmdlet interactively. If there are no other arguments
-specified with the cmdlet, you is prompted to enter a masked password for this parameter but no
+specified with the cmdlet, you are prompted to enter a masked password for this parameter but no
 confirmation of the password entered is made. This is not recommended as it could allow a mistyped
 password to be configured. Another available advanced option is to use the
 `ConvertTo-SecureString` cmdlet and specify the password string inline as unmasked console input,

@@ -186,7 +186,7 @@ this parameter are:
   that are renewed by auto-enrollment, using the Certificates snap-in, or by using the
   `Switch-Certificate` cmdlet.
 
- -- `Expire`: Certificate expiration and close-to-expire events will trigger this notification.
+- `Expire`: Certificate expiration and close-to-expire events will trigger this notification.
 
 ```yaml
 Type: Microsoft.CertificateServices.Commands.CertificateNotificationType

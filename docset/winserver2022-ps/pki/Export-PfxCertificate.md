@@ -158,10 +158,10 @@ Accept wildcard characters: False
 Specifies the options for building a chain when exporting certificates.
 The acceptable values for this parameter are:
 
- -- `BuildChain`: Certificate chain for all end entity certificates will be built and included in
- the export. This option is valid for both **PfxData** and **Cert** parameters. In the case of
- **PfxData** parameter, the collection of all PFX certificates will be used as an additional store.
-
+- `BuildChain`: Certificate chain for all end entity certificates will be built and included in the
+  export. This option is valid for both **PfxData** and **Cert** parameters. In the case of
+  **PfxData** parameter, the collection of all PFX certificates will be used as an additional
+  store.
 - `EndEntityCertOnly`: Only end entity certificates are exported without any chain. This option is
   valid for both the **PfxData** and the **Cert** parameters.
  -- `PfxDataOnly`: Certificates contained in **PFXData** objects will be exported with no chain

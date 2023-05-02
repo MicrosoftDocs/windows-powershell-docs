@@ -11,7 +11,6 @@ title: Add-ADDSReadOnlyDomainControllerAccount
 # Add-ADDSReadOnlyDomainControllerAccount
 
 ## SYNOPSIS
-
 Creates a RODC account that can be used to install an RODC in Active Directory.
 
 ## SYNTAX

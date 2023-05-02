@@ -182,9 +182,9 @@ Accept wildcard characters: False
 Specifies the type of events that will trigger certificate notifications. The acceptable values for
 this parameter are:
 
- -- `Replace`: Certificate replacement events will trigger this notification, including certificates
- that are renewed by auto-enrollment, using the Certificates snap-in, or by using the
- `Switch-Certificate` cmdlet.
+- `Replace`: Certificate replacement events will trigger this notification, including certificates
+  that are renewed by auto-enrollment, using the Certificates snap-in, or by using the
+  `Switch-Certificate` cmdlet.
 
  -- `Expire`: Certificate expiration and close-to-expire events will trigger this notification.
 

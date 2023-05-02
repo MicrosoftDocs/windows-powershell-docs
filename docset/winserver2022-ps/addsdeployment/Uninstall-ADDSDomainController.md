@@ -11,7 +11,6 @@ title: Uninstall-ADDSDomainController
 # Uninstall-ADDSDomainController
 
 ## SYNOPSIS
-
 Uninstalls a domain controller in Active Directory.
 
 ## SYNTAX

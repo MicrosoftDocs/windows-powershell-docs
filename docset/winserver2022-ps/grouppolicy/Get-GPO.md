@@ -160,7 +160,7 @@ session (or, for a startup or shutdown script, the computer), a trust must exist
 domain and the domain of the user or the computer.
 
 You can also refer to the **Domain** parameter by its built-in alias, **domainname.**
-For more information, see **about_Aliases.**
+For more information, see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
 
 ```yaml
 Type: String

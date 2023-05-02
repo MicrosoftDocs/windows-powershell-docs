@@ -36,7 +36,7 @@ Export-PfxCertificate [-NoProperties] [-NoClobber] [-Force]
 
 ## DESCRIPTION
 
-The `Export-PfxCertificate`` cmdlet exports a certificate or a **PFXData** object to a Personal
+The `Export-PfxCertificate` cmdlet exports a certificate or a **PFXData** object to a Personal
 Information Exchange (PFX) file. By default, extended properties and the entire chain are exported.
 
 Delegation may be required when using this cmdlet with Windows PowerShell remoting and changing

@@ -11,7 +11,6 @@ title: Get-CertificateEnrollmentPolicyServer
 # Get-CertificateEnrollmentPolicyServer
 
 ## SYNOPSIS
-
 Returns all of the certificate enrollment policy server URL configurations.
 
 ## SYNTAX

@@ -11,7 +11,6 @@ title: Import-Certificate
 # Import-Certificate
 
 ## SYNOPSIS
-
 Imports one or more certificates into a certificate store.
 
 ## SYNTAX
@@ -44,7 +43,7 @@ This example imports the certificate from the file into the root store of the cu
 ```powershell
 Set-Location -Path cert:\CurrentUser\My
 
-PS Cert:\CurrentUser\My> Import-Certificate -Filepath 'C:\files\intermediate.cert'
+Import-Certificate -Filepath 'C:\files\intermediate.cert'
 ```
 
 This example imports the certificate from the file into the current store.

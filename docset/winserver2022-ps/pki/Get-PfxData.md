@@ -11,7 +11,6 @@ title: Get-PfxData
 # Get-PfxData
 
 ## SYNOPSIS
-
 Extracts the content of a Personal Information Exchange (PFX) file into a structure without
 importing it to certificate store.
 

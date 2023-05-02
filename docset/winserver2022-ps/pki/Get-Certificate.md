@@ -11,7 +11,6 @@ title: Get-Certificate
 # Get-Certificate
 
 ## SYNOPSIS
-
 Submits a certificate request to an enrollment server and installs the response or retrieves a
 certificate for a previously submitted request.
 
@@ -103,10 +102,9 @@ $params = @{
     Template = 'WorkstationTemplate'
     Url = 'https://www.contoso.com/service.svc'
 }
-
 Set-Location -Path Cert:\LocalMachine\My
 
-PS Cert:\LocalMachine\My>$enrollResult = Get-Certificate @params
+$enrollResult = Get-Certificate @params
 ```
 
 This example authenticates the URL using the machine account and Windows integrated authentication
@@ -117,7 +115,7 @@ and submits a request for a machine certificate of template named `WorkstationTe
 ```powershell
 Set-Location -Path Cert:\CurrentUser\My
 
-PS Cert:\CurrentUser\My> Get-Certificate -Template User -Url ldap:
+Get-Certificate -Template User -Url ldap:
 ```
 
 This example uses Windows integrated authentication to enroll for a certificate of template `User`

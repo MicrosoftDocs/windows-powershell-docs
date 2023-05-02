@@ -11,7 +11,6 @@ title: Get-CertificateAutoEnrollmentPolicy
 # Get-CertificateAutoEnrollmentPolicy
 
 ## SYNOPSIS
-
 Retrieves certificate auto-enrollment policy settings.
 
 ## SYNTAX

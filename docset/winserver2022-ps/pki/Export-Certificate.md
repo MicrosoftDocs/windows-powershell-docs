@@ -11,7 +11,6 @@ title: Export-Certificate
 # Export-Certificate
 
 ## SYNOPSIS
-
 Exports a certificate from a certificate store into a file.
 
 ## SYNTAX
@@ -49,7 +48,7 @@ $cert = Get-ChildItem -Path Cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADD
 Export-Certificate -Cert $cert -FilePath C:\Certs\user.cer
 ```
 
-This example exports a certificate to the file system as a DER-encoded .cer file without its
+This example exports a certificate to the file system as a DER-encoded `.cer` file without its
 private key.
 
 ### EXAMPLE 3
@@ -167,10 +166,10 @@ Specifies the type of output file for the certificate export as follows.
 
 - `SST`: A Microsoft serialized certificate store (`.sst`) file format which can contain one or
   more certificates. This is the default value for multiple certificates.
- -- `CERT`: A .cer file format which contains a single DER-encoded certificate. This is the
+- `CERT`: A `.cer` file format which contains a single DER-encoded certificate. This is the
  default value for one certificate.
 
- -- `P7B`: A PKCS#7 file format which can contain one or more certificates.
+- `P7B`: A PKCS#7 file format which can contain one or more certificates.
 
 ```yaml
 Type: Microsoft.CertificateServices.Commands.CertType

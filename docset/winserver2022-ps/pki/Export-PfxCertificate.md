@@ -11,7 +11,6 @@ title: Export-PfxCertificate
 # Export-PfxCertificate
 
 ## SYNOPSIS
-
 Exports a certificate or a PFXData object to a Personal Information Exchange (PFX) file.
 
 ## SYNTAX
@@ -201,9 +200,8 @@ Accept wildcard characters: False
 Specifies the algorithm for encrypting private keys within the PFX file. If this parameter is not
 specified, the default is `TripleDES_SHA1`. The acceptable values for this parameter are:
 
--- `TripleDES_SHA1`: Private keys will be encrypted in the PFX file using Triple DES encryption.
-
--- `AES256_SHA256`: Private keys will be encrypted in the PFX file using AES-256 encryption.
+- `TripleDES_SHA1`: Private keys will be encrypted in the PFX file using Triple DES encryption.
+- `AES256_SHA256`: Private keys will be encrypted in the PFX file using AES-256 encryption.
 
 ```yaml
 Type: Microsoft.CertificateServices.Commands.CryptoAlgorithmOptions

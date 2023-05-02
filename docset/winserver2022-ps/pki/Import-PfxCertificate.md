@@ -11,7 +11,6 @@ title: Import-PfxCertificate
 # Import-PfxCertificate
 
 ## SYNOPSIS
-
 Imports certificates and private keys from a Personal Information Exchange (PFX) file to the
 destination store.
 
@@ -66,7 +65,7 @@ protected.
 ```powershell
 Set-Location -Path Cert:\LocalMachine\My
 
-PS Cert:\LocalMachine\My> Import-PfxCertificate -FilePath C:\mypfx.pfx
+Import-PfxCertificate -FilePath C:\mypfx.pfx
 ```
 
 This example imports the PFX file `mypfx.pfx` into the My store for the machine account. The

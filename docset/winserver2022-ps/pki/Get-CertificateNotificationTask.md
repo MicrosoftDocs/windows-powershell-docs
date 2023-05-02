@@ -11,7 +11,6 @@ title: Get-CertificateNotificationTask
 # Get-CertificateNotificationTask
 
 ## SYNOPSIS
-
 Returns all registered certificate notification tasks.
 
 ## SYNTAX

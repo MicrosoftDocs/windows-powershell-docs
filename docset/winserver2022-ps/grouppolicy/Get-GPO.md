@@ -35,7 +35,7 @@ Get-GPO [[-Domain] <String>] [[-Server] <String>] [-All] [<CommonParameters>]
 
 ## DESCRIPTION
 
-The **Get-GPO** cmdlet gets one Group Policy Object (GPO) or all the GPOs in a domain.
+The `Get-GPO` cmdlet gets one Group Policy Object (GPO) or all the GPOs in a domain.
 You can specify a GPO by its display name or by its globally unique identifier (GUID) to get a
 single GPO, or you can get all the GPOs in the domain through the **All** parameter.
 

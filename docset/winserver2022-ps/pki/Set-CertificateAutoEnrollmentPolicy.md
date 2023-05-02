@@ -11,7 +11,6 @@ title: Set-CertificateAutoEnrollmentPolicy
 # Set-CertificateAutoEnrollmentPolicy
 
 ## SYNOPSIS
-
 Sets local certificate auto-enrollment policy.
 
 ## SYNTAX
@@ -35,9 +34,8 @@ Set-CertificateAutoEnrollmentPolicy [-EnableAll] -context <Context> [-WhatIf] [-
 
 The `Set-CertificateAutoEnrollmentPolicy` cmdlet configures local certificate auto-enrollment policy
 for a user or computer. The auto-enrollment policy can also be configured by using the Local
-Security Policy console. These settings can be found in the following location.
-
- -- `\Security Settings\Public Key Policies\Certificate Services Client - Auto-Enrollment`.
+Security Policy console. These settings can be found in the following location:
+`\Security Settings\Public Key Policies\Certificate Services Client - Auto-Enrollment`
 
 Delegation may be required when using this cmdlet with Windows PowerShell remoting and changing user
 configuration.

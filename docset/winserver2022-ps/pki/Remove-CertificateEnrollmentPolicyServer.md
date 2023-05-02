@@ -11,7 +11,6 @@ title: Remove-CertificateEnrollmentPolicyServer
 # Remove-CertificateEnrollmentPolicyServer
 
 ## SYNOPSIS
-
 Removes an enrollment policy server and the URL of the enrollment policy server from the current
 user or local computer configuration.
 

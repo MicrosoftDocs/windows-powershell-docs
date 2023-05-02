@@ -11,7 +11,6 @@ title: Remove-CertificateNotificationTask
 # Remove-CertificateNotificationTask
 
 ## SYNOPSIS
-
 Removes a certificate notification task from Task Scheduler.
 
 ## SYNTAX

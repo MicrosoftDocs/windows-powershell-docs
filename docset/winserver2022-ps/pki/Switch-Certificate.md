@@ -11,7 +11,6 @@ title: Switch-Certificate
 # Switch-Certificate
 
 ## SYNOPSIS
-
 Marks one certificate as having been replaced by another certificate.
 
 ## SYNTAX
@@ -47,12 +46,9 @@ E42DBC3B3F2771990A9B3E35D0C3C422779DACD7 as renewed by the certificate with the 
 
 ```powershell
 Set-Location -Path cert:\LocalMachine\My
-
-PS cert:\LocalMachine\My>$oldCert = Get-ChildItem -Path E42DBC3B3F2771990A9B3E35D0C3C422779DACD7
-
-PS cert:\LocalMachine\My>$newCert = Get-ChildItem -Path 4A346B4385F139CA843912D358D765AB8DEE9FD4
-
-PS cert:\LocalMachine\My>Switch-Certificate -OldCert $oldCert -NewCert $newCert -NotifyOnly
+$oldCert = Get-ChildItem -Path E42DBC3B3F2771990A9B3E35D0C3C422779DACD7
+$newCert = Get-ChildItem -Path 4A346B4385F139CA843912D358D765AB8DEE9FD4
+Switch-Certificate -OldCert $oldCert -NewCert $newCert -NotifyOnly
 ```
 
 This example locates two certificates in the machine MY store and assigns them the variables

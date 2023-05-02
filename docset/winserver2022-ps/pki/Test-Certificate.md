@@ -11,7 +11,6 @@ title: Test-Certificate
 # Test-Certificate
 
 ## SYNOPSIS
-
 Verifies a certificate according to the input parameters.
 
 ## SYNTAX
@@ -102,7 +101,7 @@ Accept wildcard characters: False
 ### -DNSName
 
 Specifies the DNS name to verify as valid for the certificate.
- 
+
 If this parameter is specified but not the **Policy** parameter, then the `CERT_CHAIN_POLICY_SSL`
 policy is applied and the DNS name is validated for the certificate. If a `CERT_CHAIN_POLICY_SSL`
 policy does not exist, then the cmdlet will fail.

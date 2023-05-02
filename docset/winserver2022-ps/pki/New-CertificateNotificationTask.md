@@ -154,13 +154,16 @@ Generates a replacement notification for any certificate in the My store that ha
 the past. For the notification to be generated both certificates must be present in the store. This
 parameter can only be used with the `Replace` type.
 
-Note: The following warning will be displayed when this this parameter set to `False` and there are
-some certificates in MY store that would have resulted in a notification.
-
- -- `There are certificates in My store that have been replaced in the past. You can use the
- New-CertificateNotification cmdlet with the RunTaskForExistingCerts parameter to generate
- notifications for those certificates to correct any configuration problems that you may already
- have on this machine.`
+> [!NOTE]
+> The following warning is displayed when this parameter set to `False` and there are some
+> certificates in MY store that would have resulted in a notification.
+>
+> ```Output
+> There are certificates in My store that have been replaced in the past. You can use the
+> New-CertificateNotification cmdlet with the RunTaskForExistingCerts parameter to generate
+> notifications for those certificates to correct any configuration problems that you may already
+> have on this machine.
+> ```
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

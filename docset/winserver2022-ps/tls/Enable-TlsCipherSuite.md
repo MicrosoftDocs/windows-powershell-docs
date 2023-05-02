@@ -66,7 +66,7 @@ CRYPT_PRIORITY_BOTTOM.
 Enable-TlsCipherSuite -Name TLS_DHE_DSS_WITH_AES_256_CBC_SHA -Position 0
 ```
 
-This command enables cipher suite named TLS_DHE_DSS_WITH_AES_256_CBC_SHA. This command adds the
+This command enables cipher suite named `TLS_DHE_DSS_WITH_AES_256_CBC_SHA`. This command adds the
 cipher suite the TLS cipher suite list at position 0, which is the highest priority.
 
 ## PARAMETERS

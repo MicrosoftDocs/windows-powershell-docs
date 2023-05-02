@@ -11,7 +11,6 @@ title: Install-ADDSForest
 # Install-ADDSForest
 
 ## SYNOPSIS
-
 Creates a new Active Directory forest.
 
 ## SYNTAX

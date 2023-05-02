@@ -11,7 +11,6 @@ title: Test-ADDSDomainControllerInstallation
 # Test-ADDSDomainControllerInstallation
 
 ## SYNOPSIS
-
 Runs the prerequisites (only) for installing a domain controller in Active Directory.
 
 ## SYNTAX

@@ -155,7 +155,9 @@ Interactive mode).
 
 Specifies the path to the certificate store for the received certificate.
 If the request is made pending, then the request object is saved in the corresponding request store.
-Note: Only `My` store is supported.
+
+> [!NOTE]
+> Only `My` store is supported.
 
 ```yaml
 Type: System.String

@@ -59,12 +59,12 @@ TechNet.
 
 ```powershell
 $params = @{
-    Days = Sunday
+    Days          = 'Sunday'
     DurationHours = 5
-    Name = "OffHoursGC"
-    Priority = Normal
-    Start = 08:00
-    Type = GarbageCollection
+    Name          = 'OffHoursGC'
+    Priority      = 'Normal'
+    Start         = '08:00'
+    Type          = 'GarbageCollection'
 }
 New-DedupSchedule @params
 ```
@@ -79,13 +79,19 @@ process has not ended.
 
 ```powershell
 $params = @{
-    Days = Monday,Tuesday,Wednesday,Thursday,Friday
-    DurationHours = 6
-    Name = "OffHoursScrub"
-    Priority = Normal
-    Start = 23:00
+    Days               = @(
+        'Monday'
+        'Tuesday'
+        'Wednesday'
+        'Thursday'
+        'Friday'
+    )
+    DurationHours      = 6
+    Name               = 'OffHoursScrub'
+    Priority           = 'Normal'
+    Start              = '23:00'
     StopWhenSystemBusy = $true
-    Type = Scrubbing
+    Type               = 'Scrubbing'
 }
 New-DedupSchedule @params
 ```
@@ -100,11 +106,17 @@ and retries later. The **DurationHours** parameter specifies that the server can
 
 ```powershell
 $params = @{
-    Days = Mon,Tues,Wed,Thurs,Fri
+    Days          = @(
+        'Mon'
+        'Tues'
+        'Wed'
+        'Thurs'
+        'Fri'
+    )
     DurationHours = 9
-    Name = "MyWeekdayOptimization"
-    Start = 08:00
-    Type = Optimization
+    Name          = 'MyWeekdayOptimization'
+    Start         = '08:00'
+    Type          = 'Optimization'
 }
 New-DedupSchedule @params
 ```
@@ -223,7 +235,7 @@ Accept wildcard characters: False
 
 ### -DurationHours
 
-Specifies the number of hours that the server runs the task before canceling it. The value 0
+Specifies the number of hours that the server runs the task before canceling it. The value `0`
 indicates that the server runs the job to completion. This cmdlet safely stops a data deduplication
 job and does not affect the files that the server is processing when it cancels the job.
 
@@ -385,8 +397,8 @@ Accept wildcard characters: False
 ### -Start
 
 Specifies a time to start this job. The default value is 1:45am.
-Type the date in a format that is standard for the system locale, such as dd-MM-yyyy (German
-\[Germany\]) or MM/dd/yyyy (English \[United States\]).
+Type the date in a format that is standard for the system locale, such as `dd-MM-yyyy` (German
+\[Germany\]) or `MM/dd/yyyy` (English \[United States\]).
 
 ```yaml
 Type: System.DateTime
@@ -484,7 +496,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object.
 

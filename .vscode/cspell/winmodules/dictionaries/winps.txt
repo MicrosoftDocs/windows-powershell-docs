@@ -1,7 +1,10 @@
 ADCS
+Cmdletization
 Dcpromo
+Dedup
 DSRM
 krbtgt
 NTDS
 RODC
 Sysvol
+Unoptimization

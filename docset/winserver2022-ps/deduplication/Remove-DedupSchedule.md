@@ -173,7 +173,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object.
 
@@ -181,13 +181,13 @@ namespace and class name for the underlying WMI object.
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object.
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Deduplication/MSFT_DedupJobSchedule
 
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object.
 

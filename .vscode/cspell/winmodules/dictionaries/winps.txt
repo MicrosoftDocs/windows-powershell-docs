@@ -3,6 +3,8 @@ Cmdletization
 Dcpromo
 Dedup
 DSRM
+Hotspot
+hotspots
 krbtgt
 NTDS
 reoptimized

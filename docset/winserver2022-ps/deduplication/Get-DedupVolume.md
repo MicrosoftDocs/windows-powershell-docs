@@ -127,7 +127,7 @@ Accept wildcard characters: False
 Specifies one or more file system volumes for which to return data deduplication metadata, or in the
 case of a cluster, volumes with data deduplication metadata currently mounted by the managed node.
 Enter one or more volume IDs, drive letters, or volume GUID paths. For drive letters, use the format
-`D:`. For volume GUID paths, use the format `\\\\?\Volume{{GUID}}\`. Separate multiple volumes with
+`D:`. For volume GUID paths, use the format `\\?\Volume{{GUID}}\`. Separate multiple volumes with
 a comma.
 
 ```yaml

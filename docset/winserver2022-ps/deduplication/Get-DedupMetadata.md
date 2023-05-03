@@ -38,24 +38,25 @@ To run this cmdlet, you must start Windows PowerShell® with the **Run as admini
 
 This cmdlet returns the following properties:
 
-- **CorruptionCount**.
-Indicates the number of corruptions found on the volume.
-- **DataChunkAverageSize**. Indicates the data store size, not including chunk metadata, divided by
-  the total number of data chunks in the data store.
-- **DataChunkCount**.
-Indicates the number of data chunks in a container.
-- **DataContainerCount**.
-Indicates the number of containers in the data store.
-- **HotspotContainerCount**.
-Indicates the number of hotspots in the stream map store.
-- **HotspotCount**.
-Indicates the number of hotspots in a container.
-- **StreamMapAverageChunkCount**.
-Indicates the stream map store size divided by the total number of streams in the store.
-- **StreamMapContainerCount**.
-Indicates the number of containers in the stream map store.
-- **StreamMapCount**.
-Indicates the number of data streams in a container.
+- `CorruptionCount`
+  - Indicates the number of corruptions found on the volume.
+- `DataChunkAverageSize`
+  - Indicates the data store size, not including chunk metadata, divided by the total number of data
+    chunks in the data store.
+- `DataChunkCount`
+  - Indicates the number of data chunks in a container.
+- `DataContainerCount`
+  - Indicates the number of containers in the data store.
+- `HotspotContainerCount`
+  - Indicates the number of hotspots in the stream map store.
+- `HotspotCount`
+  - Indicates the number of hotspots in a container.
+- `StreamMapAverageChunkCount`
+  - Indicates the stream map store size divided by the total number of streams in the store.
+- `StreamMapContainerCount`
+  - Indicates the number of containers in the stream map store.
+- `StreamMapCount`
+  - Indicates the number of data streams in a container.
 
 ## EXAMPLES
 

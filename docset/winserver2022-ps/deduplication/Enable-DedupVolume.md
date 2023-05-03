@@ -55,7 +55,7 @@ Enable-DedupVolume -Volume "\\?\Volume{26a21bda-a627-11d7-9931-806e6f6e6963}\"
 ```
 
 This command enables data deduplication for the volume that has the GUID
-26a21bda-a627-11d7-9931-806e6f6e6963.
+`26a21bda-a627-11d7-9931-806e6f6e6963`.
 
 ### Example 4: Resume I/O activity on a specified volume/
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 Specifies an array of system volumes. Specify one or more volume IDs, drive letters, or volume GUID
 paths. For drive letters, use the format D:. For volume GUID paths, use the format
-`\\\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
+`\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
 
 ```yaml
 Type: System.String[]
@@ -211,7 +211,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object.
 

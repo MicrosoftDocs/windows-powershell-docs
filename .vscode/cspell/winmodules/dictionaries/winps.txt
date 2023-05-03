@@ -6,6 +6,7 @@ DSRM
 krbtgt
 NTDS
 reoptimized
+rescan
 RODC
 Sysvol
 Unoptimization

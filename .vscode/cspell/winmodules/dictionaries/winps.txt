@@ -5,6 +5,9 @@ Dedup
 DSRM
 krbtgt
 NTDS
+reoptimized
 RODC
 Sysvol
 Unoptimization
+unoptimization
+unoptimizes

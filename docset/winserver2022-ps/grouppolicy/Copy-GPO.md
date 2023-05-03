@@ -92,23 +92,24 @@ that is running the session.a trust must exist between that domain and the domai
 ```powershell
 Get-GPO -All -Domain "sales1.contoso.com" | ForEach-Object {
     $params = @{
-        'TargetName' = $_.DisplayName
+        'TargetName'     = $_.DisplayName
+        'TargetDomain'   = "sales2.contoso.com"
+        'CopyACL'        = $true
+        'MigrationTable' = 'c:\tables\MigrationTable.migtable'
     }
-
-??????????????????????
-
-    $_ | Copy-GPO -TargetName ($_.DisplayName) -TargetDomain "sales2.contoso.com" -CopyAcl -MigrationTable 'c:\tables\MigrationTable.migtable' }
+    $_ | Copy-GPO @params  }
 ```
 
-This command copies all the GPOs in the sales1.contoso.com domain to the sales2.contoso.com domain.
+This command copies all the GPOs in the `sales1.contoso.com` domain to the `sales2.contoso.com`
+domain.
 
 All the GPOs in the source domain are retrieved by using the **Get-GPO** cmdlet using the **All**
 parameter. The output of **Get-GPO** is piped into the ForEach-Object command. When each GPO is
 evaluated, it is piped into **Copy-GPO** and its display name is specified for the **TargetName**
-parameter `-TargetName ($_.DisplayName)`. The **CopyACL** parameter is specified to copy the ACLs for
-each GPO to the destination domain. The **MigrationTable** parameter specifies a migration table to
-use to migrate Security principals and UNC paths to the destination domain. Both the **CopyACL** and
-the **MigrationTable** parameters are optional.
+parameter `-TargetName ($_.DisplayName)`. The **CopyACL** parameter is specified to copy the ACLs
+for each GPO to the destination domain. The **MigrationTable** parameter specifies a migration table
+to use to migrate Security principals and UNC paths to the destination domain. Both the **CopyACL**
+and the **MigrationTable** parameters are optional.
 
 If a GPO with the same display name as a source GPO already exists in the destination domain, an
 error occurs when this command attempts to copy the source GPO. Because this command copies all GPOs
@@ -116,7 +117,7 @@ in the source domain, errors occur for default GPOs; for instance, the Default D
 the Default Domain Controllers Policy GPO. These GPOs are not copied. You can suppress these error
 messages by supplying the **ErrorAction** parameter with a value of SilentlyContinue to
 **Copy-GPO**. For more information about the **ErrorAction** parameter, see
-[about_CommonParameters](?????????).
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 The destination GPOs that were successfully copied are returned by this command. By default, they
 are printed to the display, but you can add commands to the end of the pipeline to further configure
@@ -232,8 +233,8 @@ Accept wildcard characters: False
 
 ### -SourceGuid
 
-Specifies the source GPO by its globally unique identifier `GUID`. The `GUID` uniquely identifies the
-GPO.
+Specifies the source GPO by its globally unique identifier `GUID`. The `GUID` uniquely identifies
+the GPO.
 
 You can also refer to the **SourceGuid** parameter by its built-in alias, `Id`.
 

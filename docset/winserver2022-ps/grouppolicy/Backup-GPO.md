@@ -80,12 +80,12 @@ This command backs up the GPO with the specified **GUID** in the `contoso.com` d
 the operation.
 
 If the domain of the user running the session (or, for startup and shutdown scripts, the computer)
-is different from the `contoso.com` domain, a trust must exist between the two domains or the command
-fails.
+is different from the `contoso.com` domain, a trust must exist between the two domains or the
+command fails.
 
 ### Example 3: Backup all GPOs in the domain of the user that is running the session
 
-```
+```powershell
 Backup-Gpo -All -Path "\\Server1\GpoBackups"
 ```
 
@@ -158,8 +158,8 @@ If you specify a domain that is different from the domain of the user that is ru
 session (or, for a startup or shutdown script, the computer), a trust must exist between that domain
 and the domain of the user (or the computer).
 
-You can also refer to Domain by its built-in alias, domain name.
-For more information, see [about_Aliases](????????).
+You can also refer to Domain by its built-in alias, domain name. For more information, see
+[about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases)
 
 ```yaml
 Type: System.String
@@ -178,11 +178,11 @@ Accept wildcard characters: False
 Specifies the GPO to backup by its globally unique identifier (GUID).
 The `GUID` uniquely identifies the GPO.
 
-You can also refer to the **Guid** parameter by its built-in alias, **Id**.
-For more information, see [about_Aliases](????????????).
+You can also refer to the **Guid** parameter by its built-in alias, **Id**. For more information,
+see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
 
 ```yaml
-Type: Guid ????????????
+Type: Guid 
 Parameter Sets: BackupOne(GUID)
 Aliases: Id
 
@@ -201,8 +201,8 @@ The display name is not guaranteed to be unique in the domain.
 If another GPO with the same display name exists in the domain an error occurs.
 You can use the **Guid** parameter to uniquely identify a GPO.
 
-You can also refer to the Name parameter by its built-in alias, **DisplayName**.
-For more information, see [about_Aliases](??????????????).
+You can also refer to the Name parameter by its built-in alias, **DisplayName**. For more
+information, see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
 
 ```yaml
 Type: System.String

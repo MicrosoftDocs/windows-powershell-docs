@@ -63,7 +63,14 @@ This command generates a report in HTML format for the GPO `TestGPO1` and writes
 ### Example 2: Generate an XML report for each GPO in the specified domain
 
 ```powershell
-Get-GPOReport -All -Domain "sales.contoso.com" -Server "DC1" -ReportType XML -Path "C:\GPOReports\GPOReportsAll.xml"
+$params = @{
+    All         = $true
+    Domain      = 'sales.contoso.com'
+    Server      = 'DC1'
+    ReportType  = 'XML' 
+    Path        = 'C:\GPOReports\GPOReportsAll.xml'
+}
+Get-GPOReport @params
 ```
 
 This command generates a report in XML format for each GPO in the `sales.contoso.com` domain and
@@ -120,7 +127,7 @@ session or, (for a startup or shutdown script, the computer), a trust must exist
 and the domain of the user or the computer.
 
 You can also refer to Domain by its built-in alias, **DomainName**. For more information, see
-[about_Aliases](????????????).
+[about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
 
 ```yaml
 Type: System.String
@@ -139,8 +146,8 @@ Accept wildcard characters: False
 Specifies the GPO for which to generate the report by its globally unique identifier (GUID). The
 GUID uniquely identifies the GPO.
 
-You can also refer to the **Guid** parameter by its built-in alias, **Id**.
-For more information, see [about_Aliases](????????).
+You can also refer to the **Guid** parameter by its built-in alias, **Id**. For more information,
+see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases)
 
 ```yaml
 Type: Guid
@@ -162,8 +169,8 @@ The display name is not guaranteed to be unique in the domain. If another GPO wi
 name exists in the domain an error occurs. You can use the **Guid** parameter to uniquely identify a
 GPO.
 
-You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
-For more information, see [about_Aliases](????????).
+You can also refer to the **Name** parameter by its built-in alias, **DisplayName**. For more
+information, see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
 
 ```yaml
 Type: System.String
@@ -224,7 +231,7 @@ If you do not specify the name by using the **Server** parameter, the primary do
 (PDC) emulator is contacted.
 
 You can refer to this parameter by its built-in alias, **DC**. For more information, see
-[about_Aliases](????????).
+[about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
 
 ```yaml
 Type: System.String
@@ -281,4 +288,3 @@ This cmdlet does not generate any output.
   startup or shutdown scripts, the computer account, a trust must exist between the two domains.
 
 ## RELATED LINKS
-

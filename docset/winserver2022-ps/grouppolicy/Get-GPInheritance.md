@@ -91,13 +91,12 @@ InheritedGpoLinks     : {Default Domain Policy}
 This command gets Group Policy inheritance information for the `contoso.com` domain. The domain
 controller with the host name `DomainController1` is contacted to complete the operation.
 
-The domain does not have to be explicitly specified using the **Domain** parameter in this example. If
-the domain of the user that is running the session (or, for startup and shutdown scripts, the
+The domain does not have to be explicitly specified using the **Domain** parameter in this example.
+If the domain of the user that is running the session (or, for startup and shutdown scripts, the
 computer) is the same as the target domain, or a trust exists between it and the target domain, you
 do not have to specify the **Domain** parameter.
 
-### Example 3: Get GPOs that are linked to a specific organizational unit by evaluating the SOM
- object
+### Example 3: Get GPOs that are linked to a specific organizational unit by evaluating the SOM object
 
 ```powershell
 (Get-GPInheritance -Target "ou=myou,dc=contoso,dc=com").GpoLinks | 
@@ -132,7 +131,7 @@ WmiFilter        :
 ```
 
 This command evaluates the SOM object `Microsoft.GroupPolicy.SOM` returned by **Get-GPInheritance**
-and returns the GPOs that are linked to the MyOU organizational unit. You can use this command to
+and returns the GPOs that are linked to the `MyOU` organizational unit. You can use this command to
 set properties of the GPOs by piping its output into other cmdlets. For instance, you can pipe the
 output to the **Set-GPPermissions** cmdlet to delegate permissions to administrators of the OU for
 each of the GPOs linked to the OU.
@@ -141,12 +140,14 @@ The **GpoLinks** property of the SOM object contains a list of all the GPO links
 Each object in this list is of type `Microsoft.GroupPolicy.GpoLink`.
 The following shows one such object:
 
+```Output
 GpoId       : d02126d4-82e8-4e87-b4a0-2d44b6891411
 DisplayName : TestGPO-3
 Enabled     : True
 Enforced    : False
 Target      : ou=myou,dc=contoso,dc=com
 Order       : 1
+```
 
 The collection is piped into a foreach-object command, which retrieves each GPO by using the
 DisplayName property of the GpoLink object.
@@ -171,7 +172,7 @@ session (or, for a startup or shutdown script, the computer), a trust must exist
 and the domain of the user or the computer.
 
 You can also refer to the **Domain** parameter by its built-in alias, `DomainName`. For more
-information, see [about_Aliases](???????).
+information, see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
 
 ```yaml
 Type: System.String

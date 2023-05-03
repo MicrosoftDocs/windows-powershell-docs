@@ -40,8 +40,9 @@ The **Get-GPO** cmdlet gets one Group Policy Object (GPO) or all the GPOs in a d
 specify a GPO by its display name or by its globally unique identifier (GUID) to get a single GPO,
 or you can get all the GPOs in the domain through the **All** parameter.
 
-This cmdlet returns one or more objects that represent the requested GPOs.
-By default, properties of the requested GPOs are printed to the display; however, you can also pipe the output of the **Get-GPO** cmdlet to other Group Policy cmdlets.
+This cmdlet returns one or more objects that represent the requested GPOs. By default, properties of
+the requested GPOs are printed to the display; however, you can also pipe the output of the
+**Get-GPO** cmdlet to other Group Policy cmdlets.
 
 ## EXAMPLES
 
@@ -65,9 +66,9 @@ ComputerVersion  : AD Version: 0, SysVol Version: 0
 WmiFilter        :
 ```
 
-This command gets the GPO named `Group Policy Test`. The GPO must exist in the domain of the user that
-is running the session (or, for startup and shutdown scripts, the computer). The command gets the
-GPO information by contacting the primary domain controller (PDC).
+This command gets the GPO named `Group Policy Test`. The GPO must exist in the domain of the user
+that is running the session (or, for startup and shutdown scripts, the computer). The command gets
+the GPO information by contacting the primary domain controller (PDC).
 
 ### Example 2: Get a single GPO by GUID
 
@@ -90,9 +91,9 @@ WmiFilter        :
 ```
 
 This command gets the GPO that has the ID (GUID) `331a09564-cd4a-4520-98fa-446a2af23b4b` in the
-`sales.contoso.com` domain. If the domain of the user that is running the session (or, for startup and
-shutdown scripts, the computer) is different that `sales.contoso.com`, a trust must exist between the
-two domains. The command retrieves the GPO information by contacting the PDC (in the
+`sales.contoso.com` domain. If the domain of the user that is running the session (or, for startup
+and shutdown scripts, the computer) is different that `sales.contoso.com`, a trust must exist
+between the two domains. The command retrieves the GPO information by contacting the PDC (in the
 `sales.contoso.com` domain).
 
 ### Example 3: Get all GPOs from a domain
@@ -132,10 +133,12 @@ If you do not specify the **Domain** parameter, the domain of the user that is r
 session is used. If the cmdlet is being run from a computer startup or shutdown script, the domain
 of the computer is used. For more information, see the Notes section in the full Help.
 
-If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user or the computer.
+If you specify a domain that is different from the domain of the user that is running the current
+session (or, for a startup or shutdown script, the computer), a trust must exist between that domain
+and the domain of the user or the computer.
 
-You can also refer to the **Domain** parameter by its built-in alias, **DomainName**.
-For more information, see [about_Aliases](????????????).
+You can also refer to the **Domain** parameter by its built-in alias, **DomainName**. For more
+information, see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
 
 ```yaml
 Type: System.String
@@ -237,19 +240,23 @@ This cmdlet returns an object that represents the requested GPO.
 
 * You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
-  If you do not explicitly specify the domain, the cmdlet uses a default domain.
-The default domain is the domain that is used to access network resources by the security context under which the current session is running.
-This domain is typically the domain of the user that is running the session.
-For example, the domain of the user who started the session by opening Windows PowerShell from the Program Files menu, or the domain of a user that is specified in a runas command.
-However, computer startup and shutdown scripts run under the context of the LocalSystem account.
-The LocalSystem account is a built-in local account, and it accesses network resources under the context of the computer account.
-Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
+  If you do not explicitly specify the domain, the cmdlet uses a default domain. The default domain
+  is the domain that is used to access network resources by the security context under which the
+  current session is running. This domain is typically the domain of the user that is running the
+  session. For example, the domain of the user who started the session by opening Windows PowerShell
+  from the Program Files menu, or the domain of a user that is specified in a runas command.
+  However, computer startup and shutdown scripts run under the context of the LocalSystem account.
+  The LocalSystem account is a built-in local account, and it accesses network resources under the
+  context of the computer account. Therefore, when this cmdlet is run from a startup or shutdown
+  script, the default domain is the domain to which the computer is joined.
 
-  Only one domain can be used by an instance of this cmdlet.
-If you pipe a collection of GPO (Microsoft.GroupPolicy.Gpo) objects to this cmdlet, the DomainName property of the first GPO object in the collection specifies the domain for the cmdlet.
-This is because domainname is a built-in alias for the **Domain** parameter, and the **Domain** parameter can take its value by property name from the pipeline.
-A non-terminating error occurs for any GPOs in the collection that are not in this domain.
-If this domain is different from the domain of the user account (for startup or shutdown scripts, the computer account), a trust must exist between the two domains.
+  Only one domain can be used by an instance of this cmdlet. If you pipe a collection of GPO
+  (Microsoft.GroupPolicy.Gpo) objects to this cmdlet, the DomainName property of the first GPO
+  object in the collection specifies the domain for the cmdlet. This is because domainname is a
+  built-in alias for the **Domain** parameter, and the **Domain** parameter can take its value by
+  property name from the pipeline. A non-terminating error occurs for any GPOs in the collection
+  that are not in this domain. If this domain is different from the domain of the user account (for
+  startup or shutdown scripts, the computer account), a trust must exist between the two domains.
 
 ## RELATED LINKS
 

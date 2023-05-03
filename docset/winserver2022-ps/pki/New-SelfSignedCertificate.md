@@ -11,7 +11,6 @@ title: New-SelfSignedCertificate
 # New-SelfSignedCertificate
 
 ## SYNOPSIS
-
 Creates a new self-signed certificate for testing purposes.
 
 ## SYNTAX
@@ -55,7 +54,7 @@ $params = @{
 New-SelfSignedCertificate @params
 ```
 
-This example creates a self-signed SSL server certificate in the computer MY store with the subject
+This example creates a self-signed SSL server certificate in the computer `MY` store with the subject
 alternative names `www.fabrikam.com` and `www.contoso.com` and the Subject and Issuer name set to
 `www.fabrikam.com`.
 
@@ -68,7 +67,7 @@ PS Cert:\LocalMachine\My> New-SelfSignedCertificate -CloneCert $OldCert
 ```
 
 This example creates a copy of the certificate specified by the **CloneCert** parameter and puts it
-in the computer MY store.
+in the computer `MY` store.
 
 ### EXAMPLE 3
 
@@ -87,9 +86,9 @@ $params = @{
 New-SelfSignedCertificate @params
 ```
 
-This example creates a self-signed S/MIME certificate in the user MY store. The certificate uses the
-default provider, which is the `Microsoft Software Key Storage Provider`. The certificate uses an
-`RSA` asymmetric key with a key size of `2048` bits. This certificate has the subject alternative
+This example creates a self-signed S/MIME certificate in the user `MY` store. The certificate uses
+the default provider, which is the `Microsoft Software Key Storage Provider`. The certificate uses
+an `RSA` asymmetric key with a key size of `2048` bits. This certificate has the subject alternative
 names of `patti.fuller@contoso.com` as RFC822 and `pattifuller@contoso.com` as Principal Name.
 
 This command does not specify the **NotAfter** parameter. Therefore, the certificate expires in one
@@ -112,7 +111,7 @@ $params = @{
 New-SelfSignedCertificate @params
 ```
 
-This example creates a self-signed client authentication certificate in the user MY store. The
+This example creates a self-signed client authentication certificate in the user `MY` store. The
 certificate uses the default provider, which is the `Microsoft Software Key Storage Provider`. The
 certificate uses an `RSA` asymmetric key with a key size of `2048` bits. The certificate has a
 subject alternative name of `pattifuller@contoso.com`.
@@ -136,10 +135,10 @@ $params = @{
 New-SelfSignedCertificate @params
 ```
 
-This example creates a self-signed client authentication certificate in the user MY store. The
+This example creates a self-signed client authentication certificate in the user `MY` store. The
 certificate uses the default provider, which is the `Microsoft Software Key Storage Provider`. The
-certificate uses an elliptic curve asymmetric key and the curve parameters nist256, which creates a
-256-bit key. The subject alternative name is `pattifuller@contoso.com`.
+certificate uses an elliptic curve asymmetric key and the curve parameters `nist256`, which creates
+a 256-bit key. The subject alternative name is `pattifuller@contoso.com`.
 
 The certificate expires in one year.
 
@@ -162,7 +161,7 @@ $params = @{
 New-SelfSignedCertificate @params
 ```
 
-This example creates a self-signed client authentication certificate in the user MY store. The
+This example creates a self-signed client authentication certificate in the user `MY` store. The
 certificate uses the `Microsoft Platform Crypto Provider`. This provider uses the Trusted Platform
 Module (TPM) of the device to create the asymmetric key. The certificate uses an `RSA` asymmetric
 key with a key size of `2048` bits. The key is not exportable. The subject alternative name is
@@ -210,9 +209,9 @@ $params = @{
 New-SelfSignedCertificate @params
 ```
 
-This example creates a self-signed S/MIME certificate in the user MY store. The certificate uses the
-default provider, which is the `Microsoft Software Key Storage Provider`. The certificate uses an
-`RSA` asymmetric key with a key size of `2048` bits. This certificate has the subject alternative
+This example creates a self-signed S/MIME certificate in the user `MY` store. The certificate uses
+the default provider, which is the `Microsoft Software Key Storage Provider`. The certificate uses
+an `RSA` asymmetric key with a key size of `2048` bits. This certificate has the subject alternative
 names of `patti.fuller@contoso.com` and `pattifuller@contoso.com` both as RFC822.
 
 This command does not specify the **NotAfter** parameter. Therefore, the certificate expires in one
@@ -229,7 +228,7 @@ New-SelfSignedCertificate @params
 ```
 
 This example creates a self-signed SSL server certificate with Subject and Issuer name set to
-`localhost` and with subject alternative name set to IPAddress `127.0.0.1` and `::1` via
+`localhost` and with subject alternative name set to **IPAddress** `127.0.0.1` and `::1` via
 **TextExtension**.
 
 ## PARAMETERS
@@ -435,7 +434,7 @@ Accept wildcard characters: False
 ### -HardwareKeyUsage
 
 Specifies how a hardware key associated with the new certificate may be used. This parameter applies
-only when you specify the Microsoft Platform Crypto Provider. The acceptable values for this
+only when you specify the `Microsoft Platform Crypto Provider`. The acceptable values for this
 parameter are:
 
 - `None`
@@ -486,9 +485,9 @@ Algorithms (ECDSA).
 
 The elliptic curve algorithm syntax is the following:
 
-`ECDSA_`curvename
+`ECDSA_{curvename}`
 
-To obtain a value for curvename, use the `certutil -displayEccCurve` command.
+To obtain a value for `{curvename}`, use the `certutil -displayEccCurve` command.
 
 Valid curve names contain a value in the **Curve OID** column in the output of the
 `certutil -displayEccCurve` command.
@@ -527,8 +526,9 @@ Specifies the policy that governs the export of the private key that is associat
 certificate.
 
 The default value of `ExportableEncrypted` is not compatible with KSP and CSPs that do not allow key
-export. These include the Microsoft Smart Card Key Storage Provider and the Microsoft Platform
-Crypto Key Storage Provider. Specify `NonExportable` for providers that do not allow key export.
+export. These include the `Microsoft Smart Card Key Storage Provider` and the
+`Microsoft Platform Crypto Key Storage Provider`. Specify `NonExportable` for providers that do not
+allow key export.
 
 ```yaml
 Type: Microsoft.CertificateServices.Commands.KeyExportPolicy[]
@@ -578,7 +578,7 @@ Accept wildcard characters: False
 ### -KeyLocation
 
 Specifies the file system location where this cmdlet stores the private keys associated with the new
-certificate. Specify this parameter only when you specify the Microsoft Platform Crypto Provider.
+certificate. Specify this parameter only when you specify the `Microsoft Platform Crypto Provider`.
 
 ```yaml
 Type: System.String
@@ -710,8 +710,8 @@ Accept wildcard characters: False
 ### -NotAfter
 
 Specifies the date and time, as a **DateTime** object, that the certificate expires. To obtain a
-**DateTime** object, use the Get-Date cmdlet. The default value for this parameter is one year after
-the certificate was created.
+**DateTime** object, use the `Get-Date` cmdlet. The default value for this parameter is one year
+after the certificate was created.
 
 ```yaml
 Type: System.DateTime
@@ -969,146 +969,104 @@ Accept wildcard characters: False
 Specifies an array of certificate extensions, as strings, which this cmdlet includes in the new
 certificate. Each string must employ one of the following formats:
 
-oid`=`base64String, where oid is the object identifier of the extension and base64String is a value
-that you provide. After decoding base64String, the value must be valid Abstract Syntax Notation One
-(ASN.1). For more information, see
+`{oid}={base64String}`, where `{oid}` is the object identifier of the extension and `{base64String}`
+is a value that you provide. After decoding `{base64String}`, the value must be valid Abstract
+Syntax Notation One (ASN.1). For more information, see
 [Abstract Syntax Notation One (ASN.1): Specification of basic notation](http://www.itu.int/ITU-T/studygroups/com17/languages/X.680-0207.pdf).
 
-oid`={hex}`hexidecimalString, where oid is the object identifier of the extension and
-hexidecimalString is a value that you provide. After decoding hexidecimalString, the value must be
-valid ASN.1.
+`{oid}={hex}{hexadecimalString}`, where `{oid}` is the object identifier of the extension and
+`{hexadecimalString}` is a value that you provide. After decoding `{hexadecimalString}`, the value
+must be valid ASN.1.
 
-oid`={text}`String, where oid is the object identifier of the extension and String is a value that
-you provide. String must contain a textual representation of the extension value in a format
-specific to each object ID. When String is processed, it will be encoded into an ASN.1 extension
-value before being placed into the new certificate as an extension.
+`{oid}={text}{String}`, where `{oid}` is the object identifier of the extension and `{String}` is a
+value that you provide. `{String}` must contain a textual representation of the extension value in a
+format specific to each object ID. When `{String}` is processed, it will be encoded into an ASN.1
+extension value before being placed into the new certificate as an extension.
 
-To specify that an extension is critical, insert `{critical}` immediately following `oid=` in any of
-the previous cases.
+To specify that an extension is critical, insert `{critical}` immediately following `{oid}=` in any
+of the previous cases.
 
 The object identifiers of some common extensions are as follows:
 
-- Application Policy.
-`1.3.6.1.4.1.311.21.10`
-- Application Policy Mappings.
-`1.3.6.1.4.1.311.21.11`
-- Basic Constraints.
-`2.5.29.19`
-- Certificate Policies.
-`2.5.29.32`
-- Enhanced Key Usage.
-`2.5.29.37`
-- Name Constraints.
-`2.5.29.30`
-- Policy Mappings.
-`2.5.29.33`
-- Subject Alternative Name.
-`2.5.29.17`
+- Application Policy: `1.3.6.1.4.1.311.21.10`
+- Application Policy Mappings: `1.3.6.1.4.1.311.21.11`
+- Basic Constraints: `2.5.29.19`
+- Certificate Policies: `2.5.29.32`
+- Enhanced Key Usage: `2.5.29.37`
+- Name Constraints: `2.5.29.30`
+- Policy Mappings: `2.5.29.33`
+- Subject Alternative Name: `2.5.29.17`
 
-Application Policy
-`1.3.6.1.4.1.311.21.10={text}token=value&token=value…`
-The tokens have the following possible values:
+Application Policy extension example: `1.3.6.1.4.1.311.21.10={text}{token}={value}&{token}={value}...`
 
-- Flags.
-0xhexidecimalNumber
-- GUID.
-A globally unique ID, such as this example: `f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39`
-- Notice.
-Text notice
-- OID.
-Object identifier in dotted decimal notation, such as this example: `1.2.3.4.5`
-- URL.
-The URL of a host, such as this example: `http://computer07.contoso.com`
+You can specify the following tokens in an Application Policy extension:
+
+- **Flags**: Bitwise flags in hexadecimal notation: `0x{hexadecimalNumber}`
+- **GUID**: A globally unique ID, such as this example: `f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39`
+- **Notice**: Text notice
+- **OID**: Object identifier in dotted decimal notation, such as this example: `1.2.3.4.5`
+- **URL**: The URL of a host, such as this example: `http://computer07.contoso.com`
 
 To specify an Application Policy extension, specify the first object identifier, followed by zero or
-more other **token=value** entries. These entries are subordinate to the preceding object
-identifier. Specify subsequent object identifiers, each followed by its subordinate **token=value**
-entries.
+more other `{token}={value}` entries. These entries are subordinate to the preceding object
+identifier. Specify subsequent object identifiers, each followed by its subordinate
+`{token}={value}` entries.
 
-Application Policy Mappings
-`1.3.6.1.4.1.311.21.11={text}oid=oid&oid=oid…`
+Application Policy Mappings extension example: `1.3.6.1.4.1.311.21.11={text}oid={oid}&oid={oid}...`
 
-Certificate Policies
-`2.5.29.32={text}token=value&token=value…`
-The tokens have the following possible values:
+Certificate Policies extension example: `2.5.29.32={text}{token}={value}&{token}={value}...`
 
-- Flags.
-0xhexidecimalNumber
-- GUID.
-A globally unique ID, such as this example: `f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39`
-- Notice.
-Text notice
-- OID.
-Object ID in dotted decimal notation, such as this example: `1.2.3.4.5`
-- URL.
-The URL of a host, such as this example: `http://computer07.contoso.com`
+You can specify the following tokens in a Certificate Policies extension:
+
+- **Flags**: Bitwise flags in hexadecimal notation: `0x{hexadecimalNumber}`
+- **GUID**: A globally unique ID, such as this example: `f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39`
+- **Notice**: Text notice
+- **OID**: Object identifier in dotted decimal notation, such as this example: `1.2.3.4.5`
+- **URL**: The URL of a host, such as this example: `http://computer07.contoso.com`
 
 To specify a Certificate Policies extension, follow the same syntax as an Application Policy
 extension.
 
-Enhanced Key Usage Object Identifiers
-`2.5.29.37={text}oid,oid…`
+Enhanced Key Usage Object Identifiers extension example: `2.5.29.37={text}{oid},{oid}...`
+
 These key usages have the following object identifiers:
 
-- Client Authentication.
-`1.3.6.1.5.5.7.3.2`
-- Server Authentication.
-`1.3.6.1.5.5.7.3.1`
-- Secure Email.
-`1.3.6.1.5.5.7.3.4`
-- Code Signing.
-`1.3.6.1.5.5.7.3.3`
-- Timestamp Signing.
-`1.3.6.1.5.5.7.3.8`
+- Client Authentication: `1.3.6.1.5.5.7.3.2`
+- Server Authentication: `1.3.6.1.5.5.7.3.1`
+- Secure Email: `1.3.6.1.5.5.7.3.4`
+- Code Signing: `1.3.6.1.5.5.7.3.3`
+- Timestamp Signing: `1.3.6.1.5.5.7.3.8`
 
-Name Constraints `2.5.29.30={text}subtree=subtreeValue&token=value&token=value&`
-`…&subtree=subtreeValue&token=value&token=value…` The subtreeValue can have the following values:
+Name Constraints extension example:
+`2.5.29.30={text}subtree=include&{token}={value}&{token}={value}&subtree=exclude&{token}={value}...`
 
-- `Include`.
-Permitted names
-- `Exclude`.
-Excluded names
+A Name Constraints extension can have **Subtree** values of `Include` and `Exclude` to specify
+included and excluded names.
 
-The tokens have the following possible values:
+You can specify the following tokens in a Name Constraints extension:
 
-- DirectoryName.
-`CN=Name,DC=Domain,DC=com`
-- DNS.
-A computer name in the following format: `computer.contoso.com`
-- Email.
-An email address, such as this example: `admin@contoso.com`
-- IPAddress.
-IPV4 address,IPV4 subnet mask or IPV6 address,IPV6 subnet mask
-- RegisteredID.
-ID in dotted decimal notation, such as this example: `1.2.3.4.5`
-- UPN.
-A user principal name in the following format: `admin@contoso.com`
-- URL.
-The URL of a host, such as this example: `http://computer07.contoso.com/index.html`
+- **DirectoryName**: A distinguished name such as: `CN=Name,DC=Domain,DC=com`
+- **DNS**: A computer name in the following format: `computer.contoso.com`
+- **Email**: An email address, such as this example: `admin@contoso.com`
+- **IPAddress**: `{IPV4 address},{IPV4 subnet mask}` or `{IPV6 address},{IPV6 subnet mask}`
+- **RegisteredID**: ID in dotted decimal notation, such as this example: `1.2.3.4.5`
+- **UPN**: A user principal name in the following format: `admin@contoso.com`
+- **URL**: The URL of a host, such as this example: `http://computer07.contoso.com/index.html`
 
-Policy Mapping
-`2.5.29.33={text}oid=oid&oid=oid…`
+Policy Mapping extension example: `2.5.29.33={text}oid={oid}&oid={oid}...`
 
-Subject Alternative Name Syntax
-`2.5.29.17={text}token=value&token=value…`
-The tokens have the following possible values:
+Subject Alternative Name extension example: `2.5.29.17={text}token=value&token=value...`
 
-- UPN.
-A user principal name in the following format: `admin@contoso.com`
-- Email.
-An email address, such as this example: `admin@contoso.com`
-- DNS.
-A computer name in the following format: `computer.contoso.com`
-- DirectoryName.
-`CN=Name,DC=Domain,DC=com`
-- URL.
-The URL of a host, such as this example: `http://computer07.contoso.com/index.html`
-- IPAddress.
-An IP address
-- RegisteredID.
-ID in dotted decimal notation, such as this example: `1.2.3.4.5`
-- GUID.
-A globally unique ID, such as this example: `f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39`
+You can specify the following tokens in a Subject Alternative Name extension:
+
+- **DirectoryName**: A distinguished name such as: `CN=Name,DC=Domain,DC=com`
+- **DNS**: A computer name in the following format: `computer.contoso.com`
+- **Email**: An email address, such as this example: `admin@contoso.com`
+- **GUID**: A globally unique ID, such as this example: `f7c3ac41-b8ce-4fb4-aa58-3d1dc0e36b39`
+- **IPAddress**: `{IPV4 address},{IPV4 subnet mask}` or `{IPV6 address},{IPV6 subnet mask}`
+- **RegisteredID**: ID in dotted decimal notation, such as this example: `1.2.3.4.5`
+- **UPN**: A user principal name in the following format: `admin@contoso.com`
+- **URL**: The URL of a host, such as this example: `http://computer07.contoso.com/index.html`
 
 ```yaml
 Type: System.String[]

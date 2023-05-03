@@ -69,7 +69,7 @@ This command displays the default NDES settings that will be configured if it is
 ```powershell
 $params = @{
     ServiceAccountName     = "CONTOSO\svcNDES"
-    ServiceAccountPassword = (read-host "Set user password" -assecurestring)
+    ServiceAccountPassword = (Read-Host "Set user password" -AsSecureString)
     WhatIf                 = $true
 }
 Install-AdcsNetworkDeviceEnrollmentService @params
@@ -98,7 +98,7 @@ common name for `<CAComputerName>` and `<CACommonName>`.
 ```powershell
 $params = @{
     ServiceAccountName     = "CONTOSO\svcNDES"
-    ServiceAccountPassword = (read-host "Set user password" -assecurestring)
+    ServiceAccountPassword = (Read-Host "Set user password" -AsSecureString)
     CAConfig               = "CAComputerName\CAName"
     RAName                 = "Contoso-NDES-RA"
     RACountry              = "US"

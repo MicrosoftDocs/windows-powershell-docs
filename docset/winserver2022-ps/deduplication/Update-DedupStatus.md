@@ -27,9 +27,10 @@ deduplication savings information. This cmdlet returns a **DeduplicationStatus**
 access to cached metadata use `Get-DedupStatus`. When this cmdlet is run on multiple volumes with
 one cmdlet call, the analysis for each volume is done serially.
 
-Note: On large volumes this cmdlet can run for several minutes and will always perform a rescan
-after the initial scan. The default behavior is to wait for completion, regardless of the length of
-time required to run the scan and rescan.
+> [!NOTE]
+> On large volumes this cmdlet can run for several minutes and will always perform a rescan after
+> the initial scan. The default behavior is to wait for completion, regardless of the length of
+> time required to run the scan and rescan.
 
 To run this cmdlet, you must start Windows PowerShell® with the **Run as administrator** option.
 
@@ -149,7 +150,7 @@ Accept wildcard characters: False
 
 Specifies one or more file system volumes for which to scan and compute fresh data deduplication
 savings information. Enter one or more volume IDs, drive letters, or volume GUID paths. For drive
-letters, use the format `D:`. For volume GUID paths, use the format `\\\\?\Volume{{GUID}}\`.
+letters, use the format `D:`. For volume GUID paths, use the format `\\?\Volume{{GUID}}\`.
 Separate multiple volumes with a comma.
 
 ```yaml
@@ -179,7 +180,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object.
 

@@ -194,7 +194,7 @@ Accept wildcard characters: False
 
 Specifies one or more file system volumes on which to cancel one or more named data deduplication
 jobs. Enter one or more volume IDs, drive letters, or volume GUID paths. For drive letters, use the
-format `D:`. For volume GUID paths, use the format `\\\\?\Volume{{GUID}}\`. Separate multiple
+format `D:`. For volume GUID paths, use the format `\\?\Volume{{GUID}}\`. Separate multiple
 volumes with a comma.
 
 ```yaml
@@ -222,7 +222,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object.
 
@@ -232,13 +232,13 @@ namespace and class name for the underlying WMI object.
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object.
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Deduplication/MSFT_DedupJob
 
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object.
 

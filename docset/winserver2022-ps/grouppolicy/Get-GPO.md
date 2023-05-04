@@ -113,7 +113,7 @@ WmiFilter        :
 This command gets the GPO that has the ID (GUID) `331a09564-cd4a-4520-98fa-446a2af23b4b` in the
 `sales.contoso.com` domain.
 If the domain of the user that is running the session (or, for startup and shutdown scripts, the
-computer) is different that sales.contoso.com, a trust must exist between the two domains.
+computer) is different than `sales.contoso.com`, a trust must exist between the two domains.
 The command retrieves the GPO information by contacting the PDC (in the `sales.contoso.com` domain).
 
 ### Example 3: Get all GPOs from a domain

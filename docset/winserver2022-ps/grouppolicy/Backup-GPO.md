@@ -39,7 +39,7 @@ Backup-GPO -Path <String> [-Comment <String>] [-Domain <String>] [-Server <Strin
 
 ## DESCRIPTION
 
-The **Backup-GPO** cmdlet backs up a specified Group Policy Object (GPO) or all the GPOs in a domain
+The `Backup-GPO` cmdlet backs up a specified Group Policy Object (GPO) or all the GPOs in a domain
 to a backup directory. The backup directory and GPO must already exist.
 
 ## EXAMPLES

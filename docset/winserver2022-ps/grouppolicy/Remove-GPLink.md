@@ -45,16 +45,16 @@ Remove-GPLink -Name "MyGPO" -Target "OU=MyOU,dc=contoso,dc=com"
 ```
 
 ```Output
-DisplayName      : MyGPO 
-DomainName       : contoso.com 
-Owner            : CONTOSO\Domain Admins 
-Id               : 375865b2-3b5f-480f-8f56-2a994ea6e725 
-GpoStatus        : AllSettingsEnabled 
-Description      : 
-CreationTime     : 2/26/2009 11:28:08 PM 
-ModificationTime : 3/5/2009 3:36:34 PM 
-UserVersion      : AD Version: 0, SysVol Version: 0 
-ComputerVersion  : AD Version: 1, SysVol Version: 1 
+DisplayName      : MyGPO
+DomainName       : contoso.com
+Owner            : CONTOSO\Domain Admins
+Id               : 375865b2-3b5f-480f-8f56-2a994ea6e725
+GpoStatus        : AllSettingsEnabled
+Description      :
+CreationTime     : 2/26/2009 11:28:08 PM
+ModificationTime : 3/5/2009 3:36:34 PM
+UserVersion      : AD Version: 0, SysVol Version: 0
+ComputerVersion  : AD Version: 1, SysVol Version: 1
 WmiFilter        :
 ```
 
@@ -76,28 +76,28 @@ This command removes the link between the GPO named MyGPO and the default site.
 ```
 
 ```Output
-DisplayName      : TestGPO-3 
-DomainName       : contoso.com 
-Owner            : CONTOSO\Domain Admins 
-Id               : d02126d4-82e8-4e87-b4a0-2d44b6891411 
-GpoStatus        : AllSettingsEnabled 
-Description      : 
-CreationTime     : 2/27/2009 2:59:51 PM 
-ModificationTime : 3/5/2009 3:36:37 PM 
-UserVersion      : AD Version: 13, SysVol Version: 13 
-ComputerVersion  : AD Version: 0, SysVol Version: 0 
-WmiFilter        : 
+DisplayName      : TestGPO-3
+DomainName       : contoso.com
+Owner            : CONTOSO\Domain Admins
+Id               : d02126d4-82e8-4e87-b4a0-2d44b6891411
+GpoStatus        : AllSettingsEnabled
+Description      :
+CreationTime     : 2/27/2009 2:59:51 PM
+ModificationTime : 3/5/2009 3:36:37 PM
+UserVersion      : AD Version: 13, SysVol Version: 13
+ComputerVersion  : AD Version: 0, SysVol Version: 0
+WmiFilter        :
 
-DisplayName      : TestGPO-2 
-DomainName       : contoso.com 
-Owner            : CONTOSO\Domain Admins 
-Id               : 375865b2-3b5f-480f-8f56-2a994ea6e725 
-GpoStatus        : AllSettingsEnabled 
-Description      : 
-CreationTime     : 2/26/2009 11:28:08 PM 
-ModificationTime : 3/5/2009 3:36:34 PM 
-UserVersion      : AD Version: 0, SysVol Version: 0 
-ComputerVersion  : AD Version: 1, SysVol Version: 1 
+DisplayName      : TestGPO-2
+DomainName       : contoso.com
+Owner            : CONTOSO\Domain Admins
+Id               : 375865b2-3b5f-480f-8f56-2a994ea6e725
+GpoStatus        : AllSettingsEnabled
+Description      :
+CreationTime     : 2/26/2009 11:28:08 PM
+ModificationTime : 3/5/2009 3:36:34 PM
+UserVersion      : AD Version: 0, SysVol Version: 0
+ComputerVersion  : AD Version: 1, SysVol Version: 1
 WmiFilter        :
 ```
 
@@ -111,22 +111,6 @@ inherited from higher-level containers are not included. This collection is pipe
 
 ## PARAMETERS
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Domain
 
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
@@ -139,9 +123,9 @@ For the `Remove-GPLink` cmdlet:
 - The Active Directory container (site, domain, or OU) that is linked must exist in a domain that
   has a trust relationship with this domain.
 
-Note: To specify a domain to link to, use the Target parameter.
+Note: To specify a domain to link to, use the **Target** parameter.
 
-If you do not specify the Domain parameter, the domain of the user that is running the current
+If you do not specify the **Domain** parameter, the domain of the user that is running the current
 session is used. If the cmdlet is being run from a computer startup or shutdown script, the domain
 of the computer is used. For more information, see the Notes section in the full Help.
 
@@ -167,7 +151,7 @@ Accept wildcard characters: False
 ### -Guid
 
 Specifies the GPO for which to remove the link by its globally unique identifier (GUID).
-The GUID uniquely identifies the GPO.
+The `GUID` uniquely identifies the GPO.
 
 You can also refer to the **Guid** parameter by its built-in aliases, **id** and **gpoid**. For more
 information, see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
@@ -212,8 +196,8 @@ Accept wildcard characters: False
 Specifies the name of the domain controller that this cmdlet contacts to complete the operation. You
 can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the **Server** parameter, the primary domain controller
-(PDC) emulator is contacted.
+If you do not specify the name using the **Server** parameter, the primary domain controller (PDC)
+emulator is contacted.
 
 You can also refer to the **Server** parameter by its built-in alias, **DC**. For more information,
 see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
@@ -239,12 +223,28 @@ or OU from which to remove the link. For instance, for the `MyOU` organizational
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -276,7 +276,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.GroupPolicy.GpoLink
-~~~~
+
 This cmdlet accepts an object that represents the link between a GPO and a site, domain, or OU.
 
 ## OUTPUTS
@@ -292,4 +292,3 @@ This cmdlet returns the GPO for which the link has been removed.
 [New-GPLink](./New-GPLink.md)
 
 [Set-GPLink](./Set-GPLink.md)
-

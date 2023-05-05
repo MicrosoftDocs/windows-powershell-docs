@@ -60,7 +60,7 @@ This command gets the permission level for the Domain Users group on the GPO nam
 
 ```powershell
 $params = @{
-    Domain     = 'Sales.Contoso.com'
+    Domain     = 'sales.contoso.com'
     Server     = 'DC1'
     GUID       = 'fa4a9473-6e2a-4b87-ab78-175e68d97bde'
     TargetName = 'Domain Admins'

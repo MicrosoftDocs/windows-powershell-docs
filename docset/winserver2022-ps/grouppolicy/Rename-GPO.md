@@ -11,31 +11,39 @@ title: Rename-GPO
 # Rename-GPO
 
 ## SYNOPSIS
+
 Assigns a new display name to a GPO.
 
 ## SYNTAX
 
 ### RenameByGUID (Default)
+
 ```
-Rename-GPO -Guid <Guid> -TargetName <String> [-Domain <String>] [-Server <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Rename-GPO -Guid <Guid> -TargetName <String> [-Domain <String>] [-Server <String>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### RenameByName
+
 ```
-Rename-GPO [-Name] <String> -TargetName <String> [-Domain <String>] [-Server <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Rename-GPO [-Name] <String> -TargetName <String> [-Domain <String>] [-Server <String>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Rename-GPO** cmdlet assigns a different, non-null display name to a Group Policy Object (GPO).
+
+The `Rename-GPO` cmdlet assigns a different, non-null display name to a Group Policy Object (GPO).
 This cmdlet has no effect on the GUID of the GPO.
 
 ## EXAMPLES
 
 ### Example 1: Rename a GPO
+
+```powershell
+Rename-GPO -Name "SampleGPO" -TargetName "SecurityGPO"
 ```
-PS C:\> Rename-GPO -Name "SampleGPO" -TargetName "SecurityGPO"
+
+```Output
 DisplayName      : securityGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -49,15 +57,16 @@ ComputerVersion  : AD Version: 0, SysVol Version: 0
 WmiFilter        :
 ```
 
-This command renames the GPO named SampleGPO to SecurityGPO.
+This command renames the GPO named `SampleGPO` to `SecurityGPO`.
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -69,22 +78,25 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-Specifies the domain for this cmdlet.
-You must specify the fully qualified domain name (FQDN) of the domain.
 
-For the **Rename-GPO** cmdlet, this is the domain of the GPO that you want to rename.
+Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
+domain.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
-If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.
-For more information, see the Notes section in the full Help.
+For the `Rename-GPO` cmdlet, this is the domain of the GPO that you want to rename.
 
-If you specify a domain that is different from the domain of the user that is running the current session (or, for a startup or shutdown script, the computer), a trust must exist between that domain and the domain of the user or the computer.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current
+session is used. If the cmdlet is being run from a computer startup or shutdown script, the domain
+of the computer is used. For more information, see the Notes section in the full Help.
 
-You can also refer to the *Domain* parameter by its built-in alias, domainname.
-For more information, see about_Aliases.
+If you specify a domain that is different from the domain of the user that is running the current
+session (or, for a startup or shutdown script, the computer), a trust must exist between that domain
+and the domain of the user or the computer.
+
+You can also refer to the **Domain** parameter by its built-in alias, **DomainName**. For more
+information, see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainName
 
@@ -96,10 +108,11 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
-Specifies the GPO to rename by its globally unique identifier (GUID).
-The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, id.
+Specifies the GPO to rename by its globally unique identifier (GUID). The GUID uniquely identifies
+the GPO.
+
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: Guid
@@ -114,16 +127,17 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the GPO to rename by its current display name.
 
-The display name is not guaranteed to be unique in the domain.
-If another GPO with the same display name exists in the domain, an error occurs.
-You can use the *Guid* parameter to uniquely identify a GPO.
+The display name is not guaranteed to be unique in the domain. If another GPO with the same display
+name exists in the domain, an error occurs. You can use the **Guid** parameter to uniquely identify
+a GPO.
 
-You can also refer to the Name parameter by its built-in alias, displayname.
+You can also refer to the Name parameter by its built-in alias, **DisplayName**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: RenameByName
 Aliases: DisplayName
 
@@ -135,15 +149,17 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
-You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+Specifies the name of the domain controller that this cmdlet contacts to complete the operation. You
+can specify either the fully qualified domain name (FQDN) or the host name.
 
-You can also refer to the *Server* parameter by its built-in alias, dc.
+If you do not specify the name by using the **Server** parameter, the primary domain controller
+(PDC) emulator is contacted.
+
+You can also refer to the **Server** parameter by its built-in alias, **DC**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -155,11 +171,12 @@ Accept wildcard characters: False
 ```
 
 ### -TargetName
-Specifies the new display name of the GPO.
-Because the display name may not be unique, an error is returned if another GPO in the domain has the same display name.
+
+Specifies the new display name of the GPO. Because the display name may not be unique, an error is
+returned if another GPO in the domain has the same display name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -171,11 +188,11 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -187,29 +204,38 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.GroupPolicy.Gpo
-You can pipe a **GPO** object to the GPO to rename.
-Collections that contain GPOs from different domains are not supported.
+
+You can pipe a **GPO** object to the GPO to rename. Collections that contain GPOs from different
+domains are not supported.
 
 ## OUTPUTS
 
 ### Microsoft.GroupPolicy.Gpo
+
 This cmdlet returns the GPO with the new display name.
 
 ## NOTES
-* You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
 
-  If you do not explicitly specify the domain, the cmdlet uses a default domain.
-The default domain is the domain that is used to access network resources by the security context under which the current session is running.
-This domain is typically the domain of the user that is running the session.
-For example, the domain of the user who started the session by opening Windows PowerShell from the Program Files menu, or the domain of a user that is specified in a runas command.
-However, computer startup and shutdown scripts run under the context of the LocalSystem account.
-The LocalSystem account is a built-in local account, and it accesses network resources under the context of the computer account.
-Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
+* You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
+
+  If you do not explicitly specify the domain, the cmdlet uses a default domain. The default domain
+  is the domain that is used to access network resources by the security context under which the
+  current session is running. This domain is typically the domain of the user that is running the
+  session. For example, the domain of the user who started the session by opening Windows PowerShell
+  from the Program Files menu, or the domain of a user that is specified in a runas command.
+  However, computer startup and shutdown scripts run under the context of the LocalSystem account.
+  The LocalSystem account is a built-in local account, and it accesses network resources under the
+  context of the computer account. Therefore, when this cmdlet is run from a startup or shutdown
+  script, the default domain is the domain to which the computer is joined.
 
 ## RELATED LINKS
 

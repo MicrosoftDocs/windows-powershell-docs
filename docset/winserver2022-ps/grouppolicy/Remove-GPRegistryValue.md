@@ -32,7 +32,7 @@ Remove-GPRegistryValue [-Name] <String> [-Key] <String> [[-ValueName] <String>] 
 
 ## DESCRIPTION
 
-The **Remove-GPRegistryValue** cmdlet removes one or more registry-based policy settings from either
+The `Remove-GPRegistryValue` cmdlet removes one or more registry-based policy settings from either
 Computer Configuration or User Configuration in a Group Policy Object (GPO). You can specify the GPO
 by its display name or by its GUID.
 
@@ -86,7 +86,7 @@ This command removes the registry-based policy setting for the registry value
 the GPO named `TestGPO`. The registry value is no longer modified when the GPO is applied on a
 client. Removing a policy setting does not delete the registry value on a client. To delete the
 registry value when the GPO is applied on a client, you must disable the policy setting by using the
-**Set-GPRegistryValue** cmdlet.
+`Set-GPRegistryValue` cmdlet.
 
 ### Example 2: Remove all the registry-based policy settings under the specified registry key
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **Remove-GPRegistryValue** cmdlet, the GPO from which to remove the registry-based policy setting must exist in this domain.
+For the `Remove-GPRegistryValue` cmdlet, the GPO from which to remove the registry-based policy setting must exist in this domain.
 
 If you do not specify the **Domain** parameter, the domain of the user that is running the current
 session is used. If the cmdlet is being run from a computer startup or shutdown script, the domain

@@ -23,7 +23,7 @@ Set-GPInheritance [-Target] <String> -IsBlocked <BlockInheritance> [-Domain <Str
 
 ## DESCRIPTION
 
-The **Set-GPInheritance** cmdlet blocks or unblocks inheritance for a specified domain or
+The `Set-GPInheritance` cmdlet blocks or unblocks inheritance for a specified domain or
 organizational unit (OU).
 
 GPOs are applied according to the Group Policy hierarchy in the following order: local GPO, GPOs
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **Set-GPInheritance** cmdlet, this is typically the domain of the Active Directory container
+For the `Set-GPInheritance` cmdlet, this is typically the domain of the Active Directory container
 (domain or OU) for which you want to block or unblock inheritance. If the domain for the cmdlet is
 different than the domain of the container, a trust must exist between the two domains.
 

@@ -34,7 +34,7 @@ Import-GPO -BackupGpoName <String> -Path <String> [-TargetGuid <Guid>] [-TargetN
 
 ## DESCRIPTION
 
-The **Import-GPO** cmdlet imports the settings from a Group Policy Object (GPO) backup into a
+The `Import-GPO` cmdlet imports the settings from a Group Policy Object (GPO) backup into a
 specified target GPO. The target GPO can be in a different domain or forest than the backup that was
 made and it does not have to exist prior to the operation.
 
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **Import-GPO** cmdlet, this is the domain into which you want to import the GPO.
+For the `Import-GPO` cmdlet, this is the domain into which you want to import the GPO.
 
 If you do not specify the **Domain** parameter, the domain of the user that is running the current
 session is used. If the cmdlet is being run from a computer startup or shutdown script, the domain
@@ -385,7 +385,7 @@ This cmdlet returns an object that represents the GPO after the settings have be
 
 ## NOTES
 
-* You can use the **Import-GPO** to copy settings from a GPO backup in one domain to the same domain
+* You can use the `Import-GPO` to copy settings from a GPO backup in one domain to the same domain
   or another domain in the same or different forest.
 
   You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.

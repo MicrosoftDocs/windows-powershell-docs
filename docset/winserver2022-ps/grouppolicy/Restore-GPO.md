@@ -46,7 +46,7 @@ Restore-GPO -Path <String> [-Domain <String>] [-Server <String>] [-All] [-WhatIf
 
 ## DESCRIPTION
 
-The **Restore-GPO** cmdlet restores a Group Policy Object (GPO) backup to the original domain from
+The `Restore-GPO` cmdlet restores a Group Policy Object (GPO) backup to the original domain from
 which it was saved. If the original domain is not available, or if the GPO no longer exists in the
 domain, the cmdlet fails.
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **Restore-GPO** cmdlet, this is the domain in which you want to restore the GPO. This must
+For the `Restore-GPO` cmdlet, this is the domain in which you want to restore the GPO. This must
 be the domain from which the GPO was backed up.
 
 If you do not specify the **Domain** parameter, the domain of the user that is running the current

@@ -36,12 +36,12 @@ Get-GPStarterGPO [-Domain <String>] [-Server <String>] [-All] [<CommonParameters
 
 ## DESCRIPTION
 
-The **Get-GPStarterGPO** cmdlet gets one Starter Group Policy Object (GPO) or all Starter GPOs in a
+The `Get-GPStarterGPO` cmdlet gets one Starter Group Policy Object (GPO) or all Starter GPOs in a
 domain. You can specify the Starter GPO to get either by display name or by GUID, or you can specify
 the **All** parameter to get all the Starter GPOs in the domain.
 
 You can use this cmdlet to get information about a StarterGPO, or you can create a new GPO from a
-specified Starter GPO by piping the output of this cmdlet into the **New-GPO** cmdlet.
+specified Starter GPO by piping the output of this cmdlet into the `New-GPO` cmdlet.
 
 ## EXAMPLES
 
@@ -95,8 +95,8 @@ WmiFilter         :
 ```
 
 This command creates a GPO named `TestGPO` from the GPO named `Windows Vista EC User` Starter. The
-command uses the **Get-SPStarterGPO** cmdlet to get the Starter GPO and is then piped into the
-**New-GPO** cmdlet to create the GPO.
+command uses the `Get-SPStarterGPO` cmdlet to get the Starter GPO and is then piped into the
+`New-GPO` cmdlet to create the GPO.
 
 ## PARAMETERS
 
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **Get-GPStarterGPO** cmdlet, the Starter GPO must exist in this domain.
+For the `Get-GPStarterGPO` cmdlet, the Starter GPO must exist in this domain.
 
 If you do not specify the **Domain** parameter, the domain of the user that is running the current
 session is used. If the cmdlet is being run from a computer startup or shutdown script, the domain

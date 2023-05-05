@@ -162,15 +162,15 @@ Remove-GPPrefRegistryValue @removeGPPrefParams |
 
 This command creates a disabled Registry preference item for the registry value
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey ValueOne` in `User` Configuration in the GPO named
-`TestGPO`. The **Remove-GPPrefRegistryValue** command removes any Registry preference items that
+`TestGPO`. The `Remove-GPPrefRegistryValue` command removes any Registry preference items that
 configure the value from User Configuration. Then, the GPO named `TestGPO` returned by the
-**Remove-GPPrefRegistryValue** is piped into **Set-GPPrefRegistryValue** to configure the `disabled`
+`Remove-GPPrefRegistryValue` is piped into `Set-GPPrefRegistryValue` to configure the `disabled`
 Registry preference item. After this command completes, the `disabled` Registry preference item is
 the only Registry preference item associated with the registry value in User Configuration.
 
 If `TestGPO` does not initially have a Registry preference item configured for the specified
 registry value, a non-terminating error occurs. You can suppress the error message by supplying the
-**ErrorAction** parameter to **Remove-GPPrefRegistryValue** and setting its value to
+**ErrorAction** parameter to `Remove-GPPrefRegistryValue` and setting its value to
 SilentlyContinue. For more information about the **ErrorAction** parameter, see
 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -200,13 +200,13 @@ This command configures a Registry preference item to update the registry value
 previously had a Registry preference item configured for that value in User Configuration.
 
 The command is invoked with the **All** parameter to get all the GPOs in the domain. These GPOs are
-piped into the **Remove-GPPrefRegistryValue** cmdlet. If the GPO contains any Registry preference
-items configured for the specified key, they are removed. **Remove-GPPrefRegistryValue** only
+piped into the `Remove-GPPrefRegistryValue` cmdlet. If the GPO contains any Registry preference
+items configured for the specified key, they are removed. `Remove-GPPrefRegistryValue` only
 outputs a GPO to the pipeline if it removes a Registry preference item from a GPO. Finally, these
-GPOs are piped to the **Set-GPPrefRegistryValue** to configure the Registry preference item to
+GPOs are piped to the `Set-GPPrefRegistryValue` to configure the Registry preference item to
 update the registry value.
 
-If a GPO passed to **Remove-GPPrefRegistryValue** does not have a Registry preference item
+If a GPO passed to `Remove-GPPrefRegistryValue` does not have a Registry preference item
 configured for the specified value, a non-terminating error occurs. The **ErrorAction** parameter is
 set to `SilentlyContinue` to suppress the error message.
 
@@ -259,25 +259,25 @@ registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey` from `User` Conf
 source GPO named `TestGPO` to Computer Configuration in destination GPO named `TestGPO-1`. A copy of
 the destination GPO `TestGPO-1` is returned for each Registration preference item set.
 
-The **Get-GPPrefRegistryValue** command gets all the Registry preference items that configure values
+The `Get-GPPrefRegistryValue` command gets all the Registry preference items that configure values
 under User Configuration in the source GPO. This command also returns all first level subkeys that
 have values configured (though not the Registry preference items for the values themselves). These
-Registry preference items and the subkeys are then piped into the **Set-GPPrefRegistryValue**
+Registry preference items and the subkeys are then piped into the `Set-GPPrefRegistryValue`
 cmdlet.
 
-The **Set-GPPrefRegistryValue** command configures the Registry preference items for the registry
+The `Set-GPPrefRegistryValue` command configures the Registry preference items for the registry
 values in the destination GPO.
 
-- The subkeys returned by **Get-GPPrefRegistryValue** do not have an **Action** property, and so a
+- The subkeys returned by `Get-GPPrefRegistryValue` do not have an **Action** property, and so a
   non-terminating error occurs for each subkey. The **ErrorAction** parameter is specified to
   suppress these error messages.
 
-- It is a good practice to specify an order of one `-Order 1` in **Set-GPPrefRegistryValue** when it
+- It is a good practice to specify an order of one `-Order 1` in `Set-GPPrefRegistryValue` when it
   accepts input from the pipeline. This is because Registry preference items passed on the pipeline
   have an **Order** property. If the **Order** property of a Registry preference item passed on the
   pipeline is greater than the number of Registry preference items currently configured in the
   destination GPO, an out of range error occurs and the Registry preference item is not configured
-  in the destination GPO. By specifying the order as one in the **Set-GPPrefRegistryValue** command,
+  in the destination GPO. By specifying the order as one in the `Set-GPPrefRegistryValue` command,
   you override the **Order** property of the source Registry preference item, and prevent such
   errors from occurring.
 
@@ -355,7 +355,7 @@ a new Registry preference item that is disabled. Any existing Registry preferenc
 configure the same key or value will still be applied when the GPO is processed on a client. This
 behavior is different than disabling an existing Registry preference item using the GPMC.
 
-You can use the **Remove-GPPrefRegistryValue** cmdlet to remove any existing Registry preference
+You can use the `Remove-GPPrefRegistryValue` cmdlet to remove any existing Registry preference
 items associated with the specified key or value from the appropriate configuration (User or
 Computer) in the GPO before you create the new disabled Registry preference item. This ensures that
 after you create the disabled Registry preference item, it will be the only Registry preference item
@@ -378,7 +378,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **Set-GPPrefRegistryValue** cmdlet, the GPO for which to configure the Registry preference
+For the `Set-GPPrefRegistryValue` cmdlet, the GPO for which to configure the Registry preference
 item must exist in this domain.
 
 If you do not specify the **Domain** parameter, the domain of the user that is running the current

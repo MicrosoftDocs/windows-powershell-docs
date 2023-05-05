@@ -42,7 +42,7 @@ Set-GPPermission -PermissionLevel <GPPermissionType> -TargetName <String>
 
 ## DESCRIPTION
 
-The **Set-GPPermission** cmdlet grants a level of permissions to a security principal (user,
+The `Set-GPPermission` cmdlet grants a level of permissions to a security principal (user,
 security group, or computer) for one Group Policy Object (GPO) or all the GPOs in a domain. You use
 the **TargetName** and **TargetType** parameters to specify a user, security group, or computer for
 which to set the permission level. You can use the *Name* or the **Guid** parameter to set the
@@ -138,12 +138,12 @@ GpoApply for all GPOs on which the `Group` has permissions. The command returns 
 the new permission level is set.
 
 The cmdlet is used to get all the GPOs in the domain. Then, the collection is piped into the
-**ForEach-Object** command. As each GPO is evaluated, it is piped into **Get-GPPermission**. If a
+`ForEach-Object` command. As each GPO is evaluated, it is piped into `Get-GPPermission`. If a
 permission level for the Marketing Admins group is returned, the GPO is piped into
-**Set-GPPermission** to set the permission level for the group. The **Replace** parameter is
+`Set-GPPermission` to set the permission level for the group. The **Replace** parameter is
 specified to make sure that the previous permission level is overwritten.
 
-The **ErrorAction** parameter is set to `SilentlyContinue` for **Get-GPPermissions**. This is
+The **ErrorAction** parameter is set to `SilentlyContinue` for `Get-GPPermissions`. This is
 because a non-terminating error occurs if the specified security principal does not have permissions
 on the GPO. Specifying **ErrorAction** as `SilentlyContinue` prevents the error messages from being
 printed for GPOs on which the security principal does not have permissions. For more information
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **Set-GPPermission** cmdlet, the GPO for which to get the permission level must exist in
+For the `Set-GPPermission` cmdlet, the GPO for which to get the permission level must exist in
 this domain.
 
 If you do not specify the **DomainName** parameter, the domain of the user that is running the
@@ -330,11 +330,11 @@ principal (domain\account) or just its name.
 
 For instance, in the `contoso.com` domain, to specify:
 
-- The user `SomeUser`, use `contoso\SomeUser` or `SomeUser`.
+- The user SomeUser, use `contoso\SomeUser` or `SomeUser`.
 
 - The Domain Admins security group, use `contoso\Domain Admins` or `Domain Admins`.
 
-- The computer `computer-01`, use `contoso\computer-01` or `computer-01`.
+- The computer computer-01, use `contoso\computer-01` or `computer-01`.
 
 ```yaml
 Type: System.String

@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ### -Guid
 
 Specifies the GPO to backup by its globally unique identifier (GUID).
-The `GUID` uniquely identifies the GPO.
+The GUID uniquely identifies the GPO.
 
 You can also refer to the **Guid** parameter by its built-in alias, **Id**. For more information,
 see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).

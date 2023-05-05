@@ -23,7 +23,7 @@ Get-GPResultantSetOfPolicy [-Computer <String>] [-User <String>] -ReportType <Re
 
 ## DESCRIPTION
 
-The **Get-GPResultantSetOfPolicy** cmdlet gets and writes the Resultant Set of Policy (RSoP)
+The `Get-GPResultantSetOfPolicy` cmdlet gets and writes the Resultant Set of Policy (RSoP)
 information for a user, a computer, or both to a file.
 
 ## EXAMPLES

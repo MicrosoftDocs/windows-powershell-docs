@@ -39,7 +39,7 @@ Get-GPOReport [-ReportType] <ReportType> [[-Path] <String>] [[-Domain] <String>]
 
 ## DESCRIPTION
 
-The **Get-GPOReport** cmdlet generates a report in either XML or HTML format that describes
+The `Get-GPOReport` cmdlet generates a report in either XML or HTML format that describes
 properties and policy settings for a specified Group Policy Object (GPO) or for all GPOs in a
 domain. The information that is reported for each GPO includes: details, links, security filtering,
 Windows Management Instrumentation (WMI) filtering, delegation, and computer and user
@@ -86,7 +86,7 @@ different from `sales.contoso2.com`, a trust must exist between the two domains.
 Get-GPOReport -GUID 73624cc9-e8f2-4f05-8802-193fae8773ce -ReportType XML
 ```
 
-This command generates a report in XML format for the GPO with the specified `GUID`.
+This command generates a report in XML format for the GPO with the specified GUID.
 Because no **Path** parameter is supplied, the report is written to the display.
 
 ## PARAMETERS
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **Get-GPOReport** cmdlet:
+For the `Get-GPOReport` cmdlet:
 
 - If a single GPO is specified, it must exist in this domain.
 

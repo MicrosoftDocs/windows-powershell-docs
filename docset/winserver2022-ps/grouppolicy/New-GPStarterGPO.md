@@ -23,8 +23,8 @@ New-GPStarterGPO [-Name] <String> [-Comment <String>] [-Domain <String>] [-Serve
 
 ## DESCRIPTION
 
-The **New-GPStarterGPO** cmdlet creates a Starter GPO with the specified name. If the Starter GPOs
-folder does not exist in the SYSVOL when the **New-GPStarterGPO** cmdlet is called, it is created
+The `New-GPStarterGPO` cmdlet creates a Starter GPO with the specified name. If the Starter GPOs
+folder does not exist in the SYSVOL when the `New-GPStarterGPO` cmdlet is called, it is created
 and populated with the eight Starter GPOs that ship with Group Policy.
 
 ## EXAMPLES

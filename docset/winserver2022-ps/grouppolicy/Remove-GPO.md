@@ -32,7 +32,7 @@ Remove-GPO [-Name] <String> [-Domain <String>] [-Server <String>] [-KeepLinks] [
 
 ## DESCRIPTION
 
-The **Remove-GPO** cmdlet removes the Group Policy Object (GPO) container and data from the
+The `Remove-GPO` cmdlet removes the Group Policy Object (GPO) container and data from the
 directory service and the system volume folder (SysVol).
 
 ## EXAMPLES

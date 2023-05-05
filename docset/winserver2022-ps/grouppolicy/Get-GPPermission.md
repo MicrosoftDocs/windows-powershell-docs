@@ -32,7 +32,7 @@ Get-GPPermission [-Name] <String> [-TargetName <String>] [-TargetType <Permissio
 
 ## DESCRIPTION
 
-The **Get-GPPermission** cmdlet gets the permission level for one or more security principals on the
+The `Get-GPPermission` cmdlet gets the permission level for one or more security principals on the
 specified Group Policy Object (GPO). You can use the **TargetName** and **TargetType** parameters to
 specify a user, security group, or computer for which to get the permission level. You can use the
 **All** parameter to get the permission level for each security principal that includes: user,
@@ -140,9 +140,9 @@ TestGPO
 This command lists the display name of each GPO (in the domain) on which the specified security
 principal has permissions.
 
-First, **Get-GPO** is used to retrieve all the GPOs in the domain (**Get-GPO -All**). Then, the
-collection is piped into the foreach-object command. As each GPO is evaluated, it is piped into
-**Get-GPPermissions**. If a permission level is returned, the DisplayName property of the GPO is
+First, `Get-GPO` is used to retrieve all the GPOs in the domain (**Get-GPO -All**). Then, the
+collection is piped into the `Foreach-Object` command. As each GPO is evaluated, it is piped into
+`Get-GPPermissions`. If a permission level is returned, the DisplayName property of the GPO is
 printed ($_.DisplayName).
 
 Note: The ErrorAction parameter is set to SilentlyContinue for Get-GPPermissions. This is because a
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain. 
 
-For the **Get-GPPermission** cmdlet, the GPO for which to get the permission level must exist in
+For the `Get-GPPermission` cmdlet, the GPO for which to get the permission level must exist in
 this domain.
 
 If you do not specify the **Domain** parameter, the domain of the user that is running the current
@@ -274,11 +274,11 @@ security principal (domain\account) or just its name.
 
 For instance, in the `contoso.com` domain, to specify:
 
-- The user `someuser`, use `contoso\someuser` or `someuser`.
+- The user someuser, use `contoso\someuser` or `someuser`.
 
 - The Domain Admins security group, use `contoso\Domain Admins` or `Domain Admins`.
 
-- The computer `computer-01`, use `contoso\computer-01` or `computer-01`.
+- The computer computer-01, use `contoso\computer-01` or `computer-01`.
 
 ```yaml
 Type: System.String

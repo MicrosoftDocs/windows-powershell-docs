@@ -32,7 +32,7 @@ Rename-GPO [-Name] <String> -TargetName <String> [-Domain <String>] [-Server <St
 
 ## DESCRIPTION
 
-The **Rename-GPO** cmdlet assigns a different, non-null display name to a Group Policy Object (GPO).
+The `Rename-GPO` cmdlet assigns a different, non-null display name to a Group Policy Object (GPO).
 This cmdlet has no effect on the GUID of the GPO.
 
 ## EXAMPLES
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **Rename-GPO** cmdlet, this is the domain of the GPO that you want to rename.
+For the `Rename-GPO` cmdlet, this is the domain of the GPO that you want to rename.
 
 If you do not specify the **Domain** parameter, the domain of the user that is running the current
 session is used. If the cmdlet is being run from a computer startup or shutdown script, the domain

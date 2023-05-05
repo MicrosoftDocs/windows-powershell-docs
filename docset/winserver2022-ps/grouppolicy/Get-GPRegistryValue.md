@@ -33,7 +33,7 @@ Get-GPRegistryValue [-Name] <String> -Key <String> [-ValueName <String>] [-Domai
 
 ## DESCRIPTION
 
-The **Get-GPRegistryValue** cmdlet retrieves one or more registry-based policy settings under either
+The `Get-GPRegistryValue` cmdlet retrieves one or more registry-based policy settings under either
 Computer Configuration or User Configuration in a Group Policy Object (GPO).
 
 You can get registry-based policy settings for a specific registry value, or for all the registry
@@ -131,7 +131,7 @@ to Delete).
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain (for instance: sales.contoso.com).
 
-For the **Get-GPRegistryValue** cmdlet, the GPO for which to get registry-based policy settings must
+For the `Get-GPRegistryValue` cmdlet, the GPO for which to get registry-based policy settings must
 exist in this domain.
 
 If you do not specify the **Domain** parameter, the domain of the user that is running the current
@@ -296,9 +296,9 @@ contain GPOs from different domains are not supported.
 This cmdlet returns **PolicyRegistrySetting** objects that represent registry-based policy settings.
 These objects can be piped into the following cmdlets:
 
-- Set-GPRegistryValue
+- `Set-GPRegistryValue`
 
-- Remove-GPRegistryValue
+- `Remove-GPRegistryValue`
 
 ## NOTES
 

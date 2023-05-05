@@ -32,7 +32,7 @@ Invoke-GPUpdate [-AsJob] [-Boot] [[-Computer] <String>] [[-RandomDelayInMinutes]
 
 ## DESCRIPTION
 
-The **Invoke-GPUpdate** cmdlet refreshes Group Policy settings, including security settings that are
+The `Invoke-GPUpdate` cmdlet refreshes Group Policy settings, including security settings that are
 set on remote computers by scheduling the running of the Gpupdate command on a remote computer. You
 can combine this cmdlet in a scripted fashion to schedule the Gpupdate command on a group of
 computers.
@@ -50,7 +50,7 @@ Invoke-GPUpdate
 ```
 
 This command schedules a Group Policy refresh on the computer on which you are running the
-**Invoke-GPUpdate** cmdlet.
+`Invoke-GPUpdate` cmdlet.
 
 ### Example 2: Schedule a Group Policy refresh on a remote computer
 

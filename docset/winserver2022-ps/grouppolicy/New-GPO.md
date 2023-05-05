@@ -39,7 +39,7 @@ New-GPO [-Name] <String> -StarterGpoName <String> [-Comment <String>] [-Domain <
 
 ## DESCRIPTION
 
-The **New-GPO** cmdlet creates a GPO with a specified name. By default, the newly created GPO is not
+The `New-GPO` cmdlet creates a GPO with a specified name. By default, the newly created GPO is not
 linked to a site, domain, or organizational unit (OU).
 
 You can use this cmdlet to create a GPO that is based on a starter GPO by specifying the GUID or the
@@ -107,7 +107,7 @@ domain, and grants the `Marketing Admins` security group permissions to edit the
 
 A GPO object is returned by the command, so you could continue to configure the new GPO by piping
 the output to other cmdlets. For example, you could set Registry preference items or registry-based
-policy settings by piping the output to **Set-GPPrefRegistryValue** or to **Set-GPRegistryValue**.
+policy settings by piping the output to `Set-GPPrefRegistryValue` or to `Set-GPRegistryValue`.
 
 ## PARAMETERS
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **New-GPO** cmdlet:
+For the `New-GPO` cmdlet:
 
 - The new GPO is created in this domain.
 

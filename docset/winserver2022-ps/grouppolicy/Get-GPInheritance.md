@@ -22,12 +22,12 @@ Get-GPInheritance [-Target] <String> [-Domain <String>] [-Server <String>] [<Com
 
 ## DESCRIPTION
 
-The **Get-GPInheritance** cmdlet gets information about Group Policy inheritance for a specified
+The `Get-GPInheritance` cmdlet gets information about Group Policy inheritance for a specified
 domain or organizational unit (OU).
 
 This information includes the following:
 
-- A list of GPOs that are linked directly to the location (the `GpoLinks` property).
+- A list of GPOs that are linked directly to the location (the **GpoLinks** property).
 - A list of GPOs that are applied to the location when Group Policy is processed on a client (the
   **InheritedGpoLinks** property).
 - Whether inheritance is blocked for the location (the **GpoInheritanceBlocked** property).
@@ -116,7 +116,6 @@ UserVersion      : AD Version: 13, SysVol Version: 13
 ComputerVersion  : AD Version: 0, SysVol Version: 0
 WmiFilter        :
 
-
 DisplayName      : TestGPO-2
 DomainName       : contoso.com
 Owner            : CONTOSO\Domain Admins
@@ -130,27 +129,17 @@ ComputerVersion  : AD Version: 1, SysVol Version: 1
 WmiFilter        :
 ```
 
-This command evaluates the SOM object `Microsoft.GroupPolicy.SOM` returned by **Get-GPInheritance**
+This command evaluates the SOM object **Microsoft.GroupPolicy.SOM** returned by `Get-GPInheritance`
 and returns the GPOs that are linked to the `MyOU` organizational unit. You can use this command to
 set properties of the GPOs by piping its output into other cmdlets. For instance, you can pipe the
-output to the **Set-GPPermissions** cmdlet to delegate permissions to administrators of the OU for
+output to the `Set-GPPermissions` cmdlet to delegate permissions to administrators of the OU for
 each of the GPOs linked to the OU.
 
 The **GpoLinks** property of the SOM object contains a list of all the GPO links for the OU.
-Each object in this list is of type `Microsoft.GroupPolicy.GpoLink`.
-The following shows one such object:
+Each object in this list is of type **Microsoft.GroupPolicy.GpoLink**.
 
-```Output
-GpoId       : d02126d4-82e8-4e87-b4a0-2d44b6891411
-DisplayName : TestGPO-3
-Enabled     : True
-Enforced    : False
-Target      : ou=myou,dc=contoso,dc=com
-Order       : 1
-```
-
-The collection is piped into a foreach-object command, which retrieves each GPO by using the
-DisplayName property of the GpoLink object.
+The collection is piped into a `Foreach-Object` command, which retrieves each GPO by using the
+**DisplayName** property of the **GpoLink** object.
 
 ## PARAMETERS
 
@@ -159,7 +148,7 @@ DisplayName property of the GpoLink object.
 Specifies the domain for this cmdlet.
 You must specify the fully qualified domain name (FQDN) of the domain.
 
-For the **Get-GPInheritance** cmdlet, this is typically the domain of the container (domain or OU)
+For the `Get-GPInheritance` cmdlet, this is typically the domain of the container (domain or OU)
 for which you want to retrieve inheritance information. If the specified domain is different than
 the domain of the container, a trust must exist between the two domains.
 
@@ -171,7 +160,7 @@ If you specify a domain that is different from the domain of the user that is ru
 session (or, for a startup or shutdown script, the computer), a trust must exist between that domain
 and the domain of the user or the computer.
 
-You can also refer to the **Domain** parameter by its built-in alias, `DomainName`. For more
+You can also refer to the **Domain** parameter by its built-in alias, **DomainName**. For more
 information, see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
 
 ```yaml
@@ -247,7 +236,7 @@ An object that represents a domain or an OU.
 
 This cmdlet returns an object that represents the domain or OU. The **GpoInheritanceBlocked**
 property indicates whether inheritance is blocked. You can modify inheritance for the domain or OU
-by using the **Set-GPInheritance** cmdlet.
+by using the `Set-GPInheritance` cmdlet.
 
 ## NOTES
 

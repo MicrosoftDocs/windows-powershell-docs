@@ -66,7 +66,7 @@ Target      : OU=MyOU,DC=contoso,DC=com
 Order       : 1
 ```
 
-This command enables the link between the GPO named **TestGPO** and the `MyOU` organizational unit
+This command enables the link between the GPO named `TestGPO` and the `MyOU` organizational unit
 in the `contoso.com` domain. The **Enforced** and **Order** properties are not changed.
 
 ### Example 2: Enable the link between a GPO and two domains

@@ -35,7 +35,7 @@ Remove-GPPrefRegistryValue [-Name] <String> -Context <GpoConfiguration> -Key <St
 
 ## DESCRIPTION
 
-The **Remove-GPPrefRegistryValue** cmdlet removes one or more Registry preference items from either
+The `Remove-GPPrefRegistryValue` cmdlet removes one or more Registry preference items from either
 Computer Configuration or User Configuration in a GPO. You must specify the **Context** parameter
 for the User or Computer to indicate whether to remove the Registry preference item from Computer
 Configuration or User Configuration. You can specify the GPO by its display name or by its GUID.
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 Specifies the domain for which this cmdlet runs the operation. You must specify the fully qualified
 domain name (FQDN) of the domain.
 
-For the **Remove-GPPrefRegistryValue** cmdlet, the GPO from which to remove the Registry preference
+For the `Remove-GPPrefRegistryValue` cmdlet, the GPO from which to remove the Registry preference
 item or items must exist in this domain.
 
 If you do not specify the **Domain** parameter, the domain of the user that is running the current
@@ -393,7 +393,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 This cmdlet takes a GPO or a **PreferenceRegistrySetting** object as input. You can pipe in one or
 more **PreferenceRegistrySetting** objects to remove one or more Registry preference items from a
-specified GPO. You can pipe in one or more GPO objects, such as Get-GPO, to remove a specified
+specified GPO. You can pipe in one or more GPO objects, such as `Get-GPO`, to remove a specified
 Registry preference item from each GPO. Collections that contain GPOs from different domains are not
 supported.
 

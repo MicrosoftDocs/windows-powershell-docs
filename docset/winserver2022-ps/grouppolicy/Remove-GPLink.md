@@ -32,7 +32,7 @@ Remove-GPLink [-Name] <String> -Target <String> [-Domain <String>] [-Server <Str
 
 ## DESCRIPTION
 
-The **Remove-GPLink** cmdlet removes the link between a Group Policy Object (GPO) and a specified
+The `Remove-GPLink` cmdlet removes the link between a Group Policy Object (GPO) and a specified
 site, domain, or OU. This cmdlet does not delete the actual GPO or any other links between the
 specified GPO and other sites, domains, or OUs.
 
@@ -107,7 +107,7 @@ the `contoso.com` domain.
 This cmdlet is used to get a **Microsoft.GroupPolicy.Som** object for the OU. The GpoLinks property
 of the SOM object contains all the GPO links for GPOs that are linked to the OU. Links that are
 inherited from higher-level containers are not included. This collection is piped into
-**Remove-GPLink**. The GPOs for which links have been removed are returned.
+`Remove-GPLink`. The GPOs for which links have been removed are returned.
 
 ## PARAMETERS
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **Remove-GPLink** cmdlet:
+For the `Remove-GPLink` cmdlet:
 
 - The GPO that is linked must exist in this domain.
 

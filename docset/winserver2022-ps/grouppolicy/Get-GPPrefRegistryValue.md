@@ -33,7 +33,7 @@ Get-GPPrefRegistryValue [-Name] <String> -Context <GpoConfiguration> -Key <Strin
 
 ## DESCRIPTION
 
-The **Get-GPPrefRegistryValue** cmdlet gets one or more Registry preference items under either
+The `Get-GPPrefRegistryValue` cmdlet gets one or more Registry preference items under either
 Computer Configuration or User Configuration in a Group Policy Object (GPO). You must specify the
 *Context* parameter, for the user or computer, to indicate whether to get the Registry preference
 item from Computer Configuration or User Configuration. You can specify the GPO by its display name
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **Get-GPPrefRegistryValue** cmdlet, the GPO for which to get the Registry preference item
+For the `Get-GPPrefRegistryValue` cmdlet, the GPO for which to get the Registry preference item
 must exist in this domain.
 
 If you do not specify the **Domain** parameter, the domain of the user that is running the current
@@ -359,9 +359,9 @@ supported.
 This cmdlet returns **PreferenceRegistrySetting** objects. You can pipe these objects to the
 following cmdlets:
 
-- Set-GPPrefRegistryValue
+- `Set-GPPrefRegistryValue`
 
-- Remove-GPPrefRegistryValue
+- `Remove-GPPrefRegistryValue`
 
 ## NOTES
 

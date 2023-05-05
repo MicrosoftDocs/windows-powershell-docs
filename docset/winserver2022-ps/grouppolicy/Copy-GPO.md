@@ -5,7 +5,7 @@ Module Name: GroupPolicy
 ms.date: 12/20/2016
 online version: https://learn.microsoft.com/powershell/module/grouppolicy/copy-gpo?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Copy-GPO
+title: `Copy-GPO`
 ---
 
 # Copy-GPO
@@ -34,7 +34,7 @@ Copy-GPO [-SourceName] <String> -TargetName <String> [-SourceDomain <String>]
 
 ## DESCRIPTION
 
-The **Copy-GPO** cmdlet creates a destination Group Policy Object (GPO) and copies the settings from
+The `Copy-GPO` cmdlet creates a destination Group Policy Object (GPO) and copies the settings from
 the source GPO to the new GPO. The cmdlet can be used to copy a GPO from one domain to another
 domain within the same forest. You can specify a migration table to map security principals and
 paths when copying across domains. You can also specify whether to copy the access control list
@@ -103,9 +103,9 @@ Get-GPO -All -Domain "sales1.contoso.com" | ForEach-Object {
 This command copies all the GPOs in the `sales1.contoso.com` domain to the `sales2.contoso.com`
 domain.
 
-All the GPOs in the source domain are retrieved by using the **Get-GPO** cmdlet using the **All**
-parameter. The output of **Get-GPO** is piped into the ForEach-Object command. When each GPO is
-evaluated, it is piped into **Copy-GPO** and its display name is specified for the **TargetName**
+All the GPOs in the source domain are retrieved by using the `Get-GPO` cmdlet using the **All**
+parameter. The output of `Get-GPO` is piped into the `ForEach-Object` command. When each GPO is
+evaluated, it is piped into `Copy-GPO` and its display name is specified for the **TargetName**
 parameter `-TargetName ($_.DisplayName)`. The **CopyACL** parameter is specified to copy the ACLs
 for each GPO to the destination domain. The **MigrationTable** parameter specifies a migration table
 to use to migrate Security principals and UNC paths to the destination domain. Both the **CopyACL**
@@ -116,12 +116,12 @@ error occurs when this command attempts to copy the source GPO. Because this com
 in the source domain, errors occur for default GPOs; for instance, the Default Domain Policy GPO and
 the Default Domain Controllers Policy GPO. These GPOs are not copied. You can suppress these error
 messages by supplying the **ErrorAction** parameter with a value of SilentlyContinue to
-**Copy-GPO**. For more information about the **ErrorAction** parameter, see
+`Copy-GPO`. For more information about the **ErrorAction** parameter, see
 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 The destination GPOs that were successfully copied are returned by this command. By default, they
 are printed to the display, but you can add commands to the end of the pipeline to further configure
-these GPOs. For example you can add a Set-GPLink cmdlet to the end of the pipeline to link all the
+these GPOs. For example you can add a `Set-GPLink` cmdlet to the end of the pipeline to link all the
 destination GPOs to a site, domain, or organizational unit.
 
 A trust relationship must exist between the source domain and the destination domain. In addition,
@@ -233,10 +233,10 @@ Accept wildcard characters: False
 
 ### -SourceGuid
 
-Specifies the source GPO by its globally unique identifier `GUID`. The `GUID` uniquely identifies
+Specifies the source GPO by its globally unique identifier GUID. The GUID uniquely identifies
 the GPO.
 
-You can also refer to the **SourceGuid** parameter by its built-in alias, `Id`.
+You can also refer to the **SourceGuid** parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: System.Management.Automation.Guid
@@ -374,7 +374,7 @@ This cmdlet outputs a copy of the specified GPO.
 
 ## NOTES
 
-* You can use the **Copy-GPO** cmdlet to copy a GPO within a domain or from one domain to another
+* You can use the `Copy-GPO` cmdlet to copy a GPO within a domain or from one domain to another
   within the same forest.
 
   You can use the **SourceDomain** and **TargetDomain** parameters to explicitly specify the source

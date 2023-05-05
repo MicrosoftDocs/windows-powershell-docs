@@ -34,7 +34,7 @@ Set-GPRegistryValue [-Name] <String> -Key <String> [-ValueName <String[]>] [-Val
 
 ## DESCRIPTION
 
-The **Set-GPRegistryValue** cmdlet configures a registry-based policy setting under either Computer
+The `Set-GPRegistryValue` cmdlet configures a registry-based policy setting under either Computer
 Configuration or User Configuration in a Group Policy Object (GPO). The policy setting configures
 keys or values in the registry on the client computer when the GPO is applied.
 
@@ -235,7 +235,7 @@ You can disable a policy setting for a registry key or value:
   When the GPO is applied on the client, only the specified value is removed from the registry.
 
 To remove a policy setting from a GPO without affecting existing registry keys or values on a client
-when Group Policy is processed, use the **Remove-GPRegistryValue** cmdlet.
+when Group Policy is processed, use the `Remove-GPRegistryValue` cmdlet.
 
 You cannot specify the **Additive**, **Type**, **Value**, or **ValuePrefix** parameters with the
 **Disable** parameter.
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **Set-GPRegistryValue** cmdlet, the GPO in which to configure the registry-based policy
+For the `Set-GPRegistryValue` cmdlet, the GPO in which to configure the registry-based policy
 setting must exist in this domain.
 
 If you do not specify the **Domain** parameter, the domain of the user that is running the current

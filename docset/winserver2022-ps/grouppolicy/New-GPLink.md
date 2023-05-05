@@ -5,7 +5,7 @@ Module Name: GroupPolicy
 ms.date: 12/20/2016
 online version: https://learn.microsoft.com/powershell/module/grouppolicy/new-gplink?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: New-GPLink
+title: `New-GPLink`
 ---
 
 # New-GPLink
@@ -34,7 +34,7 @@ New-GPLink [-Name] <String> -Target <String> [-LinkEnabled <EnableLink>] [-Order
 
 ## DESCRIPTION
 
-The **New-GPLink** cmdlet links a GPO to a site, domain, or organizational unit (OU). By default,
+The `New-GPLink` cmdlet links a GPO to a site, domain, or organizational unit (OU). By default,
 the link is enabled, which means that the settings of the GPO are applied at the level of the target
 Active Directory container according to the rules of inheritance and precedence when Group Policy is
 processed.
@@ -68,9 +68,9 @@ the domain of the user, or the computer, is different than `contoso.com`, a trus
 exist between the two domains.
 
 Because this command can take a GPO as input, you can insert any command that returns a GPO between
-New-GPO and **New-GPLink** to configure the GPO. For instance, you can insert **Set-GPPermissions**
-commands to set permissions on the GPO, Set-GPRegistryValue cmdlet to configure one or more
-registry-based policy settings for the GPO, or the **Set-GPPrefRegistryValue** cmdlet to configure
+`New-GPO` and `New-GPLink` to configure the GPO. For instance, you can insert `Set-GPPermissions`
+commands to set permissions on the GPO, `Set-GPRegistryValue` cmdlet to configure one or more
+registry-based policy settings for the GPO, or the `Set-GPPrefRegistryValue` cmdlet to configure
 one or more Registry preference items for the GPO.
 
 ### Example 2: Link a GPO in the domain of the user
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 Specifies the domain for this cmdlet. You must specify the fully qualified domain name (FQDN) of the
 domain.
 
-For the **New-GPLink** cmdlet:
+For the `New-GPLink` cmdlet:
 
 - The GPO to link from must exist in this domain.
 
@@ -273,7 +273,7 @@ precedence.
 By default, the GPO link is added at the lowest precedence with a link order equal to the number of
 GPO links to the container, plus one. Link order is a dynamic value because the value may change as
 GPO links are added and deleted from the container. You can change the link order of a GPO link with
-the **Set-GPLink** cmdlet.
+the `Set-GPLink` cmdlet.
 
 ```yaml
 Type: Int32

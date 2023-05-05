@@ -5,7 +5,7 @@ Module Name: GroupPolicy
 ms.date: 12/20/2016
 online version: https://learn.microsoft.com/powershell/module/grouppolicy/new-gplink?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: `New-GPLink`
+title: New-GPLink
 ---
 
 # New-GPLink

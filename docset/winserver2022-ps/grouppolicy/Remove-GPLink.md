@@ -254,8 +254,6 @@ Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-nt.Automation.SwitchParameter
-
 Parameter Sets: (All)
 Aliases: wi
 

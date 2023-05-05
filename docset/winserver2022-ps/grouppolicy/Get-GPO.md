@@ -49,7 +49,7 @@ the requested GPOs are printed to the display; however, you can also pipe the ou
 ### Example 1: Get a single GPO from a domain
 
 ```powershell
-Get-GPO -Name "Group Policy Test" 
+Get-GPO -Name "Group Policy Test"
 ```
 
 ```Output
@@ -66,11 +66,11 @@ ComputerVersion  : AD Version: 0, SysVol Version: 0
 WmiFilter        :
 ```
 
+### Example 2: Get a single GPO by GUID
+
 This command gets the GPO named `Group Policy Test`. The GPO must exist in the domain of the user
 that is running the session (or, for startup and shutdown scripts, the computer). The command gets
 the GPO information by contacting the primary domain controller (PDC).
-
-### Example 2: Get a single GPO by GUID
 
 ```powershell
 Get-GPO -Guid 31a09564-cd4a-4520-98fa-446a2af23b4b -Domain "sales.contoso.com"
@@ -222,6 +222,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 -WarningAction, and -WarningVariable. For more information, see
 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
 ### Microsoft.GroupPolicy.Gpo
@@ -238,7 +239,7 @@ This cmdlet returns an object that represents the requested GPO.
 
 ## NOTES
 
-* You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
+- You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain. The default domain
   is the domain that is used to access network resources by the security context under which the
@@ -251,10 +252,10 @@ This cmdlet returns an object that represents the requested GPO.
   script, the default domain is the domain to which the computer is joined.
 
   Only one domain can be used by an instance of this cmdlet. If you pipe a collection of GPO
-  (Microsoft.GroupPolicy.Gpo) objects to this cmdlet, the DomainName property of the first GPO
-  object in the collection specifies the domain for the cmdlet. This is because domainname is a
-  built-in alias for the **Domain** parameter, and the **Domain** parameter can take its value by
-  property name from the pipeline. A non-terminating error occurs for any GPOs in the collection
+  (**Microsoft.GroupPolicy.Gpo**) objects to this cmdlet, the **DomainName** property of the first
+  GPO object in the collection specifies the domain for the cmdlet. This is because **domainname**
+  is a built-in alias for the **Domain** parameter, and the **Domain** parameter can take its value
+  by property name from the pipeline. A non-terminating error occurs for any GPOs in the collection
   that are not in this domain. If this domain is different from the domain of the user account (for
   startup or shutdown scripts, the computer account), a trust must exist between the two domains.
 
@@ -273,4 +274,3 @@ This cmdlet returns an object that represents the requested GPO.
 [Rename-GPO](./Rename-GPO.md)
 
 [Restore-GPO](./Restore-GPO.md)
-

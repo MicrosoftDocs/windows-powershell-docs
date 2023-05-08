@@ -11,21 +11,20 @@ title: Get-WindowsFeature
 # Get-WindowsFeature
 
 ## SYNOPSIS
-
 Gets information about Windows Server roles, role services, and features that are available for
 installation and installed on a specified server.
 
 ## SYNTAX
 
 ```
-Get-WindowsFeature [[-Name] <String[]>] [-Vhd <String>] [-ComputerName <String>] [-Credential <PSCredential>]
- [-LogPath <String>] [<CommonParameters>]
+Get-WindowsFeature [[-Name] <String[]>] [-Vhd <String>] [-ComputerName <String>]
+[-Credential <PSCredential>] [-LogPath <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The `Get-WindowsFeature` cmdlet gets information about features that are both available for
-installation and already installed on a computer that is running Windows Server, or an offline
+installation and already installed on a computer that is running Windows Server or an offline
 virtual hard disk (VHD) that is running Windows Server.
 
 ## EXAMPLES
@@ -36,8 +35,9 @@ virtual hard disk (VHD) that is running Windows Server.
 Get-WindowsFeature -ComputerName Server1 -Credential contoso.com\user1
 ```
 
-This example gets a list of features that are available and installed on the target computer named `Server1`.
-The credentials for user `user1` in the Contoso.com domain, a user who has Administrator rights on `Server1`, are provided.
+This example gets a list of features that are available and installed on the target computer named
+`Server1`. The credentials for `user1` in the `Contoso.com` domain, a user who has Administrator
+rights on `Server1`, are provided.
 
 ### Example 2
 
@@ -92,7 +92,7 @@ Add a Computer to the Trusted Host List" in
 [about_Remote_Troubleshooting](https://go.microsoft.com/fwlink/p/?LinkID=135188).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Cn
 
@@ -112,12 +112,13 @@ user name in one of the following formats. Quotation marks are optional.
 -- "UserName"
 -- "Domain\User"
 -- "User@Domain.com"
--- A Credential object returned by the [Get-Credential](https://go.microsoft.com/fwlink/p/?LinkID=113311) cmdlet.
+- A **PSCredential** object returned by the
+ [Get-Credential](https://go.microsoft.com/fwlink/p/?LinkID=113311) cmdlet.
 
 If a user name is entered, then a prompt for a password is displayed.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -134,7 +135,7 @@ Specifies a name and path to a log file.
 Add this parameter if the results of this cmdlet must be stored in a log.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -150,7 +151,7 @@ Accept wildcard characters: False
 Specifies the command IDs of roles, role services, or features about which to return information.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -180,7 +181,7 @@ that you are using to mount the VHD must be running Windows Server. Any local pa
 `D:\myFolder`, that is specified by using this parameter is always relative to the target computer.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 

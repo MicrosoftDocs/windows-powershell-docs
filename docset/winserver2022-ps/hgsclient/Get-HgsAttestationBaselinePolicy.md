@@ -27,8 +27,8 @@ Get-HgsAttestationBaselinePolicy [-Console] [-SkipValidation] [<CommonParameters
 
 ## DESCRIPTION
 
-The **Get-HgsAttestationBaselinePolicy** cmdlet generates an attestation baseline policy. You can
-use the policy to configure the attestation service.
+The `Get-HgsAttestationBaselinePolicy` cmdlet generates an attestation baseline policy. You can use
+the policy to configure the attestation service.
 
 This cmdlet gets a byte array that represents the attestation baseline policy from the raw data of
 the last full boot from the Trusted Computing Group log of the Trusted Platform Module (TPM).
@@ -40,7 +40,7 @@ Be sure to run this cmdlet on a host that is known to have good configuration.
 ### Example 1: Generate a baseline policy
 
 ```powershell
-PS C:\> Get-HgsAttestationBaselinePolicy -Path "C:\Logs\AttestationBaselinePolicy001" -Force
+Get-HgsAttestationBaselinePolicy -Path 'C:\Logs\AttestationBaselinePolicy001' -Force
 ```
 
 This command generates a byte array that represents the baseline policy in the file `C:\Logs\AttestationBaselinePolicy001`.

@@ -30,16 +30,16 @@ Grant-HgsKeyProtectorAccess -KeyProtector <CimInstance> -GuardianFriendlyName <S
 
 ## DESCRIPTION
 
-The **Grant-HgsKeyProtectorAccess** cmdlet grants a Host Guardian Service guardian access to a key protector.
-This operation requires the private signing key of the owner of the key protector.
+The `Grant-HgsKeyProtectorAccess` cmdlet grants a Host Guardian Service guardian access to a key
+protector. This operation requires the private signing key of the owner of the key protector.
 
 ## EXAMPLES
 
 ### Example 1: Grant access to a guardian
 
 ```powershell
-$Owner = Get-HgsGuardian -Name "Guardian06"
-$Guardian01 = Get-HgsGuardian -Name "Guardian11"
+$Owner        = Get-HgsGuardian -Name "Guardian06"
+$Guardian01   = Get-HgsGuardian -Name "Guardian11"
 $KeyProtector = New-HgsKeyProtector -Owner $Owner
 Grant-HgsKeyProtectorAccess -KeyProtector $KeyProtector -Guardian $Guardian01
 ```
@@ -146,7 +146,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### CimInstance#MSFT_HgsKeyProtector
 
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object.
 

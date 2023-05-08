@@ -22,7 +22,7 @@ Get-HgsClientConfiguration [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
 
 ## DESCRIPTION
 
-The **Get-HgsClientConfiguration** cmdlet get the configuration of the local Host Guardian Service
+The `Get-HgsClientConfiguration` cmdlet get the configuration of the local Host Guardian Service
 client.
 
 ## EXAMPLES
@@ -30,7 +30,7 @@ client.
 ### Example 1: Get client configuration
 
 ```powershell
-PS C:\> Get-HgsClientConfiguration
+Get-HgsClientConfiguration
 ```
 
 This command gets the configuration of the local Host Guardian Service client.
@@ -115,7 +115,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### CimInstance#MSFT_HgsClientConfiguration
 
 This cmdlet returns the configuration of a Host Guardian Service client as a **CimInstance** object.
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object.
 

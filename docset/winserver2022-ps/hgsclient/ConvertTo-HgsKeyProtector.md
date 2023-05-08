@@ -23,9 +23,9 @@ ConvertTo-HgsKeyProtector [-Bytes] <Byte[]> [-CimSession <CimSession[]>] [-Throt
 
 ## DESCRIPTION
 
-The **ConvertTo-HgsKeyProtector** cmdlet converts an existing key protector into a Host Guardian
-Service key protector object. Specify the existing key protector as a byte array. You might use this
-cmdlet to import a key protector from a virtual machine configuration file.
+The `ConvertTo-HgsKeyProtector` cmdlet converts an existing key protector into a Host Guardian
+Service key protector object. Specify the existing key protector as a byte array. You might use
+this cmdlet to import a key protector from a virtual machine configuration file.
 
 ## EXAMPLES
 
@@ -38,14 +38,14 @@ $KeyProtector = ConvertTo-HgsKeyProtector -Bytes $VirtualMachineKeyProtector
 ```
 
 The first command gets the Trusted Platform Module (TPM) object for the virtual machine named
-Shielded Virtual Machine 17. The command stores the object in the **$VirtualTPM** variable.
+Shielded Virtual Machine 17. The command stores the object in the `$VirtualTPM` variable.
 
-The second command stores the **KeyProtector** property of the object stored in **$VirtualTPM** in
-the **$VirtualMachineKeyProtector** variable.
+The second command stores the **KeyProtector** property of the object stored in `$VirtualTPM` in
+the `$VirtualMachineKeyProtector` variable.
 
 The final command creates a Host Guardian Service key protector object from the byte array
-representation stored in **$VirtualMachineKeyProtector**. The command stores the new key protector
-in the **$KeyProtector** variable.
+representation stored in `$VirtualMachineKeyProtector`. The command stores the new key protector
+in the `$KeyProtector` variable.
 
 ## PARAMETERS
 
@@ -145,7 +145,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 This cmdlet returns a key protector.
 
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
 Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
 namespace and class name for the underlying WMI object.
 

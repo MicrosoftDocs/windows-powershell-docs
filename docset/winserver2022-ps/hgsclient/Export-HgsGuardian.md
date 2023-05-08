@@ -21,17 +21,18 @@ Export-HgsGuardian [-InputObject] <CimInstance> [-Path] <String> [<CommonParamet
 
 ## DESCRIPTION
 
-The **Export-HgsGuardian** cmdlet exports a guardian that contains public keys to an .xml file.
+The `Export-HgsGuardian` cmdlet exports a guardian that contains public keys to an `.xml` file.
 
 ## EXAMPLES
 
 ### Example 1: Export a guardian
 
 ```powershell
-Get-HgsGuardian -Name "Guardian11" | Export-HGsGuardian -Path "C:\LocalHGSFiles\Guardian11.xml"
+Get-HgsGuardian -Name 'Guardian11' |
+    Export-HGsGuardian -Path 'C:\LocalHGSFiles\Guardian11.xml'
 ```
 
-This command uses the **Get-HgsGuardian** cmdlet to get the guardian named `Guardian11`, and then
+This command uses the `Get-HgsGuardian` cmdlet to get the guardian named `Guardian11`, and then
 passes the object to the current cmdlet by using the pipeline operator. That cmdlet exports the
 guardian to the specified file.
 
@@ -40,6 +41,7 @@ guardian to the specified file.
 ### -InputObject
 
 Specifies the input to this cmdlet.
+
 You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml

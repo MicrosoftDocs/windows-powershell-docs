@@ -22,9 +22,9 @@ Get-HgsGuardian [[-Name] <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimi
 
 ## DESCRIPTION
 
-The **Get-HgsGuardian** cmdlet gets Host Guardian Service guardian objects from persistent storage.
-For a computer configured in **HostGuardianService** mode, this cmdlet returns no result.
-The **New-HgsKeyProtector** cmdlet requires **HgsGuardian** objects.
+The `Get-HgsGuardian` cmdlet gets Host Guardian Service guardian objects from persistent storage.
+For a computer configured in `HostGuardianService` mode, this cmdlet returns no result. The
+`New-HgsKeyProtector` cmdlet requires **HgsGuardian** objects.
 
 ## EXAMPLES
 
@@ -39,7 +39,7 @@ This command gets all guardians configured for this computer.
 ### Example 2: Get a guardian by using its name
 
 ```powershell
-PS C:\> Get-HgsGuardian -Name "Guardian11"
+Get-HgsGuardian -Name 'Guardian11'
 ```
 
 This command gets a guardian named Guardian11.

@@ -48,9 +48,10 @@ Set-ADUser [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredent
 
 ## DESCRIPTION
 
-The **Set-ADUser** cmdlet modifies the properties of an Active Directory user.
-You can modify commonly used property values by using the cmdlet parameters.
-You can set property values that are not associated with cmdlet parameters by using the *Add*, *Remove*, *Replace*, and *Clear* parameters.
+The `Set-ADUser` cmdlet modifies the properties of an Active Directory user. You can modify
+commonly used property values by using the cmdlet parameters. You can set property values that are
+not associated with cmdlet parameters by using the **Add**, **Remove**, **Replace**, and **Clear**
+parameters.
 
 The *Identity* parameter specifies the Active Directory user to modify.
 You can identify a user by its distinguished name, GUID, security identifier (SID), or Security Account Manager (SAM) account name.
@@ -76,7 +77,12 @@ To specify a default naming context for an AD LDS environment, set the **msDS-de
 ### Example 1: Set properties for a user
 
 ```powershell
-PS C:\> Set-ADUser -Identity ChewDavid -HomePage 'http://fabrikam.com/employees/ChewDavid' -LogonWorkstations 'ChewDavid-DSKTOP,ChewDavid-LPTOP'
+$params = @{
+    Identity          = 'ChewDavid'
+    HomePage          = 'http://fabrikam.com/employees/ChewDavid'
+    LogonWorkstations = 'ChewDavid-DSKTOP,ChewDavid-LPTOP'
+}
+Set-ADUser @params
 ```
 
 This command sets the specified user's **homepage** property to http://fabrikam.com/employees/ChewDavid and the **LogonWorkstations** property to ChewDavid-DSKTOP,ChewDavid-LPTOP.
@@ -444,8 +450,8 @@ specifying a comma-separated list. The format for this parameter is:
 
 `-Clear Attribute1LDAPDisplayName, Attribute2LDAPDisplayName`
 
-When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations are
-performed in the following order:
+When you use the **Add**, **Remove**, **Replace**, and **Clear** parameters together, the
+operations are performed in the following order:
 
 - **Remove**
 - **Add**
@@ -491,10 +497,11 @@ for the user's device. This value sets the compound identity supported flag of t
 - $False or 0
 - $True or 1
 
-Warning: Domain-joined Windows systems and services such as clustering manage their own
-**msDS-SupportedEncryptionTypes** attribute. Therefore any changes to the flag on the
-**msDS-SupportedEncryptionTypes** attribute are overwritten by the service or system that manages
-the setting.
+> [!WARNING]
+> Domain-joined Windows systems and services such as clustering manage their own
+> **msDS-SupportedEncryptionTypes** attribute. Therefore any changes to the flag on the
+> **msDS-SupportedEncryptionTypes** attribute are overwritten by the service or system that manages
+> the setting.
 
 ```yaml
 Type: Boolean
@@ -553,8 +560,8 @@ with the drive is the default.
 To specify this parameter, you can type a user name, such as `User1` or `Domain01\User01` or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credential
-cmdlet. You can then set the _Credential_ parameter to the **PSCredential** object.
+You can also create a **PSCredential** object by using a script or by using the `Get-Credential`
+cmdlet. You can then set the **Credential** parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active
 Directory PowerShell returns a terminating error.
@@ -836,9 +843,9 @@ The identifier in parentheses is the LDAP display name for the attribute.
 The acceptable values for this parameter are:
 
 - A distinguished name
-- A GUID (objectGUID)
-- A security identifier (objectSid)
-- A SAM account name (sAMAccountName)
+- A GUID (**objectGUID**)
+- A security identifier (**objectSid**)
+- A SAM account name (**sAMAccountName**)
 
 The cmdlet searches the default naming context or partition to find the object.
 If two or more objects are found, the cmdlet returns a non-terminating error.
@@ -884,9 +891,9 @@ modified and the set of changes that should be made to that object. When this pa
 specified, any modifications made to the **ADUser** object are also made to the corresponding Active
 Directory object. The cmdlet only updates the object properties that have changed.
 
-The **ADUser** object specified as the value of the _Instance_ parameter must have been retrieved by
-using the **Get-ADUser** cmdlet. When you specify the _Instance_ parameter, you cannot specify other
-parameters that set individual properties on the object.
+The **ADUser** object specified as the value of the **Instance** parameter must have been retrieved
+by using the `Get-ADUser` cmdlet. When you specify the **Instance** parameter, you cannot specify
+other parameters that set individual properties on the object.
 
 ```yaml
 Type: ADUser
@@ -906,22 +913,23 @@ Specifies whether an account supports Kerberos encryption types which are used d
 service tickets. This value sets the encryption types supported flags of the Active Directory
 **msDS-SupportedEncryptionTypes** attribute. The acceptable values for this parameter are:
 
-- None
-- DES
-- RC4
-- AES128
-- AES256
+- `None`
+- `DES`
+- `RC4`
+- `AES128`
+- `AES256`
 
-None removes all encryption types from the account, resulting in the KDC being unable to issue
+`None` removes all encryption types from the account, resulting in the KDC being unable to issue
 service tickets for services using the account.
 
 DES is a weak encryption type that is not supported by default since Windows 7 and Windows Server
 2008 R2.
 
-Warning: Domain-joined Windows systems and services such as clustering manage their own
-**msDS-SupportedEncryptionTypes** attribute. Therefore any changes to the flag on the
-**msDS-SupportedEncryptionTypes** attribute are overwritten by the service or system that manages
-the setting.
+> [!WARNING]
+> Domain-joined Windows systems and services such as clustering manage their own
+> **msDS-SupportedEncryptionTypes** attribute. Therefore any changes to the flag on the
+> **msDS-SupportedEncryptionTypes** attribute are overwritten by the service or system that manages
+> the setting.
 
 ```yaml
 Type: ADKerberosEncryptionType
@@ -938,10 +946,10 @@ Accept wildcard characters: False
 
 ### -LogonWorkstations
 
-Specifies the computers that the user can access. To specify more than one computer, create a single
-comma-separated list. You can identify a computer by using the Security Account Manager (SAM)
-account name (sAMAccountName) or the DNS host name of the computer. The SAM account name is the same
-as the NetBIOS name of the computer.
+Specifies the computers that the user can access. To specify more than one computer, create a
+single comma-separated list. You can identify a computer by using the Security Account Manager
+(SAM) account name (**sAMAccountName**) or the DNS host name of the computer. The SAM account name
+is the same as the NetBIOS name of the computer.
 
 The LDAP display name (**ldapDisplayName**) for this property is userWorkStations.
 
@@ -966,9 +974,9 @@ Note: The identifier in parentheses is the LDAP display name for the property.
 The acceptable values for this parameter are:
 
 - A distinguished name
-- A GUID (objectGUID)
-- A security identifier (objectSid)
-- A SAM account name (sAMAccountName)
+- A GUID (**objectGUID**)
+- A security identifier (**objectSid**)
+- A SAM account name (**sAMAccountName**)
 
 The LDAP display name (**ldapDisplayName**) of this property is manager.
 
@@ -1078,32 +1086,32 @@ Accept wildcard characters: False
 
 Specifies the distinguished name of an Active Directory partition.
 The distinguished name must be one of the naming contexts on the current directory server.
-The cmdlet searches this partition to find the object defined by the _Identity_ parameter.
+The cmdlet searches this partition to find the object defined by the **Identity** parameter.
 
-In many cases, a default value is used for the _Partition_ parameter if no value is specified. The
-rules for determining the default value are given below. Note that rules listed first are evaluated
-first and when a default value can be determined, no further rules are evaluated.
+In many cases, a default value is used for the **Partition** parameter if no value is specified.
+The rules for determining the default value are given below. Note that rules listed first are
+evaluated first and when a default value can be determined, no further rules are evaluated.
 
-In AD DS environments, a default value for _Partition_ are set in the following cases:
+In AD DS environments, a default value for **Partition** are set in the following cases:
 
-- If the _Identity_ parameter is set to a distinguished name, the default value of _Partition_ is
-  automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of _Partition_ is
+- If the **Identity** parameter is set to a distinguished name, the default value of **Partition**
+  is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is
   automatically generated from the current path in the drive.
-- If none of the previous cases apply, the default value of_Partition_ is set to the default
+- If none of the previous cases apply, the default value of **Partition** is set to the default
   partition or naming context of the target domain.
 
-In AD LDS environments, a default value for _Partition_ will be set in the following cases:
+In AD LDS environments, a default value for **Partition** will be set in the following cases:
 
-- If the _Identity_ parameter is set to a distinguished name, the default value of _Partition_ is
-  automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of _Partition_ is
+- If the **Identity** parameter is set to a distinguished name, the default value of **Partition**
+  is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is
   automatically generated from the current path in the drive.
-- If the target AD LDS instance has a default naming context, the default value of _Partition_ is
+- If the target AD LDS instance has a default naming context, the default value of **Partition** is
   set to the default naming context. To specify a default naming context for an AD LDS environment,
   set the **msDS-defaultNamingContext** property of the Active Directory directory service agent
   object (**nTDSDSA**) for the AD LDS instance.
-- If none of the previous cases apply, the _Partition_ parameter does not take any default value.
+- If none of the previous cases apply, the **Partition** parameter does not take any default value.
 
 ```yaml
 Type: String
@@ -1141,11 +1149,12 @@ Specifies whether the password of an account can expire. This parameter sets the
 **ADS_UF_DONT_EXPIRE_PASSWD** flag of the Active Directory User Account Control attribute. The
 acceptable values for this parameter are:
 
-- $False or 0
-- $True or 1
+- `$False` or `0`
+- `$True` or `1`
 
-Note: This parameter cannot be set to $True or 1 for an account that also has the
-**ChangePasswordAtLogon** property set to $True.
+> [!NOTE]
+> This parameter cannot be set to `$True` or `1` for an account that also has the
+> **ChangePasswordAtLogon** property set to `$True`.
 
 ```yaml
 Type: Boolean
@@ -1166,8 +1175,8 @@ property of an account, such as a user or computer account. This parameter also 
 **ADS_UF_PASSWD_NOTREQD** flag of the Active Directory User Account Control attribute. The
 acceptable values for this parameter are:
 
-- $False or 0
-- $True or 1
+- `$False` or `0`
+- `$True` or `1`
 
 ```yaml
 Type: Boolean
@@ -1201,9 +1210,8 @@ Accept wildcard characters: False
 
 ### -PostalCode
 
-Specifies the postal code or zip code.
-This parameter sets the **PostalCode** property of a user object.
-The LDAP display name (**ldapDisplayName**) of this property is postalCode.
+Specifies the postal code or zip code. This parameter sets the **PostalCode** property of a user
+object. The LDAP display name (**ldapDisplayName**) of this property is `postalCode`.
 
 ```yaml
 Type: String
@@ -1264,8 +1272,8 @@ format for this parameter is:
 
 `-Remove @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-When you use the _Add_, _Remove_, _Replace_, and _Clear_ parameters together, the parameters are
-applied in the following sequence:
+When you use the **Add**, **Remove**, **Replace**, and **Clear** parameters together, the
+parameters are applied in the following sequence:
 
 - **Remove**
 - **Add**
@@ -1295,8 +1303,8 @@ an error. The format for this parameter is:
 
 `-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-When you use the _Add_, _Remove_, _Replace_, and _Clear_ parameters together, the operations will be
-performed in the following order:
+When you use the **Add**, **Remove**, **Replace**, and **Clear** parameters together, the
+operations will be performed in the following order:
 
 - **Remove**
 - **Add**
@@ -1321,10 +1329,11 @@ Specifies the Security Account Manager (SAM) account name of the user, group, co
 account. The maximum length of the description is 256 characters. To be compatible with older
 operating systems, create a SAM account name that is 20 characters or less. This parameter sets the
 **SAMAccountName** for an account object. The LDAP display name (**ldapDisplayName**) for this
-property is sAMAccountName.
+property is `sAMAccountName`.
 
-Note: If the string value provided is not terminated with a $ character, the system adds one if
-needed.
+> [!NOTE]
+> If the string value provided is not terminated with a `$` character, the system adds one if
+> needed.
 
 ```yaml
 Type: String
@@ -1378,7 +1387,7 @@ Directory server values:
 The default value for this parameter is determined by one of the following methods in the order that
 they are listed:
 
-- By using the _Server_ value from objects passed through the pipeline
+- By using the **Server** value from objects passed through the pipeline
 - By using the server information associated with the AD DS Windows PowerShell provider drive, when
   the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
@@ -1397,10 +1406,10 @@ Accept wildcard characters: False
 
 ### -ServicePrincipalNames
 
-Specifies the service principal names for the account. This parameter sets the ServicePrincipalNames
-property of the account. The LDAP display name (ldapDisplayName) for this property is
-servicePrincipalName. This parameter uses the following syntax to add, remove, replace or clear
-service principal name values.
+Specifies the service principal names for the account. This parameter sets the
+**ServicePrincipalNames** property of the account. The LDAP display name (**ldapDisplayName**) for
+this property is `servicePrincipalName`. This parameter uses the following syntax to add, remove,
+replace or clear service principal name values.
 
 Syntax:
 
@@ -1549,8 +1558,8 @@ service. This parameter sets the **TrustedForDelegation** property of an account
 also sets the **ADS_UF_TRUSTED_FOR_DELEGATION** flag of the Active Directory User Account Control
 attribute. The acceptable values for this parameter are:
 
-- $False or 0
-- $True or 1
+- `$False` or `0`
+- `$True` or `1`
 
 ```yaml
 Type: Boolean
@@ -1612,10 +1621,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None or Microsoft.ActiveDirectory.Management.ADUser
 
-A user object is received by the _Identity_ parameter.
+A user object is received by the **Identity** parameter.
 
-A user object that was retrieved by using the **Get-ADUser** cmdlet and then modified is received by
-the _Instance_ parameter.
+A user object that was retrieved by using the `Get-ADUser` cmdlet and then modified is received by
+the **Instance** parameter.
 
 ## OUTPUTS
 

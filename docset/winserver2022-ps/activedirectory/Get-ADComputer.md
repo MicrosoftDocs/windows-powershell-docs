@@ -44,28 +44,26 @@ Get-ADComputer [-AuthType <ADAuthType>] [-Credential <PSCredential>] -LDAPFilter
 
 ## DESCRIPTION
 
-The **Get-ADComputer** cmdlet gets a computer or performs a search to retrieve multiple computers.
+The `Get-ADComputer` cmdlet gets a computer or performs a search to retrieve multiple computers.
 
-The _Identity_ parameter specifies the Active Directory computer to retrieve.
+The **Identity** parameter specifies the Active Directory computer to retrieve.
 You can identify a computer by its distinguished name, GUID, security identifier
 (SID) or Security Accounts Manager (SAM) account name. You can also set the
 parameter to a computer object variable, such as `$<localComputerobject>` or
-pass a computer object through the pipeline to the _Identity_ parameter.
+pass a computer object through the pipeline to the **Identity** parameter.
 
-To search for and retrieve more than one computer, use the _Filter_ or
-_LDAPFilter_ parameters. The _Filter_ parameter uses the PowerShell Expression
-Language to write query strings for Active Directory. PowerShell Expression
-Language syntax provides rich type conversion support for value types received
-by the _Filter_ parameter. For more information about the _Filter_ parameter
+To search for and retrieve more than one computer, use the **Filter** or **LDAPFilter** parameters.
+The **Filter** parameter uses the PowerShell Expression Language to write query strings for Active
+Directory. PowerShell Expression Language syntax provides rich type conversion support for value
+types received by the **Filter** parameter. For more information about the **Filter** parameter
 syntax, type `Get-Help`
-[about_ActiveDirectory_Filter](/previous-versions/windows/server/hh531527(v=ws.10)).
-If you have existing Lightweight Directory Access Protocol (LDAP) query strings,
-you can use the _LDAPFilter_ parameter.
+[about_ActiveDirectory_Filter](/previous-versions/windows/server/hh531527(v=ws.10)). If you have
+existing Lightweight Directory Access Protocol (LDAP) query strings, you can use the **LDAPFilter**
+parameter.
 
-This cmdlet retrieves a default set of computer object properties. To retrieve
-additional properties use the _Properties_ parameter. For more information about
-the how to determine the properties for computer objects, see the _Properties_
-parameter description.
+This cmdlet retrieves a default set of computer object properties. To retrieve additional
+properties use the **Properties** parameter. For more information about the how to determine the
+properties for computer objects, see the **Properties** parameter description.
 
 ## EXAMPLES
 
@@ -162,7 +160,7 @@ This command gets a specific computer showing all the properties.
 
 ```powershell
 Get-ADComputer -Filter 'Name -like "User01*"' -Properties IPv4Address | 
-    Format-Table Name,DNSHostName,IPv4Address -AutoSize
+    Format-Table Name, DNSHostName, IPv4Address -AutoSize
 ```
 
 ```Output
@@ -173,14 +171,14 @@ User01-SRV2 User01-SRV2.User01.com 10.194.100.3
 ```
 
 This command gets all the computers with a name starting with a particular
-string and shows the name, dns hostname, and IPv4 address.
+string and shows the name, DNS hostname, and IPv4 address.
 
 ### Example 3: Gets all computers that have changed their password in specific time frame
 
 ```powershell
 $Date = [DateTime]::Today.AddDays(-90) 
 Get-ADComputer -Filter 'PasswordLastSet -ge $Date' -Properties PasswordLastSet | 
-    Format-Table Name,PasswordLastSet
+    Format-Table Name, PasswordLastSet
 ```
 
 ```Output
@@ -206,8 +204,8 @@ davidche-laptop
 ```
 
 This command gets the computer accounts in the location
-CN=Computers,DC=User01,DC=com that are listed as laptops by using an
-_LDAPFilter_.
+`CN=Computers,DC=User01,DC=com` that are listed as laptops by using an
+**LDAPFilter**.
 
 ### Example 5: Get all computer accounts using a filter
 
@@ -221,7 +219,7 @@ This command gets all computer accounts.
 
 ```powershell
 Get-ADComputer -Filter 'Name -like "Computer01*" -or Name -like "Computer02*"' -Properties IPv4Address |
-    Format-Table Name,DNSHostName,IPv4Address -AutoSize
+    Format-Table Name, DNSHostName, IPv4Address -AutoSize
 ```
 
 ```Output
@@ -236,7 +234,7 @@ Computer02-SRV2 Computer02-SRV2.Computer02.com 10.194.100.3
 ```powershell
 $Date = [DateTime]::Today.AddDays(-30)
 Get-ADComputer -Filter 'Name -like "Computer01*" -and PasswordLastSet -ge $Date' -Properties IPv4Address | 
-    Format-Table Name,DNSHostName,IPv4Address -AutoSize
+    Format-Table Name, DNSHostName, IPv4Address -AutoSize
 ```
 
 ```Output
@@ -282,17 +280,16 @@ cmdlet is run from an Active Directory module for Windows PowerShell provider
 drive. If the cmdlet is run from such a provider drive, the account associated
 with the drive is the default.
 
-To specify this parameter, you can type a user name, such as User1 or
-Domain01\User01 or you can specify a **PSCredential** object. If you specify a
-user name for this parameter, the cmdlet prompts for a password.
+To specify this parameter, you can type a user name, such as `User1` or `Domain01\User01` or you
+can specify a **PSCredential** object. If you specify a user name for this parameter, the cmdlet
+prompts for a password.
 
 You can also create a **PSCredential** object by using a script or by using the
-**Get-Credential** cmdlet. You can then set the _Credential_ parameter to the
+`Get-Credential` cmdlet. You can then set the **Credential** parameter to the
 **PSCredential** object.
 
-If the acting credentials do not have directory-level permission to perform the
-task, Active Directory module for Windows PowerShell returns a terminating
-error.
+If the acting credentials do not have directory-level permission to perform the task, the cmdlet
+returns a terminating error.
 
 ```yaml
 Type: PSCredential
@@ -310,11 +307,10 @@ Accept wildcard characters: False
 
 Specifies a query string that retrieves Active Directory objects. This string
 uses the Windows PowerShell Expression Language syntax. The Windows PowerShell
-Expression Language syntax provides rich type-conversion support for value types
-received by the _Filter_ parameter. The syntax uses an in-order representation,
-which means that the operator is placed between the operand and the value. For
-more information about the _Filter_ parameter, type `Get-Help`
-[about_ActiveDirectory_Filter](/previous-versions/windows/server/hh531527(v=ws.10)).
+Expression Language syntax provides rich type-conversion support for value types received by the
+**Filter** parameter. The syntax uses an in-order representation, which means that the operator is
+placed between the operand and the value. For more information about the **Filter** parameter, type
+`Get-Help` [about_ActiveDirectory_Filter](/previous-versions/windows/server/hh531527(v=ws.10)).
 
 Syntax:
 
@@ -339,10 +335,11 @@ PowerShell Expression Language for this parameter.
 
 For a list of supported types for \<value\>, type `Get-Help about_ActiveDirectory_ObjectModel`.
 
-Note: Windows PowerShell wildcards other than \*, such as ?, are not supported
-by the _Filter_ syntax.
+> [!NOTE]
+> Wildcards other than `*`, such as `?`, are not supported by the **Filter** syntax.
 
-Note: To query using LDAP query strings, use the _LDAPFilter_ parameter.
+> [!NOTE]
+> To query using LDAP query strings, use the **LDAPFilter** parameter.
 
 ```yaml
 Type: String
@@ -363,9 +360,9 @@ The identifier in parentheses is the LDAP display name for the attribute.
 The acceptable values for this parameter are:
 
 - A distinguished name
-- A GUID (objectGUID)
-- A security identifier (objectSid)
-- A Security Accounts Manager account name (sAMAccountName)
+- A GUID (`objectGUID`)
+- A security identifier (`objectSid`)
+- A Security Accounts Manager account name (`sAMAccountName`)
 
 The cmdlet searches the default naming context or partition to find the object.
 If the identifier given is a distinguished name, the partition to search is
@@ -390,9 +387,9 @@ Accept wildcard characters: False
 ### -LDAPFilter
 
 Specifies an LDAP query string that is used to filter Active Directory objects.
-You can use this parameter to run your existing LDAP queries. The _Filter_
+You can use this parameter to run your existing LDAP queries. The **Filter**
 parameter syntax supports the same functionality as the LDAP syntax. For more
-information, see the _Filter_ parameter description or type `Get-Help`
+information, see the **Filter** parameter description or type `Get-Help`
 [about_ActiveDirectory_Filter](/previous-versions/windows/server/hh531527(v=ws.10)).
 
 ```yaml
@@ -411,36 +408,35 @@ Accept wildcard characters: False
 
 Specifies the distinguished name of an Active Directory partition.
 The distinguished name must be one of the naming contexts on the current directory server.
-The cmdlet searches this partition to find the object defined by the _Identity_ parameter.
+The cmdlet searches this partition to find the object defined by the **Identity** parameter.
 
-In many cases, a default value is used for the _Partition_ parameter if no value
+In many cases, a default value is used for the **Partition** parameter if no value
 is specified. The rules for determining the default value are given below. Note
 that rules listed first are evaluated first and once a default value can be
 determined, no further rules are evaluated.
 
 In Active Directory Domain Services environments, a default value for
-_Partition_ is set in the following cases:
+**Partition** is set in the following cases:
 
-- If the _Identity_ parameter is set to a distinguished name, the default value
-  of _Partition_ is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value
-  of _Partition_ is automatically generated from the current path in the drive.
-- If none of the previous cases apply, the default value of _Partition_ is set
-  to the default partition or naming context of the target domain.
+- If the **Identity** parameter is set to a distinguished name, the default value of **Partition**
+  is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is
+  automatically generated from the current path in the drive.
+- If none of the previous cases apply, the default value of **Partition** is set to the default
+  partition or naming context of the target domain.
 
 In Active Directory Lightweight Directory Services (AD LDS) environments, a
-default value for _Partition_ is set in the following cases:
+default value for **Partition** is set in the following cases:
 
-- If the _Identity_ parameter is set to a distinguished name, the default value
-  of _Partition_ is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value
-  of _Partition_ is automatically generated from the current path in the drive.
-- If the target AD LDS instance has a default naming context, the default value
-  of _Partition_ is set to the default naming context. To specify a default
-  naming context for an AD LDS environment, set the
-  **msDS-defaultNamingContext** property of the Active Directory directory
-  service agent (DSA) object (**nTDSDSA**) for the AD LDS instance.
-- If none of the previous cases apply, the _Partition_ parameter will not take any default value.
+- If the **Identity** parameter is set to a distinguished name, the default value of **Partition**
+  is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is
+  automatically generated from the current path in the drive.
+- If the target AD LDS instance has a default naming context, the default value of **Partition** is
+  set to the default naming context. To specify a default naming context for an AD LDS environment,
+  set the **msDS-defaultNamingContext** property of the Active Directory directory service agent
+  (DSA) object (**nTDSDSA**) for the AD LDS instance.
+- If none of the previous cases apply, the **Partition** parameter will not take any default value.
 
 ```yaml
 Type: String
@@ -466,9 +462,8 @@ To specify an individual extended property, use the name of the property. For
 properties that are not default or extended properties, you must specify the
 LDAP display name of the attribute.
 
-To retrieve properties and display them for an object, you can use the Get-*
-cmdlet associated with the object and pass the output to the **Get-Member**
-cmdlet.
+To retrieve properties and display them for an object, you can use the `Get-*` cmdlet associated
+with the object and pass the output to the `Get-Member` cmdlet.
 
 ```yaml
 Type: String[]
@@ -540,10 +535,9 @@ agent object (**nTDSDSA**) for the AD LDS instance. If no default naming context
 has been specified for the target AD LDS instance, then this parameter has no
 default value.
 
-When the value of the _SearchBase_ parameter is set to an empty string and you
-are connected to a global catalog port, all partitions are searched. If the
-value of the _SearchBase_ parameter is set to an empty string and you are not
-connected to a global catalog port, an error is thrown.
+When the value of the **SearchBase** parameter is set to an empty string and you are connected to a
+global catalog port, all partitions are searched. If the value of the **SearchBase** parameter is
+set to an empty string and you are not connected to a global catalog port, an error is thrown.
 
 ```yaml
 Type: String
@@ -607,7 +601,7 @@ Directory server values:
 The default value for this parameter is determined by one of the following
 methods in the order that they are listed:
 
-- By using the _Server_ value from objects passed through the pipeline
+- By using the **Server** value from objects passed through the pipeline
 - By using the server information associated with the Active Directory Domain
   Services Windows PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
@@ -636,7 +630,7 @@ For more information, see
 
 ### None or Microsoft.ActiveDirectory.Management.ADComputer
 
-A computer object is received by the _Identity_ parameter.
+A computer object is received by the **Identity** parameter.
 
 ## OUTPUTS
 
@@ -645,10 +639,10 @@ A computer object is received by the _Identity_ parameter.
 Returns one or more computer objects.
 
 This Get-ADComputer cmdlet returns a default set of **ADComputer** property values.
-To retrieve additional **ADComputer** properties, use the _Properties_ parameter of this cmdlet.
+To retrieve additional **ADComputer** properties, use the **Properties** parameter of this cmdlet.
 
 To view the properties for an **ADComputer** object, see the following examples.
-To run these examples, replace \<computer\> with a computer identifier such as
+To run these examples, replace `<computer>` with a computer identifier such as
 the SAM account name of your local computer.
 
 To get a list of the default set of properties of an ADComputer object, use the following command:
@@ -661,9 +655,9 @@ To get a list of all the properties of an ADComputer object, use the following c
 
 ## NOTES
 
-- This cmdlet does not work with AD LDS with its default schema. By default AD
-  LDS schema does not have a computer class, but if the schema is extended to
-  include it, this cmdlet will work with LDS.
+- This cmdlet doesn't work with AD LDS with its default schema. By default the AD LDS schema
+  doesn't have a computer class, but if the schema is extended to include it, this cmdlet will work
+  with LDS.
 
 ## RELATED LINKS
 

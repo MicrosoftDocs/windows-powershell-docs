@@ -16,43 +16,51 @@ Removes a target for a DFS namespace root.
 ## SYNTAX
 
 ```
-Remove-DfsnRootTarget [-Path <String>] [-TargetPath] <String> [-Cleanup] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-DfsnRootTarget [-Path <String>] [-TargetPath] <String> [-Cleanup]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-DfsnRootTarget** cmdlet removes a target for a Distributed File System (DFS) namespace root.
-This cmdlet deletes a target, but does not delete the contents of the target.
 
-A DFS namespace root can have more than one root target.
-If you remove the last root target associated with a DFS namespace root, this cmdlet deletes the namespace as well.
-Users cannot use the DFS namespace path after you delete the namespace.
+The **Remove-DfsnRootTarget** cmdlet removes a target for a Distributed File System (DFS) namespace
+root. This cmdlet deletes a target, but does not delete the contents of the target.
 
-For more information about DFS namespaces, see [Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736) on TechNet.
+A DFS namespace root can have more than one root target. If you remove the last root target
+associated with a DFS namespace root, this cmdlet deletes the namespace as well. Users cannot use
+the DFS namespace path after you delete the namespace.
+
+For more information about DFS namespaces, see
+[Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736) on TechNet.
 
 ## EXAMPLES
 
 ### Example 1: Remove a root target
-```
-PS C:\> Remove-DfsnRootTarget -TargetPath "\\Contoso-FS\AccountingSoftware" -Path "\\Contoso\AccountingSoftware"
+
+```powershell
+Remove-DfsnRootTarget -TargetPath '\\Contoso-FS\AccountingSoftware' -Path '\\Contoso\AccountingSoftware'
 ```
 
-This command removes the DFS root target path \\\\Contoso-FS\AccountingSoftware from the DFS namespace that has the path \\\\Contoso\AccountingSoftware.
+This command removes the DFS root target path `\\Contoso-FS\AccountingSoftware` from the DFS
+namespace that has the path `\\Contoso\AccountingSoftware`.
 
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+The cmdlet immediately returns an object that represents the job and then displays the command
+prompt. You can continue to work in the session while the job completes. To manage the job, use the
+`*-Job` cmdlets. To get the job results, use the
+[Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+For more information about Windows PowerShell background jobs, see
+[about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -64,12 +72,14 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
-Type: CimSession[]
+Type: Microsoft.Management.Infrastructure.CimSession[]
 Parameter Sets: (All)
 Aliases: Session
 
@@ -81,10 +91,12 @@ Accept wildcard characters: False
 ```
 
 ### -Cleanup
-Indicates that the cmdlet attempts to force a clean-up of the root target in Active Directory Domain Services (AD DS).
+
+Indicates that the cmdlet attempts to force a clean-up of the root target in Active Directory Domain
+Services (AD DS).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,12 +108,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.  The default value is **True** and asks for confirmation. If you do not want to confirm the operation, you must use the switch with the **False** value, as shown in this example:
 
-**-Confirm:$False**
+Prompts you for confirmation before running the cmdlet. The default value is **True** and asks for
+confirmation. If you do not want to confirm the operation, you must use the switch with the
+**False** value, as shown in this example: `-Confirm:$false`
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -113,10 +126,11 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
 Specifies the path for the root of a DFS namespace.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DfsPath, NamespaceRoot
 
@@ -128,11 +142,12 @@ Accept wildcard characters: False
 ```
 
 ### -TargetPath
-Specifies a path for the root target.
-This cmdlet removes the root target that has the path specified.
+
+Specifies a path for the root target. This cmdlet removes the root target that has the path
+specified.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: Target, DfsTarget, RootTargetPath
 
@@ -144,12 +159,15 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
+computer.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -161,11 +179,11 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -177,7 +195,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`,
+`-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`,
+`-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -196,4 +218,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-DfsnRootTarget](./New-DfsnRootTarget.md)
 
 [Set-DfsnRootTarget](./Set-DfsnRootTarget.md)
-

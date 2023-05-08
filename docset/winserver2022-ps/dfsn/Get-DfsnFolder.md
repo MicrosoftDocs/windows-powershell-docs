@@ -21,41 +21,49 @@ Get-DfsnFolder [-Path] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <In
 ```
 
 ## DESCRIPTION
-The **Get-DfsnFolder** cmdlet gets configuration settings for a Distributed File System (DFS) namespace folder.
-Specify a folder by using its path.
 
-For more information about DFS namespaces, see [Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736) on TechNet.
+The **Get-DfsnFolder** cmdlet gets configuration settings for a Distributed File System (DFS)
+namespace folder. Specify a folder by using its path.
+
+For more information about DFS namespaces, see
+[Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736) on TechNet.
 
 ## EXAMPLES
 
 ### Example 1: Get settings for a specified folder
-```
-PS C:\> Get-DfsnFolder -Path "\\Contoso\AccountingResources\LegacySoftware"
+
+```powershell
+Get-DfsnFolder -Path '\\Contoso\AccountingResources\LegacySoftware'
 ```
 
-This command displays settings for the \\\\Contoso\AccountingResources\LegacySoftware folder.
+This command displays settings for the `\\Contoso\AccountingResources\LegacySoftware` folder.
 
 ### Example 2: Get settings for all folders in a DFS namespace
-```
-PS C:\> Get-DfsnFolder -Path "\\Contoso\AccountingResources\*"
+
+```powershell
+Get-DfsnFolder -Path '\\Contoso\AccountingResources\*'
 ```
 
-The command uses the wildcard to get settings for all the folders in the \\\\Contoso\AccountingResources DFS namespace.
+The command uses the wildcard to get settings for all the folders in the
+`\\Contoso\AccountingResources` DFS namespace.
 
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+The cmdlet immediately returns an object that represents the job and then displays the command
+prompt. You can continue to work in the session while the job completes. To manage the job, use the
+`*-Job` cmdlets. To get the job results, use the
+[Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+For more information about Windows PowerShell background jobs, see
+[about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -67,12 +75,14 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
-Type: CimSession[]
+Type: Microsoft.Management.Infrastructure.CimSession[]
 Parameter Sets: (All)
 Aliases: Session
 
@@ -84,14 +94,15 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a path for the folder.
-This cmdlet gets configuration settings for the DFS namespace folder that has the path specified.
 
-You can use DFS namespace with the wildcard character to get settings for all the folders in the namespace.
-See the Examples section.
+Specifies a path for the folder. This cmdlet gets configuration settings for the DFS namespace
+folder that has the path specified.
+
+You can use DFS namespace with the wildcard character to get settings for all the folders in the
+namespace. See the Examples section.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DfsPath, FolderPath, NamespacePath
 
@@ -103,12 +114,15 @@ Accept wildcard characters: True
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
+computer.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -120,7 +134,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`,
+`-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`,
+`-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -141,4 +159,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-DfsnFolder](./Remove-DfsnFolder.md)
 
 [Set-DfsnFolder](./Set-DfsnFolder.md)
-

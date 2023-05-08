@@ -45,8 +45,8 @@ rights on `Server1`, are provided.
 Get-WindowsFeature -Vhd D:\ps-test\vhd1.vhd
 ```
 
-This example returns a list of features that is available and installed on the specified offline VHD
-located at `D:\ps-test\vhd1.vhd`.
+This example returns a list of features that are available and installed on the specified offline
+VHD located at `D:\ps-test\vhd1.vhd`.
 
 ### Example 3
 
@@ -55,7 +55,7 @@ Get-WindowsFeature -Name AD*, Web*
 ```
 
 This example returns a list of available and installed features that have a command ID starting with
-AD or Web.
+`AD` or `Web`.
 
 ### Example 4
 
@@ -63,7 +63,7 @@ AD or Web.
 Get-WindowsFeature -ComputerName Server01 | Where Installed
 ```
 
-This example returns a list of features installed on a specified server, Server01.
+This example returns a list of features installed on a specified server, `Server01`.
 
 ### Example 5
 
@@ -72,27 +72,23 @@ Get-WindowsFeature -ComputerName Server01 | Where InstallState -Eq Removed
 ```
 
 This example returns a list of features on a specified server, `Server01`, that have installation
-files removed from the local side-by-side store, and require an external file source for
+files removed from the local side-by-side store and require an external file source for
 installation.
 
 ## PARAMETERS
 
 ### -ComputerName
 
-Gets the list of available features from the specified remote computer that is running
-Windows Server.
-The parameter accepts only one computer name.
-If this parameter is not added, or no computer name is specified, the default target is the local
-computer.
-Valid values for the parameter include a NetBIOS name, an IP address, or a fully qualified domain
-name of a remote computer.
+Gets the list of available features from the specified remote computer that is running Windows
+Server. The parameter accepts only one computer name. If this parameter is not added, or no computer
+name is specified, the default target is the local computer. Valid values for the parameter include
+a NetBIOS name, an IP address, or a fully qualified domain name of a remote computer.
 
 To use a remote computer's IP address as the value of this parameter, your command must include the
-**Credential** parameter.
-The computer must either be configured for HTTPS transport, or the IP address of the remote computer
-must be included in the WinRM TrustedHosts list on the local computer.
-For information about adding a computer name to the WinRM TrustedHosts list, see "How to Add a
-Computer to the Trusted Host List" in
+**Credential** parameter. The computer must either be configured for HTTPS transport, or the IP
+address of the remote computer must be included in the WinRM TrustedHosts list on the local
+computer. For information about adding a computer name to the WinRM TrustedHosts list, see "How to
+Add a Computer to the Trusted Host List" in
 [about_Remote_Troubleshooting](https://go.microsoft.com/fwlink/p/?LinkID=135188).
 
 ```yaml
@@ -109,11 +105,9 @@ Accept wildcard characters: False
 
 ### -Credential
 
-Specifies a user account that has access rights to perform this action.
-If the parameter is not added, or no value is specified, the default value of this parameter is the
-current user.
-Enter a user name in one of the following formats.
-Quotation marks are optional.
+Specifies a user account that has access rights to perform this action. If the parameter is not
+added, or no value is specified, the default value of this parameter is the current user. Enter a
+user name in one of the following formats. Quotation marks are optional.
 
 -- "UserName"
 -- "Domain\User"
@@ -170,24 +164,21 @@ Accept wildcard characters: False
 
 ### -Vhd
 
-Specifies the path to an offline VHD.
-The path can either point to a VHD file, or to a location on which the VHD is already mounted by
-using Deployment Image Servicing and Management (DISM) tools.
+Specifies the path to an offline VHD. The path can either point to a VHD file, or to a location on
+which the VHD is already mounted by using Deployment Image Servicing and Management (DISM) tools.
 
-The VHD can be on a local disk on the target computer, or on a network shared folder.
-If the VHD is in a network shared folder, then the value of this parameter is a UNC path to the VHD.
-In this case, the computer account of the computer that you are using to mount the VHD must have
-read and write permissions (Read/Write permissions in the File Sharing dialog box, or Full Control
-on the Security tab of the folder Properties dialog box) on the shared folder, or the VHD will not
-be accessible.
-Local loopback UNC paths are not supported.
-Use either of the following formats for the computer account: DOMAIN\SERVERNAME$ or SERVERNAME$.
+The VHD can be on a local disk on the target computer or on a network shared folder. If the VHD is
+in a network shared folder, then the value of this parameter is a UNC path to the VHD. In this case,
+the computer account of the computer that you are using to mount the VHD must have read and write
+permissions (Read/Write permissions in the File Sharing dialog box or Full Control on the Security
+tab of the folder Properties dialog box) on the shared folder or the VHD will not be accessible.
+Local loopback UNC paths are not supported. Use either of the following formats for the computer
+account: DOMAIN\SERVERNAME$ or SERVERNAME$.
 
-Add the `ComputerName` parameter to specify the target computer you want to use to mount the VHD.
-If the `ComputerName` parameter is not specified, then the local computer is used.
-The computer that you are using to mount the VHD must be running Windows Server.
-Any local path, such as `D:\myFolder`, that is specified by using this parameter is always relative to
-the target computer.
+Add the **ComputerName** parameter to specify the target computer you want to use to mount the VHD.
+If the **ComputerName** parameter is not specified, then the local computer is used. The computer
+that you are using to mount the VHD must be running Windows Server. Any local path, such as
+`D:\myFolder`, that is specified by using this parameter is always relative to the target computer.
 
 ```yaml
 Type: System.String

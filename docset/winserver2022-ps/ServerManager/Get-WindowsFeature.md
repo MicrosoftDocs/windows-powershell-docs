@@ -35,10 +35,9 @@ virtual hard disk (VHD) that is running Windows Server.
 Get-WindowsFeature -ComputerName Server1 -Credential contoso.com\user1
 ```
 
-This example gets a list of features that is available and installed on the
-target computer named Server1.
-The credentials for user user1 in the Contoso.com domain, a user who has
-Administrator rights on Server1, are provided.
+This example gets a list of features that are available and installed on the target computer named
+`Server1`. The credentials for `user1` in the `Contoso.com` domain, a user who has Administrator
+rights on `Server1`, are provided.
 
 ### Example 2
 
@@ -47,7 +46,7 @@ Get-WindowsFeature -Vhd D:\ps-test\vhd1.vhd
 ```
 
 This example returns a list of features that is available and installed on the specified offline VHD
-located at D:\ps-test\vhd1.vhd.
+located at `D:\ps-test\vhd1.vhd`.
 
 ### Example 3
 
@@ -72,7 +71,7 @@ This example returns a list of features installed on a specified server, Server0
 Get-WindowsFeature -ComputerName Server01 | Where InstallState -Eq Removed
 ```
 
-This example returns a list of features on a specified server, Server01, that have installation
+This example returns a list of features on a specified server, `Server01`, that have installation
 files removed from the local side-by-side store, and require an external file source for
 installation.
 
@@ -89,7 +88,7 @@ Valid values for the parameter include a NetBIOS name, an IP address, or a fully
 name of a remote computer.
 
 To use a remote computer's IP address as the value of this parameter, your command must include the
-`Credential` parameter.
+**Credential** parameter.
 The computer must either be configured for HTTPS transport, or the IP address of the remote computer
 must be included in the WinRM TrustedHosts list on the local computer.
 For information about adding a computer name to the WinRM TrustedHosts list, see "How to Add a
@@ -119,7 +118,7 @@ Quotation marks are optional.
 -- "UserName"
 -- "Domain\User"
 -- "User@Domain.com"
--- A Credential object returned by the
+- A **PSCredential** object returned by the
  [Get-Credential](https://go.microsoft.com/fwlink/p/?LinkID=113311) cmdlet.
 
 If a user name is entered, then a prompt for a password is displayed.
@@ -187,7 +186,7 @@ Use either of the following formats for the computer account: DOMAIN\SERVERNAME$
 Add the `ComputerName` parameter to specify the target computer you want to use to mount the VHD.
 If the `ComputerName` parameter is not specified, then the local computer is used.
 The computer that you are using to mount the VHD must be running Windows Server.
-Any local path, such as D:\myFolder, that is specified by using this parameter is always relative to
+Any local path, such as `D:\myFolder`, that is specified by using this parameter is always relative to
 the target computer.
 
 ```yaml

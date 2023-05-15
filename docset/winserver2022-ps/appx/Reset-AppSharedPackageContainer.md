@@ -1,8 +1,10 @@
 ---
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 Module Name: appx
+ms.date: 05/15/2023
 online version: https://learn.microsoft.com/powershell/module/appx/reset-appsharedpackagecontainer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Reset-AppSharedPackageContainer
 ---
 
 # Reset-AppSharedPackageContainer
@@ -13,29 +15,34 @@ Destroys all the application data of the container.
 ## SYNTAX
 
 ```
-Reset-AppSharedPackageContainer [-Name] <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Reset-AppSharedPackageContainer [-Name] <String> [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The cmdlet destroys all the application data of the container,
-including the virtual files and registry keys.
+
+The cmdlet destroys all the application data of the container, including the virtual files and
+registry keys.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> Reset-AppSharedPackageContainer -Name ContosoTestContainer
+Reset-AppSharedPackageContainer -Name ContosoTestContainer
 ```
 
-This command clears all the application data of the shared package container ContosoTestContainer.
+This command clears all the application data of the shared package container
+`ContosoTestContainer`.
 
 ## PARAMETERS
 
 ### -Force
+
 Skips asking for confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -47,6 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 The name of the container.
 
 ```yaml
@@ -62,10 +70,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -77,11 +86,11 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -93,7 +102,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -102,6 +115,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

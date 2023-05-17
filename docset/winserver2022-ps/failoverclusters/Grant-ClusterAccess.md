@@ -3,7 +3,7 @@ description: Use this article to help manage Windows and Windows Server technolo
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
 ms.date: 05/17/2023
-online version: https://docs.microsoft.com/powershell/module/failoverclusters/grant-clusteraccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/grant-clusteraccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Grant-ClusterAccess
 ---
@@ -21,7 +21,7 @@ Grant-ClusterAccess [-User] <StringCollection> [-Full] [-ReadOnly] [-InputObject
 ```
 
 ## DESCRIPTION
-The **Grant-ClusterAccess** cmdlet grants access to a failover cluster, either full access or
+The `Grant-ClusterAccess` cmdlet grants access to a failover cluster, either full access or
 read-only access. To provide someone with read-only access to the cluster, use the **ReadOnly**
 parameter. Granting full access to the cluster is equivalent to granting full access to each of the
 cluster nodes.

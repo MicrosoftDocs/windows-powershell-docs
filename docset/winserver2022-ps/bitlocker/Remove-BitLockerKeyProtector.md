@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: BitLocker-help.xml
 Module Name: BitLocker
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/bitlocker/remove-bitlockerkeyprotector?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/bitlocker/remove-bitlockerkeyprotector?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-BitLockerKeyProtector
 ---
@@ -32,7 +32,7 @@ Any encrypted data on the drive remains encrypted.
 
 We recommend you have at least one recovery password as key protector to a volume in case you need to recover a system.
 
-For an overview of BitLocker, see [Overview of BitLocker Device Encryption](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).
+For an overview of BitLocker, see [Overview of BitLocker Device Encryption](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).
 
 ## EXAMPLES
 

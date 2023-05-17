@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 Module Name: WebAdministration
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/webadministration/get-webapplication?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/webadministration/get-webapplication?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-WebApplication
 ---
@@ -84,4 +84,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-WebApplication](./Remove-WebApplication.md)
 
-[Microsoft.Web.Administration.ConfigurationElement#Application](https://docs.microsoft.com/dotnet/api/microsoft.web.administration.application?view=iis-dotnet)
+[Microsoft.Web.Administration.ConfigurationElement#Application](/dotnet/api/microsoft.web.administration.application?view=iis-dotnet)

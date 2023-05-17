@@ -2,7 +2,7 @@
 external help file: PS_DhcpServerv4FilterList_v1.0.0.cdxml-help.xml
 Module Name: DhcpServer
 ms.date: 10/30/2017
-online version: https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv4filterlist?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv4filterlist?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DhcpServerv4FilterList
 ---

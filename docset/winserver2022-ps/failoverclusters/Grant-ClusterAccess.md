@@ -21,6 +21,7 @@ Grant-ClusterAccess [-User] <StringCollection> [-Full] [-ReadOnly] [-InputObject
 ```
 
 ## DESCRIPTION
+
 The `Grant-ClusterAccess` cmdlet grants access to a failover cluster, either full access or
 read-only access. To provide someone with read-only access to the cluster, use the **ReadOnly**
 parameter. Granting full access to the cluster is equivalent to granting full access to each of the
@@ -29,24 +30,27 @@ cluster nodes.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Grant-ClusterAccess -User contoso\johnj99 -Full
+
+```powershell
+Grant-ClusterAccess -User contoso\johnj99 -Full
 ```
 
-This example grants full access to the local cluster to johnj99 in the contoso domain.
+This example grants full access to the local cluster to `johnj99` in the `contoso` domain.
 
 ### Example 2
-```
-PS C:\> Grant-ClusterAccess -User contoso\johnj99 -ReadOnly
+
+```powershell
+Grant-ClusterAccess -User contoso\johnj99 -ReadOnly
 ```
 
-This example grants read-only access to the local cluster to johnj99 in the contoso domain.
+This example grants read-only access to the local cluster to `johnj99` in the `contoso` domain.
 
 ## PARAMETERS
 
 ### -Cluster
-Specifies the name of the cluster on which to run this cmdlet.
-If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -61,8 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -Full
-Specifies that the user gets full cluster access.
-If no access level is specified, then the user gets read-only cluster access.
+
+Specifies that the user gets full cluster access. If no access level is specified, then the user
+gets read-only cluster access.
 
 ```yaml
 Type: SwitchParameter
@@ -77,6 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies the cluster on which to grant access for the given user.
 
 ```yaml
@@ -92,8 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReadOnly
-Specifies that the user gets read-only cluster access.
-If no access level is specified, then the user gets read-only cluster access.
+
+Specifies that the user gets read-only cluster access. If no access level is specified, then the
+user gets read-only cluster access.
 
 ```yaml
 Type: SwitchParameter
@@ -108,6 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
+
 Specifies the user for whom to grant cluster access.
 
 ```yaml
@@ -123,7 +131,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -142,4 +154,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-ClusterAccess](./Get-ClusterAccess.md)
 
 [Remove-ClusterAccess](./Remove-ClusterAccess.md)
-

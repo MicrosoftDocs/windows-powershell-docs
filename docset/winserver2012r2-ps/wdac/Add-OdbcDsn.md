@@ -2,7 +2,7 @@
 external help file: MSFT_OdbcDsnTask_v1.0.cdxml-help.xml
 Module Name: Wdac
 ms.date: 10/29/2017
-online version: https://docs.microsoft.com/powershell/module/wdac/add-odbcdsn?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/wdac/add-odbcdsn?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-OdbcDsn
 ---
@@ -56,8 +56,8 @@ Without **PassThru**, the cmdlet does not return anything.
 
 ### Example 4: Migrates DSNs to a newer version of a driver
 ```
-PS C:\> $dsnArr = Get-OdbcDsn -DriverName 'SQL Server Native Client 10.0'
-PS C:\> foreach ($dsn in $dsnArr) {
+PS C:\> $DsnArray = Get-OdbcDsn -DriverName 'SQL Server Native Client 10.0'
+PS C:\> foreach ($dsn in $DsnArray) {
           Remove-OdbcDsn -InputObject $dsn 
           # You can change the property array as well, 
           # if DSN attributes have been changed in the new driver version

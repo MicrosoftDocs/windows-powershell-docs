@@ -1,7 +1,7 @@
 ---
 external help file: FSRM_Cmdlets.xml
 Module Name: FileServerResourceManager
-online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/set-fsrmfilescreentemplate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/fileserverresourcemanager/set-fsrmfilescreentemplate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

@@ -1,9 +1,9 @@
-﻿---
+---
 description: Sets the name of the network adapter, profile, and the profile source.
 external help file: MSFT_NetAdapterDataPathConfiguration.cdxml-help.xml
 Module Name: NetAdapter
 ms.date: 09/22/2021
-online version: https://docs.microsoft.com/powershell/module/netadapter/set-netadapterdatapathconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/netadapter/set-netadapterdatapathconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NetAdapterDataPathConfiguration
 ---

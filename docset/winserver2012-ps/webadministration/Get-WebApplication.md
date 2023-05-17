@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 Module Name: WebAdministration
-online version: https://docs.microsoft.com/powershell/module/webadministration/get-webapplication?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/webadministration/get-webapplication?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -82,4 +82,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-WebApplication](./Remove-WebApplication.md)
 
-[Microsoft.Web.Administration.ConfigurationElement#Application](https://docs.microsoft.com/dotnet/api/microsoft.web.administration.application?view=iis-dotnet)
+[Microsoft.Web.Administration.ConfigurationElement#Application](/dotnet/api/microsoft.web.administration.application?view=iis-dotnet)

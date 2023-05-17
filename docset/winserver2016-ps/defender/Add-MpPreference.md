@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/defender/add-mppreference?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/defender/add-mppreference?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-MpPreference
 ---
@@ -120,7 +120,7 @@ Specifies an array of processes, as paths to process images.
 This cmdlet excludes any files opened by the processes that you specify from scheduled and real-time scanning.
 Specifying this parameter excludes files opened by executable programs only.
 The cmdlet does not exclude the processes themselves.
-For more details, see [Configure exclusions for files opened by processes](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/configure-process-opened-file-exclusions-microsoft-defender-antivirus).
+For more details, see [Configure exclusions for files opened by processes](/windows/security/threat-protection/microsoft-defender-antivirus/configure-process-opened-file-exclusions-microsoft-defender-antivirus).
 
 ```yaml
 Type: String[]

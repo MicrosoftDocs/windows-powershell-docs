@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
 Module Name: ConfigCI
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/configci/new-cipolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/configci/new-cipolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-CIPolicy
 ---
@@ -460,7 +460,7 @@ Accept wildcard characters: False
 ```
 
 ### -Level
-Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
+Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
 
 ```yaml
 Type: RuleLevel
@@ -674,4 +674,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Merge-CIPolicy](./Merge-CIPolicy.md)
 
 [New-CIPolicyRule](./New-CIPolicyRule.md)
-

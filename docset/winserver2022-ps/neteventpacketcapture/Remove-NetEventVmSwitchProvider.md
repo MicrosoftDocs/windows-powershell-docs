@@ -3,7 +3,7 @@ description: The Remove-NetEventVmSwitchProvider cmdlet removes a virtual machin
 external help file: MSFT_NetEventVmSwitchProvider.cdxml-help.xml
 Module Name: NetEventPacketCapture
 ms.date: 10/22/2021
-online version: https://docs.microsoft.com/powershell/module/neteventpacketcapture/remove-neteventvmswitchprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/neteventpacketcapture/remove-neteventvmswitchprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-NetEventVmSwitchProvider
 ---

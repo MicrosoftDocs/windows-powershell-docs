@@ -2,7 +2,7 @@
 external help file: BitLocker-help.xml
 Module Name: BitLocker
 ms.date: 10/29/2017
-online version: https://docs.microsoft.com/powershell/module/bitlocker/enable-bitlockerautounlock?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/bitlocker/enable-bitlockerautounlock?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-BitLockerAutoUnlock
 ---
@@ -24,7 +24,7 @@ The **Enable-BitLockerAutoUnlock** cmdlet enables automatic unlocking for a volu
 You can configure BitLocker to automatically unlock volumes that do not host an operating system.
 After a user unlocks the operating system volume, BitLocker uses encrypted information stored in the registry and volume metadata to unlock any data volumes that use automatic unlocking.
 
-For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).
+For an overview of BitLocker, see [BitLocker Drive Encryption Overview](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).
 
 ## EXAMPLES
 
@@ -105,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-BitLockerAutoUnlock](./Disable-BitLockerAutoUnlock.md)
 
 [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-

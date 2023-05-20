@@ -46,7 +46,7 @@ These commands create a certificate for Azure MFA, register the certificate in a
 
 ### Example 2: Determine which certificate Azure MFA is using
 ```
-$CertInBase64 = New-AdfsAzureMfaTenantCertificate -TenantID
+$CertInBase64 = New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID>
 $cert = Security.Cryptography.X509Certificates.X509Certificate2
 $cert | Format-List *
 ```

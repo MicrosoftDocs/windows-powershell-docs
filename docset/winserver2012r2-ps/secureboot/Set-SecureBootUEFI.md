@@ -62,7 +62,7 @@ The SignTool.exe tool can be downloaded from Windows Software Development Kit (S
 
 ### EXAMPLE 2
 ```
-PS C:\> Set-SecureBootUEFI -ContentFilePath FormattedVariable.bin -SignedFilePath GeneratedFileToSign.bin.p7
+PS C:\> Set-SecureBootUEFI -Name DBX -ContentFilePath FormattedVariable.bin -SignedFilePath GeneratedFileToSign.bin.p7 -Time 2011-11-01T13:30:00
 Name       : dbx 
 Bytes      : {161, 89, 192, 165...} 
 Attributes : NON VOLATILE 

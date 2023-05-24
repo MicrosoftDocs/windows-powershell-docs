@@ -187,8 +187,8 @@ following cases:
 In Active Directory Lightweight Directory Services (AD LDS) environments, a default value for
 **Partition** is set in the following cases:
 
-- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is
-  automatically generated from this distinguished name.
+- If the **Identity** parameter is set to a distinguished name, the default value of **Partition**
+  is automatically generated from this distinguished name.
 - If running cmdlets from an Active Directory provider drive, the default value of **Partition** is
   automatically generated from the current path in the drive.
 - If the target AD LDS instance has a default naming context, the default value of **Partition** is

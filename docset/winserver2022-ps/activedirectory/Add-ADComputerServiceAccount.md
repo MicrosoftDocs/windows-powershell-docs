@@ -55,7 +55,7 @@ This command adds the service account `SvcAcct1` to a Computer Account `Computer
 
 ### EXAMPLE 2
 
-```
+```powershell
 Add-ADComputerServiceAccount -Computer ComputerAcct1 -ServiceAccount SvcAcct1, SvcAcct2
 ```
 

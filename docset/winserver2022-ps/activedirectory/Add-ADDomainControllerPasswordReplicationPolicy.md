@@ -11,7 +11,8 @@ title: Add-ADDomainControllerPasswordReplicationPolicy
 # Add-ADDomainControllerPasswordReplicationPolicy
 
 ## SYNOPSIS
-Adds users, computers, and groups to the allowed or denied list of a read-only domain controller password replication policy.
+Adds users, computers, and groups to the allowed or denied list of a read-only domain controller
+password replication policy.
 
 ## SYNTAX
 

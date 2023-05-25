@@ -19,30 +19,27 @@ Installs a new domain controller in an Active Directory domain.
 
 ```
 Install-ADDSDomainController [-SkipPreChecks] -DomainName <String>
-[-SafeModeAdministratorPassword <SecureString>] [-SiteName <String>]
-[-ADPrepCredential <PSCredential>] [-AllowDomainControllerReinstall]
-[-ApplicationPartitionsToReplicate <String[]>] [-CreateDnsDelegation]
-[-Credential <PSCredential>] [-CriticalReplicationOnly] [-DatabasePath <String>]
-[-DnsDelegationCredential <PSCredential>] [-NoDnsOnNetwork] [-NoGlobalCatalog]
-[-InstallationMediaPath <String>] [-InstallDns] [-LogPath <String>]
-[-MoveInfrastructureOperationMasterRoleIfNecessary] [-NoRebootOnCompletion]
-[-ReplicationSourceDC <String>] [-SkipAutoConfigureDns] [-SystemKey <SecureString>]
-[-SysvolPath <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SafeModeAdministratorPassword <SecureString>] [-SiteName <String>]
+ [-ADPrepCredential <PSCredential>] [-AllowDomainControllerReinstall]
+ [-ApplicationPartitionsToReplicate <String[]>] [-CreateDnsDelegation] [-Credential <PSCredential>]
+ [-CriticalReplicationOnly] [-DatabasePath <String>] [-DnsDelegationCredential <PSCredential>]
+ [-NoDnsOnNetwork] [-NoGlobalCatalog] [-InstallationMediaPath <String>] [-InstallDns]
+ [-LogPath <String>] [-MoveInfrastructureOperationMasterRoleIfNecessary] [-NoRebootOnCompletion]
+ [-ReplicationSourceDC <String>] [-SkipAutoConfigureDns] [-SystemKey <SecureString>]
+ [-SysvolPath <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ADDSDomainControllerReadOnly
 
 ```
 Install-ADDSDomainController [-SkipPreChecks] -DomainName <String>
- [-SafeModeAdministratorPassword <SecureString>] -SiteName <String> 
+ [-SafeModeAdministratorPassword <SecureString>] -SiteName <String>
  [-ADPrepCredential <PSCredential>] [-AllowDomainControllerReinstall]
- [-AllowPasswordReplicationAccountName <String[]>]
- [-ApplicationPartitionsToReplicate <String[]>] [-Credential <PSCredential>]
- [-CriticalReplicationOnly] [-DatabasePath <String>]
- [-DelegatedAdministratorAccountName <String>]
- [-DenyPasswordReplicationAccountName <String[]>] [-NoDnsOnNetwork] [-NoGlobalCatalog]
- [-InstallationMediaPath <String>] [-InstallDns] [-LogPath <String>]
- [-MoveInfrastructureOperationMasterRoleIfNecessary] [-ReadOnlyReplica]
+ [-AllowPasswordReplicationAccountName <String[]>] [-ApplicationPartitionsToReplicate <String[]>]
+ [-Credential <PSCredential>] [-CriticalReplicationOnly] [-DatabasePath <String>]
+ [-DelegatedAdministratorAccountName <String>] [-DenyPasswordReplicationAccountName <String[]>]
+ [-NoDnsOnNetwork] [-NoGlobalCatalog] [-InstallationMediaPath <String>] [-InstallDns]
+ [-LogPath <String>] [-MoveInfrastructureOperationMasterRoleIfNecessary] [-ReadOnlyReplica]
  [-NoRebootOnCompletion] [-ReplicationSourceDC <String>] [-SkipAutoConfigureDns]
  [-SystemKey <SecureString>] [-SysvolPath <String>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -57,8 +54,7 @@ Install-ADDSDomainController [-SkipPreChecks] -DomainName <String>
  [-CriticalReplicationOnly] [-DatabasePath <String>] [-NoDnsOnNetwork]
  [-InstallationMediaPath <String>] [-LogPath <String>] [-NoRebootOnCompletion]
  [-ReplicationSourceDC <String>] [-SkipAutoConfigureDns] [-SystemKey <SecureString>]
- [-SysvolPath <String>] [-UseExistingAccount] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SysvolPath <String>] [-UseExistingAccount] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -117,7 +113,7 @@ controller. Use the `Get-Credential` cmdlet to prompt the user to supply a passw
 ```yaml
 Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +132,7 @@ controller with the same name is found.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ADDSDomainController, ADDSDomainControllerReadOnly
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +151,7 @@ allowed.
 ```yaml
 Type: System.String[]
 Parameter Sets: ADDSDomainControllerReadOnly
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,7 +169,7 @@ Use * to replicate all application directory partitions.
 ```yaml
 Type: System.String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -209,7 +205,7 @@ automatically based on the environment.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ADDSDomainController
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -226,7 +222,7 @@ controller. Use the `Get-Credential` to prompt the user to supply a password.
 ```yaml
 Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +242,7 @@ replication.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -264,7 +260,7 @@ The default is `%SYSTEMROOT%\NTDS`.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -281,7 +277,7 @@ controller.
 ```yaml
 Type: System.String
 Parameter Sets: ADDSDomainControllerReadOnly
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,7 +299,7 @@ Owners, the krbtgt account, and Schema Admins.
 ```yaml
 Type: System.String[]
 Parameter Sets: ADDSDomainControllerReadOnly
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -320,7 +316,7 @@ value for the **CreateDnsDelegation** parameter is either specified or computed 
 ```yaml
 Type: System.Management.Automation.PSCredential
 Parameter Sets: ADDSDomainController
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -337,7 +333,7 @@ installed or added.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -353,7 +349,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -378,7 +374,7 @@ response is `corp.contoso.com`.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ADDSDomainController, ADDSDomainControllerReadOnly
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -394,7 +390,7 @@ Indicates the location of the installation media that is used to install a new d
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -412,7 +408,7 @@ that will contain the domain log files, for example, `C:\Windows\Logs`. The defa
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -431,7 +427,7 @@ remain where it currently is.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ADDSDomainController, ADDSDomainControllerReadOnly
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -456,7 +452,7 @@ DNS server address.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -473,7 +469,7 @@ By default, the domain controller that you are installing is a global catalog se
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ADDSDomainController, ADDSDomainControllerReadOnly
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -494,7 +490,7 @@ rebooted.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -510,7 +506,7 @@ Indicates that the cmdlet installs the domain controller as an RODC for an exist
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ADDSDomainControllerReadOnly
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -527,7 +523,7 @@ controller.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -559,7 +555,7 @@ which is also not a recommended security best practice in production deployments
 ```yaml
 Type: System.Security.SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -579,7 +575,7 @@ the site of the replication source domain controller.
 ```yaml
 Type: System.String
 Parameter Sets: ADDSDomainController
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -591,7 +587,7 @@ Accept wildcard characters: False
 ```yaml
 Type: System.String
 Parameter Sets: ADDSDomainControllerReadOnly
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -608,7 +604,7 @@ root hints. This parameter is in effect only if the DNS Server service is alread
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -630,7 +626,7 @@ preliminary checks that the **ADDSDeployment** module performs by default when u
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -647,7 +643,7 @@ The default is none.
 ```yaml
 Type: System.Security.SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -665,7 +661,7 @@ that will contain the Sysvol data, for example, `C:\Windows\SYSVOL`. The default
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -682,7 +678,7 @@ If specified, a member of the Domain Admins group or a delegated user can run th
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ADDSDomainControllerUseExistingAccount
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

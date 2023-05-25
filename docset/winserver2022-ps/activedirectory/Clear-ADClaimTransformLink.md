@@ -30,7 +30,7 @@ more cross-forest trust relationships in Active Directory.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 
 ```powershell
 Clear-ADClaimTransformLink -Identity 'corp.contoso.com' -Policy DenyAllPolicy
@@ -38,7 +38,7 @@ Clear-ADClaimTransformLink -Identity 'corp.contoso.com' -Policy DenyAllPolicy
 
 This command removes the policy named `DenyAllPolicy` from the `corp.contoso.com` trust.
 
-### Example 2
+### EXAMPLE 2
 
 ```powershell
 Clear-ADClaimTransformLink -Identity 'corp.contoso.com' -TrustRole Trusted
@@ -48,7 +48,7 @@ This command removes any policies that are applied to where this forest acts as 
 in the `corp.contoso.com` trust. Effectively, this cmdlet removes any policies that are applied to
 claims flowing out of this forest towards it trust partner.
 
-### Example 3
+### EXAMPLE 3
 
 ```powershell
 $params = @{

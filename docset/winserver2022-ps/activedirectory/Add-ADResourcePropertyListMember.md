@@ -16,59 +16,57 @@ Adds one or more resource properties to a resource property list in Active Direc
 ## SYNTAX
 
 ```
-Add-ADResourcePropertyListMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
- [-Identity] <ADResourcePropertyList> [-Members] <ADResourceProperty[]> [-PassThru] [-Server <String>]
- [<CommonParameters>]
+Add-ADResourcePropertyListMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>]
+ [-Credential <PSCredential>] [-Identity] <ADResourcePropertyList>
+ [-Members] <ADResourceProperty[]> [-PassThru] [-Server <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-ADResourcePropertyListMember** cmdlet adds one or more resource properties to a resource property list in Active Directory.
+
+The `Add-ADResourcePropertyListMember` cmdlet adds one or more resource properties to a resource
+property list in Active Directory.
 
 ## EXAMPLES
 
 ### Example 1: Add members to a resource property list
-```
-PS C:\> Add-ADResourcePropertyListMember -Identity "Global Resource Property List" -Members Country,Authors
+
+```powershell
+$params = @{
+    Identity = 'Global Resource Property List'
+    Members = 'Country', 'Authors'
+}
+Add-ADResourcePropertyListMember @params
 ```
 
-This command adds the resource members named Country and Authors to the list named Global Resource Property List.
+This command adds the resource members named `Country` and `Authors` to the list named
+`Global Resource Property List`.
 
-### Example 2: Add members to the default resource property list
-```
-PS C:\> Add-ADResourcePropertyListMember
-cmdlet Add-ADResourcePropertyListMember at command pipeline position 1
-Supply values for the following parameters: 
-Identity: Corporate Resource Property List
-Members[0]: Country
-Members[1]: Authors
-Members[2]:
+### Example 2: Add members to a filtered resource property list
+
+```powershell
+Get-ADResourcePropertyList -Filter "Name -like 'Corporate*'" |
+    Add-ADResourcePropertyListMember -Members Country, Authors
 ```
 
-This command adds the resource members named Country and Authors to the resource property list named Corporate Resource Property List.
-This command demonstrates the default behavior for this cmdlet when no parameters are specified.
-
-### Example 3: Add members to a filtered resource property list
-```
-PS C:\> Get-ADResourcePropertyList -Filter "Name -like 'Corporate*'" | Add-ADResourcePropertyListMember -Members Country,Authors
-```
-
-This command gets any resource property list that has a name that begins with Corporate and then passes it to Add-ADResourcePropertyListMember, which then adds the resource properties Country and Authors to it.
+This command gets any resource property list that has a name that begins with `Corporate` and then
+passes it to `Add-ADResourcePropertyListMember`, which then adds the resource properties `Country`
+and `Authors` to it.
 
 ## PARAMETERS
 
 ### -AuthType
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
 
-- Negotiate or 0
-- Basic or 1
+Specifies the authentication method to use. The acceptable values for this parameter are:
 
-The default authentication method is Negotiate.
+- `Negotiate` or `0`
+- `Basic` or `1`
 
-A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+The default authentication method is `Negotiate`.
+
+A Secure Sockets Layer (SSL) connection is required for the `Basic` authentication method.
 
 ```yaml
-Type: ADAuthType
+Type: Microsoft.ActiveDirectory.Management.ADAuthType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Negotiate, Basic
@@ -81,10 +79,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -96,20 +95,24 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies the user account credentials to use to perform this task.
-The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
-If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
 
-To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
-If you specify a user name for this parameter, the cmdlet prompts for a password.
+Specifies the user account credentials to use to perform this task. The default credentials are the
+credentials of the currently logged on user unless the cmdlet is run from an Active Directory module
+for Windows PowerShell provider drive. If the cmdlet is run from such a provider drive, the account
+associated with the drive is the default.
 
-You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
-You can then set the *Credential* parameter to the **PSCredential** object.
+To specify this parameter, you can type a user name, such as `User1` or `Domain01\User01` or you can
+specify a **PSCredential** object. If you specify a user name for this parameter, the cmdlet prompts
+for a password.
 
-If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
+You can also create a **PSCredential** object by using a script or by using the `Get-Credential`
+cmdlet. You can then set the **Credential** parameter to the **PSCredential** object.
+
+If the acting credentials do not have directory-level permission to perform the task, Active
+Directory module for Windows PowerShell returns a terminating error.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -121,17 +124,19 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specifies an Active Directory object by providing one of the following property values.
-The identifier in parentheses is the Lightweight Directory Access Protocol (LDAP) display name for the attribute.
-The acceptable values for this parameter are:
+
+Specifies an Active Directory object by providing one of the following property values. The
+identifier in parentheses is the Lightweight Directory Access Protocol (LDAP) display name for the
+attribute. The acceptable values for this parameter are:
 
 - A distinguished name
-- A GUID (objectGUID)
+- A GUID (**objectGUID**)
 
-This parameter can also get this object through the pipeline or you can set this parameter to an object instance.
+This parameter can also get this object through the pipeline or you can set this parameter to an
+object instance.
 
 ```yaml
-Type: ADResourcePropertyList
+Type: Microsoft.ActiveDirectory.Management.ADResourcePropertyList
 Parameter Sets: (All)
 Aliases: 
 
@@ -143,21 +148,20 @@ Accept wildcard characters: False
 ```
 
 ### -Members
-Specifies a set of **ADResourceProperty** objects in a comma-separated list to add to a resource property list.
-To identify each object, use one of the following property values: 
+
+Specifies a set of **ADResourceProperty** objects in a comma-separated list to add to a resource
+property list. To identify each object, use one of the following property values:
 
 - Name
 - Distinguished name
-- GUID (objectGUID) 
-
-Note: The identifier in parentheses is the LDAP display name.
+- GUID (**objectGUID**)
 
 You can also provide objects to this parameter directly.
 
 You cannot pass objects through the pipeline to this parameter.
 
 ```yaml
-Type: ADResourceProperty[]
+Type: Microsoft.ActiveDirectory.Management.ADResourceProperty[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -169,11 +173,12 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+
+Returns an object representing the item with which you're working. By default, this cmdlet doesn't
+generate any output.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -185,30 +190,35 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-Specifies the Active Directory Domain Services (AD DS) instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following: Active Directory Lightweight Directory Services (AD LDS), AD DS, or Active Directory snapshot instance.
 
-Specify the AD DS instance in one of the following ways:  
+Specifies the Active Directory Domain Services instance to connect to, by providing one of the
+following values for a corresponding domain name or directory server. The service may be any of the
+following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active
+Directory snapshot instance.
+
+Specify the Active Directory Domain Services instance in one of the following ways:
 
 Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
-Directory server values:  
+Directory server values:
 
 - Fully qualified directory server name
 - NetBIOS name
 - Fully qualified directory server name and port
 
-The default value for this parameter is determined by one of the following methods in the order that they are listed:
+The default value for this parameter is determined by one of the following methods in the order that
+they are listed:
 
 - By using the **Server** value from objects passed through the pipeline
-- By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
+- By using the server information associated with the Active Directory Domain Services Windows
+  PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -220,11 +230,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -236,24 +247,30 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADClaimTypeList
-An **ADClaimTypeList** object is received by the *Identity* parameter.
+
+An **ADClaimTypeList** object is received by the **Identity** parameter.
 
 ## OUTPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADClaimTypeList
-Returns the modified **ADClaimTypeList** object when the *PassThru* parameter is specified.
-By default, this cmdlet does not generate any output.
+
+Returns the modified **ADClaimTypeList** object when the **PassThru** parameter is specified. By
+default, this cmdlet does not generate any output.
 
 ## NOTES
-* This cmdlet does not work with a read-only domain controller.
-* This cmdlet does not work with an Active Directory snapshot.
+
+- This cmdlet does not work with a read-only domain controller.
+- This cmdlet does not work with an Active Directory snapshot.
 
 ## RELATED LINKS
 
 [Remove-ADResourcePropertyListMember](./Remove-ADResourcePropertyListMember.md)
-

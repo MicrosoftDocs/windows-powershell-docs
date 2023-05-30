@@ -28,7 +28,7 @@ property list in Active Directory.
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Add members to a resource property list
 
 ```powershell
 $params = @{
@@ -41,7 +41,7 @@ Add-ADResourcePropertyListMember @params
 This command adds the resource members named `Country` and `Authors` to the list named
 `Global Resource Property List`.
 
-### EXAMPLE 2
+### Example 2: Add members to a filtered resource property list
 
 ```powershell
 Get-ADResourcePropertyList -Filter "Name -like 'Corporate*'" |
@@ -56,8 +56,7 @@ and `Authors` to it.
 
 ### -AuthType
 
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
+Specifies the authentication method to use. The acceptable values for this parameter are:
 
 - `Negotiate` or `0`
 - `Basic` or `1`
@@ -175,8 +174,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+Returns an object representing the item with which you're working. By default, this cmdlet doesn't
+generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

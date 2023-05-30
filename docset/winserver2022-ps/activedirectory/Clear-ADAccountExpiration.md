@@ -46,7 +46,7 @@ instance.
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Clear an account expiration date for a specified user
 
 ```powershell
 Clear-ADAccountExpiration -Identity PattiFuller
@@ -54,7 +54,7 @@ Clear-ADAccountExpiration -Identity PattiFuller
 
 This command clears the account expiration date for the user with SamAccountName `PattiFuller`.
 
-### EXAMPLE 2
+### Example 2: Clear an account expiration date by using a distinguished name
 
 ```powershell
 Clear-ADAccountExpiration -Identity 'CN=PattiFuller,DC=AppNC' -Server 'PATTIFU-SVR1:60000'
@@ -67,8 +67,7 @@ This command clears the account expiration date for the user with DistinguishedN
 
 ### -AuthType
 
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
+Specifies the authentication method to use. The acceptable values for this parameter are:
 
 - `Negotiate` or `0`
 - `Basic` or `1`
@@ -217,8 +216,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+Returns an object representing the item with which you're working. By default, this cmdlet doesn't
+generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -274,8 +273,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

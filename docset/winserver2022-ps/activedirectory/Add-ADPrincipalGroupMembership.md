@@ -54,7 +54,7 @@ property of the Active Directory directory service agent object (nTDSDSA) for th
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Add a member to a group
 
 ```powershell
 Add-ADPrincipalGroupMembership -Identity SQLAdmin1 -MemberOf DlgtdAdminsPSOGroup
@@ -62,7 +62,7 @@ Add-ADPrincipalGroupMembership -Identity SQLAdmin1 -MemberOf DlgtdAdminsPSOGroup
 
 This command adds the user with SAM account name `SQLAdmin1` to the group `DlgtdAdminsPSOGroup`.
 
-### EXAMPLE 2
+### Example 2: Add filtered users to a group
 
 ```powershell
 Get-ADUser -Filter 'Name -like "*SvcAccount*"' |
@@ -72,7 +72,7 @@ Get-ADUser -Filter 'Name -like "*SvcAccount*"' |
 This command gets all users with `SvcAccount` in their name and adds them to the group
 `SvcAccPSOGroup`.
 
-### EXAMPLE 3
+### Example 3: Add filtered users to a distinguished name group
 
 ```powershell
 $params = @{
@@ -91,8 +91,7 @@ This command adds all employees in `Branch1` in the AD LDS instance `localhost:6
 
 ### -AuthType
 
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
+Specifies the authentication method to use. The acceptable values for this parameter are:
 
 - `Negotiate` or `0`
 - `Basic` or `1`
@@ -279,8 +278,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+Returns an object representing the item with which you're working. By default, this cmdlet doesn't
+generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -336,8 +335,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

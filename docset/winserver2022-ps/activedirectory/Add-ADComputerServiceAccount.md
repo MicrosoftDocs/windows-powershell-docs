@@ -40,7 +40,7 @@ account by its distinguished name, GUID, Security Identifier (SID) or Security A
 `$<localServiceAccountObject>`. If you are specifying more than one account, use a comma-separated
 list.
 
-> {!NOTE]
+> [!NOTE]
 > Adding a service account is a different operation than installing the service account locally.
 
 ## EXAMPLES
@@ -290,8 +290,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

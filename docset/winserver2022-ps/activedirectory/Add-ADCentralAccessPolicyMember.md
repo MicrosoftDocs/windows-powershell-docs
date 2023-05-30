@@ -38,8 +38,8 @@ $params = @{
 Add-ADCentralAccessPolicyMember @params
 ```
 
-This command adds the central access rules Finance Documents Rule and Corporate Documents Rule to
-the central access policy Finance Policy.
+This command adds the central access rules `Finance Documents Rule` and `Corporate Documents Rule`
+to the central access policy Finance Policy.
 
 ### EXAMPLE 2
 
@@ -238,8 +238,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

@@ -101,8 +101,7 @@ group `CN=AccountLeads,OU=UserAccounts` in the Europe domain.
 
 ### -AuthType
 
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
+Specifies the authentication method to use. The acceptable values for this parameter are:
 
 - `Negotiate` or `0`
 - `Basic` or `1`
@@ -329,8 +328,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+Returns an object representing the item with which you're working. By default, this cmdlet doesn't
+generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -386,8 +385,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

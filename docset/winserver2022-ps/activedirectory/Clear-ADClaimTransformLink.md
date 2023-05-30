@@ -30,7 +30,7 @@ more cross-forest trust relationships in Active Directory.
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Remove a specified policy from a trust relationship
 
 ```powershell
 Clear-ADClaimTransformLink -Identity 'corp.contoso.com' -Policy DenyAllPolicy
@@ -38,7 +38,7 @@ Clear-ADClaimTransformLink -Identity 'corp.contoso.com' -Policy DenyAllPolicy
 
 This command removes the policy named `DenyAllPolicy` from the `corp.contoso.com` trust.
 
-### EXAMPLE 2
+### Example 2: Remove all policies that are applied to a trusted forest
 
 ```powershell
 Clear-ADClaimTransformLink -Identity 'corp.contoso.com' -TrustRole Trusted
@@ -48,7 +48,7 @@ This command removes any policies that are applied to where this forest acts as 
 in the `corp.contoso.com` trust. Effectively, this cmdlet removes any policies that are applied to
 claims flowing out of this forest towards it trust partner.
 
-### EXAMPLE 3
+### Example 3: Remove a claim transformation policy from being applied to the trust relationship
 
 ```powershell
 $params = @{
@@ -67,8 +67,7 @@ claims coming into this from its trust partner.
 
 ### -AuthType
 
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
+Specifies the authentication method to use. The acceptable values for this parameter are:
 
 - `Negotiate` or `0`
 - `Basic` or `1`
@@ -161,8 +160,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+Returns an object representing the item with which you're working. By default, this cmdlet doesn't
+generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -255,8 +254,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

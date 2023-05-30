@@ -87,8 +87,7 @@ name is `Fuller`.
 
 ### -AuthType
 
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
+Specifies the authentication method to use. The acceptable values for this parameter are:
 
 - `Negotiate` or `0`
 - `Basic` or `1`
@@ -230,8 +229,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+Returns an object representing the item with which you are working. By default, this cmdlet does
+not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -287,9 +286,8 @@ Accept wildcard characters: False
 
 ### -Subjects
 
-Specifies one or more users or groups.
-To specify more than one user or group, use a comma-separated list.
-You can identify a user or group by one of the following property values:
+Specifies one or more users or groups. To specify more than one user or group, use a
+comma-separated list. You can identify a user or group by one of the following property values:
 
 - Distinguished name (DN)
 - GUID (**objectGUID**)
@@ -314,8 +312,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

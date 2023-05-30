@@ -46,7 +46,7 @@ instance.
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Disable an account by identity
 
 ```powershell
 Disable-ADAccount -Identity PattiFul
@@ -54,7 +54,7 @@ Disable-ADAccount -Identity PattiFul
 
 This command disables the account with identity SAMAccountName `PattiFul`.
 
-### EXAMPLE 2
+### Example 2: Disable an account by Distinguished Name
 
 ```powershell
 Disable-ADAccount -Identity 'CN=Patti Fuller,OU=Finance,OU=Users,DC=FABRIKAM,DC=COM'
@@ -63,7 +63,7 @@ Disable-ADAccount -Identity 'CN=Patti Fuller,OU=Finance,OU=Users,DC=FABRIKAM,DC=
 This command disables the account with DistinguishedName
 `CN=Patti Fuller,OU=Finance,OU=Users,DC=FABRIKAM,DC=COM`.
 
-### EXAMPLE 3
+### Example 3: Disable all accounts in an organizational unit
 
 ```powershell
 Get-ADUser -Filter 'Name -like "*"' -SearchBase "OU=Finance,OU=Users,DC=FABRIKAM,DC=COM" |
@@ -77,8 +77,7 @@ This command disables all accounts in the organizational unit
 
 ### -AuthType
 
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
+Specifies the authentication method to use. The acceptable values for this parameter are:
 
 - `Negotiate` or `0`
 - `Basic` or `1`
@@ -227,8 +226,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+Returns an object representing the item with which you're working. By default, this cmdlet doesn't
+generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -284,8 +283,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

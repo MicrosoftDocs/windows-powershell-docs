@@ -570,7 +570,7 @@ for this parameter are:
 - `InstallFull`: Installs as a full app
 - `InstallStub`: Installs as a stub app
 - `UsePreference`: Uses the current
-  [PackageSubPreference](/uwp/api/windows.management.deployment.packagestubpreference) for the
+  [PackageStubPreference](/uwp/api/windows.management.deployment.packagestubpreference) for the
   package
 
 ```yaml

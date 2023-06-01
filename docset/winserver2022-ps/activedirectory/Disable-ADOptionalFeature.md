@@ -213,7 +213,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet does not
+Returns an object representing the item with which you're working. By default, this cmdlet does not
 generate any output.
 
 ```yaml
@@ -317,7 +317,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -350,8 +350,8 @@ An optional feature object is received by the **Identity** parameter.
 
 ## NOTES
 
-- This cmdlet does not work with an Active Directory snapshot.
-- This cmdlet does not work with a read-only domain controller.
+- This cmdlet doesn't work with an Active Directory snapshot.
+- This cmdlet doesn't work with a read-only domain controller.
 
 ## RELATED LINKS
 

@@ -24,7 +24,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-CheckForSignaturesBeforeRunningScan <Boolean>] [-ScanPurgeItemsAfterDelay <UInt32>]
  [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>] [-ScanScheduleDay <Day>]
  [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleOffset <UInt32>] [-SignatureFirstAuGracePeriod <UInt32>]
- [-ScanScheduleTime <HH:MM:SS>]
+ [-ScanScheduleTime <HH:MM:SS>] [-AllowSwitchToAsyncInspection <Boolean>]
  [-SignatureAuGracePeriod <UInt32>] [-SignatureDefinitionUpdateFileSharesSources <String>]
  [-SignatureDisableUpdateOnStartupWithoutEngine <Boolean>] [-SignatureFallbackOrder <String>]
  [-SignatureScheduleDay <Day>] [-SignatureScheduleTime <DateTime>] [-SignatureUpdateCatchupInterval <UInt32>]
@@ -85,6 +85,23 @@ This command configures preferences to check for definition updates 120 minutes 
 
 ## PARAMETERS
 
+### -AllowSwitchToAsyncInspection
+
+Specifies whether to enable a performance optimization that allows synchronously inspected network flows to switch to async inspection once they have been checked and validated.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
 
@@ -114,7 +131,7 @@ Accept wildcard characters: False
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of `$True`, Windows Defender checks for new definitions.
 If you specify `$False` or don’t specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans, but it doesn’t affect scans that you start from the user interface or to scans that you start from the command line.
+This setting applies to scheduled scans, but it has no effect on scans initiated manually from the user interface or on scans started from the command line using "mpcmdrun -Scan".
 
 ```yaml
 Type: Boolean

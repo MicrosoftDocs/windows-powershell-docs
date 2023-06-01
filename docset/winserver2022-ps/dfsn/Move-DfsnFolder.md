@@ -21,42 +21,50 @@ Move-DfsnFolder [-Path] <String> [-NewPath] <String> [-Force] [-CimSession <CimS
 ```
 
 ## DESCRIPTION
+
 The **Move-DfsnFolder** cmdlet moves or renames a Distributed File System (DFS) namespace folder.
 
-For more information about DFS namespaces, see [Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736) on TechNet.
+For more information about DFS namespaces, see
+[Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736) on TechNet.
 
 ## EXAMPLES
 
 ### Example 1: Move a folder
-```
-PS C:\> Move-DfsnFolder -Path "\\Contoso\Western\Development\DesignDocuments" -NewPath "\\Contoso\Western\HumanResources\DesignDocuments"
+
+```powershell
+Move-DfsnFolder -Path '\\Contoso\Western\Development\DesignDocuments' -NewPath '\\Contoso\Western\HumanResources\DesignDocuments'
 ```
 
-This command moves the folder DesignDocuments to the location \\\\Contoso\Western\HumanResources.
-After you run this command, the folder \\\\Contoso\Western\Development\DesignDocuments no longer exists.
+This command moves the folder DesignDocuments to the location `\\Contoso\Western\HumanResources`.
+After you run this command, the folder `\\Contoso\Western\Development\DesignDocuments` no longer
+exists.
 
 ### Example 2: Rename a folder
-```
-PS C:\> Move-DfsnFolder -Path "\\Contoso\AccountingSoftware\Software" -NewPath "\\Contoso\AccountingSoftware\LegacySoftware"
+
+```powershell
+Move-DfsnFolder -Path '\\Contoso\AccountingSoftware\Software' -NewPath '\\Contoso\AccountingSoftware\LegacySoftware'
 ```
 
-This command renames the folder Software in the \\\\Contoso\AccountingSoftware folder.
-The new name is \\\\Contoso\AccountingSoftware\LegacySoftware.
+This command renames the folder Software in the `\\Contoso\AccountingSoftware` folder. The new name
+is `\\Contoso\AccountingSoftware\LegacySoftware`.
 
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+The cmdlet immediately returns an object that represents the job and then displays the command
+prompt. You can continue to work in the session while the job completes. To manage the job, use the
+`*-Job` cmdlets. To get the job results, use the
+[Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+For more information about Windows PowerShell background jobs, see
+[about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -68,12 +76,14 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
-Type: CimSession[]
+Type: Microsoft.Management.Infrastructure.CimSession[]
 Parameter Sets: (All)
 Aliases: Session
 
@@ -85,10 +95,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -100,11 +111,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Moves or renames a DFS namespace folder without prompting you for confirmation.
-By default, the cmdlet prompts you for confirmation before it proceeds.
+
+Moves or renames a DFS namespace folder without prompting you for confirmation. By default, the
+cmdlet prompts you for confirmation before it proceeds.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -116,12 +128,12 @@ Accept wildcard characters: False
 ```
 
 ### -NewPath
-Specifies a path for the DFS namespace folder.
-This cmdlet moves or renames the folder to have the path specified.
-Do not specify an existing DFS namespace folder.
+
+Specifies a path for the DFS namespace folder. This cmdlet moves or renames the folder to have the
+path specified. Do not specify an existing DFS namespace folder.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: NewDfsPath, NewNamespacePath
 
@@ -133,11 +145,12 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies the path for a DFS namespace folder.
-This cmdlet moves or renames the folder that has the path specified.
+
+Specifies the path for a DFS namespace folder. This cmdlet moves or renames the folder that has the
+path specified.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DfsPath, FolderPath, NamespacePath
 
@@ -149,12 +162,15 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
+computer.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -166,11 +182,11 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -182,7 +198,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`,
+`-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`,
+`-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -203,4 +223,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-DfsnFolder](./Remove-DfsnFolder.md)
 
 [Set-DfsnFolder](./Set-DfsnFolder.md)
-

@@ -58,7 +58,7 @@ Performs an attestation attempt using the fallback HGS server.
 Specifies that the HGS client should only attest against the fallback attestation server.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Fallback
 Aliases: 
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Specifies that the HGS client should only attest against the primary attestation server.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Primary
 Aliases: 
 

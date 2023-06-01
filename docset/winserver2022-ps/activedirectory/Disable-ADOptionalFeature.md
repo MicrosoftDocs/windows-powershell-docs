@@ -304,7 +304,7 @@ The following example shows how to set this parameter to a domain naming context
 `-Target "DC=corp,DC=Fabrikam,DC=com"`
 
 ```yaml
-Type: ADEntity
+Type: Microsoft.ActiveDirectory.Management.ADEntity
 Parameter Sets: (All)
 Aliases: 
 

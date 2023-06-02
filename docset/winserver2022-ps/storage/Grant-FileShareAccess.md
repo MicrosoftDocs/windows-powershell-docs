@@ -11,7 +11,7 @@ title: Grant-FileShareAccess
 # Grant-FileShareAccess
 
 ## SYNOPSIS
-Grants access to a file share.
+Grants access to a file share. This adjusts security descriptors of the SMB share and the underlying NTFS folder.
 
 ## SYNTAX
 
@@ -37,7 +37,7 @@ Grant-FileShareAccess -InputObject <CimInstance[]> -AccountName <String[]> -Acce
 ```
 
 ## DESCRIPTION
-The **Grant-FileShareAccess** cmdlet grants access to a file share for the specified accounts by adding an Allow access control entry (ACE) to the share's security descriptor.
+The **Grant-FileShareAccess** cmdlet grants access to a file share for the specified accounts by adding an Allow access control entry (ACE) to the share's and the underlying shared folder's security descriptors.
 
 ## EXAMPLES
 
@@ -256,6 +256,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+* To grant access to an SMB share without adjusting security of the underlying file system use [Grant-SmbShareAccess](/powershell/module/smbshare/grant-smbshareaccess).
 
 ## RELATED LINKS
 
@@ -264,4 +265,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Revoke-FileShareAccess](./Revoke-FileShareAccess.md)
 
 [Unblock-FileShareAccess](./Unblock-FileShareAccess.md)
+
+[Grant-SmbShareAccess](/powershell/module/smbshare/grant-smbshareaccess)
 

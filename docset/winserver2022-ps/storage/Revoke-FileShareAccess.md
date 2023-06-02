@@ -11,7 +11,7 @@ title: Revoke-FileShareAccess
 # Revoke-FileShareAccess
 
 ## SYNOPSIS
-Revokes access to a file share.
+Revokes access to a file share. This adjusts security descriptors of the SMB share and the underlying NTFS folder.
 
 ## SYNTAX
 
@@ -35,7 +35,7 @@ Revoke-FileShareAccess -InputObject <CimInstance[]> -AccountName <String[]> [-Ci
 ```
 
 ## DESCRIPTION
-The **Revoke-FileShareAccess** cmdlet removes the Allow access control entries (ACE) for a trustee from the security descriptor of a specified file share.
+The **Revoke-FileShareAccess** cmdlet removes the Allow access control entries (ACE) for a trustee from the security descriptors of a specified file share and the underlying shared folder.
 
 ## EXAMPLES
 
@@ -241,6 +241,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+* To revoke access to an SMB share without adjusting security of the underlying file system use [Revoke-SmbShareAccess](/powershell/module/smbshare/revoke-smbshareaccess).
 
 ## RELATED LINKS
 
@@ -249,4 +250,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Grant-FileShareAccess](./Grant-FileShareAccess.md)
 
 [Unblock-FileShareAccess](./Unblock-FileShareAccess.md)
+
+[Revoke-SmbShareAccess](/powershell/module/smbshare/revoke-smbshareaccess)
 

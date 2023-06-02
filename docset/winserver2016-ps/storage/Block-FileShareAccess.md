@@ -11,7 +11,7 @@ title: Block-FileShareAccess
 # Block-FileShareAccess
 
 ## SYNOPSIS
-Blocks access to a file share.
+Blocks access to a file share. This adjusts security descriptors of the SMB share and the underlying NTFS folder.
 
 ## SYNTAX
 
@@ -35,7 +35,7 @@ Block-FileShareAccess -InputObject <CimInstance[]> -AccountName <String[]> [-Cim
 ```
 
 ## DESCRIPTION
-The **Block-FileShareAccess** cmdlet blocks access to the specified file share for the specified accounts by adding an access-denied access control entry (ACE) to the share's security descriptor.
+The **Block-FileShareAccess** cmdlet blocks access to the specified file share for the specified accounts by adding an access-denied access control entry (ACE) to the share's and the underlying shared folder's security descriptors.
 
 ## EXAMPLES
 
@@ -242,6 +242,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+* To block access to an SMB share without adjusting security of the underlying file system use [Block-SmbShareAccess](/powershell/module/smbshare/block-smbshareaccess).
 
 ## RELATED LINKS
 
@@ -250,4 +251,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Revoke-FileShareAccess](./Revoke-FileShareAccess.md)
 
 [Unblock-FileShareAccess](./Unblock-FileShareAccess.md)
+
+[Block-SmbShareAccess](/powershell/module/smbshare/block-smbshareaccess)
 

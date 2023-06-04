@@ -93,7 +93,6 @@ A Secure Sockets Layer (SSL) connection is required for the `Basic` authenticati
 
 ```yaml
 Type: Microsoft.ActiveDirectory.Management.ADAuthType
-Type: ADAuthType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Negotiate, Basic
@@ -140,7 +139,6 @@ Directory module for Windows PowerShell returns a terminating error.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
-Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -247,7 +245,6 @@ they are listed:
 
 ```yaml
 Type: System.String
-Type: String
 Parameter Sets: (All)
 Aliases: 
 

@@ -284,11 +284,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ActiveDirectory.Management.ADAccount
+
 An account object is received by the **Identity** parameter.
 
 Derived types, such as the following are also accepted:
@@ -300,11 +305,14 @@ Derived types, such as the following are also accepted:
 ## OUTPUTS
 
 ### Microsoft.ActiveDirectory.Management.ADResultantPasswordReplicationPolicy
-This cmdlet returns an **ADResultantPasswordReplicationPolicy** enum value that represents the resultant password replication policy for an account on the specified domain controller.
+
+This cmdlet returns an **ADResultantPasswordReplicationPolicy** enum value that represents the
+resultant password replication policy for an account on the specified domain controller.
 
 ## NOTES
-* This cmdlet doesn't work with AD LDS.
-* This cmdlet doesn't work with an Active Directory snapshot.
+
+- This cmdlet doesn't work with AD LDS.
+- This cmdlet doesn't work with an Active Directory snapshot.
 
 ## RELATED LINKS
 
@@ -317,5 +325,3 @@ This cmdlet returns an **ADResultantPasswordReplicationPolicy** enum value that 
 [Search-ADAccount](./Search-ADAccount.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
-
-

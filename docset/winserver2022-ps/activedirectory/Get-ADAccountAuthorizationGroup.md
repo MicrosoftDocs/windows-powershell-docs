@@ -32,8 +32,9 @@ user, computer, or service account object by its distinguished name, GUID, secur
 (SID), Security Account Manager (SAM) account name or user principal name. You can also set the
 **Identity** parameter to an account object variable, such as `$<localAccountObject>`, or pass an
 account object through the pipeline to the **Identity** parameter. For example, you can use the
-`Get-ADUser`, `Get-ADComputer`, `Get-ADServiceAccount` or `Search-ADAccount` cmdlets to retrieve an account
-object and then pass the object through the pipeline to the `Get-ADAccountAuthorizationGroup` cmdlet.
+`Get-ADUser`, `Get-ADComputer`, `Get-ADServiceAccount` or `Search-ADAccount` cmdlets to retrieve an
+account object and then pass the object through the pipeline to the
+`Get-ADAccountAuthorizationGroup` cmdlet.
 
 ## EXAMPLES
 
@@ -100,7 +101,8 @@ GroupScope        : Global
 name              : AdminGroup
 objectClass       : group
 objectGUID        : 4d72873f-fe09-4834-9ada-a905636d10df
-SamAccountName    : SID               : S-1-510474493-936115905-4021890855-1253703389-3958791574-3542197427
+SamAccountName    : AdminGroup
+SID               : S-1-510474493-936115905-4021890855-1253703389-3958791574-3542197427
 ```
 
 This command returns all security groups for the specified account with **DistinguishedName**

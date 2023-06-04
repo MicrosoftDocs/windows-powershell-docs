@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 03/13/2023
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/new-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Cluster
@@ -30,90 +30,75 @@ Use Test-Cluster to run the validation tests. The tests will confirm that the ha
 are compatible with failover clustering. There are multiple types of tests, including Inventory,
 System Configuration, Network, Storage, and other types of tests.
 
+> [!TIP]
+> You should run the `New-Cluster` command from a cluster node or client that is the same version as
+> the cluster nodes. Running `New-Cluster` from a lower-level (down-level) client computer may
+> require `Update-ClusterFunctionalLevel` to be run after `New-Cluster` has been run.
+
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4
-```
-```output
-Name 
----- 
-cluster1
+New-Cluster -Name cluster1 -Node node1,node2,node3,node4
 ```
 
-This example creates a four-node cluster named cluster1, using default settings for IP addressing.
+This example creates a four-node cluster named `cluster1`, using default settings for IP addressing.
 
 ### Example 2
 
 ```powershell
-PS C:\> New-Cluster -Name cluster1 -Node node1,node2 -NoStorage
-```
-```output
-Name 
----- 
-cluster1
+New-Cluster -Name cluster1 -Node node1,node2 -NoStorage
 ```
 
-This example creates a two-node cluster named cluster1. The cluster will not have any clustered
+This example creates a two-node cluster named `cluster1`. The cluster will not have any clustered
 storage, or disk resources. Storage can be added using the `Get-ClusterAvailableDisk` cmdlet with
 the `Add-ClusterDisk` cmdlet.
 
 ### Example 3
 
 ```powershell
-PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123
-```
-```output
-Name 
----- 
-cluster1
+New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123
 ```
 
-This example creates a four-node cluster named cluster1 that uses the static IP address 2.0.0.123.
+This example creates a four-node cluster named `cluster1` that uses the static IP address
+`2.0.0.123`.
 
 ### Example 4
 
 ```powershell
-PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123,3.0.0.123
-```
-```output
-Name 
----- 
-cluster1
+New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123,3.0.0.123
 ```
 
-This example creates a four-node cluster named cluster1 that uses the static IP addresses 2.0.0.123
-and 3.0.0.123.
+This example creates a four-node cluster named `cluster1` that uses the static IP addresses
+`2.0.0.123` and `3.0.0.123`.
 
 ### Example 5
 
 ```powershell
-PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -IgnoreNetwork 2.0.0.0/8
-```
-```output
-Name 
----- 
-cluster1
+New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -IgnoreNetwork 2.0.0.0/8
 ```
 
-This example creates a four-node cluster named cluster1. The cluster uses default settings for IP
-addressing, and doesn't use the network 2.0.0.0/8.
+This example creates a four-node cluster named `cluster1`. The cluster uses default settings for IP
+addressing, and doesn't use the network `2.0.0.0/8`.
 
 ### Example 6
 
 ```powershell
-PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123 -IgnoreNetwork 3.0.0.0/8
-```
-```output
-Name 
----- 
-cluster1
+$parameters = @{
+    Name = 'cluster1'
+    Node = 'node1','node2','node3','node4'
+    StaticAddress = '2.0.0.123'
+    IgnoreNetwork = '3.0.0.0/8'
+}
+New-Cluster @parameters
 ```
 
 This example creates a four-node cluster named cluster1. The cluster uses the static IP address
 2.0.0.123, and doesn't use the network 3.0.0.0/8.
+
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 

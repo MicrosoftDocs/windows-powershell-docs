@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterNode
@@ -34,19 +34,20 @@ authentication on the server computer.
 
 ### Example 1
 
-```
-PS C:\> Remove-ClusterNode -Name node4
+```powershell
+Remove-ClusterNode -Name node4
 ```
 
-This example removes the node named node4 from the local cluster.
+This example removes the node named `node4` from the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Remove-ClusterNode -Name node4 -Force
+```powershell
+Remove-ClusterNode -Name node4 -Force
 ```
 
-This example removes the node named node4 from the local cluster without prompting for confirmation.
+This example removes the node named `node4` from the local cluster without prompting for
+confirmation.
 
 ## PARAMETERS
 

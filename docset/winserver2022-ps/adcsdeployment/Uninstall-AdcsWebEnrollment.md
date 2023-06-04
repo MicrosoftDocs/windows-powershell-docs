@@ -20,13 +20,16 @@ Uninstall-AdcsWebEnrollment [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Uninstall-AdcsWebEnrollment** cmdlet removes the Certification Authority (CA) Web Enrollment role service.
+
+The `Uninstall-AdcsWebEnrollment` cmdlet removes the Certification Authority (CA) Web Enrollment
+role service.
 
 ## EXAMPLES
 
 ### Example 1: Uninstall the CA Web Enrollment role service
-```
-PS C:\> Uninstall-AdcsWebEnrollment -Force
+
+```powershell
+Uninstall-AdcsWebEnrollment -Force
 ```
 
 This command uninstalls the CA Web Enrollment role service without requiring confirmation.
@@ -34,6 +37,7 @@ This command uninstalls the CA Web Enrollment role service without requiring con
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -49,6 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -64,6 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -80,7 +86,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,11 +101,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.CertificateServices.Deployment.Common.WEP.WebEnrollmentResult
 
 ## NOTES
-* Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.
 
-  
+- Ensure you run Windows PowerShell as an administrator. You can use the **Force** parameter to
+  bypass the prompt for confirmation.
 
 ## RELATED LINKS
 
 [Install-AdcsWebEnrollment](./Install-AdcsWebEnrollment.md)
-

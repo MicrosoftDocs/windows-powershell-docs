@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/new-clusternameaccount?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ClusterNameAccount
@@ -40,21 +40,21 @@ name account already exists for a cluster, this cmdlet has no effect.
 
 ### Example 1: Create a cluster name account for the current cluster
 
-```
-PS C:\> New-ClusterNameAccount -Name "cluster_17" -Domain "production.contoso.com"
+```powershell
+New-ClusterNameAccount -Name "cluster_17" -Domain "production.contoso.com"
 ```
 
-This command creates a cluster name account for the current cluster in the specified domain. The
-current cluster is the default value for the cluster on which this cmdlet operates.
+This command creates a cluster name account for the current cluster in the specified domain.
+The current cluster is the default value for the cluster on which this cmdlet operates.
 
 ### Example 2: Create a cluster name account by using credentials
 
-```
-PS C:\> $Credential = Get-Credential
-PS C:\> New-ClusterNameAccount -Name "cluster27" -Domain "production.contoso.com" -Credentials $Credential
+```powershell
+$Credential = Get-Credential
+New-ClusterNameAccount -Name "cluster27" -Domain "production.contoso.com" -Credentials $Credential
 ```
 
-The first command prompts you for credentials, and then stores them in the **$Credential** variable.
+The first command prompts you for credentials, and then stores them in the `$Credential` variable.
 
 The second command creates a cluster name account for the current cluster in the specified domain.
 The command supplies the credentials stored in `$Credential` to access Active Directory Domain

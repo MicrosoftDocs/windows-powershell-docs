@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/start-clustergroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ClusterGroup
@@ -30,26 +30,20 @@ maintenance or diagnosis.
 
 ### Example 1
 
-```
-PS C:\> Start-ClusterGroup FileServer1
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-FileServer1                node1                                         Online
+```powershell
+Start-ClusterGroup FileServer1
 ```
 
-This example starts the clustered file server, or resource group, called FileServer1.
+This example starts the clustered file server, or resource group, called `FileServer1`.
 
 ### Example 2
 
-```
-PS C:\> Start-ClusterGroup FileServer1 -Wait 0
-Name                       OwnerNode                                      State 
-----                       ---------                                      ----- 
-FileServer1                node1                                        Pending
+```powershell
+Start-ClusterGroup FileServer1 -Wait 0
 ```
 
-This example starts the clustered file server, or resource group, called FileServer1. The Windows
-PowerShell® prompt returns as soon as the action has been initiated.
+This example starts the clustered file server, or resource group, called `FileServer1`.
+The Windows PowerShell prompt returns as soon as the action has been initiated.
 
 ## PARAMETERS
 

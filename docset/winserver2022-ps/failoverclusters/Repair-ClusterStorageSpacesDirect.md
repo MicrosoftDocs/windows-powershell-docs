@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/repair-clusterstoragespacesdirect?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Repair-ClusterStorageSpacesDirect
@@ -39,12 +39,11 @@ The `Repair-ClusterStorageSpacesDirect` cmdlet repairs Storage Spaces Direct (S2
 
 ### Example 1: Repair S2D on all nodes
 
-```
-PS C:\> Repair-ClusterStorageSpacesDirect -Verbose -Confirm:$False
-VERBOSE: Performing operation 'Repair Cluster Storage Spaces Direct' on Target 'K0619-C1'.
+```powershell
+Repair-ClusterStorageSpacesDirect -Verbose -Confirm:$False
 ```
 
-This command repairs S2D on all nodes.
+This command repairs S2D on all nodes without user confirmation.
 
 ## PARAMETERS
 
@@ -181,7 +180,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

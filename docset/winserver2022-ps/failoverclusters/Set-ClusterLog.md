@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterlog?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterLog
@@ -29,22 +29,16 @@ level, `3`, includes errors, warnings, and additional information.
 
 ### Example 1
 
-```
-PS C:\> Set-ClusterLog -Level 1
-Name 
----- 
-cluster1
+```powershell
+Set-ClusterLog -Level 1
 ```
 
-This example sets the cluster log to a detail level of 1.
+This example sets the cluster log to a detail level of `1`.
 
 ### Example 2
 
-```
-PS C:\> Set-ClusterLog -Size 1024
-Name 
----- 
-cluster1
+```powershell
+Set-ClusterLog -Size 1024
 ```
 
 This example sets the cluster log size to 1024 MB.

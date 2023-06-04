@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusternetworkinterface?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterNetworkInterface
@@ -30,29 +30,19 @@ and nodes.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterNetworkInterface
-Name                Node                Network                           State 
-----                ----                -------                           ----- 
-node1 - Local A ...  node1               Cluster Network 1                    Up 
-node2 - Local A ...  node2               Cluster Network 1                    Up 
-node1 - Local A ...  node1               Cluster Network 2                    Up 
-node2 - Local A ...  node2               Cluster Network 2                    Up
+```powershell
+Get-ClusterNetworkInterface
 ```
 
 This example displays information about the physical network adapters used by the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterNode -Name node1 | Get-ClusterNetworkInterface
-Name                Node                Network                           State 
-----                ----                -------                           ----- 
-node1 - Local A ...  node1               Cluster Network 1                    Up 
-node1 - Local A ...  node1               Cluster Network 2                    Up
+```powershell
+Get-ClusterNode -Name node1 | Get-ClusterNetworkInterface
 ```
 
-This example displays information about the physical network adapters used by node1 in the local
+This example displays information about the physical network adapters used by `node1` in the local
 cluster. This cmdlet is equivalent to `Get-ClusterNetworkInterface -Node node1`.
 
 ## PARAMETERS

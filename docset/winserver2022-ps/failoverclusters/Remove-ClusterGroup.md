@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clustergroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterGroup
@@ -32,30 +32,30 @@ resources first, or specify the **RemoveResources** parameter.
 
 ### Example 1
 
-```
-PS C:\> Remove-ClusterGroup -Name MyFileServer
+```powershell
+Remove-ClusterGroup -Name MyFileServer
 ```
 
 This example prompts the user for confirmation and then removes the clustered role named
-MyFileServer, if the resources have first been removed from it.
+`MyFileServer`, if the resources have first been removed from it.
 
 ### Example 2
 
-```
-PS C:\> Remove-ClusterGroup -Name MyFileServer -Force
+```powershell
+Remove-ClusterGroup -Name MyFileServer -Force
 ```
 
-This example removes the clustered role named MyFileServer, if the resources have first been removed
+This example removes the clustered role named `MyFileServer`, if the resources have first been removed
 from it. The cmdlet doesn't prompt for confirmation.
 
 ### Example 3
 
-```
-PS C:\> Remove-ClusterGroup -Name MyFileServer -Force -RemoveResources
+```powershell
+Remove-ClusterGroup -Name MyFileServer -Force -RemoveResources
 ```
 
-This example removes the clustered role named MyFileServer, without prompting for confirmation. All
-cluster resources in MyFileServer will be deleted.
+This example removes the clustered role named `MyFileServer`, without prompting for confirmation.
+All cluster resources in `MyFileServer` will be deleted.
 
 ## PARAMETERS
 

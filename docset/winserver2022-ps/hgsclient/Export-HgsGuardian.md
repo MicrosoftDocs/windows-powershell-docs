@@ -20,26 +20,32 @@ Export-HgsGuardian [-InputObject] <CimInstance> [-Path] <String> [<CommonParamet
 ```
 
 ## DESCRIPTION
-The **Export-HgsGuardian** cmdlet exports a guardian that contains public keys to an .xml file.
+
+The `Export-HgsGuardian` cmdlet exports a guardian that contains public keys to an `.xml` file.
 
 ## EXAMPLES
 
 ### Example 1: Export a guardian
-```
-PS C:\> Get-HgsGuardian -Name "Guardian11" | Export-HGsGuardian -Path "C:\LocalHGSFiles\Guardian11.xml"
+
+```powershell
+Get-HgsGuardian -Name 'Guardian11' |
+    Export-HGsGuardian -Path 'C:\LocalHGSFiles\Guardian11.xml'
 ```
 
-This command uses the **Get-HgsGuardian** cmdlet to get the guardian named Guardian11, and then passes the object to the current cmdlet by using the pipeline operator.
-That cmdlet exports the guardian to the specified file.
+This command uses the `Get-HgsGuardian` cmdlet to get the guardian named `Guardian11`, and then
+passes the object to the current cmdlet by using the pipeline operator. That cmdlet exports the
+guardian to the specified file.
 
 ## PARAMETERS
 
 ### -InputObject
-Specifies the input to this cmdlet. 
+
+Specifies the input to this cmdlet.
+
 You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
-Type: CimInstance
+Type: Microsoft.Management.Infrastructure.CimInstance
 Parameter Sets: (All)
 Aliases: Guardian
 
@@ -51,10 +57,11 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
 Specifies the path to the file to write an XML representation of the guardian.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: FilePath
 
@@ -66,7 +73,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -83,4 +93,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-HgsGuardian](./New-HgsGuardian.md)
 
 [Remove-HgsGuardian](./Remove-HgsGuardian.md)
-

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 01/10/2023
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/move-clustervirtualmachinerole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Move-ClusterVirtualMachineRole
@@ -37,58 +37,49 @@ authentication on the server computer.
 
 ### Example 1
 
-```
-PS C:\> Move-ClusterVirtualMachineRole -Name "Virtual Machine1" -Node node2
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-Virtual Machine1           node2                              Online
+```powershell
+Move-ClusterVirtualMachineRole -Name "Virtual Machine1" -Node node2
 ```
 
 This example performs a live migration of the clustered virtual machine named Virtual Machine1 to
-the node named node2. The Windows PowerShell prompt doesn't return until the action is complete.
+the node named `node2`. The Windows PowerShell prompt doesn't return until the action is complete.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterGroup -Name "Virtual Machine1" | Move-ClusterVirtualMachineRole -Node node2 -Wait 0
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-Virtual Machine1           node2                              Online
+```powershell
+Get-ClusterGroup -Name "Virtual Machine1" | Move-ClusterVirtualMachineRole -Node node2 -Wait 0
 ```
 
-This example performs a live migration of clustered virtual machine named Virtual Machine1 to the
-node named node2. The Windows PowerShell® prompt returns as soon as the action has been initiated.
+This example performs a live migration of clustered virtual machine named `Virtual Machine1` to the
+node named `node2`. The Windows PowerShell prompt returns as soon as the action has been initiated.
 
 ### Example 3
 
-```
-PS C:\> Move-ClusterVirtualMachineRole -Name "Virtual Machine1" -Cancel
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-Virtual Machine1           node1                              Online
+```powershell
+Move-ClusterVirtualMachineRole -Name "Virtual Machine1" -Cancel
 ```
 
-This example cancels the live migration in progress for the clustered virtual machine named Virtual
-Machine1.
+This example cancels the live migration in progress for the clustered virtual machine named `Virtual
+Machine1`.
 
 ### Example 4
 
-```
-PS C:\> $groups = Get-ClusterNode -Name node1 | Get-ClusterGroup | Where-Object -FilterScript {$_ | Get-ClusterResource | Where-Object -FilterScript {$_.ResourceType -Like "Virtual Machine"}}
-
-
-PS C:\> ForEach-Object -InputObject $groups -Process { $_ | Move-ClusterVirtualMachineRole -Node node2 }
-Name                       OwnerNode                           State 
-----                       ---------                           ----- 
-Virtual Machine1           node2                              Online 
-Virtual Machine2           node2                              Online 
-Virtual Machine3           node2                              Online
+```powershell
+$vmGroups = Get-ClusterNode -Name node1 |
+    Get-ClusterGroup |
+    Where-Object -FilterScript {
+        Get-ClusterResource -InputObject $_ |
+            Where-Object ResourceType -Like "Virtual Machine"
+    }
+ForEach-Object -InputObject $vmGroups -Process { $_ | Move-ClusterVirtualMachineRole -Node node2 }
 ```
 
-This example performs a live migration of all clustered virtual machines that are currently owned by
-the node named node1 to the node named node2. The migration of each virtual machine should complete
-before the next migration is started. Use this cmdlet before performing maintenance on the specified
-node.
+This example queries a specific cluster node, `node1`, to find the currently owned groups. The
+example further filters the owned groups where there resource type is a virtual machine cluster
+resource. The filtered groups are stored in the `$vmGroups` variable. For each cluster group in the
+variable, the command will perform a live migration of all clustered virtual machines to the node
+named `node2`. The migration of each virtual machine will complete before the next migration is
+started.
 
 ## PARAMETERS
 

@@ -260,7 +260,7 @@ properties that are not included in the default set.
 
 Specify the properties to get as a comma separated list of names. For properties that are not
 default or extended properties, you must specify the LDAP display name of the property. To display
-all of the properties that are set on the object, specify an asterisk wildcard.
+all of the properties that are set on the object, specify an asterisk (`*`) wildcard.
 
 ```yaml
 Type: System.String[]

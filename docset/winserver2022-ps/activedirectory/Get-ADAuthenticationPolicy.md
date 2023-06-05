@@ -280,7 +280,7 @@ Specifies the number of objects to include in one page for an Active Directory D
 query. The default value is `256` objects per page.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: Filter, LdapFilter
 Aliases: 
 
@@ -300,7 +300,7 @@ query and the return of objects.
 The default value is `$null`.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: Filter, LdapFilter
 Aliases: 
 

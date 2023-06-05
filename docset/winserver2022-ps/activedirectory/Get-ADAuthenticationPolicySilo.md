@@ -73,6 +73,7 @@ This command gets an authentication policy silo object named AuthenticationPolic
 ```powershell
 Get-ADAuthenticationPolicySilo -Filter 'Name -like "*AuthenticationPolicySilo*"' |
     Format-Table Name, Enforce -AutoSize
+```
 
 ```output
 Name  Enforce

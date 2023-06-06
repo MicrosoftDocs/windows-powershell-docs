@@ -133,7 +133,7 @@ Denied RODC Password Replication Group                      group
 This command returns a filtered list of built-in security groups that do not have an empty or null
 setting for **objectClass**, such as **Everyone** or **Authenticated Users**.
 
-> [!NOTE]:
+> [!NOTE]
 > This type of filtering of groups in output can be useful when piping the output of this
 > cmdlet to be used as input to other Active Directory cmdlets.
 

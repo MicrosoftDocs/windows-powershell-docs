@@ -57,16 +57,16 @@ For more information about multitenancy, see the **Add-VmNetworkAdapterRoutingDo
 ## EXAMPLES
 
 ### Example 1: Set isolation mode for a virtual machine
-```
-PS C:\> Set-VMNetworkAdapterIsolation -VMName "TSQA01" -AllowUntaggedTraffic $False -IsolationMode NativeVirtualSubnet -MultiTenantStack On
+```powershell
+Set-VMNetworkAdapterIsolation -VMName "TSQA01" -AllowUntaggedTraffic $False -IsolationMode NativeVirtualSubnet -MultiTenantStack On
 ```
 
 This command sets the isolation mode of the virtual machine named TSQA01 to NativeVirtualSubnet, which indicates Hyper-V Network Virtualization.
 The virtual machine does not accept untagged traffic, but the **MultitenantStack** parameter has a value of On, so the virtual machine can provide services to multiple tenants.
 
 ### Example 2: Set isolation mode and untagged traffic setting for a virtual machine
-```
-PS C:\> Set-VMNetworkAdapterIsolation -VMName "TSQA01" -AllowUntaggedTraffic $True -IsolationMode VLAN -DefaultIsolationID 1 -MultiTenantStack On
+```powershell
+Set-VMNetworkAdapterIsolation -VMName "TSQA01" -AllowUntaggedTraffic $True -IsolationMode VLAN -DefaultIsolationID 1 -MultiTenantStack On
 ```
 
 This command sets the isolation mode for virtual machine named TSQA01 to be VLAN.

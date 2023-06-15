@@ -32,15 +32,15 @@ The **Add-VMRemoteFx3dVideoAdapter** cmdlet adds a RemoteFX video adapter in a v
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Add-VMRemoteFx3dVideoAdapter -VMName Test
+```powershell
+Add-VMRemoteFx3dVideoAdapter -VMName Test
 ```
 
 Adds a RemoteFX video adapter to virtual machine Test.
 
 ### Example 2
-```
-PS C:\> Get-VM Test | Add-VMRemoteFx3dVideoAdapter
+```powershell
+Get-VM Test | Add-VMRemoteFx3dVideoAdapter
 ```
 
 Adds a RemoteFX video adapter to virtual machine Test.

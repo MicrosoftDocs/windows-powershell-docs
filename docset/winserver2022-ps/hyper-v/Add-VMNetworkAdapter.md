@@ -43,29 +43,29 @@ The **Add-VMNetworkAdapter** cmdlet adds a virtual network adapter to a virtual 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Add-VMNetworkAdapter -VMName Redmond -Name "Redmond NIC1"
+```powershell
+Add-VMNetworkAdapter -VMName Redmond -Name "Redmond NIC1"
 ```
 
 This example adds a virtual network adapter named Redmond NIC1 to a virtual machine named Redmond.
 
 ### Example 2
-```
-PS C:\> Add-VMNetworkAdapter -VMName Test -SwitchName Network
+```powershell
+Add-VMNetworkAdapter -VMName Test -SwitchName Network
 ```
 
 This example adds a virtual network adapter to a virtual machine named Test and connects it to a virtual switch named Network.
 
 ### Example 3
-```
-PS C:\> Get-VM Test | Add-VMNetworkAdapter -IsLegacy $true -Name Bootable
+```powershell
+Get-VM Test | Add-VMNetworkAdapter -IsLegacy $true -Name Bootable
 ```
 
 This example uses two cmdlets and the pipeline in one command to perform the operation.
 
 ### Example 4
-```
-PS C:\> Add-VMNetworkAdapter -ManagementOS -Name Secondary
+```powershell
+Add-VMNetworkAdapter -ManagementOS -Name Secondary
 ```
 
 This example adds a second virtual network adapter in the management operating system.

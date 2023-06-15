@@ -26,22 +26,22 @@ The **Get-VMMigrationNetwork** cmdlet gets the networks added for migration to o
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMMigrationNetwork
+```powershell
+Get-VMMigrationNetwork
 ```
 
 Gets all networks added for migration to the local virtual machine host.
 
 ### Example 2
-```
-PS C:\> Get-VMMigrationNetwork -Priority 8
+```powershell
+Get-VMMigrationNetwork -Priority 8
 ```
 
 Gets all networks added for migration to the local virtual machine host having a priority of 8.
 
 ### Example 3
-```
-PS C:\> Get-VMMigrationNetwork 192.168.*
+```powershell
+Get-VMMigrationNetwork 192.168.*
 ```
 
 Gets all networks added for migration having a subnet starting with 192.168.

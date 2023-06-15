@@ -35,8 +35,8 @@ The retrieved extension object does not contain embedded objects for features, o
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMSwitch InternalSwitch | Get-VMSwitchExtension
+```powershell
+Get-VMSwitch InternalSwitch | Get-VMSwitchExtension
 ```
 
 Gets all virtual switch extensions available to the virtual switch InternalSwitch.

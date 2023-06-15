@@ -32,6 +32,19 @@ The **Set-VMSecurityPolicy** cmdlet configures the security policy for a virtual
 
 ## EXAMPLES
 
+### EXAMPLE 1
+```powershell
+Set-VMSecurityPolicy -VMName "Test-VM" -Shielded $True
+```
+
+This examples sets the security policy on the Virtual machines to be ***Shielded***.
+
+### EXAMPLE 2
+```powershell
+Set-VMKeyProtector -VMName "Test-VM" -NewLocalKeyProtector
+Set-VMSecurityPolicy -VMName "Test-VM" -Shielded $True
+```
+This examples creates a new local key protector and sets the security policy on the Virtual machines to be ***Shielded***. See [Set-VMKeyProtector](https://learn.microsoft.com/en-us/powershell/module/hyper-v/set-vmkeyprotector?view=windowsserver2022-ps) for additional details.
 
 ## PARAMETERS
 

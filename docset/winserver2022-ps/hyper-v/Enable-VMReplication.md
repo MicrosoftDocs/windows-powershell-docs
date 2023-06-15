@@ -59,22 +59,22 @@ The **Enable-VMReplication** cmdlet enables replication of a virtual machine to 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\>  Enable-VMReplication VM01 server01.domain01.contoso.com 80 Kerberos
+```powershell
+Enable-VMReplication VM01 server01.domain01.contoso.com 80 Kerberos
 ```
 
 This example configures replication for a virtual machine named VM01 on the local Hyper-V host and directs replication traffic to port 80 on a Replica server named server01.domain01.contoso.com, using Kerberos as the type of authentication.
 
 ### Example 2
-```
-PS C:\>  Enable-VMReplication * server01.domain01.contoso.com 80 Kerberos
+```powershell
+Enable-VMReplication * server01.domain01.contoso.com 80 Kerberos
 ```
 
 This example configures replication for all virtual machines on the local Hyper-V host to replica server and directs replication traffic to port 80 on a Replica server named server01.domain01.contoso.com, using Kerberos as the type of authentication.
 
 ### Example 3
-```
-PS C:\>  Enable-VMReplication VM01 -AsReplica -AllowedPrimaryServer *.domain01.contoso.com
+```powershell
+Enable-VMReplication VM01 -AsReplica -AllowedPrimaryServer *.domain01.contoso.com
 ```
 
 This example configures a virtual machine VM02 as a replica virtual machine and allows replication of the primary virtual machine from all primary servers that belong to a domain named domain01.contoso.com.

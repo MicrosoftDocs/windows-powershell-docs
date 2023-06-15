@@ -57,9 +57,9 @@ The **Remove-VMGroupMember** cmdlet removes either virtual machines or groups of
 ## EXAMPLES
 
 ### Example 1: Remove a virtual machine from a group
-```
-PS C:\> $VM01 = Get-VM -Name "ContosoVirtualMachine01"
-PS C:\> Remove-VMGroupMember -Name "VirtualMachineGroup" -VM $VM01
+```powershell
+$VM01 = Get-VM -Name "ContosoVirtualMachine01"
+Remove-VMGroupMember -Name "VirtualMachineGroup" -VM $VM01
 ```
 
 The first command uses the **Get-VM** cmdlet to get a virtual machine named ContosoVirtualMachine01.

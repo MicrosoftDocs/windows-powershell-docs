@@ -33,8 +33,8 @@ The **Debug-VM** cmdlet debugs a virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> debug-vm "VM to Debug" -InjectNonMaskableInterrupt -Force
+```powershell
+debug-vm "VM to Debug" -InjectNonMaskableInterrupt -Force
 ```
 
 This example injects a non-maskable interrupt into the virtual machine named "VM to Debug".

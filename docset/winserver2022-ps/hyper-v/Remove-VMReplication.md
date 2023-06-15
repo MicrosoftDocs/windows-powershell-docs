@@ -40,15 +40,15 @@ Removing replication on a Replica virtual machine does not delete the Replica vi
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VMReplication VM01
+```powershell
+Remove-VMReplication VM01
 ```
 
 This example removes the replication relationship of virtual machine VM01.
 
 ### Example 2
-```
-PS C:\> Remove-VMReplication *
+```powershell
+Remove-VMReplication *
 ```
 
 This example removes the replication relationships from all replica-enabled virtual machines on the local Hyper-V host.

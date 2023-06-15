@@ -46,6 +46,11 @@ The **Remove-VMNetworkAdapterTeamMapping** cmdlet
 ## EXAMPLES
 
 
+### Example 1
+```powershell
+Remove-VMNetworkAdapterTeamMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC"
+```
+
 ## PARAMETERS
 
 ### -CimSession

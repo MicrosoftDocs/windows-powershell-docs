@@ -39,8 +39,8 @@ The **Disable-VMIntegrationService** cmdlet disables an integration service on a
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Disable-VMIntegrationService -Name Shutdown,VSS -VMName Test1
+```powershell
+Disable-VMIntegrationService -Name Shutdown,VSS -VMName Test1
 ```
 
 This example disables the Shutdown and VSS integration services on virtual machine Test1.

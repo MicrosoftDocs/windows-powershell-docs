@@ -29,8 +29,8 @@ The object can be used to apply the configuration on specific ports using the **
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMSystemSwitchExtensionSwitchFeature
+```powershell
+Get-VMSystemSwitchExtensionSwitchFeature
 ```
 
 Gets all virtual switch extensions that support switch level features that can be configured on a virtual switch.

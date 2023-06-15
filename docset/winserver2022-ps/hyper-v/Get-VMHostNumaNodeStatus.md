@@ -33,8 +33,8 @@ If the virtual machine host enables NUMA spanning, this cmdlet returns an error.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMHostNumaNodeStatus
+```powershell
+Get-VMHostNumaNodeStatus
 ```
 
 Gets the status of the virtual machines on the non-uniform memory access (NUMA) nodes of the local Hyper-V host.

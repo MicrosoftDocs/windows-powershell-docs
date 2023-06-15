@@ -33,15 +33,15 @@ The **Remove-VMDvdDrive** cmdlet deletes a DVD drive from a virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VMDvdDrive -VMName TestVM -ControllerNumber 1 -ControllerLocation 0
+```powershell
+Remove-VMDvdDrive -VMName TestVM -ControllerNumber 1 -ControllerLocation 0
 ```
 
 Removes the virtual DVD drive at IDE 1,0 on virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VMDvdDrive -VMName TestVM -ControllerNumber 1 | Remove-VMDvdDrive
+```powershell
+Get-VMDvdDrive -VMName TestVM -ControllerNumber 1 | Remove-VMDvdDrive
 ```
 
 Removes all virtual DVD drives on IDE controller 1 of virtual machine TestVM.

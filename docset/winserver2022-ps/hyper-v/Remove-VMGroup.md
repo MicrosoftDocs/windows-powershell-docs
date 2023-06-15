@@ -39,8 +39,8 @@ Before you can remove a group, it must be empty.
 ## EXAMPLES
 
 ### Example 1: Remove a group
-```
-PS C:\> Remove-VMGroup -Name "Group04"
+```powershell
+Remove-VMGroup -Name "Group04"
 ```
 
 This command removes the virtual machine group named Group04.

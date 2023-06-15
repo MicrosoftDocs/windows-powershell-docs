@@ -29,16 +29,16 @@ Conversion is an offline operation; the virtual hard disk must not be attached w
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Convert-VHD -Path c:\test\testvhd.vhd -DestinationPath c:\test\testvhdx.vhdx
+```powershell
+Convert-VHD -Path c:\test\testvhd.vhd -DestinationPath c:\test\testvhdx.vhdx
 ```
 
 This example converts a source VHD to a destination VHDX.
 Because the format is determined by the file name extension and the default type is determined by the source virtual hard disk when no type is specified, the destination virtual hard disk will be a VHDX-format disk of the same type as the source virtual hard disk.
 
 ### Example 2
-```
-PS C:\> Convert-VHD -Path c:\test\child1vhdx.vhdx -DestinationPath c:\test\child1vhd.vhd -VHDType Differencing -ParentPath c:\test\parentvhd.vhd
+```powershell
+Convert-VHD -Path c:\test\child1vhdx.vhdx -DestinationPath c:\test\child1vhd.vhd -VHDType Differencing -ParentPath c:\test\parentvhd.vhd
 ```
 
 This example converts a source differencing disk of VHDX format to a destination differencing disk of VHD format that is connected to an existing parent disk.

@@ -37,15 +37,15 @@ The **Get-VMComPort** cmdlet gets the COM ports of a virtual machine or snapshot
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMComPort TestVM
+```powershell
+Get-VMComPort TestVM
 ```
 
 Gets all COM ports associated with virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VMComPort TestVM -Number 2
+```powershell
+Get-VMComPort TestVM -Number 2
 ```
 
 Gets the second COM port associated with virtual machine TestVM.

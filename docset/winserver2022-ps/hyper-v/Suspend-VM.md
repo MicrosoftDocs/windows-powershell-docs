@@ -33,15 +33,15 @@ To return a suspended virtual machine to a running state, use the **Resume-VM** 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Suspend-VM -Name TestVM
+```powershell
+Suspend-VM -Name TestVM
 ```
 
 This example suspends a virtual machine named TestVM.
 
 ### Example 2
-```
-PS C:\> Suspend-VM -Name Test*
+```powershell
+Suspend-VM -Name Test*
 ```
 
 This example suspends all virtual machines whose names starts with Test.

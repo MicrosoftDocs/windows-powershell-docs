@@ -41,8 +41,8 @@ The **Set-VMRemoteFx3dVideoAdapter** cmdlet configures the RemoteFX 3D video ada
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMRemoteFx3dVideoAdapter -VMName TestVM -MaximumResolution 1920x1200
+```powershell
+Set-VMRemoteFx3dVideoAdapter -VMName TestVM -MaximumResolution 1920x1200
 ```
 
 Sets the maximum resolution of the RemoteFX adapter on virtual machine TestVM to 1920x1200.

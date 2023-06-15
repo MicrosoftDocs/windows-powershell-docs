@@ -36,43 +36,43 @@ The **Get-VMReplication** cmdlet gets the replication settings for a virtual mac
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMReplication
+```powershell
+Get-VMReplication
 ```
 
 This example gets the replication settings of all replication-enabled virtual machines on the local Hyper-V host.
 
 ### Example 2
-```
-PS C:\> Get-VMReplication VM01
+```powershell
+Get-VMReplication VM01
 ```
 
 This example gets the replication settings of a virtual machine named VM01.
 
 ### Example 3
-```
-PS C:\> Get-VMReplication -ReplicaServerName server01.domain01.contoso.com
+```powershell
+Get-VMReplication -ReplicaServerName server01.domain01.contoso.com
 ```
 
 This example gets the replication settings of all virtual machines replicating to server server01.domain01.contoso.com.
 
 ### Example 4
-```
-PS C:\> Get-VMReplication -ReplicationState Replicating
+```powershell
+Get-VMReplication -ReplicationState Replicating
 ```
 
 This example gets the replication settings of all virtual machines in the Replicating state.
 
 ### Example 5
-```
-PS C:\> Get-VMReplication -TrustGroup DEFAULT
+```powershell
+Get-VMReplication -TrustGroup DEFAULT
 ```
 
 This example gets the replication settings of all virtual machines in a trust group named DEFAULT.
 
 ### Example 6
-```
-PS C:\> Get-VMReplication -ReplicationMode Primary
+```powershell
+Get-VMReplication -ReplicationMode Primary
 ```
 
 This example gets the replication settings of all primary virtual machines on the local host.

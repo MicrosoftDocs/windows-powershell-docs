@@ -29,10 +29,10 @@ The feature must have been configured previously on the virtual network adapter.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> $ModifiedFeature = Get-VMSwitchExtensionPortFeature -VMName VM2 -FeatureName "Ethernet Switch Port Security Settings"
-PS C:\> $ModifiedFeature.SettingData.EnableDhcpGuard = $false
-PS C:\> Set-VMSwitchExtensionPortFeature -VMName VM2 -VMSwitchExtensionFeature $ModifiedFeature
+```powershell
+$ModifiedFeature = Get-VMSwitchExtensionPortFeature -VMName VM2 -FeatureName "Ethernet Switch Port Security Settings"
+$ModifiedFeature.SettingData.EnableDhcpGuard = $false
+Set-VMSwitchExtensionPortFeature -VMName VM2 -VMSwitchExtensionFeature $ModifiedFeature
 ```
 
 Configures the feature on a virtual network adapter(s) on virtual machine VM2.

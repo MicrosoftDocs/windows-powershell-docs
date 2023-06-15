@@ -26,8 +26,8 @@ You can use this information for advanced debugging.
 ## EXAMPLES
 
 ### Example 1: Start error tracing
-```
-PS C:\> Start-VMTrace -Level Error
+```powershell
+Start-VMTrace -Level Error
 ```
 
 This command starts tracing at the level of Error.

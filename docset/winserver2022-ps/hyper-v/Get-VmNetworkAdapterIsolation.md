@@ -49,8 +49,8 @@ The cmdlet displays the isolation method, and other information, such as the mul
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMNetworkAdapterIsolation -VMName Multitenant-GW -VMNetworkAdapterName InternalNIC
+```powershell
+Get-VMNetworkAdapterIsolation -VMName Multitenant-GW -VMNetworkAdapterName InternalNIC
 ```
 
 This example retrieves the isolation settings of a VM.

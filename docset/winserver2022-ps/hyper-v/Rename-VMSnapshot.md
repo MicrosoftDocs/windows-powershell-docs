@@ -42,8 +42,8 @@ For clarity, this document will refer to virtual machine snapshots as checkpoint
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Rename-VMSnapshot -VMName TestVM -Name "Configuration 2" -NewName "Configuration 2: applied all updates"
+```powershell
+Rename-VMSnapshot -VMName TestVM -Name "Configuration 2" -NewName "Configuration 2: applied all updates"
 ```
 
 Renames checkpoint Configuration 2 of virtual machine TestVM to Configuration 2: applied all updates.

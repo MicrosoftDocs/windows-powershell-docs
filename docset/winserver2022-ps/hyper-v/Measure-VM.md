@@ -94,16 +94,16 @@ For more information, see the 'Notes' following the field descriptions.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Measure-VM -VMName TestVM
+```powershell
+Measure-VM -VMName TestVM
 ```
 
 This example reports resource utilization data for a virtual machine named TestVM.
 
 ### Example 2
-```
-PS C:\> $UtilizationReport = Get-VM TestVM | Measure-VM
-PS C:\> Get-VM TestVM | Reset-VMResourceMetering
+```powershell
+$UtilizationReport = Get-VM TestVM | Measure-VM
+Get-VM TestVM | Reset-VMResourceMetering
 ```
 
 This example uses two commands as well as the pipeline.

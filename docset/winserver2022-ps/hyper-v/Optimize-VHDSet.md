@@ -26,8 +26,8 @@ The **Optimize-VHDSet** cmdlet optimizes the allocation of space used by virtual
 ## EXAMPLES
 
 ### Example 1: Optimize a VHD set
-```
-PS C:\> Optimize-VHDSet -Path "c:\data.vhds"
+```powershell
+Optimize-VHDSet -Path "c:\data.vhds"
 ```
 
 This command optimizes the allocation of space on the VHD set file c:\data.vhds.

@@ -58,8 +58,8 @@ The **Set-VmNetworkAdapterRoutingDomainMapping** cmdlet sets virtual subnets on 
 ## EXAMPLES
 
 ### Example 1: Set a virtual subnet on a routing domain
-```
-PS C:\> Set-VMNetworkAdapterRoutingDomainMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC" -RoutingDomainID "{5a07361e-6a54-49fc-9210-bfbf14a5c56f}" -IsolationID 6001
+```powershell
+Set-VMNetworkAdapterRoutingDomainMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC" -RoutingDomainID "{5a07361e-6a54-49fc-9210-bfbf14a5c56f}" -IsolationID 6001
 ```
 
 This command sets the virtual subnet that has the ID 6001 for the specified routing domain.

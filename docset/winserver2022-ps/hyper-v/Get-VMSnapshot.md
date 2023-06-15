@@ -52,35 +52,33 @@ For clarity, this document will refer to virtual machine snapshots as checkpoint
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMSnapshot -VMName TestVM
+```powershell
+Get-VMSnapshot -VMName TestVM
 ```
 
 Gets all checkpoints of virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VM -Name TestVM | Get-VMSnapshot -SnapshotType Standard
+```powershell
+Get-VM -Name TestVM | Get-VMSnapshot -SnapshotType Standard
 ```
 
 Gets all standard checkpoints of virtual machine TestVM.
 
 ### Example 3
-```
-PS C:\> $snapshot = Get-VMSnapshot -Name 'Before applying updates' -VMName TestVM
+```powershell
+$snapshot = Get-VMSnapshot -Name 'Before applying updates' -VMName TestVM
 
-
-PS C:\> Get-VMSnapshot -ParentOf $snapshot
+Get-VMSnapshot -ParentOf $snapshot
 ```
 
 Gets the immediate parent of checkpoint Before applying updates of virtual machine TestVM.
 
 ### Example 4
-```
-PS C:\> $snapshot = Get-VMSnapshot -Name 'Before applying updates' -VMName TestVM
+```powershell
+$snapshot = Get-VMSnapshot -Name 'Before applying updates' -VMName TestVM
 
-
-PS C:\> Get-VMSnapshot -ChildOf $snapshot
+Get-VMSnapshot -ChildOf $snapshot
 ```
 
 Gets the immediate child checkpoints of checkpoint Before applying updates of virtual machine TestVM.

@@ -34,15 +34,15 @@ The **Disconnect-VMNetworkAdapter** cmdlet disconnects a virtual network adapter
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Disconnect-VMNetworkAdapter -VMNetworkAdapter Test1
+```powershell
+Disconnect-VMNetworkAdapter -VMNetworkAdapter Test1
 ```
 
 Disconnects virtual network adapter Test1.
 
 ### Example 2
-```
-PS C:\> Get-VMNetworkAdapter -VMName * | Where-Object {$_.SwitchName -eq 'InternetAccess'} | Disconnect-VMNetworkAdapter
+```powershell
+Get-VMNetworkAdapter -VMName * | Where-Object {$_.SwitchName -eq 'InternetAccess'} | Disconnect-VMNetworkAdapter
 ```
 
 Disconnects all virtual network adapters whose SwitchName is InternetAccess in all virtual machines on the local server that runs Hyper-V.

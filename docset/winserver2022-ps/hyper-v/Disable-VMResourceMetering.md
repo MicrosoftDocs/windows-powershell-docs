@@ -43,22 +43,22 @@ After the call, Measure-VM and Measure-VMResourcePool are not usable.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Disable-VMResourceMetering -VMName TestVM
+```powershell
+Disable-VMResourceMetering -VMName TestVM
 ```
 
 Disables collection of resource utilization data on a virtual machine named TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VM Test* | Disable-VMResourceMetering
+```powershell
+Get-VM Test* | Disable-VMResourceMetering
 ```
 
 Disables collection of resource utilization data on a set of virtual machines whose names begin with the string Test.
 
 ### Example 3
-```
-PS C:\> Disable-VMResourceMetering -ResourcePoolName TestResourcePool -ResourcePoolType Memory
+```powershell
+Disable-VMResourceMetering -ResourcePoolName TestResourcePool -ResourcePoolType Memory
 ```
 
 Disables collection of resource utilization data on a resource pool named TestResourcePool of type Memory.

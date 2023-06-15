@@ -26,8 +26,8 @@ The **Get-VMSan** cmdlet gets the available virtual storage area networks (SANs)
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMSan -Name ProductionSAN
+```powershell
+Get-VMSan -Name ProductionSAN
 ```
 
 Gets a virtual storage area network (SAN) named ProductionSAN.

@@ -43,32 +43,32 @@ You also can schedule replication to start up to 7 days later.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Start-VMInitialReplication VM01
+```powershell
+Start-VMInitialReplication VM01
 ```
 
 This example starts initial replication of virtual machine VM01 over the network.
 
 ### Example 2
-```
-PS C:\> Start-VMInitialReplication *
+```powershell
+Start-VMInitialReplication *
 ```
 
 This example starts initial replication over the network for all the virtual machines on the local Hyper-V host for which initial replication is pending.
 
 ### Example 3
-```
-PS C:\> Start-VMInitialReplication * -DestinationPath R:\IRLoc
+```powershell
+Start-VMInitialReplication * -DestinationPath R:\IRLoc
 ```
 
 This example exports the initial replication of all virtual machines on the local Hyper-V host for which initial replication is pending, to the location R:\IRLoc.
 This example assumes that the location is an external drive, which would be shipped to the Replica site so that the initial replication can be completed.
 
 ### Example 4
-```
-PS C:\> Enable-VMReplication VM01 -AsReplica -computername MyReplica.contoso.com
-PS C:\> Enable-VMReplication VMO1 -ReplicaServerName ReplicaServer01 -ReplicaServerPort 80 -AuthenticationType Kerberos -computername MyPrimary.contoso.comPS
-PS C:\> Start-VMInitialReplication VM01 -usebackup -computername MyPrimary.contoso.com
+```powershell
+Enable-VMReplication VM01 -AsReplica -computername MyReplica.contoso.com
+Enable-VMReplication VMO1 -ReplicaServerName ReplicaServer01 -ReplicaServerPort 80 -AuthenticationType Kerberos -computername MyPrimary.contoso.comPS
+Start-VMInitialReplication VM01 -usebackup -computername MyPrimary.contoso.com
 ```
 
 This example uses several consecutive commands to start initial replication from backup.
@@ -77,9 +77,9 @@ Then, it enables replication for VM01 from the primary server.
 Finally, it starts the initial replication to use the restored copy of VM01 on Replica server as the basis of the initial replication.
 
 ### Example 5
-```
-PS C:\> $VMRepl = Get-VMReplication -VMName MyVM 
-PS C:\> Start-VMInitialReplication -VMReplication $VMRepl
+```powershell
+$VMRepl = Get-VMReplication -VMName MyVM 
+Start-VMInitialReplication -VMReplication $VMRepl
 ```
 
 The first command returns a VMReplication object for the VM named MyVM and stores it in the variable $VMRepl.

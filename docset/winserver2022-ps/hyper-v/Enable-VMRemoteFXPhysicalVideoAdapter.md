@@ -33,8 +33,8 @@ The **Enable-VMRemoteFXPhysicalVideoAdapter** cmdlet enables one or more RemoteF
 ## EXAMPLES
 
 ### Code Example Title
-```
-PS C:\> Get-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia* | Enable-VMRemoteFXPhysicalVideoAdapter
+```powershell
+Get-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia* | Enable-VMRemoteFXPhysicalVideoAdapter
 ```
 
 Enables all RemoteFX physical video adapters which include the sequence "Nvidia" in their name.

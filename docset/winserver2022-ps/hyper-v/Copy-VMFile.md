@@ -34,8 +34,8 @@ The **Copy-VMFile** cmdlet copies a file to a virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Copy-VMFile "Test VM" -SourcePath "D:\Test.txt" -DestinationPath "C:\Temp\Test.txt" -CreateFullPath -FileSource Host
+```powershell
+Copy-VMFile "Test VM" -SourcePath "D:\Test.txt" -DestinationPath "C:\Temp\Test.txt" -CreateFullPath -FileSource Host
 ```
 
 This example copies the file "test.txt" from the host operating system into the guest operating system of the virtual machine "Test VM".

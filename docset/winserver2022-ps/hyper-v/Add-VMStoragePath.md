@@ -27,8 +27,8 @@ The **Add-VMStoragePath** cmdlet adds a path to a storage resource pool.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Add-VMStoragePath -Path D:\VHD -ResourcePoolName "Engineering Department" -ResourcePoolType VHD
+```powershell
+Add-VMStoragePath -Path D:\VHD -ResourcePoolName "Engineering Department" -ResourcePoolType VHD
 ```
 
 Adds path D:\VHD to resource storage pool Engineering Department of type VHD.

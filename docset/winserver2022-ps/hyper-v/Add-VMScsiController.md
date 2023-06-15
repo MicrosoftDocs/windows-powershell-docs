@@ -32,8 +32,8 @@ The **Add-VMScsiController** cmdlet adds a SCSI controller in a virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Add-VMScsiController -VMName TestVM
+```powershell
+Add-VMScsiController -VMName TestVM
 ```
 
 Adds a SCSI controller in virtual machine TestVM.

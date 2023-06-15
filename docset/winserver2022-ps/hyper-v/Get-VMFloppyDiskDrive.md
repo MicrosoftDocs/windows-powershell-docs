@@ -37,8 +37,8 @@ The **Get-VMFloppyDiskDrive** cmdlet gets the floppy disk drives of a virtual ma
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMFloppyDiskDrive TestVM
+```powershell
+Get-VMFloppyDiskDrive TestVM
 ```
 
 Gets the floppy disk drive for virtual machine TestVM.

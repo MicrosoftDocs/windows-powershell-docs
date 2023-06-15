@@ -38,15 +38,15 @@ The **Get-VMNetworkAdapterFailoverConfiguration** cmdlet gets the IP address con
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMNetworkAdapterFailoverConfiguration VM01
+```powershell
+Get-VMNetworkAdapterFailoverConfiguration VM01
 ```
 
 This example gets the failover IP address configuration of all virtual network adapters attached to a virtual machine named VM01.
 
 ### Example 2
-```
-PS C:\> Get-VMNetworkAdapterFailoverConfiguration VM01 -VMNetworkAdapterName NetworkAdapter
+```powershell
+Get-VMNetworkAdapterFailoverConfiguration VM01 -VMNetworkAdapterName NetworkAdapter
 ```
 
 This example gets the failover IP address configuration of a virtual network adapter named NetworkAdapter on a virtual machine named VM01.

@@ -33,15 +33,15 @@ The **Stop-VM** cmdlet shuts down, turns off, or saves a virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Stop-VM -Name TestVM
+```powershell
+Stop-VM -Name TestVM
 ```
 
 Shuts down virtual machine TestVM through the guest operating system.
 
 ### Example 2
-```
-PS C:\> Stop-VM -Name VM1 -Force
+```powershell
+Stop-VM -Name VM1 -Force
 ```
 
 Shuts down virtual machine TestVM through the guest operating system, regardless of any unsaved application data.
@@ -49,8 +49,8 @@ Hyper-V gives the guest five minutes to save data, then forces a shutdown.
 This shutdown can result in loss of unsaved data.
 
 ### Example 3
-```
-PS C:\> Stop-VM -Name TestVM -TurnOff
+```powershell
+Stop-VM -Name TestVM -TurnOff
 ```
 
 Turns off virtual machine TestVM.

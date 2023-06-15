@@ -48,8 +48,8 @@ The **Add-VMFibreChannelHba** cmdlet adds a virtual Fibre Channel host bus adapt
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Add-VMFibreChannelHba -VMName MyVM -SanName Production
+```powershell
+Add-VMFibreChannelHba -VMName MyVM -SanName Production
 ```
 
 This example adds the virtual Fibre Channel host bus adapter associated with virtual storage area network Production to a virtual machine named MyVM.

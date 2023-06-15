@@ -42,15 +42,15 @@ If attempted, the cmdlet throws an error.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMBios TestVM -DisableNumLock
+```powershell
+Set-VMBios TestVM -DisableNumLock
 ```
 
 This example disables the NumLock key by default on virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Set-VMBios TestVM -StartupOrder @("Floppy", "LegacyNetworkAdapter", "CD", "IDE")
+```powershell
+Set-VMBios TestVM -StartupOrder @("Floppy", "LegacyNetworkAdapter", "CD", "IDE")
 ```
 
 This example configures virtual machine TestVM to check for a boot device in the following order: floppy disk, network, CD drive, hard disk.

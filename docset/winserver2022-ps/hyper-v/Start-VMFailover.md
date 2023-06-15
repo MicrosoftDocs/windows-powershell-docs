@@ -61,8 +61,8 @@ The **Start-VMFailover** cmdlet can be used for the following tasks:
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMSnapshot VM01 -Name Snapshot01 | Start-VMFailover
+```powershell
+Get-VMSnapshot VM01 -Name Snapshot01 | Start-VMFailover
 ```
 
 This example starts failover of a virtual machine named VM01 with recovery point Snapshot01.
@@ -71,25 +71,25 @@ Note: Recovery points are stored as snapshots.
 To get a list of all snapshots, use the **Get-VMSnapshot** cmdlet.
 
 ### Example 2
-```
-PS C:\> Start-VMFailover VM01 -AsTest
+```powershell
+Start-VMFailover VM01 -AsTest
 ```
 
 This example starts a test failover of a virtual machine named VM01.
 
 ### Example 3
-```
-PS C:\> Get-VMSnapshot VM01 -Name Snapshot01 | Start-VMFailover -AsTest
+```powershell
+Get-VMSnapshot VM01 -Name Snapshot01 | Start-VMFailover -AsTest
 ```
 
 Starts a test failover of a virtual machine named VM01 with recovery point Snapshot01.
 
 ### Example 4
-```
-PS C:\> Start-VMFailover -Prepare -VMName VM01  -computername MyPrimary.contoso.com
-PS C:\> Start-VMFailover -VMName VM01 -computername MyReplica.contoso.com
-PS C:\> Set-VMReplication -Reverse -VMName VM01 -computername MyReplica.contoso.com
-PS C:\> Start-VM -VMName VM01 -computername MyReplica.contoso.com
+```powershell
+Start-VMFailover -Prepare -VMName VM01  -computername MyPrimary.contoso.com
+Start-VMFailover -VMName VM01 -computername MyReplica.contoso.com
+Set-VMReplication -Reverse -VMName VM01 -computername MyReplica.contoso.com
+Start-VM -VMName VM01 -computername MyReplica.contoso.com
 ```
 
 This example shows the cmdlets you use to perform a planned failover.

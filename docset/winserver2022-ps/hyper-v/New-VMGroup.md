@@ -33,7 +33,7 @@ The **New-VMGroup** cmdlet creates a virtual machine group.
 
 ### Example 1: Create a group to contain virtual machines
 ```powershell
-PS C:\> New-VMGroup -Name 'CollectionGroup07' -GroupType VMCollectionType
+New-VMGroup -Name 'CollectionGroup07' -GroupType VMCollectionType
 ```
 
 This command creates a virtual machine group named CollectionGroup07 of type VMCollectionType.
@@ -41,7 +41,7 @@ This group can contain collections of virtual machines.
 
 ### Example 2: Create a group to contain groups of virtual machines
 ```powershell
-PS C:\> New-VMGroup -Name 'ManagementCollectionGroup03' -GroupType ManagementCollectionType
+New-VMGroup -Name 'ManagementCollectionGroup03' -GroupType ManagementCollectionType
 ```
 
 This command creates a virtual machine group named ManagementCollectionGroup03 of type ManagementCollectionType.

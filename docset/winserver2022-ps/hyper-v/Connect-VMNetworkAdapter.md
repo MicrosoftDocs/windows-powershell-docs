@@ -59,22 +59,22 @@ The **Connect-VMNetworkAdapter** cmdlet connects a virtual network adapter to a 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Connect-VMNetworkAdapter -VMName Test1,Test2 -Name Internet -SwitchName InternetAccess
+```powershell
+Connect-VMNetworkAdapter -VMName Test1,Test2 -Name Internet -SwitchName InternetAccess
 ```
 
 Connects a virtual network adapter named Internet in virtual machines Test1 and Test2 to a virtual switch InternetAccess.
 
 ### Example 2
-```
-PS C:\> Get-VMNetworkAdapter -VMName Test1 | Connect-VMNetworkAdapter -SwitchName InternetAccess
+```powershell
+Get-VMNetworkAdapter -VMName Test1 | Connect-VMNetworkAdapter -SwitchName InternetAccess
 ```
 
 Connects a virtual network adapter in virtual machine Test1 to virtual switch InternetAccess.
 
 ### Example 3
-```
-PS C:\> Get-VMSwitch InternetAccess | Connect-VMNetworkAdapter -VMName Test1
+```powershell
+Get-VMSwitch InternetAccess | Connect-VMNetworkAdapter -VMName Test1
 ```
 
 Connects a virtual network adapter in virtual machine Test1 to switch InternetAccess.

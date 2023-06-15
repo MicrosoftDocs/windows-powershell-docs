@@ -34,10 +34,10 @@ The **Add-VMSwitchExtensionSwitchFeature** cmdlet adds a feature supported by a 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> $feature = Get-VMSwitchExtensionSwitchFeature -FeatureName "Ethernet Switch BandwidthSettings"
-PS C:\> $feature.SettingData.DefaultFlowReservation = 300000000
-PS C:\> Add-VMSwitchExtensionSwitchFeature "External" -VMSwitchExtensionSwitchFeature $feature
+```powershell
+$feature = Get-VMSwitchExtensionSwitchFeature -FeatureName "Ethernet Switch BandwidthSettings"
+$feature.SettingData.DefaultFlowReservation = 300000000
+Add-VMSwitchExtensionSwitchFeature "External" -VMSwitchExtensionSwitchFeature $feature
 ```
 
 Adds a feature to virtual switch External.

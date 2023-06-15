@@ -34,8 +34,8 @@ If the virtual machine has any snapshots, these are deleted and merged into the 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VM "new 1"
+```powershell
+Remove-VM "new 1"
 Confirm: Are you sure you want to remove virtual machine "new 1"?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y
 ```
@@ -43,14 +43,14 @@ Confirm: Are you sure you want to remove virtual machine "new 1"?
 Removes virtual machine new 1.
 
 ### Example 2
-```
+```powershell
 Remove-VM -Name "new 2" -Force
 ```
 
 Removes virtual machine new 2, suppressing the confirmation prompt.
 
 ### Example 3
-```
+```powershell
 Get-VM -Name New* | Remove-VM -Force
 ```
 

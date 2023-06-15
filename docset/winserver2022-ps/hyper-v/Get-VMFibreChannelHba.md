@@ -32,8 +32,8 @@ The **Get-VMFibreChannelHba** cmdlet lists all of the fibre channel objects for 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMFibreChannelHba -VMName MyVM
+```powershell
+Get-VMFibreChannelHba -VMName MyVM
 ```
 
 Gets the Fibre Channel host bus adapters associated with the virtual machine MyVM.

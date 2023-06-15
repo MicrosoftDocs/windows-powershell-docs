@@ -57,29 +57,29 @@ Given a list of IP-based ACL entries to be applied to traffic in the same direct
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Add-VMNetworkAdapterAcl -VMName Redmond -RemoteIPAddress 10.0.0.0/8 -Direction Both -Action Allow
+```powershell
+Add-VMNetworkAdapterAcl -VMName Redmond -RemoteIPAddress 10.0.0.0/8 -Direction Both -Action Allow
 ```
 
 This example adds an ACL to allow virtual machine Redmond to send to and receive from traffic on IP subnet 10.0.0.8/8.
 
 ### Example 2
-```
-PS C:\> Add-VMNetworkAdapterAcl -VMName Redmond -RemoteIPAddress ANY -Direction Both -Action Deny
+```powershell
+Add-VMNetworkAdapterAcl -VMName Redmond -RemoteIPAddress ANY -Direction Both -Action Deny
 ```
 
 This example adds an ACL to deny virtual machine Redmond to send either IPv4 or IPv6 traffic to anywhere and receive such traffic from anywhere.
 
 ### Example 3
-```
-PS C:\> Get-VM Redmond | Add-VMNetworkAdapterAcl -RemoteMacAddress 03-0f-01-0e-aa-b2 -Direction Both -Action Deny
+```powershell
+Get-VM Redmond | Add-VMNetworkAdapterAcl -RemoteMacAddress 03-0f-01-0e-aa-b2 -Direction Both -Action Deny
 ```
 
 This example gets virtual machine Redmond and adds an ACL to deny it to send any traffic to a device with MAC address 03-0f-01-0e-aa-b2 or to receive any traffic from that device.
 
 ### Example 4
-```
-PS C:\> Get-VMNetworkAdapter -VMName Redmond | Add-VMNetworkAdapterAcl -RemoteIPAddress 192.168.0.0/16 -Direction Outbound -Action Meter
+```powershell
+Get-VMNetworkAdapter -VMName Redmond | Add-VMNetworkAdapterAcl -RemoteIPAddress 192.168.0.0/16 -Direction Outbound -Action Meter
 ```
 
 This example gets virtual network adapters from virtual machine Redmond and adds an ACL to meter outgoing traffic sent to IP subnet 192.168.0.0/16.

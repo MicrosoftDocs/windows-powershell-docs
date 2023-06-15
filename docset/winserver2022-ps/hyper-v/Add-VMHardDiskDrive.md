@@ -48,29 +48,29 @@ The **Add-VMHardDiskDrive** cmdlet adds a hard disk drive to a virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Add-VMHardDiskDrive -VMName Test -Path D:\VHDs\disk1.vhdx
+```powershell
+Add-VMHardDiskDrive -VMName Test -Path D:\VHDs\disk1.vhdx
 ```
 
 Creates a virtual hard disk using file D:\VHDs\disk1.vhdx on virtual machine Test.
 
 ### Example 2
-```
-PS C:\> Get-VM Test | Add-VMHardDiskDrive -ControllerType SCSI -ControllerNumber 0
+```powershell
+Get-VM Test | Add-VMHardDiskDrive -ControllerType SCSI -ControllerNumber 0
 ```
 
 Adds a virtual hard disk to SCSI controller number 0 on virtual machine Test.
 
 ### Example 3
-```
-PS C:\> Get-VMScsiController -VMName Test -ControllerNumber 0 | Add-VMHardDiskDrive -DiskNumber 2
+```powershell
+Get-VMScsiController -VMName Test -ControllerNumber 0 | Add-VMHardDiskDrive -DiskNumber 2
 ```
 
 This example gets a SCSI controller on a virtual machine named Test and then adds physical disk 2 to that controller.
 
 ### Example 4
-```
-PS C:\> Get-Disk 2 | Add-VMHardDiskDrive -VMName Test
+```powershell
+Get-Disk 2 | Add-VMHardDiskDrive -VMName Test
 ```
 
 This example gets physical disk 2 and then adds it to a virtual machine named Test.

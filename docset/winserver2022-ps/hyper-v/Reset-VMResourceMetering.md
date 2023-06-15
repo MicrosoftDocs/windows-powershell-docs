@@ -41,22 +41,22 @@ Hyper-V continues to collect resource utilization data after reset.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Reset-VMResourceMetering -VMName TestVM
+```powershell
+Reset-VMResourceMetering -VMName TestVM
 ```
 
 Resets resource utilization data collection on a virtual machine named TestVM.
 
 ### Example 2
-```
-PS C:\> Reset-VMResourceMetering -ResourcePoolName TestResourcePool -ResourcePoolType Memory
+```powershell
+Reset-VMResourceMetering -ResourcePoolName TestResourcePool -ResourcePoolType Memory
 ```
 
 Resets resource utilization data collection for a single resource pool named TestResourcePool of type Memory.
 
 ### Example 3
-```
-PS C:\> Get-VMResourcePool -ResourcePoolType @("Processor","VHD","Ethernet","Memory") | Reset-VMResourceMetering
+```powershell
+Get-VMResourcePool -ResourcePoolType @("Processor","VHD","Ethernet","Memory") | Reset-VMResourceMetering
 ```
 
 Resets resource utilization data collection for all supported resource pool types on the virtual machine host.

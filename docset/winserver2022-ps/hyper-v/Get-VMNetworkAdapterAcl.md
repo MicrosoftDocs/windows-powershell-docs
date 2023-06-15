@@ -49,8 +49,8 @@ If an ACL entry is created to be applied to both directions, it will appear unde
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMNetworkAdapterAcl -VMName Redmond
+```powershell
+Get-VMNetworkAdapterAcl -VMName Redmond
 ```
 
 Gets all the port ACLs configured on virtual machine Redmond.

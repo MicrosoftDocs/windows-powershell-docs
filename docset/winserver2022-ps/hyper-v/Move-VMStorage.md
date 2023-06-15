@@ -50,15 +50,15 @@ The **Move-VMStorage** cmdlet moves the storage of a virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Move-VMStorage "Test VM" -DestinationStoragePath D:\TestVM
+```powershell
+Move-VMStorage "Test VM" -DestinationStoragePath D:\TestVM
 ```
 
 Moves all files associated with a virtual machine test VM to D:\TestVM
 
 ### Example 2
-```
-PS C:\> Move-VMStorage "Test VM" -VirtualMachinePath D:\TestVM\Config -SnapshotFilePath D:\TestVM\Snapshots -SmartPagingFilePath D:\TestVM\SmartPaging -VHDs @(@{"SourceFilePath" = "C:\TestVM\Disk1.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk1.VHDX"}, @{"SourceFilePath" = "C:\TestVM\Disk2.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk2.VHDX"})
+```powershell
+Move-VMStorage "Test VM" -VirtualMachinePath D:\TestVM\Config -SnapshotFilePath D:\TestVM\Snapshots -SmartPagingFilePath D:\TestVM\SmartPaging -VHDs @(@{"SourceFilePath" = "C:\TestVM\Disk1.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk1.VHDX"}, @{"SourceFilePath" = "C:\TestVM\Disk2.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk2.VHDX"})
 ```
 
 Moves all files associated with a virtual machine test VM to different locations under D:\TestVM.

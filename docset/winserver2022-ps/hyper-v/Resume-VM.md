@@ -32,8 +32,8 @@ The **Resume-VM** cmdlet resumes a suspended (paused) virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Resume-VM -Name TestVM
+```powershell
+Resume-VM -Name TestVM
 ```
 
 Resumes suspended (paused) virtual machine TestVM.

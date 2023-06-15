@@ -53,15 +53,15 @@ The **Remove-VMNetworkAdapterExtendedAcl** cmdlet removes an extended access con
 ## EXAMPLES
 
 ### Example 1: Remove a specific ACL
-```
-PS C:\> Remove-VMNetworkAdapterExtendedAcl -VMName "TSQA01" -Direction InBound -Weight 50
+```powershell
+Remove-VMNetworkAdapterExtendedAcl -VMName "TSQA01" -Direction InBound -Weight 50
 ```
 
 This command removes the ACL for inbound traffic that has a weight of 50 from the virtual machine named TSQA01.
 
 ### Example 2: Remove all ACLs
-```
-PS C:\> Get-VMNetworkAdapterExtendedAcl -VMName "TSQA01" | Remove-VMNetworkAdapterExtendedAcl
+```powershell
+Get-VMNetworkAdapterExtendedAcl -VMName "TSQA01" | Remove-VMNetworkAdapterExtendedAcl
 ```
 
 This command uses the **Get-VMNetworkAdapterExtendedAcl** cmdlet to get all the ACLs for the virtual machine named TSQA01, and then passes them to the current cmdlet by using the pipeline operator.

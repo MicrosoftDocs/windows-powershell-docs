@@ -37,8 +37,8 @@ Checkpoint replaces the previous term, snapshot.
 ## EXAMPLES
 
 ### Example 1: Remove a checkpoint
-```
-PS C:\> Remove-VHDSnapshot -Path "Data01.vhds" -SnapshotId 6c87351a-a39a-4581-b231-6d693b26485d
+```powershell
+Remove-VHDSnapshot -Path "Data01.vhds" -SnapshotId 6c87351a-a39a-4581-b231-6d693b26485d
 ```
 
 This command removes the checkpoint that has the specified ID from the VHD set file named Data01.vhds.

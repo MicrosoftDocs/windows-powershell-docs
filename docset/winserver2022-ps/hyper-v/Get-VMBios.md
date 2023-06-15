@@ -39,8 +39,8 @@ If attempted, the cmdlet throws an error.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMBios TestVM
+```powershell
+Get-VMBios TestVM
 ```
 
 Gets the BIOS object for virtual machine TestVM.

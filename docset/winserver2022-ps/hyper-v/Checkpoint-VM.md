@@ -36,15 +36,15 @@ For clarity, this document will refer to virtual machine snapshots as checkpoint
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Checkpoint-VM -Name Test -SnapshotName BeforeInstallingUpdates
+```powershell
+Checkpoint-VM -Name Test -SnapshotName BeforeInstallingUpdates
 ```
 
 Checkpoints virtual machine Test, creating a checkpoint of it named BeforeInstallingUpdates.
 
 ### Example 2
-```
-PS C:\> Get-VM Test -ComputerName Server1 | Checkpoint-VM
+```powershell
+Get-VM Test -ComputerName Server1 | Checkpoint-VM
 ```
 
 Checkpoints virtual machine Test on Hyper-V host Server1.

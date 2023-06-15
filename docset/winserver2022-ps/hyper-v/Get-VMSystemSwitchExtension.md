@@ -27,8 +27,8 @@ The returned switch extension does not contain embedded objects for features or 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMSystemSwitchExtension
+```powershell
+Get-VMSystemSwitchExtension
 ```
 
 Gets all virtual switch extensions installed on the system.

@@ -61,29 +61,29 @@ The **Remove-VMNetworkAdapterAcl** cmdlet removes an ACL applied to the traffic 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VMNetworkAdapterAcl -VMName Redmond -RemoteIPAddress 0.0.0.0/0 -Direction Both -Action Allow
+```powershell
+Remove-VMNetworkAdapterAcl -VMName Redmond -RemoteIPAddress 0.0.0.0/0 -Direction Both -Action Allow
 ```
 
 Removes from virtual machine Redmond the ACL allowing any IPv4 traffic sent from or to the virtual machine.
 
 ### Example 2
-```
-PS C:\> Remove-VMNetworkAdapterAcl -VMName Redmond -RemoteIPAddress ::/0 -Direction Both -Action Allow
+```powershell
+Remove-VMNetworkAdapterAcl -VMName Redmond -RemoteIPAddress ::/0 -Direction Both -Action Allow
 ```
 
 Removes from virtual machine Redmond the ACL that allows any IPv6 traffic sent from and to the virtual machine.
 
 ### Example 3
-```
-PS C:\> Remove-VMNetworkAdapterAcl -VMName Redmond -RemoteMacAddress 03-0f-01-0e-aa-b2 -Direction Both -Action Deny
+```powershell
+Remove-VMNetworkAdapterAcl -VMName Redmond -RemoteMacAddress 03-0f-01-0e-aa-b2 -Direction Both -Action Deny
 ```
 
 Removes the MAC ACL to prevent virtual machine Redmond from sending traffic to or receiving traffic from a remote device with MAC address 03-0f-01-0e-aa-b2.
 
 ### Example 4
-```
-PS C:\> Get-VMNetworkAdapterAcl -VMName Redmond | Remove-VMNetworkAdapterAcl
+```powershell
+Get-VMNetworkAdapterAcl -VMName Redmond | Remove-VMNetworkAdapterAcl
 ```
 
 Retrieves all the port ACLs configured for virtual machine Redmond and pipelines them to Remove-VMNetworkAdapterAcl, which removes all of them from the virtual machine.

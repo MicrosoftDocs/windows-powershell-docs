@@ -45,8 +45,8 @@ The **New-VMSwitch** cmdlet creates a new virtual switch on one or more virtual 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> New-VMSwitch "QoS Switch" -NetAdapterName "Wired Ethernet Connection 3" -MinimumBandwidthMode Weight
+```powershell
+New-VMSwitch "QoS Switch" -NetAdapterName "Wired Ethernet Connection 3" -MinimumBandwidthMode Weight
 ```
 
 Creates a new switch QoS switch, which binds to a network adapter called Wired Ethernet Connection 3 and supports weight-based minimum bandwidth.

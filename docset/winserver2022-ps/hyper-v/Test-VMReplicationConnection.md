@@ -28,8 +28,8 @@ The **Test-VMReplicationConnection** cmdlet tests the connection between a prima
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Test-VMReplicationConnection server01.domain01.contoso.com 80 Kerberos
+```powershell
+Test-VMReplicationConnection server01.domain01.contoso.com 80 Kerberos
 ```
 
 This example tests the connection between the local host and a Replica server named server01.domain01.contoso.com, using port 80 and Kerberos authentication.

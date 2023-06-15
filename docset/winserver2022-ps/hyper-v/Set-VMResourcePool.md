@@ -28,15 +28,15 @@ The **Set-VMResourcePool** cmdlet sets a parent resource pool for a selected res
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMResourcePool ChildPool VHD ParentPool
+```powershell
+Set-VMResourcePool ChildPool VHD ParentPool
 ```
 
 Set a virtual hard drive resource pool ParentPool as the parent of virtual hard drive resource pool ChildPool.
 
 ### Example 2
 ```
-PS C:\> Set-VMResourcePool ChildPool VHD Primordial
+Set-VMResourcePool ChildPool VHD Primordial
 ```
 
 Remove the parent resource pool from virtual hard drive resource pool ChildPool.

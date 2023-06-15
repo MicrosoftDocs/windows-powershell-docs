@@ -47,15 +47,15 @@ The **Rename-VMNetworkAdapter** cmdlet renames a virtual network adapter on a vi
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Rename-VMNetworkAdapter -VMName Redmond -NewName CoreNet
+```powershell
+Rename-VMNetworkAdapter -VMName Redmond -NewName CoreNet
 ```
 
 This example renames all the virtual network adapters of virtual machine Redmond to CoreNet.
 
 ### Example 2
-```
-PS C:\> Rename-VMNetworkAdapter -VMName Kirkland -Name Private -NewName CoreNet
+```powershell
+Rename-VMNetworkAdapter -VMName Kirkland -Name Private -NewName CoreNet
 ```
 
 This example renames the virtual network adapter Private to CoreNet in virtual machine Kirkland.

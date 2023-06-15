@@ -37,22 +37,22 @@ Replication statistics are calculated for a predetermined amount of time based o
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Measure-VMReplication
+```powershell
+Measure-VMReplication
 ```
 
 This example gets the replication monitoring details of all replicating virtual machines on the local host.
 
 ### Example 2
-```
-PS C:\> Measure-VMReplication VM01
+```powershell
+Measure-VMReplication VM01
 ```
 
 This example gets the replication monitoring details of a virtual machine named VM01.
 
 ### Example 3
-```
-PS C:\>  Measure-VMReplication -ReplicationHealth Warning
+```powershell
+Measure-VMReplication -ReplicationHealth Warning
 ```
 
 This example gets the replication monitoring details of all virtual machines that have a replication health of "Warning".

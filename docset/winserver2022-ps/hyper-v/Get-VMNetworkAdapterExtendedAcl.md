@@ -49,8 +49,8 @@ If an ACL applies to both inbound and outbound packets, it appears in both inbou
 ## EXAMPLES
 
 ### Example 1: Get all extended ACLs
-```
-PS C:\> Get-VMNetworkAdapterExtendedAcl -VMName "TSQA01"
+```powershell
+Get-VMNetworkAdapterExtendedAcl -VMName "TSQA01"
 ```
 
 This command gets all the extended ACLs for the virtual machine named TSQA01.

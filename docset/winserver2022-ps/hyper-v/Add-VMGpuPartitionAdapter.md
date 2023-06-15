@@ -52,7 +52,7 @@ This example assigns a partition to a specific VM object.
 ### Example 2
 ```powershell
 $vm = Get-VM -name "TestVM"
-Add-VMGpuPartitionAdapter -VM $vm -Instancepath "SampleGPUInstancePath"
+Add-VMGpuPartitionAdapter -VM $vm -InstancePath "SampleGPUInstancePath"
 ```
 
 This example assigns a partition from a specific GPU to a VM where the instance path is the GPU device ID name on the host.

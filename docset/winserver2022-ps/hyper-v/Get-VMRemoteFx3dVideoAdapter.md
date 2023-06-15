@@ -37,22 +37,22 @@ The **Get-VMRemoteFx3dVideoAdapter** cmdlet gets the RemoteFX video adapter of a
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMRemoteFx3dVideoAdapter -VMName TestVM
+```powershell
+Get-VMRemoteFx3dVideoAdapter -VMName TestVM
 ```
 
 Gets the RemoteFX adapter from virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VM -Name TestVM | Get-VMRemoteFx3dVideoAdapter
+```powershell
+Get-VM -Name TestVM | Get-VMRemoteFx3dVideoAdapter
 ```
 
 Gets the RemoteFx adapter from virtual machine TestVM.
 
 ### Example 3
-```
-PS C:\> Get-VMSnapshot -VMName TestVM -Name 'Before applying updates' | Get-VMRemoteFx3dVideoAdapter
+```powershell
+Get-VMSnapshot -VMName TestVM -Name 'Before applying updates' | Get-VMRemoteFx3dVideoAdapter
 ```
 
 Gets the RemoteFx adapter from snapshot Before applying updates of virtual machine TestVM.

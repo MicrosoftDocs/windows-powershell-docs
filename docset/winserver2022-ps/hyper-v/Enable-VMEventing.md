@@ -28,8 +28,8 @@ Virtual machine eventing is enabled by default.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Enable-VMEventing -Force
+```powershell
+Enable-VMEventing -Force
 ```
 
 Enables virtual machine eventing, suppressing the confirmation prompt.

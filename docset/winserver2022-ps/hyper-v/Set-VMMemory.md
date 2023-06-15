@@ -45,8 +45,8 @@ The **Set-VMMemory** cmdlet configures the memory of a virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMMemory TestVM -DynamicMemoryEnabled $true -MinimumBytes 64MB -StartupBytes 256MB -MaximumBytes 2GB -Priority 80 -Buffer 25
+```powershell
+Set-VMMemory TestVM -DynamicMemoryEnabled $true -MinimumBytes 64MB -StartupBytes 256MB -MaximumBytes 2GB -Priority 80 -Buffer 25
 ```
 
 Enables dynamic memory on virtual machine TestVM, sets its minimum, startup, and maximum memory, its memory priority, and its buffer.

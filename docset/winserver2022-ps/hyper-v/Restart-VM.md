@@ -47,8 +47,8 @@ This can result in data loss in the virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Restart-VM Win7
+```powershell
+Restart-VM Win7
 Confirm
 Are you sure you want to restart virtual machine "win7"?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y

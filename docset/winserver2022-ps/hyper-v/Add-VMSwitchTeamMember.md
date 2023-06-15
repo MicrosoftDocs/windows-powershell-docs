@@ -49,9 +49,9 @@ The **Add-VMSwitchTeamMember** cmdlet adds adapters as members to a virtual swit
 ## EXAMPLES
 
 ### Example 1: Add network adapters to a switch team
-```
-PS C:\> $VMSwitch = Get-VMSwitch -Name "Switch03"
-PS C:\> Add-VMSwitchTeamMember -VMSwitch $VMSwitch -NetAdapterName "Adapter01","Adapter04"
+```powershell
+$VMSwitch = Get-VMSwitch -Name "Switch03"
+Add-VMSwitchTeamMember -VMSwitch $VMSwitch -NetAdapterName "Adapter01","Adapter04"
 ```
 
 The first command gets the virtual switch team named Switch03, and then stores it in the **$VMSwitch** variable.

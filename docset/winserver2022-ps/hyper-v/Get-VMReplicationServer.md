@@ -31,15 +31,15 @@ The **Get-VMReplicationServer** cmdlet gets the replication and authentication s
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMReplicationServer
+```powershell
+Get-VMReplicationServer
 ```
 
 This example gets the replication configuration of the local Replica server.
 
 ### Example 2
-```
-PS C:\> Get-VMReplicationServer server01.domain01.contoso.com
+```powershell
+Get-VMReplicationServer server01.domain01.contoso.com
 ```
 
 This example gets the replication configuration of a server named server01.domain01.contoso.com.

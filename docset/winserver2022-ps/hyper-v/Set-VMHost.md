@@ -45,29 +45,29 @@ The **Set-VMHost** cmdlet configures a Hyper-V host.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMHost -MaximumVirtualMachineMigrations 10 -MaximumStorageMigrations 10
+```powershell
+Set-VMHost -MaximumVirtualMachineMigrations 10 -MaximumStorageMigrations 10
 ```
 
 This example configures the local Hyper-V host to allow 10 simultaneous live migrations and storage migrations.
 
 ### Example 2
-```
-PS C:\> Set-VMHost -MacAddressMinimum 00155D020600 -MacAddressMaximum 00155D0206FF
+```powershell
+Set-VMHost -MacAddressMinimum 00155D020600 -MacAddressMaximum 00155D0206FF
 ```
 
 This example configures a range of MAC addresses range for the local Hyper-V host.
 
 ### Example 3
-```
-PS C:\> Set-VMHost -UseAnyNetworkForMigration $true
+```powershell
+Set-VMHost -UseAnyNetworkForMigration $true
 ```
 
 This example enables the use of any network for incoming live migrations on the local Hyper-V host.
 
 ### Example 4
-```
-PS C:\> Set-VMHost -VirtualHardDiskPath "C:\Hyper-V\Virtual Hard Disks" -VirtualMachinePath "C:\Hyper-V"
+```powershell
+Set-VMHost -VirtualHardDiskPath "C:\Hyper-V\Virtual Hard Disks" -VirtualMachinePath "C:\Hyper-V"
 ```
 
 This example specifies new default locations for virtual hard disks and virtual machines on the local Hyper-V host. In this case:
@@ -76,29 +76,29 @@ This example specifies new default locations for virtual hard disks and virtual 
 - Virtual hard disks are stored in "C:\Hyper-V\Virtual Hard Disks"
 
 ### Example 5
-```
-PS C:\> Set-VMHost -FibreChannelWwnn C003FF0000FFFF00 -FibreChannelWwpnMinimum C003FF661D200000 -FibreChannelWwpnMaximum C003FF661D200000
+```powershell
+Set-VMHost -FibreChannelWwnn C003FF0000FFFF00 -FibreChannelWwpnMinimum C003FF661D200000 -FibreChannelWwpnMaximum C003FF661D200000
 ```
 
 This example configures Fibre Channel host settings on the local Hyper-V host.
 
 ### Example 6
-```
-PS C:\> Set-VMHost -NumaSpanningEnabled $false
+```powershell
+Set-VMHost -NumaSpanningEnabled $false
 ```
 
 This example disables NUMA spanning on the local Hyper-V host.
 
 ### Example 7
-```
-PS C:\> Set-VMHost -ResourceMeteringSaveInterval 01:30:00
+```powershell
+Set-VMHost -ResourceMeteringSaveInterval 01:30:00
 ```
 
 This example configures the local Hyper-V host to save data that tracks resource consumption every hour and a half.
 
 ### Example 8
-```
-PS C:\> Set-VMHost -VirtualMachineMigrationAuthenticationType Kerberos
+```powershell
+Set-VMHost -VirtualMachineMigrationAuthenticationType Kerberos
 ```
 
 The example configures the local Hyper-V host to use Kerberos to authenticate incoming live migrations.

@@ -32,9 +32,9 @@ The **Disable-VMConsoleSupport** cmdlet disables keyboard, video, and mouse for 
 ## EXAMPLES
 
 ### Example 1: Disable keyboard, video, and mouse support
-```
-PS C:\> $VM = Get-VM -ComputerName "Server01"
-PS C:\> Disable-VMConsoleSupport -VM $VM
+```powershell
+$VM = Get-VM -ComputerName "Server01"
+Disable-VMConsoleSupport -VM $VM
 ```
 
 The first command uses the **Get-VM** cmdlet to obtain the virtual machines on the host named Server01.

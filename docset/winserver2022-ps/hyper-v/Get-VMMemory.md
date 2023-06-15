@@ -37,8 +37,8 @@ The **Get-VMMemory** cmdlet gets the memory of a virtual machine or snapshot.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMMemory TestVM
+```powershell
+Get-VMMemory TestVM
 ```
 
 Gets the memory object for virtual machine TestVM.

@@ -26,8 +26,8 @@ The **New-VFD** cmdlet creates a new virtual floppy disk.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> New-VFD "c:\floppy.vfd"
+```powershell
+New-VFD "c:\floppy.vfd"
 ```
 
 Creates a new virtual floppy drive at the specified path.

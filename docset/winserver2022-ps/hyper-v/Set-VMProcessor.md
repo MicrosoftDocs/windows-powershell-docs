@@ -49,43 +49,39 @@ The **Set-VMProcessor** cmdlet configures the virtual processors of a virtual ma
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMProcessor TestVM -Count 2 -Reserve 10 -Maximum 75 -RelativeWeight 200
+```powershell
+Set-VMProcessor TestVM -Count 2 -Reserve 10 -Maximum 75 -RelativeWeight 200
 ```
 
 Configures virtual machine TestVM with two virtual processors, a reserve of 10%, a limit of 75%, and a relative weight of 200.
 
 ### Example 2
-```
-PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true
+```powershell
+Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true
 ```
 
 Configures virtual machine TestVM, enabling processor compatibility for live migration.
 
 ### Example 3
-```
-PS C:\> Set-VMProcessor TestVM -CompatibilityForOlderOperatingSystemsEnabled $true
+```powershell
+Set-VMProcessor TestVM -CompatibilityForOlderOperatingSystemsEnabled $true
 ```
 
 Configures virtual machine TestVM, enabling compatibility for running older operating systems.
 
 ### Example 4
-```
-PS C:\> Set-VMProcessor TestVM -ExposeVirtualizationExtensions $true
+```powershell
+Set-VMProcessor TestVM -ExposeVirtualizationExtensions $true
 ```
 
 Configures virtual machine TestVM, enabling embedded Hyper-V.Uu
 
 ### Example 5
-```
-PS C:\> Set-VMProcessor TestVM -Perfmon pmu,pebs,lbr 
+```powershell
+Set-VMProcessor TestVM -Perfmon pmu,pebs,lbr 
 ```
 
 Configure your VM to expose PMU, PEBS, LBR for Performance Monitoring.
-
-
-
-
 
 ## PARAMETERS
 

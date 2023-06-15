@@ -37,15 +37,15 @@ The Virtual Machines folder contains the configuration XML of the specified virt
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Export-VM -Name Test -Path D:\
+```powershell
+Export-VM -Name Test -Path D:\
 ```
 
 Exports virtual machine Test to the root of the D drive.
 
 ### Example 2
-```
-PS C:\> Get-VM | Export-VM -Path D:\
+```powershell
+Get-VM | Export-VM -Path D:\
 ```
 
 Exports all virtual machines to the root of the D drive.

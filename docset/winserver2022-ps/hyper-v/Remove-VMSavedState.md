@@ -38,15 +38,15 @@ Note: data contained in the memory of the virtual machine may be lost; data on i
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VMSavedState TestVM
+```powershell
+Remove-VMSavedState TestVM
 ```
 
 Removes the saved state from virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VMSnapshot TestVM | Remove-VMSavedState
+```powershell
+Get-VMSnapshot TestVM | Remove-VMSavedState
 ```
 
 Removes the saved state from all snapshots belonging to virtual machine TestVM.

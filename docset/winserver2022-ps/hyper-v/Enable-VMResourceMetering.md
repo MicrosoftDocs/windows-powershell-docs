@@ -45,25 +45,25 @@ To measure network traffic through an IP range, configure the **NetworkAdapterAc
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Enable-VMResourceMetering -VMName TestVM
+```powershell
+Enable-VMResourceMetering -VMName TestVM
 ```
 
 This example starts collecting resource utilization data on a virtual machine named TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VM TestVM | Enable-VMResourceMetering
-PS C:\> Get-VM TestVM | Format-List Name,ResourceMeteringEnabled
+```powershell
+Get-VM TestVM | Enable-VMResourceMetering
+Get-VM TestVM | Format-List Name,ResourceMeteringEnabled
 ```
 
 This example starts collecting resource utilization data on a resource pool named TestResourcePool.
 (You can determine whether resource metering is enabled for a resource pool by querying its ResourceMeteringEnabled property.)
 
 ### Example 3
-```
-PS C:\> Enable-VMResourceMetering -ResourcePoolName TestResourcePool -ResourcePoolType Memory
-PS C:\> Get-VMResourcePool -Name TestResourcePool -ResourcePoolType Memory | Format-List Name,ResourceMeteringEnabled
+```powershell
+Enable-VMResourceMetering -ResourcePoolName TestResourcePool -ResourcePoolType Memory
+Get-VMResourcePool -Name TestResourcePool -ResourcePoolType Memory | Format-List Name,ResourceMeteringEnabled
 ```
 
 This example uses two commands that show resource metering being enabled and then obtain the data.

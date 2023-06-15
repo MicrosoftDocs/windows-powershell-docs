@@ -33,8 +33,8 @@ The **Get-VMGroup** cmdlet gets virtual machine groups.
 ## EXAMPLES
 
 ### Example 1: Get a virtual machine group by name
-```
-PS C:\> Get-VMGroup -Name "Group04"
+```powershell
+Get-VMGroup -Name "Group04"
 ```
 
 This command gets the virtual machine group named Group04.

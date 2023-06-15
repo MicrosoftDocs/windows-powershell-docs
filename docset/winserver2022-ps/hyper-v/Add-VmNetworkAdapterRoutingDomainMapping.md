@@ -52,8 +52,8 @@ The cmdlet adds the information about the routing domain and virtual subnets to 
 ## EXAMPLES
 
 ### Example 1: Add a tenant and virtual subnet to a multitenant virtual network
-```
-PS C:\> Add-VMNetworkAdapterRoutingDomainMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC" -RoutingDomainID "{5a07361e-6a54-49fc-9210-bfbf14a5c56f}" RoutingDomainName "Contoso" -IsolationID 6000 -IsolationName "ContosoGatewayVsid"
+```powershell
+Add-VMNetworkAdapterRoutingDomainMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC" -RoutingDomainID "{5a07361e-6a54-49fc-9210-bfbf14a5c56f}" RoutingDomainName "Contoso" -IsolationID 6000 -IsolationName "ContosoGatewayVsid"
 ```
 
 This command adds a tenant that has the specified routing domain to the virtual network adapter named Internal NIC that belongs to the multitenant virtual machine named Gateway01.

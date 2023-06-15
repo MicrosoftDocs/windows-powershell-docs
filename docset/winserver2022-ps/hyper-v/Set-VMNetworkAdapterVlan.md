@@ -56,16 +56,16 @@ Access, Trunk, Private VLAN (isolated, community, or promiscuous), and untagged 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMNetworkAdapterVlan -VMName Redmond -Access -VlanId 121
+```powershell
+Set-VMNetworkAdapterVlan -VMName Redmond -Access -VlanId 121
 ```
 
 Sets the virtual network adapter(s) in virtual machine Redmond to the Access mode.
 Traffic sent by this virtual machine is tagged with VLAN ID 121.
 
 ### Example 2
-```
-PS C:\> Set-VMNetworkAdapterVlan -VMName Redmond -Trunk -AllowedVlanIdList 1-100 -NativeVlanId 10
+```powershell
+Set-VMNetworkAdapterVlan -VMName Redmond -Trunk -AllowedVlanIdList 1-100 -NativeVlanId 10
 ```
 
 Sets the virtual network adapter(s) in virtual machine Redmond to the Trunk mode.
@@ -73,29 +73,29 @@ Any traffic tagged with one of the VLAN IDs in the allowed VLAN list will be per
 If traffic is untagged, it will be treated as if it were on VLAN 10.
 
 ### Example 3
-```
-PS C:\> Get-VMNetworkAdapter -VMName Redmond | Set-VMNetworkAdapterVlan -Isolated -PrimaryVlanId 10 -SecondaryVlanId 200
+```powershell
+Get-VMNetworkAdapter -VMName Redmond | Set-VMNetworkAdapterVlan -Isolated -PrimaryVlanId 10 -SecondaryVlanId 200
 ```
 
 Gets the virtual network adapters from virtual machine Redmond and sets them to the Private VLAN isolated mode, where primary VLAN is 10 and the secondary VLAN is 200.
 
 ### Example 4
-```
-PS C:\> Get-VMNetworkAdapter -VMName WA | Set-VMNetworkAdapterVlan -Promiscuous -PrimaryVlanId 10 -SecondaryVlanIdList 200-201
+```powershell
+Get-VMNetworkAdapter -VMName WA | Set-VMNetworkAdapterVlan -Promiscuous -PrimaryVlanId 10 -SecondaryVlanIdList 200-201
 ```
 
 Gets the virtual network adapters from virtual machine WA and sets them to the Private VLAN promiscuous mode, where primary VLAN is 10 and the secondary VLANs are 201 and 202.
 
 ### Example 5
-```
-PS C:\> Get-VM Redmond | Set-VMNetworkAdapterVlan -Untagged
+```powershell
+Get-VM Redmond | Set-VMNetworkAdapterVlan -Untagged
 ```
 
 Gets virtual machine Redmond and sets the virtual network adapters in the virtual machine to the untagged mode.
 
 ### Example 5
-```
-PS C:\> Set-VMNetworkAdapterVlan -ManagementOS -Access -VlanID 20
+```powershell
+Set-VMNetworkAdapterVlan -ManagementOS -Access -VlanID 20
 ```
 
 Sets the virtual switch in the management OS to the Access mode.

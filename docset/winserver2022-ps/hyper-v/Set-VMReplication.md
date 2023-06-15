@@ -62,44 +62,44 @@ The **Set-VMReplication** cmdlet modifies the replication settings of a virtual 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\>  Set-VMReplication VM01 -AutoResynchronizedDisabled $true -AutoResynchronizeIntervalStart "18:30:00" -AutoResynchronizeIntervalEnd "06:00:00"
+```powershell
+Set-VMReplication VM01 -AutoResynchronizedDisabled $true -AutoResynchronizeIntervalStart "18:30:00" -AutoResynchronizeIntervalEnd "06:00:00"
 ```
 
 This example configures the auto-resynchronization of virtual machine VM01.
 
 ### Example 2
-```
-PS C:\>  Set-VMReplication VM01 -AsReplica -AllowedPrimaryServer server01.domain01.contoso.com
+```powershell
+Set-VMReplication VM01 -AsReplica -AllowedPrimaryServer server01.domain01.contoso.com
 ```
 
 This example configures virtual machine VM01 as a Replica virtual machine, allowing replication from primary server server01 from domain domain01.contoso.com.
 
 ### Example 3
-```
-PS C:\>  Set-VMReplication VM01 -RecoveryHistory 4 -VSSSnapshotFrequency 4
+```powershell
+Set-VMReplication VM01 -RecoveryHistory 4 -VSSSnapshotFrequency 4
 ```
 
 This example configures the recovery history and application-consistent recovery points of the virtual machine VM01.
 
 ### Example 4
-```
-PS C:\>  Set-VMReplication VM01 -Reverse
+```powershell
+Set-VMReplication VM01 -Reverse
 ```
 
 This example reverses the replication of virtual machine VM01.
 
 ### Example 5
-```
-PS C:\>  Set-VMReplication * server01.domain01.contoso.com 80
+```powershell
+Set-VMReplication * server01.domain01.contoso.com 80
 ```
 
 This example configures replication for all virtual machines on the local Hyper-V host to Replica server server01.domain01.contoso.com and port 80.
 
 ### Example 6
-```
-PS C:\> $VHDS = @("C:\VHDS\vhd1", "C:\VHDS\vhd2")
-PS C:\> Set-VMReplication -VMName "VM01" -ReplicatedDiskPaths $VHDS
+```powershell
+$VHDS = @("C:\VHDS\vhd1", "C:\VHDS\vhd2")
+Set-VMReplication -VMName "VM01" -ReplicatedDiskPaths $VHDS
 ```
 
 The first command assigns the paths of the virtual hard disks vhd1 and vhd2 to the **$VHDS** variable.
@@ -250,9 +250,9 @@ The certificate must have all of the following properties to be valid:
 
 To display a list of certificates in the computer's My store and the thumbprint of each certificate, type the following:
 
-`PS C:\\\> cd cert:\LocalMachine\My`
+`PS C:\> cd cert:\LocalMachine\My`
 
-`PS C:\\\> dir | format-list`
+`PS C:\> dir | format-list`
 
 For more information about certificate stores, see [http://technet.microsoft.com//library/cc757138.aspx](https://technet.microsoft.com//library/cc757138.aspx).
 

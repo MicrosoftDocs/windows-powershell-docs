@@ -31,8 +31,8 @@ The **Get-VMHostCluster** cmdlet gets **VMHostCluster** objects.
 ## EXAMPLES
 
 ### Example 1: Get a virtual machine host cluster
-```
-PS C:\> Get-VMHostCluster -ClusterName "ContosoCluster"
+```powershell
+Get-VMHostCluster -ClusterName "ContosoCluster"
 ```
 
 This command gets the **VMHostCluster** object for the cluster named ContosoCluster.

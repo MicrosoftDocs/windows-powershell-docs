@@ -32,8 +32,8 @@ The **Get-VMKeyProtector** cmdlet retrieves a key protector for a virtual machin
 ## EXAMPLES
 
 ### Example 1: Retrieve a key protector
-```
-PS C:\> Get-VMKeyProtector -VMName "VM01"
+```powershell
+Get-VMKeyProtector -VMName "VM01"
 ```
 
 This command retrieves the key protector for the virtual machine named "VM01".

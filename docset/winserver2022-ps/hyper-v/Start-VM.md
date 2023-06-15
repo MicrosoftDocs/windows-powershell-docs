@@ -32,15 +32,15 @@ The **Start-VM** cmdlet starts a virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Start-VM -Name TestVM
+```powershell
+Start-VM -Name TestVM
 ```
 
 Starts virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Start-VM -Name Test*
+```powershell
+Start-VM -Name Test*
 ```
 
 Starts all virtual machines whose names start with "Test."

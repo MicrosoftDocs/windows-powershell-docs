@@ -44,8 +44,8 @@ Ping verifies IP-level connectivity to another TCP/IP computer by sending ICMP E
 ## EXAMPLES
 
 ### Example 1: Test connectivity
-```
-PS C:\> Test-VMNetworkAdapter -VMName "ContosoVM01" -Receiver -SenderIPAddress "10.20.20.5" -ReceiverIPAddress "10.20.20.6" -VMNetworkAdapterName "ContosoNic01"
+```powershell
+Test-VMNetworkAdapter -VMName "ContosoVM01" -Receiver -SenderIPAddress "10.20.20.5" -ReceiverIPAddress "10.20.20.6" -VMNetworkAdapterName "ContosoNic01"
 ```
 
 This command tests connectivity by using the virtual network adapter named ContosoNic01.

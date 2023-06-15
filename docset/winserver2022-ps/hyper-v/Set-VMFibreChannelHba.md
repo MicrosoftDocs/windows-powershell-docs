@@ -65,8 +65,8 @@ The **Set-VMFibreChannelHba** cmdlet configures a Fibre Channel host bus adapter
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMFibreChannelHba -VMName MyVM | Set-VMFibreChannelHba -GenerateWwn
+```powershell
+Get-VMFibreChannelHba -VMName MyVM | Set-VMFibreChannelHba -GenerateWwn
 ```
 
 Configures a Fibre Channel host bus adapter on a virtual machine named MyVM, with World Wide Names to be generated automatically.

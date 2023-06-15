@@ -53,8 +53,8 @@ The **Remove-VmNetworkAdapterRoutingDomainMapping** cmdlet removes a routing dom
 ## EXAMPLES
 
 ### Example 1: Remove a tenant from a multitenant virtual machine
-```
-PS C:\> Remove-VMNetworkAdapterRoutingDomainMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC" -RoutingDomainID "{5a07361e-6a54-49fc-9210-bfbf14a5c56f}"
+```powershell
+Remove-VMNetworkAdapterRoutingDomainMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC" -RoutingDomainID "{5a07361e-6a54-49fc-9210-bfbf14a5c56f}"
 ```
 
 This command removes the specified routing domain from the virtual network adapter named Internal NIC.

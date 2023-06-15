@@ -53,8 +53,8 @@ The **Get-VmNetworkAdapterRoutingDomainMapping** cmdlet gets members of a routin
 ## EXAMPLES
 
 ### Example 1: Get members of a routing domain
-```
-PS C:\> Get-VMNetworkAdapterRoutingDomainMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC"
+```powershell
+Get-VMNetworkAdapterRoutingDomainMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC"
 ```
 
 This command gets the members of the routing domain from the network adapter named Internal NIC that belongs to the virtual machine named Gateway01.

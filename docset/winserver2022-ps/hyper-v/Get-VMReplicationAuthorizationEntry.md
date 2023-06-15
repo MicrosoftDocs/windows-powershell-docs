@@ -27,15 +27,15 @@ The **Get-VMReplicationAuthorizationEntry** cmdlet gets the replication authoriz
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMReplicationAuthorizationEntry
+```powershell
+Get-VMReplicationAuthorizationEntry
 ```
 
 This example gets the replication authorization entries  for the local Replica server.
 
 ### Example 2
-```
-PS C:\> Get-VMReplicationAuthorizationEntry server01.domain01.contoso.com
+```powershell
+Get-VMReplicationAuthorizationEntry server01.domain01.contoso.com
 ```
 
 This example gets the replication authorization entry for an allowed primary server named server01.domain01.contoso.com.

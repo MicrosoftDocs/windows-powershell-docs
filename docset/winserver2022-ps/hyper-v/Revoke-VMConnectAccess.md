@@ -35,8 +35,8 @@ Examples of such applications are Virtual Machine Manager.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Revoke-VMConnectAccess -VMName VM1 -UserName Contoso\John
+```powershell
+Revoke-VMConnectAccess -VMName VM1 -UserName Contoso\John
 ```
 
 This command revokes the access of user Contoso\John to connect to virtual machine VM1.

@@ -33,15 +33,15 @@ The **Dismount-VHD** cmdlet dismounts a virtual hard disk.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Dismount-VHD -Path c:\test\testvhdx.vhdx
+```powershell
+Dismount-VHD -Path c:\test\testvhdx.vhdx
 ```
 
 Dismounts an attached virtual hard disk where the path to the virtual hard disk file path is c:\test\testvhdx.vhdx.
 
 ### Example 2
-```
-PS C:\> Dismount-VHD -DiskNumber 6
+```powershell
+Dismount-VHD -DiskNumber 6
 ```
 
 Dismounts the attached virtual hard disk image with disk number 6.

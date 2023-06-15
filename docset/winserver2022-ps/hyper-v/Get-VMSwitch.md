@@ -34,15 +34,15 @@ If you specify no parameters, this cmdlet returns all virtual switches from the 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMSwitch
+```powershell
+Get-VMSwitch
 ```
 
 Gets all virtual switches from the local Hyper-V host.
 
 ### Example 2
-```
-PS C:\> Get-VMSwitch -SwitchType External
+```powershell
+Get-VMSwitch -SwitchType External
 ```
 
 Gets all virtual switches that connect to the external network.

@@ -34,8 +34,8 @@ The **New-VMSan** cmdlet creates a new virtual storage area network (SAN) on a H
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> New-VMSan -Name Production -Note "Production SAN" -WorldWideNodeName C003FF0000FFFF00 -WorldWidePortName C003FF5778E50002
+```powershell
+New-VMSan -Name Production -Note "Production SAN" -WorldWideNodeName C003FF0000FFFF00 -WorldWidePortName C003FF5778E50002
 ```
 
 Creates a new virtual storage area network (SAN) with the specified Name, Note, WorldWideNodeName, and WorldWidePortName.

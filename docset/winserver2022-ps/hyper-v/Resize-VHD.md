@@ -40,22 +40,22 @@ If the virtual disk file connects to a virtual machine's SCSI chain, you **can**
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Resize-VHD -Path c:\BaseVHD.vhd -SizeBytes 1099511627776
+```powershell
+ Resize-VHD -Path c:\BaseVHD.vhd -SizeBytes 1099511627776
 ```
 
 Expands the VHD to 1 terabyte if the previous size was less than 1 terabyte. If it was larger, the cmdlet will report an error because it cannot shrink a VHD.
 
 ### Example 2
-```
-PS C:\> Resize-VHD -Path c:\BaseVHDX.vhdx -SizeBytes 20GB
+```powershell
+Resize-VHD -Path c:\BaseVHDX.vhdx -SizeBytes 20GB
 ```
 
 Changes the VHDX's size to 20 gigabytes (21,474,836,480 bytes). If it was larger, the cmdlet will only succeed if it had a **MinimumSize** less than or equal to 20 gigabytes.
 
 ### Example 3
-```
-PS C:\> Resize-VHD -Path c:\BaseVHDX.vhdx -ToMinimumSize
+```powershell
+Resize-VHD -Path c:\BaseVHDX.vhdx -ToMinimumSize
 ```
 
 Shrinks the VHDX to its minimum possible size as indicated in its **MinimumSize** property.

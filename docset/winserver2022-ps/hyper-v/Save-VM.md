@@ -33,15 +33,15 @@ This is similar to hibernating a physical computer.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Save-VM -Name TestVM
+```powershell
+Save-VM -Name TestVM
 ```
 
 Saves virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VM -Name Win* | Save-VM
+```powershell
+Get-VM -Name Win* | Save-VM
 ```
 
 Saves all virtual machines whose name starts with Win.

@@ -33,22 +33,22 @@ The **Set-VMMigrationNetwork** cmdlet sets the subnet, subnet mask, and/or prior
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMMigrationNetwork 192.168.10.1 192.168.10.3
+```powershell
+Set-VMMigrationNetwork 192.168.10.1 192.168.10.3
 ```
 
 This example changes an IPv4 address on a migration network.
 
 ### Example 2
-```
-PS C:\> Set-VMMigrationNetwork 192.168.10.* 192.168.10.3
+```powershell
+Set-VMMigrationNetwork 192.168.10.* 192.168.10.3
 ```
 
 This example changes the IPv4 address on a migration network selected using a wildcard.
 
 ### Example 3
-```
-PS C:\> Set-VMMigrationNetwork 2001:836c:6456:1c99::/64 -NewPriority 12
+```powershell
+Set-VMMigrationNetwork 2001:836c:6456:1c99::/64 -NewPriority 12
 ```
 
 This example changes the priority of a migration network to 12.

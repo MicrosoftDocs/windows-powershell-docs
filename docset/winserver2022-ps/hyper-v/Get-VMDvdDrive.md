@@ -45,29 +45,29 @@ This cmdlet has no ControllerType parameter, as the **Get-VMHardDiskDrive** cmdl
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMDvdDrive -VMName Test
+```powershell
+Get-VMDvdDrive -VMName Test
 ```
 
 Gets the virtual DVD drives from virtual machine Test.
 
 ### Example 2
-```
-PS C:\> Get-VM -Name Test | Get-VMDvdDrive -ControllerNumber 1
+```powershell
+Get-VM -Name Test | Get-VMDvdDrive -ControllerNumber 1
 ```
 
 Gets the virtual DVD drives from IDE controller 1 of virtual machine Test.
 
 ### Example 3
-```
-PS C:\> Get-VMIdeController -VMName TestVM -ControllerNumber 1 -ComputerName Development | Get-VMDvdDrive
+```powershell
+Get-VMIdeController -VMName TestVM -ControllerNumber 1 -ComputerName Development | Get-VMDvdDrive
 ```
 
 Gets the virtual DVD drives from IDE controller 1 of virtual machine TestVM located on the server Development.
 
 ### Example 4
-```
-PS C:\> Get-VMSnapshot -VMName TestVM -Name 'Before applying updates' | Get-VMDvdDrive
+```powershell
+Get-VMSnapshot -VMName TestVM -Name 'Before applying updates' | Get-VMDvdDrive
 ```
 
 Gets the virtual DVD drives from snapshot Before applying updates of virtual machine TestVM.

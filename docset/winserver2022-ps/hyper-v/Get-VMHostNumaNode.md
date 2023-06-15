@@ -32,8 +32,8 @@ The **Get-VMHostNumaNode** cmdlet gets the NUMA topology of a Hyper-V host, retu
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMHostNumaNode
+```powershell
+Get-VMHostNumaNode
 ```
 
 Gets the NUMA topology of the local Hyper-V host.

@@ -43,35 +43,35 @@ The **Get-VHD** cmdlet gets the virtual hard disk object associated with a virtu
 
 ### Example 1
 ```powershell
-PS C:\> Get-VHD -Path C:\test\testvhdx.vhdx
+Get-VHD -Path C:\test\testvhdx.vhdx
 ```
 
 Gets the virtual hard disk where the path to the virtual hard disk file is `C:\test\testvhdx.vhdx`.
 
 ### Example 2
 ```powershell
-PS C:\> Get-VHD -DiskNumber 6
+Get-VHD -DiskNumber 6
 ```
 
 Gets the virtual hard disk attached to the system with disk number 6.
 
 ### Example 3
 ```powershell
-PS C:\> Get-VM -VMName TestVM | Select-Object -Property VMId | Get-VHD
+Get-VM -VMName TestVM | Select-Object -Property VMId | Get-VHD
 ```
 
 Gets the virtual hard disk objects associated with virtual machine TestVM, using the pipeline feature for the VMId parameter.
 
 ### Example 4
 ```powershell
-PS C:\> Get-VM -VMName TestVM | Select-Object -Property VMId | Get-VHD
+Get-VM -VMName TestVM | Select-Object -Property VMId | Get-VHD
 ```
 
 Gets the virtual hard disk objects associated with virtual machine TestVM using the pipeline feature for the path parameter.
 
 ### Example 5
 ```powershell
-PS C:\> Get-ChildItem -Path C:\test -Recurse -Include *.vhd, *.vhdx, *.vhds, *.avhd, *.avhdx | Get-VHD
+Get-ChildItem -Path C:\test -Recurse -Include *.vhd, *.vhdx, *.vhds, *.avhd, *.avhdx | Get-VHD
 ```
 
 Gets the virtual hard disk object for all the virtual hard disk files that are contained in the specified directory and its subdirectories.

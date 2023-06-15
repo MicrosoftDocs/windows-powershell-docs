@@ -32,9 +32,9 @@ The **Enable-VMConsoleSupport** cmdlet enables keyboard, video, and mouse for vi
 ## EXAMPLES
 
 ### Example 1: Enable keyboard, video, and mouse support
-```
-PS C:\> $VM = Get-VM -ComputerName "Server01"
-PS C:\> Enable-VMConsoleSupport -VM $VM
+```powershell
+$VM = Get-VM -ComputerName "Server01"
+Enable-VMConsoleSupport -VM $VM
 ```
 
 The first command uses the **Get-VM** cmdlet to obtain the virtual machines on the host named Server01.

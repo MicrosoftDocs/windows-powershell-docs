@@ -32,8 +32,8 @@ The **Disable-VMMigration** cmdlet disables migration on one or more virtual mac
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Disable-VMMigration
+```powershell
+Disable-VMMigration
 ```
 
 Disables live migration on the local Hyper-V host.

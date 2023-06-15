@@ -26,8 +26,8 @@ The **Rename-VMSan** cmdlet renames a virtual storage area network (SAN).
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Rename-VMSan -Name Production -NewName Test
+```powershell
+Rename-VMSan -Name Production -NewName Test
 ```
 
 Renames a virtual storage area network from Production to Test.

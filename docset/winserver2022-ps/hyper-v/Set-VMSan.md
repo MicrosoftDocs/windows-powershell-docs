@@ -34,8 +34,8 @@ The **Set-VMSan** cmdlet configures a virtual storage area network (SAN) on one 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMSan -Name Production -WorldWideNodeName C003FF0000FFFF22 -WorldWidePortName C003FF5778E50024
+```powershell
+Set-VMSan -Name Production -WorldWideNodeName C003FF0000FFFF22 -WorldWidePortName C003FF5778E50024
 ```
 
 Configures a virtual storage area network (SAN) named Production with the specified WorldWideNodeName and WorldWidePortName values.

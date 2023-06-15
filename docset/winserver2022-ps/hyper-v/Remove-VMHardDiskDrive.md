@@ -34,15 +34,15 @@ The **Remove-VMHardDiskDrive** cmdlet deletes a hard disk drive from a virtual m
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VMHardDiskDrive -VMName TestVM -ControllerType IDE -ControllerNumber 1 -ControllerLocation 0
+```powershell
+Remove-VMHardDiskDrive -VMName TestVM -ControllerType IDE -ControllerNumber 1 -ControllerLocation 0
 ```
 
 Removes the virtual hard drive at IDE 1,0 on virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VMHardDiskDrive -VMName TestVM -ControllerType IDE -ControllerNumber 1 | Remove-VMHardDiskDrive
+```powershell
+Get-VMHardDiskDrive -VMName TestVM -ControllerType IDE -ControllerNumber 1 | Remove-VMHardDiskDrive
 ```
 
 Removes all virtual hard drives on IDE controller 1 from virtual machine TestVM.

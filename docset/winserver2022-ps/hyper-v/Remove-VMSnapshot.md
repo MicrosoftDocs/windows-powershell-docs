@@ -43,15 +43,15 @@ For clarity, this document will refer to virtual machine snapshots as checkpoint
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VM TestVM | Remove-VMSnapshot -Name Experiment*
+```powershell
+Get-VM TestVM | Remove-VMSnapshot -Name Experiment*
 ```
 
 Deletes all checkpoints of virtual machine TestVM whose names starts with Experiment.
 
 ### Example 2
-```
-PS C:\> Get-VMSnapshot -VMName TestVM | Where-Object {$_.CreationTime -lt (Get-Date).AddDays(-90) } | Remove-VMSnapshot
+```powershell
+Get-VMSnapshot -VMName TestVM | Where-Object {$_.CreationTime -lt (Get-Date).AddDays(-90) } | Remove-VMSnapshot
 ```
 
 Deletes all checkpoints of virtual machine TestVM older than 90 days.

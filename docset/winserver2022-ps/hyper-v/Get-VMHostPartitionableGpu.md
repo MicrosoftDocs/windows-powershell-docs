@@ -33,7 +33,7 @@ This displays the information of the GPU as provided by the manufacturer's drive
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-VMHostPartitionableGpu
 ```
 

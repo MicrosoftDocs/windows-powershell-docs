@@ -32,15 +32,15 @@ The **Get-VMHostSupportedVersion** cmdlet returns a list of virtual machine conf
 ## EXAMPLES
 
 ### Example 1: Return a table of supported configurations
-```
-PS C:\> Get-VMHostSupportedVersion
+```powershell
+Get-VMHostSupportedVersion
 ```
 
 This command returns a table showing the supported virtual machine configuration versions on this host.
 
 ### Example 2: Return the default configuration version
-```
-PS C:\> Get-VMHostSupportedVersion -Default
+```powershell
+Get-VMHostSupportedVersion -Default
 ```
 
 This command returns the default virtual machine configuration version for this host.

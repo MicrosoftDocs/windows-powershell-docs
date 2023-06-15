@@ -35,15 +35,15 @@ Failover cannot be canceled after the recovery points are removed.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Complete-VMFailover VM01
+```powershell
+Complete-VMFailover VM01
 ```
 
 This command completes the failover process of a virtual machine named VM01, thereby deleting all other recovery points on the server.
 
 ### Example 2
-```
-PS C:\> Complete-VMFailover *
+```powershell
+Complete-VMFailover *
 ```
 
 This command completes the failover process of all virtual machines on the local host for which the failover process has been started.

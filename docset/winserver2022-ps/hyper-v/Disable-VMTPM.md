@@ -32,8 +32,8 @@ The **Disable-VMTPM** cmdlet disables Trusted Platform Module (TPM) functionalit
 ## EXAMPLES
 
 ### Example 1: Disable TPM on a virtual machine
-```
-PS C:\> Disable-VMTPM -VM $myVM
+```powershell
+Disable-VMTPM -VM $myVM
 ```
 
 This command disables TPM on the virtual machine stored in the $myVM variable.

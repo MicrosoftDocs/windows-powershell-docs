@@ -57,8 +57,8 @@ This port feature data surfaces runtime information and statistics on a per-port
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMSwitchExtensionPortData VM1 -FeatureId eb29f0f2-f5dc-45c6-81bb-3cd9f219bbbb
+```powershell
+Get-VMSwitchExtensionPortData VM1 -FeatureId eb29f0f2-f5dc-45c6-81bb-3cd9f219bbbb
 ```
 
 Gets the port feature data with ID eb29f0f2-f5dc-45c6-81bb-3cd9f219bbbb from the sample forwarding extension on the virtual network adapter in virtual machine VM1.

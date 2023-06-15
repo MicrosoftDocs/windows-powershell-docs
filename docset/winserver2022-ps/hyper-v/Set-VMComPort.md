@@ -40,8 +40,8 @@ The **Set-VMComPort** cmdlet configures the COM port of a virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMComPort TestVM 2 \\.\pipe\TestPipe
+```powershell
+Set-VMComPort TestVM 2 \\.\pipe\TestPipe
 ```
 
 Configure the second COM port on virtual machine TestVM to connect to named pipe TestPipe on the local computer.

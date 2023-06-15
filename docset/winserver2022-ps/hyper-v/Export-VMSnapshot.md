@@ -43,8 +43,8 @@ For clarity, this document will refer to virtual machine snapshots as checkpoint
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Export-VMSnapshot -Name 'Base Image' -VMName TestVM -Path D:\
+```powershell
+Export-VMSnapshot -Name 'Base Image' -VMName TestVM -Path D:\
 ```
 
 Exports checkpoint Base Image of virtual machine TestVM to D:\.

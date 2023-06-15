@@ -29,9 +29,9 @@ The feature must have already been configured on the virtual network adapter.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> $feature = Get-VMSwitchExtensionPortFeature -VMName VM2 -FeatureId 776e0ba7-94a1-41c8-8f28-951f524251b5
-PS C:\> Remove-VMSwitchExtensionPortFeature VM2 -VMSwitchExtensionFeature $feature
+```powershell
+$feature = Get-VMSwitchExtensionPortFeature -VMName VM2 -FeatureId 776e0ba7-94a1-41c8-8f28-951f524251b5
+Remove-VMSwitchExtensionPortFeature VM2 -VMSwitchExtensionFeature $feature
 ```
 
 Removes a feature configured on the virtual network adapter(s) on a virtual machine.

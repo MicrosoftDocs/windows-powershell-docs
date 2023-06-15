@@ -43,29 +43,29 @@ The **Resume-VMReplication** cmdlet resumes replication of a virtual machine wit
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Resume-VMReplication VM01
+```powershell
+Resume-VMReplication VM01
 ```
 
 This example resumes replication of virtual machine VM01.
 
 ### Example 2
-```
-PS C:\> Resume-VMReplication VM01 -Resynchronize
+```powershell
+Resume-VMReplication VM01 -Resynchronize
 ```
 
 This example resynchronizes replication of virtual machine VM01.
 
 ### Example 3
-```
-PS C:\> Resume-VMReplication VM01 -Resynchronize -ResynchronizeStartTime "8/1/2012 05:00 AM"
+```powershell
+Resume-VMReplication VM01 -Resynchronize -ResynchronizeStartTime "8/1/2012 05:00 AM"
 ```
 
 This example schedules the resynchronization of replication for virtual machine VM01 to start at 5:00 AM on August 1, 2012.
 
 ### Example 4
-```
-PS C:\> Resume-VMReplication *
+```powershell
+Resume-VMReplication *
 ```
 
 This example resumes replication of all virtual machines for which replication is paused.

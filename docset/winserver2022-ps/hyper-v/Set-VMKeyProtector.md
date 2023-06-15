@@ -34,15 +34,15 @@ The **Set-VMKeyProtector** cmdlet configures a key protector for a virtual machi
 ## EXAMPLES
 
 ### Example 1: Set a key protector for a virtual machine
-```
-PS C:\> Set-VMKeyProtector -VM $VM1 -KeyProtector $kp.RawData
+```powershell
+Set-VMKeyProtector -VM $VM1 -KeyProtector $kp.RawData
 ```
 
 This command specifies that virtual machine stored in the $VM1 variable is to use the key protector in $kp.
 
 ### Example 2: Set a key protector for a virtual machine by using its name
-```
-PS C:\> Set-VMKeyProtector -VMName "VM10" -NewLocalKeyProtector
+```powershell
+Set-VMKeyProtector -VMName "VM10" -NewLocalKeyProtector
 ```
 
 This command specifies that the virtual machine named VM10 is to use a new local key protector.

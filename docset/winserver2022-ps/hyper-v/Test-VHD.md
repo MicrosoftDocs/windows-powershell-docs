@@ -33,8 +33,8 @@ The **Test-VHD** cmdlet tests a virtual hard disk for any problems that would ma
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Test-VHD -Path Diff2.vhdx
+```powershell
+Test-VHD -Path Diff2.vhdx
 ```
 
 Tests whether the virtual hard disk chain is in a usable state that starts with the virtual hard disk associated with Diff2.vhdx.

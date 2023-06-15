@@ -101,14 +101,14 @@ This is useful when trying to import or migrate a virtual machine that is incomp
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Compare-VM -Name TestVM -DestinationHost TestDestinationHost
+```powershell
+Compare-VM -Name TestVM -DestinationHost TestDestinationHost
 ```
 
 Compares virtual machine TestVM and Hyper-V host TestDestinationHost for compatibility.
 
 ### Example 2
-```
+```powershell
 Attempts import of a virtual machine; the attempt fails due to incompatibilities with the Hyper-V host.
 PS C:\> Import-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML'
 Import-VM : Unable to import virtual machine due to configuration errors.  Please use Compare-VM to repair the virtual machine.

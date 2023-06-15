@@ -28,10 +28,10 @@ The feature must have already been configured on the virtual switch.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> $feature = Get-VMSystemSwitchExtensionSwitchFeature -FeatureName "Ethernet Switch Bandwidth Settings"
-PS C:\> $feature.SettingData.DefaultFlowReservation = 100000000
-PS C:\> Set-VMSwitchExtensionSwitchFeature External $feature
+```powershell
+$feature = Get-VMSystemSwitchExtensionSwitchFeature -FeatureName "Ethernet Switch Bandwidth Settings"
+$feature.SettingData.DefaultFlowReservation = 100000000
+Set-VMSwitchExtensionSwitchFeature External $feature
 ```
 
 Configures the feature on virtual switch External.

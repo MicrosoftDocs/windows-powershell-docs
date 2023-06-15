@@ -27,22 +27,22 @@ The **Mount-VHD** cmdlet mounts one or more virtual hard disks.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Mount-VHD -Path c:\test\testvhdx.vhdx
+```powershell
+Mount-VHD -Path c:\test\testvhdx.vhdx
 ```
 
 Mounts a virtual hard disk where the path to the virtual hard disk file is c:\test\testvhdx.vhdx.
 
 ### Example 2
-```
-PS C:\> Mount-VHD -Path c:\test\testvhdx.vhdx -ReadOnly
+```powershell
+Mount-VHD -Path c:\test\testvhdx.vhdx -ReadOnly
 ```
 
 Mounts a virtual hard disk in read-only mode where the path to the virtual hard disk file is c:\test\testvhdx.vhdx.
 
 ### Example 3
-```
-PS C:\> Mount-VHD -Path c:\test\testvhdx -PassThru | Get-Disk | Get-Partition | Get-Volume
+```powershell
+Mount-VHD -Path c:\test\testvhdx -PassThru | Get-Disk | Get-Partition | Get-Volume
 ```
 
 Attaches a virtual hard disk to the system where the path to the virtual hard disk file is c:\test\testvhdx.vhdx, and gets the volumes associated with it.

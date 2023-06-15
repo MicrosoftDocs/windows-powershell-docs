@@ -50,8 +50,8 @@ The **Set-VMSwitchTeam** cmdlet configures a virtual switch team.
 ## EXAMPLES
 
 ### Example 1: Configure a switch team to user dynamic load balancing
-```
-PS C:\> Set-VMSwitchTeam -Name "SwitchTeam07" -LoadBalancingAlgorithm Dynamic
+```powershell
+Set-VMSwitchTeam -Name "SwitchTeam07" -LoadBalancingAlgorithm Dynamic
 ```
 
 This command configures the switch team named SwitchTeam07 to use a dynamic load balancing algorithm.

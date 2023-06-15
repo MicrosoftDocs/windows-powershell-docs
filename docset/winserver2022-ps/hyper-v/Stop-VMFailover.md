@@ -35,15 +35,15 @@ For a planned failover that has been started on a primary virtual machine, this 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Stop-VMFailover VM01
+```powershell
+Stop-VMFailover VM01
 ```
 
 This example stops failover for a virtual machine named VM01.
 
 ### Example 2
-```
-PS C:\> Stop-VMFailover *
+```powershell
+Stop-VMFailover *
 ```
 
 This example stops all running failovers for all the virtual machines on the local Hyper-V host.

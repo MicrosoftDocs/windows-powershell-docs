@@ -40,22 +40,22 @@ The **Enable-VMIntegrationService** cmdlet enables an integration service on a v
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Enable-VMIntegrationService -Name Shutdown,VSS -VMName Test1
+```powershell
+Enable-VMIntegrationService -Name Shutdown,VSS -VMName Test1
 ```
 
 Enables integration services Shutdown and VSS on virtual machine Test1.
 
 ### Example 2
-```
-PS C:\> Get-VMIntegrationService Shutdown,Vss -VMName Test1 | Enable-VMIntegrationService
+```powershell
+Get-VMIntegrationService Shutdown,Vss -VMName Test1 | Enable-VMIntegrationService
 ```
 
 Enables integration services Shutdown and VSS on virtual machine Test1.
 
 ### Example 3
-```
-PS C:\> Get-VM Test1 | Enable-VMIntegrationService Shutdown,VSS
+```powershell
+Get-VM Test1 | Enable-VMIntegrationService Shutdown,VSS
 ```
 
 Enables integration services Shutdown and VSS on virtual machine Test1.

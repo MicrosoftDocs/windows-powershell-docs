@@ -28,9 +28,9 @@ The feature already must have been configured on the virtual switch.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> $feature = Get-VMSwitchExtensionSwitchFeature -SwitchName External -FeatureId 3eb2b8e8-4abf-4dbf-9071-16dd47481fbe
-PS C:\> Remove-VMSwitchExtensionSwitchFeature External $feature
+```powershell
+$feature = Get-VMSwitchExtensionSwitchFeature -SwitchName External -FeatureId 3eb2b8e8-4abf-4dbf-9071-16dd47481fbe
+Remove-VMSwitchExtensionSwitchFeature External $feature
 ```
 
 Removes a feature from virtual switch External.

@@ -54,16 +54,18 @@ PS C:\> Set-VMFirmware "Test VM" -EnableSecureBoot On
 
 This example enables secure boot functionality on the virtual machine "Test VM".
 
+
 ### Example 2
-```
-PS C:\> Set-VMFirmware "Test VM" -FirstBootDevice $vmNetworkAdapter
+```powershell
+$VMName = "Test VM"
+
+Set-VMFirmware -VMName "$VMName" -FirstBootDevice $(Get-VMDvdDrive -VMName "$VMName")
 ```
 
-This example sets the virtual machine "Test VM" to boot off of the VM network adapter object stored in $vmNetworkAdapter.
-This object was acquired using get-VMNetworkAdapter.
+This example sets the virtual machine "Test VM" to first boot from its DVD Drive.
 
 ### Example 3
-```
+```powershell
 PS C:\> Set-VMFirmware "Test VM" -BootOrder $vmNetworkAdapter, $vmHardDiskDrive
 ```
 

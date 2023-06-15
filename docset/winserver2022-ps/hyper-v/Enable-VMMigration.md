@@ -32,15 +32,15 @@ The **Enable-VMMigration** cmdlet enables migration on one or more virtual machi
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Enable-VMMigration
+```powershell
+Enable-VMMigration
 ```
 
 Enables live migration on the local Hyper-V host.
 
 ### Example 2
-```
-PS C:\> Enable-VMMigration -ComputerName TestVM -Passthru 
+```powershell
+Enable-VMMigration -ComputerName TestVM -Passthru 
 ```
 
 Enables live migration on the specified Hyper-V host. 

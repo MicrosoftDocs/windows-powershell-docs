@@ -29,8 +29,8 @@ Checkpoint replaces the previous term, snapshot.
 ## EXAMPLES
 
 ### Example 1: Get a VHD set and files on which it depends
-```
-PS C:\> Get-VHDSet -Path "Data01.vhds" -GetAllPaths
+```powershell
+Get-VHDSet -Path "Data01.vhds" -GetAllPaths
 ```
 
 This command gets information about the VHD set file Data01.vhds.

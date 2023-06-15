@@ -58,10 +58,10 @@ Groups can contain either virtual machines or groups of virtual machines.
 ## EXAMPLES
 
 ### Example 1: Add virtual machines to a group
-```
-PS C:\> $VM01 = Get-VM -Name "ContosoVirtualMachine01"
-PS C:\> $VM02 = Get-VM -Name "ContosoVirtualMachine02"
-PS C:\> Add-VMGroupMember -Name "VirtualMachineGroup" -VM $VM01, $VM02
+```powershell
+$VM01 = Get-VM -Name "ContosoVirtualMachine01"
+$VM02 = Get-VM -Name "ContosoVirtualMachine02"
+Add-VMGroupMember -Name "VirtualMachineGroup" -VM $VM01, $VM02
 ```
 
 The first two commands use the **Get-VM** cmdlet to get virtual machines named ContosoVirtualMachine01 and ContosoVirtualMachine02.
@@ -70,10 +70,10 @@ The commands store these virtual machine objects in the **$VM01** and **$VM02** 
 The final command adds the virtual machines in **$VM01** and **$VM02** to the virtual machine group named VirtualMachineGroup.
 
 ### Example 2: Add groups to a group
-```
-PS C:\> $VMGroup01 = Get-VMGroup -Name "ContosoGroup01"
-PS C:\> $VMGroup02 = Get-VMGroup -Name "ContosoGroup02"
-PS C:\> Add-VMGroupMember -Name "ContosoMainGroup" -VMGroupMember $VMGroup01, $VMGroup02
+```powershell
+$VMGroup01 = Get-VMGroup -Name "ContosoGroup01"
+$VMGroup02 = Get-VMGroup -Name "ContosoGroup02"
+Add-VMGroupMember -Name "ContosoMainGroup" -VMGroupMember $VMGroup01, $VMGroup02
 ```
 
 The first two commands use the **Get-VMGroup** cmdlet to get virtual machine groups named ContosoGroup01 and ContosoGroup02.

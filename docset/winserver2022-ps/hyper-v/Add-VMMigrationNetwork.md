@@ -26,29 +26,29 @@ The **Add-VMMigrationNetwork** cmdlet adds a network for virtual machine migrati
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Add-VMMigrationNetwork 192.168.0.1
+```powershell
+Add-VMMigrationNetwork 192.168.0.1
 ```
 
 This example adds an IPv4 address as a live migration network on the local Hyper-V host.
 
 ### Example 2
-```
-PS C:\> Add-VMMigrationNetwork 192.168.10.0/24
+```powershell
+Add-VMMigrationNetwork 192.168.10.0/24
 ```
 
 This example adds an IPv4 address range as possible live migration networks on the local Hyper-V host by using a subnet mask.
 
 ### Example 3
-```
-PS C:\> Add-VMMigrationNetwork 2001:836c:6456:1c99::/32
+```powershell
+Add-VMMigrationNetwork 2001:836c:6456:1c99::/32
 ```
 
 This example adds an IPv6 address range as possible live migration networks on the local Hyper-V host by adding a subnet mask.
 
 ### Example 4
-```
-PS C:\> Add-VMMigrationNetwork 2001:836c:6456:1c99::/64 -Priority 8
+```powershell
+Add-VMMigrationNetwork 2001:836c:6456:1c99::/64 -Priority 8
 ```
 
 This example adds an IPv6 address range as possible live migration networks on the local Hyper-V host by using a subnet mask and specifying the network as lower priority.

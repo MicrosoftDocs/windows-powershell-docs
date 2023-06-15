@@ -26,8 +26,8 @@ The **Get-VMStoragePath** cmdlet gets the storage paths in a storage resource po
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMStoragePath -ResourcePoolName VHD1 -ResourcePoolType VHD
+```powershell
+Get-VMStoragePath -ResourcePoolName VHD1 -ResourcePoolType VHD
 ```
 
 Gets the storage paths from virtual hard drive resource pool VHD1.

@@ -33,8 +33,8 @@ The **Remove-VMSwitch** cmdlet deletes a virtual switch.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VMSwitch "QoS Switch"
+```powershell
+Remove-VMSwitch "QoS Switch"
 ```
 
 Removes a virtual switch named Qos Switch.

@@ -37,22 +37,22 @@ The **Get-VMScsiController** cmdlet gets the SCSI controllers of a virtual machi
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMScsiController -VMName TestVM -ControllerNumber 0
+```powershell
+Get-VMScsiController -VMName TestVM -ControllerNumber 0
 ```
 
 Gets SCSI controller 0 from virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VM -Name TestVM -ComputerName Development | Get-VMScsiController
+```powershell
+Get-VM -Name TestVM -ComputerName Development | Get-VMScsiController
 ```
 
 Gets the SCSI controllers from virtual machine TestVM on Hyper-V host Development.
 
 ### Example 3
-```
-PS C:\> Get-VMSnapshot -VMName TestVM -Name 'Before applying updates' | Get-VMScsiController
+```powershell
+Get-VMSnapshot -VMName TestVM -Name 'Before applying updates' | Get-VMScsiController
 ```
 
 Gets the SCSI controllers from snapshot Before applying updates of virtual machine TestVM.

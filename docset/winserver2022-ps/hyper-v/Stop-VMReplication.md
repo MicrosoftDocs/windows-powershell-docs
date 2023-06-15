@@ -41,8 +41,8 @@ The **Stop-VMReplication** cmdlet cancels an ongoing virtual machine resynchroni
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Stop-VMReplication *
+```powershell
+Stop-VMReplication *
 ```
 
 Stops all ongoing replications of virtual machines on the local server that runs Hyper-V.

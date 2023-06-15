@@ -26,8 +26,8 @@ The **Remove-VMSan** cmdlet removes a virtual storage area network (SAN) from a 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VMSan -Name Production
+```powershell
+Remove-VMSan -Name Production
 ```
 
 Removes the virtual storage area network named Production from the local Hyper-V host.

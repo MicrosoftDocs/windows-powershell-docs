@@ -34,8 +34,8 @@ The **Remove-VMFibreChannelHba** cmdlet removes a Fibre Channel host bus adapter
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMFibreChannelHba -VMName MyVM | Remove-VMFibreChannelHba
+```powershell
+Get-VMFibreChannelHba -VMName MyVM | Remove-VMFibreChannelHba
 ```
 
 Removes a Fibre Channel host bus adapter from a virtual machine MyVM.

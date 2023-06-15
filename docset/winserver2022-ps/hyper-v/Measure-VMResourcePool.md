@@ -88,16 +88,16 @@ Default display of a resource pool resource utilization report includes the foll
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Measure-VMResourcePool -Name TestResourcePool -ResourcePoolType Memory
+```powershell
+Measure-VMResourcePool -Name TestResourcePool -ResourcePoolType Memory
 ```
 
 This example reports resource utilization data for a resource pool named TestResourcePool.
 
 ### Example 2
-```
-PS C:\> $UtilizationReport = Get-VMResourcePool -Name "TestResourcePool" -ResourcePoolType @("Processor","VHD","Ethernet","Memory") | Measure-VMResourcePool
-PS C:\> Get-VMResourcePool -ResourcePoolType @("Processor","VHD","Ethernet","Memory") | Reset-VMResourceMetering
+```powershell
+$UtilizationReport = Get-VMResourcePool -Name "TestResourcePool" -ResourcePoolType @("Processor","VHD","Ethernet","Memory") | Measure-VMResourcePool
+Get-VMResourcePool -ResourcePoolType @("Processor","VHD","Ethernet","Memory") | Reset-VMResourceMetering
 ```
 
 This example uses two commands as well as the pipeline.

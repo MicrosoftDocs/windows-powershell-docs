@@ -46,8 +46,8 @@ The **Remove-VMNetworkAdapter** cmdlet removes one or more virtual network adapt
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VMNetworkAdapter -VMName Redmond -VMNetworkAdapterName Redmond_NIC1
+```powershell
+Remove-VMNetworkAdapter -VMName Redmond -VMNetworkAdapterName Redmond_NIC1
 ```
 
 This example removes network adapter Redmond_NIC1 from a virtual machine named Redmond.

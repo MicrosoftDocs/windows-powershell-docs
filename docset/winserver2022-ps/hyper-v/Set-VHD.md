@@ -41,24 +41,24 @@ The two properties must be set in separate operations.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VHD -Path Child1.vhd -ParentPath ParentCopy.vhd -LeafPath Child2.vhd
+```powershell
+Set-VHD -Path Child1.vhd -ParentPath ParentCopy.vhd -LeafPath Child2.vhd
 ```
 
 This example sets the parent of the virtual hard disk associated with ParentCopy.vhd as the parent of the chained virtual hard disk associated with Child1.vhd, where the leaf of the virtual disk chain is the virtual hard disk associated with Child2.vhd.
 The operation is performed in online mode.
 
 ### Example 2
-```
-PS C:\> Set-VHD -Path Child1.vhd -ParentPath ParentCopy.vhd
+```powershell
+Set-VHD -Path Child1.vhd -ParentPath ParentCopy.vhd
 ```
 
 This example sets the parent of the virtual hard disk associated with ParentCopy.vhd as the parent of the chained virtual hard disk associated with Child1.vhd.
 This operation cannot be performed when the virtual disk chain is attached.
 
 ### Example 3
-```
-PS C:\> Set-VHD -Path Child1.vhd -parentpath parentcopywithnewid.vhd -IgnoreMismatchId
+```powershell
+Set-VHD -Path Child1.vhd -parentpath parentcopywithnewid.vhd -IgnoreMismatchId
 ```
 
 This example sets the parent of Child1.vhd to point to parentcopywithnewid.vhd, even though parentcopywithnewid.vhd has a different ID than the original parent of child1.vhd.
@@ -67,8 +67,8 @@ This mode should be used with extreme caution, and only when it is certain that 
 Otherwise data loss can occur.
 
 ### Example 4
-```
-PS C:\> Set-VHD -Path c:\test.vhdx -PhysicalSectorSizeBytes 512
+```powershell
+Set-VHD -Path c:\test.vhdx -PhysicalSectorSizeBytes 512
 ```
 
 This example sets the physical sector size of a VHDX to 512 bytes.

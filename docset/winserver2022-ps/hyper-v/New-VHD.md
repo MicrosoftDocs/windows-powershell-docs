@@ -57,23 +57,23 @@ The file name extension you specify determines the format.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> New-VHD -Path c:\Base.vhdx -SizeBytes 10GB
+```powershell
+New-VHD -Path c:\Base.vhdx -SizeBytes 10GB
 ```
 
 This example creates a dynamic virtual hard disk in VHDX format that is 10 GB in size.
 The file name extension determines the format and the default type of dynamic is used because no type is specified.
 
 ### Example 2
-```
-PS C:\> New-VHD -ParentPath c:\Base.vhdx -Path c:\Diff.vhdx -Differencing
+```powershell
+New-VHD -ParentPath c:\Base.vhdx -Path c:\Diff.vhdx -Differencing
 ```
 
 This example creates a VHDX-format differencing virtual hard disk with a parent path of c:\Base.vhdx.
 
 ### Example 3
-```
-PS C:\> New-VHD -Path C:\fixed.vhd -Fixed -SourceDisk 2 -SizeBytes 1TB
+```powershell
+New-VHD -Path C:\fixed.vhd -Fixed -SourceDisk 2 -SizeBytes 1TB
 ```
 
 This example creates a 1 TB VHD-format fixed virtual hard disk at the specified path.
@@ -81,17 +81,17 @@ The data for the virtual hard disk is populated from the disk identified in the 
 You can list the disks attached to the system and the number associated with each disk using the **Get-Disk** cmdlet.
 
 ### Example 4
-```
-PS C:\> New-VHD -Path c:\LargeSectorBlockSize.vhdx -BlockSizeBytes 128MB -LogicalSectorSize 4KB -SizeBytes 1TB
+```powershell
+New-VHD -Path c:\LargeSectorBlockSize.vhdx -BlockSizeBytes 128MB -LogicalSectorSize 4KB -SizeBytes 1TB
 ```
 
 This example creates a new 1 TB VHDX-format dynamic virtual hard disk at the specified path with a block size of 128 MB and a logical sector size of 4 KB.
 
 ### Example 5
-```
-PS C:\> $vhdpath = "C:\VHDs\Test.vhdx"
-PS C:\> $vhdsize = 127GB
-PS C:\> New-VHD -Path $vhdpath -Dynamic -SizeBytes $vhdsize | Mount-VHD -Passthru |Initialize-Disk -Passthru |New-Partition -AssignDriveLetter -UseMaximumSize |Format-Volume -FileSystem NTFS -Confirm:$false -Force
+```powershell
+$vhdpath = "C:\VHDs\Test.vhdx"
+$vhdsize = 127GB
+New-VHD -Path $vhdpath -Dynamic -SizeBytes $vhdsize | Mount-VHD -Passthru |Initialize-Disk -Passthru |New-Partition -AssignDriveLetter -UseMaximumSize |Format-Volume -FileSystem NTFS -Confirm:$false -Force
 ```
 
 This example creates a new 127GB VHD and then mounts, initializes, and formats it so the drive is ready to use.

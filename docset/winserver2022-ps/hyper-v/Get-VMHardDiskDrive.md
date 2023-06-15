@@ -46,29 +46,29 @@ The **Get-VMHardDiskDrive** cmdlet gets the virtual hard disk drives attached to
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMHardDiskDrive -VMName TestVM
+```powershell
+Get-VMHardDiskDrive -VMName TestVM
 ```
 
 Gets the virtual hard drives from virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VM -Name TestVM | Get-VMHardDiskDrive -ControllerType IDE -ControllerNumber 1
+```powershell
+Get-VM -Name TestVM | Get-VMHardDiskDrive -ControllerType IDE -ControllerNumber 1
 ```
 
 Gets the virtual hard drives from IDE controller 1 of virtual machine TestVM.
 
 ### Example 3
-```
-PS C:\> Get-VMIdeController -VMName TestVM -ControllerNumber 1 -ComputerName Development | Get-VMHardDiskDrive
+```powershell
+Get-VMIdeController -VMName TestVM -ControllerNumber 1 -ComputerName Development | Get-VMHardDiskDrive
 ```
 
 Gets the virtual hard drives from IDE controller 1 of virtual machine TestVM located on Hyper-V host Development.
 
 ### Example 4
-```
-PS C:\> Get-VMSnapshot -VMName Test -Name 'Before applying updates' | Get-VMHardDiskDrive
+```powershell
+Get-VMSnapshot -VMName Test -Name 'Before applying updates' | Get-VMHardDiskDrive
 ```
 
 Gets the virtual hard drives from snapshot Before applying updates of virtual machine TestVM.

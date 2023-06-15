@@ -33,8 +33,8 @@ The **Get-VMSwitchTeam** cmdlet gets virtual switch teams from one or more Hyper
 ## EXAMPLES
 
 ### Example 1: Get a switch team
-```
-PS C:\> Get-VMSwitchTeam -Name "SwitchTeam07"
+```powershell
+Get-VMSwitchTeam -Name "SwitchTeam07"
 ```
 
 This command retrieves information and team members that belong to the switch team named SwitchTeam07.

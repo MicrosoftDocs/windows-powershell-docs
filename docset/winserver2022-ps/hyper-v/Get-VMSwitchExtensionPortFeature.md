@@ -56,8 +56,8 @@ The **Get-VMSwitchExtensionPortFeature** cmdlet gets the features configured on 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMSwitchExtensionPortFeature -VMName VM2 -FeatureName "Ethernet Switch Port Security Settings"
+```powershell
+Get-VMSwitchExtensionPortFeature -VMName VM2 -FeatureName "Ethernet Switch Port Security Settings"
 ```
 
 Gets the feature configured on virtual machine VM2 by name Ethernet Switch Port Security Settings.

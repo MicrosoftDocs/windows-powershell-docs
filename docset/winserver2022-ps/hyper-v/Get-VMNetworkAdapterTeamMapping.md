@@ -41,6 +41,10 @@ The **Get-VMNetworkAdapterTeamMapping** cmdlet
 
 ## EXAMPLES
 
+### Example 1
+```powershell
+Get-VMNetworkAdapterTeamMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC"
+```
 
 ## PARAMETERS
 

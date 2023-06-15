@@ -32,15 +32,15 @@ The **Add-VMSwitch** cmdlet adds a virtual switch to an Ethernet resource pool.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Add-VMSwitch -Name Test -ResourcePoolName "Engineering Department"
+```powershell
+Add-VMSwitch -Name Test -ResourcePoolName "Engineering Department"
 ```
 
 Adds virtual switch Test to Ethernet resource pool Engineering Department.
 
 ### Example 2
-```
-PS C:\> Get-VMSwitch -Name Test | Add-VMSwitch -ResourcePoolName "Engineering Department"
+```powershell
+Get-VMSwitch -Name Test | Add-VMSwitch -ResourcePoolName "Engineering Department"
 ```
 
 Adds virtual switch Test to Ethernet resource pool Engineering Department.

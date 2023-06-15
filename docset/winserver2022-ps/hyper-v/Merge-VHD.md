@@ -30,8 +30,8 @@ Merge is an offline operation; the virtual hard disk chain must not be attached 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Merge-VHD -Path c:\test\Child4.vhdx -DestinationPath c:\test\Child2.vhdx
+```powershell
+Merge-VHD -Path c:\test\Child4.vhdx -DestinationPath c:\test\Child2.vhdx
 ```
 
 This example merges the virtual hard disk from Child4 to Child2, for a virtual disk chain with Child4 as a child of Child3, Child3 as a child of Child2, Child2 as a child of Child1, and Child1 as a child of Parent, and with the virtual hard disk file for each located in c:\test.

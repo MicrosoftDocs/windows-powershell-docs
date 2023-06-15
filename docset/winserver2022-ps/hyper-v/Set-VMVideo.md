@@ -40,8 +40,8 @@ The **Set-VMVideo** cmdlet configures the video settings for virtual machines.
 ## EXAMPLES
 
 ### Example 1: Set resolution for a virtual machine display
-```
-PS C:\> Set-VMVideo -VMName "VM06" -HorizontalResolution 1920 -VerticalResolution 1200
+```powershell
+Set-VMVideo -VMName "VM06" -HorizontalResolution 1920 -VerticalResolution 1200
 ```
 
 This command sets the video resolution for the virtual machine named VM06 to 1920x1200.

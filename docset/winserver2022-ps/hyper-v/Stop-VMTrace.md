@@ -25,8 +25,8 @@ The **Stop-VMTrace** cmdlet stops tracing to a file.
 ## EXAMPLES
 
 ### Example 1: Stop tracing
-```
-PS C:\> Stop-VMTrace
+```powershell
+Stop-VMTrace
 ```
 
 This command stops tracing.

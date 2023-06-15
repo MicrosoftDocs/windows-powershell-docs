@@ -32,8 +32,8 @@ The **Enable-VMTPM** cmdlet enables Trusted Platform Module (TPM) functionality 
 ## EXAMPLES
 
 ### Example 1: Enable TPM on a virtual machine
-```
-PS C:\> Enable-VMTPM -VMName "VM01"
+```powershell
+Enable-VMTPM -VMName "VM01"
 ```
 
 This example enables TPM on the virtual machine named "VM01"

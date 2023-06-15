@@ -33,8 +33,8 @@ The **Rename-VMSwitch** cmdlet renames a virtual switch.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Rename-VMSwitch "QoS Switch" -NewName "IIS Switch"
+```powershell
+Rename-VMSwitch "QoS Switch" -NewName "IIS Switch"
 ```
 
 Renames virtual switch QoS Switch as IIS Switch.

@@ -33,8 +33,8 @@ The **Remove-VMScsiController** cmdlet removes a SCSI controller from a virtual 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMScsiController -VMName TestVM -ControllerNumber 0 | Remove-VMScsiController
+```powershell
+Get-VMScsiController -VMName TestVM -ControllerNumber 0 | Remove-VMScsiController
 ```
 
 Deletes SCSI controller 0 from virtual machine TestVM.

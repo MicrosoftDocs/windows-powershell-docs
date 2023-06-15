@@ -35,24 +35,24 @@ Examples of such applications are Virtual Machine Manager.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMConnectAccess
+```powershell
+Get-VMConnectAccess
 ```
 
 This command gets a list of all the users who have access to connect to any virtual machine on the local computer.
 The example assumes that the Grant-VMConnectAccess has been run previously for at least one user account.
 
 ### Example 2
-```
-PS C:\> Get-VMConnectAccess -VMName VM1
+```powershell
+Get-VMConnectAccess -VMName VM1
 ```
 
 This command gets a list of all the users who have access to connect to virtual machine VM1.
 The example assumes that the Grant-VMConnectAccess has been run previously for at least one user account for virtual machine VM1.
 
 ### Example 3
-```
-PS C:\> Get-VMConnectAccess -UserName CONTOSO\John
+```powershell
+Get-VMConnectAccess -UserName CONTOSO\John
 ```
 
 This command gets a list of all the virtual machines on the local computer that user Contoso\John has access to connect to.

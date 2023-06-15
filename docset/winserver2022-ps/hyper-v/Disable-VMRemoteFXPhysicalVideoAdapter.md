@@ -33,15 +33,15 @@ The **Disable-VMRemoteFXPhysicalVideoAdapter** cmdlet disables one or more Remot
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Disable-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia*
+```powershell
+Disable-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia*
 ```
 
 This example disables all RemoteFX physical video adapters that include the string "Nvidia" in their names.
 
 ### Example 2
-```
-PS C:\> Get-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia* | Disable-VMRemotePhysicalVideoAdapter
+```powershell
+Get-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia* | Disable-VMRemotePhysicalVideoAdapter
 ```
 
 This example disables all RemoteFX physical video adapters that include the string "Nvidia" in their names.

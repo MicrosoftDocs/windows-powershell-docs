@@ -37,22 +37,22 @@ The **Get-VMIntegrationService** cmdlet gets the integration services of a virtu
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMIntegrationService -VMName TestVM | Where-Object {$_.SecondaryOperationalStatus -eq 'ProtocolMismatch'}
+```powershell
+Get-VMIntegrationService -VMName TestVM | Where-Object {$_.SecondaryOperationalStatus -eq 'ProtocolMismatch'}
 ```
 
 Gets the out-of-date integration services from virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VM -Name TestVM | Get-VMIntegrationService -Name Shutdown,VSS
+```powershell
+Get-VM -Name TestVM | Get-VMIntegrationService -Name Shutdown,VSS
 ```
 
 Gets the Shutdown and VSS integration services from virtual machine TestVM.
 
 ### Example 3
-```
-PS C:\> Get-VMSnapshot -VMName TestVM -Name 'Before applying updates' | Get-VMIntegrationService Shutdown,VSS
+```powershell
+Get-VMSnapshot -VMName TestVM -Name 'Before applying updates' | Get-VMIntegrationService Shutdown,VSS
 ```
 
 Gets the Shutdown and VSS integration services from the snapshot Before applying updates of virtual machine TestVM.

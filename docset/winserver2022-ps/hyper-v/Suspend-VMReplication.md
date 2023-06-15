@@ -40,15 +40,15 @@ When replication is resumed, all changes made since replication was suspended wi
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Suspend-VMReplication VM01
+```powershell
+Suspend-VMReplication VM01
 ```
 
 Suspends replication of virtual machine VM01.
 
 ### Example 2
-```
-PS C:\> Suspend-VMReplication *
+```powershell
+Suspend-VMReplication *
 ```
 
 Suspends replication of all virtual machines on the local Hyper-V host.

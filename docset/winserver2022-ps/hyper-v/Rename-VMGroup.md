@@ -38,8 +38,8 @@ The **Rename-VMGroup** cmdlet renames virtual machine groups.
 ## EXAMPLES
 
 ### Example 1: Rename a group
-```
-PS C:\> Rename-VMGroup -Name "TestGroup" -NewName "Group01"
+```powershell
+Rename-VMGroup -Name "TestGroup" -NewName "Group01"
 ```
 
 This command renames the group named TestGroup to be Group01.

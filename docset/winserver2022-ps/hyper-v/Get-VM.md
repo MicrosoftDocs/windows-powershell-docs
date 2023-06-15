@@ -38,22 +38,22 @@ The **Get-VM** cmdlet gets the virtual machines from one or more Hyper-V hosts.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VM
+```powershell
+Get-VM
 ```
 
 This example gets all virtual machines on the local virtual machine host.
 
 ### Example 2
-```
-PS C:\> Get-VM -ComputerName Server1 | Where-Object {$_.State -eq 'Running'}
+```powershell
+Get-VM -ComputerName Server1 | Where-Object {$_.State -eq 'Running'}
 ```
 
 This example gets all virtual machines on Hyper-V host Server1 that are running.
 
 ### Example 3
-```
-PS C:\> Get-ClusterGroup | ? {$_.GroupType -eq 'VirtualMachine' } | Get-VM
+```powershell
+Get-ClusterGroup | ? {$_.GroupType -eq 'VirtualMachine' } | Get-VM
 ```
 
 This example gets all virtual machines in the cluster to which the local Hyper-V host is joined.

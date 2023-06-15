@@ -41,15 +41,15 @@ It completes the initial replication of a virtual machine when external is used 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Import-VMInitialReplication VM01 d:\VMImportLocation\VM01
+```powershell
+Import-VMInitialReplication VM01 d:\VMImportLocation\VM01
 ```
 
 This example imports the initial replication files for a virtual machine named VM01 from location d:\VMImportLocation\VM01.
 
 ### Example 2
-```
-PS C:\> Get-VMReplication | ForEach-Object {$path = "D:\OOBLoc\" + $_.VMName + "_" + $_.VMID; if (Test-Path $path -PathType Container) {Import-VMInitialReplication $_ $path}}
+```powershell
+Get-VMReplication | ForEach-Object {$path = "D:\OOBLoc\" + $_.VMName + "_" + $_.VMID; if (Test-Path $path -PathType Container) {Import-VMInitialReplication $_ $path}}
 ```
 
 This example imports the initial replication files for a set of virtual machines using files located in D:\OOBLoc\

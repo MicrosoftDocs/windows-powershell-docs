@@ -49,9 +49,9 @@ The **Remove-VMSwitchTeamMember** cmdlet removes virtual network adapters from a
 ## EXAMPLES
 
 ### Example 1: Remove network adapters from a switch team
-```
-PS C:\> $VMSwitch = Get-VMSwitch -Name "Switch03"
-PS C:\> Remove-VMSwitchTeamMember -VMSwitch $VMSwitch -NetAdapterName "Adapter01","Adapter04"
+```powershell
+$VMSwitch = Get-VMSwitch -Name "Switch03"
+Remove-VMSwitchTeamMember -VMSwitch $VMSwitch -NetAdapterName "Adapter01","Adapter04"
 ```
 
 The first command gets the virtual switch named Switch03, and then stores that object in the **$VMSwitch** variable.

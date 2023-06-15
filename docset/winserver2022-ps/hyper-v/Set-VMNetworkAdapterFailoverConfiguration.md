@@ -52,29 +52,29 @@ The **Set-VMNetworkAdapterFailoverConfiguration** cmdlet sets the configuration 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMNetworkAdapter VM01 NetworkAdapter01 | Set-VMNetworkAdapterFailoverConfiguration -IPv4Address 10.100.1.100 -IPv4SubnetMask 255.255.255.0
+```powershell
+Get-VMNetworkAdapter VM01 NetworkAdapter01 | Set-VMNetworkAdapterFailoverConfiguration -IPv4Address 10.100.1.100 -IPv4SubnetMask 255.255.255.0
 ```
 
 This example configures a failover IPv4 address for virtual network adapter NetworkAdapter01 on virtual machine VM01.
 
 ### Example 2
-```
-PS C:\> Get-VMNetworkAdapter VM01 NetworkAdapter01 | Set-VMNetworkAdapterFailoverConfiguration -ClearFailoverIPv4Settings
+```powershell
+Get-VMNetworkAdapter VM01 NetworkAdapter01 | Set-VMNetworkAdapterFailoverConfiguration -ClearFailoverIPv4Settings
 ```
 
 This example clears the current failover IPv4 settings on virtual network adapter NetworkAdapter01 for virtual machine VM01.
 
 ### Example 3
-```
-PS C:\> Get-VMNetworkAdapter VM01 NetworkAdapter01 | Set-VMNetworkAdapterFailoverConfiguration -Ipv6Address aaaa:aaaa:aaaa:aaaa:aaaa:aaaa:aaa:aaaa -Ipv6SubnetPrefixLength 12
+```powershell
+Get-VMNetworkAdapter VM01 NetworkAdapter01 | Set-VMNetworkAdapterFailoverConfiguration -Ipv6Address aaaa:aaaa:aaaa:aaaa:aaaa:aaaa:aaa:aaaa -Ipv6SubnetPrefixLength 12
 ```
 
 This example configures an IPv6 address and a prefix length of 12 for a virtual network adapter NetworkAdapter01 for virtual machine VM01.
 
 ### Example 4
-```
-PS C:\> Get-VMNetworkAdapter VM01 NetworkAdapter01 | Set-VMNetworkAdapterFailoverConfiguration -ClearFailoverIPv6Settings
+```powershell
+Get-VMNetworkAdapter VM01 NetworkAdapter01 | Set-VMNetworkAdapterFailoverConfiguration -ClearFailoverIPv6Settings
 ```
 
 This example clears the current failover IPv6 settings on a virtual network adapter NetworkAdapter01 for virtual machine VM01.

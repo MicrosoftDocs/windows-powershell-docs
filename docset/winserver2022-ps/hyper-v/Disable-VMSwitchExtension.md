@@ -44,8 +44,8 @@ You can run Get-VMSystemSwitchExtension to enumerate the virtual switch extensio
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Disable-VMSwitchExtension -VMSwitchName "Internal Switch" -Name "Microsoft Windows Filtering Platform"
+```powershell
+Disable-VMSwitchExtension -VMSwitchName "Internal Switch" -Name "Microsoft Windows Filtering Platform"
 ```
 
 Disables WFP ("Microsoft Windows Filtering Platform") on virtual switch Internal Switch.

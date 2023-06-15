@@ -38,8 +38,8 @@ Note: This cmdlet is supported only on Generation 2 virtual machines.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMFirmware "Test VM"
+```powershell
+Get-VMFirmware "Test VM"
 ```
 
 This example returns a virtual machine firmware object for the virtual machine "Test VM".

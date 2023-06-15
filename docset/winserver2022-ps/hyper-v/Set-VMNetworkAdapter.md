@@ -88,46 +88,46 @@ The **Set-VMNetworkAdapter** cmdlet configures features of the virtual network a
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMNetworkAdapter -VMName Redmond -DhcpGuard On
+```powershell
+Set-VMNetworkAdapter -VMName Redmond -DhcpGuard On
 ```
 
 This example enables DHCP Guard on all the virtual network adapters of virtual machine Redmond.
 When DHCP Guard enabled, if virtual machine Redmond replies to requests from DHCP clients, these replies are dropped.
 
 ### Example 2
-```
-PS C:\> Set-VMNetworkAdapter -VMName Kirkland -PortMirroring Source
+```powershell
+Set-VMNetworkAdapter -VMName Kirkland -PortMirroring Source
 ```
 
 This example enables port mirroring for all virtual network adapters on virtual machine Kirkland.
 When port mirroring is enabled, every packet sent or received by this virtual machine is copied and sent to a monitoring virtual machine.
 
 ### Example 3
-```
-PS C:\> Set-VMNetworkAdapter -VMName Bellevue -Name PM_Dest -PortMirroring Destination
+```powershell
+Set-VMNetworkAdapter -VMName Bellevue -Name PM_Dest -PortMirroring Destination
 ```
 
 This example configures the virtual network adapter named PM_Dest as the destination for port mirroring, which configures the virtual machine named Bellevue to monitor network traffic.
 That is, a copy of every packet sent or received by a monitored virtual machine connected to the same virtual switch is sent to virtual machine Bellevue through virtual network adapter PM_Dest.
 
 ### Example 4
-```
-PS C:\> Get-VMNetworkAdapter -All | Set-VMNetworkAdapter -VmqWeight 100
+```powershell
+Get-VMNetworkAdapter -All | Set-VMNetworkAdapter -VmqWeight 100
 ```
 
 This example enables VMQ and sets a weight of 100 on every virtual network adapter on the local host.
 
 ### Example 5
-```
-PS C:\> Get-VM Redmond | Set-VMNetworkAdapter -AllowTeaming On
+```powershell
+Get-VM Redmond | Set-VMNetworkAdapter -AllowTeaming On
 ```
 
 This example configures NIC Teaming for all virtual network adapters of the virtual machine named Redmond.
 
 ### Example 6
-```
-PS C:\> Get-VMNetworkAdapter -VMName Redmond,Kirkland,Bellevue | Set-VMNetworkAdapter -MinimumBandwidthWeight 1
+```powershell
+Get-VMNetworkAdapter -VMName Redmond,Kirkland,Bellevue | Set-VMNetworkAdapter -MinimumBandwidthWeight 1
 ```
 
 This example sets the same minimum bandwidth weight for all virtual network adapters of three virtual machines: Redmond, Kirkland, and Bellevue.

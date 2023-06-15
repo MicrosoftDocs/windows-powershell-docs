@@ -41,8 +41,8 @@ For clarity, this document will refer to virtual machine snapshots as checkpoint
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Restore-VMSnapshot -Name 'Base image' -VMName TestVM
+```powershell
+Restore-VMSnapshot -Name 'Base image' -VMName TestVM
 Confirm
 Are you sure you want to perform this action?
 Restore-VMSnapshot will restore checkpoint "Base image".

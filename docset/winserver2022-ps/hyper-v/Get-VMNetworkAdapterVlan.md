@@ -48,8 +48,8 @@ The **Get-VMNetworkAdapterVlan** cmdlet gets the virtual LAN settings configured
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMNetworkAdapterVlan
+```powershell
+Get-VMNetworkAdapterVlan
 ```
 
 Gets the virtual LAN settings for each virtual network adapter in all virtual machines on the system.

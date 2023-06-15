@@ -60,11 +60,11 @@ This cmdlet also configures built-in virtual switch features.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> $feature = Get-VMSystemSwitchExtensionPortFeature -FeatureName "Ethernet Switch Port Security Settings"
-PS C:\> $feature.SettingData.EnableDhcpGuard = $true
-PS C:\> $feature.SettingData.EnableRouterGuard = $true
-PS C:\> Add-VMSwitchExtensionPortFeature -VMName VM2 -VMSwitchExtensionFeature $feature
+```powershell
+$feature = Get-VMSystemSwitchExtensionPortFeature -FeatureName "Ethernet Switch Port Security Settings"
+$feature.SettingData.EnableDhcpGuard = $true
+$feature.SettingData.EnableRouterGuard = $true
+Add-VMSwitchExtensionPortFeature -VMName VM2 -VMSwitchExtensionFeature $feature
 ```
 
 Adds a feature to virtual machine VM2.

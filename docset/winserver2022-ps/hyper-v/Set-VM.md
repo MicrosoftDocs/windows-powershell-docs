@@ -48,15 +48,15 @@ The **Set-VM** cmdlet configures a virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VM -Name TestVM -AutomaticStopAction Shutdown
+```powershell
+Set-VM -Name TestVM -AutomaticStopAction Shutdown
 ```
 
 Configures virtual machine TestVM to shut down when the Hyper-V host shuts down.
 
 ### Example 2
-```
-PS C:\> Stop-VM -Name TestVM -Passthru | Set-VM -ProcessorCount 2 -DynamicMemory -MemoryMaximumBytes 2GB -Passthru | Start-VM
+```powershell
+Stop-VM -Name TestVM -Passthru | Set-VM -ProcessorCount 2 -DynamicMemory -MemoryMaximumBytes 2GB -Passthru | Start-VM
 ```
 
 Stops virtual machine TestVM, sets it to use dynamic memory, sets its maximum amount of memory to 2GB, sets it to use 2 virtual processors, and starts it.

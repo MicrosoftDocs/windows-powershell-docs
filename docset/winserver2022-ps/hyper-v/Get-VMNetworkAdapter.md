@@ -49,23 +49,23 @@ The **Get-VMNetworkAdapter** cmdlet gets the virtual network adapters of the spe
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMNetworkAdapter -VMName *
+```powershell
+Get-VMNetworkAdapter -VMName *
 ```
 
 Gets virtual network adapters from all virtual machines on the local Hyper-V host.
 
 ### Example 2
-```
-PS C:\> Get-VMNetworkAdapter -ManagementOS
+```powershell
+Get-VMNetworkAdapter -ManagementOS
 ```
 
 Gets the virtual network adapters in the ManagementOS (i.e.
 the local Hyper-V host).
 
 ### Example 3
-```
-PS C:\> Get-VMNetworkAdapter -All
+```powershell
+Get-VMNetworkAdapter -All
 ```
 
 Gets virtual network adapters from all virtual machines as well as the management operating system.

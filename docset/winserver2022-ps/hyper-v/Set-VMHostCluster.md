@@ -38,8 +38,8 @@ The **Set-VMHostCluster** cmdlet configures a virtual machine host cluster.
 ## EXAMPLES
 
 ### Example 1: Configure a virtual machine host cluster
-```
-PS C:\> Set-VMHostCluster -ClusterName "ContosoCluster" -SharedStoragePath "D:\ClusterStorage\cluster01"
+```powershell
+Set-VMHostCluster -ClusterName "ContosoCluster" -SharedStoragePath "D:\ClusterStorage\cluster01"
 ```
 
 This command configures the shared storage path for the cluster named ContosoCluster.

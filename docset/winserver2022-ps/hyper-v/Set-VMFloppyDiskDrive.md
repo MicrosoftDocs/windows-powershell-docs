@@ -40,8 +40,8 @@ The **Set-VMFloppyDiskDrive** cmdlet configures a virtual floppy disk drive.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMFloppyDiskDrive TestVM C:\Test.vfd
+```powershell
+Set-VMFloppyDiskDrive TestVM C:\Test.vfd
 ```
 
 Connect C:\Test.vfd to the virtual floppy disk of virtual machine TestVM.

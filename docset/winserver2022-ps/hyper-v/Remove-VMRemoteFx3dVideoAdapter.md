@@ -38,8 +38,8 @@ The **Remove-VMRemoteFx3dVideoAdapter** cmdlet removes a RemoteFX 3D video adapt
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VMRemoteFx3dVideoAdapter -VMName TestVM1,TestVM2
+```powershell
+Remove-VMRemoteFx3dVideoAdapter -VMName TestVM1,TestVM2
 ```
 
 Removes the RemoteFX adapter from virtual machines TestVM1 and TestVM2.

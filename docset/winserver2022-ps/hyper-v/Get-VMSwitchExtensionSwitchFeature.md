@@ -35,8 +35,8 @@ The object can be used to update the configuration of the switch using the Set-V
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMSwitchExtensionSwitchFeature -SwitchName MySwitch
+```powershell
+Get-VMSwitchExtensionSwitchFeature -SwitchName MySwitch
 ```
 
 The following command returns all the configured features on the switch named MySwitch.

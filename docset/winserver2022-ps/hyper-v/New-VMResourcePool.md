@@ -27,22 +27,22 @@ The **New-VMResourcePool** cmdlet creates a resource pool.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> New-VMResourcePool "New Resource Pool" VHD -Paths d:\VHDs
+```powershell
+New-VMResourcePool "New Resource Pool" VHD -Paths d:\VHDs
 ```
 
 Creates a new virtual hard disk resource pool associated with a single path.
 
 ### Example 2
-```
-PS C:\> New-VMResourcePool "New Resource Pool" VHD  -Paths "d:\VHDs","e:\Temp"
+```powershell
+New-VMResourcePool "New Resource Pool" VHD  -Paths "d:\VHDs","e:\Temp"
 ```
 
 Creates a new virtual hard disk resource pool associated with multiple paths.
 
 ### Example 3
-```
-PS C:\> New-VMResourcePool "New Resource Pool" Ethernet
+```powershell
+New-VMResourcePool "New Resource Pool" Ethernet
 ```
 
 Creates a new ethernet resource pool.

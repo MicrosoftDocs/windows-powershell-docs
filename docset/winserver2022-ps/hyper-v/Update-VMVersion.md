@@ -33,8 +33,8 @@ The **Update-VMVersion** cmdlet updates virtual machines to the current version.
 ## EXAMPLES
 
 ### Example 1: Update a virtual machine
-```
-PS C:\> Update-VMVersion -Name "VM06"
+```powershell
+Update-VMVersion -Name "VM06"
 ```
 
 This command updates the virtual machine named VM06 to the most recent virtual machine version.

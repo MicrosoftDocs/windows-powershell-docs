@@ -37,8 +37,8 @@ The **Get-VMVideo** cmdlet gets the video settings for virtual machines.
 ## EXAMPLES
 
 ### Example 1: Get video settings for a virtual machine
-```
-PS C:\> Get-VMVideo -VMName "VM06"
+```powershell
+Get-VMVideo -VMName "VM06"
 ```
 
 This command gets the video settings for the virtual machine named VM06.

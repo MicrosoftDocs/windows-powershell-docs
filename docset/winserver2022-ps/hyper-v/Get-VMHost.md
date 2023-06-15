@@ -31,8 +31,8 @@ The **Get-VMHost** cmdlet gets a Hyper-V host.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMHost
+```powershell
+Get-VMHost
 ```
 
 Gets the local Hyper-V host.

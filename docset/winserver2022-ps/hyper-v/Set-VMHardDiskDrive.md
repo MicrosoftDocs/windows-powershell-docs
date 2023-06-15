@@ -42,15 +42,15 @@ The **Set-VMHardDiskDrive** cmdlet configures a virtual hard disk.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Set-VMHardDiskDrive -VMName TestVM -Path .\Test.vhd
+```powershell
+Set-VMHardDiskDrive -VMName TestVM -Path .\Test.vhd
 ```
 
 Configures the hard drive of virtual machine TestVM to use Test.vhd as its media.
 
 ### Example 2
-```
-PS C:\> Get-VMHardDiskDrive -VMName TestVM -ControllerType IDE -ControllerNumber 1 -ControllerLocation 0 | Set-VMHardDiskDrive -ToControllerLocation 1
+```powershell
+Get-VMHardDiskDrive -VMName TestVM -ControllerType IDE -ControllerNumber 1 -ControllerLocation 0 | Set-VMHardDiskDrive -ToControllerLocation 1
 ```
 
 Moves the virtual hard drive on virtual machine TestVM from IDE 1,0 to IDE 1,1.

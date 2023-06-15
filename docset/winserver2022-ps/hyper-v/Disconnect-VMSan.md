@@ -34,8 +34,8 @@ The **Disconnect-VMSan** cmdlet removes a host bus adapter from a virtual storag
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Disconnect-VMSan -Name Production -WorldWideNodeName C003FF0000FFFF00 -WorldWidePortName C003FF5778E50002
+```powershell
+Disconnect-VMSan -Name Production -WorldWideNodeName C003FF0000FFFF00 -WorldWidePortName C003FF5778E50002
 ```
 
 Removes the host bus adapter having the specified world wide node name and world wide port name from the virtual SAN named Production on the local Hyper-V host.

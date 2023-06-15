@@ -41,15 +41,15 @@ After the authorization entry is removed, the Replica server does not accept rep
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VMReplicationAuthorizationEntry -AllowedPrimaryServer server01.domain01.contoso.com
+```powershell
+Remove-VMReplicationAuthorizationEntry -AllowedPrimaryServer server01.domain01.contoso.com
 ```
 
 This example removes an authorization entry on the local Replica server for allowed primary server server01.domain01.contoso.com.
 
 ### Example 2
-```
-PS C:\> Get-VMReplicationAuthorizationEntry | Remove-VMReplicationAuthorizationEntry
+```powershell
+Get-VMReplicationAuthorizationEntry | Remove-VMReplicationAuthorizationEntry
 ```
 
 This example removes all authorization entries on the local Replica server.

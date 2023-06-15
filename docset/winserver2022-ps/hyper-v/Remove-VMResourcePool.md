@@ -33,8 +33,8 @@ The **Remove-VMResourcePool** cmdlet deletes a resource pool from one or more vi
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VMResourcePool Test VHD
+```powershell
+Remove-VMResourcePool Test VHD
 ```
 
 Removes a virtual hard disk resource pool named Test.

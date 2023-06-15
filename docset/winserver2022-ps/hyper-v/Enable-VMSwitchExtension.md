@@ -44,8 +44,8 @@ You can use the **Get-VMSystemSwitchExtension** cmdlet to enumerate the virtual 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Enable-VMSwitchExtension -VMSwitchName External -Name "Microsoft Windows Filtering Platform"
+```powershell
+Enable-VMSwitchExtension -VMSwitchName External -Name "Microsoft Windows Filtering Platform"
 ```
 
 Enables WFP ("Microsoft Windows Filtering Platform") on a virtual switch named External.

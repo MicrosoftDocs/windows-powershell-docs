@@ -35,8 +35,8 @@ This switch feature data surfaces runtime information and statistics on a per-sw
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMSwitchExtensionSwitchData External -FeatureId 1c37e01c-0cd6-496f-9076-90c131033dc2
+```powershell
+Get-VMSwitchExtensionSwitchData External -FeatureId 1c37e01c-0cd6-496f-9076-90c131033dc2
 ```
 
 Gets the switch data from a virtual switch extension that is configured on virtual switch External.

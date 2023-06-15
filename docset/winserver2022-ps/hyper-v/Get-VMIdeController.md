@@ -37,15 +37,15 @@ The **Get-VMIdeController** cmdlet gets the IDE controllers of a virtual machine
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMIdeController TestVM
+```powershell
+Get-VMIdeController TestVM
 ```
 
 Gets all IDE controllers belonging to virtual machine TestVM.
 
 ### Example 2
-```
-PS C:\> Get-VMIdeController TestVM -ControllerNumber 0
+```powershell
+Get-VMIdeController TestVM -ControllerNumber 0
 ```
 
 Gets the first IDE controller belonging to virtual machine TestVM.

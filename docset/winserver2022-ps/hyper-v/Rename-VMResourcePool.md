@@ -27,8 +27,8 @@ The **Rename-VMResourcePool** cmdlet renames a resource pool on one or more Hype
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Rename-VMResourcePool Test VHD Production
+```powershell
+Rename-VMResourcePool Test VHD Production
 ```
 
 Renames a VHD resource pool from Test to Production.

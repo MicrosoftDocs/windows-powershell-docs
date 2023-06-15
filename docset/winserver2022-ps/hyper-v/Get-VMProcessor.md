@@ -37,8 +37,8 @@ The **Get-VMProcessor** cmdlet gets the processor of a virtual machine or snapsh
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMProcessor TestVM
+```powershell
+Get-VMProcessor TestVM
 ```
 
 Gets the processor object for virtual machine TestVM.

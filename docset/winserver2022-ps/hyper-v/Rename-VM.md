@@ -32,15 +32,15 @@ The **Rename-VM** cmdlet renames a virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Rename-VM VM1 -NewName VM2
+```powershell
+Rename-VM VM1 -NewName VM2
 ```
 
 Renames virtual machine VM1 to VM2.
 
 ### Example 2
-```
-PS C:\> Get-VM VM1 | Rename-VM -NewName VM2 -PassThru
+```powershell
+Get-VM VM1 | Rename-VM -NewName VM2 -PassThru
 ```
 
 Renames virtual machine VM1 to VM2 and displays the renamed virtual machine.

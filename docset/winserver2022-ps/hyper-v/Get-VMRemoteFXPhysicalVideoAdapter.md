@@ -32,15 +32,15 @@ The **Get-VMRemoteFXPhysicalVideoAdapter** cmdlet gets the RemoteFX physical gra
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMRemoteFXPhysicalVideoAdapter
+```powershell
+Get-VMRemoteFXPhysicalVideoAdapter
 ```
 
 Gets all RemoteFX physical video adapters on the Hyper-V host.
 
 ### Example 2
-```
-PS C:\> Get-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia*
+```powershell
+Get-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia*
 ```
 
 Gets all RemoteFX physical video adapters on the Hyper-V host which include the sequence Nvidia in their name.

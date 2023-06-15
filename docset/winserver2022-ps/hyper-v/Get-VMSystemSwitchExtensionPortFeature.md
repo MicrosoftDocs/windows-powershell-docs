@@ -29,8 +29,8 @@ The object can be used to apply the configuration on specific ports using the Ad
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMSystemSwitchExtensionPortFeature
+```powershell
+Get-VMSystemSwitchExtensionPortFeature
 ```
 
 Gets all port-level features, supported by various virtual switch extensions installed on the system, that can be configured on a virtual network adapter on Hyper-V.

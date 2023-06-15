@@ -42,15 +42,15 @@ If replication health was reported as "Warning", then this operation also change
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Reset-VMReplicationStatistics VM01
+```powershell
+Reset-VMReplicationStatistics VM01
 ```
 
 Resets replication statistics for virtual machine VM01.
 
 ### Example 2
-```
-PS C:\> Get-VMReplication | Reset-VMReplicationStatistics
+```powershell
+Get-VMReplication | Reset-VMReplicationStatistics
 ```
 
 Resets the replication statistics of all replication-enabled virtual machines on the local Hyper-V host.

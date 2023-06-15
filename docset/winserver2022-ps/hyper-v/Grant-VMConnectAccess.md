@@ -35,8 +35,8 @@ Examples of such applications are Virtual Machine Manager.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Grant-VMConnectAccess -VMName VM1 -UserName Contoso\John
+```powershell
+Grant-VMConnectAccess -VMName VM1 -UserName Contoso\John
 ```
 
 This command grants user Contoso\John access to connect to a virtual machine named VM1.

@@ -30,15 +30,15 @@ Repair-VM handles these two particular issues in this one specific situation.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Repair-VM -CompatibilityReport $VMCompatReport -Path C:\Test
+```powershell
+Repair-VM -CompatibilityReport $VMCompatReport -Path C:\Test
 ```
 
 This example changes the configuration path for a virtual machine compatibility report.
 
 ### Example 2
-```
-PS C:\> Repair-VM -CompatibilityReport $VMCompatReport -SnapshotFilePath C:\Snapshots
+```powershell
+Repair-VM -CompatibilityReport $VMCompatReport -SnapshotFilePath C:\Snapshots
 ```
 
 This example adds missing snapshots to a virtual machine compatibility report.

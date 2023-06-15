@@ -33,6 +33,11 @@ The **Set-VMSecurity** cmdlet configures security settings for a virtual machine
 
 ## EXAMPLES
 
+### EXAMPLE 1
+```powershell
+Set-VMSecurity -VMName "Test-VM" -EncryptStateAndVmMigrationTraffic $True
+```
+This example enables **EncryptStateAndVmMigrationTraffic**
 
 ## PARAMETERS
 

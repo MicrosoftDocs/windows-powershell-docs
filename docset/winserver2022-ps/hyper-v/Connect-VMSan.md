@@ -34,8 +34,8 @@ The **Connect-VMSan** cmdlet associates a host bus adapter with a virtual storag
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Connect-VMSan -Name Production -WorldWideNodeName C003FF0000FFFF00 -WorldWidePortName C003FF5778E50002
+```powershell
+Connect-VMSan -Name Production -WorldWideNodeName C003FF0000FFFF00 -WorldWidePortName C003FF5778E50002
 ```
 
 Associates the virtual storage area network (SAN) named Production with the host bus adapter having the specified world wide node name and world wide port name.

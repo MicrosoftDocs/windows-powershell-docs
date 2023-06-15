@@ -32,8 +32,8 @@ The **Get-VMSecurity** cmdlet gets security information about a virtual machine.
 ## EXAMPLES
 
 ### Example 1: Get security information about a virtual machine
-```
-PS C:\> Get-VMSecurity -VMName "VM01"
+```powershell
+Get-VMSecurity -VMName "VM01"
 ```
 
 This command gets security information about the virtual machine named VM01.

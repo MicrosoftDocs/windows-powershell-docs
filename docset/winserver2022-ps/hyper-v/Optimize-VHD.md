@@ -32,28 +32,28 @@ The compact operation can succeed without reducing the file size, if no optimiza
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Optimize-VHD -Path c:\test\dynamic.vhdx -Mode Full
+```powershell
+Optimize-VHD -Path c:\test\dynamic.vhdx -Mode Full
 ```
 
 Runs the compact operation in Full mode.
-(If the VHDX-format file is not attached as read-only prior to the operation, it will default to Prezeroed mode.)
+(If the VHDX-format file is not attached as read-only prior to the operation, it will default to Pre-zeroed mode.)
 
 ### Example 2
-```
-PS C:\> Optimize-VHD -Path c:\test\dynamic.vhdx -Mode Retrim
+```powershell
+Optimize-VHD -Path c:\test\dynamic.vhdx -Mode Re-trim
 ```
 
-Runs the compact operation in Retrim mode.
+Runs the compact operation in Re-trim mode.
 (If the VHDX-format disk is not mounted as read-only prior to the operation, running the cmdlet returns an error.)
 
 ### Example 3
-```
-PS C:\> Optimize-VHD -Path c:\test\dynamic.vhdx -Mode Quick
+```powershell
+Optimize-VHD -Path c:\test\dynamic.vhdx -Mode Quick
 ```
 
 Runs the compact operation in Quick mode.
-(If the VHDX-format file is not attached as read-only prior to the operation, it defaults to Pretrimmed mode.)
+(If the VHDX-format file is not attached as read-only prior to the operation, it defaults to Pre-trimmed mode.)
 
 ## PARAMETERS
 
@@ -145,10 +145,10 @@ For a **VHDX** disk, the default mode is **Quick**.
 Valid modes are as follows:
 
 - **Full** scans for zero blocks and reclaims unused blocks. (Allowable only if the virtual hard disk is mounted read-only.)
-- **Pretrimmed** performs as **Quick** mode, but does not require the virtual hard disk to be mounted read-only. The detection of unused space is less effective than **Quick** mode (in which the virtual hard disk had been mounted read-only) because the scan cannot query information about free space in the NTFS file system within the virtual hard disk. Useful when the VHDX-format file has been used by operating system instances that are at least Windows 8 or Windows Server 2012, or when this cmdlet has already been run on a .vhdx file in **Retrim** mode.
-- **Prezeroed** performs as **Quick** mode, but does not require the virtual hard disk to be mounted read-only. The unused space detection will be less effective than if the virtual hard disk had been mounted read-only as the scan will be unable to query information about free space in the NTFS file system within the virtual hard disk. Useful if a tool was run previously to zero all the free space on the virtual disk as this mode of compaction can then reclaim that space for subsequent block allocations. This form of compaction can also be useful in handling virtual hard disk containing file systems other than NTFS.
+- **Pre-trimmed** performs as **Quick** mode, but does not require the virtual hard disk to be mounted read-only. The detection of unused space is less effective than **Quick** mode (in which the virtual hard disk had been mounted read-only) because the scan cannot query information about free space in the NTFS file system within the virtual hard disk. Useful when the VHDX-format file has been used by operating system instances that are at least Windows 8 or Windows Server 2012, or when this cmdlet has already been run on a .vhdx file in **Re-trim** mode.
+- **Pre-zeroed** performs as **Quick** mode, but does not require the virtual hard disk to be mounted read-only. The unused space detection will be less effective than if the virtual hard disk had been mounted read-only as the scan will be unable to query information about free space in the NTFS file system within the virtual hard disk. Useful if a tool was run previously to zero all the free space on the virtual disk as this mode of compaction can then reclaim that space for subsequent block allocations. This form of compaction can also be useful in handling virtual hard disk containing file systems other than NTFS.
 - **Quick** reclaims unused blocks, but does not scan for zero blocks. (Allowable only if the virtual hard disk is mounted read-only.)
-- **Retrim** sends down retrims without scanning for zero blocks or reclaiming unused blocks. (Allowable only if the virtual hard disk is mounted read-only.)
+- **Re-trim** sends down re-trims without scanning for zero blocks or reclaiming unused blocks. (Allowable only if the virtual hard disk is mounted read-only.)
 
 ```yaml
 Type: VhdCompactMode

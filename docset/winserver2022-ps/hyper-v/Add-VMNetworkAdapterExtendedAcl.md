@@ -60,15 +60,15 @@ The ACL allows or denies access to a virtual machine network adapter for network
 ## EXAMPLES
 
 ### Example 1: Create an ACL for Remote Desktop Protocol
-```
-PS C:\> Add-VMNetworkAdapterExtendedAcl -VMName "TSQA01" -Action Allow -Direction Inbound -LocalPort "3389" -Protocol "TCP" -Weight 10 -Stateful $True
+```powershell
+Add-VMNetworkAdapterExtendedAcl -VMName "TSQA01" -Action Allow -Direction Inbound -LocalPort "3389" -Protocol "TCP" -Weight 10 -Stateful $True
 ```
 
 This command creates a stateful inbound ACL that allows a remote device to connect to the virtual machine on port 3389, which is the port for Remote Desktop Protocol.
 
 ### Example 2: Create an ACL to initiate a connection with timeout
-```
-PS C:\> Add-VMNetworkAdapterExtendedAcl -VMName "TSQA03" -Action Allow -Direction Outbound -RemotePort "80" -Protocol "TCP" -Weight 100 -Timeout 3600 -Stateful $True
+```powershell
+Add-VMNetworkAdapterExtendedAcl -VMName "TSQA03" -Action Allow -Direction Outbound -RemotePort "80" -Protocol "TCP" -Weight 100 -Timeout 3600 -Stateful $True
 ```
 
 This command creates a stateful ACL that allows outbound packets to a remote device by using TCP.

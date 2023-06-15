@@ -26,22 +26,22 @@ The **Get-VMResourcePool** cmdlet gets the resource pools on one or more virtual
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VMResourcePool * VHD
+```powershell
+Get-VMResourcePool * VHD
 ```
 
 Get all VHD resource pools on the local virtual machine host.
 
 ### Example 2
-```
-PS C:\> Get-VMResourcePool Test*
+```powershell
+Get-VMResourcePool Test*
 ```
 
 Get all resource pools on the local virtual machine host having a name that starts with Test.
 
 ### Example 3
-```
-PS C:\> Get-VMResourcePool "test resource pool" VHD
+```powershell
+Get-VMResourcePool "test resource pool" VHD
 ```
 
 Get all VHD resource pools on the local virtual machine host named test resource pool.

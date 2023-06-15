@@ -27,8 +27,8 @@ The **Remove-VMStoragePath** cmdlet removes a path from a storage resource pool.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Remove-VMStoragePath -Path D:\Test -ResourcePoolName VHD1 -ResourcePoolType VHD
+```powershell
+Remove-VMStoragePath -Path D:\Test -ResourcePoolName VHD1 -ResourcePoolType VHD
 ```
 
 Removes path D:\Test from VHD resource pool VHD1.

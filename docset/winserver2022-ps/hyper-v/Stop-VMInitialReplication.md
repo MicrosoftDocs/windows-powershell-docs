@@ -42,15 +42,15 @@ After an export is finished, the initial replication cannot be stopped.
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Stop-VMInitialReplication VM01
+```powershell
+Stop-VMInitialReplication VM01
 ```
 
 This example stops initial replication of a virtual machine named VM01.
 
 ### Example 2
-```
-PS C:\> Stop-VMInitialReplication *
+```powershell
+Stop-VMInitialReplication *
 ```
 
 This example stops initial replication of all virtual machines whose initial replication is in progress on the local Replica server.

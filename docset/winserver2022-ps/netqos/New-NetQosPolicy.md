@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -Cluster
-Specifies the Microsoft Windows Cluster Service, which uses the Cluster network driver TCP/UDP port 3343.
+Specifies the Microsoft Windows Cluster service, which uses the Cluster network driver TCP/UDP port 3343.
 
 ```yaml
 Type: SwitchParameter

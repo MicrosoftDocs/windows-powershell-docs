@@ -41,6 +41,7 @@ The **Add-VMDvdDrive** cmdlet adds a DVD drive to a virtual machine.
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Add-VMDvdDrive -VMName Test -Path D:\ISOs\disc1.iso
 ```
@@ -48,6 +49,7 @@ Add-VMDvdDrive -VMName Test -Path D:\ISOs\disc1.iso
 This example adds a virtual DVD drive using file D:\ISOs\disc1.iso to virtual machine Test.
 
 ### Example 2
+
 ```powershell
 Get-VM Test | Add-VMDvdDrive -ControllerNumber 1
 ```
@@ -55,6 +57,7 @@ Get-VM Test | Add-VMDvdDrive -ControllerNumber 1
 This example adds a virtual DVD drive using controller number 1 to virtual machine Test.
 
 ### Example 3
+
 ```powershell
 Get-VMIdeController -VMName Test | Add-VMDvdDrive -Path E:\
 ```

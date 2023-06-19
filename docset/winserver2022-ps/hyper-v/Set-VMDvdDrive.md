@@ -36,6 +36,7 @@ The **Set-VMDvdDrive** cmdlet configures the controller and location of a virtua
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Set-VMDvdDrive -VMName TestVM -Path .\WinBuild.iso
 ```
@@ -43,6 +44,7 @@ Set-VMDvdDrive -VMName TestVM -Path .\WinBuild.iso
 Configures the virtual DVD drive of virtual machine TestVM to use WinBuild.iso as its media.
 
 ### Example 2
+
 ```powershell
 Set-VMDvdDrive -VMName TestVM -ControllerNumber 1 -ControllerLocation 0 -Path $null
 ```
@@ -51,6 +53,7 @@ Configures the virtual DVD drive at IDE 1,0 of virtual machine TestVM to use no 
 (This ejects any existing media from the virtual DVD drive.)
 
 ### Example 3
+
 ```powershell
 Get-VMDvdDrive -VMName TestVM -ControllerNumber 1 -ControllerLocation 0 | Set-VMDvdDrive -ToControllerLocation 1
 ```

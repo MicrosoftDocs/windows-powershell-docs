@@ -5,13 +5,17 @@ Help Version: 5.0.3.3
 Locale: en-US
 Module Guid: cc3e946b-9141-48c2-95d8-d9e56594416a
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 10/21/2022
 title: FailoverClusters
 ---
 
 # FailoverClusters Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all failover cluster-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.  If these cmdlets aren't available in your PowerShell session, you may need to add the `Failover Cluster Module for Windows PowerShell` Feature, using the following PowerShell cmd: `Add-WindowsFeature RSAT-Clustering-PowerShell`.
+This reference provides cmdlet descriptions and syntax for all failover cluster-specific cmdlets. It
+lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet. If these
+cmdlets aren't available in your PowerShell session, you may need to add the
+`Failover Cluster Module for Windows PowerShell` Feature, using the following PowerShell cmd:
+`Add-WindowsFeature RSAT-Clustering-PowerShell`.
 
 ## FailoverClusters Cmdlets
 ### [Add-ClusterCheckpoint](./Add-ClusterCheckpoint.md)
@@ -24,16 +28,20 @@ Makes a new disk available for use in a failover cluster.
 Creates a clustered file server resource group.
 
 ### [Add-ClusterGenericApplicationRole](./Add-ClusterGenericApplicationRole.md)
-Configures high availability for an application that was not originally designed to run in a failover cluster.
+Configures high availability for an application that wasn't originally designed to run in a
+failover cluster.
 
 ### [Add-ClusterGenericScriptRole](./Add-ClusterGenericScriptRole.md)
-Configures an application controlled by a script that runs in Windows Script Host, within a failover cluster.
+Configures an application controlled by a script that runs in Windows Script Host, within a failover
+cluster.
 
 ### [Add-ClusterGenericServiceRole](./Add-ClusterGenericServiceRole.md)
-Configures high availability for a service that was not originally designed to run in a failover cluster.
+Configures high availability for a service that wasn't originally designed to run in a failover
+cluster.
 
 ### [Add-ClusterGroup](./Add-ClusterGroup.md)
-Adds an empty resource group to the failover cluster configuration, in preparation for adding clustered resources to the group.
+Adds an empty resource group to the failover cluster configuration, in preparation for adding
+clustered resources to the group.
 
 ### [Add-ClusterGroupSetDependency](./Add-ClusterGroupSetDependency.md)
 Adds a dependency to a cluster set.
@@ -51,10 +59,12 @@ Adds a node (server) to a failover cluster.
 Adds a resource to a clustered role, or resource group, in a failover cluster.
 
 ### [Add-ClusterResourceDependency](./Add-ClusterResourceDependency.md)
-Adds a resource to the list of resources on which a particular resource depends, using AND as the connector, within a failover cluster.
+Adds a resource to the list of resources on which a particular resource depends, using AND as the
+connector, within a failover cluster.
 
 ### [Add-ClusterResourceType](./Add-ClusterResourceType.md)
-Adds a resource type to a failover cluster, and specifies information such as the dynamic-link library (DLL) to use with that resource type.
+Adds a resource type to a failover cluster, and specifies information such as the dynamic-link
+library (DLL) to use with that resource type.
 
 ### [Add-ClusterScaleOutFileServerRole](./Add-ClusterScaleOutFileServerRole.md)
 Creates a clustered file server for scale-out application data.
@@ -63,10 +73,12 @@ Creates a clustered file server for scale-out application data.
 Makes a volume available in Cluster Shared Volumes in a failover cluster.
 
 ### [Add-ClusterVirtualMachineRole](./Add-ClusterVirtualMachineRole.md)
-Creates a clustered virtual machine, that is, a virtual machine that can be failed over if necessary to a different server in the failover cluster.
+Creates a clustered virtual machine, that is, a virtual machine that can be failed over if necessary
+to a different server in the failover cluster.
 
 ### [Add-ClusterVMMonitoredItem](./Add-ClusterVMMonitoredItem.md)
-Configures monitoring for a service or an Event Tracing for Windows (ETW) event so that it is monitored on a virtual machine.
+Configures monitoring for a service or an Event Tracing for Windows (ETW) event so that it is
+monitored on a virtual machine.
 
 ### [Block-ClusterAccess](./Block-ClusterAccess.md)
 Prevents the specified user or users from accessing a failover cluster.
@@ -90,13 +102,15 @@ Gets information about one or more failover clusters in a given domain.
 Gets information about permissions that control access to a failover cluster.
 
 ### [Get-ClusterAvailableDisk](./Get-ClusterAvailableDisk.md)
-Gets information about the disks that can support Failover Clustering and are visible to all nodes, but are not yet part of the set of clustered disks.
+Gets information about the disks that can support Failover Clustering and are visible to all nodes,
+but aren't yet part of the set of clustered disks.
 
 ### [Get-ClusterCheckpoint](./Get-ClusterCheckpoint.md)
 Retrieves a cryptographic key checkpoint or registry checkpoint for a resource.
 
 ### [Get-ClusterDiagnosticInfo](./Get-ClusterDiagnosticInfo.md)
-Gets diagnostics for a cluster a cluster that contains VMs and produces a zip file containing the data.
+Gets diagnostics for a cluster a cluster that contains VMs and produces a zip file containing the
+data.
 
 ### [Get-ClusterFaultDomain](./Get-ClusterFaultDomain.md)
 Gets the cluster fault domains in a cluster.
@@ -126,7 +140,8 @@ Gets information about one or more network adapters in a failover cluster.
 Gets information about one or more nodes, or servers, in a failover cluster.
 
 ### [Get-ClusterOwnerNode](./Get-ClusterOwnerNode.md)
-Gets information about which nodes can own a resource in a failover cluster or information about the order of preference among owner nodes for a clustered role.
+Gets information about which nodes can own a resource in a failover cluster or information about the
+order of preference among owner nodes for a clustered role.
 
 ### [Get-ClusterParameter](./Get-ClusterParameter.md)
 Gets detailed information about an object in a failover cluster, such as a cluster resource.
@@ -138,7 +153,8 @@ Gets information about the quorum configuration of a failover cluster.
 Gets information about one or more resources in a failover cluster.
 
 ### [Get-ClusterResourceDependency](./Get-ClusterResourceDependency.md)
-Gets information about the dependencies that have been configured between clustered resources in a failover cluster.
+Gets information about the dependencies that have been configured between clustered resources in a
+failover cluster.
 
 ### [Get-ClusterResourceDependencyReport](./Get-ClusterResourceDependencyReport.md)
 Generates a report that lists the dependencies between resources in a failover cluster.
@@ -222,7 +238,8 @@ Removes a dependency between two resources in a clustered role within a failover
 Removes a resource type from a failover cluster.
 
 ### [Remove-ClusterSharedVolume](./Remove-ClusterSharedVolume.md)
-Removes a volume from the Cluster Shared Volumes in a failover cluster, and places it in Available Storage in the cluster.
+Removes a volume from the Cluster Shared Volumes in a failover cluster, and places it in Available
+Storage in the cluster.
 
 ### [Remove-ClusterVMMonitoredItem](./Remove-ClusterVMMonitoredItem.md)
 Removes monitoring of a service or event that is currently being monitored on a virtual machine.
@@ -231,7 +248,8 @@ Removes monitoring of a service or event that is currently being monitored on a 
 Repairs S2D disks.
 
 ### [Reset-ClusterVMMonitoredState](./Reset-ClusterVMMonitoredState.md)
-Resets the Application Critical state of a virtual machine, so that the virtual machine is no longer marked as being in a critical state in the cluster.
+Resets the Application Critical state of a virtual machine, so that the virtual machine is no longer
+marked as being in a critical state in the cluster.
 
 ### [Resume-ClusterNode](./Resume-ClusterNode.md)
 Resumes a node from the paused state or brings back drained workloads to the node or both.
@@ -252,10 +270,12 @@ Updates a cluster group set.
 Sets the size and level of detail for the cluster log.
 
 ### [Set-ClusterOwnerNode](./Set-ClusterOwnerNode.md)
-Specifies which nodes can own a resource in a failover cluster or specifies the order of preference among owner nodes for a clustered role, or resource group.
+Specifies which nodes can own a resource in a failover cluster or specifies the order of preference
+among owner nodes for a clustered role, or resource group.
 
 ### [Set-ClusterParameter](./Set-ClusterParameter.md)
-Controls specific properties of an object in a failover cluster, such as a resource, a group, or a network.
+Controls specific properties of an object in a failover cluster, such as a resource, a group, or a
+network.
 
 ### [Set-ClusterQuorum](./Set-ClusterQuorum.md)
 Configures quorum options for a failover cluster.
@@ -270,7 +290,7 @@ Sets S2D cache parameters.
 Configures the system to enable S2D to claim or not claim specific physical disks.
 
 ### [Start-Cluster](./Start-Cluster.md)
-Starts the Cluster service on all nodes of the cluster on which it is not yet started.
+Starts the Cluster service on all nodes of the cluster on which it isn't yet started.
 
 ### [Start-ClusterGroup](./Start-ClusterGroup.md)
 Starts one or more clustered roles, also known as resource groups, on a failover cluster.
@@ -282,7 +302,8 @@ Starts the Cluster service on a node in a failover cluster.
 Brings a resource online in a failover cluster.
 
 ### [Stop-Cluster](./Stop-Cluster.md)
-Stops the Cluster service on all nodes in a failover cluster, which will stop all services and applications configured in the cluster.
+Stops the Cluster service on all nodes in a failover cluster, which will stop all services and
+applications configured in the cluster.
 
 ### [Stop-ClusterGroup](./Stop-ClusterGroup.md)
 Stops one or more clustered roles on a failover cluster.
@@ -297,7 +318,8 @@ Takes a resource offline in a failover cluster.
 Suspends activity on a failover cluster node, that is, pauses the node.
 
 ### [Suspend-ClusterResource](./Suspend-ClusterResource.md)
-Turns on maintenance for a disk resource or CSV so that you can run a disk maintenance tool without triggering failover.
+Turns on maintenance for a disk resource or CSV so that you can run a disk maintenance tool without
+triggering failover.
 
 ### [Test-Cluster](./Test-Cluster.md)
 Runs validation tests for failover cluster hardware and settings.
@@ -312,11 +334,8 @@ Updates the functional level of a mixed-version cluster.
 Renews or releases the DHCP lease for an IP address resource in a failover cluster.
 
 ### [Update-ClusterNetworkNameResource](./Update-ClusterNetworkNameResource.md)
-Registers existing Network Name resources with a DNS server in a way that does not interrupt cluster availability.
+Registers existing Network Name resources with a DNS server in a way that does not interrupt cluster
+availability.
 
 ### [Update-ClusterVirtualMachineConfiguration](./Update-ClusterVirtualMachineConfiguration.md)
 Refreshes the configuration of a clustered virtual machine within a failover cluster.
-
-
-
-

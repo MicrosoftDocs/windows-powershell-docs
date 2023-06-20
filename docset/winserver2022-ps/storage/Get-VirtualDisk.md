@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: VirtualDisk.cdxml-help.xml
 Module Name: Storage
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/storage/get-virtualdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/storage/get-virtualdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-VirtualDisk
 ---
@@ -624,7 +624,7 @@ You can use the pipeline operator to pass an MSFT_TargetVirtualDisk object to th
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk
-This cmdlet outputs an object that represents the specified virtual disk. For more information about output object type, please see [MSFT_VirtualDisk class](https://docs.microsoft.com/previous-versions/windows/desktop/stormgmt/msft-virtualdisk)
+This cmdlet outputs an object that represents the specified virtual disk. For more information about output object type, see [MSFT_VirtualDisk class](/previous-versions/windows/desktop/stormgmt/msft-virtualdisk).
 
 ## NOTES
 
@@ -655,4 +655,3 @@ This cmdlet outputs an object that represents the specified virtual disk. For mo
 [Set-VirtualDisk](./Set-VirtualDisk.md)
 
 [Show-VirtualDisk](./Show-VirtualDisk.md)
-

@@ -1,21 +1,16 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: ertorres
 author: erik0686
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
-keywords: powershell, cmdlet
 manager: aandrejs
+ms.author: ertorres
 ms.date: 09/08/2021
+ms.mktglfcycl: manage
 ms.prod: w11
-ms.technology:
+ms.sitesec: library
 ms.topic: reference
-online version:
 schema: 2.0.0
 title: Copy-UserInternationalSettingsToSystem
-ms.reviewer:
-ms.assetid:
 ---
 
 # Copy-UserInternationalSettingsToSystem

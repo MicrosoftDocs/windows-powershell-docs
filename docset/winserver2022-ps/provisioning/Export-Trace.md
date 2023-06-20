@@ -1,9 +1,9 @@
-﻿---
+---
 description: The Export-Trace cmdlet exports an event trace log (ETL) file for provisioning.
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
 ms.date: 05/09/2017
-online version: https://docs.microsoft.com/powershell/module/provisioning/export-trace?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/provisioning/export-trace?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-Trace
 ---

@@ -15,7 +15,7 @@ The Active Directory module for Windows PowerShell is a PowerShell module that c
 
 If you don't have the Active Directory module installed on your machine, you need to download the correct Remote Server Administration Tools (RSAT) package for your OS.  If you're running Windows 7, you will also need to run the `import-module ActiveDirectory` command from an elevated PowerShell prompt. For more detail, see [RSAT for Windows operating systems](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems). Starting with Windows 10 October 2018 Update, RSAT is included as a set of Features on Demand right from Windows 10. Now, instead of downloading an RSAT package you can just go to Manage optional features in Settings and click Add a feature to see the list of available RSAT tools. Select and install the specific RSAT tools you need. To see installation progress, click the Back button to view status on the Manage optional features page.
 
-If you want to use this module in PowerShell 7, please see [PowerShell 7 module compatibility](https://docs.microsoft.com/powershell/scripting/whats-new/module-compatibility).
+If you want to use this module in PowerShell 7, please see [PowerShell 7 module compatibility](/powershell/scripting/whats-new/module-compatibility).
 
 ## ActiveDirectory Cmdlets
 ### [Add-ADCentralAccessPolicyMember](./Add-ADCentralAccessPolicyMember.md)
@@ -458,4 +458,3 @@ Uninstalls an Active Directory managed service account from a computer or remove
 
 ### [Unlock-ADAccount](./Unlock-ADAccount.md)
 Unlocks an Active Directory account.
-

@@ -1,7 +1,7 @@
 ---
 external help file: HgsClient-help.xml
 Module Name: HgsClient
-online version: https://docs.microsoft.com/powershell/module/hgsclient/test-hgsclientconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hgsclient/test-hgsclientconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-HgsClientConfiguration
 ---
@@ -58,7 +58,7 @@ Performs an attestation attempt using the fallback HGS server.
 Specifies that the HGS client should only attest against the fallback attestation server.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Fallback
 Aliases: 
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Specifies that the HGS client should only attest against the primary attestation server.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Primary
 Aliases: 
 

@@ -323,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScopeName
-Specifies the scope name of the SMB share.
+Specifies the scope name of the SMB share. For use with Windows Server failover cluster file server resources.
 
 ```yaml
 Type: String[]

@@ -177,6 +177,8 @@ resultant AD search. The supported name formats are as follows:
 - distinguishedName (begins with a `CN=`)
 - name (for all other inputs)
 
+Setting permissions on the domain root is only supported using the distinguishedName input format, for example 'DC=laps,DC=com'.
+
 ```yaml
 Type: System.String[]
 Parameter Sets: (All)

@@ -28,7 +28,7 @@ The 'Remove-AppxPackageAutoUpdateSettings' PowerShell cmdlet removes the setting
 PS C:\> Remove-AppxPackageAutoUpdateSettings -PackageFullName publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe
 ```
 
-This will remove the Auto Update and Repair settings for a specific Windows App that has been installed and registered to the signed-in user.
+This example removes the Auto Update and Repair settings for a specific Windows app that has been installed and registered to the signed-in user.
 
 ## PARAMETERS
 

@@ -9,7 +9,7 @@ title: Remove-AppxPackageAutoUpdateSettings
 # Remove-AppxPackageAutoUpdateSettings
 
 ## SYNOPSIS
-Removes settings configured for a particular Windows App.
+Removes settings configured for a particular Windows app.
 
 ## SYNTAX
 

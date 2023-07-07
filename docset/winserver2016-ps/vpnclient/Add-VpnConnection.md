@@ -153,7 +153,7 @@ For more information about custom EAP authentication methods, see the **New-EapC
 
 ### Example 5: Add a VPN connection that uses already generated EAP XML configuration
 ```powershell
-PS C:\> $EAPXml = [xml]Get-Content -Path C:\eap-config.xml
+PS C:\> $EAPXml = Get-Content -Path C:\eap-config.xml
 PS C:\> Add-VpnConnection -Name "Test6" -ServerAddress "10.1.1.1" -TunnelType "L2tp" -EncryptionLevel "Required" -AuthenticationMethod Eap -SplitTunneling -AllUserConnection -RememberCredential -EapConfigXmlStream $EAPXml
 ```
 

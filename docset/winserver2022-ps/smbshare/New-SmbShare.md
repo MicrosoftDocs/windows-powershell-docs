@@ -39,8 +39,8 @@ To delete a share that was created by this cmdlet, use the `Remove-SmbShare` cmd
 
 ```powershell
 $Parameters = @{
-    Name = 'VMSFiles'
-    Path = 'C:\ClusterStorage\Volume1\VMFiles'
+    Name = 'Public'
+    Path = 'D:\Public'
     FullAccess = 'Contoso\Administrator', 'Contoso\Contoso-HV1$'
 }
 New-SmbShare @Parameters
@@ -422,7 +422,7 @@ Accept wildcard characters: False
 
 ### -ScopeName
 
-Specifies the scope name of the share.
+Specifies the scope name of the share. For use with Windows Server failover cluster file server resources.
 
 ```yaml
 Type: String

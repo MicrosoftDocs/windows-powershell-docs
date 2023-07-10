@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ### -Timeout
 Specifies the number of seconds that a DNS server waits before it stops trying to contact a remote server.
 The valid value is in the range of 0x1 to 0xFFFFFFFF (1 second to 15 seconds).
-The default setting is 0xF (15 seconds).
+The default setting is 0x8 (8 seconds).
 We recommend that you increase this value when recursion occurs over a slow link.
 
 ```yaml

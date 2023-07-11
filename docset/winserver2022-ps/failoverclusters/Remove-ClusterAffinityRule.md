@@ -34,7 +34,7 @@ Removes a specified affinity rule.
 
 ### Example 1
 ```powershell
-Remove-ClusterAffinityRule -Name -Cluster Cluster1
+Remove-ClusterAffinityRule -Name AffinityRule1 -Cluster Cluster1
 ```
 ## PARAMETERS
 

@@ -28,8 +28,12 @@ will list all rules.
 
 ### Example 1
 ```powershell
-Get-ClusterAffinityRule -Name -Cluster Cluster1
+Get-ClusterAffinityRule -Name AffinityRule1 -Cluster Cluster1
 ```
+
+This example returns information about the cluster affinity rule with the name `Rule1` from
+`Cluster1`.
+
 ## PARAMETERS
 
 ### -AsJob

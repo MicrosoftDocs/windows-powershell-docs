@@ -35,7 +35,7 @@ RuleType.
 
 ### Example 1
 ```powershell
-Set-ClusterAffinityRule -Name MyRule -Enabled -Cluster MyCluster
+Set-ClusterAffinityRule -Name AffinityRule1 -Enabled -Cluster Cluster1
 ```
 
 ## PARAMETERS
@@ -144,7 +144,13 @@ Accept wildcard characters: False
 ```
 
 ### -RuleType
-The RuleType you want to set your affinity rule to.
+The type of the rule you want to set your affinity rule to. The acceptable values for this parameter
+are:
+
+- **SameFaultDomain**. Resources must stay within the same fault domain.
+- **SameNode**. Resources must stay on the same cluster node.
+- **DifferentFaultDomain**. Resources will always stay in different fault domain (anti-affinity).
+- **DifferentNode**. Resources will always stay on different cluster nodes (anti-affinity).
 
 ```yaml
 Type: RuleType

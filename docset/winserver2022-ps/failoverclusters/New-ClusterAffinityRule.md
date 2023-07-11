@@ -28,8 +28,12 @@ rule: SameFaultDomain | SameNode | DifferentFaultDomain | DifferentNode
 
 ### Example 1
 ```powershell
-New-ClusterAffinityRule -Name -RuleType SameFaultDomain -Cluster Cluster1
+New-ClusterAffinityRule -Name AffinityRule1 -RuleType SameFaultDomain -Cluster Cluster1
 ```
+
+This command creates a new affinity rule for `Cluster1` to ensure resources stay within the same
+fault domain.
+
 ## PARAMETERS
 
 ### -AsJob
@@ -90,7 +94,13 @@ Accept wildcard characters: False
 ```
 
 ### -RuleType
-The type of the rule to be created.
+The type of the rule you want to set your affinity rule to. The acceptable values for this parameter
+are:
+
+- **SameFaultDomain**. Resources must stay within the same fault domain.
+- **SameNode**. Resources must stay on the same cluster node.
+- **DifferentFaultDomain**. Resources will always stay in different fault domain (anti-affinity).
+- **DifferentNode**. Resources will always stay on different cluster nodes (anti-affinity).
 
 ```yaml
 Type: RuleType

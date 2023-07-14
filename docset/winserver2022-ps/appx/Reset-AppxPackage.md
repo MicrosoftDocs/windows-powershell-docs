@@ -17,10 +17,11 @@ Restores the Windows app to its initial configuration.
 ## SYNTAX
 
 ```
-Reset-AppxPackage [-Package] <string>
-                  [-WhatIf]
-                  [-Confirm]
-                  [<CommonParameters>]
+Reset-AppxPackage
+ [-Package] <string>
+ [-WhatIf]
+ [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

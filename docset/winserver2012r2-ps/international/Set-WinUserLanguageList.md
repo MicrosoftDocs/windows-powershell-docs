@@ -122,7 +122,7 @@ The language object contains the following properties:
 --**English name** (LP database) (READ). The name of the language in English.
 --**Localized name** (LP database) (READ). The name of the language in the current Windows display language.
 --**Script** (LP database) (READ). The writing system of the language.
---**Input methods** (READ/WRITE). A list of input method Tablet Input Panel (TIP) strings that are enabled for this language. The enabled input methods are listed in the format Language ID: Keyboard layout ID. See [Default input profiles (input locales) in Windows](/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs).
+--**Input methods** (READ/WRITE). A list of input method Tablet Input Panel (TIP) strings that are enabled for this language. The enabled input methods are listed in the format `Language ID:Keyboard layout ID`. See [Default input profiles (input locales) in Windows](/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs).
 --**Handwriting recognition input mode** (READ/WRITE). This value is either 0 (freehand) or 1 (write each character separately).
 
 ## OUTPUTS

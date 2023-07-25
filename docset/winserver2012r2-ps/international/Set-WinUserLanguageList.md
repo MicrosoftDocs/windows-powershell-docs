@@ -117,7 +117,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 A list of *WinUserLanguage* objects that contain one or more languages and associated properties from the current user account's language list. 
 The language object contains the following properties:
 
---**BCP-47** (READ). A standard language tag that is used to identify languages. For more information, see the Internet Engineering Task Force (IETF) BCP 47 RFChttp://go.microsoft.com/fwlink/?LinkID=242207.
+--**BCP-47** (READ). A standard language tag that is used to identify languages. For more information, see the [Internet Engineering Task Force (IETF) BCP 47 RFC](https://go.microsoft.com/fwlink/?LinkID=242207).
 --**Autonym** (LP database) (READ). The name of the language in the language itself.
 --**English name** (LP database) (READ). The name of the language in English.
 --**Localized name** (LP database) (READ). The name of the language in the current Windows display language.

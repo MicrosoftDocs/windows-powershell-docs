@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
-ms.date: ms.date: 06/21/2023
+ms.date: 06/21/2023
 online version: https://learn.microsoft.com/powershell/module/hyper-v/merge-vhd?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Merge-VHD
@@ -17,8 +17,8 @@ Merges virtual hard disks.
 
 ```
 Merge-VHD [-Path] <String> [[-DestinationPath] <String>] [-Force] [-AsJob] [-PassThru]
- [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,9 +39,9 @@ Merge-VHD -Path C:\test\Child4.vhdx -DestinationPath C:\test\Child2.vhdx
 
 This example merges the virtual hard disk from Child4 to Child2, for a virtual disk chain with
 Child4 as a child of Child3, Child3 as a child of Child2, Child2 as a child of Child1, and Child1 as
-a child of Parent, and with the virtual hard disk file for each located in C:\test. This example
-merges all data from Child4 and Child3 up to Child2. Child4.vhdx and Child3.vhdx aren't deleted, but
-are no longer valid virtual hard disk files after the operation.
+a child of Parent, and with the virtual hard disk file for each located in `C:\test`. This example
+merges all data from Child4 and Child3 up to Child2. **Child4.vhdx** and **Child3.vhdx** aren't
+deleted, but are no longer valid virtual hard disk files after the operation.
 
 ## PARAMETERS
 

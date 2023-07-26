@@ -39,8 +39,8 @@ Set-VHD [-Path] <String> [-ResetDiskIdentifier] [-Force] [-PassThru] [-CimSessio
 
 ## DESCRIPTION
 
-The `Set-VHD` cmdlet sets the ParentPath or PhysicalSectorSizeBytes properties of a virtual hard
-disk. The two properties must be set in separate operations.
+The `Set-VHD` cmdlet sets the **ParentPath** or **PhysicalSectorSizeBytes** properties of a virtual
+hard disk. The two properties must be set in separate operations.
 
 ## EXAMPLES
 
@@ -50,10 +50,10 @@ disk. The two properties must be set in separate operations.
 Set-VHD -Path Child1.vhd -ParentPath ParentCopy.vhd -LeafPath Child2.vhd
 ```
 
-This example sets the parent of the virtual hard disk associated with ParentCopy.vhd as the parent
-of the chained virtual hard disk associated with Child1.vhd, where the leaf of the virtual disk
-chain is the virtual hard disk associated with Child2.vhd. The operation is performed in online
-mode.
+This example sets the parent of the virtual hard disk associated with **ParentCopy.vhd** as the
+parent of the chained virtual hard disk associated with **Child1.vhd**, where the leaf of the
+virtual disk chain is the virtual hard disk associated with **Child2.vhd**. The operation is
+performed in online mode.
 
 ### Example 2
 
@@ -61,9 +61,9 @@ mode.
 Set-VHD -Path Child1.vhd -ParentPath ParentCopy.vhd
 ```
 
-This example sets the parent of the virtual hard disk associated with ParentCopy.vhd as the parent
-of the chained virtual hard disk associated with Child1.vhd. This operation can't be performed when
-the virtual disk chain is attached.
+This example sets the parent of the virtual hard disk associated with **ParentCopy.vhd** as the
+parent of the chained virtual hard disk associated with **Child1.vhd**. This operation can't be
+performed when the virtual disk chain is attached.
 
 ### Example 3
 
@@ -71,16 +71,16 @@ the virtual disk chain is attached.
 Set-VHD -Path Child1.vhd -ParentPath parentcopywithnewid.vhd -IgnoreMismatchId
 ```
 
-This example sets the parent of Child1.vhd to point to parentcopywithnewid.vhd, even though
-parentcopywithnewid.vhd has a different ID than the original parent of child1.vhd. The operation is
-performed in offline mode. This mode should be used with extreme caution, and only when it's certain
-that the block contents of the new and old parents are exactly the same. Otherwise data loss can
-occur.
+This example sets the parent of Child1.vhd to point to **parentcopywithnewid.vhd**, even though
+**parentcopywithnewid.vhd** has a different ID than the original parent of **child1.vhd**. The
+operation is performed in offline mode. This mode should be used with extreme caution, and only when
+it's certain that the block contents of the new and old parents are exactly the same. Otherwise data
+loss can occur.
 
 ### Example 4
 
 ```powershell
-Set-VHD -Path c:\test.vhdx -PhysicalSectorSizeBytes 512
+Set-VHD -Path C:\test.vhdx -PhysicalSectorSizeBytes 512
 ```
 
 This example sets the physical sector size of a VHDX to 512 bytes.

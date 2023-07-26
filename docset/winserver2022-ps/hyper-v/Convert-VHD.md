@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
-ms.date: ms.date: 06/21/2023
+ms.date: 06/21/2023
 online version: https://learn.microsoft.com/powershell/module/hyper-v/convert-vhd?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Convert-VHD
@@ -26,7 +26,7 @@ Convert-VHD [-Path] <String> [-DestinationPath] <String> [-VHDType <VhdType>] [-
 
 The `Convert-VHD` cmdlet converts a virtual hard disk file by copying the data from a source virtual
 hard disk file to a new virtual hard disk file of a specified format and version type. The format is
-determined by the file name extension of the specified files, either .vhdx or .vhd. Conversion is an
+determined by the file name extension of the specified files, either vhdx or vhd. Conversion is an
 offline operation; the virtual hard disk must not be attached when the operation is started.
 
 ## EXAMPLES
@@ -295,3 +295,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+- [Get-VHD](get-vhd.md)
+- [Merge-VHD](merge-vhd.md)
+- [Mount-VHD](mount-vhd.md)
+- [New-VHD](new-vhd.md)
+- [Optimize-VHD](optimize-vhd.md)
+- [Resize-VHD](resize-vhd.md)
+- [Set-VHD](set-vhd.md)
+- [Test-VHD](test-vhd.md)

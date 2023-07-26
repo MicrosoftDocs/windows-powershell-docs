@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
-ms.date: ms.date: 06/21/2023
+ms.date: 06/21/2023
 online version: https://learn.microsoft.com/powershell/module/hyper-v/new-vhd?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-VHD
@@ -83,7 +83,7 @@ New-VHD -ParentPath C:\Base.vhdx -Path C:\Diff.vhdx -Differencing
 ```
 
 This example creates a VHDX-format differencing virtual hard disk with a parent path of
-C:\Base.vhdx.
+`C:\Base.vhdx`.
 
 ### Example 3
 

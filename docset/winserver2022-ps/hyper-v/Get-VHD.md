@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
-ms.date: ms.date: 06/21/2023
+ms.date: 06/21/2023
 online version: https://learn.microsoft.com/powershell/module/hyper-v/get-vhd?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-VHD
@@ -49,7 +49,7 @@ trying to run the `Get-VHD` cmdlet will get an error that it's in use.
 
 ### Example 1
 
-```powershellpowershell
+```powershell
 Get-VHD -Path C:\test\testvhdx.vhdx
 ```
 
@@ -57,7 +57,7 @@ Gets the virtual hard disk where the path to the virtual hard disk file is `C:\t
 
 ### Example 2
 
-```powershellpowershell
+```powershell
 Get-VHD -DiskNumber 6
 ```
 
@@ -65,7 +65,7 @@ Gets the virtual hard disk attached to the system with disk number 6.
 
 ### Example 3
 
-```powershellpowershell
+```powershell
 Get-VM -VMName TestVM | Select-Object -Property VMId | Get-VHD
 ```
 
@@ -74,7 +74,7 @@ feature for the **VMId** parameter.
 
 ### Example 4
 
-```powershellpowershell
+```powershell
 Get-VM -VMName TestVM | Select-Object -Property VMId | Get-VHD
 ```
 
@@ -83,7 +83,7 @@ for the path parameter.
 
 ### Example 5
 
-```powershellpowershell
+```powershell
 Get-ChildItem -Path C:\test -Recurse -Include *.vhd, *.vhdx, *.vhds, *.avhd, *.avhdx | Get-VHD
 ```
 

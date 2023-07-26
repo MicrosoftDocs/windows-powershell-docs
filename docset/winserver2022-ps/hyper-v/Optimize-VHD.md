@@ -29,7 +29,7 @@ except for fixed virtual hard disks. The **Compact** operation is used to optimi
 operation reclaims unused blocks as well as rearranges the blocks to be more efficiently packed,
 which reduces the size of a virtual hard disk file.
 
-To use Optimize-VHD, the virtual hard disk must not be attached or must be attached in read-only
+To use `Optimize-VHD`, the virtual hard disk must not be attached or must be attached in read-only
 mode. The compact operation can succeed without reducing the file size, if no optimization is
 possible.
 
@@ -42,7 +42,7 @@ Optimize-VHD -Path C:\test\dynamic.vhdx -Mode Full
 ```
 
 Runs the compact operation in Full mode. If the VHDX-format file isn't attached as read-only prior
-to the operation, it'll default to Prezeroed mode.
+to the operation, it'll default to **Prezeroed** mode.
 
 ### Example 2
 
@@ -50,8 +50,8 @@ to the operation, it'll default to Prezeroed mode.
 Optimize-VHD -Path C:\test\dynamic.vhdx -Mode Retrim
 ```
 
-Runs the compact operation in Retrim mode. If the VHDX-format disk isn't mounted as read-only prior
-to the operation, running the cmdlet returns an error.
+Runs the compact operation in **Retrim** mode. If the VHDX-format disk isn't mounted as read-only
+prior to the operation, running the cmdlet returns an error.
 
 ### Example 3
 
@@ -59,8 +59,8 @@ to the operation, running the cmdlet returns an error.
 Optimize-VHD -Path C:\test\dynamic.vhdx -Mode Quick
 ```
 
-Runs the compact operation in Quick mode. If the VHDX-format file isn't attached as read-only prior
-to the operation, it defaults to Pretrimmed mode.
+Runs the compact operation in **Quick** mode. If the VHDX-format file isn't attached as read-only
+prior to the operation, it defaults to **Pretrimmed** mode.
 
 ## PARAMETERS
 

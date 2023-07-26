@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
-ms.date: ms.date: 06/21/2023
+ms.date: 06/21/2023
 online version: https://learn.microsoft.com/powershell/module/hyper-v/mount-vhd?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Mount-VHD
@@ -33,7 +33,7 @@ The `Mount-VHD` cmdlet mounts one or more virtual hard disks.
 Mount-VHD -Path C:\test\testvhdx.vhdx
 ```
 
-Mounts a virtual hard disk where the path to the virtual hard disk file is C:\test\testvhdx.vhdx.
+Mounts a virtual hard disk where the path to the virtual hard disk file is `C:\test\testvhdx.vhdx`.
 
 ### Example 2
 
@@ -42,7 +42,7 @@ Mount-VHD -Path C:\test\testvhdx.vhdx -ReadOnly
 ```
 
 Mounts a virtual hard disk in read-only mode where the path to the virtual hard disk file is
-C:\test\testvhdx.vhdx.
+`C:\test\testvhdx.vhdx`.
 
 ### Example 3
 
@@ -51,7 +51,7 @@ Mount-VHD -Path C:\test\testvhdx -PassThru | Get-Disk | Get-Partition | Get-Volu
 ```
 
 Attaches a virtual hard disk to the system where the path to the virtual hard disk file is
-C:\test\testvhdx.vhdx, and gets the volumes associated with it.
+`C:\test\testvhdx.vhdx`, and gets the volumes associated with it.
 
 ## PARAMETERS
 
@@ -236,7 +236,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
-### System.Nullable`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+### System.Nullable`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral,PublicKeyToken=b77a5c561934e089]]
 
 ## OUTPUTS
 

@@ -101,6 +101,9 @@ Gets information about one or more failover clusters in a given domain.
 ### [Get-ClusterAccess](./Get-ClusterAccess.md)
 Gets information about permissions that control access to a failover cluster.
 
+### [Get-ClusterAffinityRule](./Get-ClusterAffinityRule.md)
+This cmdlet is used to display the given rule and what type it is.
+
 ### [Get-ClusterAvailableDisk](./Get-ClusterAvailableDisk.md)
 Gets information about the disks that can support Failover Clustering and are visible to all nodes,
 but aren't yet part of the set of clustered disks.
@@ -192,6 +195,9 @@ Moves the ownership of a clustered virtual machine to a different node.
 ### [New-Cluster](./New-Cluster.md)
 Creates a new failover cluster.
 
+### [New-ClusterAffinityRule](./New-ClusterAffinityRule.md)
+Creates new affinity rules.
+
 ### [New-ClusterFaultDomain](./New-ClusterFaultDomain.md)
 Creates a fault domain in the cluster.
 
@@ -206,6 +212,9 @@ Destroys an existing failover cluster.
 
 ### [Remove-ClusterAccess](./Remove-ClusterAccess.md)
 Removes a user from the access list on the cluster.
+
+### [Remove-ClusterAffinityRule](./Remove-ClusterAffinityRule.md)
+Removes new affinity rules.
 
 ### [Remove-ClusterCheckpoint](./Remove-ClusterCheckpoint.md)
 Removes a cryptographic key checkpoint or registry checkpoint for a resource.
@@ -256,6 +265,9 @@ Resumes a node from the paused state or brings back drained workloads to the nod
 
 ### [Resume-ClusterResource](./Resume-ClusterResource.md)
 Turns off maintenance for a disk resource or Cluster Shared Volume within a failover cluster.
+
+### [Set-ClusterAffinityRule](./Set-ClusterAffinityRule.md)
+Enabled or Disable an affinity rule, and update the rule type.
 
 ### [Set-ClusterFaultDomain](./Set-ClusterFaultDomain.md)
 Update an existing cluster fault domain.

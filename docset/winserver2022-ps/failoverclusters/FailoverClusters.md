@@ -46,6 +46,9 @@ clustered resources to the group.
 ### [Add-ClusterGroupSetDependency](./Add-ClusterGroupSetDependency.md)
 Adds a dependency to a cluster set.
 
+### [Add-ClusterGroupToAffinityRule](./Add-ClusterGroupToAffinityRule.md)
+This command is used to add either a VM role or a group name to a cluster affinity rule.
+
 ### [Add-ClusterGroupToSet](./Add-ClusterGroupToSet.md)
 Adds a group to a set.
 

@@ -3,7 +3,7 @@ description: Remove-ClusterAffinityRule
 external help file: ClusterAffinityRule.cdxml-help.xml
 Module Name: FailoverClusters
 ms.date: 07/26/2022
-online version: https://docs.microsoft.com/powershell/module/failoverclusters/remove-clusteraffinityrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clusteraffinityrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterAffinityRule
 ---
@@ -16,29 +16,37 @@ Removes a specified affinity rule.
 ## SYNTAX
 
 ### Query (cdxml) (Default)
+
 ```
-Remove-ClusterAffinityRule [[-Name] <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-ClusterAffinityRule [[-Name] <String[]>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
+
 ```
-Remove-ClusterAffinityRule -InputObject <CimInstance[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-ClusterAffinityRule -InputObject <CimInstance[]> [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Removes a specified affinity rule.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Remove-ClusterAffinityRule -Name AffinityRule1 -Cluster Cluster1
 ```
+
+This example removes the cluster affinity rule named AffinityRule1.
+
 ## PARAMETERS
 
 ### -AsJob
+
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
 complete.
 
@@ -63,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
+
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
 or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
@@ -81,6 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
 Specifies the input object that is used in a pipeline command.
 
 ```yaml
@@ -96,6 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 The name of the affinity rule to delete.
 
 ```yaml
@@ -111,8 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+
+Returns an object representing the item with which you are working. By default, this cmdlet doesn't
+generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -127,6 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
+
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
 this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
@@ -146,6 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -161,8 +175,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -177,6 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

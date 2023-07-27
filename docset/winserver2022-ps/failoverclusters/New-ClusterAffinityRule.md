@@ -3,7 +3,7 @@ description: New-ClusterAffinityRule
 external help file: ClusterAffinityRule.cdxml-help.xml
 Module Name: FailoverClusters
 ms.date: 07/26/2022
-online version: https://docs.microsoft.com/powershell/module/failoverclusters/new-clusteraffinityrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/new-clusteraffinityrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ClusterAffinityRule
 ---
@@ -11,7 +11,7 @@ title: New-ClusterAffinityRule
 # New-ClusterAffinityRule
 
 ## SYNOPSIS
-Creates new affinity rules. 
+Creates new affinity rules.
 
 ## SYNTAX
 
@@ -21,12 +21,14 @@ New-ClusterAffinityRule [-Name] <String> [-RuleType <RuleType>] [-CimSession <Ci
 ```
 
 ## DESCRIPTION
+
 This cmdlet allows the creation of new affinity rules. There are four main types when creating a new
 rule: SameFaultDomain | SameNode | DifferentFaultDomain | DifferentNode
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 New-ClusterAffinityRule -Name AffinityRule1 -RuleType SameFaultDomain -Cluster Cluster1
 ```
@@ -37,6 +39,7 @@ fault domain.
 ## PARAMETERS
 
 ### -AsJob
+
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
 complete.
 
@@ -61,6 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
+
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
 or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
@@ -79,6 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 The name of the rule to be created.
 
 ```yaml
@@ -94,6 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleType
+
 The type of the rule you want to set your affinity rule to. The acceptable values for this parameter
 are:
 
@@ -116,6 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
+
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
 this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
@@ -135,6 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

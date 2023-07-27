@@ -228,6 +228,9 @@ Removes a fault domain.
 ### [Remove-ClusterGroup](./Remove-ClusterGroup.md)
 Removes a clustered role, also called a resource group, from a failover cluster.
 
+### [Remove-ClusterGroupFromAffinityRule](./Remove-ClusterGroupFromAffinityRule.md)
+Removes a cluster group from an affinity rule.
+
 ### [Remove-ClusterGroupFromSet](./Remove-ClusterGroupFromSet.md)
 Removes a group from a set.
 

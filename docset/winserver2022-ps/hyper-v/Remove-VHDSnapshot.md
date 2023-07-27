@@ -19,16 +19,16 @@ Removes a checkpoint from a VHD set file.
 
 ```
 Remove-VHDSnapshot [-Path] <String[]> [-PersistReferencePoint] -SnapshotId <Guid[]> [-AsJob]
- [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### VHDSnapshot
 
 ```
 Remove-VHDSnapshot [-PersistReferencePoint] [-VHDSnapshot] <VHDSnapshotInfo[]> [-AsJob]
- [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +46,7 @@ Remove-VHDSnapshot -Path "Data01.vhds" -SnapshotId 6c87351a-a39a-4581-b231-6d693
 ```
 
 This command removes the checkpoint that has the specified ID from the VHD set file named
-Data01.vhds.
+`Data01.vhds`.
 
 ## PARAMETERS
 
@@ -88,8 +88,8 @@ Accept wildcard characters: False
 ### -ComputerName
 
 Specifies one or more Hyper-V hosts that run this cmdlet. NetBIOS names, IP addresses, and fully
-qualified domain names are allowable. The default is the local computer. Use localhost or a dot (.)
-to specify the local computer explicitly.
+qualified domain names are allowable. The default is the local computer. Use `localhost` or a dot
+(`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]

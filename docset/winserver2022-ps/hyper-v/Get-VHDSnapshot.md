@@ -37,7 +37,7 @@ Get-VHDSnapshot -Path "Data01.vhds" -SnapshotId 6c87351a-a39a-4581-b231-6d693b26
 ```
 
 This command gets information about the checkpoint that has the specified ID from the VHD set file
-named Data01.vhds in the current working folder.
+named `Data01.vhds` in the current working folder.
 
 ## PARAMETERS
 
@@ -63,8 +63,8 @@ Accept wildcard characters: False
 ### -ComputerName
 
 Specifies one or more Hyper-V hosts that run this command. NetBIOS names, IP addresses, and fully
-qualified domain names are allowable. The default is the local computer. Use localhost or a dot (.)
-to specify the local computer explicitly.
+qualified domain names are allowable. The default is the local computer. Use `localhost` or a dot
+(`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]

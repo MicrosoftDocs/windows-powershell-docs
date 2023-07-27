@@ -2,7 +2,7 @@
 description: Get-ClusterAffinityRule
 external help file: ClusterAffinityRule.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 07/26/2022
+ms.date: 07/27/2023
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusteraffinityrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterAffinityRule

@@ -207,6 +207,9 @@ Destroys an existing failover cluster.
 ### [Remove-ClusterAccess](./Remove-ClusterAccess.md)
 Removes a user from the access list on the cluster.
 
+### [Remove-ClusterGroupFromAffinityRule](./Remove-ClusterGroupFromAffinityRule.md)
+Removes a cluster group from an affinity rule.
+
 ### [Remove-ClusterCheckpoint](./Remove-ClusterCheckpoint.md)
 Removes a cryptographic key checkpoint or registry checkpoint for a resource.
 

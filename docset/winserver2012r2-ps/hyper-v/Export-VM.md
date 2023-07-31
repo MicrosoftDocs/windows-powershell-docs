@@ -29,7 +29,7 @@ Export-VM [-Path] <String> [-AsJob] [-Passthru] [-VM] <VirtualMachine[]> [-WhatI
 ## DESCRIPTION
 The **Export-VM** cmdlet exports a virtual machine to disk.
 This cmdlet creates a folder at a specified location having three subfolders: Snapshots, Virtual Hard Disks, and Virtual Machines.
-The Snapshots and Virtual Hard Disks folders contain the snapshots of and virtual hard disks of the specified virtual machine respectively.
+Each of these folders contains the associated files. The Snapshots folder contains the associated Snapshots, and the Virtual Hard Disk folder contains the specified virtual machine's virtual disks.
 The Virtual Machines folder contains the configuration XML of the specified virtual machine.
 
 ## EXAMPLES

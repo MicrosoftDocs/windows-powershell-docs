@@ -71,6 +71,7 @@ performed when the virtual disk chain is attached.
 
 ```powershell
 Set-VHD -Path Child1.vhd -ParentPath parentcopywithnewid.vhd -IgnoreMismatchId
+=======
 ```
 
 This example sets the parent of **Child1.vhd** to point to **parentcopywithnewid.vhd**, even though

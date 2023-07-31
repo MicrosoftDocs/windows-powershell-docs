@@ -166,4 +166,4 @@ This cmdlet returns a **VHDSnapshotInfo** object.
 
 ## RELATED LINKS
 
-- [Remove-VHDSnapshot](remove-vhdsnapshot.md)
+[Remove-VHDSnapshot](remove-vhdsnapshot.md)

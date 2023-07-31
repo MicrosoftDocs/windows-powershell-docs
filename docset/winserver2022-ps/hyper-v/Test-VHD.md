@@ -69,7 +69,7 @@ Accept wildcard characters: False
 
 Specifies one or more Hyper-V hosts on which the virtual hard disk is to be tested. NetBIOS names,
 IP addresses, and fully qualified domain names are allowable. The default is the local computer. Use
-localhost or a dot (.) to specify the local computer explicitly.
+`localhost` or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -154,12 +154,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Convert-VHD](convert-vhd.md)
-- [Dismount-VHD](dismount-vhd.md)
-- [Get-VHD](get-vhd.md)
-- [Merge-VHD](merge-vhd.md)
-- [Mount-VHD](mount-vhd.md)
-- [New-VHD](new-vhd.md)
-- [Optimize-VHD](optimize-vhd.md)
-- [Resize-VHD](resize-vhd.md)
-- [Set-VHD](set-vhd.md)
+[Convert-VHD](convert-vhd.md)
+
+[Dismount-VHD](dismount-vhd.md)
+
+[Get-VHD](get-vhd.md)
+
+[Merge-VHD](merge-vhd.md)
+
+[Mount-VHD](mount-vhd.md)
+
+[New-VHD](new-vhd.md)
+
+[Optimize-VHD](optimize-vhd.md)
+
+[Resize-VHD](resize-vhd.md)
+
+[Set-VHD](set-vhd.md)

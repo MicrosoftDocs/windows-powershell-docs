@@ -18,8 +18,8 @@ disks.
 
 ```
 Optimize-VHD [-Path] <String[]> [-Mode <VhdCompactMode>] [-AsJob] [-PassThru]
- [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 Specifies one or more Hyper-V hosts on which a virtual machine is to be optimized. NetBIOS names, IP
 addresses, and fully qualified domain names are allowable. The default is the local computer. Use
-localhost or a dot (.) to specify the local computer explicitly.
+`localhost` or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -163,7 +163,7 @@ follows:
   virtual hard disk had been mounted read-only) because the scan can't query information about free
   space in the NTFS file system within the virtual hard disk. Useful when the VHDX-format file has
   been used by operating system instances that are at least Windows 8 or Windows Server 2012, or
-  when this cmdlet has already been run on a .vhdx file in **Retrim** mode.
+  when this cmdlet has already been run on a **VHDX** file in **Retrim** mode.
 - **Prezeroed** performs as **Quick** mode, but doesn't require the virtual hard disk to be mounted
   read-only. The unused space detection will be less effective than if the virtual hard disk had
   been mounted read-only as the scan will be unable to query information about free space in the
@@ -257,12 +257,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Convert-VHD](convert-vhd.md)
-- [Dismount-VHD](dismount-vhd.md)
-- [Get-VHD](get-vhd.md)
-- [Merge-VHD](merge-vhd.md)
-- [Mount-VHD](mount-vhd.md)
-- [New-VHD](new-vhd.md)
-- [Resize-VHD](resize-vhd.md)
-- [Set-VHD](set-vhd.md)
-- [Test-VHD](test-vhd.md)
+[Convert-VHD](convert-vhd.md)
+
+[Dismount-VHD](dismount-vhd.md)
+
+[Get-VHD](get-vhd.md)
+
+[Merge-VHD](merge-vhd.md)
+
+[Mount-VHD](mount-vhd.md)
+
+[New-VHD](new-vhd.md)
+
+[Resize-VHD](resize-vhd.md)
+
+[Set-VHD](set-vhd.md)
+
+[Test-VHD](test-vhd.md)

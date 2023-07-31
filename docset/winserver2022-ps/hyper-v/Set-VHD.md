@@ -18,23 +18,25 @@ Sets properties associated with a virtual hard disk.
 ### Parent (Default)
 
 ```
-Set-VHD [-Path] <String> [-ParentPath] <String> [-LeafPath <String>] [-IgnoreIdMismatch]
- [-PassThru] [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
-[ -WhatIf] [-Confirm] [<CommonParameters>]
+Set-VHD [-Path] <String> [-ParentPath] <String> [-LeafPath <String>]
+ [-IgnoreIdMismatch] [-PassThru] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+ [-Credential <PSCredential[]>] [ -WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### PhysicalSectorSize
 
 ```
-Set-VHD [-Path] <String> -PhysicalSectorSizeBytes <UInt32> [-PassThru] [-CimSession <CimSession[]>]
- [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-VHD [-Path] <String> -PhysicalSectorSizeBytes <UInt32> [-PassThru]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DiskIdentifier
 
 ```
-Set-VHD [-Path] <String> [-ResetDiskIdentifier] [-Force] [-PassThru] [-CimSession <CimSession[]>]
- [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-VHD [-Path] <String> [-ResetDiskIdentifier] [-Force] [-PassThru]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -71,8 +73,8 @@ performed when the virtual disk chain is attached.
 Set-VHD -Path Child1.vhd -ParentPath parentcopywithnewid.vhd -IgnoreMismatchId
 ```
 
-This example sets the parent of Child1.vhd to point to **parentcopywithnewid.vhd**, even though
-**parentcopywithnewid.vhd** has a different ID than the original parent of **child1.vhd**. The
+This example sets the parent of **Child1.vhd** to point to **parentcopywithnewid.vhd**, even though
+**parentcopywithnewid.vhd** has a different ID than the original parent of **Child1.vhd**. The
 operation is performed in offline mode. This mode should be used with extreme caution, and only when
 it's certain that the block contents of the new and old parents are exactly the same. Otherwise data
 loss can occur.
@@ -83,7 +85,7 @@ loss can occur.
 Set-VHD -Path C:\test.vhdx -PhysicalSectorSizeBytes 512
 ```
 
-This example sets the physical sector size of a VHDX to 512 bytes.
+This example sets the physical sector size of a **VHDX** to 512 bytes.
 
 ## PARAMETERS
 
@@ -110,7 +112,7 @@ Accept wildcard characters: False
 
 Specifies one or more Hyper-V hosts on which the parent of a virtual hard disk in a differencing
 hard disk chain is to be set. NetBIOS names, IP addresses, and fully qualified domain names are
-allowable. The default is the local computer. Use localhost or a dot (.) to specify the local
+allowable. The default is the local computer. Use `localhost` or a dot (`.`) to specify the local
 computer explicitly.
 
 ```yaml
@@ -330,12 +332,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Convert-VHD](convert-vhd.md)
-- [Dismount-VHD](dismount-vhd.md)
-- [Get-VHD](get-vhd.md)
-- [Merge-VHD](merge-vhd.md)
-- [Mount-VHD](mount-vhd.md)
-- [New-VHD](new-vhd.md)
-- [Optimize-VHD](optimize-vhd.md)
-- [Resize-VHD](resize-vhd.md)
-- [Test-VHD](test-vhd.md)
+[Convert-VHD](convert-vhd.md)
+
+[Dismount-VHD](dismount-vhd.md)
+
+[Get-VHD](get-vhd.md)
+
+[Merge-VHD](merge-vhd.md)
+
+[Mount-VHD](mount-vhd.md)
+
+[New-VHD](new-vhd.md)
+
+[Optimize-VHD](optimize-vhd.md)
+
+[Resize-VHD](resize-vhd.md)
+
+[Test-VHD](test-vhd.md)

@@ -18,15 +18,17 @@ Dismounts a virtual hard disk.
 ### Path (Default)
 
 ```
-Dismount-VHD [-Path] <String[]> [-SnapshotId <Guid>] [-PassThru] [-CimSession <CimSession[]>]
- [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Dismount-VHD [-Path] <String[]> [-SnapshotId <Guid>] [-PassThru]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Disk
 
 ```
 Dismount-VHD [-DiskNumber] <UInt32> [-PassThru] [-CimSession <CimSession[]>]
- [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,7 +79,7 @@ Accept wildcard characters: False
 
 Specifies one or more Hyper-V hosts on which a virtual hard disk is to be dismounted. NetBIOS names,
 IP addresses, and fully qualified domain names are allowable. The default is the local computer. Use
-localhost or a dot (.) to specify the local computer explicitly.
+`localhost` or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -229,12 +231,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Convert-VHD](convert-vhd.md)
-- [Get-VHD](get-vhd.md)
-- [Merge-VHD](merge-vhd.md)
-- [Mount-VHD](mount-vhd.md)
-- [New-VHD](new-vhd.md)
-- [Optimize-VHD](optimize-vhd.md)
-- [Resize-VHD](resize-vhd.md)
-- [Set-VHD](set-vhd.md)
-- [Test-VHD](test-vhd.md)
+[Convert-VHD](convert-vhd.md)
+
+[Get-VHD](get-vhd.md)
+
+[Merge-VHD](merge-vhd.md)
+
+[Mount-VHD](mount-vhd.md)
+
+[New-VHD](new-vhd.md)
+
+[Optimize-VHD](optimize-vhd.md)
+
+[Resize-VHD](resize-vhd.md)
+
+[Set-VHD](set-vhd.md)
+
+[Test-VHD](test-vhd.md)

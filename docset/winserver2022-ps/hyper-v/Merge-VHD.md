@@ -17,8 +17,8 @@ Merges virtual hard disks.
 
 ```
 Merge-VHD [-Path] <String> [[-DestinationPath] <String>] [-Force] [-AsJob] [-PassThru]
- [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 
 Specifies one or more Hyper-V hosts on which virtual hard disks are to be merged. NetBIOS names, IP
 addresses, and fully qualified domain names are allowable. The default is the local computer. Use
-localhost or a dot (.) to specify the local computer explicitly.
+`localhost` or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -234,12 +234,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Convert-VHD](convert-vhd.md)
-- [Dismount-VHD](dismount-vhd.md)
-- [Get-VHD](get-vhd.md)
-- [Mount-VHD](mount-vhd.md)
-- [New-VHD](new-vhd.md)
-- [Optimize-VHD](optimize-vhd.md)
-- [Resize-VHD](resize-vhd.md)
-- [Set-VHD](set-vhd.md)
-- [Test-VHD](test-vhd.md)
+[Convert-VHD](convert-vhd.md)
+
+[Dismount-VHD](dismount-vhd.md)
+
+[Get-VHD](get-vhd.md)
+
+[Mount-VHD](mount-vhd.md)
+
+[New-VHD](new-vhd.md)
+
+[Optimize-VHD](optimize-vhd.md)
+
+[Resize-VHD](resize-vhd.md)
+
+[Set-VHD](set-vhd.md)
+
+[Test-VHD](test-vhd.md)

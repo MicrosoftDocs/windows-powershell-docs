@@ -69,7 +69,7 @@ Gets the virtual hard disk attached to the system with disk number 6.
 Get-VM -VMName TestVM | Select-Object -Property VMId | Get-VHD
 ```
 
-Gets the virtual hard disk objects associated with virtual machine TestVM, using the pipeline
+Gets the virtual hard disk objects associated with virtual machine **TestVM**, using the pipeline
 feature for the **VMId** parameter.
 
 ### Example 4
@@ -78,7 +78,7 @@ feature for the **VMId** parameter.
 Get-VM -VMName TestVM | Select-Object -Property VMId | Get-VHD
 ```
 
-Gets the virtual hard disk objects associated with virtual machine TestVM using the pipeline feature
+Gets the virtual hard disk objects associated with virtual machine **TestVM** using the pipeline feature
 for the path parameter.
 
 ### Example 5
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 Specifies one or more Hyper-V hosts on which a virtual hard disk is to be retrieved. NetBIOS names,
 IP addresses, and fully qualified domain names are allowable. The default is the local computer. Use
-localhost or a dot (.) to specify the local computer explicitly.
+`localhost` or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -220,12 +220,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Convert-VHD](convert-vhd.md)
-- [Dismount-VHD](dismount-vhd.md)
-- [Merge-VHD](merge-vhd.md)
-- [Mount-VHD](mount-vhd.md)
-- [New-VHD](new-vhd.md)
-- [Optimize-VHD](optimize-vhd.md)
-- [Resize-VHD](resize-vhd.md)
-- [Set-VHD](set-vhd.md)
-- [Test-VHD](test-vhd.md)
+[Convert-VHD](convert-vhd.md)
+
+[Dismount-VHD](dismount-vhd.md)
+
+[Merge-VHD](merge-vhd.md)
+
+[Mount-VHD](mount-vhd.md)
+
+[New-VHD](new-vhd.md)
+
+[Optimize-VHD](optimize-vhd.md)
+
+[Resize-VHD](resize-vhd.md)
+
+[Set-VHD](set-vhd.md)
+
+[Test-VHD](test-vhd.md)

@@ -20,16 +20,16 @@ Creates one or more new virtual hard disks.
 ```
 New-VHD [-Path] <String[]> [-SizeBytes] <UInt64> [-Dynamic] [-BlockSizeBytes <UInt32>]
  [-LogicalSectorSizeBytes <UInt32>] [-PhysicalSectorSizeBytes <UInt32>] [-AsJob]
- [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### DynamicWithSource
 
 ```
-New-VHD [-Path] <String[]> -SourceDisk <UInt32> [-Dynamic] [-BlockSizeBytes <UInt32>] [-AsJob]
- [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-VHD [-Path] <String[]> -SourceDisk <UInt32> [-Dynamic] [-BlockSizeBytes <UInt32>]
+ [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+ [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Differencing
@@ -37,8 +37,8 @@ New-VHD [-Path] <String[]> -SourceDisk <UInt32> [-Dynamic] [-BlockSizeBytes <UIn
 ```
 New-VHD [-Path] <String[]> [-ParentPath] <String> [[-SizeBytes] <UInt64>] [-Differencing]
  [-BlockSizeBytes <UInt32>] [-PhysicalSectorSizeBytes <UInt32>] [-AsJob]
- [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### FixedWithoutSource
@@ -47,22 +47,23 @@ New-VHD [-Path] <String[]> [-ParentPath] <String> [[-SizeBytes] <UInt64>] [-Diff
 New-VHD [-Path] <String[]> [-SizeBytes] <UInt64> [-Fixed] [-BlockSizeBytes <UInt32>]
  [-LogicalSectorSizeBytes <UInt32>] [-PhysicalSectorSizeBytes <UInt32>]
  [-AddressAbstractionType <VirtualHardDiskPmemAddressAbstractionType>]
- [-DataAlignmentBytes <UInt64>] [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
- [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DataAlignmentBytes <UInt64>] [-AsJob] [-CimSession <CimSession[]>]
+ [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### FixedWithSource
 
 ```
-New-VHD [-Path] <String[]> -SourceDisk <UInt32> [-Fixed] [-BlockSizeBytes <UInt32>] [-AsJob]
- [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-VHD [-Path] <String[]> -SourceDisk <UInt32> [-Fixed] [-BlockSizeBytes <UInt32>]
+ [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+ [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `New-VHD` cmdlet creates one or more new virtual hard disks in either VHD format or the newer
-VHDX format. The file name extension you specify determines the format.
+The `New-VHD` cmdlet creates one or more new virtual hard disks in either VHD-format or the newer
+VHDX-format. The file name extension you specify determines the format.
 
 ## EXAMPLES
 
@@ -72,7 +73,7 @@ VHDX format. The file name extension you specify determines the format.
 New-VHD -Path C:\Base.vhdx -SizeBytes 10GB
 ```
 
-This example creates a dynamic virtual hard disk in VHDX format that's 10 GB in size. The file name
+This example creates a dynamic virtual hard disk in VHDX-format that's 10 GB in size. The file name
 extension determines the format and the default type of dynamic is used because no type is
 specified.
 
@@ -118,8 +119,8 @@ $vhdsize = 127GB
 New-VHD -Path $vhdpath -Dynamic -SizeBytes $vhdsize | Mount-VHD -PassThru | Initialize-Disk -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -Confirm $false -Force
 ```
 
-This example creates a new 127GB VHD and then mounts, initializes, and formats it so the drive is
-ready to use.
+This example creates a new 127 GB **VHD** and then mounts, initializes, and formats it so the drive
+is ready to use.
 
 ## PARAMETERS
 
@@ -178,7 +179,7 @@ Accept wildcard characters: False
 
 Specifies one or more Hyper-V hosts on which the virtual hard disk file(s) are to be created.
 NetBIOS names, IP addresses, and fully qualified domain names are allowable. The default is the
-local computer. Use localhost or a dot (.) to specify the local computer explicitly.
+local computer. Use `localhost` or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -228,8 +229,8 @@ Accept wildcard characters: False
 ### -DataAlignmentBytes
 
 Specifies the byte alignment for the virtual hard disk file. This parameter is used to optimize the
-performance of the VHD file by aligning the disk sectors with the physical sector boundaries of the
-underlying storage device.
+performance of the **VHD** file by aligning the disk sectors with the physical sector boundaries of
+the underlying storage device.
 
 ```yaml
 Type: UInt64
@@ -455,12 +456,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Convert-VHD](convert-vhd.md)
-- [Dismount-VHD](dismount-vhd.md)
-- [Get-VHD](get-vhd.md)
-- [Merge-VHD](merge-vhd.md)
-- [Mount-VHD](mount-vhd.md)
-- [Optimize-VHD](optimize-vhd.md)
-- [Resize-VHD](resize-vhd.md)
-- [Set-VHD](set-vhd.md)
-- [Test-VHD](test-vhd.md)
+[Convert-VHD](convert-vhd.md)
+
+[Dismount-VHD](dismount-vhd.md)
+
+[Get-VHD](get-vhd.md)
+
+[Merge-VHD](merge-vhd.md)
+
+[Mount-VHD](mount-vhd.md)
+
+[Optimize-VHD](optimize-vhd.md)
+
+[Resize-VHD](resize-vhd.md)
+
+[Set-VHD](set-vhd.md)
+
+[Test-VHD](test-vhd.md)

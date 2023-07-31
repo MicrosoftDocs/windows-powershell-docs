@@ -19,23 +19,24 @@ Resizes a virtual hard disk.
 
 ```
 Resize-VHD [-Path] <String[]> [-SizeBytes] <UInt64> [-AsJob] [-PassThru]
- [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### MinimumSize
 
 ```
-Resize-VHD [-Path] <String[]> [-ToMinimumSize] [-AsJob] [-PassThru] [-CimSession <CimSession[]>]
- [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Resize-VHD [-Path] <String[]> [-ToMinimumSize] [-AsJob] [-PassThru]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Resize-VHD` cmdlet changes the maximum physical size of a virtual hard disk. It can expand both
-VHD and VHDX files but can shrink only VHDX files. The shrink operation fails if it would shrink the
-virtual disk to less than its minimum size (available through the VHDX object's **MinimumSize**
-property).
+The `Resize-VHD` cmdlet changes the maximum physical size of a virtual hard disk. It can expand
+both **VHD** and **VHDX** files but can shrink only **VHDX** files. The shrink operation fails if
+it would shrink the virtual disk to less than its minimum size (available through the **VHDX**
+object's **MinimumSize** property).
 
 If the virtual disk file connects to a virtual machine's IDE chain, you **can't** resize the virtual
 disk while the virtual machine is online.
@@ -55,8 +56,8 @@ disk while the virtual machine is online.
 Resize-VHD -Path C:\BaseVHD.vhd -SizeBytes 1099511627776
 ```
 
-Expands the VHD to 1 terabyte if the previous size was less than 1 terabyte. If it was larger, the
-cmdlet will report an error because it can't shrink a VHD.
+Expands the **VHD** to 1 terabyte if the previous size was less than 1 terabyte. If it was larger,
+the cmdlet will report an error because it can't shrink a **VHD**.
 
 ### Example 2
 
@@ -64,8 +65,8 @@ cmdlet will report an error because it can't shrink a VHD.
 Resize-VHD -Path C:\BaseVHDX.vhdx -SizeBytes 20GB
 ```
 
-Changes the VHDX's size to 20 gigabytes (21,474,836,480 bytes). If it was larger, the cmdlet will
-only succeed if it had a **MinimumSize** less than or equal to 20 gigabytes.
+Changes the **VHDX** file size to 20 gigabytes (21,474,836,480 bytes). If it was larger, the cmdlet
+will only succeed if it had a **MinimumSize** less than or equal to 20 gigabytes.
 
 ### Example 3
 
@@ -116,7 +117,7 @@ Accept wildcard characters: False
 
 Specifies one or more Hyper-V hosts on which a virtual hard disk is to be resized. NetBIOS names, IP
 addresses, and fully qualified domain names are allowable. The default is the local computer. Use
-localhost or a dot (.) to specify the local computer explicitly.
+`localhost` or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -263,12 +264,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Convert-VHD](convert-vhd.md)
-- [Dismount-VHD](dismount-vhd.md)
-- [Get-VHD](get-vhd.md)
-- [Merge-VHD](merge-vhd.md)
-- [Mount-VHD](mount-vhd.md)
-- [New-VHD](new-vhd.md)
-- [Optimize-VHD](optimize-vhd.md)
-- [Set-VHD](set-vhd.md)
-- [Test-VHD](test-vhd.md)
+[Convert-VHD](convert-vhd.md)
+
+[Dismount-VHD](dismount-vhd.md)
+
+[Get-VHD](get-vhd.md)
+
+[Merge-VHD](merge-vhd.md)
+
+[Mount-VHD](mount-vhd.md)
+
+[New-VHD](new-vhd.md)
+
+[Optimize-VHD](optimize-vhd.md)
+
+[Set-VHD](set-vhd.md)
+
+[Test-VHD](test-vhd.md)

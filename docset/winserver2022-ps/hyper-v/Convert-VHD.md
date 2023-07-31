@@ -16,31 +16,33 @@ Converts the format, version type, and block size of a virtual hard disk file.
 ## SYNTAX
 
 ```
-Convert-VHD [-Path] <String> [-DestinationPath] <String> [-VHDType <VhdType>] [-ParentPath <String>]
- [-BlockSizeBytes <UInt32>] [-DeleteSource] [-AsJob] [-PassThru]
- [-AddressAbstractionType <VirtualHardDiskPmemAddressAbstractionType>] [-CimSession <CimSession[]>]
- [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Convert-VHD [-Path] <String> [-DestinationPath] <String> [-VHDType <VhdType>]
+ [-ParentPath <String>]  [-BlockSizeBytes <UInt32>] [-DeleteSource] [-AsJob]
+ [-PassThru] [-AddressAbstractionType <VirtualHardDiskPmemAddressAbstractionType>]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Convert-VHD` cmdlet converts a virtual hard disk file by copying the data from a source virtual
-hard disk file to a new virtual hard disk file of a specified format and version type. The format is
-determined by the file name extension of the specified files, either vhdx or vhd. Conversion is an
-offline operation; the virtual hard disk must not be attached when the operation is started.
+The `Convert-VHD` cmdlet converts a virtual hard disk file by copying the data from a source
+virtual hard disk file to a new virtual hard disk file of a specified format and version type. The
+format is determined by the file name extension of the specified files, either **VHDX** or **VHD**.
+Conversion is an offline operation; the virtual hard disk must not be attached when the operation
+is started.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Convert-VHD -Path c:\test\testvhd.vhd -DestinationPath c:\test\testvhdx.vhdx
+Convert-VHD -Path C:\test\testvhd.vhd -DestinationPath C:\test\testvhdx.vhdx
 ```
 
-This example converts a source VHD to a destination VHDX. Because the format is determined by the
-file name extension and the default type is determined by the source virtual hard disk when no type
-is specified, the destination virtual hard disk will be a VHDX-format disk of the same type as the
-source virtual hard disk.
+This example converts a source **VHD** to a destination **VHDX**. Because the format is determined
+by the file name extension and the default type is determined by the source virtual hard disk when
+no type is specified, the destination virtual hard disk will be a VHDX-format disk of the same type
+as the source virtual hard disk.
 
 ### Example 2
 
@@ -53,8 +55,8 @@ ParentPath = "C:\test\parentvhd.vhd"
 Convert-VHD -Path c:\test\child1vhdx.vhdx @parameters
 ```
 
-This example converts a source differencing disk of VHDX format to a destination differencing disk
-of VHD format that's connected to an existing parent disk.
+This example converts a source differencing disk of **VHDX** format to a destination differencing
+disk of **VHD** format that's connected to an existing parent disk.
 
 ## PARAMETERS
 
@@ -113,7 +115,7 @@ Accept wildcard characters: False
 
 Specifies one or more Hyper-V hosts on which the virtual hard disk is to be converted. NetBIOS
 names, IP addresses, and fully qualified domain names are allowable. The default is the local
-computer. Use localhost or a dot (.) to specify the local computer explicitly.
+computer. Use `localhost` or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -296,11 +298,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Get-VHD](get-vhd.md)
-- [Merge-VHD](merge-vhd.md)
-- [Mount-VHD](mount-vhd.md)
-- [New-VHD](new-vhd.md)
-- [Optimize-VHD](optimize-vhd.md)
-- [Resize-VHD](resize-vhd.md)
-- [Set-VHD](set-vhd.md)
-- [Test-VHD](test-vhd.md)
+[Get-VHD](get-vhd.md)
+
+[Dismount-VHD](dismount-vhd.md)
+
+[Merge-VHD](merge-vhd.md)
+
+[Mount-VHD](mount-vhd.md)
+
+[New-VHD](new-vhd.md)
+
+[Optimize-VHD](optimize-vhd.md)
+
+[Resize-VHD](resize-vhd.md)
+
+[Set-VHD](set-vhd.md)
+
+[Test-VHD](test-vhd.md)

@@ -264,7 +264,7 @@ Accept wildcard characters: False
 ### -PhysicalSectorSizeBytes
 
 Specifies the physical sector size, in bytes. Valid values are 512 and 4096. This parameter is
-supported only on a VHDX-format disk that'sn't attached when the operation is initiated.
+supported only on a VHDX-format disk that isn't attached when the operation is initiated.
 
 ```yaml
 Type: UInt32

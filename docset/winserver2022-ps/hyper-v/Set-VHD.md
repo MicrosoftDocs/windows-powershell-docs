@@ -20,13 +20,13 @@ Sets properties associated with a virtual hard disk.
 ```
 Set-VHD [-Path] <String> [-ParentPath] <String> [-LeafPath <String>]
  [-IgnoreIdMismatch] [-PassThru] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
- [-Credential <PSCredential[]>] [ -WhatIf] [-Confirm] [<CommonParameters>]
+ [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### PhysicalSectorSize
 
 ```
-Set-VHD [-Path] <String> -PhysicalSectorSizeBytes <UInt32> [-PassThru]
+Set-VHD [-Path] <String> [-PhysicalSectorSizeBytes] <UInt32> [-PassThru]
  [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

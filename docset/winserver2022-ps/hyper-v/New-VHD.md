@@ -27,7 +27,7 @@ New-VHD [-Path] <String[]> [-SizeBytes] <UInt64> [-Dynamic] [-BlockSizeBytes <UI
 ### DynamicWithSource
 
 ```
-New-VHD [-Path] <String[]> -SourceDisk <UInt32> [-Dynamic] [-BlockSizeBytes <UInt32>]
+New-VHD [-Path] <String[]> [-SourceDisk] <UInt32> [-Dynamic] [-BlockSizeBytes <UInt32>]
  [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
  [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -35,7 +35,7 @@ New-VHD [-Path] <String[]> -SourceDisk <UInt32> [-Dynamic] [-BlockSizeBytes <UIn
 ### Differencing
 
 ```
-New-VHD [-Path] <String[]> [-ParentPath] <String> [[-SizeBytes] <UInt64>] [-Differencing]
+New-VHD [-Path] <String[]> [-ParentPath] <String> [-SizeBytes] <UInt64> [-Differencing]
  [-BlockSizeBytes <UInt32>] [-PhysicalSectorSizeBytes <UInt32>] [-AsJob]
  [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -55,7 +55,7 @@ New-VHD [-Path] <String[]> [-SizeBytes] <UInt64> [-Fixed] [-BlockSizeBytes <UInt
 ### FixedWithSource
 
 ```
-New-VHD [-Path] <String[]> -SourceDisk <UInt32> [-Fixed] [-BlockSizeBytes <UInt32>]
+New-VHD [-Path] <String[]> [-SourceDisk] <UInt32> [-Fixed] [-BlockSizeBytes <UInt32>]
  [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
  [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

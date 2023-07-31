@@ -17,7 +17,7 @@ Converts the format, version type, and block size of a virtual hard disk file.
 
 ```
 Convert-VHD [-Path] <String> [-DestinationPath] <String> [-VHDType <VhdType>]
- [-ParentPath <String>]  [-BlockSizeBytes <UInt32>] [-DeleteSource] [-AsJob]
+ [-ParentPath <String>] [-BlockSizeBytes <UInt32>] [-DeleteSource] [-AsJob]
  [-PassThru] [-AddressAbstractionType <VirtualHardDiskPmemAddressAbstractionType>]
  [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
  [-WhatIf] [-Confirm] [<CommonParameters>]

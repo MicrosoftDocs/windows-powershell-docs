@@ -60,7 +60,7 @@ Accept wildcard characters: False
 
 Specifies one or more virtual machine hosts on which the virtual floppy disk is to be created.
 NetBIOS names, IP addresses, and fully qualified domain names are allowable. The default is the
-local computer. Use localhost or a dot (.) to specify the local computer explicitly.
+local computer. Use `localhost` or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]

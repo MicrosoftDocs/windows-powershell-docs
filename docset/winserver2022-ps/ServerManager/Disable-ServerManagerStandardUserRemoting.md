@@ -11,8 +11,10 @@ title: Disable-ServerManagerStandardUserRemoting
 # Disable-ServerManagerStandardUserRemoting
 
 ## SYNOPSIS
-Disables access for specified standard users to event, service, performance counter, and role and feature inventory data that is collected by Server Manager for a server.
-This cmdlet performs the opposite action, for specified users, of the Enable-ServerManagerStandardUserRemoting cmdlet.
+
+Disables access for specified standard users to event, service, performance counter, and role and
+feature inventory data that is collected by Server Manager for a server. This cmdlet performs the
+opposite action, for specified users, of the `Enable-ServerManagerStandardUserRemoting` cmdlet.
 
 ## SYNTAX
 
@@ -21,40 +23,57 @@ Disable-ServerManagerStandardUserRemoting [-User] <String[]> [-Force] [-WhatIf] 
 ```
 
 ## DESCRIPTION
-Disables access for one or more standard, non-Administrator users to event, service, performance counter, and role and feature inventory data for a server that you are managing by using Server Manager.
-The cmdlet restores the default, administrator-only access to this data, and must be run locally on the server that is being managed by using Server Manager.
-The cmdlet works by performing the following actions:
 
-- Deletes access rights for specified standard users to the root\cimv2 namespace on the local server (for access to role and feature inventory information).
+Disables access for one or more standard, non-Administrator users to event, service, performance
+counter, and role and feature inventory data for a server that you are managing by using Server
+Manager. The cmdlet restores the default, administrator-only access to this data, and must be run
+locally on the server that is being managed by using Server Manager. The cmdlet works by performing
+the following actions:
 
-- Removes specified standard users from user groups (Remote Management Users, Event Log Readers, and Performance Log Readers) that allow remote access to event and performance counter logs on the local server.
+- Deletes access rights for specified standard users to the `root\cimv2` namespace on the local server
+  (for access to role and feature inventory information).
 
-- Removes access rights in the Service Control Manager for specified standard users who have access to the status of services on the local server.
+- Removes specified standard users from user groups (Remote Management Users, Event Log Readers, and
+  Performance Log Readers) that allow remote access to event and performance counter logs on the
+  local server.
+
+- Removes access rights in the Service Control Manager for specified standard users who have access
+  to the status of services on the local server.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Disable-ServerManagerStandardUserRemoting -User JennyL
 ```
 
-In the following example, the administrator disables access to event, performance counter, service status, and role and feature inventory data for a server that is being managed by using either a local or remote Server Manager console, and for which there is a standard user named JennyL.
+In this example, the administrator disables access to event, performance counter, service
+status, and role and feature inventory data for a server that is being managed by using either a
+local or remote Server Manager console, and for which there is a standard user named `JennyL`.
 
 ### Example 2
+
 ```powershell
 Disable-ServerManagerStandardUserRemoting -User JennyL -WhatIf
 ```
 
-In the following example, the administrator views the outcome of running a command to deny a standard user named JennyL access to event, performance counter, service status, and role and feature inventory data for a server that is being managed by using the Server Manager console running on either the local or a remote computer.
-The `WhatIf` parameter is added, meaning that the command actions are not carried out.
+In this example, the administrator views the outcome of running a command to deny a standard user
+named `JennyL` access to event, performance counter, service status, and role and feature inventory
+data for a server that is being managed by using the Server Manager console running on either the
+local or a remote computer. The **WhatIf** parameter is added, meaning that the command actions are
+not carried out.
 
 ### Example 3
+
 ```powershell
 Disable-ServerManagerStandardUserRemoting -User JennyL -Confirm
 ```
 
-In the following example, the administrator denies a standard user named JennyL access to event, performance counter, service status, and role and feature inventory data for a server that is being managed by using the Server Manager console running on either the local or a remote computer.
-The `Confirm` parameter is added, meaning that the command prompts for confirmation before performing the action.
+In this example, the administrator denies a standard user named `JennyL` access to event, performance
+counter, service status, and role and feature inventory data for a server that is being managed by
+using the Server Manager console running on either the local or a remote computer. The **Confirm**
+parameter is added, meaning that the command prompts for confirmation before performing the action.
 
 ## PARAMETERS
 
@@ -75,7 +94,10 @@ Accept wildcard characters: False
 ```
 
 ### -User
-Specifies the user account name of a standard user who runs Server Manager, and no longer requires access to event, performance counter, service, and role and feature inventory data for a server that is being managed by using either a local or remote Server Manager console.
+
+Specifies the user account name of a standard user who runs Server Manager and no longer requires
+access to event, performance counter, service, and role and feature inventory data for a server that
+is being managed by using either a local or remote Server Manager console.
 
 ```yaml
 Type: String[]
@@ -90,6 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -105,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
+
+Shows what would happen if the cmdlet were run.
 The cmdlet is not run.
 
 ```yaml
@@ -121,7 +145,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

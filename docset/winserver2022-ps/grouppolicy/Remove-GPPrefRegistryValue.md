@@ -11,47 +11,69 @@ title: Remove-GPPrefRegistryValue
 # Remove-GPPrefRegistryValue
 
 ## SYNOPSIS
-Removes one or more Registry preference items from either Computer Configuration or User Configuration in a GPO.
+
+Removes one or more Registry preference items from either Computer Configuration or User
+Configuration in a GPO.
 
 ## SYNTAX
 
 ### GetByGUID (Default)
+
 ```
-Remove-GPPrefRegistryValue -Guid <Guid> -Context <GpoConfiguration> -Key <String> [-ValueName <String>]
- [-Order <Int32>] [-Domain <String>] [[-Server] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-GPPrefRegistryValue -Guid <Guid> -Context <GpoConfiguration> -Key <String>
+ [-ValueName <String>] [-Order <Int32>] [-Domain <String>] [[-Server] <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### GetByName
+
 ```
-Remove-GPPrefRegistryValue [-Name] <String> -Context <GpoConfiguration> -Key <String> [-ValueName <String>]
- [-Order <Int32>] [-Domain <String>] [[-Server] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-GPPrefRegistryValue [-Name] <String> -Context <GpoConfiguration> -Key <String>
+ [-ValueName <String>] [-Order <Int32>] [-Domain <String>] [[-Server] <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-GPPrefRegistryValue** cmdlet removes one or more Registry preference items from either Computer Configuration or User Configuration in a GPO.
-You must specify the *Context* parameter for the User or Computer to indicate whether to remove the Registry preference item from Computer Configuration or User Configuration.
-You can specify the GPO by its display name or by its GUID.
+
+The `Remove-GPPrefRegistryValue` cmdlet removes one or more Registry preference items from either
+Computer Configuration or User Configuration in a GPO. You must specify the **Context** parameter
+for the User or Computer to indicate whether to remove the Registry preference item from Computer
+Configuration or User Configuration. You can specify the GPO by its display name or by its GUID.
 
 You can specify either a key or a value:
 
-- If you specify a key, all Registry preference items that configure that registry key or any of its first-level values are removed from the specified configuration in the GPO.
-Registry preference items that configure subkeys of that key or their values are not affected.
-For a key, specify the *Key* parameter without the *ValueName* parameter.
+- If you specify a key, all Registry preference items that configure that registry key or any of its
+  first-level values are removed from the specified configuration in the GPO. Registry preference
+  items that configure subkeys of that key or their values are not affected. For a key, specify the
+  **Key** parameter without the *ValueName* parameter.
 
-- If you specify a value, all Registry preference items that configure that registry value are removed from the specified configuration in the GPO.
-For a value, specify the *Key* parameter without the *ValueName* parameter.
+- If you specify a value, all Registry preference items that configure that registry value are
+  removed from the specified configuration in the GPO. For a value, specify the **Key** parameter
+  without the **ValueName** parameter.
 
 This cmdlet can take input from the pipeline:
 
-- You can pipe GPO objects to this cmdlet to remove a specified Registry preference item from one or more GPOs.
+- You can pipe GPO objects to this cmdlet to remove a specified Registry preference item from one or
+  more GPOs.
 
-- You can pipe **PreferencRegistrySetting** objects to this cmdlet to remove one or more Registry preference items from a specified GPO.
+- You can pipe **PreferencRegistrySetting** objects to this cmdlet to remove one or more Registry
+  preference items from a specified GPO.
 
 ## EXAMPLES
 
 ### Example 1: Remove all registry preference item under the specified registry
+
+```powershell
+$params = @{
+    Name      = 'TestGPO'
+    Context   = 'User'
+    Key       = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey'
+    ValueName = 'ValueOne'
+}
+Remove-GPPrefRegistryValue @params
 ```
-PS C:\> Remove-GPPrefRegistryValue -Name "TestGPO" -Context User -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" 
+
+```Output
 DisplayName      : TestGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -65,11 +87,23 @@ ComputerVersion  : AD Version: 0, SysVol Version: 0
 WmiFilter        :
 ```
 
-This command removes all Registry preference items that configure the registry value HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey ValueOne from User Configuration in the GPO named TestGPO.
+This command removes all Registry preference items that configure the registry value
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey ValueOne` from User Configuration in the GPO named
+`TestGPO`.
 
 ### Example 2: Remove registry preference items that configure first-level values
+
+```powershell
+$params = @{
+    Name    = "TestGPO"
+    Context = "Computer"
+    Key     = "HKLM\SOFTWARE\Microsoft\ExampleKey"
+
+}
+Remove-GPPrefRegistryValue @params
 ```
-PS C:\> Remove-GPPrefRegistryValue -Name "TestGPO" -Context "Computer" -Key "HKLM\SOFTWARE\Microsoft\ExampleKey" 
+
+```Output
 DisplayName      : TestGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -83,11 +117,23 @@ ComputerVersion  : AD Version: 0, SysVol Version: 0
 WmiFilter        :
 ```
 
-This command removes Registry preference items that configure any first-level values under the registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey or the key itself from Computer Configuration in the GPO named TestGPO.
+This command removes Registry preference items that configure any first-level values under the
+registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey` or the key itself from `Computer`
+Configuration in the GPO named `TestGPO`.
 
 ### Example 3: Remove any registry preference items for all GPOs
+
+```powershell
+$params = @{
+    Context     = 'User'
+    Key         = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey'
+    ValueName   = 'ValueOne'
+    ErrorAction = 'SilentlyContinue'
+}
+Get-GPO -All | Remove-GPPrefRegistryValue @params
 ```
-PS C:\> Get-GPO -All | Remove-GPPrefRegistryValue -Context "User" -Key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" -ValueName "ValueOne" -ErrorAction SilentlyContinue 
+
+```Output
 DisplayName      : TestGPO 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 
@@ -114,20 +160,24 @@ ComputerVersion  : AD Version: 0, SysVol Version: 0
 WmiFilter        :
 ```
 
-This command removes any Registry preference items that configure the registry value "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey ValueOne" from User Configuration for all GPOs in the domain.
-It returns each GPO from which at least one Registry preference item is removed.
+This command removes any Registry preference items that configure the registry value
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey ValueOne` from `User` Configuration for all GPOs
+in the domain. It returns each GPO from which at least one Registry preference item is removed.
 
-This cmdlet returns a non-terminating error for each GPO that does not have a Registry preference item associated with the specified registry value.
-In this command, these error messages are suppressed by setting the *ErrorAction* parameter to SilentlyContinue.
-For more information about the *ErrorAction* parameter, see about_CommonParameters.
+This cmdlet returns a non-terminating error for each GPO that does not have a Registry preference
+item associated with the specified registry value. In this command, these error messages are
+suppressed by setting the **ErrorAction** parameter to `SilentlyContinue`. For more information
+about the **ErrorAction** parameter, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -139,8 +189,9 @@ Accept wildcard characters: False
 ```
 
 ### -Context
-Specifies whether the Registry preference item (or items) are removed from Computer Configuration or User Configuration in the specified GPO.
-You must specify either User or Computer.
+
+Specifies whether the Registry preference item (or items) are removed from Computer Configuration or
+User Configuration in the specified GPO. You must specify either User or Computer.
 
 ```yaml
 Type: GpoConfiguration
@@ -156,21 +207,25 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-Specifies the domain for which this cmdlet runs the operation.
-You must specify the fully qualified domain name (FQDN) of the domain.
 
-For the **Remove-GPPrefRegistryValue** cmdlet, the GPO from which to remove the Registry preference item or items must exist in this domain.
+Specifies the domain for which this cmdlet runs the operation. You must specify the fully qualified
+domain name (FQDN) of the domain.
 
-If you do not specify the *Domain* parameter, the domain of the user that is running the current session is used.
-(If the cmdlet is being run from a computer startup or shutdown script, the domain of the computer is used.) For more information, see the Notes section in the full Help.
+For the `Remove-GPPrefRegistryValue` cmdlet, the GPO from which to remove the Registry preference
+item or items must exist in this domain.
 
-If you specify a domain that is different from the domain of the user that is running the current session, a trust must exist between that domain and the domain of the user or the computer.
+If you do not specify the **Domain** parameter, the domain of the user that is running the current
+session is used. (If the cmdlet is being run from a computer startup or shutdown script, the domain
+of the computer is used.) For more information, see the Notes section in the full Help.
 
-You can also refer to the Domain parameter by its built-in alias, domainname.
-For more information, see about_Aliases.
+If you specify a domain that is different from the domain of the user that is running the current
+session, a trust must exist between that domain and the domain of the user or the computer.
+
+You can also refer to the Domain parameter by its built-in alias, **DomainName**. For more
+information, see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DomainName
 
@@ -182,10 +237,11 @@ Accept wildcard characters: False
 ```
 
 ### -Guid
-Specifies the GPO from which to remove the Registry preference item by its globally unique identifier (GUID).
-The GUID uniquely identifies the GPO.
 
-You can also refer to the *Guid* parameter by its built-in alias, id.
+Specifies the GPO from which to remove the Registry preference item by its globally unique
+identifier (GUID). The GUID uniquely identifies the GPO.
+
+You can also refer to the **Guid** parameter by its built-in alias, **Id**.
 
 ```yaml
 Type: Guid
@@ -200,21 +256,26 @@ Accept wildcard characters: False
 ```
 
 ### -Key
-Specifies a registry key for which to remove one or more Registry preference items; for instance, HKCU\Control Panel\Colors.
+Specifies a registry key for which to remove one or more Registry preference items; for instance,
+HKCU\Control Panel\Colors.
 
-You can specify any of the following registry hives: HKEY_CLASSES_ROOT (HKCR), HKEY_CURRENT_USER (HKCU), HKEY_LOCAL_MACHINE (HKLM), HKEY_USERS (HKU), and HKEY_CURRENT_CONFIG (HKCC).
-Any of these hives can be specified for Registry preference items in both Computer Configuration and User Configuration.
+You can specify any of the following registry hives: `HKEY_CLASSES_ROOT` (HKCR), `HKEY_CURRENT_USER`
+(HKCU), `HKEY_LOCAL_MACHINE` (HKLM), `HKEY_USERS` (HKU), and `HKEY_CURRENT_CONFIG` (HKCC). Any of
+these hives can be specified for Registry preference items in both Computer Configuration and User
+Configuration.
 
-The *Key* parameter can be specified with or without the *ValueName* parameter:
+The **Key** parameter can be specified with or without the **ValueName** parameter:
 
-- If the *ValueName* parameter is specified, all Registry preference items that configure the registry value are removed.
+- If the **ValueName** parameter is specified, all Registry preference items that configure the
+  registry value are removed.
 
-- If the *ValueName* parameter is not specified, all Registry preference items that configure the registry key and any of its first-level values are removed.
+- If the **ValueName** parameter is not specified, all Registry preference items that configure the
+  registry key and any of its first-level values are removed.
 
-You can also refer to the *Key* parameter by its built-in alias, FullKeyPath.
+You can also refer to the **Key** parameter by its built-in alias, FullKeyPath.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: FullKeyPath
 
@@ -226,16 +287,17 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the GPO from which to remove the Registry preference item by its display name.
 
-The display name is not guaranteed to be unique in the domain.
-If another GPO with the same display name exists in the domain an error occurs.
-You can use the Guid parameter to uniquely identify a GPO.
+The display name is not guaranteed to be unique in the domain. If another GPO with the same display
+name exists in the domain an error occurs. You can use the Guid parameter to uniquely identify a
+GPO.
 
-You can also refer to the *Name* parameter by its built-in alias, displayname.
+You can also refer to the **Name** parameter by its built-in alias, **DisplayName**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: GetByName
 Aliases: DisplayName
 
@@ -247,7 +309,9 @@ Accept wildcard characters: False
 ```
 
 ### -Order
-Specifies the order in which a Registry preference item is processed relative to other Registry preference items in the GPO when the GPO is applied on a client computer.
+
+Specifies the order in which a Registry preference item is processed relative to other Registry
+preference items in the GPO when the GPO is applied on a client computer.
 
 ```yaml
 Type: Int32
@@ -262,15 +326,17 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-Specifies the name of the domain controller that this cmdlet contacts to complete the operation.
-You can specify either the fully qualified domain name (FQDN) or the host name.
 
-If you do not specify the name by using the *Server* parameter, the primary domain controller (PDC) emulator is contacted.
+Specifies the name of the domain controller that this cmdlet contacts to complete the operation. You
+can specify either the fully qualified domain name (FQDN) or the host name.
 
-You can also refer to the *Server* parameter by its built-in alias, dc.
+If you do not specify the name by using the **Server** parameter, the primary domain controller
+(PDC) emulator is contacted.
+
+You can also refer to the **Server** parameter by its built-in alias, **DC**.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DC
 
@@ -282,11 +348,12 @@ Accept wildcard characters: False
 ```
 
 ### -ValueName
-Specifies the name of a registry value for which to remove all Registry preference items.
-If you specify the *ValueName* parameter, you must also specify the *Key* parameter.
+
+Specifies the name of a registry value for which to remove all Registry preference items. If you
+specify the **ValueName** parameter, you must also specify the **Key** parameter.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -298,11 +365,11 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -314,31 +381,41 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.GroupPolicy.Gpo, Microsoft.GroupPolicy.PreferenceRegistrySetting
-This cmdlet takes a GPO or a **PreferenceRegistrySetting** object as input.
-You can pipe in one or more **PreferenceRegistrySetting** objects to remove one or more Registry preference items from a specified GPO.
-You can pipe in one or more GPO objects, such as Get-GPO, to remove a specified Registry preference item from each GPO.
-Collections that contain GPOs from different domains are not supported.
+
+This cmdlet takes a GPO or a **PreferenceRegistrySetting** object as input. You can pipe in one or
+more **PreferenceRegistrySetting** objects to remove one or more Registry preference items from a
+specified GPO. You can pipe in one or more GPO objects, such as `Get-GPO`, to remove a specified
+Registry preference item from each GPO. Collections that contain GPOs from different domains are not
+supported.
 
 ## OUTPUTS
 
 ### Microsoft.GroupPolicy.Gpo
+
 This cmdlet returns the GPO from which the Registry preference item or items that have been removed.
 
 ## NOTES
-* You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
 
-  If you do not explicitly specify the domain, the cmdlet uses a default domain.
-The default domain is the domain that is used to access network resources by the security context under which the current session is running.
-This domain is typically the domain of the user that is running the session.
-For instance, the domain of the user who started the session by opening Windows PowerShell from the Program Files menu, or the domain of a user that is specified in a runas command.
-However, computer startup and shutdown scripts run under the context of the LocalSystem account.
-The LocalSystem account is a built-in local account, and it accesses network resources under the context of the computer account.
-Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
+* You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
+
+  If you do not explicitly specify the domain, the cmdlet uses a default domain. The default domain
+  is the domain that is used to access network resources by the security context under which the
+  current session is running. This domain is typically the domain of the user that is running the
+  session. For instance, the domain of the user who started the session by opening Windows
+  PowerShell from the Program Files menu, or the domain of a user that is specified in a runas
+  command. However, computer startup and shutdown scripts run under the context of the LocalSystem
+  account. The LocalSystem account is a built-in local account, and it accesses network resources
+  under the context of the computer account. Therefore, when this cmdlet is run from a startup or
+  shutdown script, the default domain is the domain to which the computer is joined.
 
 ## RELATED LINKS
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.BestPractices.Cmdlets.dll-Help.xml
 Module Name: BestPractices
-online version: https://docs.microsoft.com/powershell/module/bestpractices/invoke-bpamodel?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/bestpractices/invoke-bpamodel?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

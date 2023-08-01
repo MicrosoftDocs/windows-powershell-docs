@@ -3,7 +3,7 @@ description: The Remove-NetEventVFPProvider cmdlet removes a Virtual Filtering P
 external help file: MSFT_NetEventVFPProvider.cdxml-help.xml
 Module Name: NetEventPacketCapture
 ms.date: 10/22/2021
-online version: https://docs.microsoft.com/powershell/module/neteventpacketcapture/remove-neteventvfpprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/neteventpacketcapture/remove-neteventvfpprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-NetEventVFPProvider
 ---

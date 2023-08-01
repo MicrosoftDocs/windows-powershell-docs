@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
 Module Name: adcsdeployment
-online version: https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsnetworkdeviceenrollmentservice?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/adcsdeployment/install-adcsnetworkdeviceenrollmentservice?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -RACountry
-Specifies the country of the registration authority.
+Specifies the country/region of the registration authority.
 
 ```yaml
 Type: String

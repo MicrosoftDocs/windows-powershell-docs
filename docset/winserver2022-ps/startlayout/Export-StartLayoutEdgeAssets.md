@@ -3,7 +3,7 @@ description: The Export-StartLayoutEdgeAssets cmdlet exports secondary tiles for
 external help file: Microsoft.Windows.StartLayout.Commands.dll-Help.xml
 Module Name: StartLayout
 ms.date: 09/20/2021
-online version: https://docs.microsoft.com/powershell/module/startlayout/export-startlayoutedgeassets?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/startlayout/export-startlayoutedgeassets?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

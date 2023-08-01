@@ -2,7 +2,7 @@
 external help file: MSFT_NetIPInterface.cdxml-help.xml
 Module Name: NetTCPIP
 ms.date: 10/29/2017
-online version: https://docs.microsoft.com/powershell/module/nettcpip/get-netipinterface?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/nettcpip/get-netipinterface?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetIPInterface
 ---
@@ -292,8 +292,8 @@ Accept wildcard characters: False
 
 ### -BaseReachableTimeMs
 Specifies an array of base values of random reachable times, in milliseconds.
-For more information, see RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.
-The default value is 30.
+For more information, see [RFC 2461](https://go.microsoft.com/fwlink/p/?LinkId=84044).
+The default value is 30000.
 
 ```yaml
 Type: UInt32[]

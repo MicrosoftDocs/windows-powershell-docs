@@ -1,7 +1,7 @@
 ---
 external help file: NFS_Cmdlets.xml
 Module Name: NFS
-online version: https://docs.microsoft.com/powershell/module/nfs/new-nfsclientgroup?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/nfs/new-nfsclientgroup?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -70,7 +70,7 @@ Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -AsJob

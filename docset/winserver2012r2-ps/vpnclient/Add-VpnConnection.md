@@ -2,7 +2,7 @@
 external help file: PS_VpnConnection_v1.0.0.cdxml-help.xml
 Module Name: VpnClient
 ms.date: 10/29/2017
-online version: https://docs.microsoft.com/powershell/module/vpnclient/add-vpnconnection?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/vpnclient/add-vpnconnection?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-VpnConnection
 ---
@@ -152,11 +152,11 @@ For more information about custom EAP authentication methods, see the **New-EapC
 
 ### Example 5: Add a VPN connection that uses already generated EAP XML configuration
 ```powershell
-PS C:\> $EAPXml = [xml]Get-Content -Path C:\eap-config.xml
+PS C:\> $EAPXml = Get-Content -Path C:\eap-config.xml
 PS C:\> Add-VpnConnection -Name "Test6" -ServerAddress "10.1.1.1" -TunnelType "L2tp" -EncryptionLevel "Required" -AuthenticationMethod Eap -SplitTunneling -AllUserConnection -RememberCredential -EapConfigXmlStream $EAPXml
 ```
 
-This set of commands adds a VPN connection using an already generated EAP XML configuration. For more information about how to generate EAP XML configuration, see [EAP Configuration](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+This set of commands adds a VPN connection using an already generated EAP XML configuration. For more information about how to generate EAP XML configuration, see [EAP Configuration](/windows/client-management/mdm/eap-configuration).
 
 ## PARAMETERS
 
@@ -573,4 +573,3 @@ The VpnConnection object contains the VpnConnection configuration settings.
 [Remove-VpnConnection](./Remove-VpnConnection.md)
 
 [New-EapConfiguration](./New-EapConfiguration.md)
-

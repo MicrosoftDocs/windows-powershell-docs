@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
 Module Name: ConfigCI
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/configci/new-cipolicyrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 05/23/2022
+online version: https://learn.microsoft.com/powershell/module/configci/new-cipolicyrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-CIPolicyRule
 ---
@@ -202,43 +202,79 @@ This command generates a filepath rule for the specific path verbatim string. Th
 
 ### Example 5: Create a policy rule for a packaged application and its dependencies
 ```
-PS C:\> $package = Get-AppxPackage -Name *Microsoft.Whiteboard*
-PS C:\> $package_dependencies = $package.Dependencies
+PS C:\> $packages = Get-AppxPackage -Name *Microsoft*
+PS C:\> $packages
 
-PS C:\> $package_rule = New-CIPolicyRule -Package $package
-PS C:\> $package_rule += New-CIPolicyRule -Package $dependency[0] # repeat for all dependencies in array
-```
-```output
-PS C:\> $package_rule
+Name              : Microsoft.NET.Native.Runtime.1.4
+Publisher         : CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+Architecture      : X86
+ResourceId        :
+Version           : 1.4.24201.0
+PackageFullName   : Microsoft.NET.Native.Runtime.1.4_1.4.24201.0_x86__8wekyb3d8bbwe
+InstallLocation   : C:\Program Files\WindowsApps\Microsoft.NET.Native.Runtime.1.4_1.4.24201.0_x86__8wekyb3d8bbwe
+IsFramework       : True
+PackageFamilyName : Microsoft.NET.Native.Runtime.1.4_8wekyb3d8bbwe
+PublisherId       : 8wekyb3d8bbwe
+IsResourcePackage : False
+IsBundle          : False
+IsDevelopmentMode : False
+NonRemovable      : False
+IsPartiallyStaged : False
+SignatureKind     : Store
+Status            : Ok
+...
+Name              : Microsoft.NET.Native.Runtime.1.4
+Publisher         : CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+Architecture      : X64
+ResourceId        :
+Version           : 1.4.24201.0
+PackageFullName   : Microsoft.NET.Native.Runtime.1.4_1.4.24201.0_x64__8wekyb3d8bbwe
+InstallLocation   : C:\Program Files\WindowsApps\Microsoft.NET.Native.Runtime.1.4_1.4.24201.0_x64__8wekyb3d8bbwe
+IsFramework       : True
+PackageFamilyName : Microsoft.NET.Native.Runtime.1.4_8wekyb3d8bbwe
+PublisherId       : 8wekyb3d8bbwe
+IsResourcePackage : False
+IsBundle          : False
+IsDevelopmentMode : False
+NonRemovable      : False
+IsPartiallyStaged : False
+SignatureKind     : Store
+Status            : Ok
 
+$package_dependencies = $packages.Dependencies
+$package_rule = New-CIPolicyRule -Package $packages[0] #repeat for all desired packages in the array
+$package_rule += New-CIPolicyRule -Package $package_dependencies[0] # repeat for all dependencies in the array
+$package_rule
 
-Name           : Microsoft.Whiteboard_8wekyb3d8bbwe FileRule
-Id             : ID_ALLOW_A_D
+Name           : Microsoft.NET.Native.Runtime.1.4_8wekyb3d8bbwe FileRule
+Id             : ID_ALLOW_A_1
 TypeId         : Allow
-Root           : 
-FileVersionRef : 
-AppIDRef       : 
+Root           :
+FileVersionRef :
+AppIDRef       :
 Wellknown      : False
-Ekus           : 
-Exceptions     : 
-FileAttributes : 
+Ekus           :
+Exceptions     :
+FileAttributes :
 FileException  : False
 UserMode       : True
-attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [PackageFamilyName, Microsoft.Whiteboard_8wekyb3d8bbwe], [PackageVersion, 21.10503.5662.0]}
+attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [PackageFamilyName,
+                 Microsoft.NET.Native.Runtime.1.4_8wekyb3d8bbwe], [PackageVersion, 1.4.24201.0]}
 
-Name           : Microsoft.NET.Native.Runtime.2.2_8wekyb3d8bbwe FileRule
-Id             : ID_ALLOW_A_E
+Name           : Microsoft.NET.Native.Framework.2.2_8wekyb3d8bbwe FileRule
+Id             : ID_ALLOW_A_2
 TypeId         : Allow
-Root           : 
-FileVersionRef : 
-AppIDRef       : 
+Root           :
+FileVersionRef :
+AppIDRef       :
 Wellknown      : False
-Ekus           : 
-Exceptions     : 
-FileAttributes : 
+Ekus           :
+Exceptions     :
+FileAttributes :
 FileException  : False
 UserMode       : True
-attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [PackageFamilyName, Microsoft.NET.Native.Runtime.2.2_8wekyb3d8bbwe], [PackageVersion, 2.2.28604.0]}
+attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [PackageFamilyName,
+                 Microsoft.NET.Native.Framework.2.2_8wekyb3d8bbwe], [PackageVersion, 2.2.29512.0]}
 ```
 
 This set of commands finds a packaged application matching the specified name and generates an allow rule for the packaged application and its dependencies. 
@@ -349,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePathRule
-Specifies the path of a folder for generating a rule with level set to FilePath. Refer to [Filepath Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#more-information-about-filepath-rules) for acceptable wildcard values and usage. 
+Specifies the path of a folder for generating a rule with level set to FilePath. Refer to [Filepath Rules Info](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#more-information-about-filepath-rules) for acceptable wildcard values and usage. 
 This cmdlet will not check whether the filepath string is a valid filepath. 
 
 ```yaml
@@ -456,4 +492,3 @@ This cmdlet returns the rules that it creates.
 ## RELATED LINKS
 
 [Get-SystemDriver](./Get-SystemDriver.md)
-

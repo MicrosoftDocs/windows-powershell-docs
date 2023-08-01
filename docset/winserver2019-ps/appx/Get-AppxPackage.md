@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 Module Name: Appx
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/appx/get-appxpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/appx/get-appxpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-AppxPackage
 ---
@@ -78,13 +78,6 @@ Accept wildcard characters: False
 
 ### -PackageTypeFilter
 Specifies one or more comma-separated types of packages that the cmdlet gets from the package repository.
-Valid values are: 
-
-- Bundle
-- Framework
-- Main
-- Resource
-- None
 
 By default, this cmdlet returns only packages of types Main and Framework.
 
@@ -92,7 +85,7 @@ By default, this cmdlet returns only packages of types Main and Framework.
 Type: PackageTypes
 Parameter Sets: (All)
 Aliases:
-Accepted values: None, Main, Framework, Resource, Bundle, Xap
+Accepted values: None, Main, Framework, Resource, Bundle, Xap, Optional
 
 Required: False
 Position: Named

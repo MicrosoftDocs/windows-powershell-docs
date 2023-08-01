@@ -5,7 +5,7 @@ external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
 Locale: en-US
 Module Name: SystemInsights
 ms.date: 06/18/2018
-online version: https://docs.microsoft.com/powershell/module/systeminsights/get-insightscapabilityaction?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/systeminsights/get-insightscapabilityaction?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-InsightsCapabilityAction
 ---

@@ -2,7 +2,7 @@
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 Module Name: International
 ms.date: 10/29/2017
-online version: https://docs.microsoft.com/powershell/module/international/get-winuserlanguagelist?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/international/get-winuserlanguagelist?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-WinUserLanguageList
 ---
@@ -87,24 +87,33 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Collections.Generic.List<Microsoft.InternationalSettings.Commands.WinUserLanguage>
-A list of WinUserLanguage objects that contain one or more languages and associated properties from the current user account's language list.
-For information about the Generic.List object, see List(Of T) Classhttp://go.microsoft.com/fwlink/?LinkID=243342.
+This cmdlet returns a list of **WinUserLanguage** objects that contain one or more languages and associated properties from the current user account's language list.
+For information about the **Generic.List** object, see [List(Of T) Class](https://go.microsoft.com/fwlink/?LinkID=243342).
 
-The generic list object supports the following methods:
+The generic list object supports the following methods: 
 
-- Add("BCP-47")
-- Insert(index, "BCP-47")
+- Add("`LanguageTag`")
+- Insert(index, "`LanguageTag`")
 - Remove(Index)
 
-The output language object contains the following properties:
+The output language object contains the following properties: 
 
---**BCP-47** (READ). A standard language tag that is used to identify languages. For more information, see the Internet Engineering Task Force (IETF) BCP 47 RFChttp://go.microsoft.com/fwlink/?LinkID=242207.
---**Autonym** (LP database) (READ). The name of the language in the language itself.
---**English name** (LP database) (READ). The name of the language in English.
---**Localized name** (LP database) (READ). The name of the language in the current Windows display language.
---**Script** (LP database) (READ). The writing system of the language.
---**Input methods** (READ/WRITE). A list of input method Tablet Input Panel (TIP) strings that are enabled for this language. The enabled Input methods are listed in the format Language ID: Keyboard layout ID.
---**Handwriting recognition input mode** (READ/WRITE). This value is either 0 (freehand) or 1 (write each character separately).
+- **LanguageTag** (READ).
+A standard BCP-47 language tag that is used to identify languages.
+For more information, see the [Internet Engineering Task Force (IETF) BCP 47 RFC](https://go.microsoft.com/fwlink/?LinkID=242207). 
+- **Autonym** (LP database) (READ).
+The name of the language in the language itself. 
+- **EnglishName** (LP database) (READ).
+The name of the language in English. 
+- **LocalizedName** (LP database) (READ).
+The name of the language in the current Windows display language. 
+- **ScriptName** (LP database) (READ).
+The writing system of the language. 
+- **InputMethodTips** (READ/WRITE).
+A list of input method Tablet Input Panel (TIP) strings that are enabled for this language.
+The enabled Input methods are listed in the format `Language ID: Keyboard layout ID`. 
+- **Handwriting** (READ/WRITE).
+This value is either 0 (freehand) or 1 (write each character separately).
 
 ## NOTES
 

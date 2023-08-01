@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
 Module Name: TLS
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/tls/disable-tlsciphersuite?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/tls/disable-tlsciphersuite?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-TlsCipherSuite
 ---
@@ -20,16 +20,19 @@ Disable-TlsCipherSuite [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>
 ```
 
 ## DESCRIPTION
-The **Disable-TlsCipherSuite** cmdlet disables a cipher suite.
-This cmdlet removes the cipher suite from the list of Transport Layer Security (TLS) protocol cipher suites for the computer.
 
-For more information about the TLS cipher suites, see the documentation for the Enable-TlsCipherSuite cmdlet or type `Get-Help Enable-TlsCipherSuite`.
+The `Disable-TlsCipherSuite` cmdlet disables a cipher suite. This cmdlet removes the cipher suite
+from the list of Transport Layer Security (TLS) protocol cipher suites for the computer.
+
+For more information about the TLS cipher suites, see the documentation for the
+Enable-TlsCipherSuite cmdlet or type `Get-Help Enable-TlsCipherSuite`.
 
 ## EXAMPLES
 
 ### Example 1: Disable a cipher suite
-```
-PS C:\>Disable-TlsCipherSuite -Name "TLS_RSA_WITH_3DES_EDE_CBC_SHA"
+
+```powershell
+Disable-TlsCipherSuite -Name 'TLS_RSA_WITH_3DES_EDE_CBC_SHA'
 ```
 
 This command disables the cipher suite named TLS_RSA_WITH_3DES_EDE_CBC_SHA.
@@ -38,12 +41,13 @@ The command removes the cipher suite from the list of TLS protocol cipher suites
 ## PARAMETERS
 
 ### -Name
+
 Specifies the name of the TLS cipher suite to disable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -53,10 +57,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -68,10 +73,11 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -83,7 +89,10 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -96,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-TlsCipherSuite](./Enable-TlsCipherSuite.md)
 
 [Get-TlsCipherSuite](./Get-TlsCipherSuite.md)
-

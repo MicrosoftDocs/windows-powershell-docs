@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: System.Object[]
 ms.date: 12/21/2016
-online version: https://docs.microsoft.com/powershell/module/dism/add-appxprovisionedpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dism/add-appxprovisionedpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-AppxProvisionedPackage
 ---
@@ -17,8 +17,8 @@ Adds an app package (.appx) that will install for each new user to a Windows ima
 
 ### Offline
 ```
-Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
- [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] -Path <String> [-WindowsDirectory <String>]
+Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>] 
+ [-OptionalPackagePath <String[]>] [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] -Path <String> [-WindowsDirectory <String>]
  [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>] [-Regions <String>]
  [<CommonParameters>]
 ```
@@ -26,7 +26,7 @@ Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-Depe
 ### Online
 ```
 Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
- [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] [-Online] [-WindowsDirectory <String>]
+  [-OptionalPackagePath <String[]>] [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] [-Online] [-WindowsDirectory <String>]
  [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>] [-Regions <String>]
  [<CommonParameters>]
 ```
@@ -39,7 +39,7 @@ For example, you must install the x86 dependency on the x86 image.
 You cannot install an app package (.appx) on an operating system that does not support Windows 8 apps.
 Apps are not supported on Server Core installations of Windows Server 2012, Windows Preinstallation Environment (Windows PE) 4.0, or on any versions of Windows older than Windows 8 and Windows Server 2012.
 
-To install and run apps on Windows Server 2016, you must install the [Install Server with Desktop Experience](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-with-desktop-experience).
+To install and run apps on Windows Server 2016, you must install the [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience).
 
 Use the *Online* parameter to specify the running operating system on your local computer, or use the *Path* parameter to specify the location of a mounted Windows image.
 
@@ -50,7 +50,7 @@ Use the *FolderPath* parameter to specify the location of a folder of unpacked a
 
 To add an app package (.appx) for a particular user, or to test a package while developing your app, use the **Add-AppxPackage** cmdlet instead.
 
-For more information, including requirements for app package provisioning, see [Sideload Apps with DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sideload-apps-with-dism-s14) and [How to develop an OEM app that uses a custom file](https://docs.microsoft.com/windows/win32/appxpkg/how-to-develop-oem-app-with-custom-file) in MicrosoftDocs.
+For more information, including requirements for app package provisioning, see [Sideload Apps with DISM](/windows-hardware/manufacture/desktop/sideload-apps-with-dism-s14) and [How to develop an OEM app that uses a custom file](/windows/win32/appxpkg/how-to-develop-oem-app-with-custom-file) in MicrosoftDocs.
 
 ## EXAMPLES
 
@@ -179,6 +179,23 @@ Parameter Sets: Online
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OptionalPackagePath
+Specifies the path to an optional package that will also be provisioned. For more information on
+optional packages, see
+[Optional packages and related set authoring](/windows/msix/package/optional-packages).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

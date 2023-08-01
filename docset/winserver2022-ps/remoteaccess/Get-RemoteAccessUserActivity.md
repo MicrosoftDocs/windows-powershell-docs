@@ -52,24 +52,28 @@ However, only one of these filters can be used at a time.
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
-PS C:\>$startdate = Get-Date -Date "12/16/2011"
+
+```powershell
+$startdate = Get-Date -Date "12/16/2011"
 
 
 
-PS C:\>$startdate
+$startdate
 16 December 2011 00:00:00
 
 
-PS C:\>$enddate = Get-Date -Date "12/23/2011"
+$enddate = Get-Date -Date "12/23/2011"
 
 
 
-PS C:\>$enddate
+$enddate
 
 
 
-PS C:\>Get-RemoteAccessUserActivity -StartDateTime $startdate -EndDateTime $enddate -UserName "corp.contoso.com\User1"
+Get-RemoteAccessUserActivity -StartDateTime $startdate -EndDateTime $enddate -UserName "corp.contoso.com\User1"
+```
+
+```output
 ServerIpAddress                          ProtocolID                     ServerPort 
 ---------------                          ----------                     ---------- 
 2001:4898:0:fff:0:5efe:10.57.36.131      6                              443 
@@ -80,8 +84,12 @@ This example shows historic access details for a particular user.
 Query the accounting store for user activity details for User1 between the start date and end date.
 
 ### EXAMPLE 2
+
+```powershell
+Get-RemoteAccessUserActivity -UserName "contoso\User1" -ComputerName edge1.corp.contoso.com
 ```
-PS C:\>Get-RemoteAccessUserActivity -UserName "contoso\User1" -ComputerName edge1.corp.contoso.com
+
+```output
 ServerIpAddress                          ProtocolID                     ServerPort 
 ---------------                          ----------                     ---------- 
 2001:4898:0:fff:0:5efe:10.166.20.136     6                              80 

@@ -26,31 +26,35 @@ Get-HgsAttestationBaselinePolicy [-Console] [-SkipValidation] [<CommonParameters
 ```
 
 ## DESCRIPTION
-The **Get-HgsAttestationBaselinePolicy** cmdlet generates an attestation baseline policy.
-You can use the policy to configure the attestation service.
 
-This cmdlet gets a byte array that represents the attestation baseline policy from the raw data of the last full boot from the Trusted Computing Group log of the Trusted Platform Module (TPM).
+The `Get-HgsAttestationBaselinePolicy` cmdlet generates an attestation baseline policy. You can use
+the policy to configure the attestation service.
+
+This cmdlet gets a byte array that represents the attestation baseline policy from the raw data of
+the last full boot from the Trusted Computing Group log of the Trusted Platform Module (TPM).
 
 Be sure to run this cmdlet on a host that is known to have good configuration.
 
 ## EXAMPLES
 
 ### Example 1: Generate a baseline policy
-```
-PS C:\> Get-HgsAttestationBaselinePolicy -Path "C:\Logs\AttestationBaselinePolicy001" -Force
+
+```powershell
+Get-HgsAttestationBaselinePolicy -Path 'C:\Logs\AttestationBaselinePolicy001' -Force
 ```
 
-This command generates a byte array that represents the baseline policy in the file C:\Logs\AttestationBaselinePolicy001.
+This command generates a byte array that represents the baseline policy in the file `C:\Logs\AttestationBaselinePolicy001`.
 
 ## PARAMETERS
 
 ### -Console
+
 Indicates that this cmdlet operates in console mode.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Console
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -60,12 +64,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Indicates that this cmdlet overwrites an existing file that the **Output** object specifies.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: File
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,11 +80,12 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
 Specifies a file path.
 This cmdlet writes the policy to the file that this parameter specifies.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: File
 Aliases: FilePath
 
@@ -91,12 +97,13 @@ Accept wildcard characters: False
 ```
 
 ### -SkipValidation
+
 Indicates that this cmdlet skips validation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Diagnostics.Switch
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +113,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -117,4 +128,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

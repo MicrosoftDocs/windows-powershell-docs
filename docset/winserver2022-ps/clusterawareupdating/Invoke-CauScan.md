@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
+ms.date: 09/27/2022
 online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/invoke-causcan?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-CauScan
@@ -19,15 +19,16 @@ updates that are applied to each node in a specified cluster.
 ```
 Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential]
 <PSCredential>] [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure]
-[<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Invoke-CauScan** cmdlet performs a scan of cluster nodes for applicable updates and gets a
+
+The `Invoke-CauScan` cmdlet performs a scan of cluster nodes for applicable updates and gets a
 list of the initial set of updates that are applied to each node in a specified cluster. Generation
 of the list can take a few minutes to complete.
 
-The preview list includes only an initial set of updates. The list does not include updates that
+The preview list includes only an initial set of updates. The list doesn't include updates that
 might become applicable after the initial updates are installed.
 
 If the **Microsoft.HotfixPlugin** plug-in is specified, the scan gets only the list of hotfix files
@@ -36,41 +37,57 @@ that are discovered on the hotfix file share.
 ## EXAMPLES
 
 ### Example 1: Get a detailed list of the initial set of updates on the specified cluster
-```
-PS C:\> Invoke-CauScan -ClusterName "CONTOSO-FC1" -CauPluginName "Microsoft.WindowsUpdatePlugin" -Verbose
+
+```powershell
+Invoke-CauScan -ClusterName "CONTOSO-FC1" -CauPluginName "Microsoft.WindowsUpdatePlugin" -Verbose
 ```
 
 This command gets a detailed list of the initial set of updates that would currently be applied to
 each node in the cluster named CONTOSO-FC1. The list is based on the updates that would be applied
 by the **Microsoft.WindowsUpdatePlugin** plug-in, which is the default plug-in. The preview list
-includes only an initial set of updates, and does not include updates that might become applicable
+includes only an initial set of updates, and doesn't include updates that might become applicable
 only after the initial updates are installed.
 
 ### Example 2: Get a detailed list of the initial set of updates on the specified cluster using a query string
-```
-PS C:\>$SecPasswd = ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force
-PS C:\> $Cred = New-Object System.Management.Automation.PSCredential ("username", $SecPasswd)
-PS C:\> Invoke-CauScan -ClusterName CONTOSO-FC1 -CauPluginName Microsoft.WindowsUpdatePlugin, Microsoft.HotfixPlugin -CauPluginArguments @{'QueryString'="IsInstalled=0 and Type='Software' and IsHidden=0"},@{'HotfixRootFolderPath' = '\\CauHotfixSrv\shareName'} -Credential $Cred
+
+```powershell
+$SecPasswd = ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force 
+$Cred = New-Object System.Management.Automation.PSCredential ("username", $SecPasswd) 
+$parameters = @{
+    ClusterName = 'CONTOSO-FC1'
+    CauPluginName = 'Microsoft.WindowsUpdatePlugin',
+                    'Microsoft.HotfixPlugin'
+    CauPluginArguments = @{'QueryString'="IsInstalled=0 and Type='Software' and IsHidden=0"},
+                         @{'HotfixRootFolderPath' = '\\CauHotfixSrv\shareName'}
+    StopOnPluginFailure = $true
+    EnableFirewallRules = $true
+    Force = $true
+}
+Invoke-CauScan $parameters -Credential $Cred
 ```
 
 This example gets a detailed list of the initial set of updates that would currently be applied to
 each node in the cluster named CONTOSO-FC1. The list is based on the updates that would be applied
 by the **Microsoft.WindowsUpdatePlugin** plug-in, using a specified query string, and the
 **Microsoft.HotfixPlugin**, after the necessary hotfixes and the hotfix configuration file have been
-downloaded to \\\\CauHotfixSrv\shareName. This example also shows how to pass the administrative
+downloaded to `\\CauHotfixSrv\shareName`. This example also shows how to pass the administrative
 credentials for cluster CONTOSO-FC1 to the cmdlet.
+
+This example uses splatting to pass parameter values from the `$parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 
 ### -CauPluginArguments
+
 Specifies a set of name=value pairs for each updating plug-in to use.
 For instance, to specify a **Domain** argument for one plug-in: 
 - `@{Domain=Domain.local}`
 You can specify multiple pairs in a set separated with semicolons.
 For instance: 
 - `@{name1=value1;name2=value2;name3=value3}` These name=value pairs must be meaningful to the
-  *CauPluginName* parameter that you specify. If you specify arguments for more than one plug-in,
-  provide the sets of name=value pairs in the order that you pass values into the *CauPluginName*
+  **CauPluginName** parameter that you specify. If you specify arguments for more than one plug-in,
+  provide the sets of name=value pairs in the order that you pass values into the **CauPluginName**
   parameter, separated by commas. For instance:
 - `@{name1=value1;name2=value2;name3=value3},@{name4=value4;name5=value5}`
 
@@ -123,6 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -CauPluginName
+
 Specifies one or more plug-ins to use when performing scans. You can specify multiple values
 separated with commas. The default is the **Microsoft.WindowsUpdatePlugin** plug-in. This plug-in
 coordinates the Windows Update Agent software resident on each cluster node, the same software that
@@ -144,8 +162,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClusterName
+
 Specifies the name of the cluster which should be scanned for applicable updates. This parameter is
-only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to
+only required when this cmdlet isn't run on a failover cluster node, or this cmdlet is used to
 reference a failover cluster different from where the cmdlet is run.
 
 ```yaml
@@ -161,6 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the administrative credentials for the target cluster.
 
 ```yaml
@@ -176,12 +196,13 @@ Accept wildcard characters: False
 ```
 
 ### -RunPluginsSerially
+
 Indicates that CAU scans each cluster node for applicable updates and stages the updates for each
-plug-in in the plug-in order passed into the *CauPluginName* parameter then multiple plug-ins are
+plug-in in the plug-in order passed into the **CauPluginName** parameter then multiple plug-ins are
 used during a scan for updates
 
 By default, CAU scans and stages the applicable updates for all plug-ins in parallel.
-This parameter is valid only when multiple plug-ins are specified in *CauPluginName* parameter.
+This parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter.
 If a single plug-in is specified, a warning appears.
 
 ```yaml
@@ -197,11 +218,12 @@ Accept wildcard characters: False
 ```
 
 ### -StopOnPluginFailure
+
 Indicates that if a failure occurs during a scan on a node by any plug-in, subsequent scans on the
 node that are coordinated by the remaining plug-ins are stopped when multiple plug-ins are used
 during a scan for updates.
 
-The parameter is valid only when multiple plug-ins are specified in the *CauPluginName* parameter.
+The parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter.
 If a single plug-in is specified, a warning appears.
 
 ```yaml
@@ -217,6 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see

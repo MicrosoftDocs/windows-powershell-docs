@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterlog?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterLog
@@ -23,7 +23,7 @@ Get-ClusterLog [[-Node] <StringCollection>] [-Destination <String>] [-TimeSpan <
 
 ## DESCRIPTION
 
-The **Get-ClusterLog** cmdlet creates a log file for all nodes, or a specific a node, in a failover
+The `Get-ClusterLog` cmdlet creates a log file for all nodes, or a specific a node, in a failover
 cluster.
 
 When creating a log file for the cluster, you can specify the timespan that you want logged
@@ -36,25 +36,17 @@ authentication on the server computer.
 
 ### Example 1: Create a log file for the local cluster
 
-```
-PS C:\> Get-ClusterLog
-Mode                LastWriteTime     Length Name 
-----                -------------     ------ ---- 
--a---          9/4/2008   3:53 PM    2211301 Cluster.log 
--a---          9/4/2008   3:53 PM    1261025 Cluster.log
+```powershell
+Get-ClusterLog
 ```
 
 This command creates a log file for the local cluster in the cluster reports folder
-(C:\Windows\Cluster\Reports) on each node of the cluster.
+`C:\Windows\Cluster\Reports` on each node of the cluster.
 
 ### Example 2: Create log files for each node and save them locally
 
-```
-PS C:\> Get-ClusterLog -Destination .
-Mode                LastWriteTime     Length Name 
-----                -------------     ------ ---- 
--a---          9/4/2008   3:55 PM    2211301 node1_cluster.log 
--a---          9/4/2008   3:55 PM    1261025 node2_cluster.log
+```powershell
+Get-ClusterLog -Destination .
 ```
 
 This command creates a log file for each node of the local cluster, and copies all logs to the local
@@ -62,16 +54,12 @@ folder.
 
 ### Example 3: Create a log file for the local cluster for previous five minutes
 
-```
-PS C:\> Get-ClusterLog -TimeSpan 5
-Mode                LastWriteTime     Length Name 
-----                -------------     ------ ---- 
--a---          9/4/2008   3:58 PM     128299 Cluster.log 
--a---          9/4/2008   4:01 PM     104181 Cluster.log
+```powershell
+Get-ClusterLog -TimeSpan 5
 ```
 
 This command creates a log file for the local cluster in the cluster reports folder
-(C:\Windows\Cluster\Reports) on each node of the cluster. The log covers the last 5 minutes.
+`C:\Windows\Cluster\Reports` on each node of the cluster. The log covers the last 5 minutes.
 
 ## PARAMETERS
 
@@ -95,7 +83,7 @@ Accept wildcard characters: False
 ### -Destination
 
 Specifies the location to which to copy one or more cluster logs. To copy to the current folder, use
-`.` for this parameter input. Default location is C:\Windows\Cluster\Reports.
+`.` for this parameter input. Default location is `C:\Windows\Cluster\Reports`.
 
 ```yaml
 Type: String
@@ -159,7 +147,7 @@ Accept wildcard characters: False
 
 ### -SkipClusterState
 
-Indicates that the cmdlet does not add additional cluster state information to the cluster logs.
+Indicates that the cmdlet doesn't add additional cluster state information to the cluster logs.
 
 ```yaml
 Type: SwitchParameter

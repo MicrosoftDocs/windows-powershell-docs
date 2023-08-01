@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/24/2022
+ms.date: 10/20/2022
 online version: /powershell/module/smbshare/set-smbserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SmbServerConfiguration
@@ -19,16 +19,17 @@ Sets the Server Message Block (SMB) server configuration.
 Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean>]
  [-AsynchronousCredits <UInt32>] [-AuditSmb1Access <Boolean>] [-AutoDisconnectTimeout <UInt32>]
  [-AutoShareServer <Boolean>] [-AutoShareWorkstation <Boolean>] [-CachedOpenLimit <UInt32>]
- [-DisableSmbEncryptionOnSecureConnection <Boolean>] [-DurableHandleV2TimeoutInSeconds <UInt32>]
- [-EnableAuthenticateUserSharing <Boolean>] [-EnableDownlevelTimewarp <Boolean>]
- [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>] [-EnableMultiChannel <Boolean>]
- [-EnableOplocks <Boolean>] [-EnableSecuritySignature <Boolean>] [-EnableSMB1Protocol <Boolean>]
- [-EnableSMB2Protocol <Boolean>] [-EnableSMBQUIC <Boolean>] [-EnableStrictNameChecking <Boolean>]
- [-EncryptData <Boolean>] [-EncryptionCiphers <String>] [-IrpStackSize <UInt32>]
- [-KeepAliveTime <UInt32>] [-MaxChannelPerSession <UInt32>] [-MaxMpxCount <UInt32>]
- [-MaxSessionPerConnection <UInt32>] [-MaxThreadsPerQueue <UInt32>] [-MaxWorkItems <UInt32>]
- [-NullSessionPipes <String>] [-NullSessionShares <String>] [-OplockBreakWait <UInt32>]
- [-PendingClientTimeoutInSeconds <UInt32>] [-RejectUnencryptedAccess <Boolean>]
+ [-DisableCompression <Boolean>] [-DisableSmbEncryptionOnSecureConnection <Boolean>]
+ [-DurableHandleV2TimeoutInSeconds <UInt32>] [-EnableAuthenticateUserSharing <Boolean>]
+ [-EnableDownlevelTimewarp <Boolean>] [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>]
+ [-EnableMultiChannel <Boolean>] [-EnableOplocks <Boolean>] [-EnableSecuritySignature <Boolean>]
+ [-EnableSMB1Protocol <Boolean>] [-EnableSMB2Protocol <Boolean>] [-EnableSMBQUIC <Boolean>]
+ [-EnableStrictNameChecking <Boolean>] [-EncryptData <Boolean>] [-EncryptionCiphers <String>]
+ [-IrpStackSize <UInt32>] [-KeepAliveTime <UInt32>] [-MaxChannelPerSession <UInt32>]
+ [-MaxMpxCount <UInt32>] [-MaxSessionPerConnection <UInt32>] [-MaxThreadsPerQueue <UInt32>]
+ [-MaxWorkItems <UInt32>] [-NullSessionPipes <String>] [-NullSessionShares <String>]
+ [-OplockBreakWait <UInt32>] [-PendingClientTimeoutInSeconds <UInt32>]
+ [-RejectUnencryptedAccess <Boolean>] [-RequestCompression <Boolean>]
  [-RequireSecuritySignature <Boolean>] [-RestrictNamedpipeAccessViaQuic <Boolean>]
  [-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>] [-Smb2CreditsMin <UInt32>]
  [-SmbServerNameHardeningLevel <UInt32>] [-TreatHostAsStableStorage <Boolean>]
@@ -46,10 +47,15 @@ For more information on SMB server and protocol specifications, see
 and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and 3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 > [!NOTE]
-> The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
-> Microsoft server operating system version 21H2 for x64-based Systems
-> ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
-> version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+> - The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
+>   Microsoft server operating system version 21H2 for x64-based Systems
+>   ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
+>   version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+>
+> - The **DisableCompression** and **RequestCompression** parameters are available beginning with
+>   2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
+>   Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
+>   Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
 
 ## EXAMPLES
 
@@ -65,9 +71,9 @@ This command sets the SMB Service configuration without user confirmation.
 
 ```powershell
 $Parameters = @{
-    RequireSecuritySignature = $True
-    EnableSecuritySignature = $True
-    EncryptData = $True
+    RequireSecuritySignature = $true
+    EnableSecuritySignature = $true
+    EncryptData = $true
     Confirm = $false
 }
 Set-SmbServerConfiguration @Parameters
@@ -80,7 +86,7 @@ splatting to pass parameter values from the `$Parameters` variable to the comman
 ### Example 3: Turn off the default server and workstations shares
 
 ```powershell
-Set-SmbServerConfiguration -AutoShareServer $False -AutoShareWorkstation $False -Confirm:$false
+Set-SmbServerConfiguration -AutoShareServer $false -AutoShareWorkstation $false -Confirm:$false
 ```
 
 This command turns off the default server and workstations shares without user confirmation.
@@ -88,7 +94,7 @@ This command turns off the default server and workstations shares without user c
 ### Example 4: Turn off server announcements
 
 ```powershell
-Set-SmbServerConfiguration -ServerHidden $False -AnnounceServer $False -Confirm:$false
+Set-SmbServerConfiguration -ServerHidden $false -AnnounceServer $false -Confirm:$false
 ```
 
 This command turns off server announcements without user confirmation.
@@ -269,6 +275,23 @@ current session on the local computer.
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableCompression
+
+Indicates that the SMB server should never compress files even if client or application requested
+it.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -715,8 +738,25 @@ Accept wildcard characters: False
 
 ### -RejectUnencryptedAccess
 
-Indicates whether the client that does not support encryption is denied access if it attempts to
+Indicates whether the client that doesn't support encryption is denied access if it attempts to
 connect to an encrypted share.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestCompression
+
+Indicates if SMB server should always request compression even if client or application didn't
+specify it.
 
 ```yaml
 Type: Boolean
@@ -748,7 +788,7 @@ Accept wildcard characters: False
 
 ### -RestrictNamedpipeAccessViaQuic
 
-Specifies that named pipes are allowed when using SMB over QUIC. A value of $TRUE prevents use of
+Specifies that named pipes are allowed when using SMB over QUIC. A value of `$true` prevents use of
 named pipes and is the default.
 
 ```yaml
@@ -866,7 +906,7 @@ Accept wildcard characters: False
 
 ### -ValidateAliasNotCircular
 
-Indicates whether the aliases that are not circular are validated.
+Indicates whether the aliases that aren't circular are validated.
 
 ```yaml
 Type: Boolean
@@ -946,7 +986,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

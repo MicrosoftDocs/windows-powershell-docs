@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterFaultDomain.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/new-clusterfaultdomain?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ClusterFaultDomain
@@ -23,22 +23,19 @@ New-ClusterFaultDomain -Name <String> [-FaultDomain <String>] -FaultDomainType <
 
 ## DESCRIPTION
 
-The **New-ClusterFaultDomain** cmdlet creates a fault domain in the cluster. Additionally, you can
+The `New-ClusterFaultDomain` cmdlet creates a fault domain in the cluster. Additionally, you can
 specify the relationship between the fault domains when they are created.
 
 ## EXAMPLES
 
 ### Example 1: Create a cluster fault domain in an existing fault domain
 
-```
-PS C:\> New-ClusterFaultDomain -Type Rack -Name "Rack1" -FaultDomain "Site001"
-Name  Type ParentName ChildrenNames
-----  ---- ---------- -------------
-Rack1 Rack Site1
+```powershell
+New-ClusterFaultDomain -Type Rack -Name "Rack1" -FaultDomain "Site001"
 ```
 
-This command creates a cluster fault domain of type Rack named Rack1 in the existing fault domain
-named Site001.
+This command creates a cluster fault domain of type Rack named `Rack1` in the existing fault domain
+named `Site001`.
 
 ## PARAMETERS
 
@@ -124,10 +121,10 @@ Specifies the type of the fault domain that this cmdlet creates.
 
 The acceptable values for this parameter are:
 
-- Site
-- Rack
-- Chassis
-- Node
+- `Site`
+- `Rack`
+- `Chassis`
+- `Node`
 
 ```yaml
 Type: FaultDomainType
@@ -193,7 +190,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

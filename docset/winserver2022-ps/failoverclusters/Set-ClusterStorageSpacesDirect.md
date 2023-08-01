@@ -23,18 +23,18 @@ Set-ClusterStorageSpacesDirect [-CacheState <CacheStateType>] [-CacheModeHDD <Ca
 
 ## DESCRIPTION
 
-The **Set-ClusterStorageSpacesDirect** cmdlet sets Storage Spaces Direct (S2D) cache parameters.
+The `Set-ClusterStorageSpacesDirect` cmdlet sets Storage Spaces Direct (S2D) cache parameters.
 
 ## EXAMPLES
 
 ### Example 1: Set S2D cache parameters
 
-```
-PS C:\> Set-ClusterStorageSpacesDirect -CimSession "K0619-C2.cfdev.nttest.contoso.com" -CacheModeHDD ReadWrite
+```powershell
+Set-ClusterStorageSpacesDirect -CimSession "cluster01.contoso.com" -CacheModeHDD ReadWrite
 ```
 
 The following command sets the S2D cache parameter as ReadWrite on the cluster named
-K0619-C2.cfdev.nttest.contoso.com.
+`cluster01.contoso.com`.
 
 ## PARAMETERS
 
@@ -67,9 +67,9 @@ Accept wildcard characters: False
 
 Specifies the cache mode of the hard disk drive. The acceptable values for this parameter are:
 
-- ReadOnly
-- WriteOnly
-- ReadWrite
+- `ReadOnly`
+- `WriteOnly`
+- `ReadWrite`
 
 ```yaml
 Type: CacheModeType
@@ -88,9 +88,9 @@ Accept wildcard characters: False
 
 Specifies the cache mode of the solid state drive. The acceptable values for this parameter are:
 
-- ReadOnly
-- WriteOnly
-- ReadWrite
+- `ReadOnly`
+- `WriteOnly`
+- `ReadWrite`
 
 ```yaml
 Type: CacheModeType
@@ -107,8 +107,8 @@ Accept wildcard characters: False
 
 ### -CacheState
 
-Specifies the S2D cache state. The acceptable values for this parameter are: Enabled or Disabled.
-The default value is Enabled.
+Specifies the S2D cache state. The acceptable values for this parameter are: `Enabled` or
+`Disabled`. The default value is `Enabled`.
 
 ```yaml
 Type: CacheStateType
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ### -SkipEligibilityChecks
 
 Indicates that the cmdlet skips cache eligibility checks. If cache stores are found with data
-partitions on them, then you can use Enable-ClusterStorageSpacesDirect with the cache state as
+partitions on them, then you can use `Enable-ClusterStorageSpacesDirect` with the cache state as
 Disabled but not as ReadOnly or ReadWrite.
 
 ```yaml
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

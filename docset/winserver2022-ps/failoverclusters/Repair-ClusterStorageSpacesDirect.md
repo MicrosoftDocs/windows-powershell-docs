@@ -33,18 +33,17 @@ Repair-ClusterStorageSpacesDirect [-DisableStorageMaintenanceMode] [-Node <Strin
 
 ## DESCRIPTION
 
-The **Repair-ClusterStorageSpacesDirect** cmdlet repairs Storage Spaces Direct (S2D) disks.
+The `Repair-ClusterStorageSpacesDirect` cmdlet repairs Storage Spaces Direct (S2D) disks.
 
 ## EXAMPLES
 
 ### Example 1: Repair S2D on all nodes
 
-```
-PS C:\> Repair-ClusterStorageSpacesDirect -Verbose -Confirm:$False
-VERBOSE: Performing operation 'Repair Cluster Storage Spaces Direct' on Target 'K0619-C1'.
+```powershell
+Repair-ClusterStorageSpacesDirect -Verbose -Confirm:$False
 ```
 
-This command repairs S2D on all nodes.
+This command repairs S2D on all nodes without user confirmation.
 
 ## PARAMETERS
 
@@ -127,7 +126,7 @@ Accept wildcard characters: False
 
 ### -Node
 
-Specifies a node on which the cmdlet performs the operation. If you do not specify a value, all
+Specifies a node on which the cmdlet performs the operation. If you don't specify a value, all
 nodes are used.
 
 ```yaml
@@ -181,7 +180,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.
@@ -200,7 +199,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

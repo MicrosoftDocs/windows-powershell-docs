@@ -1,4 +1,4 @@
-
+---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterCollection.cdxml-help.xml
 Module Name: FailoverClusters
@@ -31,17 +31,18 @@ Remove-ClusterGroupFromSet -InputObject <CimInstance[]> [-Group] <String>
 
 ## DESCRIPTION
 
-The **Remove-ClusterGroupFromSet** cmdlet removes a group from a set.
+The `Remove-ClusterGroupFromSet` cmdlet removes a group from a set.
 
 ## EXAMPLES
 
 ### Example 1: Remove a group from the specified group set
 
-```
-PS C:\> Remove-ClusterGroupFromSet -Name "Set001" -Group "Group001"
+```powershell
+Remove-ClusterGroupSetDependency -Name "Set001" -Provider "Set002"
 ```
 
-This command removes the group named Group001 from group set named Set001.
+This command removes the group set named `Set002` from being a provider for the group set named
+`Set001`.
 
 ## PARAMETERS
 
@@ -139,7 +140,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet does not
+Returns an object representing the item with which you are working. By default, this cmdlet doesn't
 generate any output.
 
 ```yaml

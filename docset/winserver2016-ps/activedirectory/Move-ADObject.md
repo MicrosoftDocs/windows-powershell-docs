@@ -37,6 +37,7 @@ You can also use the **Get-ADGroup**, **Get-ADUser**, **Get-ADComputer**, **Get-
 The *TargetPath* parameter must be specified.
 This parameter identifies the new location for the object or container.
 
+The Cmdlet also moves the password when a user or computer object is moved across domains within a forest.
 ## EXAMPLES
 
 ### Example 1: Move an OU to a new location

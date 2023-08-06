@@ -21,7 +21,7 @@ Move-ADObject [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCred
 ```
 
 ## DESCRIPTION
-The **Move-ADObject** cmdlet moves an object or a container of objects from one container to another or from one domain to another.
+The **Move-ADObject** cmdlet moves an object or a container of objects from one container to another or from one domain to another within the same forest.
 
 The **Identity** parameter specifies the Active Directory object or container to move.
 You can identify an object or container by its distinguished name or GUID.

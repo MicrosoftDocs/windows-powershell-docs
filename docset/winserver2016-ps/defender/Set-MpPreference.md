@@ -588,7 +588,7 @@ Accept wildcard characters: False
 
 ### -OobeEnableRtpAndSigUpdate
 
-This setting allows you to configure whether real-time protection and Security Intelligence Updates are enabled during OOBE (Out of Box experience).
+This setting allows you to configure whether real-time protection and Security Intelligence Updates are enabled during Out of Box experience (OOBE).
 
 Valid values are:
 True -	If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.

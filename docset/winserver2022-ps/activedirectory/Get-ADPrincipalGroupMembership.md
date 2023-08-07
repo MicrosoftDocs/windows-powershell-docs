@@ -287,7 +287,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: DefaultNC; Provider: Default is to use the Partition that you are currently in. Else, use DefaultNC (IE: If you are in the RootDSE)
+Default value: DefaultNC; Provider: The default is to use the Partition that you are currently in. Otherwise, use DefaultNC (that is, if you are in the RootDSE)
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -694,8 +694,8 @@ Accept wildcard characters: False
 This setting allows you to configure whether real-time protection and Security Intelligence Updates are enabled during Out of Box experience (OOBE).
 
 Valid values are:
-True - If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.
-False (Default) - If you either disable or don't configure this setting, real-time protection and Security Intelligence Updates during OOBE aren't enabled.
+- True - If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.
+- False (Default) - If you either disable or don't configure this setting, real-time protection and Security Intelligence Updates during OOBE aren't enabled.
 
 ```yaml
 Type: Boolean

@@ -26,8 +26,11 @@ The **Get-RemoteAccessRoutingDomain** cmdlet retrieves routing domain configurat
 ## EXAMPLES
 
 ### Example 1: Retrieve configuration for a specific routing domain
+```powershell
+Get-RemoteAccessRoutingDomain -Name Rd_01
 ```
-PS C:\> Get-RemoteAccessRoutingDomain -Name Rd_01
+
+```Output
 
 RoutingDomain                  : Rd_01
 RoutingDomainID                : {11111111-1111-1111-1111-111111111001}

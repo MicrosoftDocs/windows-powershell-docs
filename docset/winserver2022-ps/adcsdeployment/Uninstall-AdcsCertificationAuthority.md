@@ -16,24 +16,30 @@ Uninstalls the CA role service and removes the configuration information.
 ## SYNTAX
 
 ```
-Uninstall-AdcsCertificationAuthority [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Uninstall-AdcsCertificationAuthority [-Force] [-WhatIf] [-Confirm] 
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Uninstall-AdcsCertificationAuthority** cmdlet removes the Active certificate authority (CA) role and removes the configuration information.
+
+The `Uninstall-AdcsCertificationAuthority` cmdlet removes the Active certificate authority (CA) role
+and removes the configuration information.
 
 ## EXAMPLES
 
 ### Example 1: Uninstall the Active Directory CA role service
-```
-PS C:\> Uninstall-AdcsCertificationAuthority -Force
+
+```powershell
+Uninstall-AdcsCertificationAuthority -Force
 ```
 
-This command uninstalls the Active Directory Certification Authority role service and does not prompt for user confirmation.
+This command uninstalls the Active Directory Certification Authority role service and does not
+prompt for user confirmation.
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -49,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -64,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -80,7 +88,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,9 +103,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.CertificateServices.Deployment.Common.CA.CertificationAuthoritySetupResult
 
 ## NOTES
-* To uninstall the CA role service, ensure you run Windows PowerShell as an administrator. You can run the command with the *Force* parameter to bypass the prompt for confirmation.
+
+- To uninstall the CA role service, ensure you run Windows PowerShell as an administrator. You can
+  run the command with the **Force** parameter to bypass the prompt for confirmation.
 
 ## RELATED LINKS
 
 [Install-AdcsCertificationAuthority](./Install-AdcsCertificationAuthority.md)
-

@@ -11,7 +11,7 @@ title: New-SmbGlobalMapping
 # New-SmbGlobalMapping
 
 ## SYNOPSIS
-Specifies Server Message Block (SMB) leasing and oplock behaviors.
+Creates an SMB global mapping.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ New-SmbGlobalMapping [[-LocalPath] <String>] [-RemotePath] <String> -Credential 
 ```
 
 ## DESCRIPTION
-The **New-SmbGlobalMapping** cmdlet creates an SMB global mapping on the SMB client to an SMB share. Global mappings allow all users to use the same mapping. Its primary use is for Windows Containers.
+The **New-SmbGlobalMapping** cmdlet creates an SMB global mapping on the SMB client to an SMB share. Global mappings allow all users to use the same mapping. Its primary use is for Windows Containers. Global mappings support standalone and failover cluster SMB shares, they do not support DFS Namespace folder shares.
 
 ## EXAMPLES
 

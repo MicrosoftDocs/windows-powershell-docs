@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clustersharedvolumestate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterSharedVolumeState
@@ -26,32 +26,10 @@ The `Get-ClusterSharedVolumeState` cmdlet gets the state of Cluster Shared Volum
 
 ## EXAMPLES
 
-### 1:
+### Example 1
 
-```
-PS C:\> Get-ClusterSharedVolumeState
-Name                : Cluster Disk X 
-VolumeName          : \\?\Volume{2297f079-53c2-41e9-94d1-483d61ea94d7}\
-Node                : ClusterNode1
-State               : Direct
-
-VolumeFriendlyName  : Volume1
-RedirectedIOReason  : NotRedirected
-
-Name                : Cluster Disk Y 
-VolumeName          : \\?\Volume{0312ef48-74c7-4a4d-946e-4bb4a397ad1f}\
-Node                : ClusterNode2
-State               : File System Redirected
-
-VolumeFriendlyName  : Volume2
-RedirectedIOReason  : UserRequest
-
-Name                : Cluster Disk Z 
-VolumeName          : \\?\Volume{c4689cef-83e3-4f47-9eaf-161a9e31c5a0}\
-Node                : ClusterNode3
-State               : Block Redirected
-VolumeFriendlyName  : Volume3
-RedirectedIOReason  : NoDiskConnectivity
+```powershell
+Get-ClusterSharedVolumeState
 ```
 
 This command gets the state of Cluster Shared Volumes on the local cluster.

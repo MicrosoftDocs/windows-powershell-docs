@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-Cluster
@@ -34,8 +34,8 @@ authentication on the server computer.
 
 ### Example 1
 
-```
-PS C:\> Remove-Cluster
+```powershell
+Remove-Cluster
 ```
 
 This example prompts the user for confirmation, then destroys the local failover cluster and removes
@@ -43,8 +43,8 @@ cluster configuration information from the cluster nodes.
 
 ### Example 2
 
-```
-PS C:\> Remove-Cluster -Force
+```powershell
+Remove-Cluster -Force
 ```
 
 This example destroys the local failover cluster and removes cluster configuration information from
@@ -52,13 +52,13 @@ the cluster nodes. The cmdlet doesn't prompt for confirmation.
 
 ### Example 3
 
-```
-PS C:\> Get-Cluster -Name Cluster1 | Remove-Cluster -Force -CleanupAD
+```powershell
+Get-Cluster -Name Cluster1 | Remove-Cluster -Force -CleanupAD
 ```
 
-This example destroys the cluster named Cluster1, removes cluster configuration information from the
-cluster nodes, and deletes the cluster objects in Active Directory. The cmdlet doesn't prompt for
-confirmation.
+This example destroys the cluster named `Cluster1`, removes cluster configuration information from
+the cluster nodes, and deletes the cluster objects in Active Directory. The cmdlet doesn't prompt
+for confirmation.
 
 ## PARAMETERS
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/start-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-Cluster
@@ -32,26 +32,20 @@ authentication on the server computer.
 
 ### Example 1
 
-```
-PS C:\> Start-Cluster
-Name 
----- 
-mycluster
+```powershell
+Start-Cluster
 ```
 
 This example starts all cluster nodes on the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Start-Cluster -Name node2
-Name 
----- 
-mycluster
+```powershell
+Start-Cluster -Name node2
 ```
 
-This example starts all cluster nodes on the cluster of which the node named node2 is a part. A node
-name is required if all cluster nodes are stopped. If the cluster is already running, then the
+This example starts all cluster nodes on the cluster of which the node named `node2` is a part. A
+node name is required if all cluster nodes are stopped. If the cluster is already running, then the
 cluster name, assuming the cluster name resource is online, can be used instead of the node name.
 
 ## PARAMETERS

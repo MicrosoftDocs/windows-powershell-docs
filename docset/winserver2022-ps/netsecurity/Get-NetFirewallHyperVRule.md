@@ -28,7 +28,7 @@ Get-NetFirewallHyperVRule -DisplayName <string[]> [-PolicyStore <string>] [-CimS
 ```
 
 ```
-Get-NetFirewallHyperVRule [-Direction {Inbound | Outbound}] [-VMCreatorId <string[]>] [-Protocol <string[]>] [-Action {NotConfigured | Allow | Block}] [-Enabled {True | False}] [-EnforcementStatus {Unknown | OK | PartiallyEnforced | NoApplicablePorts | ParsingError | Error}] [-PolicyStoreSourceType {None | Local | Dynamic | Hardcoded | MDM}] [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [<CommonParameters>]
+Get-NetFirewallHyperVRule [-Direction {Inbound | Outbound}] [-VMCreatorId <string[]>] [-Protocol <string[]>] [-Action {NotConfigured | Allow | Block}] [-Enabled {True | False}] [-EnforcementStatus {Unknown | OK | PartiallyEnforced | NoApplicablePorts | ParsingError | Error}] [-PolicyStoreSourceType {None | Local | GroupPolicy | Dynamic | Generated | Hardcoded | MDM | HostFirewallLocal | HostFirewallGroupPolicy | HostFirewallDynamic | HostFirewallMDM}] [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -236,6 +236,10 @@ This parameter value is automatically generated and should not be modified.
 The acceptable values for this parameter are:
 - Local: The object originates from the local store. 
 - MDM: The object originates from the MDM store.
+- Dynamic: The object originates from the dynamic store.
+- HostFirewallLocal: This object originates from the host windows firewall local store.
+- HostFirewallGroupPolicy: This object originates from the host windows firewall group policy store.
+- HostFirewallMDM: This object originates from the host windows firewall MDM store.
 
 By default, the Local store is queried.
 

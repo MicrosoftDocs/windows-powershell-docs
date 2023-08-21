@@ -16,19 +16,19 @@ Configures Hyper-V firewall per-VM settings on the target computer.
 ## SYNTAX
 
 ```
-New-NetFirewallHyperVVMSetting [-PolicyStore <string>] [-GPOSession <string>] [-Name <string>] [-Enabled {False | True | NotConfigured}] [-DefaultInboundAction {NotConfigured | Allow | Block}] [-DefaultOutboundAction {NotConfigured | Allow | Block}] [-LoopbackEnabled {False | True | NotConfigured}] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-WhatIf] [-Confirm]  [<CommonParameters>]
+New-NetFirewallHyperVVMSetting [-PolicyStore <string>] [-GPOSession <string>] [-Name <string>] [-Enabled {False | True | NotConfigured}] [-DefaultInboundAction {NotConfigured | Allow | Block}] [-DefaultOutboundAction {NotConfigured | Allow | Block}] [-LoopbackEnabled {False | True | NotConfigured}] [-AllowHostPolicyMerge {False | True | NotConfigured}] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **New-NetFirewallHyperVVMSetting** cmdlet configures settings for the Hyper-V firewall per-VM settings on the system. These settings are applicable to all Hyper-V firewall ports created by a specific Hyper-V firewall VM creator.
 
-This cmdlet should be used when none of the following are true: a Hyper-V VM creator has registered its VM creator ID with the system, when another Hyper-V per-VM setting is already configured for the specified VM creator ID, or when a Hyper-V firewall port is created with the specified VM creator ID. If any of the above are true, the Set-NetFirewallHyperVVMSetting cmdlet should be used. In other words, this cmdlet can be used to configure policy prior to the application corresponding to the specific VM creator ID has running on the system.
+This cmdlet should be used when none of the following are true: a Hyper-V VM creator has registered its VM creator ID with the system, when another Hyper-V setting is already configured for the specified VM creator ID, or when a Hyper-V firewall port is created with the specified VM creator ID. If any of the above are true, the Set-NetFirewallHyperVVMSetting cmdlet should be used. In other words, this cmdlet can be used to configure policy prior to the application corresponding to the specific VM creator ID has running on the system.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\> New-NetFirewallHyperVVMSetting -Name '9E288F02-CE00-4D9E-BE2B-14CE463B0298}' -LoopbackEnabled True
+PS C:\> New-NetFirewallHyperVVMSetting -Name '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}' -LoopbackEnabled True
 ```
 
 This configures the LoopbackEnabled setting for all Hyper-V firewall ports created by the Hyper-V firewall VM creator specified.
@@ -69,6 +69,8 @@ Accept wildcard characters: False
 Specifies how to filter inbound traffic which does not match any Hyper-V firewall rules.
 The acceptable values for this parameter are: NotConfigured, Allow, or Block. 
 
+This setting applies the configuration to all profiles. For configuring at a per-profile granularity, use the `New-NetFirewallHyperVProfile` cmdlet.
+
 - Block: Blocks inbound network traffic that does not match an inbound rule. 
 - Allow: Allows all inbound network traffic, whether or not it matches an inbound rule. 
 - NotConfigured: Resets this value back to its default.
@@ -90,7 +92,9 @@ Accept wildcard characters: False
 
 ### -DefaultOutboundAction
 Specifies how to filter outbound traffic which does not match any Hyper-V firewall rules.
-The acceptable values for this parameter are: NotConfigured, Allow, or Block. 
+The acceptable values for this parameter are: NotConfigured, Allow, or Block.
+
+This setting applies the configuration to all profiles. For configuring at a per-profile granularity, use the `New-NetFirewallHyperVProfile` cmdlet.
 
 - Block: Blocks outbound network traffic that does not match an outbound rule. 
 - Allow: Allows all outbound network traffic, whether or not it matches an outbound rule. 
@@ -113,7 +117,9 @@ Accept wildcard characters: False
 
 ### -Enabled
 Determines whether or not the Hyper-V firewall is active and enforced.
-The acceptable values for this parameter are: False, True, or NotConfigured. 
+The acceptable values for this parameter are: False, True, or NotConfigured.
+
+This setting applies the configuration to all profiles. For configuring at a per-profile granularity, use the `New-NetFirewallHyperVProfile` cmdlet.
 
 - True: Enables Windows Hyper-V firewall.
 - False: Disables Windows Hyper-V firewall.
@@ -137,8 +143,6 @@ Accept wildcard characters: False
 ### -LoopbackEnabled
 Determines whether or not guest-host loopback traffic is allowed.
 
-This setting is orthogonal to any existing Hyper-V firewall rules. That is, both this setting and the set of Hyper-V firewall rules must both be configured to allow guest-host communication. Furthermore, if either this setting or a Hyper-V firewall rule blocks the communication, it will be blocked.
-
 The acceptable values for this parameter are: False, True, or NotConfigured. 
 
 - True: Hyper-V firewall allows traffic between guest and host.
@@ -146,6 +150,39 @@ The acceptable values for this parameter are: False, True, or NotConfigured.
 - NotConfigured: Resets this value back to its default.
 
 The default setting is False.
+
+```yaml
+Type: GpoBoolean
+Parameter Sets: (All)
+Aliases: 
+Accepted values: False, True, NotConfigured
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowHostPolicyMerge
+Specifies that the host firewall policy should be merged into the effective policy. 
+
+This setting controls whether host firewall profile settings (DefaultInboundAction, DefaultOutboundAction, Enabled, AllowLocalFirewallRules) as well as host firewall rules (only rules which are IP 5-tuple based, i.e, not having any local conditions such as application) should be applicable to Hyper-V firewall.
+
+Policy configurations may come from many stores. If this setting is True, the following order of precedence is used for determining the effective policy (highest priority to lowest priority):
+- Host Firewall Group Policy
+- Hyper-V Firewall MDM
+- Host Firewall MDM
+- Hyper-V Firewall Local
+- Host Firewall Local
+
+The acceptable values for this parameter are: False, True, or NotConfigured.
+
+- True: Host firewall rules and settings are applied to Hyper-V Firewall.
+- False: Host firewall rules and settings are not applied to Hyper-V firewall
+- NotConfigured: Resets this value back to its default.
+
+The default setting is True.
 
 ```yaml
 Type: GpoBoolean
@@ -217,3 +254,9 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetFirewallHyperVVMSetting](./Get-NetFirewallHyperVVMSetting.md)
 
 [Set-NetFirewallHyperVVMSetting](./Set-NetFirewallHyperVVMSetting.md)
+
+[Get-NetFirewallHyperVProfile](./Get-NetFirewallHyperVProfile.md)
+
+[New-NetFirewallHyperVProfile](./New-NetFirewallHyperVProfile.md)
+
+[Set-NetFirewallHyperVProfile](./Set-NetFirewallHyperVProfile.md)

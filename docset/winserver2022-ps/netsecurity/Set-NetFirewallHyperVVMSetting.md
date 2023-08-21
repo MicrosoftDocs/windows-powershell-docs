@@ -26,7 +26,7 @@ Set-NetFirewallHyperVVMSetting -InputObject <CimInstance#MSFT_NetFirewallHyperVV
 ## DESCRIPTION
 The **Set-NetFirewallHyperVVMSetting** cmdlet configures settings for the Hyper-V firewall per-VM settings on the system. These settings are applicable to all Hyper-V firewall ports created by a specific Hyper-V firewall VM creator.
 
-This cmdlet should be used when a Hyper-V VM creator has registered its VM creator ID with the system, when another Hyper-V per-VM setting is already configured for the specified VM creator ID, or when a Hyper-V firewall port is created with the specified VM creator ID. If none of the above are true, then the New-NetFirewallHyperVVMSetting cmdlet should be used.
+This cmdlet should be used when a Hyper-V VM creator has registered its VM creator ID with the system, when another Hyper-V setting is already configured for the specified VM creator ID, or when a Hyper-V firewall port is created with the specified VM creator ID. If none of the above are true, then the New-NetFirewallHyperVVMSetting cmdlet should be used.
 
 ## EXAMPLES
 
@@ -71,6 +71,9 @@ Accept wildcard characters: False
 
 ### -DefaultInboundAction
 Specifies how to filter inbound traffic which does not match any Hyper-V firewall rules.
+
+This setting applies the configuration to all profiles. For configuring at a per-profile granularity, use the `Set-NetFirewallHyperVProfile` cmdlet.
+
 The acceptable values for this parameter are: NotConfigured, Allow, or Block. 
 
 - Block: Blocks inbound network traffic that does not match an inbound rule. 
@@ -94,6 +97,9 @@ Accept wildcard characters: False
 
 ### -DefaultOutboundAction
 Specifies how to filter outbound traffic which does not match any Hyper-V firewall rules.
+
+This setting applies the configuration to all profiles. For configuring at a per-profile granularity, use the `Set-NetFirewallHyperVProfile` cmdlet.
+
 The acceptable values for this parameter are: NotConfigured, Allow, or Block. 
 
 - Block: Blocks outbound network traffic that does not match an outbound rule. 
@@ -117,7 +123,10 @@ Accept wildcard characters: False
 
 ### -Enabled
 Determines whether or not the Hyper-V firewall is active and enforced.
-The acceptable values for this parameter are: False, True, or NotConfigured. 
+
+This setting applies the configuration to all profiles. For configuring at a per-profile granularity, use the `Set-NetFirewallHyperVProfile` cmdlet.
+
+The acceptable values for this parameter are: False, True, or NotConfigured.
 
 - True: Enables Windows Hyper-V firewall.
 - False: Disables Windows Hyper-V firewall.
@@ -150,6 +159,39 @@ The acceptable values for this parameter are: False, True, or NotConfigured.
 - NotConfigured: Resets this value back to its default.
 
 The default setting is False.
+
+```yaml
+Type: GpoBoolean
+Parameter Sets: (All)
+Aliases: 
+Accepted values: False, True, NotConfigured
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowHostPolicyMerge
+Specifies that the host firewall policy should be merged into the effective policy. 
+
+This setting controls whether host firewall profile settings (DefaultInboundAction, DefaultOutboundAction, Enabled, AllowLocalFirewallRules) as well as host firewall rules (only rules which are IP 5-tuple based, i.e, not having any local conditions such as application) should be applicable to Hyper-V firewall.
+
+Policy configurations may come from many stores. If this setting is True, the following order of precedence is used for determining the effective policy (highest priority to lowest priority):
+- Host Firewall Group Policy
+- Hyper-V Firewall MDM
+- Host Firewall MDM
+- Hyper-V Firewall Local
+- Host Firewall Local
+
+The acceptable values for this parameter are: False, True, or NotConfigured.
+
+- True: Host firewall rules and settings are applied to Hyper-V Firewall.
+- False: Host firewall rules and settings are not applied to Hyper-V firewall
+- NotConfigured: Resets this value back to its default.
+
+The default setting is True.
 
 ```yaml
 Type: GpoBoolean
@@ -221,3 +263,9 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetFirewallHyperVVMSetting](./Get-NetFirewallHyperVVMSetting.md)
 
 [New-NetFirewallHyperVVMSetting](./New-NetFirewallHyperVVMSetting.md)
+
+[Get-NetFirewallHyperVProfile](./Get-NetFirewallHyperVProfile.md)
+
+[New-NetFirewallHyperVProfile](./New-NetFirewallHyperVProfile.md)
+
+[Set-NetFirewallHyperVProfile](./Set-NetFirewallHyperVProfile.md)

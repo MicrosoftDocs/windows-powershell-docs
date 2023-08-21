@@ -179,3 +179,9 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [New-NetFirewallHyperVVMSetting](./New-NetFirewallHyperVVMSetting.md)
 
 [Set-NetFirewallHyperVVMSetting](./Set-NetFirewallHyperVVMSetting.md)
+
+[Get-NetFirewallHyperVProfile](./Get-NetFirewallHyperVProfile.md)
+
+[New-NetFirewallHyperVProfile](./New-NetFirewallHyperVProfile.md)
+
+[Set-NetFirewallHyperVProfile](./Set-NetFirewallHyperVProfile.md)

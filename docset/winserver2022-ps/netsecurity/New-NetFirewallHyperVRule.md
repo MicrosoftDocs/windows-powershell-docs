@@ -16,7 +16,7 @@ Creates a new inbound or outbound Hyper-V firewall rule and adds the rule to the
 ## SYNTAX
 
 ```
-New-NetFirewallHyperVRule -DisplayName <string> [-Name <string>] [-RulePriority <uint16>] [-Direction {Inbound | Outbound}] [-VMCreatorId <string>] [-Protocol <string>] [-LocalAddresses <string[]>] [-LocalPorts <string[]>] [-RemoteAddresses <string[]>] [-RemotePorts <string[]>] [-Action {NotConfigured | Allow | Block}] [-Enabled {True | False}] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-WhatIf] [-Confirm]  [<CommonParameters>]
+New-NetFirewallHyperVRule -DisplayName <string> [-Name <string>] [-RulePriority <uint16>] [-Direction {Inbound | Outbound}] [-VMCreatorId <string>] [-Protocol <string>] [-LocalAddresses <string[]>] [-LocalPorts <string[]>] [-RemoteAddresses <string[]>] [-RemotePorts <string[]>] [-Action {NotConfigured | Allow | Block}] [-Enabled {True | False}] [-Profiles {Any | Domain | Private | Public | NotApplicable}] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -315,13 +315,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+### -VMCreatorId
+Specifies that network packets originating from a VM matching this VMCreatorId matches this rule. The format for this value is a GUID enclosed in brackets: '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}'.
+
+The default value is Any.
 
 ```yaml
-Type: Int32
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Required: False
@@ -331,13 +331,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -VMCreatorId
-Specifies that network packets originating from a VM matching this VMCreatorId matches this rule. The format for this value is a GUID enclosed in brackets: '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}'.
-
+### -Profiles
+Specifies one or more profiles to which the hyper-v firewall rule is assigned.
+The rule is active on the local computer only when the specified profile is currently active.
+This relationship is many-to-many and can be indirectly modified by the user, by changing the Profiles field on instances of rules.
+Only one profile is applied at a time. 
+The acceptable values for this parameter are: Any, Domain, Private, Public, or NotApplicable.
 The default value is Any.
+Separate multiple entries with a comma and do not include any spaces.
 
 ```yaml
-Type: String
+Type: Profiles
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Any, Domain, Private, Public, NotApplicable
+
+Required: False
+Position: Named
+Default value: Any
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThrottleLimit
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases: 
 Required: False

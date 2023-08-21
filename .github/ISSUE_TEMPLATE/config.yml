@@ -1,0 +1,13 @@
+blank_issues_enabled: true
+contact_links:
+  - name: What's the Quality Contributions Project?
+    url: https://learn.microsoft.com/powershell/scripting/community/contributing/quality-improvements
+    about: >-
+      If you'd like to commit to improving quality for the documentation, before filing an issue,
+      check the info and instructions.
+  # - name: PowerShell Product Feedback
+  #   url: https://github.com/PowerShell/PowerShell/issues/new/choose
+  #   about: Please open feature requests for current PowerShell here.
+  # - name: Support
+  #   url: https://learn.microsoft.com/powershell/scripting/community/community-support
+  #   about: PowerShell Support Questions/Help

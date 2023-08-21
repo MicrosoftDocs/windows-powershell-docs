@@ -1,7 +1,7 @@
 ---
 external help file: PrintMgmt_Cmdlets.xml
 Module Name: PrintManagement
-online version: https://docs.microsoft.com/powershell/module/printmanagement/remove-printjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/printmanagement/remove-printjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

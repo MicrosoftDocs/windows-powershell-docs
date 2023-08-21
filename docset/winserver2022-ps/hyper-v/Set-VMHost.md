@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmhost?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 02/08/2023
+online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmhost?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-VMHost
 ---
@@ -281,7 +281,10 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumVirtualMachineMigrations
-Specifies the maximum number of live migrations that can be performed at the same time on the Hyper-V host.
+Specifies the maximum number of live migrations that can be performed at the same time on the
+Hyper-V host. If your host is part a Failover Cluster, the cluster property takes precedence any
+values set by the **MaximumVirtualMachineMigrations** parameter. To check the cluster property,
+you can run the PowerShell command `(Get-Cluster).MaximumParallelMigrations`.
 
 ```yaml
 Type: UInt32

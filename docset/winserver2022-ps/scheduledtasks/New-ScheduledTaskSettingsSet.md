@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
 Module Name: ScheduledTasks
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/scheduledtasks/new-scheduledtasksettingsset?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/scheduledtasks/new-scheduledtasksettingsset?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ScheduledTaskSettingsSet
 ---
@@ -68,7 +68,7 @@ The first command creates a scheduled task action named Cmd and assig
  
 The second command creates scheduled task settings that sets a higher priority for the scheduled task, and assigns the **ScheduledTaskSettings** object to the $Stset variable.
 
-The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that have a priority setting of 9.
+The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that have a priority setting of 5.
 
 This example sets the priority of a scheduled task.
 
@@ -144,7 +144,7 @@ The second command creates scheduled task settings that specify if the task is n
 
 The third command registers the scheduled task Task01 to run the task action named Cmd, only then finish the task after one hour.
 
-Without the ExecutionTimeLimit setting defined, the time limit set to it's default of three days for the Task Scheduler is allowed to complete the task. To configure the time limit, see [New-TimeSpan](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan).
+Without the ExecutionTimeLimit setting defined, the time limit set to it's default of three days for the Task Scheduler is allowed to complete the task. To configure the time limit, see [New-TimeSpan](/powershell/module/microsoft.powershell.utility/new-timespan).
 
 
 ## PARAMETERS
@@ -651,4 +651,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-ScheduledTask](./Start-ScheduledTask.md)
 
 [Unregister-ScheduledTask](./Unregister-ScheduledTask.md)
-

@@ -1,7 +1,7 @@
 ---
 external help file: dnslookup.dll-Help.xml
 Module Name: DnsClient
-online version: https://docs.microsoft.com/powershell/module/dnsclient/resolve-dnsname?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dnsclient/resolve-dnsname?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
 Module Name: SecureBoot
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/secureboot/format-securebootuefi?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/secureboot/format-securebootuefi?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Format-SecureBootUEFI
 ---
@@ -38,7 +38,7 @@ The **Format-SecureBootUEFI** cmdlet receives certificates or hashes as input an
 The Set-SecureBootUEFI cmdlet uses this object to update the variable.
 If you specify a signable file, this cmdlet creates a file that has the specified name that has to be signed.
 
-This cmdlet this runs on both UEFI and BIOS (non-UEFI) computers.
+This cmdlet runs on both UEFI and BIOS (non-UEFI) computers.
 
 ## EXAMPLES
 

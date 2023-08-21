@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Disk.cdxml-help.xml
 Module Name: Storage
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/storage/get-disk?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/storage/get-disk?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Disk
 ---
@@ -14,7 +14,7 @@ title: Get-Disk
 Gets one or more disks visible to the operating system.
 
 > [!NOTE]
-> This cmdlet returns physical disk objects like basic disks and partitioned drive partitions.  Dynamic disks can span multiple pieces of physical media, so they will not be returned by Get-Disk. For more information, see [Basic and Dynamic Disks](https://docs.microsoft.com/windows/desktop/FileIO/basic-and-dynamic-disks).
+> This cmdlet returns physical disk objects like basic disks and partitioned drive partitions.  Dynamic disks can span multiple pieces of physical media, so they will not be returned by Get-Disk. For more information, see [Basic and Dynamic Disks](/windows/desktop/FileIO/basic-and-dynamic-disks).
 
 ## SYNTAX
 
@@ -401,4 +401,3 @@ This cmdlet outputs one or more objects representing disks.
 [Set-Disk](./Set-Disk.md)
 
 [Update-Disk](./Update-Disk.md)
-

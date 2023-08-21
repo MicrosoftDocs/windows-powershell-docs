@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 Module Name: pki
 ms.date: 10/06/2019
-online version: https://docs.microsoft.com/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-SelfSignedCertificate
 ---
@@ -403,11 +403,6 @@ Accept wildcard characters: False
 
 ### -KeyExportPolicy
 Specifies the policy that governs the export of the private key that is associated with the certificate.
-The acceptable values for this parameter are:
-
-- Exportable 
-- ExportableEncrypted (default) 
-- NonExportable 
 
 The default value of ExportableEncrypted is not compatible with KSP and CSPs that do not allow key export.
 These include the Microsoft Smart Card Key Storage Provider and the Microsoft Platform Crypto Key Storage Provider.
@@ -421,7 +416,7 @@ Accepted values: NonExportable, ExportableEncrypted, Exportable
 
 Required: False
 Position: Named
-Default value: None
+Default value: ExportableEncrypted
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -628,7 +623,7 @@ Accept wildcard characters: False
 ```
 
 ### -Provider
-Specifies the name of the KSP or CSP that this cmdlet uses to create the certificate. See [Cryptographic Providers](https://docs.microsoft.com/en-us/windows/desktop/SecCertEnroll/understanding-cryptographic-providers) for more information.
+Specifies the name of the KSP or CSP that this cmdlet uses to create the certificate. See [Cryptographic Providers](/windows/desktop/SecCertEnroll/understanding-cryptographic-providers) for more information.
 Some acceptable values include:
 
 - Microsoft Software Key Storage Provider
@@ -968,13 +963,6 @@ Accept wildcard characters: False
 
 ### -Type
 Specifies the type of certificate that this cmdlet creates.
-The acceptable values for this parameter are:
-
-- CodeSigningCert
-- Custom
-- DocumentEncryptionCert
-- DocumentEncryptionCertLegacyCsp
-- SSLServerAuthentication (default)
 
 ```yaml
 Type: CertificateType
@@ -984,7 +972,7 @@ Accepted values: Custom, CodeSigningCert, DocumentEncryptionCert, SSLServerAuthe
 
 Required: False
 Position: Named
-Default value: None
+Default value: SSLServerAuthentication
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1022,4 +1010,4 @@ An **X509Certificate2** object for the certificate that has been created.
 
 ## RELATED LINKS
 
-[System Store Locations](https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations)
+[System Store Locations](/windows/desktop/seccrypto/system-store-locations)

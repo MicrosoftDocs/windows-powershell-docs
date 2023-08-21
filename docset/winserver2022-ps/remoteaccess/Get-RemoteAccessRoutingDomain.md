@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: PS_RemoteAccessRoutingDomain_v1.0.cdxml-help.xml
 Module Name: RemoteAccess
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/remoteaccess/get-remoteaccessroutingdomain?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/remoteaccess/get-remoteaccessroutingdomain?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-RemoteAccessRoutingDomain
 ---
@@ -26,8 +26,11 @@ The **Get-RemoteAccessRoutingDomain** cmdlet retrieves routing domain configurat
 ## EXAMPLES
 
 ### Example 1: Retrieve configuration for a specific routing domain
+```powershell
+Get-RemoteAccessRoutingDomain -Name Rd_01
 ```
-PS C:\> Get-RemoteAccessRoutingDomain -Name Rd_01
+
+```Output
 
 RoutingDomain                  : Rd_01
 RoutingDomainID                : {11111111-1111-1111-1111-111111111001}

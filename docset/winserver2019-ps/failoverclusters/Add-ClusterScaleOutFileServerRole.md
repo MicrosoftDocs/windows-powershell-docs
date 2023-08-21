@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clusterscaleoutfileserverrole?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clusterscaleoutfileserverrole?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterScaleOutFileServerRole
 ---
@@ -16,7 +16,7 @@ Creates a clustered file server for scale-out application data.
 ## SYNTAX
 
 ```
-Add-ClusterScaleOutFileServerRole [[-Name] <String>] [-Wait <Int32>] [-InputObject <PSObject>]
+Add-ClusterScaleOutFileServerRole [[-Name] <String>] [-Wait <Int32>] [-Infrastructure] [-InputObject <PSObject>]
  [-Cluster <String>] [<CommonParameters>]
 ```
 
@@ -32,25 +32,36 @@ Note: This cmdlet cannot be run remotely without Credential Security Service Pro
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> Add-ClusterScaleOutFileServerRole
+```
+```output
 Name                                    OwnerNode                               State 
 ----                                    ---------                               ----- 
 clusterSOFS                             CLUSTER-N2                              Online
 ```
 
-This example creates a highly available Scale-out file server role.
+This example creates a highly available scale-out file server role.
 
 ### Example 2
-```
+```powershell
 PS C:\> Add-ClusterScaleOutFileServerRole -Wait 0
+```
+```output
 Name                                    OwnerNode                               State 
 ----                                    ---------                               ----- 
 clusterSOFS                             CLUSTER-N2                              Pending
 ```
 
-This example creates a highly available scale out file server role.
+This example creates a highly available scale-out file server role.
 The cmdlet completes without waiting for all resources to come online.
+
+### Example 3
+```powershell
+Add-ClusterScaleOutFileServerRole -Cluster MyCluster -Infrastructure -Name InfraSOFSName
+```
+
+This example creates an infrastructure file server scale-out file server role. It automatically creates a single namespace share for the CSV drive (such as `\\InfraSOFSName\Volume1`).  In hyper-converged configurations, an infrastructure scale-out file server allows an SMB client (Hyper-V host) to communicate with guaranteed continuous availability with the infrastructure scale-out SMB file server. There can be at most only one infrastructure scale-out file server cluster role on a failover cluster.
 
 ## PARAMETERS
 
@@ -60,6 +71,21 @@ If the input for this parameter is `.` or it is omitted, then the cmdlet runs on
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Infrastructure
+Specifies whether to create an infrastructure file server scale-out file server role.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 

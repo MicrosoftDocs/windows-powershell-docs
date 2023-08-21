@@ -4,7 +4,7 @@ description: Use this topic to help prevent the uninstall of specific Windows ap
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
 ms.date: 02/05/2020
-online version: https://docs.microsoft.com/powershell/module/appx/set-nonremovableappspolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/appx/set-nonremovableappspolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NonRemovableAppsPolicy
 ---

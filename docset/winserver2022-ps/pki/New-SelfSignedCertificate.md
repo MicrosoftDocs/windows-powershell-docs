@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 Module Name: pki
-ms.date: 10/06/2019
+ms.date: 08/23/2023
 online version: https://learn.microsoft.com/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-SelfSignedCertificate
@@ -230,6 +230,27 @@ New-SelfSignedCertificate @params
 This example creates a self-signed SSL server certificate with Subject and Issuer name set to
 `localhost` and with subject alternative name set to **IPAddress** `127.0.0.1` and `::1` via
 **TextExtension**.
+
+### Example 10
+
+```powershell
+$params = @{
+    Type = 'Custom'
+    Subject = 'CN=Patti Fuller,OU=UserAccounts,DC=corp,DC=contoso,DC=com'
+    TextExtension = @(
+        '2.5.29.37={text}1.3.6.1.5.5.7.3.2',
+        '2.5.29.17={text}upn=pattifuller@contoso.com' )
+    KeyUsage = 'DigitalSignature', 'CRLSign', 'CertSign'
+    KeyAlgorithm = 'RSA'
+    KeyLength = 2048
+    CertStoreLocation = 'Cert:\CurrentUser\My'
+}
+New-SelfSignedCertificate @params
+```
+This example creates a self-signed client authentication certificate in the user `MY` store. The
+certificate uses the default provider, which is the `Microsoft Software Key Storage Provider`. The
+certificate uses an `RSA` asymmetric key with a key size of `2048` bits. The certificate has it's key
+usages set to `DigitalSignature`, `CRLSign` and `CertSign`.
 
 ## PARAMETERS
 

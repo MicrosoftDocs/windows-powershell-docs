@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallHyperVRule.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 12/27/2016
+ms.date: 8/25/2023
 online version: https://docs.microsoft.com/powershell/module/netsecurity/enable-netfirewallhypervrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-NetFirewallHyperVRule
@@ -15,22 +15,27 @@ Enables one or more Hyper-V firewall rules that match the specified criteria.
 
 ## SYNTAX
 
+### GetAll (Default)
 ```
 Enable-NetFirewallHyperVRule [-All] [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
+### ByName
 ```
 Enable-NetFirewallHyperVRule [-Name] <string[]> [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### ByDisplayName
 ```
 Enable-NetFirewallHyperVRule -DisplayName <string[]> [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### ByQuery
 ```
 Enable-NetFirewallHyperVRule [-Direction {Inbound | Outbound}] [-VMCreatorId <string[]>] [-Protocol <string[]>] [-Action {NotConfigured | Allow | Block}] [-Enabled {True | False}] [-EnforcementStatus {Unknown | OK | PartiallyEnforced | NoApplicablePorts | ParsingError | Error}] [-PolicyStoreSourceType {None | Local | MDM}] [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
+### InputObject (cdxml)
 ```
 Enable-NetFirewallHyperVRule -InputObject <CimInstance#MSFT_NetFirewallHyperVRule[]> [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

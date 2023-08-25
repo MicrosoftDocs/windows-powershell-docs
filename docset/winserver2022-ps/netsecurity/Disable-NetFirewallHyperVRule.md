@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallHyperVRule.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 12/27/2016
+ms.date: 8/25/2023
 online version: https://docs.microsoft.com/powershell/module/netsecurity/disable-netfirewallhypervrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-NetFirewallHyperVRule
@@ -15,22 +15,27 @@ Disables one or more Hyper-V firewall rules that match the specified criteria.
 
 ## SYNTAX
 
+### GetAll (Default)
 ```
 Disable-NetFirewallHyperVRule [-All] [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
+### ByName
 ```
 Disable-NetFirewallHyperVRule [-Name] <string[]> [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### ByDisplayName
 ```
 Disable-NetFirewallHyperVRule -DisplayName <string[]> [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### ByQuery
 ```
 Disable-NetFirewallHyperVRule [-Direction {Inbound | Outbound}] [-VMCreatorId <string[]>] [-Protocol <string[]>] [-Action {NotConfigured | Allow | Block}] [-Enabled {True | False}] [-EnforcementStatus {Unknown | OK | PartiallyEnforced | NoApplicablePorts | ParsingError | Error}] [-PolicyStoreSourceType {None | Local | MDM}] [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
+### InputObject (cdxml)
 ```
 Disable-NetFirewallHyperVRule -InputObject <CimInstance#MSFT_NetFirewallHyperVRule[]> [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -40,7 +45,7 @@ IMPORTANT NOTE: Running this cmdlet without parameters disables all Windows Hype
 
 The **Disable-NetFirewallHyperVRule** cmdlet disables a previously enabled Hyper-V firewall rule to be inactive. A Disabled rule will not actively modify system behavior, but the rule still exists on the computer so it can be re-enabled later. This is different from the Remove-NetFirewallHyperVRule cmdlet, which will permanently remove the rule.
 
-This cmdlet gets disables one or more Hyper-V firewall rules with the Name parameter, DisplayName parameter, or rule properties.
+This cmdlet disables one or more Hyper-V firewall rules with the Name parameter, DisplayName parameter, or rule properties.
 
 Disabling Hyper-V firewall rules can be useful for debugging Hyper-V firewall policy mismatch issues.
 

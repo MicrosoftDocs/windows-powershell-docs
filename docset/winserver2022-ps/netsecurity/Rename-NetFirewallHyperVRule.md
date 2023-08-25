@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallHyperVRule.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 12/27/2016
+ms.date: 8/25/2023
 online version: https://docs.microsoft.com/powershell/module/netsecurity/rename-netfirewallhypervrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-NetFirewallHyperVRule
@@ -15,22 +15,27 @@ Renames a single Hyper-V firewall rule.
 
 ## SYNTAX
 
+### GetAll (Default)
 ```
 Rename-NetFirewallHyperVRule -NewName <string> [-All] [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### ByName
 ```
 Rename-NetFirewallHyperVRule [-Name] <string[]> -NewName <string> [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### ByDisplayName
 ```
 Rename-NetFirewallHyperVRule -DisplayName <string[]> -NewName <string> [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### ByQuery
 ```
 Rename-NetFirewallHyperVRule -NewName <string> [-Direction {Inbound | Outbound}] [-VMCreatorId <string[]>] [-Protocol <string[]>] [-Action {NotConfigured | Allow | Block}] [-Enabled {True | False}] [-EnforcementStatus {Unknown | OK | PartiallyEnforced | NoApplicablePorts | ParsingError | Error}] [-PolicyStoreSourceType {None | Local | MDM}] [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
+### InputObject (cdxml)
 ```
 Rename-NetFirewallHyperVRule -InputObject <CimInstance#MSFT_NetFirewallHyperVRule[]> -NewName <string> [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallHyperVRule.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 12/27/2016
+ms.date: 8/25/2023
 online version: https://docs.microsoft.com/powershell/module/netsecurity/get-netfirewallhypervrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetFirewallHyperVRule
@@ -15,18 +15,22 @@ Retrieves Hyper-V firewall rules from the target computer.
 
 ## SYNTAX
 
+### GetAll (Default)
 ```
 Get-NetFirewallHyperVRule [-All] [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [<CommonParameters>] 
 ```
 
+### ByName
 ```
 Get-NetFirewallHyperVRule [-Name] <string[]> [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob]  [<CommonParameters>]
 ```
 
+### ByDisplayName
 ```
 Get-NetFirewallHyperVRule -DisplayName <string[]> [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob]  [<CommonParameters>]
 ```
 
+### ByQuery
 ```
 Get-NetFirewallHyperVRule [-Direction {Inbound | Outbound}] [-VMCreatorId <string[]>] [-Protocol <string[]>] [-Action {NotConfigured | Allow | Block}] [-Enabled {True | False}] [-EnforcementStatus {Unknown | OK | PartiallyEnforced | NoApplicablePorts | ParsingError | Error}] [-PolicyStoreSourceType {None | Local | GroupPolicy | Dynamic | Generated | Hardcoded | MDM | HostFirewallLocal | HostFirewallGroupPolicy | HostFirewallDynamic | HostFirewallMDM}] [-PolicyStore <string>] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [<CommonParameters>]
 ```

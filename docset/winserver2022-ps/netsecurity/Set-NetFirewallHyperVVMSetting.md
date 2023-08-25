@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallHyperVVMSetting.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 12/27/2016
+ms.date: 8/25/2023
 online version: https://docs.microsoft.com/powershell/module/netsecurity/set-netfirewallhypervvmsetting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NetFirewallHyperVVMSetting
@@ -15,10 +15,12 @@ Configures Hyper-V firewall per-VM settings on the target computer.
 
 ## SYNTAX
 
+### ByName
 ```
 Set-NetFirewallHyperVVMSetting [-Name] <string[]> [-Enabled {False | True | NotConfigured}] [-DefaultInboundAction {NotConfigured | Allow | Block}] [-DefaultOutboundAction {NotConfigured | Allow | Block}] [-LoopbackEnabled {False | True | NotConfigured}] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
+### InputObject (cdxml)
 ```
 Set-NetFirewallHyperVVMSetting -InputObject <CimInstance#MSFT_NetFirewallHyperVVMSetting[]> [-Enabled {False | True | NotConfigured}] [-DefaultInboundAction {NotConfigured | Allow | Block}] [-DefaultOutboundAction {NotConfigured | Allow | Block}] [-LoopbackEnabled {False | True | NotConfigured}] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```

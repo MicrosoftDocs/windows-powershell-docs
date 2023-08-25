@@ -2,19 +2,20 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallHyperVPort.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 12/27/2016
+ms.date: 8/25/2023
 online version: https://docs.microsoft.com/powershell/module/netsecurity/get-netfirewallhypervport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetFirewallHyperVPort
 ---
 
-# Get-NetFirewallHyperVRule
+# Get-NetFirewallHyperVPort
 
 ## SYNOPSIS
 Retrieves Hyper-V firewall ports from the target computer.
 
 ## SYNTAX
 
+### GetAll (Default)
 ```
 Get-NetFirewallHyperVPort [-All] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [<CommonParameters>]
 ```

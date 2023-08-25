@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallHyperVRule.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 12/27/2016
+ms.date: 8/25/2023
 online version: https://docs.microsoft.com/powershell/module/netsecurity/set-netfirewallhypervrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NetFirewallHyperVRule
@@ -15,14 +15,17 @@ Modifies existing Hyper-V firewall rules.
 
 ## SYNTAX
 
+### ByName
 ```
 Set-NetFirewallHyperVRule [-Name] <string[]> [-NewDisplayName <string>] [-RulePriority <uint16>] [-Direction {Inbound | Outbound}] [-VMCreatorId <string>] [-Protocol <string>] [-LocalAddresses <string[]>] [-LocalPorts <string[]>] [-RemoteAddresses <string[]>] [-RemotePorts <string[]>] [-Action {NotConfigured | Allow | Block}] [-Enabled {True | False}] [-Profiles {Any | Domain | Private | Public | NotApplicable}] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]  [<CommonParameters>]
 ```
 
+### ByDisplayName
 ```
 Set-NetFirewallHyperVRule -DisplayName <string[]> [-NewDisplayName <string>] [-RulePriority <uint16>] [-Direction {Inbound | Outbound}] [-VMCreatorId <string>] [-Protocol <string>] [-LocalAddresses <string[]>] [-LocalPorts <string[]>] [-RemoteAddresses <string[]>] [-RemotePorts <string[]>] [-Action {NotConfigured | Allow | Block}] [-Enabled {True | False}] [-Profiles {Any | Domain | Private | Public | NotApplicable}] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### InputObject (cdxml)
 ```
 Set-NetFirewallHyperVRule -InputObject <CimInstance#MSFT_NetFirewallHyperVRule[]> [-NewDisplayName <string>] [-RulePriority <uint16>] [-Direction {Inbound | Outbound}] [-VMCreatorId <string>] [-Protocol <string>] [-LocalAddresses <string[]>] [-LocalPorts <string[]>] [-RemoteAddresses <string[]>] [-RemotePorts <string[]>] [-Action {NotConfigured | Allow | Block}] [-Enabled {True | False}] [-Profiles {Any | Domain | Private | Public | NotApplicable}] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

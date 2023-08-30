@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -DevDrive
-Formats the volume as a [dev drive](https://learn.microsoft.com/en-us/windows/dev-drive/). A dev drive is optimized for performance of developer scenarios and gives administators control over what minifilters are attached to the volume.
+Formats the volume as a [dev drive](/windows/dev-drive/). A dev drive is optimized for performance of developer scenarios and gives administators control over what minifilters are attached to the volume.
 
 ```yaml
 Type: SwitchParameter

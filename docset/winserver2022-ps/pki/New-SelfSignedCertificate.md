@@ -249,8 +249,8 @@ New-SelfSignedCertificate @params
 ```
 This example creates a self-signed client authentication certificate in the user `MY` store. The
 certificate uses the default provider, which is the `Microsoft Software Key Storage Provider`. The
-certificate uses an `RSA` asymmetric key with a key size of `2048` bits. The certificate has it's key
-usages set to `DigitalSignature`, `CRLSign` and `CertSign`.
+certificate uses an `RSA` asymmetric key with a key size of `2048` bits. The certificate's key
+usages are set to `DigitalSignature`, `CRLSign`, and `CertSign`.
 
 ## PARAMETERS
 

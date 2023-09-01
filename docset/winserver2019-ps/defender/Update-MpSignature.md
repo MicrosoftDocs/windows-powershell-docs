@@ -31,7 +31,7 @@ PS C:\> Update-MpSignature
 ```
 
 This command updates the antimalware definitions.
-By default, the cmdlet uses the sources configured through [SignatureFallbackOrder](Set-MpPreference.md#-signaturefallbackorder). If no signature fallback order is configured, then the cmdlet uses the default update source.
+By default, the cmdlet uses the sources configured through [SignatureFallbackOrder](Set-MpPreference.md#-signaturefallbackorder). If no signature fallback order is configured, the cmdlet uses the default update source.
 
 ### Example 2: Update signatures from a specific source
 ```

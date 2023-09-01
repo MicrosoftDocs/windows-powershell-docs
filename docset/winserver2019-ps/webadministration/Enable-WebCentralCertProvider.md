@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Specifies the name of the user account that is used to access the central certificate store.
+Specifies the password of the user account that is used to access the central certificate store.
 
 ```yaml
 Type: String

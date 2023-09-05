@@ -70,7 +70,6 @@ computer. For more information, see
 | Iscsi | [iSCSI](/powershell/module/iscsi) |
 | IscsiTarget | [iSCSI Target](/powershell/module/iscsitarget) |
 | KDS | [Key Distribution Server](/powershell/module/kds) |
-| Microsoft.Windows.ServerManager.Migration | [Server Migration](/powershell/module/Microsoft.Windows.ServerManager.Migration/) |
 | MMAgent | [Memory Management Agent](/powershell/module/mmagent) |
 | Mpio | [MPIO](/powershell/module/mpio) |
 | MSDTC | [Distributed Transaction Coordinator](/powershell/module/msdtc) |

@@ -20,9 +20,10 @@ New-NetFirewallHyperVProfile [-PolicyStore <string>] [-GPOSession <string>] [-Na
 ```
 
 ## DESCRIPTION
+
 The **New-NetFirewallHyperVProfile** cmdlet configures the Hyper-V firewall profile settings on the system. These settings are applicable to all Hyper-V firewall ports created by a specific Hyper-V firewall VM creator. These settings apply to the VM only when the profile is active.
 
-This cmdlet should be used when none of the following are true: a Hyper-V VM creator has registered its VM creator ID with the system, when another Hyper-V setting is already configured for the specified VM creator ID, or when a Hyper-V firewall port is created with the specified VM creator ID. If any of the above are true, the Set-NetFirewallHyperVProfile cmdlet should be used. In other words, this cmdlet can be used to configure policy prior to the application corresponding to the specific VM creator ID has running on the system.
+This cmdlet should be used when none of the following are true: a Hyper-V VM creator has registered its VM creator ID with the system, when another Hyper-V setting is already configured for the specified VM creator ID, or when a Hyper-V firewall port is created with the specified VM creator ID. If any of these is true, the Set-NetFirewallHyperVProfile cmdlet should be used. In other words, this cmdlet can be used to configure policy prior to the application corresponding to the specific VM creator ID is running on the system.
 
 ## EXAMPLES
 
@@ -31,7 +32,7 @@ This cmdlet should be used when none of the following are true: a Hyper-V VM cre
 PS C:\> New-NetFirewallHyperVProfile -Name '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}' -Profile Public -Enabled True
 ```
 
-This configures the Enabled setting on the Public profile for all Hyper-V firewall ports created by the Hyper-V firewall VM creator specified.
+This example configures the enabled setting on the public profile for all Hyper-V firewall ports created by the Hyper-V firewall VM creator specified.
 
 ## PARAMETERS
 
@@ -158,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies that the settings are applicable only to the Hyper-V firewall VM creator with the matching Id.
+Specifies that the settings are applicable only to the Hyper-V firewall VM creator with the matching ID.
 The format for this value is a GUID enclosed in brackets: '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}'.
 
 ```yaml
@@ -174,7 +175,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

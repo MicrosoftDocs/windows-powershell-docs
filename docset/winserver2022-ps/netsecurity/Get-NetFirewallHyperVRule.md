@@ -36,9 +36,11 @@ Get-NetFirewallHyperVRule [-Direction {Inbound | Outbound}] [-VMCreatorId <strin
 ```
 
 ## DESCRIPTION
-The **Get-NetFirewallHyperVRule** cmdlet returns the instances of the Hyper-V firewall rules that match the search parameters from the user. See the New-NetFirewallHyperVrule cmdlet for more information.
 
-This cmdlet returns one or more Hyper-V firewall rules by specifying the Name parameter, the DisplayName parameter, or rule properties. The queried rules can be placed intro variables and piped to other cmdlets for further modifications.
+The **Get-NetFirewallHyperVRule** cmdlet returns the instances of the Hyper-V firewall rules that match the search parameters of the user. See the New-NetFirewallHyperVrule cmdlet for more information.
+
+This cmdlet returns one or more Hyper-V firewall rules by specifying the Name parameter, the DisplayName parameter, or rule properties. The queried rules can be placed into variables and piped to other cmdlets for further modifications.
+
 
 In addition to the rule parameters, a read-only field called 'PortStatuses' will be enumerated. A Hyper-V firewall rule is applied to individual Hyper-V firewall ports based on the rule parameters. This output displays all Hyper-V ports that this rule is currently applied to.
 
@@ -49,21 +51,24 @@ In addition to the rule parameters, a read-only field called 'PortStatuses' will
 PS C:\> Get-NetFirewallHyperVRule -PolicyStore ActiveStore
 ```
 
-This retrieves all of the Hyper-V firewall rules in the active store, which is a collection of all the policy stores that apply to the computer. Running this cmdlet without specifying the policy store retrieves the persistent store.
+This example retrieves all the Hyper-V firewall rules in the active store, which is a collection of all the policy stores that apply to the computer. Running this cmdlet without specifying the policy store retrieves the persistent store.
+
 
 ### EXAMPLE 2
 ```
 PS C:\> Get-NetFirewallHyperVRule -EnforcementStatus OK
 ```
 
-This retrieves all of the Hyper-V firewall rules with EnforcementStatus OK, which means that the rule is active and being enforced.
+This example retrieves all the Hyper-V firewall rules with EnforcementStatus OK, which means that the rule is active and being enforced.
+
 
 ### EXAMPLE 3
 ```
 PS C:\> Get-NetFirewallHyperVRule -Name 'MyRuleId'
 ```
 
-This retrieves the Hyper-V firewall rule with the Name 'MyRuleId'
+This example retrieves the Hyper-V firewall rule with the Name 'MyRuleId'
+
 
 ## PARAMETERS
 
@@ -155,7 +160,8 @@ The acceptable values for this parameter are:
 - True: Specifies the rule is currently enabled. 
 - False: Specifies the rule is currently disabled.
 
-Note, that the type of this parameter is not boolean, therefore `$true` and `$false` variables are not acceptable values here. Use "True" and "False" text strings instead.
+Note that the type of this parameter is not Boolean, therefore `$true` and `$false` variables are not acceptable values here. Use "True" and "False" text strings instead.
+
 
 A disabled rule will not actively modify computer behavior, but the management construct still exists on the computer so it can be re-enabled.
 
@@ -261,7 +267,8 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Specifies that only matching Hyper-V firewall rules with the indicated Protocol are retrieved.
+Specifies that only matching Hyper-V firewall rules with the indicated protocol are retrieved.
+
 The acceptable values for this parameter are:
 - Protocols by number:  0-255. 
 - Protocols by name:  TCP, UDP, ICMPv4, or ICMPv6. 
@@ -279,7 +286,8 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

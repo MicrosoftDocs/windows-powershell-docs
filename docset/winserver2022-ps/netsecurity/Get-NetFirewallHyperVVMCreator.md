@@ -21,11 +21,14 @@ Get-NetFirewallHyperVVMCreator [-All] [-CimSession <CimSession[]>] [-ThrottleLim
 ```
 
 ## DESCRIPTION
+
 The **Get-NetFirewallHyperVVMCreator** cmdlet returns the instances of the Hyper-V firewall VM creators on the system.
+
 
 A Hyper-V firewall rule can be scoped to apply only to Hyper-V firewall ports created by specific Hyper-V VM creators. This cmdlet is used to query the list of creators currently on the system.
 
-A rule can scoped to a specific VM creator even if it is not yet on the system. This can be useful when configuring policy when a particular application may be installed at an unknown point in time.
+A rule can be scoped to a specific VM creator even if it is not yet on the system. This can be useful when configuring policy when a particular application may be installed at an unknown point in time.
+
 
 ## EXAMPLES
 
@@ -34,7 +37,8 @@ A rule can scoped to a specific VM creator even if it is not yet on the system. 
 PS C:\> Get-NetFirewallHyperVVMCreator
 ```
 
-This retrieves all of the Hyper-V firewall VM creators that are currently on the system.
+This example retrieves all the Hyper-V firewall VM creators that are currently on the system.
+
 
 ## PARAMETERS
 
@@ -85,7 +89,8 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

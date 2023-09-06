@@ -31,7 +31,9 @@ Set-NetFirewallHyperVRule -InputObject <CimInstance#MSFT_NetFirewallHyperVRule[]
 ```
 
 ## DESCRIPTION
+
 The **Set-NetFirewallHyperVRule** cmdlet modifies existing Hyper-V firewall rule properties. This cmdlet gets one or more rules to be modified using the *Name* parameter or the *DisplayName* parameter.
+
 
 Rules cannot be queried by property in this cmdlet, but the querying can be done by the Get-NetFirewallHyperVRule cmdlet and piped into this cmdlet. The remaining parameters modify the properties of the specified rules.
 
@@ -149,7 +151,8 @@ The acceptable values for this parameter are:
 - True: Specifies the rule is currently enabled. 
 - False: Specifies the rule is currently disabled.
 
-Note, that the type of this parameter is not boolean, therefore `$true` and `$false` variables are not acceptable values here. Use "True" and "False" text strings instead.
+Note that the type of this parameter is not Boolean, therefore `$true` and `$false` variables are not acceptable values here. Use "True" and "False" text strings instead.
+
 
 A disabled rule will not actively modify computer behavior, but the management construct still exists on the computer so it can be re-enabled.
 
@@ -190,7 +193,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -LocalPorts
-Updates the LocalPorts avlue for the matching Hyper-V firewall rules.
+Updates the LocalPorts value for the matching Hyper-V firewall rules.
+
 This parameter specifies that network packets with matching IP local port numbers match this rule. 
 The acceptable values are:
 - Port range: 0-65535 
@@ -208,7 +212,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies that only matching Hyper-V firewall rules of the indicated Name are updated.
+Specifies that only matching Hyper-V firewall rules of the indicated name are updated.
+
 
 ```yaml
 Type: String
@@ -235,7 +240,8 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Updates the Protocol value of the matching Hyper-V firewall rules.
+Updates the protocol value of the matching Hyper-V firewall rules.
+
 This parameter specifies that network packets with matching IP protocol match this rule.
 The acceptable values for this parameter are:
 - Protocols by number:  0-255. 
@@ -349,7 +355,8 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

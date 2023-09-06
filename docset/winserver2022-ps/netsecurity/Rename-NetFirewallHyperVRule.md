@@ -41,9 +41,11 @@ Rename-NetFirewallHyperVRule -InputObject <CimInstance#MSFT_NetFirewallHyperVRul
 ```
 
 ## DESCRIPTION
+
 The **Rename-NetFirewallHyperVRule** cmdlet renames an existing Hyper-V firewall rule. When creating a rule, if the Name parameter is not specified, then a random GUID is used. This cmdlet specifies a friendly and descriptive rule name. The newly specified name, using the NewName parameter, must still be unique since it identifies a single rule object on the computer.
 
-This cmdlet gets renames the Hyper-V firewall rule with the Name parameter, DisplayName parameter, or rule properties. Only one Hyper-V firewall rule can be renamed at a time.
+This cmdlet renames the Hyper-V firewall rule with the Name parameter, DisplayName parameter, or rule properties. Only one Hyper-V firewall rule can be renamed at a time.
+
 
 To modify the DisplayName parameter, run the Set-NetFirewallHyperVRule cmdlet with the NewDisplayName parameter.
 
@@ -148,7 +150,8 @@ The acceptable values for this parameter are:
 - True: Specifies the rule is currently enabled. 
 - False: Specifies the rule is currently disabled.
 
-Note, that the type of this parameter is not boolean, therefore `$true` and `$false` variables are not acceptable values here. Use "True" and "False" text strings instead.
+Note that the type of this parameter is not Boolean, therefore `$true` and `$false` variables are not acceptable values here. Use "True" and "False" text strings instead.
+
 
 A disabled rule will not actively modify computer behavior, but the management construct still exists on the computer so it can be re-enabled.
 
@@ -266,7 +269,8 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Specifies that only matching Hyper-V firewall rules with the indicated Protocol are renamed.
+Specifies that only matching Hyper-V firewall rules with the indicated protocol are renamed.
+
 The acceptable values for this parameter are:
 - Protocols by number:  0-255. 
 - Protocols by name:  TCP, UDP, ICMPv4, or ICMPv6. 
@@ -284,7 +288,8 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -300,7 +305,8 @@ Accept wildcard characters: False
 
 ### -VMCreatorId
 Specifies that only matching Hyper-V firewall rules with the specified VMCreatorId are renamed.
-The format for this value is a Guid enclosed in brackets, i.e '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}'
+The format for this value is a GUID enclosed in brackets, such as '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}'.
+
 
 ```yaml
 Type: String

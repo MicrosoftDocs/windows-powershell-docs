@@ -41,11 +41,14 @@ Remove-NetFirewallHyperVRule -InputObject <CimInstance#MSFT_NetFirewallHyperVRul
 ```
 
 ## DESCRIPTION
-IMPORTANT NOTE: Running this cmdlet without parameters removes all Windows Hyper-V firewall rules on the target computer. Always run this cmdlet with the WhatIf parameter if you are not targeting a specific Windows Hyper-V Firewall rule.
+
+**Important**: Running this cmdlet without parameters removes all Windows Hyper-V firewall rules on the target computer. Always run this cmdlet with the WhatIf parameter if you are not targeting a specific Windows Hyper-V Firewall rule.
+
 
 The **Remove-NetFirewallHyperVRule** cmdlet permanently deletes a Hyper-V firewall rule to be inactive. This is different from the Disable-NetFirewallHyperVRule cmdlet, which will only disable the rule. A Disabled rule will not actively modify system behavior, but the rule still exists on the computer so it can be re-enabled later.
 
-This cmdlet gets removes one or more Hyper-V firewall rules with the Name parameter, DisplayName parameter, or rule properties.
+This cmdlet removes one or more Hyper-V firewall rules with the Name parameter, DisplayName parameter, or rule properties.
+
 
 ## EXAMPLES
 
@@ -54,14 +57,16 @@ This cmdlet gets removes one or more Hyper-V firewall rules with the Name parame
 PS C:\> Remove-NetFirewallHyperVRule
 ```
 
-This retrieves all of the Hyper-V firewall rules in the local store and removes all of them.
+This example retrieves all the Hyper-V firewall rules in the local store and removes them.
+
 
 ### EXAMPLE 2
 ```
 PS C:\> Remove-NetFirewallHyperVRule -DisplayName 'MyServerIPBlock'
 ```
 
-This retrieves all of the Hyper-V firewall rules with DisplayName 'MyServerIPBlock' and removes them.
+This example retrieves all the Hyper-V firewall rules with DisplayName 'MyServerIPBlock' and removes them.
+
 
 ## PARAMETERS
 
@@ -153,7 +158,8 @@ The acceptable values for this parameter are:
 - True: Specifies the rule is currently enabled. 
 - False: Specifies the rule is currently disabled.
 
-Note, that the type of this parameter is not boolean, therefore `$true` and `$false` variables are not acceptable values here. Use "True" and "False" text strings instead.
+Note that the type of this parameter is not Boolean, therefore `$true` and `$false` variables are not acceptable values here. Use "True" and "False" text strings instead.
+
 
 A disabled rule will not actively modify computer behavior, but the management construct still exists on the computer so it can be re-enabled.
 
@@ -239,7 +245,8 @@ The acceptable values for this parameter are:
 - Local: The object originates from the local store. 
 - MDM: The object originates from the MDM store.
 
-By default, the Local store is queried.
+By default, the local store is queried.
+
 
 ```yaml
 Type: PolicyStoreType[]
@@ -255,7 +262,8 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Specifies that only matching Hyper-V firewall rules with the indicated Protocol are removed.
+Specifies that only matching Hyper-V firewall rules with the indicated protocol are removed.
+
 The acceptable values for this parameter are:
 - Protocols by number:  0-255. 
 - Protocols by name:  TCP, UDP, ICMPv4, or ICMPv6. 
@@ -273,7 +281,8 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -289,7 +298,8 @@ Accept wildcard characters: False
 
 ### -VMCreatorId
 Specifies that only matching Hyper-V firewall rules with the specified VMCreatorId are removed.
-The format for this value is a Guid enclosed in brackets, i.e '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}'
+The format for this value is a GUID enclosed in brackets, such as '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}'.
+
 
 ```yaml
 Type: String

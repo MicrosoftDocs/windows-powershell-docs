@@ -26,7 +26,9 @@ Set-NetFirewallHyperVVMSetting -InputObject <CimInstance#MSFT_NetFirewallHyperVV
 ```
 
 ## DESCRIPTION
+
 The **Set-NetFirewallHyperVVMSetting** cmdlet configures settings for the Hyper-V firewall per-VM settings on the system. These settings are applicable to all Hyper-V firewall ports created by a specific Hyper-V firewall VM creator.
+
 
 This cmdlet should be used when a Hyper-V VM creator has registered its VM creator ID with the system, when another Hyper-V setting is already configured for the specified VM creator ID, or when a Hyper-V firewall port is created with the specified VM creator ID. If none of the above are true, then the New-NetFirewallHyperVVMSetting cmdlet should be used.
 
@@ -37,7 +39,8 @@ This cmdlet should be used when a Hyper-V VM creator has registered its VM creat
 PS C:\> Set-NetFirewallHyperVVMSetting -Name '9E288F02-CE00-4D9E-BE2B-14CE463B0298}' -LoopbackEnabled True
 ```
 
-This updates the LoopbackEnabled setting for all Hyper-V firewall ports created by the Hyper-V firewall VM creator specified.
+This example updates the LoopbackEnabled setting for all Hyper-V firewall ports created by the Hyper-V firewall VM creator specified.
+
 
 ## PARAMETERS
 
@@ -72,7 +75,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultInboundAction
-Specifies how to filter inbound traffic which does not match any Hyper-V firewall rules.
+Specifies how to filter inbound traffic that does not match any Hyper-V firewall rules.
+
 
 This setting applies the configuration to all profiles. For configuring at a per-profile granularity, use the `Set-NetFirewallHyperVProfile` cmdlet.
 
@@ -98,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultOutboundAction
-Specifies how to filter outbound traffic which does not match any Hyper-V firewall rules.
+Specifies how to filter outbound traffic that does not match any Hyper-V firewall rules.
+
 
 This setting applies the configuration to all profiles. For configuring at a per-profile granularity, use the `Set-NetFirewallHyperVProfile` cmdlet.
 
@@ -178,7 +183,8 @@ Accept wildcard characters: False
 ### -AllowHostPolicyMerge
 Specifies that the host firewall policy should be merged into the effective policy. 
 
-This setting controls whether host firewall profile settings (DefaultInboundAction, DefaultOutboundAction, Enabled, AllowLocalFirewallRules) as well as host firewall rules (only rules which are IP 5-tuple based, i.e, not having any local conditions such as application) should be applicable to Hyper-V firewall.
+This setting controls whether host firewall profile settings (DefaultInboundAction, DefaultOutboundAction, Enabled, and AllowLocalFirewallRules) as well as host firewall rules (only rules that are IP 5-tuple based, that is, not having any local conditions such as application) should be applicable to Hyper-V firewall.
+
 
 Policy configurations may come from many stores. If this setting is True, the following order of precedence is used for determining the effective policy (highest priority to lowest priority):
 - Host Firewall Group Policy
@@ -189,7 +195,8 @@ Policy configurations may come from many stores. If this setting is True, the fo
 
 The acceptable values for this parameter are: False, True, or NotConfigured.
 
-- True: Host firewall rules and settings are applied to Hyper-V Firewall.
+- True: Host firewall rules and settings are applied to Hyper-V firewall.
+
 - False: Host firewall rules and settings are not applied to Hyper-V firewall
 - NotConfigured: Resets this value back to its default.
 
@@ -225,7 +232,8 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

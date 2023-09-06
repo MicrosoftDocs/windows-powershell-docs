@@ -21,7 +21,9 @@ Get-NetFirewallHyperVPort [-All] [-CimSession <CimSession[]>] [-ThrottleLimit <i
 ```
 
 ## DESCRIPTION
-The **Get-NetFirewallHyperVPort** cmdlet returns the instances of the Hyper-V firewall ports. Hyper-V firewall rules are applied on a per port basis. This cmdlet queries the active ports on the system and displays associated data about the port.
+
+The **Get-NetFirewallHyperVPort** cmdlet returns the instances of the Hyper-V firewall ports. Hyper-V firewall rules are applied on a per-port basis. This cmdlet queries the active ports on the system and displays associated data about the port.
+
 
 ## EXAMPLES
 
@@ -30,7 +32,8 @@ The **Get-NetFirewallHyperVPort** cmdlet returns the instances of the Hyper-V fi
 PS C:\> Get-NetFirewallHyperVPort
 ```
 
-This retrieves all of the Hyper-V firewall ports that are currently on the system.
+This example retrieves all the Hyper-V firewall ports that are currently on the system.
+
 
 ## PARAMETERS
 
@@ -81,7 +84,8 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

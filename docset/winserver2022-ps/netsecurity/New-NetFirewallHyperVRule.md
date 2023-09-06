@@ -20,7 +20,9 @@ New-NetFirewallHyperVRule -DisplayName <string> [-Name <string>] [-RulePriority 
 ```
 
 ## DESCRIPTION
+
 The **New-NetFirewallHyperVRule** cmdlet creates an inbound or outbound Hyper-V firewall rule and adds the rule to the target computer.
+
 
 Some parameters are used to specify the conditions that must be matched for the rule to apply, such as the *LocalAddress* and *RemoteAddress* parameters.
 
@@ -156,7 +158,8 @@ The acceptable values for this parameter are:
 - True: Specifies the rule is currently enabled. 
 - False: Specifies the rule is currently disabled.
 
-Note, that the type of this parameter is not boolean, therefore `$true` and `$false` variables are not acceptable values here. Use "True" and "False" text strings instead.
+Note that the type of this parameter is not Boolean, therefore `$true` and `$false` variables are not acceptable values here. Use "True" and "False" text strings instead.
+
 
 A disabled rule will not actively modify computer behavior, but the management construct still exists on the computer so it can be re-enabled.
 
@@ -302,7 +305,8 @@ Accept wildcard characters: False
 ### -RulePriority
 Specifies the order in which rules are evaluated. A lower priority rule is evaluated before a higher priority rule.
 
-The default value is based on the Action of the rule. A rule with Action Allow is set to priority 2, and a rule with Action Block is 1. This configures, by default, Block rules to take precedence over Allow rules.
+The default value is based on the action of the rule. A rule with Action Allow is set to priority 2, and a rule with Action Block is 1. This configures, by default, Block rules to take precedence over Allow rules.
+
 
 ```yaml
 Type: uint16
@@ -355,7 +359,8 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

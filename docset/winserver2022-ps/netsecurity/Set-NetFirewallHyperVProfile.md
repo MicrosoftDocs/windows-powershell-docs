@@ -11,7 +11,7 @@ title: Set-NetFirewallHyperVProfile
 # Set-NetFirewallHyperVProfile
 
 ## SYNOPSIS
-Configures Hyper-V firewall profile settings settings on the target computer.
+Configures Hyper-V firewall profile settings on the target computer.
 
 ## SYNTAX
 
@@ -21,6 +21,7 @@ Set-NetFirewallHyperVProfile [-PolicyStore <string>] [-GPOSession <string>] [-Na
 ```
 
 ## DESCRIPTION
+
 The **Set-NetFirewallHyperVProfile** cmdlet configures the Hyper-V firewall profile settings on the system. These settings are applicable to all Hyper-V firewall ports created by a specific Hyper-V firewall VM creator. These settings apply to the VM only when the profile is active.
 
 This cmdlet should be used when a Hyper-V VM creator has registered its VM creator ID with the system, when another Hyper-V setting is already configured for the specified VM creator ID, or when a Hyper-V firewall port is created with the specified VM creator ID. If none of the above are true, then the New-NetFirewallHyperVProfile cmdlet should be used.
@@ -32,7 +33,7 @@ This cmdlet should be used when a Hyper-V VM creator has registered its VM creat
 PS C:\> Set-NetFirewallHyperVProfile -Name '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}' -Profile Public -Enabled True
 ```
 
-This configures the Enabled setting on the Public profile for all Hyper-V firewall ports created by the Hyper-V firewall VM creator specified.
+This example configures the Enabled setting on the Public profile for all Hyper-V firewall ports created by the Hyper-V firewall VM creator specified.
 
 ## PARAMETERS
 
@@ -67,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultInboundAction
-Specifies how to filter inbound traffic which does not match any Hyper-V firewall rules.
+Specifies how to filter inbound traffic that does not match any Hyper-V firewall rules.
 The acceptable values for this parameter are: NotConfigured, Allow, or Block. 
 
 - Block: Blocks inbound network traffic that does not match an inbound rule. 
@@ -90,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultOutboundAction
-Specifies how to filter outbound traffic which does not match any Hyper-V firewall rules.
+Specifies how to filter outbound traffic that does not match any Hyper-V firewall rules.
 The acceptable values for this parameter are: NotConfigured, Allow, or Block.
 
 - Block: Blocks outbound network traffic that does not match an outbound rule. 
@@ -159,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies that the settings are applicable only to the Hyper-V firewall VM creator with the matching Id.
+Specifies that the settings are applicable only to the Hyper-V firewall VM creator with the matching ID.
 The format for this value is a GUID enclosed in brackets: '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}'.
 
 ```yaml
@@ -175,7 +176,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

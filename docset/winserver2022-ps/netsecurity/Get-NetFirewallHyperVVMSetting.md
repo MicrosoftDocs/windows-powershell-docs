@@ -26,7 +26,9 @@ Get-NetFirewallHyperVVMSetting [-Name] <string[]> [-PolicyStore <string>] [-CimS
 ```
 
 ## DESCRIPTION
-The **Get-NetFirewallHyperVVMSetting** cmdlet returns the the Hyper-V firewall per-VM settings on the system. These settings are applicable to all Hyper-V firewall ports created by a specific Hyper-V firewall VM creator.
+
+The **Get-NetFirewallHyperVVMSetting** cmdlet returns the Hyper-V firewall per-VM settings on the system. These settings are applicable to all Hyper-V firewall ports created by a specific Hyper-V firewall VM creator.
+
 
 These settings are configurable on a per-store basis. By default, this cmdlet queries the local store.
 
@@ -37,21 +39,24 @@ These settings are configurable on a per-store basis. By default, this cmdlet qu
 PS C:\> Get-NetFirewallHyperVVMSetting
 ```
 
-This retrieves all of the Hyper-V firewall per-VM settings. With no parameters, this cmdlet queries the settings in the local store.
+This example retrieves all of the Hyper-V firewall per-VM settings. With no parameters, this cmdlet queries the settings in the local store.
+
 
 ### EXAMPLE 2
 ```
 PS C:\> Get-NetFirewallHyperVVMSetting -Name '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}'
 ```
 
-This retrieves all of the Hyper-V firewall per-VM settings for the specified VM creator Id.
+This example retrieves all the Hyper-V firewall per-VM settings for the specified VM creator ID.
+
 
 ### EXAMPLE 3
 ```
 PS C:\> Get-NetFirewallHyperVVMSetting -PolicyStore ActiveStore
 ```
 
-This retrieves all of the Hyper-V firewall per-VM settings from the ActiveStore.
+This example retrieves all the Hyper-V firewall per-VM settings from the ActiveStore.
+
 
 ## PARAMETERS
 
@@ -141,7 +146,8 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

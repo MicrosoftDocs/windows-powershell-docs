@@ -20,9 +20,12 @@ New-NetFirewallHyperVVMSetting [-PolicyStore <string>] [-GPOSession <string>] [-
 ```
 
 ## DESCRIPTION
+
 The **New-NetFirewallHyperVVMSetting** cmdlet configures settings for the Hyper-V firewall per-VM settings on the system. These settings are applicable to all Hyper-V firewall ports created by a specific Hyper-V firewall VM creator.
 
-This cmdlet should be used when none of the following are true: a Hyper-V VM creator has registered its VM creator ID with the system, when another Hyper-V setting is already configured for the specified VM creator ID, or when a Hyper-V firewall port is created with the specified VM creator ID. If any of the above are true, the Set-NetFirewallHyperVVMSetting cmdlet should be used. In other words, this cmdlet can be used to configure policy prior to the application corresponding to the specific VM creator ID has running on the system.
+
+This cmdlet should be used when none of the following are true: a Hyper-V VM creator has registered its VM creator ID with the system, when another Hyper-V setting is already configured for the specified VM creator ID, or when a Hyper-V firewall port is created with the specified VM creator ID. If any of these is true, the Set-NetFirewallHyperVVMSetting cmdlet should be used. In other words, this cmdlet can be used to configure policy prior to the application corresponding to the specific VM creator ID running on the system.
+
 
 ## EXAMPLES
 
@@ -31,7 +34,8 @@ This cmdlet should be used when none of the following are true: a Hyper-V VM cre
 PS C:\> New-NetFirewallHyperVVMSetting -Name '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}' -LoopbackEnabled True
 ```
 
-This configures the LoopbackEnabled setting for all Hyper-V firewall ports created by the Hyper-V firewall VM creator specified.
+This example configures the LoopbackEnabled setting for all Hyper-V firewall ports created by the Hyper-V firewall VM creator specified.
+
 
 ## PARAMETERS
 
@@ -167,7 +171,8 @@ Accept wildcard characters: False
 ### -AllowHostPolicyMerge
 Specifies that the host firewall policy should be merged into the effective policy. 
 
-This setting controls whether host firewall profile settings (DefaultInboundAction, DefaultOutboundAction, Enabled, AllowLocalFirewallRules) as well as host firewall rules (only rules which are IP 5-tuple based, i.e, not having any local conditions such as application) should be applicable to Hyper-V firewall.
+This setting controls whether host firewall profile settings (DefaultInboundAction, DefaultOutboundAction, Enabled, AllowLocalFirewallRules) as well as host firewall rules (only rules that are IP 5-tuple based, that is, not having any local conditions such as application) should be applicable to Hyper-V firewall.
+
 
 Policy configurations may come from many stores. If this setting is True, the following order of precedence is used for determining the effective policy (highest priority to lowest priority):
 - Host Firewall Group Policy
@@ -178,7 +183,8 @@ Policy configurations may come from many stores. If this setting is True, the fo
 
 The acceptable values for this parameter are: False, True, or NotConfigured.
 
-- True: Host firewall rules and settings are applied to Hyper-V Firewall.
+- True: Host firewall rules and settings are applied to the Hyper-V firewall.
+
 - False: Host firewall rules and settings are not applied to Hyper-V firewall
 - NotConfigured: Resets this value back to its default.
 
@@ -198,7 +204,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies that the settings are applicable only to the Hyper-V firewall VM creator with the matching Id.
+Specifies that the settings are applicable only to the Hyper-V firewall VM creator with the matching ID.
+
 The format for this value is a GUID enclosed in brackets: '{9E288F02-CE00-4D9E-BE2B-14CE463B0298}'.
 
 ```yaml
@@ -214,7 +221,8 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

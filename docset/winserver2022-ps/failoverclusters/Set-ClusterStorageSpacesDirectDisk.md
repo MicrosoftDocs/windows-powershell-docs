@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
-online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterstoragespacesdirectdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 07/26/2022
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterstoragespacesdirectdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterStorageSpacesDirectDisk
 ---
@@ -15,14 +15,21 @@ Configures the system to enable S2D to claim or not claim specific physical disk
 
 ## SYNTAX
 
+### ByPhysicalDiskGuid (Default)
 ```
-Set-ClusterStorageSpacesDirectDisk [-CanBeClaimed <Boolean>] [-PhysicalDiskIds <String[]>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+Set-ClusterStorageSpacesDirectDisk -PhysicalDiskGuid <String[]> [-CanBeClaimed <Boolean>] [-Reset]
+ [-CacheUsage <S2DDiskUsage>] [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### ByPhysicalDisk
+```
+Set-ClusterStorageSpacesDirectDisk -PhysicalDisk <CimInstance[]> [-CanBeClaimed <Boolean>] [-Reset]
+ [-CacheUsage <S2DDiskUsage>] [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
 The `Set-ClusterStorageSpacesDirectDisk` cmdlet configures the system to enable Storage Spaces
 Direct (S2D) to claim or not claim specific physical disks. Disks marked to be not claimed by S2D
 remain untouched so that they can be used for other purposes.
@@ -33,19 +40,19 @@ S2D. Alternatively, you can run this cmdlet after you enable S2D.
 ## EXAMPLES
 
 ### Example 1: Configure disks not to be claimed
-
 ```powershell
 $parameters = @{
     CimSession = 'K0619-C1.contoso.com'
     CanBeClaimed = $False
-    PhysicalDiskIds = '55CD2E404B75A3FC', '50014EE05950DD7C'
+    PhysicalDiskIds = '55CD2E404B75A3FC',
+                      '50014EE05950DD7C'
 }
 Set-ClusterStorageSpacesDirectDisk @parameters
 ```
 
-This command configures the system that physical disks that have the IDs `55CD2E404B75A3FC` and
-`50014EE05950DD7C` cannot be claimed by S2D. In this example, the `CanBeClaimed` parameter is
-explicitly specified as `$False`. Omitting that parameter has the same effect.
+This command configures the system that physical disks that have the IDs _55CD2E404B75A3FC_ and
+_50014EE05950DD7C_ cannot be claimed by S2D. In this example, the `CanBeClaimed` parameter is
+explicitly specified as $False. Omitting that parameter has the same effect.
 
 
 This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
@@ -54,7 +61,6 @@ Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/
 ## PARAMETERS
 
 ### -AsJob
-
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
 complete.
 
@@ -69,7 +75,24 @@ For more information about Windows PowerShell background jobs, see
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CacheUsage
+The desired cache usage of the disk. The acceptable values for this parameter are: NonHybrid,
+Capacity, Cache, and Auto.
+
+```yaml
+Type: S2DDiskUsage
+Parameter Sets: (All)
+Aliases:
+Accepted values: NonHybrid, Capacity, Cache, Auto
 
 Required: False
 Position: Named
@@ -79,15 +102,14 @@ Accept wildcard characters: False
 ```
 
 ### -CanBeClaimed
-
-Indicates that S2D can claim the physical disks specified by the **PhysicalDiskIds** parameter. If
-you don't specify this parameter, this cmdlet indicates that the specified physical disks can be
+Indicates that S2D can claim the physical disks specified by the *PhysicalDiskIds* parameter. If you
+do not specify this parameter, this cmdlet indicates that the specified physical disks can be
 claimed.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +119,6 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
 or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
@@ -116,7 +137,6 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -131,15 +151,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PhysicalDiskIds
+### -PhysicalDisk
+{{ Fill PhysicalDisk Description }}
 
-Specifies an array of unique IDs of physical disks. This cmdlet set S2D to claim or not claim the
-specified disks.
+```yaml
+Type: CimInstance[]
+Parameter Sets: ByPhysicalDisk
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -PhysicalDiskGuid
+{{ Fill PhysicalDiskGuid Description }}
 
 ```yaml
 Type: String[]
+Parameter Sets: ByPhysicalDiskGuid
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reset
+Indicates whether the disk can be reset.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,9 +197,8 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.
@@ -159,7 +206,7 @@ computer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,8 +216,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-
-Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -185,7 +232,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
@@ -193,7 +239,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Management.Infrastructure.CimInstance[]
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 
@@ -206,3 +256,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-ClusterStorageSpacesDirect](./Get-ClusterStorageSpacesDirect.md)
 
 [Repair-ClusterStorageSpacesDirect](./Repair-ClusterStorageSpacesDirect.md)
+

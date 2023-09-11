@@ -25,8 +25,9 @@ Remove-ClusterSharedVolumeFromAffinityRule [[-Name] <String[]>] [-ClusterSharedV
 ### InputObject (cdxml)
 
 ```
-Remove-ClusterSharedVolumeFromAffinityRule -InputObject <CimInstance[]> [-ClusterSharedVolumes] <String[]>
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
+Remove-ClusterSharedVolumeFromAffinityRule -InputObject <CimInstance[]> 
+ [-ClusterSharedVolumes] <String[]>  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,11 +39,11 @@ Remove a cluster shared volume from an affinity rule.
 ### Example 1
 
 ```powershell
-Remove-ClusterSharedVolumeFromAffinityRule -ClusterSharedVolumes MyVolume -Name MyRule -Cluster MyCluster
+Remove-ClusterSharedVolumeFromAffinityRule -ClusterSharedVolumes Volume -Name Rule -Cluster Cluster
 ```
 
-This command removes the cluster shared volume _MyVolume_ from the affinity rule _MyRule_ for the
-cluster _MyCluster_.
+This command removes the cluster shared volume _Volume_ from the affinity rule _Rule_ for the
+cluster _Cluster_.
 
 ## PARAMETERS
 
@@ -158,10 +159,9 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an
-optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
-computer. The throttle limit applies only to the current cmdlet, not to the session or to the
-computer.
+this parameter is omitted or a value of `0` is entered, then PowerShell calculates an optimum
+throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32

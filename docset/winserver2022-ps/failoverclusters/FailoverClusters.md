@@ -207,9 +207,6 @@ Destroys an existing failover cluster.
 ### [Remove-ClusterAccess](./Remove-ClusterAccess.md)
 Removes a user from the access list on the cluster.
 
-### [Remove-ClusterGroupFromAffinityRule](./Remove-ClusterGroupFromAffinityRule.md)
-Removes a cluster group from an affinity rule.
-
 ### [Remove-ClusterCheckpoint](./Remove-ClusterCheckpoint.md)
 Removes a cryptographic key checkpoint or registry checkpoint for a resource.
 
@@ -243,6 +240,9 @@ Removes a resource type from a failover cluster.
 ### [Remove-ClusterSharedVolume](./Remove-ClusterSharedVolume.md)
 Removes a volume from the Cluster Shared Volumes in a failover cluster, and places it in Available
 Storage in the cluster.
+
+### [Remove-ClusterSharedVolumeFromAffinityRule](./Remove-ClusterSharedVolumeFromAffinityRule.md)
+Remove a cluster shared volume from an affinity rule.
 
 ### [Remove-ClusterVMMonitoredItem](./Remove-ClusterVMMonitoredItem.md)
 Removes monitoring of a service or event that is currently being monitored on a virtual machine.

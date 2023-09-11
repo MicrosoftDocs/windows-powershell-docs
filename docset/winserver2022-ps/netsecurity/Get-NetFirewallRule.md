@@ -588,11 +588,12 @@ Accept wildcard characters: False
 ### -PolicyAppId 
 Specifies that matching firewall rules of the indicated PolicyAppId are retrieved. This parameter specifies the WDAC policy tag that would be found in the WDAC tagging policy under AppIdTags.
 
-Type: string
+```yaml
+Type: String[]
 Default value: null
 Accept pipeline input: false
 Accept wildcard characters: false
-
+```
 
 ### -PolicyStore
 Targets the policy store from which to retrieve the rules. 

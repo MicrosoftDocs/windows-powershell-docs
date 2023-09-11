@@ -29,7 +29,7 @@ Recursion occurs when a DNS server queries other DNS servers on behalf of a requ
 
 ### Example 1: Set the retry interval
 ```
-PS C:\> Set-DnsServerRecursion -RetryInterval 3 -PassThru
+PS C:\> Set-DnsServerRecursion -RetryInterval 15 -PassThru
 
 Enable               : False
 AdditionalTimeout(s) : 4
@@ -38,7 +38,7 @@ Timeout(s)           : 8
 SecureResponse       : True
 ```
 
-This command sets the retry interval to 3 seconds.
+This command sets the retry interval to 15 seconds.
 
 ## PARAMETERS
 

@@ -31,7 +31,7 @@ Remove-ClusterGroupFromAffinityRule -InputObject <CimInstance[]> [-Groups] <Stri
 
 ## DESCRIPTION
 
-Removes a cluster group from an affinity rule. This doesn't remove the rule itself
+Removes a cluster group from an affinity rule. This doesn't remove the rule itself.
 
 ## EXAMPLES
 

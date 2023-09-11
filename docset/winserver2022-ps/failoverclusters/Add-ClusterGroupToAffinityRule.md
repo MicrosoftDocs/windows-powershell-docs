@@ -11,7 +11,7 @@ title: Add-ClusterGroupToAffinityRule
 # Add-ClusterGroupToAffinityRule
 
 ## SYNOPSIS
-This cmdlet is used to add either a VM role or a group name to a cluster affinity rule.
+Adds a cluster group to an affinity rule.
 
 ## SYNTAX
 
@@ -31,9 +31,7 @@ Add-ClusterGroupToAffinityRule -InputObject <CimInstance[]> [-Groups] <String[]>
 
 ## DESCRIPTION
 
-This cmdlet is used to add either a VM role or a group name to a cluster affinity rule. When using
-this cmdlet we can use both **Name** and **Groups** parameters. The former is used to choose the
-desired affinity rule and the latter is for the groups to be added.
+Adds a cluster group to a named affinity rule.
 
 ## EXAMPLES
 

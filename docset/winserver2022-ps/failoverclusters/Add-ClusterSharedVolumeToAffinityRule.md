@@ -11,7 +11,7 @@ title: Add-ClusterSharedVolumeToAffinityRule
 # Add-ClusterSharedVolumeToAffinityRule
 
 ## SYNOPSIS
-Adds a Cluster Shared Volume (CSV) to an existing Affinity Rule.
+Adds a Cluster Shared Volume (CSV) to an existing affinity rule.
 
 ## SYNTAX
 
@@ -33,7 +33,8 @@ Add-ClusterSharedVolumeToAffinityRule -InputObject <CimInstance[]>
 
 ## DESCRIPTION
 
-This cmdlet gives the ability to keep VMs with the cluster shared volume(CSV) that contains its VHD.
+This cmdlet allows you to add cluster shared volumes (CSVs) to an existing affinity rule, using
+either the CSV name or object.
 
 ## EXAMPLES
 

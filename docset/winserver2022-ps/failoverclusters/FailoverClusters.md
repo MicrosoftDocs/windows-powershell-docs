@@ -259,6 +259,9 @@ Removes a resource type from a failover cluster.
 Removes a volume from the Cluster Shared Volumes in a failover cluster, and places it in Available
 Storage in the cluster.
 
+### [Remove-ClusterSharedVolumeFromAffinityRule](./Remove-ClusterSharedVolumeFromAffinityRule.md)
+Remove a cluster shared volume from an affinity rule.
+
 ### [Remove-ClusterVMMonitoredItem](./Remove-ClusterVMMonitoredItem.md)
 Removes monitoring of a service or event that is currently being monitored on a virtual machine.
 

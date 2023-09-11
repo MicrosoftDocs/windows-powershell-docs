@@ -22,8 +22,8 @@ New-ClusterAffinityRule [-Name] <String> [-RuleType <RuleType>] [-CimSession <Ci
 
 ## DESCRIPTION
 
-This cmdlet allows the creation of new affinity rules. There are four main types when creating a new
-rule: SameFaultDomain | SameNode | DifferentFaultDomain | DifferentNode
+This cmdlet allows the creation of new affinity rules using one of four rule types, the same fault
+domain, different fault domain, same node, and different node
 
 ## EXAMPLES
 
@@ -124,10 +124,9 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an
-optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
-computer. The throttle limit applies only to the current cmdlet, not to the session or to the
-computer.
+this parameter is omitted or a value of `0` is entered, then PowerShell calculates an optimum
+throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
@@ -161,3 +160,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-ClusterAffinityRule](Get-ClusterAffinityRule.md)
+
+[Remove-ClusterAffinityRule](Remove-ClusterAffinityRule.md)
+
+[Set-ClusterAffinityRule](Set-ClusterAffinityRule.md)

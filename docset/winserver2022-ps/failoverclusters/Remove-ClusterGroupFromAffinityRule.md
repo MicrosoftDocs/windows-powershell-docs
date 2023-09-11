@@ -196,3 +196,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-ClusterGroupToAffinityRule](Add-ClusterGroupToAffinityRule.md)

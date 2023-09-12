@@ -35,13 +35,14 @@ Adds a cluster group to a named affinity rule.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Add a group to an affinity rule
 
 ```powershell
 Add-ClusterGroupToAffinityRule -Groups MyGroup -Name MyRule -Cluster MyCluster
 ```
 
-This example adds the group named `MyGroup` to the affinity rule named `MyRule` on the cluster named `MyCluster`.
+This example adds the group named `MyGroup` to the affinity rule named `MyRule` on the cluster named
+`MyCluster`.
 
 ## PARAMETERS
 
@@ -107,7 +108,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies the input object that is used in a pipeline command.
+Specifies the affinity rule object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]

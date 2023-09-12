@@ -35,7 +35,7 @@ Removes a cluster group from an affinity rule. This doesn't remove the rule itse
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Remove a group from an affinity rule
 
 ```powershell
 Remove-ClusterGroupFromAffinityRule -Name MuRyle -Groups MyGroup -Cluster MyCluster
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies the input object that is used in a pipeline command.
+Specifies the affinity rule object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]

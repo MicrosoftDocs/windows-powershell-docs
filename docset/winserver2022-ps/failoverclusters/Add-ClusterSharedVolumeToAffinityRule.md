@@ -55,7 +55,7 @@ prompt. You can continue to work in the session while the job completes. To mana
 `*-Job` cmdlets. To get the job results, use the
 [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
-For more information about Windows PowerShell background jobs, see
+For more information about PowerShell background jobs, see
 [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -ClusterSharedVolumes
 
-The cluster shared volumes to be added to the affinity rule.
+The cluster shared volumes to add to the affinity rule.
 
 ```yaml
 Type: String[]
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-The affinity rule in question to add cluster shared volumes to.
+The affinity rule to add cluster shared volumes to.
 
 ```yaml
 Type: String[]

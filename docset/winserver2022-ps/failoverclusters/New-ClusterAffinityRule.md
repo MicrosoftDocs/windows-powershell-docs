@@ -27,7 +27,7 @@ domain, different fault domain, same node, and different node
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Create a new affinity rule
 
 ```powershell
 New-ClusterAffinityRule -Name AffinityRule1 -RuleType SameFaultDomain -Cluster Cluster1
@@ -48,7 +48,7 @@ prompt. You can continue to work in the session while the job completes. To mana
 `*-Job` cmdlets. To get the job results, use the
 [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
-For more information about Windows PowerShell background jobs, see
+For more information about PowerShell background jobs, see
 [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-The name of the rule to be created.
+The name of the rule to create.
 
 ```yaml
 Type: String
@@ -100,13 +100,13 @@ Accept wildcard characters: False
 
 ### -RuleType
 
-The type of the rule you want to set your affinity rule to. The acceptable values for this parameter
-are:
+The affinity type for the new rule. The valid values for this parameter are:
 
 - **SameFaultDomain**. Resources must stay within the same fault domain.
-- **SameNode**. Resources must stay on the same cluster node.
-- **DifferentFaultDomain**. Resources will always stay in different fault domain (anti-affinity).
-- **DifferentNode**. Resources will always stay on different cluster nodes (anti-affinity).
+- `SameFaultDomain`. Resources must stay within the same fault domain.
+- `SameNode`. Resources must stay on the same cluster node.
+- `DifferentFaultDomain`. Resources must stay in different fault domain (anti-affinity).
+- `DifferentNode`. Resources must stay on different cluster nodes (anti-affinity).
 
 ```yaml
 Type: RuleType
@@ -150,6 +150,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
+This cmdlet doesn't accept any input from the pipeline.
 
 ## OUTPUTS
 

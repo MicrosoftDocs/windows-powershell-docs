@@ -11,7 +11,7 @@ title: Set-ClusterAffinityRule
 # Set-ClusterAffinityRule
 
 ## SYNOPSIS
-Enabled or Disable an affinity rule, and update the rule type.
+Enable or disable an affinity rule, and update the rule type.
 
 ## SYNTAX
 
@@ -31,12 +31,12 @@ Set-ClusterAffinityRule -InputObject <CimInstance[]> [-RuleType <RuleType>] [-En
 
 ## DESCRIPTION
 
-This cmdlet is used to Enabled or Disable an affinity rule. This can also be used to change the
-RuleType.
+The `Set-ClusterAffinityRule` command can enable or disable an existing affinity rule. It can also
+change the **RuleType**.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Enable an affinity rule
 
 ```powershell
 Set-ClusterAffinityRule -Name AffinityRule1 -Enabled -Cluster Cluster1
@@ -56,7 +56,7 @@ prompt. You can continue to work in the session while the job completes. To mana
 `*-Job` cmdlets. To get the job results, use the
 [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
-For more information about Windows PowerShell background jobs, see
+For more information about PowerShell background jobs, see
 [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies the input object that is used in a pipeline command.
+Specifies the affinity rule object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-The name of the affinity rule you want to either enable or disable.
+The name of the affinity rule you want to change.
 
 ```yaml
 Type: String[]
@@ -157,13 +157,12 @@ Accept wildcard characters: False
 
 ### -RuleType
 
-The type of the rule you want to set your affinity rule to. The acceptable values for this parameter
-are:
+The affinity type to set the rule to. The valid values for this parameter are:
 
-- **SameFaultDomain**. Resources must stay within the same fault domain.
-- **SameNode**. Resources must stay on the same cluster node.
-- **DifferentFaultDomain**. Resources will always stay in different fault domain (anti-affinity).
-- **DifferentNode**. Resources will always stay on different cluster nodes (anti-affinity).
+- `SameFaultDomain`. Resources must stay within the same fault domain.
+- `SameNode`. Resources must stay on the same cluster node.
+- `DifferentFaultDomain`. Resources must stay in different fault domain (anti-affinity).
+- `DifferentNode`. Resources must stay on different cluster nodes (anti-affinity).
 
 ```yaml
 Type: RuleType

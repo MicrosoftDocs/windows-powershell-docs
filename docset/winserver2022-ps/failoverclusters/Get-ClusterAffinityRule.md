@@ -22,12 +22,12 @@ Get-ClusterAffinityRule [[-Name] <String[]>] [-CimSession <CimSession[]>] [-Thro
 
 ## DESCRIPTION
 
-This cmdlet is used to display the given rule and what type it is. If -Name isn't specified, it
-will list all rules.
+This cmdlet is used to display the given rule and what type it is. The cmdlet lists all rules by
+default. Use the **Name** parameter to return a specific rule or rules.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Get a specific affinity rule
 
 ```powershell
 Get-ClusterAffinityRule -Name AffinityRule1 -Cluster Cluster1
@@ -48,7 +48,7 @@ prompt. You can continue to work in the session while the job completes. To mana
 `*-Job` cmdlets. To get the job results, use the
 [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
-For more information about Windows PowerShell background jobs, see
+For more information about PowerShell background jobs, see
 [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
@@ -84,7 +84,8 @@ Accept wildcard characters: False
 
 ### -Name
 
-The name of the desired affinity rule. if this isn't provided, it will list all the rules.
+The name of the desired affinity rule. When this parameter isn't specified, the cmdlet lists every
+rule.
 
 ```yaml
 Type: String[]

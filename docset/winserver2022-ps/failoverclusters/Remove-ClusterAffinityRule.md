@@ -31,17 +31,17 @@ Remove-ClusterAffinityRule -InputObject <CimInstance[]> [-CimSession <CimSession
 
 ## DESCRIPTION
 
-Removes a specified affinity rule.
+Removes a specified affinity rule, using either the rule name or affinity rule object.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Remove an existing affinity rule
 
 ```powershell
 Remove-ClusterAffinityRule -Name AffinityRule1 -Cluster Cluster1
 ```
 
-This example removes the cluster affinity rule named AffinityRule1.
+This example removes the cluster affinity rule named `AffinityRule1`.
 
 ## PARAMETERS
 
@@ -55,7 +55,7 @@ prompt. You can continue to work in the session while the job completes. To mana
 `*-Job` cmdlets. To get the job results, use the
 [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
-For more information about Windows PowerShell background jobs, see
+For more information about PowerShell background jobs, see
 [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies the input object that is used in a pipeline command.
+Specifies the affinity rule object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]

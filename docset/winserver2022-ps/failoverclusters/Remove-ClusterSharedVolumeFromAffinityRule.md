@@ -36,7 +36,7 @@ Remove a cluster shared volume from an affinity rule.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Remove a CSV from an affinity rule
 
 ```powershell
 Remove-ClusterSharedVolumeFromAffinityRule -ClusterSharedVolumes Volume -Name Rule -Cluster Cluster
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 
 ### -ClusterSharedVolumes
 
-The clustered shared volumes that should be added to the given affinity rule
+The clustered shared volumes to add to the given affinity rule.
 
 ```yaml
 Type: String[]
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies the input object that is used in a pipeline command.
+Specifies affinity rule input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]

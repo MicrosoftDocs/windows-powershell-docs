@@ -38,11 +38,15 @@ either the CSV name or object.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - Add a CSV to an affinity rule
 
 ```powershell
 Add-ClusterSharedVolumeToAffinityRule -ClusterSharedVolumes MyVolume -Name MyRule -Cluster MyCluster
 ```
+
+This command adds the cluster shared volume _MyVolume_ to the affinity rule _MyRule_ for the cluster
+_MyCluster_.
+
 ## PARAMETERS
 
 ### -AsJob
@@ -107,7 +111,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies the input object that is used in a pipeline command.
+Specifies the affinity rule object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
@@ -123,7 +127,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-The affinity rule to add cluster shared volumes to.
+The name of affinity rule to add cluster shared volumes to.
 
 ```yaml
 Type: String[]

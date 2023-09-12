@@ -41,7 +41,7 @@ Adds a cluster group to a named affinity rule.
 Add-ClusterGroupToAffinityRule -Groups MyGroup -Name MyRule -Cluster MyCluster
 ```
 
-This example adds the group named MyGroup to the affinity rule named MyRule on the cluster named.
+This example adds the group named `MyGroup` to the affinity rule named `MyRule` on the cluster named `MyCluster`.
 
 ## PARAMETERS
 
@@ -55,7 +55,7 @@ prompt. You can continue to work in the session while the job completes. To mana
 `*-Job` cmdlets. To get the job results, use the
 [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
-For more information about Windows PowerShell background jobs, see
+For more information about PowerShell background jobs, see
 [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-The Affinity rule in question that groups will be added to.
+The Affinity rule to add the groups to.
 
 ```yaml
 Type: String[]
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an
+this parameter is omitted or a value of `0` is entered, then PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

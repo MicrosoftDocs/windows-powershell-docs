@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 
 ### -DisableCacheMaintenance
-Defines whether the cache maintenance idle task will perform the cache maintenance or not. Allowed values are 1- Cache maintenance is disabled and 0- Cache maintenance is enabled (default).
+Defines whether the cache maintenance idle task will perform the cache maintenance or not. Allowed values are 1 - cache maintenance is disabled, and 0 - cache maintenance is enabled (default).
 
 ```yaml
 Type: Boolean

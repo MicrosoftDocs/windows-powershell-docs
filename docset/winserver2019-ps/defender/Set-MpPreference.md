@@ -32,7 +32,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-SubmitSamplesConsent <SubmitSamplesConsentType>] [-DisableAutoExclusions <Boolean>]
  [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>] [-DisableBehaviorMonitoring <Boolean>]
  [-DisableIntrusionPreventionSystem <Boolean>] [-DisableIOAVProtection <Boolean>]
- [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
+ [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>] [-DisableCacheMaintenance <UInt32>]
  [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
@@ -268,6 +268,22 @@ Aliases: dbaf
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -DisableCacheMaintenance
+Defines whether the cache maintenance idle task will perform the cache maintenance or not.Allowed values are 1- Cache maintenance is disabled and 0- Cache maintenance is enabled (default).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dcm
+
+Required: False
+Position: Named
+Default value: 0 
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

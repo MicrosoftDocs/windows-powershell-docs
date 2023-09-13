@@ -22,7 +22,6 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-RemediationScheduleTime <DateTime>] [-ReportingAdditionalActionTimeOut <UInt32>]
  [-ReportingCriticalFailureTimeOut <UInt32>] [-ReportingNonCriticalTimeOut <UInt32>]
  [-ScanAvgCPULoadFactor <Byte>] [-CheckForSignaturesBeforeRunningScan <Boolean>]
- [-DisableCacheMaintenance <UInt32>]
  [-ScanPurgeItemsAfterDelay <UInt32>] [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>]
  [-ScanScheduleDay <Day>] [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleOffset <UInt32>]
  [-ScanScheduleTime <HH:MM:SS>]
@@ -37,7 +36,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-MAPSReporting <MAPSReportingType>] [-SubmitSamplesConsent <SubmitSamplesConsentType>]
  [-DisableAutoExclusions <Boolean>] [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>]
  [-SchedulerRandomizationTime <UInt32>] [-DisableBehaviorMonitoring <Boolean>]
- [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
+ [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>] [-DisableCacheMaintenance <UInt32>]
  [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
@@ -397,7 +396,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCacheMaintenance
-Defines whether the cache maintenance idle task will perform the cache maintenance or not.Allowed values are 1- Cache maintenance is disabled and 0- Cache maintenance is enabled (default).
+Defines whether the cache maintenance idle task will perform the cache maintenance or not. Allowed values are 1- Cache maintenance is disabled and 0- Cache maintenance is enabled (default).
 
 ```yaml
 Type: Boolean

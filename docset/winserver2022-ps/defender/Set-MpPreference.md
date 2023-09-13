@@ -22,6 +22,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-RemediationScheduleTime <DateTime>] [-ReportingAdditionalActionTimeOut <UInt32>]
  [-ReportingCriticalFailureTimeOut <UInt32>] [-ReportingNonCriticalTimeOut <UInt32>]
  [-ScanAvgCPULoadFactor <Byte>] [-CheckForSignaturesBeforeRunningScan <Boolean>]
+ [-DisableCacheMaintenance <UInt32>]
  [-ScanPurgeItemsAfterDelay <UInt32>] [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>]
  [-ScanScheduleDay <Day>] [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleOffset <UInt32>]
  [-ScanScheduleTime <HH:MM:SS>]
@@ -395,6 +396,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableCacheMaintenance
+Defines whether the cache maintenance idle task will perform the cache maintenance or not.Allowed values are 1- Cache maintenance is disabled and 0- Cache maintenance is enabled (default).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dcm
+
+Required: False
+Position: Named
+Default value: 0 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableCatchupFullScan
 Indicates whether Windows Defender runs catch-up scans for scheduled full scans.
 A computer can miss a scheduled scan, usually because the computer is turned off at the scheduled time.
@@ -407,7 +423,7 @@ Aliases: dcfsc
 
 Required: False
 Position: Named
-Default value: True
+Default value: 0 
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

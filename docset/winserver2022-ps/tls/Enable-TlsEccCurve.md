@@ -20,26 +20,30 @@ Enable-TlsEccCurve [[-Position] <UInt32>] [-Name] <String> [-WhatIf] [-Confirm] 
 ```
 
 ## DESCRIPTION
+
 Enables Elliptic Curve Cryptography (ECC) cipher suites available for TLS for a computer.
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Enable-TlsEccCurve "NistP384" -Position 0
+
+```powershell
+Enable-TlsEccCurve 'NistP384' -Position 0
 ```
 
-This command enables Elliptic Curve Cryptography cipher suite named "NistP384"  at position 0, which is the highest priority.
+This command enables Elliptic Curve Cryptography cipher suite named 'NistP384' at position 0, which
+is the highest priority.
 
 ## PARAMETERS
 
 ### -Name
+
 Specifies the name of the ECC cipher suite to enable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -49,14 +53,19 @@ Accept wildcard characters: False
 ```
 
 ### -Position
-Specifies the position at which to insert the cipher suite in the ordered list of ECC cipher suites. The cmdlet inserts the cipher suite at the position that this parameter specifies, ahead of any existing cipher suites.
 
-Specify a value of 0 or CRYPT_PRIORITY_TOP to insert the function at the top of the list. Specify a value of 4294967295 or 0xFFFFFFFF or CRYPT_PRIORITY_BOTTOM to insert the function at the end of the list.
+Specifies the position at which to insert the cipher suite in the ordered list of ECC cipher suites.
+The cmdlet inserts the cipher suite at the position that this parameter specifies, ahead of any
+existing cipher suites.
+
+Specify a value of 0 or CRYPT_PRIORITY_TOP to insert the function at the top of the list. Specify a
+value of 4294967295 or 0xFFFFFFFF or CRYPT_PRIORITY_BOTTOM to insert the function at the end of the
+list.
 
 ```yaml
-Type: UInt32
+Type: System.UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -66,10 +75,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -81,11 +91,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -97,12 +108,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
-
 
 ## OUTPUTS
 
@@ -112,3 +126,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-TlsEccCurve](./Get-TlsEccCurve.md)
+
+[Disable-TlsEccCurve](./Disable-TlsEccCurve.md)

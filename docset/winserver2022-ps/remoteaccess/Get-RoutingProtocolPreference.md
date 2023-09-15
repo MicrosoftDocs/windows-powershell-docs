@@ -29,8 +29,12 @@ Use the Set-RoutingProtocolPreference cmdlet to modify preferences.
 ## EXAMPLES
 
 ### Example 1: Display preferences
+
+```powershell
+Get-RoutingProtocolPreference
 ```
-PS C:\> Get-RoutingProtocolPreference
+
+```output
 Protocol                                          Priority (Lower value = higher priority)
 -----------------------------                     -----------------------------------------------
 local                                             1

@@ -38,7 +38,7 @@ Set-NetAdapterSriov -InputObject <CimInstance[]> [-NumVFs <UInt32>] [-Enabled <B
 
 ## DESCRIPTION
 The **Set-NetAdapterSriov** cmdlet sets the Single-Root I/O Virtualization (SR-IOV) properties of the network adapter.
-The properties include the number of virtual functions, the number of virtual ports (VPorts), and the number of queue pairs for default and non-default VPorts.
+The properties include the number of virtual functions, and the number of queue pairs for default and non-default VPorts.
 The enabled state of SR-IOV can also be set with the cmdlet.
 
 The network adapter for these actions can be specified with the adapter name, interface description, or piped as an input object.
@@ -54,10 +54,10 @@ This command sets the number of virtual functions available to 31 on the network
 
 ### Example 2: Set the number of virtual functions and VPorts on the specified network adapter
 ```
-PS C:\> Set-NetAdapterSriov -Name "Ethernet 2" -NumVFs 31 -VPorts 64 -NumQueuePairsForDefaultVPort 2 -NumQueuePairsForNonDefaultVPort 2
+PS C:\> Set-NetAdapterSriov -Name "Ethernet 2" -NumVFs 31 -NumQueuePairsForDefaultVPort 2 -NumQueuePairsForNonDefaultVPort 2
 ```
 
-This command sets the number of virtual functions to 31 and the total number of VPorts to 64.
+This command sets the number of virtual functions to 31.
 This results in 31 virtual functions and 32 virtual machine queues (VMQ), plus 1 used by the physical function.
 Since the number of queue pair is set to 2 for both default and non-default ports, the total number of queue pairs used is 128.
 

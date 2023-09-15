@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clustervmmonitoreditem?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterVMMonitoredItem
@@ -46,16 +46,12 @@ resource. For example, the configuration might specify that the virtual machine 
 
 ### Example 1
 
-```
-PS C:\> Get-Cluster -Name Cluster1 | Get-ClusterVMMonitoredItem -VirtualMachine vm1
-Name 
----- 
-Microsoft-Windows-FailoverClustering-Manager+Admin,Microsoft-Windows-FailoverClustering-Manager,4708 
-Spooler
+```powershell
+Get-Cluster -Name Cluster1 | Get-ClusterVMMonitoredItem -VirtualMachine vm1
 ```
 
-This example returns the services and events being monitored in the virtual machine named vm1 on the
-cluster named Cluster1.
+This example returns the services and events being monitored in the virtual machine named `vm1` on
+the cluster named `Cluster1`.
 
 ## PARAMETERS
 

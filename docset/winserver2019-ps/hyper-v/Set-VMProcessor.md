@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExposeVirtualizationExtensions
-Specifies whether the hypervisor should expose the presence of virtualization extensions to the virtual machine, which enables support for nested virtualization,.
+Specifies whether the hypervisor should expose the presence of virtualization extensions to the virtual machine, which enables support for nested virtualization.
 
 
 ```yaml

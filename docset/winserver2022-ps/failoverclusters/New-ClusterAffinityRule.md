@@ -158,6 +158,9 @@ This cmdlet doesn't accept any input from the pipeline.
 ### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#root/MSCluster/MSCluster_AffinityRule
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
+Windows Management Instrumentation (WMI) objects. The command returns an object representing an
+affinity rule as a CIM instance within the `root/MSCLUSTER/MSCluster_AffinityRule` path.
 
 ## NOTES
 

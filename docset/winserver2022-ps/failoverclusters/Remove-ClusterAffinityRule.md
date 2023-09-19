@@ -201,13 +201,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
+When a string is piped to this cmdlet, the value is use as the name of the affinity rule to remove.
+
 ### Microsoft.Management.Infrastructure.CimInstance[]
+
+This cmdlet accepts CIM instance objects representing an affinity rule like those returned by the
+[Get-ClusterAffinityRule](Get-ClusterAffinityRule.md) cmdlet.
 
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#root/MSCLUSTER/MSCluster_AffinityRule
+
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
+Windows Management Instrumentation (WMI) objects. The command returns an object representing an
+affinity rule as a CIM instance within the `root/MSCLUSTER/MSCluster_AffinityRule` path.
 
 ## NOTES
 

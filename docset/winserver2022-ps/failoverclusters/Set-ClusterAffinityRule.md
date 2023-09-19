@@ -39,10 +39,28 @@ change the **RuleType**.
 ### Example 1 - Enable an affinity rule
 
 ```powershell
-Set-ClusterAffinityRule -Name AffinityRule1 -Enabled -Cluster Cluster1
+Set-ClusterAffinityRule -Name AffinityRule1 -Enabled
 ```
 
-This example enables the cluster affinity rule named AffinityRule1.
+This example enables the cluster affinity rule named `AffinityRule1`.
+
+### Example 2 - Disable an affinity rule
+
+```powershell
+Set-ClusterAffinityRule -Name AffinityRule1 -Enabled:$false
+```
+
+This example disables the cluster affinity rule named `AffinityRule1`.
+
+### Example 3 - Change an affinity rule type
+
+```powershell
+Get-ClusterAffinityRule -Name AffinityRule1 | Set-ClusterAffinityRule -RuleType DifferentNode
+```
+
+This example gets the affinity rule named `AffinityRule1` and pipes the affinity rule object to the
+`Set-ClusterAffinityRule` cmdlet. The `Set-ClusterAffinityRule` cmdlet changes the affinity rule
+type to `DifferentNode`.
 
 ## PARAMETERS
 
@@ -92,7 +110,10 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-Enables or disables the affinity rule.
+Enables or disables the affinity rule. The accepted values for this parameter are:
+
+- `0` or `$false`. The affinity rule is disabled.
+- `1` or `$true`. The affinity rule is enabled.
 
 ```yaml
 Type: UInt32
@@ -140,8 +161,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet doesn't
-generate any output.
+Returns an the original object passed to the command. By default, this cmdlet doesn't generate any
+output.
 
 ```yaml
 Type: SwitchParameter
@@ -207,13 +228,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
+When a string is piped to this cmdlet, the value is use as the name of the affinity rule to remove.
+
 ### Microsoft.Management.Infrastructure.CimInstance[]
 
+This cmdlet accepts CIM instance objects representing an affinity rule like those returned by the
+[Get-ClusterAffinityRule](Get-ClusterAffinityRule.md) cmdlet.
+
 ## OUTPUTS
+
+### None
+
+The cmdlet doesn't generate any output unless you use the **PassThru** parameter.
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#root/MSCLUSTER/MSCluster_AffinityRule
+
+The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
+Windows Management Instrumentation (WMI) objects. The command returns an object representing an
+affinity rule as a CIM instance within the `root/MSCLUSTER/MSCluster_AffinityRule` path.
 
 ## NOTES
 

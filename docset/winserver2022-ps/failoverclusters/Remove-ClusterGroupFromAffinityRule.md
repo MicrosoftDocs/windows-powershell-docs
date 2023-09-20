@@ -206,6 +206,8 @@ Specifies the affinity rule object to remove, as returned by the
 
 ## OUTPUTS
 
+### None
+
 By default, the cmdlet doesn't return any output.
 
 ### Microsoft.Management.Infrastructure.CimInstance

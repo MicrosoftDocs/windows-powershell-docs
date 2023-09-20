@@ -53,8 +53,8 @@ Get-ClusterAffinityRule -name Rule1 |
 ```
 
 The command gets the affinity rule `Rule1` object and passes it to the
-`Remove-ClusterSharedVolumeFromAffinityRule` command. The command adds the cluster shared volume
-`Volume1` to the affinity rule.
+`Remove-ClusterSharedVolumeFromAffinityRule` command. The command removes the cluster shared volume
+`Volume1` from the affinity rule.
 
 ## PARAMETERS
 

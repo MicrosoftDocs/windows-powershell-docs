@@ -202,7 +202,7 @@ the cluster shared volume from.
 
 ### Microsoft.Management.Infrastructure.CimInstance[]
 
-This cmdlet accepts CIM instance objects representing an affinity rule like those returned by the
+Specifies the affinity rule object to remove, as returned by the
 [Get-ClusterAffinityRule](Get-ClusterAffinityRule.md) cmdlet.
 
 ## OUTPUTS

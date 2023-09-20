@@ -45,6 +45,17 @@ Remove-ClusterSharedVolumeFromAffinityRule -ClusterSharedVolumes Volume -Name Ru
 This command removes the cluster shared volume _Volume_ from the affinity rule _Rule_ for the
 cluster _Cluster_.
 
+### Example 2 - Remove a CSV to an affinity rule using pipeline
+
+```powershell
+Get-ClusterAffinityRule -name Rule1 |
+ Remove-ClusterSharedVolumeFromAffinityRule -ClusterSharedVolumes Volume1
+```
+
+The command gets the affinity rule `Rule1` object and passes it to the
+`Remove-ClusterSharedVolumeFromAffinityRule` command. The command adds the cluster shared volume
+`Volume1` to the affinity rule.
+
 ## PARAMETERS
 
 ### -AsJob
@@ -141,8 +152,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+Returns the original affinity rule object passed to the command. By default, this cmdlet doesn't
+generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -186,13 +197,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
+When a string is piped to this cmdlet, the value is used as the name of the affinity rule to remove
+the cluster shared volume from.
+
 ### Microsoft.Management.Infrastructure.CimInstance[]
 
+This cmdlet accepts CIM instance objects representing an affinity rule like those returned by the
+[Get-ClusterAffinityRule](Get-ClusterAffinityRule.md) cmdlet.
+
 ## OUTPUTS
+
+### None
+
+By default, the cmdlet doesn't return any output.
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#root/MSCLUSTER/MSCluster_AffinityRule
+
+When the **PassThru** parameter is specified, the cmdlet returns an object representing an affinity
+rule as a CIM instance within the `root/MSCLUSTER/MSCluster_AffinityRule` path.
 
 ## NOTES
 

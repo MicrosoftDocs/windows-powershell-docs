@@ -47,6 +47,17 @@ Add-ClusterSharedVolumeToAffinityRule -ClusterSharedVolumes MyVolume -Name MyRul
 This command adds the cluster shared volume _MyVolume_ to the affinity rule _MyRule_ for the cluster
 _MyCluster_.
 
+### Example 2 - Add a CSV to an affinity rule using pipeline
+
+```powershell
+Get-ClusterAffinityRule -name Rule1 |
+ Add-ClusterSharedVolumeToAffinityRule -ClusterSharedVolumes Volume1
+```
+
+The command gets the affinity rule `Rule1` object and passes it to the
+`Add-ClusterSharedVolumeToAffinityRule` command. The command adds the cluster shared volume
+`Volume1` to the affinity rule.
+
 ## PARAMETERS
 
 ### -AsJob
@@ -143,7 +154,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet doesn't
+Returns the original affinity rule object passed to the command. By default, this cmdlet doesn't
 generate any output.
 
 ```yaml
@@ -188,13 +199,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
+When a string is piped to this cmdlet, the value is used as the name of the affinity rule to add the
+cluster shared volume to.
+
 ### Microsoft.Management.Infrastructure.CimInstance[]
 
+This cmdlet accepts CIM instance objects representing an affinity rule like those returned by the
+[Get-ClusterAffinityRule](Get-ClusterAffinityRule.md) cmdlet.
+
 ## OUTPUTS
+
+### None
+
+By default, the cmdlet doesn't return any output.
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#root/MSCLUSTER/MSCluster_AffinityRule
+
+When the **PassThru** parameter is specified, the cmdlet returns an object representing an affinity
+rule as a CIM instance within the `root/MSCLUSTER/MSCluster_AffinityRule` path.
 
 ## NOTES
 

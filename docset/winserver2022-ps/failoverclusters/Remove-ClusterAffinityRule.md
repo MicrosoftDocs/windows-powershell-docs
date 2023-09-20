@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies the affinity rule object that is used in a pipeline command.
+Specifies the affinity rule object to remove, as returned by the `Get-ClusterAffinityRule` cmdlet.
 
 ```yaml
 Type: CimInstance[]
@@ -175,8 +175,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet isn't run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -201,7 +200,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
-When a string is piped to this cmdlet, the value is use as the name of the affinity rule to remove.
+When a string is piped to this cmdlet, the value is used as the name of the affinity rule to
+remove.
 
 ### Microsoft.Management.Infrastructure.CimInstance[]
 
@@ -214,9 +214,8 @@ This cmdlet accepts CIM instance objects representing an affinity rule like thos
 
 ### Microsoft.Management.Infrastructure.CimInstance#root/MSCLUSTER/MSCluster_AffinityRule
 
-The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
-Windows Management Instrumentation (WMI) objects. The command returns an object representing an
-affinity rule as a CIM instance within the `root/MSCLUSTER/MSCluster_AffinityRule` path.
+The cmdlet returns an object representing an affinity rule as a CIM instance within the
+`root/MSCLUSTER/MSCluster_AffinityRule` path.
 
 ## NOTES
 

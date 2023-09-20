@@ -22,8 +22,13 @@ New-ClusterAffinityRule [-Name] <String> [-RuleType <RuleType>] [-CimSession <Ci
 
 ## DESCRIPTION
 
-This cmdlet allows the creation of new affinity rules using one of four rule types, the same fault
-domain, different fault domain, same node, and different node
+This cmdlet allows the creation of new affinity rules for a cluster, which can be used to control
+whether certain roles (that is, virtual machines, resource groups, and so on) should run on the
+same node. For more information, see
+[Cluster affinity](/windows-server/failover-clustering/cluster-affinity).
+
+The available rule types are: the same fault domain, different fault domain, same node, and
+different node.
 
 ## EXAMPLES
 
@@ -102,11 +107,11 @@ Accept wildcard characters: False
 
 The affinity type for the new rule. The valid values for this parameter are:
 
-- **SameFaultDomain**. Resources must stay within the same fault domain.
-- `SameFaultDomain`. Resources must stay within the same fault domain.
-- `SameNode`. Resources must stay on the same cluster node.
-- `DifferentFaultDomain`. Resources must stay in different fault domain (anti-affinity).
-- `DifferentNode`. Resources must stay on different cluster nodes (anti-affinity).
+- `SameFaultDomain` - Resources must stay within the same fault domain.
+- `SameFaultDomain` - Resources must stay within the same fault domain.
+- `SameNode` - Resources must stay on the same cluster node.
+- `DifferentFaultDomain` - Resources must stay in different fault domain (anti-affinity).
+- `DifferentNode` - Resources must stay on different cluster nodes (anti-affinity).
 
 ```yaml
 Type: RuleType
@@ -158,9 +163,8 @@ This cmdlet doesn't accept any input from the pipeline.
 ### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#root/MSCluster/MSCluster_AffinityRule
-The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
-Windows Management Instrumentation (WMI) objects. The command returns an object representing an
-affinity rule as a CIM instance within the `root/MSCLUSTER/MSCluster_AffinityRule` path.
+The cmdlet returns an object representing an affinity rule as a CIM instance within the
+`root/MSCLUSTER/MSCluster_AffinityRule` path.
 
 ## NOTES
 

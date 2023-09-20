@@ -31,7 +31,7 @@ Set-ClusterAffinityRule -InputObject <CimInstance[]> [-RuleType <RuleType>] [-En
 
 ## DESCRIPTION
 
-The `Set-ClusterAffinityRule` command can enable or disable an existing affinity rule. It can also
+The `Set-ClusterAffinityRule` cmdlet can enable or disable an existing affinity rule. It can also
 change the **RuleType**.
 
 ## EXAMPLES
@@ -39,7 +39,7 @@ change the **RuleType**.
 ### Example 1 - Enable an affinity rule
 
 ```powershell
-Set-ClusterAffinityRule -Name AffinityRule1 -Enabled
+Set-ClusterAffinityRule -Name AffinityRule1 -Enabled $true
 ```
 
 This example enables the cluster affinity rule named `AffinityRule1`.
@@ -47,7 +47,7 @@ This example enables the cluster affinity rule named `AffinityRule1`.
 ### Example 2 - Disable an affinity rule
 
 ```powershell
-Set-ClusterAffinityRule -Name AffinityRule1 -Enabled:$false
+Set-ClusterAffinityRule -Name AffinityRule1 -Enabled $false
 ```
 
 This example disables the cluster affinity rule named `AffinityRule1`.
@@ -129,7 +129,8 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-Specifies the affinity rule object that is used in a pipeline command.
+Specifies the affinity rule object to change. The value must be an object representing an affinity
+rule, like the output that the `Get-ClusterAffinityRule` cmdlet returns.
 
 ```yaml
 Type: CimInstance[]
@@ -145,7 +146,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-The name of the affinity rule you want to change.
+The name of the affinity rule to change.
 
 ```yaml
 Type: String[]
@@ -180,10 +181,10 @@ Accept wildcard characters: False
 
 The affinity type to set the rule to. The valid values for this parameter are:
 
-- `SameFaultDomain`. Resources must stay within the same fault domain.
-- `SameNode`. Resources must stay on the same cluster node.
-- `DifferentFaultDomain`. Resources must stay in different fault domain (anti-affinity).
-- `DifferentNode`. Resources must stay on different cluster nodes (anti-affinity).
+- `SameFaultDomain` - Resources must stay within the same fault domain.
+- `SameNode` - Resources must stay on the same cluster node.
+- `DifferentFaultDomain` - Resources must stay in different fault domain (anti-affinity).
+- `DifferentNode` - Resources must stay on different cluster nodes (anti-affinity).
 
 ```yaml
 Type: RuleType
@@ -228,7 +229,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
-When a string is piped to this cmdlet, the value is use as the name of the affinity rule to remove.
+When a string is piped to this cmdlet, the value is used as the name of the affinity rule to
+change.
 
 ### Microsoft.Management.Infrastructure.CimInstance[]
 
@@ -239,15 +241,14 @@ This cmdlet accepts CIM instance objects representing an affinity rule like thos
 
 ### None
 
-The cmdlet doesn't generate any output unless you use the **PassThru** parameter.
+By default, the cmdlet doesn't return any output.
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#root/MSCLUSTER/MSCluster_AffinityRule
 
-The **Microsoft.Management.Infrastructure.CimInstance** object is a wrapper class that displays
-Windows Management Instrumentation (WMI) objects. The command returns an object representing an
-affinity rule as a CIM instance within the `root/MSCLUSTER/MSCluster_AffinityRule` path.
+When the **PassThru** parameter is specified, the cmdlet returns an object representing an affinity
+rule as a CIM instance within the `root/MSCLUSTER/MSCluster_AffinityRule` path.
 
 ## NOTES
 

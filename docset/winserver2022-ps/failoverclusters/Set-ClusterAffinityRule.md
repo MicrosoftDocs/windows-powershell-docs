@@ -161,7 +161,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an the original object passed to the command. By default, this cmdlet doesn't generate any
+Returns the original object passed to the command. By default, this cmdlet doesn't generate any
 output.
 
 ```yaml

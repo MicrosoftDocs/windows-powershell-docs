@@ -123,8 +123,8 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet doesn't
-generate any output.
+Returns the original object passed to the command. By default, this cmdlet doesn't generate any
+output.
 
 ```yaml
 Type: SwitchParameter

@@ -2,7 +2,7 @@
 description: Remove-ClusterGroupFromAffinityRule
 external help file: ClusterAffinityRule.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 07/27/2023
+ms.date: 09/20/2023
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clustergroupfromaffinityrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterGroupFromAffinityRule
@@ -42,6 +42,17 @@ Remove-ClusterGroupFromAffinityRule -Name MuRyle -Groups MyGroup -Cluster MyClus
 ```
 
 This example removes the cluster group `MyGroup` from the affinity rule named `MyRule`.
+
+### Example 2 - Remove a group to an affinity rule using pipeline
+
+```powershell
+Get-ClusterAffinityRule -name Rule1 |
+ Remove-ClusterGroupFromAffinityRule -Groups MyGroup
+```
+
+The command gets the affinity rule `Rule1` object and passes it to the
+`Remove-ClusterGroupFromAffinityRule` command. The command removes the cluster group `MyGroup` from
+the affinity rule.
 
 ## PARAMETERS
 
@@ -139,7 +150,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet doesn't
+Returns the original affinity rule object passed to the command. By default, this cmdlet doesn't
 generate any output.
 
 ```yaml
@@ -185,13 +196,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
+When a string is piped to this cmdlet, the value is used as the name of the affinity rule to remove
+the cluster shared volume from.
+
 ### Microsoft.Management.Infrastructure.CimInstance[]
 
+Specifies the affinity rule object to remove, as returned by the
+[Get-ClusterAffinityRule](Get-ClusterAffinityRule.md) cmdlet.
+
 ## OUTPUTS
+
+By default, the cmdlet doesn't return any output.
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#root/MSCLUSTER/MSCluster_AffinityRule
+
+When the **PassThru** parameter is specified, the cmdlet returns an object representing an affinity
+rule as a CIM instance within the `root/MSCLUSTER/MSCluster_AffinityRule` path.
 
 ## NOTES
 

@@ -2,7 +2,7 @@
 description: Add-ClusterGroupToAffinityRule
 external help file: ClusterAffinityRule.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 07/27/2023
+ms.date: 09/20/2023
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustergrouptoaffinityrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterGroupToAffinityRule
@@ -43,6 +43,17 @@ Add-ClusterGroupToAffinityRule -Groups MyGroup -Name MyRule -Cluster MyCluster
 
 This example adds the group named `MyGroup` to the affinity rule named `MyRule` on the cluster named
 `MyCluster`.
+
+### Example 2 - Add a group to an affinity rule using pipeline
+
+```powershell
+Get-ClusterAffinityRule -name Rule1 |
+ Add-ClusterGroupToAffinityRule -Groups MyGroup
+```
+
+The command gets the affinity rule `Rule1` object and passes it to the
+`Add-ClusterGroupToAffinityRule` command. The command adds the cluster group `MyGroup` to the
+affinity rule.
 
 ## PARAMETERS
 
@@ -140,7 +151,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet doesn't
+Returns the original affinity rule object passed to the command. By default, this cmdlet doesn't
 generate any output.
 
 ```yaml
@@ -186,13 +197,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
+When a string is piped to this cmdlet, the value is used as the name of the affinity rule to add the
+cluster shared volume to.
+
 ### Microsoft.Management.Infrastructure.CimInstance[]
 
+This cmdlet accepts CIM instance objects representing an affinity rule like those returned by the
+[Get-ClusterAffinityRule](Get-ClusterAffinityRule.md) cmdlet.
+
 ## OUTPUTS
+
+### None
+
+By default, the cmdlet doesn't return any output.
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#root/MSCLUSTER/MSCluster_AffinityRule
+
+When the **PassThru** parameter is specified, the cmdlet returns an object representing an affinity
+rule as a CIM instance within the `root/MSCLUSTER/MSCluster_AffinityRule` path.
 
 ## NOTES
 

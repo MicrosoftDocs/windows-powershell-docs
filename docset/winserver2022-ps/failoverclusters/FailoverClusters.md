@@ -75,6 +75,9 @@ Creates a clustered file server for scale-out application data.
 ### [Add-ClusterSharedVolume](./Add-ClusterSharedVolume.md)
 Makes a volume available in Cluster Shared Volumes in a failover cluster.
 
+### [Add-ClusterSharedVolumeToAffinityRule](./Add-ClusterSharedVolumeToAffinityRule.md)
+Adds a Cluster Shared Volume (CSV) to an existing Affinity Rule.
+
 ### [Add-ClusterVirtualMachineRole](./Add-ClusterVirtualMachineRole.md)
 Creates a clustered virtual machine, that is, a virtual machine that can be failed over if necessary
 to a different server in the failover cluster.
@@ -255,6 +258,9 @@ Removes a resource type from a failover cluster.
 ### [Remove-ClusterSharedVolume](./Remove-ClusterSharedVolume.md)
 Removes a volume from the Cluster Shared Volumes in a failover cluster, and places it in Available
 Storage in the cluster.
+
+### [Remove-ClusterSharedVolumeFromAffinityRule](./Remove-ClusterSharedVolumeFromAffinityRule.md)
+Remove a cluster shared volume from an affinity rule.
 
 ### [Remove-ClusterVMMonitoredItem](./Remove-ClusterVMMonitoredItem.md)
 Removes monitoring of a service or event that is currently being monitored on a virtual machine.

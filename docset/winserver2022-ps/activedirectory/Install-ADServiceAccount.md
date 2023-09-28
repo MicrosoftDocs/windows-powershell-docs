@@ -11,7 +11,7 @@ title: Install-ADServiceAccount
 # Install-ADServiceAccount
 
 ## SYNOPSIS
-Installs an Active Directory managed service account on a computer or caches a group managed service account on a computer.
+Installs an Active Directory managed service account on a computer.
 
 ## SYNTAX
 
@@ -30,7 +30,7 @@ You can identify a managed service account by its distinguished name, GUID, secu
 You can also set the parameter to a managed service account object variable, such as `$<localServiceAccountObject>` or pass a managed service account object through the pipeline to the *Identity* parameter.
 For example, you can use Get-ADServiceAccount to get a managed service account object and then pass the object through the pipeline to the Install-ADServiceAccount.
 
-The *AccountPassword* parameter allows you to pass a secure string that contains the password of a standalone managed service account and is ignored for group managed service accounts.
+The *AccountPassword* parameter allows you to pass a secure string that contains the password of a standalone managed service account.
 Alternatively, you can use *PromptForPassword* parameter to prompt for the standalone managed service account password.
 You must enter the password of a standalone managed service account if you want to install an account that you have provisioned.
 This is required when you are installing a standalone managed service account on a server located on a segmented network (site) with read-only domain controllers (for example, a perimeter network or DMZ).
@@ -45,7 +45,6 @@ PS C:\> Install-ADServiceAccount -Identity 'SQL-HR-svc-01'
 ```
 
 This command installs a managed service account with name SQL-HR-svc-01 on the local computer.
-If a group managed service account is used, the service account must have the **PrincipalsAllowedToRetrieveManagedPassword** property set.
 
 ### Example 2: Get a managed service account and install it on the local computer
 ```
@@ -54,7 +53,6 @@ PS C:\> Install-ADServiceAccount $Account
 ```
 
 This command gets a managed service account with name SQL-HR-svc-01 from the default directory and installs it on the local computer.
-If a group managed service account is used, the service account must have the **PrincipalsAllowedToRetrieveManagedPassword** property set.
 
 ### Example 3: Install a standalone managed service account for a read-only domain controller site
 ```
@@ -64,7 +62,6 @@ Password: *******
 ```
 
 This command installs a standalone managed service account identified as SQL-HR-svc-01 in a read-only domain controller site.
-If a group managed service account is used, the service account must have the **PrincipalsAllowedToRetrieveManagedPassword** property set.
 
 ### Example 4: Install a standalone managed service account with the specified password
 ```
@@ -72,13 +69,12 @@ PS C:\> Install-ADServiceAccount -Identity 'SQL-HR-svc-01' -AccountPassword (Con
 ```
 
 This command installs a standalone managed service account with the name SQL-HR-svc-01 in a read-only domain controller site, and passes the account password as a secure string.
-If a group managed service account is used, the service account must have the **PrincipalsAllowedToRetrieveManagedPassword** property set.
 
 ## PARAMETERS
 
 ### -AccountPassword
 Specifies the account password as a secure string.
-This parameter enables you to specify the password of a standalone managed service account that you have provisioned and is ignored for group managed service accounts.
+This parameter enables you to specify the password of a standalone managed service account that you have provisioned.
 This is required when you are installing a standalone managed service account on a server located on a segmented network (site) with read-only domain controllers (for example, a perimeter network or DMZ).
 In this case you should create the standalone managed service account, link it with the appropriate computer account, and assign a well-known password that must be passed when installing the standalone managed service account on the server on the read-only domain controller site with no access to writable domain controllers.
 If you pass both *AccountPassword* and *PromptForPassword* parameters, the *AccountPassword* parameter takes precedence.
@@ -177,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -PromptForPassword
-Indicates that you can enter the password of a standalone managed service account that you have pre-provisioned and ignored for group managed service accounts.
+Indicates that you can enter the password of a standalone managed service account that you have pre-provisioned.
 This is required when you are installing a standalone managed service account on a server located on a segmented network (site) with no access to writable domain controllers, but only read-only domain controllers (RODCs) (e.g.
 perimeter network or DMZ).
 In this case you should create the standalone managed service account, link it with the appropriate computer account, and assign a well-known password that must be passed when installing the standalone managed service account on the server on the RODC-only site.
@@ -229,6 +225,7 @@ A managed service account object is received by the *Identity* parameter.
 * This cmdlet does not work with a read-only domain controller.
 * This cmdlet must be run from an elevated PowerShell session.
 * To successfully install a managed service account, the service account should have the *PrincipalsAllowedToRetrieveManagedPassword* parameter option set first by using either the New-ADServiceAccount or Set-ADServiceAccount cmdlet first. Otherwise, installation will fail.
+* This cmdlet is not necessary for Group Managed Service Accounts to run.
 
 ## RELATED LINKS
 

@@ -163,7 +163,7 @@ A parameter with name **ForceRemoveLocal** is provided to un-install standalone 
 * This cmdlet does not work with AD LDS.
 * This cmdlet does not work with an Active Directory snapshot.
 * This cmdlet does not work with a read-only domain controller.
-* This cmdlet is not necessary for Group Managed Service Accounts to run.
+* This cmdlet is not necessary for group managed service accounts to run.
 
 ## RELATED LINKS
 

@@ -225,7 +225,7 @@ A managed service account object is received by the *Identity* parameter.
 * This cmdlet does not work with a read-only domain controller.
 * This cmdlet must be run from an elevated PowerShell session.
 * To successfully install a managed service account, the service account should have the *PrincipalsAllowedToRetrieveManagedPassword* parameter option set first by using either the New-ADServiceAccount or Set-ADServiceAccount cmdlet first. Otherwise, installation will fail.
-* This cmdlet is not necessary for Group Managed Service Accounts to run.
+* This cmdlet is not necessary for group managed service accounts to run.
 
 ## RELATED LINKS
 

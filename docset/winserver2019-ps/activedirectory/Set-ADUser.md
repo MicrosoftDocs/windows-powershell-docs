@@ -496,6 +496,7 @@ Accept wildcard characters: False
 Specifies the country or region code for the user's language of choice.
 This parameter sets the **Country** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is c.
+This value uses the ISO-3166 2-character code (see [Country-Name attribute](/windows/win32/adschema/a-c)).
 This value is not used by Windows 2000.
 
 ```yaml

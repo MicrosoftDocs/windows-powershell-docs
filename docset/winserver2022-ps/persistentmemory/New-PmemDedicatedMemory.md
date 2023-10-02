@@ -2,9 +2,9 @@
 description: The New-PmemDedicatedMemory cmdlet creates dedicated persistent memory in the specified region.
 external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
 Module Name: PersistentMemory
-online version: https://docs.microsoft.com/powershell/module/persistentmemory/new-pmemdedicatedmemory?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
-schema: 2.0.0
 ms.date: 09/24/2021
+online version: https://learn.microsoft.com/powershell/module/persistentmemory/new-pmemdedicatedmemory?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 title: New-PmemDedicatedMemory
 ---
 

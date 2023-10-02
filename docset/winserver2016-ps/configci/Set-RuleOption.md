@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
 Module Name: ConfigCI
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/configci/set-ruleoption?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/configci/set-ruleoption?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-RuleOption
 ---
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 
 ### -Option
 Specifies the index of the rule option that this cmdlet modifies. 
-Specify the **Help** parameter for option information. Refer to [WDAC Policy Rule Options](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-policy-rules) for more detailed descriptions of each option.
+Specify the **Help** parameter for option information. Refer to [WDAC Policy Rule Options](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-policy-rules) for more detailed descriptions of each option.
 
 ```yaml
 Type: Int32
@@ -156,4 +156,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-HVCIOptions](./Set-HVCIOptions.md)
-

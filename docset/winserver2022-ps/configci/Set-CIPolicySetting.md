@@ -3,7 +3,7 @@ description: The Set-CIPolicySetting cmdlet modifies the SecureSettings within t
 external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
 Module Name: ConfigCI
 ms.date: 10/20/2021
-online version: https://docs.microsoft.com/powershell/module/configci/set-cipolicysetting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/configci/set-cipolicysetting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-CIPolicySetting
 ---

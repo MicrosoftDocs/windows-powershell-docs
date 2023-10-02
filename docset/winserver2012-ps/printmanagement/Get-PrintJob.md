@@ -1,7 +1,7 @@
 ---
 external help file: PrintMgmt_Cmdlets.xml
 Module Name: PrintManagement
-online version: https://docs.microsoft.com/powershell/module/printmanagement/get-printjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/printmanagement/get-printjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 
 ### -ID
 Specifies the ID of the print job to retrieve. 
-You can use wildcard characters.
+You cannot use wildcard characters.
 
 ```yaml
 Type: UInt32

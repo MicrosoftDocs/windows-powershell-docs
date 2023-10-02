@@ -2,7 +2,7 @@
 external help file: Microsoft.Management.UI.PowWA.Commands.dll-Help.xml
 Module Name: PowerShellWebAccess
 ms.date: 10/30/2017
-online version: https://docs.microsoft.com/powershell/module/powershellwebaccess/test-pswaauthorizationrule?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/powershellwebaccess/test-pswaauthorizationrule?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-PswaAuthorizationRule
 ---

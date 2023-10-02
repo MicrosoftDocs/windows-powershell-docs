@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 Module Name: ADDSDeployment
-online version: https://docs.microsoft.com/powershell/module/addsdeployment/install-addsdomain?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/addsdeployment/install-addsdomain?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

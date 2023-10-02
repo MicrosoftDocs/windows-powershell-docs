@@ -1,11 +1,11 @@
 ---
+description: The Get-InstalledLanguage cmdlet lets you see which languages are installed in a running Windows installation
 external help file: Microsoft.LanguagePackManagement.Powershell.Commands.dll-Help.xml
 Module Name: LanguagePackManagement
-online version: https://docs.microsoft.com/powershell/module/languagepackmanagement/get-installedlanguage?view=windowsserver2019-ps
-schema: 2.0.0
 ms.date: 08/15/2022
+online version: https://learn.microsoft.com/powershell/module/languagepackmanagement/get-installedlanguage?view=windowsserver2019-ps
+schema: 2.0.0
 title: Get-InstalledLanguage
-description: The Get-InstalledLanguage cmdlet lets you see which languages are installed in a running Windows installation
 ---
 
 # Get-InstalledLanguage

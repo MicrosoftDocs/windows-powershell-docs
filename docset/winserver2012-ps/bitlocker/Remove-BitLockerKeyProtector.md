@@ -1,7 +1,7 @@
 ---
 external help file: Bitlocker_Cmdlets.xml
 Module Name: BitLocker
-online version: https://docs.microsoft.com/powershell/module/bitlocker/remove-bitlockerkeyprotector?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/bitlocker/remove-bitlockerkeyprotector?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -28,7 +28,7 @@ Any encrypted data on the drive remains encrypted.
 
 We recommend you have at least one recovery password as key protector to a volume in case you need to recover a system.
 
-For an overview of BitLocker, see [BitLocker Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/dn641993(v=ws.11)).
+For an overview of BitLocker, see [BitLocker Overview](/previous-versions/windows/it-pro/windows-8.1-and-8/dn641993(v=ws.11)).
 
 ## EXAMPLES
 

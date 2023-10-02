@@ -1,7 +1,7 @@
 ---
 external help file: DfsNamespaceFolder.cdxml-help.xml
 Module Name: DFSN
-online version: https://docs.microsoft.com/powershell/module/dfsn/get-dfsnfolder?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dfsn/get-dfsnfolder?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -89,7 +89,7 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ThrottleLimit

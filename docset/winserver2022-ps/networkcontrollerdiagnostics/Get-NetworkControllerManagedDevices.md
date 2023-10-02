@@ -3,7 +3,7 @@ description: The Get-NetworkControllerManagedDevices cmdlet gets managed devices
 external help file: Debug-NetworkController.psm1-help.xml
 Module Name: NetworkControllerDiagnostics
 ms.date: 10/22/2021
-online version: https://docs.microsoft.com/powershell/module/networkcontrollerdiagnostics/get-networkcontrollermanageddevices?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/networkcontrollerdiagnostics/get-networkcontrollermanageddevices?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetworkControllerManagedDevices
 ---

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
-online version: https://docs.microsoft.com/powershell/module/hyper-v/debug-vm?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/debug-vm?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Debug-VM
 ---
@@ -230,4 +230,4 @@ Shielded virtual machines do not support debugging or nonmaskable interrupts.
 
 ## RELATED LINKS
 
-[Configuring Automatic Debugging](https://docs.microsoft.com/windows/win32/debug/configuring-automatic-debugging)
+[Configuring Automatic Debugging](/windows/win32/debug/configuring-automatic-debugging)

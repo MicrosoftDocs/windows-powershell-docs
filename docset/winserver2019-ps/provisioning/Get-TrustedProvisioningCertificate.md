@@ -3,7 +3,7 @@ description: Lists all installed trusted provisioning certificates; use this cmd
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
 ms.date: 11/29/2021
-online version: https://docs.microsoft.com/powershell/module/provisioning/get-trustedprovisioningcertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/provisioning/get-trustedprovisioningcertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-TrustedProvisioningCertificate
 ---

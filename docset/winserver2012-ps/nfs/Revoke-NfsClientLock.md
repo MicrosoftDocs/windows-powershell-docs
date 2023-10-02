@@ -1,7 +1,7 @@
 ---
 external help file: NFS_Cmdlets.xml
 Module Name: NFS
-online version: https://docs.microsoft.com/powershell/module/nfs/revoke-nfsclientlock?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/nfs/revoke-nfsclientlock?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

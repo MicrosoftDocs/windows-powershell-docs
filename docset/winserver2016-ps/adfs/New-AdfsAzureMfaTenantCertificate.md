@@ -3,7 +3,8 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: ADFS
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/adfs/new-adfsazuremfatenantcertificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+ms.custom: has-azure-ad-ps-ref
+online version: https://learn.microsoft.com/powershell/module/adfs/new-adfsazuremfatenantcertificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-AdfsAzureMfaTenantCertificate
 ---
@@ -42,7 +43,7 @@ PS C:\> Set-AdfsAzureMfaTenant -TenantId <your tenant ID> -ClientId 981f26a1-7f4
 These commands create a certificate for Azure MFA, register the certificate in a tenant, and enable Azure MFA on an AD FS farm.
 
 > [!NOTE]
-> Customers are encouraged to use the newer Azure Active Directory PowerShell 2.0 module. For more information about the v2.0 module please see [AzureAD PowerShell 2.0](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0).
+> Customers are encouraged to use the newer Azure Active Directory PowerShell 2.0 module. For more information about the v2.0 module please see [AzureAD PowerShell 2.0](/powershell/module/Azuread/?view=azureadps-2.0).
 
 ### Example 2: Determine which certificate Azure MFA is using
 ```

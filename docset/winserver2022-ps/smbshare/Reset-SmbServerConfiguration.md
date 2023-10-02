@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/24/2022
+ms.date: 10/20/2022
 online version: http://go.microsoft.com/fwlink/?LinkID=241959
 schema: 2.0.0
 title: Reset-SmbServerConfiguration
@@ -18,17 +18,17 @@ Resets the Server Message Block (SMB) server configuration parameters to their d
 ```
 Reset-SmbServerConfiguration [-All] [-AnnounceComment] [-AnnounceServer] [-AsynchronousCredits]
  [-AuditSmb1Access] [-AutoShareServer] [-AutoShareWorkstation] [-CachedOpenLimit]
- [-DisableSmbEncryptionOnSecureConnection] [-DurableHandleV2TimeoutInSeconds]
+ [-DisableCompression] [-DisableSmbEncryptionOnSecureConnection] [-DurableHandleV2TimeoutInSeconds]
  [-EnableDownlevelTimewarp] [-EnableLeasing] [-EnableMultiChannel] [-EnableOplocks]
  [-EnableSMB2Protocol] [-EnableSMBQUIC] [-EnableStrictNameChecking] [-EncryptData]
  [-EncryptionCiphers] [-IrpStackSize] [-KeepAliveTime] [-MaxChannelPerSession] [-MaxMpxCount]
  [-MaxSessionPerConnection] [-MaxThreadsPerQueue] [-MaxWorkItems] [-NullSessionShares]
  [-OplockBreakWait] [-PendingClientTimeoutInSeconds] [-RejectUnencryptedAccess]
- [-RestrictNamedpipeAccessViaQuic] [-ServerHidden] [-Smb2CreditsMax] [-Smb2CreditsMin]
- [-SmbServerNameHardeningLevel] [-TreatHostAsStableStorage] [-ValidateAliasNotCircular]
- [-ValidateShareScope] [-ValidateShareScopeNotAliased] [-ValidateTargetName] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-RequestCompression] [-RestrictNamedpipeAccessViaQuic] [-ServerHidden] [-Smb2CreditsMax]
+ [-Smb2CreditsMin] [-SmbServerNameHardeningLevel] [-TreatHostAsStableStorage]
+ [-ValidateAliasNotCircular] [-ValidateShareScope] [-ValidateShareScopeNotAliased]
+ [-ValidateTargetName] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,10 +39,15 @@ default values. For more information on SMB server and protocol specifications, 
 and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 > [!NOTE]
-> This cmdlet is available beginning with 2022-06 Cumulative Update for Microsoft server operating
+> - This cmdlet is available beginning with 2022-06 Cumulative Update for Microsoft server operating
 > system version 21H2 for x64-based Systems
 > ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
 > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+>
+> - The **DisableCompression** and **RequestCompression** parameters are available beginning with
+>   2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
+>   Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
+>   Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
 
 ## EXAMPLES
 
@@ -213,6 +218,22 @@ current session on the local computer.
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableCompression
+
+Resets the SMB compression behavior to its default value.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -589,6 +610,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RequestCompression
+
+Resets the SMB server request compression value to its default value.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RestrictNamedpipeAccessViaQuic
 
 Resets the named pipes behavior when using SMB over QUIC to its default value.
@@ -708,7 +745,7 @@ Accept wildcard characters: False
 
 ### -ValidateAliasNotCircular
 
-Resets whether the aliases that are not circular are validated to its default value.
+Resets whether the aliases that aren't circular are validated to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -788,7 +825,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

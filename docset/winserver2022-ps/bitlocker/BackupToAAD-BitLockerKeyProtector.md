@@ -1,7 +1,6 @@
 ---
 external help file: BitLocker-help.xml
 Module Name: bitlocker
-online version:
 schema: 2.0.0
 ---
 

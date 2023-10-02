@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/get-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 09/27/2022
+online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/get-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CauClusterRole
 ---
@@ -20,25 +20,16 @@ Get-CauClusterRole [[-ClusterName] <String>] [-Credential <PSCredential>] [<Comm
 ```
 
 ## DESCRIPTION
-The **Get-CauClusterRole** cmdlet gets configuration properties of the Cluster-Aware Updating (CAU) clustered role on the specified cluster.
+
+The `Get-CauClusterRole` cmdlet gets configuration properties of the Cluster-Aware Updating (CAU)
+clustered role on the specified cluster.
 
 ## EXAMPLES
 
 ### Example 1: Get information about a CAU clustered role on the specified cluster
-```
-PS C:\> Get-CauClusterRole -ClusterName "CONTOSO-FC1"
 
-Name                                                        Value 
-----                                                        ----- 
-ResourceGroupName                                           CAUCAUCldy8 
-Status                                                      Online 
-StartDate                                                   10/14/2011 3:00:00 AM 
-MaxFailedNodes                                              2 
-MaxRetriesPerNode                                           2 
-PostUpdateScript                                            G:\verifyupdatesinstalled.ps1 
-RequireAllNodesOnline                                       On 
-DaysOfWeek                                                  Tuesday, Saturday 
-WeeksOfMonth                                                {2, 4}
+```powershell
+Get-CauClusterRole -ClusterName "CONTOSO-FC1"
 ```
 
 This command gets information about the CAU clustered role on the cluster named CONTOSO-FC1.
@@ -46,8 +37,10 @@ This command gets information about the CAU clustered role on the cluster named 
 ## PARAMETERS
 
 ### -ClusterName
-Specifies the name of the cluster for which the CAU clustered role information that this cmdlet gets.
-This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+
+Specifies the name of the cluster for which the CAU clustered role information that this cmdlet
+gets. This parameter is only required when this cmdlet isn't run on a failover cluster node, or
+this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
 
 ```yaml
 Type: String
@@ -62,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the administrative credentials for the target cluster.
 
 ```yaml
@@ -77,7 +71,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

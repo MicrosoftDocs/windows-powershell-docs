@@ -1,7 +1,7 @@
 ---
 external help file: DnsServer_Cmdlets.xml
 Module Name: DnsServer
-online version: https://docs.microsoft.com/powershell/module/dnsserver/export-dnsserverzone?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dnsserver/export-dnsserverzone?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 
 ### -FileName
 Specifies a name for the export file.
-You can include a file path.
+The file will be created in the default DNS directory.
 
 ```yaml
 Type: String

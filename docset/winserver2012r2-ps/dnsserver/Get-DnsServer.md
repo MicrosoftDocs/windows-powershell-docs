@@ -2,7 +2,7 @@
 external help file: PS_DnsServer_v1.0.0.cdxml-help.xml
 Module Name: DnsServer
 ms.date: 10/30/2017
-online version: https://docs.microsoft.com/powershell/module/dnsserver/get-dnsserver?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dnsserver/get-dnsserver?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-DnsServer
 ---
@@ -24,7 +24,7 @@ The **Get-DnsServer** cmdlet retrieves a Domain Name System (DNS) server configu
 
 You can pipe the output of the **Get-DnsServer** cmdlet to the **Export-Clixml** cmdlet, which generates an XML file of the configuration.
 You can use the XML file to back up or transfer DNS settings between computers.
-For more information about **Export-Clixml**, see [Using the Export-Clixml cmdlet](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-clixml).
+For more information about **Export-Clixml**, see [Using the Export-Clixml cmdlet](/powershell/module/microsoft.powershell.utility/export-clixml).
 
 ## EXAMPLES
 
@@ -132,4 +132,3 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 [Set-DnsServer](./Set-DnsServer.md)
 
 [Test-DnsServer](./Test-DnsServer.md)
-

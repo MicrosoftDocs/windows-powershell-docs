@@ -1,10 +1,10 @@
 ---
 description: These articles document the persistent memory cmdlets. Persistent memory is a type of non-volatile media that fits in a standard DIMM memory slot.
-Module Name: PersistentMemory
-Module Guid: e5905ed9-12bc-4765-b20d-40a37d69c3dd
 Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 1.0.0.0
 Locale: en-US
+Module Guid: e5905ed9-12bc-4765-b20d-40a37d69c3dd
+Module Name: PersistentMemory
 ms.date: 09/24/2021
 title: PersistentMemory
 ---

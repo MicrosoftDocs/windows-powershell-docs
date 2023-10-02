@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 Module Name: FailoverClusters
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterstoragespacesdirectdisk?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterstoragespacesdirectdisk?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterStorageSpacesDirectDisk
 ---
@@ -36,7 +36,7 @@ PS C:\> Set-ClusterStorageSpacesDirectDisk -CimSession "K0619-C1.contoso.com" -C
 
 This command configures the system that physical disks that have the IDs 55CD2E404B75A3FC and 50014EE05950DD7C cannot be claimed by S2D.
 In this example, the *CanBeClaimed* parameter is explicitly specified as $False.
-Omitting that parameter has the same effect.
+Omitting that parameter indicates that the specified physical disks can be claimed.
 
 ## PARAMETERS
 

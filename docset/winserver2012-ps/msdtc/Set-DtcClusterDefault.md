@@ -1,7 +1,7 @@
 ---
 external help file: MsDTC_Cmdlets.xml
 Module Name: MsDTC
-online version: https://docs.microsoft.com/powershell/module/msdtc/set-dtcclusterdefault?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/msdtc/set-dtcclusterdefault?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

@@ -2,7 +2,7 @@
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 Module Name: International
 ms.date: 10/29/2017
-online version: https://docs.microsoft.com/powershell/module/international/set-winuserlanguagelist?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/international/set-winuserlanguagelist?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-WinUserLanguageList
 ---
@@ -117,12 +117,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 A list of *WinUserLanguage* objects that contain one or more languages and associated properties from the current user account's language list. 
 The language object contains the following properties:
 
---**BCP-47** (READ). A standard language tag that is used to identify languages. For more information, see the Internet Engineering Task Force (IETF) BCP 47 RFChttp://go.microsoft.com/fwlink/?LinkID=242207.
+--**BCP-47** (READ). A standard language tag that is used to identify languages. For more information, see the [Internet Engineering Task Force (IETF) BCP 47 RFC](https://go.microsoft.com/fwlink/?LinkID=242207).
 --**Autonym** (LP database) (READ). The name of the language in the language itself.
 --**English name** (LP database) (READ). The name of the language in English.
 --**Localized name** (LP database) (READ). The name of the language in the current Windows display language.
 --**Script** (LP database) (READ). The writing system of the language.
---**Input methods** (READ/WRITE). A list of input method Tablet Input Panel (TIP) strings that are enabled for this language. The enabled input methods are listed in the format Language ID: Keyboard layout ID.
+--**Input methods** (READ/WRITE). A list of input method Tablet Input Panel (TIP) strings that are enabled for this language. The enabled input methods are listed in the format `Language ID:Keyboard layout ID`. See [Default input profiles (input locales) in Windows](/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs).
 --**Handwriting recognition input mode** (READ/WRITE). This value is either 0 (freehand) or 1 (write each character separately).
 
 ## OUTPUTS

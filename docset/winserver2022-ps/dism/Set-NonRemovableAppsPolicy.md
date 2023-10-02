@@ -3,7 +3,7 @@ description: Sets an app package as non-removable (can not be uninstalled).
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: Dism
 ms.date: 10/07/2021
-online version: https://docs.microsoft.com/powershell/module/dism/set-nonremovableappspolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dism/set-nonremovableappspolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NonRemovableAppsPolicy
 ---

@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
 Module Name: ConfigCI
 ms.date: 05/23/2022
-online version: https://docs.microsoft.com/powershell/module/configci/new-cipolicyrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/configci/new-cipolicyrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-CIPolicyRule
 ---
@@ -385,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePathRule
-Specifies the path of a folder for generating a rule with level set to FilePath. Refer to [Filepath Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#more-information-about-filepath-rules) for acceptable wildcard values and usage. 
+Specifies the path of a folder for generating a rule with level set to FilePath. Refer to [Filepath Rules Info](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#more-information-about-filepath-rules) for acceptable wildcard values and usage. 
 This cmdlet will not check whether the filepath string is a valid filepath. 
 
 ```yaml
@@ -492,4 +492,3 @@ This cmdlet returns the rules that it creates.
 ## RELATED LINKS
 
 [Get-SystemDriver](./Get-SystemDriver.md)
-

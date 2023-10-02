@@ -1,7 +1,7 @@
 ---
 external help file: WSS_Cmdlets.xml
 Module Name: WssCmdlets
-online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssbackupvolume?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/wsscmdlets/get-wssbackupvolume?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

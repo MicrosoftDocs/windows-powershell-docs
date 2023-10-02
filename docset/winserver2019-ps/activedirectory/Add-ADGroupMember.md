@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/activedirectory/add-adgroupmember?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/add-adgroupmember?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ADGroupMember
 ---
@@ -370,6 +370,7 @@ By default, this cmdlet does not generate any output.
 ## NOTES
 * This cmdlet does not work with a read-only domain controller.
 * This cmdlet does not work with an Active Directory snapshot.
+* This cmdlet will allow you to add a group as a member of itself which could lead to unstable behavior.
 
 ## RELATED LINKS
 

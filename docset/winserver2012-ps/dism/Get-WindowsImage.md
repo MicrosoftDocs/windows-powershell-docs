@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: System.Object[]
-online version: https://docs.microsoft.com/powershell/module/dism/get-windowsimage?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dism/get-windowsimage?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -119,7 +119,7 @@ Accepted values: Errors, Warnings, WarningsInfo
 
 Required: False
 Position: Named
-Default value: None
+Default value: 3
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

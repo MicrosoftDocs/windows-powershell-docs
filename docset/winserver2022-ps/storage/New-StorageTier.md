@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: StoragePool.cdxml-help.xml
 Module Name: Storage
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/storage/new-storagetier?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/storage/new-storagetier?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-StorageTier
 ---
@@ -58,7 +58,7 @@ The **New-StorageTier** cmdlet creates a storage tier in a storage pool.
 
 ### Example 1: Create a storage tier
 ```
-PS C:\> New-StorageTier -StoragePoolFriendlyName "TierPool01" -FriendlyName "Standard_HDD_Tier" -MediaType HDD
+PS C:\> New-StorageTier -StoragePoolFriendlyName "TierPool01" -FriendlyName "Tier11" -MediaType HDD
 ```
 
 This command creates a storage tier for hard disk drives named Tier11 in the storage pool named TierPool01.

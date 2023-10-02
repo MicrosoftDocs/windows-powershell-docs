@@ -1,7 +1,7 @@
 ---
 external help file: NetAdapter_Cmdlets.xml
 Module Name: NetAdapter
-online version: https://docs.microsoft.com/powershell/module/netadapter/get-netadapterpowermanagement?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/netadapter/get-netadapterpowermanagement?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -25,8 +25,7 @@ Get-NetAdapterPowerManagement [-AsJob] [-CimSession <CimSession[]>] [-IncludeHid
 ```
 
 ## DESCRIPTION
-The **Get-NetAdapterPowerManagement** cmdlet gets the state of the power management features of a Power Management capable network adapter.
-You must be an administrator in order to run this cmdlet.
+The **Get-NetAdapterPowerManagement** cmdlet gets the state of the power management features of a Power Management capable network adapter. You need to run this cmdlet in an elevated (Run as Administrator) Windows PowerShell session.
 
 ## EXAMPLES
 

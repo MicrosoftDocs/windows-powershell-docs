@@ -2,7 +2,7 @@
 external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
 Module Name: ADFS
 ms.date: 10/30/2017
-online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfsfarmnode?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/adfs/remove-adfsfarmnode?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-AdfsFarmNode
 ---
@@ -11,7 +11,7 @@ title: Remove-AdfsFarmNode
 
 ## SYNOPSIS
 The Remove-AdfsFarmNode cmdlet is deprecated.
-Instead, use the Uninstall-WindowsFeature cmdlet.
+Instead, use the **Uninstall-WindowsFeature** cmdlet. 
 
 ## SYNTAX
 
@@ -27,8 +27,8 @@ Remove-AdfsFarmNode -GroupServiceAccountIdentifier <String> [-Credential <PSCred
 
 ## DESCRIPTION
 The **Remove-AdfsFarmNode** cmdlet is deprecated in this release.
-Instead, use the Uninstall-WindowsFeaturehttp://go.microsoft.com/fwlink/?LinkID=287572 cmdlet.
-For more information on the **Uninstall-WindowsFeature** cmdlet, type `Get-Help Uninstall-WindowsFeature`.
+Instead, use the [Uninstall-WindowsFeature](https://go.microsoft.com/fwlink/?LinkID=287572) cmdlet.
+For more information on the **Uninstall-WindowsFeature** cmdlet, type `Get-Help Uninstall-WindowsFeature`. Note that the **Uninstall-WindowsFeature** cmdlet removes only the server role but doesn't remove the node from the ADFS farm. For proper cleanup, use the **Set-AdfsFarmInformation** cmdlet with the `-RemoveNode` parameter.
 
 ## EXAMPLES
 

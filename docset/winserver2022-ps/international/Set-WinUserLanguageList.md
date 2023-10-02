@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 Module Name: International
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/international/set-winuserlanguagelist?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/international/set-winuserlanguagelist?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-WinUserLanguageList
 ---
@@ -144,7 +144,7 @@ The name of the language in the current Windows display language.
 The writing system of the language. 
 - **Input methods** (READ/WRITE).
 A list of input method Tablet Input Panel (TIP) strings that are enabled for this language.
-The enabled input methods are listed in the format `Language ID: Keyboard layout ID`. 
+The enabled input methods are listed in the format `Language ID:Keyboard layout ID`. See [Default input profiles (input locales) in Windows](/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs).
 - **Handwriting recognition input mode** (READ/WRITE).
 This value is either 0 (freehand) or 1 (write each character separately).
 

@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: ADFS
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/adfs/new-adfsaccesscontrolpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/adfs/new-adfsaccesscontrolpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-AdfsAccessControlPolicy
 ---
@@ -23,6 +23,10 @@ New-AdfsAccessControlPolicy -Name <String> [-SourceName <String>] [-Identifier <
 
 ## DESCRIPTION
 The **New-AdfsAccessControlPolicy** cmdlet creates an Active Directory Federation Services (AD FS) access control policy from a policy metadata file.
+
+**How to create a federation metadata file**
+
+The federation metadata document is an XML file that is available for [download](https://adfshelp.microsoft.com/MetadataExplorer/GetFederationMetadata). To retrieve your document, enter your federation service name, and then select the **Get federation metadata** button.
 
 ## EXAMPLES
 

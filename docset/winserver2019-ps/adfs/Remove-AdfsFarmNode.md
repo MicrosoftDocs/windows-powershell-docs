@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
 Module Name: ADFS
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/adfs/remove-adfsfarmnode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/adfs/remove-adfsfarmnode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-AdfsFarmNode
 ---
@@ -29,7 +29,7 @@ Remove-AdfsFarmNode -GroupServiceAccountIdentifier <String> [-Credential <PSCred
 ## DESCRIPTION
 The **Remove-AdfsFarmNode** cmdlet is deprecated in this release.
 Instead, use the [Uninstall-WindowsFeature](https://go.microsoft.com/fwlink/?LinkID=287572) cmdlet.
-For more information on the **Uninstall-WindowsFeature** cmdlet, type `Get-Help Uninstall-WindowsFeature`.
+For more information on the **Uninstall-WindowsFeature** cmdlet, type `Get-Help Uninstall-WindowsFeature`. Note that the **Uninstall-WindowsFeature** cmdlet removes only the server role but doesn't remove the node from the ADFS farm. For proper cleanup, use the **Set-AdfsFarmInformation** cmdlet with the `-RemoveNode` parameter.
 
 ## EXAMPLES
 
@@ -87,5 +87,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Uninstall-WindowsFeature](../Microsoft.Windows.ServerManager.Migration/Uninstall-WindowsFeature.md)
+[Uninstall-WindowsFeature](/powershell/module/microsoft.windows.servermanager.migration/uninstall-windowsfeature)
 

@@ -457,7 +457,7 @@
     },
     {
       "source_path": "docset/virtual-directory-module/pkiclient/pkiclient.md",
-      "redirect_url": "/powershell/module/pki",
+      "redirect_url": "/powershell/module/pki/pki",
       "redirect_document_id": false
     },
     {
@@ -1312,7 +1312,7 @@
     },
     {
       "source_path": "docset/winserver2012-ps/pkiclient/PKIClient.md",
-      "redirect_url": "/powershell/module/pki/?view=winserver2012-ps",
+      "redirect_url": "/powershell/module/pki/pki.md?view=winserver2012-ps",
       "redirect_document_id": false
     },
     {
@@ -2552,7 +2552,7 @@
     },
     {
       "source_path": "docset/winserver2012r2-ps/pkiclient/PKIClient.md",
-      "redirect_url": "/powershell/module/pki/?view=winserver2012r2-ps",
+      "redirect_url": "/powershell/module/pki/pki.md?view=winserver2012r2-ps",
       "redirect_document_id": false
     },
     {
@@ -3742,7 +3742,7 @@
     },
     {
       "source_path": "docset/winserver2016-ps/pkiclient/PKIClient.md",
-      "redirect_url": "/powershell/module/pki/?view=windowsserver2016-ps",
+      "redirect_url": "/powershell/module/pki/pki.md?view=windowsserver2016-ps",
       "redirect_document_id": false
     },
     {
@@ -4722,7 +4722,7 @@
     },
     {
       "source_path": "docset/winserver2019-ps/pkiclient/PKIClient.md",
-      "redirect_url": "/powershell/module/pki/?view=windowsserver2019-ps",
+      "redirect_url": "/powershell/module/pki/pki.md?view=windowsserver2019-ps",
       "redirect_document_id": false
     },
     {
@@ -5198,6 +5198,21 @@
     {
       "source_path": "docset/winserver2019-ps/windowsdevlic/WindowsDevLic.md",
       "redirect_url": "/powershell/module/windowsdeveloperlicense/WindowsDeveloperLicense?view=windowsserver2019-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2022-ps/pkiclient/Export-PfxCertificate.md",
+      "redirect_url": "/powershell/module/pki/Export-PfxCertificate?view=windowsserver2022-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2022-ps/pkiclient/PKIClient.md",
+      "redirect_url": "/powershell/module/pki/pki.md?view=windowsserver2022-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/winserver2022-ps/pkiclient/New-SelfSignedCertificate.md",
+      "redirect_url": "/powershell/module/pki/New-SelfSignedCertificate?view=winserver2022-ps",
       "redirect_document_id": false
     },
     {

@@ -1,7 +1,7 @@
 ---
 external help file: DDVCmdlets.dll-Help.xml
 Module Name: Microsoft.DiagnosticDataViewer
-online version: https://docs.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/get-diagnosticdata?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/get-diagnosticdata?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-DiagnosticData
 ---
@@ -165,4 +165,4 @@ Persisted event record.
 Requires Windows 10 version 17134 (1803) or higher
 
 ## RELATED LINKS
-[About Windows Diagnostic Data](https://docs.microsoft.com/en-us/windows/privacy/windows-diagnostic-data)
+[About Windows Diagnostic Data](/windows/privacy/windows-diagnostic-data)

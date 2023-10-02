@@ -1,7 +1,7 @@
 ---
 external help file: Storage2_Cmdlets.xml
 Module Name: Storage
-online version: https://docs.microsoft.com/powershell/module/storage/format-volume?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/storage/format-volume?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -387,6 +387,8 @@ Accept wildcard characters: False
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
+
+**NOTE**: The WhatIf switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter

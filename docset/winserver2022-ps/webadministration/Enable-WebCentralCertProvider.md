@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 Module Name: WebAdministration
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/webadministration/enable-webcentralcertprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/webadministration/enable-webcentralcertprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-WebCentralCertProvider
 ---
@@ -51,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Specifies the name of the user account that is used to access the central certificate store.
+Specifies the password of the user account that is used to access the central certificate store.
 
 ```yaml
 Type: String

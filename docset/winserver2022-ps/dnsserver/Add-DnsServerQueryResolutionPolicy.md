@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerQueryResolutionPolicy_v1.0.0.cdxml-help.xml
 Module Name: DnsServer
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 01/03/2022
+online version: https://learn.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-DnsServerQueryResolutionPolicy
 ---
@@ -18,7 +18,7 @@ Adds a policy for query resolution to a DNS server.
 ### Server (Default)
 ```
 Add-DnsServerQueryResolutionPolicy [-PassThru] [-ComputerName <String>] [-Name] <String> [-Fqdn <String>]
- [-ClientSubnet <String>] [-TimeOfDay <String>] [-TransportProtocol <String>] [-InternetProtocol <String>]
+ [-ECS <String>] [-ClientSubnet <String>] [-TimeOfDay <String>] [-TransportProtocol <String>] [-InternetProtocol <String>]
  [[-Action] <String>] [-ApplyOnRecursion] [-ServerInterfaceIP <String>] [-QType <String>]
  [-ProcessingOrder <UInt32>] [[-Condition] <String>] [-RecursionScope <String>] [-Disable]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -27,7 +27,7 @@ Add-DnsServerQueryResolutionPolicy [-PassThru] [-ComputerName <String>] [-Name] 
 ### Zone
 ```
 Add-DnsServerQueryResolutionPolicy [-PassThru] [-ComputerName <String>] [-ZoneName] <String> [-Name] <String>
- [-Fqdn <String>] [-ClientSubnet <String>] [-TimeOfDay <String>] [-TransportProtocol <String>]
+ [-Fqdn <String>] [-ECS <String>] [-ClientSubnet <String>] [-TimeOfDay <String>] [-TransportProtocol <String>]
  [-InternetProtocol <String>] [[-Action] <String>] [-ServerInterfaceIP <String>] [-QType <String>]
  [-ProcessingOrder <UInt32>] [[-Condition] <String>] [-Disable] [-ZoneScope <String>]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -510,6 +510,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ECS
+
+This parameter is reserved for internal use.
+
+```yaml
+Type: String
+Parameter Sets: Server, Zone
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Fqdn
 Specifies the FQDN criterion.
 This is the FQDN of record in the query.
@@ -716,7 +732,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

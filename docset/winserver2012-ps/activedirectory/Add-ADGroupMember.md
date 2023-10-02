@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
-online version: https://docs.microsoft.com/powershell/module/activedirectory/add-adgroupmember?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/add-adgroupmember?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -416,8 +416,8 @@ By default, this cmdlet does not generate any output.
 
 ## NOTES
 * This cmdlet does not work with a read-only domain controller.
-
-  This cmdlet does not work with an Active Directory Snapshot.
+* This cmdlet does not work with an Active Directory snapshot.
+* This cmdlet will allow you to add a group as a member of itself which could lead to unstable behavior.
 
 ## RELATED LINKS
 

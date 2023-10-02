@@ -3,7 +3,7 @@ description: The Get-NetworkControllerAuditingSettingsConfiguration cmdlet gets 
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
-online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrollerauditingsettingsconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/networkcontroller/get-networkcontrollerauditingsettingsconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetworkControllerAuditingSettingsConfiguration
 ---

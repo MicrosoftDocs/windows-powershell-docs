@@ -2,7 +2,7 @@
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
 ms.date: 10/30/2017
-online version: https://docs.microsoft.com/powershell/module/activedirectory/get-aduser?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/get-aduser?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ADUser
 ---
@@ -38,7 +38,7 @@ Get-ADUser [-AuthType <ADAuthType>] [-Credential <PSCredential>] -LDAPFilter <St
 The **Get-ADUser** cmdlet gets a specified user object or performs a search to get multiple user objects.
 
 The *Identity* parameter specifies the Active Directory user to get.
-You can identify a user by its distinguished name (DN), GUID, security identifier (SID), Security Account Manager (SAM) account name, or name.
+You can identify a user by its distinguished name (DN), GUID, security identifier (SID), or Security Account Manager (SAM) account name.
 You can also set the parameter to a user object variable such as `$<localUserObject>` or pass a user object through the pipeline to the *Identity* parameter.
 
 To search for and retrieve more than one user, use the *Filter* or *LDAPFilter* parameters.
@@ -189,7 +189,7 @@ The following syntax uses Backus-Naur form to show how to use the PowerShell Exp
 
 For a list of supported types for \<value\>, type `Get-Help about_ActiveDirectory_ObjectModel`.
 
-Note: For String parameter type, PowerShell will cast the filter query to a string while processing the command. When using a string variable as a value in the filter component, make sure that it complies with the [PowerShell Quoting Rules](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_quoting_rules). For example, if the filter expression is double-quoted, the variable should be enclosed using single quotation marks:
+Note: For String parameter type, PowerShell will cast the filter query to a string while processing the command. When using a string variable as a value in the filter component, make sure that it complies with the [PowerShell Quoting Rules](/powershell/module/microsoft.powershell.core/about/about_quoting_rules). For example, if the filter expression is double-quoted, the variable should be enclosed using single quotation marks:
 **Get-ADUser -Filter "Name -like '$UserName'"**. On the contrary, if curly braces are used to enclose the filter, the variable should not be quoted at all: **Get-ADUser -Filter {Name -like $UserName}**.
 
 Note: PowerShell wildcards other than \*, such as ?, are not supported by the *Filter* syntax.

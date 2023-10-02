@@ -2,7 +2,7 @@
 external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
 Module Name: ScheduledTasks
 ms.date: 10/29/2017
-online version: https://docs.microsoft.com/powershell/module/scheduledtasks/new-scheduledtask?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/scheduledtasks/new-scheduledtask?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ScheduledTask
 ---
@@ -40,18 +40,18 @@ PS C:\> Register-ScheduledTask T1 -InputObject $task
 
 In this example, the set of commands uses several cmdlets and variables to define and then register a scheduled task.
 
-The first command uses the **New-ScheduledTaskAction** cmdlet to assign the executable file tskmgr.exe to the variable $A.
+The first command uses the **New-ScheduledTaskAction** cmdlet to assign the executable file `tskmgr.exe` to the variable `$action`.
 
-The second command uses the **New-ScheduledTaskTrigger** cmdlet to assign the value AtLogon to the variable $T.
+The second command uses the **New-ScheduledTaskTrigger** cmdlet to assign the value `AtLogon` to the variable `$trigger`.
 
-The third command assigns the principal of the scheduled task `Contoso\Administrator` to the variable $P.
+The third command assigns the principal of the scheduled task `Contoso\Administrator` to the variable `$principal`.
 
-The fourth command uses the **New-ScheduledTaskSettingsSet** cmdlet to assign a task settings object to the variable $S.
+The fourth command uses the **New-ScheduledTaskSettingsSet** cmdlet to assign a task settings object to the variable `$settings`.
 
-The fifth command creates a new task and assigns the task definition to the variable $D.
+The fifth command creates a new task and assigns the task definition to the variable `$task`.
 
 The sixth command (hypothetically) runs at a later time.
-It registers the new scheduled task and defines it by using the $D variable.
+It registers the new scheduled task and defines it by using the `$task` variable.
 
 ### Example 2: Define a scheduled task with multiple actions
 ```powershell
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

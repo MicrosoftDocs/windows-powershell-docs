@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/activedirectory/get-adorganizationalunit?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/get-adorganizationalunit?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ADOrganizationalUnit
 ---
@@ -58,6 +58,8 @@ For more information about the how to determine the properties for computer obje
 ### Example 1: Get all of the OUs in a domain
 ```powershell
 PS C:\> Get-ADOrganizationalUnit -Filter 'Name -like "*"' | Format-Table Name, DistinguishedName -A
+```
+```output
 Name                 DistinguishedName
 ----                 -----------------
 Domain Controllers   OU=Domain Controllers,DC=FABRIKAM,DC=COM
@@ -84,6 +86,8 @@ This command gets all of the OUs in a domain.
 ### Example 2: Get an OU by its distinguished name
 ```powershell
 PS C:\> Get-ADOrganizationalUnit -Identity 'OU=AsiaPacific,OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM' | Format-Table Name,Country,PostalCode,City,StreetAddress,State -A
+```
+```output
 Name        Country PostalCode City     StreetAddress    State
 ----        ------- ---------- ----     -------------    -----
 AsiaPacific AU      4171       Balmoral 45 Martens Place QLD
@@ -94,6 +98,8 @@ This command gets the OU with the distinguished name OU=AsiaPacific,OU=Sales,OU=
 ### Example 3: Get child OUs
 ```powershell
 PS C:\> Get-ADOrganizationalUnit -LDAPFilter '(name=*)' -SearchBase 'OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM' -SearchScope OneLevel | Format-Table Name,Country,PostalCode,City,StreetAddress,State
+```
+```output
 Name                    Country                 PostalCode             City                   StreetAddress          State
 ----                    -------                 ----------             ----                   -------------          -----
 AsiaPacific             AU                      4171                   Balmoral               45 Martens Place       QLD

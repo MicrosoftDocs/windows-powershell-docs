@@ -2,7 +2,7 @@
 external help file: PS_DnsServerRecursion_v1.0.0.cdxml-help.xml
 Module Name: DnsServer
 ms.date: 10/30/2017
-online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverrecursion?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dnsserver/set-dnsserverrecursion?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DnsServerRecursion
 ---
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ### -Timeout
 Determines the number of seconds that a DNS server waits before it stops trying to contact a remote server.
 The valid value is in the range of 0x1 to 0xFFFFFFFF (1 second to 15 seconds).
-The default setting is 0xF (15 seconds).
+The default setting is 0x8 (8 seconds).
 We recommend that you increase this value when recursion occurs over a slow link.
 
 ```yaml

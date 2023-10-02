@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: wsbcmdlet.dll-Help.xml
 Module Name: WindowsServerBackup
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/new-wbfilespec?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/windowsserverbackup/new-wbfilespec?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-WBFileSpec
 ---
@@ -41,7 +41,7 @@ PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample\1.jpg"
 
 This command creates a file specification and adds the file named C:\Sample\1.jpg to it.
 
-### Example 2: Add a volume recursively to a backup file specification
+### Example 2: Add a folder recursively to a backup file specification
 ```
 PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample"
 ```
@@ -49,7 +49,7 @@ PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample"
 This command creates a file specification and adds the contents of the C:\Sample folder to it.
 Because the cmdlet does not include the *NonRecursive* parameter, the backup includes the contents of this folder and its subfolders.
 
-### Example 3: Add a volume nonrecursively to a backup file specification
+### Example 3: Add a folder nonrecursively to a backup file specification
 ```
 PS C:\> $Filespec = New-WBFileSpec -FileSpec "C:\Sample" -NonRecursive
 ```

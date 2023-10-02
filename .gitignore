@@ -5,7 +5,6 @@ _site/
 _themes*/
 .vs/
 common/
-.vscode/
 *.ini
 .DS_Store
 *.db

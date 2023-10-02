@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_WvrAdminTasks.cdxml-help.xml
 Module Name: StorageReplica
 ms.date: 07/28/2021
-online version: https://docs.microsoft.com/powershell/module/storagereplica/set-srnetworkconstraint?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/storagereplica/set-srnetworkconstraint?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SRNetworkConstraint
 ---
@@ -44,7 +44,7 @@ This example sets the network constraint for interfaces and replication groups o
 ### Example 2: Set a constraint for a stretch cluster
 
 ```powershell
-Set-SRNetworkConstraint -SourceComputerName "SR-SRV01" -SourceRGName "Group01" -SourceNWInterface "Cluster Network 1","Cluster Network 2" -DestinationComputerName "SR-SRV03" -DestinationRGName "Group02" -DestinationNWInterface "Cluster Network 1","Cluster Network 2"
+Set-SRNetworkConstraint -SourceComputerName "Cluster01" -SourceRGName "Group01" -SourceNWInterface "Cluster Network 1","Cluster Network 2" -DestinationComputerName "Cluster02" -DestinationRGName "Group02" -DestinationNWInterface "Cluster Network 1","Cluster Network 2"
 ```
 
 This command sets a network constraint for a specific set of cluster networks in a stretch cluster.

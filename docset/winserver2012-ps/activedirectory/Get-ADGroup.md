@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
-online version: https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/get-adgroup?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -36,7 +36,7 @@ Get-ADGroup [-AuthType <ADAuthType>] [-Credential <PSCredential>] -LDAPFilter <S
 The Get-ADGroup cmdlet gets a group or performs a search to retrieve multiple groups from an Active Directory.
 
 The Identity parameter specifies the Active Directory group to get.
-You can identify a group by its distinguished name (DN), GUID, security identifier (SID), Security Accounts Manager (SAM) account name, or canonical name.
+You can identify a group by its distinguished name (DN), GUID, security identifier (SID), or Security Accounts Manager (SAM) account name.
 You can also specify group object variable, such as $\<localGroupObject\>.
 
 To search for and retrieve more than one group, use the Filter or LDAPFilter parameters.

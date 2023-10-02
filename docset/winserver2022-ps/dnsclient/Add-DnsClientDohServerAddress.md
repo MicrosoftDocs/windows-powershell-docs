@@ -1,11 +1,11 @@
 ---
-title: Add-DnsClientDohServerAddress
 description: The Add-DnsClientDohServerAddress cmdlet adds a DNS-over-HTTPS (DoH) server configuration to the supported DoH servers.
 external help file: MSFT_DnsClientDohServerAddress.cdxml-help.xml
 Module Name: DnsClient
-online version: https://docs.microsoft.com/powershell/module/dnsclient/add-dnsclientdohserveraddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
-schema: 2.0.0
 ms.date: 08/31/2021
+online version: https://learn.microsoft.com/powershell/module/dnsclient/add-dnsclientdohserveraddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
+title: Add-DnsClientDohServerAddress
 ---
 
 # Add-DnsClientDohServerAddress

@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
 Module Name: ScheduledTasks
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/scheduledtasks/new-scheduledtaskprincipal?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/scheduledtasks/new-scheduledtaskprincipal?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ScheduledTaskPrincipal
 ---
@@ -144,6 +144,8 @@ The acceptable values for this parameter are:
 - Group
 - ServiceAccount
 - InteractiveOrPassword
+   
+For more information about LogonType values, see [Principal.LogonType](/windows/win32/taskschd/principal-logontype#property-value)
 
 ```yaml
 Type: LogonTypeEnum
@@ -271,4 +273,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-ScheduledTaskTrigger](./New-ScheduledTaskTrigger.md)
 
 [Register-ScheduledTask](./Register-ScheduledTask.md)
+
 

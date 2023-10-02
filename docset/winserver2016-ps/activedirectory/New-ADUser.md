@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/activedirectory/new-aduser?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/new-aduser?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ADUser
 ---
@@ -88,6 +88,13 @@ PS C:\> New-ADUser -Name "ChewDavid" -Type iNetOrgPerson -Path "DC=AppNC" -Serve
 ```
 
 This command creates an **inetOrgPerson**-class user named ChewDavid on an AD LDS instance.
+
+### Example 4: Create a user and set password
+```
+PS C:\> New-ADUser -Name "ChewDavid" -Accountpassword (Read-Host -AsSecureString "AccountPassword") -Enabled $true
+```
+
+This command creates a new user named ChewDavid and sets the account password.
 
 ## PARAMETERS
 
@@ -833,7 +840,7 @@ Accept wildcard characters: False
 ### -Office
 Specifies the location of the user's office or place of business.
 This parameter sets the **Office** property of a user object.
-The LDAP display name (**ldapDisplayName**) of this property is office.
+The LDAP display name (**ldapDisplayName**) of this property is physicalDeliveryOfficeName.
 
 ```yaml
 Type: String

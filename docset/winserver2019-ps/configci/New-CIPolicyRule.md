@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
 Module Name: ConfigCI
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/configci/new-cipolicyrule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/configci/new-cipolicyrule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-CIPolicyRule
 ---
@@ -41,7 +41,7 @@ Specify a rule level and an array of **DriverFile** objects or the path of a dri
 
 ### Example 1: Create policy rules for drivers
 ```
-PS C:\> $DriverFiles = Get-SystemDriver -ScanPath '.\temp\' -UserPEs -OmitPaths '.\temp\ConfigCITestBinaries' -NoScript
+PS C:\> $DriverFiles = Get-SystemDriver -ScanPath '.\temp\' -OmitPaths '.\temp\ConfigCITestBinaries' -NoScript
 PS C:\> New-CIPolicyRule -Level FileName -DriverFiles $DriverFiles
 Scan completed successfully
 
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePathRule
-Specifies the path of a folder for generating a rule with level set to FilePath. Refer to [Filepath Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#more-information-about-filepath-rules) for acceptable wildcard values and usage. 
+Specifies the path of a folder for generating a rule with level set to FilePath. Refer to [Filepath Rules Info](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#more-information-about-filepath-rules) for acceptable wildcard values and usage. 
 This cmdlet will not check whether the filepath string is a valid filepath. 
 
 ```yaml
@@ -278,7 +278,7 @@ Accept wildcard characters: True
 ```
 
 ### -Level
-Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
+Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
 
 ```yaml
 Type: RuleLevel
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 
 ### -SpecificFileNameLevel
 Specifies the attribute of the file off which to base a file name rule. 
-Refer to [File Name Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values. 
+Refer to [File Name Rules Info](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values. 
 
 ```yaml
 Type: SwitchParameter
@@ -339,4 +339,3 @@ This cmdlet returns the rules that it creates.
 ## RELATED LINKS
 
 [Get-SystemDriver](./Get-SystemDriver.md)
-

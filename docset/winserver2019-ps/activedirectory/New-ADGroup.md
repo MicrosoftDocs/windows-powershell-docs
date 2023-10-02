@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/activedirectory/new-adgroup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/new-adgroup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ADGroup
 ---
@@ -28,7 +28,7 @@ Many object properties are defined by setting cmdlet parameters.
 Properties that cannot be set by cmdlet parameters can be set using the **OtherAttributes** parameter.
 
 The **Name** and **GroupScope** parameters specify the name and scope of the group and are required to create a new group.
-You can define the new group as a security or distribution group by setting the **GroupType** parameter.
+You can define the new group as a security or distribution group by setting the **GroupCategory** parameter.
 The **Path** parameter specifies the container or organizational unit (OU) for the group.
 
 The following methods explain different ways to create an object by using this cmdlet.

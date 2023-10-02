@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: DedupVolume.cdxml-help.xml
 Module Name: Deduplication
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/deduplication/get-dedupvolume?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/deduplication/get-dedupvolume?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-DedupVolume
 ---
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -167,4 +167,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Enable-DedupVolume](./Enable-DedupVolume.md)
 
 [Set-DedupVolume](./Set-DedupVolume.md)
-

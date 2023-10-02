@@ -20,7 +20,7 @@ computer. For more information, see
 
 | Module name | Title and link to Web version |
 | - | - |
-| ActiveDirectory | [Active Directory Domain Services Administration](/powershell/module/addsadministration) |
+| ActiveDirectory | [Active Directory Domain Services Administration](/powershell/module/activedirectory) |
 | ADCSAdministration | [Active Directory Certificate Services Administration](/powershell/module/adcsadministration) |
 | ADCSDeployment | [Active Directory Certificate Services Deployment](/powershell/module/adcsdeployment) |
 | ADDSDeployment | [Active Directory Domain Services Deployment](/powershell/module/addsdeployment) |
@@ -47,7 +47,7 @@ computer. For more information, see
 | Dfsn | [Distributed File System (DFS) Namespaces](/powershell/module/dfsn/) |
 | Dfsr | [DFS Replication](/powershell/module/dfsr) |
 | DHCPServer | [DHCP Server](/powershell/module/dhcpserver) |
-| DirectAccessClientComponent | [Direct Access client](/powershell/module/directaccessclientcomponent) |
+| DirectAccessClientComponent | [Direct Access client](/powershell/module/directaccessclientcomponents) |
 | DISM | [DISM](/powershell/module/dism) |
 | DNSClient | [DNS client](/powershell/module/dnsclient) |
 | DNSServer | [DNS Server](/powershell/module/dnsserver) |
@@ -70,7 +70,6 @@ computer. For more information, see
 | Iscsi | [iSCSI](/powershell/module/iscsi) |
 | IscsiTarget | [iSCSI Target](/powershell/module/iscsitarget) |
 | KDS | [Key Distribution Server](/powershell/module/kds) |
-| Microsoft.Windows.ServerManager.Migration | [Server Migration](/powershell/module/Microsoft.Windows.ServerManager.Migration) |
 | MMAgent | [Memory Management Agent](/powershell/module/mmagent) |
 | Mpio | [MPIO](/powershell/module/mpio) |
 | MSDTC | [Distributed Transaction Coordinator](/powershell/module/msdtc) |
@@ -78,7 +77,7 @@ computer. For more information, see
 | Multipoint | [MultiPoint Services](/powershell/module/multipoint) |
 | MultiPointVdi | [Multipoint VDI](/powershell/module/multipointvdi) |
 | NanoServerImageGenerator | [Nano Server Image Generator](/powershell/module/nanoserverimagegenerator) |
-| NetLdpAgent | [NetLdpAgent](/powershell/module/netldpagent) |
+| NetLldpAgent | [NetLldpAgent](/powershell/module/netlldpagent) |
 | NetAdapter | [Network Adapter](/powershell/module/netadapter) |
 | NetConnection | [Network connection](/powershell/module/netconnection) |
 | NetEventPacketCapture | [Network Event Packet Capture](/powershell/module/neteventpacketcapture) |
@@ -98,7 +97,7 @@ computer. For more information, see
 | NFS | [Network File System](/powershell/module/nfs) |
 | NPS | [Network Policy Server](/powershell/module/nps) |
 | PCSVDevice | [Physical Computer System View device](/powershell/module/pcsvdevice) |
-| PKIClient | [Public Key Infrastructure](/powershell/module/pkiclient) |
+| PKIClient | [Public Key Infrastructure](/powershell/module/pki) |
 | PlatformIdentifier | [Platform Identifier](/powershell/module/platformidentifier) |
 | PnpDevice | [Plug and Play](/powershell/module/pnpdevice) |
 | PrintManagement | [Print management](/powershell/module/printmanagement) |
@@ -112,7 +111,7 @@ computer. For more information, see
 | ServerManager | [Server Manager](/powershell/module/servermanager) |
 | ServerManagerTasks | [Server Manager tasks](/powershell/module/servermanagertasks) |
 | ShieldedVMDataFile | [Shielded Virtual Machine data file](/powershell/module/shieldedvmdatafile) |
-| ShieldedVMProvisioning | [Shielded Virtual Machine provisioning](/powershell/module/shieldedvmprovisioning) |
+| ShieldedVMProvisioning | [Shielded Virtual Machine provisioning](/powershell/module/shieldedvmcmdlets/) |
 | ShieldedVMTemplate | [Shielded Virtual Machine template](/powershell/module/shieldedvmtemplate) |
 | SmbShare | [SmbShare share](/powershell/module/smbshare) |
 | SmbWitness | [SMB Witness](/powershell/module/smbwitness) |
@@ -127,7 +126,7 @@ computer. For more information, see
 | TLS | [TLS](/powershell/module/tls) |
 | TroubleshootingPack | [Troubleshooting Pack](/powershell/module/troubleshootingpack) |
 | TrustedPlatformModule | [Trusted Platform Module](/powershell/module/trustedplatformmodule) |
-| UpdateServices | [Windows Server Update Services](/powershell/module/wsus) |
+| UpdateServices | [Windows Server Update Services](/powershell/module/updateservices/) |
 | UserAccessLogging | [User Access Logging](/powershell/module/useraccesslogging/) |
 | UEV | [User Experience Virtualization](/powershell/module/uev) |
 | VAMT | [Volume Activation Management Tool](/powershell/module/vamt) |
@@ -137,7 +136,7 @@ computer. For more information, see
 | WebApplicationProxy | [Web Application Proxy](/powershell/module/webapplicationproxy) |
 | WDS | [Windows Deployment Services](/powershell/module/wds) |
 | WHEA | [Windows Hardware Error Architecture](/powershell/module/whea) |
-| WindowsDevLic | [Windows Developer License](/powershell/module/windowsdevlic) |
+| WindowsDevLic | [Windows Developer License](/powershell/module/windowsdeveloperlicense) |
 | WindowsErrorReporting | [Windows Error Reporting](/powershell/module/windowserrorreporting) |
 | WindowsSearch | [Windows Search](/powershell/module/windowssearch) |
 | WindowsServerBackup | [Windows Server Backup](/powershell/module/windowsserverbackup) |

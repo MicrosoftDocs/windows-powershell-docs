@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 Module Name: WebAdministration
-online version: https://docs.microsoft.com/powershell/module/webadministration/get-websitestate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/webadministration/get-websitestate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

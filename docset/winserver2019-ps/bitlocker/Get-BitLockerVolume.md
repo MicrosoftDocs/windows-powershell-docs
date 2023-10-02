@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: BitLocker-help.xml
 Module Name: BitLocker
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/bitlocker/get-bitlockervolume?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/bitlocker/get-bitlockervolume?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-BitLockerVolume
 ---
@@ -41,9 +41,9 @@ You can also use this cmdlet to view the following information about a BitLocker
 - Protection Status - Whether BitLocker currently uses a key protector to encrypt the volume encryption key.
 - EncryptionMethod - Indicates the encryption algorithm and key size used on the volume.
 
-See [BitLocker Overview](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview) for more information.
+See [BitLocker Overview](/windows/security/information-protection/bitlocker/bitlocker-overview) for more information.
 
-For an overview of encryption methods, see [GetEncryptionMethod method](https://docs.microsoft.com/windows/win32/secprov/getencryptionmethod-win32-encryptablevolume).
+For an overview of encryption methods, see [GetEncryptionMethod method](/windows/win32/secprov/getencryptionmethod-win32-encryptablevolume).
 
 ## EXAMPLES
 
@@ -134,4 +134,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-BitLocker](./Enable-BitLocker.md)
 
 [Enable-BitLockerAutoUnlock](./Enable-BitLockerAutoUnlock.md)
-

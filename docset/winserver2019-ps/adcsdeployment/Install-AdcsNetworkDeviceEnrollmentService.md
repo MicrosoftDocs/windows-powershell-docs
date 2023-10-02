@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
 Module Name: ADCSDeployment
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsnetworkdeviceenrollmentservice?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/adcsdeployment/install-adcsnetworkdeviceenrollmentservice?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-AdcsNetworkDeviceEnrollmentService
 ---
@@ -52,15 +52,15 @@ Int is equivalent to Int32 in the [.NET Framework](https://msdn.microsoft.com/en
 PS C:\> Install-AdcsNetworkDeviceEnrollmentService -ApplicationPoolIdentity -WhatIf
 ```
 
-This command displays the default NDES settings when the service is running as the default application identity without making any changes to the configuration.
+This command displays the default NDES settings that will be configured if it is installed.
 
 ### Example 2: Display the default NDES settings using a service account name and password
 ```
-PS C:\> Install-AdcsNetworkDeviceEnrollmentService -ServiceAccountName "CONTOSO\PattiFul" -ServiceAccountPassword (read-host "Set user password" -assecurestring) -WhatIf
+PS C:\> Install-AdcsNetworkDeviceEnrollmentService -ServiceAccountName "CONTOSO\svcNDES" -ServiceAccountPassword (read-host "Set user password" -assecurestring) -WhatIf
 ```
 
 This command displays the default settings when NDES is using a service account without making any changes to the configuration.
-This command uses the service account named CONTOSO\PattiFul that is a member of the local computer's IIS_USRS group.
+This command uses the service account named "CONTOSO\svcNDES" that is a member of the local computer's IIS_USRS group.
 
 ### Example 3: Install NDES using the application pool identity
 ```
@@ -72,10 +72,10 @@ Substitute the appropriate CA computer name and common name for `<CAComputerName
 
 ### Example 4: Install NDES using a specific service account
 ```
-PS C:\> Install-AdcsNetworkDeviceEnrollmentService -ServiceAccountName MyDomain\AccountName -ServiceAccountPassword (read-host "Set user password" -assecurestring) -CAConfig "CAComputerName\CAName" -RAName "Contoso-NDES-RA" -RACountry "US" -RACompany "Contoso" -SigningProviderName "Microsoft Strong Cryptographic Provider" -SigningKeyLength 4096 -EncryptionProviderName "Microsoft Strong Cryptographic Provider" -EncryptionKeyLength 4096
+PS C:\> Install-AdcsNetworkDeviceEnrollmentService -ServiceAccountName "CONTOSO\svcNDES" -ServiceAccountPassword (read-host "Set user password" -assecurestring) -CAConfig "CAComputerName\CAName" -RAName "Contoso-NDES-RA" -RACountry "US" -RACompany "Contoso" -SigningProviderName "Microsoft Strong Cryptographic Provider" -SigningKeyLength 4096 -EncryptionProviderName "Microsoft Strong Cryptographic Provider" -EncryptionKeyLength 4096
 ```
 
-This command installs the NDES using a service account named CONTOSO\PattiFul that is a member of the local computer's IIS_USRS group.
+This command installs the NDES using a service account named "CONTOSO\svcNDES" that is a member of the local computer's IIS_USRS group.
 The command also specifies several non-default parameters.
 
 ## PARAMETERS
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -RACountry
-Specifies the country of the registration authority.
+Specifies the country/region of the registration authority.
 
 ```yaml
 Type: String

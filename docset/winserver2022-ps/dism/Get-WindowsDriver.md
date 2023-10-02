@@ -61,7 +61,7 @@ PS C:\> Get-WindowsDriver -Path "c:\offline" -Driver "c:\drivers\Usb\Usb.inf"
 
 This command gets detailed information about the Usb.inf driver in a mounted Windows image.
 
-### Example 5: Gets all drivers in an online image with logpath and loglevel
+### Example 5: Get all drivers in an online image with a log path and log level
 ```
 PS C:\> Get-WindowsDriver -Online -All -LogPath C:\Temp\debug.log -LogLevel 2
 ```

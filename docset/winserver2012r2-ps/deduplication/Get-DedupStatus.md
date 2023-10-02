@@ -2,7 +2,7 @@
 external help file: DedupStatus.cdxml-help.xml
 Module Name: Deduplication
 ms.date: 10/30/2017
-online version: https://docs.microsoft.com/powershell/module/deduplication/get-dedupstatus?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/deduplication/get-dedupstatus?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-DedupStatus
 ---
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 ```yaml
 Type: CimSession[]
 Parameter Sets: (All)
@@ -128,4 +128,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 ## RELATED LINKS
 
 [Update-DedupStatus](./Update-DedupStatus.md)
-

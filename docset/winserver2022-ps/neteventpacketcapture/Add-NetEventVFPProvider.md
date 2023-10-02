@@ -3,7 +3,7 @@ description: The Add-NetEventVFPProvider cmdlet creates a Virtual Filtering Plat
 external help file: MSFT_NetEventVFPProvider.cdxml-help.xml
 Module Name: NetEventPacketCapture
 ms.date: 10/22/2021
-online version: https://docs.microsoft.com/powershell/module/neteventpacketcapture/add-neteventvfpprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/neteventpacketcapture/add-neteventvfpprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-NetEventVFPProvider
 ---

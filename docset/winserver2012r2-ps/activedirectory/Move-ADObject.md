@@ -2,7 +2,7 @@
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
 ms.date: 10/30/2017
-online version: https://docs.microsoft.com/powershell/module/activedirectory/move-adobject?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/move-adobject?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Move-ADObject
 ---
@@ -21,7 +21,7 @@ Move-ADObject [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCred
 ```
 
 ## DESCRIPTION
-The **Move-ADObject** cmdlet moves an object or a container of objects from one container to another or from one domain to another.
+The **Move-ADObject** cmdlet moves an object or a container of objects from one container to another or from one domain to another within the same forest.
 
 The **Identity** parameter specifies the Active Directory object or container to move.
 You can identify an object or container by its distinguished name or GUID.
@@ -31,6 +31,7 @@ You can also use the Get-ADGroup, Get-ADUser, Get-ADComputer, Get-ADServiceAccou
 
 The **TargetPath** parameter must be specified.
 This parameter identifies the new location for the object or container.
+The cmdlet also moves the password when a user or computer object is moved across domains within a forest.
 
 ## EXAMPLES
 

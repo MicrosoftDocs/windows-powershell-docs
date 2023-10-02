@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 Module Name: pki
-online version: https://docs.microsoft.com/powershell/module/pki/import-pfxcertificate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/pki/import-pfxcertificate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

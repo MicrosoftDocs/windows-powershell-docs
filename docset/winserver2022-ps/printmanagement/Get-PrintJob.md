@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrintJob_v1.0.cdxml-help.xml
 Module Name: PrintManagement
-ms.date: 9/20/2021
-online version: https://docs.microsoft.com/powershell/module/printmanagement/get-printjob?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 09/20/2021
+online version: https://learn.microsoft.com/powershell/module/printmanagement/get-printjob?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PrintJob
 ---
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 
 ### -ID
 Specifies the ID of the print job to retrieve.
-You can use wildcard characters.
+You cannot use wildcard characters.
 
 ```yaml
 Type: UInt32

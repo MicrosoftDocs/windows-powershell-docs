@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.WindowsErrorReporting.PowerShell.dll-Help.xml
 Module Name: WindowsErrorReporting
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/windowserrorreporting/disable-windowserrorreporting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/windowserrorreporting/disable-windowserrorreporting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-WindowsErrorReporting
 ---
@@ -27,7 +27,7 @@ Windows Error Reporting generates reports in response to system events, such as 
 
 To get the current WER status, use the [Get-WindowsErrorReporting](./Get-WindowsErrorReporting.md) cmdlet.
 If you disable WER, you can use the [Enable-WindowsErrorReporting](./Enable-WindowsErrorReporting.md) cmdlet to re-enable it.
-After you run this cmdlet, WER again sends information about application failures to Microsoft. To customize the settings of Windows Error Reporting, use registry keys described in [WER Settings](https://docs.microsoft.com/windows/desktop/wer/wer-settings) article.
+After you run this cmdlet, WER again sends information about application failures to Microsoft. To customize the settings of Windows Error Reporting, use registry keys described in the [WER Settings](/windows/desktop/wer/wer-settings) article.
 
 ## EXAMPLES
 
@@ -58,4 +58,3 @@ Otherwise, it returns $False.
 [Enable-WindowsErrorReporting](./Enable-WindowsErrorReporting.md)
 
 [Get-WindowsErrorReporting](./Get-WindowsErrorReporting.md)
-

@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Volume.cdxml-help.xml
 Module Name: Storage
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/storage/format-volume?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/storage/format-volume?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Format-Volume
 ---
@@ -19,7 +19,7 @@ Formats one or more existing volumes or a new volume on an existing partition.
 ```
 Format-Volume [-DriveLetter] <Char[]> [-FileSystem <String>] [-NewFileSystemLabel <String>]
  [-AllocationUnitSize <UInt32>] [-Full] [-Force] [-Compress] [-ShortFileNameSupport <Boolean>]
- [-SetIntegrityStreams <Boolean>] [-UseLargeFRS] [-DisableHeatGathering] [-IsDAX <Boolean>]
+ [-SetIntegrityStreams <Boolean>] [-UseLargeFRS] [-DisableHeatGathering] [-IsDAX <Boolean>] [-DevDrive]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -27,7 +27,7 @@ Format-Volume [-DriveLetter] <Char[]> [-FileSystem <String>] [-NewFileSystemLabe
 ```
 Format-Volume -ObjectId <String[]> [-FileSystem <String>] [-NewFileSystemLabel <String>]
  [-AllocationUnitSize <UInt32>] [-Full] [-Force] [-Compress] [-ShortFileNameSupport <Boolean>]
- [-SetIntegrityStreams <Boolean>] [-UseLargeFRS] [-DisableHeatGathering] [-IsDAX <Boolean>]
+ [-SetIntegrityStreams <Boolean>] [-UseLargeFRS] [-DisableHeatGathering] [-IsDAX <Boolean>] [-DevDrive]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -35,7 +35,7 @@ Format-Volume -ObjectId <String[]> [-FileSystem <String>] [-NewFileSystemLabel <
 ```
 Format-Volume -Path <String[]> [-FileSystem <String>] [-NewFileSystemLabel <String>]
  [-AllocationUnitSize <UInt32>] [-Full] [-Force] [-Compress] [-ShortFileNameSupport <Boolean>]
- [-SetIntegrityStreams <Boolean>] [-UseLargeFRS] [-DisableHeatGathering] [-IsDAX <Boolean>]
+ [-SetIntegrityStreams <Boolean>] [-UseLargeFRS] [-DisableHeatGathering] [-IsDAX <Boolean>] [-DevDrive]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -43,7 +43,7 @@ Format-Volume -Path <String[]> [-FileSystem <String>] [-NewFileSystemLabel <Stri
 ```
 Format-Volume -FileSystemLabel <String[]> [-FileSystem <String>] [-NewFileSystemLabel <String>]
  [-AllocationUnitSize <UInt32>] [-Full] [-Force] [-Compress] [-ShortFileNameSupport <Boolean>]
- [-SetIntegrityStreams <Boolean>] [-UseLargeFRS] [-DisableHeatGathering] [-IsDAX <Boolean>]
+ [-SetIntegrityStreams <Boolean>] [-UseLargeFRS] [-DisableHeatGathering] [-IsDAX <Boolean>] [-DevDrive]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -51,7 +51,7 @@ Format-Volume -FileSystemLabel <String[]> [-FileSystem <String>] [-NewFileSystem
 ```
 Format-Volume [-Partition <CimInstance>] [-FileSystem <String>] [-NewFileSystemLabel <String>]
  [-AllocationUnitSize <UInt32>] [-Full] [-Force] [-Compress] [-ShortFileNameSupport <Boolean>]
- [-SetIntegrityStreams <Boolean>] [-UseLargeFRS] [-DisableHeatGathering] [-IsDAX <Boolean>]
+ [-SetIntegrityStreams <Boolean>] [-UseLargeFRS] [-DisableHeatGathering] [-IsDAX <Boolean>] [-DevDrive]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -59,7 +59,7 @@ Format-Volume [-Partition <CimInstance>] [-FileSystem <String>] [-NewFileSystemL
 ```
 Format-Volume -InputObject <CimInstance[]> [-FileSystem <String>] [-NewFileSystemLabel <String>]
  [-AllocationUnitSize <UInt32>] [-Full] [-Force] [-Compress] [-ShortFileNameSupport <Boolean>]
- [-SetIntegrityStreams <Boolean>] [-UseLargeFRS] [-DisableHeatGathering] [-IsDAX <Boolean>]
+ [-SetIntegrityStreams <Boolean>] [-UseLargeFRS] [-DisableHeatGathering] [-IsDAX <Boolean>] [-DevDrive]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -184,6 +184,21 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DevDrive
+Formats the volume as a [dev drive](/windows/dev-drive/). A dev drive is optimized for performance of developer scenarios and gives administators control over what minifilters are attached to the volume.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -499,4 +514,3 @@ This cmdlet returns an object that represents the newly formatted volume.
 [Repair-Volume](./Repair-Volume.md)
 
 [Set-Volume](./Set-Volume.md)
-

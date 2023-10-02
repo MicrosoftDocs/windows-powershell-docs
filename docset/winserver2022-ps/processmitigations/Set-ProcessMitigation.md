@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ProcessMitigations.Commands.dll-Help.xml
 Module Name: ProcessMitigations
 ms.date: 03/29/2017
-online version: https://docs.microsoft.com/powershell/module/processmitigations/set-processmitigation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/processmitigations/set-processmitigation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ProcessMitigation
 ---
@@ -102,7 +102,7 @@ If specified in both, it will be disabled.
 Type: String[]
 Parameter Sets: ProcessPolicy, SystemMode
 Aliases: d
-Accepted values: DEP, EmulateAtlThunks, SEHOP, ForceRelocate, RequireInfo, BottomUp, HighEntropy, StrictHandle, DisableWin32kSystemCalls, AuditSystemCall, ExtensionPoint, DynamicCode, AuditDynamicCode, CFG, SuppressExports, StrictCFG, BlockNonMicrosoftSigned, AllowStoreSigned, AuditMicrosoftSigned, AuditStoreSigned, EnforceModuleDepencySigning, DisableNonSystemFonts, FontAuditOnly, AuditFont, BlockRemoteImages, BlockLowLabel, PreferSystem32, AuditImageLoad, EnableExportAddressFilter, AuditEnableExportAddressFilter, EnableExportAddressFilterPlus, AuditEnableExportAddressFilterPlus, EnableImportAddressFilter, AuditEnableImportAddressFilter, EnableRopStackPivot, AuditEnableRopStackPivot, EnableRopCallerCheck, AuditEnableRopCallerCheck, EnableRopSimExec, AuditEnableRopSimExec, SEHOP, AuditSEHOP, SEHOPTelemetry, TerminateOnHeapError, DisallowChildProcessCreation, AuditChildProcess, UserShadowStack, UserShadowStackStrictMode, AuditUserShadowStack
+Accepted values: DEP, EmulateAtlThunks, SEHOP, ForceRelocateImages, RequireInfo, BottomUp, HighEntropy, StrictHandle, DisableWin32kSystemCalls, AuditSystemCall, DisableExtensionPoints, BlockDynamicCode, AllowThreadsToOptOut, AuditDynamicCode, CFG, SuppressExports, StrictCFG, MicrosoftSignedOnly, AllowStoreSignedBinaries, AuditMicrosoftSigned, AuditStoreSigned, EnforceModuleDependencySigning, DisableNonSystemFonts, AuditFont, BlockRemoteImageLoads, BlockLowLabelImageLoads, PreferSystem32, AuditRemoteImageLoads, AuditLowLabelImageLoads, AuditPreferSystem32, EnableExportAddressFilter, AuditEnableExportAddressFilter, EnableExportAddressFilterPlus, AuditEnableExportAddressFilterPlus, EnableImportAddressFilter, AuditEnableImportAddressFilter, EnableRopStackPivot, AuditEnableRopStackPivot, EnableRopCallerCheck, AuditEnableRopCallerCheck, EnableRopSimExec, AuditEnableRopSimExec, SEHOP, AuditSEHOP, SEHOPTelemetry, TerminateOnError, DisallowChildProcessCreation, AuditChildProcess
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ If specified in both, it will be disabled.
 Type: String[]
 Parameter Sets: ProcessPolicy, SystemMode
 Aliases: e
-Accepted values: DEP, EmulateAtlThunks, SEHOP, ForceRelocate, RequireInfo, BottomUp, HighEntropy, StrictHandle, DisableWin32kSystemCalls, AuditSystemCall, ExtensionPoint, DynamicCode, AuditDynamicCode, CFG, SuppressExports, StrictCFG, BlockNonMicrosoftSigned, AllowStoreSigned, AuditMicrosoftSigned, AuditStoreSigned, EnforceModuleDepencySigning, DisableNonSystemFonts, FontAuditOnly, AuditFont, BlockRemoteImages, BlockLowLabel, PreferSystem32, AuditImageLoad, EnableExportAddressFilter, EnableExportAddressFilterPlus, EnableImportAddressFilter, EnableRopStackPivot, EnableRopCallerCheck, EnableRopSimExec, SEHOP, AuditSEHOP, SEHOPTelemetry, TerminateOnHeapError, DisallowChildProcessCreation, AuditChildProcess, UserShadowStack, UserShadowStackStrictMode, AuditUserShadowStack
+Accepted values: DEP, EmulateAtlThunks, SEHOP, ForceRelocateImages, RequireInfo, BottomUp, HighEntropy, StrictHandle, DisableWin32kSystemCalls, AuditSystemCall, DisableExtensionPoints, BlockDynamicCode, AllowThreadsToOptOut, AuditDynamicCode, CFG, SuppressExports, StrictCFG, MicrosoftSignedOnly, AllowStoreSignedBinaries, AuditMicrosoftSigned, AuditStoreSigned, EnforceModuleDependencySigning, DisableNonSystemFonts, AuditFont, BlockRemoteImageLoads, BlockLowLabelImageLoads, PreferSystem32, AuditRemoteImageLoads, AuditLowLabelImageLoads, AuditPreferSystem32, EnableExportAddressFilter, AuditEnableExportAddressFilter, EnableExportAddressFilterPlus, AuditEnableExportAddressFilterPlus, EnableImportAddressFilter, AuditEnableImportAddressFilter, EnableRopStackPivot, AuditEnableRopStackPivot, EnableRopCallerCheck, AuditEnableRopCallerCheck, EnableRopSimExec, AuditEnableRopSimExec, SEHOP, AuditSEHOP, SEHOPTelemetry, TerminateOnError, DisallowChildProcessCreation, AuditChildProcess
 
 Required: False
 Position: Named

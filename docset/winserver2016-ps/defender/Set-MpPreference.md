@@ -34,8 +34,9 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
  [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
+ [-OobeEnableRtpAndSigUpdate <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
- [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
+ [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>] [-AllowSwitchToAsyncInspection <Boolean>]
  [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-UnknownThreatDefaultAction <ThreatAction>]
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
@@ -102,11 +103,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowSwitchToAsyncInspection
+
+Specifies whether to enable a performance optimization that allows synchronously inspected network flows to switch to async inspection once they have been checked and validated.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -CheckForSignaturesBeforeRunningScan
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of $True, Windows Defender checks for new definitions.
 If you specify $False or don't specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans and to scans that you start from the command line, but it doesn't affect scans that you start from the user interface.
+This setting applies to scheduled scans, but it has no effect on scans initiated manually from the user interface or scans started from the command line using "mpcmdrun -Scan".
 
 ```yaml
 Type: Boolean
@@ -564,6 +582,26 @@ Accepted values: Clean, Quarantine, Remove, Allow, UserDefined, NoAction, Block
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OobeEnableRtpAndSigUpdate
+
+This setting allows you to configure whether real-time protection and Security Intelligence Updates are enabled during Out of Box experience (OOBE).
+
+Valid values are:
+- True - If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.
+- False (Default) - If you either disable or don't configure this setting, real-time protection and Security Intelligence Updates during OOBE aren't enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

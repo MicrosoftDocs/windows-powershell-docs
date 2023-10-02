@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterquorum?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ClusterQuorum
@@ -33,44 +33,46 @@ cluster configuration) or file share witness.
 
 ### Example 1
 
-```
-PS C:\> Set-ClusterQuorum -NodeMajority
-Cluster                    QuorumResource                  QuorumType 
--------                    --------------                  ---------- 
-cluster1                                                 NodeMajority
+```powershell
+Set-ClusterQuorum -NodeMajority
 ```
 
 This example changes the quorum configuration to Node Majority on the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Set-ClusterQuorum -DiskWitness "Cluster Disk 7"
-Cluster                    QuorumResource                  QuorumType 
--------                    --------------                  ---------- 
-cluster1                   Cluster Disk 7         NodeAndDiskMajority
+```powershell
+Set-ClusterQuorum -DiskWitness "Cluster Disk 7"
 ```
 
 This example changes the quorum configuration to Node and Disk Majority on the local cluster, using
-the disk resource named Cluster Disk 7 for the disk witness.
+the disk resource named `Cluster Disk 7` for the disk witness.
 
 ### Example 3
 
-```
-PS C:\> Set-ClusterQuorum -NodeAndFileShareMajority \\fileserver\fsw
-Cluster               QuorumResource                       QuorumType 
--------               --------------                       ---------- 
-cluster1              File Share Witness     NodeAndFileShareMajority
+```powershell
+Set-ClusterQuorum -NodeAndFileShareMajority \\fileserver\fsw
 ```
 
 This example changes the quorum configuration to Node and File Share Majority on the local cluster,
-using the disk resource at \\\\fileserver\fsw for the file share witness.
+using the disk resource at `\\fileserver\fsw` for the file share witness.
 
 ### Example 4
 
+```powershell
+$parameters = @{
+    CloudWitness = $true
+    AccountName  = '<AzureStorageAccountName>'
+    AccessKey    = '<AzureStorageAccountAccessKey>'
+}
+Set-ClusterQuorum @parameters
 ```
-PS C:\> Set-ClusterQuorum -CloudWitness -AccountName <AzureStorageAccountName> -AccessKey <AzureStorageAccountAccessKey>
-```
+
+This example changes the quorum configuration to use an Azure Storage Account to use as a Cloud
+Witness.
+
+The example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 

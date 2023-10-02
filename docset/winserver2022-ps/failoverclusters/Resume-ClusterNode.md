@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/resume-clusternode?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Resume-ClusterNode
@@ -31,44 +31,32 @@ that are currently offline can be brought online on that node.
 
 ### Example 1
 
-```
-PS C:\> Resume-ClusterNode node1
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                        Up
+```powershell
+Resume-ClusterNode node1
 ```
 
 This example resumes node1 on the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Resume-ClusterNode node2 -Cluster mycluster
-Name                                                                      State 
-----                                                                      ----- 
-node2                                                                        Up
+```powershell
+Resume-ClusterNode node2 -Cluster mycluster
 ```
 
-This example resumes node2 on the cluster called mycluster.
+This example resumes node2 on the cluster called `mycluster`.
 
 ### Example 3
 
-```
-PS C:\> Get-ClusterNode | Resume-ClusterNode
-Name                                                                      State 
-----                                                                      ----- 
-node1                                                                        Up
+```powershell
+Get-ClusterNode | Resume-ClusterNode
 ```
 
 This example resumes all cluster nodes that are suspended, or paused, on the local cluster.
 
 ### Example 4
 
-```
-PS C:\> Get-ClusterNode | Resume-ClusterNode -Failback Immediate
-Name                                                                      State 
-----                                                                      ----- 
-node2                                                                        Up
+```powershell
+Get-ClusterNode | Resume-ClusterNode -Failback Immediate
 ```
 
 This example resumes all cluster nodes that are suspended, or paused, on the local cluster and

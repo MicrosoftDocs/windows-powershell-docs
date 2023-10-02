@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterresourcetype?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterResourceType
@@ -30,56 +30,20 @@ which the Cluster service communicates with a particular resource type.
 
 ### Example 1
 
-```
-PS C:\> Get-ClusterResourceType
-Name                                    DisplayName 
-----                                    ----------- 
-DFS Replicated Folder                   DFS Replicated Folder 
-DHCP Service                            DHCP Service 
-Distributed File System                 Distributed File System 
-Distributed Transaction Coordinator     Distributed Transaction Coordinator 
-File Server                             File Server 
-File Share Witness                      File Share Quorum Witness 
-Generic Application                     Generic Application 
-Generic Script                          Generic Script 
-Generic Service                         Generic Service 
-IP Address                              IP Address 
-IPv6 Address                            IPv6 Address 
-IPv6 Tunnel Address                     IPv6 Tunnel Address 
-Microsoft iSNS                          iSNSClusRes 
-MSMQ                                    (Resource Type Unavailable) 
-MSMQTriggers                            (Resource Type Unavailable) 
-Network Name                            Network Name 
-NFS Share                               NFS Share 
-Physical Disk                           Physical Disk 
-Print Spooler                           Print Spooler 
-Virtual Machine                         Virtual Machine 
-Virtual Machine Configuration           Virtual Machine Configuration 
-Volume Shadow Copy Service Task         Volume Shadow Copy Service Task 
-WINS Service                            WINS Service
+```powershell
+Get-ClusterResourceType
 ```
 
 This example lists all the resource types that can be used in configurations on the local cluster.
 
 ### Example 2
 
-```
-PS C:\> Get-ClusterResourceType -Name "File Server" | Format-List -Property *
-Cluster                : Cluster1 
-DisplayName            : File Server 
-Name                   : file server 
-DllName                : clusres.dll 
-Description            : 
-AdminExtensions        : {} 
-LooksAlivePollInterval : 5000 
-IsAlivePollInterval    : 60000 
-PendingTimeout         : 180000 
-DeadlockTimeout        : 300000 
-Id                     : f582c84f-0066-0069-6c65-207365727665
+```powershell
+Get-ClusterResourceType -Name "File Server" | Format-List -Property *
 ```
 
-This example gets information about the File Server resource type on the local cluster, and displays
-the information in the form of a list.
+This example gets information about the `File Server` resource type on the local cluster, and
+displays the information in the form of a list.
 
 ## PARAMETERS
 

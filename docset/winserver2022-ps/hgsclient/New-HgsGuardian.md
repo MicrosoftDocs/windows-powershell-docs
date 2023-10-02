@@ -69,7 +69,7 @@ The passwords stored in the **$SecureStringPassword01** and **$SecureStringPassw
 Indicates that this cmdlet can create a guardian by using certificates that are expired.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: AcceptCertificates, ByThumbprints
 Aliases: 
 
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet can create a guardian by using self-signed certificates.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: AcceptCertificates, ByThumbprints
 Aliases: 
 
@@ -149,7 +149,7 @@ If you specify this parameter, the new guardian does not have a trusted root.
 Therefore, you must also specify the **AllowUntrustedRoot** parameter.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: GenerateCertificates
 Aliases: 
 
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -241,7 +241,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 

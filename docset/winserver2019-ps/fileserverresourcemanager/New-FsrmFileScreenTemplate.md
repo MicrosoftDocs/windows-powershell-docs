@@ -32,7 +32,7 @@ When you make changes to a template, you can choose to apply those changes to al
 
 ### Example 1: Create a passive file screen template
 ```
-PS C:\> New-FsrmFileScreenTemplate "Filter Non-HTML text files" -IncludeGroup "Non-HTML text files"
+PS C:\> New-FsrmFileScreenTemplate "Filter Non-HTML text files" -IncludeGroup "Non-HTML text files" -Active:$False
 ```
 
 This command creates a passive file screen template named "Filter Non-HTML text files" that logs any files that match the "Non-HTML text files" file group.

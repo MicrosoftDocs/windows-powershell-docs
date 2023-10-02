@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -RACountry
-Specifies the country of the registration authority.
+Specifies the country/region of the registration authority.
 
 ```yaml
 Type: String

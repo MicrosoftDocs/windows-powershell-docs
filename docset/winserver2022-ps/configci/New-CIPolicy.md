@@ -36,7 +36,7 @@ New-CIPolicy [-FilePath] <String> -Rules <Rule[]> [-Audit] [-ScanPath <String>] 
 The **New-CIPolicy** cmdlet creates a Code Integrity policy as an .xml file.
 
 If you specify **DriverFile** objects, this cmdlet generates rules based on the **Level** parameter.
-This cmdlet creates a policy based on those rules for the specified drive files.
+This cmdlet creates a policy based on those rules for the specified driver files.
 
 If you specify **Rule** objects, this cmdlet creates a policy based on those objects.
 Because the rules that you specify are created at a specific level, do not specify a level.

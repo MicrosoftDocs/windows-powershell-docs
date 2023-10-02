@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterCollection.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 11/22/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/new-clustergroupset?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ClusterGroupSet
@@ -29,18 +29,11 @@ based on dependencies between sets.
 
 ### Example 1: Create a cluster group set
 
-```
-PS C:\> New-ClusterGroupSet -Name "Set001" -Group "Group001"
-Name                : Set1
-GroupNames          : {g1}
-ProviderNames       : {}
-StartupDelayTrigger : Delay
-StartupCount        : 4294967295
-IsGlobal            : False
-StartupDelay        : 20
+```powershell
+New-ClusterGroupSet -Name "Set001" -Group "Group001"
 ```
 
-This command creates a cluster group set named Set001 that contains the group named Group001.
+This command creates a cluster group set named `Set001` that contains the group named `Group001`.
 
 ## PARAMETERS
 
@@ -139,7 +132,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

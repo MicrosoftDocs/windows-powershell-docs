@@ -2,7 +2,7 @@
 description: Use this article to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 09/20/2022
+ms.date: 03/22/2023
 online version: https://learn.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -24,7 +24,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-CheckForSignaturesBeforeRunningScan <Boolean>] [-ScanPurgeItemsAfterDelay <UInt32>]
  [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>] [-ScanScheduleDay <Day>]
  [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleOffset <UInt32>] [-SignatureFirstAuGracePeriod <UInt32>]
- [-ScanScheduleTime <HH:MM:SS>]
+ [-ScanScheduleTime <HH:MM:SS>] [-AllowSwitchToAsyncInspection <Boolean>]
  [-SignatureAuGracePeriod <UInt32>] [-SignatureDefinitionUpdateFileSharesSources <String>]
  [-SignatureDisableUpdateOnStartupWithoutEngine <Boolean>] [-SignatureFallbackOrder <String>]
  [-SignatureScheduleDay <Day>] [-SignatureScheduleTime <DateTime>] [-SignatureUpdateCatchupInterval <UInt32>]
@@ -37,6 +37,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
+ [-OobeEnableRtpAndSigUpdate <Boolean>]
  [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
  [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-UnknownThreatDefaultAction <ThreatAction>]
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
@@ -85,6 +86,23 @@ This command configures preferences to check for definition updates 120 minutes 
 
 ## PARAMETERS
 
+### -AllowSwitchToAsyncInspection
+
+Specifies whether to enable a performance optimization that allows synchronously inspected network flows to switch to async inspection once they have been checked and validated.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
 
@@ -114,7 +132,7 @@ Accept wildcard characters: False
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of `$True`, Windows Defender checks for new definitions.
 If you specify `$False` or don’t specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans, but it doesn’t affect scans that you start from the user interface or to scans that you start from the command line.
+This setting applies to scheduled scans, but it has no effect on scans initiated manually from the user interface or on scans started from the command line using "mpcmdrun -Scan".
 
 ```yaml
 Type: Boolean
@@ -671,6 +689,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OobeEnableRtpAndSigUpdate
+
+This setting allows you to configure whether real-time protection and Security Intelligence Updates are enabled during Out of Box experience (OOBE).
+
+Valid values are:
+- True - If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.
+- False (Default) - If you either disable or don't configure this setting, real-time protection and Security Intelligence Updates during OOBE aren't enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PUAProtection
 
 ```yaml
@@ -1024,7 +1062,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceHealthReportInterval
-This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints. 
+This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints. These are for Microsoft Defender Antivirus events 1150 and 1151. For more information, see [Microsoft Defender Antivirus event IDs](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus#microsoft-defender-antivirus-event-ids).
 
 If you don’t configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour). 
 If you configure this setting to 0, no service health reports will be sent.

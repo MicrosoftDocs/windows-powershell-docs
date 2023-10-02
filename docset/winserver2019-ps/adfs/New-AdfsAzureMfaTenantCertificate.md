@@ -3,6 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: ADFS
 ms.date: 12/20/2016
+ms.custom: has-azure-ad-ps-ref
 online version: https://learn.microsoft.com/powershell/module/adfs/new-adfsazuremfatenantcertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-AdfsAzureMfaTenantCertificate
@@ -47,8 +48,7 @@ These commands create a certificate for Azure MFA, register the certificate in a
 ### Example 2: Determine which certificate Azure MFA is using
 ```
 $CertInBase64 = New-AdfsAzureMfaTenantCertificate -TenantID
-$cert = Security.Cryptography.X509Certificates.X509Certificate2
-$cert | Format-List *
+[Security.Cryptography.X509Certificates.X509Certificate2]([System.Convert]::FromBase64String($CertInBase64))
 ```
 
 After AD FS has been configured for Azure MFA, this command determines which certificate Azure MFA is using and when it expires.

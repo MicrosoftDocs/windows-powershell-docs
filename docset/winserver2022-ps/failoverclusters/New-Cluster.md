@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 11/22/2022
+ms.date: 03/13/2023
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/new-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Cluster
@@ -17,8 +17,8 @@ Creates a new failover cluster.
 
 ```
 New-Cluster [-Name] <String> [-Node <StringCollection>] [-StaticAddress <StringCollection>]
- [-IgnoreNetwork <StringCollection>] [-NoStorage] [-S2D]
- [-AdministrativeAccessPoint <AdminAccessPoint>] [-Force] [<CommonParameters>]
+ [-IgnoreNetwork <StringCollection>] [-NoStorage] [-S2D] [-AdministrativeAccessPoint <AdminAccessPoint>]
+ [-Force] [-ManagementPointNetworkType <AdminAccessPointResType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,6 +29,11 @@ The `New-Cluster` cmdlet creates a new failover cluster. Before creating a clust
 Use Test-Cluster to run the validation tests. The tests will confirm that the hardware and settings
 are compatible with failover clustering. There are multiple types of tests, including Inventory,
 System Configuration, Network, Storage, and other types of tests.
+
+> [!TIP]
+> You should run the `New-Cluster` command from a cluster node or client that is the same version as
+> the cluster nodes. Running `New-Cluster` from a lower-level (down-level) client computer may
+> require `Update-ClusterFunctionalLevel` to be run after `New-Cluster` has been run.
 
 ## EXAMPLES
 
@@ -158,6 +163,27 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagementPointNetworkType
+Specifies the network configuration used to determine IP address settings.
+
+The acceptable values for this parameter are:
+
+- Automatic: Automatically detects the appropriate setting. If SQL Server is running in Azure, it uses `Distributed`. If SQL Server is running on-premises, uses `Singleton`. (Default setting)
+- Singleton: The traditional method of DHCP or static IP address.
+- Distributed: Uses a Distributed Network Name by using Node IP addresses.
+
+```yaml
+Type: AdminAccessPointResType
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Automatic
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

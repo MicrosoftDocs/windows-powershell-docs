@@ -21,28 +21,34 @@ Remove-DfsnAccess [-Path] <String> [-AccountName] <String[]> [-CimSession <CimSe
 ```
 
 ## DESCRIPTION
-The **Remove-DfsnAccess** cmdlet removes users and groups from the access control list (ACL) for a Distributed File System (DFS) namespace folder.
-When you remove a user from an ACL, the current permissions in the ACL may still allow that user to access the folder.
 
-For more information about DFS namespaces, see [Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736) on TechNet.
+The **Remove-DfsnAccess** cmdlet removes users and groups from the access control list (ACL) for a
+Distributed File System (DFS) namespace folder. When you remove a user from an ACL, the current
+permissions in the ACL may still allow that user to access the folder.
+
+For more information about DFS namespaces, see
+[Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736) on TechNet.
 
 ## EXAMPLES
 
 ### Example 1: Remove a user from the ACL for a folder
-```
-PS C:\> Remove-DfsnAccess -Path "\\Contoso\Software\Projects" -AccountName "TSQA\PattiFuller"
+
+```powershell
+Remove-DfsnAccess -Path '\\Contoso\Software\Projects' -AccountName 'TSQA\PattiFuller'
 ```
 
-This command removes the user TSQA\PattiFuller from the access control list of \\\\Contoso\Software\Projects.
+This command removes the user TSQA\PattiFuller from the access control list of
+`\\Contoso\Software\Projects`.
 
 ## PARAMETERS
 
 ### -AccountName
-Specifies an array of user and group accounts.
-This cmdlet removes the accounts specified from the ACL of a DFS namespace folder.
+
+Specifies an array of user and group accounts. This cmdlet removes the accounts specified from the
+ACL of a DFS namespace folder.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: Account, User
 
@@ -54,17 +60,20 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+The cmdlet immediately returns an object that represents the job and then displays the command
+prompt. You can continue to work in the session while the job completes. To manage the job, use the
+`*-Job` cmdlets. To get the job results, use the
+[Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+For more information about Windows PowerShell background jobs, see
+[about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,12 +85,14 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
-Type: CimSession[]
+Type: Microsoft.Management.Infrastructure.CimSession[]
 Parameter Sets: (All)
 Aliases: Session
 
@@ -93,10 +104,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -108,11 +120,12 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a path for a DFS namespace folder.
-This cmdlet removes user accounts or group accounts from the ACL of the folder specified.
+
+Specifies a path for a DFS namespace folder. This cmdlet removes user accounts or group accounts
+from the ACL of the folder specified.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: DfsPath, FolderPath, NamespacePath
 
@@ -124,12 +137,15 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
+computer.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -141,10 +157,11 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -156,7 +173,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`,
+`-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`,
+`-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -177,4 +198,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Grant-DfsnAccess](./Grant-DfsnAccess.md)
 
 [Revoke-DfsnAccess](./Revoke-DfsnAccess.md)
-

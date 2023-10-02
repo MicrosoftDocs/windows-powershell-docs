@@ -3,7 +3,7 @@ description: The Backup-Acl cmdlet backs up the security descriptor of a specifi
 external help file: wsbcmdlet.dll-help.xml
 Module Name: WindowsServerBackup
 ms.date: 09/10/2021
-online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/backup-acl?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/windowsserverbackup/backup-acl?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Backup-ACL
 ---

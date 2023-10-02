@@ -3,7 +3,7 @@ description: The Restore-ACL cmdlet restores the security descriptor of a specif
 external help file: wsbcmdlet.dll-help.xml
 Module Name: WindowsServerBackup
 ms.date: 09/10/2021
-online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/restore-acl?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/windowsserverbackup/restore-acl?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Restore-ACL
 ---

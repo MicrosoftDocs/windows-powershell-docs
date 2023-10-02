@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_PrinterPortTasks_v1.0.cdxml-help.xml
 Module Name: PrintManagement
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/printmanagement/add-printerport?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/printmanagement/add-printerport?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-PrinterPort
 ---

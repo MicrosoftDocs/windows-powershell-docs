@@ -3,7 +3,7 @@ description: The New-NetworkControllerIpReservation cmdlet creates an IP reserva
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
 ms.date: 09/27/2021
-online version: https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrolleripreservation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/networkcontroller/new-networkcontrolleripreservation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-NetworkControllerIpReservation
 ---

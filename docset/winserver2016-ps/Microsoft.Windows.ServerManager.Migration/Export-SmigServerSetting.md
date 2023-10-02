@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Windows.ServerManager.PowerShell.dll-Help.xml
 Module Name: Microsoft.Windows.ServerManager.Migration
 ms.date: 01/03/2017
-online version: https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/export-smigserversetting?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/export-smigserversetting?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-SmigServerSetting
 ---

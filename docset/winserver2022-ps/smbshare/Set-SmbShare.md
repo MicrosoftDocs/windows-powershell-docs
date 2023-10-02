@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: SmbShare.cdxml-help.xml
 Module Name: SmbShare
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/smbshare/set-smbshare?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/smbshare/set-smbshare?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SmbShare
 ---
@@ -323,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScopeName
-Specifies the scope name of the SMB share.
+Specifies the scope name of the SMB share. For use with Windows Server failover cluster file server resources.
 
 ```yaml
 Type: String[]

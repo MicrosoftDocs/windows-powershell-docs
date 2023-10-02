@@ -1,11 +1,11 @@
 ---
-title: Set-DnsClientDohServerAddress
 description: The Set-DnsClientDohServerAddress cmdlet modifies an existing DNS-over-HTTPS (DoH) server configuration.
 external help file: MSFT_DnsClientDohServerAddress.cdxml-help.xml
 Module Name: DnsClient
-online version: https://docs.microsoft.com/powershell/module/dnsclient/set-dnsclientdohserveraddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
-schema: 2.0.0
 ms.date: 08/31/2021
+online version: https://learn.microsoft.com/powershell/module/dnsclient/set-dnsclientdohserveraddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
+title: Set-DnsClientDohServerAddress
 ---
 
 # Set-DnsClientDohServerAddress

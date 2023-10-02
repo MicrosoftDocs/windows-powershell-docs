@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 Module Name: pki
 ms.date: 10/06/2019
-online version: https://docs.microsoft.com/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-SelfSignedCertificate
 ---
@@ -623,7 +623,7 @@ Accept wildcard characters: False
 ```
 
 ### -Provider
-Specifies the name of the KSP or CSP that this cmdlet uses to create the certificate. See [Cryptographic Providers](https://docs.microsoft.com/en-us/windows/desktop/SecCertEnroll/understanding-cryptographic-providers) for more information.
+Specifies the name of the KSP or CSP that this cmdlet uses to create the certificate. See [Cryptographic Providers](/windows/desktop/SecCertEnroll/understanding-cryptographic-providers) for more information.
 Some acceptable values include:
 
 - Microsoft Software Key Storage Provider
@@ -1010,4 +1010,4 @@ An **X509Certificate2** object for the certificate that has been created.
 
 ## RELATED LINKS
 
-[System Store Locations](https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations)
+[System Store Locations](/windows/desktop/seccrypto/system-store-locations)

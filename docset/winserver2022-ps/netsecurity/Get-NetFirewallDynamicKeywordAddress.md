@@ -3,7 +3,7 @@ description: The Get-NetFirewallDynamicKeywordAddress cmdlet gets dynamic keywor
 external help file: NetFirewallDynamicKeywordAddress.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
 ms.date: 10/20/2021
-online version: https://docs.microsoft.com/powershell/module/netsecurity/get-netfirewalldynamickeywordaddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/netsecurity/get-netfirewalldynamickeywordaddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetFirewallDynamicKeywordAddress
 ---

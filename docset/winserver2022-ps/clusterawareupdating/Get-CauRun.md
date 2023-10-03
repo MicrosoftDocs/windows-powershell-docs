@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/get-caurun?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 09/27/2022
+online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/get-caurun?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CauRun
 ---
@@ -16,35 +16,46 @@ Gets status information about an updating run currently in progress.
 ## SYNTAX
 
 ### DefaultParamSet (Default)
+
 ```
 Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [<CommonParameters>]
 ```
 
 ### WaitForStart
+
 ```
-Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForStart] [<CommonParameters>]
+Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForStart]
+ [<CommonParameters>]
 ```
 
 ### WaitForCompletion
+
 ```
-Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForCompletion] [<CommonParameters>]
+Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-WaitForCompletion]
+ [<CommonParameters>]
 ```
 
 ### ShowClusterNodeState
+
 ```
-Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-ShowClusterNodeState] [<CommonParameters>]
+Get-CauRun [[-ClusterName] <String>] [-Credential <PSCredential>] [-ShowClusterNodeState]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-CauRun** cmdlet gets status information about an updating run currently in progress.
+
+The `Get-CauRun` cmdlet gets status information about an updating run currently in progress.
 Use this cmdlet to monitor current updating runs.
 
 ## EXAMPLES
 
 ### Example 1: Get status information about the updating run in progress from the specified cluster
-```
-PS C:\> Get-CauRun -ClusterName "CONTOSO-FC1"
 
+```powershell
+Get-CauRun -ClusterName "CONTOSO-FC1"
+```
+
+```output
 RunId                   : 834dd11e-584b-41f2-8d22-4c9c0471dbad 
 RunStartTime            : 10/13/2011 1:35:39 PM 
 CurrentOrchestrator     : NODE1 
@@ -63,13 +74,16 @@ InstallResults           : Microsoft.ClusterAwareUpdating.UpdateInstallResult[]
 }
 ```
 
-This command gets status information about the updating run currently in progress on the cluster named CONTOSO-FC1.
+This command gets status information about the updating run currently in progress on the cluster
+named CONTOSO-FC1.
 
 ## PARAMETERS
 
 ### -ClusterName
-Specifies the name of the cluster for which this cmdlet gets the updating run status.
-This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+
+Specifies the name of the cluster for which this cmdlet gets the updating run status. This parameter
+is only required when this cmdlet isn't run on a failover cluster node, or this cmdlet is used to
+reference a failover cluster different from where the cmdlet is run.
 
 ```yaml
 Type: String
@@ -84,6 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the administrative credentials for the target cluster.
 
 ```yaml
@@ -99,8 +114,9 @@ Accept wildcard characters: False
 ```
 
 ### -ShowClusterNodeState
-Indicates that this cmdlet gets the status of the Windows Management Instrumentation (WMI) object that is created on each cluster node.
-This can be used to debug the status of leftover objects.
+
+Indicates that this cmdlet gets the status of the Windows Management Instrumentation (WMI) object
+that is created on each cluster node. This can be used to debug the status of leftover objects.
 
 ```yaml
 Type: SwitchParameter
@@ -115,8 +131,10 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForCompletion
-Indicates that this cmdlet waits for the updating run to finish.
-If this parameter is specified, the cmdlet also writes the updated CAU run objects to the output stream as progress is recorded by the current CAU Update Coordinator.
+
+Indicates that this cmdlet waits for the updating run to finish. If this parameter is specified, the
+cmdlet also writes the updated CAU run objects to the output stream as progress is recorded by the
+current CAU Update Coordinator.
 
 ```yaml
 Type: SwitchParameter
@@ -131,6 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -WaitForStart
+
 Indicates that this cmdlet waits for an updating run that is in progress on the specified cluster.
 Otherwise the cmdlet waits for an updating run to begin.
 
@@ -147,7 +166,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

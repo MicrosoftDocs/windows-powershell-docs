@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/activedirectory/set-adcentralaccessrule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/set-adcentralaccessrule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ADCentralAccessRule
 ---
@@ -60,7 +60,7 @@ PS C:\> Set-ADCentralAccessRule -Identity "Finance Documents Rule" -ResourceCond
 This example sets the central access rule named Finance Documents Rule with a new resource condition and new permissions.
 
 The new rule specifies that documents should only be read by members of the Finance department.
-Members of the Finance department should only be able to access documents in their own country.
+Members of the Finance department should only be able to access documents in their own country/region.
 Only Finance Administrators should have write access.
 The rule allows an exception for members of the FinanceException group.
 This group will have read access.

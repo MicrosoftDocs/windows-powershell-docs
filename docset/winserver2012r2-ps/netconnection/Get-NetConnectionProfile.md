@@ -2,7 +2,7 @@
 external help file: MSFT_NetConnectionProfile.cdxml-help.xml
 Module Name: NetConnection
 ms.date: 10/29/2017
-online version: https://docs.microsoft.com/powershell/module/netconnectionprofile/get-netconnectionprofile?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/netconnectionprofile/get-netconnectionprofile?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetConnectionProfile
 ---
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -216,4 +216,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-NetConnectionProfile](./Set-NetConnectionProfile.md)
-

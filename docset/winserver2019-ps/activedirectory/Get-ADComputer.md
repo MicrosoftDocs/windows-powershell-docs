@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/activedirectory/get-adcomputer?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/get-adcomputer?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ADComputer
 ---
@@ -45,7 +45,7 @@ You can also set the parameter to a computer object variable, such as `$<localCo
 To search for and retrieve more than one computer, use the *Filter* or *LDAPFilter* parameters.
 The *Filter* parameter uses the PowerShell Expression Language to write query strings for Active Directory.
 PowerShell Expression Language syntax provides rich type conversion support for value types received by the *Filter* parameter.
-For more information about the *Filter* parameter syntax, type `Get-Help` [about_ActiveDirectory_Filter](https://docs.microsoft.com/previous-versions/windows/server/hh531527(v=ws.10)).
+For more information about the *Filter* parameter syntax, type `Get-Help` [about_ActiveDirectory_Filter](/previous-versions/windows/server/hh531527(v=ws.10)).
 If you have existing Lightweight Directory Access Protocol (LDAP) query strings, you can use the *LDAPFilter* parameter.
 
 This cmdlet retrieves a default set of computer object properties.
@@ -257,7 +257,7 @@ Specifies a query string that retrieves Active Directory objects.
 This string uses the Windows PowerShell Expression Language syntax.
 The Windows PowerShell Expression Language syntax provides rich type-conversion support for value types received by the *Filter* parameter.
 The syntax uses an in-order representation, which means that the operator is placed between the operand and the value.
-For more information about the *Filter* parameter, type `Get-Help` [about_ActiveDirectory_Filter](https://docs.microsoft.com/previous-versions/windows/server/hh531527(v=ws.10)).
+For more information about the *Filter* parameter, type `Get-Help` [about_ActiveDirectory_Filter](/previous-versions/windows/server/hh531527(v=ws.10)).
 
 Syntax:
 
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 Specifies an LDAP query string that is used to filter Active Directory objects.
 You can use this parameter to run your existing LDAP queries.
 The *Filter* parameter syntax supports the same functionality as the LDAP syntax.
-For more information, see the *Filter* parameter description or type `Get-Help` [about_ActiveDirectory_Filter](https://docs.microsoft.com/previous-versions/windows/server/hh531527(v=ws.10)).
+For more information, see the *Filter* parameter description or type `Get-Help` [about_ActiveDirectory_Filter](/previous-versions/windows/server/hh531527(v=ws.10)).
 
 ```yaml
 Type: String

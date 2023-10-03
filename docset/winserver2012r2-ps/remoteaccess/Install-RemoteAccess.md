@@ -2,7 +2,7 @@
 external help file: PS_RemoteAccess_v1.0.0.cdxml-help.xml
 Module Name: RemoteAccess
 ms.date: 05/31/2018
-online version: https://docs.microsoft.com/powershell/module/remoteaccess/install-remoteaccess?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/remoteaccess/install-remoteaccess?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-RemoteAccess
 ---

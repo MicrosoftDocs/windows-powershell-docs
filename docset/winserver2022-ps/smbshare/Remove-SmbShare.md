@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: SmbShare.cdxml-help.xml
 Module Name: SmbShare
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/smbshare/remove-smbshare?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/smbshare/remove-smbshare?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-SmbShare
 ---
@@ -50,12 +50,13 @@ Performing operation 'Remove-Share' on Target 'Contoso-FS,Data'.
 
 This command deletes the SMB share named Data.
 
-### Example 2: Delete an SMB share without confirmation
-```
-PS C:\>Remove-SmbShare -Name "VMFiles" -ScopeName "Contoso-SO" -Force
+### Example 2: Delete a Windows Server failover cluster file server resource SMB share without confirmation
+
+```powershell
+Remove-SmbShare -Name "VMFiles" -ScopeName "Contoso-SO" -Force
 ```
 
-This command deletes the SMB share named VMFiles without user confirmation.
+This command deletes the SMB share named VMFiles on the `Contoso-SO` file server resource without user confirmation.
 
 ## PARAMETERS
 
@@ -153,7 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -ScopeName
-Specifies an array of the scopes of the SMB share to delete.
+
+Specifies an array of the scopes of the SMB share to delete. For use with Windows Server failover cluster file server resources.
 
 ```yaml
 Type: String[]

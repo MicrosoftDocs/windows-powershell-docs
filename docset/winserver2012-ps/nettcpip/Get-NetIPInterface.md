@@ -1,7 +1,7 @@
 ---
 external help file: NetTCPIP_Cmdlets.xml
 Module Name: NetTCPIP
-online version: https://docs.microsoft.com/powershell/module/nettcpip/get-netipinterface?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/nettcpip/get-netipinterface?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -304,8 +304,8 @@ Accept wildcard characters: False
 ### -BaseReachableTimeMs
 Gets IP interface properties only for interfaces by the BaseReachableTime property.
 This parameter is the base for random reachable time, in milliseconds.
-This parameter is described in RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.
-The default BaseReachableTime setting is `30`.
+This parameter is described in [RFC 2461](https://go.microsoft.com/fwlink/p/?LinkId=84044).
+The default BaseReachableTime setting is `30000`.
 
 ```yaml
 Type: UInt32[]

@@ -1,7 +1,7 @@
 ---
 external help file: NetTCPIP_Cmdlets.xml
 Module Name: NetTCPIP
-online version: https://docs.microsoft.com/powershell/module/nettcpip/set-netroute?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/nettcpip/set-netroute?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 
 ### -PreferredLifetime
 Modifies the preferred lifetime of the IP route.
-This parameter value uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+This parameter value uses time as defined by the [TimeSpan](http://msdn.microsoft.com/library/system.timespan.aspx) structure.
 
 ```yaml
 Type: TimeSpan
@@ -324,7 +324,7 @@ Accept wildcard characters: False
 
 ### -ValidLifetime
 Modifies the valid lifetime of a route.
-This parameter value uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+This parameter value uses time as defined by the [TimeSpan](http://msdn.microsoft.com/library/system.timespan.aspx) structure.
 
 ```yaml
 Type: TimeSpan
@@ -389,5 +389,4 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Remove-NetRoute](./Remove-NetRoute.md)
 
-[New-TimeSpan](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan)
-
+[New-TimeSpan](/powershell/module/microsoft.powershell.utility/new-timespan)

@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: HgsClient-help.xml
 Module Name: HgsClient
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-HgsKeyProtector
 ---
@@ -53,7 +53,7 @@ The command also grants access to the guardians stored in **$GuardianA** and **$
 Indicates that this cmdlet can create a key protector by using certificates that are expired.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet can create a key protector by using self-signed certificates.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 

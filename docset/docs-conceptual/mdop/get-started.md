@@ -15,7 +15,7 @@ maintain, configure, and develop new features for MDOP.
 ## MDOP Automation with Windows PowerShell
 
 The table below shows the latest published version of the Help for each module. The Help is
-available in docs.microsoft.com through the links below, or as Updateable Help files. Updateable
+available through the links below, or as Updateable Help files. Updateable
 Help was introduced with Windows PowerShell 3.0 and enables you to have the latest Help topics
 available locally on your computer by using the Update-Help cmdlet. For more information, see
 [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help).

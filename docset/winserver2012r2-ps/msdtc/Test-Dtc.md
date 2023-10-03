@@ -2,7 +2,7 @@
 external help file: TestDtc-help.xml
 Module Name: MsDTC
 ms.date: 10/29/2017
-online version: https://docs.microsoft.com/powershell/module/msdtc/test-dtc?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/msdtc/test-dtc?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-Dtc
 ---
@@ -32,7 +32,7 @@ To run this cmdlet, you must first enable the firewall rule for Distributed Tran
 
 `netsh advfirewall firewall set rule group="Distributed Transaction Coordinator" new enable=yes`
 
-For more information, see [Netsh Command Syntax, Contexts, and Formatting](https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts).
+For more information, see [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts).
 
 To enable the rule using PowerShell run the following command:
 
@@ -317,4 +317,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-Dtc](./Stop-Dtc.md)
 
 [Uninstall-Dtc](./Uninstall-Dtc.md)
-

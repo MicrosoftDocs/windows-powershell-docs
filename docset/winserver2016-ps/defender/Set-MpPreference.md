@@ -1,9 +1,9 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Use this article to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+ms.date: 08/30/2022
+online version: https://learn.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
 ---
@@ -23,7 +23,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-ReportingNonCriticalTimeOut <UInt32>] [-ScanAvgCPULoadFactor <Byte>]
  [-CheckForSignaturesBeforeRunningScan <Boolean>] [-ScanPurgeItemsAfterDelay <UInt32>]
  [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>] [-ScanScheduleDay <Day>]
- [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleTime <DateTime>] [-SignatureFirstAuGracePeriod <UInt32>]
+ [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleOffset <UInt32>] [-SignatureFirstAuGracePeriod <UInt32>]
  [-SignatureAuGracePeriod <UInt32>] [-SignatureDefinitionUpdateFileSharesSources <String>]
  [-SignatureDisableUpdateOnStartupWithoutEngine <Boolean>] [-SignatureFallbackOrder <String>]
  [-SignatureScheduleDay <Day>] [-SignatureScheduleTime <DateTime>] [-SignatureUpdateCatchupInterval <UInt32>]
@@ -34,8 +34,9 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
  [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
+ [-OobeEnableRtpAndSigUpdate <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
- [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
+ [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>] [-AllowSwitchToAsyncInspection <Boolean>]
  [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-UnknownThreatDefaultAction <ThreatAction>]
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
@@ -58,7 +59,7 @@ The following table provides remediation action values for detected threats at l
 |3 |Remove the detected threat. |
 |6 |Allow the detected threat. |
 |8 |Allow the user to determine the action to take with the detected threat. |
-|9 |Do not take any action. |
+|9 |Don't take any action. |
 |10 |Block the detected threat. |
 |0 | (NULL)|Apply action based on the Security Intelligence Update (SIU). This is the default value. |
 
@@ -76,7 +77,7 @@ This command configures preferences to check for definition updates every day.
 PS C:\> Set-MpPreference -SignatureScheduleTime 120
 ```
 
-This command configures preferences to check for definition updates 120 minutes after midnight on days when it is scheduled to check.
+This command configures preferences to check for definition updates 120 minutes after midnight on days when it's scheduled to check.
 
 ## PARAMETERS
 
@@ -102,11 +103,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowSwitchToAsyncInspection
+
+Specifies whether to enable a performance optimization that allows synchronously inspected network flows to switch to async inspection once they have been checked and validated.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -CheckForSignaturesBeforeRunningScan
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of $True, Windows Defender checks for new definitions.
-If you specify $False or do not specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans and to scans that you start from the command line, but it does not affect scans that you start from the user interface.
+If you specify $False or don't specify a value, the scan begins with existing definitions.
+This setting applies to scheduled scans, but it has no effect on scans initiated manually from the user interface or scans started from the command line using "mpcmdrun -Scan".
 
 ```yaml
 Type: Boolean
@@ -204,7 +222,7 @@ Accept wildcard characters: False
 ### -DisableCatchupFullScan
 Indicates whether Windows Defender runs catch-up scans for scheduled full scans.
 A computer can miss a scheduled scan, usually because the computer is turned off at the scheduled time.
-If you specify a value of $False, after the computer misses two scheduled full scans, Windows Defender runs a catch-up scan the next time someone logs on to the computer. If you specify a value of $True, the computer does not run catch-up scans for scheduled full scans.
+If you specify a value of $False, after the computer misses two scheduled full scans, Windows Defender runs a catch-up scan the next time someone logs on to the computer. If you specify a value of $True, the computer doesn't run catch-up scans for scheduled full scans.
 
 ```yaml
 Type: Boolean
@@ -568,6 +586,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OobeEnableRtpAndSigUpdate
+
+This setting allows you to configure whether real-time protection and Security Intelligence Updates are enabled during Out of Box experience (OOBE).
+
+Valid values are:
+- True - If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.
+- False (Default) - If you either disable or don't configure this setting, real-time protection and Security Intelligence Updates during OOBE aren't enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PUAProtection
 
 ```yaml
@@ -846,7 +884,7 @@ Accept wildcard characters: False
 ### -ScanScheduleQuickScanTime
 Specifies the time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
 The time refers to the local time on the computer.
-If you do not specify a value for this parameter, a scheduled quick scan runs at the time specified by the **ScanScheduleTime** parameter.
+If you do not specify a value for this parameter, a scheduled quick scan runs at the time specified by the **ScanScheduleOffset** parameter.
 That parameter has a default time of two hours after midnight.
 
 ```yaml
@@ -862,16 +900,14 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleTime
-Specifies the time of day, as the number of minutes after midnight, to perform a scheduled scan.
-The time refers to the local time on the computer.
-If you do not specify a value for this parameter, a scheduled scan runs at a default time of two hours after midnight.
+This setting is discontinued and replaced with **ScanScheduleOffset** as a part of a recent Microsoft Defender Antivirus update.
+
+### -ScanScheduleOffset
+Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
 
 ```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: scst
-
-Required: False
+Type: UInt32
+Aliases: scso
 Position: Named
 Default value: None
 Accept pipeline input: False

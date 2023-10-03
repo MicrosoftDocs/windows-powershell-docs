@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmcomport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmcomport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-VMComPort
 ---
@@ -47,7 +47,7 @@ PS C:\> Set-VMComPort TestVM 2 \\.\pipe\TestPipe
 Configure the second COM port on virtual machine TestVM to connect to named pipe TestPipe on the local computer.
 
 > [!NOTE]
-> This does not create the named pipe on the local computer. You will have to write your own application to create a named pipe.
+> You can then access the named pipe using a third-party application or develop your own application.
 
 ## PARAMETERS
 

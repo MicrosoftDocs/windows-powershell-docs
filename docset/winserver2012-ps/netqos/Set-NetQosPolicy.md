@@ -1,7 +1,7 @@
 ---
 external help file: NetQos_Cmdlets.xml
 Module Name: NetQoS
-online version: https://docs.microsoft.com/powershell/module/netqos/set-netqospolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/netqos/set-netqospolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

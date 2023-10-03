@@ -1,7 +1,7 @@
 ---
 external help file: Iscsi_Cmdlets.xml
 Module Name: iSCSI
-online version: https://docs.microsoft.com/powershell/module/iscsi/new-iscsitargetportal?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/iscsi/new-iscsitargetportal?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -244,4 +244,4 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[iSCSI Target Server Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848272(v=ws.11))
+[iSCSI Target Server Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848272(v=ws.11))

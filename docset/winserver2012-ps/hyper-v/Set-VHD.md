@@ -1,7 +1,7 @@
 ---
 external help file: Hyper-V_Cmdlets.xml
 Module Name: Hyper-V
-online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vhd?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vhd?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -48,7 +48,7 @@ This operation cannot be performed when the virtual disk chain is attached.
 
 ### Example 3
 ```
-PS C:\>Set-VHD -Path Child1.vhd -parentpath parentcopywithnewid.vhd -IgnoreMismatchId
+PS C:\>Set-VHD -Path Child1.vhd -parentpath parentcopywithnewid.vhd -IgnoreIdMismatch
 ```
 
 This example sets the parent of Child1.vhd to point to parentcopywithnewid.vhd, even though parentcopywithnewid.vhd has a different ID than the original parent of child1.vhd.

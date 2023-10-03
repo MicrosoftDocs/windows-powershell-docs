@@ -1,7 +1,7 @@
 ---
 external help file: VAMT_Cmdlets.xml
 Module Name: VAMT
-online version: https://docs.microsoft.com/powershell/module/vamt/install-vamtproductactivation?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/vamt/install-vamtproductactivation?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

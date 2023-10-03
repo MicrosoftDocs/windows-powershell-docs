@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/hyper-v/remove-vm?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/remove-vm?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-VM
 ---
@@ -44,14 +44,14 @@ Removes virtual machine new 1.
 
 ### Example 2
 ```
-PS C:\> Remove-VM -Name "new 2" -Force
+Remove-VM -Name "new 2" -Force
 ```
 
 Removes virtual machine new 2, suppressing the confirmation prompt.
 
 ### Example 3
 ```
-PS C:\> Get-VM -Name New* | Remove-VM -Force
+Get-VM -Name New* | Remove-VM -Force
 ```
 
 Removes with no confirmation prompt all virtual machines having names starting with New.

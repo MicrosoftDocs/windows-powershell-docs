@@ -1,7 +1,7 @@
 ---
 external help file: DhcpServer_Cmdlets.xml
 Module Name: DhcpServer
-online version: https://docs.microsoft.com/powershell/module/dhcpserver/import-dhcpserver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dhcpserver/import-dhcpserver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -320,4 +320,3 @@ Accept wildcard characters: False
 [Export-DhcpServer](./Export-DhcpServer.md)
 
 [Restore-DhcpServer](./Restore-DhcpServer.md)
-

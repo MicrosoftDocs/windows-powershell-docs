@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -ID
 Specifies the ID of the print job to retrieve. 
-You can use wildcard characters.
+You cannot use wildcard characters.
 
 ```yaml
 Type: UInt32

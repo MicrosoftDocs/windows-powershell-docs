@@ -31,7 +31,7 @@ You can set commonly used OU property values by using the cmdlet parameters.
 **Property** values that are not associated with cmdlet parameters can be set by using the *OtherAttributes* parameter.
 
 You must set the *Name* parameter to create a new OU.
-If you do not specify the *Path* parameter, the cmdlet creates an OU under the default NC (Naming Context) head for the domain.
+If you do not specify the *Path* parameter, the cmdlet creates an OU under the default naming context (NC) head for the domain.
 
 The following methods describe how to create an object by using this cmdlet.
 

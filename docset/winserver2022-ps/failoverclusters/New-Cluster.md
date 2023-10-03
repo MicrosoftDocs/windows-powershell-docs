@@ -17,8 +17,8 @@ Creates a new failover cluster.
 
 ```
 New-Cluster [-Name] <String> [-Node <StringCollection>] [-StaticAddress <StringCollection>]
- [-IgnoreNetwork <StringCollection>] [-NoStorage] [-S2D]
- [-AdministrativeAccessPoint <AdminAccessPoint>] [-Force] [<CommonParameters>]
+ [-IgnoreNetwork <StringCollection>] [-NoStorage] [-S2D] [-AdministrativeAccessPoint <AdminAccessPoint>]
+ [-Force] [-ManagementPointNetworkType <AdminAccessPointResType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -163,6 +163,27 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagementPointNetworkType
+Specifies the network configuration used to determine IP address settings.
+
+The acceptable values for this parameter are:
+
+- Automatic: Automatically detects the appropriate setting. If SQL Server is running in Azure, it uses `Distributed`. If SQL Server is running on-premises, uses `Singleton`. (Default setting)
+- Singleton: The traditional method of DHCP or static IP address.
+- Distributed: Uses a Distributed Network Name by using Node IP addresses.
+
+```yaml
+Type: AdminAccessPointResType
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Automatic
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

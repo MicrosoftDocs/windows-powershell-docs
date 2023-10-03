@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Windows.ServerManager.Migration.dll-Help.xml
 Module Name: ServerMigration
-ms.date: 12/06/2017
-online version: https://docs.microsoft.com/powershell/module/servermigration/import-smigserversetting?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+ms.date: 04/29/2022
+online version: https://learn.microsoft.com/powershell/module/servermigration/import-smigserversetting?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-SmigServerSetting
 ---
@@ -35,7 +35,7 @@ For online Help about the Windows Server Migration Tools cmdlets, see http://go.
 
 ### EXAMPLE 1
 ```
-PS C:\> Import-SmigServerSetting -Feature "DHCP" -User All -Group -Path "c:\temp\store" -Verbose
+Import-SmigServerSetting -FeatureID 'DHCP' -User All -Group -Path 'c:\temp\store' -Verbose
 ```
 
 This sample command imports the Dynamic Host Configuration Protocol (DHCP) Server, and all other Windows features required by this technology.
@@ -50,7 +50,15 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### EXAMPLE 2
 ```
-PS C:\> Import-SmigServerSetting -IPConfig All -SourcePhysicalAddress "00-13-D3-F7-A1-3A","00-13-D3-F7-A1-4A" -TargetPhysicalAddress "11-13-D3-F7-A1-3A","11-13-D3-F7-A1-4A" -Path "c:\temp\store" -Password (Read-Host "Enter a Password:" -AsSecureString)-Verbose
+$parameters = @{
+    IPConfig = 'All'
+    SourcePhysicalAddress = '00-13-D3-F7-A1-3A','00-13-D3-F7-A1-4A'
+    TargetPhysicalAddress = '11-13-D3-F7-A1-3A','11-13-D3-F7-A1-4A'
+    Path = 'c:\temp\store'
+    Password = (Read-Host -Prompt 'Enter a Password:' -AsSecureString)
+    Verbose = $true
+}
+Import-SmigServerSetting @parameters
 ```
 
 This sample command imports the IP configuration from the migration store specified at c:\temp\store, and applies it to the local server.
@@ -65,8 +73,8 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### EXAMPLE 3
 ```
-PS C:\> $c = Get-SmigServerFeature -Path "c:\temp\store"
-PS C:\> Import-SmigServerSetting -Feature $c -Path "c:\temp\store" -Verbose
+$c = Get-SmigServerFeature -Path 'c:\temp\store'
+Import-SmigServerSetting -FeatureID $c -Path 'c:\temp\store' -Verbose
 ```
 
 This sample command imports a set of Windows features that have already been retrieved by using the Get-SmigServerFeature cmdlet.
@@ -83,7 +91,7 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### EXAMPLE 4
 ```
-PS C:\> Get-SmigServerFeature -Path "c:\temp\store" | Import-SmigServerSetting -Path "c:\temp\store" -Verbose
+Get-SmigServerFeature -Path 'c:\temp\store' | Import-SmigServerSetting -Path 'c:\temp\store' -Verbose
 ```
 
 This sample command pipes a set of features that have already been retrieved by using the Get-SmigServerFeature cmdlet to the Import-SmigServerSetting cmdlet.
@@ -100,8 +108,8 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### EXAMPLE 5
 ```
-PS C:\> $pass = ConvertTo-SecureString -String "password" -AsPlainText -Force
-PS C:\> Import-SmigServerSetting -User All -Password $pass -Path "c:\store" -Verbose
+$pass = ConvertTo-SecureString -String 'password' -AsPlainText -Force
+Import-SmigServerSetting -User All -Password $pass -Path 'c:\store' -Verbose
 ```
 
 In this example, the first command convert the store encryption password, represented by "password," to a secure string, and store it in the variable $pass.

@@ -2,7 +2,7 @@
 external help file: dnslookup.dll-Help.xml
 Module Name: DnsClient
 ms.date: 05/20/2019
-online version: https://docs.microsoft.com/powershell/module/dnsclient/resolve-dnsname?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dnsclient/resolve-dnsname?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Resolve-DnsName
 ---

@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: PS_DnsServerResourceRecord_v1.0.0.cdxml-help.xml
 Module Name: DnsServer
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverresourcerecord?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dnsserver/set-dnsserverresourcerecord?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DnsServerResourceRecord
 ---
@@ -32,7 +32,7 @@ This cmdlet cannot change the Name or Type of a DNS server resource record objec
 ### Example 1: Change the timespan of a resource record
 ```
 PS C:\> $OldObj = Get-DnsServerResourceRecord -Name "Host01" -ZoneName "contoso.com" -RRType "A"
-PS C:\> $NewObj = $OldObj.Clone()
+PS C:\> $NewObj = [ciminstance]::new($OldObj)
 PS C:\> $NewObj.TimeToLive = [System.TimeSpan]::FromHours(2)
 PS C:\> Set-DnsServerResourceRecord -NewInputObject $NewObj -OldInputObject $OldObj -ZoneName "contoso.com" -PassThru
 

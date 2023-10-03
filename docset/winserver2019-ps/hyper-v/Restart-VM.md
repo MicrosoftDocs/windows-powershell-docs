@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/hyper-v/restart-vm?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/restart-vm?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Restart-VM
 ---
@@ -218,6 +218,9 @@ Accept wildcard characters: False
 
 ### -Timeout
 
+Specifies the duration of the wait, in seconds. When the timeout elapses, **Restart-VM** returns to the command prompt, even if the virtual machine isn't restarted.
+
+This parameter is only valid with the `-Wait` parameter. The `-Timeout` parameter overrides the `-Wait` parameter's indefinite waiting period.
 
 ```yaml
 Type: Int32
@@ -248,6 +251,9 @@ Accept wildcard characters: False
 
 ### -Wait
 
+**Restart-VM** suppresses the PowerShell prompt and blocks the pipeline until the virtual machine has restarted. You can use this parameter in a script to restart the virtual machine and then continue to process when the restart is finished.
+
+The `-Wait` parameter waits indefinitely for the virtual machine to restart. You can use the `-Timeout` parameter to adjust the timing and the `-For` and `-Delay` parameters to wait for particular services to become available on the restarted virtual machine.
 
 ```yaml
 Type: SwitchParameter

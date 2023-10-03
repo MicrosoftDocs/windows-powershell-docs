@@ -1,7 +1,7 @@
 ---
 external help file: Hyper-V_Cmdlets.xml
 Module Name: Hyper-V
-online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmswitch?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmswitch?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -82,7 +82,7 @@ This example sets the minimum bandwidth allocation to 500Mbps on a virtual switc
 ## PARAMETERS
 
 ### -AllowManagementOS
-Specifies whether the management operating system can use the physical network adapter that is bound to the external virtual switch.
+Specifies whether the management operating system can use the physical network adapter that is bound to the virtual switch. Setting **AllowManagementOS** to `$true` creates management operating system virtual network adapters (VMNetworkAdapters) in the parent partition and connects it to the virtual switch. Setting **AllowManagementOS** to `$false` removes any VMNetworkAdapters connected to the virtual switch.
 
 ```yaml
 Type: Boolean

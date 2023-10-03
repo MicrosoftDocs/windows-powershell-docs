@@ -3,7 +3,7 @@ description: Windows gives a user the ability to uninstall and roll back to a pr
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: Dism
 ms.date: 10/07/2021
-online version: https://docs.microsoft.com/powershell/module/dism/start-osuninstall?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dism/start-osuninstall?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-OSUninstall
 ---

@@ -2,7 +2,7 @@
 description: Checks whether the local CA trusts secure hardware for identity key attestation.
 external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
 Module Name: ADCSAdministration
-online version: https://docs.microsoft.com/powershell/module/adcsadministration/confirm-caattestationidentitykeyinfo?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/adcsadministration/confirm-caattestationidentitykeyinfo?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Confirm-CAAttestationIdentityKeyInfo
 ---

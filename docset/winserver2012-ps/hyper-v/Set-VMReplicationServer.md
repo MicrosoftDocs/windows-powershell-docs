@@ -1,7 +1,7 @@
 ---
 external help file: Hyper-V_Cmdlets.xml
 Module Name: Hyper-V
-online version: https://docs.microsoft.com/powershell/module/hyper-v/set-vmreplicationserver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmreplicationserver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -141,7 +141,7 @@ To display a list of certificates in the computer's My store and the thumbprint 
 
 `PS C:\\\> dir | format-list`
 
-For more information about certificate stores, see [Certificate stores](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10).
+For more information about certificate stores, see [Certificate stores](/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).
 
 ```yaml
 Type: String

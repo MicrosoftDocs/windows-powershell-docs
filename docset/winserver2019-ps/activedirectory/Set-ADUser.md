@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/activedirectory/set-aduser?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/set-aduser?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ADUser
 ---
@@ -496,6 +496,7 @@ Accept wildcard characters: False
 Specifies the country or region code for the user's language of choice.
 This parameter sets the **Country** property of a user object.
 The LDAP display name (**ldapDisplayName**) of this property is c.
+This value uses the ISO-3166 2-character code (see [Country-Name attribute](/windows/win32/adschema/a-c)).
 This value is not used by Windows 2000.
 
 ```yaml

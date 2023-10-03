@@ -1,7 +1,7 @@
 ---
 external help file: Hyper-V_Cmdlets.xml
 Module Name: Hyper-V
-online version: https://docs.microsoft.com/powershell/module/hyper-v/export-vm?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/export-vm?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -25,7 +25,7 @@ Export-VM [-VM] <VirtualMachine[]> [-Path] <String> [-AsJob] [-Passthru]
 ## DESCRIPTION
 The **Export-VM** cmdlet exports a virtual machine to disk.
 This cmdlet creates a folder at a specified location having three subfolders: Snapshots, Virtual Hard Disks, and Virtual Machines.
-The Snapshots and Virtual Hard Disks folders contain the snapshots of and virtual hard disks of the specified virtual machine respectively.
+Each of these folders contains the associated files. The Snapshots folder contains the associated Snapshots, and the Virtual Hard Disk folder contains the specified virtual machine's virtual disks.
 The Virtual Machines folder contains the configuration XML of the specified virtual machine.
 
 ## EXAMPLES

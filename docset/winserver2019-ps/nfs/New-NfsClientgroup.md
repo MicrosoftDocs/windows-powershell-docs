@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_NfsServerTasks.cmdletDefinition.cdxml-help.xml
 Module Name: NFS
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/nfs/new-nfsclientgroup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/nfs/new-nfsclientgroup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-NfsClientgroup
 ---
@@ -72,7 +72,7 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -AsJob

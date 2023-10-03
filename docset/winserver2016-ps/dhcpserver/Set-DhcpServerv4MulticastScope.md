@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: PS_DhcpServerV4MulticastScope_v1.0.0.cdxml-help.xml
 Module Name: DhcpServer
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv4multicastscope?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv4multicastscope?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DhcpServerv4MulticastScope
 ---

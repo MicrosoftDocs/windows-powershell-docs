@@ -1,7 +1,7 @@
 ---
 external help file: WDAC_Cmdlets.xml
 Module Name: Wdac
-online version: https://docs.microsoft.com/powershell/module/wdac/add-odbcdsn?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/wdac/add-odbcdsn?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -51,10 +51,10 @@ PS C:\> $newDsn = Add-OdbcDsn MyPayroll -DriverName "SQL Server Native Client 10
 This command is equivalent to example 2, but it saves the newly-created System DSN object into a PowerShell variable for future use.
 By default, this command does not return the driver object if the "PassThru" parameter is not specified:
 
-### 4:
+### Example 4: Migrates DSNs to a newer version of a driver
 ```
-C:\PS> $dsnArr = Get-OdbcDsn -DriverName 'SQL Server Native Client 10.0'
-C:\PS> foreach ($dsn in $dsnArr) {
+C:\PS> $DsnArray = Get-OdbcDsn -DriverName 'SQL Server Native Client 10.0'
+C:\PS> foreach ($dsn in $DsnArray) {
           Remove-OdbcDsn $dsn 
           # You can change the property array as well, 
           # if DSN attributes have been changed in the new driver version

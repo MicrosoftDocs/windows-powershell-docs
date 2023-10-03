@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 02/08/2023
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-cluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Cluster
 ---
@@ -20,126 +20,96 @@ Get-Cluster [[-Name] <String>] [-Domain <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-Cluster** cmdlet gets information about one or more failover clusters in a given domain.
 
-This cmdlet can obtain a variety of configuration and state information about a failover cluster, including the following items: 
+The `Get-Cluster` cmdlet gets information about one or more failover clusters in a given domain.
 
- -- State information about whether a backup is in progress. 
+This cmdlet can obtain a variety of configuration and state information about a failover cluster,
+including the following items:
 
- -- State information about whether the cluster is in a forced quorum state. 
+- State information about whether a backup is in progress.
+- State information about whether the cluster is in a forced quorum state.
+- Cross-network settings that are especially relevant for multi-site clusters.
 
- -- Cross-network settings that are especially relevant for multi-site clusters.
-
-To set a common property for the cluster, use this cmdlet to get the cluster object and then set the appropriate property on that cluster object directly.
+To set a common property for the cluster, use this cmdlet to get the cluster object and then set the
+appropriate property on that cluster object directly.
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-Cluster | Format-List -Property *
-Domain                                  : contoso.com 
-Name                                    : cluster1 
-AddEvictDelay                           : 60 
-BackupInProgress                        : 0 
-ClusSvcHangTimeout                      : 60 
-ClusSvcRegroupOpeningTimeout            : 5 
-ClusSvcRegroupPruningTimeout            : 5 
-ClusSvcRegroupStageTimeout              : 5 
-ClusSvcRegroupTickInMilliseconds        : 300 
-ClusterGroupWaitDelay                   : 120 
-MinimumNeverPreemptPriority             : 3000 
-MinimumPreemptorPriority                : 1 
-ClusterEnforcedAntiAffinity             : 0 
-ClusterLogLevel                         : 3 
-ClusterLogSize                          : 300 
-CrossSubnetDelay                        : 1000 
-CrossSubnetThreshold                    : 5 
-DefaultNetworkRole                      : 2 
-Description                             : 
-FixQuorum                               : 0 
-HangRecoveryAction                      : 3 
-IgnorePersistentStateOnStartup          : 0 
-LogResourceControls                     : 0 
-PlumbAllCrossSubnetRoutes               : 0 
-PreventQuorum                           : 0 
-QuarantineDuration                      : 7200
-QuarantineThreshold                     : 3
-QuorumArbitrationTimeMax                : 20 
-RequestReplyTimeout                     : 60 
-RootMemoryReserved                      : 4294967295 
-RouteHistoryLength                      : 0 
-SameSubnetDelay                         : 1000 
-SameSubnetThreshold                     : 5 
-SecurityLevel                           : 1 
-SharedVolumeCompatibleFilters           : {} 
-SharedVolumeIncompatibleFilters         : {} 
-SharedVolumesRoot                       : C:\ClusterStorage 
-SharedVolumeSecurityDescriptor          : {1, 0, 4, 128...} 
-ShutdownTimeoutInMinutes                : 20 
-UseNetftForSharedVolumes                : 1 
-UseClientAccessNetworksForSharedVolumes : 0 
-SharedVolumeBlockCacheSizeInMB          : 0 
-WitnessDatabaseWriteTimeout             : 300 
-WitnessRestartInterval                  : 15 
-EnableSharedVolumes                     : Enabled 
-DynamicQuorum                           : 1 
-Id                                      : af5881ef-0ff7-4b5c-bfed-098decbbf762
+
+```powershell
+Get-Cluster | Format-List -Property *
 ```
 
 This example displays state and property information for the local cluster in the form of a list.
 
 ### Example 2
-```
-PS C:\> Get-Cluster -Name cluster1
-Name 
----- 
-cluster1
+
+```powershell
+Get-Cluster -Name cluster1
 ```
 
-This example gets information about a cluster named cluster1.
+This example gets information about a cluster named `cluster1`.
 
 ### Example 3
-```
-PS C:\> Get-Cluster -Domain contoso.com
-Name 
----- 
-cluster1 
-cluster2 
-cluster3
+
+```powershell
+Get-Cluster -Domain contoso.com
 ```
 
-This example gets information about each of the clusters in the contoso.com domain.
+This example gets information about each of the clusters in the `contoso.com` domain.
 
 ### Example 4
-```
-PS C:\> Get-Cluster | ForEach-Object -Process {$_.CrossSubnetDelay = 1500}
+
+```powershell
+Get-Cluster | ForEach-Object -Process {$_.CrossSubnetDelay = 1500}
 ```
 
-This example sets the common property called CrossSubnetDelay for the local cluster to 1500.
+This example sets the common property called `CrossSubnetDelay` for the local cluster to `1500`.
 
 ### Example 5
-```
-PS C:\> (Get-Cluster).DynamicQuorum = 1
+
+```powershell
+(Get-Cluster).DynamicQuorum = 1
 ```
 
 This example enables the Dynamic Quorum feature for the cluster.
 
 ### Example 6
+
+```powershell
+Get-Cluster | Format-List -Property Quarantine*
 ```
-PS C:\> Get-Cluster | Format-List -Property Quarantine*
-QuarantineDuration  : 7200
-QuarantineThreshold : 3
+
+This example shows default values for **QuarantineThreshold** and **QuarantineDuration** for the
+local cluster.
+
+- **QuarantineThreshold**: This is the number of times that a node can become isolated in an hour
+ before the cluster will be quarantined. This is set to 3 by default.
+- **QuarantineDuration**: This setting, set to 7200 seconds or 2 hours by default, controls how long
+  a host will remain quarantined.
+
+### Example 7
+
+```powershell
+(Get-Cluster).MaximumParallelMigrations = 2
 ```
 
-This example shows default values for QuarantineThreshold and QuarantineDuration for the local cluster.
+Beginning with the 2022-09 Cumulative Update, you can now configure the number of parallel live
+migrations within a cluster. For more information, see
+[KB5017381](https://support.microsoft.com/help/5017381) for Windows Server 2022 and
+[KB5017382](https://support.microsoft.com/help/5017382) for Azure Stack HCI, version 21H2.
 
- -- QuarantineThreshold: This is the number of times that a node can become isolated in an hour before the cluster will be quarantined. This is set to 3 by default.
-
- --QuarantineDuration: This setting, set to 7200 seconds or 2 hours by default, controls how long a host will remain quarantined.
+This example sets the cluster property MaximumParallelMigrations to a value of `2`, limiting the
+number of live migrations that a cluster node can participate in. Both existing and new cluster
+nodes inherit this value of `2` because it's a cluster property. Setting the cluster
+property overrides any values configured using the [Set-VMHost](../hyper-v/Set-VMHost.md)
+command.
 
 ## PARAMETERS
 
 ### -Domain
+
 Specifies the name of the domain in which to enumerate clusters.
 
 ```yaml
@@ -155,6 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the cluster to get.
 
 ```yaml
@@ -170,7 +141,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -195,4 +170,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-Cluster](./Stop-Cluster.md)
 
 [Test-Cluster](./Test-Cluster.md)
-

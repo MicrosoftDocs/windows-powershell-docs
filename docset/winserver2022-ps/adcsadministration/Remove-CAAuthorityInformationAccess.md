@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
 Module Name: ADCSAdministration
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/adcsadministration/remove-caauthorityinformationaccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/adcsadministration/remove-caauthorityinformationaccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-CAAuthorityInformationAccess
 ---
@@ -53,6 +53,18 @@ PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.contoso.com/pki/orc
 
 This command removes all AIA and OCSP entries that match the URL `http://www.contoso.com/pki/orca1.crt`.
 
+### Example 4: Remove all AIA entries
+
+```powershell
+$AIA = Get-CAAuthorityInformationAccess
+$AIA | Remove-CAAuthorityInformationAccess
+```
+
+This example removes all AIA entries
+
+The first command gets the certificate authority information and stores the information in the variable named $AIA.
+
+The second command removes all the AIA entries that are stored in the $AIA variable.
 ## PARAMETERS
 
 ### -AddToCertificateAia
@@ -61,7 +73,7 @@ Indicates that the cmdlet adds the AIA URI.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RemoveAsAIA
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,7 +88,7 @@ Indicates that the cmdlet adds an Online Responder's URI.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RemoveAsOCSP
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +118,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +134,7 @@ This information is added to the CA properties and registry.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

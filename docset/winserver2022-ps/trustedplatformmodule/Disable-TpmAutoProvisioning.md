@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Tpm.Commands.dll-Help.xml
 Module Name: TrustedPlatformModule
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/trustedplatformmodule/disable-tpmautoprovisioning?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/trustedplatformmodule/disable-tpmautoprovisioning?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-TpmAutoProvisioning
 ---
@@ -25,7 +25,7 @@ Provisioning is the process of preparing a TPM to be used.
 You can disable provisioning completely or only for the next restart.
 You can use the Enable-TpmAutoProvisioning cmdlet to enable auto-provisioning.
 
-For more information on TPM, see the [Trusted Platform Module Technology Overview](https://technet.microsoft.com/en-us/library/jj131725.aspx) in the Technet library.
+For more information on TPM, see [Trusted Platform Module Technology Overview](/windows/security/information-protection/tpm/trusted-platform-module-overview).
 
 ## EXAMPLES
 

@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_NetRoute.cdxml-help.xml
 Module Name: NetTCPIP
 ms.date: 05/30/2018
-online version: https://docs.microsoft.com/powershell/module/nettcpip/new-netroute?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/nettcpip/new-netroute?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-NetRoute
 ---
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/New-CimSession) or [Get-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/Get-CimSession) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/New-CimSession) or [Get-CimSession](/powershell/module/cimcmdlets/Get-CimSession) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -408,4 +408,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Set-NetRoute](./Set-NetRoute.md)
 
 [Set-NetIPInterface](./Set-NetIPInterface.md)
-

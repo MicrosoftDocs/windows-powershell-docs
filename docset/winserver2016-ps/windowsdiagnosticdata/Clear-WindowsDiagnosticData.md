@@ -1,7 +1,7 @@
 ---
 external help file: ClearWindowsDiagnosticData.psm1-help.xml
 Module Name: WindowsDiagnosticData
-online version: https://docs.microsoft.com/powershell/module/windowsdiagnosticdata/clear-windowsdiagnosticdata?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/windowsdiagnosticdata/clear-windowsdiagnosticdata?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-WindowsDiagnosticData
 ---

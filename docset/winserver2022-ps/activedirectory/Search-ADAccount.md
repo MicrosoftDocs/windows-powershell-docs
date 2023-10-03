@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/activedirectory/search-adaccount?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/search-adaccount?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Search-ADAccount
 ---
@@ -291,10 +291,10 @@ Accept wildcard characters: False
 ```
 
 ### -DateTime
-Specifies a distinct time value for **Search-ADAccount** parameters such as *AccountExpiring*, *AccountInactive*, and *PasswordExpiring*.
+Specifies a distinct time value for **Search-ADAccount** parameters such as *AccountExpiring*, *AccountInactive*, and *PasswordExpired*.
 
 Time is assumed to be local time unless otherwise specified.
-When a time value is not specified, the time is assumed to midnight local time.
+When a time value is not specified, the time is assumed to be midnight local time.
 If you do not specify a date, the date is assumed to be the current date.
 The following examples show commonly-used syntax to specify a *DateTime* object. 
 
@@ -317,7 +317,7 @@ This example defines time by using Greenwich Mean Time (GMT).
 The following example shows how to specify a value as Coordinated Universal Time (UTC).
 This example represents Monday, April 17, 2006 at 2:22:48 PM UTC. 
 
-- "2000-04-17T14:22:48.0000000"
+- "2006-04-17T14:22:48.0000000"
 
 The following example shows how to set the *AccountExpiring* parameter to a *DateTime* value of June 18, 2012 at 2:00:00 AM. 
 

@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_WvrAdminTasks.cdxml-help.xml
 Module Name: StorageReplica
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/storagereplica/new-srgroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 10/04/2022
+online version: https://learn.microsoft.com/powershell/module/storagereplica/new-srgroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-SRGroup
 ---
@@ -16,88 +16,64 @@ Creates a replication group.
 ## SYNTAX
 
 ```
-New-SRGroup [[-ComputerName] <String>] [-Name] <String> [-VolumeName] <String[]> [-LogVolumeName] <String>
- [[-LogSizeInBytes] <UInt64>] [[-Description] <String>] [-EnableConsistencyGroups] [-EnableEncryption] [-Force]
+New-SRGroup [[-ComputerName] <String>] [-Name] <String> [-VolumeName] <String[]>
+ [-LogVolumeName] <String> [[-LogSizeInBytes] <UInt64>] [[-Description] <String>]
+ [-EnableConsistencyGroups] [-EnableEncryption] [-EnableCompression] [-Force]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **New-SRGroup** cmdlet creates a replication group.
-A replication group contains one or more data volumes and an associated log volume.
-A replication group is the container for replication.
+
+The `New-SRGroup` cmdlet creates a replication group. A replication group contains one or more
+data volumes and an associated log volume. A replication group is the container for replication.
+
+> [!NOTE]
+> The **Compression** parameter is only available in
+> [Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/) or later,
+> and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative Update for Microsoft
+> server operating system version 21H2 for x64-based Systems
+> ([KB5017381](https://support.microsoft.com/help/5017381)).
 
 ## EXAMPLES
 
 ### Example 1: Create a replication group
-```
-PS C:\>New-SRGroup -ComputerName "SR-SRV05" -Name "ReplicationGroup01" -VolumeName "D:" -LogVolumeName "E:" 
-AllowVolumeResize  : False
-AsyncRPO           : 
-ComputerName       : SR-SRV05
-Description        : 
-Id                 : 7b44e4bd-3fd8-411d-a6d1-1a6bb704520f
-IsAutoFailover     : 
-IsCluster          : False
-IsEncrypted        : False
-IsInPartnership    : False
-IsPrimary          : 
-IsSuspended        : 
-IsWriteConsistency : False
-LastInSyncTime     : 
-LogSizeInBytes     : 8589934592
-LogVolume          : e:\ 
-Name               : ReplicationGroup01
-NumOfReplicas      : 1
-Partitions         : {bc49f059-4f78-464d-b88a-3a092108816e}
-Replicas           : {MSFT_WvrReplica (PartitionId =
-                     "bc49f059-4f78-464d-b88a-3a092108816e")}
-ReplicationMode    : Synchronous
-ReplicationStatus  : NotInPartnership
-PSComputerName     :
+
+```powershell
+New-SRGroup -ComputerName "SR-SRV05" -Name "ReplicationGroup01" -VolumeName "D:" -LogVolumeName "E:" 
 ```
 
-This command creates a replication group for server named SR-SRV05.
-The command specifies the replicated volume and the log volume.
-Because this command does not specify other parameters, the replication group uses default values.
-Replication does not start until you run the New-SRPartnership cmdlet.
+This command creates a replication group for server named SR-SRV05. The command specifies the
+replicated volume and the log volume. Because this command does not specify other parameters, the
+replication group uses default values. Replication will not start until you run the
+`New-SRPartnership` cmdlet.
 
 ### Example 2: Create a replication group that uses custom properties
-```
-PS C:\>New-SRGroup -ComputerName "SR-SRV05" -Name "ReplicationGroup02" -VolumeName "D:" -LogVolumeName "E:" -LogSizeInBytes 32GB -EnableEncryption
-AllowVolumeResize  : False
-AsyncRPO           : 
-ComputerName       : SR-SRV05
-Description        : 
-Id                 : 1b0962d1-0771-49cb-bde5-7298db488263
-IsAutoFailover     : 
-IsCluster          : False
-IsEncrypted        : True
-IsInPartnership    : False
-IsPrimary          : 
-IsSuspended        : 
-IsWriteConsistency : False
-LastInSyncTime     : 
-LogSizeInBytes     : 34359738368
-LogVolume          : e:\ 
-Name               : ReplicationGroup02
-NumOfReplicas      : 1
-Partitions         : {bc49f059-4f78-464d-b88a-3a092108816e}
-Replicas           : {MSFT_WvrReplica (PartitionId =
-                     "bc49f059-4f78-464d-b88a-3a092108816e")}
-ReplicationMode    : Synchronous
-ReplicationStatus  : NotInPartnership
-PSComputerName     :
+
+```powershell
+$Parameters = @{
+    ComputerName = 'SR-SRV05'
+    Name = 'ReplicationGroup02'
+    VolumeName = 'D:'
+    LogVolumeName = 'E:'
+    LogSizeInBytes = '32GB'
+    EnableEncryption = $True
+}
+New-SRGroup @Parameters
 ```
 
-This command creates a replication group for server named SR-SRV05.
-The command specifies the replicated volume and the log volume.
-The command also specifies a custom log size in GB and enables replication traffic encryption.
-Replication does not start until you run **New-SRPartnership**.
+This command creates a replication group for server named SR-SRV05. The command specifies the
+replicated volume and the log volume. The command also specifies a custom log size in GB and enables
+replication traffic encryption. Replication will not start until you run `New-SRPartnership`.
+
+This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
 ```yaml
 Type: SwitchParameter
@@ -112,9 +88,11 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -129,8 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies a single replica host computer NetBIOS name or fully qualified domain name (FQDN) of a computer to belong to the replication group.
-The default value is the local computer.
+
+Specifies a single replica host computer NetBIOS name or fully qualified domain name (FQDN) of a
+computer to belong to the replication group. The default value is the local computer.
 
 ```yaml
 Type: String
@@ -145,6 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specifies a description for the replication group.
 
 ```yaml
@@ -159,10 +139,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableCompression
+
+Indicates that this Storage Replica group should use SMB compression for data transfer. This
+parameter only applies to
+[Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/)
+or later, and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative
+Update for Microsoft server operating system version 21H2 for x64-based Systems
+([KB5017381](https://support.microsoft.com/help/5017381)).
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ECMP
+
+Required: False
+Position: 9
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableConsistencyGroups
-Indicates that consistency groups are enabled for the replication group that contains multiple volumes.
-Consistency groups provide write ordering.
-This can be important, for example, for replication of application data on multiple volumes.
+
+Indicates that consistency groups are enabled for the replication group that contains multiple
+volumes. Consistency groups provide write ordering. This can be important, for example, for
+replication of application data on multiple volumes.
 
 If you enable consistency groups, it may decrease replication and write Input/Output performance.
 
@@ -179,9 +180,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEncryption
-Indicates that this partnership should encrypt connection by using SMB AES-128-GCM.
-Enabling encryption can protect Storage Replica block transfers from man-in-the-middle interception or reading.
-Enabling encryption decreases performance.
+
+Indicates that this partnership should encrypt connection by using SMB AES-128-GCM. Enabling
+encryption can protect Storage Replica block transfers from man-in-the-middle interception or
+reading. Enabling encryption decreases performance.
 
 ```yaml
 Type: SwitchParameter
@@ -196,6 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -211,11 +214,13 @@ Accept wildcard characters: False
 ```
 
 ### -LogSizeInBytes
-Specifies the aggregate size of log files on each server in the replication group for the volumes that are associated with this replication group.
-The minimum size 512MB.
-You can specify a value by using the Windows PowerShell byte conversion capability, such as 4GB or 3200MB.
 
-A value that is too small may cause decreased replication performance or increased recovery time after an interruption between computers.
+Specifies the aggregate size of log files on each server in the replication group for the volumes
+that are associated with this replication group. The minimum size 512MB. You can specify a value by
+using the Windows PowerShell byte conversion capability, such as 4GB or 3200MB.
+
+A value that is too small may cause decreased replication performance or increased recovery time
+after an interruption between computers.
 
 ```yaml
 Type: UInt64
@@ -230,10 +235,10 @@ Accept wildcard characters: False
 ```
 
 ### -LogVolumeName
-Specifies a drive letter, mount point path, or volume GUID where Storage Replication creates destination replication logs.
-The value must contain an NTFS-formatted volume or ReFS-formatted volume.
-The path must exist.
-The path cannot be a mapped drive or UNC path.
+
+Specifies a drive letter, mount point path, or volume GUID where Storage Replication creates
+destination replication logs. The value must contain an NTFS-formatted volume or ReFS-formatted
+volume. The path must exist. The path cannot be a mapped drive or UNC path.
 
 Storage Replication creates logs in the System Volume Information folder.
 
@@ -250,6 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies a name for the replication group.
 
 ```yaml
@@ -265,9 +271,12 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
+computer.
 
 ```yaml
 Type: Int32
@@ -282,16 +291,15 @@ Accept wildcard characters: False
 ```
 
 ### -VolumeName
-Specifies an array of drive letters or mount point paths for the replica.
-The volumes must exist.
+
+Specifies an array of drive letters or mount point paths for the replica. The volumes must exist.
 The volumes cannot be mapped drives or UNC paths.
 
-This is an ordered list.
-The order of volumes determines the order of replication.
-For more information, see the *DestinationVolumeName* parameter of the New-SRPartnership cmdlet.
+This is an ordered list. The order of volumes determines the order of replication. For more
+information, see the **DestinationVolumeName** parameter of the `New-SRPartnership` cmdlet.
 
-We do not recommend replicating different drive letters or mount point paths.
-The practice can cause application failures because of stored settings after a failover occurs.
+We do not recommend replicating different drive letters or mount point paths. The practice can cause
+application failures because of stored settings after a failover occurs.
 
 ```yaml
 Type: String[]
@@ -306,13 +314,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ## OUTPUTS
 
-### replicationgroup
+### Microsoft.Management.Infrastructure.CimInstance
 
 ## NOTES
 
@@ -329,4 +341,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Suspend-SRGroup](./Suspend-SRGroup.md)
 
 [Sync-SRGroup](./Sync-SRGroup.md)
-

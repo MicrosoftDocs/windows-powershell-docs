@@ -3,7 +3,7 @@ description: The Remove-MpPreference cmdlet removes exclusions for file name ext
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/defender/remove-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/defender/remove-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-MpPreference
 ---

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterCollection.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clustergroupfromset?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterGroupFromSet
@@ -37,11 +37,12 @@ The `Remove-ClusterGroupFromSet` cmdlet removes a group from a set.
 
 ### Example 1: Remove a group from the specified group set
 
-```
-PS C:\> Remove-ClusterGroupFromSet -Name "Set001" -Group "Group001"
+```powershell
+Remove-ClusterGroupSetDependency -Name "Set001" -Provider "Set002"
 ```
 
-This command removes the group named Group001 from group set named Set001.
+This command removes the group set named `Set002` from being a provider for the group set named
+`Set001`.
 
 ## PARAMETERS
 

@@ -292,8 +292,8 @@ Accept wildcard characters: False
 
 ### -BaseReachableTimeMs
 Specifies an array of base values of random reachable times, in milliseconds.
-For more information, see RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.
-The default value is 30.
+For more information, see [RFC 2461](https://go.microsoft.com/fwlink/p/?LinkId=84044).
+The default value is 30000.
 
 ```yaml
 Type: UInt32[]

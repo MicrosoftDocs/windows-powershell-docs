@@ -2,7 +2,7 @@
 description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 09/20/2022
+ms.date: 03/22/2023
 online version: https://learn.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -15,7 +15,8 @@ Configures preferences for Windows Defender scans and updates.
 
 ## SYNTAX
 
-```
+
+```powershell
 Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
  [-ExclusionIpAddress <String[]>] [-RealTimeScanDirection <ScanDirection>]
  [-QuarantinePurgeItemsAfterDelay <UInt32>] [-RemediationScheduleDay <Day>]
@@ -40,12 +41,13 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
- [-DisableIOAVProtection <Boolean>] 
+ [-DisableIOAVProtection <Boolean>] [-AllowSwitchToAsyncInspection <Boolean>]
  [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
  [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-UnknownThreatDefaultAction <ThreatAction>]
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
  [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>]
+ [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>] [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>][-CloudBlockLevel <CloudBlockLevelType>][-ServiceHealthReportInterval <UInt32>]
  [-CloudBlockLevel <CloudBlockLevelType>] [-CloudExtendedTimeout <UInt32>]
  [-EnableNetworkProtection <ASRRuleActionType>] [-EnableControlledFolderAccess <ControlledFolderAccessType>]
  [-AttackSurfaceReductionOnlyExclusions <String[]>] [-ControlledFolderAccessAllowedApplications <String[]>]
@@ -53,6 +55,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>] [-EnableLowCpuPriority <Boolean>]
  [-EnableFileHashComputation <Boolean>] [-EnableFullScanOnBatteryPower <Boolean>] [-ProxyPacUrl <String>]
  [-ProxyServer <String>] [-ProxyBypass <String[]>] [-ForceUseProxyOnly <Boolean>]
+ [-OobeEnableRtpAndSigUpdate <Boolean>]
  [-DisableTlsParsing <Boolean>] [-DisableHttpParsing <Boolean>] [-DisableDnsParsing <Boolean>]
  [-DisableDnsOverTcpParsing <Boolean>] [-DisableSshParsing <Boolean>]
  [-PlatformUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>]
@@ -84,15 +87,17 @@ The following table provides remediation action values for detected threats at l
 ## EXAMPLES
 
 ### Example 1: Schedule to check for definition updates everyday
-```
+
+```sql
 PS C:\> Set-MpPreference -SignatureScheduleDay Everyday
 ```
 
 This command configures preferences to check for definition updates every day.
 
 ### Example 2: Schedule a time of day to check for definition updates
-```
-PS C:\> Set-MpPreference -SignatureScheduleTime 120
+
+```sql
+PS C:\> Set-MpPreference -SignatureScheduleTime 02:00:00
 ```
 
 This command configures preferences to check for definition updates 120 minutes after midnight on days when it's scheduled to check.
@@ -143,6 +148,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+
+### -AllowSwitchToAsyncInspection
+
+Specifies whether to enable a performance optimization that allows synchronously inspected network flows to switch to async inspection once they have been checked and validated.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
@@ -219,7 +242,7 @@ Accept wildcard characters: False
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of $True, Windows Defender checks for new definitions.
 If you specify $False or don't specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans and to scans that you start from the command line, but it doesn't affect scans that you start from the user interface.
+This setting applies to scheduled scans, but it has no effect on scans initiated manually from the user interface or on scans started from the command line using "mpcmdrun -Scan".
 
 ```yaml
 Type: Boolean
@@ -654,7 +677,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender does not scan network files. We do not recommend that you scan network files.
+Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender does not scan network files. 
 
 ```yaml
 Type: Boolean
@@ -1038,6 +1061,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OobeEnableRtpAndSigUpdate
+
+This setting allows you to configure whether real-time protection and Security Intelligence Updates are enabled during Out of Box experience (OOBE).
+
+Valid values are:
+- True - If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.
+- False (Default) - If you either disable or don't configure this setting, real-time protection and Security Intelligence Updates during OOBE aren't enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PlatformUpdatesChannel
 Specifies when devices receive Microsoft Defender platform updates during the monthly gradual rollout.
 
@@ -1282,7 +1325,7 @@ The acceptable values for this parameter are: integers from 5 through 100, and t
 Windows Defender does not exceed the percentage of CPU usage that you specify.
 The default value is 50.
 
-Note: This is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average.
+Note: This is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average. If ScanOnlyIfIdleEnabled (instructing the product to scan only when the computer is not in use) and DisableCpuThrottleOnIdleScans (instructing the product to disable CPU throttling on idle scans) are both enabled, then the value of ScanAvgCPULoadFactor is ignored.
 
 ```yaml
 Type: Byte
@@ -1436,6 +1479,23 @@ Aliases: srt
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ServiceHealthReportInterval
+This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints. These are for Microsoft Defender Antivirus events 1150 and 1151. For more information, see [Microsoft Defender Antivirus event IDs](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus#microsoft-defender-antivirus-event-ids).
+
+If you do not configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour). 
+If you configure this setting to 0, no service health reports will be sent.
+The maximum value allowed to be set is 14400 minutes (ten days).
+
+```yaml
+Type: UInt32
+Aliases: shri
+Accepted values: 0-14400
+Position: Named
+Default value: 60
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1847,3 +1907,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MpPreference](./Get-MpPreference.md)
 
 [Remove-MpPreference](./Remove-MpPreference.md)
+

@@ -38,7 +38,7 @@ The **Format-SecureBootUEFI** cmdlet receives certificates or hashes as input an
 The Set-SecureBootUEFI cmdlet uses this object to update the variable.
 If you specify a signable file, this cmdlet creates a file that has the specified name that has to be signed.
 
-This cmdlet this runs on both UEFI and BIOS (non-UEFI) computers.
+This cmdlet runs on both UEFI and BIOS (non-UEFI) computers.
 
 ## EXAMPLES
 

@@ -34,7 +34,7 @@ This cmdlet returns error information if errors occur while adding the BGP route
 ```
 PS C:\>Add-BgpRouter -BgpIdentifier 10.1.1.10-LocalASN 64522 -PassThru
 RoutingDomain            : 
-BgpIdentifier            : 192.168.1.10
+BgpIdentifier            : 10.1.1.10
 LocalASN                 : 64522
 CompareMEDAcrossASN      : False
 DefaultGatewayRouting    : False

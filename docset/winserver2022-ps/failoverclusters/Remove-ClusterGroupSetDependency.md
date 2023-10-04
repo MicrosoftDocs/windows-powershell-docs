@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterCollection.cdxml-help.xml
 Module Name: FailoverClusters
-ms.date: 11/21/2022
+ms.date: 10/21/2022
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clustergroupsetdependency?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ClusterGroupSetDependency
@@ -11,6 +11,8 @@ title: Remove-ClusterGroupSetDependency
 # Remove-ClusterGroupSetDependency
 
 ## SYNOPSIS
+Removes a dependency from a group set.
+
 ## SYNTAX
 
 ### Query (cdxml) (Default)
@@ -35,12 +37,12 @@ The `Remove-ClusterGroupSetDependency` cmdlet removes a dependency from a group 
 
 ### Example 1: Remove a group set dependency on another group set
 
-```
-PS C:\> Remove-ClusterGroupSetDependency -Name "Set001" -Provider "Set002"
+```powershell
+Remove-ClusterGroupSetDependency -Name "Set001" -Provider "Set002"
 ```
 
-This command removes the group set named Set002 from being a provider for the group set named
-Set001.
+This command removes the group set named `Set002` from being a provider for the group set named
+`Set001`.
 
 ## PARAMETERS
 
@@ -156,7 +158,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.

@@ -22,7 +22,7 @@ Move-ADObject [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCred
 ```
 
 ## DESCRIPTION
-The **Move-ADObject** cmdlet moves an object or a container of objects from one container to another or from one domain to another.
+The **Move-ADObject** cmdlet moves an object or a container of objects from one container to another or from one domain to another within the same forest.
 
 When an object is moved between domains, both the source DC and the target DC need to be the RID Master of their domains. If a different DC is being used, you will receive the following error:
 
@@ -37,6 +37,7 @@ You can also use the **Get-ADGroup**, **Get-ADUser**, **Get-ADComputer**, **Get-
 The *TargetPath* parameter must be specified.
 This parameter identifies the new location for the object or container.
 
+The cmdlet also moves the password when a user or computer object is moved across domains within a forest.
 ## EXAMPLES
 
 ### Example 1: Move an OU to a new location

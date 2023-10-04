@@ -46,6 +46,9 @@ clustered resources to the group.
 ### [Add-ClusterGroupSetDependency](./Add-ClusterGroupSetDependency.md)
 Adds a dependency to a cluster set.
 
+### [Add-ClusterGroupToAffinityRule](./Add-ClusterGroupToAffinityRule.md)
+This command is used to add either a VM role or a group name to a cluster affinity rule.
+
 ### [Add-ClusterGroupToSet](./Add-ClusterGroupToSet.md)
 Adds a group to a set.
 
@@ -71,6 +74,9 @@ Creates a clustered file server for scale-out application data.
 
 ### [Add-ClusterSharedVolume](./Add-ClusterSharedVolume.md)
 Makes a volume available in Cluster Shared Volumes in a failover cluster.
+
+### [Add-ClusterSharedVolumeToAffinityRule](./Add-ClusterSharedVolumeToAffinityRule.md)
+Adds a Cluster Shared Volume (CSV) to an existing Affinity Rule.
 
 ### [Add-ClusterVirtualMachineRole](./Add-ClusterVirtualMachineRole.md)
 Creates a clustered virtual machine, that is, a virtual machine that can be failed over if necessary
@@ -100,6 +106,9 @@ Gets information about one or more failover clusters in a given domain.
 
 ### [Get-ClusterAccess](./Get-ClusterAccess.md)
 Gets information about permissions that control access to a failover cluster.
+
+### [Get-ClusterAffinityRule](./Get-ClusterAffinityRule.md)
+This cmdlet is used to display the given rule and what type it is.
 
 ### [Get-ClusterAvailableDisk](./Get-ClusterAvailableDisk.md)
 Gets information about the disks that can support Failover Clustering and are visible to all nodes,
@@ -192,6 +201,9 @@ Moves the ownership of a clustered virtual machine to a different node.
 ### [New-Cluster](./New-Cluster.md)
 Creates a new failover cluster.
 
+### [New-ClusterAffinityRule](./New-ClusterAffinityRule.md)
+Creates new affinity rules.
+
 ### [New-ClusterFaultDomain](./New-ClusterFaultDomain.md)
 Creates a fault domain in the cluster.
 
@@ -207,6 +219,9 @@ Destroys an existing failover cluster.
 ### [Remove-ClusterAccess](./Remove-ClusterAccess.md)
 Removes a user from the access list on the cluster.
 
+### [Remove-ClusterAffinityRule](./Remove-ClusterAffinityRule.md)
+Removes new affinity rules.
+
 ### [Remove-ClusterCheckpoint](./Remove-ClusterCheckpoint.md)
 Removes a cryptographic key checkpoint or registry checkpoint for a resource.
 
@@ -215,6 +230,9 @@ Removes a fault domain.
 
 ### [Remove-ClusterGroup](./Remove-ClusterGroup.md)
 Removes a clustered role, also called a resource group, from a failover cluster.
+
+### [Remove-ClusterGroupFromAffinityRule](./Remove-ClusterGroupFromAffinityRule.md)
+Removes a cluster group from an affinity rule.
 
 ### [Remove-ClusterGroupFromSet](./Remove-ClusterGroupFromSet.md)
 Removes a group from a set.
@@ -241,6 +259,9 @@ Removes a resource type from a failover cluster.
 Removes a volume from the Cluster Shared Volumes in a failover cluster, and places it in Available
 Storage in the cluster.
 
+### [Remove-ClusterSharedVolumeFromAffinityRule](./Remove-ClusterSharedVolumeFromAffinityRule.md)
+Remove a cluster shared volume from an affinity rule.
+
 ### [Remove-ClusterVMMonitoredItem](./Remove-ClusterVMMonitoredItem.md)
 Removes monitoring of a service or event that is currently being monitored on a virtual machine.
 
@@ -256,6 +277,9 @@ Resumes a node from the paused state or brings back drained workloads to the nod
 
 ### [Resume-ClusterResource](./Resume-ClusterResource.md)
 Turns off maintenance for a disk resource or Cluster Shared Volume within a failover cluster.
+
+### [Set-ClusterAffinityRule](./Set-ClusterAffinityRule.md)
+Enabled or Disable an affinity rule, and update the rule type.
 
 ### [Set-ClusterFaultDomain](./Set-ClusterFaultDomain.md)
 Update an existing cluster fault domain.

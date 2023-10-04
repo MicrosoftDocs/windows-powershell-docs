@@ -50,7 +50,7 @@ This cmdlet will return a Volume object or a set of Volume objects given paramet
 PS C:\>Get-Partition
 ```
 
-This example return all partitions, on all disks.
+This example returns all partitions, on all disks.
 
 ### EXAMPLE 2
 ```
@@ -62,7 +62,7 @@ PartitionNumber  DriveLetter Offset                                        Size 
 1                H           1048576                                  298.09 GB IFS
 ```
 
-This example return all partitions on disk 5.
+This example returns all partitions on disk 5.
 
 ### EXAMPLE 3
 ```
@@ -74,7 +74,7 @@ PartitionNumber  DriveLetter Offset                                        Size 
 2                C           368050176                                465.42 GB IFS
 ```
 
-This example partition associated with the volume for drive letter C.
+This example returns partitions associated with the volume for drive letter C.
 
 ### EXAMPLE 4
 ```

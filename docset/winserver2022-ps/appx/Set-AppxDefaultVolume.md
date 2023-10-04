@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 Module Name: Appx
-ms.date: 12/20/2016
+ms.date: 05/15/2023
 online version: https://learn.microsoft.com/powershell/module/appx/set-appxdefaultvolume?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-AppxDefaultVolume
@@ -20,22 +20,25 @@ Set-AppxDefaultVolume [-Volume] <AppxVolume> [-WhatIf] [-Confirm] [<CommonParame
 ```
 
 ## DESCRIPTION
-The **Set-AppxDefaultVolume** cmdlet specifies a default **AppxVolume**.
-The default **AppxVolume** is the default target for all deployment operations on the computer.
-Deployment operations can specify a different non-default target volume.
+
+The `Set-AppxDefaultVolume` cmdlet specifies a default **AppxVolume**. The default **AppxVolume**
+is the default target for all deployment operations on the computer. Deployment operations can
+specify a different non-default target volume.
 
 ## EXAMPLES
 
 ### Example 1: Set a default volume by using a path
-```
-PS C:\> Set-AppxDefaultVolume -Volume F:\
+
+```powershell
+Set-AppxDefaultVolume -Volume F:\
 ```
 
-This command sets the default volume to be the volume F:\.
+This command sets the default volume to be the volume `F:\`.
 
 ### Example 2: Set a default volume by using an ID
-```
-PS C:\> Set-AppxDefaultVolume -Volume {ef23c8d6-b13c-4c4c-ae3b-7d5a162de9b9}
+
+```powershell
+Set-AppxDefaultVolume -Volume {ef23c8d6-b13c-4c4c-ae3b-7d5a162de9b9}
 ```
 
 This command sets the default volume to be the one that has the specified media ID.
@@ -43,8 +46,9 @@ This command sets the default volume to be the one that has the specified media 
 ## PARAMETERS
 
 ### -Volume
-Specifies the path a volume.
-This cmdlet sets the volume that this parameter specifies to be the default deployment target for the computer.
+
+Specifies the path a volume. This cmdlet sets the volume that this parameter specifies to be the
+default deployment target for the computer.
 
 ```yaml
 Type: AppxVolume
@@ -59,10 +63,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -74,10 +79,11 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -89,7 +95,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -100,4 +110,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AppxDefaultVolume](./Get-AppxDefaultVolume.md)
-

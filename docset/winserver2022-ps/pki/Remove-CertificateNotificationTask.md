@@ -16,17 +16,21 @@ Removes a certificate notification task from Task Scheduler.
 ## SYNTAX
 
 ```
-Remove-CertificateNotificationTask [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-CertificateNotificationTask [-Name] <String> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-CertificateNotificationTask** cmdlet removes from Task Scheduler a certificate notification task that was registered with the New-CertificateNotificationTask cmdlet.
+
+The `Remove-CertificateNotificationTask` cmdlet removes from Task Scheduler a certificate
+notification task that was registered with the `New-CertificateNotificationTask` cmdlet.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
-PS C:\>Remove-CertificateNotificationTask -Name "My Task"
+
+```powershell
+Remove-CertificateNotificationTask -Name "My Task"
 ```
 
 This example removes the task named My Task.
@@ -34,10 +38,11 @@ This example removes the task named My Task.
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -49,10 +54,11 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Identifies the notification task to be deleted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -64,11 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -80,11 +87,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
+
 A **String** containing the name of the task to be removed.
 
 ## OUTPUTS
@@ -100,4 +112,3 @@ A **String** containing the name of the task to be removed.
 [New-CertificateNotificationTask](./New-CertificateNotificationTask.md)
 
 [Switch-Certificate](./Switch-Certificate.md)
-

@@ -25,12 +25,13 @@ New-DfsnRoot [-Path <String>] [-TargetPath] <String> [-Type] <Type> [[-EnableSit
 ```
 
 ## DESCRIPTION
-The **New-DfsnRoot** cmdlet creates a Distributed File System (DFS) namespace.
-Specify the root path and the root target path for the new namespace.
-You must also specify a type: stand-alone namespace, Windows 2000 Server mode (Domain v1) namespace, or Windows Server 2008 mode (Domain v2) namespace.
 
-You can specify settings for the new namespace.
-You can use this cmdlet to enable or disable the following settings: 
+The **New-DfsnRoot** cmdlet creates a Distributed File System (DFS) namespace. Specify the root path
+and the root target path for the new namespace. You must also specify a type: stand-alone namespace,
+Windows 2000 Server mode (Domain v1) namespace, or Windows Server 2008 mode (Domain v2) namespace.
+
+You can specify settings for the new namespace. You can use this cmdlet to enable or disable the
+following settings:
 
 - Site costing.
 - In-site referrals.
@@ -38,46 +39,54 @@ You can use this cmdlet to enable or disable the following settings:
 - Root scalability.
 - Target failback.
 
-You can also add a descriptive comment, select the state of the DFS namespace and DFS root target, and set the Time to Live (TTL) interval for referrals.
+You can also add a descriptive comment, select the state of the DFS namespace and DFS root target,
+and set the Time to Live (TTL) interval for referrals.
 
-To manage the DFS namespace, you can grant permissions to users or user groups.
-Users who have these permissions can add, remove, and modify namespace folders and folder targets for the DFS namespace.
+To manage the DFS namespace, you can grant permissions to users or user groups. Users who have these
+permissions can add, remove, and modify namespace folders and folder targets for the DFS namespace.
 
-For more information about DFS namespaces, see [Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736) on TechNet.
+For more information about DFS namespaces, see
+[Overview of DFS Namespaces](https://technet.microsoft.com/library/cc730736) on TechNet.
 
 ## EXAMPLES
 
 ### Example 1: Create a Windows Server 2008 mode domain DFS namespace
-```
-PS C:\> New-DfsnRoot -TargetPath "\\Contoso-FS\AccountingResources" -Type DomainV2 -Path "\\Contoso\AccountingResources"
+
+```powershell
+New-DfsnRoot -TargetPath '\\Contoso-FS\AccountingResources' -Type 'DomainV2' -Path '\\Contoso\AccountingResources'
 ```
 
-This command creates a DFS namespace that has a root at the path \\\\Contoso\AccountingResources.
-The root target for the path is the shared folder \\\\Contoso-FS\AccountingResources.
-The namespace type is Windows Server 2008 mode, specified as a type of DomainV2.
+This command creates a DFS namespace that has a root at the path `\\Contoso\AccountingResources`.
+The root target for the path is the shared folder `\\Contoso-FS\AccountingResources`. The namespace
+type is Windows Server 2008 mode, specified as a type of `DomainV2`.
 
 ### Example 2: Create a stand-alone DFS namespace
-```
-PS C:\> New-DfsnRoot -TargetPath "\\Contoso-FS\Software" -Type Standalone -EnableSiteCosting -Path "\\Contoso\Software"
+
+```powershell
+New-DfsnRoot -TargetPath '\\Contoso-FS\Software' -Type 'Standalone' -EnableSiteCosting -Path '\\Contoso\Software'
 ```
 
-This command creates a stand-alone DFS namespace that has a root at path \\\\Contoso\Software that has a namespace root target pointing to \\\\Contoso-FS\Software.
-This namespace uses cost-based site selection.
+This command creates a stand-alone DFS namespace that has a root at path `\\Contoso\Software` that
+has a namespace root target pointing to `\\Contoso-FS\Software`. This namespace uses cost-based site
+selection.
 
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+The cmdlet immediately returns an object that represents the job and then displays the command
+prompt. You can continue to work in the session while the job completes. To manage the job, use the
+`*-Job` cmdlets. To get the job results, use the
+[Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+For more information about Windows PowerShell background jobs, see
+[about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -89,12 +98,14 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
-Type: CimSession[]
+Type: Microsoft.Management.Infrastructure.CimSession[]
 Parameter Sets: (All)
 Aliases: Session
 
@@ -106,10 +117,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -121,10 +133,11 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specifies a description for a DFS namespace.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: desc
 
@@ -136,11 +149,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAccessBasedEnumeration
-Indicates whether a DFS namespace uses access-based enumeration.
-If this value is $True, a DFS namespace server shows a user only the files and folders that the user can access.
+
+Indicates whether a DFS namespace uses access-based enumeration. If this value is `$true`, a DFS
+namespace server shows a user only the files and folders that the user can access.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: abe, abde
 
@@ -152,12 +166,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnableInsiteReferrals
-Indicates whether a DFS namespace server provides a client only with referrals that are in the same site as the client.
-If this value is $True, the DFS namespace server provides only in-site referrals.
-If this value is $False, the DFS namespace server provides in-site referrals first, then other referrals.
+
+Indicates whether a DFS namespace server provides a client only with referrals that are in the same
+site as the client. If this value is `$true`, the DFS namespace server provides only in-site
+referrals. If this value is `$false`, the DFS namespace server provides in-site referrals first,
+then other referrals.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: insite
 
@@ -169,12 +185,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableRootScalability
-Indicates whether a DFS namespace uses root scalability mode.
-If this value is $True, DFS namespace servers connect to the nearest domain controllers for periodic namespace updates.
-If this value is $False, the servers connect to the primary domain controller (PDC) emulator.
+
+Indicates whether a DFS namespace uses root scalability mode. If this value is `$true`, DFS
+namespace servers connect to the nearest domain controllers for periodic namespace updates. If this
+value is `$false`, the servers connect to the primary domain controller (PDC) emulator.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: RootScalability, rootscale
 
@@ -186,12 +203,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSiteCosting
-Indicates whether a DFS namespace uses cost-based selection.
-If a client cannot access a folder target in-site, a DFS namespace server selects the least resource intensive alternative.
-If you provide a value of $True for this parameter, DFS namespace favors high-speed links over wide area network (WAN) links.
+
+Indicates whether a DFS namespace uses cost-based selection. If a client cannot access a folder
+target in-site, a DFS namespace server selects the least resource intensive alternative. If you
+provide a value of `$true` for this parameter, DFS namespace favors high-speed links over wide area
+network (WAN) links.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: SiteCosting, sitecost
 
@@ -203,13 +222,15 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTargetFailback
-Indicates whether a DFS namespace uses target failback.
-If a client attempts to access a target on a server and that server is not available, the client fails over to another referral.
-If this value is $True, once the first server becomes available again, the client fails back to the first server.
-If this value is $False, the DFS namespace server does not require the client to fail back to the preferred server.
+
+Indicates whether a DFS namespace uses target failback. If a client attempts to access a target on a
+server and that server is not available, the client fails over to another referral. If this value is
+`$true`, once the first server becomes available again, the client fails back to the first server. If
+this value is `$false`, the DFS namespace server does not require the client to fail back to the
+preferred server.
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: failback, TargetFailback
 
@@ -221,12 +242,13 @@ Accept wildcard characters: False
 ```
 
 ### -GrantAdminAccounts
-Specifies an array of accounts.
-This cmdlet grants management permissions for the DFS namespace to the users and user groups specified.
-Users can add, remove, and modify namespace folders and folder targets.
+
+Specifies an array of accounts. This cmdlet grants management permissions for the DFS namespace to
+the users and user groups specified. Users can add, remove, and modify namespace folders and folder
+targets.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: GrantAdmin, GrantAdminAccess
 
@@ -238,12 +260,12 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a path for the root of a DFS namespace.
-This path must be unique.
-This path cannot be the name of an existing DFS namespace.
+
+Specifies a path for the root of a DFS namespace. This path must be unique. This path cannot be the
+name of an existing DFS namespace.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: RootPath, root, namespace, NamespaceRoot
 
@@ -255,31 +277,27 @@ Accept wildcard characters: False
 ```
 
 ### -ReferralPriorityClass
-Specifies the target priority class for a DFS namespace root.
-Target priority offers you the ability to classify and rank in-site targets.
-You can specify targets to receive the highest or lowest preference, and you can divide the remaining targets based on their site cost for a DFS client to connect to them.
-The acceptable values for this parameter are:
 
-- GlobalHigh.
-The highest priority class for a DFS target.
-Targets assigned this class receive global preference. 
-- SiteCostHigh.
-The highest site cost priority class for a DFS target.
-Targets assigned this class receive the most preference among targets of the same site cost for a given DFS client.
-- SiteCostNormal.
-The middle or normal site cost priority class for a DFS target. 
-- SiteCostLow.
-The lowest site cost priority class for a DFS target.
-Targets assigned this class receive the least preference among targets of the same site cost for a given DFS client.
-- GlobalLow.
-The lowest level of priority class for a DFS target.
-Targets assigned this class receive the least preference globally.
+Specifies the target priority class for a DFS namespace root. Target priority offers you the ability
+to classify and rank in-site targets. You can specify targets to receive the highest or lowest
+preference, and you can divide the remaining targets based on their site cost for a DFS client to
+connect to them. The acceptable values for this parameter are:
+
+- `GlobalHigh` - The highest priority class for a DFS target. Targets assigned this class receive
+  global preference.
+- `SiteCostHigh` - The highest site cost priority class for a DFS target. Targets assigned this
+  class receive the most preference among targets of the same site cost for a given DFS client.
+- `SiteCostNormal` - The middle or normal site cost priority class for a DFS target.
+- `SiteCostLow` - The lowest site cost priority class for a DFS target. Targets assigned this class
+  receive the least preference among targets of the same site cost for a given DFS client.
+- `GlobalLow` - The lowest level of priority class for a DFS target. Targets assigned this class
+  receive the least preference globally.
 
 ```yaml
-Type: ReferralPriorityClass
+Type: Microsoft.PowerShell.Cmdletization.GeneratedTypes.DfsNamespaceRootTarget.ReferralPriorityClass
 Parameter Sets: (All)
 Aliases: PriorityClass, Class
-Accepted values: sitecostnormal, globalhigh, sitecosthigh, sitecostlow, globallow
+Accepted values: SiteCostNormal, GlobalHigh, SiteCostHigh, SiteCostLow, GlobalLow
 
 Required: False
 Position: 12
@@ -289,12 +307,12 @@ Accept wildcard characters: False
 ```
 
 ### -ReferralPriorityRank
-Specifies the priority rank, as an integer, for a root target of the DFS namespace.
-Lower values have greater preference.
-A value of zero (0) is the greatest preference.
+
+Specifies the priority rank, as an integer, for a root target of the DFS namespace. Lower values
+have greater preference. A value of zero (0) is the greatest preference.
 
 ```yaml
-Type: UInt32
+Type: System.UInt32
 Parameter Sets: (All)
 Aliases: PriorityRank, Rank
 
@@ -306,17 +324,17 @@ Accept wildcard characters: False
 ```
 
 ### -State
-Specifies the state of the DFS namespace root.
-The acceptable values for this parameter are:
 
-- Online
-- Offline
+Specifies the state of the DFS namespace root. The acceptable values for this parameter are:
 
-Clients do not receive referrals for a DFS namespace folder that is offline.
-If you set a namespace root to a value of Offline, the entire namespace becomes inaccessible.
+- `Online`
+- `Offline`
+
+Clients do not receive referrals for a DFS namespace folder that is offline. If you set a namespace
+root to a value of Offline, the entire namespace becomes inaccessible.
 
 ```yaml
-Type: State
+Type: Microsoft.PowerShell.Cmdletization.GeneratedTypes.DfsNamespaceRootTarget.State
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Offline, Online
@@ -329,10 +347,11 @@ Accept wildcard characters: False
 ```
 
 ### -TargetPath
+
 Specifies a path for a root target of the DFS namespace.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: NamespaceRootTarget
 
@@ -344,16 +363,16 @@ Accept wildcard characters: False
 ```
 
 ### -TargetState
-Specifies the state of the DFS namespace root target.
-The acceptable values for this parameter are:
 
-- Online
-- Offline
+Specifies the state of the DFS namespace root target. The acceptable values for this parameter are:
+
+- `Online`
+- `Offline`
 
 Clients do not receive referrals for a DFS namespace folder target that is Offline.
 
 ```yaml
-Type: State
+Type: Microsoft.PowerShell.Cmdletization.GeneratedTypes.DfsNamespaceRootTarget.State
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Offline, Online
@@ -366,12 +385,15 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
+computer.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: (All)
 Aliases: 
 
@@ -383,12 +405,12 @@ Accept wildcard characters: False
 ```
 
 ### -TimeToLiveSec
-Specifies a TTL interval, in seconds, for referrals.
-Clients store referrals to root targets for this length of time.
-The default TTL interval for root referrals is 300 seconds.
+
+Specifies a TTL interval, in seconds, for referrals. Clients store referrals to root targets for
+this length of time. The default TTL interval for root referrals is 300 seconds.
 
 ```yaml
-Type: UInt32
+Type: System.UInt32
 Parameter Sets: (All)
 Aliases: ttl, TimeToLive
 
@@ -400,18 +422,16 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Specifies the type of a DFS namespace as a Type object.
-The acceptable values for this parameter are:
 
-- Standalone.
-Specifies a stand-alone namespace.
-- DomainV1.
-Specifies a Windows 2000 Server mode domain namespace.
-- DomainV2.
-Specifies a Windows Server 2008 mode domain namespace.
+Specifies the type of a DFS namespace as a Type object. The acceptable values for this parameter
+are:
+
+- `Standalone` - Specifies a stand-alone namespace.
+- `DomainV1` - Specifies a Windows 2000 Server mode domain namespace.
+- `DomainV2` - Specifies a Windows Server 2008 mode domain namespace.
 
 ```yaml
-Type: Type
+Type: Microsoft.PowerShell.Cmdletization.GeneratedTypes.DfsNamespace.Type
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Standalone, DomainV1, DomainV2
@@ -424,11 +444,11 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -440,7 +460,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`,
+`-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`,
+`-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -473,4 +497,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-DfsnRoot](./Remove-DfsnRoot.md)
 
 [Set-DfsnRoot](./Set-DfsnRoot.md)
-

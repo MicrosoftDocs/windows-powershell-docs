@@ -19,46 +19,48 @@ Get-TlsEccCurve [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Gets the list of Elliptic Curve Cryptography (ECC) cipher suites available for TLS for a computer.
 
 ## EXAMPLES
 
 ### Example 1: Get all ECC curves
+
 ```powershell
 Get-TlsEccCurve
 ```
 
-This generates the following output:
-
-
+```output
 curve25519
 NistP256
 NistP384
-
+```
 
 This command gets all ECC curves for the computer.
 
 ### Example 2: Get the ECC curves that match a string
+
 ```powershell
 Get-TlsEccCurve -Name 'Nist'
 ```
 
-This generates the following output:
-
-
+```output
 NistP256
 NistP384
+```
 
-
-This command gets all the ECC curves that have names that contain the string 'Nist' (case-sensitive).
+This command gets all the ECC curves that have names that contain the string 'Nist'
+(case-sensitive).
 
 ## PARAMETERS
 
 ### -Name
-Specifies the name of the ECC curve to get. The cmdlet gets ECC curves that match the string that this cmdlet specifies, so you can specify a partial name. This parameter is case-sensitive. 
+
+Specifies the name of the ECC curve to get. The cmdlet gets ECC curves that match the string that
+this cmdlet specifies, so you can specify a partial name. This parameter is case-sensitive.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: None
 
@@ -70,12 +72,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
-
 
 ## OUTPUTS
 
@@ -84,6 +89,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-[Enable-TlsEccCurve]()
-[Disable-TlsEccCurve]()
 
+[Enable-TlsEccCurve](./Enable-TlsEccCurve.md)
+
+[Disable-TlsEccCurve](./Disable-TlsEccCurve.md)

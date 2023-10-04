@@ -53,7 +53,7 @@ The command also grants access to the guardians stored in **$GuardianA** and **$
 Indicates that this cmdlet can create a key protector by using certificates that are expired.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet can create a key protector by using self-signed certificates.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 

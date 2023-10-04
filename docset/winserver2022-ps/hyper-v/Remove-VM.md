@@ -44,14 +44,14 @@ Removes virtual machine new 1.
 
 ### Example 2
 ```
-PS C:\> Remove-VM -Name "new 2" -Force
+Remove-VM -Name "new 2" -Force
 ```
 
 Removes virtual machine new 2, suppressing the confirmation prompt.
 
 ### Example 3
 ```
-PS C:\> Get-VM -Name New* | Remove-VM -Force
+Get-VM -Name New* | Remove-VM -Force
 ```
 
 Removes with no confirmation prompt all virtual machines having names starting with New.

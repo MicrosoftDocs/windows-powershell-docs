@@ -15,7 +15,8 @@ Configures preferences for Windows Defender scans and updates.
 
 ## SYNTAX
 
-```
+
+```powershell
 Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
  [-RealTimeScanDirection <ScanDirection>] [-QuarantinePurgeItemsAfterDelay <UInt32>]
  [-RemediationScheduleDay <Day>] [-RemediationScheduleTime <DateTime>]
@@ -37,6 +38,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
+ [-OobeEnableRtpAndSigUpdate <Boolean>]
  [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
  [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-UnknownThreatDefaultAction <ThreatAction>]
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
@@ -44,7 +46,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>]
  [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>][-CloudBlockLevel <CloudBlockLevelType>][-ServiceHealthReportInterval <UInt32>]
- ```
+```
 
 ## DESCRIPTION
 The **Set-MpPreference** cmdlet configures preferences for Windows Defender scans and updates.
@@ -69,7 +71,8 @@ The following table provides remediation action values for detected threats at l
 
 ### Example 1: Schedule to check for definition updates everyday
 
-```
+
+```sql
 PS C:\> Set-MpPreference -SignatureScheduleDay Everyday
 ```
 
@@ -77,7 +80,8 @@ This command configures preferences to check for definition updates every day.
 
 ### Example 2: Schedule a time of day to check for definition updates
 
-```
+
+```sql
 PS C:\> Set-MpPreference -SignatureScheduleTime 02:00:00
 ```
 
@@ -131,7 +135,7 @@ Accept wildcard characters: False
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of `$True`, Windows Defender checks for new definitions.
 If you specify `$False` or don’t specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans, but it doesn’t affect scans that you start from the user interface or to scans that you start from the command line.
+This setting applies to scheduled scans, but it has no effect on scans initiated manually from the user interface or on scans started from the command line using "mpcmdrun -Scan".
 
 ```yaml
 Type: Boolean
@@ -688,6 +692,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OobeEnableRtpAndSigUpdate
+
+This setting allows you to configure whether real-time protection and Security Intelligence Updates are enabled during Out of Box experience (OOBE).
+
+Valid values are:
+- True - If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.
+- False (Default) - If you either disable or don't configure this setting, real-time protection and Security Intelligence Updates during OOBE aren't enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PUAProtection
 
 ```yaml
@@ -894,7 +918,7 @@ The default value is 50.
 
 Note: This limit isn’t a hard limit but rather guidance for the scanning engine to not exceed this maximum on average.
 
-Note: Manually run scans will ignore this setting and run without any CPU limits.
+Note: Manually run scans will ignore this setting and run without any CPU limits. If ScanOnlyIfIdleEnabled (instructing the product to scan only when the computer is not in use) and DisableCpuThrottleOnIdleScans (instructing the product to disable CPU throttling on idle scans) are both enabled, then the value of ScanAvgCPULoadFactor is ignored.
 
 ```yaml
 Type: Byte
@@ -1397,3 +1421,4 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 [Get-MpPreference](./Get-MpPreference.md)
 
 [Remove-MpPreference](./Remove-MpPreference.md)
+

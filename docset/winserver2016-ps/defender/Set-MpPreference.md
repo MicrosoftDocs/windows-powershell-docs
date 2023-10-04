@@ -15,7 +15,8 @@ Configures preferences for Windows Defender scans and updates.
 
 ## SYNTAX
 
-```
+
+```powershell
 Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
  [-RealTimeScanDirection <ScanDirection>] [-QuarantinePurgeItemsAfterDelay <UInt32>]
  [-RemediationScheduleDay <Day>] [-RemediationScheduleTime <DateTime>]
@@ -66,14 +67,16 @@ The following table provides remediation action values for detected threats at l
 ## EXAMPLES
 
 ### Example 1: Schedule to check for definition updates everyday
-```
+
+```sql
 PS C:\> Set-MpPreference -SignatureScheduleDay Everyday
 ```
 
 This command configures preferences to check for definition updates every day.
 
 ### Example 2: Schedule a time of day to check for definition updates
-```
+
+```sql
 PS C:\> Set-MpPreference -SignatureScheduleTime 120
 ```
 
@@ -780,7 +783,7 @@ The acceptable values for this parameter are: integers from 5 through 100, and t
 Windows Defender does not exceed the percentage of CPU usage that you specify.
 The default value is 50.
 
-Note: This is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average.
+Note: This is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average. If ScanOnlyIfIdleEnabled (instructing the product to scan only when the computer is not in use) and DisableCpuThrottleOnIdleScans (instructing the product to disable CPU throttling on idle scans) are both enabled, then the value of ScanAvgCPULoadFactor is ignored.
 
 ```yaml
 Type: Byte
@@ -1253,3 +1256,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MpPreference](./Get-MpPreference.md)
 
 [Remove-MpPreference](./Remove-MpPreference.md)
+

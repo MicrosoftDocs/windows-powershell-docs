@@ -44,8 +44,9 @@ Set-ClusterStorageSpacesDirectDisk @parameters
 ```
 
 This command configures the system that physical disks that have the IDs `55CD2E404B75A3FC` and
-`50014EE05950DD7C` cannot be claimed by S2D. In this example, the `CanBeClaimed` parameter is
-explicitly specified as `$False`. Omitting that parameter has the same effect.
+`50014EE05950DD7C` cannot be claimed by S2D. In this example, the **CanBeClaimed** parameter is
+explicitly specified as `$False`. Omitting that parameter indicates that the specified physical disks can be claimed.
+
 
 
 This example uses splatting to pass parameter values from the `$Parameters` variable to the command.

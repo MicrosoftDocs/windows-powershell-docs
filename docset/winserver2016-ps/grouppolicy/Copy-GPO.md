@@ -77,7 +77,7 @@ PS C:\> Copy-GPO -SourceName "TestGpo1" -SourceDomain "test.contoso.com" TargetN
 This command copies the TestGpo1 GPO from the test.contoso.com domain to a GPO named TestGpo1 in the sales.contoso.com domain.
 
 A trust relationship must exist between the source domain and the destination domain.
-In addition, if the source domain or the destination domain (or both) is different than the domain of the user that is running the session.a trust must exist between that domain and the domain of the user.
+In addition, if the source domain or the destination domain (or both) is different than the domain of the user that is running the session a trust must exist between that domain and the domain of the user.
 
 ### Example 3: Copy all GPOs from a domain to another domain
 ```

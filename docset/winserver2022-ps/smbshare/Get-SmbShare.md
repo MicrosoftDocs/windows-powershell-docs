@@ -30,32 +30,17 @@ The **Get-SmbShare** cmdlet retrieves objects that represent the Server Message 
 
 ## EXAMPLES
 
-### Example 1: Get SMB shares
+### Example 1: Get SMB shares on a local computer
 ```
 PS C:\>Get-SMBShare
 Name                          ScopeName                     Path                          Description 
 ----                          ---------                     ----                          ----------- 
 ADMIN$                        *                             C:\Windows                    Remote Admin 
 C$                            *                             C:\                           Default share 
-ClusterStorage$               Contoso-SO                    C:\ClusterStorage             Cluster Shared Volumes Def... 
 D$                            *                             D:\                           Default share 
 F$                            *                             F:\                           Default share 
-G$                            *                             G:\                           Default share 
-H$                            *                             H:\                           Default share 
-I$                            Contoso-FS                    I:\                           Cluster Default Share 
-I$                            *                             I:\                           Default share 
 IPC$                          *                                                           Remote IPC 
-J$                            Contoso-FS                    J:\                           Cluster Default Share 
-J$                            *                             J:\                           Default share 
-K$                            *                             K:\                           Default share 
-L$                            *                             L:\                           Default share 
-M$                            *                             M:\                           Default share 
-N$                            *                             N:\                           Default share 
-VMS1                          Contoso-FS                    I:\VMS 
-VMS2                          Contoso-FS                    J:\VMS 
-VMS3                          Contoso-SO                    C:\ClusterStorage\Volume1\VMS 
-VMS4                          Contoso-SO                    C:\ClusterStorage\Volume2\VMS 
-VMS5                          *                             D:\VMS
+VMS1                          *                             I:\VMS
 ```
 
 This command retrieves the SMB shares on the computer.
@@ -65,21 +50,29 @@ This command retrieves the SMB shares on the computer.
 PS C:\>Get-SmbShare -Name "VMS1"
 Name                          ScopeName                     Path                          Description 
 ----                          ---------                     ----                          ----------- 
-VMS1                          Contoso-FS                    I:\VMS
+VMS1                          *                             I:\VMS
 ```
 
 This command retrieves information about the SMB share named 'VMS1' on the local computer.
 
-### Example 3: Display information about the SMB share named 'VMS1' on the local computer in a list
+### Example 3: Display information about the SMB shares on a remote computer
 ```
-PS C:\>Get-SmbShare -Name "VMS1" | Format-List
-Name        : VMS1 
-ScopeName   : Contoso-FS 
-Path        : I:\VMS 
-Description :
+PS C:\>get-smbshare -CimSession "NEDFS1"
+
+Name        ScopeName Path                Description   PSComputerName
+----        --------- ----                -----------   --------------
+ADMIN$      *         C:\Windows          Remote Admin  ae-dfsr-sr-01
+C$          *         C:\                 Default share ae-dfsr-sr-01
+D$          *         D:\                 Default share ae-dfsr-sr-01
+E$          *         E:\                 Default share ae-dfsr-sr-01
+IPC$        *                             Remote IPC    ae-dfsr-sr-01
+IT dept     *         D:\data\IT dept                   ae-dfsr-sr-01
+procedures  *         D:\hr\procedures                  ae-dfsr-sr-01
+VHD and ISO *         D:\data\VHD and ISO               ae-dfsr-sr-01
+
 ```
 
-This command displays the information about the SMB share named 'VMS1' on the local computer as a formatted list.
+This command displays the information about the SMB shares on the remote computer NEDFS1.
 
 ### Example 4: Display all properties about a specific SMB share on the local computer in a list
 ```
@@ -99,7 +92,7 @@ EncryptData           : False
 Name                  : VMS1 
 Path                  : I:\VMS 
 Scoped                : True 
-ScopeName             : Contoso-FS 
+ScopeName             : *
 SecurityDescriptor    : O:BAG:DUD:(A;;FA;;;S-1-5-21-219828122-4198910963-4161819395-500)(A;;FA;;;S-1-5-21-219828122-419 
                         8910963-4161819395-1106)(A;;FA;;;S-1-5-21-219828122-4198910963-4161819395-1109) 
 ShadowCopy            : False 
@@ -114,7 +107,7 @@ CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 
 This command displays all of the information about the SMB share named 'VMS1' on the local computer as a formatted list.
 
-### Example 5: Get shares on the local computer that have scaled out availability
+### Example 5: Get shares on the local failover cluster computer that have scale out availability
 ```
 PS C:\>Get-SmbShare | Where-Object -Property AvailabilityType -Eq ScaleOut
 Name                          ScopeName                     Path                          Description 
@@ -126,7 +119,7 @@ VMS4                          Contoso-SO                    C:\ClusterStorage\Vo
 
 This command retrieves the SMB shares on the computer that have scaled out availability.
 
-### Example 6: Get shares that are connected to a specific server
+### Example 6: Get shares that are connected to a local failover cluster file server resource named "Contoso-FS"
 ```
 PS C:\>Get-SmbShare -ScopeName "Contoso-FS"
 Name                          ScopeName                     Path                          Description 
@@ -137,7 +130,7 @@ VMS1                          Contoso-FS                    I:\VMS
 VMS2                          Contoso-FS                    J:\VMS
 ```
 
-This command retrieves the SMB shares on the computer that are connected to the SMB server named Contoso-FS.
+This command retrieves the SMB shares on the Windows Server failover cluster that are connected to the clustered file server resource named Contoso-FS.
 
 ## PARAMETERS
 
@@ -342,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScopeName
-Specifies the scope of the share by name.
+Specifies the scope of the share by name. For use with Windows Server failover cluster file server resources.
 
 ```yaml
 Type: String[]

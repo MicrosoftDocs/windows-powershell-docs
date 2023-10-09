@@ -28,6 +28,9 @@ The **New-SMBShare** cmdlet exposes a file system folder to remote clients as a 
 
 To delete a share that was created by this cmdlet, use the Remove-SMBShare cmdlet.
 
+> [!NOTE]
+> The **WhatIf** parameter does not work with this cmdlet.
+
 ## EXAMPLES
 
 ### EXAMPLE 1
@@ -395,8 +398,6 @@ Accept wildcard characters: False
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
-
-NOTE: The WhatIf switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter

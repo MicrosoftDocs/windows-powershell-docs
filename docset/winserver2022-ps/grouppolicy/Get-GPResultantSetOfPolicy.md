@@ -73,7 +73,7 @@ and is written to the specified file.
 ```powershell
 $params = @{
     ReportType = 'HTML'
-    Path       = 'c:\reports\UserReport.xml'
+    Path       = 'c:\reports\UserReport.html'
     User       = 'Contoso\PattiFul'
 }
 Get-GPResultantSetOfPolicy @params

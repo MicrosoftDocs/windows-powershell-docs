@@ -29,7 +29,8 @@ The **New-SmbGlobalMapping** cmdlet creates an SMB global mapping on the SMB cli
 
 ### Example 1
 ```powershell
-$creds = Get-Credential New-SmbGlobalMapping -RemotePath \\fs1.contoso.com\public -Credential $creds -LocalPath G:
+$creds = Get-Credential
+New-SmbGlobalMapping -RemotePath \\fs1.contoso.com\public -Credential $creds -LocalPath G:
 ```
 
 ```output

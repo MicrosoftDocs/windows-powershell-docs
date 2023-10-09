@@ -48,7 +48,7 @@ report is generated in XML format, and is written to the specified file.
 ### Example 2: Generate a report for the specified computer
 
 ```powershell
-@params = @{
+$params = @{
     ReportType = 'Xml'
     Path       = 'c:\reports\computer-08.xml'
     Computer   = 'computer-08.contso.com'
@@ -71,9 +71,9 @@ and is written to the specified file.
 ### Example 3: Generate a report for the specified user in HTML format and save it to the specified file
 
 ```powershell
-@params = @{
+$params = @{
     ReportType = 'HTML'
-    Path       = 'c:\reports\UserReport.xml'
+    Path       = 'c:\reports\UserReport.html'
     User       = 'Contoso\PattiFul'
 }
 Get-GPResultantSetOfPolicy @params
@@ -93,7 +93,7 @@ it to the specified file.
 ### Example 4: Generate a report for the specified computer and user in HTML format and save it to the specified file
 
 ```powershell
-@params = @{
+$params = @{
     ReportType = 'HTML'
     Path       = 'c:\reports\UserAndComputerReport.xml'
     User       = 'SomeUser'

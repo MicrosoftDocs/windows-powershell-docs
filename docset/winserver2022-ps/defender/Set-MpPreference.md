@@ -37,7 +37,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-MAPSReporting <MAPSReportingType>] [-SubmitSamplesConsent <SubmitSamplesConsentType>]
  [-DisableAutoExclusions <Boolean>] [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>]
  [-SchedulerRandomizationTime <UInt32>] [-DisableBehaviorMonitoring <Boolean>]
- [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
+ [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>] [-DisableCacheMaintenance <UInt32>]
  [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
@@ -398,6 +398,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableCacheMaintenance
+Defines whether the cache maintenance idle task will perform the cache maintenance or not. Allowed values are 1 - cache maintenance is disabled, and 0 - cache maintenance is enabled (default).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dcm
+
+Required: False
+Position: Named
+Default value: 0 
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableCatchupFullScan
 Indicates whether Windows Defender runs catch-up scans for scheduled full scans.
 A computer can miss a scheduled scan, usually because the computer is turned off at the scheduled time.
@@ -410,7 +425,7 @@ Aliases: dcfsc
 
 Required: False
 Position: Named
-Default value: True
+Default value: 0 
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

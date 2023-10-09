@@ -827,7 +827,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDynamicKeywordAddresses
-Specifies dynamic keyword addresses that match this rule.
+Specifies the dynamic keyword address IDs to be used for the remote host of the traffic matched by this rule. 
 
 ```yaml
 Type: String[]

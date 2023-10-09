@@ -31,7 +31,7 @@ The `Import-Certificate` cmdlet imports one or more certificates into a certific
 ```powershell
 $params = @{
     FilePath = 'C:\Users\Xyz\Desktop\BackupCert.cer'
-    CertStoreLocations = 'Cert:\CurrentUser\Root'
+    CertStoreLocation = 'Cert:\CurrentUser\Root'
 }
 Import-Certificate @params
 ```

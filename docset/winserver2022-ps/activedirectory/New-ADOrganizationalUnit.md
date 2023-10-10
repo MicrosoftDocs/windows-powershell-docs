@@ -44,7 +44,8 @@ You can override property values from the template by setting cmdlet parameters.
 For more information, see the *Instance* parameter description for this cmdlet.
 
 Method 3: Use the **Import-Csv** cmdlet with the **New-ADOrganizationalUnit** cmdlet to create multiple Active Directory OU objects.
-To do this, use the **Import-Csv** cmdlet to create the custom objects from a comma-separated value (CSV) file that contains a list of object properties.
+To do this, use the [**Import-Csv**](https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/import-csv) cmdlet to create the custom objects 
+from a comma-separated value (CSV) file that contains a list of object properties.
 Then pass these objects through the pipeline to the **New-ADOrganizationalUnit** cmdlet to create the OU objects.
 
 ## EXAMPLES
@@ -180,7 +181,7 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type a user name, such as `User1` or `Domain01\User01` or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+You can also create a **PSCredential** object by using a script or by using the [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential?view=powershell-7.3) cmdlet.
 You can then set the *Credential* parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.
@@ -364,17 +365,15 @@ Note that rules listed first are evaluated first and when a default value can be
 In Active Directory Domain Services (AD DS) environments, a default value for *Path* is set in the following cases:
 
 - If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current path of the provider drive.
-- If the cmdlet has a default path, this is used.
-For example: in New-ADUser, the *Path* parameter defaults to the Users container.
+- If the cmdlet has a default path, this is used. For example: in **New-ADUser**, the *Path* parameter defaults to the Users container.
 - If none of the previous cases apply, the default value of *Path* is set to the default partition or naming context of the target domain.
 
-In AD LDS environments, a default value for *Path*  is set in the following cases:
+In AD LDS environments, a default value for *Path* is set in the following cases:
 
 - If the cmdlet is run from an Active Directory module for PowerShell provider drive, the parameter is set to the current path of the provider drive.
-- If the cmdlet has a default path, this is used.
-For example: in New-ADUser, the *Path* parameter defaults to the Users container.
+- If the cmdlet has a default path, this is used. For example: in **New-ADUser**, the *Path* parameter defaults to the Users container.
 - If the target AD LDS instance has a default naming context, the default value of *Path* is set to the default naming context.
-To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance.
+  To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance.
 - If none of the previous cases apply, the *Path* parameter does not take any default value.
 
 > [!NOTE]
@@ -438,14 +437,14 @@ Accept wildcard characters: False
 Specifies the AD DS instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following: AD LDS, AD DS, or Active Directory snapshot instance.
 
-Specify the AD DS instance in one of the following ways:  
+Specify the AD DS instance in one of the following ways:
 
 Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
-Directory server values:  
+Directory server values:
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -541,8 +540,8 @@ By default, this cmdlet does not generate any output.
 
 ## NOTES
 
-- This cmdlet does not work with an Active Directory snapshot.
-- This cmdlet does not work with a read-only domain controller.
+* This cmdlet does not work with an Active Directory snapshot.
+* This cmdlet does not work with a read-only domain controller.
 
 ## RELATED LINKS
 

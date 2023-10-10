@@ -41,7 +41,7 @@ ps_nlbc_checkstate_remark
 
 ### Example 1: Change the cluster name
 ```
-PS C:\>Get-NlbCluster | Set-NlbCluster -Name " NewCluster001"
+PS C:\>Get-NlbCluster | Set-NlbCluster -Name "NewCluster001"
 Name                IPAddress           SubnetMask          Mode 
 ----                ---------           ----------          ---- 
 NewCluster001       fe80::b349:6945:... ::                  UNICAST

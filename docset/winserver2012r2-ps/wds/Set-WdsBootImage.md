@@ -47,7 +47,7 @@ If the image name and architecture do not uniquely identify the image, also spec
 
 ### Example 1: Change boot image settings
 ```
-PS C:\> Set-WdsBootImage -Architecture x86 -ImageName " Fabrikam LOB setup (x86)" -DisplayOrder 2 -NewImageName " Fabrikam LOB setup with re-partitioning (x86)" -NewDescription "Choose this image to re-partition the disk, and install Fabrikam LOB on computers with x86 processors."
+PS C:\> Set-WdsBootImage -Architecture x86 -ImageName "Fabrikam LOB setup (x86)" -DisplayOrder 2 -NewImageName "Fabrikam LOB setup with re-partitioning (x86)" -NewDescription "Choose this image to re-partition the disk, and install Fabrikam LOB on computers with x86 processors."
 ```
 
 This command changes the settings of the boot image named Fabrikam LOB setup (x86) for the x86 architecture.
@@ -55,7 +55,7 @@ The command sets the display order of the boot image on the boot menu on PXE cli
 
 ### Example 2: Start a multicast transmission of a boot image
 ```
-PS C:\> Set-WdsBootImage -Architecture x86 -ImageName " Fabrikam LOB setup (x86)" -Multicast -TransmissionName "Custom WinPE multicast"
+PS C:\> Set-WdsBootImage -Architecture x86 -ImageName "Fabrikam LOB setup (x86)" -Multicast -TransmissionName "Custom WinPE multicast"
 ```
 
 This command starts a multicast transmission of the boot image named Fabrikam LOB setup (x86) for the x86 architecture.

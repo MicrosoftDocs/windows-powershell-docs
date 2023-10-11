@@ -47,6 +47,34 @@ Get-AppxPackage -Name "Package17" -User "Contoso\EvanNarvaez"
 This command displays information about `Package17` if it's installed in the specified user
 profile.
 
+### Example 3: Get a particular app package information
+
+```powershell
+Get-AppxPackage -Name Microsoft.ScreenSketch
+```
+
+This command gives information about the ScreenSketch app.
+
+
+### Example 4: Get all app packages for a particular Publisher
+
+```powershell
+Get-AppxPackage -Publisher "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+```
+
+This command lists all the app packages that are installed from Microsoft Corporation on the computer.
+
+### Example 5: Get all app packages with PackageTypeFilter
+
+```powershell
+Get-AppxPackage -PackageTypeFilter Bundle
+Get-AppxPackage -PackageTypeFilter Framework
+Get-AppxPackage -PackageTypeFilter Main 
+Get-AppxPackage -PackageTypeFilter Resource
+```
+
+This command lists all the app packages with PackageTypeFilter installed on the computer.
+
 ## PARAMETERS
 
 ### -AllUsers

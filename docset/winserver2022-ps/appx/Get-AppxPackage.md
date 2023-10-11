@@ -61,7 +61,7 @@ This command gives information about the ScreenSketch app.
 Get-AppxPackage -Publisher "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
 ```
 
-This command lists all the app packages that are installed from Microsoft Corporation on the computer.
+This command lists all the Microsoft app packages that are installed on the computer.
 
 ### Example 5: Get all app packages with PackageTypeFilter
 

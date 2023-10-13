@@ -53,7 +53,7 @@ profile.
 Get-AppxPackage -Name Microsoft.ScreenSketch
 ```
 
-This command gives information about the ScreenSketch app.
+This command displays information about the ScreenSketch app.
 
 ### Example 4: Get all app packages for a particular Publisher
 

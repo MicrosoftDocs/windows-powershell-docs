@@ -57,6 +57,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-ProxyServer <String>] [-ProxyBypass <String[]>] [-ForceUseProxyOnly <Boolean>]
  [-OobeEnableRtpAndSigUpdate <Boolean>]
  [-DisableTlsParsing <Boolean>] [-DisableHttpParsing <Boolean>] [-DisableDnsParsing <Boolean>]
+ [-DisableFtpParsing <Boolean>]
  [-DisableDnsOverTcpParsing <Boolean>] [-DisableSshParsing <Boolean>]
  [-PlatformUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>]
  [-SignaturesUpdatesChannel <UpdatesChannelType>] [-DisableGradualRelease <Boolean>]
@@ -503,6 +504,22 @@ Aliases: ddnsp
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableFtpParsing
+
+Specifies whether to disable FTP Parsing for Network Protection.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dfp
+
+Required: False
+Position: Named
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -509,7 +509,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFtpParsing
-
 Specifies whether to disable FTP Parsing for Network Protection.
 
 ```yaml

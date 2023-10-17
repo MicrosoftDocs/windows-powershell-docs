@@ -66,10 +66,7 @@ This command lists all the Microsoft app packages that are installed on the comp
 ### Example 5: Get all app packages with PackageTypeFilter
 
 ```powershell
-Get-AppxPackage -PackageTypeFilter Bundle
-Get-AppxPackage -PackageTypeFilter Framework
-Get-AppxPackage -PackageTypeFilter Main 
-Get-AppxPackage -PackageTypeFilter Resource
+Get-AppxPackage -PackageTypeFilter Bundle,Framework,Main,Resource
 ```
 
 This command lists all the app packages with PackageTypeFilter installed on the computer.

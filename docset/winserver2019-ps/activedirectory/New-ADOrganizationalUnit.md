@@ -43,7 +43,7 @@ You can override property values from the template by setting cmdlet parameters.
 For more information, see the *Instance* parameter description for this cmdlet.
 
 Method 3: Use the **Import-Csv** cmdlet with the **New-ADOrganizationalUnit** cmdlet to create multiple Active Directory OU objects.
-To do this, use the [**Import-Csv**](https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/import-csv) cmdlet to create the custom objects 
+To do this, use the [**Import-Csv**](/powershell/module/microsoft.powershell.utility/import-csv) cmdlet to create the custom objects 
 from a comma-separated value (CSV) file that contains a list of object properties.
 Then pass these objects through the pipeline to the **New-ADOrganizationalUnit** cmdlet to create the OU objects.
 

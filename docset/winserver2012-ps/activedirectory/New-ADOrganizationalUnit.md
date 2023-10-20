@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-ADOrganizationalUnit
 
 ## SYNOPSIS
+
 Creates a new Active Directory organizational unit.
 
 ## SYNTAX
@@ -40,8 +41,7 @@ You can override property values from the template by setting cmdlet parameters.
 For more information, see the *Instance* parameter description for this cmdlet.
 
 Method 3: Use the **Import-Csv** cmdlet with the **New-ADOrganizationalUnit** cmdlet to create multiple Active Directory OU objects.
-To do this, use the [**Import-Csv**](/powershell/module/microsoft.powershell.utility/import-csv) cmdlet to create the custom objects 
-from a comma-separated value (CSV) file that contains a list of object properties.
+To do this, use the [**Import-Csv**](/powershell/module/microsoft.powershell.utility/import-csv) cmdlet to create the custom objects from a comma-separated value (CSV) file that contains a list of object properties.
 Then pass these objects through the pipeline to the **New-ADOrganizationalUnit** cmdlet to create the OU objects.
 
 ## EXAMPLES
@@ -93,19 +93,15 @@ This command creates an OU named Managed in an AD LDS instance.
 ### -AuthType
 
 Specifies the authentication method to use.
-Possible values for this parameter include:
 
-Negotiate or 0
+The acceptable values for this parameter are:
 
-Basic or 1
+- Negotiate or 0
+- Basic or 1
 
 The default authentication method is Negotiate.
 
 A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
-
-The following example shows how to set this parameter to Basic.
-
--AuthType Basic
 
 ```yaml
 Type: ADAuthType
@@ -122,13 +118,9 @@ Accept wildcard characters: False
 
 ### -City
 
-Specifies the user's town or city.
-This parameter sets the City property of a user.
+Specifies the town or city.
+This parameter sets the **City** property of an OU object.
 The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName**) of this property is `l`.
-
-The following example shows how set this parameter.
-
--City "Las Vegas"
 
 ```yaml
 Type: String
@@ -160,14 +152,10 @@ Accept wildcard characters: False
 
 ### -Country
 
-Specifies the country or region code for the user's language of choice.
-This parameter sets the Country property of a user object.
+Specifies the country or region code.
+This parameter sets the **Country** property of an OU object.
 The LDAP display name (**ldapDisplayName**) of this property is `c`.
 This value is not used by Windows 2000.
-
-The following example shows how set this parameter.
-
--Country "IN"
 
 ```yaml
 Type: String
@@ -210,7 +198,7 @@ Accept wildcard characters: False
 ### -Description
 
 Specifies a description of the object.
-This parameter sets the value of the Description property for the object.
+This parameter sets the value of the **Description** property for the OU object.
 The LDAP display name (**ldapDisplayName**) for this property is `description`.
 
 ```yaml
@@ -228,7 +216,7 @@ Accept wildcard characters: False
 ### -DisplayName
 
 Specifies the display name of the object.
-This parameter sets the DisplayName property of the object.
+This parameter sets the **DisplayName** property of the OU object.
 The LDAP display name (**ldapDisplayName**) for this property is `displayName`.
 
 ```yaml
@@ -258,9 +246,9 @@ Method 2: Create a new **ADOrganizationalUnit** object and set the property valu
 Then pass this object to the *Instance* parameter of the **New-ADOrganizationalUnit** cmdlet to create the new Active Directory OU object.
 
 ```powershell
-$OrganizationalUnitInstance = new-object Microsoft.ActiveDirectory.Management.ADOrganizationalUnit
+$OrganizationalUnitInstance = New-Object -ComObject Microsoft.ActiveDirectory.Management.ADOrganizationalUnit
 $OrganizationalUnitInstance.Country = Australia
-New-ADOrganizationalUnit -Name accountingAustralia  -Instance $OrganizationalUnitInstance
+New-ADOrganizationalUnit -Name accountingAustralia -Instance $OrganizationalUnitInstance
 ```
 
 > [!NOTE]
@@ -281,7 +269,7 @@ Accept wildcard characters: False
 ### -ManagedBy
 
 Specifies the user or group that manages the object by providing one of the following property values.
-Note: The identifier in parentheses is the LDAP display name for the property.
+Note: The identifier in parentheses is the LDAP display name for the property.  
 The acceptable values for this parameter are:
 
 - A distinguished name
@@ -380,13 +368,15 @@ Note that rules listed first are evaluated first and when a default value can be
 In Active Directory Domain Services (AD DS) environments, a default value for *Path* is set in the following cases:
 
 - If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current path of the provider drive.
-- If the cmdlet has a default path, this is used. For example: in **New-ADUser**, the *Path* parameter defaults to the Users container.
+- If the cmdlet has a default path, this is used.  
+For example: in **New-ADUser**, the *Path* parameter defaults to the Users container.
 - If none of the previous cases apply, the default value of *Path* is set to the default partition or naming context of the target domain.
 
 In AD LDS environments, a default value for *Path* is set in the following cases:
 
 - If the cmdlet is run from an Active Directory module for PowerShell provider drive, the parameter is set to the current path of the provider drive.
-- If the cmdlet has a default path, this is used. For example: in **New-ADUser**, the *Path* parameter defaults to the Users container.
+- If the cmdlet has a default path, this is used.  
+For example: in **New-ADUser**, the *Path* parameter defaults to the Users container.
 - If the target AD LDS instance has a default naming context, the default value of *Path* is set to the default naming context.
   To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance.
 - If none of the previous cases apply, the *Path* parameter does not take any default value.
@@ -429,7 +419,7 @@ Accept wildcard characters: False
 ### -ProtectedFromAccidentalDeletion
 
 Indicates whether to prevent the object from being deleted.
-When this property is set to $True, you cannot delete the corresponding object without changing the value of the property.
+When this property is set to $True, you cannot delete the corresponding object without changing the value of the property.  
 The acceptable values for this parameter are:
 
 - $False or 0
@@ -544,19 +534,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None or Microsoft.ActiveDirectory.Management.ADOrganizationalUnit
 
-An organizational unit object that is a template for the new organizational unit object is received by the Instance parameter.
+An OU object that is a template for the new OU object is received by the **Instance** parameter.
 
 ## OUTPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADOrganizationalUnit
 
-Returns the new organizational unit object when the PassThru parameter is specified.
+Returns the new OU object when the **PassThru** parameter is specified.  
 By default, this cmdlet does not generate any output.
 
 ## NOTES
 
-* This cmdlet does not work with an Active Directory Snapshot.
-* This cmdlet does not work with a read-only domain controller.
+- This cmdlet does not work with an Active Directory Snapshot.
+- This cmdlet does not work with a read-only domain controller.
 
 ## RELATED LINKS
 

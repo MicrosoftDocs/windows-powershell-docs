@@ -44,7 +44,7 @@ You can override property values from the template by setting cmdlet parameters.
 For more information, see the *Instance* parameter description for this cmdlet.
 
 Method 3: Use the **Import-Csv** cmdlet with the **New-ADOrganizationalUnit** cmdlet to create multiple Active Directory OU objects.
-To do this, use the [**Import-Csv**](https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/import-csv) cmdlet to create the custom objects 
+To do this, use the [**Import-Csv**](/powershell/module/microsoft.powershell.utility/import-csv) cmdlet to create the custom objects 
 from a comma-separated value (CSV) file that contains a list of object properties.
 Then pass these objects through the pipeline to the **New-ADOrganizationalUnit** cmdlet to create the OU objects.
 
@@ -181,7 +181,7 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type a user name, such as `User1` or `Domain01\User01` or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential?view=powershell-7.3) cmdlet.
+You can also create a **PSCredential** object by using a script or by using the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential?view=powershell-7.3) cmdlet.
 You can then set the *Credential* parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.

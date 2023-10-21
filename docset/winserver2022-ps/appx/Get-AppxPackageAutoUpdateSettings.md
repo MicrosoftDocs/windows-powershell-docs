@@ -54,7 +54,7 @@ Get-AppxPackageAutoUpdateSettings -PackageFullName publisher.package1_1.0.0.0_ne
 This will return the Auto Update and Repair settings for a specific Windows App that has been
 installed and registered to the signed-in user.
 
-### Example 4: Get App Package Auto Update settings with showupdateAvailability
+### Example 4: Get App Package Auto Update settings for all installed Windows Apps
 
 ```powershell
 Get-AppxPackageAutoUpdateSettings -ShowUpdateAvailability

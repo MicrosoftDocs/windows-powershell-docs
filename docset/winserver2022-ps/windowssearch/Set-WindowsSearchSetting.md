@@ -44,7 +44,7 @@ This command modifies Windows Search settings.
 The command enables the use of search history and the specific location of the user by specifying a value of PersonalizedAndLocation for the *SearchExperienceSetting* parameter.
 The command enables web results and sets SafeSearch to a value of Strict.
 
-### Example 3: Enable Metered Web Search
+### Example 3: Enable metered web search
 ```
 PS C:\> Set-WindowsSearchSetting -EnableMeteredWebResultsSetting $True
 ```

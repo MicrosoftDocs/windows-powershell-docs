@@ -61,7 +61,6 @@ Get-AppxPackageAutoUpdateSettings -ShowUpdateAvailability
 ```
 
 Display available update information for all installed Windows Apps.
-installed.
 
 ## PARAMETERS
 

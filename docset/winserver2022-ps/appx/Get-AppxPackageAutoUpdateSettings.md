@@ -60,7 +60,7 @@ installed and registered to the signed-in user.
 Get-AppxPackageAutoUpdateSettings -ShowUpdateAvailability
 ```
 
-Display available update information for all installed Windows Apps.
+Displays available update information for all installed Windows Apps.
 
 ## PARAMETERS
 

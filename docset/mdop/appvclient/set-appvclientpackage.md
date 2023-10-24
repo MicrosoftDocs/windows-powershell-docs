@@ -33,7 +33,7 @@ Set-AppvClientPackage [-Path <String>] [-DynamicDeploymentConfiguration <String>
 ```
 
 ## DESCRIPTION
-The **Set-AppvClientPackage** cmdlet modifies the configuration files of an Microsoft Application Virtualization (App-V) package.
+The **Set-AppvClientPackage** cmdlet modifies the configuration files of a Microsoft Application Virtualization (App-V) package.
 
 ## EXAMPLES
 

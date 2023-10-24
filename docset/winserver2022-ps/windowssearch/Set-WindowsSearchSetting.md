@@ -49,7 +49,7 @@ The command enables web results and sets SafeSearch to a value of Strict.
 PS C:\> Set-WindowsSearchSetting -EnableMeteredWebResultsSetting $True
 ```
 
-This command enables Windows Search to displays web results and suggestions while using metered connections.
+This command enables Windows Search to display web results and suggestions while using metered connections.
 
 ## PARAMETERS
 

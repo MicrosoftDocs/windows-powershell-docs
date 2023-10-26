@@ -25,8 +25,8 @@ Local Administrator Password Solution (LAPS) password attributes.
 
 ### [Get-LapsAADPassword](Get-LapsAADPassword.md)
 
-Queries Azure Active Directory (AAD) for the Windows Local Administrator Password Solution (LAPS)
-credentials on a specified Azure AD device.
+Queries Microsoft Entra ID for the Windows Local Administrator Password Solution (LAPS)
+credentials on a specified Microsoft Entra device.
 
 ### [Get-LapsADPassword](Get-LapsADPassword.md)
 

@@ -65,7 +65,7 @@ This command assigns multiple error messages to display to users for the relying
 
 ### Example 2: Create a custom message on the Sign in page
 ```
-PS C:\> Set-AdfsRelyingPartyWebContent -SignInPageDescription "If you have forgotten your password, visit <A href='https://passwordreset.microsoftonline.com/'>Azure AD self-service password reset</A>." -TargetRelyingPartyName "Microsoft Office 365 Identity Platform"
+PS C:\> Set-AdfsRelyingPartyWebContent -SignInPageDescription "If you have forgotten your password, visit <A href='https://passwordreset.microsoftonline.com/'>Microsoft Entra self-service password reset</A>." -TargetRelyingPartyName "Microsoft Office 365 Identity Platform"
 ```
 
 The command creates a custom message on the Sign in page for the Office 365 relying party.

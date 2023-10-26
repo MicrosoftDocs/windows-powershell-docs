@@ -17,7 +17,7 @@ Enable-MSDSMAutomaticClaim [-BusType] <String>
 ```
 
 ## DESCRIPTION
-The **Enable-MSDSMAutomaticClaim** cmdlet enables an Microsoft Device Specific Module (MSDSM) to automatically claim storage area network (SAN) disks for Microsoft Multipath I/O (MPIO) for a bus type.
+The **Enable-MSDSMAutomaticClaim** cmdlet enables a Microsoft Device Specific Module (MSDSM) to automatically claim storage area network (SAN) disks for Microsoft Multipath I/O (MPIO) for a bus type.
 
 You need to specify a valid bus type, either serial attached storage (SAS) and Internet Small Computer System Interface (iSCSI).
 You can enable MSDSM to automatically claim both SAS and iSCSI disks.

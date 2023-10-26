@@ -1,5 +1,5 @@
 ---
-description: Queries Azure Active Directory (AAD) for the Windows Local Administrator Password Solution (LAPS) credentials on a specified Azure AD device.
+description: Queries Microsoft Entra ID for the Windows Local Administrator Password Solution (LAPS) credentials on a specified Microsoft Entra device.
 external help file: LAPS-help.xml
 Module Name: LAPS
 online version: https://learn.microsoft.com/powershell/module/laps/get-lapsaadpassword?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
@@ -12,8 +12,8 @@ title: Get-LapsAADPassword
 # Get-LapsAADPassword
 
 ## SYNOPSIS
-Queries Azure Active Directory (AAD) for the Windows Local Administrator Password Solution (LAPS)
-credentials on a specified Azure AD device.
+Queries Microsoft Entra ID for the Windows Local Administrator Password Solution (LAPS)
+credentials on a specified Microsoft Entra device.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-LapsAADPassword -DeviceIds <String[]> [-IncludePasswords] [-IncludeHistory] 
 ## DESCRIPTION
 
 The `Get-LapsAADPassword` cmdlet allows administrators to retrieve LAPS passwords and password
-history for an AAD-joined device. This is implemented by sending queries to Microsoft Graph over the
+history for a Microsoft Entra joined device. This is implemented by sending queries to Microsoft Graph over the
 deviceLocalCredentials collection.
 
 The `Get-LapsAADPassword` cmdlet supports two basic modes when querying LAPS passwords:
@@ -51,9 +51,9 @@ device, the `DeviceManagementManagedDevices.Read.All` permission may also be req
 > [!IMPORTANT]
 > The `Get-LapsAADPassword` cmdlet is implemented as a wrapper around the Microsoft Graph PowerShell
 > library, which must be manually installed on the device before `Get-LapsAADPassword` can work.
-> Additional configuration steps are required in your AAD tenant to enable authentication to
+> Additional configuration steps are required in your Microsoft Entra tenant to enable authentication to
 > Microsoft Graph and to grant the necessary Microsoft Graph permissions. For more information, see
-> [Get started with Windows LAPS and Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2233704)
+> [Get started with Windows LAPS and Microsoft Entra ID](https://go.microsoft.com/fwlink/?linkid=2233704)
 
 The **Verbose** parameter may be used to get additional information about the cmdlet's operation.
 
@@ -240,4 +240,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Windows LAPS Overview](https://go.microsoft.com/fwlink/?linkid=2233901)
 
-[Get started with Windows LAPS and Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2233704)
+[Get started with Windows LAPS and Microsoft Entra ID](https://go.microsoft.com/fwlink/?linkid=2233704)

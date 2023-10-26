@@ -71,8 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -TenantId
-Specifies the GUID representation of the Azure AD tenant ID.
-This can be found in the URL bar of the Azure AD portal, as in this example: `https://manage.windowsazure.com/contoso.onmicrosoft.com#Workspaces/ActiveDirectoryExtension/Directory/<tenantID_GUID>/directoryQuickStart`
+Specifies the GUID representation of the Microsoft Entra tenant ID.
+This can be found in the URL bar of the Microsoft Entra admin center, as in this example: `https://manage.windowsazure.com/contoso.onmicrosoft.com#Workspaces/ActiveDirectoryExtension/Directory/<tenantID_GUID>/directoryQuickStart`
 
 Alternatively, you can use the **Login-AzureRmAccount** cmdlet to get the tenant ID.
 

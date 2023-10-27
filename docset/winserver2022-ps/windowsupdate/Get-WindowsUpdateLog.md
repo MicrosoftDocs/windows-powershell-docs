@@ -143,7 +143,7 @@ Accept wildcard characters: False
 
 ### -IncludeAllLogs
 
-Decodes all update related logs: Windows Update, Update Session Orchestrator (USO), and Update UX (UX). This parameter is mutually exclusive of all other parameters of this cmdlet. Specifying this parameter will use defaults for all other parameters. This paramater causes a folder to be created on the desktop and readable WindowsUpdate.log, USO.log, and UX.log files are written to it.
+Decodes all update related logs: Windows Update, Update Session Orchestrator (USO), and Update user interface (UX). This parameter is mutually exclusive of all other parameters of this cmdlet. Specifying this parameter will use defaults for all other parameters. This paramater causes a folder to be created on the desktop and readable WindowsUpdate.log, USO.log, and UX.log files are written to it.
 
 
 ```yaml

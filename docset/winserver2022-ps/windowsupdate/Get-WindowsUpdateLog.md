@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: WindowsUpdateLog.psm1-help.xml
 Module Name: WindowsUpdate
-ms.date: 12/20/2016
+ms.date: 10/31/2023
 online version: https://learn.microsoft.com/powershell/module/windowsupdate/get-windowsupdatelog?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-WindowsUpdateLog
@@ -18,7 +18,7 @@ Merges Windows Update `.etl` files into a single log file.
 
 ```
 Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>] 
-[-ProcessingType <String>] [-ForceFlush] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-ProcessingType <String>] [-IncludeAllLogs] [-ForceFlush] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -140,6 +140,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -IncludeAllLogs
+
+Decodes all update related logs: Windows Update, Update Session Orchestrator (USO), and Update UX (UX). This parameter is mutually exclusive of all other parameters of this cmdlet. Specifying this parameter will use defaults for all other parameters. This paramater causes a folder to be created on the desktop and readable WindowsUpdate.log, USO.log, and UX.log files are written to it.
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -LogPath
 

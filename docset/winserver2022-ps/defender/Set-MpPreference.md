@@ -1043,7 +1043,6 @@ Accept wildcard characters: False
 ### -IntelTDTEnabled
 This policy setting configures the Intel TDT integration level for Intel TDT-capable devices.
 The acceptable values for this parameter are:
-
 - 0 (Default) - If you don't configure this setting, the default value will be applied. The default value is controlled by Microsoft security intelligence updates. Microsoft will enable Intel TDT if there is a known threat.
 - 1 - If you configure this setting to enabled, Intel TDT integration will turn on.
 - 2 - If you configure this setting to disabled, Intel TDT integration will turn off.

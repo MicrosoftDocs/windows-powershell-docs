@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Use this article to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: WindowsUpdateLog.psm1-help.xml
 Module Name: WindowsUpdate
 ms.date: 10/31/2023
@@ -16,9 +16,16 @@ Merges Windows Update `.etl` files into a single log file.
 
 ## SYNTAX
 
+### ParameterSetDefault
 ```
 Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>] 
 [-ProcessingType <String>] [-IncludeAllLogs] [-ForceFlush] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+
+### ParameterSetIncludeAllLogs
+```
+Get-WindowsUpdateLog [-IncludeAllLogs] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,11 +33,11 @@ Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>]
 The `Get-WindowsUpdateLog` cmdlet merges and converts Windows Update `.etl` files into a single
 readable `WindowsUpdate.log` file. Windows Update Agent uses Event Tracing for Windows (ETW) to
 generate diagnostic logs. Windows Update no longer directly produces a `WindowsUpdate.log` file.
-Instead, it produces `.etl` files that are not immediately readable as written.
+Instead, it produces `.etl` files that aren't immediately readable as written.
 
 For Windows 10 versions prior to 1709 (OS Build 16299), this cmdlet requires access to a Microsoft
 symbol server, and log decoding must be run from a Windows 10 version earlier than 1709. Logs from
-Windows 10, version 1709 onward do not require a Microsoft symbol server, and need to be decoded
+Windows 10, version 1709 onward don't require a Microsoft symbol server, and need to be decoded
 from Windows 10, versions 1709 or higher.
 
 ## EXAMPLES
@@ -90,7 +97,7 @@ Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases: cf
 
 Required: False
@@ -112,7 +119,7 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases: PsPath
 
 Required: False
@@ -131,7 +138,7 @@ PowerShell with administrative credentials by using the Run as administrator com
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases: 
 
 Required: False
@@ -143,12 +150,12 @@ Accept wildcard characters: False
 
 ### -IncludeAllLogs
 
-Decodes all update related logs: Windows Update, Update Session Orchestrator (USO), and Update user interface (UX). This parameter is mutually exclusive of all other parameters of this cmdlet. Specifying this parameter will use defaults for all other parameters. This paramater causes a folder to be created on the desktop and readable WindowsUpdate.log, USO.log, and UX.log files are written to it.
+Decodes all update-related logs: Windows Update, Update Session Orchestrator (USO), and the update user interface (UX). This parameter is mutually exclusive of all other parameters of this cmdlet. Specifying this parameter uses defaults for all other parameters. This parameter causes a folder to be created on the desktop and readable WindowsUpdate.log, USO.log, and UX.log files are written to it.
 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: IncludeAllLogs
 Aliases: 
 
 Required: False
@@ -166,7 +173,7 @@ The default value is `WindowsUpdate.log` in the Desktop folder of the current us
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases: 
 
 Required: False
@@ -189,7 +196,7 @@ The temporary files are in `$env:TEMP\WindowsUpdateLog`.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases: 
 Accepted values: CSV, XML
 
@@ -203,11 +210,11 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Default
 Aliases: wi
 
 Required: False

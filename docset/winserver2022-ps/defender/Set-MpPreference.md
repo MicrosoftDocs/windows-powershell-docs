@@ -775,10 +775,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisableSmtpParsing 
-This setting disables SMTP Parsing for Network Protection.
-The accepted values are 0 and 1
-1- 		SMTP parsing is disabled.
-0 (Default)- 	SMTP parsing is enabled.
+This setting disables SMTP parsing for network protection.
+The accepted values are 0 and 1.
+- 1 - SMTP parsing is disabled.
+- 0 (Default) - SMTP parsing is enabled.
 
 ```yaml
 Type: Boolean

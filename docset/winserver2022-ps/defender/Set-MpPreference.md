@@ -1946,10 +1946,8 @@ Accept wildcard characters: False
 ### -ThrottleForScheduledScanOnly
 A CPU usage limit can be applied to scheduled scans only, or to scheduled and custom scans. The default value applies a CPU usage limit to scheduled scans only.
 The acceptable values for this parameter are:
-
-1 (Default) - If you enable this setting, CPU throttling will apply only to scheduled scans.
-0- If you disable this setting, CPU throttling will apply to scheduled and custom scans.
-
+- 1 (Default) - If you enable this setting, CPU throttling will apply only to scheduled scans.
+- 0 - If you disable this setting, CPU throttling will apply to scheduled and custom scans.
 
 ```yaml
 Type: Boolean

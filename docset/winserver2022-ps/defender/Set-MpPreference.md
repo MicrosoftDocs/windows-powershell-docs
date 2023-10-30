@@ -616,10 +616,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisableNetworkProtectionPerfTelemetry 
-This setting disables the gathering and send of performance telemetry from Network Protection. 
-The accepted values are 0 and 1
-1- 	Network protection telemetry is disabled.
-0 (Default)- 	Network protection telemetry is enabled.
+This setting disables the gathering and sending of performance telemetry from network protection. 
+The accepted values are 0 and 1.
+- 1- Network protection telemetry is disabled.
+- 0 (Default) - Network protection telemetry is enabled.
 
 ```yaml
 Type: Boolean

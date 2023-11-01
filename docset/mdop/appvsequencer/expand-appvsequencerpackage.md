@@ -19,7 +19,7 @@ Expand-AppvSequencerPackage [-AppvPackagePath] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Expand-AppvSequencerPackage** cmdlet expands an Microsoft Application Virtualization (App-V) package into its native form to the NTFS file system on the computer running the sequencer.
+The **Expand-AppvSequencerPackage** cmdlet expands a Microsoft Application Virtualization (App-V) package into its native form to the NTFS file system on the computer running the sequencer.
 You can more easily add prerequisites or dependent applications to the sequencer before generating the package.
 
 Run this cmdlet each time to expand a new package onto the computer running the sequencer.

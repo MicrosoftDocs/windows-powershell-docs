@@ -7,7 +7,7 @@ schema: 2.0.0
 # BackupToAAD-BitLockerKeyProtector
 
 ## SYNOPSIS
-Saves a key protector for a BitLocker volume in Azure Active Directory.
+Saves a key protector for a BitLocker volume in Microsoft Entra ID.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ BackupToAAD-BitLockerKeyProtector [-MountPoint] <String[]> [-KeyProtectorId] <St
 ```
 
 ## DESCRIPTION
-The **BackupToAAD-BitLockerKeyProtector** cmdlet saves a recovery password key protector for a volume protected by BitLocker Drive Encryption to Azure Active Directory (AAD). Specify a key to be saved by ID.
+The **BackupToAAD-BitLockerKeyProtector** cmdlet saves a recovery password key protector for a volume protected by BitLocker Drive Encryption to Microsoft Entra ID. Specify a key to be saved by ID.
 
 ## EXAMPLES
 
@@ -38,7 +38,7 @@ The second command backs up the key protector for the BitLocker volume specified
 ```powershell
 PS C:\> BackupToAAD-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId "{E2611001E-6AD0-4A08-BAAA-C9c031DB2AA6}"
 ```
-This command saves a key protector for a specified BitLocker volume to Azure AD. The command specifies the key protector by using its ID.
+This command saves a key protector for a specified BitLocker volume to Microsoft Entra ID. The command specifies the key protector by using its ID.
 
 ## PARAMETERS
 

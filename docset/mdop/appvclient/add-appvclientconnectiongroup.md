@@ -19,7 +19,7 @@ Add-AppvClientConnectionGroup [-Path] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-AppvClientConnectionGroup** cmdlet creates an Microsoft Application Virtualization (App-V) connection group.
+The **Add-AppvClientConnectionGroup** cmdlet creates a Microsoft Application Virtualization (App-V) connection group.
 In order for the group to be applied, all packages in the group must be added to the target computer, and must not be running.
 
 This cmdlet can also be used to update an already existing connection group definition.

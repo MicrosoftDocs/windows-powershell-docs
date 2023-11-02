@@ -19,7 +19,7 @@ Merges Windows Update `.etl` files into a single log file.
 ### ParameterSetDefault
 ```
 Get-WindowsUpdateLog [[-ETLPath] <String[]>] [[-LogPath] <String>] 
-[-ProcessingType <String>] [-IncludeAllLogs] [-ForceFlush] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-ProcessingType <String>] [-ForceFlush] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 

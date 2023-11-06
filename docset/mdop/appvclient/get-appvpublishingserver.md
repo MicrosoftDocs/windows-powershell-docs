@@ -25,7 +25,7 @@ Get-AppvPublishingServer [[-Name] <String>] [[-URL] <String>] [<CommonParameters
 ```
 
 ## DESCRIPTION
-The **Get-AppvPublishingServer** cmdlet returns an Microsoft Application Virtualization (App-V) Server object or set of App-V Server objects based on the criteria provided.
+The **Get-AppvPublishingServer** cmdlet returns a Microsoft Application Virtualization (App-V) Server object or set of App-V Server objects based on the criteria provided.
 
 ## EXAMPLES
 

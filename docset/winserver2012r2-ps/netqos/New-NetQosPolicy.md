@@ -151,7 +151,7 @@ AppPathName    : ftp.exe
 ThrottleRate   : 1.049 MBits/sec
 ```
 
-This example creates a QoS policy named FTP, that matches an application path at ftp.exe and throttles the traffic at 1,000,000 bytes per second.
+This example creates a QoS policy named FTP, that matches an application path at ftp.exe and throttles the traffic at 1 MBits per second.
 This policy is ActiveStore, meaning that it is not persistent after reboot of the computer. 
                          
 An alias for the **ThrottleRateActionBytesPerSecond** parameter is `MaxBw`.
@@ -183,7 +183,7 @@ IPPort         : 80
 ThrottleRate   : 10.486 MBits/sec
 ```
 
-This example creates a QoS policy that matches TCP traffic sent to port 80 and rate-limits it at 10,000,000 bytes per second.
+This example creates a QoS policy that matches TCP traffic sent to port 80 and rate-limits it at 10 MBits per second.
 
 ### EXAMPLE 5
 ```
@@ -210,7 +210,7 @@ URIRecursive   : False
 ThrottleRate   : 516.096 KBits/sec
 ```
 
-This example creates a QoS policy named IIS, that matches return traffic from an HTTP server application with the specified URI and rate limit the return traffic at 500,000 bytes per second.
+This example creates a QoS policy named IIS, that matches return traffic from an HTTP server application with the specified URI and rate limit the return traffic at 500 KBits per second.
 
 ## PARAMETERS
 

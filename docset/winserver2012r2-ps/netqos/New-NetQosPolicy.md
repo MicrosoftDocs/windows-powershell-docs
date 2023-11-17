@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -Cluster
-Specifies Microsoft's cluster service, which uses the default SQL server TCP/UDP port 3343.
+Specifies the Microsoft Windows Cluster service, which uses the Cluster network driver TCP/UDP port 3343.
 
 ```yaml
 Type: SwitchParameter

@@ -21,7 +21,7 @@ Set-AdfsAzureMfaTenant -TenantId <String> -ClientId <String> [-WhatIf] [-Confirm
 ```
 
 ## DESCRIPTION
-The **Set-AdfsAzureMfaTenant** cmdlet enables an Active Directory Federation Services (AD FS) farm to use Azure Multi-Factor Authentication (MFA) after a certificate has been created and registered in the Azure Active Directory (AD) tenant.
+The **Set-AdfsAzureMfaTenant** cmdlet enables an Active Directory Federation Services (AD FS) farm to use Azure Multi-Factor Authentication (MFA) after a certificate has been created and registered in the Microsoft Entra tenant.
 
 ## EXAMPLES
 
@@ -45,7 +45,7 @@ After AD FS has been configured for Azure MFA, this command determines which cer
 ## PARAMETERS
 
 ### -ClientId
-Specifies the well-known ID of the Azure MFA application in Azure AD.
+Specifies the well-known ID of the Azure MFA application in Microsoft Entra ID.
 
 ```yaml
 Type: String
@@ -60,8 +60,8 @@ Accept wildcard characters: False
 ```
 
 ### -TenantId
-Specifies the GUID representation of an Azure AD tenant ID.
-This can be found in the URL bar of the Azure AD portal, as in this example: 
+Specifies the GUID representation of a Microsoft Entra tenant ID.
+This can be found in the URL bar of the Microsoft Entra admin center, as in this example: 
 
 `https://manage.windowsazure.com/contoso.onmicrosoft.com#Workspaces/ActiveDirectoryExtension/Directory/\<tenantID_GUID\>/directoryQuickStart`
 

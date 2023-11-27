@@ -2,7 +2,7 @@
 description: The Get-SystemPreferredUILanguage cmdlet lets you see which language is set as the System Preferred UI Language in a running Windows installation
 external help file: Microsoft.LanguagePackManagement.Powershell.Commands.dll-Help.xml
 Module Name: LanguagePackManagement
-ms.date: 08/15/2022
+ms.date: 06/21/2023
 online version: https://learn.microsoft.com/powershell/module/languagepackmanagement/get-systempreferreduilanguage?view=windowsserver2022-ps
 schema: 2.0.0
 title: Get-SystemPreferredUILanguage
@@ -28,7 +28,7 @@ Returns the language that is set as the System Preferred Language
 ### Example 1
 
 ```powershell
-Get-SystemPrefferedUILanguage
+Get-SystemPreferredUILanguage
 ```
 
 This command returns the language that's currently set as the System Preferred UI Language

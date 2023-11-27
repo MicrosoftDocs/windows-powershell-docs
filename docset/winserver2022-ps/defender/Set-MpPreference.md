@@ -19,6 +19,7 @@ Configures preferences for Windows Defender scans and updates.
 ```powershell
 Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
  [-ExclusionIpAddress <String[]>] [-RealTimeScanDirection <ScanDirection>]
+ [-IntelTDTEnabled <UInt32>]
  [-QuarantinePurgeItemsAfterDelay <UInt32>] [-RemediationScheduleDay <Day>]
  [-RemediationScheduleTime <DateTime>] [-ReportingAdditionalActionTimeOut <UInt32>]
  [-ReportingCriticalFailureTimeOut <UInt32>] [-ReportingNonCriticalTimeOut <UInt32>]
@@ -57,7 +58,9 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-ProxyServer <String>] [-ProxyBypass <String[]>] [-ForceUseProxyOnly <Boolean>]
  [-OobeEnableRtpAndSigUpdate <Boolean>]
  [-DisableTlsParsing <Boolean>] [-DisableHttpParsing <Boolean>] [-DisableDnsParsing <Boolean>]
+ [-DisableFtpParsing <Boolean>] [-DisableSmtpParsing <Boolean>]
  [-DisableDnsOverTcpParsing <Boolean>] [-DisableSshParsing <Boolean>]
+ [-DisableNetworkProtectionPerfTelemetry <Boolean>]
  [-PlatformUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>]
  [-SignaturesUpdatesChannel <UpdatesChannelType>] [-DisableGradualRelease <Boolean>]
  [-AllowNetworkProtectionDownLevel <Boolean>] [-AllowDatagramProcessingOnWinServer <Boolean>]
@@ -507,6 +510,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableFtpParsing
+Specifies whether to disable FTP parsing for network protection.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dfp
+
+Required: False
+Position: Named
+Default value: 0
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableEmailScanning
 Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
 Windows Defender supports several formats, including .pst, .dbx, .mbx, .mime, and .binhex.
@@ -593,6 +611,24 @@ Aliases: dioavp
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableNetworkProtectionPerfTelemetry 
+This setting disables the gathering and sending of performance telemetry from network protection. 
+The accepted values are 0 and 1.
+- 1- Network protection telemetry is disabled.
+- 0 (Default) - Network protection telemetry is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dnpp
+
+Required: False
+Position: Named
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -734,6 +770,24 @@ Aliases: dsshp
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableSmtpParsing 
+This setting disables SMTP parsing for network protection.
+The accepted values are 0 and 1.
+- 1 - SMTP parsing is disabled.
+- 0 (Default) - SMTP parsing is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dsp
+
+Required: False
+Position: Named
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -982,6 +1036,26 @@ Accepted values: Clean, Quarantine, Remove, Allow, UserDefined, NoAction, Block
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IntelTDTEnabled
+This policy setting configures the Intel TDT integration level for Intel TDT-capable devices.
+The acceptable values for this parameter are:
+- 0 (Default) - If you don't configure this setting, the default value will be applied. The default value is controlled by Microsoft security intelligence updates. Microsoft will enable Intel TDT if there is a known threat.
+- 1 - If you configure this setting to enabled, Intel TDT integration will turn on.
+- 2 - If you configure this setting to disabled, Intel TDT integration will turn off.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: itdte
+Accepted values: 0,1 and 2
+
+Required: False
+Position: Named
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1867,6 +1941,25 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -ThrottleForScheduledScanOnly
+A CPU usage limit can be applied to scheduled scans only, or to scheduled and custom scans. The default value applies a CPU usage limit to scheduled scans only.
+The acceptable values for this parameter are:
+- 1 (Default) - If you enable this setting, CPU throttling will apply only to scheduled scans.
+- 0 - If you disable this setting, CPU throttling will apply to scheduled and custom scans.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: 1
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -UILockdown
 Indicates whether to disable UI lockdown mode.

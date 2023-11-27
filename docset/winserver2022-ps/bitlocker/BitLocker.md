@@ -18,7 +18,7 @@ This reference provides cmdlet descriptions and syntax for all BitLocker cmdlets
 Adds a key protector for a BitLocker volume.
 
 ### [BackupToAAD-BitLockerKeyProtector](./BackupToAAD-BitLockerKeyProtector.md)
-Saves a key protector for a BitLocker volume in AAD.
+Saves a key protector for a BitLocker volume in Microsoft Entra ID.
 
 ### [Backup-BitLockerKeyProtector](./Backup-BitLockerKeyProtector.md)
 Saves a key protector for a BitLocker volume in AD DS.

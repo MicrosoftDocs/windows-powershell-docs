@@ -365,7 +365,7 @@ You can override property values of the new object by setting the appropriate pa
 
 $objectInstance = Get-ADClaimType -Identity "Employee Type"
 
-New-ADClaimType -Name " Employee Type"  -Instance $ObjectInstance
+New-ADClaimType -Name "Employee Type"  -Instance $ObjectInstance
 
 Method 2: Create a new claim type and set the property values by using the Windows PowerShell command line interface.
 Then pass this object to the Instance parameter of the New-ADClaimType cmdlet to create the new claim type object.

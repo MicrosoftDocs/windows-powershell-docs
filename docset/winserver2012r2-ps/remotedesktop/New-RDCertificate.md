@@ -55,7 +55,7 @@ The role service is configured with either enterprise certificate or public cert
 
 ### Example 1: Create a certificate
 ```
-PS C:\> $Password = ConvertTo-SecureString -String "Wings%%83Potato" -AsPlainText -Force PS C:\> New-RDCertificate -Role RDPublishing -DnsName "RDWA01.Contoso.com " -Password $Password -ConnectionBroker "RDCB.Contoso.com"
+PS C:\> $Password = ConvertTo-SecureString -String "Wings%%83Potato" -AsPlainText -Force PS C:\> New-RDCertificate -Role RDPublishing -DnsName "RDWA01.Contoso.com" -Password $Password -ConnectionBroker "RDCB.Contoso.com"
 ```
 
 This example creates a certificate for an RDS role.

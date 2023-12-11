@@ -27,7 +27,7 @@ The applications automatically trigger a VPN connection when launched.
 
 ### Example 1: Add an application to a trigger list
 ```
-PS C:\> Add-VpnConnectionTriggerApplication -ConnectionName "Contoso " -ApplicationID "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe","Microsoft.RemoteDesktop_Contoso0987" -PassThru
+PS C:\> Add-VpnConnectionTriggerApplication -ConnectionName "Contoso" -ApplicationID "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe","Microsoft.RemoteDesktop_Contoso0987" -PassThru
 ConnectionName : Contoso
 
 ApplicationID  : {C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe, Microsoft.RemoteDesktop_Contoso0987}

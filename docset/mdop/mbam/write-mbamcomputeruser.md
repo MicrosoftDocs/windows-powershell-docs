@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerUser
-Specifies an array of fully qualified domain user accounts that have permission to access this volume recovery information in user principal name (UPN) (\<login name\>@\<domain name\> format (For instance, @("user12@contoso.com", " user13@contoso.com")).
+Specifies an array of fully qualified domain user accounts that have permission to access this volume recovery information in user principal name (UPN) (\<login name\>@\<domain name\> format (For instance, @("user12@contoso.com", "user13@contoso.com")).
 
 ```yaml
 Type: String[]

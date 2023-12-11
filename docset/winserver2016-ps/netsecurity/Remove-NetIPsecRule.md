@@ -133,7 +133,7 @@ This example removes all of the static local policies.
 
 ### EXAMPLE 2
 ```
-PS C:\>Remove-NetIPsecRule -DisplayName " Transport Mode - CorpNet IPv4 - AuthIP"
+PS C:\>Remove-NetIPsecRule -DisplayName "Transport Mode - CorpNet IPv4 - AuthIP"
 ```
 
 This example deletes an IPsec rule based on the localized name.

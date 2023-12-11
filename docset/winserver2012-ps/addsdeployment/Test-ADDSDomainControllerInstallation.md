@@ -308,7 +308,7 @@ Specifies whether the DNS Server service should be installed and configured on t
 For domain controller installation, if this parameter is left unspecified and the current domain already hosts and stores the DNS names for the domain, then the default for this parameter is $true and the DNS server will be installed.
 Otherwise, if DNS domain names are hosted outside of Active Directory, the default is $false and no DNS server will be installed.
 
-To test if DNS domain names are hosted outside of Active Directory, this cmdlet uses a start of authority (SOA) type DNS query to ask the question "Does a zone exist for the domain name?" For example, if the value of **-DomainName** is "corp.contoso.com", Active Directory performs an SOA query for "corp.contoso.com" and ensures that the zone name in the response is " corp.contoso.com".
+To test if DNS domain names are hosted outside of Active Directory, this cmdlet uses a start of authority (SOA) type DNS query to ask the question "Does a zone exist for the domain name?" For example, if the value of **-DomainName** is "corp.contoso.com", Active Directory performs an SOA query for "corp.contoso.com" and ensures that the zone name in the response is "corp.contoso.com".
 
 ```yaml
 Type: SwitchParameter

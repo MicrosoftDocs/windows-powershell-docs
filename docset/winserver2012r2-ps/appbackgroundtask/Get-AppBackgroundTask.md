@@ -28,14 +28,14 @@ You must have administrator access to get background information.
 
 ### Example 1: Display background tasks
 ```
-PS C:\> Get-AppBackgroundTask -PackageFamilyName "Microsoft.BingSports_8wekyb3d8bbwe "
+PS C:\> Get-AppBackgroundTask -PackageFamilyName "Microsoft.BingSports_8wekyb3d8bbwe"
 ```
 
 This command displays the registered background tasks that belong to the Microsoft.BingSports_8wekyb3d8bbwe package family.
 
 ### Example 2: Display background tasks with resource usage data
 ```
-PS C:\>Get-AppBackgroundTask -PackageFamilyName "Microsoft.BingSports_8wekyb3d8bbwe " -IncludeResourceUsage
+PS C:\>Get-AppBackgroundTask -PackageFamilyName "Microsoft.BingSports_8wekyb3d8bbwe" -IncludeResourceUsage
 ```
 
 This command displays the registered background tasks that belong to the Microsoft.BingSports_8wekyb3d8bbwe package family, including detailed resource usage information.

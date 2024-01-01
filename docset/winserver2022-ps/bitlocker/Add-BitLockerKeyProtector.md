@@ -296,9 +296,9 @@ Accept wildcard characters: False
 
 ### -RecoveryPassword
 Specifies a recovery password. The cmdlet adds the password specified or created as a protector for the volume encryption key.
-If you do not specify this parameter, the cmdlet creates a random password.
+If you do not specify this parameter (but specify `-RecoveryPasswordProtector`, the cmdlet creates a random recovery password.
 
-A recovery password has rigid requirements. It must consist of 48 digits. Each 6 must be divisible by 11. For example, the
+A recovery password has rigid requirements. It must consist of 48 digits. Each six must be divisible by 11. For example, the
 following is acceptable:
 
     '147279-525107-204677-117612-367510-356554-273911-527274'

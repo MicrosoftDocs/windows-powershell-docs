@@ -11,7 +11,7 @@ title: Get-ClusterDiagnosticInfo
 # Get-ClusterDiagnosticInfo
 
 ## SYNOPSIS
-Gets diagnostics for a cluster a cluster that contains VMs and produces a zip file containing the
+Gets diagnostics for a cluster that contains VMs and produces a zip file containing the
 data.
 
 ## SYNTAX

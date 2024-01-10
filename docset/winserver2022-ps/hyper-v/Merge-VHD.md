@@ -42,8 +42,6 @@ Finally, VDisk1 is a child of the Parent virtual hard disk.
 
 In this example, all referenced virtual hard disks reside within C:\test.
 
-
-
 The VDisk4.avhdx and VDisk3.avhdx are not deleted, however, they are no longer valid virtual hard disk files after the operation completes.
 
 ## PARAMETERS

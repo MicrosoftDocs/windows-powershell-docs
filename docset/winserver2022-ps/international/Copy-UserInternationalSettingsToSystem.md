@@ -6,7 +6,7 @@ manager: aandrejs
 ms.author: ertorres
 ms.date: 09/08/2021
 ms.mktglfcycl: manage
-ms.prod: w11
+ms.service: windows-11
 ms.sitesec: library
 ms.topic: reference
 schema: 2.0.0

@@ -5,11 +5,11 @@ Help Version: 2.0.0.1
 Locale: en-US
 Module Guid: 576ff287-7d01-46a3-8a88-94df7581a2b0
 Module Name: PCSVDevice
-ms.date: 12/20/2016
-title: PCSVDevice
+ms.date: 01/19/2024
+title: PcsvDevice
 ---
 
-# PCSVDevice Module
+# PcsvDevice Module
 ## Description
 This reference provides cmdlet descriptions and syntax for all Physical Computer System View cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
@@ -40,5 +40,3 @@ Starts the specified remote hardware device.
 
 ### [Stop-PcsvDevice](./Stop-PcsvDevice.md)
 Shuts down a remote hardware device.
-
-

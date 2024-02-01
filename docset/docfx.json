@@ -66,7 +66,7 @@
       "apiPlatform": "powershell",
       "ROBOTS": "INDEX, FOLLOW",
       "breadcrumb_path": "/powershell/windows/bread/toc.json",
-      "ms.service": "w10",
+      "ms.service": "windows-11",
       "ms.topic": "managed-reference",
       "ms.author": "jgerend",
       "author": "JasonGerend",

@@ -4,7 +4,7 @@ Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 2.0.0.1
 Locale: en-US
 Module Guid: 576ff287-7d01-46a3-8a88-94df7581a2b0
-Module Name: PCSVDevice
+Module Name: PcsvDevice
 ms.date: 01/19/2024
 title: PcsvDevice
 ---
@@ -13,7 +13,7 @@ title: PcsvDevice
 ## Description
 This reference provides cmdlet descriptions and syntax for all Physical Computer System View cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-## PCSVDevice Cmdlets
+## PcsvDevice Cmdlets
 ### [Clear-PcsvDeviceLog](./Clear-PcsvDeviceLog.md)
 Clears the System Event Log for a PCSV device.
 

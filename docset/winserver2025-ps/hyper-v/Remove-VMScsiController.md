@@ -192,10 +192,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
-None by default; **VMScsiController** if **-PassThru** is specified.
+### None
+
+By default, this cmdlet doesn't return any output.
+
+### VMScsiController
+
+When you use the **PassThru** parameter, this cmdlet returns a **VMScsiController** object.
 
 ## NOTES
 
 ## RELATED LINKS
-

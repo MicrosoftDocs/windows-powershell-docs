@@ -243,10 +243,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
-None by default; Microsoft.HyperV.PowerShell.RemoteFxVideoAdapter if *PassThru* is specified.
+### None
+
+By default, this cmdlet doesn't return any output.
+
+### Microsoft.HyperV.PowerShell.RemoteFxVideoAdapter
+
+When you use the **PassThru** parameter, this cmdlet returns a **Microsoft.HyperV.PowerShell.RemoteFxVideoAdapter** object.
 
 ## NOTES
 
 ## RELATED LINKS
-

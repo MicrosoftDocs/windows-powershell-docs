@@ -241,7 +241,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
+### SyncServerSetting
 This cmdlet returns an object that changes the synchronization configuration on the local server.
 
 ## NOTES
@@ -249,4 +249,3 @@ This cmdlet returns an object that changes the synchronization configuration on 
 ## RELATED LINKS
 
 [Get-SyncServerSetting](./Get-SyncServerSetting.md)
-

@@ -115,7 +115,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
+### CimInstance
+
 This cmdlet returns a CimInstance object that represents the provisioning job for the shielded virtual machine.
 
 ## NOTES
@@ -129,4 +130,3 @@ This cmdlet returns a CimInstance object that represents the provisioning job fo
 [New-ShieldedVMSpecializationDataFile](./New-ShieldedVMSpecializationDataFile.md)
 
 [Test-ShieldingDataApplicability](./Test-ShieldingDataApplicability.md)
-

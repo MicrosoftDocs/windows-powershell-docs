@@ -308,18 +308,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisks
+
 You can use the pipeline operator to pass an array of MSFT_PhysicalDisk objects to the *PhysicalDisks* parameter
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool
+
 You can use the pipeline operator to pass an MSFT_StoragePool object to the *StoragePool* parameter.
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk
+
 You can use the pipeline operator to pass an MSFT_VirtualDisk object to the *VirtualDisk* parameter.
 
 ## OUTPUTS
 
-###
-This cmdlet does not generate output.
+### None
+
+By default, this cmdlet doesn't return any output.
 
 ## NOTES
 
@@ -338,4 +342,3 @@ This cmdlet does not generate output.
 [Get-StoragePool](./Get-StoragePool.md)
 
 [Get-VirtualDisk](./Get-VirtualDisk.md)
-

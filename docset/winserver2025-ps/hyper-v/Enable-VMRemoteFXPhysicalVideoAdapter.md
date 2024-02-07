@@ -183,7 +183,7 @@ System.String\[\]
 
 ### None
 
-None by default.
+By default, this cmdlet doesn't return any output.
 
 ### Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter
 
@@ -192,4 +192,3 @@ None by default.
 ## NOTES
 
 ## RELATED LINKS
-

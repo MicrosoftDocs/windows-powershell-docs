@@ -1,0 +1,5 @@
+items:
+  - name: Windows PowerShell
+    href: get-started.md
+  - name: PowerShell 7 compatibility
+    href: module-compatibility.md

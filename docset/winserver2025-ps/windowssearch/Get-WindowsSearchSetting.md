@@ -44,8 +44,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
-**WindowsSearchSetting**Returns the values of properties that control Windows Search:
+### WindowsSearchSetting
+
+Returns the values of properties that control Windows Search:
 
 - EnableMeteredWebResultsSetting.
 Whether Windows Search displays web results and suggestions while using a metered network.
@@ -56,7 +57,9 @@ The experience setting.
 - WindowsSafeSearchSetting.
 The value of SafeSearch that Windows Search uses for queries.
 
-**SearchExperienceSetting** has the following possible values:
+### SearchExperienceSetting
+
+Has the following possible values:
 
 - PersonalizedAndLocation.
 Personalize Windows Search and other Microsoft experiences by using search history, some Microsoft account information, and specific location of the user.
@@ -65,7 +68,9 @@ Personalize Windows Search and other Microsoft experiences by using search histo
 - NotPersonalized.
 Do not personalize Windows Search and other Microsoft experiences or use specific location of the user.
 
-**WindowsSafeSearchSetting** has the following possible values:
+### WindowsSafeSearchSetting
+
+Has the following possible values:
 
 - Off.
 Windows Search does not remove adult content from results.
@@ -79,4 +84,3 @@ Windows Search excludes adult images, videos, and text from results.
 ## RELATED LINKS
 
 [Set-WindowsSearchSetting](./Set-WindowsSearchSetting.md)
-

@@ -213,12 +213,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageTier
+
 You can use the pipeline operator to pass an MSFT_StorageTier object to the *DesiredStorageTier* parameter.
 
 ## OUTPUTS
 
-###
-This cmdlet does not generate any output.
+### None
+
+By default, this cmdlet doesn't return any output.
 
 ## NOTES
 
@@ -231,4 +233,3 @@ This cmdlet does not generate any output.
 [Get-FileStorageTier](./Get-FileStorageTier.md)
 
 [Get-StorageTier](./Get-StorageTier.md)
-

@@ -129,18 +129,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###
-**System.IO.FileInfo**.
+### System.IO.FileInfo
+
 To obtain a **FileInfo** object, use the [Get-Item](https://go.microsoft.com/fwlink/?LinkID=290495) cmdlet for a specified file name.
 The cmdlet uses the **FullName** property as the value of the *FileName* parameter.
 
-**System.IO.DirectoryInfo**.
+### System.IO.DirectoryInfo
+
 To obtain a **DirectoryInfo** object, use **Get-Item** for a specified directory name.
 The cmdlet uses the **FullName** property as the value of the *FileName* parameter.
 
 ## OUTPUTS
 
 ### MSFT_FileIntegrity
+
 This cmdlet generates an **MSFT_FileIntegrity** object.
 
 ## NOTES

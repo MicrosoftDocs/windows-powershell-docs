@@ -845,9 +845,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
-None by default.
-if *PassThru* is specified, then a **Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter** is passed through to the pipeline if **-ManagementOS** is also specified, otherwise **Microsoft.HyperV.PowerShell.VMNetworkAdapter**.
+### None
+
+By default, this cmdlet doesn't return any output.
+
+### Microsoft.HyperV.PowerShell.VMNetworkAdapter
+
+When you use the **PassThru** parameter, this cmdlet returns a **Microsoft.HyperV.PowerShell.VMNetworkAdapter** object. 
+
+### Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter
+
+When you use the **PassThru** and **-ManagementOS** parameters, this cmdlet returns a **Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter** object.
 
 ## NOTES
 

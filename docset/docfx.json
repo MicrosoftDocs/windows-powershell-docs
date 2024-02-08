@@ -3,6 +3,11 @@
     "content": [
       { "files": [ "toc.yml" ], "src": "bread", "dest": "windows/bread" },
 
+      { "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2025-ps", "version": "WindowsServer2025-ps", "dest": "windows" },
+      { "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2025-ps", "version": "WindowsServer2025-ps", "dest": "winserver2025-ps" },
+      { "files": [ "**/*.yml" ], "exclude": [ "toc.yml" ], "src": "winserver2025-ps", "version": "WindowsServer2025-ps", "dest": "module" },
+      { "files": [ "toc.yml" ], "src": "winserver2025-ps", "version": "WindowsServer2025-ps", "dest": "module/WindowsServer2025-ps" },
+      
       { "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2022-ps", "version": "WindowsServer2022-ps", "dest": "windows" },
       { "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2022-ps", "version": "WindowsServer2022-ps", "dest": "winserver2022-ps" },
       { "files": [ "**/*.yml" ], "exclude": [ "toc.yml" ], "src": "winserver2022-ps", "version": "WindowsServer2022-ps", "dest": "module" },
@@ -39,6 +44,9 @@
       { "files": [ "**/*.png", "**/*.jpg" ], "exclude": [ "**/obj/**", "**/includes/**" ] }
     ],
     "versions": {
+      "WindowsServer2025-ps": {
+        "dest": "winserver2025-ps"
+      },
       "WindowsServer2022-ps": {
         "dest": "winserver2022-ps"
       },
@@ -104,6 +112,14 @@
         "mdop/**/*.yml": [
           "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
           "https://authoring-docs-microsoft.poolparty.biz/devrel/211bc889-ad71-4c77-b1cd-8ea0d02263f9"
+        ],
+        "winserver2025-ps/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56754133-c3c3-4a9f-af19-71bdbe19fccf"
+        ],
+        "winserver2025-ps/**/*.yml": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56754133-c3c3-4a9f-af19-71bdbe19fccf"
         ],
         "winserver2022-ps/**/*.md": [
           "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",

@@ -148,8 +148,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
-None by default; **Microsoft.HyperV.PowerShell.VMNetwork** if **-PassThru** is present.
+### None
+
+By default, this cmdlet doesn't return any output.
+
+### Microsoft.HyperV.PowerShell.VMNetwork
+
+When you use the **PassThru** parameter, this cmdlet returns a **Microsoft.HyperV.PowerShell.VMNetwork** object.
 
 ## NOTES
 

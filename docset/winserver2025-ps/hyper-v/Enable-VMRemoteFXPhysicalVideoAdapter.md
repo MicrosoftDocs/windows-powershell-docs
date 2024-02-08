@@ -16,25 +16,31 @@ Enables one or more RemoteFX physical video adapters for use with RemoteFX-enabl
 ## SYNTAX
 
 ### GPUByName (Default)
+
 ```
 Enable-VMRemoteFXPhysicalVideoAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>]
- [-Credential <PSCredential[]>] [-Name] <String[]> [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Credential <PSCredential[]>] [-Name] <String[]> [-Passthru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### GPUByObject
+
 ```
-Enable-VMRemoteFXPhysicalVideoAdapter [-GPU] <VMRemoteFXPhysicalVideoAdapter[]> [-Passthru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Enable-VMRemoteFXPhysicalVideoAdapter [-GPU] <VMRemoteFXPhysicalVideoAdapter[]> [-Passthru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Enable-VMRemoteFXPhysicalVideoAdapter** cmdlet enables one or more RemoteFX physical video adapters to be used with RemoteFX-enabled virtual machines.
+
+The **Enable-VMRemoteFXPhysicalVideoAdapter** cmdlet enables one or more RemoteFX physical video
+adapters to be used with RemoteFX-enabled virtual machines.
 
 ## EXAMPLES
 
 ### Code Example Title
-```
-PS C:\> Get-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia* | Enable-VMRemoteFXPhysicalVideoAdapter
+
+```powershell
+Get-VMRemoteFXPhysicalVideoAdapter -Name *Nvidia* | Enable-VMRemoteFXPhysicalVideoAdapter
 ```
 
 Enables all RemoteFX physical video adapters which include the sequence "Nvidia" in their name.
@@ -42,9 +48,11 @@ Enables all RemoteFX physical video adapters which include the sequence "Nvidia"
 ## PARAMETERS
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -59,10 +67,10 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
+
 Specifies one or more Hyper-V hosts on which the RemoteFX physical video adapters are to be enabled.
-NetBIOS names, IP addresses, and fully qualified domain names are allowable.
-The default is the local computer.
-Use localhost or a dot (.) to specify the local computer explicitly.
+NetBIOS names, IP addresses, and fully qualified domain names are allowable. The default is the
+local computer. Use localhost or a dot (.) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -77,6 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -92,8 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies one or more user accounts that have permission to perform this action.
-The default is the current user.
+
+Specifies one or more user accounts that have permission to perform this action. The default is the
+current user.
 
 ```yaml
 Type: PSCredential[]
@@ -108,6 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -GPU
+
 Specifies the RemoteFX physical video adapters to be enabled.
 
 ```yaml
@@ -123,8 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies an array of names of adapters.
-The cmdlet enables the RemoteFX physical video adapters that you specify.
+
+Specifies an array of names of adapters. The cmdlet enables the RemoteFX physical video adapters
+that you specify.
 
 ```yaml
 Type: String[]
@@ -139,7 +151,10 @@ Accept wildcard characters: False
 ```
 
 ### -Passthru
-Specifies that one or more **Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter** objects are to be passed through to the pipeline representing the RemoteFX physical video adapters to be enabled.
+
+Specifies that one or more **Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter** objects
+are to be passed through to the pipeline representing the RemoteFX physical video adapters to be
+enabled.
 
 ```yaml
 Type: SwitchParameter
@@ -154,8 +169,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -170,14 +185,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter[]
 
-###
-System.String\[\]
+### System.String[]
 
 ## OUTPUTS
 
@@ -187,7 +205,8 @@ By default, this cmdlet doesn't return any output.
 
 ### Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter
 
-**Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter\[\]** if *PassThru* is specified.
+What you use the **PassThru** parameter, the cmdlet returns
+**Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter** objects.
 
 ## NOTES
 

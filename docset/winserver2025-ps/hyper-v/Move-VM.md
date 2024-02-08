@@ -471,10 +471,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
-None, by default.
-**Microsoft.HyperV.PowerShell.VirtualMachine** if the migration succeeds and **-PassThru** is specified.
-**Microsoft.HyperV.PowerShell.CompatibilityReport** if the migration fails because of an incompatibility.
+### None
+
+By default, this cmdlet doesn't return any output.
+
+### Microsoft.HyperV.PowerShell.VirtualMachine
+
+When you use the **PassThru** parameter, this cmdlet returns a **Microsoft.HyperV.PowerShell.VirtualMachine** object if the migration is successful.
+
+### Microsoft.HyperV.PowerShell.CompatibilityReport
+
+When you use the **PassThru** parameter, this cmdlet returns a **Microsoft.HyperV.PowerShell.CompatibilityReport** object if the migration fails because of an incompatibility.
 
 ## NOTES
 

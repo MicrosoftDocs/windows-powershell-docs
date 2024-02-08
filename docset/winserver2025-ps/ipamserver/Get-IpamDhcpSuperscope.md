@@ -154,7 +154,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
+### Get-IpamDhcpSuperscope
+
 This cmdlet returns an object that represents an instance of **Get-IpamDhcpSuperscope**.
 
 ## NOTES
@@ -164,4 +165,3 @@ This cmdlet returns an object that represents an instance of **Get-IpamDhcpSuper
 [Get-IpamDhcpScope](./Get-IpamDhcpScope.md)
 
 [Get-IpamDhcpServer](./Get-IpamDhcpServer.md)
-

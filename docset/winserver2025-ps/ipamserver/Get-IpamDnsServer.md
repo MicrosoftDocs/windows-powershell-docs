@@ -122,7 +122,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
+### IpamDnsServer
+
 This cmdlet returns an instance of the **IpamDnsServer** object.
 
 ## NOTES
@@ -134,4 +135,3 @@ This cmdlet returns an instance of the **IpamDnsServer** object.
 [Get-IpamDnsResourceRecord](./Get-IpamDnsResourceRecord.md)
 
 [Get-IpamDnsZone](./Get-IpamDnsZone.md)
-

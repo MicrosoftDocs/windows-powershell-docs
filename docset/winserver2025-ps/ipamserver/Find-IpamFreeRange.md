@@ -151,7 +151,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
+### IpamFreeRange
+
 The cmdlet returns an instance of the **IpamFreeRange** object.
 
 ## NOTES
@@ -161,4 +162,3 @@ The cmdlet returns an instance of the **IpamFreeRange** object.
 [Find-IpamFreeAddress](./Find-IpamFreeAddress.md)
 
 [Find-IpamFreeSubnet](./Find-IpamFreeSubnet.md)
-

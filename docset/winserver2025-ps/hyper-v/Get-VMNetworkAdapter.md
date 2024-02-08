@@ -255,8 +255,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
-**Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter** if **ManagementOS** is specified; **Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter** and **Microsoft.HyperV.PowerShell.VMNetworkAdapter** if **All** is specified;**Microsoft.HyperV.PowerShell.VMNetworkAdapter** in all other cases.
+### Microsoft.HyperV.PowerShell.VMNetworkAdapter
+
+By default, **Microsoft.HyperV.PowerShell.VMNetworkAdapter** is output.
+
+### Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter
+
+**Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter** if **ManagementOS** is specified.
+
+### Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter and Microsoft.HyperV.PowerShell.VMNetworkAdapter
+
+**Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter** and **Microsoft.HyperV.PowerShell.VMNetworkAdapter** if **All** is specified.
 
 ## NOTES
 

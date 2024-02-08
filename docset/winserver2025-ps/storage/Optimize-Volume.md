@@ -356,16 +356,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_Volume
+
 You can use the pipeline operator to pass a Volume object to the *InputObject* parameter.
 
 ## OUTPUTS
 
-###
-This cmdlet does not generate output.
+### None
+
+By default, this cmdlet doesn't return any output.
 
 ## NOTES
 
-* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+- When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 
@@ -376,4 +378,3 @@ This cmdlet does not generate output.
 [Repair-Volume](./Repair-Volume.md)
 
 [Set-Volume](./Set-Volume.md)
-

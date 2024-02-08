@@ -150,7 +150,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
+### IpamDnsConditionalForwarder
+
 This cmdlet returns an object that represents an instance of the **IpamDnsConditionalForwarder** object.
 
 ## NOTES
@@ -162,4 +163,3 @@ This cmdlet returns an object that represents an instance of the **IpamDnsCondit
 [Get-IpamDnsServer](./Get-IpamDnsServer.md)
 
 [Get-IpamDnsZone](./Get-IpamDnsZone.md)
-

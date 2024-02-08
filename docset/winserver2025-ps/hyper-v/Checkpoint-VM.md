@@ -216,8 +216,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
-Nothing by default; **Microsoft.HyperV.PowerShell.Snapshot** if *PassThru* is specified.
+### None
+
+By default, this cmdlet doesn't return any output.
+
+### Microsoft.HyperV.PowerShell.Snapshot
+
+When you use the **PassThru** parameter, this cmdlet returns a **Microsoft.HyperV.PowerShell.Snapshot** object.
 
 ## NOTES
 

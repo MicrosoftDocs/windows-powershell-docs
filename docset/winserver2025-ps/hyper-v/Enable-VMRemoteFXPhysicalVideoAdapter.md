@@ -181,10 +181,14 @@ System.String\[\]
 
 ## OUTPUTS
 
-###
-None by default; **Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter\[\]** if *PassThru* is specified.
+### None
+
+By default, this cmdlet doesn't return any output.
+
+### Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter
+
+**Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter\[\]** if *PassThru* is specified.
 
 ## NOTES
 
 ## RELATED LINKS
-

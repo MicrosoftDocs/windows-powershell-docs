@@ -1499,8 +1499,8 @@ The acceptable values for this parameter are:
 - 7: Saturday 
 - 8: Never
 
-The default value is 8, never.
-If you specify a value of 8 or do not specify a value, Windows Defender does not perform scheduled scans.
+The default value is 0, Everyday.
+If you specify a value of 8 , Windows Defender does not perform scheduled scans.
 
 ```yaml
 Type: Day

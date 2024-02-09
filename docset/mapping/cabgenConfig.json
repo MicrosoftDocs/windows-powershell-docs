@@ -1,6 +1,13 @@
 {
     "monikers": [
         {
+            "WindowsServer2025-ps": {
+                "exclude": [
+                    "docset/winserver2025-ps/Microsoft.DiagnosticDataViewer",
+                    "docset/winserver2025-ps/Microsoft.Windows.ServerManager.Migration",
+                    "docset/winserver2025-ps/windowsdiagnosticdata"
+                ]
+            },
             "WindowsServer2022-ps": {
                 "exclude": [
                     "docset/winserver2022-ps/Microsoft.DiagnosticDataViewer",
@@ -20,17 +27,6 @@
                     "docset/winserver2016-ps/Microsoft.DiagnosticDataViewer",
                     "docset/winserver2016-ps/Microsoft.Windows.ServerManager.Migration",
                     "docset/winserver2016-ps/windowsdiagnosticdata"
-                ]
-            },
-            "winserver2012r2-ps": {
-                "exclude": [
-                    "docset/winserver2012r2-ps/hpc",
-                    "docset/winserver2012r2-ps/servermigrationcmdlets"
-                ]
-            },
-            "winserver2012-ps": {
-                "exclude": [
-                    "docset/winserver2012-ps/servermigrationcmdlets"
                 ]
             }
         }

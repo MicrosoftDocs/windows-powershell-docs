@@ -1,0 +1,1053 @@
+---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file: PS_VpnS2SInterface_v1.0.0.cdxml-help.xml
+Module Name: RemoteAccess
+ms.date: 12/20/2016
+online version: https://learn.microsoft.com/powershell/module/remoteaccess/set-vpns2sinterface?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
+title: Set-VpnS2SInterface
+---
+
+# Set-VpnS2SInterface
+
+## SYNOPSIS
+Updates parameters for an S2S Interface.
+
+## SYNTAX
+
+### EncryptionType (Default)
+```
+Set-VpnS2SInterface [[-Destination] <String[]>] [-AdminStatus <Boolean>] [-PromoteAlternate <Boolean>]
+ [-AuthenticationMethod <String>] [-EapMethod <String>] [-InternalIPv4 <Boolean>] [-Force]
+ [-PostConnectionIPv4Subnet <String[]>] [-IPv4TriggerFilter <String[]>] [-IPv4TriggerFilterAction <Action>]
+ [-PostConnectionIPv6Subnet <String[]>] [-IPv6TriggerFilter <String[]>] [-IPv6TriggerFilterAction <Action>]
+ [-IPv4Subnet <String[]>] [-Name] <String> [-ResponderAuthenticationMethod <String>] [-PassThru] [-Persistent]
+ [-AutoConnectEnabled <Boolean>] [-InitiateConfigPayload <Boolean>] [-RadiusAttributeClass <String>]
+ [-EnableQoS <EnableQoS>] [-TxBandwidthKbps <UInt64>] [-RxBandwidthKbps <UInt64>]
+ [-NetworkOutageTimeSeconds <UInt32>] [-NumberOfTries <UInt32>] [-RetryIntervalSeconds <UInt32>]
+ [-SADataSizeForRenegotiationKilobytes <UInt32>] [-SALifeTimeSeconds <UInt32>] [-MMSALifeTimeSeconds <UInt32>]
+ [-IPv6Subnet <String[]>] [-InternalIPv6 <Boolean>] [-IdleDisconnectSeconds <UInt32>] [-UserName <String>]
+ [-Password <String>] [-Certificate <X509Certificate2>] [-SharedSecret <String>] [-SourceIpAddress <String>]
+ [-LocalVpnTrafficSelector <CimInstance[]>] [-RemoteVpnTrafficSelector <CimInstance[]>]
+ [-EncryptionType <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### GreInterface
+```
+Set-VpnS2SInterface [[-Destination] <String[]>] [-AdminStatus <Boolean>] [-InternalIPv4 <Boolean>] [-Force]
+ [-IPv4Subnet <String[]>] [-Name] <String> [-PassThru] [-EnableQoS <EnableQoS>] [-TxBandwidthKbps <UInt64>]
+ [-RxBandwidthKbps <UInt64>] [-IPv6Subnet <String[]>] [-InternalIPv6 <Boolean>] [-SourceIpAddress <String>]
+ [[-GreKey] <UInt32>] [-GreTunnel] [-IPv4Address <String>] [-IPv6Address <String>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CustomPolicy
+```
+Set-VpnS2SInterface [[-Destination] <String[]>] [-AdminStatus <Boolean>] [-PromoteAlternate <Boolean>]
+ [-AuthenticationMethod <String>] [-EapMethod <String>] [-InternalIPv4 <Boolean>] [-Force]
+ [-PostConnectionIPv4Subnet <String[]>] [-IPv4TriggerFilter <String[]>] [-IPv4TriggerFilterAction <Action>]
+ [-PostConnectionIPv6Subnet <String[]>] [-IPv6TriggerFilter <String[]>] [-IPv6TriggerFilterAction <Action>]
+ [-IPv4Subnet <String[]>] [-Name] <String> [-ResponderAuthenticationMethod <String>] [-PassThru] [-Persistent]
+ [-AutoConnectEnabled <Boolean>] [-InitiateConfigPayload <Boolean>] [-RadiusAttributeClass <String>]
+ [-EnableQoS <EnableQoS>] [-TxBandwidthKbps <UInt64>] [-RxBandwidthKbps <UInt64>]
+ [-NetworkOutageTimeSeconds <UInt32>] [-NumberOfTries <UInt32>] [-RetryIntervalSeconds <UInt32>]
+ [-SADataSizeForRenegotiationKilobytes <UInt32>] [-SALifeTimeSeconds <UInt32>] [-MMSALifeTimeSeconds <UInt32>]
+ [-IPv6Subnet <String[]>] [-InternalIPv6 <Boolean>] [-IdleDisconnectSeconds <UInt32>] [-UserName <String>]
+ [-Password <String>] [-Certificate <X509Certificate2>] [-SharedSecret <String>]
+ [-EncryptionMethod <EncryptionMethod>] [-IntegrityCheckMethod <IntegrityCheckMethod>]
+ [-CipherTransformConstants <CipherTransformConstants>] [-DHGroup <DHGroup>]
+ [-AuthenticationTransformConstants <AuthenticationTransformConstants>] [-PfsGroup <PfsGroup>] [-CustomPolicy]
+ [-SourceIpAddress <String>] [-LocalVpnTrafficSelector <CimInstance[]>]
+ [-RemoteVpnTrafficSelector <CimInstance[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **Set-VpnS2SInterace** cmdlet is used to update parameters for a site-to-site (S2S) interface.
+If the connection is already connected, the changes take effect after disconnection.
+You can use the *CustomPolicy* parameter to customize Internet Protocol security (IPSec) settings.
+If the *AuthenticationMethod* parameter is set to pre-shared key (PSK), then only one interface can be enabled per destination and the initiator and responder policies are governed by what is specified for each interface.
+If the *AuthenticationMethod* parameter is set to user name or computer certificates (machine certificates), then only the initiator policies are governed by what is specified for each interface and the responder policies are governed by what is specified on the server.
+For incoming connections:
+
+- If the authentication method is pre shared key, the interface whose destination IP matches the incoming IP is activated.
+- If the authentication method is username, the interface whose name matches the username is activated.
+- If the authentication method is certificates the interface whose name matches the certificate subject name is activated.
+
+This cmdlet is used to modify parameters a S2S Interface.
+If the connection is already connected, the changes take effect after disconnection.
+
+## EXAMPLES
+
+### Example 1: Modify the destination address of an interface
+```
+PS C:\>Set-VpnS2SInterface -Name "Edge1" -Destination 131.107.0.4 -PassThru
+```
+
+This command modifies the destination address of interface named Edge1.
+
+### Example 2: Modify the initiator authentication method
+```
+PS C:\>Set-VpnS2SInterface -Name "Edge1" -AuthenticationMethod EAP -EapMethod EAP-MSCHAPv2 -PassThru
+```
+
+This command modifies the initiator authentication method.
+
+### Example 3: Modify the configuration of an existing S2S VPN interface
+```
+PS C:\>Set-VpnS2SInterface -Name "Edge1" -IPv4Subnet 172.23.90.0/24:50 -PassThru
+RoutingDomain   Name                 Destination          AdminStatus  ConnectionState IPv4Subnet
+-------------   ----                 -----------          -----------  --------------- ----------
+Rd_001          Blue-Tunnel-2        {100.0.0.7}          True         Disconnected    {172.23.90.0/24:50}
+```
+
+This command modifies the configuration of an existing S2S VPN interface of a specific routing domain in a Multi-Tenant environment.
+
+## PARAMETERS
+
+### -AdminStatus
+Specifies the admin status of the cmdlet.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AsJob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationMethod
+Specifies the AuthenticationMethod to be used by the S2S connection.
+
+```yaml
+Type: String
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+Accepted values: EAP, MachineCertificates, PSKOnly, MSCHAPv2,
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthenticationTransformConstants
+Specifies the authentication transform plumbed in IPsec policy.
+
+```yaml
+Type: AuthenticationTransformConstants
+Parameter Sets: CustomPolicy
+Aliases: FirstTransformType, AuthenticationTransformConstant
+Accepted values: MD596, SHA196, SHA256128, GCMAES128, GCMAES192, GCMAES256, None
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AutoConnectEnabled
+Specifies a value that indicates whether auto-connect is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Certificate
+Specifies the subject name of the certificate to be used in default store.
+This parameter is applicable only if the *AuthenticationMethod* parameter is set to MachineCert.
+
+```yaml
+Type: X509Certificate2
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases: Cert
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CimSession
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+The default is the current session on the local computer.
+
+```yaml
+Type: CimSession[]
+Parameter Sets: (All)
+Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CipherTransformConstants
+Specifies the cipher plumbed in IPsec policy.
+
+```yaml
+Type: CipherTransformConstants
+Parameter Sets: CustomPolicy
+Aliases: OtherCipherAlgorithm, FirstCipherAlgorithm, CipherTransformConstant
+Accepted values: DES, DES3, AES128, AES192, AES256, GCMAES128, GCMAES192, GCMAES256, None
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomPolicy
+Specifies custom Internet Key Exchange (IKE) IPsec policies, must be a separate parameter set.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: CustomPolicy
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DHGroup
+Specifies the Diffie-Hellman (DH) Group Plumbed in IPsec policy.
+
+```yaml
+Type: DHGroup
+Parameter Sets: CustomPolicy
+Aliases:
+Accepted values: None, Group1, Group2, Group14, ECP256, ECP384, Group24
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Destination
+Specifies the destination end-point of the S2S connection.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: RemoteTunnelEndpoint, RemoteTunnelHostname, RemoteAddress
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EapMethod
+Specifies EAP method if IkeLocalAuthenticationMethod is EAP.
+
+```yaml
+Type: String
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+Accepted values: EAP-TLS, EAP-PEAP, EAP-MSCHAPv2,
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableQoS
+Indicates whether to enable Quality of Service (QoS) on an interface.
+The acceptable values for this parameter are:
+
+- Enabled
+- Disabled
+
+```yaml
+Type: EnableQoS
+Parameter Sets: (All)
+Aliases:
+Accepted values: Disabled, Enabled
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EncryptionMethod
+Specifies the encryption method plumbed in IKE policy.
+
+```yaml
+Type: EncryptionMethod
+Parameter Sets: CustomPolicy
+Aliases: Encryption
+Accepted values: DES, DES3, AES128, AES192, AES256
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EncryptionType
+Specifies the type of Encryption.
+
+```yaml
+Type: String
+Parameter Sets: EncryptionType
+Aliases:
+Accepted values: NoEncryption, RequireEncryption, OptionalEncryption, MaximumEncryption, CustomEncryption
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Force
+Forces the command to run without asking for user confirmation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GreKey
+Specifies the individual traffic flows within a Generic Routing Encapsulation (GRE) tunnel.
+
+```yaml
+Type: UInt32
+Parameter Sets: GreInterface
+Aliases:
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -GreTunnel
+Indicates that this cmdlet uses the GRE tunnel capability for the Windows Server Gateway.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: GreInterface
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IPv4Address
+Specifies the IPv4 address.
+
+```yaml
+Type: String
+Parameter Sets: GreInterface
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IPv4Subnet
+Specifies the IPv4 subnet that is routed on this connection with metric.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: IPv4TriggerSubnet
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IPv4TriggerFilter
+Specifies an array of IPv4 filters that trigger demand dial connections.
+
+```yaml
+Type: String[]
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -IPv4TriggerFilterAction
+Indicates whether a filter should trigger an S2S connection.
+
+```yaml
+Type: Action
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+Accepted values: Allow, Deny
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -IPv6Address
+Specifies the IPv6 address.
+
+```yaml
+Type: String
+Parameter Sets: GreInterface
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IPv6Subnet
+Specifies the IPv6 subnet that is routed on this connection with metric.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: IPv6TriggerSubnet
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IPv6TriggerFilter
+Specifies an array of IPv6 filters that trigger demand dial connections.
+
+```yaml
+Type: String[]
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -IPv6TriggerFilterAction
+Indicates whether a filter should trigger an S2S connection.
+
+```yaml
+Type: Action
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+Accepted values: Allow, Deny
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -IdleDisconnectSeconds
+Specifies the time, in seconds, after which an idle connection is terminated.
+Unless the idle time-out is disabled, the entire connection is terminated if the connection is idle for the specified interval.
+
+```yaml
+Type: UInt32
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases: IdleDurationSeconds, IdleDisconnectSec
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InitiateConfigPayload
+Indicates whether to initiate a config payload negotiation.
+
+```yaml
+Type: Boolean
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IntegrityCheckMethod
+Specifies the integrity method plumbed in IPsec policy.
+
+```yaml
+Type: IntegrityCheckMethod
+Parameter Sets: CustomPolicy
+Aliases: FirstIntegrityAlgorithm, OtherHashAlgorithm
+Accepted values: MD5, SHA1, SHA256, SHA384
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InternalIPv4
+Specifies that the IPv4 address should be negotiated.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InternalIPv6
+Specifies that the Ipv6 address should be negotiated.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LocalVpnTrafficSelector
+Specifies the traffic selector object.
+
+```yaml
+Type: CimInstance[]
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MMSALifeTimeSeconds
+```yaml
+Type: UInt32
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases: MMSaLifeTimeSec
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the connection.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ElementName
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetworkOutageTimeSeconds
+Specifies the maximum network outage time after which the connection is disconnected.
+
+```yaml
+Type: UInt32
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases: NetworkOutageTimeSec
+Accepted values: 3, 6, 9, 12, 15, 30, 60, 120, 240, 360, 720, 900
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NumberOfTries
+Specifies the number of tries the connection is retried.
+If you specify 0, the cmdlet will retry indefinitely.
+
+```yaml
+Type: UInt32
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PassThru
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Password
+Specifies the password of the username to be used for dialing the connection.
+This parameter is only applicable if *AuthenticationMethod* is set to EAP.
+
+```yaml
+Type: String
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Persistent
+Indicates whether the connection state is persisted across the service restart or system reboots.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PfsGroup
+Specifies the perfect forward secrecy (PFS) Group plumbed in IPsec policy.
+
+```yaml
+Type: PfsGroup
+Parameter Sets: CustomPolicy
+Aliases: PfsGroupId
+Accepted values: None, PFS1, PFS2, PFS2048, ECP256, ECP384, PFSMM, PFS24
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PostConnectionIPv4Subnet
+Specifies the IPv4 subnet routes that are added to a S2S interface after the connection is established.
+The values specified are not used to initiate the S2S VPN connection.
+
+```yaml
+Type: String[]
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PostConnectionIPv6Subnet
+Specifies the IPv6 subnet routes that are added to a S2S interface after the connection is established.
+The values specified are not used to initiate the S2S VPN connection.
+
+```yaml
+Type: String[]
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PromoteAlternate
+Specifies an alternate IP address that when it successfully connects becomes the primary IP address, and the current primary IP address is moved to the alternate list.
+
+```yaml
+Type: Boolean
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RadiusAttributeClass
+Specifies a RADIUS attribute.
+
+```yaml
+Type: String
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RemoteVpnTrafficSelector
+Specifies the traffic selector object.
+
+```yaml
+Type: CimInstance[]
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResponderAuthenticationMethod
+Specifies the responder AuthenticationMethod to be used by the S2S connection.
+
+```yaml
+Type: String
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+Accepted values: MachineCertificates, PSKOnly,
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RetryIntervalSeconds
+Specifies the number of seconds between retries.
+
+```yaml
+Type: UInt32
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases: RetryIntervalSec
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RxBandwidthKbps
+Specifies the receive bandwidth limit, in kilobits per second (Kbps).
+
+```yaml
+Type: UInt64
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SADataSizeForRenegotiationKilobytes
+Specifies the number of kilobytes that are allowed to transfer using a security association (SA), after which the SA will be renegotiated.
+
+```yaml
+Type: UInt32
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases: SARenegotiationDataSizeKB, LifeTimeKiloBytes
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SALifeTimeSeconds
+Specifies the lifetime of a SA in seconds, after which the SA is no longer valid.
+
+```yaml
+Type: UInt32
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases: SaLifeTimeSec, LifeTimeSeconds, QMSALifeTimeSeconds
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SharedSecret
+Specifies the text of the shared secret to be used in dialing the connection.
+This parameter is only applicable if *AuthenticationMethod* is set to PSK.
+
+```yaml
+Type: String
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SourceIpAddress
+Specifies the source IPv4 or IPv6 addresses to use when dialing the connection.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ThrottleLimit
+Specifies the maximum number of concurrent connections that can be established to run this command.
+If you omit this parameter or enter a value of 0, the default value, 32, is used.
+
+The throttle limit applies only to the current command, not to the session or to the computer.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TxBandwidthKbps
+Specifies a transmit bandwidth limit, in Kbps, for the interface.
+
+```yaml
+Type: UInt64
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserName
+Specifies the username to be used for dialing this connection.
+This parameter is only applicable if *AuthenticationMethod* is set to EAP.
+
+```yaml
+Type: String
+Parameter Sets: EncryptionType, CustomPolicy
+Aliases: User
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### System.String[]
+
+### System.Boolean
+
+### System.String
+
+### System.Nullable`1[[Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.Action, Microsoft.PowerShell.Cmdletization.GeneratedTypes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+### System.Management.Automation.SwitchParameter
+
+### System.Nullable`1[[Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.EnableQoS, Microsoft.PowerShell.Cmdletization.GeneratedTypes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+### System.Nullable`1[[System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+
+### System.UInt32
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.EncryptionMethod
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.IntegrityCheckMethod
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.CipherTransformConstants
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.DHGroup
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.AuthenticationTransformConstants
+
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.PfsGroup
+
+### Microsoft.Management.Infrastructure.CimInstance[]
+
+### System.Nullable`1[[System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+
+## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
+
+### Microsoft.Management.Infrastructure.CimInstance#VpnS2SInterface
+
+## NOTES
+
+## RELATED LINKS
+
+[Add-VpnS2SInterface](./Add-VpnS2SInterface.md)
+
+[Connect-VpnS2SInterface](./Connect-VpnS2SInterface.md)
+
+[Disconnect-VpnS2SInterface](./Disconnect-VpnS2SInterface.md)
+
+[Get-VpnS2SInterface](./Get-VpnS2SInterface.md)
+
+[Remove-VpnS2SInterface](./Remove-VpnS2SInterface.md)
+
+[Remote Access Cmdlets](./remoteaccess.md)
+

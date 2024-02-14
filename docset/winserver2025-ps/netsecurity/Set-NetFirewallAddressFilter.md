@@ -247,19 +247,24 @@ Accept wildcard characters: False
 
 ### -RemoteAddress
 Specifies that network packets with matching IP addresses match this rule.
-This parameter value is the second end point of an IPsec rule and specifies the computers that are subject to the requirements of this rule.
-This parameter value is an IPv4 or IPv6 address, hostname, subnet, range, or the following keyword: Any.
+This parameter value is an IPv4 or IPv6 address, subnet, range or keyword.
 The acceptable formats for this parameter are:
+
 - Single IPv4 Address: 1.2.3.4
 - Single IPv6 Address: fe80::1
 - IPv4 Subnet (by network bit count): 1.2.3.4/24
 - IPv6 Subnet (by network bit count): fe80::1/48
 - IPv4 Subnet (by network mask): 1.2.3.4/255.255.255.0
-- IPv4 Range: 1.2.3.4 through 1.2.3.7
-- IPv6 Range: fe80::1 through fe80::9
+- IPv4 Range: 1.2.3.4-1.2.3.7
+- IPv6 Range: fe80::1-fe80::9
+- Keyword: Any, LocalSubnet, DNS, DHCP, WINS, DefaultGateway, Internet, Intranet, IntranetRemoteAccess, PlayToDevice, CaptivePortal.
+
+> [!TIP]
+> Keywords can be restricted to IPv4 or IPv6 by appending a 4 or 6 (for example, keyword "LocalSubnet4" means that all local IPv4 addresses are matching this rule).
 
 > [!NOTE]
-> Querying for rules with this parameter can only be performed using filter objects. See the **Get-NetFirewallAddressFilter** cmdlet for more information.
+> Querying for rules with this parameter can only be performed using filter objects.
+> See the [Get-NetFirewallAddressFilter](./Get-NetFirewallAddressFilter.md) cmdlet for more information.
 
 ```yaml
 Type: String[]

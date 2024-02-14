@@ -75,7 +75,7 @@ $Parameters = @{
 New-SmbShare @Parameters
 ```
 
-This command creates an SMB share named `VMSFiles` and grants Change permissions to the domain
+This command creates an SMB share named `Public` and grants Change permissions to the domain
 groups `CONTOSO\Finance Users` and `CONTOSO\HR Users`. Full Access permissions to the builtin
 `Administrators` group.
 

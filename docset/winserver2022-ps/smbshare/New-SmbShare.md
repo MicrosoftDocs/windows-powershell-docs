@@ -42,8 +42,8 @@ To delete a share that was created by this cmdlet, use the `Remove-SmbShare` cmd
 
 ```powershell
 $Parameters = @{
-    Name = 'Public'
-    Path = 'D:\Public'
+    Name = 'VMSFiles'
+    Path = 'C:\ClusterStorage\Volume1\VMFiles'
     FullAccess = 'Contoso\Administrator', 'Contoso\Contoso-HV1$'
 }
 New-SmbShare @Parameters
@@ -67,8 +67,8 @@ This command creates an encrypted SMB share.
 
 ```powershell
 $Parameters = @{
-    Name = 'VMSFiles'
-    Path = 'C:\ClusterStorage\Volume1\VMFiles'
+    Name = 'Public'
+    Path = 'D:\Public'
     ChangeAccess = 'CONTOSO\Finance Users','CONTOSO\HR Users'
     FullAccess = 'Administrators'
 }

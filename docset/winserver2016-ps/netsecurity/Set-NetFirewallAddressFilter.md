@@ -260,11 +260,11 @@ The acceptable formats for this parameter are:
 - Keyword: Any, LocalSubnet, DNS, DHCP, WINS, DefaultGateway, Internet, Intranet, IntranetRemoteAccess, PlayToDevice.
 
 > [!TIP]
-> Keywords can be restricted to IPv4 or IPv6 by appending a 4 or 6 (for example, keyword "LocalSubnet4" means that all local IPv4 addresses are matching this rule).
+> Keywords can be restricted to IPv4 or IPv6 by appending a 4 or 6 (for example, keyword `LocalSubnet4` means that all local IPv4 addresses are matching this rule).
 
 > [!NOTE]
 > Querying for rules with this parameter can only be performed using filter objects.
-> See the [Get-NetFirewallAddressFilter](./Get-NetFirewallAddressFilter.md) cmdlet for more information.
+> See the [`Get-NetFirewallAddressFilter`](./Get-NetFirewallAddressFilter.md) cmdlet for more information.
 
 ```yaml
 Type: String[]

@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Module Name: Microsoft.Windows.ServerManager.Migration
 ms.date: 01/03/2017
 title: Microsoft.Windows.ServerManager.Migration

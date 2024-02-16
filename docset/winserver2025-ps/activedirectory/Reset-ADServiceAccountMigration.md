@@ -79,7 +79,7 @@ A Secure Sockets Layer (SSL) connection is required for the Basic authentication
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -109,7 +109,7 @@ Directory module for Windows PowerShell returns a terminating error.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ If two or more objects are found, the cmdlet returns a non-terminating error.
 ```yaml
 Type: ADServiceAccount
 Parameter Sets: ADServiceAccountMigrationParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -152,7 +152,7 @@ account must be specified by it's distinguished name.
 ```yaml
 Type: String
 Parameter Sets: ADServiceAccountMigrationParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -190,7 +190,7 @@ order that they are listed:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

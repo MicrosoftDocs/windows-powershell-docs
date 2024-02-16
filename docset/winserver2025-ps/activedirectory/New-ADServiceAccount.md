@@ -761,7 +761,6 @@ service account without the parameters required for successful inbound authentic
 Type: SwitchParameter
 Parameter Sets: RestrictedToOutboundAuthenticationOnly
 Aliases:
-Accepted values: true
 
 Required: True
 Position: Named
@@ -780,7 +779,6 @@ Windows Server 2008 R2.
 Type: SwitchParameter
 Parameter Sets: RestrictedToSingleComputer
 Aliases:
-Accepted values: true
 
 Required: True
 Position: Named
@@ -798,7 +796,6 @@ Delegated managed service accounts were introduced in Windows Server 2025.
 Type: SwitchParameter
 Parameter Sets: Group
 Aliases:
-AcceptedValues: true
 
 Required: False
 Position: Named

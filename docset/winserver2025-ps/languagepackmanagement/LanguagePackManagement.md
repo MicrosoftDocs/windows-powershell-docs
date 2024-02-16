@@ -1,6 +1,6 @@
 ---
 description: The LanguagePackManagement module includes cmdlets that help you easily manage languages and language settings on a running Windows installation
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
 Module Guid: f42dbdd4-4358-4067-8155-a4567a0aaee5

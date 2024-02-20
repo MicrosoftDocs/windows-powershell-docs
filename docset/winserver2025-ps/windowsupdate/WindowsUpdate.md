@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-Module Guid: c3f81f5f-6555-43cb-802a-aef7aa5a11cb
+Module Guid: db6155f2-9e89-45cf-876a-f15141294f5b
 Module Name: WindowsUpdate
 ms.date: 12/20/2016
 title: WindowsUpdate

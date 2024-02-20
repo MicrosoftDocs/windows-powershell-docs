@@ -4,16 +4,16 @@ Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
 Module Guid: 5ee6f0a2-bfc8-4824-a1e2-f974d39ca886
-Module Name: NPS
+Module Name: Nps
 ms.date: 12/20/2016
-title: NPS
+title: Nps Module
 ---
 
-# NPS Module
+# Nps Module
 ## Description
 This reference provides cmdlet descriptions and syntax for all NPS cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-## NPS Cmdlets
+## Nps Cmdlets
 ### [Export-NpsConfiguration](./Export-NpsConfiguration.md)
 Exports NPS settings.
 

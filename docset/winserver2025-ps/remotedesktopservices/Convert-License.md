@@ -130,9 +130,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-RDLicenseConfiguration](../rdmgmt/Get-RDLicenseConfiguration.md)
+[Get-RDLicenseConfiguration](../remotedesktop/Get-RDLicenseConfiguration.md)
 
-[Get-RDSessionHost](../rdmgmt/Get-RDSessionHost.md)
+[Get-RDSessionHost](../remotedesktop/Get-RDSessionHost.md)
 
 [Get-WmiObject](https://go.microsoft.com/fwlink/?LinkId=821595)
 

@@ -4,16 +4,16 @@ Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
 Module Guid: 176542f6-2a6b-11e0-ab18-d010e0d72085
-Module Name: KDS
+Module Name: Kds
 ms.date: 12/20/2016
-title: KDS
+title: Kds module
 ---
 
-# KDS Module
+# Kds module
 ## Description
 This reference provides cmdlet descriptions and syntax for all Key Distribution Service (KDS)-specific cmdlets. It lists the cmdlets in alphabetical order.
 
-## KDS Cmdlets
+## Kds Cmdlets
 ### [Add-KdsRootKey](./Add-KdsRootKey.md)
 Generates a new root key for the Microsoft Group KdsSvc within Active Directory.
 
@@ -31,5 +31,3 @@ Sets the configuration of Microsoft Group KdsSvc.
 
 ### [Test-KdsRootKey](./Test-KdsRootKey.md)
 Tests the root key configuration.
-
-

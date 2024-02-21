@@ -3,12 +3,12 @@ Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 5.1.0.2025
 Locale: en-US
 Module Guid: 1c9ff8ee-e567-4883-a532-4087d40bc5d6
-Module Name: OSConfiguration
+Module Name: OsConfiguration
 ms.date: 02/21/2024
-title: OSConfiguration module
+title: OsConfiguration module
 ---
 
-# OSConfiguration Module
+# OsConfiguration Module
 ## Description
 {{ Fill in the Description }}
 
@@ -36,4 +36,3 @@ title: OSConfiguration module
 
 ### [Set-OsConfigurationProperty](Set-OsConfigurationProperty.md)
 {{ Fill in the Description }}
-

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Management.OsConfiguration.Commands.dll-Help.xml
-Module Name: OSConfiguration
+Module Name: OsConfiguration
 ms.date: 02/21/2024
 online version: https://learn.microsoft.com/powershell/module/osconfiguration/set-osconfigurationdocument?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0

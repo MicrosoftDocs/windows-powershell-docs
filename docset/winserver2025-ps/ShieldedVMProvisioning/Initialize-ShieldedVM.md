@@ -1,7 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ShieldedVmCmdlets-help.xml
-Module Name: ShieldedVmCmdlets
+Module Name: ShieldedVMProvisioning
 ms.date: 12/20/2016
 online version: https://learn.microsoft.com/powershell/module/shieldedvmcmdlets/initialize-shieldedvm?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0

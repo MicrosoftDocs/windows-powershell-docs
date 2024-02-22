@@ -4,16 +4,16 @@ Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 5.0.2.1
 Locale: en-US
 Module Guid: 7f53f4d9-97ba-4322-9c8d-008f1ca4be6a
-Module Name: MultipointVdi
+Module Name: MultiPointVdi
 ms.date: 12/20/2016
-title: MultipointVdi
+title: MultiPointVdi
 ---
 
-# MultipointVdi Module
+# MultiPointVdi Module
 ## Description
 The MultiPoint VDI cmdlets in this module are used to manage MultiPoint VDI virtual desktops.
 
-## MultipointVdi Cmdlets
+## MultiPointVdi Cmdlets
 ### [Disable-WmsVirtualDesktopRole](./Disable-WmsVirtualDesktopRole.md)
 Disables a Hyper-V virtual desktop role.
 

@@ -4,7 +4,7 @@ Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
 Module Guid: b57d41f8-8b6b-4012-912f-b08109101281
-Module Name: DcbQoS
+Module Name: DcbQos
 ms.date: 12/27/2016
 title: DcbQoS
 ---

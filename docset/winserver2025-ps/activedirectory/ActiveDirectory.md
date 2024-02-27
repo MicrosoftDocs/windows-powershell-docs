@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 4.0.6.1
 Locale: en-US
 Module Guid: 43c15630-959c-49e4-a977-758c5cc93408
@@ -44,6 +44,9 @@ Clears the expiration date for an Active Directory account.
 
 ### [Clear-ADClaimTransformLink](./Clear-ADClaimTransformLink.md)
 Removes a claims transformation from being applied to one or more cross-forest trust relationships in Active Directory.
+
+### [Complete-ADServiceAccountMigration](./Complete-ADServiceAccountMigration.md)
+Completes the migration process of a service account to a delegated managed service account.
 
 ### [Disable-ADAccount](./Disable-ADAccount.md)
 Disables an Active Directory account.
@@ -342,6 +345,9 @@ Removes an Active Directory user.
 ### [Rename-ADObject](./Rename-ADObject.md)
 Changes the name of an Active Directory object.
 
+### [Reset-ADServiceAccountMigration](./Reset-ADServiceAccountMigration.md)
+Resets and unlinks the delegated managed service account from the user account.
+
 ### [Reset-ADServiceAccountPassword](./Reset-ADServiceAccountPassword.md)
 Resets the password for a standalone managed service account.
 
@@ -447,11 +453,17 @@ Modifies an Active Directory user.
 ### [Show-ADAuthenticationPolicyExpression](./Show-ADAuthenticationPolicyExpression.md)
 Displays the Edit Access Control Conditions window update or create security descriptor definition language (SDDL) security descriptors.
 
+### [Start-ADServiceAccountMigration](./Start-ADServiceAccountMigration.md)
+Starts the migration of a user account to a delegated managed service account.
+
 ### [Sync-ADObject](./Sync-ADObject.md)
 Replicates a single object between any two domain controllers that have partitions in common.
 
 ### [Test-ADServiceAccount](./Test-ADServiceAccount.md)
 Tests a managed service account from a computer.
+
+### [Undo-ADServiceAccountMigration](./Undo-ADServiceAccountMigration.md)
+Reverts the migration phase of delegated managed service account to a user account.
 
 ### [Uninstall-ADServiceAccount](./Uninstall-ADServiceAccount.md)
 Uninstalls an Active Directory managed service account from a computer or removes a cached group managed service account from a computer.

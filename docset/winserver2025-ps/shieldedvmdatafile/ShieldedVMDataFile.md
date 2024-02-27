@@ -1,5 +1,5 @@
 ---
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 5.0.0.2
 Locale: en-US
 Module Guid: 9e8b69b3-2cc7-4060-8d66-6f86be39febf

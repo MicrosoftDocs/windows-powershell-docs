@@ -1,10 +1,10 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
 Module Guid: cf094c6b-63d1-4dda-bf70-15a602c4eb2b
-Module Name: pki
+Module Name: PKI
 ms.date: 12/20/2016
 title: pki
 ---

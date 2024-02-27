@@ -1,7 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetQosFlowControl.cdxml-help.xml
-Module Name: DcbQoS
+Module Name: DcbQos
 ms.date: 12/27/2016
 online version: https://learn.microsoft.com/powershell/module/dcbqos/enable-netqosflowcontrol?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0

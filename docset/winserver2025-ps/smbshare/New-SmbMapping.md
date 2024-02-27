@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateCheck
-Indicates that the client does not need to trust the server certificate’s issuer in order to connect using SMB over QUIC.
+Indicates that the client does not need to trust the server certificate's issuer in order to connect using SMB over QUIC.
 
 ```yaml
 Type: SwitchParameter
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -257,9 +257,9 @@ Accept wildcard characters: False
 ### -TransportType
 Specifies the network transport used by SMB. The acceptable values for this parameter are:
 
-- `TCP:` Use TCP network transport.
-- `QUIC:` Use QUIC network transport.
-- `None"` Use default transport behavior (first try TCP then try QUIC).
+- `TCP`: Use TCP network transport.
+- `QUIC`: Use QUIC network transport.
+- `None`: Use default transport behavior (first try TCP then try QUIC).
 
 ```yaml
 Type: TransportType
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseWriteThrough
-Indicates that forced unit access (“write through”) is required and bypasses all OS caches, forcing IO to disk.
+Indicates that forced unit access ("write through") is required and bypasses all OS caches, forcing IO to disk.
 
 ```yaml
 Type: Boolean

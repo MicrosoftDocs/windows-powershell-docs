@@ -4,16 +4,16 @@ Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 5.0.1.1
 Locale: en-US
 Module Guid: beb3db13-eed6-4f7b-8420-079e395b58f9
-Module Name: ADRMSAdmin
+Module Name: ADRMSADMIN
 ms.date: 12/20/2016
-title: ADRMSAdmin
+title: ADRMSADMIN
 ---
 
-# ADRMSAdmin Module
+# ADRMSADMIN Module
 ## Description
-This topic contains brief descriptions of the Windows PowerShell cmdlets that are for use in administering Active Directory Rights Management Services (AD RMS) in Windows Server 2016. Each cmdlet in the table is linked to additional information about that cmdlet. These cmdlets give you the ability to administer an AD RMS cluster using PowerShell.
+This topic contains brief descriptions of the Windows PowerShell cmdlets that are for use in administering Active Directory Rights Management Services (AD RMS) in Windows Server. Each cmdlet in the table is linked to additional information about that cmdlet. These cmdlets give you the ability to administer an AD RMS cluster using PowerShell.
 
-## ADRMSAdmin Cmdlets
+## ADRMSADMIN Cmdlets
 ### [Export-RmsReportDefinitionLanguage](./Export-RmsReportDefinitionLanguage.md)
 Exports all report definition (.rdl) files.
 

@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 4.0.3.1
 Locale: en-US
 Module Guid: 95b28fd4-92c3-41e8-b338-2df356ba9eca

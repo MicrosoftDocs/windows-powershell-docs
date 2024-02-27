@@ -1,15 +1,15 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+Download Help Link: https://aka.ms/winsvr-2025-pshelp
 Help Version: 5.0.1.1
 Locale: en-US
 Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
-Module Name: DISM
+Module Name: Dism
 ms.date: 10/07/2021
-title: DISM
+title: Dism Module
 ---
 
-# DISM Module
+# Dism Module
 
 ## Description
 
@@ -19,14 +19,13 @@ use DISM tools to mount, and get information about, Windows image (`.wim`) files
 disks (`.vhd` or `.vhdx`). You can also use it to install, uninstall, configure, and update Windows
 features, packages, and drivers in a Windows image or to change the edition of a Windows image.
 
-The DISM platform also includes a command-line tool, DISM.exe, and the
-[DISM API](https://go.microsoft.com/fwlink/?LinkID=237611). The command-line tool is available in
-the
+The DISM platform also includes a command-line tool, `dism.exe`, and the
+[DISM API](https://go.microsoft.com/fwlink/?LinkID=237611). The command-line tool is available in the
 [Windows Assessment and Deployment Kit (Windows ADK)](https://go.microsoft.com/fwlink/?LinkId=206587)
 and includes additional functionality that supports servicing commands for international settings.
 
-You can check for errors when running DISM cmdlets by checking if the `$?`. If set to True the last
-operation succeeded. If False the last operation failed. The `$LASTEXITCODE` contains the exit code
+You can check for errors when running Dism cmdlets by checking if the `$?`. If set to True, the last
+operation succeeded. If False, the last operation failed. The `$LASTEXITCODE` contains the exit code
 of the last Win32 executable run. For example, to check that the `Get-WindowsImage` cmdlet fails to
 get information about the Windows image contained in the file, `E:\images\c.wim`, type the
 following:
@@ -42,13 +41,12 @@ catch
     $message = "TRAPPED: {0}: '{1}'" -f ($_.Exception.GetType().FullName), ($_.Exception.Message)
     Write-host $message
 }
-
 ```
 
 For more information about error handling, see the
 [about_Try_Catch_Finally](https://go.microsoft.com/fwlink/p/?LinkID=317390).
 
-## DISM Cmdlets
+## Dism Cmdlets
 ### [Add-AppxProvisionedPackage](./Add-AppxProvisionedPackage.md)
 Adds an app package (.appx) that will install for each new user to a Windows image.
 
@@ -188,5 +186,3 @@ Updates the Windows image file boot (WIMBoot) configuration entry, associated wi
 
 ### [Use-WindowsUnattend](./Use-WindowsUnattend.md)
 Applies an unattended answer file to a Windows image.
-
-

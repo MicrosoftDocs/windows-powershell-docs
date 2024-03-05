@@ -34,15 +34,13 @@ Merge is an offline operation; the virtual hard disk chain must not be attached 
 PS C:\> Merge-VHD -Path c:\test\VDisk4.avhdx -DestinationPath c:\test\VDisk2.avhdx
 ```
 
-This example merges the virtual hard disk from VDisk4 to VDisk2. It merges all data from VDisk4 and VDisk3, up to VDisk2.
+This example merges the virtual hard disk from VDisk4 to VDisk2. It merges all data from VDisk4 and
+VDisk3, up to VDisk2. In this virtual hard disk chain VDisk4 is a child of VDisk3, which is a child
+of VDisk2, which is a child of VDisk1. Finally, VDisk1 is a child of the Parent virtual hard disk.
 
-In this virtual hard disk chain VDisk4 is a child of VDisk3, which is a child of VDisk2, which is a child of VDisk1.
-
-Finally, VDisk1 is a child of the Parent virtual hard disk.
-
-In this example, all referenced virtual hard disks reside within C:\test.
-
-The VDisk4.avhdx and VDisk3.avhdx are not deleted, however, they are no longer valid virtual hard disk files after the operation completes.
+In this example, all referenced virtual hard disks reside within `C:\test`. The `VDisk4.avhdx` and
+`VDisk3.avhdx` are not deleted, however, they are no longer valid virtual hard disk files after the
+operation completes.
 
 ## PARAMETERS
 

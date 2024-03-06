@@ -101,36 +101,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CATimeout
-
-Specifies the continuous availability time-out for the share.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CachingMode
 
 Specifies the caching mode of the offline files for the SMB share. There are five caching modes:
 
-- None.
-Prevents users from storing documents and programs offline.
-- Manual.
-Allows users to identify the documents and programs they want to store offline.
-- Programs.
-Automatically stores documents and programs offline.
-- Documents.
-Automatically stores documents offline.
-- BranchCache.
-Enables BranchCache and manual caching of documents on the shared folder.
+- BranchCache - Enables BranchCache and manual caching of documents on the shared folder.
+- Documents - Automatically stores documents offline.
+- Manual - Allows users to identify the documents and programs that they want to store offline.
+- Programs - Automatically stores documents and programs offline.
+- None - Prevents users from storing documents and programs offline.
 
 ```yaml
 Type: CachingMode
@@ -228,6 +207,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -488,22 +483,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

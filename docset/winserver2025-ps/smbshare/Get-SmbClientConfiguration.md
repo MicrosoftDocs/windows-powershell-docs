@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbClientConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/23/2022
+ms.date: 02/22/2024
 online version: https://learn.microsoft.com/powershell/module/smbshare/get-smbclientconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-SmbClientConfiguration
@@ -33,7 +33,7 @@ configuration.
 Get-SmbClientConfiguration
 ```
 
-```Output
+```output
 SkipCertificateCheck                  : False
 ConnectionCountPerRssNetworkInterface : 4
 DirectoryCacheEntriesMax              : 16
@@ -64,9 +64,7 @@ EncryptionCiphers                     : AES_128_GCM, AES_128_CCM, AES_256_GCM, A
 This command retrieves the SMB client configuration.
 
 > [!NOTE]
-> The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
-> Microsoft server operating system version 21H2 for x64-based Systems
-> ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
+> The **EncryptionCiphers** parameter is available beginning with Cumulative Update for Windows 11,
 > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
 
 ## PARAMETERS
@@ -106,6 +104,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
@@ -126,25 +140,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -179,5 +177,6 @@ The **MSFT_SmbClientConfiguration** object represents the configuration of the S
 
 ## RELATED LINKS
 
-[Set-SmbClientConfiguration](./Set-SmbClientConfiguration.md)
+[Reset-SmbClientConfiguration](./Reset-SmbClientConfiguration.md)
 
+[Set-SmbClientConfiguration](./Set-SmbClientConfiguration.md)

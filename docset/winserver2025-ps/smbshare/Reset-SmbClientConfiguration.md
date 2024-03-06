@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbClientConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 10/20/2022
-online version: http://go.microsoft.com/fwlink/?LinkID=241959
+ms.date: 02/22/2024
+online version: https://learn.microsoft.com/powershell/module/smbshare/reset-smbclientconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Reset-SmbClientConfiguration
 ---
@@ -16,16 +16,19 @@ Resets the Server Message Block (SMB) client configuration parameters to their d
 ## SYNTAX
 
 ```
-Reset-SmbClientConfiguration [-All] [-CompressibilitySampling]
- [-ConnectionCountPerRssNetworkInterface] [-DirectoryCacheEntriesMax] [-DirectoryCacheEntrySizeMax]
- [-DirectoryCacheLifetime] [-DisableCompression] [-DormantFileLimit] [-EnableBandwidthThrottling]
- [-EnableByteRangeLockingOnReadOnlyFiles] [-EnableLargeMtu] [-EnableLoadBalanceScaleOut]
- [-EnableMultiChannel] [-EncryptionCiphers] [-ExtendedSessionTimeout] [-FileInfoCacheEntriesMax]
- [-FileInfoCacheLifetime] [-FileNotFoundCacheEntriesMax] [-FileNotFoundCacheLifetime]
- [-ForceSMBEncryptionOverQuic] [-KeepConn] [-MaxCmds] [-MaximumConnectionCountPerServer]
- [-OplocksDisabled] [-RequestCompression] [-SessionTimeout] [-SkipCertificateCheck]
- [-UseOpportunisticLocking] [-WindowSizeThreshold] [-Force] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+Reset-SmbClientConfiguration [-All] [-AuditInsecureGuestLogon]
+ [-AuditServerDoesNotSupportEncryption] [-AuditServerDoesNotSupportSigning] [-BlockNTLM]
+ [-CompressibilitySampling] [-ConnectionCountPerRssNetworkInterface] [-DirectoryCacheEntriesMax]
+ [-DirectoryCacheEntrySizeMax] [-DirectoryCacheLifetime] [-DisableCompression] [-DormantFileLimit]
+ [-EnableBandwidthThrottling] [-EnableByteRangeLockingOnReadOnlyFiles] [-EnableLargeMtu]
+ [-EnableLoadBalanceScaleOut] [-EnableMailslots] [-EnableMultiChannel] [-EncryptionCiphers]
+ [-ExtendedSessionTimeout] [-FileInfoCacheEntriesMax] [-FileInfoCacheLifetime]
+ [-FileNotFoundCacheEntriesMax] [-FileNotFoundCacheLifetime] [-ForceSMBEncryptionOverQuic]
+ [-InvalidAuthenticationCacheLifetime] [-KeepConn] [-MaxCmds] [-MaximumConnectionCountPerServer]
+ [-OplocksDisabled] [-RequestCompression] [-RequireEncryption] [-SessionTimeout]
+ [-SkipCertificateCheck] [-Smb2DialectMax] [-Smb2DialectMin] [-UseOpportunisticLocking]
+ [-WindowSizeThreshold] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,15 +37,11 @@ The `Reset-SmbClientConfiguration` cmdlet resets SMB client configuration parame
 default values.
 
 > [!NOTE]
-> - This cmdlet is available beginning with 2022-06 Cumulative Update for Microsoft server operating
-> system version 21H2 for x64-based Systems
-> ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
-> version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+> This cmdlet is available beginning with Cumulative Update for Windows 11, version 22H2
+> ([KB5014668](https://support.microsoft.com/help/5014668)).
 >
-> - The **CompressibilitySampling** and **RequestCompression** parameters are available beginning
->   with 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
->   Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
->   Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
+> The **DisableCompression** and **RequestCompression** parameters are available beginning with
+> Cumulative Update for Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
 
 ## EXAMPLES
 
@@ -89,6 +88,74 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AuditInsecureGuestLogon
+
+Specifies whether to audit insecure guest logon attempts.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditServerDoesNotSupportEncryption
+
+Specifies whether to audit when a server doesn't support encryption. If this parameter is
+specified, events will be logged when a server doesn't support encryption.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditServerDoesNotSupportSigning
+
+Specifies whether to audit when a server doesn't support message signing. If this parameter is
+specified, events will be logged when a server doesn't support message signing.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockNTLM
+
+Specifies whether to block NT LAN Manager (NTLM) authentication. If this parameter is set to
+`$true`, NTLM authentication will be blocked. If set to `$false` (default), NTLM authentication
+will be allowed.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
@@ -116,6 +183,22 @@ Resets the compression sampling behavior to its default value.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -284,6 +367,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableMailslots
+
+Specifies whether to enable mailslots. If this parameter is specified, mailslots will be enabled.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableMultiChannel
 
 Resets the enable multi-channel value to its default value.
@@ -428,6 +527,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InvalidAuthenticationCacheLifetime
+
+Specifies the length of time (in seconds) that an invalid authentication cache entry should be kept
+before being removed. An authentication cache is used to store information about successful
+authentication attempts, and this parameter allows you to control how long unsuccessful attempts
+should be remembered before being purged.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -KeepConn
 
 Reset the time, in seconds, before the SMB client session is automatically disconnected to its
@@ -510,6 +628,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RequireEncryption
+
+Specifies whether or not encryption should be required for all SMB traffic. When this parameter is
+set to `$true`, all SMB traffic must be encrypted. If it is set to `$false` (the default),
+encryption is not required, but may still be negotiated if both the client and server support it.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SessionTimeout
 
 Resets the session time-out value to its default value.
@@ -534,6 +670,54 @@ Resets the skip certificate check value to its default value.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Smb2DialectMax
+
+This parameter specifies the maximum version of the SMB protocol to be used. Acceptable values are:
+
+- None – There is no maximum protocol version specified, the client can use any supported version.
+- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB client.
+- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB client.
+- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB client.
+- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB client.
+- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB client.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, SMB202, SMB210, SMB300, SMB302, SMB311
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Smb2DialectMin
+
+This parameter specifies the minimum version of the SMB protocol to be used. Acceptable values are:
+
+- None – There is no maximum protocol version specified, the client can use any supported version.
+- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB client.
+- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB client.
+- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB client.
+- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB client.
+- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB client.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, SMB202, SMB210, SMB300, SMB302, SMB311
 
 Required: False
 Position: Named
@@ -594,26 +778,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet isn't run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -622,7 +789,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

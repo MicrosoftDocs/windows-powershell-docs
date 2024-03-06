@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 10/20/2022
-online version: http://go.microsoft.com/fwlink/?LinkID=241959
+ms.date: 02/22/2024
+online version: https://learn.microsoft.com/powershell/module/smbshare/reset-smbserverconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Reset-SmbServerConfiguration
 ---
@@ -17,18 +17,21 @@ Resets the Server Message Block (SMB) server configuration parameters to their d
 
 ```
 Reset-SmbServerConfiguration [-All] [-AnnounceComment] [-AnnounceServer] [-AsynchronousCredits]
- [-AuditSmb1Access] [-AutoShareServer] [-AutoShareWorkstation] [-CachedOpenLimit]
- [-DisableCompression] [-DisableSmbEncryptionOnSecureConnection] [-DurableHandleV2TimeoutInSeconds]
- [-EnableDownlevelTimewarp] [-EnableLeasing] [-EnableMultiChannel] [-EnableOplocks]
- [-EnableSMB2Protocol] [-EnableSMBQUIC] [-EnableStrictNameChecking] [-EncryptData]
- [-EncryptionCiphers] [-IrpStackSize] [-KeepAliveTime] [-MaxChannelPerSession] [-MaxMpxCount]
- [-MaxSessionPerConnection] [-MaxThreadsPerQueue] [-MaxWorkItems] [-NullSessionShares]
- [-OplockBreakWait] [-PendingClientTimeoutInSeconds] [-RejectUnencryptedAccess]
- [-RequestCompression] [-RestrictNamedpipeAccessViaQuic] [-ServerHidden] [-Smb2CreditsMax]
- [-Smb2CreditsMin] [-SmbServerNameHardeningLevel] [-TreatHostAsStableStorage]
- [-ValidateAliasNotCircular] [-ValidateShareScope] [-ValidateShareScopeNotAliased]
- [-ValidateTargetName] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AuditClientCertificateAccess] [-AuditClientDoesNotSupportEncryption]
+ [-AuditClientDoesNotSupportSigning] [-AuditInsecureGuestLogon] [-AuditSmb1Access]
+ [-AutoShareServer] [-AutoShareWorkstation] [-CachedOpenLimit] [-DisableCompression]
+ [-DisableSmbEncryptionOnSecureConnection] [-DurableHandleV2TimeoutInSeconds]
+ [-EnableDirectoryHandleLeasing] [-EnableDownlevelTimewarp] [-EnableLeasing] [-EnableMailslots]
+ [-EnableMultiChannel] [-EnableOplocks] [-EnableSMB2Protocol] [-EnableSMBQUIC]
+ [-EnableStrictNameChecking] [-EncryptData] [-EncryptionCiphers] [-IrpStackSize] [-KeepAliveTime]
+ [-MaxChannelPerSession] [-MaxMpxCount] [-MaxSessionPerConnection] [-MaxThreadsPerQueue]
+ [-MaxWorkItems] [-NullSessionShares] [-OplockBreakWait] [-PendingClientTimeoutInSeconds]
+ [-RejectUnencryptedAccess] [-RequestCompression] [-RestrictNamedpipeAccessViaQuic] [-ServerHidden]
+ [-Smb2CreditsMax] [-Smb2CreditsMin] [-Smb2DialectMax] [-Smb2DialectMin]
+ [-SmbServerNameHardeningLevel] [-TreatHostAsStableStorage] [-ValidateAliasNotCircular]
+ [-ValidateShareScope] [-ValidateShareScopeNotAliased] [-ValidateTargetName] [-Force]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,15 +42,11 @@ default values. For more information on SMB server and protocol specifications, 
 and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 > [!NOTE]
-> - This cmdlet is available beginning with 2022-06 Cumulative Update for Microsoft server operating
-> system version 21H2 for x64-based Systems
-> ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
-> version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+> This cmdlet is available beginning with Cumulative Update for Windows 11, version 22H2
+> ([KB5014668](https://support.microsoft.com/help/5014668)).
 >
-> - The **DisableCompression** and **RequestCompression** parameters are available beginning with
->   2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
->   Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
->   Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
+> The **DisableCompression** and **RequestCompression** parameters are available beginning with
+> Cumulative Update for Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
 
 ## EXAMPLES
 
@@ -130,6 +129,74 @@ Accept wildcard characters: False
 ### -AsynchronousCredits
 
 Resets the asynchronous credits to its default value.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditClientCertificateAccess
+
+Enables auditing of the clients certificate access attempts on the server. Events are logged when a
+client attempts to access a certificate store on the server.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditClientDoesNotSupportEncryption
+
+Enables auditing of the clients attempts to connect without encryption to the server. The server
+logs an audit event when a client attempts to connect to the server without using encryption.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditClientDoesNotSupportSigning
+
+Enables auditing of the clients attempts to connect without signing to the server. The server logs
+an audit event when a client attempts to connect to the server without using message signing.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditInsecureGuestLogon
+
+Specifies whether to audit insecure guest logon attempts. When enabled insecure guest logons will
+appear in Windows Event Viewer.
 
 ```yaml
 Type: SwitchParameter
@@ -226,6 +293,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableCompression
 
 Resets the SMB compression behavior to its default value.
@@ -274,6 +357,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableDirectoryHandleLeasing
+
+Enables directory handle leasing on the server. When directory handle leasing is enabled, the
+server can cache directory handles for a longer period of time, which can improve performance for
+certain workloads. This can be particularly useful in scenarios where there are a large number of
+directory operations being performed on the server.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableDownlevelTimewarp
 
 Resets the down-level timewarp support behavior to its default value.
@@ -293,6 +395,28 @@ Accept wildcard characters: False
 ### -EnableLeasing
 
 Resets the enable leasing behavior to its default value.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableMailslots
+
+Specifies whether to enable mailslots. If this parameter is specified, mailslots will be enabled.
+Beginning with Windows Server 2025 and Windows 11 Insider Preview Build 25314, remote mailslots are
+disabled by default.
+
+To learn more about remote mailslot deprecation, see [Features removed or no
+longer developed starting with Windows Server
+2025](/windows-server/get-started/removed-deprecated-features-windows-server-2025).
 
 ```yaml
 Type: SwitchParameter
@@ -690,6 +814,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Smb2DialectMax
+
+This parameter specifies the maximum version of the SMB protocol to be used. Acceptable values are:
+
+- None – There is no maximum protocol version specified, the server can use any supported version.
+- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB Sever
+- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB Sever
+- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB Sever
+- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB Sever
+- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB Sever
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, SMB202, SMB210, SMB300, SMB302, SMB311
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Smb2DialectMin
+
+This parameter specifies the minimum version of the SMB protocol to be used. Acceptable values are:
+
+- None – There is no maximum protocol version specified, the server can use any supported version.
+- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB Sever
+- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB Sever
+- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB Sever
+- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB Sever
+- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB Sever
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, SMB202, SMB210, SMB300, SMB302, SMB311
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SmbServerNameHardeningLevel
 
 Resets the SMB Service name hardening level to its default value.
@@ -799,22 +971,6 @@ Resets whether the target name is validated to its default value.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named

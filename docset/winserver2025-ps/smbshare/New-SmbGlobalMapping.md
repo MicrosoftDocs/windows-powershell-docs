@@ -429,6 +429,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbGlobalMapping.md](./Get-SmbGlobalMapping.md)
+[Get-SmbGlobalMapping.md](Get-SmbGlobalMapping.md)
 
-[Remove-SmbGlobalMapping.md](./Remove-SmbGlobalMapping.md)
+[Remove-SmbGlobalMapping.md](Remove-SmbGlobalMapping.md)

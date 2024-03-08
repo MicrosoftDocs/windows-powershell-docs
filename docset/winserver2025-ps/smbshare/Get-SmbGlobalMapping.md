@@ -150,6 +150,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SmbGlobalMapping.md](./New-SmbGlobalMapping.md)
+[New-SmbGlobalMapping.md](New-SmbGlobalMapping.md)
 
-[Remove-SmbGlobalMapping.md](./Remove-SmbGlobalMapping.md)
+[Remove-SmbGlobalMapping.md](Remove-SmbGlobalMapping.md)

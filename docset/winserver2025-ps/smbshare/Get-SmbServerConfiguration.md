@@ -164,8 +164,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet isn't run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -200,6 +199,6 @@ The **MSFT_SmbServerConfiguration** object represents the configuration of the S
 
 ## RELATED LINKS
 
-[Reset-SmbServerConfiguration](./Reset-SmbServerConfiguration.md)
+[Reset-SmbServerConfiguration](Reset-SmbServerConfiguration.md)
 
-[Set-SmbServerConfiguration](./Set-SmbServerConfiguration.md)
+[Set-SmbServerConfiguration](Set-SmbServerConfiguration.md)

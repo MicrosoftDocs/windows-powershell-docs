@@ -1014,6 +1014,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbServerConfiguration](./Get-SmbServerConfiguration.md)
+[Get-SmbServerConfiguration](Get-SmbServerConfiguration.md)
 
-[Set-SmbServerConfiguration](./Set-SmbServerConfiguration.md)
+[Set-SmbServerConfiguration](Set-SmbServerConfiguration.md)

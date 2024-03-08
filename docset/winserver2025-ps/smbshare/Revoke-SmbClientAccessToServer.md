@@ -249,10 +249,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Block-SmbClientAccessToServer](Block-SmbClientAccessToServer)
+[Block-SmbClientAccessToServer](Block-SmbClientAccessToServer.md)
 
-[Get-SmbClientAccessToServer](Get-SmbClientAccessToServer)
+[Get-SmbClientAccessToServer](Get-SmbClientAccessToServer.md)
 
-[Grant-SmbClientAccessToServer](Grant-SmbClientAccessToServer)
+[Grant-SmbClientAccessToServer](Grant-SmbClientAccessToServer.md)
 
-[Unblock-SmbClientAccessToServer](Unblock-SmbClientAccessToServer)
+[Unblock-SmbClientAccessToServer](Unblock-SmbClientAccessToServer.md)

@@ -16,15 +16,15 @@ Grants SMB client access to a specified server.
 ## SYNTAX
 
 ```
-Grant-SmbClientAccessToServer [-Name] <String[]> -IdentifierType <IdentifierType> -Identifier <String>
- [-Description <String>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Grant-SmbClientAccessToServer [-Name] <String[]> -IdentifierType <IdentifierType>
+ -Identifier <String> [-Description <String>] [-Force] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ```
 Grant-SmbClientAccessToServer -InputObject <CimInstance[]> -IdentifierType <IdentifierType>
- -Identifier <String> [-Description <String>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Identifier <String> [-Description <String>] [-Force] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -276,10 +276,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Block-SmbClientAccessToServer](Block-SmbClientAccessToServer)
+[Block-SmbClientAccessToServer](Block-SmbClientAccessToServer.md)
 
-[Get-SmbClientAccessToServer](Get-SmbClientAccessToServer)
+[Get-SmbClientAccessToServer](Get-SmbClientAccessToServer.md)
 
-[Revoke-SmbClientAccessToServer](Revoke-SmbClientAccessToServer)
+[Revoke-SmbClientAccessToServer](Revoke-SmbClientAccessToServer.md)
 
-[Unblock-SmbClientAccessToServer](Unblock-SmbClientAccessToServer)
+[Unblock-SmbClientAccessToServer](Unblock-SmbClientAccessToServer.md)

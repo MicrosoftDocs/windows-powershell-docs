@@ -170,6 +170,6 @@ object that represents the mappings created from the SMB client to SMB shares.
 
 ## RELATED LINKS
 
-[New-SmbMapping](./New-SmbMapping.md)
+[New-SmbMapping](New-SmbMapping.md)
 
-[Remove-SmbMapping](./Remove-SmbMapping.md)
+[Remove-SmbMapping](Remove-SmbMapping.md)

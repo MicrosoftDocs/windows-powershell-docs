@@ -281,6 +281,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbMapping](./Get-SmbMapping.md)
+[Get-SmbMapping](Get-SmbMapping.md)
 
-[New-SmbMapping](./New-SmbMapping.md)
+[New-SmbMapping](New-SmbMapping.md)

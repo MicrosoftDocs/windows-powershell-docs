@@ -47,7 +47,8 @@ number **1**.
 
 ### -AsJob
 
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
 ```yaml
 Type: SwitchParameter
@@ -257,8 +258,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbServerAlternativePort](./Get-SmbServerAlternativePort.md)
+[Get-SmbServerAlternativePort](Get-SmbServerAlternativePort.md)
 
-[New-SmbServerAlternativePort](./New-SmbServerAlternativePort.md)
+[New-SmbServerAlternativePort](New-SmbServerAlternativePort.md)
 
-[Set-SmbServerAlternativePort](./Set-SmbServerAlternativePort.md)
+[Set-SmbServerAlternativePort](Set-SmbServerAlternativePort.md)

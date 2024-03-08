@@ -23,8 +23,8 @@ New-SmbServerAlternativePort [-TransportType] <TransportType> [-Port] <UInt16>
 
 ## DESCRIPTION
 
-The `New-SmbServerAlternativePort` cmdlet creates a new alternative port for the Server Message Block
-(SMB) protocol on the local server. This cmdlet can be used to add a new port to the list of
+The `New-SmbServerAlternativePort` cmdlet creates a new alternative port for the Server Message
+Block (SMB) protocol on the local server. This cmdlet can be used to add a new port to the list of
 alternate ports that are available for SMB connections.
 
 ## EXAMPLES
@@ -219,8 +219,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbServerAlternativePort](./Get-SmbServerAlternativePort.md)
+[Get-SmbServerAlternativePort](Get-SmbServerAlternativePort.md)
 
-[Remove-SmbServerAlternativePort](./Remove-SmbServerAlternativePort.md)
+[Remove-SmbServerAlternativePort](Remove-SmbServerAlternativePort.md)
 
-[Set-SmbServerAlternativePort](./Set-SmbServerAlternativePort.md)
+[Set-SmbServerAlternativePort](Set-SmbServerAlternativePort.md)

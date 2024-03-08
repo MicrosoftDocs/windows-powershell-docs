@@ -241,8 +241,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbServerAlternativePort](./Get-SmbServerAlternativePort.md)
+[Get-SmbServerAlternativePort](Get-SmbServerAlternativePort.md)
 
-[New-SmbServerAlternativePort](./New-SmbServerAlternativePort.md)
+[New-SmbServerAlternativePort](New-SmbServerAlternativePort.md)
 
-[Remove-SmbServerAlternativePort](./Remove-SmbServerAlternativePort.md)
+[Remove-SmbServerAlternativePort](Remove-SmbServerAlternativePort.md)

@@ -177,6 +177,6 @@ The **MSFT_SmbClientConfiguration** object represents the configuration of the S
 
 ## RELATED LINKS
 
-[Reset-SmbClientConfiguration](./Reset-SmbClientConfiguration.md)
+[Reset-SmbClientConfiguration](Reset-SmbClientConfiguration.md)
 
-[Set-SmbClientConfiguration](./Set-SmbClientConfiguration.md)
+[Set-SmbClientConfiguration](Set-SmbClientConfiguration.md)

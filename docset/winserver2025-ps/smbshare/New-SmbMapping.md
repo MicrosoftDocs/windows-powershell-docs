@@ -16,22 +16,13 @@ Creates an SMB mapping.
 ## SYNTAX
 
 ```
-New-SmbMapping [[-LocalPath] <String>] [[-RemotePath] <String>] [-UserName <String>]
- [-Password <String>] [-Persistent <Boolean>] [-SaveCredentials] [-HomeFolder]
- [-RequireIntegrity <Boolean>] [-RequirePrivacy <Boolean>] [-UseWriteThrough <Boolean>]
- [-TransportType <TransportType>] [-SkipCertificateCheck] [-CompressNetworkTraffic <Boolean>]
- [-GlobalMapping] [-BlockNTLM <Boolean>] [-TcpPort <UInt16>] [-QuicPort <UInt16>]
- [-RdmaPort <UInt16>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-```
-New-SmbMapping [[-LocalPath] <String>] [[-RemotePath] <String>] [-Persistent <Boolean>]
- [-SaveCredentials] [-HomeFolder] [-RequireIntegrity <Boolean>] [-RequirePrivacy <Boolean>]
- [-UseWriteThrough <Boolean>] [-TransportType <TransportType>] [-SkipCertificateCheck]
- [-CompressNetworkTraffic <Boolean>] [-GlobalMapping] [-TcpPort <UInt16>] [-QuicPort <UInt16>]
- [-RdmaPort <UInt16>] [-Credential <PSCredential>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-SmbMapping [[-LocalPath] <String>] [[-RemotePath] <String>] [-AsJob] [-BlockNTLM <Boolean>]
+[-CimSession <CimSession[]>] [-CompressNetworkTraffic <Boolean>] [-Confirm]
+[-Credential <PSCredential>] [-GlobalMapping] [-HomeFolder] [-Password <String>]
+[-Persistent <Boolean>] [-QuicPort <UInt16>] [-RdmaPort <UInt16>] [-RequireIntegrity <Boolean>]
+[-RequirePrivacy <Boolean>] [-SaveCredentials] [-SkipCertificateCheck] [-TcpPort <UInt16>]
+[-ThrottleLimit <Int32>] [-TransportType <TransportType>] [-UserName <String>]
+[-UseWriteThrough <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

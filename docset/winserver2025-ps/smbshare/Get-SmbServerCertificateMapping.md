@@ -310,8 +310,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SmbServerCertificateMapping](./New-SmbServerCertificateMapping.md)
+[New-SmbServerCertificateMapping](New-SmbServerCertificateMapping.md)
 
-[Remove-SmbServerCertificateMapping](./Remove-SmbServerCertificateMapping.md)
+[Remove-SmbServerCertificateMapping](Remove-SmbServerCertificateMapping.md)
 
-[Set-SmbServerCertificateMapping](./Set-SmbServerCertificateMapping.md)
+[Set-SmbServerCertificateMapping](Set-SmbServerCertificateMapping.md)

@@ -33,7 +33,7 @@ over QUIC. For more information, see [SMB over QUIC](https://aka.ms/smboverquic)
 ### Example 1 - Map a certificate located in the local machine's personal store
 
 This command maps a certificate located in the local machine's personal store for SMB server edge
-endpoint "fs2.contoso.com" using the certificate's thumbprint.
+endpoint `fs2.contoso.com` using the certificate's thumbprint.
 
 ```powershell
 $params = @{
@@ -290,7 +290,9 @@ Accept wildcard characters: False
 
 Specifies the type of certificate mapping. The acceptable value for this parameter is:
 
-`QUIC` Certificate mapping is for SMB over QUIC.
+- `QUIC`
+
+Certificate mapping is for SMB over QUIC.
 
 ```yaml
 Type: Type
@@ -340,8 +342,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbServerCertificateMapping](./Get-SmbServerCertificateMapping.md)
+[Get-SmbServerCertificateMapping](Get-SmbServerCertificateMapping.md)
 
-[Remove-SmbServerCertificateMapping](./Remove-SmbServerCertificateMapping.md)
+[Remove-SmbServerCertificateMapping](Remove-SmbServerCertificateMapping.md)
 
-[Set-SmbServerCertificateMapping](./Set-SmbServerCertificateMapping.md)
+[Set-SmbServerCertificateMapping](Set-SmbServerCertificateMapping.md)

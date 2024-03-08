@@ -347,7 +347,11 @@ Accept wildcard characters: False
 
 ### -Type
 
-`QUIC` Certificate mapping is for SMB over QUIC.
+Specifies the type of certificate mapping. The acceptable value for this parameter is:
+
+- `QUIC`
+
+Certificate mapping is for SMB over QUIC.
 
 ```yaml
 Type: Type[]
@@ -408,8 +412,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbServerCertificateMapping](./Get-SmbServerCertificateMapping.md)
+[Get-SmbServerCertificateMapping](Get-SmbServerCertificateMapping.md)
 
-[New-SmbServerCertificateMapping](./New-SmbServerCertificateMapping.md)
+[New-SmbServerCertificateMapping](New-SmbServerCertificateMapping.md)
 
-[Set-SmbServerCertificateMapping](./Set-SmbServerCertificateMapping.md)
+[Set-SmbServerCertificateMapping](Set-SmbServerCertificateMapping.md)

@@ -585,8 +585,8 @@ SMB shares on the computer.
 
 ## RELATED LINKS
 
-[New-SmbShare](./New-SmbShare.md)
+[New-SmbShare](New-SmbShare.md)
 
-[Remove-SmbShare](./Remove-SmbShare.md)
+[Remove-SmbShare](Remove-SmbShare.md)
 
-[Set-SmbShare](./Set-SmbShare.md)
+[Set-SmbShare](Set-SmbShare.md)

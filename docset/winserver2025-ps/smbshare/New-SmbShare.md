@@ -420,7 +420,8 @@ Accept wildcard characters: False
 
 ### -ScopeName
 
-Specifies the scope name of the share. For use with Windows Server failover cluster file server resources.
+Specifies the scope name of the share. For use with Windows Server failover cluster file server
+resources.
 
 ```yaml
 Type: String
@@ -489,8 +490,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet isn't run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 > [!NOTE]
 > The **WhatIf** switch doesn't work with this cmdlet.
@@ -531,8 +531,8 @@ object that represents the SMB share.
 
 ## RELATED LINKS
 
-[Get-SmbShare](./Get-SmbShare.md)
+[Get-SmbShare](Get-SmbShare.md)
 
-[Remove-SmbShare](./Remove-SmbShare.md)
+[Remove-SmbShare](Remove-SmbShare.md)
 
-[Set-SmbShare](./Set-SmbShare.md)
+[Set-SmbShare](Set-SmbShare.md)

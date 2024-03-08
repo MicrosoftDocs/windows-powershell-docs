@@ -563,8 +563,8 @@ This cmdlet returns a **MSFT_SmbShare** object that represents the modified shar
 
 ## RELATED LINKS
 
-[Get-SmbShare](./Get-SmbShare.md)
+[Get-SmbShare](Get-SmbShare.md)
 
-[New-SmbShare](./New-SmbShare.md)
+[New-SmbShare](New-SmbShare.md)
 
-[Remove-SmbShare](./Remove-SmbShare.md)
+[Remove-SmbShare](Remove-SmbShare.md)

@@ -277,8 +277,8 @@ namespace and class name for the underlying WMI object.
 
 ## RELATED LINKS
 
-[Get-SmbShare](./Get-SmbShare.md)
+[Get-SmbShare](Get-SmbShare.md)
 
-[New-SmbShare](./New-SmbShare.md)
+[New-SmbShare](New-SmbShare.md)
 
-[Set-SmbShare](./Set-SmbShare.md)
+[Set-SmbShare](Set-SmbShare.md)

@@ -32,7 +32,7 @@ This command retrieves the properties and validity of the `2022-ae-02.corp.conto
 QUIC endpoint certificate mapping.
 
 ```powershell
-Get-SmbServerCertProps -Name 2022-ae-02.corp.contoso.com
+PS C:\> Get-SmbServerCertProps -Name 2022-ae-02.corp.contoso.com
 ```
 
 ```output

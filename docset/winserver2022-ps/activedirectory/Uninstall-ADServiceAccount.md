@@ -11,7 +11,7 @@ title: Uninstall-ADServiceAccount
 # Uninstall-ADServiceAccount
 
 ## SYNOPSIS
-Uninstalls an Active Directory managed service account from a computer or removes a cached group managed service account from a computer.
+Uninstalls an Active Directory managed service account from a computer.
 
 ## SYNTAX
 
@@ -22,8 +22,6 @@ Uninstall-ADServiceAccount [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Force
 
 ## DESCRIPTION
 The **Uninstall-ADServiceAccount** cmdlet removes an Active Directory standalone managed service account (MSA) on the computer on which the cmdlet is run.
-For group MSAs, the cmdlet removes the group MSA from the cache.
-However, if a service is still using the group MSA and the host has permission to retrieve the password, then a new cache entry is created.
 The specified MSA must be installed on the computer.
 
 the *Identity* parameter specifies the Active Directory MSA to uninstall.
@@ -165,6 +163,7 @@ A parameter with name **ForceRemoveLocal** is provided to un-install standalone 
 * This cmdlet does not work with AD LDS.
 * This cmdlet does not work with an Active Directory snapshot.
 * This cmdlet does not work with a read-only domain controller.
+* This cmdlet is not necessary for group managed service accounts to run.
 
 ## RELATED LINKS
 

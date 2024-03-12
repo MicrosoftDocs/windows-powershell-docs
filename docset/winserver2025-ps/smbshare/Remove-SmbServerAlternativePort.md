@@ -15,11 +15,15 @@ Removes an alternative port for the Server Message Block (SMB) protocol on the l
 
 ## SYNTAX
 
+### Query
+
 ```
 Remove-SmbServerAlternativePort [-TransportType] <TransportType[]> [-Port] <UInt16[]>
  [-IncludeHidden] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
  [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
+### InputObject
 
 ```
 Remove-SmbServerAlternativePort -InputObject <CimInstance[]> [-Force] [-CimSession <CimSession[]>]
@@ -30,7 +34,7 @@ Remove-SmbServerAlternativePort -InputObject <CimInstance[]> [-Force] [-CimSessi
 
 The `Remove-SmbServerAlternativePort` cmdlet removes an alternative port for the Server Message
 Block (SMB) protocol on the local server. You can specify the transport type and port number of the
-alternative port to remove using the `-TransportType` and `-Port` parameters, respectively.
+alternative port to remove using the **TransportType** and **Port** parameters, respectively.
 
 ## EXAMPLES
 
@@ -66,29 +70,13 @@ Accept wildcard characters: False
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -135,7 +123,7 @@ Specifies the input object that's used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
-Parameter Sets: InputObject (cdxml)
+Parameter Sets: InputObject
 Aliases:
 
 Required: True
@@ -213,6 +201,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -46,7 +46,8 @@ OK     G:         \\fs1.contoso.com\public
 
 ### -AsJob
 
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +64,8 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a `New-CimSession` or `Get-CimSession` cmdlet. The default is the
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or
+[Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -150,6 +152,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SmbGlobalMapping.md](New-SmbGlobalMapping.md)
+[New-SmbGlobalMapping](New-SmbGlobalMapping.md)
 
-[Remove-SmbGlobalMapping.md](Remove-SmbGlobalMapping.md)
+[Remove-SmbGlobalMapping](Remove-SmbGlobalMapping.md)

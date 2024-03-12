@@ -15,11 +15,15 @@ Removes a Server Message Block (SMB) global mapping to an SMB share.
 
 ## SYNTAX
 
+### Query
+
 ```
 Remove-SmbGlobalMapping [[-LocalPath] <String[]>] [[-RemotePath] <String[]>] [-Force]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
+
+### InputObject
 
 ```
 Remove-SmbGlobalMapping -InputObject <CimInstance[]> [-Force] [-CimSession <CimSession[]>]
@@ -34,7 +38,7 @@ The `Remove-SmbGlobalMapping` cmdlet removes the SMB global mapping to an SMB sh
 
 ### Example 1: Remove an SMB global mapping
 
-This command removes an SMB global mapping for the "G:" drive to an SMB share.
+This command removes an SMB global mapping for the indicated drive to an SMB share.
 
 ```powershell
 Remove-SmbGlobalMapping -LocalPath G:
@@ -70,29 +74,13 @@ Accept wildcard characters: False
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [`New-CimSession`](/powershell/module/cimcmdlets/new-cimsession) or
-[`Get-CimSession`](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+[`Get-CimSession`](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -123,7 +111,7 @@ Specifies the input object that's used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
-Parameter Sets: InputObject (cdxml)
+Parameter Sets: InputObject
 Aliases:
 
 Required: True
@@ -139,7 +127,7 @@ Specifies the local drive letter to which the remote path is mapped.
 
 ```yaml
 Type: String[]
-Parameter Sets: Query (cdxml)
+Parameter Sets: Query
 Aliases:
 
 Required: False
@@ -172,7 +160,7 @@ Specifies the remote path that's accessed from this computer.
 
 ```yaml
 Type: String[]
-Parameter Sets: Query (cdxml)
+Parameter Sets: Query
 Aliases:
 
 Required: False
@@ -193,6 +181,22 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 Type: Int32
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -240,6 +244,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbGlobalMapping.md](Get-SmbGlobalMapping.md)
+[Get-SmbGlobalMapping](Get-SmbGlobalMapping.md)
 
-[New-SmbGlobalMapping.md](New-SmbGlobalMapping.md)
+[New-SmbGlobalMapping](New-SmbGlobalMapping.md)

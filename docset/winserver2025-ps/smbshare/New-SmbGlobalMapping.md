@@ -48,8 +48,8 @@ OK     G:         \\fs1.contoso.com\public
 ```
 
 This command will gather the credentials for the global mapping. It then maps the remote share path
-`\\fs1.contoso.com\public` to the "G:" drive letter. Any users, applications, or containers can now
-access data on the G: drive.
+`\\fs1.contoso.com\public` to the indicated drive letter. Any users, applications, or containers
+can now access data on that drive.
 
 ## PARAMETERS
 
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or
-[Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+[Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -116,22 +116,6 @@ will be compressed. If set to `$false` (default), network traffic won't be compr
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -394,6 +378,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
@@ -429,6 +429,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbGlobalMapping.md](Get-SmbGlobalMapping.md)
+[Get-SmbGlobalMapping](Get-SmbGlobalMapping.md)
 
-[Remove-SmbGlobalMapping.md](Remove-SmbGlobalMapping.md)
+[Remove-SmbGlobalMapping](Remove-SmbGlobalMapping.md)

@@ -74,29 +74,13 @@ Accept wildcard characters: False
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or
-[Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+[Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -126,10 +110,10 @@ Accept wildcard characters: False
 Specifies if Named Pipes are enabled for SMB over QUIC. The acceptable values for this parameter
 are:
 
-- `None:` Remove all flags.
-- `AllowNamedPipe:` Enable use of named pipes in SMB over QUIC connections for this mapping (off by
+- `None`: Remove all flags.
+- `AllowNamedPipe`: Enable use of named pipes in SMB over QUIC connections for this mapping (off by
   default, overrides the value of RestrictNamedPipeAccessOverQuic).
-- `DefaultCert:` Not used.
+- `DefaultCert`: Not used.
 
 ```yaml
 Type: Flags
@@ -254,9 +238,10 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of 0 is entered, then Windows PowerShell calculates an optimum
-throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
+computer.
 
 ```yaml
 Type: Int32
@@ -290,15 +275,29 @@ Accept wildcard characters: False
 
 Specifies the type of certificate mapping. The acceptable value for this parameter is:
 
-- `QUIC`
-
-Certificate mapping is for SMB over QUIC.
+- `QUIC`: Certificate mapping is for SMB over QUIC.
 
 ```yaml
 Type: Type
 Parameter Sets: (All)
 Aliases:
 Accepted values: QUIC
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

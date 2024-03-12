@@ -15,11 +15,15 @@ Removes the SMB mapping to an SMB share.
 
 ## SYNTAX
 
+### Query
+
 ```
 Remove-SmbMapping [[-LocalPath] <String[]>] [[-RemotePath] <String[]>] [-UpdateProfile] [-Force]
  [-GlobalMapping] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
+### InputObject
 
 ```
 Remove-SmbMapping -InputObject <CimInstance[]> [-UpdateProfile] [-Force] [-GlobalMapping]
@@ -37,6 +41,9 @@ The `Remove-SmbMapping` cmdlet removes the Server Message Block (SMB) mapping to
 
 ```powershell
 PS C:\\>Remove-SmbMapping -LocalPath "Y:"
+
+
+
 Confirm
 Are you sure you want to perform this action?
 Performing operation `Close-Connection` on Target 'Y:,\\Contoso-FS\VMS1'.
@@ -76,7 +83,7 @@ Accept wildcard characters: False
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -87,22 +94,6 @@ Aliases: Session
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -145,7 +136,7 @@ Specifies the input object that's used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
-Parameter Sets: InputObject (cdxml)
+Parameter Sets: InputObject
 Aliases:
 
 Required: True
@@ -161,7 +152,7 @@ Specifies an array of the local paths associated with the SMB mappings that this
 
 ```yaml
 Type: String[]
-Parameter Sets: Query (cdxml)
+Parameter Sets: Query
 Aliases:
 
 Required: False
@@ -190,11 +181,12 @@ Accept wildcard characters: False
 
 ### -RemotePath
 
-Specifies an array of the remote paths of the SMB shares associated with the mappings that this cmdlet removes.
+Specifies an array of the remote paths of the SMB shares associated with the mappings that this
+cmdlet removes.
 
 ```yaml
 Type: String[]
-Parameter Sets: Query (cdxml)
+Parameter Sets: Query
 Aliases:
 
 Required: False
@@ -238,6 +230,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

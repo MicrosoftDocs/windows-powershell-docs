@@ -17,8 +17,9 @@ Creates a new client certificate mapping for the Server Message Block (SMB) prot
 
 ```
 New-SmbClientCertificateMapping [-Namespace] <String> [-Thumbprint <String>] [-StoreName <String>]
- [-IssuerName <String>] [-Subject <String>] [-DisplayName <String>] [-Type <Type>] [-Flags <Flags>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IssuerName <String>] [-Subject <String>] [-DisplayName <String>] [-Type <Type>] [-Flags <Flags>]
+ [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,7 +47,7 @@ New-SmbClientCertificateMapping @params
 This creates a new certificate mapping for an SMB client where a specific thumbprint, store name,
 issuer name, subject, and display name are specified for the certificate mapping.
 
-For example, if you have an SMB client named "MySMBClient" that needs to connect to a server using
+For example, if you have an SMB client named `MySMBClient` that needs to connect to a server using
 a specific certificate, you could use this cmdlet to create a certificate mapping that associates
 the client with the certificate.
 
@@ -73,7 +74,7 @@ Accept wildcard characters: False
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -125,10 +126,10 @@ Accept wildcard characters: False
 Specifies if `NamedPipes` are enabled for SMB over QUIC. The acceptable values for this parameter
 are:
 
-- `None:` Remove all flags
-- `AllowNamedPipe:` Enable use of named pipes in SMB over QUIC connections for this mapping (off by
+- `None`: Remove all flags
+- `AllowNamedPipe`: Enable use of named pipes in SMB over QUIC connections for this mapping (off by
   default, overrides value of RestrictNamedPipeAccessOverQuic)
-- `DefaultCert:` Not used
+- `DefaultCert`: Not used
 
 ```yaml
 Type: Flags[]
@@ -264,7 +265,7 @@ Accept wildcard characters: False
 
 Specifies the type of certificate mapping. The acceptable value for this parameter is:
 
-`QUIC:` Certificate mapping is for SMB over QUIC.
+`QUIC`: Certificate mapping is for SMB over QUIC.
 
 ```yaml
 Type: Type[]

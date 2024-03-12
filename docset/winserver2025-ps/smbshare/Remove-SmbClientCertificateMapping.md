@@ -15,6 +15,8 @@ Removes an existing client certificate mapping for the Server Message Block (SMB
 
 ## SYNTAX
 
+### Query
+
 ```
 Remove-SmbClientCertificateMapping [-Namespace] <String[]> [[-Subject] <String[]>]
  [[-Thumbprint] <String[]>] [[-DisplayName] <String[]>] [[-StoreName] <String[]>]
@@ -22,6 +24,8 @@ Remove-SmbClientCertificateMapping [-Namespace] <String[]> [[-Subject] <String[]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
+
+### InputObject
 
 ```
 Remove-SmbClientCertificateMapping -InputObject <CimInstance[]> [-Force]
@@ -78,7 +82,7 @@ Accept wildcard characters: False
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -130,10 +134,10 @@ Accept wildcard characters: False
 Specifies if Named Pipes are enabled for SMB over QUIC. The acceptable values for this parameter
 are:
 
-- `None:` Remove all flags.
-- `AllowNamedPipe:` Enable use of named pipes in SMB over QUIC connections for this mapping (off by
+- `None`: Remove all flags.
+- `AllowNamedPipe`: Enable use of named pipes in SMB over QUIC connections for this mapping (off by
   default, overrides the value of RestrictNamedPipeAccessOverQuic).
-- `DefaultCert:` Not used.
+- `DefaultCert`: Not used.
 
 ```yaml
 Type: Flags[]
@@ -317,7 +321,7 @@ Accept wildcard characters: False
 
 ### -Type
 
-`QUIC` Certificate mapping is for SMB over QUIC.
+`QUIC`: Certificate mapping is for SMB over QUIC.
 
 ```yaml
 Type: Type[]

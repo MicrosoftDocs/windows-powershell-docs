@@ -15,11 +15,13 @@ Gets information about SMB client access to a specified server.
 
 ## SYNTAX
 
+### Query
 ```
 Get-SmbClientAccessToServer [-Name] <String[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
  [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### InputObject
 ```
 Get-SmbClientAccessToServer -InputObject <CimInstance[]> [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -39,7 +41,7 @@ the specified server.
 Get-SmbClientAccessToServer -Name "Server01"
 ```
 
-This command retrieves the SMB client access information for a device named "Server01".
+This command retrieves the SMB client access information for a device named `Server01`.
 
 ## PARAMETERS
 
@@ -64,7 +66,7 @@ Accept wildcard characters: False
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or
-[Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+[Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -75,22 +77,6 @@ Aliases: Session
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -118,7 +104,7 @@ or an entry in the certificate's subject alternative names.
 
 ```yaml
 Type: String[]
-Parameter Sets: (All)
+Parameter Sets: Query
 Aliases:
 
 Required: True
@@ -145,6 +131,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

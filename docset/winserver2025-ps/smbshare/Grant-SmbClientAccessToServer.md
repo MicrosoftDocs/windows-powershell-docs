@@ -15,12 +15,14 @@ Grants SMB client access to a specified server.
 
 ## SYNTAX
 
+### Query
 ```
 Grant-SmbClientAccessToServer [-Name] <String[]> -IdentifierType <IdentifierType>
  -Identifier <String> [-Description <String>] [-Force] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### InputObject
 ```
 Grant-SmbClientAccessToServer -InputObject <CimInstance[]> -IdentifierType <IdentifierType>
  -Identifier <String> [-Description <String>] [-Force] [-CimSession <CimSession[]>]
@@ -49,7 +51,7 @@ $params = @{
 Grant-SmbClientAccessToServer @params
 ```
 
-This example grants SMB client access to a server named "Server01" based on the client's
+This example grants SMB client access to a server named `Server01` based on the client's
 certificate. The **Description** parameter is used to provide a description of the rule being added
 to the server's firewall. This command runs without prompting for confirmation.
 
@@ -76,7 +78,7 @@ Accept wildcard characters: False
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or
-[Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+[Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -87,22 +89,6 @@ Aliases: Session
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -146,7 +132,7 @@ Accept wildcard characters: False
 
 Specifies the identity of the client that is being granted access to the SMB server. This parameter
 takes a string value that represents the identity of the client. The format of the string value
-will depend on the `-IdentifierType` parameter that you're using.
+will depend on the **IdentifierType** parameter that you're using.
 
 ```yaml
 Type: String
@@ -163,7 +149,7 @@ Accept wildcard characters: False
 ### -IdentifierType
 
 Specifies the type of identifier that you're using to identify a client. The valid values for the
-`-IdentifierType` parameter are:
+**IdentifierType** parameter are:
 
 - SHA256
 - ISSUER
@@ -208,7 +194,7 @@ or an entry in the certificate's subject alternative names.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Query
 Aliases:
 
 Required: True
@@ -235,6 +221,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

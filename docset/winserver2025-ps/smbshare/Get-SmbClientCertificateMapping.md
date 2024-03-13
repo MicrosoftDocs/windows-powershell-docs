@@ -284,8 +284,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SmbClientCertificateMapping](./New-SmbClientCertificateMapping.md)
+[New-SmbClientCertificateMapping](New-SmbClientCertificateMapping.md)
 
-[Remove-SmbClientCertificateMapping](./Remove-SmbClientCertificateMapping.md)
+[Remove-SmbClientCertificateMapping](Remove-SmbClientCertificateMapping.md)
 
-[Set-SmbClientCertificateMapping](./Set-SmbClientCertificateMapping.md)
+[Set-SmbClientCertificateMapping](Set-SmbClientCertificateMapping.md)

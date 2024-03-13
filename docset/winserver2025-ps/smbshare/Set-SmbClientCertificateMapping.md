@@ -76,22 +76,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Flags
 
 Specifies if `NamedPipes` are enabled for SMB over QUIC. The acceptable values for this parameter
@@ -200,6 +184,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
@@ -237,8 +237,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbClientCertificateMapping](./Get-SmbClientCertificateMapping.md)
+[Get-SmbClientCertificateMapping](Get-SmbClientCertificateMapping.md)
 
-[New-SmbClientCertificateMapping](./New-SmbClientCertificateMapping.md)
+[New-SmbClientCertificateMapping](New-SmbClientCertificateMapping.md)
 
-[Remove-SmbClientCertificateMapping](./Remove-SmbClientCertificateMapping.md)
+[Remove-SmbClientCertificateMapping](Remove-SmbClientCertificateMapping.md)

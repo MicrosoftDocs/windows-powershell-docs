@@ -16,6 +16,7 @@ Blocks SMB client access to a specified server.
 ## SYNTAX
 
 ### Query
+
 ```
 Block-SmbClientAccessToServer [-Name] <String[]> -IdentifierType <IdentifierType>
  -Identifier <String> [-Description <String>] [-Force] [-CimSession <CimSession[]>]
@@ -23,6 +24,7 @@ Block-SmbClientAccessToServer [-Name] <String[]> -IdentifierType <IdentifierType
 ```
 
 ### InputObject
+
 ```
 Block-SmbClientAccessToServer -InputObject <CimInstance[]> -IdentifierType <IdentifierType>
  -Identifier <String> [-Description <String>] [-Force] [-CimSession <CimSession[]>]
@@ -50,7 +52,7 @@ $params = @{
 Block-SmbClientAccessToServer @params
 ```
 
-This command blocks SMB client access to a server named "Server01" for the based on the client's
+This command blocks SMB client access to a server named `Server01` for the based on the client's
 certificate. This command runs without prompting for confirmation as the **Force** parameter is set
 to `$true`.
 

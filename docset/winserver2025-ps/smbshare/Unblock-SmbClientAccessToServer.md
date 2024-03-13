@@ -16,6 +16,7 @@ Unblocks SMB client access to a previously blocked server.
 ## SYNTAX
 
 ### Query
+
 ```
 Unblock-SmbClientAccessToServer [-Name] <String[]> -IdentifierType <IdentifierType>
  -Identifier <String> [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
@@ -23,6 +24,7 @@ Unblock-SmbClientAccessToServer [-Name] <String[]> -IdentifierType <IdentifierTy
 ```
 
 ### InputObject
+
 ```
 Unblock-SmbClientAccessToServer -InputObject <CimInstance[]> -IdentifierType <IdentifierType>
  -Identifier <String> [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]

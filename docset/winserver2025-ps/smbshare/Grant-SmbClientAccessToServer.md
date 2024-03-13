@@ -16,6 +16,7 @@ Grants SMB client access to a specified server.
 ## SYNTAX
 
 ### Query
+
 ```
 Grant-SmbClientAccessToServer [-Name] <String[]> -IdentifierType <IdentifierType>
  -Identifier <String> [-Description <String>] [-Force] [-CimSession <CimSession[]>]
@@ -23,6 +24,7 @@ Grant-SmbClientAccessToServer [-Name] <String[]> -IdentifierType <IdentifierType
 ```
 
 ### InputObject
+
 ```
 Grant-SmbClientAccessToServer -InputObject <CimInstance[]> -IdentifierType <IdentifierType>
  -Identifier <String> [-Description <String>] [-Force] [-CimSession <CimSession[]>]

@@ -16,12 +16,14 @@ Gets information about SMB client access to a specified server.
 ## SYNTAX
 
 ### Query
+
 ```
 Get-SmbClientAccessToServer [-Name] <String[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
  [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InputObject
+
 ```
 Get-SmbClientAccessToServer -InputObject <CimInstance[]> [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]

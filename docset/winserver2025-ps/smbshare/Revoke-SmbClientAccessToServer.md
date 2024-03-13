@@ -16,6 +16,7 @@ Revokes SMB client access to a specified server.
 ## SYNTAX
 
 ### Query
+
 ```
 Revoke-SmbClientAccessToServer [-Name] <String[]> -IdentifierType <IdentifierType>
  -Identifier <String> [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
@@ -23,6 +24,7 @@ Revoke-SmbClientAccessToServer [-Name] <String[]> -IdentifierType <IdentifierTyp
 ```
 
 ### InputObject
+
 ```
 Revoke-SmbClientAccessToServer -InputObject <CimInstance[]> -IdentifierType <IdentifierType>
  -Identifier <String> [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]

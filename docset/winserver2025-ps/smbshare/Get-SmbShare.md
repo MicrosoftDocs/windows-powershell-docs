@@ -59,7 +59,7 @@ Name                          ScopeName                     Path                
 VMS1                          *                             I:\VMS
 ```
 
-This command retrieves information about the SMB share named 'VMS1' on the local computer.
+This command retrieves information about the SMB share named `VMS1` on the local computer.
 
 ### Example 3: Display information about the SMB shares on a remote computer
 
@@ -79,7 +79,7 @@ VHD and ISO *         D:\\data\VHD and ISO               ae-dfsr-sr-01
 
 ```
 
-This command displays the information about the SMB shares on the remote computer NEDFS1.
+This command displays the information about the SMB shares on the remote computer `NEDFS1`.
 
 ### Example 4: Display all properties about a specific SMB share on the local computer in a list
 
@@ -113,7 +113,7 @@ CimInstanceProperties : {AvailabilityType, CachingMode, CATimeout, ConcurrentUse
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-This command displays all of the information about the SMB share named 'VMS1' on the local computer
+This command displays all of the information about the SMB share named `VMS1` on the local computer
 as a formatted list.
 
 ### Example 5: Get shares on the local failover cluster computer that have scale out availability
@@ -142,7 +142,7 @@ VMS2                          Contoso-FS                    J:\VMS
 ```
 
 This command retrieves the SMB shares on the Windows Server failover cluster that are connected to
-the clustered file server resource named Contoso-FS.
+the clustered file server resource named `Contoso-FS`.
 
 ## PARAMETERS
 
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml

@@ -15,11 +15,15 @@ Deletes the specified SMB shares.
 
 ## SYNTAX
 
+### Query
+
 ```
 Remove-SmbShare [-Name] <String[]> [[-ScopeName] <String[]>] [-SmbInstance <SmbInstance>] [-Force]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
+
+### InputObject
 
 ```
 Remove-SmbShare -InputObject <CimInstance[]> [-Force] [-CimSession <CimSession[]>]
@@ -32,7 +36,7 @@ The `Remove-SmbShare` cmdlet deletes one or more Server Message Block (SMB) shar
 
 Removing an SMB share forcibly disconnects all of the existing connections to the share. Use this
 cmdlet with caution. Clients that are forcibly disconnected from a share aren't able to flush
-locally cached data before they are disconnected. This may cause data loss. Use the Get-SmbSession
+locally cached data before they are disconnected. This may cause data loss. Use the `Get-SmbSession`
 cmdlet to determine whether users are connected to a share.
 
 ## EXAMPLES
@@ -49,7 +53,7 @@ Performing operation `Remove-Share` on Target 'Contoso-FS,Data'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-This command deletes the SMB share named **Data**.
+This command deletes the SMB share named `Data`.
 
 ### Example 2: Delete a Windows Server failover cluster file server resource SMB share without confirmation
 
@@ -57,7 +61,7 @@ This command deletes the SMB share named **Data**.
 Remove-SmbShare -Name "VMFiles" -ScopeName "Contoso-SO" -Force
 ```
 
-This command deletes the SMB share named VMFiles on the `Contoso-SO` file server resource without
+This command deletes the SMB share named `VMFiles` on the `Contoso-SO` file server resource without
 user confirmation.
 
 ## PARAMETERS
@@ -83,29 +87,13 @@ Accept wildcard characters: False
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -136,7 +124,7 @@ Specifies the input object that's used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
-Parameter Sets: InputObject (cdxml)
+Parameter Sets: InputObject
 Aliases:
 
 Required: True
@@ -226,6 +214,22 @@ computer.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

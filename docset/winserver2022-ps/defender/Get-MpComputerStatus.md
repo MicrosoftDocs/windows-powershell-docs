@@ -31,38 +31,68 @@ computer.
 
 ```
 PS C:\> Get-MpComputerStatus
-AMEngineVersion                 : 1.1.9700.0
-AMProductVersion                : 4.3.9463.0
-AMServiceEnabled                : True
-AMServiceVersion                : 4.3.9463.0
-AntispywareEnabled              : True
-AntispywareSignatureAge         : 0
-AntispywareSignatureLastUpdated : 7/30/2013 3:01:45 AM
-AntispywareSignatureVersion     : 1.155.1107.0
-AntivirusEnabled                : True
-AntivirusSignatureAge           : 0
-AntivirusSignatureLastUpdated   : 7/30/2013 3:01:45 AM
-AntivirusSignatureVersion       : 1.155.1107.0
-BehaviorMonitorEnabled          : True
-ComputerID                      : A69DA5B8-06B3-4A00-B2C1-D18ED66BAD40
-ComputerState                   : 0
-FullScanAge                     : 4294967295
-FullScanEndTime                 :
-FullScanStartTime               :
-IoavProtectionEnabled           : True
-LastFullScanSource              : 0
-LastQuickScanSource             : 2
-NISEnabled                      : False
-NISEngineVersion                : 2.1.9700.0
-NISSignatureAge                 : 0
-NISSignatureLastUpdated         : 7/30/2013 1:30:46 PM
-NISSignatureVersion             : 106.0.0.0
-OnAccessProtectionEnabled       : True
-QuickScanAge                    : 0
-QuickScanEndTime                : 7/30/2013 1:50:24 PM
-QuickScanStartTime              : 7/30/2013 1:49:15 PM
-RealTimeProtectionEnabled       : True
-RealTimeScanDirection           : 0
+AMEngineVersion                  : 1.1.23080.2005
+AMProductVersion                 : 4.18.23080.2006
+AMRunningMode                    : Normal
+AMServiceEnabled                 : True
+AMServiceVersion                 : 4.18.23080.2006
+AntispywareEnabled               : True
+AntispywareSignatureAge          : 0
+AntispywareSignatureLastUpdated  : 02-10-2023 12:11:38 PM
+AntispywareSignatureVersion      : 1.397.1940.0
+AntivirusEnabled                 : True
+AntivirusSignatureAge            : 0
+AntivirusSignatureLastUpdated    : 02-10-2023 12:11:37 PM
+AntivirusSignatureVersion        : 1.397.1940.0
+BehaviorMonitorEnabled           : True
+ComputerID                       : A089CDD8-4895-F63E-C346-045B90A9610B
+ComputerState                    : 0
+DefenderSignaturesOutOfDate      : False
+DeviceControlDefaultEnforcement  : Unknown
+DeviceControlPoliciesLastUpdated : 27-03-2023 10:43:04 PM
+DeviceControlState               : Disabled
+FullScanAge                      : 4294967295
+FullScanEndTime                  :
+FullScanOverdue                  : False
+FullScanRequired                 : False
+FullScanSignatureVersion         :
+FullScanStartTime                :
+IoavProtectionEnabled            : True
+IsTamperProtected                : True
+IsVirtualMachine                 : False
+LastFullScanSource               : 0
+LastQuickScanSource              : 1
+NISEnabled                       : True
+NISEngineVersion                 : 1.1.23080.2005
+NISSignatureAge                  : 0
+NISSignatureLastUpdated          : 02-10-2023 12:11:37 PM
+NISSignatureVersion              : 1.397.1940.0
+OnAccessProtectionEnabled        : True
+ProductStatus                    : 524288
+QuickScanAge                     : 0
+QuickScanEndTime                 : 02-10-2023 08:51:52 PM
+QuickScanOverdue                 : False
+QuickScanSignatureVersion        : 1.397.1940.0
+QuickScanStartTime               : 02-10-2023 08:49:04 PM
+RealTimeProtectionEnabled        : True
+RealTimeScanDirection            : 1
+RebootRequired                   : False
+SmartAppControlExpiration        :
+SmartAppControlState             : Off
+TamperProtectionSource           : UI
+TDTMode                          : cm
+TDTSiloType                      : E
+TDTStatus                        : Disabled
+TDTTelemetry                     : Disabled
+TroubleShootingDailyMaxQuota     :
+TroubleShootingDailyQuotaLeft    :
+TroubleShootingEndTime           :
+TroubleShootingExpirationLeft    :
+TroubleShootingMode              :
+TroubleShootingModeSource        :
+TroubleShootingQuotaResetTime    :
+TroubleShootingStartTime         :
+PSComputerName                   :
 ```
 
 This command gets the status of antimalware protection software installed on the computer.

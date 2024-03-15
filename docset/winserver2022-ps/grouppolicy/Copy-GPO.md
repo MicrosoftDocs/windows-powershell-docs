@@ -70,6 +70,15 @@ The GPOs exist in the domain of the user that is running the session.
 
 ### Example 2: Copy a GPO from a domain to another domain
 
+```
+PS C:\> Copy-GPO -SourceName "TestGpo1" -SourceDomain "test.contoso.com" TargetName "TestGpo1" -TargetDomain "sales.contoso.com"
+```
+
+This command copies the TestGpo1 GPO from the test.contoso.com domain to a GPO named TestGpo1 in the sales.contoso.com domain.
+
+A trust relationship must exist between the source domain and the destination domain.
+In addition, if the source domain or the destination domain (or both) is different than the domain of the user that is running the session a trust must exist between that domain and the domain of the user.
+
 ```powershell
 $params = @{
     SourceName   = 'TestGpo1"'

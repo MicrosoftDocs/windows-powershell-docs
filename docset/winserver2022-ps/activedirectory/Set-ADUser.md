@@ -54,7 +54,7 @@ not associated with cmdlet parameters by using the **Add**, **Remove**, **Replac
 parameters.
 
 The *Identity* parameter specifies the Active Directory user to modify.
-You can identify a user by its distinguished name, GUID, security identifier (SID), or Security Account Manager (SAM) account name.
+**You can identify a user by its distinguished name, GUID, security identifier (SID), or Security Account Manager (SAM) account name.**
 You can also set the *Identity* parameter to an object variable such as `$<localUserObject>`, or you can pass an object through the pipeline to the *Identity* parameter.
 For example, you can use the **Get-ADUser** cmdlet to retrieve a user object and then pass the object through the pipeline to the **Set-ADUser** cmdlet.
 
@@ -104,7 +104,19 @@ PS C:\> Set-ADUser -Identity GlenJohn -Replace @{title="director";mail="glenjohn
 
 This command sets the specified user's **title** property to director and the **mail** property to glenjohn@fabrikam.com.
 
-### Example 4: Modify a user otherMailbox property
+### Example 4: Disable multiple users from a variable in a Script
+
+```powershell
+$users = Get-ADUser -Filter * -properties Name, distinguishedName
+Foreach ($element in $users)
+{
+Set-ADUser -Identity $element.distinguishedName -Enabled $False
+}
+```
+
+This command disables every account entry
+
+### Example 5: Modify a user otherMailbox property
 
 ```powershell
 PS C:\> Set-ADUser -Identity GlenJohn -Remove @{otherMailbox="glen.john"} -Add @{url="fabrikam.com"} -Replace @{title="manager"} -Clear description
@@ -112,7 +124,7 @@ PS C:\> Set-ADUser -Identity GlenJohn -Remove @{otherMailbox="glen.john"} -Add @
 
 This command modifies the user with the SAM account name GlenJohn's object by removing glen.john from the **otherMailbox** property, adding fabrikam.com to the **url** property, replacing the **title** property with manager, and clearing the **description** property.
 
-### Example 5: Set user properties to a local instance
+### Example 6: Set user properties to a local instance
 
 ```powershell
 PS C:\> $User = Get-ADUser -Identity GlenJohn -Properties mail,department
@@ -123,7 +135,7 @@ PS C:\> Set-ADUser -Instance $User
 
 This example sets the **mail** and **department** properties on the user object with the SAM account name GlenJohn by using the *Instance* parameter.
 
-### Example 6: Set attributes for a user
+### Example 7: Set attributes for a user
 
 ```powershell
 PS C:\> $Hours = New-Object byte[] 21
@@ -138,7 +150,7 @@ PS C:\> Set-ADUser -Identity "SarahDavis" -Replace $ReplaceHashTable
 This example sets the user logon hours to Monday through Friday from 8:00 AM to 5:00 PM and adds a description.
 It updates the **logonHours** attribute with the specified byte array and the **description** attribute with the specified string.
 
-### Example 7: Set a property for a user
+### Example 8: Set a property for a user
 
 ```powershell
 PS C:\> $Manager = Get-ADUser -Identity GlenJohn -Server Corp-DC01 
@@ -147,7 +159,7 @@ PS C:\> Set-ADUser -Identity ChewDavid -Manager $Manager -Server Branch-DC02
 
 This example sets the **Manager** property for the user with the SAM account name of ChewDavid where the manager, GlenJohn, is a user in another domain.
 
-### Example 8: Get a user and set a property
+### Example 9: Get a user and set a property
 
 ```powershell
 PS C:\> Get-ADUser -Identity "DavidChew" | Set-ADUser -Manager "ElisaDaugherty"

@@ -17,9 +17,9 @@ updates that are applied to each node in a specified cluster.
 ## SYNTAX
 
 ```
-Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential]
-<PSCredential>] [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure]
- [<CommonParameters>]
+Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>]
+ [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure]
+ [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,6 +78,25 @@ Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/
 
 ## PARAMETERS
 
+### -AttemptSoftReboot
+
+Indicates that command assumes a Kernel Soft Reboot (KSR) for the failover cluster.
+
+KSR bypasses BIOS/firmware initialization.
+You can only use KSR for updates that do not require a BIOS/firmware initialization.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CauPluginArguments
 
 Specifies a set of name=value pairs for each updating plug-in to use.
@@ -92,6 +111,7 @@ For instance:
 - `@{name1=value1;name2=value2;name3=value3},@{name4=value4;name5=value5}`
 
 For the default **Microsoft.WindowsUpdatePlugin** plug-in, no arguments are needed.
+
 The following arguments are optional: 
 - **'IncludeRecommendedUpdates'='\<Value\>'**: Boolean value to indicate that recommended updates
   will be applied in addition to important updates on each node. If not specified, the default value
@@ -100,7 +120,7 @@ The following arguments are optional:
   Agent to filter the updates that will be applied to each node. For a name, use **QueryString** and
   for a value, enclose the full query in quotation marks. If not specified, then the
   **Microsoft.WindowsUpdatePlugin** plug-in by default uses the following argument:
-- `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
+  - `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
 
 For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in
 and the criteria such as IsInstalled that can be included in the query strings, see
@@ -145,7 +165,9 @@ Specifies one or more plug-ins to use when performing scans. You can specify mul
 separated with commas. The default is the **Microsoft.WindowsUpdatePlugin** plug-in. This plug-in
 coordinates the Windows Update Agent software resident on each cluster node, the same software that
 is used when updates are downloaded from Windows Update or Microsoft Update, or from a Windows
-Server Update Services (WSUS) server. For more information about how plug-ins work with
+Server Update Services (WSUS) server.
+
+For more information about how plug-ins work with
 Cluster-Aware Updating (CAU), see
 [Cluster-Aware Updating plug-ins](https://go.microsoft.com/fwlink/p/?LinkId=235333).
 
@@ -190,6 +212,39 @@ Aliases:
 
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OsRollingUpgrade
+
+Indicates that the CAU cluster role scans for upgrades to the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RebootMode
+
+{{ Fill RebootMode Description }}
+
+```yaml
+Type: RebootType
+Parameter Sets: (All)
+Aliases:
+Accepted values: ClusProp, FullReboot, SoftReboot
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -251,7 +306,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.ClusterAwareUpdating.CauUpdateInfo
+### Microsoft.ClusterAwareUpdating.UpdateInfo
+
+### Microsoft.ClusterAwareUpdating.ActivityIdMap
+
+### Microsoft.ClusterAwareUpdating.UpgradeSetupInfo
 
 ## NOTES
 

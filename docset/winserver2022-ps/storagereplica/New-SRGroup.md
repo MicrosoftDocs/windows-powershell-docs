@@ -27,6 +27,13 @@ New-SRGroup [[-ComputerName] <String>] [-Name] <String> [-VolumeName] <String[]>
 The `New-SRGroup` cmdlet creates a replication group. A replication group contains one or more
 data volumes and an associated log volume. A replication group is the container for replication.
 
+> [!NOTE]
+> The **EnableCompression** parameter is only available in
+> [Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/) or later,
+> and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative Update for Microsoft
+> server operating system version 21H2 for x64-based Systems
+> ([KB5017381](https://support.microsoft.com/help/5017381)).
+
 ## EXAMPLES
 
 ### Example 1: Create a replication group
@@ -135,6 +142,12 @@ Accept wildcard characters: False
 ### -EnableCompression
 
 Indicates that this Storage Replica group should use SMB compression for data transfer.
+
+This parameter only applies to
+[Azure Stack HCI version 22H2](/updates/public-preview-azure-stack-hci-version-22h2/) or later, and
+Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative Update for Microsoft
+server operating system version 21H2 for x64-based Systems
+([KB5017381](https://support.microsoft.com/help/5017381)).
 
 ```yaml
 Type: SwitchParameter

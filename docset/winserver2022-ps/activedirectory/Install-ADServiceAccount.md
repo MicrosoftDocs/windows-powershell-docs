@@ -37,6 +37,8 @@ This is required when you are installing a standalone managed service account on
 In this case you should create the standalone managed service account, link it with the appropriate computer account, and assign a well-known password that must be passed when installing the standalone managed service account on the server on the read-only domain controller site.
 If you pass both *AccountPassword* and *PromptForPassword* parameters, the *AccountPassword* parameter takes precedence.
 
+**NOTE**: This cmdlet is designed for MSAs. It can report success for a GMSA when computer and GMSA objects are in the same domain, but it will not have an effect. To use a GMSA on a computer, configure the account to be used for the application purpose per the documentation of the application, and grant permissions and privileges as needed.
+
 ## EXAMPLES
 
 ### Example 1: Install a managed service account on the local computer

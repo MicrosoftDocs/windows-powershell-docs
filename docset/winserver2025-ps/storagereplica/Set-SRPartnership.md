@@ -189,6 +189,7 @@ Accept wildcard characters: False
 ### -Compression
 
 Indicates that the connections in this partnership should use SMB compression for data transfer.
+SMB compression is only used with TCP, and isn't supported on both SMB Direct and RDMA networks.
 
 ```yaml
 Type: Boolean

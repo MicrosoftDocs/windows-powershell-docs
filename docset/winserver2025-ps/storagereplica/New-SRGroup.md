@@ -134,7 +134,8 @@ Accept wildcard characters: False
 
 ### -EnableCompression
 
-Indicates that this Storage Replica group should use SMB compression for data transfer.
+Indicates that this Storage Replica group should use SMB compression for data transfer. SMB
+compression is only used with TCP, and isn't supported on both SMB Direct and RDMA networks.
 
 ```yaml
 Type: SwitchParameter

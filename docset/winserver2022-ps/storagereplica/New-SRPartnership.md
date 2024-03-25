@@ -233,12 +233,12 @@ specify drive letters.
 
 This is an ordered list. The order of volumes determines the order of replication.
 
-For instance, to replicate the F: and H: drives on one server to the F: and H: drives of another
+For instance, to replicate the `F:` and `H:` drives on one server to the `F:` and `H:` drives of another
 server, specify the following values:
 
 `-SourceVolumeName "F:","H:" -DestinationVolumeName "F:","H:"`
 
- To replicate F: to H: instead, specify the following values:
+ To replicate `F:` to `H:` instead, specify the following values:
 
 `-SourceVolumeName "F:","H:" -DestinationVolumeName "H:","F:"`
 

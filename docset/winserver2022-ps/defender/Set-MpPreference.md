@@ -902,7 +902,7 @@ Accept wildcard characters: False
 ```
 
 ### Enable UdpReceiveOffload: 
-Specifies whether UDP receive offload support in Network Protection is enabled, resulting in potentially higher UDP bandwidth in the inbound direction. Starting with platform version 4.18.24030, Microsoft will gradually move this support default from disabled to enabled. This setting can be manually controlled by setting it to '1' to enable and '0' to disable.
+Specifies whether UDP receive offload support in Network Protection is enabled, resulting in potentially higher UDP bandwidth in the inbound direction. Starting with platform version `4.18.24030`, Microsoft will gradually move this support default from disabled to enabled. This setting can be manually controlled by setting it to `1` to enable and `0` to disable.
 
 ```yaml
 Type: ASRRuleActionType
@@ -917,7 +917,7 @@ Accept wildcard characters: False
 ```
 
 ### Enable UdpSegmentationOffload: 
-Specifies whether UDP segmentation offload support in Network Protection is enabled, resulting in potentially higher UDP bandwidth in the outbound direction. Starting with platform version 4.18.24030, Microsoft will gradually move this support default from disabled to enabled. This setting can be manually controlled by setting it to '1' to enable and '0' to disable.
+Specifies whether UDP segmentation offload support in Network Protection is enabled, resulting in potentially higher UDP bandwidth in the outbound direction. Starting with platform version `4.18.24030`, Microsoft will gradually move this support default from disabled to enabled. This setting can be manually controlled by setting it to `1` to enable and `0` to disable.
 
 ```yaml
 Type: ASRRuleActionType

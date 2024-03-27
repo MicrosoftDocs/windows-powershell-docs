@@ -2,7 +2,7 @@
 description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 03/25/2024
+ms.date: 03/27/2024
 online version: https://learn.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -813,6 +813,21 @@ Specifies the state for the controlled folder access feature. Valid values are D
 
 ```yaml
 Type: ControlledFolderAccessType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableConvertWarnToBlock
+This setting controls whether network protection blocks network traffic instead of displaying a warning. This setting can be manually controlled by setting it to `1` to enable and `0` to disable.
+
+```yaml
+Type: ASRRuleActionType
 Parameter Sets: (All)
 Aliases:
 

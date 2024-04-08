@@ -37,7 +37,7 @@ being displayed by the computer.
 ### Example 1: Get SMB shares on a local computer
 
 ```powershell
-PS C:\\>Get-SMBShare
+Get-SMBShare
 Name                          ScopeName                     Path                          Description
 ----                          ---------                     ----                          -----------
 ADMIN$                        *                             C:\\Windows                   Remote Admin
@@ -53,7 +53,7 @@ This command retrieves the SMB shares on the computer.
 ### Example 2: Get a specific SMB share on the local computer
 
 ```powershell
-PS C:\\>Get-SmbShare -Name "VMS1"
+Get-SmbShare -Name "VMS1"
 Name                          ScopeName                     Path                          Description
 ----                          ---------                     ----                          -----------
 VMS1                          *                             I:\VMS
@@ -64,7 +64,7 @@ This command retrieves information about the SMB share named `VMS1` on the local
 ### Example 3: Display information about the SMB shares on a remote computer
 
 ```powershell
-PS C:\\>get-smbshare -CimSession "NEDFS1"
+Get-SmbShare -CimSession "NEDFS1"
 
 Name        ScopeName Path                Description   PSComputerName
 ----        --------- ----                -----------   --------------
@@ -76,7 +76,6 @@ IPC$        *                              Remote IPC    ae-dfsr-sr-01
 IT dept     *         D:\\data\IT dept                   ae-dfsr-sr-01
 procedures  *         D:\\hr\procedures                  ae-dfsr-sr-01
 VHD and ISO *         D:\\data\VHD and ISO               ae-dfsr-sr-01
-
 ```
 
 This command displays the information about the SMB shares on the remote computer `NEDFS1`.
@@ -84,7 +83,7 @@ This command displays the information about the SMB shares on the remote compute
 ### Example 4: Display all properties about a specific SMB share on the local computer in a list
 
 ```powershell
-PS C:\\>Get-SmbShare -Name "VMS1" | Format-List -Property *
+Get-SmbShare -Name "VMS1" | Format-List -Property *
 PresetPathAcl         : System.Security.AccessControl.DirectorySecurity
 ShareState            : Online
 AvailabilityType      : Clustered
@@ -119,7 +118,7 @@ as a formatted list.
 ### Example 5: Get shares on the local failover cluster computer that have scale out availability
 
 ```powershell
-PS C:\\>Get-SmbShare | Where-Object -Property AvailabilityType -Eq ScaleOut
+Get-SmbShare | Where-Object -Property AvailabilityType -Eq ScaleOut
 Name                          ScopeName                     Path                          Description
 ----                          ---------                     ----                          -----------
 ClusterStorage$               Contoso-SO                    C:\\ClusterStorage             Cluster Shared Volumes Def...
@@ -132,7 +131,7 @@ This command retrieves the SMB shares on the computer that have scaled out avail
 ### Example 6: Get shares that are connected to a local failover cluster file server resource named "Contoso-FS"
 
 ```powershell
-PS C:\\>Get-SmbShare -ScopeName "Contoso-FS"
+Get-SmbShare -ScopeName "Contoso-FS"
 Name                          ScopeName                     Path                          Description
 ----                          ---------                     ----                          -----------
 I$                            Contoso-FS                    I:\                           Cluster Default Share
@@ -222,7 +221,7 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
 or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
@@ -337,8 +336,8 @@ Accept wildcard characters: False
 
 ### -IsolatedTransport
 
-Specifies whether to use an isolated transport for the SMB share. An isolated transport provides
-additional security by encrypting and signing SMB traffic. The default value is `$false`.
+Treats this share to be a distinct file server instance. Clients will establish a new set of
+connections to access the share.
 
 ```yaml
 Type: Boolean[]
@@ -488,8 +487,12 @@ Accept wildcard characters: False
 
 ### -SmbInstance
 
-Specifies the input to this cmdlet. You can use this parameter, or you can pipe the input to this
-cmdlet.
+Specifies the SMB share instance type. Accepted values are:
+
+- `Default`: Used for operations where a client device opens a file on a share on the server.
+- `CSV`: Used by Windows Failover Clusters.
+- `SBL`: Used by Storage Spaces Direct.
+- `SR`: Used by Storage Replica.
 
 ```yaml
 Type: SmbInstance
@@ -546,7 +549,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

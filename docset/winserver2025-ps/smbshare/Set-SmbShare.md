@@ -49,7 +49,7 @@ The `Set-SmbShare` cmdlet modifies the properties of the Server Message Block (S
 ### Example 1: Modify properties of an SMB share
 
 ```powershell
-PS C:\\>Set-SmbShare -Name "VMFiles" -EncryptData $True
+Set-SmbShare -Name "VMFiles" -EncryptData $True
 
 
 Confirm
@@ -63,7 +63,7 @@ This command modifies the properties of an SMB share.
 ### Example 2: Modify properties of an SMB share without confirmation
 
 ```powershell
-PS C:\\>Set-SmbShare -Name "VMFiles" -EncryptData $True -Force
+Set-SmbShare -Name "VMFiles" -EncryptData $True -Force
 ```
 
 This command modifies the properties of an SMB share without user confirmation.
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
 or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
@@ -533,17 +533,15 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
-### System.String[]
+### System.String
 
 ### Microsoft.PowerShell.Cmdletization.GeneratedTypes.SmbShare.SmbInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance[]
-
-### System.String
 
 ### System.UInt32
 

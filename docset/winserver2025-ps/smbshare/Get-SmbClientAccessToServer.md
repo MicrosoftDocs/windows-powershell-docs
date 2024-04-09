@@ -32,8 +32,8 @@ Get-SmbClientAccessToServer -InputObject <CimInstance[]> [-CimSession <CimSessio
 ## DESCRIPTION
 
 The `Get-SmbClientAccessToServer` cmdlet is used to retrieve information about SMB client access to
-a specified server. When you run this cmdlet, it'll return a list of all SMB client connections to
-the specified server.
+a specified server. When you run this cmdlet, it'll return a list of allowed and blocked
+connections for SMB over QUIC client access control.
 
 ## EXAMPLES
 
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

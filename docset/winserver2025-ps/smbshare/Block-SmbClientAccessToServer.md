@@ -28,15 +28,16 @@ Block-SmbClientAccessToServer [-Name] <String[]> -IdentifierType <IdentifierType
 ```
 Block-SmbClientAccessToServer -InputObject <CimInstance[]> -IdentifierType <IdentifierType>
  -Identifier <String> [-Description <String>] [-Force] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>]  [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The `Block-SmbClientAccessToServer` cmdlet is used to prevent SMB clients from accessing a
-specified server. When you run this cmdlet, all SMB client connections to the specified server will
-be terminated, and no new connections will be allowed until the block is lifted. To unblock access
-to the server, use the `Unblock-SmbClientAccessToServer` cmdlet.
+specified server when using SMB over QUIC client access control. When you run this cmdlet, all SMB
+client connections to the specified server will be terminated, and no new connections will be
+allowed until the block is lifted. To unblock access to the server, use the
+`Unblock-SmbClientAccessToServer` cmdlet.
 
 ## EXAMPLES
 
@@ -263,7 +264,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

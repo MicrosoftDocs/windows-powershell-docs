@@ -11,7 +11,8 @@ title: Grant-SmbClientAccessToServer
 # Grant-SmbClientAccessToServer
 
 ## SYNOPSIS
-Grants SMB client access to a specified server.
+Allow access to a computer or set of computers for SMB over QUIC's client access control feature on
+an SMB Server.
 
 ## SYNTAX
 
@@ -264,7 +265,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

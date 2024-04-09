@@ -41,7 +41,7 @@ alternative port to remove using the **TransportType** and **Port** parameters, 
 ### Example 1: Remove a SMB server alternative port
 
 ```powershell
-PS C:\\> Remove-SmbServerAlternativePort -TransportType QUIC -Port 1
+Remove-SmbServerAlternativePort -TransportType QUIC -Port 1
 ```
 
 This command removes an SMB server alternative port that uses the QUIC transport protocol on port
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
 or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -IncludeHidden
 
-Include any hidden SMB server alternative ports in the list of ports that is removed.
+Not used.
 
 ```yaml
 Type: SwitchParameter
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ### -TransportType
 
 Specifies the transport protocol to use for the SMB connection. The only accepted value for this
-parameter is **QUIC**. If not specified, the transport protocol defaults to TCP.
+parameter is `QUIC`.
 
 ```yaml
 Type: TransportType[]
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

@@ -33,7 +33,7 @@ accordingly.
 ### Example 1: Configure a new SMB server alternative port
 
 ```powershell
-PS C:\\> Set-SmbServerAlternativePort -TransportType QUIC -Port 1
+Set-SmbServerAlternativePort -TransportType QUIC -Port 1
 ```
 
 Configures an SMB server alternative port that uses the QUIC transport protocol on port number
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
 or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
@@ -79,8 +79,8 @@ Accept wildcard characters: False
 
 ### -DisableInstances
 
-Disables the creation of multiple instances of the SMB server service and sets the port number
-specified by the **Port** parameter as the default port for the SMB server service.
+Disables alternative ports on SMB instances. Currently only the **Default** instance is allowed.
+This setting is not used.
 
 ```yaml
 Type: Instance
@@ -97,8 +97,8 @@ Accept wildcard characters: False
 
 ### -EnableInstances
 
-Enables the creation of multiple instances of the SMB server service, each with its own unique port
-number specified by the **Port** parameter.
+Enables alternative ports on SMB instances. Currently only the **Default** instance is allowed.
+This setting is not used.
 
 ```yaml
 Type: Instance
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

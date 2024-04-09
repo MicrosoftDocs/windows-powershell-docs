@@ -41,15 +41,6 @@ Get-SmbServerAlternativePort
 This command retrieves a list of all SMB server alternative ports that are currently configured on
 the local server.
 
-### Example 2: Get all SMB Server alternative ports including hidden ports
-
-```powershell
-Get-SmbServerAlternativePort -IncludeHidden
-```
-
-This command retrieves a list of all SMB server alternative ports that are currently configured on
-the local server, including any hidden ports.
-
 ## PARAMETERS
 
 ### -AsJob
@@ -72,7 +63,7 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
 or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
@@ -90,7 +81,7 @@ Accept wildcard characters: False
 
 ### -IncludeHidden
 
-Include any hidden SMB server alternative ports in the list of ports that is returned.
+Not used.
 
 ```yaml
 Type: SwitchParameter
@@ -143,7 +134,7 @@ Accept wildcard characters: False
 ### -TransportType
 
 Specifies the transport protocol to use for the SMB connection. The only accepted value for this
-parameter is **QUIC**. If not specified, the transport protocol defaults to TCP.
+parameter is `QUIC`.
 
 ```yaml
 Type: TransportType[]
@@ -163,7 +154,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

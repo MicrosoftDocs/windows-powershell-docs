@@ -31,7 +31,7 @@ it can be a mapping without a local path.
 ### Example 1: Get SMB client directory mappings
 
 ```powershell
-PS C:\\>Get-SmbMapping
+Get-SmbMapping
 Status                                  Local Path                              Remote Path
 ------                                  ----------                              -----------
 OK                                      X:                                      \\Contoso-SO\VMFiles
@@ -43,7 +43,7 @@ This command retrieves the SMB client directory mappings created for the SMB ser
 ### Example 2: Get SMB client directory mapping for a directory
 
 ```powershell
-PS C:\\>Get-SmbMapping -LocalPath X: | Select-Object -Property *
+Get-SmbMapping -LocalPath "X:" | Select-Object -Property *
 Status                : OK
 LocalPath             : X:
 RemotePath            : \\Contoso-SO\VMFiles
@@ -53,7 +53,7 @@ CimInstanceProperties : {LocalPath, RemotePath, Status}
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-This command retrieves the SMB client directory mapping for the X: directory created for the SMB
+This command retrieves the SMB client directory mapping for the **X:** directory created for the SMB
 server.
 
 ## PARAMETERS
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

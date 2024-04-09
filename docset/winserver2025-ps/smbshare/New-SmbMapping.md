@@ -35,7 +35,7 @@ SMB share.
 ### Example 1: Create an SMB mapping
 
 ```powershell
-PS C:\\>New-SmbMapping -LocalPath 'X:' -RemotePath '\\Contoso-SO\VMFiles'
+New-SmbMapping -LocalPath "X:" -RemotePath "\\Contoso-SO\VMFiles"
 Status                                  Local Path                              Remote Path
 ------                                  ----------                              -----------
 OK                                      X:                                      \\Contoso-SO\VMFiles
@@ -65,8 +65,9 @@ Accept wildcard characters: False
 ### -BlockNTLM
 
 Specifies whether to block NT LAN Manager (NTLM) authentication. If this parameter is set to
-`$true`, NTLM authentication will be blocked forcing the connection to use Kerberos authentication.
-If set to `$false` (default), NTLM authentication will be allowed.
+`$true`, NTLM authentication will be blocked forcing the connection to use another negotiated
+authentication method, such as Kerberos. If set to `$false` (default), NTLM authentication will be
+allowed.
 
 ```yaml
 Type: Boolean
@@ -83,7 +84,7 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
 or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
@@ -217,8 +218,7 @@ Accept wildcard characters: False
 
 ### -QuicPort
 
-Specifies the destination port number used by the SMB server for Quick UDP Internet Connections
-(QUIC) protocol connections.
+Specifies the destination port number used by the SMB server for QUIC protocol connections.
 
 ```yaml
 Type: UInt16
@@ -459,7 +459,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

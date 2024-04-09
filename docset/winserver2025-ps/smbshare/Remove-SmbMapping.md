@@ -40,7 +40,7 @@ The `Remove-SmbMapping` cmdlet removes the Server Message Block (SMB) mapping to
 ### Example 1: Remove an SMB mapping to an SMB share
 
 ```powershell
-PS C:\\>Remove-SmbMapping -LocalPath "Y:"
+Remove-SmbMapping -LocalPath "Y:"
 
 
 
@@ -55,7 +55,7 @@ This command removes an SMB mapping to an SMB share.
 ### Example 2: Remove an SMB mapping to an SMB share without confirmation
 
 ```powershell
-PS C:\\>Remove-SmbMapping -RemotePath "\\Contoso-SO\VMFiles" -Force
+Remove-SmbMapping -RemotePath "\\Contoso-SO\VMFiles" -Force
 ```
 
 This command removes an SMB mapping to an SMB share without user confirmation.
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
 or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -AuditClientCertificateAccess
 
-Resets the SMB over QUIC client access control audit events.
+Resets the SMB over QUIC client access control audit events to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -153,7 +153,8 @@ Accept wildcard characters: False
 
 ### -AuditClientDoesNotSupportEncryption
 
-Resets auditing of the clients attempts to connect without encryption to the server.
+Resets auditing of the clients attempts to connect without encryption to the server to its default
+value.
 
 ```yaml
 Type: SwitchParameter
@@ -169,7 +170,7 @@ Accept wildcard characters: False
 
 ### -AuditClientDoesNotSupportSigning
 
-Resets auditing of SMB clients that don't support signing.
+Resets auditing of SMB clients that don't support signing to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -185,7 +186,7 @@ Accept wildcard characters: False
 
 ### -AuditInsecureGuestLogon
 
-Resets whether to audit insecure guest logon attempts.
+Resets whether to audit insecure guest logon attempts to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -332,7 +333,7 @@ Accept wildcard characters: False
 
 ### -EnableDirectoryHandleLeasing
 
-Resets the directory handle leasing on the server.
+Resets the directory handle leasing on the server to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -380,7 +381,7 @@ Accept wildcard characters: False
 
 ### -EnableMailslots
 
-Resets mailslots to disabled.
+Resets mailslots to its default value.
 
 Beginning with Windows Server 2025 and Windows 11 Insider Preview Build 25314, remote mailslots are
 disabled by default.
@@ -787,7 +788,7 @@ Accept wildcard characters: False
 
 ### -Smb2DialectMax
 
-Resets the maximum version of the SMB protocol to be used back to `None`.
+Resets the maximum version of the SMB protocol to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -804,7 +805,7 @@ Accept wildcard characters: False
 
 ### -Smb2DialectMin
 
-Resets the minimum version of the SMB protocol to be used back to `None`.
+Resets the minimum version of the SMB protocol to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -840,9 +841,8 @@ Accept wildcard characters: False
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
 this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.
-
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32

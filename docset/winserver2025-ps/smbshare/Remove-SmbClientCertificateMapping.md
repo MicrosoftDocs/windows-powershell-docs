@@ -45,7 +45,7 @@ client name.
 ### Example 1: Remove all certificate mappings from a specific store
 
 ```powershell
-Remove-SmbClientCertificateMapping -StoreName "MyCertificateStore" -Force
+Remove-SmbClientCertificateMapping -StoreName "My" -Force
 ```
 
 This force removes all certificate mappings that have been stored in a specific certificate store.
@@ -53,11 +53,10 @@ This force removes all certificate mappings that have been stored in a specific 
 ### Example 2: Remove a certificate mapping by thumbprint
 
 ```powershell
-Remove-SmbClientCertificateMapping -Thumbprint "MyThumbprint" -IncludeHidden -Force
+Remove-SmbClientCertificateMapping -Thumbprint "MyThumbprint" -Force
 ```
 
-This force removes a certificate mapping with a specific thumbprint, including any hidden
-certificate mappings.
+This force removes a certificate mapping with a specific thumbprint.
 
 ## PARAMETERS
 
@@ -81,7 +80,7 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
 or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
@@ -99,7 +98,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 
-Specifies a friendly name to display for the mapping.
+Specifies the friendly name of the certificate.
 
 ```yaml
 Type: String[]
@@ -120,7 +119,7 @@ are:
 
 - `None`: Remove all flags.
 - `AllowNamedPipe`: Enable use of named pipes in SMB over QUIC connections for this mapping (off by
-  default, overrides the value of RestrictNamedPipeAccessOverQuic).
+  default, overrides the value of the **RestrictNamedPipeAccessOverQuic** parameter).
 - `DefaultCert`: Not used.
 
 ```yaml
@@ -154,7 +153,7 @@ Accept wildcard characters: False
 
 ### -IncludeHidden
 
-Includes removal of any hidden certificate mappings.
+Not used.
 
 ```yaml
 Type: SwitchParameter
@@ -202,8 +201,8 @@ Accept wildcard characters: False
 
 ### -Namespace
 
-Specifies the namespace in which the certificate mappings are located. By default, the cmdlet
-searches in the `root\cimv2\Security\MicrosoftTlsCertificateMappingProvider` namespace.
+Specifies the namespace of the QUIC server. For example, `server1.contoso.com`. By default, the
+cmdlet searches in the `root\cimv2\Security\MicrosoftTlsCertificateMappingProvider` namespace.
 
 ```yaml
 Type: String[]
@@ -357,7 +356,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

@@ -25,15 +25,15 @@ Get-SmbClientCertificateMapping [[-Namespace] <String[]>] [[-Subject] <String[]>
 ## DESCRIPTION
 
 The `Get-SmbClientCertificateMapping` cmdlet retrieves the client certificate mappings for the SMB
-protocol. These mappings are used to authenticate clients that connect to SMB servers using
-certificates.
+protocol, such as when using SMB over QUIC. These mappings are used to authenticate clients that
+connect to SMB servers using certificates.
 
 ## EXAMPLES
 
 ### Example 1: Retrieve all certificate mappings for a specific store
 
 ```powershell
-Get-SmbClientCertificateMapping -StoreName "MyCertificateStore"
+Get-SmbClientCertificateMapping -StoreName "My"
 ```
 
 This retrieves all certificate mappings that have been stored in a specific certificate store.
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
 or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -DisplayName
 
-Specifies a friendly name to display for the mapping.
+Specifies the friendly name of the certificate.
 
 ```yaml
 Type: String[]
@@ -107,7 +107,7 @@ are:
 
 - `None`: Remove all flags
 - `AllowNamedPipe`: Enable use of named pipes in SMB over QUIC connections for this mapping (off by
-  default, overrides value of RestrictNamedPipeAccessOverQuic)
+  default, overrides value of the **RestrictNamedPipeAccessOverQuic** parameter)
 - `DefaultCert`: Not used
 
 ```yaml
@@ -264,7 +264,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

@@ -28,10 +28,10 @@ The `New-SRGroup` cmdlet creates a replication group. A replication group contai
 data volumes and an associated log volume. A replication group is the container for replication.
 
 > [!NOTE]
-> The **Compression** parameter is only available in
-> [Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/) or later,
-> and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative Update for Microsoft
-> server operating system version 21H2 for x64-based Systems
+> The **EnableCompression** parameter is only available in
+> [Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/)
+> or later, and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative
+> Update for Microsoft server operating system version 21H2 for x64-based Systems
 > ([KB5017381](https://support.microsoft.com/help/5017381)).
 
 ## EXAMPLES
@@ -42,7 +42,7 @@ data volumes and an associated log volume. A replication group is the container 
 New-SRGroup -ComputerName "SR-SRV05" -Name "ReplicationGroup01" -VolumeName "D:" -LogVolumeName "E:" 
 ```
 
-This command creates a replication group for server named SR-SRV05. The command specifies the
+This command creates a replication group for server named `SR-SRV05`. The command specifies the
 replicated volume and the log volume. Because this command does not specify other parameters, the
 replication group uses default values. Replication will not start until you run the
 `New-SRPartnership` cmdlet.
@@ -61,7 +61,7 @@ $Parameters = @{
 New-SRGroup @Parameters
 ```
 
-This command creates a replication group for server named SR-SRV05. The command specifies the
+This command creates a replication group for server named `SR-SRV05`. The command specifies the
 replicated volume and the log volume. The command also specifies a custom log size in GB and enables
 replication traffic encryption. Replication will not start until you run `New-SRPartnership`.
 
@@ -90,8 +90,8 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+or [Get-CimSession](/powershell/module/cimcmdlets/get-ciminstance) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -141,12 +141,14 @@ Accept wildcard characters: False
 
 ### -EnableCompression
 
-Indicates that this Storage Replica group should use SMB compression for data transfer. This
-parameter only applies to
+Indicates that this Storage Replica group should use SMB compression for data transfer.
+
+This parameter only applies to
 [Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/)
-or later, and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative
-Update for Microsoft server operating system version 21H2 for x64-based Systems
+or later, and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative Update
+for Microsoft server operating system version 21H2 for x64-based Systems
 ([KB5017381](https://support.microsoft.com/help/5017381)).
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -318,7 +320,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -330,14 +332,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SRGroup](./Get-SRGroup.md)
+[Get-SRGroup](Get-SRGroup.md)
 
-[New-SRPartnership](./New-SRPartnership.md)
+[New-SRPartnership](New-SRPartnership.md)
 
-[Remove-SRGroup](./Remove-SRGroup.md)
+[Remove-SRGroup](Remove-SRGroup.md)
 
-[Set-SRGroup](./Set-SRGroup.md)
+[Set-SRGroup](Set-SRGroup.md)
 
-[Suspend-SRGroup](./Suspend-SRGroup.md)
+[Suspend-SRGroup](Suspend-SRGroup.md)
 
-[Sync-SRGroup](./Sync-SRGroup.md)
+[Sync-SRGroup](Sync-SRGroup.md)

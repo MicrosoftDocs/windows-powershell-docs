@@ -28,19 +28,19 @@ SMB server for SMB over QUIC. For more information, see [SMB over QUIC](https://
 
 ### Example 1 - Retrieve the properties of a certificate associated with the SMB server
 
-This command retrieves the properties and validity of the `2022-ae-02.corp.contoso.com` SMB over
+This command retrieves the properties and validity of the `2025-srv-01.corp.contoso.com` SMB over
 QUIC endpoint certificate mapping.
 
 ```powershell
-PS C:\> Get-SmbServerCertProps -Name 2022-ae-02.corp.contoso.com
+Get-SmbServerCertProps -Name 2025-srv-01.corp.contoso.com
 ```
 
 ```output
-Checking Mapping '2022-ae-02.corp.contoso.com'.....
-SMBServerCertificateMappingName : 2022-ae-02.corp.contoso.com
+Checking Mapping '2025-srv-01.corp.contoso.com'.....
+SMBServerCertificateMappingName : 2025-srv-01.corp.contoso.com
 SelfSigned                      : True
 SubjectName                     : System.Security.Cryptography.X509Certificates.X500DistinguishedName
-Subject                         : CN=2022-ae-02
+Subject                         : CN=2025-srv-01
 SubjectOid                      : System.Security.Cryptography.Oid
 SubjectRawData                  : {48, 21, 49, 19...}
 FriendlyName                    :
@@ -50,7 +50,7 @@ NotBefore                       : 8/20/2021 3:02:16 PM
 NotAfter                        : 8/20/2022 3:02:16 PM
 SendAsTrustedIssuer             : False
 PublicKey                       : System.Security.Cryptography.X509Certificates.PublicKey
-DnsNameList                     : {2022-ae-02.corp.contoso.com, fs2.contoso.com}
+DnsNameList                     : {2025-srv-01.corp.contoso.com, fs1.contoso.com}
 
 Test-Certificate result : PASS
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

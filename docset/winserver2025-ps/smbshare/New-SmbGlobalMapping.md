@@ -38,7 +38,7 @@ Namespace folder shares.
 
 ```powershell
 $creds = Get-Credential
-New-SmbGlobalMapping -RemotePath \\fs1.contoso.com\public -Credential $creds -LocalPath G:
+New-SmbGlobalMapping -RemotePath "\\fs1.contoso.com\public" -Credential $creds -LocalPath "G:"
 ```
 
 ```output
@@ -72,9 +72,9 @@ Accept wildcard characters: False
 
 ### -BlockNTLM
 
-Specifies whether to block NT LAN Manager (NTLM) authentication. If this parameter is set to
-`$true`, NTLM authentication will be blocked. If set to `$false` (default), NTLM authentication
-will be allowed.
+Specifies whether to block NT LAN Manager (NTLM) authentication. If this parameter is set to $true,
+NTLM authentication will be blocked forcing the connection to use another negotiated authentication
+method, such as Kerberos. If set to $false (default), NTLM authentication will be allowed.
 
 ```yaml
 Type: Boolean
@@ -209,8 +209,7 @@ Accept wildcard characters: False
 
 ### -QuicPort
 
-Specifies the port number to be used for Quick UDP Internet Connections (QUIC) protocol
-connections.
+Specifies the port number to be used for QUIC protocol connections.
 
 ```yaml
 Type: UInt16
@@ -323,7 +322,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of 0 is entered, then Windows PowerShell calculates an optimum
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum
 throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
@@ -415,7 +414,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

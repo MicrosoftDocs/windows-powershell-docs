@@ -36,13 +36,6 @@ Reset-SmbClientConfiguration [-All] [-AuditInsecureGuestLogon]
 The `Reset-SmbClientConfiguration` cmdlet resets SMB client configuration parameters to their
 default values.
 
-> [!NOTE]
-> This cmdlet is available beginning with Cumulative Update for Windows 11, version 22H2
-> ([KB5014668](https://support.microsoft.com/help/5014668)).
->
-> The **DisableCompression** and **RequestCompression** parameters are available beginning with
-> Cumulative Update for Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
-
 ## EXAMPLES
 
 ### Example 1: Reset the large MTU behavior
@@ -90,7 +83,7 @@ Accept wildcard characters: False
 
 ### -AuditInsecureGuestLogon
 
-Specifies whether to audit insecure guest logon attempts.
+Resets whether to audit insecure guest logon attempts to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -106,8 +99,7 @@ Accept wildcard characters: False
 
 ### -AuditServerDoesNotSupportEncryption
 
-Specifies whether to audit when a server doesn't support encryption. If this parameter is
-specified, events will be logged when a server doesn't support encryption.
+Resets whether to audit when a server doesn't support encryption to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -123,8 +115,7 @@ Accept wildcard characters: False
 
 ### -AuditServerDoesNotSupportSigning
 
-Specifies whether to audit when a server doesn't support message signing. If this parameter is
-specified, events will be logged when a server doesn't support message signing.
+Resets whether to audit when a server doesn't support message signing to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -140,9 +131,7 @@ Accept wildcard characters: False
 
 ### -BlockNTLM
 
-Specifies whether to block NT LAN Manager (NTLM) authentication. If this parameter is set to
-`$true`, NTLM authentication will be blocked. If set to `$false` (default), NTLM authentication
-will be allowed.
+Resets whether to block NT LAN Manager (NTLM) authentication to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -159,7 +148,7 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
 or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
@@ -353,7 +342,13 @@ Accept wildcard characters: False
 
 ### -EnableMailslots
 
-Specifies whether to enable mailslots. If this parameter is specified, mailslots will be enabled.
+Resets mailslots to its default value.
+
+Beginning with Windows Server 2025 and Windows 11 Insider Preview Build 25314, remote mailslots are
+disabled by default.
+
+To learn more about remote mailslot deprecation, see [Features removed or no longer developed
+starting with Windows Server 2025](/windows-server/get-started/removed-deprecated-features-windows-server-2025).
 
 ```yaml
 Type: SwitchParameter
@@ -513,10 +508,8 @@ Accept wildcard characters: False
 
 ### -InvalidAuthenticationCacheLifetime
 
-Specifies the length of time (in seconds) that an invalid authentication cache entry should be kept
-before being removed. An authentication cache is used to store information about successful
-authentication attempts, and this parameter allows you to control how long unsuccessful attempts
-should be remembered before being purged.
+Resets the length of time (in seconds) that an invalid authentication cache entry should be kept
+before being removed to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -664,14 +657,7 @@ Accept wildcard characters: False
 
 ### -Smb2DialectMax
 
-This parameter specifies the maximum version of the SMB protocol to be used. Acceptable values are:
-
-- None – There is no maximum protocol version specified, the client can use any supported version.
-- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB client.
-- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB client.
-- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB client.
-- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB client.
-- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB client.
+Resets the maximum version of the SMB protocol to be used back to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -688,14 +674,7 @@ Accept wildcard characters: False
 
 ### -Smb2DialectMin
 
-This parameter specifies the minimum version of the SMB protocol to be used. Acceptable values are:
-
-- None – There is no maximum protocol version specified, the client can use any supported version.
-- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB client.
-- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB client.
-- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB client.
-- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB client.
-- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB client.
+Resets the minimum version of the SMB protocol to be used back to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -799,7 +778,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -813,6 +792,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbClientConfiguration](./Get-SmbClientConfiguration.md)
+[Get-SmbClientConfiguration](Get-SmbClientConfiguration.md)
 
-[Set-SmbClientConfiguration](./Set-SmbClientConfiguration.md)
+[Set-SmbClientConfiguration](Set-SmbClientConfiguration.md)

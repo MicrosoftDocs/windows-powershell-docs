@@ -43,14 +43,6 @@ Set-SmbClientConfiguration [-AuditInsecureGuestLogon <Boolean>]
 
 The `Set-SmbClientConfiguration` cmdlet sets the Server Message Block (SMB) client configuration.
 
-> [!NOTE]
-> The **EncryptionCiphers** parameter is available beginning with Cumulative Update for Windows 11,
-> version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
->
-> The **CompressibilitySamplingSize**, **CompressibleThreshold**, **EnableCompressibilitySampling**,
-> and **RequestCompression** parameters are available beginning with Cumulative Update for
-> Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
-
 ## EXAMPLES
 
 ### Example 1: Set the SMB client configuration
@@ -91,7 +83,8 @@ Accept wildcard characters: False
 
 ### -AuditInsecureGuestLogon
 
-Specifies whether to audit insecure guest logon attempts.
+Specifies whether to audit insecure guest logon attempts. Audit events are written to the Windows
+event log.
 
 ```yaml
 Type: Boolean
@@ -142,8 +135,9 @@ Accept wildcard characters: False
 ### -BlockNTLM
 
 Specifies whether to block NT LAN Manager (NTLM) authentication. If this parameter is set to
-`$true`, NTLM authentication will be blocked. If set to `$false` (default), NTLM authentication
-will be allowed.
+`$true`, NTLM authentication will be blocked forcing the connection to use another negotiated
+authentication method, such as Kerberos. If set to `$false` (default), NTLM authentication will be
+allowed.
 
 ```yaml
 Type: Boolean
@@ -160,7 +154,7 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
 or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
@@ -696,8 +690,9 @@ Accept wildcard characters: False
 ### -RequireEncryption
 
 Specifies whether or not encryption should be required for all SMB traffic. When this parameter is
-set to `$true`, all SMB traffic must be encrypted. If it is set to `$false` (the default),
-encryption is not required, but may still be negotiated if both the client and server support it.
+set to `$true`, all SMB traffic must be encrypted, which is required by the server. If it is set to
+`$false` (the default), encryption is not required, but may still be negotiated if both the client
+and server support it.
 
 ```yaml
 Type: Boolean
@@ -788,12 +783,12 @@ Accept wildcard characters: False
 
 This parameter specifies the minimum version of the SMB protocol to be used. Acceptable values are:
 
-- None – There is no maximum protocol version specified, the client can use any supported version.
-- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB client.
-- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB client.
-- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB client.
-- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB client.
-- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB client.
+- None – There is no minimum protocol version specified, the client can use any supported version.
+- SMB202 – SMB 2.0.2 is the minimum version accepted by the SMB client.
+- SMB210 - SMB 2.1.0 is the minimum version accepted by the SMB client.
+- SMB300 - SMB 3.0.0 is the minimum version accepted by the SMB client.
+- SMB302 - SMB 3.0.2 is the minimum version accepted by the SMB client.
+- SMB311 - SMB 3.1.1 is the minimum version accepted by the SMB client.
 
 ```yaml
 Type: Smb2DialectMin
@@ -897,7 +892,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -911,6 +906,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbClientConfiguration](./Get-SmbClientConfiguration.md)
+[Get-SmbClientConfiguration](Get-SmbClientConfiguration.md)
 
-[Reset-SmbClientConfiguration](./Reset-SmbClientConfiguration.md)
+[Reset-SmbClientConfiguration](Reset-SmbClientConfiguration.md)

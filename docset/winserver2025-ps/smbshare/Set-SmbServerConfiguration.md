@@ -52,13 +52,6 @@ For more information on SMB server and protocol specifications, see
 and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and
 3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
-> [!NOTE]
-> The **EncryptionCiphers** parameter is available beginning with Cumulative Update for Windows 11,
-> version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
->
-> The **DisableCompression** and **RequestCompression** parameters are available beginning with
-> Cumulative Update for Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
-
 ## EXAMPLES
 
 ### Example 1: Set the SMB Service configuration
@@ -185,10 +178,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AuditClientCertificateAccess
+
+Enables SMB over QUIC client access control audit events. There are three possible events: access
+allowed, access denied, and error. The access allowed and access denied events list properties of
+the client certificate chain and any allow and deny access control entries that apply to the
+client certificates.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AuditClientDoesNotSupportEncryption
 
-Enables auditing of the clients attempts to connect without encryption to the server. The server
-logs an audit event when a client attempts to connect to the server without using encryption.
+Enables auditing of SMB clients that don't support encryption. Clients that connect and don't list
+SMB encryption in their supported capabilities will be recorded in the Windows event log.
 
 ```yaml
 Type: Boolean
@@ -672,7 +684,7 @@ Accept wildcard characters: False
 ### -InvalidAuthenticationDelayTimeInMs
 
 Specifies the length of time in milliseconds that the server should delay before responding to an
-authentication request that has been deemed invalid.
+authentication request that has been deemed invalid, such as an incorrect user name or password.
 
 ```yaml
 Type: UInt32
@@ -982,11 +994,11 @@ Accept wildcard characters: False
 This parameter specifies the maximum version of the SMB protocol to be used. Acceptable values are:
 
 - None – There is no maximum protocol version specified, the server can use any supported version.
-- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB Sever
-- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB Sever
-- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB Sever
-- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB Sever
-- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB Sever
+- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB Server
+- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB Server
+- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB Server
+- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB Server
+- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB Server
 
 ```yaml
 Type: SwitchParameter
@@ -1006,11 +1018,11 @@ Accept wildcard characters: False
 This parameter specifies the minimum version of the SMB protocol to be used. Acceptable values are:
 
 - None – There is no maximum protocol version specified, the server can use any supported version.
-- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB Sever
-- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB Sever
-- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB Sever
-- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB Sever
-- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB Sever
+- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB Server
+- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB Server
+- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB Server
+- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB Server
+- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB Server
 
 ```yaml
 Type: Smb2DialectMin
@@ -1027,12 +1039,20 @@ Accept wildcard characters: False
 
 ### -SmbServerNameHardeningLevel
 
-Specifies the SMB Service name hardening level.
+Controls the level of validation that a server performs on the service principal name (SPN) that is
+provided by the client device when the client establishes a session using Server Message Block
+(SMB). The acceptable values are:
+
+- `0`: Don't enforce SPN check.
+- `1`: Allow clients who didn't provide the target, but fail those who do provide the target and it
+  doesn't match.
+- `2`: Only allow clients who supply matching targets.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
 Aliases:
+Accepted values: 0, 1, 2
 
 Required: False
 Position: Named
@@ -1179,7 +1199,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

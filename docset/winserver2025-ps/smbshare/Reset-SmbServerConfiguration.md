@@ -41,13 +41,6 @@ default values. For more information on SMB server and protocol specifications, 
 [Overview of file sharing using the SMB 3 protocol in Windows Server](/windows-server/storage/file-server/file-server-smb-overview)
 and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
-> [!NOTE]
-> This cmdlet is available beginning with Cumulative Update for Windows 11, version 22H2
-> ([KB5014668](https://support.microsoft.com/help/5014668)).
->
-> The **DisableCompression** and **RequestCompression** parameters are available beginning with
-> Cumulative Update for Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
-
 ## EXAMPLES
 
 ### Example 1: Reset the unencrypted access behavior
@@ -144,8 +137,7 @@ Accept wildcard characters: False
 
 ### -AuditClientCertificateAccess
 
-Enables auditing of the clients certificate access attempts on the server. Events are logged when a
-client attempts to access a certificate store on the server.
+Resets the SMB over QUIC client access control audit events.
 
 ```yaml
 Type: SwitchParameter
@@ -161,8 +153,7 @@ Accept wildcard characters: False
 
 ### -AuditClientDoesNotSupportEncryption
 
-Enables auditing of the clients attempts to connect without encryption to the server. The server
-logs an audit event when a client attempts to connect to the server without using encryption.
+Resets auditing of the clients attempts to connect without encryption to the server.
 
 ```yaml
 Type: SwitchParameter
@@ -178,8 +169,7 @@ Accept wildcard characters: False
 
 ### -AuditClientDoesNotSupportSigning
 
-Enables auditing of the clients attempts to connect without signing to the server. The server logs
-an audit event when a client attempts to connect to the server without using message signing.
+Resets auditing of SMB clients that don't support signing.
 
 ```yaml
 Type: SwitchParameter
@@ -195,8 +185,7 @@ Accept wildcard characters: False
 
 ### -AuditInsecureGuestLogon
 
-Specifies whether to audit insecure guest logon attempts. When enabled insecure guest logons will
-appear in Windows Event Viewer.
+Resets whether to audit insecure guest logon attempts.
 
 ```yaml
 Type: SwitchParameter
@@ -277,7 +266,7 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
 or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
@@ -343,10 +332,7 @@ Accept wildcard characters: False
 
 ### -EnableDirectoryHandleLeasing
 
-Enables directory handle leasing on the server. When directory handle leasing is enabled, the
-server can cache directory handles for a longer period of time, which can improve performance for
-certain workloads. This can be particularly useful in scenarios where there are a large number of
-directory operations being performed on the server.
+Resets the directory handle leasing on the server.
 
 ```yaml
 Type: SwitchParameter
@@ -394,7 +380,8 @@ Accept wildcard characters: False
 
 ### -EnableMailslots
 
-Specifies whether to enable mailslots. If this parameter is specified, mailslots will be enabled.
+Resets mailslots to disabled.
+
 Beginning with Windows Server 2025 and Windows 11 Insider Preview Build 25314, remote mailslots are
 disabled by default.
 
@@ -800,14 +787,7 @@ Accept wildcard characters: False
 
 ### -Smb2DialectMax
 
-This parameter specifies the maximum version of the SMB protocol to be used. Acceptable values are:
-
-- None – There is no maximum protocol version specified, the server can use any supported version.
-- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB Sever
-- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB Sever
-- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB Sever
-- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB Sever
-- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB Sever
+Resets the maximum version of the SMB protocol to be used back to `None`.
 
 ```yaml
 Type: SwitchParameter
@@ -824,14 +804,7 @@ Accept wildcard characters: False
 
 ### -Smb2DialectMin
 
-This parameter specifies the minimum version of the SMB protocol to be used. Acceptable values are:
-
-- None – There is no maximum protocol version specified, the server can use any supported version.
-- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB Sever
-- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB Sever
-- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB Sever
-- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB Sever
-- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB Sever
+Resets the minimum version of the SMB protocol to be used back to `None`.
 
 ```yaml
 Type: SwitchParameter
@@ -1000,7 +973,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

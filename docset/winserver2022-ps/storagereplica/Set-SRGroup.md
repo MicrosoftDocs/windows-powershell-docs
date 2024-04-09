@@ -42,9 +42,9 @@ Set-SRGroup [[-ComputerName] <String>] [-Name] <String> [-Force] [[-LogSizeInByt
 
 ## DESCRIPTION
 
-The `Set-SRGroup` cmdlet modifies settings of an existing replication group.
-A replication group contains one or more data volumes and an associated log volume.
-A replication group is the container for replication.
+The `Set-SRGroup` cmdlet modifies settings of an existing replication group. A replication group
+contains one or more data volumes and an associated log volume. A replication group is the
+container for replication.
 
 > [!NOTE]
 > The **Compression** parameter is only available in
@@ -61,8 +61,8 @@ A replication group is the container for replication.
 Set-SRGroup -Name "ReplicationGroup01" -AddVolumeName "F:"
 ```
 
-This command adds the F: volume to the existing replication group named ReplicationGroup01 on the
-local computer.
+This command adds the `F:` volume to the existing replication group named `ReplicationGroup01` on
+the local computer.
 
 ### Example 2: Remove a volume from a replication group
 
@@ -70,8 +70,8 @@ local computer.
 Set-SRGroup -Name "ReplicationGroup01" -RemoveVolumeName "F:"
 ```
 
-This command removes the F: volume from the existing replication group ReplicationGroup01 on the
-local computer.
+This command removes the `F:` volume from the existing replication group `ReplicationGroup01` on
+the local computer.
 
 ### Example 3: Resize volumes in a replication group
 
@@ -79,10 +79,11 @@ local computer.
 Set-SRGroup -Name "ReplicationGroup01" -AllowVolumeResize $True
 ```
 
-This command lets you resize volumes in the replication group named ReplicationGroup01 on the local
-computer. By default, the Storage Replica driver prevents volume resizes in order to protect from
-block mismatches. To grow a volume, enable the allow volume resize mode on both resource groups,
-increase the size of the volume on both servers to be the same size, then disable this mode.
+This command lets you resize volumes in the replication group named `ReplicationGroup01` on the
+local computer. By default, the Storage Replica driver prevents volume resizes in order to protect
+from block mismatches. To grow a volume, enable the allow volume resize mode on both resource
+groups, increase the size of the volume on both servers to be the same size, then disable this
+mode.
 
 ## PARAMETERS
 
@@ -142,8 +143,8 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+or [Get-CimSession](/powershell/module/cimcmdlets/get-ciminstance) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -160,11 +161,12 @@ Accept wildcard characters: False
 
 ### -Compression
 
-Indicates that this Storage Replica group should use SMB compression for data transfer. This
-parameter only applies to
+Indicates that this Storage Replica group should use SMB compression for data transfer.
+
+This parameter only applies to
 [Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/)
-or later, and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative
-Update for Microsoft server operating system version 21H2 for x64-based Systems
+or later, and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative Update
+for Microsoft server operating system version 21H2 for x64-based Systems
 ([KB5017381](https://support.microsoft.com/help/5017381)).
 
 ```yaml
@@ -193,22 +195,6 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -334,8 +320,8 @@ values for this parameter are:
   source server, which allows for replication over high latency, geographic networks.
 
 The default value is synchronous. The default asynchronous recovery point alert time is 5 minutes.
-You can modify it by using the `Set-SRPartnership` cmdlet. The alert time has no effect on replication
-behavior, only on reporting.
+You can modify it by using the `Set-SRPartnership` cmdlet. The alert time has no effect on
+replication behavior, only on reporting.
 
 ```yaml
 Type: ReplicationMode
@@ -370,10 +356,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -392,13 +393,11 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
 ### System.String
-
-### System.String[]
 
 ### System.UInt64
 
@@ -414,14 +413,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SRGroup](./Get-SRGroup.md)
+[Get-SRGroup](Get-SRGroup.md)
 
-[New-SRGroup](./New-SRGroup.md)
+[New-SRGroup](New-SRGroup.md)
 
-[Remove-SRGroup](./Remove-SRGroup.md)
+[Remove-SRGroup](Remove-SRGroup.md)
 
-[Set-SRPartnership](./Set-SRPartnership.md)
+[Set-SRPartnership](Set-SRPartnership.md)
 
-[Suspend-SRGroup](./Suspend-SRGroup.md)
+[Suspend-SRGroup](Suspend-SRGroup.md)
 
-[Sync-SRGroup](./Sync-SRGroup.md)
+[Sync-SRGroup](Sync-SRGroup.md)

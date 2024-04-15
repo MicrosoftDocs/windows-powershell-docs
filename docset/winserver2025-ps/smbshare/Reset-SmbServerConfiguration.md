@@ -39,7 +39,7 @@ Reset-SmbServerConfiguration [-All] [-AnnounceComment] [-AnnounceServer] [-Async
 The `Reset-SmbServerConfiguration` cmdlet resets SMB server configuration parameters to their
 default values. For more information on SMB server and protocol specifications, see
 [Overview of file sharing using the SMB 3 protocol in Windows Server](/windows-server/storage/file-server/file-server-smb-overview)
-and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
+and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and 3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 ## EXAMPLES
 
@@ -138,6 +138,9 @@ Accept wildcard characters: False
 ### -AuditClientCertificateAccess
 
 Resets the SMB over QUIC client access control audit events to its default value.
+
+> [!NOTE]
+> Devices running Windows 11 version 22H2 and earlier may not have access to this parameter.
 
 ```yaml
 Type: SwitchParameter

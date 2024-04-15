@@ -1,64 +1,42 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: SmbMapping.cdxml-help.xml
+external help file: SmbClientCertificateMapping.cdxml-help.xml
 Module Name: SmbShare
 ms.date: 02/22/2024
-online version: https://learn.microsoft.com/powershell/module/smbshare/remove-smbmapping?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/smbshare/set-smbclientcertificatemapping?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Remove-SmbMapping
+title: Set-SmbClientCertificateMapping
 ---
 
-# Remove-SmbMapping
+# Set-SmbClientCertificateMapping
 
 ## SYNOPSIS
-Removes the SMB mapping to an SMB share.
+Configures an existing client certificate mapping for the Server Message Block (SMB) protocol.
 
 ## SYNTAX
 
-### Query
-
 ```
-Remove-SmbMapping [[-LocalPath] <String[]>] [[-RemotePath] <String[]>] [-UpdateProfile] [-Force]
- [-GlobalMapping] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### InputObject
-
-```
-Remove-SmbMapping -InputObject <CimInstance[]> [-UpdateProfile] [-Force] [-GlobalMapping]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-SmbClientCertificateMapping [-Namespace] <String> [-Flags <Flags>] [-Thumbprint <String>]
+ [-StoreName <String>] [-IssuerName <String>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Remove-SmbMapping` cmdlet removes the Server Message Block (SMB) mapping to an SMB share.
+The `Set-SmbClientCertificateMapping` cmdlet modifies an existing client certificate mapping for
+the SMB protocol. These mappings are used to authenticate clients that connect to SMB servers using
+certificates. You can use this cmdlet to modify an existing mapping between a client certificate
+and an SMB client name.
 
 ## EXAMPLES
 
-### Example 1: Remove an SMB mapping to an SMB share
+### Example 1: Update the issuer name for a certificate mapping
 
 ```powershell
-Remove-SmbMapping -LocalPath "Y:"
-
-
-
-Confirm
-Are you sure you want to perform this action?
-Performing operation `Close-Connection` on Target 'Y:,\\Contoso-FS\VMS1'.
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+Set-SmbClientCertificateMapping -Thumbprint "1234567890abcdef" -IssuerName "CN=NewIssuerName"
 ```
 
-This command removes an SMB mapping to an SMB share.
-
-### Example 2: Remove an SMB mapping to an SMB share without confirmation
-
-```powershell
-Remove-SmbMapping -RemotePath "\\Contoso-SO\VMFiles" -Force
-```
-
-This command removes an SMB mapping to an SMB share without user confirmation.
+This updates the issuer name for a certificate mapping with a specific thumbprint.
 
 ## PARAMETERS
 
@@ -98,12 +76,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
+### -Flags
 
-Forces the command to run without asking for user confirmation.
+Specifies if `NamedPipes` are enabled for SMB over QUIC. The acceptable values for this parameter
+are:
+
+- `None`: Remove all flags
+- `AllowNamedPipe`: Enable use of named pipes in SMB over QUIC connections for this mapping (off by
+  default, overrides value of the **RestrictNamedPipeAccessOverQuic** parameter)
+- `DefaultCert`: Not used
 
 ```yaml
-Type: SwitchParameter
+Type: Flags[]
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, AllowNamedPipe, DefaultCert
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IssuerName
+
+Filters the certificate mappings based on the issuer name of the certificate.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -114,83 +115,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -GlobalMapping
+### -Namespace
 
-Removes an SMB global mapping to an SMB share.
+Specifies the namespace of the QUIC server. For example, `server1.contoso.com`. By default, the
+cmdlet searches in the `root\cimv2\Security\MicrosoftTlsCertificateMappingProvider` namespace.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InputObject
-
-Specifies the input object that's used in a pipeline command.
-
-```yaml
-Type: CimInstance[]
-Parameter Sets: InputObject
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -LocalPath
-
-Specifies an array of the local paths associated with the SMB mappings that this cmdlet removes.
-
-```yaml
-Type: String[]
-Parameter Sets: Query
-Aliases:
-
-Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PassThru
+### -StoreName
 
-Returns an object representing the item with which you're working. By default, this cmdlet doesn't
-generate any output.
+Specifies the path to the certificate store for the certificate.
 
 ```yaml
-Type: SwitchParameter
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemotePath
-
-Specifies an array of the remote paths of the SMB shares associated with the mappings that this
-cmdlet removes.
-
-```yaml
-Type: String[]
-Parameter Sets: Query
-Aliases:
-
-Required: False
-Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -216,21 +168,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UpdateProfile
+### -Thumbprint
 
-Indicates that the mapping is removed persistently. The mapping isn't re-established when the
-computer restarts. If you specify this parameter and the mapping is persistent, the mapping is
-removed persistently. The mapping isn't re-established when the computer restarts.
+Specifies the thumbprint value of the certificate.
 
 ```yaml
-Type: SwitchParameter
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -275,20 +225,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String[]
+### System.String
 
-### Microsoft.Management.Infrastructure.CimInstance[]
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.SmbClientCertificateMapping.Flags
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance
-
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/SMB/MSFT_SmbMapping
+### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-SmbMapping](Get-SmbMapping.md)
+[Get-SmbClientCertificateMapping](Get-SmbClientCertificateMapping.md)
 
-[New-SmbMapping](New-SmbMapping.md)
+[New-SmbClientCertificateMapping](New-SmbClientCertificateMapping.md)
+
+[Remove-SmbClientCertificateMapping](Remove-SmbClientCertificateMapping.md)

@@ -1,64 +1,51 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: SmbMapping.cdxml-help.xml
+external help file: SmbServerAlternativePort.cdxml-help.xml
 Module Name: SmbShare
 ms.date: 02/22/2024
-online version: https://learn.microsoft.com/powershell/module/smbshare/remove-smbmapping?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/smbshare/remove-smbserveralternativeport?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Remove-SmbMapping
+title: Remove-SmbServerAlternativePort
 ---
 
-# Remove-SmbMapping
+# Remove-SmbServerAlternativePort
 
 ## SYNOPSIS
-Removes the SMB mapping to an SMB share.
+Removes an alternative port for the Server Message Block (SMB) protocol on the local server.
 
 ## SYNTAX
 
 ### Query
 
 ```
-Remove-SmbMapping [[-LocalPath] <String[]>] [[-RemotePath] <String[]>] [-UpdateProfile] [-Force]
- [-GlobalMapping] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-SmbServerAlternativePort [-TransportType] <TransportType[]> [-Port] <UInt16[]>
+ [-IncludeHidden] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InputObject
 
 ```
-Remove-SmbMapping -InputObject <CimInstance[]> [-UpdateProfile] [-Force] [-GlobalMapping]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-SmbServerAlternativePort -InputObject <CimInstance[]> [-Force] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Remove-SmbMapping` cmdlet removes the Server Message Block (SMB) mapping to an SMB share.
+The `Remove-SmbServerAlternativePort` cmdlet removes an alternative port for the Server Message
+Block (SMB) protocol on the local server. You can specify the transport type and port number of the
+alternative port to remove using the **TransportType** and **Port** parameters, respectively.
 
 ## EXAMPLES
 
-### Example 1: Remove an SMB mapping to an SMB share
+### Example 1: Remove a SMB server alternative port
 
 ```powershell
-Remove-SmbMapping -LocalPath "Y:"
-
-
-
-Confirm
-Are you sure you want to perform this action?
-Performing operation `Close-Connection` on Target 'Y:,\\Contoso-FS\VMS1'.
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+Remove-SmbServerAlternativePort -TransportType QUIC -Port 1
 ```
 
-This command removes an SMB mapping to an SMB share.
-
-### Example 2: Remove an SMB mapping to an SMB share without confirmation
-
-```powershell
-Remove-SmbMapping -RemotePath "\\Contoso-SO\VMFiles" -Force
-```
-
-This command removes an SMB mapping to an SMB share without user confirmation.
+This command removes an SMB server alternative port that uses the QUIC transport protocol on port
+number **1**.
 
 ## PARAMETERS
 
@@ -114,13 +101,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -GlobalMapping
+### -IncludeHidden
 
-Removes an SMB global mapping to an SMB share.
+Not used.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: Query
 Aliases:
 
 Required: False
@@ -146,22 +133,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -LocalPath
-
-Specifies an array of the local paths associated with the SMB mappings that this cmdlet removes.
-
-```yaml
-Type: String[]
-Parameter Sets: Query
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -PassThru
 
 Returns an object representing the item with which you're working. By default, this cmdlet doesn't
@@ -179,17 +150,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemotePath
+### -Port
 
-Specifies an array of the remote paths of the SMB shares associated with the mappings that this
-cmdlet removes.
+Specifies the port number that the SMB connection should use.
 
 ```yaml
-Type: String[]
+Type: UInt16[]
 Parameter Sets: Query
 Aliases:
 
-Required: False
+Required: True
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -216,21 +186,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UpdateProfile
+### -TransportType
 
-Indicates that the mapping is removed persistently. The mapping isn't re-established when the
-computer restarts. If you specify this parameter and the mapping is persistent, the mapping is
-removed persistently. The mapping isn't re-established when the computer restarts.
+Specifies the transport protocol to use for the SMB connection. The only accepted value for this
+parameter is `QUIC`.
 
 ```yaml
-Type: SwitchParameter
+Type: TransportType[]
 Parameter Sets: (All)
 Aliases:
+Accepted values: QUIC
 
 Required: False
-Position: Named
+Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -245,14 +215,15 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+Shows what would happen if the cmdlet runs.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -275,7 +246,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String[]
+### Microsoft.PowerShell.Cmdletization.GeneratedTypes.SmbServerAlternativePort.TransportType[]
+
+### System.UInt16[]
 
 ### Microsoft.Management.Infrastructure.CimInstance[]
 
@@ -283,12 +256,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Management.Infrastructure.CimInstance
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/SMB/MSFT_SmbMapping
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/SMB/MSFT_SmbServerAlternativePort
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-SmbMapping](Get-SmbMapping.md)
+[Get-SmbServerAlternativePort](Get-SmbServerAlternativePort.md)
 
-[New-SmbMapping](New-SmbMapping.md)
+[New-SmbServerAlternativePort](New-SmbServerAlternativePort.md)
+
+[Set-SmbServerAlternativePort](Set-SmbServerAlternativePort.md)

@@ -268,7 +268,7 @@ Accept wildcard characters: False
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a
 [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or
-[Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+[Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -853,12 +853,20 @@ Accept wildcard characters: False
 
 ### -SmbServerNameHardeningLevel
 
-Specifies the SMB Service name hardening level.
+Controls the level of validation that a server performs on the service principal name (SPN) that is
+provided by the client device when the client establishes a session using Server Message Block
+(SMB). The acceptable values are:
+
+- `0`: Don't enforce SPN check.
+- `1`: Allow clients who didn't provide the target, but fail those who do provide the target and it
+  doesn't match.
+- `2`: Only allow clients who supply matching targets.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
 Aliases:
+Accepted values: 0, 1, 2
 
 Required: False
 Position: Named
@@ -1005,7 +1013,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -1019,6 +1027,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbServerConfiguration](./Get-SmbServerConfiguration.md)
+[Get-SmbServerConfiguration](Get-SmbServerConfiguration.md)
 
-[Reset-SmbServerConfiguration](./Reset-SmbServerConfiguration.md)
+[Reset-SmbServerConfiguration](Reset-SmbServerConfiguration.md)

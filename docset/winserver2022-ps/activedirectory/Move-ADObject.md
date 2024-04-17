@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/activedirectory/move-adobject?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/move-adobject?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Move-ADObject
 ---
@@ -22,7 +22,7 @@ Move-ADObject [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCred
 ```
 
 ## DESCRIPTION
-The **Move-ADObject** cmdlet moves an object or a container of objects from one container to another or from one domain to another.
+The **Move-ADObject** cmdlet moves an object or a container of objects from one container to another or from one domain to another within the same forest.
 
 When an object is moved between domains, both the source DC and the target DC need to be the RID Master of their domains. If a different DC is being used, you will receive the following error:
 
@@ -36,6 +36,9 @@ You can also use the **Get-ADGroup**, **Get-ADUser**, **Get-ADComputer**, **Get-
 
 The *TargetPath* parameter must be specified.
 This parameter identifies the new location for the object or container.
+
+The cmdlet also moves the password when a user or computer object is moved across domains within a forest.
+
 
 ## EXAMPLES
 

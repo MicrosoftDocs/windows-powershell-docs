@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.GroupPolicy.Commands.dll-Help.xml
 Module Name: GroupPolicy
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/grouppolicy/copy-gpo?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/grouppolicy/copy-gpo?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Copy-GPO
 ---
@@ -77,7 +77,7 @@ PS C:\> Copy-GPO -SourceName "TestGpo1" -SourceDomain "test.contoso.com" TargetN
 This command copies the TestGpo1 GPO from the test.contoso.com domain to a GPO named TestGpo1 in the sales.contoso.com domain.
 
 A trust relationship must exist between the source domain and the destination domain.
-In addition, if the source domain or the destination domain (or both) is different than the domain of the user that is running the session.a trust must exist between that domain and the domain of the user.
+In addition, if the source domain or the destination domain (or both) is different than the domain of the user that is running the session a trust must exist between that domain and the domain of the user.
 
 ### Example 3: Copy all GPOs from a domain to another domain
 ```

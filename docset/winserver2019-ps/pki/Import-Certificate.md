@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 Module Name: pki
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/pki/import-certificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/pki/import-certificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-Certificate
 ---
@@ -85,6 +85,8 @@ Accept wildcard characters: False
 Specifies the path to a certificate file to be imported.
 Acceptable formats include .sst, .p7b, and .cert files.
 If the file contains multiple certificates, then each certificate will be imported to the destination store.
+The file must be in .sst format to import multiple certificates;
+otherwise, only the first certificate in the file will be imported.
 
 ```yaml
 Type: String
@@ -137,4 +139,4 @@ The output is an array of **X509Certificate2\[\]** objects.
 
 [Export-Certificate](./Export-Certificate.md)
 
-[System Store Locations](https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations)
+[System Store Locations](/windows/desktop/seccrypto/system-store-locations)

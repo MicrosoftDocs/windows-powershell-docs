@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: ADFS
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsrelyingpartywebcontent?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/adfs/set-adfsrelyingpartywebcontent?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-AdfsRelyingPartyWebContent
 ---
@@ -65,7 +65,7 @@ This command assigns multiple error messages to display to users for the relying
 
 ### Example 2: Create a custom message on the Sign in page
 ```
-PS C:\> Set-AdfsRelyingPartyWebContent -SignInPageDescription "If you have forgotten your password, visit <A href='https://passwordreset.microsoftonline.com/'>Azure AD self-service password reset</A>." -TargetRelyingPartyName "Microsoft Office 365 Identity Platform"
+PS C:\> Set-AdfsRelyingPartyWebContent -SignInPageDescription "If you have forgotten your password, visit <A href='https://passwordreset.microsoftonline.com/'>Microsoft Entra self-service password reset</A>." -TargetRelyingPartyName "Microsoft Office 365 Identity Platform"
 ```
 
 The command creates a custom message on the Sign in page for the Office 365 relying party.

@@ -197,6 +197,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Enable-MbamWebApplication](enable-mbamwebapplication.md)
 
-[Microsoft BitLocker Administration and Monitoring](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/)
-
-
+[Microsoft BitLocker Administration and Monitoring](/microsoft-desktop-optimization-pack/mbam-v25/)

@@ -1,7 +1,7 @@
 ---
 external help file: DhcpServer_Cmdlets.xml
 Module Name: DhcpServer
-online version: https://docs.microsoft.com/powershell/module/dhcpserver/add-dhcpserverv4optiondefinition?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dhcpserver/add-dhcpserverv4optiondefinition?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 
@@ -208,12 +208,23 @@ Accept wildcard characters: False
 
 ### -Type
 Specifies the data type of the values for this option.
-The acceptable values for this parameter are: Byte, Word, DWord, DWordDword, IPAddress, String, BinaryData, EncapsulatedData or IPv6Address.
+The acceptable values for this parameter are:
+
+- Byte 
+- Word 
+- DWord 
+- DWordDword 
+- IPAddress 
+- String 
+- BinaryData 
+- EncapsulatedData 
+- IPv6Address
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Byte, Word, DWord, DWordDWord, IPv4Address, IPv6Address, String, BinaryData, EncapsulatedData
 
 Required: True
 Position: 3

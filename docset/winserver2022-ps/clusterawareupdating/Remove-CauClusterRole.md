@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 Module Name: ClusterAwareUpdating
-ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/remove-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+ms.date: 09/27/2022
+online version: https://learn.microsoft.com/powershell/module/clusterawareupdating/remove-cauclusterrole?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-CauClusterRole
 ---
@@ -16,31 +16,39 @@ Removes the CAU clustered role from the specified failover cluster.
 ## SYNTAX
 
 ```
-Remove-CauClusterRole [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-CauClusterRole [[-ClusterName] <String>] [[-Credential] <PSCredential>] [-Force] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-CauClusterRole** cmdlet removes the Cluster-Aware Updating (CAU) clustered role from the specified failover cluster.
-To run CAU from a cluster, ensure that the CAU clustered role is configured in that cluster.
 
-The **Remove-CauClusterRole** cmdlet removes the virtual computer object (VCO) in Active Directory for the CAU clustered role, unless you previously prestaged or specified the VCO by using the **Add-CauClusterRole** cmdlet with the *VirtualComputerObjectName* parameter.
+The `Remove-CauClusterRole` cmdlet removes the Cluster-Aware Updating (CAU) clustered role from
+the specified failover cluster. To run CAU from a cluster, ensure that the CAU clustered role is
+configured in that cluster.
+
+The `Remove-CauClusterRole` cmdlet removes the virtual computer object (VCO) in Active Directory
+for the CAU clustered role, unless you previously prestaged or specified the VCO by using the
+`Add-CauClusterRole` cmdlet with the **VirtualComputerObjectName** parameter.
 
 ## EXAMPLES
 
 ### Example 1: Remove an instance of a CAU clustered role configured on the specified cluster
-```
-PS C:\> Remove-CauClusterRole -ClusterName "CONTOSO-FC1" -Force
+
+```powershell
+Remove-CauClusterRole -ClusterName "CONTOSO-FC1" -Force
 ```
 
-This command removes the instance of the CAU clustered role that is configured on the cluster named CONTOSO-FC1.
-Because the command specifies the *Force* parameter, the cmdlet runs without displaying confirmation prompts.
+This command removes the instance of the CAU clustered role that is configured on the cluster named
+CONTOSO-FC1. Because the command specifies the **Force** parameter, the cmdlet runs without displaying
+confirmation prompts.
 
 ## PARAMETERS
 
 ### -ClusterName
-Specifies the name of the cluster from which to remove the CAU clustered role.
-This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+
+Specifies the name of the cluster from which to remove the CAU clustered role. This parameter is
+only required when this cmdlet isn't run on a failover cluster node, or this cmdlet is used to
+reference a failover cluster different from where the cmdlet is run.
 
 ```yaml
 Type: String
@@ -55,6 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -70,6 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the administrative credentials for the target cluster.
 
 ```yaml
@@ -85,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -100,8 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -116,7 +128,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

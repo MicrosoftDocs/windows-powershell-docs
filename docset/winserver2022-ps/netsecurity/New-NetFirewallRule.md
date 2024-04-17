@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: NetFirewallRule.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/netsecurity/new-netfirewallrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/netsecurity/new-netfirewallrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-NetFirewallRule
 ---
@@ -827,7 +827,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteDynamicKeywordAddresses
-Specifies dynamic keyword addresses that match this rule.
+Specifies the dynamic keyword address IDs to be used for the remote host of the traffic matched by this rule. 
 
 ```yaml
 Type: String[]

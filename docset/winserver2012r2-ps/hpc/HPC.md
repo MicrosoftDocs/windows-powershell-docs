@@ -267,7 +267,7 @@ Clears the cached credentials that the HPC Diagnostics Service uses to run diagn
 Clears the alert icon for diagnostic test runs.
 
 ### [Remove-HpcTokenCache](./Remove-HpcTokenCache.md)
-Removes the client Azure Active Directory token cache used for job submission.
+Removes the client Microsoft Entra token cache used for job submission.
 
 ### [Replicate-HpcImage](./Replicate-HpcImage.md)
 Copies a base-node operating system image from a Windows image (.wim) file to an Internet SCSI (iSCSI) storage array.
@@ -321,7 +321,7 @@ Sets the properties for a task.
 Sets the credentials for running diagnostic tests.
 
 ### [Set-HpcTokenCache](./Set-HpcTokenCache.md)
-Sets the client Azure Active Directory token cache for job submission.
+Sets the client Microsoft Entra token cache for job submission.
 
 ### [Shutdown-HpcNode](./Shutdown-HpcNode.md)
 Turns off one or more nodes.

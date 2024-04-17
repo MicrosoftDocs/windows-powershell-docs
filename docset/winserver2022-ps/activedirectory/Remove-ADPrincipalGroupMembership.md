@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
 ms.date: 12/27/2016
-online version: https://docs.microsoft.com/powershell/module/activedirectory/remove-adprincipalgroupmembership?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/activedirectory/remove-adprincipalgroupmembership?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ADPrincipalGroupMembership
 ---
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -MemberOf
-Specifies the Active Directory groups to add a user, computer, or group to as a member.
+Specifies the Active Directory groups to remove a user, computer, or group to as a member.
 You can identify a group by providing one of the following values. 
 Note: The identifier in parentheses is the LDAP display name for the attribute.
 The acceptable values for this parameter are:

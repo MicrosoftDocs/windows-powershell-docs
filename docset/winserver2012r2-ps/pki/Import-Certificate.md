@@ -2,7 +2,7 @@
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 Module Name: pki
 ms.date: 10/29/2017
-online version: https://docs.microsoft.com/powershell/module/pki/import-certificate?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/pki/import-certificate?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-Certificate
 ---
@@ -82,6 +82,8 @@ Accept wildcard characters: False
 Specifies the path to a certificate file to be imported.
 Acceptable formats include .sst, .p7b, and .cert files.
 If the file contains multiple certificates, then each certificate will be imported to the destination store.
+The file must be in .sst format to import multiple certificates;
+otherwise, only the first certificate in the file will be imported.
 
 ```yaml
 Type: String

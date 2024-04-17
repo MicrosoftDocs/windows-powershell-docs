@@ -2,8 +2,8 @@
 description: Use this article to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 07/14/2022
-online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+ms.date: 08/30/2022
+online version: https://learn.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
 ---
@@ -15,7 +15,8 @@ Configures preferences for Windows Defender scans and updates.
 
 ## SYNTAX
 
-```
+
+```powershell
 Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
  [-RealTimeScanDirection <ScanDirection>] [-QuarantinePurgeItemsAfterDelay <UInt32>]
  [-RemediationScheduleDay <Day>] [-RemediationScheduleTime <DateTime>]
@@ -28,14 +29,15 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-SignatureDisableUpdateOnStartupWithoutEngine <Boolean>] [-SignatureFallbackOrder <String>]
  [-SignatureScheduleDay <Day>] [-SignatureScheduleTime <DateTime>] [-SignatureUpdateCatchupInterval <UInt32>]
  [-SignatureUpdateInterval <UInt32>] [-MAPSReporting <MAPSReportingType>]
- [-SubmitSamplesConsent <SubmitSamplesConsentType>] [-DisableAutoExclusions <Boolean>]
+ [-SubmitSamplesConsent <SubmitSamplesConsentType>] [-DisableAutoExclusions <Boolean>] [-DisableCacheMaintenance <UInt32>]
  [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>] [-DisableBehaviorMonitoring <Boolean>]
  [-DisableIntrusionPreventionSystem <Boolean>] [-DisableIOAVProtection <Boolean>]
  [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
  [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
+ [-OobeEnableRtpAndSigUpdate <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
- [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
+ [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>] [-AllowSwitchToAsyncInspection <Boolean>]
  [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-UnknownThreatDefaultAction <ThreatAction>]
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
@@ -65,14 +67,16 @@ The following table provides remediation action values for detected threats at l
 ## EXAMPLES
 
 ### Example 1: Schedule to check for definition updates everyday
-```
+
+```sql
 PS C:\> Set-MpPreference -SignatureScheduleDay Everyday
 ```
 
 This command configures preferences to check for definition updates every day.
 
 ### Example 2: Schedule a time of day to check for definition updates
-```
+
+```sql
 PS C:\> Set-MpPreference -SignatureScheduleTime 120
 ```
 
@@ -102,11 +106,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowSwitchToAsyncInspection
+
+Specifies whether to enable a performance optimization that allows synchronously inspected network flows to switch to async inspection once they have been checked and validated.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -CheckForSignaturesBeforeRunningScan
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of $True, Windows Defender checks for new definitions.
 If you specify $False or don't specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans and to scans that you start from the command line, but it doesn't affect scans that you start from the user interface.
+This setting applies to scheduled scans, but it has no effect on scans initiated manually from the user interface or scans started from the command line using "mpcmdrun -Scan".
 
 ```yaml
 Type: Boolean
@@ -214,6 +235,21 @@ Aliases: dcfsc
 Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableCacheMaintenance
+Defines whether the cache maintenance idle task will perform the cache maintenance or not. Allowed values are 1 - cache maintenance is disabled, and 0 - cache maintenance is enabled (default).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dcm
+
+Required: False
+Position: Named
+Default value: 0 
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -568,6 +604,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OobeEnableRtpAndSigUpdate
+
+This setting allows you to configure whether real-time protection and Security Intelligence Updates are enabled during Out of Box experience (OOBE).
+
+Valid values are:
+- True - If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.
+- False (Default) - If you either disable or don't configure this setting, real-time protection and Security Intelligence Updates during OOBE aren't enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PUAProtection
 
 ```yaml
@@ -742,7 +798,7 @@ The acceptable values for this parameter are: integers from 5 through 100, and t
 Windows Defender does not exceed the percentage of CPU usage that you specify.
 The default value is 50.
 
-Note: This is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average.
+Note: This is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average. If ScanOnlyIfIdleEnabled (instructing the product to scan only when the computer is not in use) and DisableCpuThrottleOnIdleScans (instructing the product to disable CPU throttling on idle scans) are both enabled, then the value of ScanAvgCPULoadFactor is ignored.
 
 ```yaml
 Type: Byte
@@ -846,7 +902,7 @@ Accept wildcard characters: False
 ### -ScanScheduleQuickScanTime
 Specifies the time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
 The time refers to the local time on the computer.
-If you do not specify a value for this parameter, a scheduled quick scan runs at the time specified by the **ScanScheduleTime** parameter.
+If you do not specify a value for this parameter, a scheduled quick scan runs at the time specified by the **ScanScheduleOffset** parameter.
 That parameter has a default time of two hours after midnight.
 
 ```yaml
@@ -862,16 +918,14 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleTime
-Specifies the time of day, as the number of minutes after midnight, to perform a scheduled scan.
-The time refers to the local time on the computer.
-If you do not specify a value for this parameter, a scheduled scan runs at a default time of two hours after midnight.
+This setting is discontinued and replaced with **ScanScheduleOffset** as a part of a recent Microsoft Defender Antivirus update.
+
+### -ScanScheduleOffset
+Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
 
 ```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases: scst
-
-Required: False
+Type: UInt32
+Aliases: scso
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1217,3 +1271,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MpPreference](./Get-MpPreference.md)
 
 [Remove-MpPreference](./Remove-MpPreference.md)
+

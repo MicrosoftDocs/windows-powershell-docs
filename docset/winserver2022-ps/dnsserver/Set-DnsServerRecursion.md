@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: PS_DnsServerRecursion_v1.0.0.cdxml-help.xml
 Module Name: DnsServer
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverrecursion?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/dnsserver/set-dnsserverrecursion?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DnsServerRecursion
 ---
@@ -29,7 +29,7 @@ Recursion occurs when a DNS server queries other DNS servers on behalf of a requ
 
 ### Example 1: Set the retry interval
 ```
-PS C:\> Set-DnsServerRecursion -RetryInterval 3 -PassThru
+PS C:\> Set-DnsServerRecursion -RetryInterval 15 -PassThru
 
 Enable               : False
 AdditionalTimeout(s) : 4
@@ -38,7 +38,7 @@ Timeout(s)           : 8
 SecureResponse       : True
 ```
 
-This command sets the retry interval to 3 seconds.
+This command sets the retry interval to 15 seconds.
 
 ## PARAMETERS
 
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ### -Timeout
 Specifies the number of seconds that a DNS server waits before it stops trying to contact a remote server.
 The valid value is in the range of 0x1 to 0xFFFFFFFF (1 second to 15 seconds).
-The default setting is 0xF (15 seconds).
+The default setting is 0x8 (8 seconds).
 We recommend that you increase this value when recursion occurs over a slow link.
 
 ```yaml

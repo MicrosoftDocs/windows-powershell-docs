@@ -2,7 +2,7 @@
 external help file: MsftUal_UserAccess.cdxml-help.xml
 Module Name: UserAccessLogging
 ms.date: 10/29/2017
-online version: https://docs.microsoft.com/powershell/module/useraccesslogging/get-ualuseraccess?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/useraccesslogging/get-ualuseraccess?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-UalUserAccess
 ---

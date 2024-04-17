@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: provcmdlets.dll-Help.xml
 Module Name: Provisioning
 ms.date: 11/29/2021
-online version: https://docs.microsoft.com/powershell/module/provisioning/install-provisioningpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/provisioning/install-provisioningpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-ProvisioningPackage
 ---
@@ -21,7 +21,7 @@ Install-ProvisioningPackage [-PackagePath] <String> [-ForceInstall] [-QuietInsta
 ```
 
 ## DESCRIPTION
-This cmdlet is used to install .ppkg files that are generated and exported by the [Windows Configuration Designer tool](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-install-icd).
+This cmdlet is used to install .ppkg files that are generated and exported by the [Windows Configuration Designer tool](/windows/configuration/provisioning-packages/provisioning-install-icd).
 
 The **Install-ProvisioningPackage** cmdlet is supported on Windows 10 client operating system only.
 
@@ -145,4 +145,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

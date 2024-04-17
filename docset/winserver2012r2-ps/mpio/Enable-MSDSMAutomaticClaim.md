@@ -2,7 +2,7 @@
 external help file: Mpio-help.xml
 Module Name: MPIO
 ms.date: 10/30/2017
-online version: https://docs.microsoft.com/powershell/module/mpio/enable-msdsmautomaticclaim?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/mpio/enable-msdsmautomaticclaim?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-MSDSMAutomaticClaim
 ---
@@ -19,7 +19,7 @@ Enable-MSDSMAutomaticClaim [-BusType] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Enable-MSDSMAutomaticClaim** cmdlet enables an Microsoft Device Specific Module (MSDSM) to automatically claim storage area network (SAN) disks for Microsoft Multipath I/O (MPIO) for a bus type.
+The **Enable-MSDSMAutomaticClaim** cmdlet enables a Microsoft Device Specific Module (MSDSM) to automatically claim storage area network (SAN) disks for Microsoft Multipath I/O (MPIO) for a bus type.
 
 You need to specify a valid bus type, either serial attached storage (SAS) and Internet Small Computer System Interface (iSCSI).
 You can enable MSDSM to automatically claim both SAS and iSCSI disks.

@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: FsrmFileScreenTemplate.cdxml-help.xml
 Module Name: FileServerResourceManager
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/new-fsrmfilescreentemplate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/fileserverresourcemanager/new-fsrmfilescreentemplate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-FsrmFileScreenTemplate
 ---
@@ -32,7 +32,7 @@ When you make changes to a template, you can choose to apply those changes to al
 
 ### Example 1: Create a passive file screen template
 ```
-PS C:\> New-FsrmFileScreenTemplate "Filter Non-HTML text files" -IncludeGroup "Non-HTML text files"
+PS C:\> New-FsrmFileScreenTemplate "Filter Non-HTML text files" -IncludeGroup "Non-HTML text files" -Active:$False
 ```
 
 This command creates a passive file screen template named "Filter Non-HTML text files" that logs any files that match the "Non-HTML text files" file group.

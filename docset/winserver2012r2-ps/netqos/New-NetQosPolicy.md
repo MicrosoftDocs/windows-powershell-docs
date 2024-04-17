@@ -2,7 +2,7 @@
 external help file: MSFT_NetQosPolicy.cdxml-help.xml
 Module Name: NetQoS
 ms.date: 10/29/2017
-online version: https://docs.microsoft.com/powershell/module/netqos/new-netqospolicy?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/netqos/new-netqospolicy?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-NetQosPolicy
 ---
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -Cluster
-Specifies Microsoft's cluster service, which uses the default SQL server TCP/UDP port 3343.
+Specifies the Microsoft Windows Cluster service, which uses the Cluster network driver TCP/UDP port 3343.
 
 ```yaml
 Type: SwitchParameter

@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
 Module Name: KDS
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/kds/add-kdsrootkey?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/kds/add-kdsrootkey?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-KdsRootKey
 ---
@@ -47,10 +47,10 @@ This command generates a new root key immediately and adds it to the Microsoft G
 
 ### Example 3: Generate a new root key which takes effect on a specific date
 ```
-PS C:\> Add-KdsRootKey -EffectiveTime 03/06/2013
+PS C:\> Add-KdsRootKey -EffectiveTime 03/23/2013
 ```
 
-This command generates a new root key for the Microsoft Group KdsSvc which takes effect on the date 03/06/2013.
+This command generates a new root key for the Microsoft Group KdsSvc which takes effect on the date 03/23/2013.
 Use the mm/dd/yyyy format.
 
 ### Example 4: Generate a new root key on the local host only

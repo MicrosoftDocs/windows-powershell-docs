@@ -136,6 +136,4 @@ The BitLocker recovery key for the specified volume.
 
 ## RELATED LINKS
 
-[Microsoft BitLocker Administration and Monitoring](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/)
-
-
+[Microsoft BitLocker Administration and Monitoring](/microsoft-desktop-optimization-pack/mbam-v25/)

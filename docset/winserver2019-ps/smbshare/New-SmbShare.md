@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: SmbShare.cdxml-help.xml
 Module Name: SmbShare
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/smbshare/new-smbshare?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/smbshare/new-smbshare?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-SmbShare
 ---
@@ -28,6 +28,9 @@ New-SmbShare [-Temporary] [-ContinuouslyAvailable <Boolean>] [-Description <Stri
 The **New-SmbShare** cmdlet exposes a file system folder to remote clients as a Server Message Block (SMB) share.
 
 To delete a share that was created by this cmdlet, use the Remove-SmbShare cmdlet.
+
+> [!NOTE]
+> The **WhatIf** parameter does not work with this cmdlet.
 
 ## EXAMPLES
 
@@ -411,8 +414,6 @@ Accept wildcard characters: False
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
-
-NOTE: The WhatIf switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter

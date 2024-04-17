@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
 Module Name: AppvClient
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/appvclient/add-appvclientconnectiongroup?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/appvclient/add-appvclientconnectiongroup?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-AppvClientConnectionGroup
 ---
@@ -20,7 +20,7 @@ Add-AppvClientConnectionGroup [-Path] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-AppvClientConnectionGroup** cmdlet creates an Microsoft Application Virtualization (App-V) connection group.
+The **Add-AppvClientConnectionGroup** cmdlet creates a Microsoft Application Virtualization (App-V) connection group.
 In order for the group to be applied, all packages in the group must be added to the target computer, and must not be running.
 
 This cmdlet can also be used to update an already existing connection group definition.

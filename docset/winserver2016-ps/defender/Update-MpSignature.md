@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_MpSignature.cdxml-help.xml
 Module Name: Defender
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/defender/update-mpsignature?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/defender/update-mpsignature?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-MpSignature
 ---
@@ -31,7 +31,7 @@ PS C:\> Update-MpSignature
 ```
 
 This command updates the antimalware definitions.
-By default, the cmdlet uses the default update source.
+By default, the cmdlet uses the sources configured through [SignatureFallbackOrder](Set-MpPreference.yml#-signaturefallbackorder). If no signature fallback order is configured, the cmdlet uses the default update source.
 
 ### Example 2: Update signatures from a specific source
 ```
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ### -UpdateSource
 Specifies an update source.
 This cmdlet downloads updated definitions from the server you specify.
-If you do not specify this parameter, the cmdlet uses the Microsoft Update Server, then Microsoft Malware Protection Center (MMPC), as an update source.
+If you do not specify this parameter, the cmdlet uses the sources configured through [SignatureFallbackOrder](Set-MpPreference.yml#-signaturefallbackorder). If no signature fallback order is configured, the cmdlet uses Microsoft Update Server, then Microsoft Malware Protection Center (MMPC) as an update source.
 The acceptable values for this parameter are:
 
 - InternalDefinitionUpdateServer
@@ -134,4 +134,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
 

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Storage2_Cmdlets.xml
 Module Name: Storage
-online version: https://docs.microsoft.com/powershell/module/storage/repair-volume?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/storage/repair-volume?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Repair-Volume
 ---

@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
 Module Name: AppvClient
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/appvclient/mount-appvclientpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/appvclient/mount-appvclientpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Mount-AppvClientPackage
 ---
@@ -31,7 +31,7 @@ Mount-AppvClientPackage [-Name] <String> [[-Version] <String>] [<CommonParameter
 ```
 
 ## DESCRIPTION
-The **Mount-AppvClientPackage** cmdlet initiates or resumes the loading of an Microsoft Application Virtualization (App-V) package into the cache.
+The **Mount-AppvClientPackage** cmdlet initiates or resumes the loading of a Microsoft Application Virtualization (App-V) package into the cache.
 
 ## EXAMPLES
 

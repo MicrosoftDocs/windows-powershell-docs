@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_NetTCPSetting.cdxml-help.xml
 Module Name: NetTCPIP
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/nettcpip/set-nettcpsetting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/nettcpip/set-nettcpsetting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NetTCPSetting
 ---
@@ -104,7 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -AutoReusePortRangeStartPort
-Specifies the number of ports for the auto-reuse port range, which is a port range used for local ephemeral port selection by outbound TCP connections for which either SO_REUSE_UNICASTPORT has been set on the socket, or for which connect() has been called without calling bind() on the socket.
+Specifies the starting port for the auto-reuse port range.
+
+This parameter sets the starting port to send and receive TCP traffic, which is a port range used for local ephemeral port selection by outbound TCP connections for which either SO_REUSE_UNICASTPORT has been set on the socket, or for which connect() has been called without calling bind() on the socket.
 
 If you specify 0, the auto-reuse feature is disabled and ephemeral ports are drawn instead from the dynamic port range as specified by *DynamicPortRangeStartPort* and *DynamicPortRangeNumberOfPorts*, even if SO_REUSE_UNICASTPORT is set on a socket.
 

@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
 Module Name: AppvClient
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/appvclient/get-appvpublishingserver?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/appvclient/get-appvpublishingserver?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-AppvPublishingServer
 ---
@@ -26,7 +26,7 @@ Get-AppvPublishingServer [[-Name] <String>] [[-URL] <String>] [<CommonParameters
 ```
 
 ## DESCRIPTION
-The **Get-AppvPublishingServer** cmdlet returns an Microsoft Application Virtualization (App-V) Server object or set of App-V Server objects based on the criteria provided.
+The **Get-AppvPublishingServer** cmdlet returns a Microsoft Application Virtualization (App-V) Server object or set of App-V Server objects based on the criteria provided.
 
 ## EXAMPLES
 

@@ -439,7 +439,7 @@ Accept wildcard characters: False
 
 ### -EnableSMB2Protocol
 
-Resets whether the SMB2 protocol is enabled to its default value.
+Resets the SMB2 protocol to its default value.
 
 ```yaml
 Type: SwitchParameter
@@ -455,7 +455,7 @@ Accept wildcard characters: False
 
 ### -EnableSMBQUIC
 
-Resets whether the SMB over QUIC protocol is enabled to its default value.
+Resets the SMB over QUIC protocol to its default value.
 
 ```yaml
 Type: SwitchParameter

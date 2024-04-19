@@ -603,7 +603,7 @@ Accept wildcard characters: False
 
 ### -EnableSMBQUIC
 
-Specifies that the SMB over QUIC protocol is enabled.
+Indicates whether the SMB over QUIC protocol is enabled.
 
 ```yaml
 Type: Boolean

@@ -378,6 +378,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableSMBQUIC
+
+Resets the SMB over QUIC client protocol to its default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+> [!NOTE]
+> This parameter is available on Windows 11 Insider Preview build 26090 and later.
+
 ### -EncryptionCiphers
 
 Resets the encryption ciphers used by the SMB client to its default value and order.

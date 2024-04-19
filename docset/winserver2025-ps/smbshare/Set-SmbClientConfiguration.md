@@ -25,13 +25,13 @@ Set-SmbClientConfiguration [-AuditInsecureGuestLogon <Boolean>]
  [-EnableBandwidthThrottling <Boolean>] [-EnableByteRangeLockingOnReadOnlyFiles <Boolean>]
  [-EnableCompressibilitySampling <Boolean>] [-EnableInsecureGuestLogons <Boolean>]
  [-EnableLargeMtu <Boolean>] [-EnableLoadBalanceScaleOut <Boolean>] [-EnableMailslots <Boolean>]
- [-EnableMultiChannel <Boolean>] [-EnableSecuritySignature <Boolean>] [-EncryptionCiphers <String>]
- [-ExtendedSessionTimeout <UInt32>] [-FileInfoCacheEntriesMax <UInt32>]
- [-FileInfoCacheLifetime <UInt32>] [-FileNotFoundCacheEntriesMax <UInt32>]
- [-FileNotFoundCacheLifetime <UInt32>] [-ForceSMBEncryptionOverQuic <Boolean>]
- [-InvalidAuthenticationCacheLifetime <UInt32>] [-KeepConn <UInt32>] [-MaxCmds <UInt32>]
- [-MaximumConnectionCountPerServer <UInt32>] [-OplocksDisabled <Boolean>]
- [-RequestCompression <Boolean>] [-RequireEncryption <Boolean>]
+ [-EnableMultiChannel <Boolean>] [-EnableSecuritySignature <Boolean>] [-EnableSMBQUIC <Boolean>]
+ [-EncryptionCiphers <String>] [-ExtendedSessionTimeout <UInt32>]
+ [-FileInfoCacheEntriesMax <UInt32>] [-FileInfoCacheLifetime <UInt32>]
+ [-FileNotFoundCacheEntriesMax <UInt32>] [-FileNotFoundCacheLifetime <UInt32>]
+ [-ForceSMBEncryptionOverQuic <Boolean>] [-InvalidAuthenticationCacheLifetime <UInt32>]
+ [-KeepConn <UInt32>] [-MaxCmds <UInt32>] [-MaximumConnectionCountPerServer <UInt32>]
+ [-OplocksDisabled <Boolean>] [-RequestCompression <Boolean>] [-RequireEncryption <Boolean>]
  [-RequireSecuritySignature <Boolean>] [-SessionTimeout <UInt32>] [-SkipCertificateCheck <Boolean>]
  [-Smb2DialectMax <Smb2DialectMax>] [-Smb2DialectMin <Smb2DialectMin>]
  [-UseOpportunisticLocking <Boolean>] [-WindowSizeThreshold <UInt32>] [-Force]
@@ -42,6 +42,10 @@ Set-SmbClientConfiguration [-AuditInsecureGuestLogon <Boolean>]
 ## DESCRIPTION
 
 The `Set-SmbClientConfiguration` cmdlet sets the Server Message Block (SMB) client configuration.
+
+> [!NOTE]
+> The **EnableSMBQUIC** parameter is available starting with Windows 11 Insider Preview
+> build 26090 and later.
 
 ## EXAMPLES
 
@@ -444,6 +448,22 @@ Accept wildcard characters: False
 ### -EnableSecuritySignature
 
 Indicates that the security signature is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSMBQUIC
+
+Specifies whether the SMB over QUIC client protocol is enabled.
 
 ```yaml
 Type: Boolean

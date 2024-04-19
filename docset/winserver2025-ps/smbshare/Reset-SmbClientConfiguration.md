@@ -21,8 +21,8 @@ Reset-SmbClientConfiguration [-All] [-AuditInsecureGuestLogon]
  [-CompressibilitySampling] [-ConnectionCountPerRssNetworkInterface] [-DirectoryCacheEntriesMax]
  [-DirectoryCacheEntrySizeMax] [-DirectoryCacheLifetime] [-DisableCompression] [-DormantFileLimit]
  [-EnableBandwidthThrottling] [-EnableByteRangeLockingOnReadOnlyFiles] [-EnableLargeMtu]
- [-EnableLoadBalanceScaleOut] [-EnableMailslots] [-EnableMultiChannel] [-EncryptionCiphers]
- [-ExtendedSessionTimeout] [-FileInfoCacheEntriesMax] [-FileInfoCacheLifetime]
+ [-EnableLoadBalanceScaleOut] [-EnableMailslots] [-EnableMultiChannel] [-EnableSMBQUIC]
+ [-EncryptionCiphers] [-ExtendedSessionTimeout] [-FileInfoCacheEntriesMax] [-FileInfoCacheLifetime]
  [-FileNotFoundCacheEntriesMax] [-FileNotFoundCacheLifetime] [-ForceSMBEncryptionOverQuic]
  [-InvalidAuthenticationCacheLifetime] [-KeepConn] [-MaxCmds] [-MaximumConnectionCountPerServer]
  [-OplocksDisabled] [-RequestCompression] [-RequireEncryption] [-SessionTimeout]
@@ -35,6 +35,10 @@ Reset-SmbClientConfiguration [-All] [-AuditInsecureGuestLogon]
 
 The `Reset-SmbClientConfiguration` cmdlet resets SMB client configuration parameters to their
 default values.
+
+> [!NOTE]
+> The **EnableSMBQUIC** parameter is available starting with Windows 11 Insider Preview
+> build 26090 and later.
 
 ## EXAMPLES
 
@@ -365,6 +369,22 @@ Accept wildcard characters: False
 ### -EnableMultiChannel
 
 Resets the enable multi-channel value to its default value.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSMBQUIC
+
+Resets the SMB over QUIC client protocol to its default value.
 
 ```yaml
 Type: SwitchParameter

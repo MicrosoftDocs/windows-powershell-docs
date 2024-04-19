@@ -43,6 +43,10 @@ Set-SmbClientConfiguration [-AuditInsecureGuestLogon <Boolean>]
 
 The `Set-SmbClientConfiguration` cmdlet sets the Server Message Block (SMB) client configuration.
 
+> [!NOTE]
+> The **EnableSMBQUIC** parameter is available starting with Windows 11 Insider Preview
+> build 26090 and later.
+
 ## EXAMPLES
 
 ### Example 1: Set the SMB client configuration
@@ -472,9 +476,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-> [!NOTE]
-> This parameter is available on Windows 11 Insider Preview build 26090 and later.
 
 ### -EncryptionCiphers
 

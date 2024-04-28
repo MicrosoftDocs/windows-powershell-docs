@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-ADOrganizationalUnit
 
 ## SYNOPSIS
+
 Creates a new Active Directory organizational unit.
 
 ## SYNTAX
@@ -21,101 +22,86 @@ New-ADOrganizationalUnit [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-City <S
 ```
 
 ## DESCRIPTION
-The New-ADOrganizationalUnit cmdlet creates a new Active Directory organizational unit.
-You can set commonly used organizational unit property values by using the cmdlet parameters.
-Property values that are not associated with cmdlet parameters can be set by using the OtherAttributes parameter.
 
-You must set the Name parameter to create a new organizational unit.
-When you do not specify the Path parameter, the cmdlet creates an organizational unit under the default NC head for the domain.
+The **New-ADOrganizationalUnit** cmdlet creates an Active Directory organizational unit (OU).
+You can set commonly used OU property values by using the cmdlet parameters.
+**Property** values that are not associated with cmdlet parameters can be set by using the *OtherAttributes* parameter.
 
-The following methods explain different ways to create an object by using this cmdlet.
+You must set the *Name* parameter to create a new OU.
+If you do not specify the *Path* parameter, the cmdlet creates an OU under the default naming context (NC) head for the domain.
 
-Method 1: Use the New-ADOrganizationalUnit cmdlet, specify the required parameters, and set any additional property values by using the cmdlet parameters.
+The following methods describe how to create an object by using this cmdlet.
+
+Method 1: Use the **New-ADOrganizationalUnit** cmdlet, specify the required parameters, and set any additional property values by using the cmdlet parameters.
 
 Method 2: Use a template to create the new object.
-To do this, create a new organizational unit object or retrieve a copy of an existing organizational unit object and set the Instance parameter to this object.
-The object provided to the Instance parameter is used as a template for the new object.
+To do this, create a new OU object or get a copy of an existing OU object and set the *Instance* parameter to this object.
+The object provided to the *Instance* parameter is used as a template for the new object.
 You can override property values from the template by setting cmdlet parameters.
-For examples and more information, see the Instance parameter description for this cmdlet.
+For more information, see the *Instance* parameter description for this cmdlet.
 
-Method 3: Use the Import-CSV cmdlet with the New-ADOrganizationalUnit cmdlet to create multiple Active Directory organizational unit objects.
-To do this, use the Import-CSV cmdlet to create the custom objects from a comma-separated value (CSV) file that contains a list of object properties.
-Then pass these objects through the pipeline to the New-ADOrganizationalUnit cmdlet to create the organizational unit objects.
+Method 3: Use the **Import-Csv** cmdlet with the **New-ADOrganizationalUnit** cmdlet to create multiple Active Directory OU objects.
+To do this, use the [**Import-Csv**](/powershell/module/microsoft.powershell.utility/import-csv) cmdlet to create the custom objects from a comma-separated value (CSV) file that contains a list of object properties.
+Then pass these objects through the pipeline to the **New-ADOrganizationalUnit** cmdlet to create the OU objects.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Create an OU
+
 ```
-C:\PS>New-ADOrganizationalUnit -Name UserAccounts -Path "DC=FABRIKAM,DC=COM"
-```
-
-Description
-
------------
-
-Creates a new OrganizationalUnit named 'UserAccounts' which is protected from accidental deletion.
-
-### -------------------------- EXAMPLE 2 --------------------------
-```
-C:\PS>New-ADOrganizationalUnit -Name UserAccounts -Path "DC=FABRIKAM,DC=COM" -ProtectedFromAccidentalDeletion $false
+PS C:\> New-ADOrganizationalUnit -Name "UserAccounts" -Path "DC=FABRIKAM,DC=COM"
 ```
 
-Description
+This command creates an OU named UserAccounts that is protected from accidental deletion. Note that accidental protection is implicit.
 
------------
+### Example 2: Create an OU that is not protected from accidental deletion
 
-Creates a new OrganizationalUnit named 'UserAccounts' which is not protected from deletion.
-
-### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>New-ADOrganizationalUnit -Name UserAccounts -Path "DC=FABRIKAM,DC=COM" -OtherAttributes @{seeAlso="CN=HumanResourceManagers,OU=Groups,OU=Managed,DC=Fabrikam,DC=com";managedBy="CN=TomC,DC=FABRIKAM,DC=COM"}
+PS C:\> New-ADOrganizationalUnit -Name "UserAccounts" -Path "DC=FABRIKAM,DC=COM" -ProtectedFromAccidentalDeletion $False
 ```
 
-Description
+This command creates an OU named UserAccounts that is not protected from accidental deletion.
 
------------
+### Example 3: Create an OU that is protected from accidental deletion
 
-Creates an OrganizationalUnit name 'UserAccounts' which is protected from accidental deletion with properties 'seeAlso' and 'managedBy' set to the specified values.
-
-### -------------------------- EXAMPLE 4 --------------------------
 ```
-C:\PS>$ouTemplate = Get-ADOrganizationalUnit "OU=UserAccounts,DC=Fabrikam,DC=com" -properties seeAlso,managedBy; New-ADOrganizationalUnit -name TomCReports -instance $ouTemplate
+PS C:\> New-ADOrganizationalUnit -Name "UserAccounts" -Path "DC=FABRIKAM,DC=COM" -OtherAttributes @{seeAlso="CN=HumanResourceManagers,OU=Groups,OU=Managed,DC=Fabrikam,DC=com";managedBy="CN=TomC,DC=FABRIKAM,DC=COM"}
 ```
 
-Description
+This command creates an OU named UserAccounts that is protected from accidental deletion.
+The **seeAlso** and **managedBy** properties are set to specified values.
 
------------
+### Example 4: Create an OU from a template OU
 
-Uses the data from the OrganizationalUnit 'OU=UserAccounts,DC=Fabrikam,DC=com' as a template for another new OrganizationalUnit.
-
-### -------------------------- EXAMPLE 5 --------------------------
 ```
-C:\PS>New-ADOrganizationalUnit -name "Managed" -path "DC=AppNC" -server "FABRIKAM-SRV1:60000"
+PS C:\> $OuTemplate = Get-ADOrganizationalUnit -Identity "OU=UserAccounts,DC=Fabrikam,DC=com" -Properties seeAlso,managedBy 
+PS C:\> New-ADOrganizationalUnit -Name "TomCReports" -Instance $OuTemplate
 ```
 
-Description
+This command uses the data from the OU OU=UserAccounts,DC=Fabrikam,DC=com as a template for another OU.
 
------------
+### Example 5: Create an OU in an AD LDS instance
 
-Creates a new OrganizationalUnit named 'Managed' in an LDS instance.
+```
+PS C:\> New-ADOrganizationalUnit -Name "Managed" -Path "DC=AppNC" -Server "FABRIKAM-SRV1:60000"
+```
+
+This command creates an OU named Managed in an AD LDS instance.
 
 ## PARAMETERS
 
 ### -AuthType
+
 Specifies the authentication method to use.
-Possible values for this parameter include:
 
-Negotiate or 0
+The acceptable values for this parameter are:
 
-Basic or 1
+- Negotiate or 0
+- Basic or 1
 
 The default authentication method is Negotiate.
 
 A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
-
-The following example shows how to set this parameter to Basic.
-
--AuthType Basic
 
 ```yaml
 Type: ADAuthType
@@ -131,13 +117,10 @@ Accept wildcard characters: False
 ```
 
 ### -City
-Specifies the user's town or city.
-This parameter sets the City property of a user.
-The LDAP display name (ldapDisplayName) of this property is "l".
 
-The following example shows how set this parameter.
-
--City "Las Vegas"
+Specifies the town or city.
+This parameter sets the **City** property of an OU object.
+The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName**) of this property is `l`.
 
 ```yaml
 Type: String
@@ -152,6 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -167,14 +151,11 @@ Accept wildcard characters: False
 ```
 
 ### -Country
-Specifies the country or region code for the user's language of choice.
-This parameter sets the Country property of a user object.
-The LDAP Display Name (ldapDisplayName) of this property is "c".
+
+Specifies the country or region code.
+This parameter sets the **Country** property of an OU object.
+The LDAP display name (**ldapDisplayName**) of this property is `c`.
 This value is not used by Windows 2000.
-
-The following example shows how set this parameter.
-
--Country "IN"
 
 ```yaml
 Type: String
@@ -189,21 +170,16 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the user account credentials to use to perform this task.
 The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory PowerShell provider drive.
 If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
 
-To specify this parameter, you can type a user name, such as "User1" or "Domain01\User01" or you can specify a PSCredential object.
+To specify this parameter, you can type a user name, such as `User1` or `Domain01\User01` or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a PSCredential object by using a script or by using the Get-Credential cmdlet.
-You can then set the Credential parameter to the PSCredential object The following example shows how to create credentials.
-
-$AdminCredentials = Get-Credential "Domain01\User01"
-
-The following shows how to set the Credential parameter to these credentials.
-
--Credential $AdminCredentials
+You can also create a **PSCredential** object by using a script or by using the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet.
+You can then set the *Credential* parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.
 
@@ -220,13 +196,10 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specifies a description of the object.
-This parameter sets the value of the Description property for the object.
-The LDAP Display Name (ldapDisplayName) for this property is "description".
-
-The following example shows how to set this parameter to a sample description.
-
--Description "Description of the object"
+This parameter sets the value of the **Description** property for the OU object.
+The LDAP display name (**ldapDisplayName**) for this property is `description`.
 
 ```yaml
 Type: String
@@ -241,13 +214,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
+
 Specifies the display name of the object.
-This parameter sets the DisplayName property of the object.
-The LDAP Display Name (ldapDisplayName) for this property is "displayName".
-
-The following example shows how to set this parameter.
-
--DisplayName "Sara Davis Laptop"
+This parameter sets the **DisplayName** property of the OU object.
+The LDAP display name (**ldapDisplayName**) for this property is `displayName`.
 
 ```yaml
 Type: String
@@ -262,30 +232,27 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Specifies an instance of an organizational unit object to use as a template for a new organizational unit object.
 
-You can use an instance of an existing organizational unit object as a template or you can construct a new organizational unit object by using the Windows PowerShell command line or by using a script.
-The following examples show how to use these two methods to create organizational unit object templates.
+Specifies an instance of an OU object to use as a template for a new OU object.
 
-Method 1: Use an existing organizational unit object as a template for a new object.
-To retrieve an instance of an existing organizational unit object use Get-ADOrganizationalUnit.
-Then provide this object to the Instance parameter of the New-ADOrganizationalUnit cmdlet to create a new organizational unit object.
+You can use an instance of an existing OU object as a template or you can construct a new OU object by using the Windows PowerShell command line or by using a script.
+
+Method 1: Use an existing OU object as a template for a new object.
+To retrieve an instance of an existing OU object use Get-ADOrganizationalUnit.
+Then provide this object to the *Instance* parameter of the **New-ADOrganizationalUnit** cmdlet to create a new OU object.
 You can override property values of the new object by setting the appropriate parameters.
 
-$organizationalUnitInstance = Get-ADOrganizationalUnit -Identity accountingAsia
+Method 2: Create a new **ADOrganizationalUnit** object and set the property values by using the Windows PowerShell command line interface.
+Then pass this object to the *Instance* parameter of the **New-ADOrganizationalUnit** cmdlet to create the new Active Directory OU object.
 
-New-ADOrganizationalUnit -Name accountingAustralia  -Instance $OrganizationalUnitInstance -Country Australia
-
-Method 2: Create a new ADOrganizationalUnit object and set the property values by using the Windows PowerShell command line interface.
-Then pass this object to the Instance parameter of the New-ADOrganizationalUnit cmdlet to create the new Active Directory organizational unit object.
-
-$OrganizationalUnitInstance = new-object Microsoft.ActiveDirectory.Management.ADOrganizationalUnit
-
+```powershell
+$OrganizationalUnitInstance = New-Object -ComObject Microsoft.ActiveDirectory.Management.ADOrganizationalUnit
 $OrganizationalUnitInstance.Country = Australia
+New-ADOrganizationalUnit -Name accountingAustralia -Instance $OrganizationalUnitInstance
+```
 
-New-ADOrganizationalUnit -Name accountingAustralia  -Instance $OrganizationalUnitInstance
-
-Note: Specified attributes are not validated, so attempting to set attributes that do not exist or cannot be set will raise an error.
+> [!NOTE]
+> Specified attributes are not validated, so attempting to set attributes that do not exist or cannot be set raises an error.
 
 ```yaml
 Type: ADOrganizationalUnit
@@ -300,30 +267,17 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedBy
+
 Specifies the user or group that manages the object by providing one of the following property values.
-Note: The identifier in parentheses is the LDAP display name for the property.
+Note: The identifier in parentheses is the LDAP display name for the property.  
+The acceptable values for this parameter are:
 
-Distinguished Name
+- A distinguished name
+- A GUID (objectGUID)
+- A security identifier (objectSid)
+- A SAM account name (sAMAccountName)
 
-Example:  CN=SaraDavis,OU=Europe,CN=Users,DC=corp,DC=contoso,DC=com
-
-GUID (objectGUID)
-
-Example: 599c3d2e-f72d-4d20-8a88-030d99495f20
-
-Security Identifier (objectSid)
-
-Example: S-1-5-21-3165297888-301567370-576410423-1103
-
-SAM Account Name (sAMAccountName)
-
-Example: saradavis
-
-This parameter sets the Active Directory attribute with an LDAP Display Name of "managedBy".
-
-The following example shows how to specify this parameter.
-
--ManagedBy ContosoAdmins
+This parameter sets the Active Directory attribute with an LDAP display name of `managedBy`.
 
 ```yaml
 Type: ADPrincipal
@@ -338,13 +292,10 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the object.
-This parameter sets the Name property of the Active Directory object.
-The LDAP Display Name (ldapDisplayName) of this property is "name".
-
-The following example shows how to set this parameter to a name string.
-
--Name "SaraDavis"
+This parameter sets the **Name** property of the OU object.
+The LDAP display name (**ldapDisplayName**) of this property is `name`.
 
 ```yaml
 Type: String
@@ -359,35 +310,23 @@ Accept wildcard characters: False
 ```
 
 ### -OtherAttributes
+
 Specifies object attribute values for attributes that are not represented by cmdlet parameters.
 You can set one or more parameters at the same time with this parameter.
 If an attribute takes more than one value, you can assign multiple values.
-To identify an attribute, specify the LDAPDisplayName (ldapDisplayName) defined for it in the Active Directory schema.
-
-Syntax:
+To identify an attribute, specify the LDAP display name (**ldapDisplayName**) defined for it in the Active Directory schema.
 
 To specify a single value for an attribute:
 
--OtherAttributes @{'AttributeLDAPDisplayName'=value}
+`-OtherAttributes @{'AttributeLDAPDisplayName'=value}`
 
-To specify multiple values for an attribute
+To specify multiple values for an attribute, separate the values with a comma:
 
--OtherAttributes @{'AttributeLDAPDisplayName'=value1,value2,...}
+`-OtherAttributes @{'AttributeLDAPDisplayName'=value1,value2,...}`
 
-You can specify values for more than one attribute by using semicolons to separate attributes. 
-The following syntax shows how to set values for multiple attributes:
+To specify values for multiple attributes, separate the attributes with a semi-colon:
 
--OtherAttributes @{'Attribute1LDAPDisplayName'=value; 'Attribute2LDAPDisplayName'=value1,value2;...}
-
-The following examples show how to use this parameter.
-
-To set the value of a custom attribute called favColors that takes a set of Unicode strings, use the following syntax:
-
--OtherAttributes @{'favColors'="pink","purple"}
-
-To set values for favColors and dateOfBirth simultaneously, use the following syntax:
-
--OtherAttributes @{'favColors'="pink","purple"; 'dateOfBirth'=" 01/01/1960"}
+`-OtherAttributes @{'Attribute1LDAPDisplayName'=value; 'Attribute2LDAPDisplayName'=value1,value2;...}`
 
 ```yaml
 Type: Hashtable
@@ -402,9 +341,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns the new or modified object.
-By default (i.e.
-if -PassThru is not specified), this cmdlet does not generate any output.
+
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -419,31 +358,33 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies the X.500 path of the Organizational Unit (OU) or container where the new object is created.
 
-In many cases, a default value will be used for the Path parameter if no value is specified. 
-The rules for determining the default value are given below. 
-Note that rules listed first are evaluated first and once a default value can be determined, no further rules will be evaluated.
+Specifies the X.500 path of the OU or container where the new object is created.
 
-In AD DS environments, a default value for Path will be set in the following cases:
+In many cases, a default value is used for the *Path* parameter if no value is specified.
+The rules for determining the default value are given below.
+Note that rules listed first are evaluated first and when a default value can be determined, no further rules are evaluated.
 
-- If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current path of the provider drive.
-- If the cmdlet has a default path, this will be used.  For example: in New-ADUser, the Path parameter would default to the Users container.
-- If none of the previous cases apply, the default value of Path will be set to the default partition or naming context of the target domain.
-
-In AD LDS environments, a default value for Path will be set in the following cases:
+In Active Directory Domain Services (AD DS) environments, a default value for *Path* is set in the following cases:
 
 - If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current path of the provider drive.
-- If the cmdlet has a default path, this will be used.  For example: in New-ADUser, the Path parameter would default to the Users container.
-- If the target AD LDS instance has a default naming context, the default value of Path will be set to the default naming context.  To specify a default naming context for an AD LDS environment, set the msDS-defaultNamingContext property of the Active Directory directory service agent (DSA) object (nTDSDSA) for the AD LDS instance.
-- If none of the previous cases apply, the Path parameter will not take any default value.
+- If the cmdlet has a default path, this is used.  
+For example: in **New-ADUser**, the *Path* parameter defaults to the Users container.
+- If none of the previous cases apply, the default value of *Path* is set to the default partition or naming context of the target domain.
 
-The following example shows how to set this parameter to an OU.
+In AD LDS environments, a default value for *Path* is set in the following cases:
 
--Path "ou=mfg,dc=noam,dc=corp,dc=contoso,dc=com"
+- If the cmdlet is run from an Active Directory module for PowerShell provider drive, the parameter is set to the current path of the provider drive.
+- If the cmdlet has a default path, this is used.  
+For example: in **New-ADUser**, the *Path* parameter defaults to the Users container.
+- If the target AD LDS instance has a default naming context, the default value of *Path* is set to the default naming context.
+  To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance.
+- If none of the previous cases apply, the *Path* parameter does not take any default value.
 
-Note:  The Active Directory Provider cmdlets, such New-Item, Remove-Item, Remove-ItemProperty, Rename-Item and Set-ItemProperty also contain a Path property.
-However, for the provider cmdlets, the Path parameter identifies the path of the actual object and not the container as with the Active Directory cmdlets.
+> [!NOTE]
+> The Active Directory Provider cmdlets, such as **New-Item**, **Remove-Item**, **Remove-ItemProperty**, **Rename-Item**, and **Set-ItemProperty**, also contain a **Path** property.
+>
+> However, for the Active Directory Provider cmdlets, the *Path* parameter identifies the path of the actual object rather than the container.
 
 ```yaml
 Type: String
@@ -458,13 +399,10 @@ Accept wildcard characters: False
 ```
 
 ### -PostalCode
-Specifies the user's postal code or zip code.
-This parameter sets the PostalCode property of a user.
-The LDAP Display Name (ldapDisplayName) of this property is "postalCode".
 
-The following example shows how to set this parameter.
-
--PostalCode "28712"
+Specifies the postal code or zip code.
+This parameter sets the **PostalCode** property of an OU object.
+The LDAP display name (**ldapDisplayName**) of this property is `postalCode`.
 
 ```yaml
 Type: String
@@ -479,17 +417,13 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectedFromAccidentalDeletion
-Specifies whether to prevent the object from being deleted.
-When this property is set to true, you cannot delete the corresponding object without changing the value of the property.
-Possible values for this parameter include:
 
-$false or 0
+Indicates whether to prevent the object from being deleted.
+When this property is set to $True, you cannot delete the corresponding object without changing the value of the property.  
+The acceptable values for this parameter are:
 
-$true or 1
-
-The following example shows how to set this parameter to true.
-
--ProtectedFromAccidentalDeletion $true
+- $False or 0
+- $True or 1
 
 ```yaml
 Type: Boolean
@@ -504,44 +438,28 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory Snapshot instance.
+
+Specifies the AD DS instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+The service may be any of the following: AD LDS, AD DS, or Active Directory snapshot instance.
+
+Specify the AD DS instance in one of the following ways:
 
 Domain name values:
 
-Fully qualified domain name
-
-Examples: corp.contoso.com
-
-NetBIOS name
-
-Example: CORP
+- Fully qualified domain name
+- NetBIOS name
 
 Directory server values:
 
-Fully qualified directory server name
+- Fully qualified directory server name
+- NetBIOS name
+- Fully qualified directory server name and port
 
-Example: corp-DC12.corp.contoso.com
+The default value for this parameter is determined by one of the following methods in the order that they are listed:
 
-NetBIOS name
-
-Example: corp-DC12
-
-Fully qualified directory server name and port
-
-Example: corp-DC12.corp.contoso.com:3268
-
-The default value for the Server parameter is determined by one of the following methods in the order that they are listed:
-
--By using Server value from objects passed through the pipeline.
-
--By using the server information associated with the Active Directory PowerShell provider drive, when running under that drive.
-
--By using the domain of the computer running Powershell.
-
-The following example shows how to specify a full qualified domain name as the parameter value.
-
--Server "corp.contoso.com"
+- By using the *Server* value from objects passed through the pipeline
+- By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
+- By using the domain of the computer running Windows PowerShell
 
 ```yaml
 Type: String
@@ -556,13 +474,10 @@ Accept wildcard characters: False
 ```
 
 ### -State
-Specifies the user's or Organizational Unit's state or province.
-This parameter sets the State property of a User or Organizational Unit object.
-The LDAP display name (ldapDisplayName) of this property is "st".
 
-The following example shows how set this parameter.
-
--State  "Nevada"
+Specifies a state or province.
+This parameter sets the **State** property of an OU object.
+The LDAP display name (**ldapDisplayName**) of this property is `st`.
 
 ```yaml
 Type: String
@@ -577,13 +492,10 @@ Accept wildcard characters: False
 ```
 
 ### -StreetAddress
-Specifies the organizational unit's street address.
-This parameter sets the StreetAddress property of a organizational unit object.
-The LDAP display name (ldapDisplayName) of this property is "street".
 
-The following example shows how to set this parameter.
-
--StreetAddress  "1200 Main Street"
+Specifies a street address.
+This parameter sets the **StreetAddress** property of an OU object.
+The LDAP display name (**ldapDisplayName**) of this property is `street`.
 
 ```yaml
 Type: String
@@ -598,6 +510,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -614,23 +527,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADOrganizationalUnit
-An organizational unit object that is a template for the new organizational unit object is received by the Instance parameter.
+
+An OU object that is a template for the new OU object is received by the **Instance** parameter.
 
 ## OUTPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADOrganizationalUnit
-Returns the new organizational unit object when the PassThru parameter is specified.
+
+Returns the new OU object when the **PassThru** parameter is specified.  
 By default, this cmdlet does not generate any output.
 
 ## NOTES
-* This cmdlet does not work with an Active Directory Snapshot.
 
-  This cmdlet does not work with a read-only domain controller.
+- This cmdlet does not work with an Active Directory Snapshot.
+- This cmdlet does not work with a read-only domain controller.
 
 ## RELATED LINKS
 
@@ -639,4 +555,3 @@ By default, this cmdlet does not generate any output.
 [Remove-ADOrganizationalUnit](./Remove-ADOrganizationalUnit.md)
 
 [Set-ADOrganizationalUnit](./Set-ADOrganizationalUnit.md)
-

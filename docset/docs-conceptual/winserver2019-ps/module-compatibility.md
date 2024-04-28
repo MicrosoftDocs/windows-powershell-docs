@@ -3,7 +3,7 @@ description: This article lists the status of PowerShell 7 with Powershell modul
 ms.date: 06/05/2023
 title: PowerShell 7 module compatibility
 ---
-# PowerShell 7 module compatibility
+# PowerShell 7 module compatibility in Windows Server 2019
 
 This article contains a list of PowerShell modules published by Microsoft. These modules provide
 management and support for various Microsoft products and services. They have been updated to work

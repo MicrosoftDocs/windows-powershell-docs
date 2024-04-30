@@ -1,55 +1,55 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: SmbServerCertificateMapping.cdxml-help.xml
+external help file: SmbClientCertificateMapping.cdxml-help.xml
 Module Name: SmbShare
 ms.date: 02/22/2024
-online version: https://learn.microsoft.com/powershell/module/smbshare/new-smbservercertificatemapping?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/smbshare/new-smbclientcertificatemapping?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: New-SmbServerCertificateMapping
+title: New-SmbClientCertificateMapping
 ---
 
-# New-SmbServerCertificateMapping
+# New-SmbClientCertificateMapping
 
 ## SYNOPSIS
-Creates a certificate association with the SMB server for SMB over QUIC.
+Creates a new client certificate mapping for the Server Message Block (SMB) protocol.
 
 ## SYNTAX
 
 ```
-New-SmbServerCertificateMapping [-Name] <String> [-Thumbprint] <String> [-StoreName] <String>
- [-Subject <String>] [-DisplayName <String>] [-Type <Type>] [-Flags <Flags>]
- [-RequireClientAuthentication <Boolean>] [-SkipClientCertificateAccessCheck <Boolean>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+New-SmbClientCertificateMapping [-Namespace] <String> [-Thumbprint <String>] [-StoreName <String>]
+ [-IssuerName <String>] [-Subject <String>] [-DisplayName <String>] [-Type <Type>] [-Flags <Flags>]
+ [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `New-SmbServerCertificateMapping` cmdlet associates a certificate to the SMB server for SMB
-over QUIC. For more information, see [SMB over QUIC](https://aka.ms/smboverquic).
+The `New-SmbClientCertificateMapping` cmdlet creates a new client certificate mapping for the SMB
+protocol. These mappings are used to authenticate clients that connect to SMB servers using
+certificates. You can use this cmdlet to create a new mapping between a client certificate and an
+SMB client name.
 
 ## EXAMPLES
 
-### Example 1 - Map a certificate located in the local machine's personal store
-
-This command maps a certificate located in the local machine's personal store for SMB server edge
-endpoint `fs2.contoso.com` using the certificate's thumbprint.
+### Example 1: Create a new certificate mapping for an SMB client
 
 ```powershell
 $params = @{
-    Name = "fs2.contoso.com"
-    Thumbprint = "88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F"
+    Thumbprint = "a1b2c3d4e5f6g7h8"
     StoreName = "My"
-    Subject = "CN=2022-ae-02"
+    IssuerName = "CN=MyCertificateAuthority"
+    Subject = "CN=MyClientCertificate"
+    DisplayName = "MyClientCertificateMapping"
 }
-New-SmbServerCertificateMapping @params
+New-SmbClientCertificateMapping @params
 ```
 
-```output
-Name            Subject       Thumbprint                               DisplayName StoreName Type Flags
-----            -------       ----------                               ----------- --------- ---- -----
-fs2.contoso.com CN=2022-ae-02 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F 2022-ae-02  my        QUIC None
-```
+This creates a new certificate mapping for an SMB client where a specific thumbprint, store name,
+issuer name, subject, and display name are specified for the certificate mapping.
+
+For example, if you have an SMB client named `MySMBClient` that needs to connect to a server using
+a specific certificate, you could use this cmdlet to create a certificate mapping that associates
+the client with the certificate.
 
 ## PARAMETERS
 
@@ -73,8 +73,8 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or
-[Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -91,32 +91,32 @@ Accept wildcard characters: False
 
 ### -DisplayName
 
-Specifies a friendly name to display for the mapping.
+Specifies the friendly name of the certificate.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -Flags
 
-Specifies if Named Pipes are enabled for SMB over QUIC. The acceptable values for this parameter
+Specifies if `NamedPipes` are enabled for SMB over QUIC. The acceptable values for this parameter
 are:
 
-- `None`: Remove all flags.
+- `None`: Remove all flags
 - `AllowNamedPipe`: Enable use of named pipes in SMB over QUIC connections for this mapping (off by
-  default, overrides the value of RestrictNamedPipeAccessOverQuic).
-- `DefaultCert`: Not used.
+  default, overrides value of the **RestrictNamedPipeAccessOverQuic** parameter)
+- `DefaultCert`: Not used
 
 ```yaml
-Type: Flags
+Type: Flags[]
 Parameter Sets: (All)
 Aliases:
 Accepted values: None, AllowNamedPipe, DefaultCert
@@ -124,7 +124,7 @@ Accepted values: None, AllowNamedPipe, DefaultCert
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -144,10 +144,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
+### -IssuerName
 
-Specifies a fully-qualified DNS name or NetBIOS name that must match the certificate's subject name
-or an entry in the certificate's subject alternative names.
+Filters the certificate mappings based on the issuer name of the certificate.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Namespace
+
+Specifies the namespace of the QUIC server. For example, `server1.contoso.com`. By default, the
+cmdlet searches in the `root\cimv2\Security\MicrosoftTlsCertificateMappingProvider` namespace.
 
 ```yaml
 Type: String
@@ -161,59 +177,17 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RequireClientAuthentication
-
-Specifies whether client authentication is required for connections to the server. When this
-parameter is set to `$true`, clients must present a valid certificate to connect to the server.
-When it is set to `$false`, clients can connect without presenting a certificate.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SkipClientCertificateAccessCheck
-
-Specifies whether the server should skip the check for client certificate access when a client
-connects. When this parameter is set to `$true`, the server will not check whether the client has
-access to the certificate it presents. This can be useful in scenarios where the server is acting
-as a gateway or proxy, and does not need to perform full certificate validation.
-
-However, it can also increase the risk of security breaches. When this parameter is set to
-`$false`, the server will check whether the client has access to the certificate it presents before
-allowing the client to connect.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -StoreName
 
-Specifies the path to the certificate store for the certificate. The recommended value is "My" for
-the local machine personal store.
+Specifies the path to the certificate store for the certificate.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: 3
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -224,14 +198,14 @@ Accept wildcard characters: False
 Specifies the subject name of the certificate.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
+Position: 2
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -260,12 +234,12 @@ Accept wildcard characters: False
 Specifies the thumbprint value of the certificate.
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: 2
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -275,10 +249,10 @@ Accept wildcard characters: False
 
 Specifies the type of certificate mapping. The acceptable value for this parameter is:
 
-- `QUIC`: Certificate mapping is for SMB over QUIC.
+`QUIC`: Certificate mapping is for SMB over QUIC.
 
 ```yaml
-Type: Type
+Type: Type[]
 Parameter Sets: (All)
 Aliases:
 Accepted values: QUIC
@@ -286,7 +260,7 @@ Accepted values: QUIC
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -301,7 +275,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -317,7 +291,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -341,8 +315,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbServerCertificateMapping](Get-SmbServerCertificateMapping.md)
+[Get-SmbClientCertificateMapping](Get-SmbClientCertificateMapping.md)
 
-[Remove-SmbServerCertificateMapping](Remove-SmbServerCertificateMapping.md)
+[Remove-SmbClientCertificateMapping](Remove-SmbClientCertificateMapping.md)
 
-[Set-SmbServerCertificateMapping](Set-SmbServerCertificateMapping.md)
+[Set-SmbClientCertificateMapping](Set-SmbClientCertificateMapping.md)

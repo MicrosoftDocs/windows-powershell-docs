@@ -1,55 +1,49 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: SmbGlobalMapping.cdxml-help.xml
+external help file: SmbClientAccessToServer.cdxml-help.xml
 Module Name: SmbShare
 ms.date: 02/22/2024
-online version: https://learn.microsoft.com/powershell/module/smbshare/remove-smbglobalmapping?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/smbshare/get-smbclientaccesstoserver?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Remove-SmbGlobalMapping
+title: Get-SmbClientAccessToServer
 ---
 
-# Remove-SmbGlobalMapping
+# Get-SmbClientAccessToServer
 
 ## SYNOPSIS
-Removes a Server Message Block (SMB) global mapping to an SMB share.
+Gets information about SMB client access to a specified server.
 
 ## SYNTAX
 
 ### Query
 
 ```
-Remove-SmbGlobalMapping [[-LocalPath] <String[]>] [[-RemotePath] <String[]>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Get-SmbClientAccessToServer [-Name] <String[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+ [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InputObject
 
 ```
-Remove-SmbGlobalMapping -InputObject <CimInstance[]> [-Force] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Get-SmbClientAccessToServer -InputObject <CimInstance[]> [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Remove-SmbGlobalMapping` cmdlet removes the SMB global mapping to an SMB share.
+The `Get-SmbClientAccessToServer` cmdlet is used to retrieve information about SMB client access to
+a specified server. When you run this cmdlet, it'll return a list of allowed and blocked
+connections for SMB over QUIC client access control.
 
 ## EXAMPLES
 
-### Example 1: Remove an SMB global mapping
-
-This command removes an SMB global mapping for the indicated drive to an SMB share.
+### Example 1: Retrieve client access information
 
 ```powershell
-Remove-SmbGlobalMapping -LocalPath "G:"
+Get-SmbClientAccessToServer -Name "Server01"
 ```
 
-```output
-Confirm
-Are you sure you want to perform this action?
-Performing operation `Close-Connection` on Target 'G:\\uglymonkey\shared'.
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y
-```
+This command retrieves the SMB client access information for a device named `Server01`.
 
 ## PARAMETERS
 
@@ -89,22 +83,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-
-Forces the command to run without asking for user confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InputObject
 
 Specifies the input object that's used in a pipeline command.
@@ -121,50 +99,18 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -LocalPath
+### -Name
 
-Specifies the local drive letter to which the remote path is mapped.
+Specifies a fully-qualified DNS name or NetBIOS name that must match the certificate's subject name
+or an entry in the certificate's subject alternative names.
 
 ```yaml
 Type: String[]
 Parameter Sets: Query
 Aliases:
 
-Required: False
+Required: True
 Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PassThru
-
-Returns an object representing the item with which you're working. By default, this cmdlet doesn't
-generate any output.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemotePath
-
-Specifies the remote path that's accessed from this computer.
-
-```yaml
-Type: String[]
-Parameter Sets: Query
-Aliases:
-
-Required: False
-Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -173,8 +119,10 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum
-throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
+optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
+computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -200,7 +148,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -216,7 +164,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -236,14 +184,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance
-
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/SMB/MSFT_SmbGlobalMapping
+### Microsoft.Management.Infrastructure.CimInstance[]
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-SmbGlobalMapping](Get-SmbGlobalMapping.md)
+[Block-SmbClientAccessToServer](Block-SmbClientAccessToServer.md)
 
-[New-SmbGlobalMapping](New-SmbGlobalMapping.md)
+[Grant-SmbClientAccessToServer](Grant-SmbClientAccessToServer.md)
+
+[Revoke-SmbClientAccessToServer](Revoke-SmbClientAccessToServer.md)
+
+[Unblock-SmbClientAccessToServer](Unblock-SmbClientAccessToServer.md)

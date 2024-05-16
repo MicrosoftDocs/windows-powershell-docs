@@ -28,9 +28,9 @@ Additionally, this cmdlet can also be used to edit site properties once configur
 
 ### Example 1: Initiate Peering with Self-Signed Certificates
 ```powershell
-PS C:\> $cert1 = Get-ChildItem ìCert:\LocalMachine\Myî | where {$_.Subject -like ësdnsite1.contoso.comí}
+PS C:\> $cert1 = Get-ChildItem ‚ÄúCert:\LocalMachine\My‚Äù | where {$_.Subject -like ‚Äòsdnsite1.contoso.com‚Äô}
 $base64cert1 = [System.Convert]::ToBase64String($cert1.RawData)
-$cert2 = Get-ChildItem ìCert:\LocalMachine\Myî | where {$_.Subject -like ësdnsite2.contoso.comí}
+$cert2 = Get-ChildItem ‚ÄúCert:\LocalMachine\My‚Äù | where {$_.Subject -like ‚Äòsdnsite2.contoso.com‚Äô}
 $base64cert2 = [System.Convert]::ToBase64String($cert2.RawData)
 
 $prop = new-object Microsoft.Windows.NetworkController.NetworkControllerMultisiteProperties
@@ -173,14 +173,14 @@ Accept wildcard characters: False
 ### -Properties
 Specifies a site configuration for Multisite Peering. Site configuration comes as a NetworkControllerMultisiteProperties object. This object can be defined as new-object Microsoft.Windows.NetworkController.NetworkControllerMultisiteProperties. Here are the following properties that can be changed:
 - CertificateSubjectName
-- [[Sites] <NetworkControllerSite>]
+- [[Sites] \<NetworkControllerSite\>]
     - ResourceID/RESTIPAddress
     - IsPrimary
     - State
     - DeploymentID
     - APIVersion
     - ConfigurationState
-    - [[Properties] <NetworkControllerSiteProperties>]
+    - [[Properties] \<NetworkControllerSiteProperties\>]
         - RestIPAddress
         - CertificateSubjectName
         - EncodedCertificate

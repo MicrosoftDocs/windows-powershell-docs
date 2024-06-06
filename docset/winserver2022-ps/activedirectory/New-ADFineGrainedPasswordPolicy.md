@@ -71,13 +71,6 @@ PS C:\> New-ADFineGrainedPasswordPolicy -Instance $TemplatePSO -Name "AdminsPSO"
 
 This example creates two new fine-grained password policy objects using a template object.
 
-### Example 3: Create a fine-grained password policy with manual account unlock
-```powershell
-PS C:\> New-ADFineGrainedPasswordPolicy -Name "ManualUnlockPSO" -Precedence 500 -ComplexityEnabled $true -Description "Manual Unlock Password Policy" -DisplayName "Manual Unlock PSO" -LockoutDuration "00:00:00" -LockoutObservationWindow "00:00:00" -LockoutThreshold 3
-```
-
-This command creates a fine-grained password policy object named ManualUnlockPSO that would require manual unlock of accounts by the administrator.
-
 ## PARAMETERS
 
 ### -AuthType
@@ -274,6 +267,7 @@ The LDAP display name (**ldapDisplayName**) of this property is **msDS-lockoutOb
 
 The lockout observation window must be smaller than or equal to the lockout duration for a password policy.
 Use the *LockoutDuration* parameter to set the lockout duration time.
+**Note:** Setting the lockout observation window to 0 realistically means that the window is too short to reasonably observe more than one password attempt, and therefore the account will not ever be locked out.
 
 Specify the time interval in the following format:
 

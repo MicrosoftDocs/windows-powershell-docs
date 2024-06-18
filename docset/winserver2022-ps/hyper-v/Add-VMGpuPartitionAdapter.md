@@ -23,7 +23,8 @@ Add-VMGpuPartitionAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>
  [-MinPartitionVRAM <UInt64>] [-MaxPartitionVRAM <UInt64>] [-OptimalPartitionVRAM <UInt64>]
  [-MinPartitionEncode <UInt64>] [-MaxPartitionEncode <UInt64>] [-OptimalPartitionEncode <UInt64>]
  [-MinPartitionDecode <UInt64>] [-MaxPartitionDecode <UInt64>] [-OptimalPartitionDecode <UInt64>]
- [-MinPartitionCompute <UInt64>] [-MaxPartitionCompute <UInt64>] [-OptimalPartitionCompute <UInt64>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-MinPartitionCompute <UInt64>] [-MaxPartitionCompute <UInt64>] [-OptimalPartitionCompute <UInt64>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### VMObject
@@ -33,12 +34,14 @@ Add-VMGpuPartitionAdapter [-VM] <VirtualMachine[]> [-Passthru] [-InstancePath <S
  [-MinPartitionVRAM <UInt64>] [-MaxPartitionVRAM <UInt64>] [-OptimalPartitionVRAM <UInt64>]
  [-MinPartitionEncode <UInt64>] [-MaxPartitionEncode <UInt64>] [-OptimalPartitionEncode <UInt64>]
  [-MinPartitionDecode <UInt64>] [-MaxPartitionDecode <UInt64>] [-OptimalPartitionDecode <UInt64>]
- [-MinPartitionCompute <UInt64>] [-MaxPartitionCompute <UInt64>] [-OptimalPartitionCompute <UInt64>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-MinPartitionCompute <UInt64>] [-MaxPartitionCompute <UInt64>] [-OptimalPartitionCompute <UInt64>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Add-VMGpuPartitionAdapter` cmdlet adds a GPU partition adapter to a virtual machine. With no parameter, it assigns a full partition from an assignable GPU to a VM.
+The `Add-VMGpuPartitionAdapter` cmdlet adds a GPU partition adapter to a virtual machine. With no
+parameter, it assigns a full partition from an assignable GPU to a VM.
 
 ## EXAMPLES
 

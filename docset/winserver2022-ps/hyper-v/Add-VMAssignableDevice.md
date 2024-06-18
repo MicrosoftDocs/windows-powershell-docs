@@ -270,6 +270,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Get-VMAssignableDevice](Get-VMAssignableDevice.md)
+- [Get-VMAssignableDevice](get-vmassignabledevice.md)
 
-- [Remove-VMAssignableDevice](Remove-VMAssignableDevice.md)
+- [Remove-VMAssignableDevice](remove-vmassignabledevice.md)

@@ -189,6 +189,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Add-VMAssignableDevice](Add-VMAssignableDevice.md)
+- [Add-VMAssignableDevice](add-vmassignabledevice.md)
 
-- [Remove-VMAssignableDevice](Remove-VMAssignableDevice.md)
+- [Remove-VMAssignableDevice](remove-vmassignabledevice.md)

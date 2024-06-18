@@ -11,7 +11,7 @@ title: Get-VMAssignableDevice
 # Get-VMAssignableDevice
 
 ## SYNOPSIS
-Retrieves information about the assignable devices from a specific virtual machine.
+Retrieves information about the assignable device from a specific virtual machine.
 
 ## SYNTAX
 

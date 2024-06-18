@@ -1,5 +1,5 @@
 ---
-description: Assign's a device to a virtual machine.
+description: Assigns a device to a virtual machine.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 06/12/2024
@@ -11,7 +11,7 @@ title: Add-VMAssignableDevice
 # Add-VMAssignableDevice
 
 ## SYNOPSIS
-Adds assignable devices to a specific virtual machine.
+Adds an assignable device to a specific virtual machine.
 
 ## SYNTAX
 

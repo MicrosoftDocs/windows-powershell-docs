@@ -64,7 +64,7 @@ PS C:\> Add-AppxProvisionedPackage -Online -FolderPath "c:\Appx"
 This command adds the app package, dependency packages, and license file from the c:\Appx folder to the running Windows operating system.
 The package will be installed for the current user and any new user account created on the computer.
 
-### Example 2: Add an app package an operating system image
+### Example 2: Add an app package to an operating system image
 ```powershell
 PS C:\> Add-AppxProvisionedPackage -Path c:\offline -PackagePath c:\Appx\myPackage.appx -DependencyPackagePath c:\Appx\dependency1\dependencyPackage.appx -LicensePath c:\Appx\myLicense.xml
 ```

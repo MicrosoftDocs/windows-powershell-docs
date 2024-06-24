@@ -267,7 +267,10 @@ The LDAP display name (**ldapDisplayName**) of this property is **msDS-lockoutOb
 
 The lockout observation window must be smaller than or equal to the lockout duration for a password policy.
 Use the *LockoutDuration* parameter to set the lockout duration time.
-**Note:** Setting the lockout observation window to 0 realistically means that the window is too short to reasonably observe more than one password attempt, and therefore the account will not ever be locked out.
+
+> [!NOTE]
+> Setting the lockout observation window to 0 effectively means that the window is too short to
+> observe more than one password attempt, therefore the account will never be locked out.
 
 Specify the time interval in the following format:
 

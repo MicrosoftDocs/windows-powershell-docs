@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 Module Name: NetworkController
+ms.date: 06/26/2024
 online version: https://learn.microsoft.com/powershell/module/networkcontroller/set-networkcontrollermultisiteconfiguration?view=windowsserver2025-ps
 schema: 2.0.0
 ---
@@ -14,100 +15,107 @@ Initiates site peering between NC infrastructures across two different locations
 ## SYNTAX
 
 ```
-Set-NetworkControllerMultisiteConfiguration [[-Tags] <PSObject>] [-Properties]
-<NetworkControllerMultisiteProperties> [[-Etag] <String>] [[-ResourceMetadata]
-<ResourceMetadata>] [[-ResourceId] <String>] [-Force] -ConnectionUri <Uri>
-[-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException] [-WhatIf]
-[-Confirm] [<CommonParameters>]
+Set-NetworkControllerMultisiteConfiguration [[-Tags] <PSObject>]
+ [-Properties] <NetworkControllerMultisiteProperties> [[-Etag] <String>]
+ [[-ResourceMetadata] <ResourceMetadata>] [[-ResourceId] <String>] [-Force] -ConnectionUri <Uri>
+ [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The `Set-NetworkControllerMultisiteConfiguration` cmdlet initiates a Multisite peering connection
-between two NC infrastructures. For instance, if you have site A with NC infrastructure A and
-site B with NC infrastructure B, then you can initiate a peer between NC infrastructure A and NC
-infrastructure B. This cmdlet can not only initiate peering but can also remove peering and
-change the status of a NC infrastructure to primary. Additionally, this cmdlet can also be used
-to edit site properties once configured.
+between two NC infrastructures. For instance, if you have site A with NC infrastructure A and site B
+with NC infrastructure B, then you can initiate a peer between NC infrastructure A and NC
+infrastructure B. This cmdlet can not only initiate peering but can also remove peering and change
+the status of a NC infrastructure to primary. Additionally, this cmdlet can also be used to edit
+site properties once configured.
 
 ## EXAMPLES
 
 ### Example 1: Initiate Peering with Self-Signed Certificates
 
 ```powershell
-$cert1 = Get-ChildItem 'Cert:\LocalMachine\My' | where {$_.Subject -like ‘sdnsite1.contoso.com’}
+$cert1 = Get-ChildItem 'Cert:\LocalMachine\My' | Where-Object Subject -like 'sdnsite1.contoso.com'
+$cert2 = Get-ChildItem 'Cert:\LocalMachine\My' | Where-Object Subject -like 'sdnsite2.contoso.com'
 $base64cert1 = [System.Convert]::ToBase64String($cert1.RawData)
-$cert2 = Get-ChildItem “Cert:\LocalMachine\My” | where {$_.Subject -like ‘sdnsite2.contoso.com’}
 $base64cert2 = [System.Convert]::ToBase64String($cert2.RawData)
 
-$prop = new-object Microsoft.Windows.NetworkController.NetworkControllerMultisiteProperties
+$prop = New-Object Microsoft.Windows.NetworkController.NetworkControllerMultisiteProperties
 $prop.certificateSubjectName = 'sdnsite1.contoso.com'
-$prop.Sites = new-object Microsoft.Windows.NetworkController.NetworkControllerSite
+$prop.Sites = New-Object Microsoft.Windows.NetworkController.NetworkControllerSite
 $prop.Sites[0].ResourceId = 'site2'
-$prop.Sites[0].Properties = new-object
-Microsoft.Windows.NetworkController.NetworkControllerSiteProperties
+$prop.Sites[0].Properties = New-Object Microsoft.Windows.NetworkController.NetworkControllerSiteProperties
 
 $prop.Sites[0].Properties.RestIPAddress = 'sdnsite2.contoso.com'
 $prop.Sites[0].Properties.CertificateSubjectName = 'sdnsite2.contoso.com'
 $prop.Sites[0].Properties.EncodedCertificate = $base64cert2
 
-Set-NetworkControllerMultisiteConfiguration -ConnectionUri 'https://sdnsite1.contoso.com'
--Properties $prop -Force
+$parameters = @{
+    ConnectionUri = 'https://sdnsite1.contoso.com'
+    Properties = $prop
+    Force = $true
+}
+Set-NetworkControllerMultisiteConfiguration @parameters
 
-$prop = new-object Microsoft.Windows.NetworkController.NetworkControllerMultisiteProperties
+$prop = New-Object Microsoft.Windows.NetworkController.NetworkControllerMultisiteProperties
 $prop.certificateSubjectName = 'sdnsite2.contoso.com'
-$prop.Sites = new-object Microsoft.Windows.NetworkController.NetworkControllerSite
+$prop.Sites = New-Object Microsoft.Windows.NetworkController.NetworkControllerSite
 $prop.Sites[0].ResourceId = 'site1'
-$prop.Sites[0].Properties = new-object
-Microsoft.Windows.NetworkController.NetworkControllerSiteProperties
+$prop.Sites[0].Properties = New-Object Microsoft.Windows.NetworkController.NetworkControllerSiteProperties
 
 $prop.Sites[0].Properties.RestIPAddress = 'sdnsite1.contoso.com'
 $prop.Sites[0].Properties.CertificateSubjectName = 'sdnsite1.contoso.com'
 $prop.Sites[0].Properties.EncodedCertificate = $base64cert1
 
-Set-NetworkControllerMultisiteConfiguration -ConnectionUri 'https://sdnsite2.contoso.com'
--Properties $prop -Force
+$parameters.ConnectionUri = 'https://sdnsite2.contoso.com'
+Set-NetworkControllerMultisiteConfiguration @parameters
 ```
 
 ### Example 2: Removing Peering after Multisite has been set-up
 
 ```powershell
-$prop = new-object Microsoft.Windows.NetworkController.NetworkControllerMultisiteProperties
+$prop = New-Object Microsoft.Windows.NetworkController.NetworkControllerMultisiteProperties
 
-Set-NetworkControllerMultisiteConfiguration -ConnectionUri 'https://site1.com' -Properties $prop
--Force
-
-Set-NetworkControllerMultisiteConfiguration -ConnectionUri 'https://site2.com' -Properties $prop
--Force
+$parameters = @{
+    ConnectionUri = 'https://site1.contoso.com'
+    Properties = $prop
+    Force = $true
+}
+Set-NetworkControllerMultisiteConfiguration @parameters
+$parameters.ConnectionUri = 'https://site2.contoso.com'
+Set-NetworkControllerMultisiteConfiguration @parameters
 ```
 
 ### Example 3: Removing a site where site property is an empty array or has a null value
 
 ```powershell
-$multisiteProp = new-object
-Microsoft.Windows.NetworkController.NetworkControllerMultisiteProperties
+$multisiteProp = New-Object Microsoft.Windows.NetworkController.NetworkControllerMultisiteProperties
+$parameters = @{
+    ConnectionUri = 'https://site2.contoso.com'
+    Properties = $multisiteProp
+    Force = $true
+}
+Set-NetworkControllerMultisiteConfiguration @parameters
 
-Set-NetworkControllerMultisiteConfiguration -ConnectionUri $site2Url -Properties $multisiteProp
--Force
-	
-Set-NetworkControllerMultisiteConfiguration -ConnectionUri $site1Url -Properties $multisiteProp
--Force
+$parameters.ConnectionUri = 'https://site1.contoso.com'
+Set-NetworkControllerMultisiteConfiguration @parameters
 ```
 
 ### Example 4: **NetworkControllerMultisiteProperties** object properties
 
 - CertificateSubjectName
 - [[Sites] \<NetworkControllerSite\>]
-    - ResourceID/RESTIPAddress
-    - IsPrimary
-    - State
-    - DeploymentID
-    - APIVersion
-    - ConfigurationState
-    - [[Properties] \<NetworkControllerSiteProperties\>]
-        - RestIPAddress
-        - CertificateSubjectName
-        - EncodedCertificate
+  - ResourceID/RESTIPAddress
+  - IsPrimary
+  - State
+  - DeploymentID
+  - APIVersion
+  - ConfigurationState
+  - [[Properties] \<NetworkControllerSiteProperties\>]
+    - RestIPAddress
+    - CertificateSubjectName
+    - EncodedCertificate
 
 ## PARAMETERS
 
@@ -220,9 +228,8 @@ Accept wildcard characters: False
 
 ### -Properties
 
-Specifies a site configuration for Multisite Peering. Site configuration comes as a
-NetworkControllerMultisiteProperties object. This object can be defined as new-object
-**Microsoft.Windows.NetworkController.NetworkControllerMultisiteProperties**. 
+Specifies a site configuration for Multisite Peering. This parameter takes a
+**NetworkControllerMultisiteProperties** object, which you can create using `New-Object`.
 
 ```yaml
 Type: Microsoft.Windows.NetworkController.NetworkControllerMultisiteProperties
@@ -302,8 +309,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

@@ -14,40 +14,44 @@ Sets the primary site of a NetworkController Site.
 ## SYNTAX
 
 ```
-Set-NetworkControllerMultisitePrimary [[-Tags] <PSObject>] [-Properties]
-<NetworkControllerMultisitePrimaryProperties> [[-Etag] <String>] [[-ResourceMetadata]
-<ResourceMetadata>] [[-ResourceId] <String>] [-Force] -ConnectionUri <Uri>
-[-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException] [-WhatIf]
-[-Confirm] [<CommonParameters>]
+Set-NetworkControllerMultisitePrimary [[-Tags] <PSObject>]
+ [-Properties] <NetworkControllerMultisitePrimaryProperties> [[-Etag] <String>]
+ [[-ResourceMetadata] <ResourceMetadata>] [[-ResourceId] <String>] [-Force] -ConnectionUri <Uri>
+ [-CertificateThumbprint <String>] [-Credential <PSCredential>] [-PassInnerException] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Set-NetworkControllerMultisitePrimary` cmdlet is used to change the primary site of a
-location in a Multisite configuration. This can be done in the off-chance that your original
-Primary site has gone offline and policies still need to be pushed and applied. Note, any
-policies that were being configured at the moment when the original primary site crashes will be
-lost and must be redone.
+The `Set-NetworkControllerMultisitePrimary` cmdlet is used to change the primary site of a location
+in a Multisite configuration. You can use this command in cases when your original Primary site has
+gone offline and policies still need to be pushed and applied.
+
+> [!NOTE]
+> Any policies that were being configured when the original primary site crashed are lost and must
+> be reapplied.
 
 ## EXAMPLES
 
-### Example 1: Set new Primary site 
+### Example 1: Set new Primary site
 
 ```powershell
-$prop = new-object
-Microsoft.Windows.NetworkController.NetworkControllerMultisitePrimaryProperties 
-
-Set-NetworkControllerMultisitePrimary -ConnectionUri 'https://site1.com' -Properties $prop
--Force
+$prop = New-Object Microsoft.Windows.NetworkController.NetworkControllerMultisitePrimaryProperties
+$parameters = @{
+    ConnectionUri = 'https://site1.contoso.com'
+    Properties    = $prop
+    Force         = $true
+}
+Set-NetworkControllerMultisitePrimary @parameters
 ```
 
 ## PARAMETERS
 
 ### -CertificateThumbprint
 
-Specifies the digital public key X.509 certificate of a user account that has permission to
-perform this action. Specify this parameter only if you run this cmdlet on a computer that is
-not part of the network controller cluster.
+Specifies the digital public key X.509 certificate of a user account that has permission to perform
+this action. Specify this parameter only if you run this cmdlet on a computer that is not part of
+the network controller cluster.
 
 ```yaml
 Type: System.String
@@ -63,7 +67,7 @@ Accept wildcard characters: False
 
 ### -ConnectionUri
 
-Specifies the Uniform Resource Identifier (URI) of a Network Controller. 
+Specifies the Uniform Resource Identifier (URI) of a Network Controller.
 
 ```yaml
 Type: System.Uri
@@ -79,9 +83,9 @@ Accept wildcard characters: False
 
 ### -Credential
 
-Specifies a user credential that has permission to perform this action. The default is the
-current user. Specify this parameter only if you run this cmdlet on a computer that is not part
-of the network controller cluster.
+Specifies a user credential that has permission to perform this action. The default is the current
+user. Specify this parameter only if you run this cmdlet on a computer that is not part of the
+network controller cluster.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -97,10 +101,10 @@ Accept wildcard characters: False
 
 ### -Etag
 
-Specifies the entity tag (ETag) parameter of the resource. An ETag (entity tag) is an HTTP
-response header returned by an HTTP-compliant web server used to determine change in the content
-of a resource at a given URL. The value of the header is an opaque string representing the state
-of the resource at the time the response was generated.
+Specifies the entity tag (ETag) parameter of the resource. An ETag (entity tag) is an HTTP response
+header returned by an HTTP-compliant web server used to determine change in the content of a
+resource at a given URL. The value of the header is an opaque string representing the state of the
+resource at the time the response was generated.
 
 ```yaml
 Type: System.String
@@ -268,4 +272,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-NetworkControllerMultisiteConfiguration](./Set-NetworkControllerMultisiteConfiguration.md)
 
 [Get-NetworkControllerMultisiteConfiguration](./Get-NetworkControllerMultisiteConfiguration.md)
-

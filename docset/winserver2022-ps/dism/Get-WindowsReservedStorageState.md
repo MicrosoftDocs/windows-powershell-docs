@@ -24,7 +24,7 @@ Gets the current state of reserved storage. This command is supported with the o
 
 ### Example 1
 ```powershell
-PS C:\> Get-WindowsReservedStorageState -Online
+PS C:\> Get-WindowsReservedStorageState
 ```
 
 This command gets the Windows reserved storage state on the local host.

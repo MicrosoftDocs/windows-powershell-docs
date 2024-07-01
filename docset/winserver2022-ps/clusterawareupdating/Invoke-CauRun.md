@@ -20,19 +20,21 @@ Performs a scan of cluster nodes for applicable updates and installs those updat
 ```
 Invoke-CauRun [-MaxFailedNodes <Int32>] [-MaxRetriesPerNode <Int32>] [-NodeOrder <String[]>]
  [-PreUpdateScript <String>] [-PostUpdateScript <String>] [-ConfigurationName <String>]
- [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>]
- [-RebootTimeoutMinutes <Int32>] [-SeparateReboots] [-EnableFirewallRules]
- [-FailbackMode <FailbackType>] [-SuspendClusterNodeTimeoutMinutes <Int32>] [-Force] [[-ClusterName]
-<String>] [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>]
- [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-RequireAllNodesOnline] [-WarnAfter <TimeSpan>] [-StopAfter <TimeSpan>] [-RebootTimeoutMinutes <Int32>]
+ [-SeparateReboots] [-EnableFirewallRules] [-FailbackMode <FailbackType>]
+ [-SuspendClusterNodeTimeoutMinutes <Int32>] [-Force] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+ [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-ForceSelfUpdate] [-SiteAwareUpdatingOrder <String[]>]
+ [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>]
+ [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure] [-OsRollingUpgrade]
+ [-AttemptSoftReboot] [-RebootMode <RebootType>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RecoverParamSet
 
 ```
-Invoke-CauRun [-ForceRecovery] [-Force] [[-ClusterName] <String>] [[-Credential] <PSCredential>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-CauRun [-ForceRecovery] [-Force] [-ForcePauseNoDrain] [-ForcePauseAndDrain]
+ [-ForcePauseDrainAndReboot] [-SkipUpdateChecks] [-ForceSelfUpdate] [[-ClusterName] <String>]
+ [[-Credential] <PSCredential>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -123,6 +125,25 @@ recovery is performed without confirmation prompts.
 
 ## PARAMETERS
 
+### -AttemptSoftReboot
+
+Indicates that command attempts a Kernel Soft Reboot (KSR) for the failover cluster.
+
+KSR bypasses BIOS/firmware initialization.
+You can only use KSR for updates that do not require a BIOS/firmware initialization.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: DefaultParamSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CauPluginArguments
 
 Specifies a set of name=value pairs for each updating plug-in to use.
@@ -138,13 +159,14 @@ For instance:
 
 For the default **Microsoft.WindowsUpdatePlugin** plug-in, no arguments are needed.
 The following arguments are optional: 
-- **'IncludeRecommendedUpdates'='\<Value\>'**: Boolean value to indicate that recommended updates will be applied in addition to important updates on each node.
-If not specified, the default value is **'False'**.
--- A standard Windows Update Agent query string that specifies criteria used by the Windows Update
-Agent to filter the updates that will be applied to each node. For a name, use **QueryString** and
-for a value, enclose the full query in quotation marks. If not specified, then the
-**Microsoft.WindowsUpdatePlugin** plug-in by default uses the following argument:
-- `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
+- **'IncludeRecommendedUpdates'='\<Value\>'**: Boolean value to indicate that recommended updates
+  will be applied in addition to important updates on each node. If not specified, the default value
+  is **'False'**.
+- A standard Windows Update Agent query string that specifies criteria used by the Windows Update
+  Agent to filter the updates that will be applied to each node. For a name, use **QueryString** and
+  for a value, enclose the full query in quotation marks. If not specified, then the
+  **Microsoft.WindowsUpdatePlugin** plug-in by default uses the following argument:
+  - `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
 
 For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in
 and the criteria such as IsInstalled that can be included in the query strings, see
@@ -336,6 +358,61 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForcePauseAndDrain
+
+Indicates that the command forces cluster nodes to pause and drain roles.
+
+A forced drain moves the roles off of the draining node even if the group cannot move.
+A group might not be able to move because no other node can host the group or the group is locked.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForcePauseDrainAndReboot
+
+Indicates that the command forces cluster nodes to pause, drain roles, and restart.
+
+A forced drain moves the roles off of the draining node even if the group cannot move.
+A group might not be able to move because no other node can host the group or the group is locked.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForcePauseNoDrain
+
+Indicates that the command forces cluster nodes to pause.
+The nodes are not drained.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ForceRecovery
 
 Indicates that the cmdlet recovers from a previous failed run that left the cluster in a Locked
@@ -350,6 +427,22 @@ Parameter Sets: RecoverParamSet
 Aliases: Recover
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceSelfUpdate
+
+{{ Fill ForceSelfUpdate Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -399,6 +492,22 @@ Specifies an array of cluster nodes names in the order that they are updated.
 ```yaml
 Type: String[]
 Parameter Sets: DefaultParamSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OsRollingUpgrade
+
+Indicates that the CAU cluster role upgrades the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: DefaultParamSet
 Aliases: 
 
 Required: False
@@ -441,6 +550,23 @@ pre-update script fails, the node isn't updated.
 Type: String
 Parameter Sets: DefaultParamSet
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RebootMode
+
+{{ Fill RebootMode Description }}
+
+```yaml
+Type: RebootType
+Parameter Sets: DefaultParamSet
+Aliases:
+Accepted values: ClusProp, FullReboot, SoftReboot
 
 Required: False
 Position: Named
@@ -519,6 +645,40 @@ If a single plug-in is specified, a warning appears.
 Type: SwitchParameter
 Parameter Sets: DefaultParamSet
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteAwareUpdatingOrder
+
+Specifies the order in which the command updates cluster nodes.
+
+By default, CAU selects the order of nodes to update based on the level of activity.
+
+```yaml
+Type: String[]
+Parameter Sets: DefaultParamSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipUpdateChecks
+
+Indicates that the command skips update checks.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

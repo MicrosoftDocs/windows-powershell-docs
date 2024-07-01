@@ -40,8 +40,8 @@ Register-CauPlugin -Path "C:\PluginDevelopment\Plugin01.dll" -Force
 ```
 
 The command registers a plug-in called Plugin01.dll located in the C:\PluginDevelopment folder.
-Because the command specifies the **Force** parameter, the cmdlet runs without displaying confirmation
-prompts.
+Because the command specifies the **Force** parameter, the cmdlet runs without displaying
+confirmation prompts.
 
 ## PARAMETERS
 

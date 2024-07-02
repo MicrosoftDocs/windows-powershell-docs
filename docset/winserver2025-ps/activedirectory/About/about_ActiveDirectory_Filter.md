@@ -283,50 +283,42 @@ Expression Language for the Filter parameter.
 
 The following table shows frequently used search filter operators.
 
-|    Operator     |           Description           |      LDAP Equivalent       |
-| --------------- | ------------------------------- | -------------------------- |
-| -eq             | Equal to. This will             | =                          |
-|                 | not support wild card           |                            |
-|                 | search.                         |                            |
-| -ne             | Not equal to. This will         | !x = y                     |
-|                 | not support wild card           |                            |
-|                 | search.                         |                            |
-| -approx         | Approximately equal to          | ~=                         |
-| -le             | Lexicographically less than     | <=                         |
-|                 | or equal to                     |                            |
-| -lt             | Lexicographically less than     | !x >= y                    |
-| -ge             | Lexicographically greater       | >=                         |
-|                 | than or equal to                |                            |
-| -gt             | Lexicographically greater than  | !x <= y                    |
-|                 |                                 |                            |
-| -and            | AND                             | &                          |
-| -or             | OR                              |                            |
-| -not            | NOT                             | !                          |
-| -bor            | Bitwise OR                      | :1.2.840.113556.1.4.804:=  |
-| -band           | Bitwise AND                     | :1.2.840.113556.1.4.803:=  |
-| -recursivematch | Use LDAP_MATCHING_RULE_IN_CHAIN | :1.2.840.113556.1.4.1941:= |
-|                 | (Note: This control only works  |                            |
-|                 | with Windows 2008 and later.)   |                            |
-| -like           | Similar to -eq and supports     | =                          |
-|                 | wildcard comparison. The only   |                            |
-|                 | wildcard character              |                            |
-|                 | supported is: *                 |                            |
-| -notlike        | Not like. Supports wild         | !x = y                     |
-|                 | card comparison.                |                            |
+|     Operator      |              Description               |      LDAP Equivalent       |
+| ----------------- | -------------------------------------- | -------------------------- |
+| `-eq`             | Equal to. Wildcards not supported.     | =                          |
+| `-ne`             | Not equal to. Wildcards not supported. | !x = y                     |
+| `-approx`         | Approximately equal to                 | ~=                         |
+| `-le`             | Lexicographically less than            | <=                         |
+|                   | or equal to                            |                            |
+| `-lt`             | Lexicographically less than            | !x >= y                    |
+| `-ge`             | Lexicographically greater              | >=                         |
+|                   | than or equal to                       |                            |
+| `-gt`             | Lexicographically greater than         | !x <= y                    |
+|                   |                                        |                            |
+| `-and`            | AND                                    | &                          |
+| `-or`             | OR                                     |                            |
+| `-not`            | NOT                                    | !                          |
+| `-bor`            | Bitwise OR                             | :1.2.840.113556.1.4.804:=  |
+| `-band`           | Bitwise AND                            | :1.2.840.113556.1.4.803:=  |
+| `-recursivematch` | Use LDAP_MATCHING_RULE_IN_CHAIN        | :1.2.840.113556.1.4.1941:= |
+| `-like`           | Similar to `-eq` and supports          | =                          |
+|                   | wildcard comparison. The only          |                            |
+|                   | wildcard character supported is: `*`   |                            |
+| `-notlike`        | Not like. Supports wild                | !x = y                     |
+|                   | card comparison.                       |                            |
 
 > [!NOTE]
 > PowerShell wildcards, other than "*", such as "?" are not supported by the
 > **Filter** parameter syntax.
-
 
 ### Operator Precedence
 
 The following listing shows the precedence of operators for filters from
 highest to lowest.
 
-- Highest precedence: -eq | -ge | -le | -approx | -band | -bor |
-  -recursivematch | -ne | -like | -not | -and
-- Lowest precedence: -or
+- Highest precedence: `-eq`, `-ge`, `-le`, `-approx`, `-band`, `-bor`,
+  `-recursivematch`, `-ne`, `-like`, `-not`, `-and`
+- Lowest precedence: `-or`
 
 ### Special Characters
 

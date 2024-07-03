@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 ### -VM
 
-Specifies the virtual machine on which the device is to be assigned.
+Specifies the virtual machine to which the device is to be assigned.
 
 ```yaml
 Type: VirtualMachine[]
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 
 ### -VMName
 
-Specifies the name of the virtual machine where a device is to be assigned.
+Specifies the name of the virtual machine to which the device is to be assigned.
 
 ```yaml
 Type: String[]
@@ -270,6 +270,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Get-VMAssignableDevice](get-vmassignabledevice.md)
+[Get-VMAssignableDevice](get-vmassignabledevice.md)
 
-- [Remove-VMAssignableDevice](remove-vmassignabledevice.md)
+[Remove-VMAssignableDevice](remove-vmassignabledevice.md)

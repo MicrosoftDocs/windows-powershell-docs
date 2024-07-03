@@ -1,5 +1,5 @@
 ---
-description: Dismounts an assigned device from a virtual machine host.
+description: Dismounts an assignable device from a virtual machine host.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 06/12/2024
@@ -36,7 +36,7 @@ Dismount-VMHostAssignableDevice -InstancePath "PCIROOT(0)#PCI(1D02)#PCI(0000)"
 ```
 
 This example dismounts the device with the specified instance path from the host, making it
-available for reassignment to another virtual machine.
+available for assignment to a virtual machine.
 
 ## PARAMETERS
 
@@ -61,9 +61,9 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS
-names, IP addresses, and fully qualified domain names are allowed. The default is the local
-computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
+Specifies one or more Hyper-V hosts from which the assignable devices are to be dismounted.
+NetBIOS names, IP addresses, and fully qualified domain names are allowed. The default is the
+local computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -97,6 +97,13 @@ Accept wildcard characters: False
 ### -Force
 
 Forces the command to run without asking for user confirmation.
+
+Using the **Force** parameter also overrides some security checks in the platform. To learn more,
+see [Dismount the device from the host partition
+](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda#dismount-the-device-from-the-host-partition).
+
+If no partitioning driver is provided, during dismount, you must use `-Force` to bypass the
+security warning. For more information about the security implications, see [Plan for deploying devices by using Discrete Device Assignment](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment).
 
 ```yaml
 Type: SwitchParameter

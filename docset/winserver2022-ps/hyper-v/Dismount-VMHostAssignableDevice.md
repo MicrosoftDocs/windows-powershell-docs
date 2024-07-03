@@ -61,9 +61,9 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies one or more Hyper-V hosts from which the assignable devices are to be dismounted.
-NetBIOS names, IP addresses, and fully qualified domain names are allowed. The default is the
-local computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
+Specifies one or more Hyper-V hosts from which the assignable devices are to be dismounted. NetBIOS
+names, IP addresses, and fully qualified domain names are allowed. The default is the local
+computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]

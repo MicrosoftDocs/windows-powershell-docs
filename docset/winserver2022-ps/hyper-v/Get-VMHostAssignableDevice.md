@@ -1,5 +1,5 @@
 ---
-description: Retrieves information about a device assigned to a virtual machine host.
+description: Retrieves information about an assignable device to a virtual machine host.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 06/12/2024

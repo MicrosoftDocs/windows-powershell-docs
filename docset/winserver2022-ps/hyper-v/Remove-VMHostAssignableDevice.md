@@ -1,5 +1,5 @@
 ---
-description: Removes an assigned device from a virtual machine host.
+description: Removes an assignable device from a virtual machine host.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 06/12/2024
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS
+Specifies one or more Hyper-V hosts from which the assignable devices are to be removed. NetBIOS
 names, IP addresses, and fully qualified domain names are allowed. The default is the local
 computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
 
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 
 ### -ResourcePoolName
 
-Specifies the name of the resource pool to which the device is assigned.
+Specifies the name of the resource pool from which to remove an assignable device.
 
 ```yaml
 Type: String[]

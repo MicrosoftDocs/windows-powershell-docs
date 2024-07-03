@@ -75,9 +75,9 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies the name of the Hyper-V host to which the device is to be added. NetBIOS names,
-IP addresses, and fully qualified domain names are allowed. The default is the local
-computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
+Specifies the name of the Hyper-V host to which the device is to be added. NetBIOS names, IP
+addresses, and fully qualified domain names are allowed. The default is the local computer. Use
+localhost or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]

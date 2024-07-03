@@ -1,5 +1,5 @@
 ---
-description: Mounts an assigned device to a virtual machine host.
+description: Mounts an assignable device to a virtual machine host.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 06/12/2024
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS
+Specifies one or more Hyper-V hosts from which the assignable devices are to be mounted. NetBIOS
 names, IP addresses, and fully qualified domain names are allowed. The default is the local
 computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -HostAssignableDevice
 
-Specifies the device object to be assigned to the virtual machine.
+Specifies the assignable device to be mounted on the virtual machine host.
 
 ```yaml
 Type: VMHostAssignableDevice[]

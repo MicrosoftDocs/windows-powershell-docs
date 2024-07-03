@@ -67,7 +67,7 @@ The first two of these topics offer a high level overview of the Active
 Directory module and the Active Directory Provider.
 
 - For a brief introduction to the Active Directory provider for Windows
-  PowerShell, see [ActiveDirectory](../ActiveDirectory.md).
+  PowerShell, see [ActiveDirectory](/powershell/module/activedirectory).
 - The following topics are conceptual support topics for the Active Directory
   module cmdlets.
   - For an introduction to the **Identity** parameter, which is used by the

@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS
+Specifies one or more Hyper-V hosts on which the assignable devices are to be retrieved. NetBIOS
 names, IP addresses, and fully qualified domain names are allowed. The default is the local
 computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
 

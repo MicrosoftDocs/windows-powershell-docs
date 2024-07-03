@@ -71,7 +71,7 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS
+Specifies one or more Hyper-V hosts from which the assignable devices are to be retrieved. NetBIOS
 names, IP addresses, and fully qualified domain names are allowed. The default is the local
 computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -VM
 
-Retrieves the network adapter assigned to the virtual machine.
+Retrieves the virtual machine which a device is assigned.
 
 ```yaml
 Type: VirtualMachine[]
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 
 ### -VMName
 
-Retrieves the name of the virtual machine which the network adapter is assigned.
+Retrieves the names of the assignable devices assigned to the specified virtual machine.
 
 ```yaml
 Type: String[]

@@ -715,6 +715,8 @@ Accept wildcard characters: False
 
 ### -ThrottleRateActionBitsPerSecond
 Specifies a throttle rate in bits per second to set the maximum bandwidth that can be consumed.
+If a value of `0` is entered for this parameter, there won't be any rate limit.
+Value entered will be rounded down to the nearest multiple of 8.
 
 ```yaml
 Type: UInt64

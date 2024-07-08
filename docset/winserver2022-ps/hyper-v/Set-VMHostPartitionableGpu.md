@@ -2,7 +2,7 @@
 description: Configures the host partitionable GPU to the number of partitions supported by the manufacturer.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
-ms.date: 10/21/2022
+ms.date: 06/12/2024
 online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmhostpartitionablegpu?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-VMHostPartitionableGpu
@@ -16,44 +16,51 @@ Configures the host partitionable GPU to the number of partitions supported by t
 ## SYNTAX
 
 ### ComputerName (Default)
+
 ```
 Set-VMHostPartitionableGpu [[-ComputerName] <String[]>] [[-Credential] <PSCredential[]>] [-Passthru]
  [-PartitionCount <UInt16>] [<CommonParameters>]
 ```
 
 ### CimSession
+
 ```
 Set-VMHostPartitionableGpu [-CimSession] <CimSession[]> [-Passthru] [-PartitionCount <UInt16>]
  [<CommonParameters>]
 ```
 
 ### Object
+
 ```
 Set-VMHostPartitionableGpu [-HostPartitionableGpu] <VMHostPartitionableGpu[]> [-Passthru]
  [-PartitionCount <UInt16>] [<CommonParameters>]
 ```
 
 ### Name
+
 ```
 Set-VMHostPartitionableGpu [-Passthru] [-Name <String>] [-PartitionCount <UInt16>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The `Set-VMHostPartitionableGpu` cmdlet configures the host partitionable GPU to the number of partitions supported by the manufacturer.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-Set-VMHostPartitionableGpu -ComputerName SampleHost -partitioncount 8
+Set-VMHostPartitionableGpu -ComputerName "MyHost" -PartitionCount 8
 ```
 
 This example partitions a GPU in a specific host into eight partitions.
 
 ### Example 2
+
 ```powershell
-$GPU = Get-VMHostPartitionableGpu -name "SampleGPUDeviceIDName"
-Set-VMHostPartitionableGpu -Name $GPU -partitionCount 4
+$GPU = Get-VMHostPartitionableGpu -Name "GPUDeviceIDName"
+Set-VMHostPartitionableGpu -Name $GPU -PartitionCount 4
 ```
 
 This example partitions a GPU in a host into four partitions by using the GPU device ID name.
@@ -61,8 +68,11 @@ This example partitions a GPU in a host into four partitions by using the GPU de
 ## PARAMETERS
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -77,9 +87,10 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS names, IP addresses, and fully qualified domain names are allowed.
-The default is the local computer.
-Use localhost or a dot ('.') to specify the local computer explicitly.
+
+Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS
+names, IP addresses, and fully qualified domain names are allowed. The default is the local
+computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -94,8 +105,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies one or more user accounts that have permission to perform this action.
-The default is the current user.
+
+Specifies one or more user accounts that have permission to perform this action. The default is the
+current user.
 
 ```yaml
 Type: PSCredential[]
@@ -110,7 +122,8 @@ Accept wildcard characters: False
 ```
 
 ### -HostPartitionableGpu
-Full GPU object, obtained by executing 'Get-VMHostPartitionableGpu'.
+
+Full GPU object, obtained by executing `Get-VMHostPartitionableGpu`.
 
 ```yaml
 Type: VMHostPartitionableGpu[]
@@ -125,6 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the GPU.
 
 ```yaml
@@ -140,7 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionCount
-Specifies the number of partitions that the GPU will assign. The number of partitions is defined by the manufacturer.
+
+Specifies the number of partitions that the GPU will assign. The number of partitions is defined by
+the manufacturer.
 
 ```yaml
 Type: UInt16
@@ -155,6 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -Passthru
+
 Returns an object for each process that the cmdlet started.
 
 ```yaml
@@ -170,7 +187,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -185,3 +206,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-VMHostPartitionableGpu](get-vmhostpartitionablegpu.md)

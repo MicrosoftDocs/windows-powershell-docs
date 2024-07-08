@@ -239,6 +239,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Add-VMAssignableDevice](add-vmassignabledevice.md)
+[Add-VMAssignableDevice](add-vmassignabledevice.md)
 
-- [Get-VMAssignableDevice](get-vmassignabledevice.md)
+[Get-VMAssignableDevice](get-vmassignabledevice.md)

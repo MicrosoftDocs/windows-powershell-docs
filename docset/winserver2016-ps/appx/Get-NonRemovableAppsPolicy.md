@@ -1,5 +1,6 @@
 ---
-audiencems.localizationpriority: ITPro
+audience: ITPro
+ms.localizationpriority: Low
 description: Use this topic to help prevent the uninstall of specific Windows apps with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx

@@ -216,10 +216,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Add-VMHostAssignableDevice](add-vmhostassignabledevice.md)
+[Add-VMHostAssignableDevice](add-vmhostassignabledevice.md)
 
-- [Get-VMHostAssignableDevice](get-vmhostassignabledevice.md)
+[Get-VMHostAssignableDevice](get-vmhostassignabledevice.md)
 
-- [Mount-VMHostAssignableDevice](mount-vmhostassignabledevice.md)
+[Mount-VMHostAssignableDevice](mount-vmhostassignabledevice.md)
 
-- [Remove-VMHostAssignableDevice](remove-vmhostassignabledevice.md)
+[Remove-VMHostAssignableDevice](remove-vmhostassignabledevice.md)

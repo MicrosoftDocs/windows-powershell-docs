@@ -50,17 +50,6 @@ Add-VMAssignableDevice -VMName "MyVM" -InstancePath "PCIROOT(0)#PCI(0300)#PCI(00
 This example attaches a physical device, identified by its instance path, to the virtual machine
 named **MyVM**.
 
-### Example 2
-
-```powershell
-$gpu = Get-VMHostAssignableDevice
-Add-VMHostAssignableDevice -HostAssignableDevice $gpu -ResourcePoolName "GpuChildPool"
-```
-
-This example retrieves a list of GPUs or other assignable devices and adds these devices to a
-resource pool named **GpuChildPool**, making the devices available for use by virtual machines in
-that resource pool.
-
 ## PARAMETERS
 
 ### -CimSession

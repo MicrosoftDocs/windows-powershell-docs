@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS
+Specifies one or more Hyper-V hosts on which the assignable devices are to be retrieved. NetBIOS
 names, IP addresses, and fully qualified domain names are allowed. The default is the local
 computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 
 ### -VM
 
-Specifies the virtual machine on which the device is to be assigned.
+Specifies the virtual machine to which the device is to be assigned.
 
 ```yaml
 Type: VirtualMachine[]
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 
 ### -VMName
 
-Specifies the name of the virtual machine where a device is to be assigned.
+Specifies the name of the virtual machine to which the device is to be assigned.
 
 ```yaml
 Type: String[]
@@ -270,6 +270,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Get-VMAssignableDevice](get-vmassignabledevice.md)
+[Get-VMAssignableDevice](get-vmassignabledevice.md)
 
-- [Remove-VMAssignableDevice](remove-vmassignabledevice.md)
+[Remove-VMAssignableDevice](remove-vmassignabledevice.md)

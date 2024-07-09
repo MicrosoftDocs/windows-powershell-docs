@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbGlobalMapping.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 08/31/2021
+ms.date: 02/22/2024
 online version: https://learn.microsoft.com/powershell/module/smbshare/remove-smbglobalmapping?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-SmbGlobalMapping
@@ -15,42 +15,48 @@ Removes a Server Message Block (SMB) global mapping to an SMB share.
 
 ## SYNTAX
 
-### Query (cdxml) (Default)
+### Query
+
 ```
 Remove-SmbGlobalMapping [[-LocalPath] <String[]>] [[-RemotePath] <String[]>] [-Force]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
-### InputObject (cdxml)
+### InputObject
+
 ```
 Remove-SmbGlobalMapping -InputObject <CimInstance[]> [-Force] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Remove-SmbGlobalMapping cmdlet removes the SMB global mapping to an SMB share.
+
+The `Remove-SmbGlobalMapping` cmdlet removes the SMB global mapping to an SMB share.
 
 ## EXAMPLES
 
-### Example 1 - Remove an SMB global mapping
+### Example 1: Remove an SMB global mapping
 
-This command removes an SMB global mapping for the “g:” drive to an SMB share.
+This command removes an SMB global mapping for the indicated drive to an SMB share.
 
 ```powershell
-PS C:\> Remove-SmbGlobalMapping -LocalPath g:
+Remove-SmbGlobalMapping -LocalPath "G:"
 ```
+
 ```output
 Confirm
 Are you sure you want to perform this action?
-Performing operation 'Close-Connection' on Target 'G:,\\uglymonkey\shared'.
+Performing operation `Close-Connection` on Target 'G:\\uglymonkey\shared'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y
 ```
 
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
 ```yaml
 Type: SwitchParameter
@@ -65,7 +71,11 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a [`New-CimSession`](/powershell/module/cimcmdlets/new-cimsession) or [`Get-CimSession`](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the current session on the local computer.
+
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or
+[Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
+current session on the local computer.
 
 ```yaml
 Type: CimSession[]
@@ -80,6 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -95,11 +106,12 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input object that is used in a pipeline command.
+
+Specifies the input object that's used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
-Parameter Sets: InputObject (cdxml)
+Parameter Sets: InputObject
 Aliases:
 
 Required: True
@@ -110,11 +122,12 @@ Accept wildcard characters: False
 ```
 
 ### -LocalPath
+
 Specifies the local drive letter to which the remote path is mapped.
 
 ```yaml
 Type: String[]
-Parameter Sets: Query (cdxml)
+Parameter Sets: Query
 Aliases:
 
 Required: False
@@ -125,7 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
+
+Returns an object representing the item with which you're working. By default, this cmdlet doesn't
+generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -140,11 +155,12 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePath
-Specifies the remote path that is accessed from this computer.
+
+Specifies the remote path that's accessed from this computer.
 
 ```yaml
 Type: String[]
-Parameter Sets: Query (cdxml)
+Parameter Sets: Query
 Aliases:
 
 Required: False
@@ -155,7 +171,11 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of 0 is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum
+throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
@@ -170,6 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -185,8 +206,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -201,7 +222,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -218,3 +243,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-SmbGlobalMapping](Get-SmbGlobalMapping.md)
+
+[New-SmbGlobalMapping](New-SmbGlobalMapping.md)

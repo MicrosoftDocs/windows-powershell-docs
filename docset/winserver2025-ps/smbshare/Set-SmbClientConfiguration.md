@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbClientConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 10/20/2022
+ms.date: 02/22/2024
 online version: https://learn.microsoft.com/powershell/module/smbshare/set-smbclientconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SmbClientConfiguration
@@ -16,22 +16,27 @@ Sets the SMB client configuration.
 ## SYNTAX
 
 ```
-Set-SmbClientConfiguration [-CompressibilitySamplingSize <UInt64>]
- [-CompressibleThreshold <UInt64>] [-ConnectionCountPerRssNetworkInterface <UInt32>]
- [-DirectoryCacheEntriesMax <UInt32>] [-DirectoryCacheEntrySizeMax <UInt32>]
- [-DirectoryCacheLifetime <UInt32>] [-DisableCompression <Boolean>] [-DormantFileLimit <UInt32>]
+Set-SmbClientConfiguration [-AuditInsecureGuestLogon <Boolean>]
+ [-AuditServerDoesNotSupportEncryption <Boolean>] [-AuditServerDoesNotSupportSigning <Boolean>]
+ [-BlockNTLM <Boolean>] [-CompressibilitySamplingSize <UInt64>] [-CompressibleThreshold <UInt64>]
+ [-ConnectionCountPerRssNetworkInterface <UInt32>] [-DirectoryCacheEntriesMax <UInt32>]
+ [-DirectoryCacheEntrySizeMax <UInt32>] [-DirectoryCacheLifetime <UInt32>]
+ [-DisableCompression <Boolean>] [-DormantFileLimit <UInt32>]
  [-EnableBandwidthThrottling <Boolean>] [-EnableByteRangeLockingOnReadOnlyFiles <Boolean>]
  [-EnableCompressibilitySampling <Boolean>] [-EnableInsecureGuestLogons <Boolean>]
- [-EnableLargeMtu <Boolean>] [-EnableLoadBalanceScaleOut <Boolean>] [-EnableMultiChannel <Boolean>]
- [-EnableSecuritySignature <Boolean>] [-EncryptionCiphers <String>]
- [-ExtendedSessionTimeout <UInt32>] [-FileInfoCacheEntriesMax <UInt32>]
- [-FileInfoCacheLifetime <UInt32>] [-FileNotFoundCacheEntriesMax <UInt32>]
- [-FileNotFoundCacheLifetime <UInt32>] [-ForceSMBEncryptionOverQuic <Boolean>] [-KeepConn <UInt32>]
- [-MaxCmds <UInt32>] [-MaximumConnectionCountPerServer <UInt32>] [-OplocksDisabled <Boolean>]
- [-RequestCompression <Boolean>] [-RequireSecuritySignature <Boolean>] [-SessionTimeout <UInt32>]
- [-SkipCertificateCheck <Boolean>] [-UseOpportunisticLocking <Boolean>]
- [-WindowSizeThreshold <UInt32>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableLargeMtu <Boolean>] [-EnableLoadBalanceScaleOut <Boolean>] [-EnableMailslots <Boolean>]
+ [-EnableMultiChannel <Boolean>] [-EnableSecuritySignature <Boolean>] [-EnableSMBQUIC <Boolean>]
+ [-EncryptionCiphers <String>] [-ExtendedSessionTimeout <UInt32>]
+ [-FileInfoCacheEntriesMax <UInt32>] [-FileInfoCacheLifetime <UInt32>]
+ [-FileNotFoundCacheEntriesMax <UInt32>] [-FileNotFoundCacheLifetime <UInt32>]
+ [-ForceSMBEncryptionOverQuic <Boolean>] [-InvalidAuthenticationCacheLifetime <UInt32>]
+ [-KeepConn <UInt32>] [-MaxCmds <UInt32>] [-MaximumConnectionCountPerServer <UInt32>]
+ [-OplocksDisabled <Boolean>] [-RequestCompression <Boolean>] [-RequireEncryption <Boolean>]
+ [-RequireSecuritySignature <Boolean>] [-SessionTimeout <UInt32>] [-SkipCertificateCheck <Boolean>]
+ [-Smb2DialectMax <Smb2DialectMax>] [-Smb2DialectMin <Smb2DialectMin>]
+ [-UseOpportunisticLocking <Boolean>] [-WindowSizeThreshold <UInt32>] [-Force]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,16 +44,8 @@ Set-SmbClientConfiguration [-CompressibilitySamplingSize <UInt64>]
 The `Set-SmbClientConfiguration` cmdlet sets the Server Message Block (SMB) client configuration.
 
 > [!NOTE]
-> - The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
->   Microsoft server operating system version 21H2 for x64-based Systems
->   ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
->   version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
->
-> - The **CompressibilitySamplingSize**, **CompressibleThreshold**,
->   **EnableCompressibilitySampling**, and **RequestCompression** parameters are available beginning
->   with 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
->   Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
->   Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
+> The **EnableSMBQUIC** parameter is available starting with Windows 11 Insider Preview
+> build 26090 and later.
 
 ## EXAMPLES
 
@@ -71,7 +68,6 @@ without user confirmation.
 
 ## PARAMETERS
 
-
 ### -AsJob
 
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
@@ -89,11 +85,81 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AuditInsecureGuestLogon
+
+Specifies whether to audit insecure guest logon attempts. Audit events are written to the Windows
+event log.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditServerDoesNotSupportEncryption
+
+Specifies whether to audit when a server doesn't support encryption. If this parameter is
+specified, events will be logged when a server doesn't support encryption.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditServerDoesNotSupportSigning
+
+Specifies whether to audit when a server doesn't support message signing. If this parameter is
+specified, events will be logged when a server doesn't support message signing.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockNTLM
+
+Specifies whether to block NT LAN Manager (NTLM) authentication. If this parameter is set to
+`$true`, NTLM authentication will be blocked forcing the connection to use another negotiated
+authentication method, such as Kerberos. If set to `$false` (default), NTLM authentication will be
+allowed.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -210,7 +276,8 @@ Accept wildcard characters: False
 
 ### -DisableCompression
 
-Specifies that the SMB client ignores all requests for compression from applications or SMB servers.
+Specifies that the SMB client ignores all requests for compression from applications or SMB
+servers.
 
 ```yaml
 Type: Boolean
@@ -346,6 +413,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableMailslots
+
+Specifies whether to enable mailslots. If this parameter is specified, mailslots will be enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableMultiChannel
 
 Indicates that multi-channel is enabled.
@@ -365,6 +448,22 @@ Accept wildcard characters: False
 ### -EnableSecuritySignature
 
 Indicates that the security signature is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSMBQUIC
+
+Specifies whether the SMB over QUIC client protocol is enabled.
 
 ```yaml
 Type: Boolean
@@ -507,6 +606,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InvalidAuthenticationCacheLifetime
+
+Specifies the length of time (in seconds) that an invalid authentication cache entry should be kept
+before being removed. An authentication cache is used to store information about successful
+authentication attempts, and this parameter allows you to control how long unsuccessful attempts
+should be remembered before being purged.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -KeepConn
 
 Specifies the time, in seconds, before the SMB client session is automatically disconnected.
@@ -525,7 +643,8 @@ Accept wildcard characters: False
 
 ### -MaxCmds
 
-Specifies the maximum number of concurrent outstanding network requests that the SMB client supports.
+Specifies the maximum number of concurrent outstanding network requests that the SMB client
+supports.
 
 ```yaml
 Type: UInt32
@@ -588,6 +707,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RequireEncryption
+
+Specifies whether or not encryption should be required for all SMB traffic. When this parameter is
+set to `$true`, all SMB traffic must be encrypted, which is required by the server. If it is set to
+`$false` (the default), encryption is not required, but may still be negotiated if both the client
+and server support it.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RequireSecuritySignature
 
 Indicates that the security signature is required.
@@ -637,6 +775,54 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Smb2DialectMax
+
+This parameter specifies the maximum version of the SMB protocol to be used. Acceptable values are:
+
+- None – There is no maximum protocol version specified, the client can use any supported version.
+- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB client.
+- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB client.
+- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB client.
+- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB client.
+- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB client.
+
+```yaml
+Type: Smb2DialectMax
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, SMB202, SMB210, SMB300, SMB302, SMB311
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Smb2DialectMin
+
+This parameter specifies the minimum version of the SMB protocol to be used. Acceptable values are:
+
+- None – There is no minimum protocol version specified, the client can use any supported version.
+- SMB202 – SMB 2.0.2 is the minimum version accepted by the SMB client.
+- SMB210 - SMB 2.1.0 is the minimum version accepted by the SMB client.
+- SMB300 - SMB 3.0.0 is the minimum version accepted by the SMB client.
+- SMB302 - SMB 3.0.2 is the minimum version accepted by the SMB client.
+- SMB311 - SMB 3.1.1 is the minimum version accepted by the SMB client.
+
+```yaml
+Type: Smb2DialectMin
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, SMB202, SMB210, SMB300, SMB302, SMB311
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
@@ -673,6 +859,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WindowSizeThreshold
+
+Specifies the window size threshold.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 
 Prompts you for confirmation before running the cmdlet.
@@ -691,8 +893,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet isn't run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -706,28 +907,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WindowSizeThreshold
-
-Specifies the window size threshold.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -735,12 +920,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-SmbClientConfiguration](./Get-SmbClientConfiguration.md)
+[Get-SmbClientConfiguration](Get-SmbClientConfiguration.md)
 
-[Reset-SmbClientConfiguration](./Reset-SmbClientConfiguration.md)
+[Reset-SmbClientConfiguration](Reset-SmbClientConfiguration.md)

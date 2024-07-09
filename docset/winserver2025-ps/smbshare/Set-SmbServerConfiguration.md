@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 10/20/2022
-online version: /powershell/module/smbshare/set-smbserverconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+ms.date: 02/22/2024
+online version: https://learn.microsoft.com/powershell/module/smbshare/set-smbserverconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SmbServerConfiguration
 ---
@@ -17,21 +17,26 @@ Sets the Server Message Block (SMB) server configuration.
 
 ```
 Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean>]
- [-AsynchronousCredits <UInt32>] [-AuditSmb1Access <Boolean>] [-AutoDisconnectTimeout <UInt32>]
+ [-AsynchronousCredits <UInt32>] [-AuditClientCertificateAccess <Boolean>]
+ [-AuditClientDoesNotSupportEncryption <Boolean>] [-AuditClientDoesNotSupportSigning <Boolean>]
+ [-AuditInsecureGuestLogon <Boolean>] [-AuditSmb1Access <Boolean>]
+ [-AutoDisconnectTimeoutInMinutesV1 <UInt32>] [-AutoDisconnectTimeoutInSecondsV2 <UInt32>]
  [-AutoShareServer <Boolean>] [-AutoShareWorkstation <Boolean>] [-CachedOpenLimit <UInt32>]
- [-DisableCompression <Boolean>] [-DisableSmbEncryptionOnSecureConnection <Boolean>]
- [-DurableHandleV2TimeoutInSeconds <UInt32>] [-EnableAuthenticateUserSharing <Boolean>]
- [-EnableDownlevelTimewarp <Boolean>] [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>]
+ [-EnableDirectoryHandleLeasing <Boolean>] [-DisableCompression <Boolean>]
+ [-DisableSmbEncryptionOnSecureConnection <Boolean>] [-DurableHandleV2TimeoutInSeconds <UInt32>]
+ [-EnableAuthenticateUserSharing <Boolean>] [-EnableDownlevelTimewarp <Boolean>]
+ [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>] [-EnableMailslots <Boolean>]
  [-EnableMultiChannel <Boolean>] [-EnableOplocks <Boolean>] [-EnableSecuritySignature <Boolean>]
  [-EnableSMB1Protocol <Boolean>] [-EnableSMB2Protocol <Boolean>] [-EnableSMBQUIC <Boolean>]
  [-EnableStrictNameChecking <Boolean>] [-EncryptData <Boolean>] [-EncryptionCiphers <String>]
- [-IrpStackSize <UInt32>] [-KeepAliveTime <UInt32>] [-MaxChannelPerSession <UInt32>]
- [-MaxMpxCount <UInt32>] [-MaxSessionPerConnection <UInt32>] [-MaxThreadsPerQueue <UInt32>]
- [-MaxWorkItems <UInt32>] [-NullSessionPipes <String>] [-NullSessionShares <String>]
- [-OplockBreakWait <UInt32>] [-PendingClientTimeoutInSeconds <UInt32>]
- [-RejectUnencryptedAccess <Boolean>] [-RequestCompression <Boolean>]
- [-RequireSecuritySignature <Boolean>] [-RestrictNamedpipeAccessViaQuic <Boolean>]
- [-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>] [-Smb2CreditsMin <UInt32>]
+ [-InvalidAuthenticationDelayTimeInMs <UInt32>] [-IrpStackSize <UInt32>] [-KeepAliveTime <UInt32>]
+ [-MaxChannelPerSession <UInt32>] [-MaxMpxCount <UInt32>] [-MaxSessionPerConnection <UInt32>]
+ [-MaxThreadsPerQueue <UInt32>] [-MaxWorkItems <UInt32>] [-NullSessionPipes <String>]
+ [-NullSessionShares <String>] [-OplockBreakWait <UInt32>]
+ [-PendingClientTimeoutInSeconds <UInt32>] [-RejectUnencryptedAccess <Boolean>]
+ [-RequestCompression <Boolean>] [-RequireSecuritySignature <Boolean>]
+ [-RestrictNamedpipeAccessViaQuic <Boolean>] [-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>]
+ [-Smb2CreditsMin <UInt32>] [-Smb2DialectMax <Smb2DialectMax>] [-Smb2DialectMin <Smb2DialectMin>]
  [-SmbServerNameHardeningLevel <UInt32>] [-TreatHostAsStableStorage <Boolean>]
  [-ValidateAliasNotCircular <Boolean>] [-ValidateShareScope <Boolean>]
  [-ValidateShareScopeNotAliased <Boolean>] [-ValidateTargetName <Boolean>] [-Force]
@@ -44,18 +49,8 @@ Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean
 The `Set-SmbServerConfiguration` cmdlet sets the Server Message Block (SMB) Service configuration.
 For more information on SMB server and protocol specifications, see
 [Overview of file sharing using the SMB 3 protocol in Windows Server](/windows-server/storage/file-server/file-server-smb-overview)
-and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and 3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
-
-> [!NOTE]
-> - The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
->   Microsoft server operating system version 21H2 for x64-based Systems
->   ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
->   version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
->
-> - The **DisableCompression** and **RequestCompression** parameters are available beginning with
->   2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
->   Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
->   Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
+and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and
+3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 ## EXAMPLES
 
@@ -183,9 +178,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AuditSmb1Access
+### -AuditClientCertificateAccess
 
-Enables auditing of SMB version 1 protocol in Windows Event Log.
+Enables SMB over QUIC client access control audit events. There are three possible events: access
+allowed, access denied, and error. The access allowed and access denied events list properties of
+the client certificate chain and any allow and deny access control entries that apply to the
+client certificates.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditClientDoesNotSupportEncryption
+
+Enables auditing of SMB clients that don't support encryption. Clients that connect and don't list
+SMB encryption in their supported capabilities will be recorded in the Windows event log.
 
 ```yaml
 Type: Boolean
@@ -199,9 +214,75 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AutoDisconnectTimeout
+### -AuditClientDoesNotSupportSigning
 
-Specifies the auto disconnect time-out.
+Enables auditing of the clients attempts to connect without signing to the server. The server logs
+an audit event when a client attempts to connect to the server without using message signing.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditInsecureGuestLogon
+
+Specifies whether to audit insecure guest logon attempts. When enabled insecure guest logons will
+appear in Windows Event Viewer.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditSmb1Access
+
+Enables the auditing of SMB version 1 protocol behavior.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoDisconnectTimeoutInMinutesV1
+
+Specifies the v1 auto disconnect time-out period, in minutes.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoDisconnectTimeoutInSecondsV2
+
+Specifies the v2 auto disconnect time-out period, in seconds.
 
 ```yaml
 Type: UInt32
@@ -266,9 +347,8 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a
-[New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or
-[Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or
+[Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -352,6 +432,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableDirectoryHandleLeasing
+
+Enables directory handle leasing on the server. When directory handle leasing is enabled, the
+server can cache directory handles for a longer period of time, which can improve performance for
+certain workloads. This can be particularly useful in scenarios where there are a large number of
+directory operations being performed on the server.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableDownlevelTimewarp
 
 Indicates whether down-level timewarp support is disabled.
@@ -387,6 +486,28 @@ Accept wildcard characters: False
 ### -EnableLeasing
 
 Indicates whether leasing is disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableMailslots
+
+Specifies whether to enable mailslots. If this parameter is specified, mailslots will be enabled.
+Beginning with Windows Server 2025 and Windows 11 Insider Preview Build 25314, remote mailslots are
+disabled by default.
+
+To learn more about remote mailslot deprecation, see [Features removed or no
+longer developed starting with Windows Server
+2025](/windows-server/get-started/removed-deprecated-features-windows-server-2025).
 
 ```yaml
 Type: Boolean
@@ -482,7 +603,7 @@ Accept wildcard characters: False
 
 ### -EnableSMBQUIC
 
-Specifies that the SMB over QUIC protocol is enabled.
+Indicates whether the SMB over QUIC protocol is enabled.
 
 ```yaml
 Type: Boolean
@@ -550,6 +671,23 @@ Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InvalidAuthenticationDelayTimeInMs
+
+Specifies the length of time in milliseconds that the server should delay before responding to an
+authentication request that has been deemed invalid, such as an incorrect user name or password.
+
+```yaml
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -851,14 +989,70 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Smb2DialectMax
+
+This parameter specifies the maximum version of the SMB protocol to be used. Acceptable values are:
+
+- None – There is no maximum protocol version specified, the server can use any supported version.
+- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB Server
+- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB Server
+- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB Server
+- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB Server
+- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB Server
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, SMB202, SMB210, SMB300, SMB302, SMB311
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Smb2DialectMin
+
+This parameter specifies the minimum version of the SMB protocol to be used. Acceptable values are:
+
+- None – There is no maximum protocol version specified, the server can use any supported version.
+- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB Server
+- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB Server
+- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB Server
+- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB Server
+- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB Server
+
+```yaml
+Type: Smb2DialectMin
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, SMB202, SMB210, SMB300, SMB302, SMB311
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SmbServerNameHardeningLevel
 
-Specifies the SMB Service name hardening level.
+Controls the level of validation that a server performs on the service principal name (SPN) that is
+provided by the client device when the client establishes a session using Server Message Block
+(SMB). The acceptable values are:
+
+- `0`: Don't enforce SPN check.
+- `1`: Allow clients who didn't provide the target, but fail those who do provide the target and it
+  doesn't match.
+- `2`: Only allow clients who supply matching targets.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
 Aliases:
+Accepted values: 0, 1, 2
 
 Required: False
 Position: Named
@@ -1005,7 +1199,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -1013,12 +1207,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-SmbServerConfiguration](./Get-SmbServerConfiguration.md)
+[Get-SmbServerConfiguration](Get-SmbServerConfiguration.md)
 
-[Reset-SmbServerConfiguration](./Reset-SmbServerConfiguration.md)
+[Reset-SmbServerConfiguration](Reset-SmbServerConfiguration.md)

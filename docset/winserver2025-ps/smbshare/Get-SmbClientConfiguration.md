@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbClientConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/23/2022
+ms.date: 02/22/2024
 online version: https://learn.microsoft.com/powershell/module/smbshare/get-smbclientconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-SmbClientConfiguration
@@ -33,7 +33,7 @@ configuration.
 Get-SmbClientConfiguration
 ```
 
-```Output
+```output
 SkipCertificateCheck                  : False
 ConnectionCountPerRssNetworkInterface : 4
 DirectoryCacheEntriesMax              : 16
@@ -63,17 +63,12 @@ EncryptionCiphers                     : AES_128_GCM, AES_128_CCM, AES_256_GCM, A
 
 This command retrieves the SMB client configuration.
 
-> [!NOTE]
-> The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
-> Microsoft server operating system version 21H2 for x64-based Systems
-> ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
-> version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
-
 ## PARAMETERS
 
 ### -AsJob
 
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
 ```yaml
 Type: SwitchParameter
@@ -90,8 +85,8 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -144,7 +139,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -163,7 +158,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -179,5 +174,6 @@ The **MSFT_SmbClientConfiguration** object represents the configuration of the S
 
 ## RELATED LINKS
 
-[Set-SmbClientConfiguration](./Set-SmbClientConfiguration.md)
+[Reset-SmbClientConfiguration](Reset-SmbClientConfiguration.md)
 
+[Set-SmbClientConfiguration](Set-SmbClientConfiguration.md)

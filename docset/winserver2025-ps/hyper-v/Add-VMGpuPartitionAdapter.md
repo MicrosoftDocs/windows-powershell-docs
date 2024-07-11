@@ -439,8 +439,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Get-VMGpuPartitionAdapter](get-vmgpupartitionadapter.md)
+[Get-VMGpuPartitionAdapter](get-vmgpupartitionadapter.md)
 
-- [Remove-VMGpuPartitionAdapter](remove-vmgpupartitionadapter.md)
+[Remove-VMGpuPartitionAdapter](remove-vmgpupartitionadapter.md)
 
-- [Set-VMGpuPartitionAdapter](set-vmgpupartitionadapter.md)
+[Set-VMGpuPartitionAdapter](set-vmgpupartitionadapter.md)

@@ -56,17 +56,22 @@ that fails to update.
 Specifies a set of name=value pairs, as arguments, for each updating plug-in to use.
 
 For instance, to specify a Domain argument for one plug-in:
+
 - `@{Domain=Domain.local}`
-You can specify multiple pairs in a set separated with semicolons.
-For instance:
-- `@{name1=value1;name2=value2;name3=value3}` These name=value pairs must be meaningful to the
-  **CauPluginName** parameter that you specify. If you specify arguments for more than one plug-in,
-  provide the sets of name=value pairs in the order that you pass values in **CauPluginName**,
-  separated by commas. For instance:
+
+You can specify multiple pairs in a set separated with semicolons. For instance:
+
+- `@{name1=value1;name2=value2;name3=value3}`
+
+These name=value pairs must be meaningful to the **CauPluginName** parameter that you specify. If
+you specify arguments for more than one plug-in, provide the sets of name=value pairs in the order
+that you pass values in **CauPluginName**, separated by commas. For instance:
+
 - `@{name1=value1;name2=value2;name3=value3},@{name4=value4;name5=value5}`
 
-For the default **Microsoft.WindowsUpdatePlugin** plug-in, no arguments are needed.
-The following arguments are optional:
+For the default **Microsoft.WindowsUpdatePlugin** plug-in, no arguments are needed. The following
+arguments are optional:
+
 - **'IncludeRecommendedUpdates'='\<Value\>'**: Boolean value to indicate that recommended updates
   will be applied in addition to important updates on each node. If not specified, the default value
   is False.
@@ -74,16 +79,19 @@ The following arguments are optional:
   Agent to filter the updates that will be applied to each node. For a name, use **QueryString** and
   for a value, enclose the full query in quotation marks. If not specified, then the
   **Microsoft.WindowsUpdatePlugin** plug-in by default uses the following argument:
-- `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"` For more
-  information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in and the
-  criteria such as IsInstalled that can be included in the query strings, see
-  [IUpdateSearcher::Search method](/windows/win32/api/wuapi/nf-wuapi-iupdatesearcher-search).
+- `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
+
+For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in
+and the criteria such as IsInstalled that can be included in the query strings, see
+[IUpdateSearcher::Search method](/windows/win32/api/wuapi/nf-wuapi-iupdatesearcher-search).
 
 For the **Microsoft.HotfixPlugin** plug-in, the following argument is required:
+
 - **HotfixRootFolderPath=\<Path\>**: The UNC path to a hotfix root folder in an SMB share with a
-  structure that contains the updates to apply and that contains the hotfix configuration file
+  structure that contains the updates to apply and that contains the hotfix configuration file.
 
 The following arguments are optional for the **Microsoft.HotfixPlugin** plug-in:
+
 - **RequireSmbEncryption=\<Value\>**: Boolean value to indicate that SMB Encryption will be enforced
   for accessing data from the SMB share. If not specified, the default value is False. To ensure the
   integrity of the data accessed from the SMB share, the plug-in requires that the share is enabled
@@ -94,7 +102,7 @@ The following arguments are optional for the **Microsoft.HotfixPlugin** plug-in:
 - **HotfixInstallerTimeoutMinutes=\<Integer\>**: The length of time in minutes that the plug-in
   allows the hotfix installer process to return. If not specified, the default value is 30 minutes.
 - **HotfixConfigFileName=\<name\>**: Name for the hotfix configuration file. If not specified, the
-  default name DefaultHotfixConfig.xml is used. For more information about required and optional
+  default name `DefaultHotfixConfig.xml` is used. For more information about required and optional
   arguments for the **Microsoft.HotfixPlugin** plug-in, see
   [How Cluster-Aware Updating plug-ins work](/windows-server/failover-clustering/cluster-aware-updating-plug-ins).
 
@@ -144,22 +152,6 @@ built into Windows PowerShell is used.
 Type: String
 Parameter Sets: DefaultParamSet
 Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
 
 Required: False
 Position: Named
@@ -325,11 +317,11 @@ Accept wildcard characters: False
 Specifies the type of reboot to use for each node in the cluster during the update. The available
 values are:
 
-- ClusProp
-- FullReboot
-- SoftReboot
-- PluginCustomReboot
-- OrchestratorDefault
+- `ClusProp`
+- `FullReboot`
+- `SoftReboot`
+- `PluginCustomReboot`
+- `OrchestratorDefault`
 
 ```yaml
 Type: RebootType
@@ -398,6 +390,22 @@ parameter. If a single plug-in is specified, a warning appears.
 Type: SwitchParameter
 Parameter Sets: DefaultParamSet
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named

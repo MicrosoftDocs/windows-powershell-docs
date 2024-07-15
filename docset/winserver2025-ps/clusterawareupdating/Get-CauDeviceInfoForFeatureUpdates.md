@@ -39,8 +39,8 @@ Get-CauDeviceInfoForFeatureUpdates $parameters
 ```
 
 This command retrieves device information for feature updates from the `C:\Updates` directory for
-the cluster named `CONTOSO-FC1`. It also specifies the path to the deployment cab file that will be
-created for the update in `C:\Deployment\FeatureUpdate.cab`.
+the cluster named **CONTOSO-FC1**. It also specifies the path to the deployment cab file that will
+be created for the update in `C:\Deployment\FeatureUpdate.cab`.
 
 ## PARAMETERS
 

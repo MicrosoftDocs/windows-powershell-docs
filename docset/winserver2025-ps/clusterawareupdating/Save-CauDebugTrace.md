@@ -38,7 +38,7 @@ Compatibility Mode (HTTP-In)** firewall exception is enabled on each node.
 Save-CauDebugTrace -ClusterName "CONTOSO-FC1" -FilePath "C:\temp\testrun.zip"
 ```
 
-This command saves the debug tracing information for the cluster named `CONTOSO-FC1`, to a trace
+This command saves the debug tracing information for the cluster named **CONTOSO-FC1**, to a trace
 file called `testrun.zip` in the `C:\temp` folder.
 
 ## PARAMETERS
@@ -82,9 +82,9 @@ Accept wildcard characters: False
 Specifies the level of detail to include in the debug trace for feature updates. The acceptable
 values for this parameter are:
 
-- **None**: No feature update logs will be included in the debug trace.
-- **FailedSetup**: Only logs related to failed feature updates will be included in the debug trace.
-- **All**: All feature update logs will be included in the debug trace.
+- `None`: No feature update logs will be included in the debug trace.
+- `FailedSetup`: Only logs related to failed feature updates will be included in the debug trace.
+- `All`: All feature update logs will be included in the debug trace.
 
 ```yaml
 Type: FeatureUpdateLogs
@@ -169,4 +169,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Invoke-CauRun](./Invoke-CauRun.md)
+[Invoke-CauRun](invoke-caurun.md)

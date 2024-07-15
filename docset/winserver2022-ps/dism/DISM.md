@@ -15,23 +15,9 @@ title: DISM
 
 The Deployment Image Servicing and Management (DISM) platform is used to mount and service Windows
 images before deployment. A subset of DISM commands can be used on online Windows images. You can
-use DISM tools to mount, and get information about, Windows image (.wim) files or virtual hard disks
-(.vhd or .vhdx). You can also use it to install, uninstall, configure, and update Windows features,
-packages, and drivers in a Windows image or to change the edition of a Windows image.
-
-This topic introduces the DISM cmdlets available in the DISM PowerShell module. This module is
-available in Windows 8.1 and Windows Server 2012 R2. On other supported operating systems, you can
-install the DISM module from the
-[Windows Assessment and Deployment Kit (Windows ADK)](https://go.microsoft.com/fwlink/?LinkId=206587).
-For more information about how to use the DISM PowerShell module installed with the ADK, see
-[How to Use DISM in Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=239927).
-
-For Windows 8.1 and Windows Server 2012 R2, Windows PowerShell 4.0 is included in the installation.
-For other supported versions of Windows and Windows Server, (including Windows 8, Windows 7 SP1,
-Windows Server 2012, and Windows Server 2008 R2 SP1), you must install Windows Management Framework
-4.0. You can download and install
-[Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=293881) from the
-Microsoft Download Center.
+use DISM tools to mount, and get information about, Windows image (`.wim`) files or virtual hard
+disks (`.vhd` or `.vhdx`). You can also use it to install, uninstall, configure, and update Windows
+features, packages, and drivers in a Windows image or to change the edition of a Windows image.
 
 The DISM platform also includes a command-line tool, DISM.exe, and the
 [DISM API](https://go.microsoft.com/fwlink/?LinkID=237611). The command-line tool is available in
@@ -45,7 +31,7 @@ of the last Win32 executable run. For example, to check that the `Get-WindowsIma
 get information about the Windows image contained in the file, `E:\images\c.wim`, type the
 following:
 
-```
+```powershell
 try
 {
 

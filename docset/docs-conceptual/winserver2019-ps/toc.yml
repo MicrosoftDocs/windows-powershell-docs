@@ -1,5 +1,5 @@
 items:
   - name: Windows PowerShell
     href: get-started.md
-  - name: PowerShell 7 compatibility
+  - name: PowerShell 7 compatibility in Windows Server 2019
     href: module-compatibility.md

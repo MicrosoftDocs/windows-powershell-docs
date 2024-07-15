@@ -3,6 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: ADFS
 ms.date: 12/20/2016
+ms.custom: has-azure-ad-ps-ref
 online version: https://learn.microsoft.com/powershell/module/adfs/set-adfsazuremfatenant?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-AdfsAzureMfaTenant
@@ -20,7 +21,7 @@ Set-AdfsAzureMfaTenant -TenantId <String> -ClientId <String> [-WhatIf] [-Confirm
 ```
 
 ## DESCRIPTION
-The **Set-AdfsAzureMfaTenant** cmdlet enables an Active Directory Federation Services (AD FS) farm to use Azure Multi-Factor Authentication (MFA) after a certificate has been created and registered in the Azure Active Directory (AD) tenant.
+The **Set-AdfsAzureMfaTenant** cmdlet enables an Active Directory Federation Services (AD FS) farm to use Azure Multi-Factor Authentication (MFA) after a certificate has been created and registered in the Microsoft Entra tenant.
 
 ## EXAMPLES
 
@@ -44,7 +45,7 @@ After AD FS has been configured for Azure MFA, this command determines which cer
 ## PARAMETERS
 
 ### -ClientId
-Specifies the well-known ID of the Azure MFA application in Azure AD.
+Specifies the well-known ID of the Azure MFA application in Microsoft Entra ID.
 
 ```yaml
 Type: String
@@ -59,8 +60,8 @@ Accept wildcard characters: False
 ```
 
 ### -TenantId
-Specifies the GUID representation of an Azure AD tenant ID.
-This can be found in the URL bar of the Azure AD portal, as in this example: 
+Specifies the GUID representation of a Microsoft Entra tenant ID.
+This can be found in the URL bar of the Microsoft Entra admin center, as in this example: 
 
 `https://manage.windowsazure.com/contoso.onmicrosoft.com#Workspaces/ActiveDirectoryExtension/Directory/\<tenantID_GUID\>/directoryQuickStart`
 
@@ -121,4 +122,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-AdfsAzureMfaTenantCertificate](./New-AdfsAzureMfaTenantCertificate.md)
-

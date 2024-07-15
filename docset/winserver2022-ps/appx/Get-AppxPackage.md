@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 Module Name: Appx
-ms.date: 12/20/2016
+ms.date: 05/15/2023
 online version: https://learn.microsoft.com/powershell/module/appx/get-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-AppxPackage
@@ -16,39 +16,70 @@ Gets a list of the app packages that are installed in a user profile.
 ## SYNTAX
 
 ```
-Get-AppxPackage [-AllUsers] [-PackageTypeFilter <PackageTypes>] [[-Name] <String>] [[-Publisher] <String>]
- [-User <String>] [-Volume <AppxVolume>] [<CommonParameters>]
+Get-AppxPackage [-AllUsers] [-PackageTypeFilter <PackageTypes>]
+ [[-Name] <String>] [[-Publisher] <String>] [-User <String>]
+ [-Volume <AppxVolume>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AppxPackage** cmdlet gets a list of the app packages that are installed in a user profile.
-An app package has an .msix or .appx file name extension.
-To get the list of packages for a user profile other than the profile for the current user, you must run this command by using administrator permissions.
+
+The `Get-AppxPackage` cmdlet gets a list of the app packages that are installed in a user profile.
+An app package has an `.msix` or `.appx` file extension. To get the list of packages for a user
+profile other than the profile for the current user, you must run this command with administrator
+permissions.
 
 ## EXAMPLES
 
 ### Example 1: Get all app packages for every user account
-```
-PS C:\> Get-AppxPackage -AllUsers
+
+```powershell
+Get-AppxPackage -AllUsers
 ```
 
 This command lists the app packages that are installed for every user account on the computer.
 
 ### Example 2: Get an app package for a specific a user
-```
-PS C:\> Get-AppxPackage -Name "Package17" -User "Contoso\EvanNarvaez"
+
+```powershell
+Get-AppxPackage -Name "Package17" -User "Contoso\EvanNarvaez"
 ```
 
-This command displays information about Package17 if it is installed in the specified user profile.
+This command displays information about `Package17` if it's installed in the specified user
+profile.
+
+### Example 3: Get a particular app package information
+
+```powershell
+Get-AppxPackage -Name Microsoft.ScreenSketch
+```
+
+This command displays information about the ScreenSketch app.
+
+### Example 4: Get all app packages for a particular Publisher
+
+```powershell
+Get-AppxPackage -Publisher "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+```
+
+This command lists all the Microsoft app packages that are installed on the computer.
+
+### Example 5: Get all app packages with PackageTypeFilter
+
+```powershell
+Get-AppxPackage -PackageTypeFilter Bundle,Framework,Main,Resource
+```
+
+This command lists all the app packages with PackageTypeFilter installed on the computer.
 
 ## PARAMETERS
 
 ### -AllUsers
-Indicates that this cmdlet lists app packages for all user accounts on the computer.
-To use this parameter, you must run the command by using administrator permissions.
+
+Indicates that this cmdlet lists app packages for all user accounts on the computer. To use this
+parameter, you must run the command with administrator permissions.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -60,12 +91,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of a particular package.
-If you specify this parameter, the cmdlet returns results for this package only.
-Wildcards are permitted.
+
+Specifies the name of a particular package. If you specify this parameter, the cmdlet returns
+results for this package only. Wildcards are permitted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -77,9 +108,11 @@ Accept wildcard characters: False
 ```
 
 ### -PackageTypeFilter
-Specifies one or more comma-separated types of packages that the cmdlet gets from the package repository.
 
-By default, this cmdlet returns only packages of types Main and Framework.
+Specifies one or more comma-separated types of packages that the cmdlet gets from the package
+repository.
+
+By default, this cmdlet returns only packages of types `Main` and `Framework`.
 
 ```yaml
 Type: PackageTypes
@@ -95,12 +128,12 @@ Accept wildcard characters: False
 ```
 
 ### -Publisher
-Specifies the publisher of a particular package.
-If you specify this parameter, the cmdlet returns results only for this publisher.
-Wildcards are permitted.
+
+Specifies the publisher of a particular package. If you specify this parameter, the cmdlet returns
+results only for this publisher. Wildcards are permitted.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -112,18 +145,19 @@ Accept wildcard characters: False
 ```
 
 ### -User
-Specifies a user.
-If you specify this parameter, the cmdlet returns a list of app packages that are installed for only the user that this cmdlet specifies.
-To get the list of packages for a user profile other than the profile for the current user, you must run this command by using administrator permissions.
-The user name can be in one of these formats: 
 
-- domain\user_name
-- user_name@fqn.domain.tld
-- user_name
-- SID-string
+Specifies a user. If you specify this parameter, the cmdlet returns a list of app packages that are
+installed for only the user that this cmdlet specifies. To get the list of packages for a user
+profile other than the profile for the current user, you must run this command with
+administrator permissions. The user name can be in one of these formats:
+
+- `domain\user_name`
+- `user_name@fqn.domain.tld`
+- `user_name`
+- `SID-string`
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -135,8 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -Volume
-Specifies an **AppxVolume** object.
-If you specify this parameter, this cmdlet returns only packages that are relative to volume that this parameter specifies.
+
+Specifies an **AppxVolume** object. If you specify this parameter, this cmdlet returns only
+packages that are relative to volume that this parameter specifies.
 
 ```yaml
 Type: AppxVolume
@@ -151,7 +186,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -160,7 +199,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Windows.Appx.PackageManager.Commands.AppxPackage
-This cmdlet returns an **AppxPackage** object that contains information, including the full name of the app package.
+
+This cmdlet returns an **AppxPackage** object that contains information, including the full name of
+the app package.
 
 ## NOTES
 
@@ -177,4 +218,3 @@ This cmdlet returns an **AppxPackage** object that contains information, includi
 [Move-AppxPackage](./Move-AppxPackage.md)
 
 [Remove-AppxPackage](./Remove-AppxPackage.md)
-

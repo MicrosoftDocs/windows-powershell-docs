@@ -11,7 +11,8 @@ title: Disable-TlsEccCurve
 # Disable-TlsEccCurve
 
 ## SYNOPSIS
-Disables the Elliptic Curve Cryptography (ECC) cipher suites available for TLS(Transport Layer Security) for a computer.
+Disables the Elliptic Curve Cryptography (ECC) cipher suites available for TLS(Transport Layer
+Security) for a computer.
 
 ## SYNTAX
 
@@ -20,26 +21,30 @@ Disable-TlsEccCurve [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This Command disables the Elliptic Curve Cryptography (ECC) cipher suites available for TLS(Transport Layer Security) for a computer.
+
+This Command disables the Elliptic Curve Cryptography (ECC) cipher suites available for
+TLS(Transport Layer Security) for a computer.
 
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Disable-TlsEccCurve -Name curve25519
+
+```powershell
+Disable-TlsEccCurve -Name curve25519
 ```
 
-This will disable the ECC Curve "curve25519".
+This will disable the ECC Curve `curve25519`.
 
 ## PARAMETERS
 
 ### -Name
+
 Specifies the name of the ECC curve to disable.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -49,10 +54,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -64,11 +70,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -80,12 +87,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
-
 
 ## OUTPUTS
 
@@ -94,4 +104,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -16,94 +16,118 @@ Gets one or more Active Directory Domain Services authentication policies.
 ## SYNTAX
 
 ### Filter (Default)
+
 ```
-Get-ADAuthenticationPolicy [-AuthType <ADAuthType>] [-Credential <PSCredential>] -Filter <String>
- [-Properties <String[]>] [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-Server <String>]
- [<CommonParameters>]
+Get-ADAuthenticationPolicy [-AuthType <ADAuthType>] [-Credential <PSCredential>]
+ -Filter <String> [-Properties <String[]>] [-ResultPageSize <Int32>]
+ [-ResultSetSize <Int32>] [-Server <String>] [<CommonParameters>]
 ```
 
 ### Identity
+
 ```
 Get-ADAuthenticationPolicy [-AuthType <ADAuthType>] [-Credential <PSCredential>]
- [-Identity] <ADAuthenticationPolicy> [-Properties <String[]>] [-Server <String>] [<CommonParameters>]
-```
-
-### LdapFilter
-```
-Get-ADAuthenticationPolicy [-AuthType <ADAuthType>] [-Credential <PSCredential>] -LDAPFilter <String>
- [-Properties <String[]>] [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-Server <String>]
+ [-Identity] <ADAuthenticationPolicy> [-Properties <String[]>] [-Server <String>]
  [<CommonParameters>]
 ```
 
+### LdapFilter
+
+```
+Get-ADAuthenticationPolicy [-AuthType <ADAuthType>] [-Credential <PSCredential>]
+ -LDAPFilter <String> [-Properties <String[]>] [-ResultPageSize <Int32>]
+ [-ResultSetSize <Int32>] [-Server <String>] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-The **Get-ADAuthenticationPolicy** cmdlet gets an authentication policy or performs a search to get authentication policies.
 
-The *Identity* parameter specifies the Active Directory Domain Services authentication policy to get.
-You can identify an authentication policy by its distinguished name, GUID or name.
-You can also use the *Identity* parameter to specify a variable that contains an authentication policy object, or you can use the pipeline operator to pass an authentication policy object to the *Identity* parameter.
+The `Get-ADAuthenticationPolicy` cmdlet gets an authentication policy or performs a search to get
+authentication policies.
 
-You can search for and use multiple authentication policies by specifying the *Filter* parameter or the *LDAPFilter* parameter.
-The *Filter* parameter uses the Windows PowerShell® expression language to write query strings for Active Directory Domain Services.
-Windows PowerShell expression language syntax provides rich type conversion support for value types received by the *Filter* parameter.
-For more information about the *Filter* parameter syntax, type `Get-Help  about_ActiveDirectory_Filter`.
-If you have existing Lightweight Directory Access Protocol (LDAP) query strings, you can use the *LDAPFilter* parameter.
+The **Identity** parameter specifies the Active Directory Domain Services authentication policy to
+get. You can identify an authentication policy by its distinguished name, GUID or name. You can also
+use the **Identity** parameter to specify a variable that contains an authentication policy object,
+or you can use the pipeline operator to pass an authentication policy object to the **Identity**
+parameter.
+
+You can search for and use multiple authentication policies by specifying the **Filter** parameter
+or the **LDAPFilter** parameter. The **Filter** parameter uses the Windows PowerShell expression
+language to write query strings for Active Directory Domain Services. Windows PowerShell expression
+language syntax provides rich type conversion support for value types received by the **Filter**
+parameter. For more information about the **Filter** parameter syntax, type
+`Get-Help  about_ActiveDirectory_Filter`. If you have existing Lightweight Directory Access Protocol
+(LDAP) query strings, you can use the **LDAPFilter** parameter.
 
 ## EXAMPLES
 
 ### Example 1: Get an authentication policy
-```
-PS C:\> Get-ADAuthenticationPolicy -Identity AuthenticationPolicy01
+
+```powershell
+Get-ADAuthenticationPolicy -Identity AuthenticationPolicy01
 ```
 
 This command gets an authentication policy object by specifying the object name.
 
 ### Example 2: Get an authentication policy by using an LDAP filter
-```
-PS C:\> Get-ADAuthenticationPolicy -LDAPFilter "(name=AuthenticationPolicy*)" -Server Server01.Contoso.com
+
+```powershell
+Get-ADAuthenticationPolicy -LDAPFilter "(name=AuthenticationPolicy*)" -Server Server01
 ```
 
-This command gets all authentication policies that match the LDAP filter specified by the *LDAPFilter* parameter.
+This command gets all authentication policies that match the LDAP filter specified by the
+**LDAPFilter** parameter.
 
 ### Example 3: Get an authentication policy by using a filter
-```
-PS C:\> Get-ADAuthenticationPolicy -Filter "Name -like 'AuthenticationPolicy*'" -Server Server02.Contoso.com
+
+```powershell
+Get-ADAuthenticationPolicy -Filter "Name -like 'AuthenticationPolicy*'" -Server Server02
 ```
 
-This command gets all authentication policies that match the filter specified by the *Filter* parameter.
+This command gets all authentication policies that match the filter specified by the **Filter**
+parameter.
 
 ### Example 4: Get all authentication policy objects that match a filter
+
+```powershell
+Get-ADAuthenticationPolicy -Filter * | Format-Table Name, Enforce -AutoSize
 ```
-PS C:\> Get-ADAuthenticationPolicy -Filter * | Format-Table Name, Enforce -AutoSize
+
+```output
 Name                   Enforce
 ----                   -------
 AuthenticationPolicy1   False
 AuthenticationPolicy2   False
 ```
 
-This command gets all the authentication policies available.
-The output is then passed to the Format-Table cmdlet to display the name of the policy and the value for **Enforce** on each policy.
+This command gets all the authentication policies available. The output is then passed to the
+`Format-Table` cmdlet to display the name of the policy and the value for **Enforce** on each
+policy.
 
 ### Example 5: Get all properties for an authentication policy
-```
-PS C:\> Get-ADAuthenticationPolicy -Identity "AuthenticationPolicy01" -Properties "*"
+
+```powershell
+Get-ADAuthenticationPolicy -Identity "AuthenticationPolicy01" -Properties "*"
 ```
 
-This command gets all properties of the authentication policy specified by the *Identity* parameter.
+This command gets all properties of the authentication policy specified by the **Identity**
+parameter.
 
 ## PARAMETERS
 
 ### -AuthType
+
 Specifies the authentication method to use.
 The acceptable values for this parameter are:
 
-- Negotiate or 0
-- Basic or 1
+- `Negotiate` or `0`
+- `Basic` or `1`
 
-The default authentication method is Negotiate.
-A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+The default authentication method is `Negotiate`.
+
+A Secure Sockets Layer (SSL) connection is required for the `Basic` authentication method.
 
 ```yaml
-Type: ADAuthType
+Type: Microsoft.ActiveDirectory.Management.ADAuthType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Negotiate, Basic
@@ -116,17 +140,24 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies a user account that has permission to perform the task.
-The default is the current user.
-Type a user name, such as User01 or Domain01\User01, or enter a **PSCredential** object, such as one generated by the **Get-Credential** cmdlet.
 
-By default, the cmdlet uses the credentials of the currently logged on user unless the cmdlet is run from an Active Directory Domain Services Windows PowerShell provider drive.
-If you run the cmdlet in a provider drive, the account associated with the drive is the default.
+Specifies the user account credentials to use to perform this task. The default credentials are the
+credentials of the currently logged on user unless the cmdlet is run from an Active Directory module
+for Windows PowerShell provider drive. If the cmdlet is run from such a provider drive, the account
+associated with the drive is the default.
 
-If you specify credentials that do not have permission to perform the task, the cmdlet returns an error.
+To specify this parameter, you can type a user name, such as `User1` or `Domain01\User01` or you can
+specify a **PSCredential** object. If you specify a user name for this parameter, the cmdlet prompts
+for a password.
+
+You can also create a **PSCredential** object by using a script or by using the `Get-Credential`
+cmdlet. You can then set the **Credential** parameter to the **PSCredential** object.
+
+If the acting credentials do not have directory-level permission to perform the task, Active
+Directory module for Windows PowerShell returns a terminating error.
 
 ```yaml
-Type: PSCredential
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -138,32 +169,36 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Specifies a query string that retrieves Active Directory Domain Services objects.
-This string uses the Windows PowerShell expression language syntax.
-The Windows PowerShell expression language syntax provides rich type-conversion support for value types received by the *Filter* parameter.
 
-Specify the Filter parameter in one of the following formats: 
+Specifies a query string that retrieves Active Directory Domain Services objects. This string uses
+the Windows PowerShell expression language syntax. The Windows PowerShell expression language syntax
+provides rich type-conversion support for value types received by the **Filter** parameter.
 
-- To match a single filter element: {Attributeoperator  "value"} 
-- To match multiple filter elements: {(Attribute1operator1 "value1") joinOperator (Attribute2operator2 "value2")}
+Specify the **Filter** parameter in one of the following formats:
 
-Windows PowerShell wildcards other than "*", such as "?" are not supported by the Filter syntax.
+- To match a single filter element: `{Attribute operator "value"}`
+- To match multiple filter elements:
+  `{(Attribute1 operator1 "value1") joinOperator (Attribute2 operator2 "value2")}`
 
-Valid filter operators are: 
+Windows PowerShell wildcards other than `*`, such as `?`, are not supported by the **Filter**
+syntax.
 
- -eq, -le, -ge, -ne, -lt, -gt, -approx, -bor, -band, -recursivematch, -like, -notlike
+Valid filter operators are:
 
-Valid join operators are: 
+ `-eq`, `-le`, `-ge`, `-ne`, `-lt`, `-gt`, `-approx`, `-bor`, `-band`, `-recursivematch`, `-like`,
+ `-notlike`
 
--and, -or
+Valid join operators are:
 
-The not operator is -not
+`-and`, `-or`
 
-For a list of supported types for values, see about_ActiveDirectory_ObjectModel.
-For more information about the Filter parameter, see about_ActiveDirectory_Filter.
+The not operator is `-not`.
+
+For a list of supported types for values, see `about_ActiveDirectory_ObjectModel`. For more
+information about the **Filter** parameter, see `about_ActiveDirectory_Filter`.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: Filter
 Aliases: 
 
@@ -175,20 +210,22 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specifies an Active Directory Domain Services authentication policy object.
-Specify the authentication policy object in one of the following formats: 
+
+Specifies an Active Directory Domain Services authentication policy object. Specify the
+authentication policy object in one of the following formats:
 
 - A distinguished name
 - GUID
 - Name
 
-This parameter can also get this object through the pipeline or you can set this parameter to an object instance.
+This parameter can also get this object through the pipeline or you can set this parameter to an
+object instance.
 
-The cmdlet searches the default naming context or partition to find the object.
-If the cmdlet finds two or more objects, the cmdlet returns a non-terminating error.
+The cmdlet searches the default naming context or partition to find the object. If the cmdlet finds
+two or more objects, the cmdlet returns a non-terminating error.
 
 ```yaml
-Type: ADAuthenticationPolicy
+Type: Microsoft.ActiveDirectory.Management.ADAuthenticationPolicy
 Parameter Sets: Identity
 Aliases: 
 
@@ -200,11 +237,12 @@ Accept wildcard characters: False
 ```
 
 ### -LDAPFilter
-Specifies an LDAP query string used to filter Active Directory Domain Services objects.
-Use this parameter to run your existing LDAP queries.
+
+Specifies a filter using the LDAP search filter syntax defined in RFC2254 to filter Active Directory
+Domain Services objects.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: LdapFilter
 Aliases: 
 
@@ -216,17 +254,16 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-Specifies the properties of the output object to get from the server.
-Use this parameter to get properties that are not included in the default set.
 
-Specify the properties to get as a comma separated list of names.
-For properties that are not default or extended properties, you must specify the LDAP display name of the property.
-To display all of the properties that are set on the object, specify an asterisk wildcard.
+Specifies the properties of the output object to get from the server. Use this parameter to get
+properties that are not included in the default set.
 
-To get properties for an object and display them, you can use this cmdlet and pass the output to the [Get-Member](https://go.microsoft.com/fwlink/?LinkID=293971) cmdlet by using the pipeline operator.
+Specify the properties to get as a comma separated list of names. For properties that are not
+default or extended properties, you must specify the LDAP display name of the property. To display
+all of the properties that are set on the object, specify an asterisk (`*`) wildcard.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases: Property
 
@@ -238,11 +275,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResultPageSize
-Specifies the number of objects to include in one page for an Active Directory Domain Services query.
-The default value is 256 objects per page.
+
+Specifies the number of objects to include in one page for an Active Directory Domain Services
+query. The default value is `256` objects per page.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: Filter, LdapFilter
 Aliases: 
 
@@ -254,14 +292,15 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSetSize
-Specifies the maximum number of objects to return for an Active Directory Domain Services query.
-If you want to get all of the objects, set this parameter to $Null.
-You can use Ctrl+C to stop the query and the return of objects.
 
-The default value is $Null.
+Specifies the maximum number of objects to return for an Active Directory Domain Services query. If
+you want to get all of the objects, set this parameter to `$null`. You can use Ctrl+C to stop the
+query and the return of objects.
+
+The default value is `$null`.
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: Filter, LdapFilter
 Aliases: 
 
@@ -273,30 +312,35 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-Specifies the Active Directory Domain Services instance to which to connect, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
 
-Specify the Active Directory Domain Services instance in one of the following ways:  
+Specifies the Active Directory Domain Services instance to connect to, by providing one of the
+following values for a corresponding domain name or directory server. The service may be any of the
+following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active
+Directory snapshot instance.
+
+Specify the Active Directory Domain Services instance in one of the following ways:
 
 Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
-Directory server values: 
+Directory server values:
 
 - Fully qualified directory server name
 - NetBIOS name
 - Fully qualified directory server name and port
 
-The default value for this parameter is determined by one of the following methods in the order that they are listed:
+The default value for this parameter is determined by one of the following methods in the order that
+they are listed:
 
 - By using the **Server** value from objects passed through the pipeline
-- By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
+- By using the server information associated with the Active Directory Domain Services Windows
+  PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -308,19 +352,25 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADAuthenticationPolicy
+
 This cmdlet accepts an authentication policy object.
 
 ## OUTPUTS
 
 ### Microsoft.ActiveDirectory.Management.ADAuthenticationPolicy
-This cmdlet returns one or more authentication policy objects.
-This cmdlet returns a default set of **ADAuthenticationPolicy** property values.
-To retrieve additional **ADAuthenticationPolicy** properties, use the *Properties* parameter.
+
+This cmdlet returns one or more authentication policy objects. This cmdlet returns a default set of
+**ADAuthenticationPolicy** property values. To retrieve additional **ADAuthenticationPolicy**
+properties, use the **Properties** parameter.
 
 ## NOTES
 
@@ -333,4 +383,3 @@ To retrieve additional **ADAuthenticationPolicy** properties, use the *Propertie
 [Set-ADAuthenticationPolicy](./Set-ADAuthenticationPolicy.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
-

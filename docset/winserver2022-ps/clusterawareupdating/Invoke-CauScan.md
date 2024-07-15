@@ -44,10 +44,10 @@ Invoke-CauScan -ClusterName "CONTOSO-FC1" -CauPluginName "Microsoft.WindowsUpdat
 ```
 
 This command gets a detailed list of the initial set of updates that would currently be applied to
-each node in the cluster named `CONTOSO-FC1`. The list is based on the updates that would be applied
-by the **Microsoft.WindowsUpdatePlugin** plug-in, which is the default plug-in. The preview list
-includes only an initial set of updates, and doesn't include updates that might become applicable
-only after the initial updates are installed.
+each node in the cluster named **CONTOSO-FC1**. The list is based on the updates that would be
+applied by the **Microsoft.WindowsUpdatePlugin** plug-in, which is the default plug-in. The preview
+list includes only an initial set of updates, and doesn't include updates that might become
+applicable only after the initial updates are installed.
 
 ### Example 2: Get a detailed list of the initial set of updates on the specified cluster using a query string
 
@@ -68,7 +68,7 @@ Invoke-CauScan $parameters -Credential $Cred
 ```
 
 This example gets a detailed list of the initial set of updates that would currently be applied to
-each node in the cluster named `CONTOSO-FC1`. The list is based on the updates that would be applied
+each node in the cluster named **CONTOSO-FC1**. The list is based on the updates that would be applied
 by the **Microsoft.WindowsUpdatePlugin** plug-in, using a specified query string, and the
 **Microsoft.HotfixPlugin**, after the necessary hotfixes and the hotfix configuration file have been
 downloaded to `\\CauHotfixSrv\shareName`. This example also shows how to pass the administrative

@@ -34,9 +34,9 @@ cluster. The self-updating functionality of the cluster can be disabled with the
 Enable-CauClusterRole -ClusterName "CONTOSO-FC1" -Force
 ```
 
-This command enables the CAU clustered role on the `CONTOSO-FC1` cluster to begin performing Updating
-Runs. The cmdlet changes the status of the CAU clustered role to Running. The cmdlet runs without
-displaying confirmation prompts, as the **Force** parameter was used.
+This command enables the CAU clustered role on the **CONTOSO-FC1** cluster to begin performing
+Updating Runs. The cmdlet changes the status of the CAU clustered role to Running. The cmdlet runs
+without displaying confirmation prompts, as the **Force** parameter was used.
 
 ## PARAMETERS
 

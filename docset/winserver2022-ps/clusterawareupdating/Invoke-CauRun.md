@@ -100,7 +100,7 @@ $parameters = @{
 Invoke-CauRun @parameters
 ```
 
-This command performs a scan and a full updating run on the cluster named `CONTOSO-FC1`. This cmdlet
+This command performs a scan and a full updating run on the cluster named **CONTOSO-FC1**. This cmdlet
 uses the **Microsoft.WindowsUpdatePlugin** plug-in with the default configuration, and the
 **Microsoft.HotfixPlugin** plug-in using the hotfix root folder `\\CauHotfixSrv\shareName` and the
 default hotfix configuration file. If it isn't already enabled, the **Remote Shutdown** Windows
@@ -121,7 +121,7 @@ Invoke-CauRun -ClusterName "CONTOSO-FC1"-ForceRecovery -Force
 ```
 
 This command recovers from a previous updating run that failed and left the cluster in a Locked
-state for the cluster named `CONTOSO-FC1`. Because the command specifies the **Force** parameter,
+state for the cluster named **CONTOSO-FC1**. Because the command specifies the **Force** parameter,
 the recovery is performed without confirmation prompts.
 
 ## PARAMETERS

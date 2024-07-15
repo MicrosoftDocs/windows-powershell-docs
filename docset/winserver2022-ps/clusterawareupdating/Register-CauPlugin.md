@@ -39,7 +39,7 @@ Services (WSUS) server. For more information about how plug-ins work in CAU, see
 Register-CauPlugin -Path "C:\PluginDevelopment\Plugin01.dll" -Force
 ```
 
-The command registers a plug-in called Plugin01.dll located in the C:\PluginDevelopment folder.
+The command registers a plug-in called **Plugin01.dll** located in the `C:\PluginDevelopment` folder.
 Because the command specifies the **Force** parameter, the cmdlet runs without displaying
 confirmation prompts.
 

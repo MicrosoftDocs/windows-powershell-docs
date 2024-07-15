@@ -70,8 +70,8 @@ to a cluster, the failover cluster can update itself on the schedule that is spe
 without requiring an external computer to coordinate the cluster updating process.
 
 To run this cmdlet, Windows PowerShell® remoting must be enabled on each node. To do this, run the
-`Enable-PSRemoting` cmdlet. In addition, ensure that the Windows Remote Management - Compatibility
-Mode (HTTP-In) firewall exception is enabled on each node.
+`Enable-PSRemoting` cmdlet. In addition, ensure that the **Windows Remote Management - Compatibility
+Mode (HTTP-In)** firewall exception is enabled on each node.
 
 ## EXAMPLES
 
@@ -94,14 +94,14 @@ $parameters = @{
 Add-CauClusterRole @parameters
 ```
 
-This command adds the CAU clustered role, using a default name, on the cluster called CONTOSO-FC1.
-The CAU clustered role is configured to perform Updating Runs on Tuesdays and Saturdays on the
-second and fourth weeks of each month. In an Updating Run, the maximum number of failed nodes is two
-and the maximum number of retries per node is two. A script called verifyupdatesinstalled.ps1 runs
-on each node after it has been fully updated. Before an Updating Run can begin, all the nodes of
-that cluster must be running. If it isn't already enabled, the Remote Shutdown Windows Firewall
-rule group will be enabled on each cluster node. Because the command uses the **Force** parameter, the
-cmdlet runs without displaying confirmation prompts.
+This command adds the CAU clustered role, using a default name, on the cluster called
+**CONTOSO-FC1**. The CAU clustered role is configured to perform Updating Runs on Tuesdays and
+Saturdays on the second and fourth weeks of each month. In an Updating Run, the maximum number of
+failed nodes is two and the maximum number of retries per node is two. A script called
+`verifyupdatesinstalled.ps1` runs on each node after it has been fully updated. Before an Updating
+Run can begin, all the nodes of that cluster must be running. If it isn't already enabled, the
+Remote Shutdown Windows Firewall rule group will be enabled on each cluster node. Because the
+command uses the **Force** parameter, the cmdlet runs without displaying confirmation prompts.
 
 This example uses splatting to pass parameter values from the `$parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
@@ -122,7 +122,7 @@ $parameters = @{
 Add-CauClusterRole @parameters
 ```
 
-This command adds the CAU clustered role, using a default name, on the cluster called CONTOSO-FC1.
+This command adds the CAU clustered role, using a default name, on the cluster called **CONTOSO-FC1**.
 The CAU clustered role is configured to perform Updating Runs on Tuesdays and Saturdays at an
 interval of every three weeks. In an Updating Run, the maximum number of failed nodes is two and the
 maximum number of retries per node is two. Updating Runs can begin even when the nodes of the
@@ -150,7 +150,7 @@ $parameters = @{
 Add-CauClusterRole @parameters
 ```
 
-This command adds the CAU clustered role, using a default name, on the cluster called CONTOSO-FC1.
+This command adds the CAU clustered role, using a default name, on the cluster called **CONTOSO-FC1**.
 The CAU clustered role is configured to perform updates using the **Microsoft.WindowsUpdatePlugin**
 plug-in with the optional **IncludeRecommendedUpdates** parameter set to True, and using the
 **Microsoft.HotfixPlugin plug-in** using the hotfix root folder `\\CauHotfixSrv\shareName` and the
@@ -187,10 +187,10 @@ Accept wildcard characters: False
 ### -CauPluginArguments
 
 Specifies an array of name=value pairs (arguments) for each updating plug-in to use.
-For instance, to specify a Domain argument for one plug-in: 
+For instance, to specify a Domain argument for one plug-in:
 - `@{Domain=Domain.local}`
 You can specify multiple pairs in a set separated with semicolons.
-For instance: 
+For instance:
 - `@{name1=value1;name2=value2;name3=value3}` These name=value pairs must be meaningful to the
   **CauPluginName** parameter that you specify. If you specify arguments for more than one plug-in,
   provide the sets of name=value pairs in the order that you pass values in **CauPluginName**,
@@ -198,7 +198,7 @@ For instance:
 - `@{name1=value1;name2=value2;name3=value3},@{name4=value4;name5=value5}`
 
 For the default **Microsoft.WindowsUpdatePlugin** plug-in, no arguments are needed.
-The following arguments are optional: 
+The following arguments are optional:
 - **'IncludeRecommendedUpdates'='\<Value\>'**: Boolean value to indicate that recommended updates
   will be applied in addition to important updates on each node. If not specified, the default value
   is False.
@@ -209,14 +209,14 @@ The following arguments are optional:
 - `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"` For more
   information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in and the
   criteria such as IsInstalled that can be included in the query strings, see
-  [IUpdateSearcher::Search method](https://go.microsoft.com/fwlink/p/?LinkId=223304).
+  [IUpdateSearcher::Search method](/windows/win32/api/wuapi/nf-wuapi-iupdatesearcher-search).
 
 For the **Microsoft.HotfixPlugin** plug-in.
-the following argument is required: 
+the following argument is required:
 - **HotfixRootFolderPath=\<Path\>**: The UNC path to a hotfix root folder in an SMB share with a
   structure that contains the updates to apply and that contains the hotfix configuration file
 
-The following arguments are optional for the **Microsoft.HotfixPlugin** plug-in: 
+The following arguments are optional for the **Microsoft.HotfixPlugin** plug-in:
 - **RequireSmbEncryption=\<Value\>**: Boolean value to indicate that SMB Encryption will be enforced
   for accessing data from the SMB share. If not specified, the default value is False. To ensure the
   integrity of the data accessed from the SMB share, the plug-in requires that the share is enabled
@@ -246,10 +246,11 @@ Accept wildcard characters: False
 ### -CauPluginName
 
 Specifies one or more plug-ins to use when performing scans or updates. You can specify multiple
-values separated with commas. The default is the Microsoft.WindowsUpdatePlugin plug-in. This plug-in
-coordinates the Windows Update Agent software resident on each cluster node, the same software that
-is used when updates are downloaded from Windows Update or Microsoft Update, or from a Windows
-Server Update Services (WSUS) server. For more information about how plug-ins work with CAU, see
+values separated with commas. The default is the **Microsoft.WindowsUpdatePlugin** plug-in. This
+plug-in coordinates the Windows Update Agent software resident on each cluster node, the same
+software that is used when updates are downloaded from Windows Update or Microsoft Update, or from
+a Windows Server Update Services (WSUS) server. For more information about how plug-ins work with
+CAU, see
 [How CAU Plug-ins Work](/windows-server/failover-clustering/cluster-aware-updating-plug-ins).
 
 ```yaml
@@ -298,22 +299,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -916,6 +901,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

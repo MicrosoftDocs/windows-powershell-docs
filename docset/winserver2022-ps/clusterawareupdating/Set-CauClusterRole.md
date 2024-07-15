@@ -102,7 +102,7 @@ $parameters = @{
 Set-CauClusterRole $parameters
 ```
 
-This command configures settings for the CAU clustered role on the cluster named `CONTOSO-FC1`. The
+This command configures settings for the CAU clustered role on the cluster named **CONTOSO-FC1**. The
 CAU clustered role is configured to perform updating runs on Tuesdays on the first and second weeks
 of each month. The CAU clustered role allows 10 minutes for the restarting of each node, if a
 restart is necessary. If the restart doesn't complete within this time, then the updating run on
@@ -139,7 +139,7 @@ DaysOfWeek                                                  Tuesday
 WeeksInterval                                               2
 ```
 
-This command configures settings for the CAU clustered role on the cluster named `CONTOSO-FC1`. The
+This command configures settings for the CAU clustered role on the cluster named **CONTOSO-FC1**. The
 CAU clustered role is configured to perform updating runs on Tuesdays on the second week of each
 month. The CAU clustered role allows 10 minutes for the restarting of each node, if a restart is
 necessary. If the restart doesn't complete within this time, then the updating run on that node is
@@ -158,7 +158,7 @@ Set-CauClusterRole -ClusterName "CONTOSO-FC1" -UpdateNow -Force
 ```
 
 This command causes the CAU clustered role to initiate an updating run immediately on the cluster
-named `CONTOSO-FC1`. Because the command specifies the **Force** parameter, the cmdlet runs without
+named **CONTOSO-FC1**. Because the command specifies the **Force** parameter, the cmdlet runs without
 displaying confirmation prompts
 
 ### Example 4: Configure settings for a CAU cluster role on the specified cluster
@@ -176,7 +176,7 @@ $parameters = @{
 Set-CauClusterRole @parameters
 ```
 
-This example configures settings for the CAU clustered role on the cluster named `CONTOSO-FC1`. Time
+This example configures settings for the CAU clustered role on the cluster named **CONTOSO-FC1**. Time
 spans are specified for logging a warning or canceling the updating run if it isn't completed. The
 earliest date that an updating run can be triggered is 1/1/2012. Because the command specifies the
 **Force** parameter, the cmdlet runs without displaying confirmation prompts.

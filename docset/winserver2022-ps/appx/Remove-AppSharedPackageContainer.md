@@ -1,8 +1,10 @@
 ---
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 Module Name: appx
+ms.date: 05/15/2023
 online version: https://learn.microsoft.com/powershell/module/appx/remove-appsharedpackagecontainer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Remove-AppSharedPackageContainer
 ---
 
 # Remove-AppSharedPackageContainer
@@ -13,28 +15,32 @@ Removes the shared package container.
 ## SYNTAX
 
 ```
-Remove-AppSharedPackageContainer [-Name] <String> [-ForceApplicationShutdown] [-AllUsers] [<CommonParameters>]
+Remove-AppSharedPackageContainer [-Name] <String> [-ForceApplicationShutdown] [-AllUsers]
+ [<CommonParameters>]
 ```
 
-## DESCRIPTION 
+## DESCRIPTION
+
 The cmdlet removes the shared package container definition for the particular user.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> Remove-AppSharedPackageContainer -Name ContosoTestContainer
+Remove-AppSharedPackageContainer -Name ContosoTestContainer
 ```
 
-This command removes the shared package container definition with the name ContosoTestContainer.
+This command removes the shared package container definition with the name `ContosoTestContainer`.
 
 ## PARAMETERS
 
 ### -AllUsers
-Unsupported. Will result in "-AllUsers functionality is not yet implemented" error.
+
+Unsupported. Will result in `-AllUsers functionality is not yet implemented` error.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -46,10 +52,11 @@ Accept wildcard characters: False
 ```
 
 ### -ForceApplicationShutdown
+
 Closes all packages in the Shared Package Container.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -61,6 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 The name of the container.
 
 ```yaml
@@ -76,7 +84,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -85,6 +97,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

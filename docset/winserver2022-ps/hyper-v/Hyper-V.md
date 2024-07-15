@@ -5,7 +5,7 @@ Help Version: 5.0.2.1
 Locale: en-US
 Module Guid: af4bddd0-8583-4ff2-84b2-a33f5c8de8a7
 Module Name: Hyper-V
-ms.date: 12/20/2016
+ms.date: 06/12/2024
 title: Hyper-V
 ---
 # Hyper-V Module
@@ -16,17 +16,26 @@ This reference provides cmdlet descriptions and syntax for all Hyper-V-specific 
 
 ## Hyper-V Cmdlets
 
+### [Add-VMAssignableDevice](./Add-VMAssignableDevice.md)
+Adds an assignable device to a specific virtual machine.
+
 ### [Add-VMDvdDrive](./Add-VMDvdDrive.md)
 Adds a DVD drive to a virtual machine.
 
 ### [Add-VMFibreChannelHba](./Add-VMFibreChannelHba.md)
 Adds a virtual Fibre Channel host bus adapter to a virtual machine.
 
+### [Add-VMGpuPartitionAdapter](./Add-VMGpuPartitionAdapter.md)
+Adds a GPU partition adapter to a virtual machine.
+
 ### [Add-VMGroupMember](./Add-VMGroupMember.md)
 Adds group members to a virtual machine group.
 
 ### [Add-VMHardDiskDrive](./Add-VMHardDiskDrive.md)
 Adds a hard disk drive to a virtual machine.
+
+### [Add-VMHostAssignableDevice](./Add-VMHostAssignableDevice.md)
+Adds an assignable device to a virtual machine (VM) host.
 
 ### [Add-VMMigrationNetwork](./Add-VMMigrationNetwork.md)
 Adds a network for virtual machine migration on one or more virtual machine hosts.
@@ -121,6 +130,9 @@ Removes a host bus adapter from a virtual storage area network (SAN).
 ### [Dismount-VHD](./Dismount-VHD.md)
 Dismounts a virtual hard disk.
 
+### [Dismount-VMHostAssignableDevice](./Dismount-VMHostAssignableDevice.md)
+Dismounts a device from a virtual machine (VM) host.
+
 ### [Enable-VMConsoleSupport](./Enable-VMConsoleSupport.md)
 Enables keyboard, video, and mouse for virtual machines.
 
@@ -166,6 +178,9 @@ Gets information about a checkpoint in a VHD set.
 ### [Get-VM](./Get-VM.md)
 Gets the virtual machines from one or more Hyper-V hosts.
 
+### [Get-VMAssignableDevice](./Get-VMAssignableDevice.md)
+Retrieves information about the assignable device from a specific virtual machine.
+
 ### [Get-VMBios](./Get-VMBios.md)
 Gets the BIOS of a virtual machine or snapshot.
 
@@ -187,6 +202,9 @@ Gets the firmware configuration of a virtual machine.
 ### [Get-VMFloppyDiskDrive](./Get-VMFloppyDiskDrive.md)
 Gets the floppy disk drives of a virtual machine or snapshot.
 
+### [Get-VMGpuPartitionAdapter](./Get-VMGpuPartitionAdapter.md)
+Gets the information of assigned GPU partitions to a virtual machine.
+
 ### [Get-VMGroup](./Get-VMGroup.md)
 Gets virtual machine groups.
 
@@ -196,8 +214,14 @@ Gets the virtual hard disk drives attached to one or more virtual machines.
 ### [Get-VMHost](./Get-VMHost.md)
 Gets a Hyper-V host.
 
+### [Get-VMHostAssignableDevice](./Get-VMHostAssignableDevice.md)
+Retrieves device information assigned to a virtual machine (VM) host.
+
 ### [Get-VMHostCluster](./Get-VMHostCluster.md)
 Gets virtual machine host clusters.
+
+### [Get-VMHostPartitionableGpu](./Get-VMHostPartitionableGpu.md)
+Gets the host machine's partitionable GPU.
 
 ### [Get-VMHostNumaNode](./Get-VMHostNumaNode.md)
 Gets the NUMA topology of a virtual machine host.
@@ -242,7 +266,6 @@ Gets isolation settings for a virtual network adapter.
 Gets members of a routing domain.
 
 ### [Get-VMNetworkAdapterTeamMapping](./Get-VMNetworkAdapterTeamMapping.md)
-
 
 ### [Get-VMNetworkAdapterVlan](./Get-VMNetworkAdapterVlan.md)
 Gets the virtual LAN settings configured on a virtual network adapter.
@@ -340,6 +363,9 @@ Merges virtual hard disks.
 ### [Mount-VHD](./Mount-VHD.md)
 Mounts one or more virtual hard disks.
 
+### [Mount-VMHostAssignableDevice](./Mount-VMHostAssignableDevice.md)
+Mounts a device to a virtual machine (VM) host.
+
 ### [Move-VM](./Move-VM.md)
 Moves a virtual machine to a new Hyper-V host.
 
@@ -382,11 +408,17 @@ Removes a checkpoint from a VHD set file.
 ### [Remove-VM](./Remove-VM.md)
 Deletes a virtual machine.
 
+### [Remove-VMAssignableDevice](./Remove-VMAssignableDevice.md)
+Removes information about the assignable devices from a specific virtual machine.
+
 ### [Remove-VMDvdDrive](./Remove-VMDvdDrive.md)
 Deletes a DVD drive from a virtual machine.
 
 ### [Remove-VMFibreChannelHba](./Remove-VMFibreChannelHba.md)
 Removes a Fibre Channel host bus adapter from a virtual machine.
+
+### [Remove-VMGpuPartitionAdapter](./Remove-VMGpuPartitionAdapter.md)
+Removes an assigned GPU partition from a virtual machine.
 
 ### [Remove-VMGroup](./Remove-VMGroup.md)
 Removes a virtual machine group.
@@ -396,6 +428,9 @@ Removes members from a virtual machine group.
 
 ### [Remove-VMHardDiskDrive](./Remove-VMHardDiskDrive.md)
 Deletes a hard disk drive from a virtual machine.
+
+### [Remove-VMHostAssignableDevice](./Remove-VMHostAssignableDevice.md)
+Removes a device assigned to a virtual machine (VM) host.
 
 ### [Remove-VMMigrationNetwork](./Remove-VMMigrationNetwork.md)
 Removes a network from use with migration.
@@ -413,7 +448,6 @@ Removes an extended ACL for a virtual network adapter.
 Removes a routing domain from a virtual network adapter.
 
 ### [Remove-VMNetworkAdapterTeamMapping](./Remove-VMNetworkAdapterTeamMapping.md)
-
 
 ### [Remove-VMRemoteFx3dVideoAdapter](./Remove-VMRemoteFx3dVideoAdapter.md)
 Removes a RemoteFX 3D video adapter from a virtual machine.
@@ -529,6 +563,9 @@ Sets the firmware configuration of a virtual machine.
 ### [Set-VMFloppyDiskDrive](./Set-VMFloppyDiskDrive.md)
 Configures a virtual floppy disk drive.
 
+### [Set-VMGpuPartitionAdapter](./Set-VMGpuPartitionAdapter.md)
+Assigns a partition of a GPU to a virtual machine.
+
 ### [Set-VMHardDiskDrive](./Set-VMHardDiskDrive.md)
 Configures a virtual hard disk.
 
@@ -537,6 +574,9 @@ Configures a Hyper-V host.
 
 ### [Set-VMHostCluster](./Set-VMHostCluster.md)
 Configures a virtual machine host cluster.
+
+### [Set-VMHostPartitionableGpu](./Set-VMHostPartitionableGpu.md)
+Configures a host partitionable GPU to the number of partitions supported by the manufacturer.
 
 ### [Set-VMKeyProtector](./Set-VMKeyProtector.md)
 Configures a key protector for a virtual machine.
@@ -560,7 +600,6 @@ Modifies isolation settings for a virtual network adapter.
 Sets virtual subnets on a routing domain.
 
 ### [Set-VMNetworkAdapterTeamMapping](./Set-VMNetworkAdapterTeamMapping.md)
-
 
 ### [Set-VMNetworkAdapterVlan](./Set-VMNetworkAdapterVlan.md)
 Configures the virtual LAN settings for the traffic through a virtual network adapter.

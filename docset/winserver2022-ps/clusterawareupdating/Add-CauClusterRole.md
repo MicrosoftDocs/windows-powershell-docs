@@ -229,7 +229,7 @@ The following arguments are optional for the **Microsoft.HotfixPlugin** plug-in:
 - **HotfixConfigFileName=\<name\>**: Name for the hotfix configuration file. If not specified, the
   default name DefaultHotfixConfigFile.xml is used. For more information about required and optional
   arguments for the **Microsoft.HotfixPlugin** plug-in, see
-  [How CAU Plug-ins Work](https://go.microsoft.com/fwlink/p/?LinkId=235333).
+  [How CAU Plug-ins Work](/windows-server/failover-clustering/cluster-aware-updating-plug-ins).
 
 ```yaml
 Type: Hashtable[]
@@ -631,13 +631,20 @@ Accept wildcard characters: False
 
 ### -RebootMode
 
-{{ Fill RebootMode Description }}
+Specifies the type of reboot to use for each node in the cluster during the update. The available
+values are:
+
+- `ClusProp`
+- `FullReboot`
+- `SoftReboot`
+- `PluginCustomReboot`
+- `OrchestratorDefault`
 
 ```yaml
 Type: RebootType
 Parameter Sets: (All)
 Aliases:
-Accepted values: ClusProp, FullReboot, SoftReboot
+Accepted values: ClusProp, FullReboot, SoftReboot, PluginCustomReboot, OrchestratorDefault
 
 Required: False
 Position: Named
@@ -682,7 +689,8 @@ Accept wildcard characters: False
 
 ### -RunOnce
 
-{{ Fill RunOnce Description }}
+Specifies that the CAU run should only be performed once, rather than on a recurring schedule. This
+can be useful if you only need to perform a one-time update of your cluster nodes.
 
 ```yaml
 Type: SwitchParameter
@@ -934,7 +942,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -948,13 +956,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CauClusterRole](./Disable-CauClusterRole.md)
+[Disable-CauClusterRole](disable-cauclusterrole.md)
 
-[Enable-CauClusterRole](./Enable-CauClusterRole.md)
+[Enable-CauClusterRole](enable-cauclusterrole.md)
 
-[Get-CauClusterRole](./Get-CauClusterRole.md)
+[Get-CauClusterRole](get-cauclusterrole.md)
 
-[Remove-CauClusterRole](./Remove-CauClusterRole.md)
+[Remove-CauClusterRole](remove-cauclusterrole.md)
 
-[Set-CauClusterRole](./Set-CauClusterRole.md)
-
+[Set-CauClusterRole](set-cauclusterrole.md)

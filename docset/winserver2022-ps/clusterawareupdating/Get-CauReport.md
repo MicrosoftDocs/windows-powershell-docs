@@ -40,8 +40,8 @@ Get-CauReport [[-ClusterName] <String>] [-Last] [-Detailed] [-Credential <PSCred
 ### SpecificReportParamSet
 
 ```
-Get-CauReport [[-ClusterName] <String>] [-Report <CauReportSummary>] [-Credential <PSCredential>]
- [<CommonParameters>]
+Get-CauReport [[-ClusterName] <String>] [-Report <CauReportSummary>]
+ [-Credential <PSCredential>]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,8 +62,8 @@ Updating (CAU) report summary object.
 Get-CauReport -ClusterName Contoso-FC1 -StartDate 01/01/2012 -Detailed
 ```
 
-This command gets a detailed list of the updating runs performed on the cluster named Contoso-FC1 on
-01/01/2012 or later.
+This command gets a detailed list of the updating runs performed on the cluster named `Contoso-FC1`
+on 01/01/2012 or later.
 
 ### Example 2: Get a detailed list of updating runs from a date span from the specified cluster
 
@@ -71,7 +71,7 @@ This command gets a detailed list of the updating runs performed on the cluster 
 Get-CauReport -ClusterName "Contoso-FC1" -StartDate 01/01/2012 -EndDate 04/01/2012 -Detailed
 ```
 
-This command gets a detailed list of the updating runs performed on the cluster called Contoso-FC1
+This command gets a detailed list of the updating runs performed on the cluster called `Contoso-FC1`
 starting with updating runs on 01/01/2012 and ending with updating runs on 04/01/2012.
 
 ### Example 3: Get the last updating run summary from the specified cluster
@@ -81,7 +81,7 @@ $CauReportSummary = Get-CauReport "Contoso-FC1" -Last
 Get-CauReport "Contoso-FC1" -Report $CauReportSummary
 ```
 
-The first command gets the last updating run report summary from the cluster named Contoso-FC1 and
+The first command gets the last updating run report summary from the cluster named `Contoso-FC1` and
 stores the result in the variable named `$CauReportSummary`.
 
 The second command gets the detailed report from the information stored in the `$CauReportSummary`
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -224,5 +224,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-CauReport](./Export-CauReport.md)
-
+[Export-CauReport](export-caureport.md)

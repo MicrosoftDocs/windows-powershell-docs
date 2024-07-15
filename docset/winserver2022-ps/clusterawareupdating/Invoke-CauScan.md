@@ -17,9 +17,10 @@ updates that are applied to each node in a specified cluster.
 ## SYNTAX
 
 ```
-Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>] [[-Credential] <PSCredential>]
- [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially] [-StopOnPluginFailure]
- [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>] [<CommonParameters>]
+Invoke-CauScan [[-ClusterName] <String>] [[-CauPluginName] <String[]>]
+ [[-Credential] <PSCredential>] [-CauPluginArguments <Hashtable[]>] [-RunPluginsSerially]
+ [-StopOnPluginFailure] [-OsRollingUpgrade] [-AttemptSoftReboot] [-RebootMode <RebootType>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +44,7 @@ Invoke-CauScan -ClusterName "CONTOSO-FC1" -CauPluginName "Microsoft.WindowsUpdat
 ```
 
 This command gets a detailed list of the initial set of updates that would currently be applied to
-each node in the cluster named CONTOSO-FC1. The list is based on the updates that would be applied
+each node in the cluster named `CONTOSO-FC1`. The list is based on the updates that would be applied
 by the **Microsoft.WindowsUpdatePlugin** plug-in, which is the default plug-in. The preview list
 includes only an initial set of updates, and doesn't include updates that might become applicable
 only after the initial updates are installed.
@@ -67,11 +68,11 @@ Invoke-CauScan $parameters -Credential $Cred
 ```
 
 This example gets a detailed list of the initial set of updates that would currently be applied to
-each node in the cluster named CONTOSO-FC1. The list is based on the updates that would be applied
+each node in the cluster named `CONTOSO-FC1`. The list is based on the updates that would be applied
 by the **Microsoft.WindowsUpdatePlugin** plug-in, using a specified query string, and the
 **Microsoft.HotfixPlugin**, after the necessary hotfixes and the hotfix configuration file have been
 downloaded to `\\CauHotfixSrv\shareName`. This example also shows how to pass the administrative
-credentials for cluster CONTOSO-FC1 to the cmdlet.
+credentials for cluster `CONTOSO-FC1` to the cmdlet.
 
 This example uses splatting to pass parameter values from the `$parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
@@ -100,19 +101,23 @@ Accept wildcard characters: False
 ### -CauPluginArguments
 
 Specifies a set of name=value pairs for each updating plug-in to use.
-For instance, to specify a **Domain** argument for one plug-in: 
+For instance, to specify a **Domain** argument for one plug-in:
+
 - `@{Domain=Domain.local}`
 You can specify multiple pairs in a set separated with semicolons.
-For instance: 
+For instance:
+
 - `@{name1=value1;name2=value2;name3=value3}` These name=value pairs must be meaningful to the
   **CauPluginName** parameter that you specify. If you specify arguments for more than one plug-in,
   provide the sets of name=value pairs in the order that you pass values into the **CauPluginName**
   parameter, separated by commas. For instance:
+
 - `@{name1=value1;name2=value2;name3=value3},@{name4=value4;name5=value5}`
 
 For the default **Microsoft.WindowsUpdatePlugin** plug-in, no arguments are needed.
 
-The following arguments are optional: 
+The following arguments are optional:
+
 - **'IncludeRecommendedUpdates'='\<Value\>'**: Boolean value to indicate that recommended updates
   will be applied in addition to important updates on each node. If not specified, the default value
   is False.
@@ -124,14 +129,13 @@ The following arguments are optional:
 
 For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in
 and the criteria such as IsInstalled that can be included in the query strings, see
-[IUpdateSearcher::Search method](https://go.microsoft.com/fwlink/p/?LinkId=223304).
+[IUpdateSearcher::Search method](/windows/win32/api/wuapi/nf-wuapi-iupdatesearcher-search).
 
-For the **Microsoft.HotfixPlugin** plug-in.
-the following argument is required: 
+For the **Microsoft.HotfixPlugin** plug-in, the following argument is required:
 - **HotfixRootFolderPath=\<Path\>**: The UNC path to a hotfix root folder in an SMB share with a
-  structure that contains the updates to apply and that contains the hotfix configuration file
+  structure that contains the updates to apply and that contains the hotfix configuration file.
 
-The following arguments are optional for the **Microsoft.HotfixPlugin** plug-in: 
+The following arguments are optional for the **Microsoft.HotfixPlugin** plug-in:
 - **RequireSmbEncryption=\<Value\>**: Boolean value to indicate that SMB Encryption will be enforced
   for accessing data from the SMB share. If not specified, the default value is False. To ensure the
   integrity of the data accessed from the SMB share, the plug-in requires that the share is enabled
@@ -142,10 +146,10 @@ The following arguments are optional for the **Microsoft.HotfixPlugin** plug-in:
 - **HotfixInstallerTimeoutMinutes=\<Integer\>**: The length of time in minutes that the plug-in
   allows the hotfix installer process to return. If not specified, the default value is 30 minutes.
 - **HotfixConfigFileName=\<name\>**: Name for the hotfix configuration file. If not specified, the
-  default name DefaultHotfixConfig.xml is used.
+  default name `DefaultHotfixConfig.xml` is used.
 
 For more information about required and optional arguments for the **Microsoft.HotfixPlugin**
-plug-in, see [How CAU Plug-ins Work](https://go.microsoft.com/fwlink/p/?LinkId=235333).
+plug-in, see [How CAU Plug-ins Work](/windows-server/failover-clustering/cluster-aware-updating-plug-ins).
 
 ```yaml
 Type: Hashtable[]
@@ -169,7 +173,7 @@ Server Update Services (WSUS) server.
 
 For more information about how plug-ins work with
 Cluster-Aware Updating (CAU), see
-[Cluster-Aware Updating plug-ins](https://go.microsoft.com/fwlink/p/?LinkId=235333).
+[Cluster-Aware Updating plug-ins](/windows-server/failover-clustering/cluster-aware-updating-plug-ins).
 
 ```yaml
 Type: String[]
@@ -219,7 +223,8 @@ Accept wildcard characters: False
 
 ### -OsRollingUpgrade
 
-Indicates that the CAU cluster role scans for upgrades to the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. 
+Indicates that the CAU cluster role scans for upgrades to the operating system of the cluster nodes
+without stopping the Hyper-V or the Scale-Out File Server workloads.
 
 ```yaml
 Type: SwitchParameter
@@ -235,13 +240,20 @@ Accept wildcard characters: False
 
 ### -RebootMode
 
-{{ Fill RebootMode Description }}
+Specifies the type of reboot to use for each node in the cluster during the update. The available
+values are:
+
+- `ClusProp`
+- `FullReboot`
+- `SoftReboot`
+- `PluginCustomReboot`
+- `OrchestratorDefault`
 
 ```yaml
 Type: RebootType
-Parameter Sets: (All)
+Parameter Sets: DefaultParamSet
 Aliases:
-Accepted values: ClusProp, FullReboot, SoftReboot
+Accepted values: ClusProp, FullReboot, SoftReboot, PluginCustomReboot, OrchestratorDefault
 
 Required: False
 Position: Named
@@ -256,9 +268,9 @@ Indicates that CAU scans each cluster node for applicable updates and stages the
 plug-in in the plug-in order passed into the **CauPluginName** parameter then multiple plug-ins are
 used during a scan for updates
 
-By default, CAU scans and stages the applicable updates for all plug-ins in parallel.
-This parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter.
-If a single plug-in is specified, a warning appears.
+By default, CAU scans and stages the applicable updates for all plug-ins in parallel. This
+parameter is valid only when multiple plug-ins are specified in the **CauPluginName** parameter. If
+a single plug-in is specified, a warning appears.
 
 ```yaml
 Type: SwitchParameter
@@ -298,7 +310,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -316,5 +328,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Invoke-CauRun](./Invoke-CauRun.md)
+[Add-CauClusterRole](add-cauclusterrole.md)
 
+[Get-CauRun](get-caurun.md)
+
+[Invoke-CauRun](invoke-caurun.md)
+
+[Stop-CauRun](stop-caurun.md)

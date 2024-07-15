@@ -38,8 +38,8 @@ Compatibility Mode (HTTP-In)** firewall exception is enabled on each node.
 Save-CauDebugTrace -ClusterName "CONTOSO-FC1" -FilePath "C:\temp\testrun.zip"
 ```
 
-This command saves the debug tracing information for the cluster named CONTOSO-FC1, to a trace file
-called `testrun.zip` in the `C:\temp` folder.
+This command saves the debug tracing information for the cluster named `CONTOSO-FC1`, to a trace
+file called `testrun.zip` in the `C:\temp` folder.
 
 ## PARAMETERS
 
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -163,5 +163,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Invoke-CauRun](./Invoke-CauRun.md)
-
+[Invoke-CauRun](invoke-caurun.md)

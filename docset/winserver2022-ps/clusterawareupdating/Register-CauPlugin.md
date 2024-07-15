@@ -29,7 +29,7 @@ because CAU uses the **Microsoft.WindowsUpdatePlugin** plug-in by default. This 
 with the Windows Update Agent software resident on each node, the same software that is used when
 updates are downloaded from Windows Update or Microsoft Update, or from a Windows Server Update
 Services (WSUS) server. For more information about how plug-ins work in CAU, see
-[How CAU Plug-ins Work](https://go.microsoft.com/fwlink/p/?LinkId=235333).
+[How CAU Plug-ins Work](/windows-server/failover-clustering/cluster-aware-updating-plug-ins).
 
 ## EXAMPLES
 
@@ -39,27 +39,11 @@ Services (WSUS) server. For more information about how plug-ins work in CAU, see
 Register-CauPlugin -Path "C:\PluginDevelopment\Plugin01.dll" -Force
 ```
 
-The command registers a plug-in called Plugin01.dll located in the C:\PluginDevelopment folder.
-Because the command specifies the **Force** parameter, the cmdlet runs without displaying confirmation
-prompts.
+The command registers a plug-in called **Plugin01.dll** located in the `C:\PluginDevelopment` folder.
+Because the command specifies the **Force** parameter, the cmdlet runs without displaying
+confirmation prompts.
 
 ## PARAMETERS
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Path
 
@@ -75,6 +59,22 @@ Aliases:
 Required: True
 Position: 0
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -115,7 +115,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CauPlugin](./Get-CauPlugin.md)
+[Get-CauPlugin](get-cauplugin.md)
 
-[Unregister-CauPlugin](./Unregister-CauPlugin.md)
-
+[Unregister-CauPlugin](unregister-cauplugin.md)

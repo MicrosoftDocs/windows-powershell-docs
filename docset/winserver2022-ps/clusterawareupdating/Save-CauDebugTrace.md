@@ -17,7 +17,7 @@ Saves CAU debug tracing information to a local zip file.
 
 ```
 Save-CauDebugTrace [[-ClusterName] <String>] [[-FilePath] <String>] [-Credential <PSCredential>]
- [-RunId <Guid>] [-Force] [<CommonParameters>]
+ [-RunId <Guid>] [-Force] [-FeatureUpdateLogs <FeatureUpdateLogs>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,8 +38,8 @@ Compatibility Mode (HTTP-In)** firewall exception is enabled on each node.
 Save-CauDebugTrace -ClusterName "CONTOSO-FC1" -FilePath "C:\temp\testrun.zip"
 ```
 
-This command saves the debug tracing information for the cluster named CONTOSO-FC1, to a trace file
-called `testrun.zip` in the `C:\temp` folder.
+This command saves the debug tracing information for the cluster named **CONTOSO-FC1**, to a trace
+file called `testrun.zip` in the `C:\temp` folder.
 
 ## PARAMETERS
 
@@ -67,6 +67,22 @@ Specifies the administrative credentials for the target cluster.
 
 ```yaml
 Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FeatureUpdateLogs
+
+Specifies feature update logs.
+
+```yaml
+Type: FeatureUpdateLogs
 Parameter Sets: (All)
 Aliases: 
 
@@ -131,7 +147,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -139,11 +155,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### None
+### Microsoft.ClusterAwareUpdating.ActivityIdMap
+
+### System.IO.FileInfo
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Invoke-CauRun](./Invoke-CauRun.md)
-
+[Invoke-CauRun](invoke-caurun.md)

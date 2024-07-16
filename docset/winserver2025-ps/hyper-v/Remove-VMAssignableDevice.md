@@ -1,85 +1,70 @@
 ---
-description: Removes an assigned GPU partition from a virtual machine.
+description: Removes a device assigned to a virtual machine.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 06/12/2024
-online version: https://learn.microsoft.com/powershell/module/hyper-v/remove-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/remove-vmassignabledevice?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Remove-VMGpuPartitionAdapter
+title: Remove-VMAssignableDevice
 ---
 
-# Remove-VMGpuPartitionAdapter
+# Remove-VMAssignableDevice
 
 ## SYNOPSIS
-Removes an assigned GPU partition from a virtual machine.
+Removes information about the assignable devices from a specific virtual machine.
 
 ## SYNTAX
 
 ### VMName (Default)
 
 ```
-Remove-VMGpuPartitionAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>]
- [-Credential <PSCredential[]>] [-VMName] <String[]> [-Passthru] [-AdapterId <String>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### VMObject
-
-```
-Remove-VMGpuPartitionAdapter [-VM] <VirtualMachine[]> [-Passthru] [-AdapterId <String>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-VMAssignableDevice [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+ [-Credential <PSCredential[]>] [-VMName] <String[]> [-InstancePath <String>]
+ [-LocationPath <String>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Object
 
 ```
-Remove-VMGpuPartitionAdapter [-VMGpuPartitionAdapter] <VMGpuPartitionAdapter[]> [-Passthru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-VMAssignableDevice [-VMAssignableDevice] <VMAssignedDevice[]> [-Passthru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Remove-VMGpuPartitionAdapter` cmdlet removes an assigned graphic processing unit partition from
-a virtual machine and releases that partition back to the host GPU.
+The `Remove-VMAssignableDevice` cmdlet removes an assignable device from a specified virtual
+machine (VM). This is often used in scenarios where a physical device, such as a GPU or network
+adapter, was previously assigned to a VM and needs to be unassigned.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-$testvm = Get-VM "TestVM"
-Remove-VMGpuPartitionAdapter -VM $testvm
+$params = @{
+VMName = "MyVM"
+InstancePath = "PCIROOT(0)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)#PCI(1000)"
+}
+Remove-VMAssignableDevice $params
 ```
 
-This example removes a partition assigned to a specific VM object.
+This example removes a specific assignable device, identified by its instance path, from the
+virtual machine named **MyVM**.
 
 ### Example 2
 
 ```powershell
-$testvm = Get-VM "TestVM"
-$GPUpartition = Get-VMGpuPartitionAdapter -VM $testvm
-Remove-VMGpuPartitionAdapter -VM $testvm -AdapterId $GPUpartiton[0].id
+$params = @{
+VMName = "MyVM"
+}
+$vm = Get-VMAssignableDevice @params | Where-Object { $_.ResourcePoolName -eq "GpuChildPool" }
+$vm | Remove-VMAssignableDevice
 ```
 
-This example removes a specific partition object from a specific VM.
+This example removes a specific assignable device, identified by the ResourcePoolName property
+**GpuChildPool**, from the virtual machine named **MyVM**.
 
 ## PARAMETERS
-
-### -AdapterId
-
-This is a VM's GPU partition identification number used to remove a GPU from a VM.
-
-```yaml
-Type: String
-Parameter Sets: VMName, VMObject
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -CimSession
 
@@ -104,7 +89,7 @@ Accept wildcard characters: False
 
 Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS
 names, IP addresses, and fully qualified domain names are allowed. The default is the local
-computer.Use localhost or a dot (`.`) to specify the local computer explicitly.
+computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -135,6 +120,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InstancePath
+
+Removes the Device Instance path in the host machine.
+
+```yaml
+Type: String
+Parameter Sets: VMName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocationPath
+
+Specifies the location path to the assignable device.
+
+```yaml
+Type: String
+Parameter Sets: VMName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Passthru
 
 Returns an object for each process that the cmdlet started.
@@ -151,30 +168,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -VM
+### -VMAssignableDevice
 
-Specifies the virtual machine whose virtual network adapters are to be retrieved. The asterisk (`*`)
-is the wildcard. If it is specified the cmdlet returns virtual network adapters from every virtual
-machine in the system.
-
-```yaml
-Type: VirtualMachine[]
-Parameter Sets: VMObject
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -VMGpuPartitionAdapter
-
-GPU partition object obtained from `Get-VMGpuPartitionAdapter`.
+Specifies the assignable device object that you want to remove from the virtual machine. This is
+usually an object retrieved from a cmdlet like `Get-VMAssignableDevice`.
 
 ```yaml
-Type: VMGpuPartitionAdapter[]
+Type: VMAssignedDevice[]
 Parameter Sets: Object
 Aliases:
 
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 
 ### -VMName
 
-Specifies the name of the virtual machine whose network adapters are to be retrieved.
+Specifies the name of the virtual machine from which you want to remove the assignable device.
 
 ```yaml
 Type: String[]
@@ -242,20 +242,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.HyperV.PowerShell.VirtualMachine[]
-
-### Microsoft.HyperV.PowerShell.VMGpuPartitionAdapter[]
+### Microsoft.HyperV.PowerShell.VMAssignedDevice[]
 
 ## OUTPUTS
 
-### Microsoft.HyperV.PowerShell.VMGpuPartitionAdapter
+### Microsoft.HyperV.PowerShell.VMAssignedDevice
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Add-VMGpuPartitionAdapter](add-vmgpupartitionadapter.md)
+[Add-VMAssignableDevice](add-vmassignabledevice.md)
 
-[Get-VMGpuPartitionAdapter](get-vmgpupartitionadapter.md)
-
-[Set-VMGpuPartitionAdapter](set-vmgpupartitionadapter.md)
+[Get-VMAssignableDevice](get-vmassignabledevice.md)

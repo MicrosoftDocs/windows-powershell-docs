@@ -1,85 +1,56 @@
 ---
-description: Removes an assigned GPU partition from a virtual machine.
+description: Assigns a device to a virtual machine.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 06/12/2024
-online version: https://learn.microsoft.com/powershell/module/hyper-v/remove-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/add-vmassignabledevice?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Remove-VMGpuPartitionAdapter
+title: Add-VMAssignableDevice
 ---
 
-# Remove-VMGpuPartitionAdapter
+# Add-VMAssignableDevice
 
 ## SYNOPSIS
-Removes an assigned GPU partition from a virtual machine.
+Adds an assignable device to a specific virtual machine.
 
 ## SYNTAX
 
 ### VMName (Default)
 
 ```
-Remove-VMGpuPartitionAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>]
- [-Credential <PSCredential[]>] [-VMName] <String[]> [-Passthru] [-AdapterId <String>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Add-VMAssignableDevice [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+ [-Credential <PSCredential[]>] [-VMName] <String[]> [-InstancePath <String>]
+ [-LocationPath <String>] [-VirtualFunction <UInt16>] [-ResourcePoolName <String>] [-Passthru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### VMObject
 
 ```
-Remove-VMGpuPartitionAdapter [-VM] <VirtualMachine[]> [-Passthru] [-AdapterId <String>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### Object
-
-```
-Remove-VMGpuPartitionAdapter [-VMGpuPartitionAdapter] <VMGpuPartitionAdapter[]> [-Passthru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-VMAssignableDevice [-VM] <VirtualMachine[]> [-InstancePath <String>] [-LocationPath <String>]
+ [-VirtualFunction <UInt16>] [-ResourcePoolName <String>] [-Passthru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Remove-VMGpuPartitionAdapter` cmdlet removes an assigned graphic processing unit partition from
-a virtual machine and releases that partition back to the host GPU.
+The `Add-VMAssignableDevice` cmdlet assigns a physical device to a specified virtual machine (VM).
+This is commonly used for tasks such as attaching GPUs or network adapters directly to a VM to
+enhance performance for specific applications or workloads. The device can be specified through its
+instance path, location path, or assignable device object.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-$testvm = Get-VM "TestVM"
-Remove-VMGpuPartitionAdapter -VM $testvm
+Add-VMAssignableDevice -VMName "MyVM" -InstancePath "PCIROOT(0)#PCI(0300)#PCI(0000)"
 ```
 
-This example removes a partition assigned to a specific VM object.
-
-### Example 2
-
-```powershell
-$testvm = Get-VM "TestVM"
-$GPUpartition = Get-VMGpuPartitionAdapter -VM $testvm
-Remove-VMGpuPartitionAdapter -VM $testvm -AdapterId $GPUpartiton[0].id
-```
-
-This example removes a specific partition object from a specific VM.
+This example attaches a physical device, identified by its instance path, to the virtual machine
+named **MyVM**.
 
 ## PARAMETERS
-
-### -AdapterId
-
-This is a VM's GPU partition identification number used to remove a GPU from a VM.
-
-```yaml
-Type: String
-Parameter Sets: VMName, VMObject
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -CimSession
 
@@ -102,9 +73,9 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS
+Specifies one or more Hyper-V hosts on which the assignable devices are to be retrieved. NetBIOS
 names, IP addresses, and fully qualified domain names are allowed. The default is the local
-computer.Use localhost or a dot (`.`) to specify the local computer explicitly.
+computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -135,6 +106,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InstancePath
+
+Represents the Device Instance path in the host machine.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocationPath
+
+Specifies the location path to the assignable device
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Passthru
 
 Returns an object for each process that the cmdlet started.
@@ -151,11 +154,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ResourcePoolName
+
+Specifies the name of the resource pool to which the device is to be assigned.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VirtualFunction
+
+Specifies the number of the virtual function (VF) of an SR-IOV-capable network adapter assigned to
+the virtual machine.
+
+```yaml
+Type: UInt16
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -VM
 
-Specifies the virtual machine whose virtual network adapters are to be retrieved. The asterisk (`*`)
-is the wildcard. If it is specified the cmdlet returns virtual network adapters from every virtual
-machine in the system.
+Specifies the virtual machine to which the device is to be assigned.
 
 ```yaml
 Type: VirtualMachine[]
@@ -169,25 +203,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -VMGpuPartitionAdapter
-
-GPU partition object obtained from `Get-VMGpuPartitionAdapter`.
-
-```yaml
-Type: VMGpuPartitionAdapter[]
-Parameter Sets: Object
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -VMName
 
-Specifies the name of the virtual machine whose network adapters are to be retrieved.
+Specifies the name of the virtual machine to which the device is to be assigned.
 
 ```yaml
 Type: String[]
@@ -244,18 +262,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.HyperV.PowerShell.VirtualMachine[]
 
-### Microsoft.HyperV.PowerShell.VMGpuPartitionAdapter[]
-
 ## OUTPUTS
 
-### Microsoft.HyperV.PowerShell.VMGpuPartitionAdapter
+### Microsoft.HyperV.PowerShell.VMAssignedDevice
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Add-VMGpuPartitionAdapter](add-vmgpupartitionadapter.md)
+[Get-VMAssignableDevice](get-vmassignabledevice.md)
 
-[Get-VMGpuPartitionAdapter](get-vmgpupartitionadapter.md)
-
-[Set-VMGpuPartitionAdapter](set-vmgpupartitionadapter.md)
+[Remove-VMAssignableDevice](remove-vmassignabledevice.md)

@@ -209,4 +209,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Get-VMHostPartitionableGpu](get-vmhostpartitionablegpu.md)
+[Get-VMHostPartitionableGpu](get-vmhostpartitionablegpu.md)

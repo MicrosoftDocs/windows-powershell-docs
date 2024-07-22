@@ -159,4 +159,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Set-VMHostPartitionableGpu](set-vmhostpartitionablegpu.md)
+[Set-VMHostPartitionableGpu](set-vmhostpartitionablegpu.md)

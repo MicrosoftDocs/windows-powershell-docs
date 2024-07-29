@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceURL
-Specifies a URL for the directed discovery of a Web Services on Devices (WSD) printer to add to the specified computer.s
+Specifies a URL for the directed discovery of a Web Services on Devices (WSD) printer to add to the specified computers.
 
 ```yaml
 Type: String

@@ -21,7 +21,7 @@ Get-EnabledIntentName
 
 ## DESCRIPTION
 
-Gets the intent enabled for Accelerated Networking Management.
+Retrieves the enabled intent for Accelerated Networking Management.
 
 ## EXAMPLES
 

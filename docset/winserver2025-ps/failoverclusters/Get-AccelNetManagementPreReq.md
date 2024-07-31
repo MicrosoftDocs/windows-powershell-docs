@@ -38,7 +38,9 @@ This example checks if the cluster nodes support AccelNet for the intent named `
 
 ### -IntentName
 
-The intent name to be used for AccelNet Management.
+The intent name to be used for Accelerated Networking Management. This parameter is required.
+
+This value must be an integer greater than or equal to **0** and less than or equal to **99**.
 
 ```yaml
 Type: String

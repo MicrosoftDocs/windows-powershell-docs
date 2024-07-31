@@ -23,6 +23,9 @@ Disable-AccelNetManagement [<CommonParameters>]
 
 Disables Accelerated Networking Management cluster-wide. This doesn't turn off SR-IOV on VMs.
 
+Disabling this feature on the cluster won't change any configuration settings on the VMs. They will
+no longer be managed by Accelerated Networking or tracked by HUD.
+
 ## EXAMPLES
 
 ### EXAMPLE 1

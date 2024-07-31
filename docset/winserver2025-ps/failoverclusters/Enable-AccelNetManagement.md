@@ -41,7 +41,9 @@ there is an error, it will return `$false`.
 
 ### -IntentName
 
-The intent name to be used for Accelerated Networking Management.
+The intent name to be used for Accelerated Networking Management. This parameter is required.
+
+This value must be an integer greater than or equal to **0** and less than or equal to **99**.
 
 ```yaml
 Type: String
@@ -60,7 +62,7 @@ Accept wildcard characters: False
 The percentage of cluster nodes that can be down simultaneously while still maintaining enough
 virtual functions for each VM chosen for Accelerated Networking Management.
 
-If this parameter is left blank, a default of **50%** will be selected.
+If this parameter is left blank, a default of **50%** will be assigned.
 
 ```yaml
 Type: UInt32

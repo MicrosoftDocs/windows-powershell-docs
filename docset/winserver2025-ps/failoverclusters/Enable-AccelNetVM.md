@@ -38,7 +38,7 @@ named `MyVM`.
 
 ### -Performance
 
-Sets the performance level. Acceptable values are:
+Sets the performance level. This parameter is required. Acceptable values are:
 
 - `Low`
 - `Medium`
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 
 ### -VMName
 
-Specifies the name of the virtual machine.
+Specifies the name of the virtual machine. This parameter is required.
 
 ```yaml
 Type: String

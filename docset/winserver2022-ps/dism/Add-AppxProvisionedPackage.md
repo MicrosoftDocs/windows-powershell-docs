@@ -209,7 +209,7 @@ Specifies the location of the app package (.appx) to add to the Windows image.
 This package will be added for every new user account.
 To add an app package (.appx) for a particular user or to test a package while developing your app, use the **Add-AppxPackage** cmdlet instead.
 
-The *PackagePath* parameter is only supported for offline servicing when the technician computer is running a version of Windows that supports Windows 8 apps.
+When performing offline servicing, the *PackagePath* parameter is only supported if the technician computer is running a version of Windows that supports Windows 8 apps.
 
 ```yaml
 Type: String

@@ -161,6 +161,7 @@ This parameter removes the setting from the GPO, which results in the policy not
 
 The default setting when managing a computer is True.
 When managing a GPO, the default setting is NotConfigured.
+Note that this will only take effect if a GPO is targeted with -PolicyStore. If this is set locally it is not applied.
 
 ```yaml
 Type: GpoBoolean
@@ -186,6 +187,7 @@ This parameter removes the setting from the GPO, which results in the policy not
 
 The default setting when managing a computer is True.
 When managing a GPO, the default setting is NotConfigured.
+Note that this will only take effect if a GPO is targeted with -PolicyStore. If this is set locally it is not applied.
 
 ```yaml
 Type: GpoBoolean

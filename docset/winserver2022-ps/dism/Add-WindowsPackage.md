@@ -275,6 +275,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+**Checkpoint cumulative updates**
+
+Starting with Windows 11, version 24H2, the latest cumulative update may have a prerequisite cumulative update that is required to be installed first. These are known as checkpoint cumulative updates. In these cases, the cumulative update file level differentials are based on a previous cumulative update instead of the Windows RTM release. The benefit is a smaller update package and faster installation. When you obtain the latest cumulative update from the Microsoft Update Catalog, checkpoint cumulative updates will be available from the download button. In addition, the knowledge base article for the cumulative update will provide additional information.
+
+To install the checkpoint(s) when servicing the Windows OS and WinPE, call Add-WindowsPackage with the target cumulative update. The folder from -PackagePath will be used to discover and install one or more checkpoints as needed. Only the target cumulative update and checkpoint cumulative updates should be in the -PackagePath folder. Cumulative update packages with a revision <= the target cumulative update will be processed. If you are not customizing the image or device with additional languages and/or optional features, then separate calls to Add-WindowsPackage (checkpoint cumulative updates first) can be used to apply the servicing stack dynamic update and the latest cumulative updates.
+
 ## RELATED LINKS
 
 [Get-WindowsPackage](./Get-WindowsPackage.md)

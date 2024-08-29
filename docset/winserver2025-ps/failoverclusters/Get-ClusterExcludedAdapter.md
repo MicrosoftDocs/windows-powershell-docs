@@ -1,14 +1,17 @@
 ---
-external help file: ClusterExcludedAdapter.cdxml-help.xml
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-online version: https://go.microsoft.com/fwlink/?LinkId=615932
+ms.date: 08/28/2024
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterexcludedadapter?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Get-ClusterExcludedAdapter
 ---
 
 # Get-ClusterExcludedAdapter
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves a network adapter from the list of excluded adapters.
 
 ## SYNTAX
 
@@ -19,17 +22,21 @@ Get-ClusterExcludedAdapter -ExclusionType <AdapterExclusionType> [-CimSession <C
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The `Get-ClusterExcludedAdapter` cmdlet retrieves a network adapter from a list of network adapters
+that should be excluded from use by the Failover Cluster. By default, the cluster will use all
+available network adapters, but in some cases you may want to reserve certain adapters as backup or
+management, such as Dell iDRAC or HPE iLO.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-{{ Add example code here }}
+Get-ClusterExcludedAdapter -ExclusionType "FriendlyName" 
 ```
 
-{{ Add example description here }}
+This example retrieves a list of network adapters that have been excluded from use by the cluster
+based on the friendly name.
 
 ## PARAMETERS
 
@@ -79,9 +86,9 @@ Accept wildcard characters: False
 
 Specifies the type of exclusion to retrieve from the cluster. Acceptable values are:
 
-- `IPAddress`: Excludes a network adapter based on its IP address.
-- `NetworkName`: Excludes a network adapter based on its network name.
-- `SubnetMask`: Excludes a network adapter based on its subnet mask.
+- `IPPrefix`: Excludes a network adapter based on its IP address.
+- `Description`: Excludes a network adapter based on its description.
+- `FriendlyName`: Excludes a network adapter based on its friendly name.
 
 ```yaml
 Type: AdapterExclusionType
@@ -138,6 +145,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-ClusterExcludedAdapter](remove-clusterexcludedadapter.md)
 
-[Repair-ClusterExcludedAdapter](repair-clusterexcludedadapter.md)
+[Repair-ClusterNameAccount](repair-clusternameaccount.md)
 
 [Set-ClusterExcludedAdapter](set-clusterexcludedadapter.md)

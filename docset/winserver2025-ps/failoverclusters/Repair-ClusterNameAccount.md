@@ -1,14 +1,17 @@
 ---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-online version: https://go.microsoft.com/fwlink/?linkid=2204048
+ms.date: 08/28/2024
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/repair-clusternameaccount?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Repair-ClusterNameAccount
 ---
 
 # Repair-ClusterNameAccount
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Repairs the Cluster Name Account and ensures that the cluster continues to function properly.
 
 ## SYNTAX
 
@@ -28,17 +31,33 @@ Repair-ClusterNameAccount [-Credentials <PSCredential>] [-Domain <String>] [-Clu
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The `Repair-ClusterNameAccount` cmdlet repairs or updates the Cluster Name Account used for
+authentication and authorization on a Failover Cluster. The Cluster Name Account is used to create
+Highly Available applications or Virtual Computer Objects (VCOs) in the cluster.
+
+To learn more about cluster accounts in domain environments, see
+[Configuring cluster accounts in Active Directory](/windows-server/failover-clustering/configure-ad-accounts).
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-{{ Add example code here }}
+Repair-ClusterNameAccount -Cluster "Cluster01"
 ```
 
-{{ Add example description here }}
+This example repairs or updates the Cluster Name Account for the cluster named `Cluster01`.
+
+### Example 2
+
+```powershell
+$cred = Get-Credential
+Repair-ClusterNameAccount -Cluster "Cluster01" -Credentials $cred -Domain "contoso.com"
+```
+
+This example repairs or updates the Cluster Name Account for the cluster named `Cluster01` using
+the specified credentials and domain. The `Get-Credential` cmdlet is used to create a PSCredential
+object for the `-Credentials` parameter.
 
 ## PARAMETERS
 
@@ -78,7 +97,8 @@ Accept wildcard characters: False
 
 ### -Domain
 
-Specifies the name of the domain in which to repair the cluster name account.
+Specifies the name of the domain in which to repair the cluster name account. This should be the
+fully qualified domain name (FQDN) of the domain that the cluster is in.
 
 ```yaml
 Type: String

@@ -1,8 +1,11 @@
 ---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
-online version: https://go.microsoft.com/fwlink/?LinkId=691107
+ms.date: 09/11/2024
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-workgroupclusternode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Remove-WorkgroupClusterNode
 ---
 
 # Remove-WorkgroupClusterNode
@@ -217,4 +220,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-WorkgroupCluster](add-workgroupcluster.md)
 
+[Clear-ClusterNode](clear-clusternode.md)
+
+[New-WorkgroupCluster](new-workgroupcluster.md)
+
+[Remove-WorkgroupCluster](remove-workgroupcluster.md)
+
+[Set-WorkgroupClusterRemotingConfiguration](set-workgroupclusterremotingconfiguration.md)
+
+[Test-WorkgroupCluster](test-workgroupcluster.md)
+
+[Test-WorkgroupClusterRemoting](test-workgroupclusterremoting.md)

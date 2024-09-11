@@ -1,8 +1,11 @@
 ---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
-online version: https://go.microsoft.com/fwlink/?LinkId=691107
+ms.date: 09/11/2024
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/new-workgroupcluster?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: New-WorkgroupCluster
 ---
 
 # New-WorkgroupCluster
@@ -22,7 +25,7 @@ New-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [[-N
 
 ## DESCRIPTION
 
-The New-WorkgroupCluster function creates a new workgroup cluster.
+The `New-WorkgroupCluster` cmdlet creates a new workgroup cluster.
 
 ## EXAMPLES
 
@@ -89,6 +92,8 @@ Accept wildcard characters: False
 
 ### -StaticAddress
 
+Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
+are always included, but other networks need a static address to be specified using the
 **StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
@@ -268,4 +273,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-WorkgroupCluster](add-workgroupcluster.md)
 
+[Remove-WorkgroupCluster](remove-workgroupcluster.md)
+
+[Remove-WorkgroupClusterNode](remove-workgroupclusternode.md)
+
+[Set-WorkgroupClusterRemotingConfiguration](set-workgroupclusterremotingconfiguration.md)
+
+[Test-WorkgroupCluster](test-workgroupcluster.md)
+
+[Test-WorkgroupClusterRemoting](test-workgroupclusterremoting.md)

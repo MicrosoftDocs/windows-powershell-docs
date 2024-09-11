@@ -1,8 +1,11 @@
 ---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
-online version:
+ms.date: 09/11/2024
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-workgroupclusternode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Add-WorkgroupClusterNode
 ---
 
 # Add-WorkgroupClusterNode
@@ -166,4 +169,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-WorkgroupCluster](new-workgroupcluster.md)
 
+[Remove-WorkgroupCluster](remove-workgroupcluster.md)
+
+[Remove-WorkgroupClusterNode](remove-workgroupclusternode.md)
+
+[Set-WorkgroupClusterRemotingConfiguration](set-workgroupclusterremotingconfiguration.md)
+
+[Test-WorkgroupCluster](test-workgroupcluster.md)
+
+[Test-WorkgroupClusterRemoting](test-workgroupclusterremoting.md)

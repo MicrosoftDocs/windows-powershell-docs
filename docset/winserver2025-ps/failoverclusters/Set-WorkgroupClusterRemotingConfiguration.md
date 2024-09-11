@@ -1,14 +1,17 @@
 ---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
-online version: https://go.microsoft.com/fwlink/?LinkId=691106
+ms.date: 09/11/2024
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/set-workgroupclusterremotingconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Set-WorkgroupClusterRemotingConfiguration
 ---
 
 # Set-WorkgroupClusterRemotingConfiguration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Configures the remote management settings for a failover cluster that is part of a workgroup.
 
 ## SYNTAX
 
@@ -18,17 +21,19 @@ Set-WorkgroupClusterRemotingConfiguration [<CommonParameters>]
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The `Set-WorkgroupClusterRemotingConfiguration` cmdlet configures the remote management settings for
+a failover cluster that is part of a workgroup.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-{{ Add example code here }}
+Set-WorkgroupClusterRemotingConfiguration -Verbose
 ```
 
-{{ Add example description here }}
+This example displays detailed information about the current workgroup cluster remoting
+configuration.
 
 ## PARAMETERS
 
@@ -51,4 +56,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-WorkgroupCluster](add-workgroupcluster.md)
 
+[New-WorkgroupCluster](new-workgroupcluster.md)
+
+[Remove-WorkgroupCluster](remove-workgroupcluster.md)
+
+[Remove-WorkgroupClusterNode](remove-workgroupclusternode.md)
+
+[Test-WorkgroupCluster](test-workgroupcluster.md)
+
+[Test-WorkgroupClusterRemoting](test-workgroupclusterremoting.md)

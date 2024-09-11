@@ -134,7 +134,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-WorkgroupCluster](add-workgroupcluster.md)
+[Add-WorkgroupClusterNode](add-workgroupclusternode.md)
 
 [New-WorkgroupCluster](new-workgroupcluster.md)
 

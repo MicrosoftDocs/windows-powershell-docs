@@ -804,15 +804,19 @@ The acceptable formats for this parameter are:
 
 - Single IPv4 Address: 1.2.3.4
 - Single IPv6 Address: fe80::1
-- IPv4 Subnet (by network bit count):  1.2.3.4/24
-- IPv6 Subnet (by network bit count):  fe80::1/48
-- IPv4 Subnet (by network mask):  1.2.3.4/255.255.255.0
+- IPv4 Subnet (by network bit count): 1.2.3.4/24
+- IPv6 Subnet (by network bit count): fe80::1/48
+- IPv4 Subnet (by network mask): 1.2.3.4/255.255.255.0
 - IPv4 Range: 1.2.3.4-1.2.3.7
 - IPv6 Range: fe80::1-fe80::9
-- Keyword: Any, LocalSubnet, DNS, DHCP, WINS, DefaultGateway, Internet, Intranet, IntranetRemoteAccess, PlayToDevice. NOTE: Keywords can be restricted to IPv4 or IPv6 by appending a 4 or 6 (for example, keyword "LocalSubnet4" means that all local IPv4 addresses are matching this rule).
+- Keyword: Any, LocalSubnet, DNS, DHCP, WINS, DefaultGateway, Internet, Intranet, IntranetRemoteAccess, PlayToDevice, CaptivePortal.
 
-Querying for rules with this parameter can only be performed using filter objects.
-See the Get-NetFirewallAddressFilter cmdlet for more information.
+> [!TIP]
+> Keywords can be restricted to IPv4 or IPv6 by appending a 4 or 6 (for example, keyword `LocalSubnet4` means that all local IPv4 addresses are matching this rule).
+
+> [!NOTE]
+> Querying for rules with this parameter can only be performed using filter objects.
+> See the [`Get-NetFirewallAddressFilter`](./Get-NetFirewallAddressFilter.md) cmdlet for more information.
 
 ```yaml
 Type: String[]

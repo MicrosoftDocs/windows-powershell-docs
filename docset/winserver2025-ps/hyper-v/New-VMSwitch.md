@@ -187,7 +187,7 @@ Allowed values are **Absolute**, **Default**, **None**, or **Weight**.
 If **Absolute** is specified, minimum bandwidth is bits per second.
 If **Weight** is specified, minimum bandwidth is a value ranging from 1 to 100.
 If **None** is specified, minimum bandwidth is disabled on the switch - that is, users cannot configure it on any network adapter connected to the switch.
-If **Default** is specified, the system will set the mode to **Weight**, if the switch is not IOV-enabled, or **None** if the switch is IOV-enabled.
+If **Default** is specified, the system will set the mode to **Absolute**, if the switch is not IOV-enabled, or **None** if the switch is IOV-enabled.
 
 ```yaml
 Type: VMSwitchBandwidthMode

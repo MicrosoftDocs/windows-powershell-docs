@@ -139,7 +139,7 @@ Specifies the device to use as the boot device for the new virtual machine. Acce
 - `VHD`
 
 When `LegacyNetworkAdapter` is specified, this configures the new virtual machine with a network
-adapter that can be used to perform a PXE boot and install an operating system from a network
+adapter that can be used to perform a PXE boot and install a 32-bit operating system from a network
 installation server.
 
 Generation 2 virtual machines do not support `Floppy`, `LegacyNetworkAdapter` or `IDE`. Using these
@@ -286,12 +286,14 @@ Accept wildcard characters: False
 
 ### -GuestStateIsolationType
 
-Specifies the level of security for the virtual machine being created. Acceptable values are:
+Specifies the level of isolation for the virtual machine being created. Acceptable values are:
 
-- `TrustedLaunch`: Enables Trusted Launch security feature for the virtual machine.
-- `VBS`: Enables Virtualization Based Security (VBS) for the virtual machine.
-- `SNP`: Enables System and Network Protection (SNP) for the virtual machine.
-- `TDX`: Enables Trusted Execution (TDX) for the virtual machine.
+- `TrustedLaunch`: Enables guest state isolation and Trusted Launch security features for the
+  virtual machine.
+- `VBS`: Enables Virtualization Based Security (VBS) isolation for the virtual machine.
+- `SNP`: Enables AMD Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP) isolation for
+  the virtual machine.
+- `TDX`: Enables Intel Trust Domain Extensions (TDX) isolation for the virtual machine.
 - `Disabled`: Disables all guest state isolation features for the virtual machine.
 
 ```yaml

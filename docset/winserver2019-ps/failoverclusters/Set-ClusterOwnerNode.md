@@ -31,14 +31,16 @@ The settings that control the possible or preferred owners affect the way the cl
 PS C:\> Get-ClusterResource -Name "Cluster Disk 3" | Set-ClusterOwnerNode -Owners node1,node2
 ```
 
-This example sets the possible owners for cluster named Cluster Disk 3 on the local cluster to the nodes named node1 and node2.
+This example sets the possible owners for the cluster resource named `Cluster Disk 3` on the local cluster to the
+nodes named `node1` and `node2`. The order of the owner nodes matters.
 
 ### Example 2
 ```
 PS C:\> Set-ClusterOwnerNode -Group cluster12FS -Owners node3,node2
 ```
 
-This example sets the preferred owners for the clustered service named cluster12FS to the node named node3 followed by the node named node2 on the local cluster.
+This example sets the preferred owners for the cluster group named `cluster12FS` to the node
+named `node3` followed by the node named `node2` on the local cluster. The order of the owner nodes does not matter.
 
 ## PARAMETERS
 

@@ -51,8 +51,8 @@ This command renames a network adapter from the current name of Ethernet to the 
 PS C:\> Rename-NetAdapter -Name "E*t" -NewName "ManagementAdapter"
 ```
 
-This command renames a network adapter from the current name, by matching the pattern e*t, to the new name ManagementAdapter.
-A typical match of e*t is the default name Ethernet.
+This command renames a network adapter from the current name, by matching the pattern e\*t, to the new name ManagementAdapter.
+A typical match of e\*t is the default name Ethernet.
 
 ## PARAMETERS
 

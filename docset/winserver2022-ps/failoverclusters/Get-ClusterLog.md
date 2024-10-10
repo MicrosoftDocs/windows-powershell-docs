@@ -17,7 +17,7 @@ Creates a log file for all nodes, or a specific a node, in a failover cluster.
 
 ```
 Get-ClusterLog [[-Node] <StringCollection>] [-Destination <String>] [-TimeSpan <UInt32>]
- [-UseLocalTime] [-SkipClusterState] [-Health] [-InputObject <PSObject>] [-Cluster <String>]
+ [-UseLocalTime] [-SkipClusterState] [-Health] [-Netft] [-InputObject <PSObject>] [-Cluster <String>]
  [<CommonParameters>]
 ```
 
@@ -99,7 +99,23 @@ Accept wildcard characters: False
 
 ### -Health
 
-Indicates that the cmdlet also logs the health information of the cluster.
+Indicates that the cmdlet retrieves the health information logs of the cluster.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Netft
+
+Indicates that the cmdlet retrieves the NetFT Virtual Network Adapter logs of the cluster.
 
 ```yaml
 Type: SwitchParameter

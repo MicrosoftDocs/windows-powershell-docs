@@ -15,57 +15,116 @@ Configures preferences for Windows Defender scans and updates.
 
 ## SYNTAX
 
-
 ```powershell
-Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
- [-ExclusionIpAddress <String[]>] [-RealTimeScanDirection <ScanDirection>]
- [-IntelTDTEnabled <UInt32>]
- [-QuarantinePurgeItemsAfterDelay <UInt32>] [-RemediationScheduleDay <Day>]
- [-RemediationScheduleTime <DateTime>] [-ReportingAdditionalActionTimeOut <UInt32>]
- [-ReportingCriticalFailureTimeOut <UInt32>] [-ReportingNonCriticalTimeOut <UInt32>]
- [-ScanAvgCPULoadFactor <Byte>] [-CheckForSignaturesBeforeRunningScan <Boolean>]
- [-ScanPurgeItemsAfterDelay <UInt32>] [-ScanOnlyIfIdleEnabled <Boolean>] [-ScanParameters <ScanType>]
- [-ScanScheduleDay <Day>] [-ScanScheduleQuickScanTime <DateTime>] [-ScanScheduleOffset <UInt32>]
- [-ScanScheduleTime <HH:MM:SS>]
- [-SignatureFirstAuGracePeriod <UInt32>] [-SignatureAuGracePeriod <UInt32>]
- [-SignatureDefinitionUpdateFileSharesSources <String>]
- [-SignatureDisableUpdateOnStartupWithoutEngine <Boolean>] [-SignatureFallbackOrder <String>]
- [-SharedSignaturesPath <String>] [-SignatureScheduleDay <Day>] [-SignatureScheduleTime <DateTime>]
- [-SignatureUpdateCatchupInterval <UInt32>] [-SignatureUpdateInterval <UInt32>]
- [-SignatureBlobUpdateInterval <UInt32>] [-SignatureBlobFileSharesSources <String>]
- [-MeteredConnectionUpdates <Boolean>] [-AllowNetworkProtectionOnWinServer <Boolean>]
- [-DisableDatagramProcessing <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>]
- [-MAPSReporting <MAPSReportingType>] [-SubmitSamplesConsent <SubmitSamplesConsentType>]
- [-DisableAutoExclusions <Boolean>] [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>]
- [-SchedulerRandomizationTime <UInt32>] [-DisableBehaviorMonitoring <Boolean>]
- [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>] [-DisableCacheMaintenance <UInt32>]
- [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableEmailScanning <Boolean>]
- [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
- [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
- [-DisableIOAVProtection <Boolean>] [-AllowSwitchToAsyncInspection <Boolean>]
- [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
- [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-UnknownThreatDefaultAction <ThreatAction>]
- [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
- [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
- [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>]
- [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>] [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>][-CloudBlockLevel <CloudBlockLevelType>][-ServiceHealthReportInterval <UInt32>]
- [-CloudBlockLevel <CloudBlockLevelType>] [-CloudExtendedTimeout <UInt32>]
- [-EnableNetworkProtection <ASRRuleActionType>] [-EnableControlledFolderAccess <ControlledFolderAccessType>]
- [-AttackSurfaceReductionOnlyExclusions <String[]>] [-ControlledFolderAccessAllowedApplications <String[]>]
- [-ControlledFolderAccessProtectedFolders <String[]>] [-AttackSurfaceReductionRules_Ids <String[]>]
- [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>] [-EnableLowCpuPriority <Boolean>]
- [-EnableFileHashComputation <Boolean>] [-EnableFullScanOnBatteryPower <Boolean>] [-ProxyPacUrl <String>]
- [-ProxyServer <String>] [-ProxyBypass <String[]>] [-ForceUseProxyOnly <Boolean>]
- [-OobeEnableRtpAndSigUpdate <Boolean>]
- [-DisableTlsParsing <Boolean>] [-DisableHttpParsing <Boolean>] [-DisableDnsParsing <Boolean>]
- [-DisableFtpParsing <Boolean>] [-DisableSmtpParsing <Boolean>]
- [-DisableDnsOverTcpParsing <Boolean>] [-DisableSshParsing <Boolean>]
+Set-MpPreference
+ [-AllowDatagramProcessingOnWinServer <Boolean>]
+ [-AllowNetworkProtectionDownLevel <Boolean>]
+ [-AllowNetworkProtectionOnWinServer <Boolean>]
+ [-AllowSwitchToAsyncInspection <Boolean>]
+ [-AsJob]
+ [-AttackSurfaceReductionOnlyExclusions <String[]>]
+ [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>]
+ [-AttackSurfaceReductionRules_Ids <String[]>]
+ [-CheckForSignaturesBeforeRunningScan <Boolean>]
+ [-CimSession <CimSession[]>]
+ [-CloudBlockLevel <CloudBlockLevelType>]
+ [-CloudExtendedTimeout <UInt32>]
+ [-ControlledFolderAccessAllowedApplications <String[]>]
+ [-ControlledFolderAccessProtectedFolders <String[]>]
+ [-DefinitionUpdatesChannel <UpdatesChannelType>]
+ [-DisableArchiveScanning <Boolean>]
+ [-DisableAutoExclusions <Boolean>]
+ [-DisableBehaviorMonitoring <Boolean>]
+ [-DisableBlockAtFirstSeen <Boolean>]
+ [-DisableCacheMaintenance <UInt32>]
+ [-DisableCatchupFullScan <Boolean>]
+ [-DisableCatchupQuickScan <Boolean>]
+ [-DisableCpuThrottleOnIdleScans <Boolean>]
+ [-DisableDatagramProcessing <Boolean>]
+ [-DisableDnsOverTcpParsing <Boolean>]
+ [-DisableDnsParsing <Boolean>]
+ [-DisableEmailScanning <Boolean>]
+ [-DisableFtpParsing <Boolean>]
+ [-DisableGradualRelease <Boolean>]
+ [-DisableHttpParsing <Boolean>]
+ [-DisableIOAVProtection <Boolean>]
+ [-DisableInboundConnectionFiltering <Boolean>]
  [-DisableNetworkProtectionPerfTelemetry <Boolean>]
- [-PlatformUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>]
- [-SignaturesUpdatesChannel <UpdatesChannelType>] [-DisableGradualRelease <Boolean>]
- [-AllowNetworkProtectionDownLevel <Boolean>] [-AllowDatagramProcessingOnWinServer <Boolean>]
- [-EnableDnsSinkhole <Boolean>] [-DisableInboundConnectionFiltering <Boolean>] [-DisableRdpParsing <Boolean>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-DisablePrivacyMode <Boolean>]
+ [-DisableRdpParsing <Boolean>]
+ [-DisableRealtimeMonitoring <Boolean>]
+ [-DisableRemovableDriveScanning <Boolean>]
+ [-DisableRestorePoint <Boolean>]
+ [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>]
+ [-DisableScanningNetworkFiles <Boolean>]
+ [-DisableScriptScanning <Boolean>]
+ [-DisableSmtpParsing <Boolean>]
+ [-DisableSshParsing <Boolean>]
+ [-DisableTlsParsing <Boolean>]
+ [-EnableControlledFolderAccess <ControlledFolderAccessType>]
+ [-EnableDnsSinkhole <Boolean>]
+ [-EnableFileHashComputation <Boolean>]
+ [-EnableFullScanOnBatteryPower <Boolean>]
+ [-EnableLowCpuPriority <Boolean>]
+ [-EnableNetworkProtection <ASRRuleActionType>]
+ [-EngineUpdatesChannel <UpdatesChannelType>]
+ [-ExclusionExtension <String[]>]
+ [-ExclusionIpAddress <String[]>]
+ [-ExclusionPath <String[]>]
+ [-ExclusionProcess <String[]>]
+ [-ForceUseProxyOnly <Boolean>]
+ [-Force]
+ [-HighThreatDefaultAction <ThreatAction>]
+ [-IntelTDTEnabled <UInt32>]
+ [-LowThreatDefaultAction <ThreatAction>]
+ [-MAPSReporting <MAPSReportingType>]
+ [-MeteredConnectionUpdates <Boolean>]
+ [-ModerateThreatDefaultAction <ThreatAction>]
+ [-OobeEnableRtpAndSigUpdate <Boolean>]
+ [-PUAProtection <PUAProtectionType>]
+ [-PlatformUpdatesChannel <UpdatesChannelType>]
+ [-ProxyBypass <String[]>]
+ [-ProxyPacUrl <String>]
+ [-ProxyServer <String>]
+ [-QuarantinePurgeItemsAfterDelay <UInt32>]
+ [-RandomizeScheduleTaskTimes <Boolean>]
+ [-RealTimeScanDirection <ScanDirection>]
+ [-RemediationScheduleDay <Day>]
+ [-RemediationScheduleTime <DateTime>]
+ [-ReportingAdditionalActionTimeOut <UInt32>]
+ [-ReportingCriticalFailureTimeOut <UInt32>]
+ [-ReportingNonCriticalTimeOut <UInt32>]
+ [-ScanAvgCPULoadFactor <Byte>]
+ [-ScanOnlyIfIdleEnabled <Boolean>]
+ [-ScanParameters <ScanType>]
+ [-ScanPurgeItemsAfterDelay <UInt32>]
+ [-ScanScheduleDay <Day>]
+ [-ScanScheduleOffset <UInt32>]
+ [-ScanScheduleQuickScanTime <DateTime>]
+ [-ScanScheduleTime <HH:MM:SS>]
+ [-SchedulerRandomizationTime <UInt32>]
+ [-ServiceHealthReportInterval <UInt32>]
+ [-SevereThreatDefaultAction <ThreatAction>]
+ [-SharedSignaturesPath <String>]
+ [-SignatureAuGracePeriod <UInt32>]
+ [-SignatureBlobFileSharesSources <String>]
+ [-SignatureBlobUpdateInterval <UInt32>]
+ [-SignatureDefinitionUpdateFileSharesSources <String>]
+ [-SignatureDisableUpdateOnStartupWithoutEngine <Boolean>]
+ [-SignatureFallbackOrder <String>]
+ [-SignatureFirstAuGracePeriod <UInt32>]
+ [-SignatureScheduleDay <Day>]
+ [-SignatureScheduleTime <DateTime>]
+ [-SignatureUpdateCatchupInterval <UInt32>]
+ [-SignatureUpdateInterval <UInt32>]
+ [-SignaturesUpdatesChannel <UpdatesChannelType>]
+ [-SubmitSamplesConsent <SubmitSamplesConsentType>]
+ [-ThreatIDDefaultAction_Actions <ThreatAction[]>]
+ [-ThreatIDDefaultAction_Ids <Int64[]>]
+ [-ThrottleLimit <Int32>]
+ [-UILockdown <Boolean>]
+ [-UnknownThreatDefaultAction <ThreatAction>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,7 +150,7 @@ The following table provides remediation action values for detected threats at l
 
 ### Example 1: Schedule to check for definition updates everyday
 
-```sql
+```powershell
 PS C:\> Set-MpPreference -SignatureScheduleDay Everyday
 ```
 
@@ -99,7 +158,7 @@ This command configures preferences to check for definition updates every day.
 
 ### Example 2: Schedule a time of day to check for definition updates
 
-```sql
+```powershell
 PS C:\> Set-MpPreference -SignatureScheduleTime 02:00:00
 ```
 
@@ -152,7 +211,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -AllowSwitchToAsyncInspection
 
 Specifies whether to enable a performance optimization that allows synchronously inspected network flows to switch to async inspection once they have been checked and validated.
@@ -160,7 +218,7 @@ Specifies whether to enable a performance optimization that allows synchronously
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,14 +227,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
@@ -232,7 +289,7 @@ If you add multiple rules as a comma-separated list, specify their states separa
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,8 +317,8 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. 
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. 
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -411,7 +468,7 @@ Aliases: dcm
 
 Required: False
 Position: Named
-Default value: 0 
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -428,7 +485,7 @@ Aliases: dcfsc
 
 Required: False
 Position: Named
-Default value: 0 
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -543,15 +600,15 @@ Accept wildcard characters: False
 ```
 
 ### -DisableGradualRelease
-Specifies whether to disable gradual rollout of monthly and daily Windows Defender updates. 
+Specifies whether to disable gradual rollout of monthly and daily Windows Defender updates.
 If you enable this option, devices are offered all updates after the gradual release cycle finishes.
-Consider this option for datacenter computers that only receive limited updates. 
+Consider this option for datacenter computers that only receive limited updates.
 
 This setting applies to both monthly and daily updates.
-It overrides configured channel selections for platform and engine updates. 
+It overrides configured channel selections for platform and engine updates.
 
 If you disable or do not configure this policy, the device remains in Current Channel (Default) unless specified otherwise in specific channels.
-The device stays up to date automatically during the gradual release cycle, which is suitable for most devices. 
+The device stays up to date automatically during the gradual release cycle, which is suitable for most devices.
 
 This policy is available starting with platform version 4.18.2106.5 and later.
 
@@ -615,9 +672,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisableNetworkProtectionPerfTelemetry 
-This setting disables the gathering and sending of performance telemetry from network protection. 
+### -DisableNetworkProtectionPerfTelemetry
+This setting disables the gathering and sending of performance telemetry from network protection.
 The accepted values are 0 and 1.
+
 - 1- Network protection telemetry is disabled.
 - 0 (Default) - Network protection telemetry is enabled.
 
@@ -728,7 +786,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender does not scan network files. 
+Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender does not scan network files.
 
 ```yaml
 Type: Boolean
@@ -774,9 +832,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisableSmtpParsing 
+### -DisableSmtpParsing
 This setting disables SMTP parsing for network protection.
 The accepted values are 0 and 1.
+
 - 1 - SMTP parsing is disabled.
 - 0 (Default) - SMTP parsing is enabled.
 
@@ -916,7 +975,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### Enable UdpReceiveOffload: 
+### Enable UdpReceiveOffload:
 Specifies whether UDP receive offload support in Network Protection is enabled, resulting in potentially higher UDP bandwidth in the inbound direction. Starting with platform version `4.18.24030`, Microsoft will gradually move this support default from disabled to enabled. This setting can be manually controlled by setting it to `1` to enable and `0` to disable.
 
 ```yaml
@@ -931,7 +990,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### Enable UdpSegmentationOffload: 
+### Enable UdpSegmentationOffload:
 Specifies whether UDP segmentation offload support in Network Protection is enabled, resulting in potentially higher UDP bandwidth in the outbound direction. Starting with platform version `4.18.24030`, Microsoft will gradually move this support default from disabled to enabled. This setting can be manually controlled by setting it to `1` to enable and `0` to disable.
 
 ```yaml
@@ -990,7 +1049,7 @@ Specifies an array of IP addresses to exclude from scheduled and real-time scann
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1006,7 +1065,7 @@ You can specify a folder to exclude all the files under the folder.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1025,7 +1084,7 @@ To exclude a process, specify it by using the **ExclusionPath** parameter.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1068,8 +1127,8 @@ Accept wildcard characters: False
 Specifies which automatic remediation action to take for a high level threat.
 The acceptable values for this parameter are:
 
-- Quarantine 
-- Remove 
+- Quarantine
+- Remove
 - Ignore
 
 ```yaml
@@ -1088,6 +1147,7 @@ Accept wildcard characters: False
 ### -IntelTDTEnabled
 This policy setting configures the Intel TDT integration level for Intel TDT-capable devices.
 The acceptable values for this parameter are:
+
 - 0 (Default) - If you don't configure this setting, the default value will be applied. The default value is controlled by Microsoft security intelligence updates. Microsoft will enable Intel TDT if there is a known threat.
 - 1 - If you configure this setting to enabled, Intel TDT integration will turn on.
 - 2 - If you configure this setting to disabled, Intel TDT integration will turn off.
@@ -1136,7 +1196,7 @@ The acceptable values for this parameter are:
 Send no information to Microsoft.
 This is the default value.
 - 1: Basic membership.
-Send basic information to Microsoft about detected software, including where the software came from, the actions that you apply or that apply automatically, and whether the actions succeeded. 
+Send basic information to Microsoft about detected software, including where the software came from, the actions that you apply or that apply automatically, and whether the actions succeeded.
 - 2: Advanced membership.
 In addition to basic information, send more information to Microsoft about malicious software, spyware, and potentially unwanted software, including the location of the software, file names, how the software operates, and how it affects your computer.
 
@@ -1148,7 +1208,7 @@ However, Microsoft will not use this information to identify you or contact you.
 ```yaml
 Type: MAPSReportingType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Basic, Advanced
 
 Required: False
@@ -1178,8 +1238,8 @@ Accept wildcard characters: False
 Specifies which automatic remediation action to take for a moderate level threat.
 The acceptable values for this parameter are:
 
-- Quarantine 
-- Remove 
+- Quarantine
+- Remove
 - Ignore
 
 ```yaml
@@ -1200,13 +1260,14 @@ Accept wildcard characters: False
 This setting allows you to configure whether real-time protection and Security Intelligence Updates are enabled during Out of Box experience (OOBE).
 
 Valid values are:
+
 - True - If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.
 - False (Default) - If you either disable or don't configure this setting, real-time protection and Security Intelligence Updates during OOBE aren't enabled.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1290,7 +1351,7 @@ When potentially unwanted software is downloaded or attempts to install itself o
 ```yaml
 Type: PUAProtectionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled, AuditMode
 
 Required: False
@@ -1339,9 +1400,9 @@ Specifies scanning configuration for incoming and outgoing files on NTFS volumes
 The acceptable values for this parameter are:
 
 - 0: Scan both incoming and outgoing files.
-This is the default. 
-- 1: Scan incoming files only. 
-- 2: Scan outgoing files only. 
+This is the default.
+- 1: Scan incoming files only.
+- 2: Scan outgoing files only.
 
 Specify a value for this parameter to enhance performance on servers which have a large number of file transfers, but need scanning for either incoming or outgoing files.
 Evaluate this configuration based on the server role.
@@ -1368,12 +1429,12 @@ The acceptable values for this parameter are:
 - 0: Everyday
 - 1: Sunday
 - 2: Monday
-- 3: Tuesday 
+- 3: Tuesday
 - 4: Wednesday
-- 5: Thursday 
+- 5: Thursday
 - 6: Friday
 - 7: Saturday
-- 8: Never 
+- 8: Never
 
 The default value is 8, never.
 If you specify a value of 8 or do not specify a value, Windows Defender performs a scheduled full scan to complete remediation by using a default frequency.
@@ -1494,14 +1555,14 @@ Specifies the scan type to use during a scheduled scan.
 The acceptable values for this parameter are:
 
 - 1: Quick scan
-- 2: Full scan 
+- 2: Full scan
 
 If you do not specify this parameter, Windows Defender uses the default value of quick scan.
 
 ```yaml
 Type: ScanType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: QuickScan, FullScan
 
 Required: False
@@ -1534,14 +1595,14 @@ Specifies the day of the week on which to perform a scheduled scan.
 Alternatively, specify everyday for a scheduled scan or never.
 The acceptable values for this parameter are:
 
-- 0: Everyday 
-- 1: Sunday 
-- 2: Monday 
-- 3: Tuesday 
-- 4: Wednesday 
-- 5: Thursday 
-- 6: Friday 
-- 7: Saturday 
+- 0: Everyday
+- 1: Sunday
+- 2: Monday
+- 3: Tuesday
+- 4: Wednesday
+- 5: Thursday
+- 6: Friday
+- 7: Saturday
 - 8: Never
 
 The default value is 8, never.
@@ -1620,7 +1681,7 @@ Accept wildcard characters: False
 ### -ServiceHealthReportInterval
 This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints. These are for Microsoft Defender Antivirus events 1150 and 1151. For more information, see [Microsoft Defender Antivirus event IDs](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus#microsoft-defender-antivirus-event-ids).
 
-If you do not configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour). 
+If you do not configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour).
 If you configure this setting to 0, no service health reports will be sent.
 The maximum value allowed to be set is 14400 minutes (ten days).
 
@@ -1638,8 +1699,8 @@ Accept wildcard characters: False
 Specifies which automatic remediation action to take for a severe level threat.
 The acceptable values for this parameter are:
 
-- Quarantine 
-- Remove 
+- Quarantine
+- Remove
 - Ignore
 
 ```yaml
@@ -1802,15 +1863,15 @@ Specifies the day of the week on which to check for definition updates.
 Alternatively, specify everyday for a scheduled scan or never.
 The acceptable values for this parameter are:
 
-- 0: Everyday 
-- 1: Sunday 
-- 2: Monday 
-- 3: Tuesday 
-- 4: Wednesday 
-- 5: Thursday 
-- 6: Friday 
-- 7: Saturday 
-- 8: Never 
+- 0: Everyday
+- 1: Sunday
+- 2: Monday
+- 3: Tuesday
+- 4: Wednesday
+- 5: Thursday
+- 6: Friday
+- 7: Saturday
+- 8: Never
 
 The default value is 8, never.
 If you specify a value of 8 or do not specify a value, Windows Defender checks for definition updates by using a default frequency.
@@ -1909,14 +1970,14 @@ Otherwise, if the **MAPSReporting** parameter does not have a value of Disabled,
 The acceptable values for this parameter are:
 
 - 0: Always prompt
-- 1: Send safe samples automatically 
+- 1: Send safe samples automatically
 - 2: Never send
 - 3: Send all samples automatically
 
 ```yaml
 Type: SubmitSamplesConsentType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AlwaysPrompt, SendSafeSamples, NeverSend, SendAllSamples
 
 Required: False
@@ -1930,16 +1991,16 @@ Accept wildcard characters: False
 Specifies an array of the actions to take for the IDs specified by using the **ThreatIDDefaultAction_Ids** parameter.
 The acceptable values for this parameter are:
 
-- 1: Clean 
-- 2: Quarantine 
-- 3: Remove 
-- 6: Allow 
-- 8: UserDefined 
-- 9: NoAction 
+- 1: Clean
+- 2: Quarantine
+- 3: Remove
+- 6: Allow
+- 8: UserDefined
+- 9: NoAction
 - 10: Block
 
->[!NOTE]
->A value of 0 (NULL) applies an action based on the Security Intelligence Update (SIU). This is the default value.
+> [!NOTE]
+> A value of 0 (NULL) applies an action based on the Security Intelligence Update (SIU). This is the default value.
 
 ```yaml
 Type: ThreatAction[]
@@ -1978,7 +2039,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1990,13 +2051,14 @@ Accept wildcard characters: False
 ### -ThrottleForScheduledScanOnly
 A CPU usage limit can be applied to scheduled scans only, or to scheduled and custom scans. The default value applies a CPU usage limit to scheduled scans only.
 The acceptable values for this parameter are:
+
 - 1 (Default) - If you enable this setting, CPU throttling will apply only to scheduled scans.
 - 0 - If you disable this setting, CPU throttling will apply to scheduled and custom scans.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -2004,7 +2066,6 @@ Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -UILockdown
 Indicates whether to disable UI lockdown mode.
@@ -2014,7 +2075,7 @@ If you specify $False or do not specify a value, UI lockdown mode is enabled.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -2027,8 +2088,8 @@ Accept wildcard characters: False
 Specifies which automatic remediation action to take for an unknown level threat.
 The acceptable values for this parameter are:
 
-- Quarantine 
-- Remove 
+- Quarantine
+- Remove
 - Ignore
 
 ```yaml

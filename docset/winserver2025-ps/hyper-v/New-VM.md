@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
-ms.date: 08/13/2024
+ms.date: 10/15/2024
 online version: https://learn.microsoft.com/powershell/module/hyper-v/new-vm?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-VM
@@ -480,7 +480,9 @@ Accept wildcard characters: False
 
 ### -Version
 
-{{ Fill Version Description }}
+Specifies the version during the VM creation process. See,
+[Get-VMHostSupportedVersion](/powershell/module/hyper-v/get-vmhostsupportedversion) for supported
+VM versions on a given host.
 
 ```yaml
 Type: Version

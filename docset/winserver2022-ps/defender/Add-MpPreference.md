@@ -16,14 +16,23 @@ Modifies settings for Windows Defender.
 ## SYNTAX
 
 ```
-Add-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>]
-[-ExclusionProcess <String[]>] [-ExclusionIpAddress <String[]>]
-[-ThreatIDDefaultAction_Ids <Int64[]>] [-ThreatIDDefaultAction_Actions <ThreatAction[]>]
-[-AttackSurfaceReductionOnlyExclusions <String[]>]
-[-ControlledFolderAccessAllowedApplications <String[]>]
-[-ControlledFolderAccessProtectedFolders <String[]>] [-AttackSurfaceReductionRules_Ids <String[]>]
-[-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>] [-Force] [-CimSession <CimSession[]>]
-[-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+Add-MpPreference
+ [-AsJob]
+ [-AttackSurfaceReductionOnlyExclusions <String[]>]
+ [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>]
+ [-AttackSurfaceReductionRules_Ids <String[]>]
+ [-CimSession <CimSession[]>]
+ [-ControlledFolderAccessAllowedApplications <String[]>]
+ [-ControlledFolderAccessProtectedFolders <String[]>]
+ [-ExclusionExtension <String[]>]
+ [-ExclusionIpAddress <String[]>]
+ [-ExclusionPath <String[]>]
+ [-ExclusionProcess <String[]>]
+ [-Force]
+ [-ThreatIDDefaultAction_Actions <ThreatAction[]>]
+ [-ThreatIDDefaultAction_Ids <Int64[]>]
+ [-ThrottleLimit <Int32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,7 +78,7 @@ For more information about Windows PowerShell background jobs, see
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,7 +221,7 @@ Specifies an array of IP addresses to exclude from scheduled and real-time scann
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +238,7 @@ You can specify a folder to exclude all the files under the folder.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +257,7 @@ themselves. To exclude a process, specify it by using the **ExclusionPath** para
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -264,7 +273,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -327,7 +336,7 @@ computer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

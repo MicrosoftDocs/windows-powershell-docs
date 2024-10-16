@@ -24,7 +24,11 @@ Get-MpThreatCatalog [<CommonParameters>]
 ### ById
 
 ```
-Get-MpThreatCatalog [-ThreatID <Int64[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+Get-MpThreatCatalog
+ [-AsJob]
+ [-CimSession <CimSession[]>]
+ [-ThreatID <Int64[]>]
+ [-ThrottleLimit <Int32>]
  [<CommonParameters>]
 ```
 
@@ -37,7 +41,7 @@ The definitions catalog contains references to all known threats that Windows De
 
 ### Example 1: Get a known threat from the definitions catalog
 
-```
+```powershell
 PS C:\> Get-MpThreatCatalog -ThreatID 1994
 ```
 
@@ -61,7 +65,7 @@ For more information about Windows PowerShell background jobs, see
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +121,7 @@ computer.
 ```yaml
 Type: Int32
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

@@ -101,7 +101,7 @@ This command configures a registry-based policy setting for the registry value
 data type of `DWord`. This policy setting sets the Screen Saver timeout to 900 seconds (15 minutes)
 when Group Policy is applied on the client.
 
-### Example 1: Configure a registry-based policy settings for multiple registry values
+### Example 2: Configure a registry-based policy settings for multiple registry values
 
 ```powershell
 $params = @{

@@ -16,8 +16,11 @@ Gets preferences for the Windows Defender scans and updates.
 ## SYNTAX
 
 ```
-Get-MpPreference [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
-[<CommonParameters>]
+Get-MpPreference
+ [-AsJob]
+ [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,7 +33,7 @@ information about the preferences that this cmdlet retrieves, see
 
 ### Example 1: View the scheduled scan day
 
-```
+```powershell
 PS C:\> $Preferences = Get-MpPreference
 PS C:\> $Preferences.ScanScheduleDay
 ```
@@ -58,7 +61,7 @@ For more information about Windows PowerShell background jobs, see
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +100,7 @@ computer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

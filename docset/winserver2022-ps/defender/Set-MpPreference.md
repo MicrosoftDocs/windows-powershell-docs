@@ -1904,7 +1904,7 @@ default value.
 - $false: Scheduled tasks begin on the scheduled time
 
 Randomized start times can distribute the impact of scanning. For example, if several virtual
-machines share the same host, randomized start times prevent all the hosts from starting the
+machines share the same host, randomized start times prevent all virtual machines from starting the
 scheduled tasks at the same time.
 
 ```yaml

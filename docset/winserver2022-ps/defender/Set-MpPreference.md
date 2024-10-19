@@ -22,7 +22,6 @@ Set-MpPreference
  [-AllowNetworkProtectionDownLevel <Boolean>]
  [-AllowNetworkProtectionOnWinServer <Boolean>]
  [-AllowSwitchToAsyncInspection <Boolean>]
- [-ApplyDisableNetworkScanningToIOAV <Boolean>]
  [-AsJob]
  [-AttackSurfaceReductionOnlyExclusions <String[]>]
  [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>]
@@ -122,10 +121,10 @@ Set-MpPreference
  [-SignatureScheduleTime <DateTime>]
  [-SignatureUpdateCatchupInterval <UInt32>]
  [-SignatureUpdateInterval <UInt32>]
- [-SignaturesUpdatesChannel <UpdatesChannelType>]
  [-SubmitSamplesConsent <SubmitSamplesConsentType>]
  [-ThreatIDDefaultAction_Actions <ThreatAction[]>]
  [-ThreatIDDefaultAction_Ids <Int64[]>]
+ [-ThrottleForScheduledScanOnly <Boolean>]
  [-ThrottleLimit <Int32>]
  [-UILockdown <Boolean>]
  [-UnknownThreatDefaultAction <ThreatAction>]
@@ -300,8 +299,6 @@ To remove values without affecting other existing values, use the **Remove-MPPre
 
 `Remove-MpPreference -AttackSurfaceReductionOnlyExclusions "Value1","Value2",..."ValueN"`
 
-To empty the list, use the value $null for this parameter.
-
 For more information, see [Exclude files and folders from attack surface reduction rules](/defender-endpoint/enable-attack-surface-reduction#exclude-files-and-folders-from-attack-surface-reduction-rules).
 
 ```yaml
@@ -325,15 +322,16 @@ together in the same command to specify the states of attack surface reduction (
 example, the GUID value of the "Block Office communication application from creating child
 processes" ASR rule is `26190899-1602-49e8-8b27-eb1d0a1ce869`. For more information, see
 [ASR rule to GUID matrix](/defender-endpoint/attack-surface-reduction-rules-reference#asr-rule-to-guid-matrix).
-- The **AttackSurfaceReductionRules_Actions** parameter identifies ASR rule action:
+- The **AttackSurfaceReductionRules_Actions** parameter identifies ASR rule action. Valid values
+are:
 
-  • 0: Deactivated
+  • 0 or Deactivated
 
-  • 1: Activated
+  • 1 or Activated
 
-  • 2: Audit mode
+  • 2 or Audit mode
 
-  • 6: Warning
+  • 6 or Warning
 
 To replace all existing values with the values you specify, use the following syntax:
 
@@ -346,8 +344,6 @@ To add values without affecting existing values, use the **Add-MPPreference** cm
 To remove values without affecting other existing values, use the **Remove-MPPreference** cmdlet:
 
 `Remove-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
-
-To empty the list, use the value $null for this parameter.
 
 ```yaml
 Type: ASRRuleActionType[]
@@ -395,8 +391,6 @@ To remove values without affecting other existing values, use the **Remove-MPPre
 
 `Remove-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
-To empty the list, use the value $null for this parameter.
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -411,7 +405,7 @@ Accept wildcard characters: False
 
 ### -CheckForSignaturesBeforeRunningScan
 
-Indicates whether to check for new virus and spyware definitions before Windows Defender runs a
+Specifies whether to check for new virus and spyware definitions before Windows Defender runs a
 scan. Valid values are:
 
 - $true: Windows Defender checks for new definitions before running a scan.
@@ -481,10 +475,10 @@ Accept wildcard characters: False
 
 ### -CloudExtendedTimeout
 
-Specifies the amount of extended time in seconds to block a suspicious file and scan it in the
-cloud. Without using this parameter, the standard time is 10 seconds.
+<!---The default value on 2 Win 11 PCs is 0; Max value claimed to be 50 --->
 
-Valid values for this parameter are are from 0 to 50 additional seconds.
+Specifies the amount of extended time in seconds to block a suspicious file and scan it in the
+cloud. A valid value is an integer from 0 to 4294967295. The default value is 10 seconds.
 
 ```yaml
 Type: UInt32
@@ -515,8 +509,6 @@ To remove values without affecting other existing values, use the **Remove-MPPre
 
 `Remove-MpPreference -ControlledFolderAccessAllowedApplications "PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`
 
-To empty the list, use the value $null for this parameter.
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -545,8 +537,6 @@ To add values without affecting existing values, use the **Add-MPPreference** cm
 To remove values without affecting other existing values, use the **Remove-MPPreference** cmdlet:
 
 `Remove-MpPreference -ControlledFolderAccessAllowedApplications "Path1","Path2",..."PathN"`
-
-To empty the list, use the value $null for this parameter.
 
 ```yaml
 Type: String[]
@@ -589,8 +579,8 @@ Accept wildcard characters: False
 
 ### -DisableArchiveScanning
 
-Indicates whether to scan archive files, such as .zip and .cab files, for malicious and unwanted
-software. Valid values are:
+Specifies whether to scan archive files (for example, .zip and .cab files) for malicious and
+unwanted software. Valid values are:
 
 - $true: Windows Defender doesn't scan archive file.
 - $false: Windows Defender scans archive files. This is the default value.
@@ -609,7 +599,7 @@ Accept wildcard characters: False
 
 ### -DisableAutoExclusions
 
-Indicates whether to disable the Automatic Exclusions feature for the server. Valid values are:
+Specifies whether to disable the Automatic Exclusions feature for the server. Valid values are:
 
 - $true: Windows Defender disables the Automatic Exclusions feature for the server.
 - $false: Windows Defender enables the Automatic Exclusions feature for the server. This is the default value.
@@ -628,7 +618,7 @@ Accept wildcard characters: False
 
 ### -DisableBehaviorMonitoring
 
-Indicates whether to enable behavior monitoring. Valid values are:
+Specifies whether to enable behavior monitoring. Valid values are:
 
 - $true: Windows Defender disables behavior monitoring.
 - $false: Windows Defender enables behavior monitoring. This is the default value.
@@ -647,7 +637,7 @@ Accept wildcard characters: False
 
 ### -DisableBlockAtFirstSeen
 
-Indicates whether to enable block at first seen. Valid values are:
+Specifies whether to enable block at first seen. Valid values are:
 
 - $true: Windows Defender disables block at first seen.
 - $false: Windows Defender enables block at first seen. This is the default value.
@@ -685,7 +675,7 @@ Accept wildcard characters: False
 
 ### -DisableCatchupFullScan
 
-Indicates whether Windows Defender runs catch-up scans for missed scheduled full scans. Valid values
+Specifies whether Windows Defender runs catch-up scans for missed scheduled full scans. Valid values
 are:
 
 - $true: Windows Defender doesn't run catch-up scans for missed scheduled full scans.
@@ -706,7 +696,7 @@ Accept wildcard characters: False
 
 ### -DisableCatchupQuickScan
 
-Indicates whether Windows Defender runs catch-up scans for missed scheduled quick scans. Valid values
+Specifies whether Windows Defender runs catch-up scans for missed scheduled quick scans. Valid values
 are:
 
 $true: Windows Defender doesn't run catch-up scans for missed scheduled quick scans.
@@ -727,7 +717,7 @@ Accept wildcard characters: False
 
 ### -DisableCpuThrottleOnIdleScans
 
-Indicates whether the CPU is throttled for scheduled scans while the device is idle. Valid
+Specifies whether the CPU is throttled for scheduled scans while the device is idle. Valid
 values are:
 
 - $true: The CPU is throttled for scheduled scans.
@@ -811,28 +801,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisableFtpParsing
-
-Specifies whether to disable FTP parsing for network protection. Valid values are:
-
-- $true: FTP parsing for network protection is disabled.
-- $false: FTP parsing for network protection is enabled.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: dfp
-
-Required: False
-Position: Named
-Default value: 0
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableEmailScanning
 
-Indicates whether Windows Defender parses mailbox and email message files to analyze message bodies
+Specifies whether Windows Defender parses mailbox and email message files to analyze message bodies
 and email attachments. Valid values are:
 
 - $true: Windows Defender doesn't scan mailbox and email message files.
@@ -854,6 +825,25 @@ Aliases: demsc
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableFtpParsing
+
+Specifies whether to disable FTP parsing for network protection. Valid values are:
+
+- $true: FTP parsing for network protection is disabled.
+- $false: FTP parsing for network protection is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dfp
+
+Required: False
+Position: Named
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -929,7 +919,7 @@ Accept wildcard characters: False
 
 ### -DisableIOAVProtection
 
-Indicates whether Windows Defender scans all downloaded files and attachments. Valid values are:
+Specifies whether Windows Defender scans all downloaded files and attachments. Valid values are:
 
 - $true: Windows Defender doesn't scan all downloaded files and attachments.
 - $false: Windows Defender scans all downloaded files and attachments. This is the default value.
@@ -1007,7 +997,7 @@ Accept wildcard characters: False
 
 ### -DisableRealtimeMonitoring
 
-Indicates whether to use real-time protection. Valid values are:
+Specifies whether to use real-time protection. Valid values are:
 
 - $true: Windows Defender doesn't use real-time protection.
 - $false: Windows Defender uses real-time protection. This is the default and recommended value.
@@ -1026,7 +1016,7 @@ Accept wildcard characters: False
 
 ### -DisableRemovableDriveScanning
 
-Indicates whether to scan for malicious and unwanted software in removable drives, such as flash
+Specifies whether to scan for malicious and unwanted software in removable drives, such as flash
 drives, during a full scan. Valid values are:
 
 - $true: Windows Defender doesn't scan removable drives during a full scan, but can still scan
@@ -1048,7 +1038,7 @@ Accept wildcard characters: False
 
 ### -DisableRestorePoint
 
-Indicates whether to disable scanning of restore points. Valid values are:
+Specifies whether to disable scanning of restore points. Valid values are:
 
 - $true: Windows Defender restore point scanning is disabled.
 - $false: Windows Defender restore point scanning is enabled. This is the default value.
@@ -1056,7 +1046,7 @@ Indicates whether to disable scanning of restore points. Valid values are:
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: drp, dsnf
+Aliases: drp
 
 Required: False
 Position: Named
@@ -1067,7 +1057,7 @@ Accept wildcard characters: False
 
 ### -DisableScanningMappedNetworkDrivesForFullScan
 
-Indicates whether to scan mapped network drives. Valid values are:
+Specifies whether to scan mapped network drives. Valid values are:
 
 - $true: Windows Defender doesn't scan mapped network drives.
 - $false: Windows Defender scans mapped network drives. This is the default value.
@@ -1086,7 +1076,7 @@ Accept wildcard characters: False
 
 ### -DisableScanningNetworkFiles
 
-Indicates whether to scan network files. Valid values are:
+Specifies whether to scan network files. Valid values are:
 
 - $true: Windows Defender doesn't scan network files.
 - $false: Windows Defender scans network files. This is the default value.
@@ -1122,25 +1112,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisableSshParsing
-
-Specifies whether to disable the inspection of SSH traffic. Valid values are:
-
-- $true: Network Protection doesn't inspect SSH traffic.
-- $false: Network Protection inspects SSH traffic. This is the default value.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: dsshp
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableSmtpParsing
 
 This setting disables SMTP parsing by Network Protection. Valid values are:
@@ -1156,6 +1127,25 @@ Aliases: dsp
 Required: False
 Position: Named
 Default value: 0
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableSshParsing
+
+Specifies whether to disable the inspection of SSH traffic. Valid values are:
+
+- $true: Network Protection doesn't inspect SSH traffic.
+- $false: Network Protection inspects SSH traffic. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dsshp
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1230,6 +1220,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDnsSinkhole
+
+**Note**: This parameter has been deprecated.
 
 Specifies whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other
 DNS based malicious attacks. Valid values are:
@@ -1310,16 +1302,12 @@ Accept wildcard characters: False
 
 ### -EnableNetworkProtection
 
-<!--- Regardless of the value I enter, the property value in Get-MpPreference is always 1--->
-
 Specifies how the network protection service handles web-based malicious threats, including phishing
 and malware. Valid values are:
 
-- Disabled
-- Enabled
-- AuditMode
-- NotConfigured
-- Warn
+- 0 or Disabled
+- 1 or Enabled
+- 2 or AuditMode
 
 ```yaml
 Type: ASRRuleActionType
@@ -1425,8 +1413,6 @@ To remove values without affecting other existing values, use the **Remove-MPPre
 
 `Remove-MpPreference -ExclusionExtension "Extension1","Extension2"..."ExtensionN"`
 
-To empty the list, use the value $null for this parameter.
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -1452,8 +1438,6 @@ To add values without affecting existing values, use the **Add-MPPreference** cm
 To remove values without affecting other existing values, use the **Remove-MPPreference** cmdlet:
 
 `Remove-MpPreference -ExclusionIpAddress "IPAddress1","IPAddress2",..."IPAddressN"`
-
-To empty the list, use the value $null for this parameter.
 
 ```yaml
 Type: String[]
@@ -1483,8 +1467,6 @@ To remove values without affecting other existing values, use the **Remove-MPPre
 
 `Remove-MpPreference -ExclusionPath "Value1","Value2",..."ValueN"`
 
-To empty the list, use the value $null for this parameter.
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -1511,8 +1493,6 @@ To add values without affecting existing values, use the **Add-MPPreference** cm
 To remove values without affecting other existing values, use the **Remove-MPPreference** cmdlet:
 
 `Remove-MpPreference -ExclusionProcess "Path1","Path2",..."PathN"`
-
-To empty the list, use the value $null for this parameter.
 
 This parameter excludes files opened by executable programs only, not the processes themselves.
 To exclude processes, use the **ExclusionPath** parameter.
@@ -1567,9 +1547,10 @@ Accept wildcard characters: False
 
 ### -HighThreatDefaultAction
 
-<!--- Regardless of the value I enter, the property value in Get-MpPreference is 0--->
+<!--- Regardless of the value I enter, the property value in Get-MpPreference is 0. If I could
+change it like UnknownThreatDefaultAction, I wouldn't be able to change it back.--->
 
-Specifies the automatic remediation action to take for a high level threat. Valid values are:
+Specifies the automatic remediation action to take for high level threats. Valid values are:
 
 - Clean
 - Quarantine
@@ -1615,9 +1596,10 @@ Accept wildcard characters: False
 
 ### -LowThreatDefaultAction
 
-<!--- Regardless of the value I enter, the property value in Get-MpPreference is 0--->
+<!--- Regardless of the value I enter, the property value in Get-MpPreference is 0. If I could
+change it like UnknownThreatDefaultAction, I wouldn't be able to change it back.--->
 
-Specifies the automatic remediation action to take for a low level threat. Valid values are:
+Specifies the automatic remediation action to take for low level threats. Valid values are:
 
 - Clean
 - Quarantine
@@ -1642,16 +1624,14 @@ Accept wildcard characters: False
 
 ### -MAPSReporting
 
-<!--- Regardless of the value I enter, the property value in Get-MpPreference is 2--->
-
 Specifies the type of membership in Microsoft Active Protection Service. This services is an online
 community that helps you choose how to respond to potential threats. The community also helps
 prevent the spread of new malicious software. Valid values are:
 
-- Disabled: Send no information to Microsoft. This is the default value.
-- Basic: Send basic information to Microsoft about detected software, including where the software
+- 0 or Disabled: Send no information to Microsoft. This is the default value.
+- 1 or Basic: Send basic information to Microsoft about detected software, including where the software
 came from, the actions you applied (manually or automatically), and whether the actions succeeded.
-- Advanced: In addition to basic information, send more information to Microsoft about malicious
+- 2 or Advanced: In addition to basic information, send more information to Microsoft about malicious
 software, spyware, and potentially unwanted software, including the location of the software,
 filenames, how the software operates, and how it affects your computer.
 
@@ -1694,9 +1674,10 @@ Accept wildcard characters: False
 
 ### -ModerateThreatDefaultAction
 
-<!--- Regardless of the value I enter, the property value in Get-MpPreference is 0--->
+<!--- Regardless of the value I enter, the property value in Get-MpPreference is 0. If I could
+change it like UnknownThreatDefaultAction, I wouldn't be able to change it back.--->
 
-Specifies the automatic remediation action to take for a moderate level threat. Valid values are:
+Specifies the automatic remediation action to take for moderate level threats. Valid values are:
 
 - Clean
 - Quarantine
@@ -1804,8 +1785,6 @@ the list, run the following commands:
 
   `Set-MpPreference -ProxyBypass $r`
 
-To empty the list, use the value $null for this parameter.
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -1852,14 +1831,12 @@ Accept wildcard characters: False
 
 ### -PUAProtection
 
-<!--- Regardless of the value I enter, the property value in Get-MpPreference is 1--->
-
 Specifies the level of detection for potentially unwanted applications. Valid values are:
 
-- Disabled
-- Enabled: You're warned when potentially unwanted software is downloaded or attempts to install
+- 0 or Disabled
+- 1 or Enabled: You're warned when potentially unwanted software is downloaded or attempts to install
 itself on your computer.
-- Audit
+- 2 or Audit
 
 ```yaml
 Type: PUAProtectionType
@@ -1876,11 +1853,8 @@ Accept wildcard characters: False
 
 ### -QuarantinePurgeItemsAfterDelay
 
-<!--- Regardless of the value I enter, the property value in Get-MpPreference is 15--->
-
-Specifies the number of days to keep items in the Quarantine folder.
-
-No value or the value 0 means items stay in the Quarantine folder indefinitely.
+Specifies the number of days to keep items in the Quarantine folder. A valid value is an integer
+from 0 to 4294967295. The value 0 means items stay in the Quarantine folder indefinitely.
 
 ```yaml
 Type: UInt32
@@ -1896,7 +1870,7 @@ Accept wildcard characters: False
 
 ### -RandomizeScheduleTaskTimes
 
-Indicates whether to select a random time for the scheduled start and scheduled update for
+Specifies whether to select a random time for the scheduled start and scheduled update for
 definitions. Valid values are:
 
 - $true: Scheduled tasks begin within 30 minutes before or after the scheduled time. This is the
@@ -1921,17 +1895,17 @@ Accept wildcard characters: False
 
 ### -RealTimeScanDirection
 
-Specifies scanning configuration for incoming and outgoing files on NTFS volumes.
-The acceptable values for this parameter are:
+Specifies scanning configuration for incoming and outgoing files on NTFS volumes. Valid values are:
 
-- 0: Scan both incoming and outgoing files.
-This is the default.
-- 1: Scan incoming files only.
-- 2: Scan outgoing files only.
+- 0 or Both: Scan incoming and outgoing files. This is the default value.
+- 1 or Incoming: Scan incoming files only.
+- 2 or Outcoming \[SP\]: Scan outgoing files only.
 
-Specify a value for this parameter to enhance performance on servers which have a large number of file transfers, but need scanning for either incoming or outgoing files.
-Evaluate this configuration based on the server role.
-For non-NTFS volumes, Windows Defender performs full monitoring of file and program activity.
+Use this parameter to restrict scanning to incoming or outgoing files on servers that have a large
+number of file transfers in only one direction.
+
+Evaluate this configuration based on the server role. For non-NTFS volumes, Windows Defender
+does full monitoring of file and program activity.
 
 ```yaml
 Type: ScanDirection
@@ -1948,28 +1922,27 @@ Accept wildcard characters: False
 
 ### -RemediationScheduleDay
 
-Specifies the day of the week on which to perform a scheduled full scan in order to complete remediation.
-Alternatively, specify everyday for this full scan or never.
-The acceptable values for this parameter are:
+Specifies the day of the week to run scheduled full scans to complete remediation. Valid values are:
 
-- 0: Everyday
-- 1: Sunday
-- 2: Monday
-- 3: Tuesday
-- 4: Wednesday
-- 5: Thursday
-- 6: Friday
-- 7: Saturday
-- 8: Never
+- 0 or Everyday
+- 1 or Sunday
+- 2 or Monday
+- 3 or Tuesday
+- 4 or Wednesday
+- 5 or Thursday
+- 6 or Friday
+- 7 or Saturday
+- 8 or Never (default)
 
-The default value is 8, never.
-If you specify a value of 8 or do not specify a value, Windows Defender performs a scheduled full scan to complete remediation by using a default frequency.
+For the value 8 or Never, Windows Defender uses a default frequency to run scheduled full scans to
+complete remediation.
 
 ```yaml
 Type: Day
 Parameter Sets: (All)
 Aliases: rsd
-Accepted values: Everyday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Never
+Accepted values: Everyday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday,
+Never
 
 Required: False
 Position: Named
@@ -1980,9 +1953,12 @@ Accept wildcard characters: False
 
 ### -RemediationScheduleTime
 
-Specifies the time of day, as the number of minutes after midnight, to perform a scheduled scan.
-The time refers to the local time on the computer.
-If you do not specify a value for this parameter, a scheduled scan runs at the default time of two hours after midnight.
+Specifies the time on the local computer to run scheduled scans for remediation.
+
+To specify a value, enter it as a time span: `hh:mm:ss` where `hh` = hours, `mm` = minutes and `ss`
+= seconds. For example, `13:30:00` indicates 1:30 PM.
+
+The default value is `02:00:00` (2:00 AM).
 
 ```yaml
 Type: DateTime
@@ -1998,7 +1974,8 @@ Accept wildcard characters: False
 
 ### -ReportingAdditionalActionTimeOut
 
-Specifies the number of minutes before a detection in the additional action state changes to the cleared state.
+Specifies the number of minutes before a detection in the additional action state changes to the
+cleared state. A valid value is an integer from 0 to 4294967295.
 
 ```yaml
 Type: UInt32
@@ -2014,7 +1991,8 @@ Accept wildcard characters: False
 
 ### -ReportingCriticalFailureTimeOut
 
-Specifies the number of minutes before a detection in the critically failed state changes to either the additional action state or the cleared state.
+Specifies the number of minutes before a detection in the critically failed state changes to
+the additional action state or the cleared state. A valid value is an integer from 0 to 4294967295.
 
 ```yaml
 Type: UInt32
@@ -2030,7 +2008,8 @@ Accept wildcard characters: False
 
 ### -ReportingNonCriticalTimeOut
 
-Specifies the number of minutes before a detection in the non-critically failed state changes to the cleared state.
+Specifies the number of minutes before a detection in the non-critically failed state changes to
+the cleared state. A valid value is an integer from 0 to 4294967295.
 
 ```yaml
 Type: UInt32
@@ -2047,11 +2026,19 @@ Accept wildcard characters: False
 ### -ScanAvgCPULoadFactor
 
 Specifies the maximum percentage CPU usage for a scan.
-The acceptable values for this parameter are: integers from 5 through 100, and the value 0, which disables CPU throttling.
-Windows Defender does not exceed the percentage of CPU usage that you specify.
-The default value is 50.
 
-Note: This is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average. If ScanOnlyIfIdleEnabled (instructing the product to scan only when the computer is not in use) and DisableCpuThrottleOnIdleScans (instructing the product to disable CPU throttling on idle scans) are both enabled, then the value of ScanAvgCPULoadFactor is ignored.
+A valid value is an integer from 5 to 100. The default value is 50. The value 0 disables CPU
+throttling.
+
+**Note**: This value isn't a hard limit, but rather guidance for the scanning engine to not exceed
+the specified value on average.
+
+The value of this parameter is ignored if both of the following conditions are true:
+
+- The value of the **ScanOnlyIfIdleEnabled** parameter is $true (scan only when the computer isn't
+in use).
+- The value of the **DisableCpuThrottleOnIdleScans** parameter is $false (disable CPU throttling on
+idle scans).
 
 ```yaml
 Type: Byte
@@ -2067,8 +2054,11 @@ Accept wildcard characters: False
 
 ### -ScanOnlyIfIdleEnabled
 
-Indicates whether to start scheduled scans only when the computer is not in use.
-If you specify a value of $True or do not specify a value, Windows Defender runs schedules scans when the computer is on, but not in use.
+Specifies whether to start scheduled scans only when the computer is not in use. Valid values are:
+
+- $true: Windows Defender runs schedules scans when the computer is on, but not in use. This is the
+default value.
+- $false: Windows Defender runs schedules scans when the computer is in use.
 
 ```yaml
 Type: Boolean
@@ -2084,13 +2074,10 @@ Accept wildcard characters: False
 
 ### -ScanParameters
 
-Specifies the scan type to use during a scheduled scan.
-The acceptable values for this parameter are:
+Specifies the scan type to use during a scheduled scan. Valid values are:
 
-- 1: Quick scan
-- 2: Full scan
-
-If you do not specify this parameter, Windows Defender uses the default value of quick scan.
+- 1 or QuickScan (default)
+- 2 or FullScan
 
 ```yaml
 Type: ScanType
@@ -2107,10 +2094,11 @@ Accept wildcard characters: False
 
 ### -ScanPurgeItemsAfterDelay
 
-Specifies the number of days to keep items in the scan history folder.
-After this time, Windows Defender removes the items.
-If you specify a value of zero, Windows Defender does not remove items.
-If you do not specify a value, Windows Defender removes items from the scan history folder after the default length of time, which is 15 days.
+Specifies the number of days to keep items in the scan history folder. After this time, Windows
+Defender removes the items.
+
+A valid value is an integer from 0 to
+4294967295. The default value is 15 days. The value 0 means Windows Defender doesn't remove items from the scan history folder.
 
 ```yaml
 Type: UInt32
@@ -2126,22 +2114,19 @@ Accept wildcard characters: False
 
 ### -ScanScheduleDay
 
-Specifies the day of the week on which to perform a scheduled scan.
-Alternatively, specify everyday for a scheduled scan or never.
-The acceptable values for this parameter are:
+Specifies the day of the week to run scheduled scans. Valid values are:
 
-- 0: Everyday
-- 1: Sunday
-- 2: Monday
-- 3: Tuesday
-- 4: Wednesday
-- 5: Thursday
-- 6: Friday
-- 7: Saturday
-- 8: Never
+- 0 or Everyday
+- 1 or Sunday
+- 2 or Monday
+- 3 or Tuesday
+- 4 or Wednesday
+- 5 or Thursday
+- 6 or Friday
+- 7 or Saturday
+- 8 or Never (default)
 
-The default value is 8, never.
-If you specify a value of 8 or do not specify a value, Windows Defender does not perform scheduled scans.
+For the value 8 or Never, Windows Defender doesn't do scheduled scans.
 
 ```yaml
 Type: Day
@@ -2156,12 +2141,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ScanScheduleOffset
+
+Specifies the number of minutes after midnight on the local computer to run scheduled scans. The
+default value is 120, which means scheduled scans start on the local computer at 2:00 AM.
+
+If you don't specify a value for this parameter, scheduled scans start at the time specified by the
+**ScanScheduleTime** and **ScanScheduleQuickScanTime** parameters.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: scso
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ScanScheduleQuickScanTime
 
-Specifies the time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
-The time refers to the local time on the computer.
-If you do not specify a value for this parameter, a scheduled quick scan runs at the time specified by the **ScanScheduleOffset** parameter.
-That parameter has a default time of two hours after midnight.
+Specifies the time on the local computer to run scheduled quick scans.
+
+To specify a value, enter it as a time span: `hh:mm:ss` where `hh` = hours, `mm` = minutes and `ss`
+= seconds. For example, `13:30:00` indicates 1:30 PM.
+
+The default value is `02:00:00` (2:00 AM).
+
+If you don't specify a value for this parameter, scheduled quick scans run at the time specified
+by the **ScanScheduleOffset** parameter.
 
 ```yaml
 Type: DateTime
@@ -2175,26 +2185,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ScanScheduleOffset
-
-Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
-
-```yaml
-Type: UInt32
-Aliases: scso
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ScanScheduleTime
 
-Specifies the time of day to run a scheduled scan. The time refers to the local time on the computer. Specify the number of minutes after midnight (for example, enter 60 for 1 a.m.). This parameter has a default time of two hours after midnight (2 a.m.).
+Specifies the time on the local computer to run scheduled scans.
+
+To specify a value, enter it as a time span: `hh:mm:ss` where `hh` = hours, `mm` = minutes and `ss`
+= seconds. For example, `13:30:00` indicates 1:30 PM.
+
+The default value is `02:00:00` (2:00 AM).
+
+If you don't specify a value for this parameter, scheduled scans run at the time specified
+by the **ScanScheduleOffset** parameter.
 
 ```yaml
 Type: DateTime
-Aliases: scsqst
+Aliases: scst
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -2203,7 +2208,8 @@ Accept wildcard characters: False
 
 ### -SchedulerRandomizationTime
 
-Specifies the randomization time for the scheduler.
+Specifies the randomization time for the scheduler. A valid value is an integer from 0 to
+4294967295.
 
 ```yaml
 Type: UInt32
@@ -2219,11 +2225,16 @@ Accept wildcard characters: False
 
 ### -ServiceHealthReportInterval
 
-This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints. These are for Microsoft Defender Antivirus events 1150 and 1151. For more information, see [Microsoft Defender Antivirus event IDs](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus#microsoft-defender-antivirus-event-ids).
+<!-- Max value claimed to be 1440, but I could set 429496729 --->
 
-If you do not configure this setting, the default value will be applied. The default value is set at 60 minutes (one hour).
-If you configure this setting to 0, no service health reports will be sent.
-The maximum value allowed to be set is 14400 minutes (ten days).
+Specifies the time interval in minutes for the service health reports to be sent from endpoints.
+These reports are for Microsoft Defender Antivirus events 1150 and 1151.
+
+A valid value is an integer from 0 to 4294967295. The default value is 60 minutes. The value 0
+means no service health reports are sent.
+
+For more information, see
+[Microsoft Defender Antivirus event IDs](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus#microsoft-defender-antivirus-event-ids).
 
 ```yaml
 Type: UInt32
@@ -2237,12 +2248,18 @@ Accept wildcard characters: False
 
 ### -SevereThreatDefaultAction
 
-Specifies which automatic remediation action to take for a severe level threat.
-The acceptable values for this parameter are:
+<!--- Regardless of the value I enter, the property value in Get-MpPreference is 0. If I could
+change it like UnknownThreatDefaultAction, I wouldn't be able to change it back.--->
 
+Specifies which automatic remediation action to take for severe level threats. Valid values are:
+
+- Clean
 - Quarantine
 - Remove
-- Ignore
+- Allow
+- UserDefined
+- NoAction
+- Block
 
 ```yaml
 Type: ThreatAction
@@ -2259,7 +2276,10 @@ Accept wildcard characters: False
 
 ### -SharedSignaturesPath
 
-Specifies the shared signatures path.
+Specifies the shared signatures path. For example, `"P:\Signature Data"`. If the value contains
+spaces, enclose the value in quotation marks (").
+
+To empty this setting, use the value `" "`.
 
 ```yaml
 Type: String
@@ -2275,8 +2295,16 @@ Accept wildcard characters: False
 
 ### -SignatureAuGracePeriod
 
-Specifies a grace period, in minutes, for the definition.
-If a definition successfully updates within this period, Windows Defender abandons any service initiated updates.
+Specified the grace period in minutes that's applied to all signature updates after the initial,
+first-time application.
+
+A valid value is an integer from 0 to 4294967295.
+
+If Windows Defender successfully updates within this period, any service initiated updates are
+abandoned.
+
+THe **SignatureFirstAuGracePeriod** parameter specifies the grace period when a new signature is
+first detected.
 
 ```yaml
 Type: UInt32
@@ -2292,7 +2320,11 @@ Accept wildcard characters: False
 
 ### -SignatureBlobFileSharesSources
 
-Specifies the file shares sources for signatures.
+Specifies the file shares sources for signatures. For example,
+`"\\ServerName\\ShareName\Folder name\"`. If the value contains spaces, enclose the value in
+quotation marks (").
+
+To empty this setting, use the value `" "`.
 
 ```yaml
 Type: String
@@ -2308,7 +2340,7 @@ Accept wildcard characters: False
 
 ### -SignatureBlobUpdateInterval
 
-Specifies the signature update interval.
+Specifies the signature update interval. A valid value is an integer from 0 to 4294967295.
 
 ```yaml
 Type: UInt32
@@ -2325,10 +2357,15 @@ Accept wildcard characters: False
 ### -SignatureDefinitionUpdateFileSharesSources
 
 Specifies file-share sources for definition updates.
-Specify sources as a bracketed sequence of Universal Naming Convention (UNC) locations, separated by the pipeline symbol; for example, { \\\\Server01\Share01 | \\\\Server02\Share02 | \\\\Server03\Share03}.
-If you specify a value for this parameter, Windows Defender attempts to connect to the shares in the order that you specify.
-After Windows Defender updates a definition, it stops attempting to connect to shares on the list.
-If you do not specify a value for this parameter, the list is empty.
+
+A valid value uses the following syntax:
+`{\\Server1\Share1 | \\Server2\Share2 | ... \\ServerN\ShareN}`.
+
+Windows Defender tries to connect to the shared folders in the specified order. After the update
+is successful, Windows Defender stops trying to connect to the remaining shared folders in the
+list.
+
+To empty this setting, use the value `" "`.
 
 ```yaml
 Type: String
@@ -2344,9 +2381,11 @@ Accept wildcard characters: False
 
 ### -SignatureDisableUpdateOnStartupWithoutEngine
 
-Indicates whether to initiate definition updates even if no antimalware engine is present.
-If you specify a value of $True or do not specify a value, Windows Defender does not initiate definition updates on startup.
-If you specify a value of $False, and if no antimalware engine is present, Windows Defender initiates definition updates on startup.
+Specifies whether to initiate definition updates even if no antimalware engine is present. Valid values are:
+
+- $true: Windows Defender does not initiate definition updates on startup. This is the default value
+- $false: If no antimalware engine is present, Windows Defender initiates definition updates on
+startup.
 
 ```yaml
 Type: Boolean
@@ -2362,20 +2401,19 @@ Accept wildcard characters: False
 
 ### -SignatureFallbackOrder
 
-Specifies the order in which to contact different definition update sources.
-Specify the types of update sources in the order in which you want Windows Defender to contact them, enclosed in braces and separated by the pipeline symbol; for example, { InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }.
-The values that you can specify in the string are:
+Specifies the order in which to contact different definition update sources. The available sources
+are:
 
 - InternalDefinitionUpdateServer
 - MicrosoftUpdateServer
-- MMPC
-- FileShares
+- MMPC (Microsoft Malware Protection Center)
+- FileShares (specified by the **SignatureDefinitionUpdateFileSharesSources** parameter)
 
-MMPC refers to Microsoft Malware Protection Center.
+A valid value uses the following syntax: `{Source1 | Source2 | Source3 |Source4}`. The default
+value is `{MicrosoftUpdateServer | MMPC}`.
 
-If you specify a value for this parameter, Windows Defender contacts the definition update sources in the specified order.
-After Windows Defender downloads definition updates from a source, it stops attempting to connect to other sources.
-If you do not specify a value for this parameter, Windows Defender contacts sources in the default order of { MicrosoftUpdateServer | MMPC }.
+Windows Defender tries to connect to the sources in the specified order. After the update
+is successful, Windows Defender stops trying to connect to the remaining sources in the list.
 
 ```yaml
 Type: String
@@ -2391,9 +2429,19 @@ Accept wildcard characters: False
 
 ### -SignatureFirstAuGracePeriod
 
-Specifies a grace period, in minutes, for the definition.
-If a definition successfully updates within this period, Windows Defender abandons any service initiated updates.
+Specifies the grace period in minutes that's given to a new signature when it's first applied. This
+grace period allows more time for compatibility checks with new detection logic. For example, to
+prevent false positives from triggering alerts.
+
+A valid value is an integer from 20 to 4320.
+
+If Windows Defender successfully updates within this period, any service initiated updates are
+abandoned.
+
 This parameter overrides the value of the **CheckForSignaturesBeforeRunningScan** parameter.
+
+The **SignatureAuGracePeriod** parameter specifies the standard grace period for all subsequent
+signature updates.
 
 ```yaml
 Type: UInt32
@@ -2409,22 +2457,19 @@ Accept wildcard characters: False
 
 ### -SignatureScheduleDay
 
-Specifies the day of the week on which to check for definition updates.
-Alternatively, specify everyday for a scheduled scan or never.
-The acceptable values for this parameter are:
+Specifies the day of the week on which to check for definition updates. Valid values are:
 
-- 0: Everyday
-- 1: Sunday
-- 2: Monday
-- 3: Tuesday
-- 4: Wednesday
-- 5: Thursday
-- 6: Friday
-- 7: Saturday
-- 8: Never
+- 0 or Everyday
+- 1 or Sunday
+- 2 or Monday
+- 3 or Tuesday
+- 4 or Wednesday
+- 5 or Thursday
+- 6 or Friday
+- 7 or Saturday
+- 8 or Never (default)
 
-The default value is 8, never.
-If you specify a value of 8 or do not specify a value, Windows Defender checks for definition updates by using a default frequency.
+For the value 8 or Never, Windows Defender uses a default frequency to check for definition updates.
 
 ```yaml
 Type: Day
@@ -2441,9 +2486,13 @@ Accept wildcard characters: False
 
 ### -SignatureScheduleTime
 
-Specifies the time of day, as the number of minutes after midnight, to check for definition updates.
-The time refers to the local time on the computer.
-If you do not specify a value for this parameter, Windows Defender checks for definition updates at the default time of 15 minutes before the scheduled scan time.
+Specifies the time on the local computer to check for definition updates.
+
+To specify a value, enter it as a time span: `hh:mm:ss` where `hh` = hours, `mm` = minutes and `ss`
+= seconds. For example, `13:30:00` indicates 1:30 PM.
+
+If you don't specify a value for this parameter, Windows Defender checks for definition updates 15
+minutes before the scheduled scan time by default.
 
 ```yaml
 Type: DateTime
@@ -2457,26 +2506,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SignaturesUpdatesChannel
-
-This parameter has been replaced by the **DefinitionUpdatesChannel** parameter.
-
-```yaml
-Type: UpdatesChannelType
-Parameter Sets: (All)
-Aliases: srelr
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SignatureUpdateCatchupInterval
 
 Specifies the number of days after which Windows Defender requires a catch-up definition update.
-If you do not specify a value for this parameter, Windows Defender requires a catch-up definition update after the default value of one day.
+
+A valid value is an integer from 0 to 4294967295. The default value is one day.
 
 ```yaml
 Type: UInt32
@@ -2492,10 +2526,14 @@ Accept wildcard characters: False
 
 ### -SignatureUpdateInterval
 
-Specifies the interval, in hours, at which to check for definition updates.
-The acceptable values for this parameter are: integers from 1 through 24.
-If you do not specify a value for this parameter, Windows Defender checks at the default interval.
-You can use this parameter instead of the **SignatureScheduleDay** parameter and **SignatureScheduleTime** parameter.
+<!---Range is supposedly 1 to 24 --->
+
+Specifies the interval in hours to check for definition updates.
+
+A valid value is an integer from 0 to 4294967295.
+
+You can use this parameter instead of the **SignatureScheduleDay**and **SignatureScheduleTime**
+parameters.
 
 ```yaml
 Type: UInt32
@@ -2511,15 +2549,15 @@ Accept wildcard characters: False
 
 ### -SubmitSamplesConsent
 
-Specifies how Windows Defender checks for user consent for certain samples.
-If consent has previously been granted, Windows Defender submits the samples.
-Otherwise, if the **MAPSReporting** parameter does not have a value of Disabled, Windows Defender prompts the user for consent.
-The acceptable values for this parameter are:
+Specifies how Windows Defender checks for user consent for certain samples. Valid values are:
 
-- 0: Always prompt
-- 1: Send safe samples automatically
-- 2: Never send
-- 3: Send all samples automatically
+- 0 or AlwaysPrompt
+- 1 or SendSafeSamples
+- 2 or NeverSend
+- 3 or SendAllSamples
+
+If consent was previously granted, Windows Defender submits the samples. Otherwise, Windows Defender
+prompts the user for consent if the value of the **MAPSReporting** parameter isn't Disabled.
 
 ```yaml
 Type: SubmitSamplesConsentType
@@ -2536,19 +2574,45 @@ Accept wildcard characters: False
 
 ### -ThreatIDDefaultAction_Actions
 
-Specifies an array of the actions to take for the IDs specified by using the **ThreatIDDefaultAction_Ids** parameter.
-The acceptable values for this parameter are:
+Use the **ThreatIDDefaultAction_Ids** and **ThreatIDDefaultAction_Actions** parameters
+together in the same command to specify the actions to take on the corresponding threats.
 
-- 1: Clean
-- 2: Quarantine
-- 3: Remove
-- 6: Allow
-- 8: UserDefined
-- 9: NoAction
-- 10: Block
+- The **ThreatIDDefaultAction_Ids** parameter identifies the threat from the output of the
+**Get-MpThreatCatalog** cmdlet. For example, the ThreatID value of the threat named
+**Trojan:Win32/BlueFire** is `3229`.
+- The **ThreatIDDefaultAction_Actions** parameter identifies the action to take on the corresponding
+threat ID. Valid values are:
 
-> [!NOTE]
-> A value of 0 (NULL) applies an action based on the Security Intelligence Update (SIU). This is the default value.
+  • 1 or Clean
+
+  • 2 or Quarantine
+
+  • 3 or Remove
+
+  • 6 or Allow
+
+  • 8 or UserDefined
+
+  • 9 or NoAction
+
+  • 10 or Block
+
+To replace all existing values with the values you specify, use the following syntax:
+
+`Set-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+
+`Add-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+To remove values without affecting other existing values, use the **Remove-MPPreference** cmdlet:
+
+`Remove-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+**Note**: When a threat and corresponding action aren't specified in the
+**ThreatIDDefaultAction_Ids** and **ThreatIDDefaultAction_Actions** parameters, the action that's
+applied to the threat is based on the Security Intelligence Update (SIU). By default, no threats or
+corresponding actions are specified in the parameters.
 
 ```yaml
 Type: ThreatAction[]
@@ -2565,8 +2629,45 @@ Accept wildcard characters: False
 
 ### -ThreatIDDefaultAction_Ids
 
-Specifies an array of threat IDs.
-This cmdlet modifies the default action for the threat IDs that you specify.
+Use the **ThreatIDDefaultAction_Ids** and **ThreatIDDefaultAction_Actions** parameters
+together in the same command to specify the actions to take on the corresponding threats.
+
+- The **ThreatIDDefaultAction_Ids** parameter identifies the threat from the output of the
+**Get-MpThreatCatalog** cmdlet. For example, the ThreatID value of the threat named
+**Trojan:Win32/BlueFire** is `3229`.
+- The **ThreatIDDefaultAction_Actions** parameter identifies the action to take on the corresponding
+threat ID. Valid values are:
+
+  • 1 or Clean
+
+  • 2 or Quarantine
+
+  • 3 or Remove
+
+  • 6 or Allow
+
+  • 8 or UserDefined
+
+  • 9 or NoAction
+
+  • 10 or Block
+
+To replace all existing values with the values you specify, use the following syntax:
+
+`Set-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+
+`Add-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+To remove values without affecting other existing values, use the **Remove-MPPreference** cmdlet:
+
+`Remove-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+**Note**: When a threat and corresponding action aren't specified in the
+**ThreatIDDefaultAction_Ids** and **ThreatIDDefaultAction_Actions** parameters, the action that's
+applied to the threat is based on the Security Intelligence Update (SIU). By default, no threats or
+corresponding actions are specified in the parameters.
 
 ```yaml
 Type: Int64[]
@@ -2582,8 +2683,12 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+Specifies the maximum number of concurrent operations that can be established to run this cmdlet.
+
+A valid value is an integer from 0 to 2147483647. The default value is 0, which means PowerShell
+calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are
+running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -2600,11 +2705,10 @@ Accept wildcard characters: False
 
 ### -ThrottleForScheduledScanOnly
 
-A CPU usage limit can be applied to scheduled scans only, or to scheduled and custom scans. The default value applies a CPU usage limit to scheduled scans only.
-The acceptable values for this parameter are:
+Specifies whether a CPU usage limit applies scheduled scans only. Valid values are:
 
-- 1 (Default) - If you enable this setting, CPU throttling will apply only to scheduled scans.
-- 0 - If you disable this setting, CPU throttling will apply to scheduled and custom scans.
+- $true: CPU throttling applies only to scheduled scans. This is the default value.
+- $false: CPU throttling applies to scheduled and custom scans.
 
 ```yaml
 Type: Boolean
@@ -2620,9 +2724,10 @@ Accept wildcard characters: False
 
 ### -UILockdown
 
-Indicates whether to disable UI lockdown mode.
-If you specify a value of $True, Windows Defender disables UI lockdown mode.
-If you specify $False or do not specify a value, UI lockdown mode is enabled.
+Specifies whether to disable UI lockdown mode. Valid values are:
+
+- $true: UI lockdown mode is disabled.
+- $false: UI lockdown mode is enabled
 
 ```yaml
 Type: Boolean
@@ -2638,12 +2743,18 @@ Accept wildcard characters: False
 
 ### -UnknownThreatDefaultAction
 
-Specifies which automatic remediation action to take for an unknown level threat.
-The acceptable values for this parameter are:
+<!---Default value is 0, which doesn't correspond to anything. If you change it, you can't change
+it back to zero. --->
 
-- Quarantine
-- Remove
-- Ignore
+Specifies the automatic remediation action to take for unknown level threats. Valid values are:
+
+- 1 or Clean
+- 2 or Quarantine
+- 3 or Remove
+- 6 or Allow
+- 8 or UserDefined
+- 9 or NoAction
+- 10 or Block
 
 ```yaml
 Type: ThreatAction

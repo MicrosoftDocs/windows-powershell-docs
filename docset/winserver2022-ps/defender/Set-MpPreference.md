@@ -193,12 +193,19 @@ Accept wildcard characters: False
 
 ### -AllowNetworkProtectionDownLevel
 
-Specifies whether to allow network protection to be set to Enabled or Audit Mode on Windows versions
-before 1709. Valid values are:
+Specifies whether network protection on Windows Server 2012 R2 is controlled by the
+**EnableNetworkProtection** parameter. Valid values are:
 
-- $true: Allow network protection to be set to Enabled or Audit Mode on Windows v1709 or earlier.
-- $false: Don't allow network protection to be set to Enabled or Audit Mode on Windows v1709 or
-earlier.
+- $true: Network protection is controlled by the **EnableNetworkProtection**
+parameter (Enabled, Disabled, or AuditMode).
+
+  **Tip**: For Windows Server 2016 or Windows Server 2012 R2, you also need to set the
+**AllowNetworkProtectionOnWinServer** parameter to the value $true.
+
+- $false: Network protection isn't controlled by the **EnableNetworkProtection**
+parameter.
+
+For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
 
 ```yaml
 Type: Boolean
@@ -214,11 +221,19 @@ Accept wildcard characters: False
 
 ### -AllowNetworkProtectionOnWinServer
 
-Specifies whether to allow network protection to be set to Enabled or Audit Mode for Windows Server.
-Valid values are:
+Specifies whether network protection on Windows Server is controlled by the
+**EnableNetworkProtection** parameter. Valid values are:
 
-- $true: Allow network protection to be set to Enabled or Audit Mode on Windows Server.
-- $false: Don't allow network protection to be set to Enabled or Audit Mode on Windows Server.
+- $true: Network protection is controlled by the **EnableNetworkProtection**
+parameter (Enabled, Disabled, or AuditMode).
+
+  **Tip**: For Windows Server 2016 or Windows Server 2012 R2, you also need to set the
+**AllowNetworkProtectionDownLevel** parameter to the value $true.
+
+- $false: Network protection isn't controlled by the **EnableNetworkProtection**
+parameter.
+
+For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
 
 ```yaml
 Type: Boolean
@@ -509,6 +524,15 @@ To remove values without affecting other existing values, use the **Remove-MPPre
 
 `Remove-MpPreference -ControlledFolderAccessAllowedApplications "PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`
 
+The value parameter is meaningful only if the value of the **EnableControlledFolderAccess**
+parameter isn't `Disabled`.
+
+To specify additional folders that are protected by controlled folder access, use the
+**ControlledFolderAccessProtectedFolders** parameter.
+
+For more information about controlled folder access, see [Protect important folders with controlled
+folder access](/defender-endpoint/controlled-folders).
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -537,6 +561,15 @@ To add values without affecting existing values, use the **Add-MPPreference** cm
 To remove values without affecting other existing values, use the **Remove-MPPreference** cmdlet:
 
 `Remove-MpPreference -ControlledFolderAccessAllowedApplications "Path1","Path2",..."PathN"`
+
+The value parameter is meaningful only if the value of the **EnableControlledFolderAccess**
+parameter isn't `Disabled`.
+
+To specify applications that are allowed to access controlled folders, use the
+**ControlledFolderAccessAllowedApplications** parameter.
+
+For more information about controlled folder access, see [Protect important folders with controlled
+folder access](/defender-endpoint/controlled-folders).
 
 ```yaml
 Type: String[]
@@ -769,6 +802,8 @@ Network protection needs to inspect DNS traffic over TCP in the following scenar
 - To provide metadata for anti-malware behavior monitoring.
 - To allow for a DNS sinkhole if the **EnableDnsSinkhole** parameter is set to the value $true.
 
+For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -835,6 +870,8 @@ Specifies whether to disable FTP parsing for network protection. Valid values ar
 
 - $true: FTP parsing for network protection is disabled.
 - $false: FTP parsing for network protection is enabled.
+
+For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
 
 ```yaml
 Type: Boolean
@@ -905,6 +942,8 @@ Specifies whether Network Protection inspects only outbound connections. Valid v
 - $true: Network Protection inspects only outbound connections.
 - $false: Network Protection inspects inbound and outbound connections. This is the default value.
 
+For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -943,6 +982,8 @@ Valid values are:
 
 - $true: Network protection telemetry is disabled.
 - $false: Network protection telemetry is enabled. This is the default value.
+
+For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
 
 ```yaml
 Type: Boolean
@@ -1114,10 +1155,12 @@ Accept wildcard characters: False
 
 ### -DisableSmtpParsing
 
-This setting disables SMTP parsing by Network Protection. Valid values are:
+This setting disables SMTP parsing by network protection. Valid values are:
 
 - $true: SMTP parsing is disabled.
 - $false: SMTP parsing is enabled. This is the default value
+
+For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
 
 ```yaml
 Type: Boolean
@@ -1135,8 +1178,10 @@ Accept wildcard characters: False
 
 Specifies whether to disable the inspection of SSH traffic. Valid values are:
 
-- $true: Network Protection doesn't inspect SSH traffic.
-- $false: Network Protection inspects SSH traffic. This is the default value.
+- $true: Network protection doesn't inspect SSH traffic.
+- $false: Network protection inspects SSH traffic. This is the default value.
+
+For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
 
 ```yaml
 Type: Boolean
@@ -1163,6 +1208,8 @@ being made to a malicious website, and to provide metadata to behavior monitorin
 TLS connections to malicious websites can also be blocked if the value of the
 **EnableNetworkProtection** parameter is `Enabled`.
 
+For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -1187,6 +1234,15 @@ Specifies the state for the controlled folder access feature. Valid values are:
 - BlockDiskModificationOnly
 - AuditDiskModificationOnly
 
+To specify additional folders that are protected by controlled folder access, use the
+**ControlledFolderAccessProtectedFolders** parameter.
+
+To specify applications that are allowed to access controlled folders, use the
+**ControlledFolderAccessAllowedApplications** parameter.
+
+For more information about controlled folder access, see [Protect important folders with controlled
+folder access](/defender-endpoint/controlled-folders).
+
 ```yaml
 Type: ControlledFolderAccessType
 Parameter Sets: (All)
@@ -1206,6 +1262,8 @@ warning. Valid values are:
 
 - $true: Network Protection blocks network traffic instead of displaying a warning.
 - $false: Network Protection displaying a warning.
+
+For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
 
 ```yaml
 Type: Boolean
@@ -1230,6 +1288,8 @@ DNS based malicious attacks. Valid values are:
 in conjunction with behavior monitoring, detect and sinkhole DNS exfiltration attempts, and other
 DNS based malicious attacks.
 - $false: DNS sinkhole is disabled.
+
+For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
 
 ```yaml
 Type: Boolean
@@ -1309,6 +1369,12 @@ and malware. Valid values are:
 - 1 or Enabled
 - 2 or AuditMode
 
+**Tip**: Network protection on Windows Server also requires that the
+**AllowNetworkProtectionOnWinServer** and (for Windows Server 2016 or Windows Server 2012 R2)
+**AllowNetworkProtectionDownLevel** parameters are set to the value $true.
+
+For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
+
 ```yaml
 Type: ASRRuleActionType
 Parameter Sets: (All)
@@ -1329,8 +1395,8 @@ potentially higher inbound UDP bandwidth. Valid values are:
 - $true: UDP receive offload support in Network Protection is enabled.
 - $false: UDP receive offload support in Network Protection is disabled.
 
-Starting with platform version `4.18.24030`, Microsoft will gradually move the default value from
-disabled to enabled.
+Starting with platform version `4.18.24030`, we're gradually moving the default value from
+$false (disabled) to $true (enabled).
 
 ```yaml
 Type: Boolean

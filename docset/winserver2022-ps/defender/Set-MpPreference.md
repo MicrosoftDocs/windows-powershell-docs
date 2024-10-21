@@ -143,7 +143,8 @@ for high, moderate, and low threat levels.
 
 **REMEDIATION VALUES**:
 
-The following table provides remediation action values for detected threats at low, medium, high, and severe alert levels.
+The following table provides remediation action values for detected threats at low, medium, high,
+and severe alert levels.
 
 |Value|Action|
 |---|---|
@@ -172,7 +173,8 @@ This command configures preferences to check for definition updates every day.
 PS C:\> Set-MpPreference -SignatureScheduleTime 02:00:00
 ```
 
-This command configures preferences to check for definition updates 120 minutes after midnight on days when it's scheduled to check.
+This command configures preferences to check for definition updates 120 minutes after midnight on
+days when it's scheduled to check.
 
 ## PARAMETERS
 
@@ -197,8 +199,8 @@ Accept wildcard characters: False
 
 ### -AllowNetworkProtectionDownLevel
 
-Specifies whether network protection on Windows Server 2012 R2 is controlled by the
-**EnableNetworkProtection** parameter. Valid values are:
+Specifies whether network protection on Windows Server 2016 or Windows Server 2012 R2 is controlled
+by the **EnableNetworkProtection** parameter. Valid values are:
 
 - $true: Network protection is controlled by the **EnableNetworkProtection**
 parameter (Enabled, Disabled, or AuditMode).

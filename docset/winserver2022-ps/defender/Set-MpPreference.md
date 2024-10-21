@@ -2011,8 +2011,7 @@ complete remediation.
 Type: Day
 Parameter Sets: (All)
 Aliases: rsd
-Accepted values: Everyday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday,
-Never
+Accepted values: Everyday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Never
 
 Required: False
 Position: Named

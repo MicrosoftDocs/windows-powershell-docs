@@ -14,6 +14,10 @@ title: Set-MpPreference
 
 Configures preferences for Windows Defender scans and updates.
 
+> [!NOTE]
+> You need to run this cmdlet in an elevated PowerShell window (a PowerShell window you opened by
+selecting **Run as administrator**).
+
 ## SYNTAX
 
 ```powershell

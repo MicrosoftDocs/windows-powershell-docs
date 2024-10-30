@@ -541,27 +541,18 @@ Accept wildcard characters: False
 ```
 
 ### -Partition
-Specifies the distinguished name of an Active Directory partition.
-The distinguished name must be one of the naming contexts on the current directory server.
+Specifies the distinguished name of an Active Directory domain naming context.
 The cmdlet searches this partition to find the object defined by the *Identity* parameter.
 
-In many cases, a default value is used for the *Partition* parameter if no value is specified.
-The rules for determining the default value are given below.
+In many cases, a default value is used for the *Partition* parameter if no value is specified. The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and once a default value can be determined, no further rules are evaluated.
 
-In Active Directory Domain Services (AD DS) environments, a default value for *Partition* is set in the following cases: 
+A default value for *Partition* is set in the following cases: 
 
 - If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
-- If none of the previous cases apply, the default value of *Partition* is set to the default partition or naming context of the target domain.
-
-In AD LDS environments, a default value for *Partition* is set in the following cases:
-
-- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name. 
-- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
-- If the target AD LDS instance has a default naming context, the default value of *Partition* will be set to the default naming context.
-To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance. 
-- If none of the previous cases apply, the *Partition* parameter will not take any default value.
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive.
+- If the `-server` parameter is used, the Path is set to the default naming context of this server.
+- If none of the previous cases apply, the default value of *Partition* is set to the default partition or naming context of the target used.
 
 ```yaml
 Type: String
@@ -682,13 +673,14 @@ Accept wildcard characters: False
 ```
 
 ### -SamAccountName
-Specifies the Security Account Manager (SAM) account name of the user, group, computer, or service account.
-The maximum length of the description is 256 characters.
+Specifies the Security Account Manager (SAM) account name of the service account.
 To be compatible with older operating systems, create a SAM account name that is 20 characters or less.
 This parameter sets the **SAMAccountName** for an account object.
 The LDAP display name (**ldapDisplayName**) for this property is sAMAccountName.
 
-Note: If the string value provided is not terminated with a $ character, the system adds one if needed.
+Notes:
+- If the string value provided is not terminated with a $ character, the system adds one if needed.
+- The name needs to be unique in the forest as in some places the GMSA names are searched in the domain tree.
 
 ```yaml
 Type: String
@@ -704,7 +696,7 @@ Accept wildcard characters: False
 
 ### -Server
 Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory Snapshot instance.
+The service may be the following: Active Directory Domain Services.
 
 Domain name values:
 

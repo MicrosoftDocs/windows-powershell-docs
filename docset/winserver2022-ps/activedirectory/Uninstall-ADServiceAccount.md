@@ -31,6 +31,8 @@ You can identify an MSA by its distinguished name (DN), GUID, security identifie
 You can also set the parameter to an MSA object variable, such as `$<localServiceAccountObject>` or pass an MSA object through the pipeline to the *Identity* parameter.
 For example, you can use the **Get-ADServiceAccount** cmdlet to get an MSA object and then pass that object through the pipeline to the **Uninstall-ADServiceAccount** cmdlet.
 
+You will receive an error if the account name is not unique in the forest, meaning an account with the same samAccountName may be in multiple domains in the forest.
+
 ## EXAMPLES
 
 ### Example 1: Uninstall a specified MSA
@@ -164,7 +166,6 @@ A parameter with name **ForceRemoveLocal** is provided to un-install standalone 
 ## NOTES
 * This cmdlet does not work with AD LDS.
 * This cmdlet does not work with an Active Directory snapshot.
-* This cmdlet does not work with a read-only domain controller.
 
 ## RELATED LINKS
 

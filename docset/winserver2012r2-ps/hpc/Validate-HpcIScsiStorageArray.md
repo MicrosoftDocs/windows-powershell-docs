@@ -112,9 +112,9 @@ The message for this event provides more information about the failure.
 
 ## RELATED LINKS
 
-[Add-HpcIScsiStorageArray](./Add-HpcIScsiStorageArray.md)
+[Add-HpcIScsiStorageArray](/powershell/module/hpcpack2019/add-hpciscsistoragearray?view=hpc19-ps)
 
-[Get-HpcIScsiStorageArray](./Get-HpcIScsiStorageArray.md)
+[Get-HpcIScsiStorageArray](/powershell/module/hpcpack2019/get-hpciscsistoragearray?view=hpc19-ps)
 
 [Remove-HpcIScsiStorageArray](./Remove-HpcIScsiStorageArray.md)
 

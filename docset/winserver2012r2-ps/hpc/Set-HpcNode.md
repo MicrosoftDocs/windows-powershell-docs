@@ -340,7 +340,7 @@ You must be a cluster administrator to run this cmdlet successfully.
 
 ## RELATED LINKS
 
-[Get-HpcNode](./Get-HpcNode.md)
+[Get-HpcNode](/powershell/module/hpcpack2019/get-hpcnode?view=hpc19-ps)
 
 [Remove-HpcNode](./Remove-HpcNode.md)
 

@@ -126,9 +126,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-HpcJob](./Export-HpcJob.md)
+[Export-HpcJob](/powershell/module/hpcpack2019/export-hpcjob?view=hpc19-ps)
 
-[Get-HpcJob](./Get-HpcJob.md)
+[Get-HpcJob](/powershell/module/hpcpack2019/get-hpcjob?view=hpc19-ps)
 
 [New-HpcJob](./New-HpcJob.md)
 

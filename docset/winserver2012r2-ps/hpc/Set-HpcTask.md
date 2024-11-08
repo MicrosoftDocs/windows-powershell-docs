@@ -663,9 +663,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-HpcTask](./Add-HpcTask.md)
+[Add-HpcTask](/powershell/module/hpcpack2019/add-hpctask?view=hpc19-ps)
 
-[Export-HpcTask](./Export-HpcTask.md)
+[Export-HpcTask](/powershell/module/hpcpack2019/export-hpctask?view=hpc19-ps)
 
 [Get-HpcTask](./Get-HpcTask.md)
 

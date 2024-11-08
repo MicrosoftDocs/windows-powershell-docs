@@ -130,8 +130,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-HpcJob](/powershell/module/hpcpack2019/get-hpcjob?view=hpc19-ps)
 
-[New-HpcJob](./New-HpcJob.md)
+[New-HpcJob](/powershell/module/hpcpack2019/new-hpcjob?view=hpc19-ps)
 
-[Set-HpcJob](./Set-HpcJob.md)
+[Set-HpcJob](/powershell/module/hpcpack2019/set-hpcjob?view=hpc19-ps)
 
 [Stop-HpcJob](./Stop-HpcJob.md)

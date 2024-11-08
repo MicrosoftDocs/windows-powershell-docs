@@ -158,6 +158,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Export-HpcTestResult](/powershell/module/hpcpack2016/export-hpctestresult?view=hpc16-ps)
 
-[Get-HpcTestResult](./Get-HpcTestResult.md)
+[Get-HpcTestResult](/powershell/module/hpcpack2019/get-hpctestresult?view=hpc19-ps)
 
-[Invoke-HpcTest](./Invoke-HpcTest.md)
+[Invoke-HpcTest](/powershell/module/hpcpack2019/invoke-hpctest?view=hpc19-ps)

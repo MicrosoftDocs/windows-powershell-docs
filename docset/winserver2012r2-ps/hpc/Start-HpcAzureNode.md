@@ -137,7 +137,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-HpcAzureNode](./Remove-HpcAzureNode.md)
+[Remove-HpcAzureNode](/powershell/module/hpcpack2019/remove-hpcazurenode?view=hpc19-ps)
 
 [Start-HpcNodeSet](./Start-HpcNodeSet.md)
 

@@ -119,6 +119,6 @@ This cmdlet was introduced in HPC Pack 2008 R2 with Service Pack 2 (SP2). It is 
 
 [Add-HpcPool](/powershell/module/hpcpack2019/add-hpcpool?view=hpc19-ps)
 
-[Get-HpcPool](./Get-HpcPool.md)
+[Get-HpcPool](/powershell/module/hpcpack2019/get-hpcpool?view=hpc19-ps)
 
-[Remove-HpcPool](./Remove-HpcPool.md)
+[Remove-HpcPool](/powershell/module/hpcpack2019/remove-hpcpool?view=hpc19-ps)

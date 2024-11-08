@@ -342,9 +342,9 @@ You must be a cluster administrator to run this cmdlet successfully.
 
 [Get-HpcNode](/powershell/module/hpcpack2019/get-hpcnode?view=hpc19-ps)
 
-[Remove-HpcNode](./Remove-HpcNode.md)
+[Remove-HpcNode](/powershell/module/hpcpack2016/remove-hpcnode?view=hpc16-ps)
 
-[Restart-HpcNode](./Restart-HpcNode.md)
+[Restart-HpcNode](/powershell/module/hpcpack2019/restart-hpcnode?view=hpc19-ps)
 
 [Shutdown-HpcNode](./Shutdown-HpcNode.md)
 

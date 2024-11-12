@@ -192,8 +192,8 @@ Accept wildcard characters: False
 ### -SkipClientCertificateAccessCheck
 
 Specifies whether the server should skip the check for client certificate access when a client
-connects. When this parameter is set to `$true`, the server will not check whether the client has
-access to the certificate it presents. This can be useful in scenarios where the server is acting
+connects. When this parameter is set to `$true`, the server will not perform the access control
+checks based on the client certificates. This can be useful in scenarios where the server is acting
 as a gateway or proxy, and does not need to perform full certificate validation.
 
 However, it can also increase the risk of security breaches. When this parameter is set to

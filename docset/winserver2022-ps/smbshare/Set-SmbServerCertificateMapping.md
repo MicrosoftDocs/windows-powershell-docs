@@ -41,7 +41,7 @@ for SMB over QUIC. For more information, see [SMB over QUIC](https://aka.ms/smbo
 > [!NOTE]
 >
 > - The **RequireClientAuthentication** and **SkipClientCertificateAccessCheck** parameters are only
-> supported in Windows Server Datacenter: Azure Edition.
+> supported in Windows Server 2022 Datacenter: Azure Edition.
 >
 > - If the **RequireClientAuthentication** parameter is set to `$true` and
 > **SkipClientCertificateAccessCheck** is set to `$false`, the server will perform both client

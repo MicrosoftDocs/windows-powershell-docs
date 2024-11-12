@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbShare.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 10/20/2022
+ms.date: 02/22/2024
 online version: https://learn.microsoft.com/powershell/module/smbshare/new-smbshare?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-SmbShare
@@ -42,7 +42,7 @@ To delete a share that was created by this cmdlet, use the `Remove-SmbShare` cmd
 
 ```powershell
 $Parameters = @{
-    Name = 'Public'
+    Name = 'VMSFiles'
     Path = 'D:\Public'
     FullAccess = 'Contoso\Administrator', 'Contoso\Contoso-HV1$'
 }
@@ -101,36 +101,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CATimeout
-
-Specifies the continuous availability time-out for the share.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CachingMode
 
 Specifies the caching mode of the offline files for the SMB share. There are five caching modes:
 
-- None.
-Prevents users from storing documents and programs offline.
-- Manual.
-Allows users to identify the documents and programs they want to store offline.
-- Programs.
-Automatically stores documents and programs offline.
-- Documents.
-Automatically stores documents offline.
-- BranchCache.
-Enables BranchCache and manual caching of documents on the shared folder.
+- BranchCache - Enables BranchCache and manual caching of documents on the shared folder.
+- Documents - Automatically stores documents offline.
+- Manual - Allows users to identify the documents and programs that they want to store offline.
+- Programs - Automatically stores documents and programs offline.
+- None - Prevents users from storing documents and programs offline.
 
 ```yaml
 Type: CachingMode
@@ -182,8 +161,8 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -335,9 +314,9 @@ Accept wildcard characters: False
 Specifies SMB leasing and oplock behaviors for application compatibility. The acceptable values for
 this parameter are:
 
-- `Full:` Use default lease and oplock behaviors from SMB3.
-- `Shared:` Grant read-caching lease but not write or handle-caching.
-- `None:` No oplocks or leases, behave like SMB1 (not recommended).
+- `Full`: Use default lease and oplock behaviors from SMB3.
+- `Shared`: Grant read-caching lease but not write or handle-caching.
+- `None`: No oplocks or leases, behave like SMB1 (not recommended).
 
 ```yaml
 Type: LeasingMode
@@ -425,7 +404,8 @@ Accept wildcard characters: False
 
 ### -ScopeName
 
-Specifies the scope name of the share. For use with Windows Server failover cluster file server resources.
+Specifies the scope name of the share. For use with Windows Server failover cluster file server
+resources.
 
 ```yaml
 Type: String
@@ -510,8 +490,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet isn't run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 > [!NOTE]
 > The **WhatIf** switch doesn't work with this cmdlet.
@@ -533,7 +512,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -552,8 +531,8 @@ object that represents the SMB share.
 
 ## RELATED LINKS
 
-[Get-SmbShare](./Get-SmbShare.md)
+[Get-SmbShare](Get-SmbShare.md)
 
-[Remove-SmbShare](./Remove-SmbShare.md)
+[Remove-SmbShare](Remove-SmbShare.md)
 
-[Set-SmbShare](./Set-SmbShare.md)
+[Set-SmbShare](Set-SmbShare.md)

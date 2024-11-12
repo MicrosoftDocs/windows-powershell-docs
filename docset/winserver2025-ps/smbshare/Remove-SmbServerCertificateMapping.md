@@ -40,6 +40,16 @@ The `Remove-SmbServerCertificateMapping` cmdlet removes the certificates associa
 server for SMB over QUIC. For more information, review
 [SMB over QUIC](/windows-server/storage/file-server/smb-over-quic).
 
+> [!NOTE]
+>
+> - If the **RequireClientAuthentication** parameter is set to `$true` and
+> **SkipClientCertificateAccessCheck** is set to `$false`, the server will perform both client
+> certificate validation and access control checks.
+>
+> - If the **RequireClientAuthentication** parameter is set to `$true` and
+> **SkipClientCertificateAccessCheck** is also set to `$true`, the server will perform client
+> certificate validation but no access control checks.
+
 ## EXAMPLES
 
 ### Example 1 - Remove a certificate mapping for SMB server edge endpoint
@@ -242,13 +252,15 @@ Accept wildcard characters: False
 ### -SkipClientCertificateAccessCheck
 
 Specifies whether the server should skip the check for client certificate access when a client
-connects. When this parameter is set to `$true`, the server will not check whether the client has
-access to the certificate it presents. This can be useful in scenarios where the server is acting
-as a gateway or proxy, and does not need to perform full certificate validation.
+connects. This parameter only applies when the server certificate mapping
+**RequireClientAuthentication** value is `$true`. When this parameter is set to `$true`, the server
+will not perform the access control checks based on the client certificates. This can be useful in
+scenarios where the server is acting as a gateway or proxy and client certificate validation is
+sufficient.
 
 However, it can also increase the risk of security breaches. When this parameter is set to
-`$false`, the server will check whether the client has access to the certificate it presents before
-allowing the client to connect.
+`$false`, the server will perform the access control checks based on the client certificates in
+addition to the client certificate validation before allowing the client to connect.
 
 ```yaml
 Type: Boolean[]

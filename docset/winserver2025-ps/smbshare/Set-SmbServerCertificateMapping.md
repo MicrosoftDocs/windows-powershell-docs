@@ -38,6 +38,16 @@ Set-SmbServerCertificateMapping -InputObject <CimInstance[]> [-Flags <Flags>] [-
 The `Set-SmbServerCertificateMapping` cmdlet modifies a certificate's association to the SMB server
 for SMB over QUIC. For more information, see [SMB over QUIC](https://aka.ms/smboverquic).
 
+> [!NOTE]
+>
+> - If the **RequireClientAuthentication** parameter is set to `$true` and
+> **SkipClientCertificateAccessCheck** is set to `$false`, the server will perform both client
+> certificate validation and access control checks.
+>
+> - If the **RequireClientAuthentication** parameter is set to `$true` and
+> **SkipClientCertificateAccessCheck** is also set to `$true`, the server will perform client
+> certificate validation but no access control checks.
+
 ## EXAMPLES
 
 ### Example 1: Enable Named Pipes for the SMB over QUIC endpoint

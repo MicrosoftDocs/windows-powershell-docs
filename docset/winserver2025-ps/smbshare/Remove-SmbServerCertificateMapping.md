@@ -40,6 +40,16 @@ The `Remove-SmbServerCertificateMapping` cmdlet removes the certificates associa
 server for SMB over QUIC. For more information, review
 [SMB over QUIC](/windows-server/storage/file-server/smb-over-quic).
 
+> [!NOTE]
+>
+> - If the **RequireClientAuthentication** parameter is set to `$true` and
+> **SkipClientCertificateAccessCheck** is set to `$false`, the server will perform both client
+> certificate validation and access control checks.
+>
+> - If the **RequireClientAuthentication** parameter is set to `$true` and
+> **SkipClientCertificateAccessCheck** is also set to `$true`, the server will perform client
+> certificate validation but no access control checks.
+
 ## EXAMPLES
 
 ### Example 1 - Remove a certificate mapping for SMB server edge endpoint

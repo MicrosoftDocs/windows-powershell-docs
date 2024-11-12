@@ -47,6 +47,7 @@ For more information on SMB server and protocol specifications, see
 and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and 3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 > [!NOTE]
+>
 > - The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
 >   Microsoft server operating system version 21H2 for x64-based Systems
 >   ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,

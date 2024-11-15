@@ -34,14 +34,16 @@ Get-SmbServerConfiguration
 ```
 
 ```output
-AnnounceComment                        :
+AnnounceComment                        : 
 AnnounceServer                         : False
 AsynchronousCredits                    : 512
+AuditClientCertificateAccess           : False
 AuditSmb1Access                        : False
 AutoDisconnectTimeout                  : 15
 AutoShareServer                        : True
 AutoShareWorkstation                   : True
 CachedOpenLimit                        : 10
+DisableCompression                     : False
 DisableSmbEncryptionOnSecureConnection : True
 DurableHandleV2TimeoutInSeconds        : 180
 EnableAuthenticateUserSharing          : False
@@ -53,8 +55,10 @@ EnableOplocks                          : True
 EnableSecuritySignature                : False
 EnableSMB1Protocol                     : False
 EnableSMB2Protocol                     : True
+EnableSMBQUIC                          : True
 EnableStrictNameChecking               : True
 EncryptData                            : False
+EncryptionCiphers                      : AES_128_GCM, AES_128_CCM, AES_256_GCM, AES_256_CCM
 IrpStackSize                           : 15
 KeepAliveTime                          : 2
 MaxChannelPerSession                   : 32
@@ -62,12 +66,14 @@ MaxMpxCount                            : 50
 MaxSessionPerConnection                : 16384
 MaxThreadsPerQueue                     : 20
 MaxWorkItems                           : 1
-NullSessionPipes                       :
-NullSessionShares                      :
+NullSessionPipes                       : 
+NullSessionShares                      : 
 OplockBreakWait                        : 35
 PendingClientTimeoutInSeconds          : 120
 RejectUnencryptedAccess                : True
+RequestCompression                     : False
 RequireSecuritySignature               : False
+RestrictNamedpipeAccessViaQuic         : True
 ServerHidden                           : True
 Smb2CreditsMax                         : 8192
 Smb2CreditsMin                         : 512
@@ -77,9 +83,6 @@ ValidateAliasNotCircular               : True
 ValidateShareScope                     : True
 ValidateShareScopeNotAliased           : True
 ValidateTargetName                     : True
-RestrictNamedpipeAccessViaQuic         : True
-EnableSMBQUIC                          : True
-EncryptionCiphers                      : AES_128_GCM, AES_128_CCM, AES_256_GCM, AES_256_CCM
 ```
 
 This command retrieves the SMB server configuration.

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.ReFsDedup.Commands.dll-Help.xml
 Module Name: Microsoft.ReFsDedup.Commands
-ms.date: 02/21/2024
+ms.date: 11/20/2024
 online version: https://learn.microsoft.com/powershell/module/microsoft.refsdedup.commands/get-refsdedupstatus?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ReFSDedupStatus
@@ -10,7 +10,7 @@ title: Get-ReFSDedupStatus
 # Get-ReFSDedupStatus
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves the status of data deduplication on a specified ReFS volume.
 
 ## SYNTAX
 
@@ -19,24 +19,29 @@ Get-ReFSDedupStatus [-Volume] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The `Get-ReFSDedupStatus` cmdlet retrieves the status of data deduplication on a specified ReFS volume.
+The cmdlet returns information about the amount of space saved by deduplication, the percentage of
+data that is deduplicated, and the status of the deduplication job.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-ReFSDedupStatus -Volume "D:"
 ```
 
-{{ Add example description here }}
+This example retrieves the deduplication status for the `D:` ReFS volume.
 
 ## PARAMETERS
 
 ### -Volume
-{{ Fill Volume Description }}
+
+Specifies the ReFS volume for which to retrieve the deduplication status.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -48,7 +53,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -57,6 +66,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

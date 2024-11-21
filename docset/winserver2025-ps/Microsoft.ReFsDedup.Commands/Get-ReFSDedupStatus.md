@@ -20,9 +20,8 @@ Get-ReFSDedupStatus [-Volume] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Get-ReFSDedupStatus` cmdlet retrieves the status of data deduplication on a specified ReFS volume.
-The cmdlet returns information about the amount of space saved by deduplication, the percentage of
-data that is deduplicated, and the status of the deduplication job.
+The `Get-ReFSDedupStatus` cmdlet retrieves the status of data deduplication on a specified ReFS
+volume.
 
 ## EXAMPLES
 
@@ -32,13 +31,32 @@ data that is deduplicated, and the status of the deduplication job.
 Get-ReFSDedupStatus -Volume "D:"
 ```
 
+```output
+Volume Type             Used     Deduped Compressed Format       Level ChunkSize Status
+------ ----             ----     ------- ---------- ------       ----- --------- ------
+D:     DedupAndCompress 1.02 GiB 0 B     0 B        Uncompressed 0     0 B       --    
+```
+
 This example retrieves the deduplication status for the `D:` ReFS volume.
+
+### Example 2
+
+```powershell
+$Volumes = "E:", "F:"
+foreach ($Volume in $Volumes) {
+   Get-ReFSDedupStatus -Volume $Volume
+}
+```
+
+This example retrieves the deduplication status for both the `E:` and `F:` ReFS volume.
 
 ## PARAMETERS
 
 ### -Volume
 
-Specifies the ReFS volume for which to retrieve the deduplication status.
+Specifies the ReFS volume for which to retrieve the deduplication status. Enter one or more volume
+IDs, drive letters, or volume GUID paths. For drive letters, use the format `D:`. For volume GUID
+paths, use the format `\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
 
 ```yaml
 Type: String

@@ -21,8 +21,7 @@ Get-ReFSDedupScrubSchedule [-Volume] <String> [<CommonParameters>]
 ## DESCRIPTION
 
 The `Get-ReFSDedupScrubSchedule` cmdlet retrieves the deduplication scrub schedule on the specified
-ReFS volume. The scrub schedule specifies when and how often scrub jobs are run on the volume to
-check for and repair any data corruption.
+ReFS volume.
 
 ## EXAMPLES
 
@@ -32,13 +31,21 @@ check for and repair any data corruption.
 Get-ReFSDedupScrubSchedule -Volume "D:"
 ```
 
+```output
+Volume Enabled Start Days WeeksInterval DedupDataOnly Suspended
+------ ------- ----- ---- ------------- ------------- ---------
+D:     True    N/A   None 0             False         False    
+```
+
 This example gets the deduplication scrub schedule on the `D:` ReFS volume.
 
 ## PARAMETERS
 
 ### -Volume
 
-Specifies the volume on which to retrieve the ReFS deduplication scrub schedule.
+Specifies the volume on which to retrieve the ReFS deduplication scrub schedule. Enter one or more
+volume IDs, drive letters, or volume GUID paths. For drive letters, use the format `D:`. For volume
+GUID paths, use the format `\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
 
 ```yaml
 Type: String

@@ -22,8 +22,7 @@ Set-ReFSDedupScrubSchedule [-Volume] <String> -Start <DateTime> -Days <DaysOfWee
 ## DESCRIPTION
 
 The `Set-ReFSDedupScrubSchedule` cmdlet sets the deduplication scrub schedule on the specified ReFS
-volume. The scrub schedule specifies when and how often scrub jobs are run on the volume to check
-for and repair any data corruption.
+volume. The scrub schedule specifies when and how often scrub jobs are run on the volume.
 
 ## EXAMPLES
 
@@ -105,7 +104,9 @@ Accept wildcard characters: False
 
 ### -Volume
 
-Specifies the ReFS volume on which to set the deduplication scrub schedule.
+Specifies the ReFS volume on which to set the deduplication scrub schedule. Enter one or more volume
+IDs, drive letters, or volume GUID paths. For drive letters, use the format `D:`. For volume GUID
+paths, use the format `\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
 
 ```yaml
 Type: String

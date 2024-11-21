@@ -29,10 +29,17 @@ specify the type of deduplication to use with the `-Type` parameter.
 
 ```powershell
 Enable-ReFSDedup -Volume "D:" -Type DedupAndCompress
-
 ```
 
 This example enables data deduplication with compression on the `D:` ReFS volume.
+
+### Example 2
+
+```powershell
+Enable-ReFSDedup -Volume "E:, F:" -Type DedupAndCompress
+```
+
+This example enables data deduplication with compression on both `E:` and `F:` ReFS volumes.
 
 ## PARAMETERS
 
@@ -59,7 +66,9 @@ Accept wildcard characters: False
 
 ### -Volume
 
-Specifies the volume or volumes to enable ReFS data deduplication.
+Specifies the volume or volumes to enable ReFS data deduplication. Enter one or more volume IDs,
+drive letters, or volume GUID paths. For drive letters, use the format `D:`. For volume GUID paths,
+use the format `\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
 
 ```yaml
 Type: String

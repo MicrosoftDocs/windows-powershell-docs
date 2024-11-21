@@ -21,8 +21,7 @@ Get-ReFSDedupSchedule [-Volume] <String> [<CommonParameters>]
 ## DESCRIPTION
 
 The `Get-ReFSDedupSchedule` cmdlet retrieves the deduplication schedule for a specified ReFS
-volume. The cmdlet returns information about the last time deduplication was run, the next time it
-is scheduled to run, and the frequency with which it runs.
+volume.
 
 ## EXAMPLES
 
@@ -32,13 +31,21 @@ is scheduled to run, and the frequency with which it runs.
 Get-ReFSDedupSchedule -Volume "D:"
 ```
 
+```output
+Volume Enabled Type             Days Start Duration Suspended CompressionFormat CompressionLevel CompressionChunkSize
+------ ------- ----             ---- ----- -------- --------- ----------------- ---------------- --------------------
+D:     True    DedupAndCompress None N/A   N/A      False     LZ4               0                0 B
+```
+
 This example retrieves the deduplication schedule for the `D:` ReFS volume.
 
 ## PARAMETERS
 
 ### -Volume
 
-Specifies the ReFS volume for which to retrieve the deduplication schedule.
+Specifies the ReFS volume for which to retrieve the deduplication schedule. Enter one or more volume
+IDs, drive letters, or volume GUID paths. For drive letters, use the format `D:`. For volume GUID
+paths, use the format `\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
 
 ```yaml
 Type: String

@@ -38,7 +38,9 @@ This example suspends the deduplication schedule on the `D:` ReFS volume.
 
 ### -Volume
 
-Specifies the volume on which to suspend the ReFS Deduplication schedule.
+Specifies the volume on which to suspend the ReFS Deduplication schedule. Enter one or more volume
+IDs, drive letters, or volume GUID paths. For drive letters, use the format `D:`. For volume GUID
+paths, use the format `\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
 
 ```yaml
 Type: String

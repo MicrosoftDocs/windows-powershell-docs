@@ -284,7 +284,9 @@ Accept wildcard characters: False
 
 ### -Volume
 
-Specifies the ReFS volume for which to set the deduplication schedule.
+Specifies the ReFS volume for which to set the deduplication schedule. Enter one or more volume
+IDs, drive letters, or volume GUID paths. For drive letters, use the format `D:`. For volume GUID
+paths, use the format `\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
 
 ```yaml
 Type: String

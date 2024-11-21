@@ -21,7 +21,7 @@ Resume-ReFSDedupSchedule [-Volume] <String> [<CommonParameters>]
 ## DESCRIPTION
 
 The `Resume-ReFSDedupSchedule` cmdlet resumes the deduplication schedule on a specified ReFS
-volume. This cmdlet is used to resume a deduplication job that has been paused or stopped.
+volume that has been paused or stopped.
 
 ## EXAMPLES
 
@@ -37,7 +37,9 @@ This example resumes the deduplication schedule for the `D:` ReFS volume.
 
 ### -Volume
 
-Specifies the ReFS volume for which to resume the deduplication schedule.
+Specifies the ReFS volume for which to resume the deduplication schedule. Enter one or more volume
+IDs, drive letters, or volume GUID paths. For drive letters, use the format `D:`. For volume GUID
+paths, use the format `\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
 
 ```yaml
 Type: String

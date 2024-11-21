@@ -24,9 +24,8 @@ Start-ReFSDedupJob [-Volume] <String> [-Duration <TimeSpan>] [-FullRun] [-CpuPer
 
 ## DESCRIPTION
 
-The `Start-ReFSDedupJob` cmdlet starts a deduplication job on the specified ReFS volume. This
-cmdlet can be used to start a new deduplication job or to resume an existing job that was
-previously paused or stopped.
+The `Start-ReFSDedupJob` cmdlet starts a deduplication job on the specified ReFS volume or to
+resume an existing job that was previously paused or stopped.
 
 ## EXAMPLES
 
@@ -34,6 +33,12 @@ previously paused or stopped.
 
 ```powershell
 Start-ReFSDedupJob -Volume "D:"
+```
+
+```output
+Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
+--     ----            -------------   -----         -----------     --------             -------
+1      Job1                            NotStarted    True                                 Start-ReFSDedupJob
 ```
 
 This example starts a deduplication job on the `D:` drive using the default settings.
@@ -258,7 +263,9 @@ Accept wildcard characters: False
 
 ### -Volume
 
-Specifies the ReFS volume on which to run the job.
+Specifies the ReFS volume on which to run the job. Enter one or more volume IDs, drive letters, or
+volume GUID paths. For drive letters, use the format `D:`. For volume GUID paths, use the format
+`\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
 
 ```yaml
 Type: String

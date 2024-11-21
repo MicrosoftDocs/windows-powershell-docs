@@ -20,8 +20,8 @@ Stop-ReFSDedupJob [-Volume] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Stop-ReFSDedupJob` cmdlet stops a running deduplication job on a specified ReFS volume. This
-cmdlet is used to stop a deduplication job that is currently running.
+The `Stop-ReFSDedupJob` cmdlet stops a running deduplication job on a specified ReFS volume that is
+currently running.
 
 ## EXAMPLES
 
@@ -37,7 +37,9 @@ This example stops the deduplication job for the `D:` ReFS volume.
 
 ### -Volume
 
-Specifies the ReFS volume for which to stop the deduplication job.
+Specifies the ReFS volume for which to stop the deduplication job. Enter one or more volume IDs,
+drive letters, or volume GUID paths. For drive letters, use the format `D:`. For volume GUID paths,
+use the format `\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
 
 ```yaml
 Type: String

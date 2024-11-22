@@ -99,7 +99,7 @@ To check the functional level of the Active Directory forest, use the Get-ADFore
 
 ## RELATED LINKS
 
-[Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=windowsserver2022-ps)
+[Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature)
 
 [Enable-SmbDelegation](./Enable-SmbDelegation.md)
 

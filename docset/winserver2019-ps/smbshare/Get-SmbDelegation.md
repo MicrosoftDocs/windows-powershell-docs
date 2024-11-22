@@ -67,7 +67,7 @@ To check the functional level of the Active Directory forest, use the **Get-ADFo
 
 ## RELATED LINKS
 
-[Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=windowsserver2022-psdocset/winserver2016-ps/smbshare/Remove-SmbBandwidthLimit.md)
+[Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature
 
 [Disable-SmbDelegation](./Disable-SmbDelegation.md)
 

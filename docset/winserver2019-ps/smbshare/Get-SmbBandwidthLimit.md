@@ -126,7 +126,7 @@ For more information, type `Get-Help Install-WindowsFeature`. When you enable th
 
 ## RELATED LINKS
 
-[Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=windowsserver2022-ps)
+[Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature)
 
 [Set-SmbBandwidthLimit](./Set-SmbBandwidthLimit.md)
 

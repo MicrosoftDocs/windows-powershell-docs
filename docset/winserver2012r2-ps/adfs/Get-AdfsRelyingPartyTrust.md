@@ -42,7 +42,15 @@ PS C:\> Get-AdfsRelyingPartyTrust -Name "FabrikamApp"
 
 This command gets the property settings for the relying party trust named FabrikamApp.
 
-### Example 2: Get property settings for an updated relying party trust
+### Example 2: Get property settings for a relying party trust by using an identifier
+```
+PS C:\> Get-AdfsRelyingPartyTrust -Identifier "https://app.fabrikam.com"
+
+```
+
+This command gets the property settings for a relying party trust that has the identifier https://app.fabrikam.com.
+
+### Example 3: Get property settings for an updated relying party trust
 ```
 PS C:\> Get-AdfsRelyingPartyTrust | Where-Object{ $_.LastUpdateTime -le (get-date).subtract((new-timespan -hours 24))}
 ```

@@ -134,6 +134,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-HpcSoaCredential](/powershell/module/hpcpack2016/remove-hpcsoacredential?view=hpc16-ps)
 
-[Set-HpcJobCredential](/powershell/module/hpcpack2019/set-hpcjobcredential?view=hpc19-ps)
+[Set-HpcJobCredential](/powershell/module/hpcpack2016/set-hpcjobcredential?view=hpc16-ps)
 
 [Set-HpcTestCredential](./Set-HpcTestCredential.md)

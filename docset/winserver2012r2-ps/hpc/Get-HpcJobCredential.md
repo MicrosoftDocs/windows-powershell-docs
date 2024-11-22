@@ -68,4 +68,4 @@ This cmdlet was introduced in HPC Pack 2008 R2 with Service Pack 2 (SP2). It is 
 
 [Remove-HpcJobCredential](/powershell/module/hpcpack2016/remove-hpcjobcredential?view=hpc16-ps)
 
-[Set-HpcJobCredential](/powershell/module/hpcpack2019/set-hpcjobcredential?view=hpc19-ps)
+[Set-HpcJobCredential](/powershell/module/hpcpack2016/set-hpcjobcredential?view=hpc16-ps)

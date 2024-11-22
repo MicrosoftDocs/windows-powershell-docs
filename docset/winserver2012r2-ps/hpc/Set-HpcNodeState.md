@@ -214,6 +214,6 @@ You must be a cluster administrator to run this cmdlet successfully.
 
 ## RELATED LINKS
 
-[Get-HpcNode](/powershell/module/hpcpack2019/get-hpcnode?view=hpc19-ps)
+[Get-HpcNode](/powershell/module/hpcpack2016/get-hpcnode?view=hpc16-ps)
 
 [Set-HpcNode](./Set-HpcNode.md)

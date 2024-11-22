@@ -144,10 +144,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Invoke-HpcTest](/powershell/module/hpcpack2019/invoke-hpctest?view=hpc19-ps)
+[Invoke-HpcTest](/powershell/module/hpcpack2016/invoke-hpctest?view=hpc16-ps)
 
-[Remove-HpcTestCredential](/powershell/module/hpcpack2019/remove-hpctestcredential?view=hpc19-ps)
+[Remove-HpcTestCredential](/powershell/module/hpcpack2016/remove-hpctestcredential?view=hpc16-ps)
 
-[Set-HpcJobCredential](/powershell/module/hpcpack2019/set-hpcjobcredential?view=hpc19-ps)
+[Set-HpcJobCredential](/powershell/module/hpcpack2016/set-hpcjobcredential?view=hpc16-ps)
 
 [Set-HpcSoaCredential](./Set-HpcSoaCredential.md)

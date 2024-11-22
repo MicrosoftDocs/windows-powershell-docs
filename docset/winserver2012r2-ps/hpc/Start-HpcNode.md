@@ -117,11 +117,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-HpcNode](/powershell/module/hpcpack2019/get-hpcnode?view=hpc19-ps)
+[Get-HpcNode](/powershell/module/hpcpack2016/get-hpcnode?view=hpc16-ps)
 
 [Remove-HpcNode](/powershell/module/hpcpack2016/remove-hpcnode?view=hpc16-ps)
 
-[Restart-HpcNode](/powershell/module/hpcpack2019/restart-hpcnode?view=hpc19-ps)
+[Restart-HpcNode](/powershell/module/hpcpack2016/restart-hpcnode?view=hpc16-ps)
 
 [Set-HpcNode](./Set-HpcNode.md)
 

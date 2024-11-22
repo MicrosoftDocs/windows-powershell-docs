@@ -248,12 +248,12 @@ All other tasks are queued, including those that failed.
 
 ## RELATED LINKS
 
-[Export-HpcJob](/powershell/module/hpcpack2019/export-hpcjob?view=hpc19-ps)
+[Export-HpcJob](/powershell/module/hpcpack2016/export-hpcjob?view=hpc16-ps)
 
-[Get-HpcJob](/powershell/module/hpcpack2019/get-hpcjob?view=hpc19-ps)
+[Get-HpcJob](/powershell/module/hpcpack2016/get-hpcjob?view=hpc16-ps)
 
-[New-HpcJob](/powershell/module/hpcpack2019/new-hpcjob?view=hpc19-ps)
+[New-HpcJob](/powershell/module/hpcpack2016/new-hpcjob?view=hpc16-ps)
 
-[Set-HpcJob](/powershell/module/hpcpack2019/set-hpcjob?view=hpc19-ps)
+[Set-HpcJob](/powershell/module/hpcpack2016/set-hpcjob?view=hpc16-ps)
 
 [Submit-HpcJob](./Submit-HpcJob.md)

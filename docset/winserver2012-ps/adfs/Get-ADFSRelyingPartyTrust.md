@@ -46,7 +46,7 @@ Gets the current property settings for a relying party trust that is specified b
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADFSRelyingPartyTrust -Identifier https://www.sampleserve.com/
+C:\PS>Get-ADFSRelyingPartyTrust -Identifier https://www.fabrikam.com/
 ```
 
 Description

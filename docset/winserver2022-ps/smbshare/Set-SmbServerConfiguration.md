@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 10/20/2022
+ms.date: 02/22/2024
 online version: /powershell/module/smbshare/set-smbserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SmbServerConfiguration
@@ -17,26 +17,26 @@ Sets the Server Message Block (SMB) server configuration.
 
 ```
 Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean>]
- [-AsynchronousCredits <UInt32>] [-AuditSmb1Access <Boolean>] [-AutoDisconnectTimeout <UInt32>]
- [-AutoShareServer <Boolean>] [-AutoShareWorkstation <Boolean>] [-CachedOpenLimit <UInt32>]
- [-DisableCompression <Boolean>] [-DisableSmbEncryptionOnSecureConnection <Boolean>]
- [-DurableHandleV2TimeoutInSeconds <UInt32>] [-EnableAuthenticateUserSharing <Boolean>]
- [-EnableDownlevelTimewarp <Boolean>] [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>]
- [-EnableMultiChannel <Boolean>] [-EnableOplocks <Boolean>] [-EnableSecuritySignature <Boolean>]
- [-EnableSMB1Protocol <Boolean>] [-EnableSMB2Protocol <Boolean>] [-EnableSMBQUIC <Boolean>]
- [-EnableStrictNameChecking <Boolean>] [-EncryptData <Boolean>] [-EncryptionCiphers <String>]
- [-IrpStackSize <UInt32>] [-KeepAliveTime <UInt32>] [-MaxChannelPerSession <UInt32>]
- [-MaxMpxCount <UInt32>] [-MaxSessionPerConnection <UInt32>] [-MaxThreadsPerQueue <UInt32>]
- [-MaxWorkItems <UInt32>] [-NullSessionPipes <String>] [-NullSessionShares <String>]
- [-OplockBreakWait <UInt32>] [-PendingClientTimeoutInSeconds <UInt32>]
- [-RejectUnencryptedAccess <Boolean>] [-RequestCompression <Boolean>]
- [-RequireSecuritySignature <Boolean>] [-RestrictNamedpipeAccessViaQuic <Boolean>]
- [-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>] [-Smb2CreditsMin <UInt32>]
- [-SmbServerNameHardeningLevel <UInt32>] [-TreatHostAsStableStorage <Boolean>]
- [-ValidateAliasNotCircular <Boolean>] [-ValidateShareScope <Boolean>]
- [-ValidateShareScopeNotAliased <Boolean>] [-ValidateTargetName <Boolean>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AsynchronousCredits <UInt32>] [-AuditClientCertificateAccess <Boolean>]
+ [-AuditSmb1Access <Boolean>] [-AutoDisconnectTimeout <UInt32>] [-AutoShareServer <Boolean>]
+ [-AutoShareWorkstation <Boolean>] [-CachedOpenLimit <UInt32>] [-DisableCompression <Boolean>]
+ [-DisableSmbEncryptionOnSecureConnection <Boolean>] [-DurableHandleV2TimeoutInSeconds <UInt32>]
+ [-EnableAuthenticateUserSharing <Boolean>] [-EnableDownlevelTimewarp <Boolean>]
+ [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>] [-EnableMultiChannel <Boolean>]
+ [-EnableOplocks <Boolean>] [-EnableSecuritySignature <Boolean>] [-EnableSMB1Protocol <Boolean>]
+ [-EnableSMB2Protocol <Boolean>] [-EnableSMBQUIC <Boolean>] [-EnableStrictNameChecking <Boolean>]
+ [-EncryptData <Boolean>] [-EncryptionCiphers <String>] [-IrpStackSize <UInt32>]
+ [-KeepAliveTime <UInt32>] [-MaxChannelPerSession <UInt32>] [-MaxMpxCount <UInt32>]
+ [-MaxSessionPerConnection <UInt32>] [-MaxThreadsPerQueue <UInt32>] [-MaxWorkItems <UInt32>]
+ [-NullSessionPipes <String>] [-NullSessionShares <String>] [-OplockBreakWait <UInt32>]
+ [-PendingClientTimeoutInSeconds <UInt32>] [-RejectUnencryptedAccess <Boolean>]
+ [-RequestCompression <Boolean>] [-RequireSecuritySignature <Boolean>]
+ [-RestrictNamedpipeAccessViaQuic <Boolean>] [-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>]
+ [-Smb2CreditsMin <UInt32>] [-SmbServerNameHardeningLevel <UInt32>]
+ [-TreatHostAsStableStorage <Boolean>] [-ValidateAliasNotCircular <Boolean>]
+ [-ValidateShareScope <Boolean>] [-ValidateShareScopeNotAliased <Boolean>]
+ [-ValidateTargetName <Boolean>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+ [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,6 +47,7 @@ For more information on SMB server and protocol specifications, see
 and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and 3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 > [!NOTE]
+>
 > - The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
 >   Microsoft server operating system version 21H2 for x64-based Systems
 >   ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
@@ -173,6 +174,25 @@ Specifies the asynchronous credits.
 
 ```yaml
 Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditClientCertificateAccess
+
+Enables SMB over QUIC client access control audit events. There are three possible events: access
+allowed, access denied, and error. The access allowed and access denied events list properties of
+the client certificate chain and any allow and deny access control entries that apply to the
+client certificates.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 

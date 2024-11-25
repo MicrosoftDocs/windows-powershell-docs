@@ -31,9 +31,11 @@ Exports one or more Updating Run reports into an HTML or CSV-formatted document.
 ### [Get-CauClusterRole](./Get-CauClusterRole.md)
 Gets configuration properties of the CAU clustered role on the specified cluster.
 
-### [Get-CauPlugin](./Get-CauPlugin.md)
-Gets information about one or more software updating plug-ins that are registered on the local
-computer.
+### [Get-CauDeviceInfoForFeatureUpdates](Get-CauDeviceInfoForFeatureUpdates.md)
+Gets device information for feature updates to use with CAU.
+
+### [Get-CauPlugin](Get-CauPlugin.md)
+Gets information about one or more software updating plug-ins that are registered on the local computer.
 
 ### [Get-CauReport](./Get-CauReport.md)
 Gets the Updating Run reports for all known Updating Runs, or all Updating Runs that match the
@@ -70,5 +72,3 @@ Tests whether a cluster is properly set up to apply software updates using CAU.
 
 ### [Unregister-CauPlugin](./Unregister-CauPlugin.md)
 Removes a software updating plug-in from the list of plug-ins that are used by CAU.
-
-

@@ -117,8 +117,8 @@ This cmdlet was introduced in HPC Pack 2008 R2 with Service Pack 2 (SP2). It is 
 
 ## RELATED LINKS
 
-[Add-HpcPool](./Add-HpcPool.md)
+[Add-HpcPool](/powershell/module/hpcpack2016/add-hpcpool?view=hpc16-ps)
 
-[Get-HpcPool](./Get-HpcPool.md)
+[Get-HpcPool](/powershell/module/hpcpack2016/get-hpcpool?view=hpc16-ps)
 
-[Remove-HpcPool](./Remove-HpcPool.md)
+[Remove-HpcPool](/powershell/module/hpcpack2016/remove-hpcpool?view=hpc16-ps)

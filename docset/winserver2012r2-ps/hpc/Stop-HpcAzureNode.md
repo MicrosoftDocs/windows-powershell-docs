@@ -171,7 +171,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-HpcAzureNode](./Remove-HpcAzureNode.md)
+[Remove-HpcAzureNode](/powershell/module/hpcpack2016/remove-hpcazurenode?view=hpc16-ps)
 
 [Start-HpcAzureNode](./Start-HpcAzureNode.md)
 

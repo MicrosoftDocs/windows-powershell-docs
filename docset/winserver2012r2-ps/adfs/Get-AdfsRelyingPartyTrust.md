@@ -47,7 +47,7 @@ This command gets the property settings for the relying party trust named Fabrik
 PS C:\> Get-AdfsRelyingPartyTrust -Identifier "https://FabrikamApp.CentralServer.org"
 ```
 
-This command gets the property settings for a relying party trust that has the identifier https://FabrikamApp.CentralServer.org.
+This command gets the property settings for a relying party trust that has the identifier `https://FabrikamApp.CentralServer.org`.
 
 ### Example 3: Get property settings for an updated relying party trust
 ```

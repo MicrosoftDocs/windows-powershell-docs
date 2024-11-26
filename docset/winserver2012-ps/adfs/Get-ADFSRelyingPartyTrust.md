@@ -53,7 +53,7 @@ Description
 
 -----------
 
-Gets the current property settings for a relying party trust that is specified by the identifier https://www.fabrikam.com/.
+Gets the current property settings for a relying party trust that is specified by the identifier `https://www.fabrikam.com`.
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```

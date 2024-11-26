@@ -1871,7 +1871,7 @@ Accept wildcard characters: False
 
 ### -ProxyPacUrl
 
-Specifies the Privilege Attribute Certificate (PAC) proxy.
+Specifies the URL for Proxy Auto-Configuration (PAC) file.
 
 ```yaml
 Type: String

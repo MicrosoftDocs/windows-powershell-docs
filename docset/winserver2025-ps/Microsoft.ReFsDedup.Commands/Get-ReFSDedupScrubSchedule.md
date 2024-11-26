@@ -31,13 +31,13 @@ ReFS volume.
 Get-ReFSDedupScrubSchedule -Volume "D:"
 ```
 
-```output
+This example gets the deduplication scrub schedule on the `D:` ReFS volume.
+
+```
 Volume Enabled Start Days WeeksInterval DedupDataOnly Suspended
 ------ ------- ----- ---- ------------- ------------- ---------
 D:     True    N/A   None 0             False         False    
 ```
-
-This example gets the deduplication scrub schedule on the `D:` ReFS volume.
 
 ## PARAMETERS
 

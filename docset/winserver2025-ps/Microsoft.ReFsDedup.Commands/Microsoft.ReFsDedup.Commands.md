@@ -20,7 +20,7 @@ beginning of the cmdlet.
 
 ### [Clear-ReFSDedupSchedule](Clear-ReFSDedupSchedule.md)
 
-Clears the scheduled task for deduplication on a specified ReFS volume.
+Clears the scheduled job and the schedule itself for deduplication on a specified ReFS volume.
 
 ### [Clear-ReFSDedupScrubSchedule.md](Clear-ReFSDedupScrubSchedule.md)
 

@@ -20,8 +20,8 @@ Clear-ReFSDedupSchedule [-Volume] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Clear-ReFSDedupSchedule` cmdlet clears the scheduled task for deduplication on the specified
-ReFS volume.
+The `Clear-ReFSDedupSchedule` cmdlet clears the scheduled job, including the schedule itself, for
+deduplication on the specified ReFS volume.
 
 ## EXAMPLES
 

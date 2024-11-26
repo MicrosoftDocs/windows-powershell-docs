@@ -33,7 +33,7 @@ Get-ReFSDedupStatus -Volume "D:"
 
 This example retrieves the deduplication status for the `D:` ReFS volume.
 
-```powershell
+```output
 Volume Type             Used     Deduped Compressed Format       Level ChunkSize Status
 ------ ----             ----     ------- ---------- ------       ----- --------- ------
 D:     DedupAndCompress 1.02 GiB 0 B     0 B        Uncompressed 0     0 B       --    

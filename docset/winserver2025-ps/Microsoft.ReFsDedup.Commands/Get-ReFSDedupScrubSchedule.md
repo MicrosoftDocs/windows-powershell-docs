@@ -33,7 +33,7 @@ Get-ReFSDedupScrubSchedule -Volume "D:"
 
 This example gets the deduplication scrub schedule on the `D:` ReFS volume.
 
-```output
+```powershell
 Volume Enabled Start Days WeeksInterval DedupDataOnly Suspended
 ------ ------- ----- ---- ------------- ------------- ---------
 D:     True    N/A   None 0             False         False    

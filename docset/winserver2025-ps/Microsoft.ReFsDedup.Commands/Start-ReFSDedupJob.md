@@ -37,7 +37,7 @@ Start-ReFSDedupJob -Volume "D:"
 
 This example starts a deduplication job on the `D:` drive using the default settings.
 
-```output
+```powershell
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
 1      Job1                            NotStarted    True                                 Start-ReFSDedupJob

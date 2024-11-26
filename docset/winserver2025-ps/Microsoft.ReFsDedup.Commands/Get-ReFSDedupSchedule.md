@@ -33,7 +33,7 @@ Get-ReFSDedupSchedule -Volume "D:"
 
 This example retrieves the deduplication schedule for the `D:` ReFS volume.
 
-```output
+```powershell
 Volume Enabled Type             Days Start Duration Suspended CompressionFormat CompressionLevel CompressionChunkSize
 ------ ------- ----             ---- ----- -------- --------- ----------------- ---------------- --------------------
 D:     True    DedupAndCompress None N/A   N/A      False     LZ4               0                0 B

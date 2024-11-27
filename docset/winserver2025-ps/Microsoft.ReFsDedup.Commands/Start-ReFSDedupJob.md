@@ -35,13 +35,13 @@ resume an existing job that was previously paused or stopped.
 Start-ReFSDedupJob -Volume "D:"
 ```
 
-This example starts a deduplication job on the `D:` drive using the default settings.
-
 ```output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
 1      Job1                            NotStarted    True                                 Start-ReFSDedupJob
 ```
+
+This example starts a deduplication job on the `D:` drive using the default settings.
 
 ## PARAMETERS
 

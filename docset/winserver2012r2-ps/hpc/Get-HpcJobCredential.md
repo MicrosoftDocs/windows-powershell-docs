@@ -66,6 +66,6 @@ This cmdlet was introduced in HPC Pack 2008 R2 with Service Pack 2 (SP2). It is 
 
 [New-HpcSoftCard](./New-HpcSoftCard.md)
 
-[Remove-HpcJobCredential](./Remove-HpcJobCredential.md)
+[Remove-HpcJobCredential](/powershell/module/hpcpack2016/remove-hpcjobcredential?view=hpc16-ps)
 
-[Set-HpcJobCredential](./Set-HpcJobCredential.md)
+[Set-HpcJobCredential](/powershell/module/hpcpack2016/set-hpcjobcredential?view=hpc16-ps)

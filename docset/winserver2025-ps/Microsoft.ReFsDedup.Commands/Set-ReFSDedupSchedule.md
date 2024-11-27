@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.ReFsDedup.Commands.dll-Help.xml
 Module Name: Microsoft.ReFsDedup.Commands
-ms.date: 02/21/2024
+ms.date: 11/20/2024
 online version: https://learn.microsoft.com/powershell/module/microsoft.refsdedup.commands/set-refsdedupschedule?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-ReFSDedupSchedule
@@ -10,7 +10,7 @@ title: Set-ReFSDedupSchedule
 # Set-ReFSDedupSchedule
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Sets the deduplication schedule on a specified ReFS volume.
 
 ## SYNTAX
 
@@ -23,24 +23,29 @@ Set-ReFSDedupSchedule [-Volume] <String> -Start <DateTime> [-Duration <TimeSpan>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The `Set-ReFSDedupSchedule` cmdlet sets the deduplication schedule for a specified ReFS volume. You
+can use this cmdlet to specify when and how often deduplication should run on the volume.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Set-ReFSDedupSchedule -Volume "D:" -Start "10:00 PM" -Days Monday,Wednesday,Friday -Duration 4:00:00
 ```
 
-{{ Add example description here }}
+This example sets the deduplication schedule for the `D:` ReFS volume to run on `Monday`, `Wednesday`,
+and `Friday` at `10:00 PM` for `4` hours.
 
 ## PARAMETERS
 
 ### -CompressionChunkSize
-{{ Fill CompressionChunkSize Description }}
+
+Specifies the chunk size to use during compression.
 
 ```yaml
-Type: System.UInt32
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -52,10 +57,16 @@ Accept wildcard characters: False
 ```
 
 ### -CompressionFormat
-{{ Fill CompressionFormat Description }}
+
+Specifies the compression format to use during deduplication. Acceptable values are:
+
+- `LZ4`
+- `Uncompressed`
+- `Unknown`
+- `ZSTD`
 
 ```yaml
-Type: Microsoft.ReFS.DeDup.Format
+Type: Format
 Parameter Sets: (All)
 Aliases:
 Accepted values: Unknown, Uncompressed, LZ4, ZSTD
@@ -68,10 +79,11 @@ Accept wildcard characters: False
 ```
 
 ### -CompressionLevel
-{{ Fill CompressionLevel Description }}
+
+Specifies the compression level to use during deduplication.
 
 ```yaml
-Type: System.UInt16
+Type: UInt16
 Parameter Sets: (All)
 Aliases:
 
@@ -83,10 +95,11 @@ Accept wildcard characters: False
 ```
 
 ### -CompressionTuning
-{{ Fill CompressionTuning Description }}
+
+Specifies the compression tuning to use during deduplication.
 
 ```yaml
-Type: System.UInt32
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -98,10 +111,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentOpenFiles
-{{ Fill ConcurrentOpenFiles Description }}
+
+Specifies the maximum number of files that can be open at the same time during deduplication.
 
 ```yaml
-Type: System.UInt32
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -113,10 +127,11 @@ Accept wildcard characters: False
 ```
 
 ### -CpuPercentage
-{{ Fill CpuPercentage Description }}
+
+Specifies the maximum percentage of CPU usage that deduplication should consume.
 
 ```yaml
-Type: System.UInt32
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -128,10 +143,22 @@ Accept wildcard characters: False
 ```
 
 ### -Days
-{{ Fill Days Description }}
+
+Specifies the days of the week on which deduplication should run on the volume. Acceptable values
+are:
+
+- `None`
+- `EveryDay`
+- `Monday`
+- `Tuesday`
+- `Wednesday`
+- `Thursday`
+- `Friday`
+- `Saturday`
+- `Sunday`
 
 ```yaml
-Type: Microsoft.ReFS.DeDup.DaysOfWeek
+Type: DaysOfWeek
 Parameter Sets: (All)
 Aliases:
 Accepted values: None, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, EveryDay
@@ -144,10 +171,11 @@ Accept wildcard characters: False
 ```
 
 ### -DecompressionTuning
-{{ Fill DecompressionTuning Description }}
+
+Specifies the decompression tuning to use during deduplication.
 
 ```yaml
-Type: System.UInt32
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -159,10 +187,11 @@ Accept wildcard characters: False
 ```
 
 ### -Duration
-{{ Fill Duration Description }}
+
+Specifies the duration for which deduplication should run on the volume.
 
 ```yaml
-Type: System.TimeSpan
+Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 
@@ -174,10 +203,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeFileExtension
-{{ Fill ExcludeFileExtension Description }}
+
+Specifies one or more file extensions to exclude from deduplication.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -189,10 +219,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeFolder
-{{ Fill ExcludeFolder Description }}
+
+Specifies one or more folders to exclude from deduplication.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -204,10 +235,11 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumLastModifiedTimeHours
-{{ Fill MinimumLastModifiedTimeHours Description }}
+
+Specifies the minimum number of hours that must elapse before a file can be deduplicated.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -219,10 +251,11 @@ Accept wildcard characters: False
 ```
 
 ### -RecompressionTuning
-{{ Fill RecompressionTuning Description }}
+
+Specifies the recompression tuning to use during deduplication.
 
 ```yaml
-Type: System.UInt32
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -234,10 +267,11 @@ Accept wildcard characters: False
 ```
 
 ### -Start
-{{ Fill Start Description }}
+
+Specifies the date and time when deduplication should start running on the volume.
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: (All)
 Aliases:
 
@@ -249,10 +283,13 @@ Accept wildcard characters: False
 ```
 
 ### -Volume
-{{ Fill Volume Description }}
+
+Specifies the ReFS volume for which to set the deduplication schedule. Enter one or more volume
+IDs, drive letters, or volume GUID paths. For drive letters, use the format `D:`. For volume GUID
+paths, use the format `\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -264,7 +301,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -273,6 +314,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Clear-ReFSDedupSchedule](Clear-ReFSDedupSchedule.md)
+
+[Get-ReFSDedupSchedule](Get-ReFSDedupSchedule.md)
+
+[Resume-ReFSDedupSchedule](Resume-ReFSDedupSchedule.md)
+
+[Suspend-ReFSDedupSchedule](Suspend-ReFSDedupSchedule.md)

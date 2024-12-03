@@ -256,13 +256,12 @@ Accept wildcard characters: False
 
 ### -AllowSwitchToAsyncInspection
 
-Specifies whether to enable a performance optimization that allows synchronously inspected network
-flows to switch to async inspection once they have been checked and validated. Valid values are:
+Specifies whether to enable a performance optimization that changes synchronously inspected network
+flows to asynchronous inspection after they're checked and validated. Valid values are:
 
-- $true: Allow synchronously inspected network flows to switch to async inspection once they have
-been checked and validated.
-- $false: Don't allow synchronously inspected network flows to switch to async inspection once they
-have been checked and validated.
+- $true: Allow synchronously inspected network flows to switch to asynchronous inspection after they
+are checked and validated. This behavior can help improve performance.
+- $false: Don't allow synchronously inspected network flows to switch to asynchronous inspection.
 
 ```yaml
 Type: Boolean
@@ -500,10 +499,10 @@ Accept wildcard characters: False
 
 ### -CloudExtendedTimeout
 
-<!---The default value on 2 Win 11 PCs is 0; Max value claimed to be 50 --->
+<!---The default value on two Win 11 PCs is 0; Max value claimed to be 50 --->
 
 Specifies the amount of extended time in seconds to block a suspicious file and scan it in the
-cloud. A valid value is an integer from 0 to 4294967295. The default value is 10 seconds.
+cloud. A valid value is an integer from 0 to 4294967295.
 
 ```yaml
 Type: UInt32
@@ -622,6 +621,8 @@ Accept wildcard characters: False
 
 ### -DisableArchiveScanning
 
+<!--- Can't change the value to $true (value locked @ $false). --->
+
 Specifies whether to disable the scanning of archive files (for example, .zip and .cab files) for malicious and
 unwanted software. Valid values are:
 
@@ -642,7 +643,7 @@ Accept wildcard characters: False
 
 ### -DisableAutoExclusions
 
-Specifies whether to disable the Automatic Exclusions feature for the server. Valid values are:
+Specifies whether to disable the Automatic Exclusions feature. Valid values are:
 
 - $true: Windows Defender disables the Automatic Exclusions feature for the server.
 - $false: Windows Defender enables the Automatic Exclusions feature for the server. This is the
@@ -661,6 +662,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBehaviorMonitoring
+
+<!--- Can't change the value to $true (value locked @ $false). --->
 
 Specifies whether to disable behavior monitoring. Valid values are:
 
@@ -973,6 +976,8 @@ Accept wildcard characters: False
 
 ### -DisableIntrusionPreventionSystem
 
+<!--- This property isn't available in the output of Get- --->
+
 Specifies whether to disable the intrusion prevention system in network protection. Valid values are:
 
 - $true: The intrusion prevention system in network protection is disabled.
@@ -992,6 +997,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableIOAVProtection
+
+<!--- Can't change the value to $true (value locked @ $false). --->
 
 Specifies whether to disable the scanning of all downloaded files and attachments. Valid values are:
 
@@ -1072,6 +1079,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRealtimeMonitoring
+
+<!--- Can't change the value to $true (value locked @ $false). --->
 
 Specifies whether to disable real-time protection. Valid values are:
 
@@ -1170,6 +1179,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScriptScanning
+
+<!--- Can't change the value to $true (value locked @ $false). --->
 
 Specifies whether to disable the scanning of scripts during malware scans. Valid values are:
 
@@ -1647,7 +1658,6 @@ Accept wildcard characters: False
 ```
 
 ### -HighThreatDefaultAction
-<!--- Value in Get- never changes from 0, but 0 isn't a valid value. --->
 
 Specifies the automatic remediation action to take for high level threats. Valid values are:
 
@@ -1658,6 +1668,12 @@ Specifies the automatic remediation action to take for high level threats. Valid
 - 8 or UserDefined
 - 9 or NoAction
 - 10 or Block
+
+The default value is 0, which means Windows Defender uses the default action based on the Security
+Intelligence Update (SIU) definitions to determine how to handle the detected threat.
+
+To set this parameter to the value 0, use the **Remove-MpPreference** cmdlet:
+`Remove-MpPreference -HighThreatDefaultAction`
 
 ```yaml
 Type: ThreatAction
@@ -1674,11 +1690,17 @@ Accept wildcard characters: False
 
 ### -IntelTDTEnabled
 
-Specifies the Intel TDT integration level for Intel TDT-capable devices. Valid
-values are:
+Specifies whether Intel Threat Detection Technology (TDT) integration is enabled in Windows
+Defender. Valid values are:
 
-- $true: Intel TDT integration is turned on.
-- $false: Intel TDT integration is turned off.
+- $true: Intel TDT integration is enabled in Windows Defender.
+- $false: Intel TDT integration is disabled in Windows Defender.
+
+The default value is blank, which means the setting is controlled by the system
+(typically, disabled).
+
+To set this parameter to the value blank, use the **Remove-MpPreference** parameter:
+`Remove-MpPreference -IntelTDTEnabled`
 
 ```yaml
 Type: Boolean
@@ -1694,7 +1716,6 @@ Accept wildcard characters: False
 ```
 
 ### -LowThreatDefaultAction
-<!--- Value in Get- never changes from 0, but 0 isn't a valid value. --->
 
 Specifies the automatic remediation action to take for low level threats. Valid values are:
 
@@ -1705,6 +1726,12 @@ Specifies the automatic remediation action to take for low level threats. Valid 
 - 8 or UserDefined
 - 9 or NoAction
 - 10 or Block
+
+The default value is 0, which means Windows Defender uses the default action based on the Security
+Intelligence Update (SIU) definitions to determine how to handle the detected threat.
+
+To set this parameter to the value 0, use the **Remove-MpPreference** cmdlet:
+`Remove-MpPreference -LowThreatDefaultAction`
 
 ```yaml
 Type: ThreatAction
@@ -1771,7 +1798,6 @@ Accept wildcard characters: False
 ```
 
 ### -ModerateThreatDefaultAction
-<!--- Value in Get- never changes from 0, but 0 isn't a valid value. --->
 
 Specifies the automatic remediation action to take for moderate level threats. Valid values are:
 
@@ -1782,6 +1808,12 @@ Specifies the automatic remediation action to take for moderate level threats. V
 - 8 or UserDefined
 - 9 or NoAction
 - 10 or Block
+
+The default value is 0, which means Windows Defender uses the default action based on the Security
+Intelligence Update (SIU) definitions to determine how to handle the detected threat.
+
+To set this parameter to the value 0, use the **Remove-MpPreference** cmdlet:
+`Remove-MpPreference -ModerateThreatDefaultAction`
 
 ```yaml
 Type: ThreatAction
@@ -1884,7 +1916,6 @@ the list, run the following commands:
   `Set-MpPreference -ProxyBypass $r`
 
 To empty the list, use the **Remove-MpPreference** cmdlet:
-
 `Remove-MpPreference -ProxyBypass`
 
 ```yaml
@@ -1963,8 +1994,11 @@ Accept wildcard characters: False
 
 ### -QuarantinePurgeItemsAfterDelay
 
-Specifies the number of days to keep items in the Quarantine folder. A valid value is an integer
-from 0 to 4294967295. The value 0 means items stay in the Quarantine folder indefinitely.
+Specifies the number of days to keep items in the Quarantine folder before they're automatically
+removed. A valid value is an integer from 0 to 4294967295.
+
+The value 0 means items stay in the Quarantine folder indefinitely (items aren't
+automatically removed).
 
 ```yaml
 Type: UInt32
@@ -2034,7 +2068,7 @@ Accept wildcard characters: False
 
 Specifies the day of the week to run scheduled full scans to complete remediation. Valid values are:
 
-- 0 or Everyday
+- 0 or Everyday (default)
 - 1 or Sunday
 - 2 or Monday
 - 3 or Tuesday
@@ -2042,10 +2076,9 @@ Specifies the day of the week to run scheduled full scans to complete remediatio
 - 5 or Thursday
 - 6 or Friday
 - 7 or Saturday
-- 8 or Never (default)
+- 8 or Never
 
-For the value 8 or Never, Windows Defender uses a default frequency to run scheduled full scans to
-complete remediation.
+You specify the time of day with the **RemediationScheduleTime** parameter.
 
 ```yaml
 Type: Day
@@ -2065,9 +2098,10 @@ Accept wildcard characters: False
 Specifies the time on the local computer to run scheduled scans for remediation.
 
 To specify a value, enter it as a time span: `hh:mm:ss` where `hh` = hours, `mm` = minutes and `ss`
-= seconds. For example, `13:30:00` indicates 1:30 PM.
+= seconds. For example, `13:30:00` indicates 1:30 PM. The default value is `02:00:00` (2:00 AM).
 
-The default value is `02:00:00` (2:00 AM).
+The value of this parameter is meaningful only if the value of the **RemediationScheduleDay**
+parameter isn't 8 or Never.
 
 ```yaml
 Type: DateTime
@@ -2083,8 +2117,10 @@ Accept wildcard characters: False
 
 ### -ReportingAdditionalActionTimeOut
 
-Specifies the number of minutes before a detection in the additional action state changes to the
-cleared state. A valid value is an integer from 0 to 4294967295.
+Specifies the number of minutes that Windows Defender waits before detections that require additional
+action time out (detections in the additional action state change to the cleared state).
+
+A valid value is an integer from 0 to 4294967295. The value 0 disables the timeout.
 
 ```yaml
 Type: UInt32
@@ -2100,8 +2136,11 @@ Accept wildcard characters: False
 
 ### -ReportingCriticalFailureTimeOut
 
-Specifies the number of minutes before a detection in the critically failed state changes to
-the additional action state or the cleared state. A valid value is an integer from 0 to 4294967295.
+Specifies the number of minutes that Windows Defender waits before reporting a critical failure
+(detections in the critically failed state change to the additional action state or the cleared
+state).
+
+A valid value is an integer from 0 to 4294967295. The value 0 disables the timeout.
 
 ```yaml
 Type: UInt32
@@ -2117,8 +2156,10 @@ Accept wildcard characters: False
 
 ### -ReportingNonCriticalTimeOut
 
-Specifies the number of minutes before a detection in the non-critically failed state changes to
-the cleared state. A valid value is an integer from 0 to 4294967295.
+Specifies the number of minutes that Windows Defender waits before reporting a non-critical failure
+(detections in the non-critically failed state change the cleared state).
+
+A valid value is an integer from 0 to 4294967295. The value 0 disables the timeout.
 
 ```yaml
 Type: UInt32
@@ -2369,7 +2410,6 @@ Accept wildcard characters: False
 ```
 
 ### -SevereThreatDefaultAction
-<!--- Value in Get- never changes from 0, but 0 isn't a valid value. --->
 
 Specifies which automatic remediation action to take for severe level threats. Valid values are:
 
@@ -2380,6 +2420,12 @@ Specifies which automatic remediation action to take for severe level threats. V
 - 8 or UserDefined
 - 9 or NoAction
 - 10 or Block
+
+The default value is 0, which means Windows Defender uses the default action based on the Security
+Intelligence Update (SIU) definitions to determine how to handle the detected threat.
+
+To set this parameter to the value 0, use the **Remove-MpPreference** cmdlet:
+`Remove-MpPreference -SevereThreatDefaultAction`
 
 ```yaml
 Type: ThreatAction
@@ -2400,8 +2446,10 @@ Specifies the shared signatures path. For example, `"P:\Signature Data"`. If the
 spaces, enclose the value in quotation marks (").
 
 To remove the value, use the **Remove-MpPreference** cmdlet:
-
 `Remove-MpPreference -SharedSignaturesPath`
+
+The value of this parameter is meaningful only if the **SignatureFallBackOrder** parameter contains
+the value `FileShares`.
 
 ```yaml
 Type: String
@@ -2417,16 +2465,16 @@ Accept wildcard characters: False
 
 ### -SignatureAuGracePeriod
 
-Specified the grace period in minutes applied to all signature updates after the initial,
-first-time application.
+Specifies the grace period in minutes after which any service-initiated signature update is aborted
+if the update occurs successfully within this amount of time.
 
 A valid value is an integer from 0 to 4294967295.
 
-If Windows Defender successfully updates within this period, any service initiated updates are
-abandoned.
+This parameter overrides the **CheckForSignatureBeforeRunningScan** parameter value to ensure that
+updates aren't repeatedly attempted within the specified grace period.
 
-THe **SignatureFirstAuGracePeriod** parameter specifies the grace period when a new signature is
-first detected.
+The **SignatureFirstAuGracePeriod** parameter specifies the grace period for aborting updates
+immediately after the first installation of the service if a recent update was successful.
 
 ```yaml
 Type: UInt32
@@ -2442,11 +2490,20 @@ Accept wildcard characters: False
 
 ### -SignatureBlobFileSharesSources
 
-Specifies the file shares sources for signatures. For example,
-`"\\ServerName\\ShareName\Folder name\"`. If the value contains spaces, enclose the value in
-quotation marks (").
+Specifies the file share sources for signature blob files.
 
-To empty this setting, use the value `" "`.
+A valid value uses the following syntax:
+`{\\Server1\Share1 | \\Server2\Share2 | ... \\ServerN\ShareN}`. If the value contains spaces,
+enclose the value in quotation marks (").
+
+To empty this setting, use the **Remove-MpPreference** cmdlet:
+`Remove-MpPreference -SignatureBlobFileSharesSources`.
+
+The **SignatureDefinitionUpdateFileSharesSources** parameter specifies the file share sources for
+regular signature definition updates.
+
+The value of this parameter is meaningful only if the **SignatureFallBackOrder** parameter contains
+the value `FileShares`.
 
 ```yaml
 Type: String
@@ -2462,7 +2519,8 @@ Accept wildcard characters: False
 
 ### -SignatureBlobUpdateInterval
 
-Specifies the signature update interval. A valid value is an integer from 0 to 4294967295.
+Specifies the interval in minutes for checking and updating signature blob files. A valid value is
+an integer from 0 to 4294967295. The default value is 60 minutes.
 
 ```yaml
 Type: UInt32
@@ -2478,16 +2536,24 @@ Accept wildcard characters: False
 
 ### -SignatureDefinitionUpdateFileSharesSources
 
-Specifies file-share sources for definition updates.
+Specifies file share sources for signature definition updates.
 
 A valid value uses the following syntax:
-`{\\Server1\Share1 | \\Server2\Share2 | ... \\ServerN\ShareN}`.
+`{\\Server1\Share1 | \\Server2\Share2 | ... \\ServerN\ShareN}`. If the value contains spaces,
+enclose the value in quotation marks (").
 
 Windows Defender tries to connect to the shared folders in the specified order. After the update
 is successful, Windows Defender stops trying to connect to the remaining shared folders in the
 list.
 
-To empty this setting, use the value `" "`.
+To empty this setting, use the **Remove-MpPreference** cmdlet:
+`Remove-MpPreference -SignatureDefinitionUpdateFileSharesSources`.
+
+The **SignatureBlobFileSharesSources** parameter specifies the file share sources for
+signature blob files.
+
+The value of this parameter is meaningful only if the **SignatureFallBackOrder** parameter contains
+the value `FileShares`.
 
 ```yaml
 Type: String
@@ -2503,11 +2569,12 @@ Accept wildcard characters: False
 
 ### -SignatureDisableUpdateOnStartupWithoutEngine
 
-Specifies whether to initiate definition updates even if no antimalware engine is present. Valid values are:
+Specifies whether to disable signature updates on startup when the Windows Defender engine isn't
+present. Valid values are:
 
-- $true: Windows Defender does not initiate definition updates on startup. This is the default value
-- $false: If no antimalware engine is present, Windows Defender initiates definition updates on
-startup.
+- $true: Windows Defender doesn't update signatures on startup if the engine isn't available.
+This is the default value.
+- $false: Windows Defender updates signatures on startup even if the engine isn't available.
 
 ```yaml
 Type: Boolean
@@ -2529,10 +2596,16 @@ are:
 - InternalDefinitionUpdateServer
 - MicrosoftUpdateServer
 - MMPC (Microsoft Malware Protection Center)
-- FileShares (specified by the **SignatureDefinitionUpdateFileSharesSources** parameter)
+- FileShares: Locations specified by the following parameters:
 
-A valid value uses the following syntax: `{Source1 | Source2 | Source3 |Source4}`. The default
-value is `{MicrosoftUpdateServer | MMPC}`.
+  • **SharedSignaturesPath**
+
+  • **SignatureBlobFileSharesSources**
+
+  • **SignatureDefinitionUpdateFileSharesSources**
+
+A valid value uses the following syntax: `{Source1|Source2|Source3|Source4}`. The default
+value is `{MicrosoftUpdateServer|MMPC}`.
 
 Windows Defender tries to connect to the sources in the specified order. After the update
 is successful, Windows Defender stops trying to connect to the remaining sources in the list.
@@ -2551,19 +2624,17 @@ Accept wildcard characters: False
 
 ### -SignatureFirstAuGracePeriod
 
-Specifies the grace period in minutes that's given to a new signature when it's first applied. This
-grace period allows more time for compatibility checks with new detection logic. For example, to
+Specifies the grace period in minutes immediately after the first installation of the service,
+during which any service-initiated signature update is aborted if the update occurs successfully
+within this amount of time.
+
+A valid value is an integer from 20 to 4320. The default value is 120 minutes (2 hours).
+
+This parameter allows more time for compatibility checks with new detection logic. For example, to
 prevent false positives from triggering alerts.
 
-A valid value is an integer from 20 to 4320.
-
-If Windows Defender successfully updates within this period, any service initiated updates are
-abandoned.
-
-This parameter overrides the value of the **CheckForSignaturesBeforeRunningScan** parameter.
-
-The **SignatureAuGracePeriod** parameter specifies the standard grace period for all subsequent
-signature updates.
+The **SignatureAuGracePeriod** parameter specifies the standard grace period for aborting updates if
+a recent update was successful.
 
 ```yaml
 Type: UInt32
@@ -2591,7 +2662,9 @@ Specifies the day of the week on which to check for definition updates. Valid va
 - 7 or Saturday
 - 8 or Never (default)
 
-For the value 8 or Never, Windows Defender uses a default frequency to check for definition updates.
+Although the value 8 or Never means Windows Defender doesn't check for updates on specific days,
+definition updates still happen through other means (for example, manual updates or other system
+events).
 
 ```yaml
 Type: Day
@@ -2611,10 +2684,10 @@ Accept wildcard characters: False
 Specifies the time on the local computer to check for definition updates.
 
 To specify a value, enter it as a time span: `hh:mm:ss` where `hh` = hours, `mm` = minutes and `ss`
-= seconds. For example, `13:30:00` indicates 1:30 PM.
+= seconds. For example, `13:30:00` indicates 1:30 PM. The default value is `01:45:00` (1:45 AM).
 
-If you don't specify a value for this parameter, Windows Defender checks for definition updates 15
-minutes before the scheduled scan time by default.
+The value of this parameter is meaningful only if the value of the **SignatureScheduleDay** isn't 8
+or Never (the default value).
 
 ```yaml
 Type: DateTime
@@ -2630,9 +2703,14 @@ Accept wildcard characters: False
 
 ### -SignatureUpdateCatchupInterval
 
-Specifies the number of days after which Windows Defender requires a catch-up definition update.
+Specifies the interval in days for catching up on missed signature updates. If a scheduled update
+is missed, Windows Defender attempts to do the update after this interval.
 
-A valid value is an integer from 0 to 4294967295. The default value is one day.
+A valid value is an integer from 0 to 4294967295. The default value is 1 (one day).
+
+Even when the value of the **SignatureScheduleDay** parameter is 8 or Never (the default value),
+this parameter still controls the behavior of updates through other means (for example, manual
+updates or other system events).
 
 ```yaml
 Type: UInt32
@@ -2652,10 +2730,12 @@ Accept wildcard characters: False
 
 Specifies the interval in hours to check for definition updates.
 
-A valid value is an integer from 0 to 4294967295.
+A valid value is an integer from 0 to 4294967295. The default value is 0, which means Windows
+Defender uses the default interval for update checks, which is typically every 24 hours.
 
-You can use this parameter instead of the **SignatureScheduleDay**and **SignatureScheduleTime**
-parameters.
+Even when the value of the **SignatureScheduleDay** parameter is 8 or Never (the default value),
+this parameter still controls the behavior of updates through other means (for example, manual
+updates or other system events).
 
 ```yaml
 Type: UInt32
@@ -2673,7 +2753,7 @@ Accept wildcard characters: False
 
 Specifies how Windows Defender checks for user consent for certain samples. Valid values are:
 
-- 0 or AlwaysPrompt
+- 0 or AlwaysPrompt (default)
 - 1 or SendSafeSamples
 - 2 or NeverSend
 - 3 or SendAllSamples
@@ -2803,7 +2883,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ThrottleForScheduledScanOnly
+
+Specifies whether a CPU usage limit applies scheduled scans only. Valid values are:
+
+- $true: CPU throttling applies only to scheduled scans. This is the default value.
+- $false: CPU throttling applies to scheduled and custom scans.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 1
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ThrottleLimit
+
+<!--- No output property in Get- --->
 
 Specifies the maximum number of concurrent operations that can be established to run this cmdlet.
 
@@ -2825,31 +2926,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ThrottleForScheduledScanOnly
-
-Specifies whether a CPU usage limit applies scheduled scans only. Valid values are:
-
-- $true: CPU throttling applies only to scheduled scans. This is the default value.
-- $false: CPU throttling applies to scheduled and custom scans.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: 1
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UILockdown
 
-Specifies whether to disable UI lockdown mode. Valid values are:
+Specifies whether to enable UI lockdown mode. Valid values are:
 
-- $true: UI lockdown mode is disabled.
-- $false: UI lockdown mode is enabled
+- $true: UI lockdown mode is enabled.
+- $false: UI lockdown mode is disabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -2864,7 +2946,6 @@ Accept wildcard characters: False
 ```
 
 ### -UnknownThreatDefaultAction
-<!--- Default value is 0, but 0 isn't a valid value. Must use Remove- to go back to 0. --->
 
 Specifies the automatic remediation action to take for unknown level threats. Valid values are:
 
@@ -2875,6 +2956,12 @@ Specifies the automatic remediation action to take for unknown level threats. Va
 - 8 or UserDefined
 - 9 or NoAction
 - 10 or Block
+
+The default value is 0, which means Windows Defender uses the default action based on the Security
+Intelligence Update (SIU) definitions to determine how to handle the detected threat.
+
+To set this parameter to the value 0, use the **Remove-MpPreference** cmdlet:
+`Remove-MpPreference -UnknownThreatDefaultAction`
 
 ```yaml
 Type: ThreatAction

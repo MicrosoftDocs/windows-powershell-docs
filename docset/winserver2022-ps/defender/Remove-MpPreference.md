@@ -24,6 +24,7 @@ Remove-MpPreference
  [-AllowDatagramProcessingOnWinServer]
  [-AllowNetworkProtectionDownLevel]
  [-AllowNetworkProtectionOnWinServer]
+ [-AllowSwitchToAsyncInspection]
  [-AsJob]
  [-AttackSurfaceReductionOnlyExclusions <String[]>]
  [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>]
@@ -39,6 +40,7 @@ Remove-MpPreference
  [-DisableAutoExclusions]
  [-DisableBehaviorMonitoring]
  [-DisableBlockAtFirstSeen]
+ [-DisableCacheMaintenance]
  [-DisableCatchupFullScan]
  [-DisableCatchupQuickScan]
  [-DisableCpuThrottleOnIdleScans]
@@ -123,10 +125,10 @@ Remove-MpPreference
  [-SignatureScheduleTime]
  [-SignatureUpdateCatchupInterval]
  [-SignatureUpdateInterval]
- [-SignaturesUpdatesChannel]
  [-SubmitSamplesConsent]
  [-ThreatIDDefaultAction_Actions <ThreatAction[]>]
  [-ThreatIDDefaultAction_Ids <Int64[]>]
+ [-ThrottleForScheduledScanOnly]
  [-ThrottleLimit <Int32>]
  [-UILockdown]
  [-UnknownThreatDefaultAction]
@@ -137,8 +139,6 @@ Remove-MpPreference
 
 The **Remove-MpPreference** cmdlet removes exclusions for file name extensions, paths, and processes
 , or default actions for high, moderate, and low threats.
-
-If you attempt to remove an exclusion that is not in the list, this cmdlet reports the error.
 
 ## EXAMPLES
 
@@ -162,11 +162,11 @@ This example excludes only the file app.exe in in the Windows folder on the C dr
 
 ### -AllowDatagramProcessingOnWinServer
 
-Specifies whether to disable the inspection of UDP connections on Windows Server. You don't need to
-specify a value with this switch.
+Specifies whether to disable the inspection of UDP connections on Windows Server. You don't need to specify a value with
+this switch.
 
 **Tip**: This switch works only if the current value of the AllowDatagramProcessingOnWinServer
-property is True (enabled). If the value is already False (disabled), the command returns an error.
+property is True (enabled). If the value is already False (disabled), this switch does nothing.
 
 ```yaml
 Type: SwitchParameter
@@ -187,7 +187,7 @@ Specifies whether to disable control of network protection on Windows Server 201
 need to specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the AllowNetworkProtectionDownLevel
-property is True (enabled). If the value is already False (disabled), the command returns an error.
+property is True (enabled). If the value is already False (disabled), this switch does nothing.
 
 For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
 
@@ -210,7 +210,7 @@ Specifies whether to disable control of network protection on Windows Server by 
 value with this switch.
 
 **Tip**: This switch works only if the current value of the AllowNetworkProtectionOnWinServer
-property is True (enabled). If the value is already False (disabled), the command returns an error.
+property is True (enabled). If the value is already False (disabled), this switch does nothing.
 
 For more information about network protection, see [Protect your network](/defender-endpoint/network-protection).
 
@@ -218,6 +218,27 @@ For more information about network protection, see [Protect your network](/defen
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: anpws
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSwitchToAsyncInspection
+
+Specifies whether to enable a performance optimization that changes synchronously inspected network
+flows to asynchronous inspection after they're checked and validated. You don't need
+to specify a value with this switch.
+
+**Tip**: This switch works only if the current value of the AllowSwitchToAsyncInspection
+property is False (disabled). If the value is already True (enabled), this switch does nothing.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: astai
 
 Required: False
 Position: Named
@@ -309,7 +330,8 @@ are:
   • 6 or Warning
 
 To remove values without affecting other existing values, use the following syntax:
-`Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
+
+`Remove-MpPreference -AttackSurfaceReductionRules_IdsRule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
 To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
 
@@ -354,7 +376,8 @@ processes" ASR rule is `26190899-1602-49e8-8b27-eb1d0a1ce869`. For more informat
   • 6 or Warn
 
 To remove values without affecting other existing values, use the following syntax:
-`Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
+
+`Remove-MpPreference -AttackSurfaceReductionRules_IdsRule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
 To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
 
@@ -426,11 +449,11 @@ Accept wildcard characters: False
 ### -CloudBlockLevel
 
 Specifies the value 0 (Default) for the cloud block level that determines how aggressively Microsoft
-Defender Antivirus scans and blocks suspicious files. You don't need to specify a value with this
+Defender scans and blocks suspicious files. You don't need to specify a value with this
 switch.
 
-**Tip**: This switch does nothing if the current value of the CloudBlockLevel property is 0
-(Default).
+**Tip**: This switch works only if the current value of the CloudBlockLevel
+property isn't 0. If the value is already 0, this switch does nothing.
 
 ```yaml
 Type: SwitchParameter
@@ -446,13 +469,13 @@ Accept wildcard characters: False
 
 ### -CloudExtendedTimeout
 
-<!---The default value on 2 Win 11 PCs is 0; Max value claimed to be 50 --->
+<!---The default value on two Win 11 PCs is 0; Max value claimed to be 50 --->
 
 Specifies the value 0 for the amount of extended time in seconds to block a suspicious file and scan
 it in the cloud. You don't need to specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the CloudExtendedTimeout
-property isn't 0. If the value is already 0, the command returns an error.
+property isn't 0. If the value is already 0, this switch does nothing.
 
 ```yaml
 Type: SwitchParameter
@@ -473,8 +496,7 @@ controlled folders. You can use absolute folder paths (for example `C:\Windows\.
 variables (for example, `%appdata%...`) for path names.
 
 To remove values without affecting other existing values, use the following syntax:
-
-`Remove-MpPreference -ControlledFolderAccessAllowedApplications "PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`
+`"PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`
 
 To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
 
@@ -507,16 +529,16 @@ Specifies the entries to remove from the list of controlled access folders. You 
 folder paths (for example `C:\Windows\...`) or environment variables (for example, `%appdata%...`)
 for path names.
 
-To remove values without affecting other existing values, use the **Remove-MpPreference** cmdlet:
-
-`Remove-MpPreference -ControlledFolderAccessAllowedApplications "Path1","Path2",..."PathN"`
+To remove values without affecting other existing values, use the following syntax:
+`"Path1","Path2",..."PathN"`
 
 To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
 
 `Add-MpPreference -ControlledFolderAccessAllowedApplications "Path1","Path2",..."PathN"`
 
-To replace all existing values with the values you specify, use the following syntax:
-`"Path1","Path2"..."PathN"`.
+To replace all existing values with the values you specify, use the **Set-MPPreference** cmdlet:
+
+`Set-MpPreference -ControlledFolderAccessAllowedApplications"Path1","Path2"..."PathN"`.
 
 To remove applications that are allowed to access controlled folders, use the
 **ControlledFolderAccessAllowedApplications** parameter.
@@ -586,7 +608,7 @@ Accept wildcard characters: False
 
 <!--- Does nothing. $true stays $true; $false stays $false. --->
 
-Specifies whether to enable the Automatic Exclusions feature for the server. You don't need to
+Specifies whether to enable the Automatic Exclusions feature. You don't need to
 specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the DisableAutoExclusions
@@ -645,6 +667,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableCacheMaintenance
+Specifies whether to enable cache maintenance by the cache maintenance idle task. You don't need to specify a value with
+this switch.
+
+**Tip**: This switch works only if the current value of the DisableCacheMaintenance
+property is True (disabled). If the value is already False (enabled), this switch does nothing.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: dcm
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableCatchupFullScan
 
 Specifies whether to disable catch-up scans for missed scheduled full scans. You don't need to
@@ -652,11 +693,6 @@ specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the DisableCatchupFullScan
 property is False (enabled). If the value is already True (disabled), this switch does nothing.
-
-- $true: Windows Defender doesn't run catch-up scans for missed scheduled full scans.
-- $false: After two missed scheduled full scans, Windows Defender runs a catch-up scan.
-the next time someone signs in to the computer.
-Indicates that the cmdlet removes whether Windows Defender runs catch-up scans for scheduled full scans.
 
 ```yaml
 Type: SwitchParameter
@@ -735,8 +771,8 @@ Accept wildcard characters: False
 
 ### -DisableDnsOverTcpParsing
 
-Specifies whether to enable inspection of DNS traffic that occurs over TCP. You don't need
-to specify a value with this switch.
+Specifies whether to enable inspection of DNS traffic that occurs over TCP. You don't need to specify a value with this
+switch.
 
 **Tip**: This switch works only if the current value of the DisableDnsOverTcpParsing
 property is True (disabled). If the value is already False (enabled), this switch does nothing.
@@ -956,7 +992,7 @@ Accept wildcard characters: False
 
 ### -DisableNetworkProtectionPerfTelemetry
 
-Specifies whether to disable the gathering and sending of performance telemetry from Network
+Specifies whether to enable the gathering and sending of performance telemetry from Network
 Protection. You don't need to specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the DisableNetworkProtectionPerfTelemetry
@@ -1165,7 +1201,7 @@ Accept wildcard characters: False
 
 ### -DisableSshParsing
 
-Specifies whether to disable the inspection of SSH traffic. You don't need to specify
+Specifies whether to enable the inspection of SSH traffic. You don't need to specify
 a value with this switch.
 
 **Tip**: This switch works only if the current value of the DisableSshParsing
@@ -1244,6 +1280,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableConvertWarnToBlock
+
 Specifies whether to disable blocking network traffic by network protection instead of displaying a
 warning. You don't need to specify a value with this switch.
 
@@ -1399,8 +1436,8 @@ Accept wildcard characters: False
 
 ### -EnableUdpSegmentationOffload
 
-Specifies whether to disable UDP segmentation offload support in network protection. You don't need
-to specify a value with this switch.
+Specifies whether to disable UDP segmentation offload support in network protection (the value 0 or
+Disabled). You don't need to specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the EnableUdpSegmentationOffload
 property is True (enabled). If the value is already False (disabled), this switch does nothing.
@@ -1444,7 +1481,7 @@ Accept wildcard characters: False
 ### -ExclusionExtension
 
 Specifies the filename extensions (for example, `obj` or `lib`) to remove from the list of
-exclusions from scheduled, custom,and real-time scanning.
+exclusions from scheduled, custom, and real-time scanning.
 
 To remove values without affecting other existing values, use the following syntax:
 `"Extension1","Extension2"..."ExtensionN"`
@@ -1509,7 +1546,8 @@ To add values without affecting existing values, use the **Add-MPPreference** cm
 `Add-MpPreference -ExclusionPath "Value1","Value2",..."ValuehN"`
 
 To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
-`Remove-MpPreference -ExclusionPath "Value1","Value2"..."ValueN"`.
+
+`Set-MpPreference -ExclusionPath "Value1","Value2"..."ValueN"`.
 
 ```yaml
 Type: String[]
@@ -1529,8 +1567,7 @@ Specifies the path to process image entries to remove from the list of exclusion
 and real-time scanning.
 
 To remove values without affecting other existing values, use the following syntax:
-
-`Remove-MpPreference -ExclusionProcess "Path1","Path2",..."PathN"`
+`"Path1","Path2",..."PathN"`
 
 To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
 
@@ -1574,8 +1611,8 @@ Accept wildcard characters: False
 
 ### -ForceUseProxyOnly
 
-Specifies the device isn't forced to use the proxy only. You don't need to specify a value with
-this switch.
+Specifies the device isn't forced to use the proxy only (the value $false). You don't need to
+specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the ForceUseProxyOnly
 property is True (enabled). If the value is already False (disabled), this switch does nothing.
@@ -1594,13 +1631,14 @@ Accept wildcard characters: False
 
 ### -HighThreatDefaultAction
 
-<!--- Value in Get- never changes from 0, but 0 isn't a valid value in Set-. --->
-
-Specifies the remediation action 0 for high level threats. You don't need to
+Specifies the remediation action value 0 for high level threats. You don't need to
 specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the HighThreatDefaultAction
 property isn't 0. If the value is already 0, this switch does nothing.
+
+The value 0 means Windows Defender uses the default action based on the Security
+Intelligence Update (SIU) definitions to determine how to handle the detected threat.
 
 ```yaml
 Type: SwitchParameter
@@ -1617,11 +1655,12 @@ Accept wildcard characters: False
 ### -IntelTDTEnabled
 <!--- Default value from Get- is blank. Parameter in Set- is Boolean and doesn't take $null --->
 
-Specifies Intel TDT integration isn't configured for Intel TDT-capable devices. You don't need to
-specify a value with this switch.
+Specifies Intel Threat Detection Technology (TDT) integration in Windows Defender is controlled by
+the system (typically, disabled). You don't need to specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the IntelTDTEnabled
-property is True (enabled) or False (disabled). If the value is already blank, this switch does nothing.
+property isn't blank (default behavior controlled by the system). If the value is already blank,
+this switch does nothing.
 
 ```yaml
 Type: SwitchParameter
@@ -1636,13 +1675,15 @@ Accept wildcard characters: False
 ```
 
 ### -LowThreatDefaultAction
-<!--- Value in Get- never changes from 0, but 0 isn't a valid value in Set-. --->
 
-Specifies the remediation action 0 for low level threats. You don't need to
+Specifies the remediation action value 0 for low level threats. You don't need to
 specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the LowThreatDefaultAction
 property isn't 0. If the value is already 0, this switch does nothing.
+
+The value 0 means Windows Defender uses the default action based on the Security
+Intelligence Update (SIU) definitions to determine how to handle the detected threat.
 
 ```yaml
 Type: SwitchParameter
@@ -1711,13 +1752,15 @@ Accept wildcard characters: False
 ```
 
 ### -ModerateThreatDefaultAction
-<!--- Value in Get- never changes from 0, but 0 isn't a valid value in Set-. --->
 
-Specifies the automatic remediation action 0 for moderate level threats. You don't need to
+Specifies the automatic remediation action value 0 for moderate level threats. You don't need to
 specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the ModerateThreatDefaultAction
 property isn't 0. If the value is already 0, this switch does nothing.
+
+The value 0 means Windows Defender uses the default action based on the Security
+Intelligence Update (SIU) definitions to determine how to handle the detected threat.
 
 ```yaml
 Type: SwitchParameter
@@ -1774,7 +1817,8 @@ Accept wildcard characters: False
 
 ### -ProxyBypass
 
-Empties the list of entries for proxy bypass. You don't need to specify a value with this switch.
+Specifies whether to empty the list of entries for proxy bypass. You don't need to specify a value
+with this switch.
 
 To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
 
@@ -1821,8 +1865,8 @@ Accept wildcard characters: False
 
 ### -ProxyPacUrl
 
-Removes the Privilege Attribute Certificate (PAC) proxy value. You don't need to specify a value
-with this switch.
+Specifies whether to remove the Privilege Attribute Certificate (PAC) proxy value. You don't need
+to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1838,7 +1882,8 @@ Accept wildcard characters: False
 
 ### -ProxyServer
 
-Removes the proxy server value. You don't need to specify a value with this switch.
+Specifies whether to remove the proxy server value. You don't need to specify a value with this
+switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1874,10 +1919,11 @@ Accept wildcard characters: False
 
 ### -QuarantinePurgeItemsAfterDelay
 
-Specifies the value 0 for the number of days to keep items in the Quarantine folder. You don't need
-to specify a value with this switch.
+Specifies the value 0 as the number of days to keep items in the Quarantine folder
+before they're automatically removed. You don't need to specify a value with this switch.
 
-The value 0 means items stay in the Quarantine folder indefinitely.
+The value 0 means items stay in the Quarantine folder indefinitely (items aren't automatically
+removed).
 
 **Tip**: This switch works only if the current value of the QuarantinePurgeItemsAfterDelay
 property isn't 0. If the value is already 0, this switch does nothing.
@@ -1896,8 +1942,8 @@ Accept wildcard characters: False
 
 ### -RandomizeScheduleTaskTimes
 
-Specifies whether to select a random time within 30 minutes before or after scheduled task times.
-You don't need to specify a value with this switch.
+Specifies whether to enable selecting a random time within 30 minutes before or after scheduled task
+times (the value True). You don't need to specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the RandomizeScheduleTaskTimes
 property is False (disabled). If the value is already True (enabled), this switch does nothing.
@@ -1924,7 +1970,7 @@ Specifies scanning for incoming and outgoing files on NTFS volumes (the value 0 
 need to specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the RealTimeScanDirection
-property isn't 0 (Both). If the value is already 0, this switch does nothing.
+property isn't 0. If the value is already 0, this switch does nothing.
 
 ```yaml
 Type: SwitchParameter
@@ -1966,6 +2012,9 @@ remediation. You don't need to specify a value with this switch.
 **Tip**: This switch works only if the current value of the RemediationScheduleTime
 property isn't `02:00:00` (2:00 AM). If the value is already `02:00:00`, this switch does nothing.
 
+The value of this parameter is meaningful only if the value of the **RemediationScheduleDay**
+parameter isn't 8 or Never.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -1980,8 +2029,9 @@ Accept wildcard characters: False
 
 ### -ReportingAdditionalActionTimeOut
 
-Specifies 10080 as the number of minutes before a detection in the additional action state changes
-to the cleared state. You don't need to specify a value with this switch.
+Specifies 10080 as the number of minutes that Windows Defender waits before detections that require
+additional action time out (detections in the additional action state change to the cleared state).
+You don't need to specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the ReportingAdditionalActionTimeOut
 property isn't 10080. If the value is already 10080, this switch does nothing.
@@ -2000,9 +2050,9 @@ Accept wildcard characters: False
 
 ### -ReportingCriticalFailureTimeOut
 
-Specifies 10080 as the number of minutes before a detection in the critically failed state changes
-to the additional action state or the cleared state. You don't need to specify a value with this
-switch.
+Specifies 10080 as the number of minutes that Windows Defender waits before reporting a critical
+failure (detections in the critically failed state change to the additional action state or the
+cleared state).
 
 **Tip**: This switch works only if the current value of the ReportingCriticalFailureTimeOut
 property isn't 10080. If the value is already 10080, this switch does nothing.
@@ -2021,9 +2071,8 @@ Accept wildcard characters: False
 
 ### -ReportingNonCriticalTimeOut
 
-Specifies 1440 as the number of minutes before a detection in the non-critically failed state
-changes to the cleared state. You don't need to specify a value with this
-switch.
+Specifies 1440 as the number of minutes that Windows Defender waits before reporting a non-critical
+failure (detections in the non-critically failed state change the cleared state).
 
 **Tip**: This switch works only if the current value of the ReportingNonCriticalTimeOut
 property isn't 1440. If the value is already 1440, this switch does nothing.
@@ -2078,10 +2127,6 @@ don't need to specify a value with this switch.
 **Tip**: This switch works only if the current value of the ScanOnlyIfIdleEnabled
 property is False (disabled). If the value is already True (enabled), this switch does nothing.
 
-- $true: Windows Defender runs schedules scans when the computer is on, but not in use. This is the
-default value.
-- $false: Windows Defender runs schedules scans when the computer is in use.
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -2100,7 +2145,7 @@ Specifies quick scan as the scan type to use during a scheduled scan (the value 
 don't need to specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the ScanParameters
-property is 2 (FullScan). If the value is already 1, this switch does nothing.
+property is 2 (FullScan). If the value is already 1 (QuickScan), this switch does nothing.
 
 ```yaml
 Type: SwitchParameter
@@ -2263,6 +2308,7 @@ means no service health reports are sent.
 
 For more information, see
 [Microsoft Defender Antivirus event IDs](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus#microsoft-defender-antivirus-event-ids).
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -2276,13 +2322,15 @@ Accept wildcard characters: False
 ```
 
 ### -SevereThreatDefaultAction
-<!--- Value in Get- never changes from 0, but 0 isn't a valid value in Set-. --->
 
-Specifies the remediation action 0 for severe level threats. You don't need to
+Specifies the remediation action value 0 for severe level threats. You don't need to
 specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the SevereThreatDefaultAction
 property isn't 0. If the value is already 0, this switch does nothing.
+
+The value 0 means Windows Defender uses the default action based on the Security
+Intelligence Update (SIU) definitions to determine how to handle the detected threat.
 
 ```yaml
 Type: SwitchParameter
@@ -2298,7 +2346,11 @@ Accept wildcard characters: False
 
 ### -SharedSignaturesPath
 
-Removes the shared signatures path value. You don't need to specify a value with this switch.
+Specifies whether to remove the shared signatures path value. You don't need to specify a value with
+this switch.
+
+The value of this setting is meaningful only if the **SignatureFallBackOrder** parameter contains
+the value `FileShares`.
 
 ```yaml
 Type: SwitchParameter
@@ -2313,7 +2365,12 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureAuGracePeriod
-Indicates that the cmdlet removes specified grace period, in minutes, for the definition.
+
+Specifies the value 0 minutes for the grace period applied to all signature updates after the
+initial, first-time application. You don't need to specify a value with this switch.
+
+**Tip**: This switch works only if the current value of the SignatureAuGracePeriod
+property isn't 0. If the value is already 0, this switch does nothing.
 
 ```yaml
 Type: SwitchParameter
@@ -2328,7 +2385,12 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureBlobFileSharesSources
-Specifies the file shares sources for signatures.
+
+Specifies whether to remove the file share sources for signatures blob files. You don't need to specify a value with
+this switch.
+
+The value of this setting is meaningful only if the **SignatureFallBackOrder** parameter contains
+the value `FileShares`.
 
 ```yaml
 Type: SwitchParameter
@@ -2343,7 +2405,12 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureBlobUpdateInterval
-Indicates that the cmdlet removes the signature update interval.
+
+Specifies the value 60 minutes for checking and updating signature blob files. You don't need to
+specify a value with this switch.
+
+**Tip**: This switch works only if the current value of the SignatureBlobUpdateInterval
+property isn't 60. If the value is already 60, this switch does nothing.
 
 ```yaml
 Type: SwitchParameter
@@ -2358,7 +2425,12 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureDefinitionUpdateFileSharesSources
-Indicates that the cmdlet removes specified file-share sources for definition updates.
+
+Specifies whether to remove the file share sources for signature definition update files. You don't
+need to specify a value with this switch.
+
+The value of this setting is meaningful only if the **SignatureFallBackOrder** parameter contains
+the value `FileShares`.
 
 ```yaml
 Type: SwitchParameter
@@ -2373,7 +2445,12 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureDisableUpdateOnStartupWithoutEngine
-Indicates that the cmdlet removes whether to initiate definition updates even if no antimalware engine is present.
+
+Specifies whether to enable signature updates on startup when the Windows Defender engine isn't
+available. You don't need to specify a value with this switch.
+
+**Tip**: This switch works only if the current value of the SignatureDisableUpdateOnStartupWithoutEngine
+property is True (disabled). If the value is already False (enabled), this switch does nothing.
 
 ```yaml
 Type: SwitchParameter
@@ -2388,7 +2465,13 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureFallbackOrder
-Indicates that the cmdlet removes specified order in which to contact different definition update sources.
+
+Specifies the value `{MicrosoftUpdateServer|MMPC}` as the order in which to contact different
+definition update sources. You don't need to specify a value with this switch.
+
+**Tip**: This switch works only if the current value of the SignatureFallbackOrder
+property isn't `{MicrosoftUpdateServer|MMPC}`. If the value is already
+`{MicrosoftUpdateServer|MMPC}`, this switch does nothing.
 
 ```yaml
 Type: SwitchParameter
@@ -2403,7 +2486,14 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureFirstAuGracePeriod
-Indicates that the cmdlet removes specified grace period, in minutes, for the definition.
+
+Specifies the value 120 minutes (2 hours) for the grace period in minutes immediately after the
+first installation of the service, during which any service-initiated signature update is aborted if
+the update occurs successfully within this amount of time.  You don't need to specify a value with
+this switch.
+
+**Tip**: This switch works only if the current value of the SignatureFirstAuGracePeriod
+property isn't 120. If the value is already 120, this switch does nothing.
 
 ```yaml
 Type: SwitchParameter
@@ -2418,7 +2508,16 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureScheduleDay
-Indicates that the cmdlet removes specified day of the week on which to check for definition updates.
+
+Specifies the value 8 or Never for the day of the week that Windows Defender checks for definition
+updates. You don't need to specify a value with this switch.
+
+**Tip**: This switch works only if the current value of the SignatureScheduleDay
+property isn't 8. If the value is already 8, this switch does nothing.
+
+Although the value 8 or Never means Windows Defender doesn't check for updates on specific days,
+definition updates still happen through other means (for example, manual updates or other system
+events).
 
 ```yaml
 Type: SwitchParameter
@@ -2433,7 +2532,15 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureScheduleTime
-Indicates that the cmdlet removes specified time of day, as the number of minutes after midnight, to check for definition updates.
+
+Specifies the value `01:45:00` (1:45 AM) for the time on the local computer to check for definition
+updates. You don't need to specify a value with this switch.
+
+**Tip**: This switch works only if the current value of the SignatureScheduleTime
+property isn't `01:45:00`. If the value is already `01:45:00`, this switch does nothing.
+
+The value of this setting is meaningful only if the value of the **SignatureScheduleDay** isn't 8
+or Never (the default value).
 
 ```yaml
 Type: SwitchParameter
@@ -2447,31 +2554,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SignaturesUpdatesChannel
-Specifies when devices receive daily Microsoft Defender definition updates during the monthly gradual rollout.
-
-Valid values are:
-
-- NotConfigured. Devices stay up to date automatically during the gradual release cycle. This value is suitable for most devices.
-- Broad. Devices are offered updates only after the gradual release cycle completes. This value is suggested for a broad set of devices in your production population, from 10 to 100 percent.
-- Staged. Devices are offered updates after the monthly gradual release cycle. This value is suggested for a small, representative part of your production population, around 10 percent.
-
-This parameter name will be updated to **DefinitionUpdatesChannel** in a future release.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: srelr
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SignatureUpdateCatchupInterval
-Indicates that the cmdlet removes specified number of days after which Windows Defender requires a catch-up definition update.
+
+Specifies the value 1 (one day) for catching up on missed signature updates. You don't need to
+specify a value with this switch.
+
+**Tip**: This switch works only if the current value of the SignatureUpdateCatchupInterval
+property isn't 1. If the value is already 1, this switch does nothing.
+
+Even when the value of the **SignatureScheduleDay** setting is 8 or Never (the default value),
+this setting still controls the behavior of updates through other means (for example, manual
+updates or other system events).
 
 ```yaml
 Type: SwitchParameter
@@ -2486,7 +2579,19 @@ Accept wildcard characters: False
 ```
 
 ### -SignatureUpdateInterval
-Indicates that the cmdlet removes specified interval at which to check for definition updates.
+
+Specifies the value 0 as the interval in hours to check for definition updates. You don't need to
+specify a value with this switch.
+
+**Tip**: This switch works only if the current value of the SignatureUpdateInterval
+property isn't 0. If the value is already 0, this switch does nothing.
+
+The value 0 means Windows Defender uses the default interval for update checks, which is typically
+every 24 hours.
+
+Even when the value of the **SignatureScheduleDay** setting is 8 or Never (the default value),
+this setting still controls the behavior of updates through other means (for example, manual
+updates or other system events).
 
 ```yaml
 Type: SwitchParameter
@@ -2501,7 +2606,15 @@ Accept wildcard characters: False
 ```
 
 ### -SubmitSamplesConsent
-Indicates that the cmdlet removes how Windows Defender checks for user consent for certain samples.
+
+Specifies the value 0 or AlwaysPrompt as the interval in hours to check for definition updates.
+You don't need to specify a value with this switch.
+
+**Tip**: This switch works only if the current value of the SubmitSamplesConsent
+property isn't 0. If the value is already 0, this switch does nothing.
+
+If consent was previously granted, Windows Defender submits the samples. Otherwise, Windows Defender
+prompts the user for consent if the value of the **MAPSReporting** parameter isn't Disabled.
 
 ```yaml
 Type: SwitchParameter
@@ -2516,19 +2629,46 @@ Accept wildcard characters: False
 ```
 
 ### -ThreatIDDefaultAction_Actions
-Specifies an array of the actions to take for the IDs specified by using the **ThreatIDDefaultAction_Ids** parameter.
-The acceptable values for this parameter are:
 
-- 1: Clean
-- 2: Quarantine
-- 3: Remove
-- 6: Allow
-- 8: UserDefined
-- 9: NoAction
-- 10: Block
+Use the **ThreatIDDefaultAction_Ids** and **ThreatIDDefaultAction_Actions** parameters
+together in the same command to remove the actions to take on the corresponding threats.
 
->[!NOTE]
->A value of 0 (NULL) applies an action based on the Security Intelligence Update (SIU). This is the default value.
+- The **ThreatIDDefaultAction_Ids** parameter identifies the threat from the output of the
+**Get-MpThreatCatalog** cmdlet. For example, the ThreatID value of the threat named
+**Trojan:Win32/BlueFire** is `3229`.
+- The **ThreatIDDefaultAction_Actions** parameter identifies the action to take on the corresponding
+threat ID. Valid values are:
+
+  • 1 or Clean
+
+  • 2 or Quarantine
+
+  • 3 or Remove
+
+  • 6 or Allow
+
+  • 8 or UserDefined
+
+  • 9 or NoAction
+
+  • 10 or Block
+
+To remove values without affecting other existing values, use the following syntax:
+
+`Remove-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+
+`Add-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
+
+`Set-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+**Note**: When a threat and corresponding action aren't specified in the
+**ThreatIDDefaultAction_Ids** and **ThreatIDDefaultAction_Actions** parameters, the action that's
+applied to the threat is based on the Security Intelligence Update (SIU). By default, no threats or
+corresponding actions are specified in the parameters.
 
 ```yaml
 Type: ThreatAction[]
@@ -2543,8 +2683,46 @@ Accept wildcard characters: False
 ```
 
 ### -ThreatIDDefaultAction_Ids
-Specifies an array of threat IDs.
-This cmdlet removes the default actions for the threat IDs that you specify.
+
+Use the **ThreatIDDefaultAction_Ids** and **ThreatIDDefaultAction_Actions** parameters
+together in the same command to remove the actions to take on the corresponding threats.
+
+- The **ThreatIDDefaultAction_Ids** parameter identifies the threat from the output of the
+**Get-MpThreatCatalog** cmdlet. For example, the ThreatID value of the threat named
+**Trojan:Win32/BlueFire** is `3229`.
+- The **ThreatIDDefaultAction_Actions** parameter identifies the action to take on the corresponding
+threat ID. Valid values are:
+
+  • 1 or Clean
+
+  • 2 or Quarantine
+
+  • 3 or Remove
+
+  • 6 or Allow
+
+  • 8 or UserDefined
+
+  • 9 or NoAction
+
+  • 10 or Block
+
+To remove values without affecting other existing values, use the following syntax:
+
+`Remove-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
+
+`Add-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
+
+`Set-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+**Note**: When a threat and corresponding action aren't specified in the
+**ThreatIDDefaultAction_Ids** and **ThreatIDDefaultAction_Actions** parameters, the action that's
+applied to the threat is based on the Security Intelligence Update (SIU). By default, no threats or
+corresponding actions are specified in the parameters.
 
 ```yaml
 Type: Int64[]
@@ -2558,9 +2736,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ThrottleForScheduledScanOnly
+
+Specifies whether to apply CPU throttling to scheduled scans only (custom scans aren't affected).
+You don't need to specify a value with this switch.
+
+**Tip**: This switch works only if the current value of the ThrottleForScheduledScanOnly
+property is False (CPU throttling applies to scheduled scans and custom scans). If the value is
+already True (CPU throttling applies to scheduled scans only), this switch does nothing.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: tfsso
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
+Specifies the maximum number of concurrent operations that can be established to run this cmdlet.
+
+A valid value is an integer from 0 to 2147483647. The default value is 0, which means PowerShell
+calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are
+running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -2576,7 +2780,11 @@ Accept wildcard characters: False
 ```
 
 ### -UILockdown
-Indicates that the cmdlet removes whether to disable UI lockdown mode.
+
+Specifies whether to disable UI lockdown mode. You don't need to specify a value with this switch.
+
+**Tip**: This switch works only if the current value of the UILockdown
+property is True (enabled). If the value is already False (disabled), this switch does nothing.
 
 ```yaml
 Type: SwitchParameter
@@ -2591,13 +2799,15 @@ Accept wildcard characters: False
 ```
 
 ### -UnknownThreatDefaultAction
-<!--- Default value is 0, but 0 isn't a valid value in Set-. Must use Remove- to go back to 0. --->
 
-Specifies the remediation action 0 for unknown level threats. You don't need to
+Specifies the remediation action value 0 for unknown level threats. You don't need to
 specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the UnknownThreatDefaultAction
 property isn't 0. If the value is already 0, this switch does nothing.
+
+The value 0 means Windows Defender uses the default action based on the Security
+Intelligence Update (SIU) definitions to determine how to handle the detected threat.
 
 ```yaml
 Type: SwitchParameter

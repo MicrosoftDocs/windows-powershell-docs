@@ -53,7 +53,7 @@ moderate, and low threats.
 Add-MpPreference -ExclusionPath 'C:\Temp'
 ```
 
-This example adds the folder C:\Temp to the exclusion list.
+This example adds the folder `C:\Temp` to the exclusion list.
 
 ### Example 2: Allow an application to access folders
 

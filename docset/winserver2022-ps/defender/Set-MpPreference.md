@@ -166,7 +166,7 @@ and severe alert levels.
 PS C:\> Set-MpPreference -SignatureScheduleDay Everyday
 ```
 
-This command configures preferences to check for definition updates every day.
+This example configures preferences to check for definition updates every day.
 
 ### Example 2: Schedule a time of day to check for definition updates
 
@@ -174,8 +174,8 @@ This command configures preferences to check for definition updates every day.
 PS C:\> Set-MpPreference -SignatureScheduleTime 02:00:00
 ```
 
-This command configures preferences to check for definition updates 120 minutes after midnight on
-days when it's scheduled to check.
+This example configures preferences to check for definition updates at 2:00AM on days when it's
+scheduled to check.
 
 ## PARAMETERS
 

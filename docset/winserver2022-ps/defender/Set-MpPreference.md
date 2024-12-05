@@ -2293,8 +2293,7 @@ Accept wildcard characters: False
 
 ### -ScanScheduleOffset
 
-Specifies the fixed number of minutes to delay scheduled scan start times on the device. Staggering
-start times on devices can help reduce the impact on network and system performance.
+Specifies the fixed number of minutes to delay scheduled scan start times on the device.
 
 The default value is 120, which means scheduled scans start 2 hours after the times specified by the
 **ScanScheduleTime** and **ScanScheduleQuickScanTime** parameters.

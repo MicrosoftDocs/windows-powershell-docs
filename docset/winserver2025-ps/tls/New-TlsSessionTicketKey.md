@@ -29,7 +29,7 @@ mechanism. This mechanism helps to improve the performance of TLS. The TLS serve
 mechanism to create a key to encrypt a session ticket. The client can later use the encrypted
 session ticket to resume communication with the TLS server. Otherwise, the client must restart the
 communication by acquiring of new session ticket. For more information, see
-[RFC 5077, Transport Layer Security (TLS) Session Resumption without Server-Side State](http://rfc5077.openrfc.org/).
+[RFC 5077, Transport Layer Security (TLS) Session Resumption without Server-Side State](https://datatracker.ietf.org/doc/html/rfc5077).
 
 ## EXAMPLES
 

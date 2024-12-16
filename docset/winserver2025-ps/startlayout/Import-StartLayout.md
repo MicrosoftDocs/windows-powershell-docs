@@ -16,12 +16,12 @@ Imports the layout of the Start into a mounted Windows image.
 ## SYNTAX
 
 ### Path
-```
+```powershell
 Import-StartLayout [-LayoutPath] <String> [-MountPath] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### LiteralPath
-```
+```powershell
 Import-StartLayout -LayoutLiteralPath <String> -MountLiteralPath <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -35,6 +35,9 @@ Before you use this cmdlet, mount the Windows image file to import the layout in
 You must have administrator rights to import a layout.
 
 In Windows 10, the Export-StartLayout cmdlet exports layouts as .xml files, and the **Import-StartLayout** cmdlet imports only .xml files.
+
+> [!CAUTION]
+> The Import-StartLayout cmdlet is deprecated in Windows 11. It has no effect on either Start or Taskbar layout. To configure the Start layout in Windows 11, see [Customize the Windows 11 Start layout](https://learn.microsoft.com/en-us/windows-hardware/customize/desktop/customize-the-windows-11-start-menu). To configure Taskbar layout in Windows 11, see [Customize the Taskbar](https://learn.microsoft.com/en-us/windows-hardware/customize/desktop/customize-the-windows-11-taskbar).
 
 ## EXAMPLES
 

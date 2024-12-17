@@ -33,6 +33,7 @@ computer.
 PS C:\> Get-MpComputerStatus
 AMEngineVersion                 : 1.1.9700.0
 AMProductVersion                : 4.3.9463.0
+AMRunningMode                   : Normal
 AMServiceEnabled                : True
 AMServiceVersion                : 4.3.9463.0
 AntispywareEnabled              : True

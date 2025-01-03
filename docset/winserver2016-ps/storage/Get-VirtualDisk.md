@@ -624,7 +624,7 @@ You can use the pipeline operator to pass an MSFT_TargetVirtualDisk object to th
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk
-This cmdlet outputs an object that represents the specified virtual disk. For more information about output object type, see [MSFT_VirtualDisk class](/previous-versions/windows/desktop/stormgmt/msft-virtualdisk).
+This cmdlet outputs an object that represents the specified virtual disk. For more information about output object type, see [MSFT_VirtualDisk class](/windows-hardware/drivers/storage/msft-virtualdisk).
 
 ## NOTES
 

@@ -469,8 +469,6 @@ Accept wildcard characters: False
 
 ### -CloudExtendedTimeout
 
-<!---The default value on two Win 11 PCs is 0; Max value claimed to be 50 --->
-
 Specifies the value 0 for the amount of extended time in seconds to block a suspicious file and scan
 it in the cloud. You don't need to specify a value with this switch.
 
@@ -584,8 +582,6 @@ Accept wildcard characters: False
 
 ### -DisableArchiveScanning
 
-<!--- Can't change the value using Set- (value locked @ $false). This switch does nothing --->
-
 Specifies whether to enable the scanning of archive files (for example, .zip and .cab files) for
 malicious and unwanted software. You don't need to specify a value with this switch.
 
@@ -606,8 +602,6 @@ Accept wildcard characters: False
 
 ### -DisableAutoExclusions
 
-<!--- Does nothing. $true stays $true; $false stays $false. --->
-
 Specifies whether to enable the Automatic Exclusions feature. You don't need to
 specify a value with this switch.
 
@@ -627,8 +621,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBehaviorMonitoring
-
-<!--- Can't change the value using Set- (value locked @ $false). This switch does nothing --->
 
 Specifies whether to enable behavior monitoring. You don't need to
 specify a value with this switch.
@@ -945,8 +937,6 @@ Accept wildcard characters: False
 
 ### -DisableIntrusionPreventionSystem
 
-<!--- This property isn't available in the output of Get- --->
-
 Specifies whether to enable the intrusion prevention system in network protection. You don't need
 to specify a value with this switch.
 
@@ -969,8 +959,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableIOAVProtection
-
-<!--- Can't change the value using Set- (value locked @ $false). This switch does nothing --->
 
 Specifies whether to enable the scanning of all downloaded files and attachments. You don't need to
 specify a value with this switch.
@@ -1052,8 +1040,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRealtimeMonitoring
-
-<!--- Can't change the value using Set- (value locked @ $false). This switch does nothing --->
 
 Specifies whether to enable real-time protection. You don't need to specify a value with this switch.
 
@@ -1156,8 +1142,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScriptScanning
-
-<!--- Can't change the value using Set- (value locked @ $false). This switch does nothing --->
 
 Specifies whether to enable the scanning of scripts during malware scans. You don't need to specify
 a value with this switch.
@@ -1653,7 +1637,6 @@ Accept wildcard characters: False
 ```
 
 ### -IntelTDTEnabled
-<!--- Default value from Get- is blank. Parameter in Set- is Boolean and doesn't take $null --->
 
 Specifies Intel Threat Detection Technology (TDT) integration in Windows Defender is controlled by
 the system (typically, disabled). You don't need to specify a value with this switch.

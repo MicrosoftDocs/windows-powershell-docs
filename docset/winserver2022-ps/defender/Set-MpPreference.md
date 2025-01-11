@@ -499,8 +499,6 @@ Accept wildcard characters: False
 
 ### -CloudExtendedTimeout
 
-<!---The default value on two Win 11 PCs is 0; Max value claimed to be 50 --->
-
 Specifies the amount of extended time in seconds to block a suspicious file and scan it in the
 cloud. A valid value is an integer from 0 to 4294967295.
 
@@ -621,8 +619,6 @@ Accept wildcard characters: False
 
 ### -DisableArchiveScanning
 
-<!--- Can't change the value to $true (value locked @ $false). --->
-
 Specifies whether to disable the scanning of archive files (for example, .zip and .cab files) for malicious and
 unwanted software. Valid values are:
 
@@ -662,8 +658,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBehaviorMonitoring
-
-<!--- Can't change the value to $true (value locked @ $false). --->
 
 Specifies whether to disable behavior monitoring. Valid values are:
 
@@ -976,8 +970,6 @@ Accept wildcard characters: False
 
 ### -DisableIntrusionPreventionSystem
 
-<!--- This property isn't available in the output of Get- --->
-
 Specifies whether to disable the intrusion prevention system in network protection. Valid values are:
 
 - $true: The intrusion prevention system in network protection is disabled.
@@ -997,8 +989,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableIOAVProtection
-
-<!--- Can't change the value to $true (value locked @ $false). --->
 
 Specifies whether to disable the scanning of all downloaded files and attachments. Valid values are:
 
@@ -1079,8 +1069,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRealtimeMonitoring
-
-<!--- Can't change the value to $true (value locked @ $false). --->
 
 Specifies whether to disable real-time protection. Valid values are:
 
@@ -1179,8 +1167,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScriptScanning
-
-<!--- Can't change the value to $true (value locked @ $false). --->
 
 Specifies whether to disable the scanning of scripts during malware scans. Valid values are:
 
@@ -2387,8 +2373,6 @@ Accept wildcard characters: False
 
 ### -ServiceHealthReportInterval
 
-<!-- Max value claimed to be 1440, but I could set 429496729 --->
-
 Specifies the time interval in minutes for the service health reports to be sent from endpoints.
 These reports are for Microsoft Defender Antivirus events 1150 and 1151.
 
@@ -2725,8 +2709,6 @@ Accept wildcard characters: False
 
 ### -SignatureUpdateInterval
 
-<!---Range is supposedly 1 to 24 --->
-
 Specifies the interval in hours to check for definition updates.
 
 A valid value is an integer from 0 to 4294967295. The default value is 0, which means Windows
@@ -2902,8 +2884,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-
-<!--- No output property in Get- --->
 
 Specifies the maximum number of concurrent operations that can be established to run this cmdlet.
 

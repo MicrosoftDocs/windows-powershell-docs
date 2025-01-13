@@ -54,6 +54,7 @@ Set-MpPreference
  [-DisableHttpParsing <Boolean>]
  [-DisableInboundConnectionFiltering <Boolean>]
  [-DisableAutoExclusions <Boolean>]
+ [-DisableIntrusionPreventionSystem <Boolean>]
  [-DisableIOAVProtection <Boolean>]
  [-DisableNetworkProtectionPerfTelemetry <Boolean>]
  [-DisablePrivacyMode <Boolean>]

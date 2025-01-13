@@ -11,7 +11,9 @@ title: Add-MpPreference
 # Add-MpPreference
 
 ## SYNOPSIS
-Modifies settings for Windows Defender.
+
+Adds values to multi-valued properties (for example, exclusions and protected folders) in Windows
+Defender.
 
 > [!NOTE]
 > You need to run this cmdlet in an elevated PowerShell window (a PowerShell window you opened by
@@ -146,9 +148,13 @@ To add values without affecting existing values, use the following syntax:
 
 `Add-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
-To remove values without affecting other existing values, use the **Remove-MPPreference** cmdlet:
+For each ID value, there's a corresponding Action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
 
-`Remove-MPPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
+To remove values without affecting other existing values, use the **Remove-MpPreference** cmdlet:
+
+`Remove-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
 To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
 
@@ -190,9 +196,13 @@ To add values without affecting existing values, use the following syntax:
 
 `Add-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
-To remove values without affecting other existing values, use the **Remove-MPPreference** cmdlet:
+For each ID value, there's a corresponding Action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
 
-`Remove-MPPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
+To remove values without affecting other existing values, use the **Remove-MpPreference** cmdlet:
+
+`Remove-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
 To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
 
@@ -243,7 +253,7 @@ variables (for example, `%appdata%...`) for path names.
 To add values without affecting other existing values, use the following syntax:
 `"PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`
 
-To remove values without affecting existing values, use the **Remove-MPPreference** cmdlet:
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
 
 `Remove-MpPreference -ControlledFolderAccessAllowedApplications "PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`
 
@@ -281,7 +291,7 @@ To remove values without affecting other existing values, use the **Remove-MpPre
 
 `Remove-MpPreference -ControlledFolderAccessAllowedApplications "Path1","Path2",..."PathN"`
 
-To replace all existing values with the values you specify, use the **Set-MPPreference** cmdlet:
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
 
 `Set-MpPreference -ControlledFolderAccessAllowedApplications"Path1","Path2"..."PathN"`.
 
@@ -311,7 +321,7 @@ exclusions from scheduled, custom, and real-time scanning.
 To add values without affecting other existing values, use the following syntax:
 `"Extension1","Extension2"..."ExtensionN"`
 
-To remove values without affecting existing values, use the **Remove-MPPreference** cmdlet:
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
 
 `Remove-MpPreference -ExclusionExtension "Extension1","Extension2"..."ExtensionN"`
 
@@ -339,7 +349,7 @@ real-time scanning.
 To add values without affecting other existing values, use the following syntax:
 `"IPAddress1","IPAddress2",..."IPAddressN"`
 
-To remove values without affecting existing values, use the **Remove-MPPreference** cmdlet:
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
 
 `Remove-MpPreference -ExclusionIpAddress "IPAddress1","IPAddress",..."IPAddressN"`
 
@@ -367,7 +377,7 @@ scheduled and real-time scanning.
 To add values without affecting other existing values, use the following syntax:
 `"Value1","Value2",..."ValueN"`
 
-To remove values without affecting existing values, use the **Remove-MPPreference** cmdlet:
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
 
 `Remove-MpPreference -ExclusionPath "Value1","Value2",..."ValuehN"`
 
@@ -395,7 +405,7 @@ and real-time scanning.
 To add values without affecting other existing values, use the following syntax:
 `"Path1","Path2",..."PathN"`
 
-To remove values without affecting existing values, use the **Remove-MPPreference** cmdlet:
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
 
 `Remove-MpPreference -ExclusionProcess "Path1","Path2",..."PathhN"`
 
@@ -464,7 +474,11 @@ To add values without affecting other existing values, use the following syntax:
 
 `Add-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
 
-To remove values without affecting existing values, use the **Remove-MPPreference** cmdlet:
+For each ID value, there's a corresponding Action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
+
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
 
 `Remove-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
 
@@ -518,6 +532,10 @@ threat ID. Valid values are:
 To add values without affecting other existing values, use the following syntax:
 
 `Add-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+For each ID value, there's a corresponding action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
 
 To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
 

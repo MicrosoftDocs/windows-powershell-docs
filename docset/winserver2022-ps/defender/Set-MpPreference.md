@@ -12,7 +12,7 @@ title: Set-MpPreference
 
 ## SYNOPSIS
 
-Configures preferences for Windows Defender scans and updates.
+Configures settings for Windows Defender.
 
 > [!NOTE]
 > You need to run this cmdlet in an elevated PowerShell window (a PowerShell window you opened by
@@ -66,6 +66,7 @@ Set-MpPreference
  [-DisableScriptScanning <Boolean>]
  [-DisableSmtpParsing <Boolean>]
  [-DisableSshParsing <Boolean>]
+ [-DisableTamperProtection <Boolean>]
  [-DisableTlsParsing <Boolean>]
  [-EnableControlledFolderAccess <ControlledFolderAccessType>]
  [-EnableConvertWarnToBlock <Boolean>]
@@ -141,22 +142,6 @@ Set-MpPreference
 The **Set-MpPreference** cmdlet configures preferences for Windows Defender scans and updates.
 You can modify exclusion file name extensions, paths, or processes, and specify the default action
 for high, moderate, and low threat levels.
-
-**REMEDIATION VALUES**:
-
-The following table provides remediation action values for detected threats at low, medium, high,
-and severe alert levels.
-
-|Value|Action|
-|---|---|
-|0 (NULL)|Apply action based on the Security Intelligence Update (SIU). This is the default value.|
-|1|Clean the detected threat.|
-|2|Quarantine the detected threat.|
-|3|Remove the detected threat.|
-|6|Allow the detected threat.|
-|8|Allow the user to determine the action to take with the detected threat.|
-|9|Don't take any action.|
-|10|Block the detected threat.|
 
 ## EXAMPLES
 
@@ -315,7 +300,7 @@ path or a fully qualified resource name. For example:
 To replace all existing values with the values you specify, use the following syntax:
 `"Value1","Value2",..."ValueN"`.
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -AttackSurfaceReductionOnlyExclusions "Value1","Value2",..."ValueN"`
 
@@ -361,7 +346,11 @@ To replace all existing values with the values you specify, use the following sy
 
 `Set-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+For each ID value, there's a corresponding action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
+
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
@@ -407,7 +396,11 @@ To replace all existing values with the values you specify, use the following sy
 
 `Set-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+For each ID value, there's a corresponding action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
+
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
@@ -523,7 +516,7 @@ folders. You can use absolute folder paths (for example `C:\Windows\...`) or env
 To replace all existing values with the values you specify, use the following syntax:
 `"PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`.
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ControlledFolderAccessAllowedApplications "PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`
 
@@ -561,7 +554,7 @@ names.
 To replace all existing values with the values you specify, use the following syntax:
 `"Path1","Path2"..."PathN"`.
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ControlledFolderAccessAllowedApplications "Path1","Path2",..."PathN"`
 
@@ -619,11 +612,14 @@ Accept wildcard characters: False
 
 ### -DisableArchiveScanning
 
-Specifies whether to disable the scanning of archive files (for example, .zip and .cab files) for malicious and
-unwanted software. Valid values are:
+Specifies whether to disable the scanning of archive files (for example, .zip and .cab files) for
+malicious and unwanted software. Valid values are:
 
-- $true: Windows Defender doesn't scan archive files.
-- $false: Windows Defender scans archive files. This is the default value.
+- $true: Archive file scanning is disabled. You can set this value only if Tamper Protection is
+disabled (the value of the DisableTamperProtection property in the following command is True:
+`Get-MpPreference | Format-List DisableTamperProtection`). For more information, see
+[How do I configure or manage Tamper Protection?](https://learn.microsoft.com/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#how-do-i-configure-or-manage-tamper-protection).
+- $false: Archive file scanning is enabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -661,8 +657,11 @@ Accept wildcard characters: False
 
 Specifies whether to disable behavior monitoring. Valid values are:
 
-- $true: Windows Defender disables behavior monitoring.
-- $false: Windows Defender enables behavior monitoring. This is the default value.
+- $true: Behavior monitoring is disabled. You can set this value only if Tamper Protection is
+disabled (the value of the DisableTamperProtection property in the following command is True:
+`Get-MpPreference | Format-List DisableTamperProtection`). For more information, see
+[How do I configure or manage Tamper Protection?](https://learn.microsoft.com/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#how-do-i-configure-or-manage-tamper-protection).
+- $false: Behavior monitoring is enabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -990,10 +989,15 @@ Accept wildcard characters: False
 
 ### -DisableIOAVProtection
 
-Specifies whether to disable the scanning of all downloaded files and attachments. Valid values are:
+Specifies whether to disable the automatic scanning of all downloaded files and attachments. Valid
+ values are:
 
-- $true: Windows Defender doesn't scan all downloaded files and attachments.
-- $false: Windows Defender scans all downloaded files and attachments. This is the default value.
+- $true: Automatic scanning of all downloaded files and attachments is disabled.  You can set this
+value only if Tamper Protection is disabled (the value of the DisableTamperProtection property in
+the following command is True:  `Get-MpPreference | Format-List DisableTamperProtection`). For
+more information, see [How do I configure or manage Tamper Protection?](https://learn.microsoft.com/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#how-do-i-configure-or-manage-tamper-protection).
+- $false: Automatic scanning of all downloaded files and attachments is enabled. This is the default
+value.
 
 ```yaml
 Type: Boolean
@@ -1072,8 +1076,11 @@ Accept wildcard characters: False
 
 Specifies whether to disable real-time protection. Valid values are:
 
-- $true: Windows Defender doesn't use real-time protection.
-- $false: Windows Defender uses real-time protection. This is the default and recommended value.
+- $true: Real-time protection is disabled. You can set this value only if Tamper Protection is
+disabled (the value of the DisableTamperProtection property in the following command is True:
+`Get-MpPreference | Format-List DisableTamperProtection`). For more information, see
+[How do I configure or manage Tamper Protection?](https://learn.microsoft.com/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#how-do-i-configure-or-manage-tamper-protection).
+- $false: Real-time protection is enabled. This is the default and recommended value.
 
 ```yaml
 Type: Boolean
@@ -1170,8 +1177,11 @@ Accept wildcard characters: False
 
 Specifies whether to disable the scanning of scripts during malware scans. Valid values are:
 
-- $true: Windows Defender doesn't scan scripts.
-- $false: Windows Defender scans scripts. This is the default value.
+- $true: Script scanning is disabled. You can set this value only if Tamper Protection is
+disabled (the value of the DisableTamperProtection property in the following command is True:
+`Get-MpPreference | Format-List DisableTamperProtection`). For more information, see
+[How do I configure or manage Tamper Protection?](https://learn.microsoft.com/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#how-do-i-configure-or-manage-tamper-protection).
+- $false: Script scanning is enabled. This is the default value.
 
 ```yaml
 Type: Boolean
@@ -1219,6 +1229,24 @@ For more information about network protection, see [Protect your network](/defen
 Type: Boolean
 Parameter Sets: (All)
 Aliases: dsshp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableTamperProtection
+
+This parameter is reserved for internal Microsoft use.
+
+To configure Tamper Protection, see [How do I configure or manage Tamper Protection?](https://learn.microsoft.com/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#how-do-i-configure-or-manage-tamper-protection).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: dtp
 
 Required: False
 Position: Named
@@ -1502,7 +1530,7 @@ and real-time scanning.
 To replace all existing values with the values you specify, use the following syntax:
 `"Extension1","Extension2",..."ExtensionN"`.
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ExclusionExtension "Extension1","Extension2"..."ExtensionN"`
 
@@ -1529,7 +1557,7 @@ Specifies the IP addresses to exclude from scheduled and real-time scanning.
 To replace all existing values with the values you specify, use the following syntax:
 `"IPAddress1","IPAddress2",..."IPAddresseN"`.
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ExclusionIpAddress "IPAddress1","IPAddress",..."IPAddressN"`
 
@@ -1557,7 +1585,7 @@ exclude from scheduled and real-time scanning.
 To replace all existing values with the values you specify, use the following syntax:
 `"Value1","Value2"..."ValueN"`.
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ExclusionPath "Value1","Value2",..."ValuehN"`
 
@@ -1584,7 +1612,7 @@ Specifies the paths to process images to exclude from scheduled and real-time sc
 To replace all existing values with the values you specify, use the following syntax:
 `"Path1","Path2"..."PathN"`.
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ExclusionProcess "Path1","Path2",..."PathhN"`
 
@@ -2784,7 +2812,11 @@ To replace all existing values with the values you specify, use the following sy
 
 `Set-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+For each ID value, there's a corresponding action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
+
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
 
@@ -2839,7 +2871,11 @@ To replace all existing values with the values you specify, use the following sy
 
 `Set-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+For each ID value, there's a corresponding action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
+
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
 

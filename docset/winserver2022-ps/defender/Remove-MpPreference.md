@@ -11,7 +11,9 @@ title: Remove-MpPreference
 # Remove-MpPreference
 
 ## SYNOPSIS
-Removes exclusions or default actions.
+
+Removes values from multi-valued properties (for example, exclusions and protected folders) and
+returns settings in Windows Defender to their default values.
 
 > [!NOTE]
 > You need to run this cmdlet in an elevated PowerShell window (a PowerShell window you opened by
@@ -137,8 +139,8 @@ Remove-MpPreference
 
 ## DESCRIPTION
 
-The **Remove-MpPreference** cmdlet removes exclusions for file name extensions, paths, and processes
-, or default actions for high, moderate, and low threats.
+The **Remove-MpPreference** cmdlet removes values from multi-valued properties (for example,
+exclusions and protected folders) and returns settings in Windows Defender to their default values.
 
 ## EXAMPLES
 
@@ -287,7 +289,7 @@ Reduction (ASR) rules. Enter a folder path or a fully qualified resource name. F
 To remove values without affecting other existing values, use the following syntax:
 `"Value1","Value2",..."ValueN"`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -AttackSurfaceReductionOnlyExclusions "Value1","Value2",..."ValueN"`
 
@@ -333,7 +335,11 @@ To remove values without affecting other existing values, use the following synt
 
 `Remove-MpPreference -AttackSurfaceReductionRules_IdsRule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+For each ID value, there's a corresponding action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
+
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
@@ -379,7 +385,11 @@ To remove values without affecting other existing values, use the following synt
 
 `Remove-MpPreference -AttackSurfaceReductionRules_IdsRule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+For each ID value, there's a corresponding action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
+
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
@@ -496,7 +506,7 @@ variables (for example, `%appdata%...`) for path names.
 To remove values without affecting other existing values, use the following syntax:
 `"PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ControlledFolderAccessAllowedApplications "PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`
 
@@ -530,11 +540,11 @@ for path names.
 To remove values without affecting other existing values, use the following syntax:
 `"Path1","Path2",..."PathN"`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ControlledFolderAccessAllowedApplications "Path1","Path2",..."PathN"`
 
-To replace all existing values with the values you specify, use the **Set-MPPreference** cmdlet:
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
 
 `Set-MpPreference -ControlledFolderAccessAllowedApplications"Path1","Path2"..."PathN"`.
 
@@ -588,6 +598,9 @@ malicious and unwanted software. You don't need to specify a value with this swi
 **Tip**: This switch works only if the current value of the DisableArchiveScanning
 property is True (disabled). If the value is already False (enabled), this switch does nothing.
 
+The value True for the DisableArchiveScanning property is available only if Tamper Protection is
+disabled. For more information, see [How do I configure or manage Tamper Protection?](https://learn.microsoft.com/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#how-do-i-configure-or-manage-tamper-protection).
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -627,6 +640,9 @@ specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the DisableBehaviorMonitoring
 property is True (disabled). If the value is already False (enabled), this switch does nothing.
+
+The value True for the DisableBehaviorMonitoring property is available only if Tamper Protection is
+disabled. For more information, see [How do I configure or manage Tamper Protection?](https://learn.microsoft.com/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#how-do-i-configure-or-manage-tamper-protection).
 
 ```yaml
 Type: SwitchParameter
@@ -960,11 +976,14 @@ Accept wildcard characters: False
 
 ### -DisableIOAVProtection
 
-Specifies whether to enable the scanning of all downloaded files and attachments. You don't need to
+Specifies whether to enable the automatic scanning of all downloaded files and attachments. You don't need to
 specify a value with this switch.
 
 **Tip**: This switch works only if the current value of the DisableIOAVProtection
 property is True (disabled). If the value is already False (enabled), this switch does nothing.
+
+The value True for the DisableIOAVProtection property is available only if Tamper Protection is
+disabled. For more information, see [How do I configure or manage Tamper Protection?](https://learn.microsoft.com/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#how-do-i-configure-or-manage-tamper-protection).
 
 ```yaml
 Type: SwitchParameter
@@ -1047,6 +1066,9 @@ Specifies whether to enable real-time protection. You don't need to specify a va
 property is True (disabled). If the value is already False (enabled), this switch does nothing.
 
 The default and recommended value for this setting is enabled (False).
+
+The value True for the DisableRealtimeMonitoring property is available only if Tamper Protection is
+disabled. For more information, see [How do I configure or manage Tamper Protection?](https://learn.microsoft.com/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#how-do-i-configure-or-manage-tamper-protection).
 
 ```yaml
 Type: SwitchParameter
@@ -1148,6 +1170,9 @@ a value with this switch.
 
 **Tip**: This switch works only if the current value of the DisableScriptScanning
 property is True (disabled). If the value is already False (enabled), this switch does nothing.
+
+The value True for the DisableScriptScanning property is available only if Tamper Protection is
+disabled. For more information, see [How do I configure or manage Tamper Protection?](https://learn.microsoft.com/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#how-do-i-configure-or-manage-tamper-protection).
 
 ```yaml
 Type: SwitchParameter
@@ -1470,7 +1495,7 @@ exclusions from scheduled, custom, and real-time scanning.
 To remove values without affecting other existing values, use the following syntax:
 `"Extension1","Extension2"..."ExtensionN"`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ExclusionExtension "Extension1","Extension2"..."ExtensionN"`
 
@@ -1497,7 +1522,7 @@ real-time scanning.
 To remove values without affecting other existing values, use the following syntax:
 `"IPAddress1","IPAddress2",..."IPAddressN"`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ExclusionIpAddress "IPAddress1","IPAddress",..."IPAddressN"`
 
@@ -1525,7 +1550,7 @@ scheduled and real-time scanning.
 To remove values without affecting other existing values, use the following syntax:
 `"Value1","Value2",..."ValueN"`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ExclusionPath "Value1","Value2",..."ValuehN"`
 
@@ -1553,7 +1578,7 @@ and real-time scanning.
 To remove values without affecting other existing values, use the following syntax:
 `"Path1","Path2",..."PathN"`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ExclusionProcess "Path1","Path2",..."PathhN"`
 
@@ -2640,7 +2665,11 @@ To remove values without affecting other existing values, use the following synt
 
 `Remove-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
 
-To add values without affecting existing values, use the **Add-MPPreference** cmdlet:
+For each ID value, there's a corresponding action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
+
+To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 
 `Add-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
 
@@ -2693,6 +2722,10 @@ threat ID. Valid values are:
 To remove values without affecting other existing values, use the following syntax:
 
 `Remove-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+For each ID value, there's a corresponding action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
 
 To add values without affecting existing values, use the **Add-MpPreference** cmdlet:
 

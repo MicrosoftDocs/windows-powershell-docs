@@ -11,7 +11,7 @@ title: New-ADServiceAccount
 # New-ADServiceAccount
 
 ## SYNOPSIS
-Creates a new Active Directory managed service account or group managed service account object.
+Creates a new Active Directory Managed Service Account (MSA), Group Managed Service Account (gMSA), or Delegated Managed Service Account (dMSA) object.
 
 ## SYNTAX
 

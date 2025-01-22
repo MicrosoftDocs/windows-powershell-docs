@@ -3,12 +3,12 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
 ms.date: 08/01/2024
-online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-enabledintentname?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/failoverclusters/get-accelnetmanagement?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Get-EnabledIntentName
+title: Get-AccelNetManagement
 ---
 
-# Get-EnabledIntentName
+# Get-AccelNetManagement
 
 ## SYNOPSIS
 Gets the intent enabled for Accelerated Networking Management.
@@ -16,19 +16,19 @@ Gets the intent enabled for Accelerated Networking Management.
 ## SYNTAX
 
 ```
-Get-EnabledIntentName
+Get-AccelNetManagement
 ```
 
 ## DESCRIPTION
 
-Retrieves the enabled intent for Accelerated Networking Management.
+Retrieves the intent enabled for Accelerated Networking Management.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
 ```powershell
-Get-EnabledIntentName
+Get-AccelNetManagement
 ```
 
 This example retrieves the enabled intent name.

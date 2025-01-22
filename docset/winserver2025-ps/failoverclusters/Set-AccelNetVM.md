@@ -91,3 +91,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-AccelNetVM](disable-accelnetvm.md)
 
 [Enable-AccelNetVM](enable-accelnetvm.md)
+
+[Get-AccelNetVM](get-accelnetvm.md)

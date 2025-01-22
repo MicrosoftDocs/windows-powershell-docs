@@ -68,4 +68,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Enable-AccelNetVM](enable-accelnetvm.md)
 
+[Get-AccelNetVM](get-accelnetvm.md)
+
 [Set-AccelNetVM](set-accelnetvm.md)

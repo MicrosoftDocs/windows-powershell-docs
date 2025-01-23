@@ -21,7 +21,7 @@ Get-AccelNetVM [[-VMName] <String>] [[-VM] <VirtualMachineBase>] [<CommonParamet
 
 ## DESCRIPTION
 
-Get VMs with Accelerated Networking.
+Retrieves VMs where AccelNet is enabled.
 
 ## EXAMPLES
 
@@ -33,7 +33,7 @@ Get-AccelNetVM -VMName "MyVM"
 
 This example retrieves a VM named `MyVM`.
 
-If no VM name is provided, all VM names are retrieved.
+If the **-VMName** parameter isn't provided, all VM names are retrieved.
 
 ### EXAMPLE 2
 

@@ -21,7 +21,7 @@ Get-AccelNetManagement
 
 ## DESCRIPTION
 
-Retrieves the intent enabled for Accelerated Networking Management.
+Retrieves the intent enabled for AccelNet Management.
 
 ## EXAMPLES
 
@@ -42,3 +42,11 @@ This example retrieves the enabled intent name.
 ## NOTES
 
 ## RELATED LINKS
+
+[Disable-AccelNetManagement](disable-accelnetmanagement.md)
+
+[Enable-AccelNetManagement](enable-accelnetmanagement.md)
+
+[Get-AccelNetManagementPreReq](get-accelnetmanagementprereq.md)
+
+[Set-AccelNetManagement](set-accelnetmanagement.md)

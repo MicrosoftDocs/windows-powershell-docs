@@ -16,7 +16,8 @@ Gets the adapters on the VM that are connected to the enabled intent switch.
 ## SYNTAX
 
 ```
-Get-VMAdaptersConnectedToEnabledIntentSwitch [[-VMName] <String>] [<CommonParameters>]
+Get-VMAdaptersConnectedToEnabledIntentSwitch [[-VMName] <String>] [[-VM] <VirtualMachineBase>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,6 +50,22 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VM
+
+The VM object.
+
+```yaml
+Type: VirtualMachineBase
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

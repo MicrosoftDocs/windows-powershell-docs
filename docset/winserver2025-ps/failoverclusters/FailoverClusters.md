@@ -5,7 +5,7 @@ Help Version: 5.0.3.3
 Locale: en-US
 Module Guid: cc3e946b-9141-48c2-95d8-d9e56594416a
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 01/22/2025
 title: FailoverClusters
 ---
 
@@ -17,7 +17,10 @@ This reference provides cmdlet descriptions and syntax for all failover cluster-
 lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet. If these
 cmdlets aren't available in your PowerShell session, you may need to add the
 `Failover Cluster Module for Windows PowerShell` Feature, using the following PowerShell command:
-`Add-WindowsFeature RSAT-Clustering-PowerShell`.
+
+```powershell
+Add-WindowsFeature RSAT-Clustering-PowerShell
+```
 
 ## FailoverClusters Cmdlets
 
@@ -394,6 +397,10 @@ Turns off maintenance for a disk resource or Cluster Shared Volume within a fail
 ### [Set-AccelNetVM](Set-AccelNetVM.md)
 
 Sets Accelerated Networking on a VM.
+
+### [Set-AccelNetManagement](Set-AccelNetManagement.md)
+
+Sets Accelerated Networking Management cluster-wide.
 
 ### [Set-ClusterAffinityRule](Set-ClusterAffinityRule.md)
 

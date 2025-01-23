@@ -21,10 +21,10 @@ Disable-AccelNetManagement [<CommonParameters>]
 
 ## DESCRIPTION
 
-Disables Accelerated Networking Management cluster-wide. This doesn't turn off SR-IOV on VMs.
+Disables AccelNet Management cluster-wide. This doesn't turn off SR-IOV on VMs.
 
 Disabling this feature on the cluster won't change any configuration settings on the VMs. They will
-no longer be managed by Accelerated Networking or tracked by HUD.
+no longer be managed by AccelNet or tracked by HUD.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ no longer be managed by Accelerated Networking or tracked by HUD.
 Disable-AccelNetManagement
 ```
 
-This example disables the Accelerated Networking Management layer on the cluster.
+This example disables the AccelNet Management layer on the cluster.
 
 ## PARAMETERS
 
@@ -55,4 +55,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Enable-AccelNetManagement](enable-accelnetmanagement.md)
 
+[Get-AccelNetManagement](get-accelnetmanagement.md)
+
 [Get-AccelNetManagementPreReq](get-accelnetmanagementprereq.md)
+
+[Set-AccelNetManagement](set-accelnetmanagement.md)

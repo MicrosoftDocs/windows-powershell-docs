@@ -16,12 +16,13 @@ Enables Accelerated Networking on a VM.
 ## SYNTAX
 
 ```
-Enable-AccelNetVM [-VMName] <String> [-Performance] <PerformanceWeight> [<CommonParameters>]
+Enable-AccelNetVM [-VMName] <String> [-Performance] <PerformanceWeight> [[-VM] <VirtualMachineBase>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Enables Accelerated Networking on a VM.
+Enables AccelNet on a VM.
 
 ## EXAMPLES
 
@@ -31,7 +32,7 @@ Enables Accelerated Networking on a VM.
 Enable-AccelNetVM -VMName "MyVM" -Performance High
 ```
 
-This example enables Accelerated Networking with the performance level set to `High` for the VM
+This example enables AccelNet with the performance level set to `High` for the VM
 named `MyVM`.
 
 ## PARAMETERS
@@ -70,6 +71,22 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VM
+
+The VM object.
+
+```yaml
+Type: VirtualMachineBase
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

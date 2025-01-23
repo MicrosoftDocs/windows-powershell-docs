@@ -22,6 +22,15 @@ cmdlets aren't available in your PowerShell session, you may need to add the
 Add-WindowsFeature RSAT-Clustering-PowerShell
 ```
 
+> [!NOTE]
+> The AccelNet cmdlets have a dependency on the Hyper-V role. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
+>
+> This role can also be installed using PowerShell by running the following command:
+>
+> ```powershell
+> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+> ```
+
 ## FailoverClusters Cmdlets
 
 ### [Add-ClusterCheckpoint](Add-ClusterCheckpoint.md)

@@ -112,10 +112,10 @@ The message for this event provides more information about the failure.
 
 ## RELATED LINKS
 
-[Add-HpcIScsiStorageArray](./Add-HpcIScsiStorageArray.md)
+[Add-HpcIScsiStorageArray](/powershell/module/hpcpack2016/add-hpciscsistoragearray?view=hpc16-ps)
 
-[Get-HpcIScsiStorageArray](./Get-HpcIScsiStorageArray.md)
+[Get-HpcIScsiStorageArray](/powershell/module/hpcpack2016/get-hpciscsistoragearray?view=hpc16-ps)
 
-[Remove-HpcIScsiStorageArray](./Remove-HpcIScsiStorageArray.md)
+[Remove-HpcIScsiStorageArray](/powershell/module/hpcpack2016/remove-hpciscsistoragearray?view=hpc16-ps)
 
-[Set-HpcIScsiStorageArray](./Set-HpcIScsiStorageArray.md)
+[Set-HpcIScsiStorageArray](/powershell/module/hpcpack2016/set-hpciscsistoragearray?view=hpc16-ps)

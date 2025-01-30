@@ -16,36 +16,105 @@ Removes exclusions or default actions.
 ## SYNTAX
 
 ```
-Remove-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
- [-ExclusionIpAddress <String[]>] [-RealTimeScanDirection] [-QuarantinePurgeItemsAfterDelay]
- [-RemediationScheduleDay] [-RemediationScheduleTime] [-ReportingAdditionalActionTimeOut]
- [-ReportingCriticalFailureTimeOut] [-ReportingNonCriticalTimeOut] [-ScanAvgCPULoadFactor]
- [-CheckForSignaturesBeforeRunningScan] [-ScanPurgeItemsAfterDelay] [-ScanOnlyIfIdleEnabled] [-ScanParameters]
- [-ScanScheduleDay] [-ScanScheduleQuickScanTime] [-ScanScheduleTime] [-SignatureFirstAuGracePeriod]
- [-SignatureAuGracePeriod] [-SignatureDefinitionUpdateFileSharesSources]
- [-SignatureDisableUpdateOnStartupWithoutEngine] [-SignatureFallbackOrder] [-SharedSignaturesPath]
- [-SignatureScheduleDay] [-SignatureScheduleTime] [-SignatureUpdateCatchupInterval] [-SignatureUpdateInterval]
- [-SignatureBlobUpdateInterval] [-SignatureBlobFileSharesSources] [-MeteredConnectionUpdates]
- [-AllowNetworkProtectionOnWinServer] [-DisableDatagramProcessing] [-DisableCpuThrottleOnIdleScans]
- [-MAPSReporting] [-SubmitSamplesConsent] [-DisableAutoExclusions] [-DisablePrivacyMode]
- [-RandomizeScheduleTaskTimes] [-SchedulerRandomizationTime] [-DisableBehaviorMonitoring]
- [-DisableIntrusionPreventionSystem] [-DisableIOAVProtection] [-DisableRealtimeMonitoring]
- [-DisableScriptScanning] [-DisableArchiveScanning] [-DisableCatchupFullScan] [-DisableCatchupQuickScan]
- [-DisableEmailScanning] [-DisableRemovableDriveScanning] [-DisableRestorePoint]
- [-DisableScanningMappedNetworkDrivesForFullScan] [-DisableScanningNetworkFiles] [-UILockdown]
- [-ThreatIDDefaultAction_Ids <Int64[]>] [-ThreatIDDefaultAction_Actions <ThreatAction[]>]
- [-UnknownThreatDefaultAction] [-LowThreatDefaultAction] [-ModerateThreatDefaultAction]
- [-HighThreatDefaultAction] [-SevereThreatDefaultAction] [-DisableBlockAtFirstSeen] [-PUAProtection]
- [-CloudBlockLevel] [-CloudExtendedTimeout] [-EnableNetworkProtection] [-EnableControlledFolderAccess]
- [-AttackSurfaceReductionOnlyExclusions <String[]>] [-ControlledFolderAccessAllowedApplications <String[]>]
- [-ControlledFolderAccessProtectedFolders <String[]>] [-AttackSurfaceReductionRules_Ids <String[]>]
- [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>] [-EnableLowCpuPriority]
- [-EnableFileHashComputation] [-EnableFullScanOnBatteryPower] [-ProxyPacUrl] [-ProxyServer] [-ProxyBypass]
- [-ForceUseProxyOnly] [-DisableTlsParsing] [-DisableHttpParsing] [-DisableDnsParsing]
- [-DisableDnsOverTcpParsing] [-DisableSshParsing] [-PlatformUpdatesChannel] [-EngineUpdatesChannel]
- [-SignaturesUpdatesChannel] [-DisableGradualRelease] [-AllowNetworkProtectionDownLevel]
- [-AllowDatagramProcessingOnWinServer] [-EnableDnsSinkhole] [-DisableInboundConnectionFiltering]
- [-DisableRdpParsing] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+Remove-MpPreference
+ [-AllowDatagramProcessingOnWinServer]
+ [-AllowNetworkProtectionDownLevel]
+ [-AllowNetworkProtectionOnWinServer]
+ [-AsJob]
+ [-AttackSurfaceReductionOnlyExclusions <String[]>]
+ [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>]
+ [-AttackSurfaceReductionRules_Ids <String[]>]
+ [-CheckForSignaturesBeforeRunningScan]
+ [-CimSession <CimSession[]>]
+ [-CloudBlockLevel]
+ [-CloudExtendedTimeout]
+ [-ControlledFolderAccessAllowedApplications <String[]>]
+ [-ControlledFolderAccessProtectedFolders <String[]>]
+ [-DisableArchiveScanning]
+ [-DisableAutoExclusions]
+ [-DisableBehaviorMonitoring]
+ [-DisableBlockAtFirstSeen]
+ [-DisableCatchupFullScan]
+ [-DisableCatchupQuickScan]
+ [-DisableCpuThrottleOnIdleScans]
+ [-DisableDatagramProcessing]
+ [-DisableDnsOverTcpParsing]
+ [-DisableDnsParsing]
+ [-DisableEmailScanning]
+ [-DisableGradualRelease]
+ [-DisableHttpParsing]
+ [-DisableIOAVProtection]
+ [-DisableInboundConnectionFiltering]
+ [-DisableIntrusionPreventionSystem]
+ [-DisablePrivacyMode]
+ [-DisableRdpParsing]
+ [-DisableRealtimeMonitoring]
+ [-DisableRemovableDriveScanning]
+ [-DisableRestorePoint]
+ [-DisableScanningMappedNetworkDrivesForFullScan]
+ [-DisableScanningNetworkFiles]
+ [-DisableScriptScanning]
+ [-DisableSshParsing]
+ [-DisableTlsParsing]
+ [-EnableControlledFolderAccess]
+ [-EnableDnsSinkhole]
+ [-EnableFileHashComputation]
+ [-EnableFullScanOnBatteryPower]
+ [-EnableLowCpuPriority]
+ [-EnableNetworkProtection]
+ [-EngineUpdatesChannel]
+ [-ExclusionExtension <String[]>]
+ [-ExclusionIpAddress <String[]>]
+ [-ExclusionPath <String[]>]
+ [-ExclusionProcess <String[]>]
+ [-ForceUseProxyOnly]
+ [-Force]
+ [-HighThreatDefaultAction]
+ [-LowThreatDefaultAction]
+ [-MAPSReporting]
+ [-MeteredConnectionUpdates]
+ [-ModerateThreatDefaultAction]
+ [-PUAProtection]
+ [-PlatformUpdatesChannel]
+ [-ProxyBypass]
+ [-ProxyPacUrl]
+ [-ProxyServer]
+ [-QuarantinePurgeItemsAfterDelay]
+ [-RandomizeScheduleTaskTimes]
+ [-RealTimeScanDirection]
+ [-RemediationScheduleDay]
+ [-RemediationScheduleTime]
+ [-ReportingAdditionalActionTimeOut]
+ [-ReportingCriticalFailureTimeOut]
+ [-ReportingNonCriticalTimeOut]
+ [-ScanAvgCPULoadFactor]
+ [-ScanOnlyIfIdleEnabled]
+ [-ScanParameters]
+ [-ScanPurgeItemsAfterDelay]
+ [-ScanScheduleDay]
+ [-ScanScheduleQuickScanTime]
+ [-ScanScheduleTime]
+ [-SchedulerRandomizationTime]
+ [-SevereThreatDefaultAction]
+ [-SharedSignaturesPath]
+ [-SignatureAuGracePeriod]
+ [-SignatureBlobFileSharesSources]
+ [-SignatureBlobUpdateInterval]
+ [-SignatureDefinitionUpdateFileSharesSources]
+ [-SignatureDisableUpdateOnStartupWithoutEngine]
+ [-SignatureFallbackOrder]
+ [-SignatureFirstAuGracePeriod]
+ [-SignatureScheduleDay]
+ [-SignatureScheduleTime]
+ [-SignatureUpdateCatchupInterval]
+ [-SignatureUpdateInterval]
+ [-SignaturesUpdatesChannel]
+ [-SubmitSamplesConsent]
+ [-ThreatIDDefaultAction_Actions <ThreatAction[]>]
+ [-ThreatIDDefaultAction_Ids <Int64[]>]
+ [-ThrottleLimit <Int32>]
+ [-UILockdown]
+ [-UnknownThreatDefaultAction]
  [<CommonParameters>]
 ```
 
@@ -56,14 +125,14 @@ If you attempt to remove an exclusion that is not in the list, this cmdlet repor
 ## EXAMPLES
 
 ### Example 1: Remove a folder from the exclusion list
-```
+```powershell
 Remove-MpPreference -ExclusionPath "C:\Temp"
 ```
 
 This command removes the folder C:\Temp from the exclusion list.
 
 ### Example 2: Exclude a specific file
-```
+```powershell
 Remove-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\Windows\App.exe"
 ```
 
@@ -117,19 +186,19 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +206,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -AttackSurfaceReductionOnlyExclusions
 Specifies the files and paths to exclude from Attack Surface Reduction (ASR) rules. Specify the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, ""C:\Windows"" will exclude all files in that directory. ""C:\Windows\App.exe"" will exclude only that specific file in that specific folder.
@@ -205,7 +273,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. 
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -448,15 +516,15 @@ Accept wildcard characters: False
 ```
 
 ### -DisableGradualRelease
-Indicates that the cmdlet removes whether to disable gradual rollout of monthly and daily Windows Defender updates. 
+Indicates that the cmdlet removes whether to disable gradual rollout of monthly and daily Windows Defender updates.
 If you enable this option, devices are offered all updates after the gradual release cycle finishes.
-Consider this option for datacenter computers that only receive limited updates. 
+Consider this option for datacenter computers that only receive limited updates.
 
 This setting applies to both monthly and daily updates.
-It overrides any previously configured channel selections for platform and engine updates. 
+It overrides any previously configured channel selections for platform and engine updates.
 
 If you disable or do not configure this policy, the device remains in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates.
-The device stays up to date automatically during the gradual release cycle, which is suitable for most devices. 
+The device stays up to date automatically during the gradual release cycle, which is suitable for most devices.
 
 This policy is available starting with platform version 4.18.2106.5 and later.
 
@@ -704,7 +772,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDnsSinkhole
-Indicates that the cmdlet removes whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks. 
+Indicates that the cmdlet removes whether to examine DNS traffic to detect and sinkhole DNS exfiltration attempts and other DNS based malicious attacks.
 
 ```yaml
 Type: SwitchParameter
@@ -825,7 +893,7 @@ Specifies an array of IP addresses to exclude from scheduled and real-time scann
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -841,7 +909,7 @@ This cmdlet removes the exclusions that you specify.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -857,7 +925,7 @@ This cmdlet removes exclusions of files opened by the processes that you specify
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -872,7 +940,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1533,12 +1601,12 @@ Accept wildcard characters: False
 Specifies an array of the actions to take for the IDs specified by using the **ThreatIDDefaultAction_Ids** parameter.
 The acceptable values for this parameter are:
 
-- 1: Clean 
-- 2: Quarantine 
-- 3: Remove 
-- 6: Allow 
-- 8: UserDefined 
-- 9: NoAction 
+- 1: Clean
+- 2: Quarantine
+- 3: Remove
+- 6: Allow
+- 8: UserDefined
+- 9: NoAction
 - 10: Block
 
 >[!NOTE]
@@ -1580,7 +1648,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

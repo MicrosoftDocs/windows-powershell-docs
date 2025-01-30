@@ -85,4 +85,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-HpcJobCredential](./Get-HpcJobCredential.md)
 
 
-[Set-HpcJobCredential](./Set-HpcJobCredential.md)
+[Set-HpcJobCredential](/powershell/module/hpcpack2016/set-hpcjobcredential?view=hpc16-ps)

@@ -16,7 +16,11 @@ Removes active threats from a computer.
 ## SYNTAX
 
 ```
-Remove-MpThreat [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+Remove-MpThreat
+ [-AsJob]
+ [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +29,7 @@ The **Remove-MpThreat** cmdlet removes all active threats that Windows Defender 
 ## EXAMPLES
 
 ### Example 1: Remove active threats from a computer
-```
+```powershell
 PS C:\> Remove-MpThreat
 ```
 
@@ -34,19 +38,19 @@ This command removes all active threats from the local computer.
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -56,8 +60,8 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. 
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. 
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -80,7 +84,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

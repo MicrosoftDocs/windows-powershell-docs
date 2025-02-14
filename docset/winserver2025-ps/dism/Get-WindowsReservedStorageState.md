@@ -18,13 +18,13 @@ Get-WindowsReservedStorageState [-LogPath <String>] [-ScratchDirectory <String>]
 ```
 
 ## DESCRIPTION
-Gets the current state of reserved storage. This command is supported with the online Windows image.
+Gets the current state of reserved storage. This command is only supported with the online Windows image.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Get-WindowsReservedStorageState -Online
+PS C:\> Get-WindowsReservedStorageState
 ```
 
 This command gets the Windows reserved storage state on the local host.

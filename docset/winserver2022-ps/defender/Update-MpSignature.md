@@ -16,8 +16,12 @@ Updates the antimalware definitions on a computer.
 ## SYNTAX
 
 ```
-Update-MpSignature [-UpdateSource <UpdateSource>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [<CommonParameters>]
+Update-MpSignature
+ [-AsJob]
+ [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>]
+ [-UpdateSource <UpdateSource>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,7 +30,7 @@ The **Update-MpSignature** cmdlet updates the antimalware definitions with the l
 ## EXAMPLES
 
 ### Example 1: Update signatures
-```
+```powershell
 PS C:\> Update-MpSignature
 ```
 
@@ -34,7 +38,7 @@ This command updates the antimalware definitions.
 By default, the cmdlet uses the sources configured through [SignatureFallbackOrder](Set-MpPreference.yml#-signaturefallbackorder). If no signature fallback order is configured, the cmdlet uses the default update source.
 
 ### Example 2: Update signatures from a specific source
-```
+```powershell
 PS C:\> Update-MpSignature -UpdateSource MicrosoftUpdateServer
 ```
 
@@ -43,19 +47,19 @@ This command updates the antimalware definitions from the Microsoft Update Serve
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -65,8 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. 
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. 
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -89,7 +93,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +110,7 @@ The acceptable values for this parameter are:
 
 - InternalDefinitionUpdateServer
 - MicrosoftUpdateServer
-- MMPC 
+- MMPC
 - FileShares
 
 If you specify the InternalDefinitionUpdateServer setting, the service checks for updates on the Windows Software Update Services (WSUS) server.
@@ -114,7 +118,7 @@ If you specify the InternalDefinitionUpdateServer setting, the service checks fo
 ```yaml
 Type: UpdateSource
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: InternalDefinitionUpdateServer, MicrosoftUpdateServer, MMPC, FileShares
 
 Required: False
@@ -134,5 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

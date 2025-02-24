@@ -11,34 +11,42 @@ title: Get-MpPreference
 # Get-MpPreference
 
 ## SYNOPSIS
-Gets preferences for the Windows Defender scans and updates.
+
+Returns settings and configuration for Windows Defender.
 
 ## SYNTAX
 
 ```
-Get-MpPreference [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
-[<CommonParameters>]
+Get-MpPreference
+ [-AsJob]
+ [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Get-MpPreference` cmdlet gets preferences for the Windows Defender scans and updates. For more
-information about the preferences that this cmdlet retrieves, see
+The `Get-MpPreference` cmdlet returns settings for Windows Defender. For more
+information about the settings that this cmdlet retrieves, see
 [Windows Defender Preferences Class](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)).
 
 ## EXAMPLES
 
-### Example 1: View the scheduled scan day
+### Example 1: View all settings
 
+```powershell
+Get-MpPreference
 ```
-PS C:\> $Preferences = Get-MpPreference
-PS C:\> $Preferences.ScanScheduleDay
+
+This example returns all settings for Windows Defender.
+
+### Example 2: View the scheduled scan day
+
+```powershell
+Get-MpPreference | Format-List ScanScheduleDay
 ```
 
-The first command gets the preferences, and then stores them in the **$Preferences** variable.
-
-The second command uses standard dot syntax to display the **ScanScheduleDay** property of the
-object stored in the **$Preferences** variable.
+This example returns the current value of the **ScanScheduleDay** setting.
 
 ## PARAMETERS
 
@@ -58,7 +66,7 @@ For more information about Windows PowerShell background jobs, see
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +97,7 @@ Accept wildcard characters: False
 ### -ThrottleLimit
 
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
-this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an
+this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an
 optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the
 computer. The throttle limit applies only to the current cmdlet, not to the session or to the
 computer.
@@ -97,7 +105,7 @@ computer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

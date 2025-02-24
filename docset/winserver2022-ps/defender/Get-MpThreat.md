@@ -24,8 +24,12 @@ Get-MpThreat [<CommonParameters>]
 ### ById
 
 ```
-Get-MpThreat [-ThreatID <Int64[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
-[<CommonParameters>]
+Get-MpThreat
+ [-AsJob]
+ [-CimSession <CimSession[]>]
+ [-ThreatID <Int64[]>]
+ [-ThrottleLimit <Int32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +41,7 @@ computer.
 
 ### Example 1: Get the history of a detected threat
 
-```
+```powershell
 PS C:\> Get-MpThreat -ThreatID 1994
 ```
 
@@ -61,7 +65,7 @@ For more information about Windows PowerShell background jobs, see
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +121,7 @@ computer.
 ```yaml
 Type: Int32
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,4 +150,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MpThreatCatalog](./Get-MpThreatCatalog.md)
 
 [Get-MpThreatDetection](./Get-MpThreatDetection.md)
-

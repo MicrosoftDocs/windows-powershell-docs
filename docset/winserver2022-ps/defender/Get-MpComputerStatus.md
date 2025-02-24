@@ -16,8 +16,11 @@ Gets the status of antimalware software on the computer.
 ## SYNTAX
 
 ```
-Get-MpComputerStatus [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
-[<CommonParameters>]
+Get-MpComputerStatus
+ [-AsJob]
+ [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +32,7 @@ computer.
 
 ### Example 1: Get the computer status
 
-```
+```powershell
 PS C:\> Get-MpComputerStatus
 AMEngineVersion                  : 1.1.24050.5
 AMProductVersion                 : 4.18.24050.7
@@ -45,18 +48,18 @@ AntivirusSignatureAge            : 1
 AntivirusSignatureLastUpdated    : 6/4/2024 8:06:27 AM
 AntivirusSignatureVersion        : 1.413.102.0
 BehaviorMonitorEnabled           : True
-ComputerID                       : 
+ComputerID                       :
 ComputerState                    : 0
 DefenderSignaturesOutOfDate      : False
-DeviceControlDefaultEnforcement  : 
+DeviceControlDefaultEnforcement  :
 DeviceControlPoliciesLastUpdated : 12/31/1600 4:00:00 PM
 DeviceControlState               : Disabled
 FullScanAge                      : 4294967295
-FullScanEndTime                  : 
+FullScanEndTime                  :
 FullScanOverdue                  : False
 FullScanRequired                 : False
-FullScanSignatureVersion         : 
-FullScanStartTime                : 
+FullScanSignatureVersion         :
+FullScanStartTime                :
 InitializationProgress           : ServiceStartedSuccessfully
 IoavProtectionEnabled            : True
 IsTamperProtected                : False
@@ -71,14 +74,14 @@ NISSignatureVersion              : 1.413.102.0
 OnAccessProtectionEnabled        : True
 ProductStatus                    : 524288
 QuickScanAge                     : 4294967295
-QuickScanEndTime                 : 
+QuickScanEndTime                 :
 QuickScanOverdue                 : False
-QuickScanSignatureVersion        : 
-QuickScanStartTime               : 
+QuickScanSignatureVersion        :
+QuickScanStartTime               :
 RealTimeProtectionEnabled        : True
 RealTimeScanDirection            : 0
 RebootRequired                   : False
-SmartAppControlExpiration        : 
+SmartAppControlExpiration        :
 SmartAppControlState             : Off
 TamperProtectionSource           : E5 transition
 TDTCapable                       : N/A
@@ -95,7 +98,6 @@ TroubleShootingModeSource        : ATP
 TroubleShootingQuotaResetTime    : 6/5/2024 4:47:42 PM
 TroubleShootingStartTime         : N/A
 PSComputerName                   :
-
 ```
 
 This command gets the status of antimalware protection software installed on the computer.
@@ -118,7 +120,7 @@ For more information about Windows PowerShell background jobs, see
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -157,7 +159,7 @@ computer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

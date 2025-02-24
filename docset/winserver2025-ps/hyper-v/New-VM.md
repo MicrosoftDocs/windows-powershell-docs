@@ -234,7 +234,10 @@ Accept wildcard characters: False
 
 ### -Experimental
 
-{{ Fill Experimental Description }}
+Specific prerelease VM version 255.0. This parameter is used to experiment with new VM
+functionality, but this is not supported and may fail across updates. This VM version is not
+supported in release host builds, meaning you can only use this on pre-release host builds (Windows
+Insider program).
 
 ```yaml
 Type: SwitchParameter
@@ -411,7 +414,10 @@ Accept wildcard characters: False
 
 ### -Prerelease
 
-{{ Fill Prerelease Description }}
+Specific prerelease VM version 254.0. This parameter is used to experiment with new VM
+functionality, but this is not supported and may fail across updates. This VM version is not
+supported in release host builds, meaning you can only use this on pre-release host builds (Windows
+Insider program).
 
 ```yaml
 Type: SwitchParameter

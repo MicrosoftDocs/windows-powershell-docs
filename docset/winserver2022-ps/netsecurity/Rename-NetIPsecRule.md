@@ -630,6 +630,7 @@ Accept wildcard characters: False
 Specifies that matching IPsec rules of the indicated key module are renamed. 
 This parameter specifies which keying modules to negotiate. 
 The acceptable values for this parameter are: Default, AuthIP, IKEv1, or IKEv2.
+
 - Default: KeyModule is set based on the authentication method. As of Win11 24H2 and Server 2025, the Default is equivalent to both IKEv1 and IKEv2, and only sets AuthIP if the authentication method(s) require it. In previous releases, Default is equivalent to both IKEv1 and AuthIP. Required in order for the rule to be applied to computers running Windows versions prior to Server 2008.
 - AuthIP: Supported with phase 2 authentication. 
 - IKEv1: Supported with pre-shared key (PSK), Certificates, and Kerberos. Supported with phase 1 authentication only.

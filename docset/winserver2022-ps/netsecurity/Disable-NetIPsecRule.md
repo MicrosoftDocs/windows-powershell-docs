@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetIPsecRule.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 103/03/2025
+ms.date: 03/03/2025
 online version: https://learn.microsoft.com/powershell/module/netsecurity/disable-netipsecrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-NetIPsecRule

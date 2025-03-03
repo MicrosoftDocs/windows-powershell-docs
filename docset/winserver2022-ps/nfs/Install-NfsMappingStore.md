@@ -20,7 +20,7 @@ Install-NfsMappingStore [-InstanceName <String>] [-LdapPort <Int32>] [<CommonPar
 ```
 
 ## DESCRIPTION
-The **Install-NfaMappingStore** cmdlet installs the Active Directory Lightweight Directory Services (AD LDS) role on a local computer.
+The **Install-NfsMappingStore** cmdlet installs the Active Directory Lightweight Directory Services (AD LDS) role on a local computer.
 It then initializes an AD LDS instance as an identity mapping store.
 
 ## EXAMPLES

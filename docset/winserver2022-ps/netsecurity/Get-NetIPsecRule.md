@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetIPsecRule.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 12/27/2016
+ms.date: 03/03/2025
 online version: https://learn.microsoft.com/powershell/module/netsecurity/get-netipsecrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetIPsecRule
@@ -600,7 +600,7 @@ Specifies that matching IPsec rules of the indicated key module are retrieved.
 This parameter specifies which keying modules to negotiate. 
 The acceptable values for this parameter are: Default, AuthIP, IKEv1, or IKEv2. 
 
-- Default: KeyModule is set based on the authentication method. As of Win11 24H2 and Server 2025, the Default is equivalent to both IKEv1 and IKEv2, and only sets AuthIP if the authentication method(s) require it. In previous releases, Default is equivalent to both IKEv1 and AuthIP. Required in order for the rule to be applied to computers running Windows versions prior to Server 2008.
+- Default: KeyModule is set based on the authentication method. As of Windows 11, version 24H2 and Windows Server 2025, the Default is equivalent to both IKEv1 and IKEv2, and only sets AuthIP if the authentication method(s) require it. In previous releases, Default is equivalent to both IKEv1 and AuthIP. Required in order for the rule to be applied to computers running Windows versions prior to Windows Server 2008.
 - AuthIP: Supported with phase 2 authentication. 
 - IKEv1: Supported with pre-shared key (PSK), Certificates, and Kerberos. Supported with phase 1 authentication only.
 - IKEv2: Not supported with Kerberos, PSK, or NTLM. Supported with phase 1 authentication only.

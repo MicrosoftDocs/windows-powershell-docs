@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: NetworkAtc-help.xml
 Module Name: NetworkATC
-ms.date: 02/21/2024
+ms.date: 03/14/2025
 online version: https://learn.microsoft.com/powershell/module/networkatc/new-netintentadapterpropertyoverrides?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-NetIntentAdapterPropertyOverrides
@@ -10,48 +10,68 @@ title: New-NetIntentAdapterPropertyOverrides
 # New-NetIntentAdapterPropertyOverrides
 
 ## SYNOPSIS
-
-Creates a new instance of AdapterPropertyOverrides which can be used to supply granular values to
-`Set-NetIntent`.
+Creates a new instance of network adapter property overrides which can be used to supply granular values to `Set-NetIntent`.
 
 ## SYNTAX
 
 ```
-New-NetIntentAdapterPropertyOverrides [-EncapsulatedPacketTaskOffload <Int32>]
- [-EncapsulatedPacketTaskOffloadNvgre <Int32>] [-EncapsulatedPacketTaskOffloadVxlan <Int32>]
- [-FlowControl <Int32>] [-InterruptModeration <Int32>] [-IPChecksumOffloadIPv4 <Int32>]
- [-JumboPacket <Int32>] [-LsoV2IPv4 <Int32>] [-LsoV2IPv6 <Int32>] [-NetworkDirect <Int32>]
- [-NetworkDirectTechnology <Int32>] [-NumaNodeId <Int32>] [-PacketDirect <Int32>]
- [-PriorityVLANTag <Int32>] [-PtpHardwareTimestamp <Int32>] [-QOS <Int32>] [-QosOffload <Int32>]
- [-ReceiveBuffers <Int32>] [-RscIPv4 <Int32>] [-RscIPv6 <Int32>] [-RssOnHostVPorts <Int32>]
- [-Sriov <Int32>] [-TCPUDPChecksumOffloadIPv4 <Int32>] [-TCPUDPChecksumOffloadIPv6 <Int32>]
- [-UDPChecksumOffloadIPv4 <Int32>] [-UDPChecksumOffloadIPv6 <Int32>] [-TransmitBuffers <Int32>]
- [-UsoIPv4 <Int32>] [-UsoIPv6 <Int32>] [-VMQ <Int32>] [-VxlanUDPPortNumber <Int32>]
- [-VlanID <UInt16>] [<CommonParameters>]
+New-NetIntentAdapterPropertyOverrides [-EncapOverhead <Int32>]
+ [-EncapsulatedPacketTaskOffload <Int32>] [-EncapsulatedPacketTaskOffloadNvgre <Int32>]
+ [-EncapsulatedPacketTaskOffloadVxlan <Int32>] [-FlowControl <Int32>] [-InterruptModeration <Int32>]
+ [-IPChecksumOffloadIPv4 <Int32>] [-JumboPacket <Int32>] [-LsoV2IPv4 <Int32>] [-LsoV2IPv6 <Int32>]
+ [-NetworkDirect <Int32>] [-NetworkDirectTechnology <Int32>] [-NumaNodeId <Int32>]
+ [-PacketDirect <Int32>] [-PriorityVLANTag <Int32>] [-PtpHardwareTimestamp <Int32>] [-QOS <Int32>]
+ [-QosOffload <Int32>] [-ReceiveBuffers <Int32>] [-RscIPv4 <Int32>] [-RscIPv6 <Int32>]
+ [-RssOnHostVPorts <Int32>] [-Sriov <Int32>] [-TCPUDPChecksumOffloadIPv4 <Int32>]
+ [-TCPUDPChecksumOffloadIPv6 <Int32>] [-UDPChecksumOffloadIPv4 <Int32>]
+ [-UDPChecksumOffloadIPv6 <Int32>] [-TransmitBuffers <Int32>] [-UsoIPv4 <Int32>] [-UsoIPv6 <Int32>]
+ [-VMQ <Int32>] [-VxlanUDPPortNumber <Int32>] [-VlanID <UInt16>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The `New-NetIntentAdapterPropertyOverrides` cmdlet creates a new instance of
+network adapter property overrides, which is used to specify granular settings
+for adapter properties that can be applied using the `Set-NetIntent` cmdlet.
+These settings allow administrators to fine-tune network adapter properties to
+optimize performance and functionality for specific network intents.
 
 ## EXAMPLES
 
-### Example 1
+### Example
 
 ```powershell
-PS C:\> {{ Add example code here }}
+New-NetIntentAdapterPropertyOverrides -EncapOverhead 50 -FlowControl 1 -JumboPacket 9000
 ```
 
-{{ Add example description here }}
+This example creates a new instance of adapter property override with an
+encapsulation overhead of `50` bytes, with flow control enabled, and jumbo
+packets set to `9000` bytes.
 
 ## PARAMETERS
 
-### -EncapsulatedPacketTaskOffload
+### -EncapOverhead
 
-{{ Fill EncapsulatedPacketTaskOffload Description }}
+Specifies the value of the encapsulation overhead.
 
 ```yaml
-Type: System.Int32
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 0
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncapsulatedPacketTaskOffload
+
+Specifies the value of the encapsulated packet task offload.
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -64,10 +84,10 @@ Accept wildcard characters: False
 
 ### -EncapsulatedPacketTaskOffloadNvgre
 
-{{ Fill EncapsulatedPacketTaskOffloadNvgre Description }}
+Specifies the value of the encapsulated packet task offload for NVGRE.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -80,10 +100,10 @@ Accept wildcard characters: False
 
 ### -EncapsulatedPacketTaskOffloadVxlan
 
-{{ Fill EncapsulatedPacketTaskOffloadVxlan Description }}
+Specifies the value of the encapsulated packet task offload for VXLAN.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -96,10 +116,10 @@ Accept wildcard characters: False
 
 ### -FlowControl
 
-{{ Fill FlowControl Description }}
+Specifies if flow control is to be used.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -112,10 +132,10 @@ Accept wildcard characters: False
 
 ### -InterruptModeration
 
-{{ Fill InterruptModeration Description }}
+Specifies the interrupt moderation rate.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -128,10 +148,10 @@ Accept wildcard characters: False
 
 ### -IPChecksumOffloadIPv4
 
-{{ Fill IPChecksumOffloadIPv4 Description }}
+Specifies the IPv4 checksum offload value.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -144,10 +164,10 @@ Accept wildcard characters: False
 
 ### -JumboPacket
 
-{{ Fill JumboPacket Description }}
+Specifies the maximum size for jumbo packets.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -160,10 +180,10 @@ Accept wildcard characters: False
 
 ### -LsoV2IPv4
 
-{{ Fill LsoV2IPv4 Description }}
+Specifies the value of large send offload version 2 (LSO V2) for IPv6.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -176,10 +196,10 @@ Accept wildcard characters: False
 
 ### -LsoV2IPv6
 
-{{ Fill LsoV2IPv6 Description }}
+Specifies the value of large send offload version 2 (LSO V2) for IPv6.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -192,10 +212,10 @@ Accept wildcard characters: False
 
 ### -NetworkDirect
 
-{{ Fill NetworkDirect Description }}
+Specifies the Network Direct value.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -208,10 +228,10 @@ Accept wildcard characters: False
 
 ### -NetworkDirectTechnology
 
-{{ Fill NetworkDirectTechnology Description }}
+Specifies the Network Direct technology value.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -224,10 +244,10 @@ Accept wildcard characters: False
 
 ### -NumaNodeId
 
-{{ Fill NumaNodeId Description }}
+Specifies the NUMA node ID to use for the network adapter.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -240,10 +260,10 @@ Accept wildcard characters: False
 
 ### -PacketDirect
 
-{{ Fill PacketDirect Description }}
+Specifies the Packet Direct value.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -256,10 +276,10 @@ Accept wildcard characters: False
 
 ### -PriorityVLANTag
 
-{{ Fill PriorityVLANTag Description }}
+Specifies the priority value of VLAN tagging.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -272,10 +292,10 @@ Accept wildcard characters: False
 
 ### -PtpHardwareTimestamp
 
-{{ Fill PtpHardwareTimestamp Description }}
+Specifies the hardware timestamp for the Precision Time Protocol (PTP).
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -288,10 +308,10 @@ Accept wildcard characters: False
 
 ### -QOS
 
-{{ Fill QOS Description }}
+Specifies the Quality of Service (QoS) value for the network adapter.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -304,10 +324,10 @@ Accept wildcard characters: False
 
 ### -QosOffload
 
-{{ Fill QosOffload Description }}
+Specifies whether QoS offloading is to be enabled.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -320,10 +340,10 @@ Accept wildcard characters: False
 
 ### -ReceiveBuffers
 
-{{ Fill ReceiveBuffers Description }}
+Specifies the number of receive buffers to use.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -336,10 +356,10 @@ Accept wildcard characters: False
 
 ### -RscIPv4
 
-{{ Fill RscIPv4 Description }}
+Specifies the value of Receive Segment Coalescing (RSC) for IPv4.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -352,10 +372,10 @@ Accept wildcard characters: False
 
 ### -RscIPv6
 
-{{ Fill RscIPv6 Description }}
+Specifies the value of Receive Segment Coalescing (RSC) for IPv6.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -368,10 +388,10 @@ Accept wildcard characters: False
 
 ### -RssOnHostVPorts
 
-{{ Fill RssOnHostVPorts Description }}
+Specifies the RSS on host virtual ports.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -384,10 +404,10 @@ Accept wildcard characters: False
 
 ### -Sriov
 
-{{ Fill Sriov Description }}
+Specifies the SR-IOV value.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -400,10 +420,10 @@ Accept wildcard characters: False
 
 ### -TCPUDPChecksumOffloadIPv4
 
-{{ Fill TCPUDPChecksumOffloadIPv4 Description }}
+Specifies the TCP/UDP checksum offload value for IPv4.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -416,26 +436,10 @@ Accept wildcard characters: False
 
 ### -TCPUDPChecksumOffloadIPv6
 
-{{ Fill TCPUDPChecksumOffloadIPv6 Description }}
+Specifies the TCP/UDP checksum offload value for IPv6.
 
 ```yaml
-Type: System.Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: 0
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TransmitBuffers
-
-{{ Fill TransmitBuffers Description }}
-
-```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -448,10 +452,10 @@ Accept wildcard characters: False
 
 ### -UDPChecksumOffloadIPv4
 
-{{ Fill UDPChecksumOffloadIPv4 Description }}
+Specifies the UDP checksum offload for IPv4.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -464,10 +468,26 @@ Accept wildcard characters: False
 
 ### -UDPChecksumOffloadIPv6
 
-{{ Fill UDPChecksumOffloadIPv6 Description }}
+Specifies the UDP checksum offload for IPv6.
 
 ```yaml
-Type: System.Int32
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 0
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TransmitBuffers
+
+Specifies the number of transmit buffers to be used.
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -480,10 +500,10 @@ Accept wildcard characters: False
 
 ### -UsoIPv4
 
-{{ Fill UsoIPv4 Description }}
+Specifies the UDP segment offload (USO) for IPv4.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -496,26 +516,10 @@ Accept wildcard characters: False
 
 ### -UsoIPv6
 
-{{ Fill UsoIPv6 Description }}
+Specifies the UDP segment offload (USO) for IPv6.
 
 ```yaml
-Type: System.Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: 0
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -VlanID
-
-{{ Fill VlanID Description }}
-
-```yaml
-Type: System.UInt16
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -528,10 +532,10 @@ Accept wildcard characters: False
 
 ### -VMQ
 
-{{ Fill VMQ Description }}
+Specifies the Virtual Machine Queue (VMQ) to use.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -544,10 +548,26 @@ Accept wildcard characters: False
 
 ### -VxlanUDPPortNumber
 
-{{ Fill VxlanUDPPortNumber Description }}
+Specifies the UDP port number to use for VXLAN.
 
 ```yaml
-Type: System.Int32
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 0
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VlanID
+
+Specifies the VLAN ID.
+
+```yaml
+Type: UInt16
 Parameter Sets: (All)
 Aliases:
 
@@ -560,10 +580,11 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
--InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
--WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction,
+-ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
+-OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -572,3 +593,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+- [New-NetIntentAdapterRssOverrides](New-NetIntentAdapterRssOverrides.md)
+
+- [New-NetIntentGlobalClusterOverrides](New-NetIntentGlobalClusterOverrides.md)
+
+- [New-NetIntentGlobalProxyOverrides](New-NetIntentGlobalProxyOverrides.md)
+
+- [New-NetIntentQoSPolicyOverrides](New-NetIntentQoSPolicyOverrides.md)
+
+- [New-NetIntentSiteOverrides](New-NetIntentSiteOverrides.md)
+
+- [New-NetIntentStorageOverrides](New-NetIntentStorageOverrides.md)
+
+- [New-NetIntentSwitchConfigurationOverrides](New-NetIntentSwitchConfigurationOverrides.md)

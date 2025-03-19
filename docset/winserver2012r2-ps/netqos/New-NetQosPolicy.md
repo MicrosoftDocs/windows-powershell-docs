@@ -142,7 +142,7 @@ The **SMB** parameter is a built-in filter that matches TCP port `445`, which is
 
 ### EXAMPLE 2
 ```
-PS C:\> New-NetQosPolicy -Name "FTP" -AppPathNameMatchCondition ftp.exe -ThrottleRateActionBytesPerSecond 1MB -PolicyStore ActiveStore
+PS C:\> New-NetQosPolicy -Name "FTP" -AppPathNameMatchCondition ftp.exe -ThrottleRateActionBitsPerSecond 1MB -PolicyStore ActiveStore
 Name           : FTP 
 Owner          : PowerShell / WMI 
 NetworkProfile : All 
@@ -154,7 +154,7 @@ ThrottleRate   : 1.049 MBits/sec
 This example creates a QoS policy named FTP, that matches an application path at ftp.exe and throttles the traffic at 1,000,000 bytes per second.
 This policy is ActiveStore, meaning that it is not persistent after reboot of the computer. 
                          
-An alias for the **ThrottleRateActionBytesPerSecond** parameter is `MaxBw`.
+An alias for the **ThrottleRateActionBitsPerSecond** parameter is `MaxBw`.
 
 ### EXAMPLE 3
 ```
@@ -173,7 +173,7 @@ This policy is effective only on traffic sent on a domain-joined network adapter
 
 ### EXAMPLE 4
 ```
-PS C:\> New-NetQosPolicy -Name "HTTP" -IPPort 80 -IPProtocol TCP -ThrottleRateActionBytesPerSecond 10MB
+PS C:\> New-NetQosPolicy -Name "HTTP" -IPPort 80 -IPProtocol TCP -ThrottleRateActionBitsPerSecond 10MB
 Name           : HTTP 
 Owner          : Group Policy (Machine) 
 NetworkProfile : All 
@@ -200,7 +200,7 @@ This example creates a QoS policy named Wildcard, that catches all the traffic t
 
 ### EXAMPLE 6
 ```
-PS C:\> New-NetQosPolicy -Name "IIS" -URIMatchCondition "http://training" -ThrottleRateActionBytesPerSecond 500KB
+PS C:\> New-NetQosPolicy -Name "IIS" -URIMatchCondition "http://training" -ThrottleRateActionBitsPerSecond 500KB
 Name           : IIS 
 Owner          : Group Policy (Machine) 
 NetworkProfile : Domain 

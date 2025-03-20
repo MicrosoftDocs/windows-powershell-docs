@@ -345,7 +345,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogPath
-Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that will contain the domain log files, for example, `C:\Windows\Logs`.
+Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that will contain the domain log files, for example, `C:\Windows\NTDS`.
 The default is `%SYSTEMROOT%\NTDS`.
 
 ```yaml

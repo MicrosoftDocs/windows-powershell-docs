@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: NetworkAtc-help.xml
 Module Name: NetworkATC
-ms.date: 02/21/2024
+ms.date: 03/14/2025
 online version: https://learn.microsoft.com/powershell/module/networkatc/get-hudswitchlessmapping?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-HUDSwitchlessMapping
@@ -10,7 +10,7 @@ title: Get-HUDSwitchlessMapping
 # Get-HUDSwitchlessMapping
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves the HUD switchless mapping configuration for the specified cluster.
 
 ## SYNTAX
 
@@ -20,26 +20,27 @@ Get-HUDSwitchlessMapping [-ClusterName] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The `Get-HUDSwitchlessMapping` cmdlet queries retrieves the configuration
+mapping for switchless operation within the HUD subsystem on the target cluster.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-HUDSwitchlessMapping -ClusterName "Cluster01"
 ```
 
-{{ Add example description here }}
+This example retrieves the HUD switchless mapping configuration for the cluster `Cluster01`.
 
 ## PARAMETERS
 
 ### -ClusterName
 
-{{ Fill ClusterName Description }}
+Specifies the name of the cluster.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -52,10 +53,11 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
--InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
--WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction,
+-ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
+-OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

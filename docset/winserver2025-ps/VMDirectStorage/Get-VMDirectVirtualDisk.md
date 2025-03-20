@@ -1,53 +1,61 @@
 ---
 external help file: VMDirectStorage-help.xml
 Module Name: VMDirectStorage
-ms.date: 02/21/2024
+ms.date: 3/20/2025
 online version: https://learn.microsoft.com/powershell/module/vmdirectstorage/get-vmdirectvirtualdisk?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-VMDirectVirtualDisk
+ai-usage: ai-generated
 ---
 
 # Get-VMDirectVirtualDisk
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Retrieves direct-attached virtual disks from Hyper-V virtual machines.
 
 ## SYNTAX
 
 ### ByVMName
+
 ```
 Get-VMDirectVirtualDisk [-VMName] <String[]> [-CimSession <CimSession[]>] [[-ControllerType] <ControllerType>]
  [[-ControllerNumber] <Int32>] [-ControllerLocation <Int32>] [<CommonParameters>]
 ```
 
 ### ByVM
+
 ```
 Get-VMDirectVirtualDisk [-VM] <VirtualMachine[]> [[-ControllerType] <ControllerType>]
  [[-ControllerNumber] <Int32>] [-ControllerLocation <Int32>] [<CommonParameters>]
 ```
 
 ### ByVMDriveController
+
 ```
 Get-VMDirectVirtualDisk [-VMDriveController] <VMDriveController[]> [-ControllerLocation <Int32>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The `Get-VMDirectVirtualDisk` cmdlet retrieves information about direct-attached virtual disks configured on Hyper-V virtual machines. You can filter results by virtual machine name, controller type, number, or location.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-VMDirectVirtualDisk -VMName "VM01"
 ```
 
-{{ Add example description here }}
+This command retrieves all direct-attached virtual disks configured on the virtual machine named VM01.
 
 ## PARAMETERS
 
 ### -CimSession
-{{ Fill CimSession Description }}
+
+Specifies the CIM session to use for remote management.
 
 ```yaml
 Type: Microsoft.Management.Infrastructure.CimSession[]
@@ -62,7 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerLocation
-{{ Fill ControllerLocation Description }}
+
+Filters results by the location on the controller.
 
 ```yaml
 Type: System.Int32
@@ -77,7 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerNumber
-{{ Fill ControllerNumber Description }}
+
+Filters results by the controller number.
 
 ```yaml
 Type: System.Int32
@@ -92,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerType
-{{ Fill ControllerType Description }}
+
+Filters results by the controller type. Currently, only SCSI is supported.
 
 ```yaml
 Type: ControllerType
@@ -108,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-{{ Fill VM Description }}
+
+Specifies the virtual machine object from which to retrieve virtual disks.
 
 ```yaml
 Type: Microsoft.HyperV.PowerShell.VirtualMachine[]
@@ -123,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMDriveController
-{{ Fill VMDriveController Description }}
+
+Specifies the VM drive controller object from which to retrieve virtual disks.
 
 ```yaml
 Type: Microsoft.HyperV.PowerShell.VMDriveController[]
@@ -138,7 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-{{ Fill VMName Description }}
+
+Specifies the name of the virtual machine from which to retrieve virtual disks.
 
 ```yaml
 Type: System.String[]
@@ -153,19 +167,34 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+Supports common parameters. See [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String[]
 
+Accepts virtual machine names as input.
+
 ### Microsoft.HyperV.PowerShell.VirtualMachine[]
+
+Accepts virtual machine objects as input.
 
 ### Microsoft.HyperV.PowerShell.VMDriveController[]
 
+Accepts VM drive controller objects as input.
+
 ## OUTPUTS
 
-### System.Object
+### VMDirectVirtualDisk[]
+
+Returns objects representing direct-attached virtual disks.
+
 ## NOTES
 
+None.
+
 ## RELATED LINKS
+
+[Add-VMDirectVirtualDisk](Add-VMDirectVirtualDisk.md)  
+[Remove-VMDirectVirtualDisk](Remove-VMDirectVirtualDisk.md)

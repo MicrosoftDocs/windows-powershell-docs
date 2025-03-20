@@ -74,13 +74,11 @@ For clustering, intents are supported per cluster or as a standalone host.
   - `Management`
   - `Storage`
   - `Stretch`
+  - `Switchless`
 
-Once an intent is created, it may not be modified. The only way to override is
-to do a cleanup using `Clear-NetIntent` and then applying `Add-NetIntent` again.
-However, configuration changes like providing override for defaults are
-possible. This can be achieved by applying the override cmdlets. These can also
-be supplied when running `Add-NetIntent` and can also be applied post facto
-using `Add-NetIntentOverride`.
+Configuration changes like providing override for defaults are possible. These
+override objects can be supplied when running `Add-NetIntent` and can also be
+applied post facto using `Set-NetIntent`.
 
 If `$ComputerName` and `$ClusterName` are null, clustered hosts will use the
 name of their cluster for `$Clustername` and standalone hosts will use their own

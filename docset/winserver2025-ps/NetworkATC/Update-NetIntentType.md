@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: NetworkAtc-help.xml
 Module Name: NetworkATC
-ms.date: 02/21/2024
+ms.date: 03/14/2025
 online version: https://learn.microsoft.com/powershell/module/networkatc/update-netintenttype?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-NetIntentType
@@ -10,8 +10,7 @@ title: Update-NetIntentType
 # Update-NetIntentType
 
 ## SYNOPSIS
-
-{{ Fill in the Synopsis }}
+Updates the configuration types of network intents for specified computers or clusters.
 
 ## SYNTAX
 
@@ -31,26 +30,30 @@ Update-NetIntentType [-Name] <String> [-ClusterName] <String> [-Wait] [-Compute]
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The `Update-NetIntentType` cmdlet updates the configuration types (such as
+Compute, Management, Storage, and Stretch) for a specified network intent across
+individual computers or an entire cluster.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Update-NetIntentType -Name "MyIntent" -ComputerName "Server01" -Compute -Wait
 ```
 
-{{ Add example description here }}
+This example updates the network intent named `MyIntent` on the computer
+`Server01` to include the **Compute** configuration type and waits for the operation
+to complete before returning control.
 
 ## PARAMETERS
 
 ### -ClusterName
 
-{{ Fill ClusterName Description }}
+Specifies the name of the cluster on which to update the network intent types across all nodes.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Cluster
 Aliases:
 
@@ -63,10 +66,10 @@ Accept wildcard characters: False
 
 ### -Compute
 
-{{ Fill Compute Description }}
+Indicates that the Compute configuration type should be included in the update.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -79,10 +82,10 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-{{ Fill ComputerName Description }}
+Specifies the name of the computer on which to update the network intent types.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ComputerName
 Aliases:
 
@@ -95,10 +98,10 @@ Accept wildcard characters: False
 
 ### -Management
 
-{{ Fill Management Description }}
+Indicates that the Management configuration type should be included in the update.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -111,10 +114,10 @@ Accept wildcard characters: False
 
 ### -Name
 
-{{ Fill Name Description }}
+Specifies the name of the network intent to be updated.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -127,10 +130,10 @@ Accept wildcard characters: False
 
 ### -Storage
 
-{{ Fill Storage Description }}
+Indicates that the Storage configuration type should be included in the update.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -143,10 +146,10 @@ Accept wildcard characters: False
 
 ### -Stretch
 
-{{ Fill Stretch Description }}
+Indicates that the Stretch configuration type should be included in the update.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -159,10 +162,11 @@ Accept wildcard characters: False
 
 ### -Wait
 
-{{ Fill Wait Description }}
+Indicates that the cmdlet waits for the operation to complete before returning
+control to the command line.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -175,10 +179,11 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
--InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
--WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction,
+-ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
+-OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+For more information, see
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -191,3 +196,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+- [Update-NetIntentAdapter](Update-NetIntentAdapter.md)
+
+- [Update-NetworkATC](Update-NetworkATC.md)

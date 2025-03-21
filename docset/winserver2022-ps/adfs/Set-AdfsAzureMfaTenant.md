@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 Module Name: ADFS
 ms.date: 12/20/2016
-ms.custom: has-azure-ad-ps-ref
+ms.custom: no-azure-ad-ps-ref
 online version: https://learn.microsoft.com/powershell/module/adfs/set-adfsazuremfatenant?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-AdfsAzureMfaTenant
@@ -28,7 +28,7 @@ The **Set-AdfsAzureMfaTenant** cmdlet enables an Active Directory Federation Ser
 ### Example 1: Enable Azure MFA
 ```
 PS C:\> $certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID>
-PS C:\> New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64
+PS C:\> Add-MgServicePrincipalKey -ServicePrincipalId <service principal ID -KeyCredential $certbase64
 PS C:\> Set-AdfsAzureMfaTenant -TenantId <your tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
 ```
 

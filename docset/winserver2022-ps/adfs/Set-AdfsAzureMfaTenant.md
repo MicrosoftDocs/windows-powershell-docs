@@ -28,7 +28,7 @@ The **Set-AdfsAzureMfaTenant** cmdlet enables an Active Directory Federation Ser
 ### Example 1: Enable Azure MFA
 ```
 PS C:\> $certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID>
-PS C:\> Add-MgServicePrincipalKey -ServicePrincipalId <service principal ID -KeyCredential $certbase64
+PS C:\> Add-MgServicePrincipalKey -ServicePrincipalId <service principal ID> -KeyCredential $certbase64
 PS C:\> Set-AdfsAzureMfaTenant -TenantId <your tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
 ```
 

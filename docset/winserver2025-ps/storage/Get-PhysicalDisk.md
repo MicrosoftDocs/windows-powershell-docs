@@ -1,6 +1,5 @@
 ---
-description: Gets a list of all PhysicalDisk objects visible across any available Storage Management
-Providers, or optionally a filtered list.
+description: Gets a list of all PhysicalDisk objects visible across any available Storage Management Providers, or optionally a filtered list.
 external help file: StorageScripts-help.xml
 Module Name: Storage
 ms.date: 3/24/2025
@@ -99,7 +98,7 @@ Providers, or optionally a filtered list of disks.
 
 ### Example 1: Getting all physical disks
 
-```
+```PowerShell
 Get-PhysicalDisk
 ```
 
@@ -114,7 +113,7 @@ PhysicalDisk4       False              OK                  Healthy             D
 
 ### Example 2: Getting all physical disks eligible for adding to a storage pool
 
-```
+```PowerShell
 Get-PhysicalDisk -CanPool $True
 ```
 
@@ -481,7 +480,7 @@ Accept wildcard characters: False
 ### -VirtualDisk
 
 Accepts a **VirtualDisk** object as input and gets the physical disks used by the virtual disk. The
-VirtualDisk object is exposed by the `Get-VirtualDisk` cmdlet.
+**VirtualDisk** object is exposed by the `Get-VirtualDisk` cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -566,20 +565,20 @@ The `Get-PhysicalDisk` cmdlet returns objects that represent physical disks.
 
 - [Add-PhysicalDisk](./Add-PhysicalDisk.md)
 
-- [Get-StorageEnclosure](./Get-StorageEnclosure.md)
-
-- [Get-StoragePool](./Get-StoragePool.md)
-
-- [Get-StorageSubSystem](./Get-StorageSubsystem.md)
-
-- [New-StoragePool](./New-StoragePool.md)
-
 - [Remove-PhysicalDisk](./Remove-PhysicalDisk.md)
 
 - [Reset-PhysicalDisk](./Reset-PhysicalDisk.md)
 
 - [Set-PhysicalDisk](./Set-PhysicalDisk.md)
 
-- [New-VirtualDisk](./New-VirtualDisk.md)
+- [Get-StorageEnclosure](./Get-StorageEnclosure.md)
+
+- [Get-StoragePool](./Get-StoragePool.md)
+
+- [New-StoragePool](./New-StoragePool.md)
+
+- [Get-StorageSubSystem](./Get-StorageSubsystem.md)
 
 - [Get-StorageNode](./Get-StorageNode.md)
+
+- [New-VirtualDisk](./New-VirtualDisk.md)

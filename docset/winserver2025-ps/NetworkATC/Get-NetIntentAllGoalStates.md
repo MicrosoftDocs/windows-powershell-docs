@@ -20,9 +20,9 @@ Get-NetIntentAllGoalStates [[-ClusterName] <String>] [[-ComputerName] <String>] 
 
 ## DESCRIPTION
 
-The `Get-NetIntentAllGoalStates` retrieves the goal states stored for each
-intent. These configurations are the settings used for initial provisioning and
-drift checks. This information is useful for debugging and troubleshooting.
+The `Get-NetIntentAllGoalStates` retrieves the goal states stored for each intent. These
+configurations are the settings used for initial provisioning and drift checks. This information is
+useful for debugging and troubleshooting.
 
 ## EXAMPLES
 
@@ -70,11 +70,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -30,11 +30,10 @@ New-NetIntentAdapterPropertyOverrides [-EncapOverhead <Int32>]
 
 ## DESCRIPTION
 
-The `New-NetIntentAdapterPropertyOverrides` cmdlet creates a new instance of
-network adapter property overrides, which is used to specify granular settings
-for adapter properties that can be applied using the `Set-NetIntent` cmdlet.
-These settings allow administrators to fine-tune network adapter properties to
-optimize performance and functionality for specific network intents.
+The `New-NetIntentAdapterPropertyOverrides` cmdlet creates a new instance of network adapter
+property overrides, which is used to specify granular settings for adapter properties that can be
+applied using the `Set-NetIntent` cmdlet. These settings allow administrators to fine-tune network
+adapter properties to optimize performance and functionality for specific network intents.
 
 ## EXAMPLES
 
@@ -44,9 +43,8 @@ optimize performance and functionality for specific network intents.
 New-NetIntentAdapterPropertyOverrides -EncapOverhead 50 -FlowControl 1 -JumboPacket 9000
 ```
 
-This example creates a new instance of adapter property override with an
-encapsulation overhead of `50` bytes, with flow control enabled, and jumbo
-packets set to `9000` bytes.
+This example creates a new instance of adapter property override with an encapsulation overhead of
+`50` bytes, with flow control enabled, and jumbo packets set to `9000` bytes.
 
 ## PARAMETERS
 
@@ -580,11 +578,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -594,16 +591,16 @@ For more information, see
 
 ## RELATED LINKS
 
-- [New-NetIntentAdapterRssOverrides](New-NetIntentAdapterRssOverrides.md)
+[New-NetIntentAdapterRssOverrides](New-NetIntentAdapterRssOverrides.md)
 
-- [New-NetIntentGlobalClusterOverrides](New-NetIntentGlobalClusterOverrides.md)
+[New-NetIntentGlobalClusterOverrides](New-NetIntentGlobalClusterOverrides.md)
 
-- [New-NetIntentGlobalProxyOverrides](New-NetIntentGlobalProxyOverrides.md)
+[New-NetIntentGlobalProxyOverrides](New-NetIntentGlobalProxyOverrides.md)
 
-- [New-NetIntentQoSPolicyOverrides](New-NetIntentQoSPolicyOverrides.md)
+[New-NetIntentQoSPolicyOverrides](New-NetIntentQoSPolicyOverrides.md)
 
-- [New-NetIntentSiteOverrides](New-NetIntentSiteOverrides.md)
+[New-NetIntentSiteOverrides](New-NetIntentSiteOverrides.md)
 
-- [New-NetIntentStorageOverrides](New-NetIntentStorageOverrides.md)
+[New-NetIntentStorageOverrides](New-NetIntentStorageOverrides.md)
 
-- [New-NetIntentSwitchConfigurationOverrides](New-NetIntentSwitchConfigurationOverrides.md)
+[New-NetIntentSwitchConfigurationOverrides](New-NetIntentSwitchConfigurationOverrides.md)

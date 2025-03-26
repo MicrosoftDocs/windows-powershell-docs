@@ -29,8 +29,8 @@ New-NetIntentGlobalProxyOverrides [-AutoDetect] -AutoConfigUrl <String> [<Common
 
 ## DESCRIPTION
 
-The `New-NetIntentGlobalProxyOverrides` cmdlet configures proxy setting override
-by specifying a proxy server or bypass list.
+The `New-NetIntentGlobalProxyOverrides` cmdlet configures proxy setting override by specifying a
+proxy server or bypass list.
 
 ## EXAMPLES
 
@@ -44,9 +44,8 @@ $params = @{
 New-NetIntentGlobalProxyOverrides @params
 ```
 
-This example sets the proxy server to `proxy.example.com` and specifies that
-traffic to `localhost` and any subdomains of `example.com` should bypass the
-proxy.
+This example sets the proxy server to `proxy.example.com` and specifies that traffic to `localhost`
+and any subdomains of `example.com` should bypass the proxy.
 
 ## PARAMETERS
 
@@ -116,11 +115,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -134,16 +132,16 @@ For more information, see
 
 ## RELATED LINKS
 
-- [New-NetIntentAdapterPropertyOverrides](New-NetIntentAdapterPropertyOverrides.md)
+[New-NetIntentAdapterPropertyOverrides](New-NetIntentAdapterPropertyOverrides.md)
 
-- [New-NetIntentAdapterRssOverrides](New-NetIntentAdapterRssOverrides.md)
+[New-NetIntentAdapterRssOverrides](New-NetIntentAdapterRssOverrides.md)
 
-- [New-NetIntentGlobalClusterOverrides](New-NetIntentGlobalClusterOverrides.md)
+[New-NetIntentGlobalClusterOverrides](New-NetIntentGlobalClusterOverrides.md)
 
-- [New-NetIntentQoSPolicyOverrides](New-NetIntentQoSPolicyOverrides.md)
+[New-NetIntentQoSPolicyOverrides](New-NetIntentQoSPolicyOverrides.md)
 
-- [New-NetIntentSiteOverrides](New-NetIntentSiteOverrides.md)
+[New-NetIntentSiteOverrides](New-NetIntentSiteOverrides.md)
 
-- [New-NetIntentStorageOverrides](New-NetIntentStorageOverrides.md)
+[New-NetIntentStorageOverrides](New-NetIntentStorageOverrides.md)
 
-- [New-NetIntentSwitchConfigurationOverrides](New-NetIntentSwitchConfigurationOverrides.md)
+[New-NetIntentSwitchConfigurationOverrides](New-NetIntentSwitchConfigurationOverrides.md)

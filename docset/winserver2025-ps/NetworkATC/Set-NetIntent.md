@@ -44,9 +44,9 @@ Set-NetIntent [[-ComputerName] <String>] [[-ClusterName] <String>]
 
 ## DESCRIPTION
 
-The `Set-NetIntent` cmdlet allows provisioning of override values for given
-network intents. All properties inside the override objects are nullable,
-meaning only the properties which are set will be applied.
+The `Set-NetIntent` cmdlet allows provisioning of override values for given network intents. All
+properties inside the override objects are nullable, meaning only the properties which are set will
+be applied.
 
 ## EXAMPLES
 
@@ -71,8 +71,8 @@ $params = @{
 Set-NetIntent @params
 ```
 
-This example sets the network intent named `MyIntent` on the computer `Server01`
-with specified adapter property overrides and QoS policy overrides.
+This example sets the network intent named `MyIntent` on the computer `Server01` with specified
+adapter property overrides and QoS policy overrides.
 
 ## PARAMETERS
 
@@ -298,8 +298,8 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Indicates that the cmdlet should wait for the operation to complete before
-returning control to the command line.
+Indicates that the cmdlet should wait for the operation to complete before returning control to the
+command line.
 
 ```yaml
 Type: SwitchParameter
@@ -315,11 +315,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -327,21 +326,21 @@ For more information, see
 
 ## NOTES
 
-Once the request has been successfully placed, all services will eventually
-detect and apply the updated override policies. Use `Get-NetIntentStatus` to see
-the current status. This may take several minutes to retrieve.
+Once the request has been successfully placed, all services will eventually detect and apply the
+updated override policies. Use `Get-NetIntentStatus` to see the current status. This may take
+several minutes to retrieve.
 
-To force policy updates, use the `Set-NetIntentRetryState` to put a given policy
-in a retry pending state in which case the policy will be forcefully applied.
+To force policy updates, use the `Set-NetIntentRetryState` to put a given policy in a retry pending
+state in which case the policy will be forcefully applied.
 
 ## RELATED LINKS
 
-- [Add-NetIntent](Add-NetIntent.md)
+[Add-NetIntent](Add-NetIntent.md)
 
-- [Copy-NetIntent](Copy-NetIntent.md)
+[Copy-NetIntent](Copy-NetIntent.md)
 
-- [Get-NetIntent](Get-NetIntent.md)
+[Get-NetIntent](Get-NetIntent.md)
 
-- [Get-NetIntentStatus](Get-NetIntentStatus.md)
+[Get-NetIntentStatus](Get-NetIntentStatus.md)
 
-- [Remove-NetIntent](Remove-NetIntent.md)
+[Remove-NetIntent](Remove-NetIntent.md)

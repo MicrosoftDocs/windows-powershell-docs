@@ -22,10 +22,9 @@ New-NetIntentQoSPolicyOverrides [-PriorityValue8021Action_SMB <Byte>]
 
 ## DESCRIPTION
 
-The `New-NetIntentQoSPolicyOverrides` cmdlet creates a new instance of Quality
-of Service (QoS) policy overrides. This cmdlet is used to provide specific
-granular values that can be utilized by the `Set-NetIntent` cmdlet to define QoS
-policies for network traffic.
+The `New-NetIntentQoSPolicyOverrides` cmdlet creates a new instance of Quality of Service (QoS)
+policy overrides. This cmdlet is used to provide specific granular values that can be utilized by
+the `Set-NetIntent` cmdlet to define QoS policies for network traffic.
 
 ## EXAMPLES
 
@@ -35,9 +34,8 @@ policies for network traffic.
 New-NetIntentQoSPolicyOverrides -PriorityValue8021Action_SMB 3 -BandwidthPercentage_SMB 30
 ```
 
-This example creates a new QoS policy override setting the 802.1 priority value
-for SMB traffic to `3` with `30%` of the available network bandwidth allocated
-to SMB traffic.
+This example creates a new QoS policy override setting the 802.1 priority value for SMB traffic to
+`3` with `30%` of the available network bandwidth allocated to SMB traffic.
 
 ## PARAMETERS
 
@@ -123,11 +121,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

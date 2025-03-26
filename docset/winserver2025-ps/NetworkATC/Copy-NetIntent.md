@@ -72,9 +72,8 @@ Copy-NetIntent [-GlobalOverrides] [-SourceComputerName] <String> [-DestinationCo
 
 ## DESCRIPTION
 
-The `Copy-NetIntent` cmdlet copies or moves a network intent from one host or
-cluster to another. The source intent is removed if the **RemoveSource**
-parameter is provided.
+The `Copy-NetIntent` cmdlet copies or moves a network intent from one host or cluster to another.
+The source intent is removed if the **RemoveSource** parameter is provided.
 
 ## EXAMPLES
 
@@ -84,16 +83,16 @@ parameter is provided.
 Copy-NetIntent -Name "MyIntent" -SourceComputerName "Server01" -DestinationComputerName "Server02"
 ```
 
-This example copies a network intent from the standalone device `Server01` to
-the standalone destination device `Server02`.
+This example copies a network intent from the standalone device `Server01` to the standalone
+destination device `Server02`.
 
 ## PARAMETERS
 
 ### -Name
 
-Defines a unique name that identifies the network intent. Since intents are
-uniquely determined by their list of physical adapters, the name is used as an
-identifier to ensure that each intent is distinct.
+Defines a unique name that identifies the network intent. Since intents are uniquely determined by
+their list of physical adapters, the name is used as an identifier to ensure that each intent is
+distinct.
 
 ```yaml
 Type: String
@@ -190,8 +189,8 @@ Accept wildcard characters: False
 
 ### -RemoveSource
 
-Indicates whether the original network intent should be removed from the source
-after the copy operation is completed.
+Indicates whether the original network intent should be removed from the source after the copy
+operation is completed.
 
 ```yaml
 Type: Boolean
@@ -207,8 +206,8 @@ Accept wildcard characters: False
 
 ### -Wait
 
-When specified, the command will wait for the network configuration commands to
-complete or for status confirmation before returning control.
+When specified, the command will wait for the network configuration commands to complete or for
+status confirmation before returning control.
 
 ```yaml
 Type: SwitchParameter
@@ -224,11 +223,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -240,12 +238,12 @@ The copy and removal operation of the intent isn't a transacted operation.
 
 ## RELATED LINKS
 
-- [Add-NetIntent](Add-NetIntent.md)
+[Add-NetIntent](Add-NetIntent.md)
 
-- [Get-NetIntent](Get-NetIntent.md)
+[Get-NetIntent](Get-NetIntent.md)
 
-- [Get-NetIntentStatus](Get-NetIntentStatus.md)
+[Get-NetIntentStatus](Get-NetIntentStatus.md)
 
-- [Remove-NetIntent](Remove-NetIntent.md)
+[Remove-NetIntent](Remove-NetIntent.md)
 
-- [Set-NetIntent](Set-NetIntent.md)
+[Set-NetIntent](Set-NetIntent.md)

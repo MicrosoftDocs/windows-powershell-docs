@@ -1,20 +1,23 @@
 ---
 external help file: VMDirectStorage-help.xml
 Module Name: VMDirectStorage
-ms.date: 02/21/2024
+ms.date: 03/25/2025
 online version: https://learn.microsoft.com/powershell/module/vmdirectstorage/add-vmdirectvirtualdisk?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-VMDirectVirtualDisk
+ai-usage: ai-generated
 ---
 
 # Add-VMDirectVirtualDisk
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Attaches a Storage Spaces Direct virtual disk to a virtual machine.
 
 ## SYNTAX
 
 ### ByVMName
+
 ```
 Add-VMDirectVirtualDisk [-VMName] <String[]> [-CimSession <CimSession[]>] [[-ControllerType] <ControllerType>]
  [[-ControllerNumber] <Int32>] [-ControllerLocation <Int32>] [-VirtualDiskUniqueId <String>]
@@ -22,6 +25,7 @@ Add-VMDirectVirtualDisk [-VMName] <String[]> [-CimSession <CimSession[]>] [[-Con
 ```
 
 ### ByVM
+
 ```
 Add-VMDirectVirtualDisk [-VM] <VirtualMachine[]> [[-ControllerType] <ControllerType>]
  [[-ControllerNumber] <Int32>] [-ControllerLocation <Int32>] [-VirtualDiskUniqueId <String>]
@@ -29,27 +33,38 @@ Add-VMDirectVirtualDisk [-VM] <VirtualMachine[]> [[-ControllerType] <ControllerT
 ```
 
 ### ByVMDriveController
+
 ```
 Add-VMDirectVirtualDisk [-VMDriveController] <VMDriveController> [-ControllerLocation <Int32>]
  [-VirtualDiskUniqueId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The **Add-VMDirectVirtualDisk** cmdlet attaches a Storage Spaces Direct virtual disk to a virtual machine. This enables high-performance storage configurations by directly connecting the virtual disk to the VM.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+$parameters = @{
+    VMName             = "VM1"
+    ControllerType     = "SCSI"
+    ControllerNumber   = 0
+    ControllerLocation = 1
+    VirtualDiskUniqueId = "12345-67890"
+}
+Add-VMDirectVirtualDisk @parameters
 ```
 
-{{ Add example description here }}
+This command attaches the virtual disk with the unique ID "12345-67890" to the virtual machine named "VM1" at controller 0, location 1.
 
 ## PARAMETERS
 
 ### -CimSession
-{{ Fill CimSession Description }}
+
+Specifies the CIM session to use for the operation. This is useful for managing remote systems.
 
 ```yaml
 Type: Microsoft.Management.Infrastructure.CimSession[]
@@ -64,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerLocation
-{{ Fill ControllerLocation Description }}
+
+Specifies the location on the controller where the virtual disk will be attached.
 
 ```yaml
 Type: System.Int32
@@ -79,7 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerNumber
-{{ Fill ControllerNumber Description }}
+
+Specifies the number of the controller where the virtual disk will be attached.
 
 ```yaml
 Type: System.Int32
@@ -94,7 +111,8 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerType
-{{ Fill ControllerType Description }}
+
+Specifies the type of controller. Only SCSI is supported.
 
 ```yaml
 Type: ControllerType
@@ -110,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDiskUniqueId
-{{ Fill VirtualDiskUniqueId Description }}
+
+Specifies the unique ID of the virtual disk to attach.
 
 ```yaml
 Type: System.String
@@ -125,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-{{ Fill VM Description }}
+
+Specifies the virtual machine object to which the virtual disk will be attached.
 
 ```yaml
 Type: Microsoft.HyperV.PowerShell.VirtualMachine[]
@@ -140,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMDriveController
-{{ Fill VMDriveController Description }}
+
+Specifies the drive controller object to which the virtual disk will be attached.
 
 ```yaml
 Type: Microsoft.HyperV.PowerShell.VMDriveController
@@ -155,7 +176,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-{{ Fill VMName Description }}
+
+Specifies the name of the virtual machine to which the virtual disk will be attached.
 
 ```yaml
 Type: System.String[]
@@ -170,19 +192,33 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String[]
 
+Specifies the names of virtual machines.
+
 ### Microsoft.HyperV.PowerShell.VirtualMachine[]
 
+Specifies virtual machine objects.
+
 ### Microsoft.HyperV.PowerShell.VMDriveController
+
+Specifies drive controller objects.
 
 ## OUTPUTS
 
 ### System.Object
+
+Returns an object representing the result of the operation.
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-VMDirectVirtualDisk](Get-VMDirectVirtualDisk.md)
+
+[Remove-VMDirectVirtualDisk](Remove-VMDirectVirtualDisk.md)

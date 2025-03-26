@@ -1,46 +1,59 @@
 ---
 external help file: VMDirectStorage-help.xml
 Module Name: VMDirectStorage
-ms.date: 02/21/2024
+ms.date: 03/25/2025
 online version: https://learn.microsoft.com/powershell/module/vmdirectstorage/remove-vmdirectvirtualdisk?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-VMDirectVirtualDisk
+ai-usage: ai-generated
 ---
 
 # Remove-VMDirectVirtualDisk
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Detaches a Storage Spaces Direct virtual disk from a virtual machine.
 
 ## SYNTAX
 
 ### ByVMName
+
 ```
 Remove-VMDirectVirtualDisk [-VMName] <String> [-CimSession <CimSession[]>] [-ControllerType] <ControllerType>
  [-ControllerNumber] <Int32> [-ControllerLocation] <Int32> [<CommonParameters>]
 ```
 
 ### ByVirtualDisk
+
 ```
 Remove-VMDirectVirtualDisk [-VirtualDisk] <VMDirectVirtualDisk[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The **Remove-VMDirectVirtualDisk** cmdlet detaches a Storage Spaces Direct virtual disk from a virtual machine. This operation ensures that the virtual disk is no longer accessible by the VM.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+$parameters = @{
+    VMName            = "VM1"
+    ControllerType    = "SCSI"
+    ControllerNumber  = 0
+    ControllerLocation = 1
+}
+Remove-VMDirectVirtualDisk @parameters
 ```
 
-{{ Add example description here }}
+This command detaches the virtual disk located at controller 0, location 1, from the virtual machine named "VM1".
 
 ## PARAMETERS
 
 ### -CimSession
-{{ Fill CimSession Description }}
+
+Specifies the CIM session to use for the operation. This is useful for managing remote systems.
 
 ```yaml
 Type: Microsoft.Management.Infrastructure.CimSession[]
@@ -55,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerLocation
-{{ Fill ControllerLocation Description }}
+
+Specifies the location of the virtual disk on the controller.
 
 ```yaml
 Type: System.Int32
@@ -70,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerNumber
-{{ Fill ControllerNumber Description }}
+
+Specifies the number of the controller where the virtual disk is attached.
 
 ```yaml
 Type: System.Int32
@@ -85,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerType
-{{ Fill ControllerType Description }}
+
+Specifies the type of controller. Only SCSI is supported.
 
 ```yaml
 Type: ControllerType
@@ -101,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDisk
-{{ Fill VirtualDisk Description }}
+
+Specifies the virtual disk object to detach.
 
 ```yaml
 Type: VMDirectVirtualDisk[]
@@ -116,7 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-{{ Fill VMName Description }}
+
+Specifies the name of the virtual machine from which the virtual disk will be detached.
 
 ```yaml
 Type: System.String
@@ -131,17 +149,29 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
 
+Specifies the name of the virtual machine.
+
 ### VMDirectVirtualDisk[]
+
+Specifies the virtual disk objects to be detached.
 
 ## OUTPUTS
 
 ### System.Object
+
+Returns an object representing the result of the operation.
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-VMDirectVirtualDisk](Add-VMDirectVirtualDisk.md)
+
+[Get-VMDirectVirtualDisk](Get-VMDirectVirtualDisk.md)

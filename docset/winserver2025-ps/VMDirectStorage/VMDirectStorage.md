@@ -13,7 +13,9 @@ ai-usage: ai-generated
 
 ## Description
 
-The **VMDirectStorage** module provides cmdlets to manage the direct attachment of Storage Spaces Direct virtual disks to virtual machines (VMs). This allows for high-performance storage configurations by bypassing the host file system.
+The **VMDirectStorage** module provides cmdlets to manage the direct attachment of Storage Spaces
+Direct virtual disks to virtual machines (VMs). This allows for high-performance storage
+configurations by bypassing the host file system.
 
 ## VMDirectStorage Cmdlets
 
@@ -28,4 +30,3 @@ Retrieves information about Storage Spaces Direct virtual disks attached to a vi
 ### [Remove-VMDirectVirtualDisk](Remove-VMDirectVirtualDisk.md)
 
 Detaches a Storage Spaces Direct virtual disk from a virtual machine.
-

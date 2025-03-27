@@ -46,10 +46,7 @@ The **Get-VMDirectVirtualDisk** cmdlet retrieves information about Storage Space
 ### Example 1
 
 ```powershell
-$parameters = @{
-    VMName = "VM1"
-}
-Get-VMDirectVirtualDisk @parameters
+Get-VMDirectVirtualDisk -VMName "VM1"
 ```
 
 This command retrieves all virtual disks attached to the virtual machine named "VM1".

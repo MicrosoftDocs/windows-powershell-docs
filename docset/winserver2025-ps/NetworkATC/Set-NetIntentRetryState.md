@@ -36,9 +36,9 @@ Set-NetIntentRetryState [-ClusterName <String>] -Name <String> -NodeName <String
 
 ## DESCRIPTION
 
-The `Set-NetIntentRetryState` cmdlet changes the provisioning state of the goal
-state for a network intent on a given host. This is useful for resetting failed
-provisioning attempts, as it resets the **RetryRequired** state.
+The `Set-NetIntentRetryState` cmdlet changes the provisioning state of the goal state for a network
+intent on a given host. This is useful for resetting failed provisioning attempts, as it resets the
+**RetryRequired** state.
 
 ## EXAMPLES
 
@@ -48,8 +48,8 @@ provisioning attempts, as it resets the **RetryRequired** state.
 Set-NetIntentRetryState -ComputerName "Server01" -Name "MyIntent" -Wait
 ```
 
-This example resets the provisioning state for the network intent named
-`MyIntent` on the computer `Server01` and waits for the operation to complete.
+This example resets the provisioning state for the network intent named `MyIntent` on the computer
+`Server01` and waits for the operation to complete.
 
 ## PARAMETERS
 
@@ -131,8 +131,8 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Indicates that the cmdlet should wait for the operation to complete before
-returning control to the command line.
+Indicates that the cmdlet should wait for the operation to complete before returning control to the
+command line.
 
 ```yaml
 Type: SwitchParameter
@@ -164,11 +164,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

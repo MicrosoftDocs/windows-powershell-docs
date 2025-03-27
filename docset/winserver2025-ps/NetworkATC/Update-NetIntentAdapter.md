@@ -21,9 +21,8 @@ Update-NetIntentAdapter [-AdapterName] <String[]> [[-ClusterName] <String>]
 
 ## DESCRIPTION
 
-The `Update-NetIntentAdapter` cmdlet updates the configuration of network
-adapters to align with the specified network intent. It can be used on
-individual computers or across clusters.
+The `Update-NetIntentAdapter` cmdlet updates the configuration of network adapters to align with the
+specified network intent. It can be used on individual computers or across clusters.
 
 ## EXAMPLES
 
@@ -33,8 +32,8 @@ individual computers or across clusters.
 Update-NetIntentAdapter -AdapterName "Ethernet1" -Name "MyIntent" -ComputerName "Server01"
 ```
 
-This example updates the configuration of the adapter named `Ethernet1` on the
-computer `Server01` to match the network intent named `MyIntent`.
+This example updates the configuration of the adapter named `Ethernet1` on the computer `Server01`
+to match the network intent named `MyIntent`.
 
 ## PARAMETERS
 
@@ -56,8 +55,8 @@ Accept wildcard characters: False
 
 ### -ClusterName
 
-Specifies the name of the cluster on which to update the network intent
-configuration across all nodes.
+Specifies the name of the cluster on which to update the network intent configuration across all
+nodes.
 
 ```yaml
 Type: String
@@ -73,8 +72,8 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies the name of the computer on which to update the network intent
-configuration for the specified adapter(s).
+Specifies the name of the computer on which to update the network intent configuration for the
+specified adapter(s).
 
 ```yaml
 Type: String
@@ -106,8 +105,8 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Indicates that the cmdlet waits for the operation to complete before returning
-control to the command line.
+Indicates that the cmdlet waits for the operation to complete before returning control to the
+command line.
 
 ```yaml
 Type: SwitchParameter
@@ -123,11 +122,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -141,6 +139,6 @@ For more information, see
 
 ## RELATED LINKS
 
-- [Update-NetIntentType](Update-NetIntentType.md)
+[Update-NetIntentType](Update-NetIntentType.md)
 
-- [Update-NetworkATC](Update-NetworkATC.md)
+[Update-NetworkATC](Update-NetworkATC.md)

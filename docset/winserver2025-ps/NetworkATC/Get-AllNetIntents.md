@@ -21,8 +21,8 @@ Get-AllNetIntents [[-ClusterName] <String>] [[-ComputerName] <String>] [-GlobalO
 
 ## DESCRIPTION
 
-The `Get-AllNetIntents` cmdlet retrieves all network intent configurations
-available based on the computer name or cluster name.
+The `Get-AllNetIntents` cmdlet retrieves all network intent configurations available based on the
+computer name or cluster name.
 
 ## EXAMPLES
 
@@ -38,8 +38,8 @@ This example retrieves all network intent configurations from the `Server01` sta
 
 ### -ClusterName
 
-Specifies the name of the cluster for which the network intent is to be
-retrieved. When used, the intent "floats" across the cluster.
+Specifies the name of the cluster for which the network intent is to be retrieved. When used, the
+intent "floats" across the cluster.
 
 ```yaml
 Type: String
@@ -55,10 +55,9 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies the computer name of the target host on which the network
-intent configuration is to be retrieved. For standalone hosts, use the local
-computer name; for scenarios where the script is executed remotely, ensure the
-current user has administrative privileges on the target machine.
+Specifies the computer name of the target host on which the network intent configuration is to be
+retrieved. For standalone hosts, use the local computer name; for scenarios where the script is
+executed remotely, ensure the current user has administrative privileges on the target machine.
 
 ```yaml
 Type: String
@@ -90,11 +89,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -22,10 +22,10 @@ Resume-ClusterNode [[-Name] <StringCollection>] [[-Failback] <ResumeClusterNodeF
 
 ## DESCRIPTION
 
-The `Resume-ClusterNode` cmdlet resumes activity on a failover cluster node after it has been
-suspended, or paused, or brings back drained workloads to the node, or both. When a node is resumed,
-clustered roles that were drained from the node are returned to it, and clustered roles or resources
-that are currently offline can be brought online on that node.
+The `Resume-ClusterNode` cmdlet resumes activity, or brings back drained workloads to the node, or both,
+on a failover cluster node after it has been suspended, or paused. When a node is resumed,
+clustered roles that were drained from the node are returned to it (unless the Failback policy is set to
+`NoFailback`), and clustered roles or resources that are currently offline can be brought online on that node.
 
 ## EXAMPLES
 

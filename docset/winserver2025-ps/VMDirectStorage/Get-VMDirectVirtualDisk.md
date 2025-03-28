@@ -1,7 +1,7 @@
 ---
 external help file: VMDirectStorage-help.xml
 Module Name: VMDirectStorage
-ms.date: 03/25/2025
+ms.date: 03/28/2025
 online version: https://learn.microsoft.com/powershell/module/vmdirectstorage/get-vmdirectvirtualdisk?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-VMDirectVirtualDisk
@@ -10,11 +10,11 @@ ai-usage: ai-generated
 
 # Get-VMDirectVirtualDisk
 
-## SYNOPSIS
+## Synopsis
 
 Retrieves information about Storage Spaces Direct virtual disks attached to a virtual machine.
 
-## SYNTAX
+## Syntax
 
 ### ByVMName
 
@@ -37,11 +37,13 @@ Get-VMDirectVirtualDisk [-VMDriveController] <VMDriveController[]> [-ControllerL
  [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
-The **Get-VMDirectVirtualDisk** cmdlet retrieves information about Storage Spaces Direct virtual disks attached to a virtual machine. This includes details such as the disk's unique ID, friendly name, and its location on the controller.
+The **Get-VMDirectVirtualDisk** cmdlet retrieves information about Storage Spaces Direct virtual
+disks attached to a virtual machine. This includes details such as the disk's unique ID, friendly
+name, and its location on the controller.
 
-## EXAMPLES
+## Examples
 
 ### Example 1
 
@@ -51,7 +53,7 @@ Get-VMDirectVirtualDisk -VMName "VM1"
 
 This command retrieves all virtual disks attached to the virtual machine named "VM1".
 
-## PARAMETERS
+## Parameters
 
 ### -CimSession
 
@@ -168,9 +170,12 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### System.String[]
 
@@ -184,16 +189,16 @@ Specifies virtual machine objects.
 
 Specifies drive controller objects.
 
-## OUTPUTS
+## Outputs
 
 ### VMDirectVirtualDisk
 
 Returns objects representing the virtual disks attached to the specified virtual machine.
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links
 
-[Add-VMDirectVirtualDisk](Add-VMDirectVirtualDisk.md)
+- [Add-VMDirectVirtualDisk](Add-VMDirectVirtualDisk.md)
 
-[Remove-VMDirectVirtualDisk](Remove-VMDirectVirtualDisk.md)
+- [Remove-VMDirectVirtualDisk](Remove-VMDirectVirtualDisk.md)

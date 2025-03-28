@@ -1,7 +1,7 @@
 ---
 external help file: VMDirectStorage-help.xml
 Module Name: VMDirectStorage
-ms.date: 03/25/2025
+ms.date: 03/28/2025
 online version: https://learn.microsoft.com/powershell/module/vmdirectstorage/remove-vmdirectvirtualdisk?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-VMDirectVirtualDisk
@@ -10,11 +10,11 @@ ai-usage: ai-generated
 
 # Remove-VMDirectVirtualDisk
 
-## SYNOPSIS
+## Synopsis
 
 Detaches a Storage Spaces Direct virtual disk from a virtual machine.
 
-## SYNTAX
+## Syntax
 
 ### ByVMName
 
@@ -29,11 +29,12 @@ Remove-VMDirectVirtualDisk [-VMName] <String> [-CimSession <CimSession[]>] [-Con
 Remove-VMDirectVirtualDisk [-VirtualDisk] <VMDirectVirtualDisk[]> [<CommonParameters>]
 ```
 
-## DESCRIPTION
+## Description
 
-The **Remove-VMDirectVirtualDisk** cmdlet detaches a Storage Spaces Direct virtual disk from a virtual machine. This operation ensures that the virtual disk is no longer accessible by the VM.
+The **Remove-VMDirectVirtualDisk** cmdlet detaches a Storage Spaces Direct virtual disk from a
+virtual machine. This operation ensures that the virtual disk is no longer accessible by the VM.
 
-## EXAMPLES
+## Examples
 
 ### Example 1
 
@@ -47,9 +48,10 @@ $parameters = @{
 Remove-VMDirectVirtualDisk @parameters
 ```
 
-This command detaches the virtual disk located at controller 0, location 1, from the virtual machine named "VM1".
+This command detaches the virtual disk located at controller 0, location 1, from the virtual machine
+named "VM1".
 
-## PARAMETERS
+## Parameters
 
 ### -CimSession
 
@@ -150,9 +152,12 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+## Inputs
 
 ### System.String
 
@@ -162,16 +167,16 @@ Specifies the name of the virtual machine.
 
 Specifies the virtual disk objects to be detached.
 
-## OUTPUTS
+## Outputs
 
 ### System.Object
 
 Returns an object representing the result of the operation.
 
-## NOTES
+## Notes
 
-## RELATED LINKS
+## Related links
 
-[Add-VMDirectVirtualDisk](Add-VMDirectVirtualDisk.md)
+- [Add-VMDirectVirtualDisk](Add-VMDirectVirtualDisk.md)
 
-[Get-VMDirectVirtualDisk](Get-VMDirectVirtualDisk.md)
+- [Get-VMDirectVirtualDisk](Get-VMDirectVirtualDisk.md)

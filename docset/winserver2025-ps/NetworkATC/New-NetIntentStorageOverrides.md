@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: NetworkAtc-help.xml
 Module Name: NetworkATC
-ms.date: 02/21/2024
+ms.date: 03/14/2025
 online version: https://learn.microsoft.com/powershell/module/networkatc/new-netintentstorageoverrides?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-NetIntentStorageOverrides
@@ -10,9 +10,8 @@ title: New-NetIntentStorageOverrides
 # New-NetIntentStorageOverrides
 
 ## SYNOPSIS
-
-Creates a new instance of **NetAdapterStorageOverride** which can be used to supply granular values
-to `Set-NetIntent`.
+Creates a new instance of network adapter storage overrides which can be used to supply granular
+values to `Set-NetIntent`.
 
 ## SYNTAX
 
@@ -22,26 +21,30 @@ New-NetIntentStorageOverrides [-EnableAutomaticIPGeneration <Boolean>] [<CommonP
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The `New-NetIntentStorageOverrides` cmdlet creates a new instance of storage network adapter
+override setting. This instance can be used to specify configuration values for network adapters
+when using the `Set-NetIntent` cmdlet.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+New-NetIntentStorageOverrides -EnableAutomaticIPGeneration $true
 ```
 
-{{ Add example description here }}
+This example creates a new storage override with automatic IP generation enabled.
 
 ## PARAMETERS
 
 ### -EnableAutomaticIPGeneration
 
-{{ Fill EnableAutomaticIPGeneration Description }}
+Indicates whether automatic IP generation should be enabled for the network adapter storage
+configuration. When set to `$true`, IP addresses will be automatically generated based on the
+network settings.
 
 ```yaml
-Type: System.Boolean
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -57,7 +60,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -66,3 +69,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-NetIntentAdapterPropertyOverrides](New-NetIntentAdapterPropertyOverrides.md)
+
+[New-NetIntentAdapterRssOverrides](New-NetIntentAdapterRssOverrides.md)
+
+[New-NetIntentGlobalClusterOverrides](New-NetIntentGlobalClusterOverrides.md)
+
+[New-NetIntentGlobalProxyOverrides](New-NetIntentGlobalProxyOverrides.md)
+
+[New-NetIntentQoSPolicyOverrides](New-NetIntentQoSPolicyOverrides.md)
+
+[New-NetIntentSiteOverrides](New-NetIntentSiteOverrides.md)
+
+[New-NetIntentSwitchConfigurationOverrides](New-NetIntentSwitchConfigurationOverrides.md)

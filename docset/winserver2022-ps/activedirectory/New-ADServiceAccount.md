@@ -157,8 +157,10 @@ Accept wildcard characters: False
 ```
 
 ### -AccountPassword
-Specifies a new password value for the service account.
-This value is stored as an encrypted string.
+Specifies a new password value for the service account. This value is stored as an encrypted string.
+
+##Note:
+This parameter is only valid with MSA accounts. For GMSA the password is managed automatically.
 
 The following conditions apply based on the manner in which the password parameter is used:
 
@@ -527,6 +529,8 @@ Specifies the name of the object.
 This parameter sets the **Name** property of the Active Directory object.
 The LDAP Display Name (**ldapDisplayName**) of this property is name.
 
+This name is used as sAMAccountName of the new managed service account. The rules for the parameter SamAccountName apply to this name.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -595,19 +599,9 @@ Note that rules listed first are evaluated first and once a default value can be
 
 In AD DS environments, a default value for **Path** is set in the following cases:
 
-- If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current path of the provider drive.
-- If the cmdlet has a default path, this is used.
-For example: in **New-ADUser**, the **Path** parameter defaults to the Users container.
-- If none of the previous cases apply, the default value of **Path** is set to the default partition or naming context of the target domain.
-
-In AD LDS environments, a default value for **Path** is set in the following cases:
-
-- If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current path of the provider drive. 
-- If the cmdlet has a default path, this is used.
-For example: in **New-ADUser**, the **Path** parameter defaults to the Users container. 
-- If the target AD LDS instance has a default naming context, the default value of **Path** is set to the default naming context.
-To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
-- If none of the previous cases apply, the **Path** parameter does not take any default value.
+- If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current naming context of the provider drive.
+- If the `-server` parameter is used, the naming context is the default naming context of the server.
+- The Path within the naming context defaults to the "Managed Service Accounts" container.
 
 Note: The Active Directory Provider cmdlets, such as **New-Item**, **Remove-Item**, **Remove-ItemProperty**, **Rename-Item**, and **Set-ItemProperty**, also contain a **Path** property.
 However, for the provider cmdlets, the **Path** parameter identifies the path of the actual object and not the container as with the Active Directory cmdlets.
@@ -699,7 +693,9 @@ To be compatible with older operating systems, create a SAM account name that is
 This parameter sets the **SAMAccountName** for an account object.
 The LDAP display name (**ldapDisplayName**) for this property is sAMAccountName.
 
-Note: If the specified **SAMAccountName** string does not end with a $ (dollar sign), one is appended if necessary.
+## Notes:
+- If the specified **SAMAccountName** string does not end with a $ (dollar sign), one is appended if necessary.
+- The name needs to be unique in the forest as in some places the GMSA names are searched in the domain tree.
 
 ```yaml
 Type: String
@@ -715,7 +711,7 @@ Accept wildcard characters: False
 
 ### -Server
 Specifies the Active Directory Domain Services (AD DS) instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following: Active Directory Lightweight Domain Services (AD LDS), AD DS, or Active Directory snapshot instance.
+The service may be the following: AD DS.
 
 Domain name values:
 

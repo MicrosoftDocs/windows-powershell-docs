@@ -19,11 +19,14 @@ configurations by bypassing the host file system.
 
 ## VMDirectStorage cmdlets
 
-- [Add-VMDirectVirtualDisk](Add-VMDirectVirtualDisk.md): Attaches a Storage Spaces Direct virtual
-  disk to a virtual machine.
+### [Add-VMDirectVirtualDisk](Add-VMDirectVirtualDisk.md)
 
-- [Get-VMDirectVirtualDisk](Get-VMDirectVirtualDisk.md): Retrieves information about Storage Spaces
-  Direct virtual disks attached to a virtual machine.
+Attaches a Storage Spaces Direct virtual disk to a virtual machine.
 
-- [Remove-VMDirectVirtualDisk](Remove-VMDirectVirtualDisk.md): Detaches a Storage Spaces Direct
-  virtual disk from a virtual machine.
+### [Get-VMDirectVirtualDisk](Get-VMDirectVirtualDisk.md)
+
+Retrieves information about Storage Spaces Direct virtual disks attached to a virtual machine.
+
+### [Remove-VMDirectVirtualDisk](Remove-VMDirectVirtualDisk.md)
+
+Detaches a Storage Spaces Direct virtual disk from a virtual machine.

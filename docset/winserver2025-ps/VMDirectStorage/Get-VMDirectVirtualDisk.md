@@ -53,6 +53,14 @@ This command retrieves all virtual disks attached to the virtual machine named "
 Get-VMDirectVirtualDisk -VMName "VM1"
 ```
 
+Here's example output:
+
+```
+VMName ControllerType ControllerNumber ControllerLocation VirtualDiskFriendlyName VirtualDiskUniqueId
+------ -------------- ---------------- ------------------ ----------------------- -------------------
+VM1    SCSI           0                1                  Volume01                111BBE22FD037E4E...
+```
+
 ### Example 2: Retrieve virtual disks by virtual machine object
 
 This command gets the virtual machine object for "VM1" and then retrieves its directly attached

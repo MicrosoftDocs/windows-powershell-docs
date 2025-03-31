@@ -36,7 +36,10 @@ virtual machine. This operation ensures that the virtual disk is no longer acces
 
 ## Examples
 
-### Example 1
+### Example 1: Detach a virtual disk by specifying VM name and controller details
+
+This command detaches the virtual disk located at controller 0, location 1, from the virtual machine
+named "VM1".
 
 ```powershell
 $parameters = @{
@@ -48,8 +51,14 @@ $parameters = @{
 Remove-VMDirectVirtualDisk @parameters
 ```
 
-This command detaches the virtual disk located at controller 0, location 1, from the virtual machine
-named "VM1".
+### Example 2: Detach a virtual disk by using the virtual disk object
+
+This example gets the virtual disk object attached to "VM1" and then removes it.
+
+```powershell
+$virtualDisk = Get-VMDirectVirtualDisk -VMName "VM1"
+Remove-VMDirectVirtualDisk -VirtualDisk $virtualDisk
+```
 
 ## Parameters
 

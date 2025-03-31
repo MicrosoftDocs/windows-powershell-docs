@@ -47,7 +47,10 @@ disk to the VM.
 
 ## Examples
 
-### Example 1
+### Example 1: Attach a virtual disk by specifying VM name and controller details
+
+This example attaches the virtual disk with the unique ID "111BBE22FD037E4EB87F366648FBF111" to the
+virtual machine named "VM1" at controller 0, location 1.
 
 ```powershell
 $parameters = @{
@@ -55,13 +58,23 @@ $parameters = @{
     ControllerType     = "SCSI"
     ControllerNumber   = 0
     ControllerLocation = 1
-    VirtualDiskUniqueId = "12345-67890"
+    VirtualDiskUniqueId = "111BBE22FD037E4EB87F366648FBF111"
 }
+
 Add-VMDirectVirtualDisk @parameters
 ```
 
-This command attaches the virtual disk with the unique ID "12345-67890" to the virtual machine named
-"VM1" at controller 0, location 1.
+### Example 2: Attach a virtual disk by using a virtual disk object
+
+This example gets the Storage Spaces Direct virtual disk object named "Volume01" and the VM object
+named "VM1", and then directly attaches the disk to the VM.
+
+```powershell
+$virtualDisk = Get-VirtualDisk -Friendlyname "Volume01"
+$vm = Get-VM -Name "VM1"
+
+Add-VMDirectVirtualDisk -VM $vm -VirtualDiskUniqueId $virtualDisk.UniqueId
+```
 
 ## Parameters
 

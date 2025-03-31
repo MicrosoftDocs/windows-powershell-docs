@@ -45,13 +45,31 @@ name, and its location on the controller.
 
 ## Examples
 
-### Example 1
+### Example 1: Retrieve virtual disks by virtual machine name
+
+This command retrieves all virtual disks attached to the virtual machine named "VM1".
 
 ```powershell
 Get-VMDirectVirtualDisk -VMName "VM1"
 ```
 
-This command retrieves all virtual disks attached to the virtual machine named "VM1".
+Here's example output:
+
+```Output
+VMName ControllerType ControllerNumber ControllerLocation VirtualDiskFriendlyName VirtualDiskUniqueId
+------ -------------- ---------------- ------------------ ----------------------- -------------------
+VM1    SCSI           0                1                  Volume01                111BBE22FD037E4E...
+```
+
+### Example 2: Retrieve virtual disks by virtual machine object
+
+This command gets the virtual machine object for "VM1" and then retrieves its directly attached
+virtual disks.
+
+```powershell
+$vm = Get-VM -Name "VM1"
+Get-VMDirectVirtualDisk -VM $vm
+```
 
 ## Parameters
 

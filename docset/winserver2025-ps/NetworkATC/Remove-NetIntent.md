@@ -38,14 +38,12 @@ Remove-NetIntent [-GlobalOverrides] [-SkipServiceStop <Boolean>] [<CommonParamet
 
 The `Remove-NetIntent` cmdlet removes the specified network intent.
 
-- For clusters, if `-ClusterName` is specified, the removal affects all nodes
-  within the given cluster.
-
+- For clusters, if `-ClusterName` is specified, the removal affects all nodes within the given
+  cluster.
 - For standalone nodes, only the network intents for the specified node will be removed.
 
-Note that `Remove-NetIntent` does not remove the provisioning on the target
-hosts. The device administrator must manually remove any old intent
-configurations from the node.
+Note that `Remove-NetIntent` does not remove the provisioning on the target hosts. The device
+administrator must manually remove any old intent configurations from the node.
 
 ## EXAMPLES
 
@@ -93,8 +91,8 @@ Accept wildcard characters: False
 
 ### -ClusterName
 
-Specifies the name of the cluster from which the network intent should be
-removed. The removal will affect all nodes in the specified cluster.
+Specifies the name of the cluster from which the network intent should be removed. The removal will
+affect all nodes in the specified cluster.
 
 ```yaml
 Type: String
@@ -110,8 +108,8 @@ Accept wildcard characters: False
 
 ### -GlobalOverrides
 
-Indicates that global overrides should be removed. This affects all
-configurations using these global overrides.
+Indicates that global overrides should be removed. This affects all configurations using these
+global overrides.
 
 ```yaml
 Type: SwitchParameter
@@ -127,8 +125,8 @@ Accept wildcard characters: False
 
 ### -SkipServiceStop
 
-Specifies whether to skip stopping the service during the removal process. If
-set to `$true`, the service will not be stopped.
+Specifies whether to skip stopping the service during the removal process. If set to `$true`, the
+service will not be stopped.
 
 ```yaml
 Type: Boolean
@@ -144,11 +142,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -158,12 +155,12 @@ For more information, see
 
 ## RELATED LINKS
 
-- [Add-NetIntent](Add-NetIntent.md)
+[Add-NetIntent](Add-NetIntent.md)
 
-- [Copy-NetIntent](Copy-NetIntent.md)
+[Copy-NetIntent](Copy-NetIntent.md)
 
-- [Get-NetIntent](Get-NetIntent.md)
+[Get-NetIntent](Get-NetIntent.md)
 
-- [Get-NetIntentStatus](Get-NetIntentStatus.md)
+[Get-NetIntentStatus](Get-NetIntentStatus.md)
 
-- [Set-NetIntent](Set-NetIntent.md)
+[Set-NetIntent](Set-NetIntent.md)

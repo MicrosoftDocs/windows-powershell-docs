@@ -21,9 +21,8 @@ Update-NetworkATC [[-DriftTimerInMinutes] <Int32>] [[-ConfigurationChangeInSecon
 
 ## DESCRIPTION
 
-The `Update-NetworkATC` cmdlet updates the global configuration settings for
-Network ATC, such as the drift detection timer and the configuration change
-detection interval.
+The `Update-NetworkATC` cmdlet updates the global configuration settings for Network ATC, such as
+the drift detection timer and the configuration change detection interval.
 
 ## EXAMPLES
 
@@ -33,9 +32,8 @@ detection interval.
 Update-NetworkATC -DriftTimerInMinutes 10 -ConfigurationChangeInSeconds 30
 ```
 
-This example updates the Network ATC configuration to set the drift detection
-timer to `10` minutes and the configuration change detection interval to `30`
-seconds.
+This example updates the Network ATC configuration to set the drift detection timer to `10` minutes
+and the configuration change detection interval to `30` seconds.
 
 ## PARAMETERS
 
@@ -73,11 +71,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,6 +88,6 @@ For more information, see
 
 ## RELATED LINKS
 
-- [Update-NetIntentAdapter](Update-NetIntentAdapter.md)
+[Update-NetIntentAdapter](Update-NetIntentAdapter.md)
 
-- [Update-NetIntentType](Update-NetIntentType.md)
+[Update-NetIntentType](Update-NetIntentType.md)

@@ -20,9 +20,9 @@ Set-NetIntentTracing [-StopTracing] [[-ComputerName] <String>]
 
 ## DESCRIPTION
 
-The `Set-NetIntentTracing` cmdlet starts or stops ATC tracing sessions on the
-specified host. Tracing sessions are useful for diagnosing issues related to
-network intents by capturing relevant data.
+The `Set-NetIntentTracing` cmdlet starts or stops ATC tracing sessions on the specified host.
+Tracing sessions are useful for diagnosing issues related to network intents by capturing relevant
+data.
 
 ## EXAMPLES
 
@@ -62,9 +62,8 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies the name of the computer on which to start or stop the tracing
-session. If this parameter is not specified, the cmdlet operates on the local
-computer.
+Specifies the name of the computer on which to start or stop the tracing session. If this parameter
+is not specified, the cmdlet operates on the local computer.
 
 ```yaml
 Type: String

@@ -511,11 +511,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -525,12 +524,12 @@ For more information, see
 
 ## RELATED LINKS
 
-- [Copy-NetIntent](Copy-NetIntent.md)
+[Copy-NetIntent](Copy-NetIntent.md)
 
-- [Get-NetIntent](Get-NetIntent.md)
+[Get-NetIntent](Get-NetIntent.md)
 
-- [Get-NetIntentStatus](Get-NetIntentStatus.md)
+[Get-NetIntentStatus](Get-NetIntentStatus.md)
 
-- [Remove-NetIntent](Remove-NetIntent.md)
+[Remove-NetIntent](Remove-NetIntent.md)
 
-- [Set-NetIntent](Set-NetIntent.md)
+[Set-NetIntent](Set-NetIntent.md)

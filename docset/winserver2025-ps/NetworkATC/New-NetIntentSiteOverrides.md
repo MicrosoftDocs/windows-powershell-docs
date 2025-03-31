@@ -21,10 +21,10 @@ New-NetIntentSiteOverrides [[-StorageVLAN] <UInt16[]>] [[-StretchVLAN] <UInt16[]
 
 ## DESCRIPTION
 
-The `New-NetIntentSiteOverrides` cmdlet creates a new instance of a site
-override. It specifies detailed configuration values that can be applied to a
-network intent using the `Set-NetIntent` cmdlet. It allows administrators to
-define VLAN settings for storage, stretch, and management purposes.
+The `New-NetIntentSiteOverrides` cmdlet creates a new instance of a site override. It specifies
+detailed configuration values that can be applied to a network intent using the `Set-NetIntent`
+cmdlet. It allows administrators to define VLAN settings for storage, stretch, and management
+purposes.
 
 ## EXAMPLES
 
@@ -34,8 +34,8 @@ define VLAN settings for storage, stretch, and management purposes.
 New-NetIntentSiteOverrides -Name "MySite" -StorageVLAN 101,102
 ```
 
-This example configures a site named `MySite` and sets up VLAN IDs `101` and
-`102` for storage traffic.
+This example configures a site named `MySite` and sets up VLAN IDs `101` and `102` for storage
+traffic.
 
 ## PARAMETERS
 
@@ -89,9 +89,8 @@ Accept wildcard characters: False
 
 ### -Name
 
-Specifies the name of the site configuration. This parameter allows you to
-assign a unique name making it easier to reference and manage your network
-policies.
+Specifies the name of the site configuration. This parameter allows you to assign a unique name
+making it easier to reference and manage your network policies.
 
 ```yaml
 Type: String
@@ -107,11 +106,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -121,16 +119,16 @@ For more information, see
 
 ## RELATED LINKS
 
-- [New-NetIntentAdapterPropertyOverrides](New-NetIntentAdapterPropertyOverrides.md)
+[New-NetIntentAdapterPropertyOverrides](New-NetIntentAdapterPropertyOverrides.md)
 
-- [New-NetIntentAdapterRssOverrides](New-NetIntentAdapterRssOverrides.md)
+[New-NetIntentAdapterRssOverrides](New-NetIntentAdapterRssOverrides.md)
 
-- [New-NetIntentGlobalClusterOverrides](New-NetIntentGlobalClusterOverrides.md)
+[New-NetIntentGlobalClusterOverrides](New-NetIntentGlobalClusterOverrides.md)
 
-- [New-NetIntentGlobalProxyOverrides](New-NetIntentGlobalProxyOverrides.md)
+[New-NetIntentGlobalProxyOverrides](New-NetIntentGlobalProxyOverrides.md)
 
-- [New-NetIntentQoSPolicyOverrides](New-NetIntentQoSPolicyOverrides.md)
+[New-NetIntentQoSPolicyOverrides](New-NetIntentQoSPolicyOverrides.md)
 
-- [New-NetIntentStorageOverrides](New-NetIntentStorageOverrides.md)
+[New-NetIntentStorageOverrides](New-NetIntentStorageOverrides.md)
 
-- [New-NetIntentSwitchConfigurationOverrides](New-NetIntentSwitchConfigurationOverrides.md)
+[New-NetIntentSwitchConfigurationOverrides](New-NetIntentSwitchConfigurationOverrides.md)

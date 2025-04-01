@@ -51,11 +51,7 @@ This command retrieves all virtual disks attached to the virtual machine named "
 
 ```powershell
 Get-VMDirectVirtualDisk -VMName "VM1"
-```
 
-Here's example output:
-
-```
 VMName ControllerType ControllerNumber ControllerLocation VirtualDiskFriendlyName VirtualDiskUniqueId
 ------ -------------- ---------------- ------------------ ----------------------- -------------------
 VM1    SCSI           0                1                  Volume01                111BBE22FD037E4E...

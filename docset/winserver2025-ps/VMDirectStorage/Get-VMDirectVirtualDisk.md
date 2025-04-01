@@ -51,7 +51,9 @@ This command retrieves all virtual disks attached to the virtual machine named "
 
 ```powershell
 Get-VMDirectVirtualDisk -VMName "VM1"
+```
 
+```Output
 VMName ControllerType ControllerNumber ControllerLocation VirtualDiskFriendlyName VirtualDiskUniqueId
 ------ -------------- ---------------- ------------------ ----------------------- -------------------
 VM1    SCSI           0                1                  Volume01                111BBE22FD037E4E...
@@ -71,7 +73,10 @@ Get-VMDirectVirtualDisk -VM $vm
 
 ### -CimSession
 
-Specifies the CIM session to use for the operation. This is useful for managing remote systems.
+Runs the command using the specified CIM session. Enter a variable that contains the CIM session, or
+a command that creates or gets the CIM session, such as `New-CimSession` or `Get-CimSession`. For more
+information, see
+[about_CimSession](/powershell/module/microsoft.powershell.core/about/about_cimsession).
 
 ```yaml
 Type: Microsoft.Management.Infrastructure.CimSession[]

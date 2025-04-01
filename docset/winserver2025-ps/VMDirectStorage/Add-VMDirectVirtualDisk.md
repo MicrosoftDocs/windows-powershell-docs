@@ -49,8 +49,8 @@ disk to the VM.
 
 ### Example 1: Attach a virtual disk by specifying VM name and controller details
 
-This example attaches the virtual disk with the unique ID "111BBE22FD037E4EB87F366648FBF111" to the
-virtual machine named "VM1" at controller 0, location 1.
+This example attaches the virtual disk with the unique ID `111BBE22FD037E4EB87F366648FBF111` to the
+virtual machine named `VM1` at controller 0, location 1.
 
 ```powershell
 $parameters = @{
@@ -66,8 +66,8 @@ Add-VMDirectVirtualDisk @parameters
 
 ### Example 2: Attach a virtual disk by using a virtual disk object
 
-This example gets the Storage Spaces Direct virtual disk object named "Volume01" and the VM object
-named "VM1", and then directly attaches the disk to the VM.
+This example gets the Storage Spaces Direct virtual disk object named `Volume01` and the VM object
+named `VM1`, and then directly attaches the disk to the VM.
 
 ```powershell
 $virtualDisk = Get-VirtualDisk -Friendlyname "Volume01"
@@ -80,7 +80,10 @@ Add-VMDirectVirtualDisk -VM $vm -VirtualDiskUniqueId $virtualDisk.UniqueId
 
 ### -CimSession
 
-Specifies the CIM session to use for the operation. This is useful for managing remote systems.
+Runs the command using the specified CIM session. Enter a variable that contains the CIM session, or
+a command that creates or gets the CIM session, such as `New-CimSession` or `Get-CimSession`. For more
+information, see
+[about_CimSession](/powershell/module/microsoft.powershell.core/about/about_cimsession).
 
 ```yaml
 Type: Microsoft.Management.Infrastructure.CimSession[]

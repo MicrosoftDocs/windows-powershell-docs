@@ -64,7 +64,10 @@ Remove-VMDirectVirtualDisk -VirtualDisk $virtualDisk
 
 ### -CimSession
 
-Specifies the CIM session to use for the operation. This is useful for managing remote systems.
+Runs the command using the specified CIM session. Enter a variable that contains the CIM session, or
+a command that creates or gets the CIM session, such as `New-CimSession` or `Get-CimSession`. For more
+information, see
+[about_CimSession](/powershell/module/microsoft.powershell.core/about/about_cimsession).
 
 ```yaml
 Type: Microsoft.Management.Infrastructure.CimSession[]

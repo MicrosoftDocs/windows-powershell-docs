@@ -45,12 +45,13 @@ name, and its location on the controller.
 
 ## Examples
 
-### Example 1: Retrieve virtual disks by virtual machine name
+### Example 1: Retrieve directly attached virtual disks by VM name
 
-This command retrieves all virtual disks attached to the virtual machine named "VM1".
+This command retrieves all virtual disks attached to the virtual machine named `VM1` running on the
+cluster named `Cluster01`.
 
 ```powershell
-Get-VMDirectVirtualDisk -VMName "VM1"
+Get-VMDirectVirtualDisk -VMName "VM1" -CimSession "Cluster01"
 ```
 
 ```Output
@@ -59,23 +60,42 @@ VMName ControllerType ControllerNumber ControllerLocation VirtualDiskFriendlyNam
 VM1    SCSI           0                1                  Volume01                111BBE22FD037E4E...
 ```
 
-### Example 2: Retrieve virtual disks by virtual machine object
+### Example 2: Retrieve directly attached virtual disks by VM object
 
-This command gets the virtual machine object for "VM1" and then retrieves its directly attached
-virtual disks.
+This command gets the virtual machine object for `VM1` running on `Cluster01` and then retrieves its
+directly attached virtual disks.
 
 ```powershell
-$vm = Get-VM -Name "VM1"
+$vm = Get-VM -Name "VM1" -CimSession "Cluster01"
 Get-VMDirectVirtualDisk -VM $vm
+```
+
+### Example 3: Retrieve virtual disks by drive controller object
+
+This command gets the drive controller object for the virtual machine named `VM1` running on
+`Cluster01` and retrieves the directly attached virtual disks.
+
+```powershell
+$vm = Get-VM -Name "VM1" -CimSession "Cluster01"
+$controller = Get-VMScsiController -VMName "VM1" -CimSession "Cluster01"
+
+Get-VMDirectVirtualDisk -VMDriveController $controller
+```
+
+```Output
+VMName ControllerType ControllerNumber ControllerLocation VirtualDiskFriendlyName VirtualDiskUniqueId
+------ -------------- ---------------- ------------------ ----------------------- -------------------
+VM1    SCSI           0                1                  Volume01                111BBE22FD037E4E...
+VM1    SCSI           0                2                  Volume02                222BBE22FD037E4E...
 ```
 
 ## Parameters
 
 ### -CimSession
 
-Runs the command using the specified CIM session. Enter a variable that contains the CIM session, or
-a command that creates or gets the CIM session, such as `New-CimSession` or `Get-CimSession`. For more
-information, see
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name, cluster name, or
+a session object, such as the output of a `New-CimSession` or `Get-CimSession` cmdlet. The default
+is the current session on the local computer. For more information, see
 [about_CimSession](/powershell/module/microsoft.powershell.core/about/about_cimsession).
 
 ```yaml
@@ -92,7 +112,8 @@ Accept wildcard characters: False
 
 ### -ControllerLocation
 
-Specifies the location of the virtual disk on the controller.
+Specifies the location of the virtual disk on the controller. If you don't specify a controller
+location, the cmdlet returns all virtual disks attached to the specified controller.
 
 ```yaml
 Type: System.Int32
@@ -108,7 +129,8 @@ Accept wildcard characters: False
 
 ### -ControllerNumber
 
-Specifies the number of the controller where the virtual disk is attached.
+Specifies the number of the controller where the virtual disk is attached. If you don't specify a
+controller number, the cmdlet returns all virtual disks attached to the specified controller.
 
 ```yaml
 Type: System.Int32
@@ -124,7 +146,8 @@ Accept wildcard characters: False
 
 ### -ControllerType
 
-Specifies the type of controller. Only SCSI is supported.
+Specifies the type of controller used by the VM. If you don't specify a controller type, the cmdlet
+uses the SCSI controller type, which is the only type supported at this time.
 
 ```yaml
 Type: ControllerType
@@ -157,7 +180,8 @@ Accept wildcard characters: False
 
 ### -VMDriveController
 
-Specifies the drive controller object for which to retrieve virtual disk information.
+Specifies the drive controller object for which to retrieve virtual disk information. You can use
+the [Get-VmScsiController](/powershell/module/hyper-v/get-vmscsicontroller) cmdlet to get the drive controller object.
 
 ```yaml
 Type: Microsoft.HyperV.PowerShell.VMDriveController[]
@@ -198,15 +222,35 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
-Specifies the names of virtual machines.
+Specifies the name of a virtual machine.
 
 ### Microsoft.HyperV.PowerShell.VirtualMachine[]
 
-Specifies virtual machine objects.
+Specifies the virtual machine object for which to get directly attached virtual disks. You can use
+the [Get-VM](/powershell/module/hyper-v/get-vm) cmdlet to get the virtual machine object.
 
 ### Microsoft.HyperV.PowerShell.VMDriveController[]
 
-Specifies drive controller objects.
+Specifies the drive controller objects for which to get directly attached virtual disks. You can use
+the [Get-VmScsiController](/powershell/module/hyper-v/get-vmscsicontroller) cmdlet to get the drive
+controller object.
+
+## Inputs
+
+### System.String[]
+
+Specifies the name of a virtual machine.
+
+### Microsoft.HyperV.PowerShell.VirtualMachine[]
+
+Specifies the virtual machine object for which to get directly attached virtual disks. You can use
+the [Get-VM](/powershell/module/hyper-v/get-vm) cmdlet to get the virtual machine object.
+
+### Microsoft.HyperV.PowerShell.VMDriveController[]
+
+Specifies the drive controller objects for which to get directly attached virtual disks. You can use
+the [Get-VmScsiController](/powershell/module/hyper-v/get-vmscsicontroller) cmdlet to get the drive
+controller object.
 
 ## Outputs
 

@@ -235,23 +235,6 @@ Specifies the drive controller objects for which to get directly attached virtua
 the [Get-VmScsiController](/powershell/module/hyper-v/get-vmscsicontroller) cmdlet to get the drive
 controller object.
 
-## Inputs
-
-### System.String[]
-
-Specifies the name of a virtual machine.
-
-### Microsoft.HyperV.PowerShell.VirtualMachine[]
-
-Specifies the virtual machine object for which to get directly attached virtual disks. You can use
-the [Get-VM](/powershell/module/hyper-v/get-vm) cmdlet to get the virtual machine object.
-
-### Microsoft.HyperV.PowerShell.VMDriveController[]
-
-Specifies the drive controller objects for which to get directly attached virtual disks. You can use
-the [Get-VmScsiController](/powershell/module/hyper-v/get-vmscsicontroller) cmdlet to get the drive
-controller object.
-
 ## Outputs
 
 ### VMDirectVirtualDisk

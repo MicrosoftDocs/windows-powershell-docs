@@ -215,7 +215,7 @@ Accept wildcard characters: False
 
 ### -VMName
 
-Specifies the name of the virtual machine to which the virtual disk will be attached.
+Specifies the name of the virtual machine to which the virtual disk will be directly attached.
 
 ```yaml
 Type: System.String[]

@@ -53,7 +53,7 @@ Remove-VMDirectVirtualDisk @parameters
 
 ### Example 2: Detach a virtual disk by using the virtual disk object
 
-This example gets the virtual disk object attached to `VM1` on `Cluster01` and then removes it.
+This example gets all of the virtual disks directly attached to `VM1` on `Cluster01` and then removes them.
 
 ```powershell
 $VmDirectDisk = Get-VMDirectVirtualDisk -VMName "VM1" -CimSession "Cluster01"
@@ -83,7 +83,9 @@ Accept wildcard characters: False
 
 ### -ControllerLocation
 
-Specifies the location of the virtual disk on the controller.
+Specifies the location on the controller of the virtual disk to remove. If you don't specify a
+controller location, the cmdlet removes all directly virtual disks attached to the specified
+controller.
 
 ```yaml
 Type: System.Int32
@@ -99,7 +101,8 @@ Accept wildcard characters: False
 
 ### -ControllerNumber
 
-Specifies the number of the controller where the virtual disk is attached.
+Specifies the number of the controller where the virtual disk is attached. If you don't specify a
+controller number, the cmdlet removes all directly virtual disks on the specified controller.
 
 ```yaml
 Type: System.Int32
@@ -115,7 +118,8 @@ Accept wildcard characters: False
 
 ### -ControllerType
 
-Specifies the type of controller. Only SCSI is supported.
+Specifies the type of controller used by the VM. If you don't specify a controller type, the cmdlet
+uses the SCSI controller type, which is the only type supported at this time.
 
 ```yaml
 Type: ControllerType
@@ -132,7 +136,7 @@ Accept wildcard characters: False
 
 ### -VirtualDisk
 
-Specifies the virtual disk object to detach.
+Specifies the virtual disk object to remove.
 
 ```yaml
 Type: VMDirectVirtualDisk[]
@@ -148,7 +152,7 @@ Accept wildcard characters: False
 
 ### -VMName
 
-Specifies the name of the virtual machine from which the virtual disk will be detached.
+Specifies the name of the virtual machine from which the directly attached virtual disk will be removed.
 
 ```yaml
 Type: System.String
@@ -177,7 +181,8 @@ Specifies the name of the virtual machine.
 
 ### VMDirectVirtualDisk[]
 
-Specifies the virtual disk objects to be detached.
+Specifies the virtual disk objects to be removed. You can get the virtual disk object by using the
+[Get-VMDirectVirtualDisk](Get-VMDirectVirtualDisk.md) cmdlet.
 
 ## Outputs
 

@@ -183,7 +183,8 @@ Accept wildcard characters: False
 
 ### -VM
 
-Specifies a virtual machine object to which the virtual disk will be attached.
+Specifies a virtual machine object to which the virtual disk will be attached. You can use the
+[Get-VM](/powershell/module/hyper-v/get-vm) cmdlet to get the virtual machine object.
 
 ```yaml
 Type: Microsoft.HyperV.PowerShell.VirtualMachine[]
@@ -199,7 +200,9 @@ Accept wildcard characters: False
 
 ### -VMDriveController
 
-Specifies the drive controller object to which the virtual disk will be attached.
+Specifies the drive controller object to which the virtual disk will be attached. You can use the
+[Get-VmScsiController](/powershell/module/hyper-v/get-vmscsicontroller) cmdlet to get the drive
+controller object.
 
 ```yaml
 Type: Microsoft.HyperV.PowerShell.VMDriveController

@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ### -ControllerLocation
 
 Specifies the location of the virtual disk on the controller. If you don't specify a controller
-location, the cmdlet returns all virtual disks attached to the specified controller.
+location, the cmdlet returns virtual disks with any controller location.
 
 ```yaml
 Type: System.Int32
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ### -ControllerNumber
 
 Specifies the number of the controller where the virtual disk is attached. If you don't specify a
-controller number, the cmdlet returns all virtual disks attached to the specified controller.
+controller number, the cmdlet returns virtual disks with any controller number.
 
 ```yaml
 Type: System.Int32
@@ -164,7 +164,8 @@ Accept wildcard characters: False
 
 ### -VM
 
-Specifies the virtual machine object for which to retrieve virtual disk information.
+Specifies the virtual machine object for which to retrieve virtual disk information. You can use the
+[Get-VM](/powershell/module/hyper-v/get-vm) cmdlet to get the virtual machine object.
 
 ```yaml
 Type: Microsoft.HyperV.PowerShell.VirtualMachine[]

@@ -32,13 +32,14 @@ Remove-VMDirectVirtualDisk [-VirtualDisk] <VMDirectVirtualDisk[]> [<CommonParame
 ## Description
 
 The **Remove-VMDirectVirtualDisk** cmdlet detaches a Storage Spaces Direct virtual disk from a
-virtual machine. This operation ensures that the virtual disk is no longer accessible by the VM.
+virtual machine. This operation ensures that the virtual disk is no longer accessible by the VM,
+though it doesn't delete the virtual disk itself.
 
 ## Examples
 
-### Example 1: Detach a virtual disk by specifying VM name and controller details
+### Example 1: Remove a virtual disk by specifying VM name and controller details
 
-This command detaches the virtual disk located at controller 0, location 1, from the virtual machine
+This command removes the virtual disk located at controller 0, location 1, from the virtual machine
 named `VM1`.
 
 ```powershell
@@ -51,9 +52,10 @@ $parameters = @{
 Remove-VMDirectVirtualDisk @parameters
 ```
 
-### Example 2: Detach a virtual disk by using the virtual disk object
+### Example 2: Remove a virtual disk by using the virtual disk object
 
-This example gets all of the virtual disks directly attached to `VM1` on `Cluster01` and then removes them.
+This example gets all of the virtual disks directly attached to `VM1` on `Cluster01` and then
+removes them.
 
 ```powershell
 $VmDirectDisk = Get-VMDirectVirtualDisk -VMName "VM1" -CimSession "Cluster01"
@@ -152,7 +154,8 @@ Accept wildcard characters: False
 
 ### -VMName
 
-Specifies the name of the virtual machine from which the directly attached virtual disk will be removed.
+Specifies the name of the virtual machine from which the directly attached virtual disk will be
+removed.
 
 ```yaml
 Type: System.String

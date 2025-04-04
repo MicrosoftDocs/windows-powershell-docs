@@ -30,9 +30,9 @@ Update-NetIntentType [-Name] <String> [-ClusterName] <String> [-Wait] [-Compute]
 
 ## DESCRIPTION
 
-The `Update-NetIntentType` cmdlet updates the configuration types (such as
-Compute, Management, Storage, and Stretch) for a specified network intent across
-individual computers or an entire cluster.
+The `Update-NetIntentType` cmdlet updates the configuration types (such as Compute, Management,
+Storage, and Stretch) for a specified network intent across individual computers or an entire
+cluster.
 
 ## EXAMPLES
 
@@ -42,9 +42,8 @@ individual computers or an entire cluster.
 Update-NetIntentType -Name "MyIntent" -ComputerName "Server01" -Compute -Wait
 ```
 
-This example updates the network intent named `MyIntent` on the computer
-`Server01` to include the **Compute** configuration type and waits for the operation
-to complete before returning control.
+This example updates the network intent named `MyIntent` on the computer `Server01` to include the
+**Compute** configuration type and waits for the operation to complete before returning control.
 
 ## PARAMETERS
 
@@ -162,8 +161,8 @@ Accept wildcard characters: False
 
 ### -Wait
 
-Indicates that the cmdlet waits for the operation to complete before returning
-control to the command line.
+Indicates that the cmdlet waits for the operation to complete before returning control to the
+command line.
 
 ```yaml
 Type: SwitchParameter
@@ -179,11 +178,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -197,6 +195,6 @@ For more information, see
 
 ## RELATED LINKS
 
-- [Update-NetIntentAdapter](Update-NetIntentAdapter.md)
+[Update-NetIntentAdapter](Update-NetIntentAdapter.md)
 
-- [Update-NetworkATC](Update-NetworkATC.md)
+[Update-NetworkATC](Update-NetworkATC.md)

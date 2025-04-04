@@ -74,7 +74,7 @@ This example configures replication for all virtual machines on the local Hyper-
 
 ### Example 3
 ```
-PS C:\>  Enable-VMReplication VM01 -AsReplica -AllowedPrimaryServer *.domain01.contoso.com
+PS C:\>  Enable-VMReplication VM02 -AsReplica -AllowedPrimaryServer *.domain01.contoso.com
 ```
 
 This example configures a virtual machine VM02 as a replica virtual machine and allows replication of the primary virtual machine from all primary servers that belong to a domain named domain01.contoso.com.

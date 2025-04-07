@@ -20,8 +20,8 @@ Get-HUDSwitchlessMapping [-ClusterName] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Get-HUDSwitchlessMapping` cmdlet queries retrieves the configuration
-mapping for switchless operation within the HUD subsystem on the target cluster.
+The `Get-HUDSwitchlessMapping` cmdlet queries retrieves the configuration mapping for switchless
+operation within the HUD subsystem on the target cluster.
 
 ## EXAMPLES
 
@@ -53,11 +53,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

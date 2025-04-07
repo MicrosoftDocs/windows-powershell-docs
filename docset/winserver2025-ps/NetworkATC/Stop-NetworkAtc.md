@@ -28,8 +28,8 @@ Stop-NetworkAtc [-ClusterName] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Stop-NetworkATC` cmdlet stops the ATC service on all hosts for a cluster
-or a given single node.
+The `Stop-NetworkATC` cmdlet stops the ATC service on all hosts for a cluster or a given single
+node.
 
 ## EXAMPLES
 
@@ -77,11 +77,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,4 +90,4 @@ For more information, see
 
 ## RELATED LINKS
 
-- [Start-NetworkAtc](Start-NetworkAtc.md)
+[Start-NetworkAtc](Start-NetworkAtc.md)

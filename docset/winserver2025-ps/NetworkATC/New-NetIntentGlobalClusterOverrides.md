@@ -24,10 +24,9 @@ New-NetIntentGlobalClusterOverrides [[-EnableNetworkNaming] <Boolean>]
 
 ## DESCRIPTION
 
-The `New-NetIntentGlobalClusterOverrides` cmdlet creates a new instance of
-cluster settings which can be used to supply granular configuration values to
-the `Add-NetIntent` and `Set-NetIntent` cmdlets. These settings can also be
-retrieved using the `Get-NetIntent` cmdlet.
+The `New-NetIntentGlobalClusterOverrides` cmdlet creates a new instance of cluster settings which
+can be used to supply granular configuration values to the `Add-NetIntent` and `Set-NetIntent`
+cmdlets. These settings can also be retrieved using the `Get-NetIntent` cmdlet.
 
 ## EXAMPLES
 
@@ -37,15 +36,15 @@ retrieved using the `Get-NetIntent` cmdlet.
 New-NetIntentGlobalClusterOverrides -EnableNetworkNaming $true -MaximumVirtualMachineMigrations 5
 ```
 
-This example creates a new instance of a cluster override with network naming
-enabled and sets the maximum number of virtual machine migrations to `5`.
+This example creates a new instance of a cluster override with network naming enabled and sets the
+maximum number of virtual machine migrations to `5`.
 
 ## PARAMETERS
 
 ### -EnableNetworkNaming
 
-Indicates whether network naming is enabled for the cluster. When set to
-`$true`, this setting allows the cluster to use descriptive network names.
+Indicates whether network naming is enabled for the cluster. When set to `$true`, this setting
+allows the cluster to use descriptive network names.
 
 ```yaml
 Type: Boolean
@@ -61,9 +60,8 @@ Accept wildcard characters: False
 
 ### -EnableLiveMigrationNetworkSelection
 
-Indicates whether live migration network selection is enabled. When set to
-`$true`, this setting allows the cluster to choose the best network for live
-migrations.
+Indicates whether live migration network selection is enabled. When set to `$true`, this setting
+allows the cluster to choose the best network for live migrations.
 
 ```yaml
 Type: Boolean
@@ -79,9 +77,9 @@ Accept wildcard characters: False
 
 ### -EnableVirtualMachineMigrationPerformanceSelection
 
-Indicates whether the selection of virtual machine migration performance options
-is enabled. When set to `$true`, this setting allows the selection of
-performance options for virtual machine migrations.
+Indicates whether the selection of virtual machine migration performance options is enabled. When
+set to `$true`, this setting allows the selection of performance options for virtual machine
+migrations.
 
 ```yaml
 Type: Boolean
@@ -113,9 +111,8 @@ Accept wildcard characters: False
 
 ### -MaximumVirtualMachineMigrations
 
-Specifies the maximum number of virtual machine migrations that can occur
-simultaneously. Setting this to a higher number can increase the load on the
-network and hosts.
+Specifies the maximum number of virtual machine migrations that can occur simultaneously. Setting
+this to a higher number can increase the load on the network and hosts.
 
 ```yaml
 Type: Byte
@@ -131,9 +128,8 @@ Accept wildcard characters: False
 
 ### -MaximumSMBMigrationBandwidthInGbps
 
-Specifies the maximum bandwidth in gigabits per second (Gbps) that can be used
-for SMB migrations. This setting helps to limit the network bandwidth usage for
-migrations.
+Specifies the maximum bandwidth in gigabits per second (Gbps) that can be used for SMB migrations.
+This setting helps to limit the network bandwidth usage for migrations.
 
 ```yaml
 Type: UInt32
@@ -149,11 +145,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -163,16 +158,16 @@ For more information, see
 
 ## RELATED LINKS
 
-- [New-NetIntentAdapterPropertyOverrides](New-NetIntentAdapterPropertyOverrides.md)
+[New-NetIntentAdapterPropertyOverrides](New-NetIntentAdapterPropertyOverrides.md)
 
-- [New-NetIntentAdapterRssOverrides](New-NetIntentAdapterRssOverrides.md)
+[New-NetIntentAdapterRssOverrides](New-NetIntentAdapterRssOverrides.md)
 
-- [New-NetIntentGlobalProxyOverrides](New-NetIntentGlobalProxyOverrides.md)
+[New-NetIntentGlobalProxyOverrides](New-NetIntentGlobalProxyOverrides.md)
 
-- [New-NetIntentQoSPolicyOverrides](New-NetIntentQoSPolicyOverrides.md)
+[New-NetIntentQoSPolicyOverrides](New-NetIntentQoSPolicyOverrides.md)
 
-- [New-NetIntentSiteOverrides](New-NetIntentSiteOverrides.md)
+[New-NetIntentSiteOverrides](New-NetIntentSiteOverrides.md)
 
-- [New-NetIntentStorageOverrides](New-NetIntentStorageOverrides.md)
+[New-NetIntentStorageOverrides](New-NetIntentStorageOverrides.md)
 
-- [New-NetIntentSwitchConfigurationOverrides](New-NetIntentSwitchConfigurationOverrides.md)
+[New-NetIntentSwitchConfigurationOverrides](New-NetIntentSwitchConfigurationOverrides.md)

@@ -22,10 +22,9 @@ New-NetIntentAdapterRssOverrides [-RssEnabled <Boolean>] [-BaseProcessorGroup <U
 
 ## DESCRIPTION
 
-The `New-NetIntentAdapterRssOverrides` cmdlet creates a new instance of Receive
-Side Scaling (RSS) overrides. These overrides allow you to specify detailed
-processor and RSS configuration settings, which can be applied using the
-`Set-NetIntent` cmdlet.
+The `New-NetIntentAdapterRssOverrides` cmdlet creates a new instance of Receive Side Scaling (RSS)
+overrides. These overrides allow you to specify detailed processor and RSS configuration settings,
+which can be applied using the `Set-NetIntent` cmdlet.
 
 ## EXAMPLES
 
@@ -43,17 +42,16 @@ $params = @{
 New-NetIntentAdapterRssOverrides @params
 ```
 
-This example demonstrates how to create a new RSS override instance with RSS
-enabled. It specifies the base processor group and number, as well as the
-maximum processor group and number. Additionally, it sets the total number of
-processors to be used for RSS to `4`.
+This example demonstrates how to create a new RSS override instance with RSS enabled. It specifies
+the base processor group and number, as well as the maximum processor group and number.
+Additionally, it sets the total number of processors to be used for RSS to `4`.
 
 ## PARAMETERS
 
 ### -RssEnabled
 
-Specifies whether RSS should be enabled. When RSS is enabled, network traffic is
-distributed across multiple processors to improve performance.
+Specifies whether RSS should be enabled. When RSS is enabled, network traffic is distributed across
+multiple processors to improve performance.
 
 ```yaml
 Type: Boolean
@@ -69,8 +67,8 @@ Accept wildcard characters: False
 
 ### -BaseProcessorGroup
 
-Specifies the base processor group. This is the starting group number for the
-processors that will be used by RSS.
+Specifies the base processor group. This is the starting group number for the processors that will
+be used by RSS.
 
 ```yaml
 Type: UInt16
@@ -86,8 +84,8 @@ Accept wildcard characters: False
 
 ### -BaseProcessorNumber
 
-Specifies the base processor number within the base processor group in bytes.
-This is the starting processor number within the base group for RSS.
+Specifies the base processor number within the base processor group in bytes. This is the starting
+processor number within the base group for RSS.
 
 ```yaml
 Type: Byte
@@ -119,9 +117,8 @@ Accept wildcard characters: False
 
 ### -MaxProcessorNumber
 
-Specifies the maximum processor number within the maximum processor group. This
-defines the last processor number within the maximum group that will be used by
-RSS.
+Specifies the maximum processor number within the maximum processor group. This defines the last
+processor number within the maximum group that will be used by RSS.
 
 ```yaml
 Type: Byte
@@ -137,8 +134,8 @@ Accept wildcard characters: False
 
 ### -MaxProcessors
 
-Specifies the total number of processors that RSS can use. This limits the
-number of processors that can handle network traffic.
+Specifies the total number of processors that RSS can use. This limits the number of processors that
+can handle network traffic.
 
 ```yaml
 Type: UInt32
@@ -154,8 +151,8 @@ Accept wildcard characters: False
 
 ### -Profile
 
-Specifies the profile to be used for the RSS settings. This can be a custom
-profile name that contains predefined RSS settings.
+Specifies the profile to be used for the RSS settings. This can be a custom profile name that
+contains predefined RSS settings.
 
 ```yaml
 Type: String
@@ -171,11 +168,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction,
--ErrorVariable, -InformationAction, -InformationVariable, -OutVariable,
--OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see
-[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -185,16 +181,16 @@ For more information, see
 
 ## RELATED LINKS
 
-- [New-NetIntentAdapterPropertyOverrides](New-NetIntentAdapterPropertyOverrides.md)
+[New-NetIntentAdapterPropertyOverrides](New-NetIntentAdapterPropertyOverrides.md)
 
-- [New-NetIntentGlobalClusterOverrides](New-NetIntentGlobalClusterOverrides.md)
+[New-NetIntentGlobalClusterOverrides](New-NetIntentGlobalClusterOverrides.md)
 
-- [New-NetIntentGlobalProxyOverrides](New-NetIntentGlobalProxyOverrides.md)
+[New-NetIntentGlobalProxyOverrides](New-NetIntentGlobalProxyOverrides.md)
 
-- [New-NetIntentQoSPolicyOverrides](New-NetIntentQoSPolicyOverrides.md)
+[New-NetIntentQoSPolicyOverrides](New-NetIntentQoSPolicyOverrides.md)
 
-- [New-NetIntentSiteOverrides](New-NetIntentSiteOverrides.md)
+[New-NetIntentSiteOverrides](New-NetIntentSiteOverrides.md)
 
-- [New-NetIntentStorageOverrides](New-NetIntentStorageOverrides.md)
+[New-NetIntentStorageOverrides](New-NetIntentStorageOverrides.md)
 
-- [New-NetIntentSwitchConfigurationOverrides](New-NetIntentSwitchConfigurationOverrides.md)
+[New-NetIntentSwitchConfigurationOverrides](New-NetIntentSwitchConfigurationOverrides.md)

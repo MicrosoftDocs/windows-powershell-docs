@@ -405,7 +405,7 @@ Acceptable values vary by storage subsystem.
 Allowed values for the Windows Storage subsystem are: Simple, Mirror, or Parity.
 By default, when you specify Mirror, Storage Spaces creates a two-way mirror, and when you specify Parity, Storage Spaces creates a single-parity space.
 
-To create a three-way mirror space, specify 3 for the *NumberofDataCopies* parameter or 2 for the *PhysicalDiskRedundancy* parameter.
+To create a three-way mirror space, specify 2 for the *PhysicalDiskRedundancy* parameter.
 
 To create a dual-parity space, specify 2 for the *PhysicalDiskRedundancy* parameter and Fixed provisioning for the *ProvisioningType* parameter.
 

@@ -64,7 +64,7 @@ Get-AppxVolume -Online
 
 This command gets only **AppxVolume** objects that are currently mounted on the computer.
 
-### Example 4: Get volumes that are note mounted
+### Example 4: Get volumes that are not mounted
 
 ```powershell
 Get-AppxVolume -Offline

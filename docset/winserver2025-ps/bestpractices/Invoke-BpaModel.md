@@ -36,7 +36,7 @@ If a model is specified in the cmdlet after the BPA scan has been performed, the
 This cmdlet cannot be canceled after it has been started.
 
 Single-node XML is not supported by the BPA model schema.
-For more information about what is supported by the BPA model schema, see the [Microsoft Baseline Configuration Analyzer Model Authoring Guide](https://www.microsoft.com/download/details.aspx?id=16475) on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=16475).
+For more information about what is supported by the BPA model schema, see the [Microsoft Baseline Configuration Analyzer Model Authoring Guide](https://www.microsoft.com/download/details.aspx?id=49117) on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49117).
 
 ## EXAMPLES
 

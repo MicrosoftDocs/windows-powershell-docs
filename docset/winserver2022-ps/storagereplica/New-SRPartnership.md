@@ -28,12 +28,13 @@ New-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String>
 ### CreateTopology
 
 ```
-New-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String> [-SourceVolumeName]
-<String[]> [-SourceLogVolumeName] <String> [[-SourceRGDescription] <String>]
- [-DestinationComputerName] <String> [-DestinationRGName] <String> [-DestinationVolumeName]
-<String[]> [-DestinationLogVolumeName] <String> [[-DestinationRGDescription] <String>]
- [[-ReplicationMode] <ReplicationMode>] [[-LogSizeInBytes] <UInt64>] [-PreventReplication] [-Seeded]
- [-EnableConsistencyGroups] [[-AsyncRPO] <UInt32>] [-EnableEncryption] [-EnableCompression] [-Force]
+New-SRPartnership [[-SourceComputerName] <String>] [-SourceRGName] <String>
+ [-SourceVolumeName] <String[]> [-SourceLogVolumeName] <String> [[-SourceRGDescription] <String>]
+ [-DestinationComputerName] <String> [-DestinationRGName] <String>
+ [-DestinationVolumeName] <String[]> [-DestinationLogVolumeName] <String>
+ [[-DestinationRGDescription] <String>] [[-ReplicationMode] <ReplicationMode>]
+ [[-LogSizeInBytes] <UInt64>] [-PreventReplication] [-Seeded] [-EnableConsistencyGroups]
+ [[-AsyncRPO] <UInt32>] [-EnableEncryption] [-EnableCompression] [-Force]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
@@ -44,10 +45,10 @@ replication groups. This cmdlet can create the complete replication topology. It
 together separately created replication groups.
 
 > [!NOTE]
-> The **Compression** parameter is only available in
-> [Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/) or later,
-> and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative Update for Microsoft
-> server operating system version 21H2 for x64-based Systems
+> The **EnableCompression** parameter is only available in
+> [Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/)
+> or later, and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative
+> Update for Microsoft server operating system version 21H2 for x64-based Systems
 > ([KB5017381](https://support.microsoft.com/help/5017381)).
 
 ## EXAMPLES
@@ -68,12 +69,12 @@ $Parameters = @{
 New-SRPartnership @Parameters
 ```
 
-This command creates a replication topology between servers SR-SRV05 and SR-SRV06. The SR-SRV05
-server is the source and SR-SRV06 is the destination, with volume D: used as both the source and
-destination. The E: volume contains the logs for this partnership. The log has the default value of
-8GB. As the replication mode has not been specified, it will use the default value of synchronous.
-The command does not specify seeding, encryption, and consistency groups. Replication will start
-immediately.
+This command creates a replication topology between servers `SR-SRV05` and `SR-SRV06`. The
+`SR-SRV05` server is the source and `SR-SRV06` is the destination, with volume `D:` used as both
+the source and destination. The `E:` volume contains the logs for this partnership. The log has the
+default value of 8GB. As the replication mode has not been specified, it will use the default value
+of synchronous. The command does not specify seeding, encryption, and consistency groups.
+Replication will start immediately.
 
 This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
@@ -94,9 +95,6 @@ New-SRPartnership @Parameters"
 
 This example creates two replication groups separately and then creates a partnership between those
 groups.
-
-The example uses splatting to pass parameter values from the `$Parameters` variable to the command.
-Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
 ## PARAMETERS
 
@@ -142,8 +140,8 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+or [Get-CimSession](/powershell/module/cimcmdlets/get-ciminstance) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -235,12 +233,12 @@ specify drive letters.
 
 This is an ordered list. The order of volumes determines the order of replication.
 
-For instance, to replicate the F: and H: drives on one server to the F: and H: drives of another
+For instance, to replicate the `F:` and `H:` drives on one server to the `F:` and `H:` drives of another
 server, specify the following values:
 
 `-SourceVolumeName "F:","H:" -DestinationVolumeName "F:","H:"`
 
- To replicate F: to H: instead, specify the following values: 
+ To replicate `F:` to `H:` instead, specify the following values:
 
 `-SourceVolumeName "F:","H:" -DestinationVolumeName "H:","F:"`
 
@@ -262,10 +260,11 @@ Accept wildcard characters: False
 ### -EnableCompression
 
 Indicates that the connections in this partnership should use SMB compression for data transfer.
+
 This parameter only applies to
 [Azure Stack HCI version 22H2](https://azure.microsoft.com/updates/public-preview-azure-stack-hci-version-22h2/)
-or later, and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative
-Update for Microsoft server operating system version 21H2 for x64-based Systems
+or later, and Windows Server Datacenter: Azure Edition beginning with the 2022-09 Cumulative Update
+for Microsoft server operating system version 21H2 for x64-based Systems
 ([KB5017381](https://support.microsoft.com/help/5017381)).
 
 ```yaml
@@ -541,7 +540,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -553,12 +552,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SRPartnership](./Get-SRPartnership.md)
+[Get-SRPartnership](Get-SRPartnership.md)
 
-[New-SRGroup](./New-SRGroup.md)
+[New-SRGroup](New-SRGroup.md)
 
-[Remove-SRPartnership](./Remove-SRPartnership.md)
+[Remove-SRPartnership](Remove-SRPartnership.md)
 
-[Set-SRPartnership](./Set-SRPartnership.md)
+[Set-SRPartnership](Set-SRPartnership.md)
 
-[Sync-SRGroup](./Sync-SRGroup.md)
+[Sync-SRGroup](Sync-SRGroup.md)

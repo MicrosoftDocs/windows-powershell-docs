@@ -66,7 +66,7 @@ This examples show setting the LAPS password expiration time to a specific date.
 ### Example 3
 
 ```powershell
-Set-LapsADPasswordExpirationTime -Identity lapsClient -WhenEffective (DateTime::Now.AddDays(1))
+Set-LapsADPasswordExpirationTime -Identity lapsClient -WhenEffective ([DateTime]::Now.AddDays(1))
 ```
 
 ```Output

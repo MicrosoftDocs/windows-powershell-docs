@@ -143,9 +143,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-HpcNodeSet](./Add-HpcNodeSet.md)
+[Add-HpcNodeSet](/powershell/module/hpcpack2016/add-hpciscsistoragearray?view=hpc16-ps)
 
-[Remove-HpcNodeSet](./Remove-HpcNodeSet.md)
+[Remove-HpcNodeSet](/powershell/module/hpcpack2016/remove-hpcnodeset?view=hpc16-ps)
 
 [Start-HpcNodeSet](./Start-HpcNodeSet.md)
 

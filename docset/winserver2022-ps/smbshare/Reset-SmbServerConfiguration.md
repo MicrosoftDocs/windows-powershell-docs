@@ -2,8 +2,8 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 10/20/2022
-online version: http://go.microsoft.com/fwlink/?LinkID=241959
+ms.date: 02/22/2024
+online version: https://learn.microsoft.com/powershell/module/smbshare/reset-smbserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Reset-SmbServerConfiguration
 ---
@@ -17,15 +17,15 @@ Resets the Server Message Block (SMB) server configuration parameters to their d
 
 ```
 Reset-SmbServerConfiguration [-All] [-AnnounceComment] [-AnnounceServer] [-AsynchronousCredits]
- [-AuditSmb1Access] [-AutoShareServer] [-AutoShareWorkstation] [-CachedOpenLimit]
- [-DisableCompression] [-DisableSmbEncryptionOnSecureConnection] [-DurableHandleV2TimeoutInSeconds]
- [-EnableDownlevelTimewarp] [-EnableLeasing] [-EnableMultiChannel] [-EnableOplocks]
- [-EnableSMB2Protocol] [-EnableSMBQUIC] [-EnableStrictNameChecking] [-EncryptData]
- [-EncryptionCiphers] [-IrpStackSize] [-KeepAliveTime] [-MaxChannelPerSession] [-MaxMpxCount]
- [-MaxSessionPerConnection] [-MaxThreadsPerQueue] [-MaxWorkItems] [-NullSessionShares]
- [-OplockBreakWait] [-PendingClientTimeoutInSeconds] [-RejectUnencryptedAccess]
- [-RequestCompression] [-RestrictNamedpipeAccessViaQuic] [-ServerHidden] [-Smb2CreditsMax]
- [-Smb2CreditsMin] [-SmbServerNameHardeningLevel] [-TreatHostAsStableStorage]
+ [-AuditClientCertificateAccess] [-AuditSmb1Access] [-AutoShareServer] [-AutoShareWorkstation]
+ [-CachedOpenLimit] [-DisableCompression] [-DisableSmbEncryptionOnSecureConnection]
+ [-DurableHandleV2TimeoutInSeconds] [-EnableDownlevelTimewarp] [-EnableLeasing]
+ [-EnableMultiChannel] [-EnableOplocks] [-EnableSMB2Protocol] [-EnableSMBQUIC]
+ [-EnableStrictNameChecking] [-EncryptData] [-EncryptionCiphers] [-IrpStackSize] [-KeepAliveTime]
+ [-MaxChannelPerSession] [-MaxMpxCount] [-MaxSessionPerConnection] [-MaxThreadsPerQueue]
+ [-MaxWorkItems] [-NullSessionShares] [-OplockBreakWait] [-PendingClientTimeoutInSeconds]
+ [-RejectUnencryptedAccess] [-RequestCompression] [-RestrictNamedpipeAccessViaQuic] [-ServerHidden]
+ [-Smb2CreditsMax] [-Smb2CreditsMin] [-SmbServerNameHardeningLevel] [-TreatHostAsStableStorage]
  [-ValidateAliasNotCircular] [-ValidateShareScope] [-ValidateShareScopeNotAliased]
  [-ValidateTargetName] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -39,6 +39,7 @@ default values. For more information on SMB server and protocol specifications, 
 and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 > [!NOTE]
+>
 > - This cmdlet is available beginning with 2022-06 Cumulative Update for Microsoft server operating
 > system version 21H2 for x64-based Systems
 > ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
@@ -143,6 +144,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AuditClientCertificateAccess
+
+Resets the SMB over QUIC client access control audit events to its default value.
+
+> [!NOTE]
+> Devices running Windows 11 version 22H2 and earlier may not have access to this parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AuditSmb1Access
 
 Resets the auditing of SMB version 1 protocol behavior to its default value.
@@ -210,8 +230,8 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -844,7 +864,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -858,6 +878,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbServerConfiguration](./Get-SmbServerConfiguration.md)
+[Get-SmbServerConfiguration](Get-SmbServerConfiguration.md)
 
-[Set-SmbServerConfiguration](./Set-SmbServerConfiguration.md)
+[Set-SmbServerConfiguration](Set-SmbServerConfiguration.md)

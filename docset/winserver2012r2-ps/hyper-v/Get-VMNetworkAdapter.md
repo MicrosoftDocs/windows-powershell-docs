@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -VM
 Specifies the virtual machine whose virtual network adapters are to be retrieved.
-. The asterisk, "*", is the wildcard.
+The asterisk, "*", is the wildcard.
 If it is specified the cmdlet returns virtual network adapters from every virtual machine in the system.
 
 ```yaml

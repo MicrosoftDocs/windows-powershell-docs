@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/23/2022
+ms.date: 02/22/2024
 online version: https://learn.microsoft.com/powershell/module/smbshare/get-smbserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-SmbServerConfiguration
@@ -22,7 +22,8 @@ Get-SmbServerConfiguration [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
 
 ## DESCRIPTION
 
-The `Get-SmbServerConfiguration` cmdlet retrieves the Server Message Block (SMB) server configuration.
+The `Get-SmbServerConfiguration` cmdlet retrieves the Server Message Block (SMB) server
+configuration.
 
 ## EXAMPLES
 
@@ -32,15 +33,17 @@ The `Get-SmbServerConfiguration` cmdlet retrieves the Server Message Block (SMB)
 Get-SmbServerConfiguration
 ```
 
-```Output
-AnnounceComment                        :
+```output
+AnnounceComment                        : 
 AnnounceServer                         : False
 AsynchronousCredits                    : 512
+AuditClientCertificateAccess           : False
 AuditSmb1Access                        : False
 AutoDisconnectTimeout                  : 15
 AutoShareServer                        : True
 AutoShareWorkstation                   : True
 CachedOpenLimit                        : 10
+DisableCompression                     : False
 DisableSmbEncryptionOnSecureConnection : True
 DurableHandleV2TimeoutInSeconds        : 180
 EnableAuthenticateUserSharing          : False
@@ -52,8 +55,10 @@ EnableOplocks                          : True
 EnableSecuritySignature                : False
 EnableSMB1Protocol                     : False
 EnableSMB2Protocol                     : True
+EnableSMBQUIC                          : True
 EnableStrictNameChecking               : True
 EncryptData                            : False
+EncryptionCiphers                      : AES_128_GCM, AES_128_CCM, AES_256_GCM, AES_256_CCM
 IrpStackSize                           : 15
 KeepAliveTime                          : 2
 MaxChannelPerSession                   : 32
@@ -61,12 +66,14 @@ MaxMpxCount                            : 50
 MaxSessionPerConnection                : 16384
 MaxThreadsPerQueue                     : 20
 MaxWorkItems                           : 1
-NullSessionPipes                       :
-NullSessionShares                      :
+NullSessionPipes                       : 
+NullSessionShares                      : 
 OplockBreakWait                        : 35
 PendingClientTimeoutInSeconds          : 120
 RejectUnencryptedAccess                : True
+RequestCompression                     : False
 RequireSecuritySignature               : False
+RestrictNamedpipeAccessViaQuic         : True
 ServerHidden                           : True
 Smb2CreditsMax                         : 8192
 Smb2CreditsMin                         : 512
@@ -76,18 +83,9 @@ ValidateAliasNotCircular               : True
 ValidateShareScope                     : True
 ValidateShareScopeNotAliased           : True
 ValidateTargetName                     : True
-RestrictNamedpipeAccessViaQuic         : True
-EnableSMBQUIC                          : True
-EncryptionCiphers                      : AES_128_GCM, AES_128_CCM, AES_256_GCM, AES_256_CCM
 ```
 
 This command retrieves the SMB server configuration.
-
-> [!NOTE]
-> The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
-> Microsoft server operating system version 21H2 for x64-based Systems
-> ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
-> version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
 
 ## PARAMETERS
 
@@ -111,8 +109,8 @@ Accept wildcard characters: False
 ### -CimSession
 
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
-object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
-or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
@@ -158,15 +156,14 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -185,7 +182,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -201,4 +198,6 @@ The **MSFT_SmbServerConfiguration** object represents the configuration of the S
 
 ## RELATED LINKS
 
-[Set-SmbServerConfiguration](./Set-SmbServerConfiguration.md)
+[Reset-SmbServerConfiguration](Reset-SmbServerConfiguration.md)
+
+[Set-SmbServerConfiguration](Set-SmbServerConfiguration.md)

@@ -2,7 +2,7 @@
 description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 03/22/2023
+ms.date: 04/14/2025
 online version: https://learn.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -1277,6 +1277,9 @@ If you specify a value of $True or do not specify a value, scheduled tasks begin
 If you randomize the start times, it can distribute the impact of scanning.
 For example, if several virtual machines share the same host, randomized start times prevents all the hosts from starting the scheduled tasks at the same time.
 
+If this setting and the SchedulerRandomizationTime setting are both set to Not Configured then the system will use the default behavior of RandomizeScheduleTaskTimes, which is a 30-minute window.
+
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -1559,6 +1562,11 @@ Accept wildcard characters: False
 
 ### -SchedulerRandomizationTime
 Specifies the randomization time for the scheduler.
+
+If you disable or do not configure this setting, scheduled tasks will begin at a random time within an interval of 4 hours after the specified start time.
+If you enable this setting, you must pick a randomization window in hours. The possible randomization window interval is between 1 and 23 hours.
+
+If this setting and the RandomizeScheduleTaskTimes setting are both set to Not Configured then the system will use the default behavior of RandomizeScheduleTaskTimes, which is a 30-minute window.
 
 ```yaml
 Type: UInt32

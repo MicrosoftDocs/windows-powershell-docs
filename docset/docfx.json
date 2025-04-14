@@ -1,44 +1,44 @@
 {
   "build": {
     "content": [
-      { "files": [ "toc.yml" ], "src": "bread", "dest": "windows/bread" },
+      { "dest": "windows/bread", "files": [ "toc.yml" ], "src": "bread" },
 
-      { "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2025-ps", "version": "WindowsServer2025-ps", "dest": "windows" },
-      { "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2025-ps", "version": "WindowsServer2025-ps", "dest": "winserver2025-ps" },
-      { "files": [ "**/*.yml" ], "exclude": [ "toc.yml" ], "src": "winserver2025-ps", "version": "WindowsServer2025-ps", "dest": "module" },
-      { "files": [ "toc.yml" ], "src": "winserver2025-ps", "version": "WindowsServer2025-ps", "dest": "module/WindowsServer2025-ps" },
-      
-      { "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2022-ps", "version": "WindowsServer2022-ps", "dest": "windows" },
-      { "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2022-ps", "version": "WindowsServer2022-ps", "dest": "winserver2022-ps" },
-      { "files": [ "**/*.yml" ], "exclude": [ "toc.yml" ], "src": "winserver2022-ps", "version": "WindowsServer2022-ps", "dest": "module" },
-      { "files": [ "toc.yml" ], "src": "winserver2022-ps", "version": "WindowsServer2022-ps", "dest": "module/WindowsServer2022-ps" },
+      { "dest": "windows", "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2025-ps", "version": "WindowsServer2025-ps" },
+      { "dest": "winserver2025-ps", "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2025-ps", "version": "WindowsServer2025-ps" },
+      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml", "**/About/*.md" ], "src": "winserver2025-ps", "version": "WindowsServer2025-ps" },
+      { "dest": "module/WindowsServer2025-ps", "files": [ "toc.yml" ], "src": "winserver2025-ps", "version": "WindowsServer2025-ps" },
 
-      { "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2019-ps", "version": "WindowsServer2019-ps", "dest": "windows" },
-      { "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2019-ps", "version": "WindowsServer2019-ps", "dest": "winserver2019-ps" },
-      { "files": [ "**/*.yml" ], "exclude": [ "toc.yml" ], "src": "winserver2019-ps", "version": "WindowsServer2019-ps", "dest": "module" },
-      { "files": [ "toc.yml" ], "src": "winserver2019-ps", "version": "WindowsServer2019-ps", "dest": "module/WindowsServer2019-ps" },
+      { "dest": "windows", "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2022-ps", "version": "WindowsServer2022-ps" },
+      { "dest": "winserver2022-ps", "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2022-ps", "version": "WindowsServer2022-ps" },
+      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml", "**/About/*.md" ], "src": "winserver2022-ps", "version": "WindowsServer2022-ps" },
+      { "dest": "module/WindowsServer2022-ps", "files": [ "toc.yml" ], "src": "winserver2022-ps", "version": "WindowsServer2022-ps" },
 
-      { "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2016-ps", "version": "WindowsServer2016-ps", "dest": "windows" },
-      { "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2016-ps", "version": "WindowsServer2016-ps", "dest": "windows" },
-      { "files": [ "**/*.yml" ], "exclude": [ "toc.yml" ], "src": "winserver2016-ps", "version": "WindowsServer2016-ps", "dest": "module" },
-      { "files": [ "toc.yml" ], "src": "winserver2016-ps", "version": "WindowsServer2016-ps", "dest": "module/WindowsServer2016-ps" },
+      { "dest": "windows", "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2019-ps", "version": "WindowsServer2019-ps" },
+      { "dest": "winserver2019-ps", "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2019-ps", "version": "WindowsServer2019-ps" },
+      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml", "**/About/*.md" ], "src": "winserver2019-ps", "version": "WindowsServer2019-ps" },
+      { "dest": "module/WindowsServer2019-ps", "files": [ "toc.yml" ], "src": "winserver2019-ps", "version": "WindowsServer2019-ps" },
 
-      { "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2012-ps", "version": "winserver2012-ps", "dest": "windows" },
-      { "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2012-ps", "version": "winserver2012-ps", "dest": "winserver2012-ps" },
-      { "files": [ "**/*.yml" ], "exclude": [ "toc.yml" ], "src": "winserver2012-ps", "version": "winserver2012-ps", "dest": "module" },
-      { "files": [ "toc.yml" ], "src": "winserver2012-ps", "version": "winserver2012-ps", "dest": "module/winserver2012-ps" },
+      { "dest": "windows", "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2016-ps", "version": "WindowsServer2016-ps" },
+      { "dest": "windows", "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2016-ps", "version": "WindowsServer2016-ps" },
+      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml", "**/About/*.md" ], "src": "winserver2016-ps", "version": "WindowsServer2016-ps" },
+      { "dest": "module/WindowsServer2016-ps", "files": [ "toc.yml" ], "src": "winserver2016-ps", "version": "WindowsServer2016-ps" },
 
-      { "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2012r2-ps", "version": "winserver2012r2-ps", "dest": "windows" },
-      { "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2012r2-ps", "version": "winserver2012r2-ps", "dest": "winserver2012r2-ps" },
-      { "files": [ "**/*.yml" ], "exclude": [ "toc.yml" ], "src": "winserver2012r2-ps", "version": "winserver2012r2-ps", "dest": "module" },
-      { "files": [ "toc.yml" ], "src": "winserver2012r2-ps", "version": "winserver2012r2-ps", "dest": "module/winserver2012r2-ps" },
+      { "dest": "windows", "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2012-ps", "version": "winserver2012-ps" },
+      { "dest": "winserver2012-ps", "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2012-ps", "version": "winserver2012-ps" },
+      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml", "**/About/*.md" ], "src": "winserver2012-ps", "version": "winserver2012-ps" },
+      { "dest": "module/winserver2012-ps", "files": [ "toc.yml" ], "src": "winserver2012-ps", "version": "winserver2012-ps" },
 
-      { "files": [ "**/*.md" ], "src": "docs-conceptual/mdop", "version": "win-mdop2-ps", "dest": "mdop" },
-      { "files": [ "toc.yml" ], "src": "docs-conceptual/mdop", "version": "win-mdop2-ps", "dest": "mdop/win-mdop2-ps" },
-      { "files": [ "**/*.yml" ], "exclude": [ "toc.yml" ], "src": "mdop", "version": "win-mdop2-ps", "dest": "module" },
-      { "files": [ "toc.yml" ], "src": "mdop", "version": "win-mdop2-ps", "dest": "module/win-mdop2-ps" },
+      { "dest": "windows", "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2012r2-ps", "version": "winserver2012r2-ps" },
+      { "dest": "winserver2012r2-ps", "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2012r2-ps", "version": "winserver2012r2-ps" },
+      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml", "**/About/*.md" ], "src": "winserver2012r2-ps", "version": "winserver2012r2-ps" },
+      { "dest": "module/winserver2012r2-ps", "files": [ "toc.yml" ], "src": "winserver2012r2-ps", "version": "winserver2012r2-ps" },
 
-      { "files": [ "**/*.md" ], "src": "virtual-directory-module", "dest": "module" }
+      { "dest": "mdop", "files": [ "**/*.md" ], "src": "docs-conceptual/mdop", "version": "win-mdop2-ps" },
+      { "dest": "mdop/win-mdop2-ps", "files": [ "toc.yml" ], "src": "docs-conceptual/mdop", "version": "win-mdop2-ps" },
+      { "dest": "module", "exclude": [ "toc.yml" ], "files": [ "**/*.yml" ], "src": "mdop", "version": "win-mdop2-ps" },
+      { "dest": "module/win-mdop2-ps", "files": [ "toc.yml" ], "src": "mdop", "version": "win-mdop2-ps" },
+
+      { "dest": "module", "files": [ "**/*.md" ], "src": "virtual-directory-module" }
     ],
     "resource": [
       { "files": [ "**/*.png", "**/*.jpg" ], "exclude": [ "**/obj/**", "**/includes/**" ] }
@@ -75,7 +75,7 @@
       "ROBOTS": "INDEX, FOLLOW",
       "breadcrumb_path": "/powershell/windows/bread/toc.json",
       "ms.service": "windows-11",
-      "ms.topic": "managed-reference",
+      "ms.topic": "reference",
       "ms.author": "jgerend",
       "author": "JasonGerend",
       "manager": "femila",
@@ -91,11 +91,16 @@
         "garycentric",
         "AngelaMotherofDragons",
         "dstrome",
-        "v-dihans",        
+        "v-dihans",
         "sdwheeler",
+        "v-stchambers",
+        "shdyas",
         "Stacyrch140",
         "v-stsavell",
-        "American-Dipper"
+        "American-Dipper",
+        "Ruchika-mittal01", 
+        "aditisrivastava07",
+        "padmagit77"
       ],
       "_op_documentIdPathDepotMapping": {
         "./": {

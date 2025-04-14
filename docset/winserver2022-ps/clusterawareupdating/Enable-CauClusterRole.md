@@ -34,9 +34,9 @@ cluster. The self-updating functionality of the cluster can be disabled with the
 Enable-CauClusterRole -ClusterName "CONTOSO-FC1" -Force
 ```
 
-This command enables the CAU clustered role on the CONTOSO-FC1 cluster to begin performing Updating
-Runs. The cmdlet changes the status of the CAU clustered role to Running. Because the command
-specified the **Force** parameter, the cmdlet runs without displaying confirmation prompts.
+This command enables the CAU clustered role on the **CONTOSO-FC1** cluster to begin performing
+Updating Runs. The cmdlet changes the status of the CAU clustered role to Running. The cmdlet runs
+without displaying confirmation prompts, as the **Force** parameter was used.
 
 ## PARAMETERS
 
@@ -54,22 +54,6 @@ Aliases:
 Required: False
 Position: 0
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -106,10 +90,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet isn't run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -128,7 +127,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -136,19 +135,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### None
+### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Add-CauClusterRole](./Add-CauClusterRole.md)
+[Add-CauClusterRole](add-cauclusterrole.md)
 
-[Disable-CauClusterRole](./Disable-CauClusterRole.md)
+[Disable-CauClusterRole](disable-cauclusterrole.md)
 
-[Get-CauClusterRole](./Get-CauClusterRole.md)
+[Get-CauClusterRole](get-cauclusterrole.md)
 
-[Remove-CauClusterRole](./Remove-CauClusterRole.md)
+[Remove-CauClusterRole](remove-cauclusterrole.md)
 
-[Set-CauClusterRole](./Set-CauClusterRole.md)
-
+[Set-CauClusterRole](set-cauclusterrole.md)

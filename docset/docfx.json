@@ -75,7 +75,7 @@
       "ROBOTS": "INDEX, FOLLOW",
       "breadcrumb_path": "/powershell/windows/bread/toc.json",
       "ms.service": "windows-11",
-      "ms.topic": "managed-reference",
+      "ms.topic": "reference",
       "ms.author": "jgerend",
       "author": "JasonGerend",
       "manager": "femila",
@@ -93,9 +93,14 @@
         "dstrome",
         "v-dihans",
         "sdwheeler",
+        "v-stchambers",
+        "shdyas",
         "Stacyrch140",
         "v-stsavell",
-        "American-Dipper"
+        "American-Dipper",
+        "Ruchika-mittal01", 
+        "aditisrivastava07",
+        "padmagit77"
       ],
       "_op_documentIdPathDepotMapping": {
         "./": {

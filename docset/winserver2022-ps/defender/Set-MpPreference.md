@@ -1947,7 +1947,7 @@ Accept wildcard characters: False
 
 ### -ProxyPacUrl
 
-Specifies the Privilege Attribute Certificate (PAC) proxy value.
+Specifies the URL for Proxy Auto-Configuration (PAC) file.
 
 To remove the value, use the **Remove-MpPreference** cmdlet:
 

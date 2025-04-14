@@ -340,11 +340,11 @@ You must be a cluster administrator to run this cmdlet successfully.
 
 ## RELATED LINKS
 
-[Get-HpcNode](./Get-HpcNode.md)
+[Get-HpcNode](/powershell/module/hpcpack2016/get-hpcnode?view=hpc16-ps)
 
-[Remove-HpcNode](./Remove-HpcNode.md)
+[Remove-HpcNode](/powershell/module/hpcpack2016/remove-hpcnode?view=hpc16-ps)
 
-[Restart-HpcNode](./Restart-HpcNode.md)
+[Restart-HpcNode](/powershell/module/hpcpack2016/restart-hpcnode?view=hpc16-ps)
 
 [Shutdown-HpcNode](./Shutdown-HpcNode.md)
 

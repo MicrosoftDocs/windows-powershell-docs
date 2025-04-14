@@ -16,46 +16,60 @@ Imports one or more certificates into a certificate store.
 ## SYNTAX
 
 ```
-Import-Certificate [-FilePath] <String> [-CertStoreLocation <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Import-Certificate [-FilePath] <String> [-CertStoreLocation <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Import-Certificate** cmdlet imports one or more certificates into a certificate store.
+
+The `Import-Certificate` cmdlet imports one or more certificates into a certificate store.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
-Import-Certificate -FilePath "C:\Users\xyz\Desktop\BackupCert.Cer" -CertStoreLocation cert:\CurrentUser\Root
+
+```powershell
+$params = @{
+    FilePath = 'C:\Users\Xyz\Desktop\BackupCert.cer'
+    CertStoreLocation = 'Cert:\CurrentUser\Root'
+}
+Import-Certificate @params
 ```
 
 This example imports the certificate from the file into the root store of the current user.
 
 ### EXAMPLE 2
-```
-PS C:\>Set-Location -Path cert:\CurrentUser\My
 
-PS cert:\CurrentUser\My>Import-Certificate -Filepath "C:\files\intermediate.cert"
+```powershell
+Set-Location -Path cert:\CurrentUser\My
+
+Import-Certificate -Filepath 'C:\files\intermediate.cert'
 ```
 
 This example imports the certificate from the file into the current store.
 
 ### EXAMPLE 3
-```
-Import-Certificate -FilePath "C:\Users\Xyz\Desktop\BackupCert.Cer" -CertStoreLocation Cert:\LocalMachine\Root
+
+```powershell
+$params = @{
+    FilePath = 'C:\Users\Xyz\Desktop\BackupCert.cer'
+    CertStoreLocation = 'Cert:\LocalMachine\Root'
+}
+Import-Certificate @params
 ```
 
-This example imports the certificate from the file into the root store of the Local Machine.
+This example imports the certificate from the file into the root store of the local machine.
 
 ## PARAMETERS
 
 ### -CertStoreLocation
-Specifies the path to the certificate store where the certificates will be imported.
-If the path to the certificate store is not specified, then the current store is used.
-In order to get a list of valid CertStoreLocation values, open Powershell and run "cd cert:". Afterwards type "dir".
+
+Specifies the path to the certificate store where the certificates will be imported. If the path to
+the certificate store is not specified, then the current store is used. In order to get a list of
+valid **CertStoreLocation** values, open PowerShell and run `Get-ChildItem Cert:\`.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -67,10 +81,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -82,12 +97,14 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-Specifies the path to a certificate file to be imported.
-Acceptable formats include .sst, .p7b, and .cert files.
-If the file contains multiple certificates, then each certificate will be imported to the destination store.
+
+Specifies the path to a certificate file to be imported. Acceptable formats include `.sst`, `.p7b`,
+and `.cert` files. If the file contains multiple certificates, then each certificate will be
+imported to the destination store. The file must be in `.sst` format to import multiple
+certificates; otherwise, only the first certificate in the file will be imported.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: FullName
 
@@ -99,11 +116,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -115,16 +133,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
+
 A **String** containing the file path.
 
 ## OUTPUTS
 
 ### System.Security.Cryptography.X509Certificates.X509Certificate2[]
+
 The output is an array of **X509Certificate2\[\]** objects.
 
 ## NOTES

@@ -1,16 +1,16 @@
 ---
-description: Use this topic to help manage Windows 10 and Windows Server 2022 technologies with Windows PowerShell.
-ms.date: 03/29/2021
-title: Windows 10 and Windows Server 2019
+description: Use this topic to help manage Windows 11 and Windows Server 2022 technologies with Windows PowerShell.
+ms.date: 02/07/2024
+title: Windows 11 and Windows Server 2022
 ---
 
-# Windows 10 and Windows Server 2022
+# Windows 11 and Windows Server 2022
 
-This topic lists the Windows PowerShell modules included with Windows Server 2022 and Windows 10.
+This topic lists the Windows PowerShell modules included with Windows Server 2022 and Windows 11.
 The Windows PowerShell modules in the list support automating the features of those versions of the
 Windows operating system and provide links to the cmdlet references for each module. These modules
 enable you to use Windows PowerShell to administer, maintain, configure, and develop new features
-for Windows Server 2019 and Windows 10.
+for Windows Server 2022 and Windows 11.
 
 The table below also shows the latest published version of the Help for each module. The Help is
 available through the links below, or as Updatable Help files. Updatable Help was introduced with
@@ -70,7 +70,6 @@ computer. For more information, see
 | Iscsi | [iSCSI](/powershell/module/iscsi) |
 | IscsiTarget | [iSCSI Target](/powershell/module/iscsitarget) |
 | KDS | [Key Distribution Server](/powershell/module/kds) |
-| Microsoft.Windows.ServerManager.Migration | [Server Migration](/powershell/module/Microsoft.Windows.ServerManager.Migration/) |
 | MMAgent | [Memory Management Agent](/powershell/module/mmagent) |
 | Mpio | [MPIO](/powershell/module/mpio) |
 | MSDTC | [Distributed Transaction Coordinator](/powershell/module/msdtc) |

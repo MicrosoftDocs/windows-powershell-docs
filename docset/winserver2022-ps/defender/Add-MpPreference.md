@@ -11,56 +11,79 @@ title: Add-MpPreference
 # Add-MpPreference
 
 ## SYNOPSIS
-Modifies settings for Windows Defender.
+
+Adds values to multi-valued properties (for example, exclusions and protected folders) in Windows
+Defender.
+
+> [!NOTE]
+> You need to run this cmdlet in an elevated PowerShell window (a PowerShell window you opened by
+selecting **Run as administrator**).
 
 ## SYNTAX
 
 ```
-Add-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
- [-ExclusionIpAddress <String[]>] [-ThreatIDDefaultAction_Ids <Int64[]>]
- [-ThreatIDDefaultAction_Actions <ThreatAction[]>] [-AttackSurfaceReductionOnlyExclusions <String[]>]
- [-ControlledFolderAccessAllowedApplications <String[]>] [-ControlledFolderAccessProtectedFolders <String[]>]
- [-AttackSurfaceReductionRules_Ids <String[]>] [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>]
- [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+Add-MpPreference
+ [-AsJob]
+ [-AttackSurfaceReductionOnlyExclusions <String[]>]
+ [-AttackSurfaceReductionRules_Actions <ASRRuleActionType[]>]
+ [-AttackSurfaceReductionRules_Ids <String[]>]
+ [-CimSession <CimSession[]>]
+ [-ControlledFolderAccessAllowedApplications <String[]>]
+ [-ControlledFolderAccessProtectedFolders <String[]>]
+ [-ExclusionExtension <String[]>]
+ [-ExclusionIpAddress <String[]>]
+ [-ExclusionPath <String[]>]
+ [-ExclusionProcess <String[]>]
+ [-Force]
+ [-ThreatIDDefaultAction_Actions <ThreatAction[]>]
+ [-ThreatIDDefaultAction_Ids <Int64[]>]
+ [-ThrottleLimit <Int32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-MpPreference** cmdlet modifies settings for Windows Defender.
-Use this cmdlet to add exclusions for file name extensions, paths, and processes, and to add default actions for high, moderate, and low threats.
+
+The `Add-MpPreference` cmdlet modifies settings for Windows Defender. Use this cmdlet to add
+exclusions for file name extensions, paths, and processes, and to add default actions for high,
+moderate, and low threats.
 
 ## EXAMPLES
 
 ### Example 1: Add a folder to the exclusion list
+
 ```powershell
-Add-MpPreference -ExclusionPath "C:\Temp"
+Add-MpPreference -ExclusionPath 'C:\Temp'
 ```
 
-This command adds the folder C:\Temp to the exclusion list.
-The command disables Windows Defender scheduled and real-time scanning for files in this folder.
+This example adds the folder `C:\Temp` to the exclusion list.
 
 ### Example 2: Allow an application to access folders
+
 ```powershell
-Add-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe"
+Add-MpPreference -ControlledFolderAccessAllowedApplications 'c:\apps\test.exe'
 ```
 
-This command allows the specified application to make changes in controlled folders.
+This example allows the specified application to make changes in controlled folders.
 
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+complete.
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+The cmdlet immediately returns an object that represents the job and then displays the command
+prompt. You can continue to work in the session while the job completes. To manage the job, use the
+`*-Job` cmdlets. To get the job results, use the
+[Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+For more information about Windows PowerShell background jobs, see
+[about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,9 +93,24 @@ Accept wildcard characters: False
 ```
 
 ### -AttackSurfaceReductionOnlyExclusions
-Specifies the files and paths to exclude from attack surface reduction (ASR) rules. Specifies the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, `C:\Windows` excludes all files in that directory. `C:\Windows\App.exe` excludes only that specific file in that specific folder.
 
-See the [ASR rules](/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules) topic for more information about excluding files and folders from ASR rules.
+Specifies the folders or files to add to the exclusion list for Attack Surface
+Reduction (ASR) rules. Enter a folder path or a fully qualified resource name. For example:
+
+- `"C:\Windows"`
+- `"C:\Windows\App.exe"`
+
+To add values without affecting existing values, use the following syntax:
+"Value1","Value2",..."ValueN"`
+
+To remove values without affecting other existing values, use the **Remove-MpPreference** cmdlet:
+`Remove-MpPreference -AttackSurfaceReductionOnlyExclusions "Value1","Value2",..."ValueN"`
+
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
+
+`Set-MpPreference -AttackSurfaceReductionOnlyExclusions "Value1","Value2",..."ValueN"`.
+
+For more information, see [Exclude files and folders from attack surface reduction rules](/defender-endpoint/enable-attack-surface-reduction#exclude-files-and-folders-from-attack-surface-reduction-rules).
 
 ```yaml
 Type: String[]
@@ -87,8 +125,40 @@ Accept wildcard characters: False
 ```
 
 ### -AttackSurfaceReductionRules_Actions
-Specifies the states of attack surface reduction rules specified by using the **AttackSurfaceReductionRules_Ids** parameter.
-If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
+
+Use the **AttackSurfaceReductionRules_Ids** and **AttackSurfaceReductionRules_Actions** parameters
+together in the same command to add attack surface reduction (ASR) rules.
+
+- The **AttackSurfaceReductionRules_Ids** parameter identifies the ASR rule by GUID value. For
+example, the GUID value of the "Block Office communication application from creating child
+processes" ASR rule is `26190899-1602-49e8-8b27-eb1d0a1ce869`. For more information, see
+[ASR rule to GUID matrix](/defender-endpoint/attack-surface-reduction-rules-reference#asr-rule-to-guid-matrix).
+- The **AttackSurfaceReductionRules_Actions** parameter identifies ASR rule action. Valid values
+are:
+
+  • 0 or Deactivated
+
+  • 1 or Activated
+
+  • 2 or Audit mode
+
+  • 6 or Warning
+
+To add values without affecting existing values, use the following syntax:
+
+`Add-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
+
+For each ID value, there's a corresponding Action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
+
+To remove values without affecting other existing values, use the **Remove-MpPreference** cmdlet:
+
+`Remove-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
+
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
+
+`Set-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
 ```yaml
 Type: ASRRuleActionType[]
@@ -103,10 +173,40 @@ Accept wildcard characters: False
 ```
 
 ### -AttackSurfaceReductionRules_Ids
-Specifies the IDs of attack surface reduction rules.
-Use the **AttackSurfaceReductionRules_Actions** parameter to specify the state for each rule. 
-If you add multiple rules as a comma-separated list, specify their states separately as a comma-separated list.
 
+Use the **AttackSurfaceReductionRules_Ids** and **AttackSurfaceReductionRules_Actions** parameters
+together in the same command to add attack surface reduction (ASR) rules.
+
+- The **AttackSurfaceReductionRules_Ids** parameter identifies the ASR rule by GUID value. For
+example, the GUID value of the "Block Office communication application from creating child
+processes" ASR rule is `26190899-1602-49e8-8b27-eb1d0a1ce869`. For more information, see
+[ASR rule to GUID matrix](/defender-endpoint/attack-surface-reduction-rules-reference#asr-rule-to-guid-matrix).
+- The **AttackSurfaceReductionRules_Actions** parameter identifies ASR rule action. Valid values
+are:
+
+  • 0 or Deactivated
+
+  • 1 or Activated
+
+  • 2 or Audit mode
+
+  • 6 or Warning
+
+To add values without affecting existing values, use the following syntax:
+
+`Add-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
+
+For each ID value, there's a corresponding Action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
+
+To remove values without affecting other existing values, use the **Remove-MpPreference** cmdlet:
+
+`Remove-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
+
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
+
+`Set-MpPreference -AttackSurfaceReductionRules_Ids Rule1,Rule2,...RuleN -AttackSurfaceReductionRules_Actions Action1,Action2,...ActionN`
 
 ```yaml
 Type: String[]
@@ -121,9 +221,16 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer. 
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. 
-The default is the current session on the local computer.
+
+Runs the cmdlet in a remote session or on a remote computer that were created by the
+[New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) cmdlet and specified by the
+[Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. For example:
+
+`Set-MpPreference -CimSession (Get-CimSession -ID 1),(Get-CimSession -ID 2),...(Get-CimSession -ID N)`
+
+or
+
+`Set-MpPreference -CimSession (Get-CimSession -ID Server1),(Get-CimSession -ID Server2),...(Get-CimSession -ID ServerN)`
 
 ```yaml
 Type: CimSession[]
@@ -138,7 +245,26 @@ Accept wildcard characters: False
 ```
 
 ### -ControlledFolderAccessAllowedApplications
-Specifies applications that can make changes in controlled folders.
+
+Specifies the entries to add to the list of applications that are allowed to make changes in
+controlled folders. You can use absolute folder paths (for example `C:\Windows\...`) or environment
+variables (for example, `%appdata%...`) for path names.
+
+To add values without affecting other existing values, use the following syntax:
+`"PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`
+
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
+
+`Remove-MpPreference -ControlledFolderAccessAllowedApplications "PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`
+
+To replace all existing values with the values you specify, use the following syntax:
+`"PathAndFileName1","PathAndFileName2",..."PathAndFileNameN"`.
+
+To remove custom folders that are protected by controlled folder access, use the
+**ControlledFolderAccessProtectedFolders** parameter.
+
+For more information about controlled folder access, see [Protect important folders with controlled
+folder access](/defender-endpoint/controlled-folders).
 
 ```yaml
 Type: String[]
@@ -153,7 +279,27 @@ Accept wildcard characters: False
 ```
 
 ### -ControlledFolderAccessProtectedFolders
-Specifies more folders to protect.
+
+Specifies the entries to add to the list of controlled access folders. You can use absolute
+folder paths (for example `C:\Windows\...`) or environment variables (for example, `%appdata%...`)
+for path names.
+
+To add values without affecting existing values, use the following syntax:
+`"Path1","Path2",..."PathN"`
+
+To remove values without affecting other existing values, use the **Remove-MpPreference** cmdlet:
+
+`Remove-MpPreference -ControlledFolderAccessAllowedApplications "Path1","Path2",..."PathN"`
+
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
+
+`Set-MpPreference -ControlledFolderAccessAllowedApplications"Path1","Path2"..."PathN"`.
+
+To remove applications that are allowed to access controlled folders, use the
+**ControlledFolderAccessAllowedApplications** parameter.
+
+For more information about controlled folder access, see [Protect important folders with controlled
+folder access](/defender-endpoint/controlled-folders).
 
 ```yaml
 Type: String[]
@@ -168,8 +314,20 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusionExtension
-Specifies an array of file name extensions, such as obj or lib, to exclude from scheduled, custom, and real-time scanning.
-This cmdlet adds these file name extensions to the exclusions.
+
+Specifies the filename extensions (for example, `obj` or `lib`) to add to the list of
+exclusions from scheduled, custom, and real-time scanning.
+
+To add values without affecting other existing values, use the following syntax:
+`"Extension1","Extension2"..."ExtensionN"`
+
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
+
+`Remove-MpPreference -ExclusionExtension "Extension1","Extension2"..."ExtensionN"`
+
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
+
+`Set-MpPreference -ExclusionExtension "Extension1","Extension2",..."ExtensionN"`.
 
 ```yaml
 Type: String[]
@@ -184,12 +342,25 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusionIpAddress
-Specifies an array of IP addresses to exclude from scheduled and real-time scanning.
+
+Specifies the IP addresses to add to the list of exclusions from scheduled, custom, and
+real-time scanning.
+
+To add values without affecting other existing values, use the following syntax:
+`"IPAddress1","IPAddress2",..."IPAddressN"`
+
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
+
+`Remove-MpPreference -ExclusionIpAddress "IPAddress1","IPAddress",..."IPAddressN"`
+
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
+
+`Set-MpPreference -ExclusionIpAddress "IPAddress1","IPAddress2",..."IPAddresseN"`.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -199,13 +370,25 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusionPath
-Specifies an array of file paths to exclude from scheduled and real-time scanning.
-You can specify a folder to exclude all the files under the folder.
+
+Specifies the path and filename or path only entries to add to the list of exclusions from
+scheduled and real-time scanning.
+
+To add values without affecting other existing values, use the following syntax:
+`"Value1","Value2",..."ValueN"`
+
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
+
+`Remove-MpPreference -ExclusionPath "Value1","Value2",..."ValuehN"`
+
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
+
+`Set-MpPreference -ExclusionPath "Value1","Value2"..."ValueN"`.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -215,16 +398,28 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusionProcess
-Specifies an array of processes, as paths to process images.
-This cmdlet excludes any files opened by the processes that you specify from scheduled and real-time scanning.
-Specifying this parameter excludes files opened by executable programs only.
-The cmdlet does not exclude the processes themselves.
-To exclude a process, specify it by using the **ExclusionPath** parameter.
+
+Specifies the path to process image entries to add to the list of exclusions from scheduled
+and real-time scanning.
+
+To add values without affecting other existing values, use the following syntax:
+`"Path1","Path2",..."PathN"`
+
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
+
+`Remove-MpPreference -ExclusionProcess "Path1","Path2",..."PathhN"`
+
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
+
+`Set-MpPreference -ExclusionProcess "Path1","Path2"..."PathN"`.
+
+Process image entries exclude files opened by executable programs only, not the processes
+themselves. To add processes to the list of exclusions, use the **ExclusionPath** parameter.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,12 +429,14 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+
+Forces the command to run without asking for user confirmation. You don't need to specify a value
+with this switch.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,16 +446,50 @@ Accept wildcard characters: False
 ```
 
 ### -ThreatIDDefaultAction_Actions
-Specifies an array of the actions to take for the IDs specified by using the **ThreatIDDefaultAction_Ids** parameter.
-The acceptable values for this parameter are:
 
-- 1: Clean 
-- 2: Quarantine 
-- 3: Remove 
-- 6: Allow 
-- 8: UserDefined 
-- 9: NoAction 
-- 10: Block
+Use the **ThreatIDDefaultAction_Ids** and **ThreatIDDefaultAction_Actions** parameters
+together in the same command to add the actions to take on the corresponding threats.
+
+- The **ThreatIDDefaultAction_Ids** parameter identifies the threat from the output of the
+**Get-MpThreatCatalog** cmdlet. For example, the ThreatID value of the threat named
+**Trojan:Win32/BlueFire** is `3229`.
+- The **ThreatIDDefaultAction_Actions** parameter identifies the action to take on the corresponding
+threat ID. Valid values are:
+
+  • 1 or Clean
+
+  • 2 or Quarantine
+
+  • 3 or Remove
+
+  • 6 or Allow
+
+  • 8 or UserDefined
+
+  • 9 or NoAction
+
+  • 10 or Block
+
+To add values without affecting other existing values, use the following syntax:
+
+`Add-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+For each ID value, there's a corresponding Action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
+
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
+
+`Remove-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
+
+`Set-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+**Note**: When a threat and corresponding action aren't specified in the
+**ThreatIDDefaultAction_Ids** and **ThreatIDDefaultAction_Actions** parameters, the action that's
+applied to the threat is based on the Security Intelligence Update (SIU). By default, no threats or
+corresponding actions are specified in the parameters.
 
 ```yaml
 Type: ThreatAction[]
@@ -274,8 +505,50 @@ Accept wildcard characters: False
 ```
 
 ### -ThreatIDDefaultAction_Ids
-Specifies an array of threat IDs.
-This cmdlet adds the default action for the threat IDs that you specify.
+
+Use the **ThreatIDDefaultAction_Ids** and **ThreatIDDefaultAction_Actions** parameters
+together in the same command to add the actions to take on the corresponding threats.
+
+- The **ThreatIDDefaultAction_Ids** parameter identifies the threat from the output of the
+**Get-MpThreatCatalog** cmdlet. For example, the ThreatID value of the threat named
+**Trojan:Win32/BlueFire** is `3229`.
+- The **ThreatIDDefaultAction_Actions** parameter identifies the action to take on the corresponding
+threat ID. Valid values are:
+
+  • 1 or Clean
+
+  • 2 or Quarantine
+
+  • 3 or Remove
+
+  • 6 or Allow
+
+  • 8 or UserDefined
+
+  • 9 or NoAction
+
+  • 10 or Block
+
+To add values without affecting other existing values, use the following syntax:
+
+`Add-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+For each ID value, there's a corresponding action value. The order determines which action goes with
+what ID. The first action goes with the first ID, the second action goes with the second ID,
+and so on.
+
+To remove values without affecting existing values, use the **Remove-MpPreference** cmdlet:
+
+`Remove-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+To replace all existing values with the values you specify, use the **Set-MpPreference** cmdlet:
+
+`Set-MpPreference -ThreatIDDefaultAction_Ids ThreatID1,ThreatID2,...ThreatIDN -ThreatIDDefaultAction_Actions Action1,Action2,...ActionN`
+
+**Note**: When a threat and corresponding action aren't specified in the
+**ThreatIDDefaultAction_Ids** and **ThreatIDDefaultAction_Actions** parameters, the action that's
+applied to the threat is based on the Security Intelligence Update (SIU). By default, no threats or
+corresponding actions are specified in the parameters.
 
 ```yaml
 Type: Int64[]
@@ -290,14 +563,19 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+
+Specifies the maximum number of concurrent operations that can be established to run this cmdlet.
+
+A valid value is an integer from 0 to 2147483647. The default value is 0, which means PowerShell
+calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are
+running on the computer.
+
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -307,7 +585,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -322,4 +604,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-MpPreference](./Remove-MpPreference.md)
 
 [Set-MpPreference](./Set-MpPreference.md)
-

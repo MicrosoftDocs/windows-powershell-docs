@@ -20,13 +20,16 @@ Uninstall-AdcsNetworkDeviceEnrollmentService [-Force] [-WhatIf] [-Confirm] [<Com
 ```
 
 ## DESCRIPTION
-The **Uninstall-AdcsNetworkDeviceEnrollmentService** cmdlet uninstalls the Network Device Enrollment Service (NDES) role service.
+
+The `Uninstall-AdcsNetworkDeviceEnrollmentService` cmdlet uninstalls the Network Device Enrollment
+Service (NDES) role service.
 
 ## EXAMPLES
 
 ### Example 1: Uninstall the NDES role service
-```
-PS C:\> Uninstall-AdcsNetworkDeviceEnrollmentService -Force
+
+```powershell
+Uninstall-AdcsNetworkDeviceEnrollmentService -Force
 ```
 
 This command uninstalls the NDES role service and does not prompt for user input.
@@ -34,6 +37,7 @@ This command uninstalls the NDES role service and does not prompt for user input
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -49,6 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -64,6 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -80,7 +86,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,11 +101,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.CertificateServices.Deployment.Common.NDES.NetworkDeviceEnrollmentServiceResult
 
 ## NOTES
-* Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.
 
-  
+- Ensure you run Windows PowerShell as an administrator. You can use the **Force** parameter to
+  bypass the prompt for confirmation.
 
 ## RELATED LINKS
 
 [Install-AdcsNetworkDeviceEnrollmentService](./Install-AdcsNetworkDeviceEnrollmentService.md)
-

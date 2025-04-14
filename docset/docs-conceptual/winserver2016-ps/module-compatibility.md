@@ -1,25 +1,25 @@
 ---
 description: This article lists the status of PowerShell 7 with Powershell modules published for other Microsoft products.
-ms.date: 10/04/2021
+ms.date: 02/07/2024
 title: PowerShell 7 module compatibility
 ---
-# PowerShell 7 module compatibility
+# PowerShell 7 module compatibility in Windows Server 2016
 
 This article contains a list of PowerShell modules published by Microsoft. These modules provide
-management and support for various Microsoft products and services. They have been updated
-to work natively with PowerShell 7, or tested for compatibility with PowerShell 7. This list will be
-updated with new information as more modules are identified and tested.
+management and support for various Microsoft products and services. They have been updated to work
+natively with PowerShell 7, or tested for compatibility with PowerShell 7. This list will be updated
+with new information as more modules are identified and tested.
 
-If you have information to share or issues with specific modules, please file an issue in the
-[WindowsCompatibility repo](https://github.com/PowerShell/WindowsCompatibility).
+If you have information to share or issues with specific modules, please submit feedback in the
+Windows Feedback Hub. For more information, see
+[Send feedback to Microsoft with the Feedback Hub app][06].
 
 ## Windows management modules
 
 The Windows management modules are installed in different ways, dependent on the Edition of Windows,
 and how the module was packaged for that Edition.
 
-On Windows Server, use the feature name with the
-[Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) cmdlet as an
+On Windows Server, use the feature name with the [Install-WindowsFeature][05] cmdlet as an
 Administrator. For example:
 
 ```powershell
@@ -46,8 +46,8 @@ administrator**.
 
   For more information see:
 
-  - [Get-WindowsOptionalFeature](/powershell/module/dism/get-windowsoptionalfeature)
-  - [Enable-WindowsOptionalFeature](/powershell/module/dism/enable-windowsoptionalfeature)
+  - [Get-WindowsOptionalFeature][04]
+  - [Enable-WindowsOptionalFeature][02]
 
 - For Windows Capabilities
 
@@ -66,8 +66,8 @@ administrator**.
 
   For more information see:
 
-  - [Get-WindowsCapability](/powershell/module/dism/get-windowscapability)
-  - [Add-WindowsCapability](/powershell/module/dism/add-windowscapability)
+  - [Get-WindowsCapability][03]
+  - [Add-WindowsCapability][01]
 
 ### Module list
 
@@ -204,3 +204,11 @@ This module has some minor compatibility issues with formatted output in PowerSh
 the `Get-WindowsFeature` cmdlet returns the proper object with all properties, but the default
 display formatting makes some properties appear to be empty. The actual values are available in the
 object properties using `Select-Object` or by direct member access.
+
+<!-- link references -->
+[01]: /powershell/module/dism/add-windowscapability
+[02]: /powershell/module/dism/enable-windowsoptionalfeature
+[03]: /powershell/module/dism/get-windowscapability
+[04]: /powershell/module/dism/get-windowsoptionalfeature
+[05]: /powershell/module/servermanager/install-windowsfeature
+[06]: https://support.microsoft.com/windows/send-feedback-to-microsoft-with-the-feedback-hub-app-f59187f8-8739-22d6-ba93-f66612949332

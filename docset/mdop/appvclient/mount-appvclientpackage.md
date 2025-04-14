@@ -30,7 +30,7 @@ Mount-AppvClientPackage [-Name] <String> [[-Version] <String>] [<CommonParameter
 ```
 
 ## DESCRIPTION
-The **Mount-AppvClientPackage** cmdlet initiates or resumes the loading of an Microsoft Application Virtualization (App-V) package into the cache.
+The **Mount-AppvClientPackage** cmdlet initiates or resumes the loading of a Microsoft Application Virtualization (App-V) package into the cache.
 
 ## EXAMPLES
 

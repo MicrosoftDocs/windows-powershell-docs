@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/24/2022
+ms.date: 02/22/2024
 online version: /powershell/module/smbshare/set-smbserverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SmbServerConfiguration
@@ -17,8 +17,9 @@ Sets the Server Message Block (SMB) server configuration.
 
 ```
 Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean>]
- [-AsynchronousCredits <UInt32>] [-AuditSmb1Access <Boolean>] [-AutoDisconnectTimeout <UInt32>]
- [-AutoShareServer <Boolean>] [-AutoShareWorkstation <Boolean>] [-CachedOpenLimit <UInt32>]
+ [-AsynchronousCredits <UInt32>] [-AuditClientCertificateAccess <Boolean>]
+ [-AuditSmb1Access <Boolean>] [-AutoDisconnectTimeout <UInt32>] [-AutoShareServer <Boolean>]
+ [-AutoShareWorkstation <Boolean>] [-CachedOpenLimit <UInt32>] [-DisableCompression <Boolean>]
  [-DisableSmbEncryptionOnSecureConnection <Boolean>] [-DurableHandleV2TimeoutInSeconds <UInt32>]
  [-EnableAuthenticateUserSharing <Boolean>] [-EnableDownlevelTimewarp <Boolean>]
  [-EnableForcedLogoff <Boolean>] [-EnableLeasing <Boolean>] [-EnableMultiChannel <Boolean>]
@@ -29,13 +30,13 @@ Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean
  [-MaxSessionPerConnection <UInt32>] [-MaxThreadsPerQueue <UInt32>] [-MaxWorkItems <UInt32>]
  [-NullSessionPipes <String>] [-NullSessionShares <String>] [-OplockBreakWait <UInt32>]
  [-PendingClientTimeoutInSeconds <UInt32>] [-RejectUnencryptedAccess <Boolean>]
- [-RequireSecuritySignature <Boolean>] [-RestrictNamedpipeAccessViaQuic <Boolean>]
- [-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>] [-Smb2CreditsMin <UInt32>]
- [-SmbServerNameHardeningLevel <UInt32>] [-TreatHostAsStableStorage <Boolean>]
- [-ValidateAliasNotCircular <Boolean>] [-ValidateShareScope <Boolean>]
- [-ValidateShareScopeNotAliased <Boolean>] [-ValidateTargetName <Boolean>] [-Force]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-RequestCompression <Boolean>] [-RequireSecuritySignature <Boolean>]
+ [-RestrictNamedpipeAccessViaQuic <Boolean>] [-ServerHidden <Boolean>] [-Smb2CreditsMax <UInt32>]
+ [-Smb2CreditsMin <UInt32>] [-SmbServerNameHardeningLevel <UInt32>]
+ [-TreatHostAsStableStorage <Boolean>] [-ValidateAliasNotCircular <Boolean>]
+ [-ValidateShareScope <Boolean>] [-ValidateShareScopeNotAliased <Boolean>]
+ [-ValidateTargetName <Boolean>] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+ [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -46,10 +47,16 @@ For more information on SMB server and protocol specifications, see
 and [[MS-SMB2]:Server Message Block (SMB) Protocol Versions 2 and 3](/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 > [!NOTE]
-> The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
-> Microsoft server operating system version 21H2 for x64-based Systems
-> ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
-> version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+>
+> - The **EncryptionCiphers** parameter is available beginning with 2022-06 Cumulative Update for
+>   Microsoft server operating system version 21H2 for x64-based Systems
+>   ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
+>   version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+>
+> - The **DisableCompression** and **RequestCompression** parameters are available beginning with
+>   2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
+>   Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
+>   Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
 
 ## EXAMPLES
 
@@ -65,9 +72,9 @@ This command sets the SMB Service configuration without user confirmation.
 
 ```powershell
 $Parameters = @{
-    RequireSecuritySignature = $True
-    EnableSecuritySignature = $True
-    EncryptData = $True
+    RequireSecuritySignature = $true
+    EnableSecuritySignature = $true
+    EncryptData = $true
     Confirm = $false
 }
 Set-SmbServerConfiguration @Parameters
@@ -80,7 +87,7 @@ splatting to pass parameter values from the `$Parameters` variable to the comman
 ### Example 3: Turn off the default server and workstations shares
 
 ```powershell
-Set-SmbServerConfiguration -AutoShareServer $False -AutoShareWorkstation $False -Confirm:$false
+Set-SmbServerConfiguration -AutoShareServer $false -AutoShareWorkstation $false -Confirm:$false
 ```
 
 This command turns off the default server and workstations shares without user confirmation.
@@ -88,7 +95,7 @@ This command turns off the default server and workstations shares without user c
 ### Example 4: Turn off server announcements
 
 ```powershell
-Set-SmbServerConfiguration -ServerHidden $False -AnnounceServer $False -Confirm:$false
+Set-SmbServerConfiguration -ServerHidden $false -AnnounceServer $false -Confirm:$false
 ```
 
 This command turns off server announcements without user confirmation.
@@ -167,6 +174,25 @@ Specifies the asynchronous credits.
 
 ```yaml
 Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditClientCertificateAccess
+
+Enables SMB over QUIC client access control audit events. There are three possible events: access
+allowed, access denied, and error. The access allowed and access denied events list properties of
+the client certificate chain and any allow and deny access control entries that apply to the
+client certificates.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -262,13 +288,30 @@ Accept wildcard characters: False
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
 object, such as the output of a
 [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or
-[Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+[Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
 current session on the local computer.
 
 ```yaml
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableCompression
+
+Indicates that the SMB server should never compress files even if client or application requested
+it.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -715,8 +758,25 @@ Accept wildcard characters: False
 
 ### -RejectUnencryptedAccess
 
-Indicates whether the client that does not support encryption is denied access if it attempts to
+Indicates whether the client that doesn't support encryption is denied access if it attempts to
 connect to an encrypted share.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestCompression
+
+Indicates if SMB server should always request compression even if client or application didn't
+specify it.
 
 ```yaml
 Type: Boolean
@@ -748,7 +808,7 @@ Accept wildcard characters: False
 
 ### -RestrictNamedpipeAccessViaQuic
 
-Specifies that named pipes are allowed when using SMB over QUIC. A value of $TRUE prevents use of
+Specifies that named pipes are allowed when using SMB over QUIC. A value of `$true` prevents use of
 named pipes and is the default.
 
 ```yaml
@@ -813,12 +873,20 @@ Accept wildcard characters: False
 
 ### -SmbServerNameHardeningLevel
 
-Specifies the SMB Service name hardening level.
+Controls the level of validation that a server performs on the service principal name (SPN) that is
+provided by the client device when the client establishes a session using Server Message Block
+(SMB). The acceptable values are:
+
+- `0`: Don't enforce SPN check.
+- `1`: Allow clients who didn't provide the target, but fail those who do provide the target and it
+  doesn't match.
+- `2`: Only allow clients who supply matching targets.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
 Aliases:
+Accepted values: 0, 1, 2
 
 Required: False
 Position: Named
@@ -866,7 +934,7 @@ Accept wildcard characters: False
 
 ### -ValidateAliasNotCircular
 
-Indicates whether the aliases that are not circular are validated.
+Indicates whether the aliases that aren't circular are validated.
 
 ```yaml
 Type: Boolean
@@ -946,7 +1014,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter
@@ -965,7 +1033,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -979,6 +1047,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SmbServerConfiguration](./Get-SmbServerConfiguration.md)
+[Get-SmbServerConfiguration](Get-SmbServerConfiguration.md)
 
-[Reset-SmbServerConfiguration](./Reset-SmbServerConfiguration.md)
+[Reset-SmbServerConfiguration](Reset-SmbServerConfiguration.md)

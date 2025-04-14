@@ -58,7 +58,7 @@ Without *PassThru*, the cmdlet does not return anything.
 ### Example 4: Migrates DSNs to a newer version of a driver
 ```
 PS C:\> $DsnArray = Get-OdbcDsn -DriverName 'SQL Server Native Client 10.0'
-PS C:\> ForEach ($Dsn in $ DsnArr) {
+PS C:\> ForEach ($Dsn in $DsnArray) {
           Remove-OdbcDsn -InputObject $Dsn 
           # You can change the property array as well, 
           # if DSN attributes have been changed in the new driver version

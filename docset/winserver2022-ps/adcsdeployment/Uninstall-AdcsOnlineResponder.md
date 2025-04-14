@@ -20,13 +20,15 @@ Uninstall-AdcsOnlineResponder [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Uninstall-AdcsOnlineResponder** cmdlet uninstalls the Online Responder role service.
+
+The `Uninstall-AdcsOnlineResponder` cmdlet uninstalls the Online Responder role service.
 
 ## EXAMPLES
 
 ### Example 1: Uninstall the Online Responder role service
-```
-PS C:\> Uninstall-AdcsOnlineResponder -Force
+
+```powershell
+Uninstall-AdcsOnlineResponder -Force
 ```
 
 This command removes Online Responder role service without requiring confirmation.
@@ -34,6 +36,7 @@ This command removes Online Responder role service without requiring confirmatio
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -49,6 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -64,6 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
@@ -79,7 +84,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -90,11 +99,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.CertificateServices.Deployment.Common.OCSP.OnlineResponderResult
 
 ## NOTES
-* Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.
 
-  
+- Ensure you run Windows PowerShell as an administrator. You can use the **Force** parameter to
+  bypass the prompt for confirmation.
 
 ## RELATED LINKS
 
 [Install-AdcsOnlineResponder](./Install-AdcsOnlineResponder.md)
-

@@ -249,7 +249,7 @@ The acceptable values for this parameter are:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Byte, Word, DWord, DWordDWord, IPv4Address, String, BinaryData, EncapsulatedData
+Accepted values: Byte, Word, DWord, DWordDWord, IPv4Address, IPv6Address, String, BinaryData, EncapsulatedData
 
 Required: True
 Position: 3

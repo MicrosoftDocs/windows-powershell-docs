@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbClientConfiguration.cdxml-help.xml
 Module Name: SmbShare
-ms.date: 06/24/2022
+ms.date: 10/20/2022
 online version: http://go.microsoft.com/fwlink/?LinkID=241959
 schema: 2.0.0
 title: Reset-SmbClientConfiguration
@@ -16,16 +16,16 @@ Resets the Server Message Block (SMB) client configuration parameters to their d
 ## SYNTAX
 
 ```
-Reset-SmbClientConfiguration [-All] [-ConnectionCountPerRssNetworkInterface]
- [-DirectoryCacheEntriesMax] [-DirectoryCacheEntrySizeMax] [-DirectoryCacheLifetime]
- [-DisableCompression] [-DormantFileLimit] [-EnableBandwidthThrottling]
+Reset-SmbClientConfiguration [-All] [-CompressibilitySampling]
+ [-ConnectionCountPerRssNetworkInterface] [-DirectoryCacheEntriesMax] [-DirectoryCacheEntrySizeMax]
+ [-DirectoryCacheLifetime] [-DisableCompression] [-DormantFileLimit] [-EnableBandwidthThrottling]
  [-EnableByteRangeLockingOnReadOnlyFiles] [-EnableLargeMtu] [-EnableLoadBalanceScaleOut]
  [-EnableMultiChannel] [-EncryptionCiphers] [-ExtendedSessionTimeout] [-FileInfoCacheEntriesMax]
  [-FileInfoCacheLifetime] [-FileNotFoundCacheEntriesMax] [-FileNotFoundCacheLifetime]
  [-ForceSMBEncryptionOverQuic] [-KeepConn] [-MaxCmds] [-MaximumConnectionCountPerServer]
- [-OplocksDisabled] [-SessionTimeout] [-SkipCertificateCheck] [-UseOpportunisticLocking]
- [-WindowSizeThreshold] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-OplocksDisabled] [-RequestCompression] [-SessionTimeout] [-SkipCertificateCheck]
+ [-UseOpportunisticLocking] [-WindowSizeThreshold] [-Force] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,10 +34,15 @@ The `Reset-SmbClientConfiguration` cmdlet resets SMB client configuration parame
 default values.
 
 > [!NOTE]
-> This cmdlet is available beginning with 2022-06 Cumulative Update for Microsoft server operating
+> - This cmdlet is available beginning with 2022-06 Cumulative Update for Microsoft server operating
 > system version 21H2 for x64-based Systems
 > ([KB5014665](https://support.microsoft.com/help/5014665)), and Cumulative Update for Windows 11,
 > version 22H2 ([KB5014668](https://support.microsoft.com/help/5014668)).
+>
+> - The **CompressibilitySampling** and **RequestCompression** parameters are available beginning
+>   with 2022-08 Cumulative Update for Microsoft server operating system version 21H2 for x64-based
+>   Systems ([KB5016693](https://support.microsoft.com/help/5016693)), and Cumulative Update for
+>   Windows 11, version 22H2 ([KB5016691](https://support.microsoft.com/help/5016691)).
 
 ## EXAMPLES
 
@@ -95,6 +100,22 @@ current session on the local computer.
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompressibilitySampling
+
+Resets the compression sampling behavior to its default value.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -473,6 +494,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RequestCompression
+
+Resets the SMB client request compression value to its default value.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SessionTimeout
 
 Resets the session time-out value to its default value.
@@ -576,7 +613,7 @@ Accept wildcard characters: False
 ### -WhatIf
 
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

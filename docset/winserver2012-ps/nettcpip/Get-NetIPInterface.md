@@ -304,8 +304,8 @@ Accept wildcard characters: False
 ### -BaseReachableTimeMs
 Gets IP interface properties only for interfaces by the BaseReachableTime property.
 This parameter is the base for random reachable time, in milliseconds.
-This parameter is described in RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.
-The default BaseReachableTime setting is `30`.
+This parameter is described in [RFC 2461](https://go.microsoft.com/fwlink/p/?LinkId=84044).
+The default BaseReachableTime setting is `30000`.
 
 ```yaml
 Type: UInt32[]

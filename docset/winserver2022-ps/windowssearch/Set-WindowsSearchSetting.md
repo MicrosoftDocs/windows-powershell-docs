@@ -33,7 +33,7 @@ You can also specify SafeSearch settings.
 PS C:\> Set-WindowsSearchSetting -SearchExperienceSetting "Personalized"
 ```
 
-This command allows Windows Search to use search history, but not specific location of the user, to personalize results.
+This command allows Windows Search to use search history, but not the specific location of the user, to personalize results.
 
 ### Example 2: Modify Windows Search settings
 ```
@@ -41,8 +41,15 @@ PS C:\> Set-WindowsSearchSetting -EnableWebResultsSetting $True -SafeSearchSetti
 ```
 
 This command modifies Windows Search settings.
-The command enables the use of search history and specific location of the user by specifying a value of PersonalizedAndLocation for the *SearchExperienceSetting* parameter.
+The command enables the use of search history and the specific location of the user by specifying a value of PersonalizedAndLocation for the *SearchExperienceSetting* parameter.
 The command enables web results and sets SafeSearch to a value of Strict.
+
+### Example 3: Enable metered web search
+```
+PS C:\> Set-WindowsSearchSetting -EnableMeteredWebResultsSetting $True
+```
+
+This command enables Windows Search to display web results and suggestions while using metered connections.
 
 ## PARAMETERS
 

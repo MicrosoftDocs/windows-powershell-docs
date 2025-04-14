@@ -2682,7 +2682,7 @@ events).
 Type: Day
 Parameter Sets: (All)
 Aliases: sigsd
-Accepted values: Everyday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Default
+Accepted values: Everyday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Never
 
 Required: False
 Position: Named

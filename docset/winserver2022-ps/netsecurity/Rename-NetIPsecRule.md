@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetIPsecRule.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-ms.date: 12/27/2016
+ms.date: 03/03/2025
 online version: https://learn.microsoft.com/powershell/module/netsecurity/rename-netipsecrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-NetIPsecRule
@@ -630,15 +630,13 @@ Accept wildcard characters: False
 Specifies that matching IPsec rules of the indicated key module are renamed. 
 This parameter specifies which keying modules to negotiate. 
 The acceptable values for this parameter are: Default, AuthIP, IKEv1, or IKEv2.
--- Default: Equivalent to both IKEv1 and AuthIP.
-Required in order for the rule to be applied to computers running Windows versions prior to nextref_server_7. 
----- There are authentication and cryptographic methods that are only compatible with certain keying modules.
-This is a very advanced setting intended only for specific interoperability scenarios.
-Overriding this parameter value may result in traffic being sent in plain-text if the authorization and cryptographic settings are not supported by the keying modules there. 
+
+- Default: KeyModule is set based on the authentication method. As of Win11 24H2 and Server 2025, the Default is equivalent to both IKEv1 and IKEv2, and only sets AuthIP if the authentication method(s) require it. In previous releases, Default is equivalent to both IKEv1 and AuthIP. Required in order for the rule to be applied to computers running Windows versions prior to Server 2008.
 - AuthIP: Supported with phase 2 authentication. 
-- IKEv1: Supported with pre-shared key (PSK), Certificates, and Kerberos. 
-- IKEv2: Not supported with Kerberos, PSK, or NTLM. 
-Windows versions prior to Windows Server 2012 only support the Default configuration.
+- IKEv1: Supported with pre-shared key (PSK), Certificates, and Kerberos. Supported with phase 1 authentication only.
+- IKEv2: Not supported with Kerberos, PSK, or NTLM. Supported with phase 1 authentication only.
+
+The default value is Default. There are authentication and cryptographic methods that are only compatible with certain keying modules. This is a very advanced setting intended only for specific interoperability scenarios. Overriding this parameter value may result in traffic being sent in plain-text if the authorization and cryptographic settings are not supported by the keying modules. Windows versions prior to Windows Server 2012 only support the Default configuration.
 
 ```yaml
 Type: KeyModule[]
@@ -648,7 +646,7 @@ Accepted values: Default, IKEv1, AuthIP, IKEv2
 
 Required: False
 Position: Named
-Default value: None
+Default value: Default
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

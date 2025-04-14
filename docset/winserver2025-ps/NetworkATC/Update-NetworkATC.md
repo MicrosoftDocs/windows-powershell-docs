@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: NetworkAtc-help.xml
 Module Name: NetworkATC
-ms.date: 02/21/2024
+ms.date: 03/14/2025
 online version: https://learn.microsoft.com/powershell/module/networkatc/update-networkatc?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-NetworkATC
@@ -10,7 +10,7 @@ title: Update-NetworkATC
 # Update-NetworkATC
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Updates the Network ATC configuration settings.
 
 ## SYNTAX
 
@@ -21,26 +21,28 @@ Update-NetworkATC [[-DriftTimerInMinutes] <Int32>] [[-ConfigurationChangeInSecon
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The `Update-NetworkATC` cmdlet updates the global configuration settings for Network ATC, such as
+the drift detection timer and the configuration change detection interval.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Update-NetworkATC -DriftTimerInMinutes 10 -ConfigurationChangeInSeconds 30
 ```
 
-{{ Add example description here }}
+This example updates the Network ATC configuration to set the drift detection timer to `10` minutes
+and the configuration change detection interval to `30` seconds.
 
 ## PARAMETERS
 
 ### -ConfigurationChangeInSeconds
 
-{{ Fill ConfigurationChangeInSeconds Description }}
+Specifies the interval, in seconds, for detecting changes in network configuration.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -53,10 +55,10 @@ Accept wildcard characters: False
 
 ### -DriftTimerInMinutes
 
-{{ Fill DriftTimerInMinutes Description }}
+Specifies the timer, in minutes, for detecting drift in network configuration settings.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -72,7 +74,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -85,3 +87,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Update-NetIntentAdapter](Update-NetIntentAdapter.md)
+
+[Update-NetIntentType](Update-NetIntentType.md)

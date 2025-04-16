@@ -348,9 +348,6 @@ When you run a cmdlet from an Active Directory provider drive, the default value
 
 When you run a cmdlet outside of an Active Directory provider drive against an AD DS target, the default value of this parameter is the default naming context of the target domain.
 
-When you run a cmdlet outside of an Active Directory provider drive against an AD LDS target, the default value is the default naming context of the target LDS instance if one has been specified by setting the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance.
-If no default naming context has been specified for the target AD LDS instance, then this parameter has no default value.
-
 When the value of the **SearchBase** parameter is set to an empty string and you are connected to a GC port, all partitions will be searched.
 If the value of the **SearchBase** parameter is set to an empty string and you are not connected to a GC port, an error will be thrown.
 
@@ -393,7 +390,7 @@ Accept wildcard characters: False
 
 ### -Server
 Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory Snapshot instance.
+The service may be any of the following: Active Directory Domain Services or Active Directory Snapshot instance.
 
 Domain name values:
 

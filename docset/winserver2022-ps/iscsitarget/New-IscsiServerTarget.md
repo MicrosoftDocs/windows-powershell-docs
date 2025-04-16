@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetName
-Specifies the name of the iSCSI target.
+Specifies the name of the iSCSI target. Note that the underscore character is not supported in the target name.
 
 ```yaml
 Type: String

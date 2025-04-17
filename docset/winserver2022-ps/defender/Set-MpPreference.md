@@ -2291,6 +2291,8 @@ Specifies the day of the week to run scheduled scans. Valid values are:
 - 7 or Saturday
 - 8 or Never (default)
 
+The default value is 0, Everyday.
+
 For the value 8 or Never, Windows Defender doesn't do scheduled scans.
 
 ```yaml

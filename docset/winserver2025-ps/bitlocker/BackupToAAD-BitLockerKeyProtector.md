@@ -24,7 +24,7 @@ The **BackupToAAD-BitLockerKeyProtector** cmdlet saves a recovery password key p
 ### Example 1
 ```powershell
 PS C:\> $BLV = Get-BitLockerVolume -MountPoint "C:"
-PS C:\> BackupToAAD-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProtector[1].KeyProtectorId
+PS C:\> BackupToAAD-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId ($BLV.KeyProtector | Where-Object {$_.KeyProtectorType -eq "RecoveryPassword" }).KeyProtectorId
 
 ```
 

@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: NetworkAtc-help.xml
 Module Name: NetworkATC
-ms.date: 02/21/2024
+ms.date: 03/14/2025
 online version: https://learn.microsoft.com/powershell/module/networkatc/update-netintentadapter?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-NetIntentAdapter
@@ -10,37 +10,39 @@ title: Update-NetIntentAdapter
 # Update-NetIntentAdapter
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Updates the network intent configuration for specified network adapters.
 
 ## SYNTAX
 
 ```
-Update-NetIntentAdapter [-AdapterName] <String[]> [[-ClusterName] <String>] [[-ComputerName] <String>]
- [-Name] <String> [-Wait] [<CommonParameters>]
+Update-NetIntentAdapter [-AdapterName] <String[]> [[-ClusterName] <String>]
+ [[-ComputerName] <String>] [-Name] <String> [-Wait] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The `Update-NetIntentAdapter` cmdlet updates the configuration of network adapters to align with the
+specified network intent. It can be used on individual computers or across clusters.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Update-NetIntentAdapter -AdapterName "Ethernet1" -Name "MyIntent" -ComputerName "Server01"
 ```
 
-{{ Add example description here }}
+This example updates the configuration of the adapter named `Ethernet1` on the computer `Server01`
+to match the network intent named `MyIntent`.
 
 ## PARAMETERS
 
 ### -AdapterName
 
-{{ Fill AdapterName Description }}
+Specifies the network adapter(s) to be updated. This parameter accepts an array of adapter names.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -53,10 +55,11 @@ Accept wildcard characters: False
 
 ### -ClusterName
 
-{{ Fill ClusterName Description }}
+Specifies the name of the cluster on which to update the network intent configuration across all
+nodes.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -69,10 +72,11 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-{{ Fill ComputerName Description }}
+Specifies the name of the computer on which to update the network intent configuration for the
+specified adapter(s).
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -85,10 +89,10 @@ Accept wildcard characters: False
 
 ### -Name
 
-{{ Fill Name Description }}
+Specifies the name of the network intent to be applied to the adapter(s).
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -101,10 +105,11 @@ Accept wildcard characters: False
 
 ### -Wait
 
-{{ Fill Wait Description }}
+Indicates that the cmdlet waits for the operation to complete before returning control to the
+command line.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -120,7 +125,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -133,3 +138,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Update-NetIntentType](Update-NetIntentType.md)
+
+[Update-NetworkATC](Update-NetworkATC.md)

@@ -1,8 +1,10 @@
 ---
+description: Stops a workgroup cluster, bringing the specified nodes offline and making them unavailable for use.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
 online version:
 schema: 2.0.0
+ms.date: 04/24/2025
 ---
 
 # Stop-WorkgroupCluster

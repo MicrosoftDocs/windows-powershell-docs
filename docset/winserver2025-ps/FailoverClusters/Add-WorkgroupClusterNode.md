@@ -23,7 +23,7 @@ Add-WorkgroupClusterNode [-Node] <String[]> [-Credentials] <PSCredential[]> [-Na
 
 ## DESCRIPTION
 
-The `Add-WorkgroupClusterNode` cmdlet adds a node to a workgroup cluster.
+The `Add-WorkgroupClusterNode` cmdlet adds a node to a workgroup cluster. This cmdlet allows you to expand an existing workgroup cluster by adding a new node, specifying the required credentials and authentication method. The node can be added with or without shared storage, depending on your configuration.
 
 ## EXAMPLES
 
@@ -44,7 +44,9 @@ This example adds `Node3` to the cluster whose membership is comprised of `Node1
 ## PARAMETERS
 
 ### -AuthenticationMethod
-{{ Fill AuthenticationMethod Description }}
+Specifies the authentication method to use when adding the node to the workgroup cluster. Acceptable values are:
+- `Certificates`: Uses certificate-based authentication for secure communication between nodes.
+- `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.
 
 ```yaml
 Type: WorkgroupClusterAuthenticationMethod
@@ -180,7 +182,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+You can pipe an array of node names to this cmdlet.
+
+### System.Management.Automation.PSCredential[]
+You can pipe an array of credentials to this cmdlet.
+
+### System.String
+You can pipe the name of the node to be added.
+
+### System.Management.Automation.PSCredential
+You can pipe the credential for the node to be added.
+
 ## OUTPUTS
+
+### None
+This cmdlet does not generate any output. It performs the operation of adding a node to a workgroup cluster.
 
 ## NOTES
 

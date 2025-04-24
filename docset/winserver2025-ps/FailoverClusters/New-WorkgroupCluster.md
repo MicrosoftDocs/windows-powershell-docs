@@ -25,7 +25,7 @@ New-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [[-N
 
 ## DESCRIPTION
 
-The `New-WorkgroupCluster` cmdlet creates a new workgroup cluster.
+The `New-WorkgroupCluster` cmdlet creates a new workgroup cluster. This cmdlet allows you to specify the nodes, credentials, cluster name, network configuration, and authentication method for the new cluster. You can configure the cluster to use certificate-based or local account authentication, and optionally enable Storage Spaces Direct or specify static addresses and networks to ignore.
 
 ## EXAMPLES
 
@@ -70,7 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationMethod
-{{ Fill AuthenticationMethod Description }}
+Specifies the authentication method to use when creating the workgroup cluster. Acceptable values are:
+- `Certificates`: Uses certificate-based authentication for secure communication between nodes.
+- `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.
 
 ```yaml
 Type: WorkgroupClusterAuthenticationMethod
@@ -283,7 +285,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+You can pipe an array of node names to this cmdlet.
+
+### System.Management.Automation.PSCredential[]
+You can pipe an array of credentials to this cmdlet.
+
+### System.String
+You can pipe the name of the cluster to be created.
+
 ## OUTPUTS
+
+### None
+This cmdlet does not generate any output. It performs the operation of creating a new workgroup cluster.
 
 ## NOTES
 

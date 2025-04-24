@@ -1,16 +1,18 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Learn how to remove a node from a workgroup cluster using the Remove-WorkgroupClusterNode cmdlet in PowerShell. Includes syntax, examples, and parameter details.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
-ms.date: 09/11/2024
+ms.date: 04/24/2025
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-workgroupclusternode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-WorkgroupClusterNode
+ai-usage: ai-generated
 ---
 
 # Remove-WorkgroupClusterNode
 
 ## SYNOPSIS
+
 Removes a node from a workgroup cluster.
 
 ## SYNTAX
@@ -30,28 +32,26 @@ refer to the documentation for the
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Remove a node from the cluster
+
+This example removes the node named `Node2` from the cluster that consists of `Node1` and `Node2`.
 
 ```powershell
 Remove-WorkgroupClusterNode -Node "Node1", "Node2" -Credentials $cred1, $cred2 -Name $Node2
 ```
 
-This example removes `Node2` from the cluster membership.
+### Example 2: Remove a node not currently in the cluster
 
-### EXAMPLE 2
+This example removes `Node3` from the cluster membership. Manual cleanup may be required to clear the node state by logging into `Node3` and running `Clear-ClusterNode`.
 
 ```powershell
 Remove-WorkgroupClusterNode -Node "Node1", "Node2" -Credentials $cred1, $cred2 -Name $Node3
 ```
 
-This example removes `Node3` from the cluster membership.
-
-Manual cleanup may be required to clear the node state by logging into `Node3` and running
-`Clear-ClusterNode`.
-
 ## PARAMETERS
 
 ### -AuthenticationMethod
+
 Specifies the authentication method to use when removing the node from the workgroup cluster. Acceptable values are:
 - `Certificates`: Uses certificate-based authentication for secure communication between nodes.
 - `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.

@@ -1,8 +1,10 @@
 ---
+description: Remove certificates issued by a specific issuer from the local machine and current user certificate stores.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
 online version:
 schema: 2.0.0
+ms.date: 04/24/2025
 ---
 
 # Remove-WorkgroupClusterCertificates

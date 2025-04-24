@@ -1,16 +1,18 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Creates a new workgroup cluster with the specified nodes, credentials, and configuration options.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
-ms.date: 09/11/2024
+ms.date: 04/24/2025
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/new-workgroupcluster?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-WorkgroupCluster
+ai-usage: ai-generated
 ---
 
 # New-WorkgroupCluster
 
 ## SYNOPSIS
+
 Creates a new workgroup cluster.
 
 ## SYNTAX
@@ -29,16 +31,13 @@ The `New-WorkgroupCluster` cmdlet creates a new workgroup cluster. This cmdlet a
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Create a new workgroup cluster
+
+This example creates a new workgroup cluster named `Cluster1` with `Node1` and `Node2` using the credentials in `$cred1` and `$cred2`, without creating an administrative access point.
 
 ```powershell
 New-WorkgroupCluster -Node "Node1", "Node2" -Credentials $cred1, $cred2 -Name "Cluster1"
 ```
-
-This example creates a new workgroup cluster named `Cluster1` with `Node1` and `Node2` using
-the credentials in `$cred1` and `$cred2`.
-
-Note: Only None and DNS are supported for AdministrativeAccessPoint.
 
 ## PARAMETERS
 

@@ -17,7 +17,8 @@ Adds a node to a workgroup cluster.
 
 ```
 Add-WorkgroupClusterNode [-Node] <String[]> [-Credentials] <PSCredential[]> [-Name] <String>
- [-Credential] <PSCredential> [-NoStorage] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-Credential] <PSCredential> [-NoStorage] [-Confirm] [-WhatIf]
+ [-AuthenticationMethod] <WorkgroupClusterAuthenticationMethod> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,17 +43,33 @@ This example adds `Node3` to the cluster whose membership is comprised of `Node1
 
 ## PARAMETERS
 
-### -Node
-
-An array of nodes to be added to the cluster.
+### -AuthenticationMethod
+{{ Fill AuthenticationMethod Description }}
 
 ```yaml
-Type: String[]
+Type: WorkgroupClusterAuthenticationMethod
+Parameter Sets: (All)
+Aliases:
+Accepted values: Certificates, NoCertificates
+
+Required: True
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Credential
+
+The credential for the node to be added.
+
+```yaml
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 1
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -63,7 +80,7 @@ Accept wildcard characters: False
 An array of credentials for the nodes.
 
 ```yaml
-Type: PSCredential[]
+Type: System.Management.Automation.PSCredential[]
 Parameter Sets: (All)
 Aliases:
 
@@ -79,7 +96,7 @@ Accept wildcard characters: False
 The name of the node to be added.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -90,17 +107,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Credential
+### -Node
 
-The credential for the node to be added.
+An array of nodes to be added to the cluster.
 
 ```yaml
-Type: PSCredential
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 4
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -111,7 +128,7 @@ Accept wildcard characters: False
 Specifies that shared storage is ignored for the workgroup cluster node.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -127,7 +144,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -143,7 +160,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 

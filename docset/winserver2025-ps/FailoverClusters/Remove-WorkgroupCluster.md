@@ -16,8 +16,8 @@ Removes a workgroup cluster.
 ## SYNTAX
 
 ```
-Remove-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [-Force] [-Confirm]
- [-WhatIf] [<CommonParameters>]
+Remove-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [-Force] [-Confirm] [-WhatIf]
+ [-AuthenticationMethod] <WorkgroupClusterAuthenticationMethod> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,18 +39,18 @@ be removed and manual cleanup may be needed.
 
 ## PARAMETERS
 
-### -Node
-
-An array of nodes that form the current cluster.
+### -AuthenticationMethod
+{{ Fill AuthenticationMethod Description }}
 
 ```yaml
-Type: String[]
+Type: WorkgroupClusterAuthenticationMethod
 Parameter Sets: (All)
 Aliases:
+Accepted values: Certificates, NoCertificates
 
-Required: False
-Position: 1
-Default value: @()
+Required: True
+Position: 3
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 An array of credentials for the nodes.
 
 ```yaml
-Type: PSCredential[]
+Type: System.Management.Automation.PSCredential[]
 Parameter Sets: (All)
 Aliases:
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -87,12 +87,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Node
+
+An array of nodes that form the current cluster.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: @()
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -108,7 +124,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 

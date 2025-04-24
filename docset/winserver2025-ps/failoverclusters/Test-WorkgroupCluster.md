@@ -42,7 +42,9 @@ credentials in `$cred1` and `$cred2`, and additional parameters.
 ## PARAMETERS
 
 ### -AuthenticationMethod
-{{ Fill AuthenticationMethod Description }}
+Specifies the authentication method to use when testing the workgroup cluster. Acceptable values are:
+- `Certificates`: Uses certificate-based authentication for secure communication between nodes.
+- `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.
 
 ```yaml
 Type: WorkgroupClusterAuthenticationMethod
@@ -292,7 +294,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+You can pipe an array of node names to this cmdlet.
+
+### System.Management.Automation.PSCredential[]
+You can pipe an array of credentials to this cmdlet.
+
+### System.Object[]
+You can pipe an array of disk or storage pool objects to this cmdlet.
+
+### System.String
+You can pipe the name of the cluster, report, or destination path to this cmdlet.
+
 ## OUTPUTS
+
+### Microsoft.FailoverClusters.PowerShell.ClusterValidationReport
+Returns a ClusterValidationReport object that contains the results of the cluster validation tests, including the status of each test and the location of the generated report.
 
 ## NOTES
 

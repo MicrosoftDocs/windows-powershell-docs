@@ -23,9 +23,9 @@ Remove-WorkgroupClusterNode [-Node] <String[]> [-Credentials] <PSCredential[]> [
 
 ## DESCRIPTION
 
-The `Remove-WorkgroupCluster` function removes a node from the membership in a workgroup Cluster.
-The rest of the parameters will be forwarded to the `Remove-ClusterNode` function. Please refer to
-the documentation for the
+The `Remove-WorkgroupClusterNode` function removes a node from the membership in a workgroup
+cluster. The rest of the parameters will be forwarded to the `Remove-ClusterNode` function. Please
+refer to the documentation for the
 [Remove-ClusterNode](/powershell/module/failoverclusters/remove-clusternode) cmdlet.
 
 ## EXAMPLES
@@ -52,7 +52,9 @@ Manual cleanup may be required to clear the node state by logging into `Node3` a
 ## PARAMETERS
 
 ### -AuthenticationMethod
-{{ Fill AuthenticationMethod Description }}
+Specifies the authentication method to use when removing the node from the workgroup cluster. Acceptable values are:
+- `Certificates`: Uses certificate-based authentication for secure communication between nodes.
+- `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.
 
 ```yaml
 Type: WorkgroupClusterAuthenticationMethod
@@ -230,7 +232,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+You can pipe an array of node names to this cmdlet.
+
+### System.Management.Automation.PSCredential[]
+You can pipe an array of credentials to this cmdlet.
+
+### System.String
+You can pipe the name of the node to be removed.
+
 ## OUTPUTS
+
+### None
+This cmdlet does not generate any output.
 
 ## NOTES
 

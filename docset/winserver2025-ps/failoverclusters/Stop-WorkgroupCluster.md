@@ -18,7 +18,7 @@ Stop-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [-C
 ```
 
 ## DESCRIPTION
-The Stop-WorkgroupCluster function stops a workgroup cluster.
+The Stop-WorkgroupCluster function stops a workgroup cluster. This cmdlet takes the specified workgroup cluster offline, using the provided credentials and authentication method. You can optionally prompt for confirmation before stopping the cluster.
 
 ## EXAMPLES
 
@@ -32,7 +32,9 @@ This example stops the cluster.
 ## PARAMETERS
 
 ### -AuthenticationMethod
-{{ Fill AuthenticationMethod Description }}
+Specifies the authentication method to use when stopping the workgroup cluster. Acceptable values are:
+- `Certificates`: Uses certificate-based authentication for secure communication between nodes.
+- `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.
 
 ```yaml
 Type: WorkgroupClusterAuthenticationMethod
@@ -97,7 +99,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+You can pipe an array of node names to this cmdlet.
+
+### System.Management.Automation.PSCredential[]
+You can pipe an array of credentials to this cmdlet.
+
 ## OUTPUTS
+
+### None
+This cmdlet does not generate any output. It performs the operation of stopping a workgroup cluster.
 
 ## NOTES
 

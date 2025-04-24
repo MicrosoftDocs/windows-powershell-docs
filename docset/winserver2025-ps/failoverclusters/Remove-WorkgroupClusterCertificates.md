@@ -20,10 +20,11 @@ Remove-WorkgroupClusterCertificates [[-Authority] <String>] [-Force] [<CommonPar
 The Remove-WorkgroupClusterCertificates function removes certificates from the following certificate stores:
 - Cert:\LocalMachine\My
 - Cert:\LocalMachine\Local Cert Issuer
+- Cert:\LocalMachine\Root
 - Cert:\CurrentUser\My
 - Cert:\CurrentUser\CA
 
-Certificates are filtered for those issued by issuers starring with PKU2UAuthority.
+Certificates are filtered for those issued by an issuer name that starts with the value specified in the **Authority** parameter (by default, "PKU2UAuthority*").
 
 ## EXAMPLES
 
@@ -44,7 +45,7 @@ Prompts for confirmation before removing each certificate issued by "CN=PKU2UAut
 ## PARAMETERS
 
 ### -Authority
-{{ Fill Authority Description }}
+Specifies the issuer name prefix to match when removing certificates. Only certificates issued by an issuer whose name starts with this value will be removed. The default is "PKU2UAuthority*".
 
 ```yaml
 Type: String
@@ -59,8 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Indicates whether to force the removal of certificates without prompting for confirmation.
-By default, the value is $false.
+Indicates whether to force the removal of certificates without prompting for confirmation. By default, the value is $false.
 
 ```yaml
 Type: SwitchParameter
@@ -79,7 +79,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+You can pipe a string value for the Authority parameter to this cmdlet.
+
 ## OUTPUTS
+
+### None
+This cmdlet does not generate any output. It performs the operation of removing certificates from the specified certificate stores.
 
 ## NOTES
 

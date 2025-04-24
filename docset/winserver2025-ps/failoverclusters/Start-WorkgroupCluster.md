@@ -18,7 +18,7 @@ Start-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [-
 ```
 
 ## DESCRIPTION
-The Start-WorkgroupCluster function starts a workgroup cluster.
+The Start-WorkgroupCluster function starts a workgroup cluster. This cmdlet brings the specified workgroup cluster online, using the provided credentials and authentication method. You can optionally ignore the persistent state of the cluster when starting it.
 
 ## EXAMPLES
 
@@ -32,7 +32,9 @@ This example starts the cluster.
 ## PARAMETERS
 
 ### -AuthenticationMethod
-{{ Fill AuthenticationMethod Description }}
+Specifies the authentication method to use when starting the workgroup cluster. Acceptable values are:
+- `Certificates`: Uses certificate-based authentication for secure communication between nodes.
+- `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.
 
 ```yaml
 Type: WorkgroupClusterAuthenticationMethod
@@ -63,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnorePersistentState
-{{ Fill IgnorePersistentState Description }}
+Indicates that the cmdlet should start the cluster without restoring the previous persistent state. This can be useful if you want to start the cluster in a clean state, ignoring any saved cluster state from previous operations.
 
 ```yaml
 Type: SwitchParameter
@@ -97,7 +99,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+You can pipe an array of node names to this cmdlet.
+
+### System.Management.Automation.PSCredential[]
+You can pipe an array of credentials to this cmdlet.
+
 ## OUTPUTS
+
+### None
+This cmdlet does not generate any output. It performs the operation of starting a workgroup cluster.
 
 ## NOTES
 

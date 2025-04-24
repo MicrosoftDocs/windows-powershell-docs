@@ -22,7 +22,7 @@ Remove-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [
 
 ## DESCRIPTION
 
-The `Remove-WorkgroupCluster` cmdlet removes a workgroup cluster.
+The `Remove-WorkgroupCluster` cmdlet removes a workgroup cluster. This cmdlet disconnects and removes all nodes from the specified workgroup cluster, using the provided credentials and authentication method. If communication is lost with a node or the cluster membership is incomplete, manual cleanup may be required.
 
 ## EXAMPLES
 
@@ -40,7 +40,9 @@ be removed and manual cleanup may be needed.
 ## PARAMETERS
 
 ### -AuthenticationMethod
-{{ Fill AuthenticationMethod Description }}
+Specifies the authentication method to use when removing the workgroup cluster. Acceptable values are:
+- `Certificates`: Uses certificate-based authentication for secure communication between nodes.
+- `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.
 
 ```yaml
 Type: WorkgroupClusterAuthenticationMethod
@@ -144,7 +146,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+You can pipe an array of node names to this cmdlet.
+
+### System.Management.Automation.PSCredential[]
+You can pipe an array of credentials to this cmdlet.
+
 ## OUTPUTS
+
+### None
+This cmdlet does not generate any output. It performs the operation of removing a workgroup cluster.
 
 ## NOTES
 

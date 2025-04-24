@@ -18,7 +18,7 @@ Removes a node from a workgroup cluster.
 ```
 Remove-WorkgroupClusterNode [-Node] <String[]> [-Credentials] <PSCredential[]> [-Name] <String>
  [[-Wait] <Int32>] [-IgnoreStorageConnectivityLoss] [-CleanupDisks] [-Force] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+ [-AuthenticationMethod] <WorkgroupClusterAuthenticationMethod> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,70 +51,18 @@ Manual cleanup may be required to clear the node state by logging into `Node3` a
 
 ## PARAMETERS
 
-### -Node
-
-An array of nodes in the workgroup cluster.
+### -AuthenticationMethod
+{{ Fill AuthenticationMethod Description }}
 
 ```yaml
-Type: String[]
+Type: WorkgroupClusterAuthenticationMethod
 Parameter Sets: (All)
 Aliases:
+Accepted values: Certificates, NoCertificates
 
 Required: True
-Position: 1
+Position: 5
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Credentials
-
-An array of credentials for the nodes.
-
-```yaml
-Type: PSCredential[]
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-
-The name of the node to be removed. If the name isn't included in **Node** parameter, the first
-node in the **Node** parameter will be used to remove the node. Additional cleanup will be required
-to clear the node state.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Wait
-
-Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
-then the cmdlet waits for completion. If the value `0` is specified, then the call is initiated and
-the cmdlet returns without waiting.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 4
-Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -127,7 +75,7 @@ from any old cluster configurations, making them available for new clusters or o
 cmdlet may prevent potential conflicts that could arise from leftover metadata when reusing disks.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -138,12 +86,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Credentials
+
+An array of credentials for the nodes.
+
+```yaml
+Type: System.Management.Automation.PSCredential[]
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -162,7 +126,7 @@ this node has any Storage Spaces Direct storage. If this cmdlet finds Storage Sp
 it prompts you for confirmation before it removes the node.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -173,12 +137,64 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Name
+
+The name of the node to be removed. If the name isn't included in **Node** parameter, the first
+node in the **Node** parameter will be used to remove the node. Additional cleanup will be required
+to clear the node state.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Node
+
+An array of nodes in the workgroup cluster.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Wait
+
+Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+then the cmdlet waits for completion. If the value `0` is specified, then the call is initiated and
+the cmdlet returns without waiting.
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
+Default value: 0
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -194,7 +210,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 

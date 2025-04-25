@@ -2,15 +2,17 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
-ms.date: 04/24/2025
+ms.date: 04/25/2025
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-workgroupclusternode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-WorkgroupClusterNode
+ai-usage: ai-generated
 ---
 
 # Add-WorkgroupClusterNode
 
 ## SYNOPSIS
+
 Adds a node to a workgroup cluster.
 
 ## SYNTAX
@@ -23,28 +25,33 @@ Add-WorkgroupClusterNode [-Node] <String[]> [-Credentials] <PSCredential[]> [-Na
 
 ## DESCRIPTION
 
-The `Add-WorkgroupClusterNode` cmdlet adds a node to a workgroup cluster. This cmdlet allows you to expand an existing workgroup cluster by adding a new node, specifying the required credentials and authentication method. The node can be added with or without shared storage, depending on your configuration.
+The `Add-WorkgroupClusterNode` cmdlet adds a node to a workgroup cluster. This cmdlet lets you
+expand an existing workgroup cluster by adding a new node, specifying the required credentials and
+authentication method. The node can be added with or without shared storage, depending on your
+configuration.
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Add a node to a workgroup cluster
+
+This example adds `Node3` to the cluster whose membership is comprised of `Node1` and `Node2`.
 
 ```powershell
-$params = @{
+$parameters = @{
     Node = @("Node1", "Node2")
     Credentials = @($cred1, $cred2)
     Name = "Node3"
     Credential = $cred3
 }
-Add-WorkgroupClusterNode @params
+Add-WorkgroupClusterNode @parameters
 ```
-
-This example adds `Node3` to the cluster whose membership is comprised of `Node1` and `Node2`.
 
 ## PARAMETERS
 
 ### -AuthenticationMethod
+
 Specifies the authentication method to use when adding the node to the workgroup cluster. Acceptable values are:
+
 - `Certificates`: Uses certificate-based authentication for secure communication between nodes.
 - `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.
 
@@ -183,21 +190,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String[]
+
 You can pipe an array of node names to this cmdlet.
 
 ### System.Management.Automation.PSCredential[]
+
 You can pipe an array of credentials to this cmdlet.
 
 ### System.String
+
 You can pipe the name of the node to be added.
 
 ### System.Management.Automation.PSCredential
+
 You can pipe the credential for the node to be added.
 
 ## OUTPUTS
 
 ### None
-This cmdlet does not generate any output. It performs the operation of adding a node to a workgroup cluster.
+
+This cmdlet doesn't generate any output. It performs the operation of adding a node to a workgroup cluster.
 
 ## NOTES
 

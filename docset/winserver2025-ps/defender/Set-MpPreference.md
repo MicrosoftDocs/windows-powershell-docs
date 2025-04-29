@@ -1537,7 +1537,9 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleOffset
-Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight. _Recommended configuration to use when setting the time for the Weekly Scheduled Scan (alongside ScanParameters and ScanScheduleDay). This provides the more intuitive approach. If both ScanScheduleOffset and ScanScheduleTime are set, whichever configuration was edited more recently will be used to determine the time to execute the scan at._
+Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight. 
+
+_Note: Recommended to use ScanScheduleOffset for a more intuitive appraoch when setting the time for the Weekly Scheduled Scan (alongside ScanParameters and ScanScheduleDay). If both ScanScheduleOffset and ScanScheduleTime are set, whichever configuration was edited more recently will be used to determine the time to execute the scan at._
 
 ```yaml
 Type: UInt32

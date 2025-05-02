@@ -11,7 +11,7 @@ title: Unblock-FileShareAccess
 # Unblock-FileShareAccess
 
 ## SYNOPSIS
-Unblocks access to a file share.
+Unblocks access to a file share. This adjusts security descriptors of the SMB share and the underlying NTFS folder.
 
 ## SYNTAX
 
@@ -35,7 +35,7 @@ Unblock-FileShareAccess -InputObject <CimInstance[]> -AccountName <String[]> [-C
 ```
 
 ## DESCRIPTION
-The **Unblock-FileShareAccess** cmdlet removes all of the Deny access control entries (ACE) for the specified trustee from the share's security descriptor.
+The **Unblock-FileShareAccess** cmdlet removes all of the Deny access control entries (ACE) for the specified trustee from the share's and the underlying shared folder's security descriptors.
 
 ## EXAMPLES
 
@@ -240,6 +240,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+* To unblock access to an SMB share without adjusting security of the underlying file system use [Unblock-SmbShareAccess](/powershell/module/smbshare/unblock-smbshareaccess).
 
 ## RELATED LINKS
 
@@ -248,4 +249,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Grant-FileShareAccess](./Grant-FileShareAccess.md)
 
 [Revoke-FileShareAccess](./Revoke-FileShareAccess.md)
+
+[Unblock-SmbShareAccess](/powershell/module/smbshare/unblock-smbshareaccess)
 

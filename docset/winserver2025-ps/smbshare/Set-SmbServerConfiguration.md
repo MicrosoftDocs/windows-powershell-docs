@@ -1017,12 +1017,12 @@ Accept wildcard characters: False
 
 This parameter specifies the minimum version of the SMB protocol to be used. Acceptable values are:
 
-- None – There is no maximum protocol version specified, the server can use any supported version.
-- SMB202 – SMB 2.0.2 is the maximum version accepted by the SMB Server
-- SMB210 - SMB 2.1.0 is the maximum version accepted by the SMB Server
-- SMB300 - SMB 3.0.0 is the maximum version accepted by the SMB Server
-- SMB302 - SMB 3.0.2 is the maximum version accepted by the SMB Server
-- SMB311 - SMB 3.1.1 is the maximum version accepted by the SMB Server
+- None – There is no minimum protocol version specified, the server can use any supported version.
+- SMB202 – SMB 2.0.2 is the minimum version accepted by the SMB Server
+- SMB210 - SMB 2.1.0 is the minimum version accepted by the SMB Server
+- SMB300 - SMB 3.0.0 is the minimum version accepted by the SMB Server
+- SMB302 - SMB 3.0.2 is the minimum version accepted by the SMB Server
+- SMB311 - SMB 3.1.1 is the minimum version accepted by the SMB Server
 
 ```yaml
 Type: Smb2DialectMin

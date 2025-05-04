@@ -27,6 +27,8 @@ You can identify a MSA by its distinguished name (DN), GUID, security identifier
 You can also set the parameter to a MSA object variable, such as `$<localMSA>` or pass a MSA object through the pipeline to the *Identity* parameter.
 For example, you can use the Get-ADServiceAccount to get a MSA object and then pass that object through the pipeline to the **Test-ADServiceAccount** cmdlet.
 
+**NOTE**: This cmdlet is designed for MSAs. IT works with GMSA in a very limited fashion, namely only in the same domain as the hosting computer.
+
 ## EXAMPLES
 
 ### Example 1: Test an MSA

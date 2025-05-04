@@ -21,7 +21,7 @@ New-NetQosPolicy [-Name] <String> [-AppPathNameMatchCondition <String>] [-AsJob]
  [-IPSrcPortMatchCondition <UInt16>] [-IPSrcPortStartMatchCondition <UInt16>]
  [-IPSrcPrefixMatchCondition <String>] [-MinBandwidthWeightAction <Byte>] [-NetworkProfile <NetworkProfile>]
  [-PolicyStore <String>] [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-ThrottleLimit <Int32>]
- [-ThrottleRateActionBytesPerSecond <UInt64>] [-UserMatchCondition <String>] [-Confirm] [-WhatIf]
+ [-ThrottleRateActionBitsPerSecond <UInt64>] [-UserMatchCondition <String>] [-Confirm] [-WhatIf]
 ```
 
 ### UNNAMED_PARAMETER_SET_2
@@ -29,7 +29,7 @@ New-NetQosPolicy [-Name] <String> [-AppPathNameMatchCondition <String>] [-AsJob]
 New-NetQosPolicy [-Name] <String> [-AppPathNameMatchCondition <String>] [-AsJob] [-CimSession <CimSession[]>]
  [-DSCPAction <SByte>] [-IPProtocolMatchCondition <Protocol>] [-MinBandwidthWeightAction <Byte>]
  [-NetworkProfile <NetworkProfile>] [-PolicyStore <String>] [-Precedence <UInt32>]
- [-PriorityValue8021Action <SByte>] [-ThrottleLimit <Int32>] [-ThrottleRateActionBytesPerSecond <UInt64>]
+ [-PriorityValue8021Action <SByte>] [-ThrottleLimit <Int32>] [-ThrottleRateActionBitsPerSecond <UInt64>]
  [-UserMatchCondition <String>] -IPPortMatchCondition <UInt16> [-Confirm] [-WhatIf]
 ```
 
@@ -38,7 +38,7 @@ New-NetQosPolicy [-Name] <String> [-AppPathNameMatchCondition <String>] [-AsJob]
 New-NetQosPolicy [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-DSCPAction <SByte>]
  [-MinBandwidthWeightAction <Byte>] [-NetworkProfile <NetworkProfile>] [-PolicyStore <String>]
  [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-ThrottleLimit <Int32>]
- [-ThrottleRateActionBytesPerSecond <UInt64>] [-SMB] [-Confirm] [-WhatIf]
+ [-ThrottleRateActionBitsPerSecond <UInt64>] [-SMB] [-Confirm] [-WhatIf]
 ```
 
 ### UNNAMED_PARAMETER_SET_4
@@ -46,7 +46,7 @@ New-NetQosPolicy [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-DSCPAc
 New-NetQosPolicy [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-DSCPAction <SByte>]
  [-MinBandwidthWeightAction <Byte>] [-NetworkProfile <NetworkProfile>] [-PolicyStore <String>]
  [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-ThrottleLimit <Int32>]
- [-ThrottleRateActionBytesPerSecond <UInt64>] [-Default] [-Confirm] [-WhatIf]
+ [-ThrottleRateActionBitsPerSecond <UInt64>] [-Default] [-Confirm] [-WhatIf]
 ```
 
 ### UNNAMED_PARAMETER_SET_5
@@ -60,7 +60,7 @@ New-NetQosPolicy [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-Networ
 ```
 New-NetQosPolicy [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-DSCPAction <SByte>]
  [-IPDstPrefixMatchCondition <String>] [-NetworkProfile <NetworkProfile>] [-PolicyStore <String>]
- [-Precedence <UInt32>] [-ThrottleLimit <Int32>] [-ThrottleRateActionBytesPerSecond <UInt64>]
+ [-Precedence <UInt32>] [-ThrottleLimit <Int32>] [-ThrottleRateActionBitsPerSecond <UInt64>]
  [-URIRecursiveMatchCondition <Boolean>] -URIMatchCondition <String> [-Confirm] [-WhatIf]
 ```
 
@@ -76,7 +76,7 @@ New-NetQosPolicy [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-Networ
 New-NetQosPolicy [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-DSCPAction <SByte>]
  [-MinBandwidthWeightAction <Byte>] [-NetworkProfile <NetworkProfile>] [-PolicyStore <String>]
  [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-ThrottleLimit <Int32>]
- [-ThrottleRateActionBytesPerSecond <UInt64>] [-NFS] [-Confirm] [-WhatIf]
+ [-ThrottleRateActionBitsPerSecond <UInt64>] [-NFS] [-Confirm] [-WhatIf]
 ```
 
 ### UNNAMED_PARAMETER_SET_9
@@ -84,7 +84,7 @@ New-NetQosPolicy [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-DSCPAc
 New-NetQosPolicy [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-DSCPAction <SByte>]
  [-MinBandwidthWeightAction <Byte>] [-NetworkProfile <NetworkProfile>] [-PolicyStore <String>]
  [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-ThrottleLimit <Int32>]
- [-ThrottleRateActionBytesPerSecond <UInt64>] [-LiveMigration] [-Confirm] [-WhatIf]
+ [-ThrottleRateActionBitsPerSecond <UInt64>] [-LiveMigration] [-Confirm] [-WhatIf]
 ```
 
 ### UNNAMED_PARAMETER_SET_10
@@ -92,7 +92,7 @@ New-NetQosPolicy [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-DSCPAc
 New-NetQosPolicy [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-DSCPAction <SByte>]
  [-MinBandwidthWeightAction <Byte>] [-NetworkProfile <NetworkProfile>] [-PolicyStore <String>]
  [-Precedence <UInt32>] [-PriorityValue8021Action <SByte>] [-ThrottleLimit <Int32>]
- [-ThrottleRateActionBytesPerSecond <UInt64>] [-iSCSI] [-Confirm] [-WhatIf]
+ [-ThrottleRateActionBitsPerSecond <UInt64>] [-iSCSI] [-Confirm] [-WhatIf]
 ```
 
 ## DESCRIPTION
@@ -131,7 +131,7 @@ The **SMB** parameter is a built-in filter that matches TCP port `445`, which is
 
 ### EXAMPLE 2
 ```
-PS C:\> New-NetQosPolicy -Name "FTP" -AppPathNameMatchCondition ftp.exe -ThrottleRateActionBytesPerSecond 1MB -PolicyStore ActiveStore
+PS C:\> New-NetQosPolicy -Name "FTP" -AppPathNameMatchCondition ftp.exe -ThrottleRateActionBitsPerSecond 1MB -PolicyStore ActiveStore
 Name           : FTP 
 Owner          : PowerShell / WMI 
 NetworkProfile : All 
@@ -143,7 +143,7 @@ ThrottleRate   : 1.049 MBits/sec
 This example creates a QoS policy named FTP, that matches an application path at ftp.exe and throttles the traffic at 1,000,000 bytes per second.
 This policy is ActiveStore, meaning that it is not persistent after reboot of the computer. 
 
-An alias for the **ThrottleRateActionBytesPerSecond** parameter is `MaxBw`.
+An alias for the **ThrottleRateActionBitsPerSecond** parameter is `MaxBw`.
 
 ### EXAMPLE 3
 ```
@@ -162,7 +162,7 @@ This policy is effective only on traffic sent on a domain-joined network adapter
 
 ### EXAMPLE 4
 ```
-PS C:\> New-NetQosPolicy -Name "HTTP" -IPPort 80 -IPProtocol TCP -ThrottleRateActionBytesPerSecond 10MB
+PS C:\> New-NetQosPolicy -Name "HTTP" -IPPort 80 -IPProtocol TCP -ThrottleRateActionBitsPerSecond 10MB
 Name           : HTTP 
 Owner          : Group Policy (Machine) 
 NetworkProfile : All 
@@ -189,7 +189,7 @@ This example creates a QoS policy named Wildcard, that catches all the traffic t
 
 ### EXAMPLE 6
 ```
-PS C:\> New-NetQosPolicy -Name "IIS" -URIMatchCondition "http://training" -ThrottleRateActionBytesPerSecond 500KB
+PS C:\> New-NetQosPolicy -Name "IIS" -URIMatchCondition "http://training" -ThrottleRateActionBitsPerSecond 500KB
 Name           : IIS 
 Owner          : Group Policy (Machine) 
 NetworkProfile : Domain 
@@ -689,7 +689,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ThrottleRateActionBytesPerSecond
+### -ThrottleRateActionBitsPerSecond
 Specifies a throttle rate in bytes per second, also known as maximum bandwidth.
 
 ```yaml

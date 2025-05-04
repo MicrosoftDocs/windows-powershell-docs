@@ -85,6 +85,9 @@ Applies an image to a specified location.
 ### [Export-WindowsDriver](./Export-WindowsDriver.md)
 Exports all third-party drivers from a Windows image to a destination folder.
 
+### [Export-WindowsCapabilitySource](/powershell/module/dism/export-windowscapabilitysource)
+Creates a custom FOD repository that includes packages that support the installation of the specified capabilities.
+
 ### [Export-WindowsImage](./Export-WindowsImage.md)
 Exports a copy of the specified image to another image file.
 

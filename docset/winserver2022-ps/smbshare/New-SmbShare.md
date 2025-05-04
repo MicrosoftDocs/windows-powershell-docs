@@ -82,6 +82,15 @@ groups `CONTOSO\Finance Users` and `CONTOSO\HR Users`. Full Access permissions t
 This example uses splatting to pass parameter values from the `$Parameters` variable to the command.
 Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
 
+### Example 4: Create an SMB share in a Windows Server Failover Cluster.
+
+```powershell
+New-SmbShare -Name "Data" -ScopeName "Network Name resource" -Path "D:\Folder"
+```
+
+This command creates a clustered SMB share by using -ScopeName to specify the Network Name resource of a cluster group.
+
+
 ## PARAMETERS
 
 ### -AsJob

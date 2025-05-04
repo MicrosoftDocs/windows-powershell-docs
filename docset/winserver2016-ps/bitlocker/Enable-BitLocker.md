@@ -395,10 +395,19 @@ Accept wildcard characters: False
 
 ### -RecoveryPassword
 
-Specifies a recovery password.
-If you do not specify this parameter, but you do include the *RecoveryPasswordProtector* parameter, the cmdlet creates a random password.
-You can enter a 48-digit password.
-The password specified or created acts as a protector for the volume encryption key.
+Specifies a recovery password. The cmdlet adds the password specified or created as a protector for the volume encryption key.
+If you do not specify this parameter (but specify `-RecoveryPasswordProtector`, the cmdlet creates a random recovery password.
+
+A recovery password has rigid requirements. It must consist of 48 digits. Each six must be divisible by 11. For example, the
+following is acceptable:
+
+    '147279-525107-204677-117612-367510-356554-273911-527274'
+
+The following is **not** acceptable:
+
+    '702510-071786-013337-543770-555603-414075-635673-114355'
+
+In the example above, only the second segment is divisible by 11. The others are not.
 
 ```yaml
 Type: String

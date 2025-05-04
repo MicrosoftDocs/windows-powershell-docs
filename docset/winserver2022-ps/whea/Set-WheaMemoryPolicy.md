@@ -65,6 +65,12 @@ PS C:\> $X | Set-WheaMemoryPolicy
 
 This command gets the memory policy in the variable $X, sets the value of X. DisableOffline to True, and then uses $X to set the memory policy.
 
+### Example 4: Set WHEA memory policy with all parameters 
+```
+PS C:\> Set-WHEAMemoryPolicy -ComputerName Laptop-X542UQ -DisableOffline $False -DisablePFA $False -PersistMemoryOffline $False -PFAPageCount 12000 -PFAErrorThreshold 16 -PFATimeout 86400
+```
+This command sets all policies without the persistent memory device.
+
 ## PARAMETERS
 
 ### -ComputerName

@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies the path to the exported virtual machine to be imported.
+Specifies the path to the exported virtual machine to be imported. This should be a `.vmcx` file.
 
 ```yaml
 Type: String

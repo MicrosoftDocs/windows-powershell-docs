@@ -52,7 +52,7 @@ cluster name, assuming the cluster name resource is online, can be used instead 
 
 ### -IgnorePersistentState
 
-Starts the nodes in the cluster without bringing resources online on the nodes.
+Starts the nodes in the cluster without bringing resources online on the nodes. Note that this behavior will remain until the cluster is restarted or until the cluster property **IgnorePersistentStateOnStartup** is set to 0.
 
 ```yaml
 Type: SwitchParameter

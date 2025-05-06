@@ -1519,7 +1519,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleQuickScanTime
-Specifies the time of day, as the number of minutes after midnight, to perform a scheduled quick scan.
+Specifies the time of day, as the number of minutes after midnight, to perform a daily scheduled quick scan.
 The time refers to the local time on the computer.
 If you do not specify a value for this parameter, a scheduled quick scan runs at the time specified by the **ScanScheduleOffset** parameter.
 That parameter has a default time of two hours after midnight.
@@ -1537,7 +1537,10 @@ Accept wildcard characters: False
 ```
 
 ### -ScanScheduleOffset
-Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight.
+Configures the number of minutes after midnight to perform a scheduled scan. The time on the endpoint is used to determine the local time. If you enable this setting, a scheduled scan will run at the time specified. If you disable or don’t enable this setting, a scheduled scan runs at the default time of two hours (120 minutes) after midnight. 
+
+> [!TIP]
+> We recommend using the **ScanScheduleOffset** parameter instead of the **ScanScheduleTime** parameter because it's a more intuitive way to set the time for the Weekly Scheduled Scan. If both **ScanScheduleOffset** and **ScanScheduleTime** are set, whichever configuration was edited more recently is used to determine the time to execute the scan.
 
 ```yaml
 Type: UInt32

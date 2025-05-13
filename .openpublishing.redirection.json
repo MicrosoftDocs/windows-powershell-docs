@@ -1,6 +1,16 @@
 {
     "redirections": [
         {
+            "source_path": "docset/docs-conceptual/windows/index.md",
+            "redirect_url": "/powershell/windows/get-started",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docset/docs-conceptual/windows/overview.md",
+            "redirect_url": "/powershell/windows/get-started",
+            "redirect_document_id": false
+        },
+        {
             "redirect_document_id": true,
             "redirect_url": "winserver2016-ps/netconnection/Get-NetConnectionProfile?view=WindowsServer2016-ps",
             "source_path": "winserver2016-ps/netconnectionprofile/Get-NetConnectionProfile.md"

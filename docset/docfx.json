@@ -44,7 +44,7 @@
             }
         },
         "apiPlatform": "powershell",
-        "archive_url": "https://learn.microsoft.com/previous-versions/powershell/windows",
+        "archive_url": "https://learn.microsoft.com/previous-versions/powershell/windows/get-started",
         "author": "robinharwood",
         "breadcrumb_path": "/powershell/windows/bread/toc.json",
         "contributors_to_exclude": [

@@ -108,7 +108,6 @@ Accept wildcard characters: False
 The affinity type for the new rule. The valid values for this parameter are:
 
 - `SameFaultDomain` - Resources must stay within the same fault domain.
-- `SameFaultDomain` - Resources must stay within the same fault domain.
 - `SameNode` - Resources must stay on the same cluster node.
 - `DifferentFaultDomain` - Resources must stay in different fault domain (anti-affinity).
 - `DifferentNode` - Resources must stay on different cluster nodes (anti-affinity).

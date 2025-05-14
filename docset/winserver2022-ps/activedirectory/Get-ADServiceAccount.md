@@ -70,7 +70,7 @@ HostComputers     :
 DistinguishedName : CN=service1,CN=Managed Service Accounts,DC=contoso,DC=com
 ```
 
-This command gets a managed service account with SAM account name service1.
+This command gets a managed service account with SAM account name `service1`.
 
 ### Example 2: Get a managed service account by its SID
 ```powershell
@@ -107,6 +107,24 @@ DistinguishedName : CN=service1,CN=Managed Service Accounts,DC=contoso,DC=com
 ```
 
 This command gets the managed service accounts allowed to be used on the computer `CN=SQL-Server-1,DC=contoso,DC=com`.
+
+### Example 4: Get a managed service account from another domain by name
+```powershell
+PS C:\> Get-ADServiceAccount -Identity service1 -server server1.child1.contoso.com
+```
+```output
+Enabled           : True
+Name              : service1
+UserPrincipalName :
+SamAccountName    : service1$
+ObjectClass       : msDS-ManagedServiceAccount
+SID               : S-1-5-21-2216061493-1510163535-4121908508-4603
+ObjectGUID        : 7b4705e0-036a-49ad-a01f-23c124ea1552
+HostComputers     :
+DistinguishedName : CN=service1,CN=Managed Service Accounts,dc=child1,DC=contoso,DC=com
+```
+
+This command gets a managed service account with SAM account name `service1` in domain `child1.contoso.com`.
 
 ## PARAMETERS
 
@@ -260,13 +278,7 @@ In AD DS environments, a default value for **Partition** will be set in the foll
 - If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive. 
 - If none of the previous cases apply, the default value of **Partition** will be set to the default partition or naming context of the target domain.
 
-In AD LDS environments, a default value for Partition will be set in the following cases: 
-
-- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name. 
-- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive. 
-- If the target AD LDS instance has a default naming context, the default value of **Partition** will be set to the default naming context.
-To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance. 
-- If none of the previous cases apply, the **Partition** parameter will not take any default value.
+The parameter is only useful for snapshots. On live AD domains, the domain NC is the only allowed partition, relative to the value of the “-server” parameter.
 
 ```yaml
 Type: String

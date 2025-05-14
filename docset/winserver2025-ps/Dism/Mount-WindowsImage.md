@@ -1,7 +1,7 @@
 ---
 description: Mounts a Windows image in a WIM or VHD file to a directory on the local computer.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-Module Name: System.Object[]
+Module Name: Dism
 ms.date: 10/06/2021
 online version: https://learn.microsoft.com/powershell/module/dism/mount-windowsimage?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0

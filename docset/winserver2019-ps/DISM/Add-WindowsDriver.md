@@ -1,7 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-Module Name: System.Object[]
+Module Name: DISM
 ms.date: 12/21/2016
 online version: https://learn.microsoft.com/powershell/module/dism/add-windowsdriver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
@@ -56,7 +56,7 @@ This can be piped from the output of Export-WindowsDriver or Get-WindowsDriver.
 ```yaml
 Type: AdvancedDriverObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -72,7 +72,7 @@ This can be piped from the output of **Export-WindowsDriver** or **Get-WindowsDr
 ```yaml
 Type: BasicDriverObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ You will not receive an error message.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ For more information about driver signing requirements, see [Windows Deployment 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
 In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
 The log file will automatically be archived.
 The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
-Each time the log file is archived the .bak file will be overwritten. 
+Each time the log file is archived the .bak file will be overwritten.
 When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
 
 ```yaml
@@ -166,7 +166,7 @@ If the directory named Windows is not a subdirectory of the root directory, *Win
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -181,7 +181,7 @@ Includes all subfolders when searching for drivers to add.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,14 +194,14 @@ Accept wildcard characters: False
 Specifies a temporary directory that will be used when extracting files for use during servicing.
 The directory must exist locally.
 If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
-Items in the scratch directory are deleted after each operation. 
+Items in the scratch directory are deleted after each operation.
 You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
 The directory used for extracting files for temporary usage during servicing should be a local directory.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +218,7 @@ Use -SystemDrive to service an installed Windows image from a Windows PE environ
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -235,7 +235,7 @@ If not specified, the default is the Windows directory in the root of the offlin
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

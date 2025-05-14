@@ -1,7 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-Module Name: System.Object[]
+Module Name: DISM
 ms.date: 12/21/2016
 online version: https://learn.microsoft.com/powershell/module/dism/enable-windowsoptionalfeature?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
@@ -80,7 +80,7 @@ If a parent feature is required for the specified feature to be enabled in the i
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +97,7 @@ You can use Get-WindowsOptionalFeature to find the name of the feature in the im
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -114,7 +114,7 @@ LimitAccess can only be used when servicing images with Windows 8, Windows Serve
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
 In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
 The log file will automatically be archived.
 The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
-Each time the log file is archived the .bak file will be overwritten. 
+Each time the log file is archived the .bak file will be overwritten.
 When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
 
 ```yaml
@@ -174,7 +174,7 @@ This option will keep the application from prompting for a restart or keep it fr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -189,7 +189,7 @@ Specifies that the action is to be taken on the operating system that is current
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Online
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -204,7 +204,7 @@ Specifies the name of a package in the Windows image.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -220,7 +220,7 @@ If the directory named Windows is not a subdirectory of the root directory, *Win
 ```yaml
 Type: String
 Parameter Sets: Offline
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -233,14 +233,14 @@ Accept wildcard characters: False
 Specifies a temporary directory that will be used when extracting files for use during servicing.
 The directory must exist locally.
 If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
-Items in the scratch directory are deleted after each operation. 
+Items in the scratch directory are deleted after each operation.
 You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
 The directory used for extracting files for temporary usage during servicing should be a local directory.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -264,7 +264,7 @@ Windows Update is also used for online images.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -281,7 +281,7 @@ Use -SystemDrive to service an installed Windows image from a Windows PE environ
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -298,7 +298,7 @@ If not specified, the default is the Windows directory in the root of the offlin
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

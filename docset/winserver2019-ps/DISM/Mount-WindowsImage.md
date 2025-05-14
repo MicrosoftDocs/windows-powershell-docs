@@ -1,7 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-Module Name: System.Object[]
+Module Name: DISM
 ms.date: 12/21/2016
 online version: https://learn.microsoft.com/powershell/module/dism/mount-windowsimage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
@@ -96,14 +96,14 @@ This command mounts the Windows image at index 2 of the install.wim file to the 
 ## PARAMETERS
 
 ### -CheckIntegrity
-Detects and tracks .wim file corruption when used with the **Dismount-WindowsImage** or **Save-WindowsImage** cmdlet. 
+Detects and tracks .wim file corruption when used with the **Dismount-WindowsImage** or **Save-WindowsImage** cmdlet.
 *CheckIntegrity* stops the operation if DISM detects that the .wim file is corrupted when used with the **Mount-WindowsImage** cmdlet.
 The *CheckIntegrity* parameter does not apply to virtual hard disk (VHD) files.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: OfflineIndex, OfflineName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ Specifies the location of the WIM or VHD file containing the Windows image you w
 ```yaml
 Type: String
 Parameter Sets: OfflineIndex, OfflineName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -134,7 +134,7 @@ For a VHD file, the *Index* must be 1.
 ```yaml
 Type: UInt32
 Parameter Sets: OfflineIndex
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -171,7 +171,7 @@ If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
 In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
 The log file will automatically be archived.
 The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
-Each time the log file is archived the .bak file will be overwritten. 
+Each time the log file is archived the .bak file will be overwritten.
 When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
 
 ```yaml
@@ -192,7 +192,7 @@ Specifies the name of an image in a WIM or VHD file.
 ```yaml
 Type: String
 Parameter Sets: OfflineName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -209,7 +209,7 @@ As a result, there may be an increase in the time that is required to access a d
 ```yaml
 Type: SwitchParameter
 Parameter Sets: OfflineIndex, OfflineName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,7 +224,7 @@ Specifies the location on your local computer where you want to mount the Window
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -239,7 +239,7 @@ Specifies that the image should be mounted with read-only permissions.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: OfflineIndex, OfflineName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -254,7 +254,7 @@ Mounts an image in a WIM or VHD file that was already mounted at the specified *
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Remount
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -267,14 +267,14 @@ Accept wildcard characters: False
 Specifies a temporary directory that will be used when extracting files for use during servicing.
 The directory must exist locally.
 If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
-Items in the scratch directory are deleted after each operation. 
+Items in the scratch directory are deleted after each operation.
 You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
 The directory used for extracting files for temporary usage during servicing should be a local directory.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

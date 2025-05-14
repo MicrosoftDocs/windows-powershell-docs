@@ -543,6 +543,26 @@ For example, to search for all accounts that are expiring in 10 days, specify th
 
   `-AccountExpiring -TimeSpan "10.00:00.00"`
 
+Note that this parameter is aware of the [*ms-DS-Logon-Time-Sync-Interval*](https://learn.microsoft.com/en-us/windows/win32/adschema/a-msds-logontimesyncinterval) attribute when using with the *AccountInactive* parameter - it will try to correct for the upper range of this selection
+
+For example, with *ms-DS-Logon-Time-Sync-Interval* at the default of 14 days, we have the following situation:
+
+```
+User last logged on with timestamps:
+lastLogon          = 23/05/2024
+lastLogonTimestamp = 13/05/2024
+
+At date: 19/06/2024
+ -TimeSpan 22 = will return it:     22+14 days ago was 14/05/2024
+ -TimeSpan 23 = will not return it: 23+14 days ago was 13/05/2024
+ -TimeSpan 24 = will not return it: 24+14 days ago was 12/05/2024
+
+At date: 20/06/2024
+ -TimeSpan 22 = will return it:     22+14 days ago was 15/05/2024
+ -TimeSpan 23 = will return it:     23+14 days ago was 14/05/2024
+ -TimeSpan 24 = will not return it: 24+14 days ago was 13/05/2024
+```
+
 ```yaml
 Type: TimeSpan
 Parameter Sets: AccountExpiring, AccountInactive

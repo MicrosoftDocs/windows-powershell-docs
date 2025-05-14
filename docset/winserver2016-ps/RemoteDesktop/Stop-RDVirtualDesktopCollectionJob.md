@@ -1,9 +1,9 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: RemoteDesktop.psm1-help.xml
-Module Name: RDMgmt
+Module Name: RemoteDesktop
 ms.date: 12/20/2016
-online version: https://learn.microsoft.com/powershell/module/rdmgmt/stop-rdvirtualdesktopcollectionjob?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/moduleremotedesktop/stop-rdvirtualdesktopcollectionjob?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-RDVirtualDesktopCollectionJob
 ---

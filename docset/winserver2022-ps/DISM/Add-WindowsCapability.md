@@ -1,7 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-Module Name: System.Object[]
+Module Name: DISM
 ms.date: 08/24/2021
 online version: https://learn.microsoft.com/powershell/module/dism/add-windowscapability?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-Module Name: System.Object[]
+Module Name: DISM
 ms.date: 12/21/2016
 online version: https://learn.microsoft.com/powershell/module/dism/split-windowsimage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
@@ -22,7 +22,7 @@ Split-WindowsImage -ImagePath <String> -SplitImagePath <String> -FileSize <UInt6
 
 ## DESCRIPTION
 The **Split-WindowsImage** cmdlet creates the .swm files in the specified directory, naming each file the same as the specified path_to_swm, but with an appended number.
-For example, if you set path_to_swm as `c:\Data.swm`, this option creates a Data.swm file, a Data2.swm file, a Data3.swm file, and so on, defining each portion of the split .wim file and saving it to the C:\ directory. 
+For example, if you set path_to_swm as `c:\Data.swm`, this option creates a Data.swm file, a Data2.swm file, a Data3.swm file, and so on, defining each portion of the split .wim file and saving it to the C:\ directory.
 
 If a single file is larger than the value specified in the *FileSize* parameter, one of the split .swm files that results will be larger than the value specified in the *FileSize* parameter, in order to accommodate the large file.
 
@@ -46,7 +46,7 @@ CheckIntegrity stops the operation if DISM detects that the .wim file is corrupt
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -61,7 +61,7 @@ Specifies the maximum size in megabytes (MB) for each created .swm file.
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,7 +76,7 @@ Specifies the location of a WIM file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,7 +113,7 @@ If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
 In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
 The log file will automatically be archived.
 The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
-Each time the log file is archived the .bak file will be overwritten. 
+Each time the log file is archived the .bak file will be overwritten.
 When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
 
 ```yaml
@@ -132,14 +132,14 @@ Accept wildcard characters: False
 Specifies a temporary directory that will be used when extracting files for use during servicing.
 The directory must exist locally.
 If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
-Items in the scratch directory are deleted after each operation. 
+Items in the scratch directory are deleted after each operation.
 You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
 The directory used for extracting files for temporary usage during servicing should be a local directory.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ Specifies the location and the base split image file name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

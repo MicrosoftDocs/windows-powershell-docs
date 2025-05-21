@@ -149,11 +149,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsrConnectionSchedule, string
+### Microsoft.DistributedFileSystemReplication.DfsrConnectionSchedule
+
+### string
 
 ## NOTES
 
 ## RELATED LINKS
 
 [Set-DfsrConnectionSchedule](./Set-DfsrConnectionSchedule.md)
-

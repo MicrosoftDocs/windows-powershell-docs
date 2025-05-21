@@ -467,29 +467,41 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Microsoft.GroupPolicy.Gpo, Microsoft.GroupPolicy.PreferenceRegistrySetting
-You can pipe a GPO object (in which to configure a specified preference registry setting) to this cmdlet, or a **PreferenceRegistrySetting** object (to configure in a specified GPO).
-Collections that contain GPOs from different domains are not supported.
+### Microsoft.GroupPolicy.Gpo
+
+### Microsoft.GroupPolicy.PreferenceRegistrySetting
+
+You can pipe a GPO object (in which to configure a specified preference registry setting) to this
+cmdlet, or a **PreferenceRegistrySetting** object (to configure in a specified GPO). Collections
+that contain GPOs from different domains are not supported.
 
 ## OUTPUTS
 
 ### Microsoft.GroupPolicy.Gpo
+
 This cmdlet returns the GPO in which the Registry preference item was configured.
 
 ## NOTES
-* You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
 
-  If you do not explicitly specify the domain, the cmdlet uses a default domain.
-The default domain is the domain that is used to access network resources by the security context under which the current session is running.
-This domain is typically the domain of the user that is running the session.
-For instance, the domain of the user who started the session by opening Windows PowerShell from the Program Files menu, or the domain of a user that is specified in a runas command.
-However, computer startup and shutdown scripts run under the context of the LocalSystem account.
-The LocalSystem account is a built-in local account, and it accesses network resources under the context of the computer account.
-Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
+* You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
+
+  If you do not explicitly specify the domain, the cmdlet uses a default domain. The default domain
+  is the domain that is used to access network resources by the security context under which the
+  current session is running. This domain is typically the domain of the user that is running the
+  session. For instance, the domain of the user who started the session by opening Windows
+  PowerShell from the Program Files menu, or the domain of a user that is specified in a runas
+  command. However, computer startup and shutdown scripts run under the context of the LocalSystem
+  account. The LocalSystem account is a built-in local account, and it accesses network resources
+  under the context of the computer account. Therefore, when this cmdlet is run from a startup or
+  shutdown script, the default domain is the domain to which the computer is joined.
 
 ## RELATED LINKS
 

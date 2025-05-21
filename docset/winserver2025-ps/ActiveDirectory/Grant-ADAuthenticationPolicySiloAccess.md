@@ -224,7 +224,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ActiveDirectory.Management.ADAccount, Microsoft.ActiveDirectory.Management.ADAuthenticationPolicySilo
+### Microsoft.ActiveDirectory.Management.ADAccount
+
+### Microsoft.ActiveDirectory.Management.ADAuthenticationPolicySilo
 
 ## OUTPUTS
 
@@ -237,4 +239,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Revoke-ADAuthenticationPolicySiloAccess](./Revoke-ADAuthenticationPolicySiloAccess.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
-

@@ -153,9 +153,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Collections.Generic.Dictionary, System.Collections.Generic.KeyValuePair
-This cmdlet generates a **KeyValuePair** object that represents the setting name and value, if you specify a setting name.
-Otherwise, this cmdlet generates a list of all of the settings.
+### System.Collections.Generic.Dictionary
+
+### System.Collections.Generic.KeyValuePair
+
+This cmdlet generates a **KeyValuePair** object that represents the setting name and value, if you
+specify a setting name. Otherwise, this cmdlet generates a list of all of the settings.
 
 ## NOTES
 * A setting value can be from four sources (in order of precedence): group policy settings for the current user, group policy settings for the local computer, the current user, and the local computer. If no setting value is found in any of the sources, UE-V uses the default setting.
@@ -171,4 +174,3 @@ Otherwise, this cmdlet generates a list of all of the settings.
 [Import-UevConfiguration](./Import-UevConfiguration.md)
 
 [Export-UevConfiguration](./Export-UevConfiguration.md)
-

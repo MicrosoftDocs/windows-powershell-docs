@@ -55,7 +55,7 @@ The file must be in the manifest specified in the *Manifest* parameter.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -70,7 +70,7 @@ Indicates that this cmdlet gets the total length, in bytes, of the trace file, i
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Size
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -85,7 +85,7 @@ Specifies the path to the manifest file that documents the trace file specified 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -101,7 +101,7 @@ This value must be greater than 0 but less than the total length of the requeste
 ```yaml
 Type: Int64
 Parameter Sets: Data
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -117,11 +117,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Int64,System.Byte[]
+### System.Int64
+
+### System.Byte[]
 
 ## NOTES
 
 ## RELATED LINKS
 
 [Get-HgsTrace](./Get-HgsTrace.md)
-

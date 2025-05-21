@@ -122,7 +122,7 @@ For example: ffffffffffff0000ffff0000ffff000044440000444400004444000044440000444
 ```yaml
 Type: String
 Parameter Sets: CustomScheduleParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: 5
@@ -151,18 +151,18 @@ Specifies an array of days of the week.
 You can specify either an enumerated string value or its corresponding integer for this parameter.
 The acceptable values for this parameter are:
 
-- Sunday (0) 
-- Monday (1) 
-- Tuesday (2) 
-- Wednesday (3) 
-- Thursday (4) 
-- Friday (5) 
+- Sunday (0)
+- Monday (1)
+- Tuesday (2)
+- Wednesday (3)
+- Thursday (4)
+- Friday (5)
 - Saturday (6)
 
 ```yaml
 Type: DayOfWeek[]
 Parameter Sets: CustomScheduleParameterSet
-Aliases: 
+Aliases:
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
 
 Required: True
@@ -195,7 +195,7 @@ If you do not specify this parameter, the cmdlet uses the domain of the current 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 100
@@ -226,14 +226,14 @@ You can specify the inherited replication group schedule, a connection-based clo
 You can specify either an enumerated string value or its corresponding integer for this parameter.
 The acceptable values for this parameter are:
 
-- UseGroupSchedule (0) 
-- Never (1) 
+- UseGroupSchedule (0)
+- Never (1)
 - Always (2)
 
 ```yaml
 Type: ConnectionScheduleType
 Parameter Sets: ScheduleNameParameterSet
-Aliases: 
+Aliases:
 Accepted values: UseGroupSchedule, Never, Always
 
 Required: False
@@ -266,7 +266,7 @@ By default, the destination computer interprets the schedule in its own local ti
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -296,7 +296,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, String
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### String
 
 ## OUTPUTS
 
@@ -307,4 +309,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-DfsrConnectionSchedule](./Get-DfsrConnectionSchedule.md)
-

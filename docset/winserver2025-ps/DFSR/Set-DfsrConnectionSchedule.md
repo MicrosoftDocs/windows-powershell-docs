@@ -296,7 +296,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, String
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### String
 
 ## OUTPUTS
 
@@ -307,4 +309,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-DfsrConnectionSchedule](./Get-DfsrConnectionSchedule.md)
-

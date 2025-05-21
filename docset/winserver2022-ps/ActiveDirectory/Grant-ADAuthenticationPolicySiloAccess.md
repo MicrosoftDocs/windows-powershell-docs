@@ -45,11 +45,11 @@ The output is then passed to the **Grant-ADAuthenticationPolicySiloAccess** cmdl
 
 ### -Account
 Specifies the account to which to grant access to the authentication policy silo.
-Specify the account in one of the following formats: 
+Specify the account in one of the following formats:
 
 - A distinguished name
-- A GUID 
-- A security identifier 
+- A GUID
+- A security identifier
 - A SAM account name
 
 The cmdlet searches the default naming context or partition to find the object.
@@ -60,7 +60,7 @@ You can also use this parameter to specify a variable that contains user, comput
 ```yaml
 Type: ADAccount
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -82,7 +82,7 @@ A Secure Sockets Layer (SSL) connection is required for the Basic authentication
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -120,7 +120,7 @@ If you specify credentials that do not have permission to perform the task, the 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ### -Identity
 Specifies an **ADAuthenticationPolicySilo** object.
-Specify the authentication policy silo object in one of the following formats: 
+Specify the authentication policy silo object in one of the following formats:
 
 - A distinguished name
 - A GUID
@@ -145,7 +145,7 @@ If the cmdlet finds two or more objects, the cmdlet returns a non-terminating er
 ```yaml
 Type: ADAuthenticationPolicySilo
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -161,7 +161,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,13 +174,13 @@ Accept wildcard characters: False
 Specifies the Active Directory Domain Services instance to which to connect, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
 
-Specify the Active Directory Domain Services instance in one of the following ways:  
+Specify the Active Directory Domain Services instance in one of the following ways:
 
-Domain name values: 
+Domain name values:
 - A Fully qualified domain name
 - A NetBIOS name
 
-Directory server values:  
+Directory server values:
 - A Fully qualified directory server name
 - A NetBIOS name
 - A Fully qualified directory server name and port
@@ -194,7 +194,7 @@ The default value for this parameter is determined by one of the following metho
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,7 +224,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ActiveDirectory.Management.ADAccount, Microsoft.ActiveDirectory.Management.ADAuthenticationPolicySilo
+### Microsoft.ActiveDirectory.Management.ADAccount
+
+### Microsoft.ActiveDirectory.Management.ADAuthenticationPolicySilo
 
 ## OUTPUTS
 
@@ -237,4 +239,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Revoke-ADAuthenticationPolicySiloAccess](./Revoke-ADAuthenticationPolicySiloAccess.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
-

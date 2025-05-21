@@ -163,11 +163,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder, String
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder
+
+### String
 
 ## OUTPUTS
 
-### [none]
+### None
 
 ## NOTES
 
@@ -176,4 +180,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-DfsrPropagationTestFile](./Remove-DfsrPropagationTestFile.md)
 
 [Write-DfsrPropagationReport](./Write-DfsrPropagationReport.md)
-

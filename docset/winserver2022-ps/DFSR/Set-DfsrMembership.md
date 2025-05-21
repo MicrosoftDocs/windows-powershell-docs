@@ -43,7 +43,7 @@ You can disable replication for a member computer by using this cmdlet, but to p
 
 ### Example 1: Change membership settings
 ```
-PS C:\> Set-DfsrMembership -GroupName "RG22" -FolderName "RepFolder" -ComputerName "SRV07" -StagingPathQuotaInMB 32768 -ConflictAndDeletedQuotaInMB 4096 
+PS C:\> Set-DfsrMembership -GroupName "RG22" -FolderName "RepFolder" -ComputerName "SRV07" -StagingPathQuotaInMB 32768 -ConflictAndDeletedQuotaInMB 4096
 GroupName                   : RG22
 ComputerName                : SRV07
 FolderName                  : RF01
@@ -62,7 +62,7 @@ ConflictAndDeletedQuotaInMB : 4096
 ReadOnly                    : False
 RemoveDeletedFiles          : False
 Enabled                     : True
-DfsnPath                    : 
+DfsnPath                    :
 State                       : Normal
 ```
 
@@ -94,7 +94,7 @@ GroupName           SourceComputerName  DestinationComputerName
 River Branch Office SRV01               SRV03
 River Branch Office SRV03               SRV01
 
-The fourth command makes the computer named SRV01 the primary member of the group. The command also specifies Data Distribution 01 as the name of the replicated folder in the location C:\RF01. The command specifies the staging folder quota as 16384 MB. The command includes the *Force* parameter, and, therefore, does not prompt the user for confirmation. 
+The fourth command makes the computer named SRV01 the primary member of the group. The command also specifies Data Distribution 01 as the name of the replicated folder in the location C:\RF01. The command specifies the staging folder quota as 16384 MB. The command includes the *Force* parameter, and, therefore, does not prompt the user for confirmation.
 PS C:\> Set-DfsrMembership -GroupName "River Branch Office" -FolderName "Data Distribution 01" -ContentPath "C:\RF01" -ComputerName "SRV01" -PrimaryMember $True -StagingPathQuotaInMB 16384 -Force | Format-Table *name,*path,primary* -auto -wrap
 DomainName       GroupName           FolderName           ComputerName  ContentPath StagingPath                PrimaryMember
 ----------       ---------           ----------           ------------  ----------- -----------                -------------
@@ -164,7 +164,7 @@ Use the **Set-DfsrServiceConfiguration** cmdlet to modify the percent values.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -179,7 +179,7 @@ Specifies a local folder to contain replicated files associated with the replica
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -196,7 +196,7 @@ This value does not affect replication.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 12
@@ -218,7 +218,7 @@ If you want to temporarily pause replication, disable the connections on the mem
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 10
@@ -234,7 +234,7 @@ If you do not specify this parameter, the cmdlet uses the domain of the current 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 100
@@ -266,7 +266,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -304,43 +304,43 @@ Previous versions of the Windows operating system that support DFS Replication u
 
 The acceptable values for this parameter are:
 
-- Size256KB (0) 
-- Size512KB (1) 
-- Size1MB (2) 
-- Size2MB (3) 
-- Size4MB (4) 
-- Size8MB (5) 
+- Size256KB (0)
+- Size512KB (1)
+- Size1MB (2)
+- Size2MB (3)
+- Size4MB (4)
+- Size8MB (5)
 - Size16MB (6)
-- Size32MB (7) 
-- Size64MB (8) 
-- Size128MB (9) 
-- Size256MB (10) 
-- Size512MB (11) 
-- Size1GB (12) 
-- Size2GB (13) 
-- Size4GB (14) 
-- Size8GB (15) 
-- Size16GB (16) 
-- Size32GB (17) 
-- Size64GB (18) 
-- Size128GB (19) 
-- Size256GB (20) 
-- Size512GB (21) 
-- Size1TB (22) 
-- Size2TB (23) 
-- Size4TB (24) 
-- Size8TB (25) 
-- Size16TB (26) 
-- Size32TB (27) 
-- Size64TB (28) 
-- Size128TB (29) 
-- Size256TB (30) 
+- Size32MB (7)
+- Size64MB (8)
+- Size128MB (9)
+- Size256MB (10)
+- Size512MB (11)
+- Size1GB (12)
+- Size2GB (13)
+- Size4GB (14)
+- Size8GB (15)
+- Size16GB (16)
+- Size32GB (17)
+- Size64GB (18)
+- Size128GB (19)
+- Size256GB (20)
+- Size512GB (21)
+- Size1TB (22)
+- Size2TB (23)
+- Size4TB (24)
+- Size8TB (25)
+- Size16TB (26)
+- Size32TB (27)
+- Size64TB (28)
+- Size128TB (29)
+- Size256TB (30)
 - Size512TB (31)
 
 ```yaml
 Type: FileStagingSize
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Size256KB, Size512KB, Size1MB, Size2MB, Size4MB, Size8MB, Size16MB, Size32MB, Size64MB, Size128MB, Size256MB, Size512MB, Size1GB, Size2GB, Size4GB, Size8GB, Size16GB, Size32GB, Size64GB, Size128GB, Size256GB, Size512GB, Size1TB, Size2TB, Size4TB, Size8TB, Size16TB, Size32TB, Size64TB, Size128TB, Size256TB, Size512TB
 
 Required: False
@@ -360,7 +360,7 @@ If you specify a value of $True for this parameter, do not specify a value of $T
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -381,7 +381,7 @@ If you specify a value of $True for this parameter, do not specify a value of $T
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -401,7 +401,7 @@ If you do not specify this parameter, by default, DFS Replication preserves dele
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 9
@@ -417,7 +417,7 @@ If you do not specify this parameter, DFS Replication creates a folder named \<r
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -438,7 +438,7 @@ If you choose a larger quota, the member computer keeps staged data for longer p
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -468,7 +468,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder, string
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder
+
+### string
 
 ## OUTPUTS
 
@@ -497,4 +501,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-DfsReplicationGroup](./New-DfsReplicationGroup.md)
 
 [New-DfsReplicatedFolder](./New-DfsReplicatedFolder.md)
-

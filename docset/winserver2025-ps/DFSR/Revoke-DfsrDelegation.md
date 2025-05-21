@@ -148,7 +148,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, String[], String
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### String[]
+
+### String
 
 ## OUTPUTS
 
@@ -161,4 +165,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-DfsrDelegation](./Get-DfsrDelegation.md)
 
 [Grant-DfsrDelegation](./Grant-DfsrDelegation.md)
-

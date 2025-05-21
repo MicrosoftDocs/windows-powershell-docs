@@ -47,13 +47,13 @@ SkipAsSource      : False
 PolicyStore       : ActiveStore
 
 
-Caption            : 
-Description        : 
-ElementName        : 
-InstanceID         : :8:8:8:9:55=55;A<8=;8<=<8;55; 
-AdminDistance      : 
+Caption            :
+Description        :
+ElementName        :
+InstanceID         : :8:8:8:9:55=55;A<8=;8<=<8;55;
+AdminDistance      :
 DestinationAddress :
-IsStatic           : 
+IsStatic           :
 RouteMetric        : 0
 TypeOfRoute        : 3
 AddressFamily      : IPv4
@@ -66,7 +66,7 @@ Protocol           : NetMgmt
 Publish            : No
 Store              : ActiveStore
 ValidLifetime      : 8.00:00:00
-PSComputerName     : 
+PSComputerName     :
 ifIndex            : 3
 ```
 
@@ -83,7 +83,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ The cmdlet finds a route for this interface.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ You can also use a wildcard address, such as 0.0.0.0/0 for all IPv4 addresses, :
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +150,7 @@ You can also use a wildcard address, such as 0.0.0.0/0 for all IPv4 addresses, :
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -167,7 +167,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +185,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### NetIPAddress, NetRoute
+### NetIPAddress
+
+### NetRoute
 
 ## NOTES
 
@@ -198,4 +200,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-NetRoute](./Remove-NetRoute.md)
 
 [Set-NetRoute](./Set-NetRoute.md)
-

@@ -45,7 +45,7 @@ This cmdlet assigns permissions to the users and groups that this parameter spec
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -76,7 +76,7 @@ If you do not specify this parameter, the cmdlet uses the domain of the current 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 100
@@ -91,7 +91,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,8 +135,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, String[], String
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
 
+### String[]
+
+### String
 ## OUTPUTS
 
 ### Microsoft.DistributedFileSystemReplication.DfsrDelegation

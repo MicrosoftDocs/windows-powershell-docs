@@ -83,16 +83,16 @@ Set-GPPrefRegistryValue @params
 ```
 
 ```Output
-DisplayName      : TestGPO 
-DomainName       : contoso.com 
-Owner            : CONTOSO\Domain Admins 
-Id               : 35c12ab3-956c-45d5-973b-46b17d225f47 
-GpoStatus        : AllSettingsEnabled 
-Description      : 
-CreationTime     : 2/24/2009 4:41:03 PM 
-ModificationTime : 2/25/2009 12:16:28 PM 
-UserVersion      : AD Version: 1, SysVol Version: 1 
-ComputerVersion  : AD Version: 34, SysVol Version: 34 
+DisplayName      : TestGPO
+DomainName       : contoso.com
+Owner            : CONTOSO\Domain Admins
+Id               : 35c12ab3-956c-45d5-973b-46b17d225f47
+GpoStatus        : AllSettingsEnabled
+Description      :
+CreationTime     : 2/24/2009 4:41:03 PM
+ModificationTime : 2/25/2009 12:16:28 PM
+UserVersion      : AD Version: 1, SysVol Version: 1
+ComputerVersion  : AD Version: 34, SysVol Version: 34
 WmiFilter        :
 ```
 
@@ -156,7 +156,7 @@ $setGPPrefParams = @{
     Value     = 'SomeData'
     Type      = 'String'
 }
-Remove-GPPrefRegistryValue @removeGPPrefParams | 
+Remove-GPPrefRegistryValue @removeGPPrefParams |
     Set-GPPrefRegistryValue @setGPPrefParams
 ```
 
@@ -191,7 +191,7 @@ $setGPPrefParams = @{
     Value     = 'SomeData'
     Type      = 'String'
 }
-Get-GPO -All | Remove-GPPrefRegistryValue @removeGPPrefParams | 
+Get-GPO -All | Remove-GPPrefRegistryValue @removeGPPrefParams |
     Set-GPPrefRegistryValue @setGPPrefParams
 ```
 
@@ -228,29 +228,29 @@ Get-GPPrefRegistryValue @getGPPrefParams | Set-GPPrefRegistryValue @setGPPrefPar
 ```
 
 ```Output
-DisplayName      : TestGPO-1 
-DomainName       : contoso.com 
-Owner            : CONTOSO\Domain Admins 
-Id               : ef4d0f7e-1a1a-4fd1-b735-0bc6620e7f51 
-GpoStatus        : AllSettingsEnabled 
-Description      : 
-CreationTime     : 3/1/2009 11:14:06 AM 
-ModificationTime : 3/1/2009 11:15:16 AM 
-UserVersion      : AD Version: 0, SysVol Version: 0 
-ComputerVersion  : AD Version: 1, SysVol Version: 1 
-WmiFilter        : 
+DisplayName      : TestGPO-1
+DomainName       : contoso.com
+Owner            : CONTOSO\Domain Admins
+Id               : ef4d0f7e-1a1a-4fd1-b735-0bc6620e7f51
+GpoStatus        : AllSettingsEnabled
+Description      :
+CreationTime     : 3/1/2009 11:14:06 AM
+ModificationTime : 3/1/2009 11:15:16 AM
+UserVersion      : AD Version: 0, SysVol Version: 0
+ComputerVersion  : AD Version: 1, SysVol Version: 1
+WmiFilter        :
 
 
-DisplayName      : TestGPO-1 
-DomainName       : contoso.microsoft.com 
-Owner            : CONTOSO\Domain Admins 
-Id               : ef4d0f7e-1a1a-4fd1-b735-0bc6620e7f51 
-GpoStatus        : AllSettingsEnabled 
-Description      : 
-CreationTime     : 3/1/2009 11:14:06 AM 
-ModificationTime : 3/1/2009 11:15:16 AM 
-UserVersion      : AD Version: 0, SysVol Version: 0 
-ComputerVersion  : AD Version: 2, SysVol Version: 2 
+DisplayName      : TestGPO-1
+DomainName       : contoso.microsoft.com
+Owner            : CONTOSO\Domain Admins
+Id               : ef4d0f7e-1a1a-4fd1-b735-0bc6620e7f51
+GpoStatus        : AllSettingsEnabled
+Description      :
+CreationTime     : 3/1/2009 11:14:06 AM
+ModificationTime : 3/1/2009 11:15:16 AM
+UserVersion      : AD Version: 0, SysVol Version: 0
+ComputerVersion  : AD Version: 2, SysVol Version: 2
 WmiFilter        :
 ```
 
@@ -300,7 +300,7 @@ value on the client when Group Policy is processed.
 ```yaml
 Type: PreferenceAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Create, Replace, Update, Delete
 
 Required: True
@@ -334,7 +334,7 @@ Configuration in the GPO. The acceptable values for this parameter are: `User` o
 ```yaml
 Type: GpoConfiguration
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: User, Computer
 
 Required: True
@@ -364,7 +364,7 @@ associated with the key or value in the specified configuration in the GPO.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -494,7 +494,7 @@ order of `4`, the Registry preference items that previously were at order `4` an
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -550,7 +550,7 @@ with the **Key**, **ValueName**, and **Value** parameters.
 ```yaml
 Type: RegistryValueKind
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, String, ExpandString, Binary, DWord, MultiString, QWord, None
 
 Required: False
@@ -573,7 +573,7 @@ with the **Key**, **ValueName**, and **Type** parameters.
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -596,7 +596,7 @@ with the **Key**, **Value**, and **Type** parameters.
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -630,7 +630,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.GroupPolicy.Gpo, Microsoft.GroupPolicy.PreferenceRegistrySetting
+### Microsoft.GroupPolicy.Gpo
+
+### Microsoft.GroupPolicy.PreferenceRegistrySetting
 
 You can pipe a GPO object (in which to configure a specified preference registry setting) to this
 cmdlet, or a **PreferenceRegistrySetting** object (to configure in a specified GPO). Collections

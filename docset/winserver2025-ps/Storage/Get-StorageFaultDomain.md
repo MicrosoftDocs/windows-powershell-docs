@@ -139,11 +139,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### MSFT_PhysicalDisk, MSFT_StorageEnclosure, MSFT_StorageScaleUnit, MSFT_StorageRack, MSFT_StorageChassis
+### MSFT_PhysicalDisk
+
+### MSFT_StorageEnclosure
+
+### MSFT_StorageScaleUnit
+
+### MSFT_StorageRack
+
+### MSFT_StorageChassis
 
 ## NOTES
 
 * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
-

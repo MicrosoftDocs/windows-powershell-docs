@@ -329,7 +329,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ActiveDirectory.Management.ADAuthenticationPolicy, System.String, System.Management.Automation.SwitchParameter:  System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+### Microsoft.ActiveDirectory.Management.ADAuthenticationPolicy
+
+### System.String
+
+### System.Management.Automation.SwitchParameter
 
 ## OUTPUTS
 
@@ -346,4 +350,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-ADAuthenticationPolicySilo](./Set-ADAuthenticationPolicySilo.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
-

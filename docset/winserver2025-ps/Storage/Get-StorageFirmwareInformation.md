@@ -146,28 +146,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Boolean, UInt8, UInt8[], Boolean[], String[], String
+### System.Management.Automation.PSCustomObject
+
 This cmdlet returns the following firmware information for a storage object:
 
-- **SupportsUpdate**.
-Indicates whether the device is capable of a Windows-compliant firmware update process.
-- **NumberOfSlots**.
-The number of firmware slots the device has.
-- **ActiveSlotId**.
-Identifies the slot id that corresponds to the slot containing the currently active firmware image.
+- **SupportsUpdate**. Indicates whether the device is capable of a Windows-compliant firmware update
+  process.
+- **NumberOfSlots**. The number of firmware slots the device has.
+- **ActiveSlotId**. Identifies the slot id that corresponds to the slot containing the currently
+  active firmware image.
 - **SlotId\[\]** - Array listing all slot IDs.
-- **IsSlotWritable\[\]**.
-Indicates if a firmware image can be downloaded to the slot represented by the ID in the **SlotId\[\]** array at the corresponding index.
-- **FirmwareVersionInSlot\[\]**.
-Array showing the firmware revision in each slot.
-- **Extended Status**.
-Error information from the storage provider.
+- **IsSlotWritable\[\]**. Indicates if a firmware image can be downloaded to the slot represented by
+  the ID in the **SlotId\[\]** array at the corresponding index.
+- **FirmwareVersionInSlot\[\]**. Array showing the firmware revision in each slot.
+- **Extended Status**. Error information from the storage provider.
 
 ## NOTES
-* This cmdlet is currently limited to use on PhysicalDisk objects.
-* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+
+- This cmdlet is currently limited to use on PhysicalDisk objects.
+- When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all
+  servers in the cluster).
 
 ## RELATED LINKS
 
 [Update-StorageFirmware](./Update-StorageFirmware.md)
-

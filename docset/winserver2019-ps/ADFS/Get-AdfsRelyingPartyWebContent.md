@@ -82,15 +82,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ## OUTPUTS
 
-### Microsoft.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent, Microsoft.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent[]
-This cmdlet generates a **System.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent** object that represents web content of a relying party, or an array of such objects.
-The object includes the following properties: 
+### Microsoft.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent
+
+### Microsoft.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent[]
+
+This cmdlet generates a **System.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent**
+object that represents web content of a relying party, or an array of such objects. The object
+includes the following properties:
 
 - Locale: **System.Globalization.CultureInfo**
 - Name: **System.String**
@@ -105,4 +109,3 @@ The object includes the following properties:
 [Remove-AdfsRelyingPartyWebContent](./Remove-AdfsRelyingPartyWebContent.md)
 
 [Set-AdfsRelyingPartyWebContent](./Set-AdfsRelyingPartyWebContent.md)
-

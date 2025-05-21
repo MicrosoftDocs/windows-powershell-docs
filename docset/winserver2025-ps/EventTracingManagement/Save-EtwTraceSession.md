@@ -164,15 +164,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.IO.FileInfo, System.IO.DirectoryInfo
+### System.IO.FileInfo
+
+### System.IO.DirectoryInfo
 
 ## OUTPUTS
 
-### System.IO.FileInfo, CIM_DataFile
+### System.IO.FileInfo
+
 This cmdlet returns a **System.IO.FileInfo** object that represents a file on the local computer.
 The object is returned when the current session is saved successfully to a file on the local machine.
 
-This cmdlet returns a **CIM_DataFile** object when the current session is saved successfully to a file over a CIM session.
+### CIM_DataFile
+
+This cmdlet returns a **CIM_DataFile** object when the current session is saved successfully to a
+file over a CIM session.
 
 ## NOTES
 
@@ -189,4 +195,3 @@ This cmdlet returns a **CIM_DataFile** object when the current session is saved 
 [Stop-EtwTraceSession](./Stop-EtwTraceSession.md)
 
 [Update-EtwTraceSession](./Update-EtwTraceSession.md)
-

@@ -89,7 +89,7 @@ If you do not specify this parameter, the cmdlet uses the domain of the current 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 100
@@ -104,7 +104,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -166,7 +166,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, string
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### string
 
 ## OUTPUTS
 

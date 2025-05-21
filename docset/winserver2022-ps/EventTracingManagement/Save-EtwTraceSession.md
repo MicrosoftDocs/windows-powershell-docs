@@ -36,7 +36,7 @@ The default is the current session on the local computer.
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -66,7 +66,7 @@ Specifies the name of the ETW session.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -81,7 +81,7 @@ Specifies the file to save the .etl file to for the ETW session.
 ```yaml
 Type: FileInfo
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ To control the file name as well as the output folder, use the *OutputFile* para
 ```yaml
 Type: DirectoryInfo
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ Controls whether an existing file should be overwritten by saving this session.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ Controls whether the session should be stopped after the save is complete.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,15 +164,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.IO.FileInfo, System.IO.DirectoryInfo
+### System.IO.FileInfo
+
+### System.IO.DirectoryInfo
 
 ## OUTPUTS
 
-### System.IO.FileInfo, CIM_DataFile
+### System.IO.FileInfo
+
 This cmdlet returns a **System.IO.FileInfo** object that represents a file on the local computer.
 The object is returned when the current session is saved successfully to a file on the local machine.
 
-This cmdlet returns a **CIM_DataFile** object when the current session is saved successfully to a file over a CIM session.
+### CIM_DataFile
+
+This cmdlet returns a **CIM_DataFile** object when the current session is saved successfully to a
+file over a CIM session.
 
 ## NOTES
 
@@ -189,4 +195,3 @@ This cmdlet returns a **CIM_DataFile** object when the current session is saved 
 [Stop-EtwTraceSession](./Stop-EtwTraceSession.md)
 
 [Update-EtwTraceSession](./Update-EtwTraceSession.md)
-

@@ -118,13 +118,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, Guid
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### System.Guid
 
 ## OUTPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder, Microsoft.DistributedFileSystemReplication.DfsrMember, Microsoft.DistributedFileSystemReplication.DfsrMembership, Microsoft.DistributedFileSystemReplication.DfsrConnection, Microsoft.DistributedFileSystemReplication.DfsrVolume
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder
+
+### Microsoft.DistributedFileSystemReplication.DfsrMember
+
+### Microsoft.DistributedFileSystemReplication.DfsrMembership
+
+### Microsoft.DistributedFileSystemReplication.DfsrConnection
+
+### Microsoft.DistributedFileSystemReplication.DfsrVolume
 
 ## NOTES
 
 ## RELATED LINKS
-

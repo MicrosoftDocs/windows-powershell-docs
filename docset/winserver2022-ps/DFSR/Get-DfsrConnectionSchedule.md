@@ -99,7 +99,7 @@ If you do not specify this parameter, the cmdlet uses the domain of the current 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 100
@@ -149,11 +149,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsrConnectionSchedule, string
+### Microsoft.DistributedFileSystemReplication.DfsrConnectionSchedule
+
+### string
 
 ## NOTES
 
 ## RELATED LINKS
 
 [Set-DfsrConnectionSchedule](./Set-DfsrConnectionSchedule.md)
-

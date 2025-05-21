@@ -239,7 +239,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder
 
 ## OUTPUTS
 
@@ -254,4 +256,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-DfsReplicatedFolder](./New-DfsReplicatedFolder.md)
 
 [Remove-DfsReplicatedFolder](./Remove-DfsReplicatedFolder.md)
-

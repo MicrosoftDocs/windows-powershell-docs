@@ -257,7 +257,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsrConnection, String
+### String
+
+### String
 
 ## NOTES
 
@@ -268,4 +270,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-DfsrConnection](./Add-DfsrConnection.md)
 
 [Remove-DfsrConnection](./Remove-DfsrConnection.md)
-

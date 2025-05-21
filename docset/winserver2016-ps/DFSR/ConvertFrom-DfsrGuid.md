@@ -35,7 +35,7 @@ GroupName              : RG01
 FolderName             : RF01
 DomainName             : corp.contoso.com
 Identifier             : 9268f23a-7701-4184-8b8b-4bfdbb8ac411
-Description            : 
+Description            :
 FileNameToExclude      : {~*, *.bak, *.tmp}
 DirectoryNameToExclude : {}
 DfsnPath               :
@@ -53,7 +53,7 @@ ComputerName : SRV01
 DomainName   : corp.contoso.com
 VolumeGuid   : 9ee0fc3b-a906-11e2-8f95-806e6f6e6963
 SerialNumber : 903727946
-Path         : \\.\C: 
+Path         : \\.\C:
 DatabaseGuid : B34A6F21-A20D-402D-9BE1-467309C21CDF
 ```
 
@@ -72,7 +72,7 @@ If you do not specify this parameter, the cmdlet uses the domain of the current 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 100
@@ -95,7 +95,7 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Guid
@@ -104,7 +104,7 @@ Specifies an array of GUID values to convert to a friendly name.
 ```yaml
 Type: Guid[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -118,13 +118,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, Guid
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### System.Guid
 
 ## OUTPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder, Microsoft.DistributedFileSystemReplication.DfsrMember, Microsoft.DistributedFileSystemReplication.DfsrMembership, Microsoft.DistributedFileSystemReplication.DfsrConnection, Microsoft.DistributedFileSystemReplication.DfsrVolume
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder
+
+### Microsoft.DistributedFileSystemReplication.DfsrMember
+
+### Microsoft.DistributedFileSystemReplication.DfsrMembership
+
+### Microsoft.DistributedFileSystemReplication.DfsrConnection
+
+### Microsoft.DistributedFileSystemReplication.DfsrVolume
 
 ## NOTES
 
 ## RELATED LINKS
-

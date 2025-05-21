@@ -335,19 +335,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy, Microsoft.ActiveDirectory.Management.ADPrincipal
+### Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy
 
-A fine-grained password policy object is received by the **Identity** parameter. One or more
-principal objects that represent users and security group objects are received by the **Subjects**
-parameter. Derived principal types, such as the following, are also accepted by the **Subjects**
-parameter:
+A fine-grained password policy object is received by the **Identity** parameter.
+
+### Microsoft.ActiveDirectory.Management.ADPrincipal
+
+One or more principal objects that represent users and security group objects are received by the
+**Subjects** parameter. Derived principal types, such as the following, are also accepted by the
+**Subjects** parameter:
 
 - **Microsoft.ActiveDirectory.Management.ADGroup**
 - **Microsoft.ActiveDirectory.Management.ADUser**
 
 ## OUTPUTS
 
-### None or Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy
+### None
+
+### Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy
 
 Returns the modified fine-grained password policy object when the **PassThru** parameter is
 specified. By default, this cmdlet does not generate any output.

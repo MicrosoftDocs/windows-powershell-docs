@@ -630,7 +630,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.GroupPolicy.Gpo, Microsoft.GroupPolicy.PreferenceRegistrySetting
+### Microsoft.GroupPolicy.Gpo
+
+### Microsoft.GroupPolicy.PreferenceRegistrySetting
 
 You can pipe a GPO object (in which to configure a specified preference registry setting) to this
 cmdlet, or a **PreferenceRegistrySetting** object (to configure in a specified GPO). Collections

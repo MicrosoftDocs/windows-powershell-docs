@@ -68,16 +68,16 @@ Remove-GPRegistryValue @params
 ```
 
 ```Output
-DisplayName      : TestGPO 
-DomainName       : contoso.com 
-Owner            : CONTOSO\Domain Admins 
-Id               : 35c12ab3-956c-45d5-973b-46b17d225f47 
-GpoStatus        : AllSettingsEnabled 
-Description      : 
-CreationTime     : 2/24/2009 4:41:03 PM 
-ModificationTime : 2/25/2009 12:45:52 PM 
-UserVersion      : AD Version: 4, SysVol Version: 4 
-ComputerVersion  : AD Version: 34, SysVol Version: 34 
+DisplayName      : TestGPO
+DomainName       : contoso.com
+Owner            : CONTOSO\Domain Admins
+Id               : 35c12ab3-956c-45d5-973b-46b17d225f47
+GpoStatus        : AllSettingsEnabled
+Description      :
+CreationTime     : 2/24/2009 4:41:03 PM
+ModificationTime : 2/25/2009 12:45:52 PM
+UserVersion      : AD Version: 4, SysVol Version: 4
+ComputerVersion  : AD Version: 34, SysVol Version: 34
 WmiFilter        :
 ```
 
@@ -253,7 +253,7 @@ you specify the **ValueName** parameter, you must also specify the **Key** param
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -287,7 +287,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.GroupPolicy.Gpo, Microsoft.GroupPolicy.PolicyRegistrySetting
+### Microsoft.GroupPolicy.Gpo
+
+### Microsoft.GroupPolicy.PolicyRegistrySetting
 
 You can pipe a GPO from which to remove a registry-based policy setting, or a
 **PolicyRegistrySetting** object that represents a registry-based policy setting. Collections that
@@ -326,4 +328,3 @@ removed.
 [Get-GPRegistryValue](./Get-GPRegistryValue.md)
 
 [Set-GPRegistryValue](./Set-GPRegistryValue.md)
-

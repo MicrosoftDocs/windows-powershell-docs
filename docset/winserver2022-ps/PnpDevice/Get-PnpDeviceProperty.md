@@ -42,13 +42,13 @@ Many properties also have friendly names, in the form of DEVPKEY_XXX.
 ### Example 1: Get properties for a device by using an ID
 ```
 PS C:\>Get-PnpDeviceProperty -InstanceId 'SWD\PRINTENUM\{E82E5EFD-6616-4E4F-9A96-7D94554A8BF0}'
-InstanceId KeyName                                   Type       Data                                                       
----------- -------                                   ----       ----                                                       
-SWD\PRI... DEVPKEY_Device_DeviceDesc                 String     Local Print Queue                                          
-SWD\PRI... DEVPKEY_Device_HardwareIds                StringList {PRINTENUM\LocalPrintQueue}                                
-SWD\PRI... DEVPKEY_Device_CompatibleIds              StringList {GenPrintQueue, SWD\GenericRaw, SWD\Generic}               
-SWD\PRI... DEVPKEY_Device_Class                      String     PrintQueue                                                 
-SWD\PRI... DEVPKEY_Device_ClassGuid                  Guid       {1ED2BBF9-11F0-4084-B21F-AD83A8E6DCDC}                     
+InstanceId KeyName                                   Type       Data
+---------- -------                                   ----       ----
+SWD\PRI... DEVPKEY_Device_DeviceDesc                 String     Local Print Queue
+SWD\PRI... DEVPKEY_Device_HardwareIds                StringList {PRINTENUM\LocalPrintQueue}
+SWD\PRI... DEVPKEY_Device_CompatibleIds              StringList {GenPrintQueue, SWD\GenericRaw, SWD\Generic}
+SWD\PRI... DEVPKEY_Device_Class                      String     PrintQueue
+SWD\PRI... DEVPKEY_Device_ClassGuid                  Guid       {1ED2BBF9-11F0-4084-B21F-AD83A8E6DCDC}
 . . .
 ```
 
@@ -57,13 +57,13 @@ This command gets the PnP device properties for the device that has the specifie
 ### Example 2: Get properties for a device by using the pipeline
 ```
 PS C:\>Get-PnpDevice -InstanceId 'SWD\PRINTENUM\{E82E5EFD-6616-4E4F-9A96-7D94554A8BF0}' | Get-PnpDeviceProperty
-InstanceId KeyName                                   Type       Data                                                       
----------- -------                                   ----       ----                                                       
-SWD\PRI... DEVPKEY_Device_DeviceDesc                 String     Local Print Queue                                          
-SWD\PRI... DEVPKEY_Device_HardwareIds                StringList {PRINTENUM\LocalPrintQueue}                                
-SWD\PRI... DEVPKEY_Device_CompatibleIds              StringList {GenPrintQueue, SWD\GenericRaw, SWD\Generic}               
-SWD\PRI... DEVPKEY_Device_Class                      String     PrintQueue                                                 
-SWD\PRI... DEVPKEY_Device_ClassGuid                  Guid       {1ED2BBF9-11F0-4084-B21F-AD83A8E6DCDC}                     
+InstanceId KeyName                                   Type       Data
+---------- -------                                   ----       ----
+SWD\PRI... DEVPKEY_Device_DeviceDesc                 String     Local Print Queue
+SWD\PRI... DEVPKEY_Device_HardwareIds                StringList {PRINTENUM\LocalPrintQueue}
+SWD\PRI... DEVPKEY_Device_CompatibleIds              StringList {GenPrintQueue, SWD\GenericRaw, SWD\Generic}
+SWD\PRI... DEVPKEY_Device_Class                      String     PrintQueue
+SWD\PRI... DEVPKEY_Device_ClassGuid                  Guid       {1ED2BBF9-11F0-4084-B21F-AD83A8E6DCDC}
 . . .
 ```
 
@@ -74,10 +74,10 @@ The current command gets the device properties for that device.
 ### Example 3: Get properties by using GUID-ID pairs
 ```
 PS C:\>Get-PnpDeviceProperty -KeyName '{A45C254E-DF1C-4EFD-8020-67D146A850E0} 2', '{A45C254E-DF1C-4EFD-8020-67D146A850E0} 10', '{4340A6C5-93FA-4706-972C-7B648008A5A7} 3' -InstanceId 'SWD\PRINTENUM\{E82E5EFD-6616-4E4F-9A96-7D94554A8BF0}'
-InstanceId KeyName                                   Type       Data                                         
----------- -------                                   ----       ----                                                       
-SWD\PRI... DEVPKEY_Device_DeviceDesc                 String     Local Print Queue                          
-SWD\PRI... DEVPKEY_Device_ClassGuid                  Guid       {1ED2BBF9-11F0-4084-B21F-AD83A8E6DCDC}                     
+InstanceId KeyName                                   Type       Data
+---------- -------                                   ----       ----
+SWD\PRI... DEVPKEY_Device_DeviceDesc                 String     Local Print Queue
+SWD\PRI... DEVPKEY_Device_ClassGuid                  Guid       {1ED2BBF9-11F0-4084-B21F-AD83A8E6DCDC}
 SWD\PRI... DEVPKEY_Device_ProblemCode                UInt32     0
 ```
 
@@ -88,10 +88,10 @@ The command specifies names as GUID-ID pairs.
 ### Example 4: Get properties by using DEVPKEY names
 ```
 PS C:\>Get-PnpDeviceProperty -KeyName 'DEVPKEY_Device_DeviceDesc', 'DEVPKEY_Device_ClassGuid', 'DEVPKEY_Device_ProblemCode' -InstanceId 'SWD\PRINTENUM\{E82E5EFD-6616-4E4F-9A96-7D94554A8BF0}'
-InstanceId KeyName                                   Type       Data                                             
----------- -------                                   ----       ----                                                       
-SWD\PRI... DEVPKEY_Device_DeviceDesc                 String     Local Print Queue                                          
-SWD\PRI... DEVPKEY_Device_ClassGuid                  Guid       {1ED2BBF9-11F0-4084-B21F-AD83A8E6DCDC}                     
+InstanceId KeyName                                   Type       Data
+---------- -------                                   ----       ----
+SWD\PRI... DEVPKEY_Device_DeviceDesc                 String     Local Print Queue
+SWD\PRI... DEVPKEY_Device_ClassGuid                  Guid       {1ED2BBF9-11F0-4084-B21F-AD83A8E6DCDC}
 SWD\PRI... DEVPKEY_Device_ProblemCode                UInt32     0
 ```
 
@@ -107,7 +107,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -201,7 +201,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,27 +231,33 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Cimv2/Win32_PnPEntity[]
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
-The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
+namespace and class name for the underlying WMI object.
 
 ## OUTPUTS
 
-### System.Int32, Win32_PnPDeviceProperty[]
-This cmdlet generates an **Int32** WMI success or failure code, or an array of  **Win32_PnPDeviceProperty** objects that represent properties for a PnP device.
-A **Win32_PnPDeviceProperty** object contains the following fields: 
+### System.Int32
+
+### Win32_PnPDeviceProperty[]
+
+This cmdlet generates an **Int32** WMI success or failure code, or an array of
+**Win32_PnPDeviceProperty** objects that represent properties for a PnP device. A
+**Win32_PnPDeviceProperty** object contains the following fields:
 
 - **Device**.
-The instance ID for the device with which this property is associated. 
+The instance ID for the device with which this property is associated.
 - **KeyName**.
 The friendly name for the property.
-If no friendly name exists, this matches the **Key** field. 
+If no friendly name exists, this matches the **Key** field.
 - **Key**.
-The unique \[GUID\]-ID pairing representing the property. 
+The unique \[GUID\]-ID pairing representing the property.
 - **Data**.
 The typed data associated with the key.
 This value is defined in the classes which inherit from **Win32_PnPDeviceProperty**.
 For example, a **Win32PnPDevicePropertySint32** object would be returned for an **Int32** property.
-**Data** would be an **Int32** value in this case. 
+**Data** would be an **Int32** value in this case.
 - **Type**.
 The type of the binary data.
 This is defined in the **PnpDeviceProperty.Type** enum.
@@ -259,63 +265,63 @@ This is defined in the **PnpDeviceProperty.Type** enum.
 ## NOTES
 * The objects returned by **Get-PnpDeviceProperty** are all of the **(WMI Object) Win32_PnPDeviceProperty** type. They are always of a WMI class inherited from Win32_PnPDeviceProperty. For example, a device may contain a **String** and signed **Int32** properties. The cmdlet returns a **Win32_PnPDeviceProperty** array, where the first object in the array is a **Win32_PnPDevicePropertyString** object and the second is a **Win32_PnPDevicePropertySint32** object. For each object type, there is a **Data** variable, of the given type, which contains the value of the property.
 
-  The following is a full list of possible WMI classes and the type of the **Data** variable:  
+  The following is a full list of possible WMI classes and the type of the **Data** variable:
 
 - **Win32_PnPDevicePropertyUint8**.
-**Uint8**. 
+**Uint8**.
 - **Win32_PnPDevicePropertyUint16**.
-**Uint16**. 
+**Uint16**.
 - **Win32_PnPDevicePropertyUint32**.
-**Uint32**. 
+**Uint32**.
 - **Win32_PnPDevicePropertyUint64**.
-**Uint64**. 
+**Uint64**.
 - **Win32_PnPDevicePropertySint8**.
-**Sint8**. 
+**Sint8**.
 - **Win32_PnPDevicePropertySint16**.
-**Sint16**. 
+**Sint16**.
 - **Win32_PnPDevicePropertySint32**.
-**Sint32**. 
+**Sint32**.
 - **Win32_PnPDevicePropertySint64**.
-**Sint64**. 
+**Sint64**.
 - **Win32_PnPDevicePropertyString**.
-**String**. 
+**String**.
 - **Win32_PnPDevicePropertyBoolean**.
-**Boolean**. 
+**Boolean**.
 - **Win32_PnPDevicePropertyReal32**.
-**Real32**. 
+**Real32**.
 - **Win32_PnPDevicePropertyReal64**.
-**Real64**. 
+**Real64**.
 - **Win32_PnPDevicePropertyDateTime**.
-**DateTime**. 
+**DateTime**.
 - **Win32_PnPDevicePropertySecurityDescriptor**.
-**Win32_SecurityDescriptor**. 
+**Win32_SecurityDescriptor**.
 
 - **Win32_PnPDevicePropertyBinary**.
-**Uint8** array. 
+**Uint8** array.
 - **Win32_PnPDevicePropertyUint16Array**.
-**Uint16** array. 
+**Uint16** array.
 - **Win32_PnPDevicePropertyUint32Array**.
-**Uint32** array. 
+**Uint32** array.
 - **Win32_PnPDevicePropertyUint64Array**.
-**Uint64** array. 
+**Uint64** array.
 - **Win32_PnPDevicePropertySint8Array**.
-**Sint8** array. 
+**Sint8** array.
 - **Win32_PnPDevicePropertySint16Array**.
-**Sint16** array. 
+**Sint16** array.
 - **Win32_PnPDevicePropertySint32Array**.
-**Sint32** array. 
+**Sint32** array.
 - **Win32_PnPDevicePropertySint64Array**.
-**Sint64** array. 
+**Sint64** array.
 - **Win32_PnPDevicePropertyStringArray**.
-**String** array. 
+**String** array.
 - **Win32_PnPDevicePropertyBooleanArray**.
-**Boolean** array. 
+**Boolean** array.
 - **Win32_PnPDevicePropertyReal32Array**.
-**Real32** array. 
+**Real32** array.
 - **Win32_PnPDevicePropertyReal64Array**.
-**Real64** array. 
+**Real64** array.
 - **Win32_PnPDevicePropertyDateTimeArray**.
-**DateTime** array. 
+**DateTime** array.
 - **Win32_PnPDevicePropertySecurityDescriptorArray**.
 **Win32_SecurityDescriptor** array.
 
@@ -326,4 +332,3 @@ This is defined in the **PnpDeviceProperty.Type** enum.
 [Enable-PnpDevice](./Enable-PnpDevice.md)
 
 [Get-PnpDevice](./Get-PnpDevice.md)
-

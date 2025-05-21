@@ -117,11 +117,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Int64,System.Byte[]
+### System.Int64
+
+### System.Byte[]
 
 ## NOTES
 
 ## RELATED LINKS
 
 [Get-HgsTrace](./Get-HgsTrace.md)
-

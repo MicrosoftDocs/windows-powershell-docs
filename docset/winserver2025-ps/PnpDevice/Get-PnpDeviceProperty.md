@@ -231,14 +231,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Cimv2/Win32_PnPEntity[]
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
-The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays
+Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the
+namespace and class name for the underlying WMI object.
 
 ## OUTPUTS
 
-### System.Int32, Win32_PnPDeviceProperty[]
-This cmdlet generates an **Int32** WMI success or failure code, or an array of  **Win32_PnPDeviceProperty** objects that represent properties for a PnP device.
-A **Win32_PnPDeviceProperty** object contains the following fields:
+### System.Int32
+
+### Win32_PnPDeviceProperty[]
+
+This cmdlet generates an **Int32** WMI success or failure code, or an array of
+**Win32_PnPDeviceProperty** objects that represent properties for a PnP device. A
+**Win32_PnPDeviceProperty** object contains the following fields:
 
 - **Device**.
 The instance ID for the device with which this property is associated.
@@ -326,4 +332,3 @@ This is defined in the **PnpDeviceProperty.Type** enum.
 [Enable-PnpDevice](./Enable-PnpDevice.md)
 
 [Get-PnpDevice](./Get-PnpDevice.md)
-

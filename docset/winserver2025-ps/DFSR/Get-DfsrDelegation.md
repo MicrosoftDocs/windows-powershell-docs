@@ -86,7 +86,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, String[], String
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### String[]
+
+### String
 
 ## OUTPUTS
 

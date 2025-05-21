@@ -389,7 +389,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.GroupPolicy.Gpo, Microsoft.GroupPolicy.PreferenceRegistrySetting
+### Microsoft.GroupPolicy.Gpo
+
+### Microsoft.GroupPolicy.PreferenceRegistrySetting
 
 This cmdlet takes a GPO or a **PreferenceRegistrySetting** object as input. You can pipe in one or
 more **PreferenceRegistrySetting** objects to remove one or more Registry preference items from a
@@ -424,4 +426,3 @@ This cmdlet returns the GPO from which the Registry preference item or items tha
 [Get-GPPrefRegistryValue](./Get-GPPrefRegistryValue.md)
 
 [Set-GPPrefRegistryValue](./Set-GPPrefRegistryValue.md)
-

@@ -64,7 +64,7 @@ Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -Confirm
@@ -88,7 +88,7 @@ Specifies a description for a member computer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -104,7 +104,7 @@ If you do not specify this parameter, the cmdlet uses the domain of the current 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 100
@@ -127,7 +127,7 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -WhatIf
@@ -151,7 +151,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, String
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### String
 
 ## OUTPUTS
 
@@ -166,4 +168,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-DfsrMember](./Get-DfsrMember.md)
 
 [Remove-DfsrMember](./Remove-DfsrMember.md)
-

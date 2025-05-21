@@ -79,7 +79,7 @@ To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -96,7 +96,7 @@ To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -126,7 +126,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### BitLockerVolume, String
+### BitLockerVolume
+
+### String
 
 ## OUTPUTS
 

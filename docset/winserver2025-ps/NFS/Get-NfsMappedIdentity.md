@@ -239,7 +239,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.FileServices.Management.Nfs.UserMappedIdentity, System.FileServices.Management.Nfs.GroupMappedIdentity
+### System.FileServices.Management.Nfs.UserMappedIdentity
+
+### System.FileServices.Management.Nfs.GroupMappedIdentity
 
 ## NOTES
 
@@ -266,4 +268,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Test-NfsMappedIdentity](./Test-NfsMappedIdentity.md)
 
 [Test-NfsMappingStore](./Test-NfsMappingStore.md)
-

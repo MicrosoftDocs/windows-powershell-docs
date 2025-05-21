@@ -113,7 +113,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.FailoverClusters.PowerShell.Cluster, Microsoft.FailoverClusters.PowerShell.ClusterNode, Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume
+### Microsoft.FailoverClusters.PowerShell.Cluster
+
+### Microsoft.FailoverClusters.PowerShell.ClusterNode
+
+### Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume
 
 ## OUTPUTS
 

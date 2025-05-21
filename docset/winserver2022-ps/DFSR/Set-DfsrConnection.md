@@ -44,7 +44,7 @@ Identifier              : 8b51a050-f32d-42dc-b008-80f56754f373
 Enabled                 : True
 RdcEnabled              : False
 CrossFileRdcEnabled     : False
-Description             : 
+Description             :
 MinimumRDCFileSizeInKB  : 64
 State                   : Normal
 ```
@@ -76,7 +76,7 @@ Specifies a description for the connection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -115,7 +115,7 @@ Disabling and enabling the membership of a computer causes non-authoritative inb
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -131,13 +131,13 @@ Cross-file RDC uses up to five existing previously replicated files on a volume 
 Applying cross-file RDC over very low-bandwidth network connections with files that are very similar results in very large bandwidth savings and potentially large time savings.
 When you use cross-file RDC on very high-bandwidth network connections, cross-file RDC may add too much local processing time and negatively affect performance.
 In extremely large datasets (millions of files on a volume with a great deal of similarity), cross-file RDC may also negatively affect CPU and disk utilization.
-Consider disabling cross-file RDC when you replicate over LANs and very high performance WANs. 
+Consider disabling cross-file RDC when you replicate over LANs and very high performance WANs.
 This setting is only supported on Windows Server 2012 R2 and later.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -156,7 +156,7 @@ By default, RDC is enabled on DFS Replication connections.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -172,7 +172,7 @@ If you do not specify this parameter, the cmdlet uses the domain of the current 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 100
@@ -207,7 +207,7 @@ By default, any files equal to or greater than 64KB are chunked by RDC.
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -257,7 +257,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsrConnection, String
+### String
+
+### String
 
 ## NOTES
 
@@ -268,4 +270,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-DfsrConnection](./Add-DfsrConnection.md)
 
 [Remove-DfsrConnection](./Remove-DfsrConnection.md)
-

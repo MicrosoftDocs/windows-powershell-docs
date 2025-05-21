@@ -88,9 +88,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent, Microsoft.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent[]
-This cmdlet generates a **System.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent** object that represents web content of a relying party, or an array of such objects.
-The object includes the following properties:
+### Microsoft.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent
+
+### Microsoft.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent[]
+
+This cmdlet generates a **System.IdentityServer.Management.Resources.AdfsRelyingPartyWebContent**
+object that represents web content of a relying party, or an array of such objects. The object
+includes the following properties:
 
 - Locale: **System.Globalization.CultureInfo**
 - Name: **System.String**
@@ -105,4 +109,3 @@ The object includes the following properties:
 [Remove-AdfsRelyingPartyWebContent](./Remove-AdfsRelyingPartyWebContent.md)
 
 [Set-AdfsRelyingPartyWebContent](./Set-AdfsRelyingPartyWebContent.md)
-

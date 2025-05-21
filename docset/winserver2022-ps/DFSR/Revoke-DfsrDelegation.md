@@ -30,8 +30,8 @@ For more information about delegation in the Distributed File System (DFS) Repli
 ```
 PS C:\> Revoke-DfsrDelegation -GroupName "RG01" -AccountName "DFSR Admins"
 This operation will revoke delegation of permissions on the replication group named "RG01" for the account named DFSR
-Admins. 
-Are you sure you want to revoke delegation of permissions on this replication group? 
+Admins.
+Are you sure you want to revoke delegation of permissions on this replication group?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
 ```
 
@@ -58,7 +58,7 @@ This cmdlet revokes permissions to the users and groups that this parameter spec
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -89,7 +89,7 @@ If you do not specify this parameter, the cmdlet uses the domain of the current 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 100
@@ -104,7 +104,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +148,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, String[], String
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### String[]
+
+### String
 
 ## OUTPUTS
 
@@ -161,4 +165,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-DfsrDelegation](./Get-DfsrDelegation.md)
 
 [Grant-DfsrDelegation](./Grant-DfsrDelegation.md)
-

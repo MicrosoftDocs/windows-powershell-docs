@@ -287,7 +287,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.GroupPolicy.Gpo, Microsoft.GroupPolicy.PolicyRegistrySetting
+### Microsoft.GroupPolicy.Gpo
+
+### Microsoft.GroupPolicy.PolicyRegistrySetting
 
 You can pipe a GPO from which to remove a registry-based policy setting, or a
 **PolicyRegistrySetting** object that represents a registry-based policy setting. Collections that
@@ -326,4 +328,3 @@ removed.
 [Get-GPRegistryValue](./Get-GPRegistryValue.md)
 
 [Set-GPRegistryValue](./Set-GPRegistryValue.md)
-

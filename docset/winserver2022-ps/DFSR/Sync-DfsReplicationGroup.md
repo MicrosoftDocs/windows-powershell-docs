@@ -147,7 +147,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, uint, string Computername, string Computername
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### uint
+
+### string
 
 ## OUTPUTS
 

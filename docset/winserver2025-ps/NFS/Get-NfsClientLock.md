@@ -191,11 +191,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_NfsNlmClientLock, Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_Nfsv4ClientLock
+### Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_NfsNlmClientLock
+
+### Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_Nfsv4ClientLock
 
 ## NOTES
 
 ## RELATED LINKS
 
 [Revoke-NfsClientLock](./Revoke-NfsClientLock.md)
-

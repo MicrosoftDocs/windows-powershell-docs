@@ -71,7 +71,7 @@ For more information about Windows PowerShell background jobs, see [about_Jobs](
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ Specifies the state identifier of the locks on the NFS server.
 ```yaml
 Type: String
 Parameter Sets: v4
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -175,7 +175,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,11 +191,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_NfsNlmClientLock, Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_Nfsv4ClientLock
+### Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_NfsNlmClientLock
+
+### Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_Nfsv4ClientLock
 
 ## NOTES
 
 ## RELATED LINKS
 
 [Revoke-NfsClientLock](./Revoke-NfsClientLock.md)
-

@@ -58,7 +58,7 @@ A Secure Sockets Layer (SSL) connection is required for the Basic authentication
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -74,7 +74,7 @@ Specifies the authentication policy that applies to computer accounts.
 ```yaml
 Type: ADAuthenticationPolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ If you specify credentials that do not have permission to perform the task, the 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +128,7 @@ The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ Indicates that the authentication policy silo is enforced.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +159,7 @@ To get the **ADAuthenticationPolicySilo** object to use as a template, use the G
 ```yaml
 Type: ADAuthenticationPolicySilo
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -176,7 +176,7 @@ The LDAP display name (**ldapDisplayName**) of this property is name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -198,7 +198,7 @@ You can specify values for more than one attribute by using semicolons to separa
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +234,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -247,14 +247,14 @@ Accept wildcard characters: False
 Specifies the Active Directory Domain Services instance to which to connect, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
 
-Specify the Active Directory Domain Services instance in one of the following ways:  
+Specify the Active Directory Domain Services instance in one of the following ways:
 
 Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
-Directory server values: 
+Directory server values:
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -269,7 +269,7 @@ The default value for this parameter is determined by one of the following metho
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -284,7 +284,7 @@ Specifies the authentication policy that applies to managed service accounts.
 ```yaml
 Type: ADAuthenticationPolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -299,7 +299,7 @@ Specifies the authentication policy that applies to user accounts.
 ```yaml
 Type: ADAuthenticationPolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -329,7 +329,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.ActiveDirectory.Management.ADAuthenticationPolicy, System.String, System.Management.Automation.SwitchParameter:  System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+### Microsoft.ActiveDirectory.Management.ADAuthenticationPolicy
+
+### System.String
+
+### System.Management.Automation.SwitchParameter
 
 ## OUTPUTS
 
@@ -346,4 +350,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-ADAuthenticationPolicySilo](./Set-ADAuthenticationPolicySilo.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
-

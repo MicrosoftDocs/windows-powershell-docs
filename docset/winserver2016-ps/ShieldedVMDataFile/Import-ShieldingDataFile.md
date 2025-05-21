@@ -42,7 +42,7 @@ The file has the .pdk file name extension.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -58,7 +58,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### ShieldingDataFile, ExistingVMShieldingDataFile
+### ShieldingDataFile
+
+### ExistingVMShieldingDataFile
+
 This cmdlet returns a **ShieldingDataFile** object.
 This object represents a .pdk file used to provision a shielded virtual machine.
 

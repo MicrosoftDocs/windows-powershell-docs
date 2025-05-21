@@ -151,7 +151,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup, String
+### Microsoft.DistributedFileSystemReplication.DfsReplicationGroup
+
+### String
 
 ## OUTPUTS
 
@@ -166,4 +168,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-DfsrMember](./Get-DfsrMember.md)
 
 [Remove-DfsrMember](./Remove-DfsrMember.md)
-

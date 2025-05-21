@@ -310,7 +310,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### uint, string, switch
+### uint
+
+### string
+
+### SwitchParameter
 
 ## OUTPUTS
 

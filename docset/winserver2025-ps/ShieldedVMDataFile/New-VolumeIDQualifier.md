@@ -98,15 +98,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### String, VolumeVersionRule
+### String
+
+### VolumeVersionRule
 
 ## OUTPUTS
 
 ### VolumeIDQualifier
-This object returns a new **VolumeIDQualifier** object.
-Provide this object to the Protect-ShieldingDataFile to create a provisioning data file.
+
+This object returns a new **VolumeIDQualifier** object. Provide this object to the
+Protect-ShieldingDataFile to create a provisioning data file.
 
 ## NOTES
 
 ## RELATED LINKS
-

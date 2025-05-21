@@ -47,7 +47,7 @@ The path to the template file.
 ```yaml
 Type: String
 Parameter Sets: TemplateDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -67,7 +67,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: VolumeVersionRule
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Equals, GreaterThan, GreaterThanOrEquals
 
 Required: True
@@ -84,7 +84,7 @@ This type of file uses the .vsc file name extension.
 ```yaml
 Type: String
 Parameter Sets: SignatureCatalog
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -98,15 +98,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### String, VolumeVersionRule
+### String
+
+### VolumeVersionRule
 
 ## OUTPUTS
 
 ### VolumeIDQualifier
-This object returns a new **VolumeIDQualifier** object.
-Provide this object to the Protect-ShieldingDataFile to create a provisioning data file.
+
+This object returns a new **VolumeIDQualifier** object. Provide this object to the
+Protect-ShieldingDataFile to create a provisioning data file.
 
 ## NOTES
 
 ## RELATED LINKS
-

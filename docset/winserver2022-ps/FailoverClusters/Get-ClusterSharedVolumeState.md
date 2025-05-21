@@ -44,7 +44,7 @@ don't specify this parameter, the cmdlet runs on the local cluster.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -61,7 +61,7 @@ cmdlet.
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -78,7 +78,7 @@ state information.
 ```yaml
 Type: StringCollection
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -95,7 +95,7 @@ Cluster Shared Volumes.
 ```yaml
 Type: StringCollection
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +113,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.FailoverClusters.PowerShell.Cluster, Microsoft.FailoverClusters.PowerShell.ClusterNode, Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume
+### Microsoft.FailoverClusters.PowerShell.Cluster
+
+### Microsoft.FailoverClusters.PowerShell.ClusterNode
+
+### Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume
 
 ## OUTPUTS
 

@@ -74,16 +74,16 @@ Remove-GPPrefRegistryValue @params
 ```
 
 ```Output
-DisplayName      : TestGPO 
-DomainName       : contoso.com 
-Owner            : CONTOSO\Domain Admins 
-Id               : 92f79f6c-61ce-47d9-8dc6-f78c5cea93ac 
-GpoStatus        : AllSettingsEnabled 
-Description      : 
-CreationTime     : 2/28/2009 5:15:04 PM 
-ModificationTime : 2/28/2009 5:15:32 PM 
-UserVersion      : AD Version: 5, SysVol Version: 5 
-ComputerVersion  : AD Version: 0, SysVol Version: 0 
+DisplayName      : TestGPO
+DomainName       : contoso.com
+Owner            : CONTOSO\Domain Admins
+Id               : 92f79f6c-61ce-47d9-8dc6-f78c5cea93ac
+GpoStatus        : AllSettingsEnabled
+Description      :
+CreationTime     : 2/28/2009 5:15:04 PM
+ModificationTime : 2/28/2009 5:15:32 PM
+UserVersion      : AD Version: 5, SysVol Version: 5
+ComputerVersion  : AD Version: 0, SysVol Version: 0
 WmiFilter        :
 ```
 
@@ -104,16 +104,16 @@ Remove-GPPrefRegistryValue @params
 ```
 
 ```Output
-DisplayName      : TestGPO 
-DomainName       : contoso.com 
-Owner            : CONTOSO\Domain Admins 
-Id               : 92f79f6c-61ce-47d9-8dc6-f78c5cea93ac 
-GpoStatus        : AllSettingsEnabled 
-Description      : 
-CreationTime     : 2/28/2009 5:15:04 PM 
-ModificationTime : 2/28/2009 5:15:32 PM 
-UserVersion      : AD Version: 5, SysVol Version: 5 
-ComputerVersion  : AD Version: 0, SysVol Version: 0 
+DisplayName      : TestGPO
+DomainName       : contoso.com
+Owner            : CONTOSO\Domain Admins
+Id               : 92f79f6c-61ce-47d9-8dc6-f78c5cea93ac
+GpoStatus        : AllSettingsEnabled
+Description      :
+CreationTime     : 2/28/2009 5:15:04 PM
+ModificationTime : 2/28/2009 5:15:32 PM
+UserVersion      : AD Version: 5, SysVol Version: 5
+ComputerVersion  : AD Version: 0, SysVol Version: 0
 WmiFilter        :
 ```
 
@@ -134,29 +134,29 @@ Get-GPO -All | Remove-GPPrefRegistryValue @params
 ```
 
 ```Output
-DisplayName      : TestGPO 
-DomainName       : contoso.com 
-Owner            : CONTOSO\Domain Admins 
-Id               : a83ad1da-9fd4-4005-96b1-7e98042d04de 
-GpoStatus        : AllSettingsEnabled 
-Description      : 
-CreationTime     : 2/28/2009 5:21:05 PM 
-ModificationTime : 2/28/2009 5:21:17 PM 
-UserVersion      : AD Version: 5, SysVol Version: 5 
-ComputerVersion  : AD Version: 0, SysVol Version: 0 
-WmiFilter        : 
+DisplayName      : TestGPO
+DomainName       : contoso.com
+Owner            : CONTOSO\Domain Admins
+Id               : a83ad1da-9fd4-4005-96b1-7e98042d04de
+GpoStatus        : AllSettingsEnabled
+Description      :
+CreationTime     : 2/28/2009 5:21:05 PM
+ModificationTime : 2/28/2009 5:21:17 PM
+UserVersion      : AD Version: 5, SysVol Version: 5
+ComputerVersion  : AD Version: 0, SysVol Version: 0
+WmiFilter        :
 
 
-DisplayName      : TestGPO-1 
-DomainName       : contoso.com 
-Owner            : CONTOSO\Domain Admins 
-Id               : 277eafe8-5dbf-4e3f-86dc-557eee14d0a4 
-GpoStatus        : AllSettingsEnabled 
-Description      : 
-CreationTime     : 2/28/2009 2:35:24 PM 
-ModificationTime : 2/28/2009 5:21:17 PM 
-UserVersion      : AD Version: 0, SysVol Version: 0 
-ComputerVersion  : AD Version: 0, SysVol Version: 0 
+DisplayName      : TestGPO-1
+DomainName       : contoso.com
+Owner            : CONTOSO\Domain Admins
+Id               : 277eafe8-5dbf-4e3f-86dc-557eee14d0a4
+GpoStatus        : AllSettingsEnabled
+Description      :
+CreationTime     : 2/28/2009 2:35:24 PM
+ModificationTime : 2/28/2009 5:21:17 PM
+UserVersion      : AD Version: 0, SysVol Version: 0
+ComputerVersion  : AD Version: 0, SysVol Version: 0
 WmiFilter        :
 ```
 
@@ -196,7 +196,7 @@ User Configuration in the specified GPO. You must specify either User or Compute
 ```yaml
 Type: GpoConfiguration
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: User, Computer
 
 Required: True
@@ -316,7 +316,7 @@ preference items in the GPO when the GPO is applied on a client computer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -355,7 +355,7 @@ specify the **ValueName** parameter, you must also specify the **Key** parameter
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -389,7 +389,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.GroupPolicy.Gpo, Microsoft.GroupPolicy.PreferenceRegistrySetting
+### Microsoft.GroupPolicy.Gpo
+
+### Microsoft.GroupPolicy.PreferenceRegistrySetting
 
 This cmdlet takes a GPO or a **PreferenceRegistrySetting** object as input. You can pipe in one or
 more **PreferenceRegistrySetting** objects to remove one or more Registry preference items from a
@@ -424,4 +426,3 @@ This cmdlet returns the GPO from which the Registry preference item or items tha
 [Get-GPPrefRegistryValue](./Get-GPPrefRegistryValue.md)
 
 [Set-GPPrefRegistryValue](./Set-GPPrefRegistryValue.md)
-

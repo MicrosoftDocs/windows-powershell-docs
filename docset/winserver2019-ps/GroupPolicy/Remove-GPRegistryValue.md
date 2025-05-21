@@ -243,37 +243,52 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Microsoft.GroupPolicy.Gpo, Microsoft.GroupPolicy.PolicyRegistrySetting
-You can pipe a GPO from which to remove a registry-based policy setting, or a **PolicyRegistrySetting** object that represents a registry-based policy setting.
-Collections that contain GPOs from different domains are not supported.
+### Microsoft.GroupPolicy.Gpo
+
+### Microsoft.GroupPolicy.PolicyRegistrySetting
+
+You can pipe a GPO from which to remove a registry-based policy setting, or a
+**PolicyRegistrySetting** object that represents a registry-based policy setting. Collections that
+contain GPOs from different domains are not supported.
 
 ## OUTPUTS
 
 ### Microsoft.GroupPolicy.Gpo
-This cmdlet returns the GPO from which the registry-based policy setting (or settings) has been removed.
+
+This cmdlet returns the GPO from which the registry-based policy setting (or settings) has been
+removed.
 
 ## NOTES
-* The hive of the registry key that you specify -- HKEY_LOCAL_MACHINE (HKLM) or HKEY_CURRENT_USER (HKCU) indicates whether the registry-based policy setting is removed from Computer Configuration or User Configuration.
 
-  If a value for the registry key cannot be located (the registry key is not configured) or if subkeys are present, an error occurs and a corresponding error message is displayed.
+* The hive of the registry key that you specify -- `HKEY_LOCAL_MACHINE` (HKLM) or
+  `HKEY_CURRENT_USER` (HKCU) indicates whether the registry-based policy setting is removed from
+  Computer Configuration or User Configuration.
 
-  You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
+  If a value for the registry key cannot be located (the registry key is not configured) or if
+  subkeys are present, an error occurs and a corresponding error message is displayed.
 
-  If you do not explicitly specify the domain, the cmdlet uses a default domain.
-The default domain is the domain that is used to access network resources by the security context under which the current session is running.
-This domain is typically the domain of the user that is running the session.
-For instance, the domain of the user who started the session by opening Windows PowerShell from the Program Files menu, or the domain of a user that is specified in a runas command.
-However, computer startup and shutdown scripts run under the context of the LocalSystem account.
-The LocalSystem account is a built-in local account, and it accesses network resources under the context of the computer account.
-Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
+  You can use the **Domain** parameter to explicitly specify the domain for this cmdlet.
+
+  If you do not explicitly specify the domain, the cmdlet uses a default domain. The default domain
+  is the domain that is used to access network resources by the security context under which the
+  current session is running. This domain is typically the domain of the user that is running the
+  session. For instance, the domain of the user who started the session by opening Windows
+  PowerShell from the Program Files menu, or the domain of a user that is specified in a runas
+  command. However, computer startup and shutdown scripts run under the context of the LocalSystem
+  account. The LocalSystem account is a built-in local account, and it accesses network resources
+  under the context of the computer account. Therefore, when this cmdlet is run from a startup or
+  shutdown script, the default domain is the domain to which the computer is joined.
 
 ## RELATED LINKS
 
 [Get-GPRegistryValue](./Get-GPRegistryValue.md)
 
 [Set-GPRegistryValue](./Set-GPRegistryValue.md)
-

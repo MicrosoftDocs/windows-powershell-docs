@@ -47,7 +47,7 @@ Specifies a **PSCredential** object. Use the **Get-Credential** cmdlet to get a 
 ```yaml
 Type: PSCredential
 Parameter Sets: UseCreds
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -62,7 +62,7 @@ Specifies a description.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +77,7 @@ Specifies the full name of the user.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ Specifies a name for the user.
 ```yaml
 Type: String
 Parameter Sets: UseUserName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -126,7 +126,7 @@ Specifies the user type. The acceptable values for this parameter are:
 ```yaml
 Type: UserTypePS
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Administrator, Standard, DashboardUser
 
 Required: False
@@ -151,9 +151,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-WmsUser]()
+[Get-WmsUser](Get-WmsUser.md)
 
-[New-WmsUser]()
+[New-WmsUser](New-WmsUser.md)
 
-[Remove-WmsUser]()
-
+[Remove-WmsUser](Remove-WmsUser.md)

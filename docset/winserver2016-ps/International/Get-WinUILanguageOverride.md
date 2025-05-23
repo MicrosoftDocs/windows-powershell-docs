@@ -1,6 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+Locale: en-US
 Module Name: International
 ms.date: 12/20/2016
 online version: https://learn.microsoft.com/powershell/module/international/get-winuilanguageoverride?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
@@ -29,8 +30,8 @@ For more information, see the **Get-WinUserLanguageList** and **Set-WinUserLangu
 ### Example 1: Display the language override setting
 ```
 PS C:\> Get-WinUILanguageOverride
-LCID             Name             DisplayName                                                                        
-----             ----             -----------                                                                        
+LCID             Name             DisplayName
+----             ----             -----------
 1033             en-US            English (United States)
 ```
 

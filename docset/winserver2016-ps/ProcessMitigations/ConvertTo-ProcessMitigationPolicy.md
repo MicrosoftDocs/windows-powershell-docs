@@ -34,7 +34,8 @@ Converts EMET file policy.xml to result.xml, may also generate a CI file CI-resu
 ## PARAMETERS
 
 ### -EMETFilePath
-{{Fill EMETFilePath Description}}```yaml
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: f
@@ -47,7 +48,8 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFilePath
-{{Fill OutputFilePath Description}}```yaml
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: o
@@ -73,4 +75,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

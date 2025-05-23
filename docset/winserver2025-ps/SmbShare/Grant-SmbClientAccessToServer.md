@@ -1,7 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
-Module Name: SmbClientAccessToServer
+Module Name: SmbShare
 ms.date: 02/22/2024
 online version: https://learn.microsoft.com/powershell/module/smbshare/grant-smbclientaccesstoserver?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0

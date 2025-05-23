@@ -1,6 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+Locale: en-US
 Module Name: International
 ms.date: 12/20/2016
 online version: https://learn.microsoft.com/powershell/module/international/set-winculturefromlanguagelistoptout?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
@@ -42,7 +43,7 @@ Specifies the opt-out value.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

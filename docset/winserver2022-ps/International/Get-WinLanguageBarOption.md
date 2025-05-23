@@ -1,6 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+Locale: en-US
 Module Name: International
 ms.date: 12/20/2016
 online version: https://learn.microsoft.com/powershell/module/international/get-winlanguagebaroption?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -46,12 +47,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### LanguageBar
-This cmdlet returns an object that contains the following settings. 
+This cmdlet returns an object that contains the following settings.
 
 - **IsLegacyLanguageBar**.
 When this setting is set to true, the desktop language bar is used, where available.
 When this setting is set to false, the modem input switcher is used.
-This is recommended. 
+This is recommended.
 - **IsLegacySwitchingMode**.
 When this setting is set to true, the current input method, which includes keyboard layout or input method editor (IME), is selected for the current application only.
 When new applications start, the default input method is selected.

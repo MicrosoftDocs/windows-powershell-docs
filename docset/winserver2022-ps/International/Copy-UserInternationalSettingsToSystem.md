@@ -2,13 +2,12 @@
 author: erik0686
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+Locale: en-US
 manager: aandrejs
 ms.author: ertorres
 ms.date: 09/08/2021
-ms.mktglfcycl: manage
-ms.service: windows-11
-ms.sitesec: library
-ms.topic: reference
+Module Name: International
+online version: https://learn.microsoft.com/powershell/module/international/copy-userinternationalsettingstosystem?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Copy-UserInternationalSettingsToSystem
 ---
@@ -84,3 +83,11 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS

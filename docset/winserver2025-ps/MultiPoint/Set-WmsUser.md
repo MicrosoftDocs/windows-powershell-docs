@@ -151,9 +151,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-WmsUser]()
+[Get-WmsUser](Get-WmsUser.md)
 
-[New-WmsUser]()
+[New-WmsUser](New-WmsUser.md)
 
-[Remove-WmsUser]()
-
+[Remove-WmsUser](Remove-WmsUser.md)

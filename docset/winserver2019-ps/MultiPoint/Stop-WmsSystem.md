@@ -94,15 +94,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-WmsSystem]()
+[Add-WmsSystem](Add-WmsSystem.md)
 
-[Get-WmsSystem]()
+[Get-WmsSystem](Get-WmsSystem.md)
 
-[Remove-WmsSystem]()
+[Remove-WmsSystem](Remove-WmsSystem.md)
 
-[Restart-WmsSystem]()
+[Restart-WmsSystem](Restart-WmsSystem.md)
 
-[Search-WmsSystem]()
+[Search-WmsSystem](Search-WmsSystem.md)
 
-[Set-WmsSystem]()
-
+[Set-WmsSystem](Set-WmsSystem.md)

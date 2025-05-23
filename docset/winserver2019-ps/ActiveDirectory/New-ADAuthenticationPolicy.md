@@ -17,66 +17,77 @@ Creates an Active Directory Domain Services authentication policy object.
 
 ```
 New-ADAuthenticationPolicy [-WhatIf] [-Confirm] [-AuthType <ADAuthType>]
- [-ComputerAllowedToAuthenticateTo <String>] [-ComputerTGTLifetimeMins <Int32>] [-Credential <PSCredential>]
- [-Description <String>] [-Enforce] [-Instance <ADAuthenticationPolicy>] [-Name] <String>
- [-OtherAttributes <Hashtable>] [-PassThru] [-ProtectedFromAccidentalDeletion <Boolean>]
- [-RollingNTLMSecret <ADStrongNTLMPolicyType>] [-Server <String>] [-ServiceAllowedToAuthenticateFrom <String>]
+ [-ComputerAllowedToAuthenticateTo <String>] [-ComputerTGTLifetimeMins <Int32>]
+ [-Credential <PSCredential>] [-Description <String>] [-Enforce]
+ [-Instance <ADAuthenticationPolicy>] [-Name] <String> [-OtherAttributes <Hashtable>] [-PassThru]
+ [-ProtectedFromAccidentalDeletion <Boolean>] [-RollingNTLMSecret <ADStrongNTLMPolicyType>]
+ [-Server <String>] [-ServiceAllowedToAuthenticateFrom <String>]
  [-ServiceAllowedToAuthenticateTo <String>] [-ServiceAllowedNTLMNetworkAuthentication]
  [-ServiceTGTLifetimeMins <Int32>] [-UserAllowedToAuthenticateFrom <String>]
- [-UserAllowedToAuthenticateTo <String>] [-UserAllowedNTLMNetworkAuthentication] [-UserTGTLifetimeMins <Int32>]
- [<CommonParameters>]
+ [-UserAllowedToAuthenticateTo <String>] [-UserAllowedNTLMNetworkAuthentication]
+ [-UserTGTLifetimeMins <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **New-ADAuthenticationPolicy** creates an authentication policy object in Active Directory® Domain Services.
 
-Commonly used attributes of the object can be specified by the parameters of this cmdlet.
-To set attributes for the object that are not represented by the parameters of this cmdlet, specify the *OtherAttributes* parameter.
+The **New-ADAuthenticationPolicy** creates an authentication policy object in Active Directory®
+Domain Services.
 
-You can use the pipeline operator and the Import-Csv cmdlet to pass a list for bulk creation of objects in the directory. 
-You can also specify a template object by using the *Instance* parameter to create objects from a template.
+Commonly used attributes of the object can be specified by the parameters of this cmdlet. To set
+attributes for the object that are not represented by the parameters of this cmdlet, specify the
+*OtherAttributes* parameter.
+
+You can use the pipeline operator and the Import-Csv cmdlet to pass a list for bulk creation of
+objects in the directory. You can also specify a template object by using the *Instance* parameter
+to create objects from a template.
 
 ## EXAMPLES
 
 ### Example 1: Create an authentication policy with a user TGT lifetime
+
 ```
 PS C:\> New-ADAuthenticationPolicy -Name "AuthenticationPolicy01" -UserTGTLifetimeMins 60
 ```
 
-This command creates an authentication policy object named AuthenticationPolicy01 and sets the TGT lifetime for a user account to 60 minutes.
-Because the *Enforce* parameter is not specified, the authentication policy created is in audit mode.
+This command creates an authentication policy object named AuthenticationPolicy01 and sets the TGT
+lifetime for a user account to 60 minutes. Because the *Enforce* parameter is not specified, the
+authentication policy created is in audit mode.
 
 ### Example 2: Create an enforced authentication policy
+
 ```
 PS C:\> New-ADAuthenticationPolicy -Name "AuthenticationPolicy02" -Enforce
 ```
 
-This command creates an authentication policy named AuthenticationPolicy02 and enforces it by specifying the *Enforce*  parameter.
+This command creates an authentication policy named AuthenticationPolicy02 and enforces it by
+specifying the *Enforce* parameter.
 
 ### Example 3: Create an authentication policy
+
 ```
 PS C:\> New-ADAuthenticationPolicy -Name "TestAuthenticationPolicy" -UserAllowedToAuthenticateFrom (Get-Acl .\someFile.txt).sddl
 ```
 
-This command creates an authentication policy named TestAuthenticationPolicy.
-The *UserAllowedToAuthenticationFrom* parameter specifies the devices from which users are allowed to authenticate by an SDDL string in the file named someFile.txt.
+This command creates an authentication policy named TestAuthenticationPolicy. The
+*UserAllowedToAuthenticationFrom* parameter specifies the devices from which users are allowed to
+authenticate by an SDDL string in the file named someFile.txt.
 
 ## PARAMETERS
 
 ### -AuthType
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
+
+Specifies the authentication method to use. The acceptable values for this parameter are:
 
 - Negotiate or 0
 - Basic or 1
 
-The default authentication method is Negotiate.
-A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+The default authentication method is Negotiate. A Secure Sockets Layer (SSL) connection is required
+for the Basic authentication method.
 
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -87,12 +98,14 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerAllowedToAuthenticateTo
-Specifies the security descriptor definition language (SDDL) string of the security descriptor used to determine if the computer can authenticate to this account.
+
+Specifies the security descriptor definition language (SDDL) string of the security descriptor used
+to determine if the computer can authenticate to this account.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,12 +115,14 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerTGTLifetimeMins
-Specifies the lifetime in minutes for non-renewable ticket granting tickets (TGTs) for computer accounts.
+
+Specifies the lifetime in minutes for non-renewable ticket granting tickets (TGTs) for computer
+accounts.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,6 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -132,19 +148,22 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies a user account that has permission to perform the task.
-The default is the current user.
-Type a user name, such as User01 or Domain01\User01, or enter a **PSCredential** object, such as one generated by the **Get-Credential** cmdlet.
 
-By default, the cmdlet uses the credentials of the currently logged on user unless the cmdlet is run from an Active Directory Domain Services Windows PowerShell provider drive.
-If you run the cmdlet in a provider drive, the account associated with the drive is the default.
+Specifies a user account that has permission to perform the task. The default is the current user.
+Type a user name, such as User01 or Domain01\\User01, or enter a **PSCredential** object, such as one
+generated by the **Get-Credential** cmdlet.
 
-If you specify credentials that do not have permission to perform the task, the cmdlet returns an error.
+By default, the cmdlet uses the credentials of the currently logged on user unless the cmdlet is run
+from an Active Directory Domain Services Windows PowerShell provider drive. If you run the cmdlet in
+a provider drive, the account associated with the drive is the default.
+
+If you specify credentials that do not have permission to perform the task, the cmdlet returns an
+error.
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -154,14 +173,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies a description for the object.
-This parameter sets the value of the description property for the object.
-The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName**) for this property is description.
+
+Specifies a description for the object. This parameter sets the value of the description property
+for the object. The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName**)
+for this property is description.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -171,12 +191,13 @@ Accept wildcard characters: False
 ```
 
 ### -Enforce
+
 Indicates that the authentication policy is enforced.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,13 +207,15 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Specifies an instance of an **ADAuthenticationPolicy** object to use as a template for a new **ADAuthenticationPolicy**object.
-To get the **ADAuthenticationPolicy** object to use as a template, use the **Get-ADAuthenticationPolicy** cmdlet.
+
+Specifies an instance of an **ADAuthenticationPolicy** object to use as a template for a new
+**ADAuthenticationPolicy**object. To get the **ADAuthenticationPolicy** object to use as a template,
+use the **Get-ADAuthenticationPolicy** cmdlet.
 
 ```yaml
 Type: ADAuthenticationPolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,14 +225,14 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the object.
-This parameter sets the **Name** property of the Active Directory Domain Services object.
-The LDAP display name (**ldapDisplayName**) of this property is name.
+
+Specifies the name of the object. This parameter sets the **Name** property of the Active Directory
+Domain Services object. The LDAP display name (**ldapDisplayName**) of this property is name.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -219,19 +242,24 @@ Accept wildcard characters: False
 ```
 
 ### -OtherAttributes
-Specifies a list of object attribute values for attributes that are not represented by other parameters.
-You can set one or more attributes at the same time with this parameter, and if an attribute takes more than one value you can assign multiple values.
-To identify an attribute, specify the LDAPDisplayName (**ldapDisplayName**) defined for it in the Active Directory Domain Services schema.
 
-Specify the attribute and the value of the attribute in the following format: @{'AttributeLDAPDisplayName'=value}.
+Specifies a list of object attribute values for attributes that are not represented by other
+parameters. You can set one or more attributes at the same time with this parameter, and if an
+attribute takes more than one value you can assign multiple values. To identify an attribute,
+specify the LDAPDisplayName (**ldapDisplayName**) defined for it in the Active Directory Domain
+Services schema.
 
-To specify multiple values for an attribute, specify a comma separated list the values for the display name.
-You can specify values for more than one attribute by using semicolons to separate attribute value pairs.
+Specify the attribute and the value of the attribute in the following format:
+@{'AttributeLDAPDisplayName'=value}.
+
+To specify multiple values for an attribute, specify a comma separated list the values for the
+display name. You can specify values for more than one attribute by using semicolons to separate
+attribute value pairs.
 
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -241,13 +269,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working.
-By default, this cmdlet does not generate any output.
+
+Returns an object representing the item with which you are working. By default, this cmdlet does not
+generate any output.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -257,9 +286,10 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectedFromAccidentalDeletion
-Indicates whether to prevent the object from being deleted.
-When this property is set to true, you cannot delete the corresponding object without changing the value of the property.
-The acceptable values for this parameter are:
+
+Indicates whether to prevent the object from being deleted. When this property is set to true, you
+cannot delete the corresponding object without changing the value of the property. The acceptable
+values for this parameter are:
 
 - $False or 0
 - $True or 1
@@ -267,7 +297,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -277,12 +307,14 @@ Accept wildcard characters: False
 ```
 
 ### -RollingNTLMSecret
-Beginning with Windows 10, version 1703, this feature is deprecated and should not be configured in Active Directory.
+
+Beginning with Windows 10, version 1703, this feature is deprecated and should not be configured in
+Active Directory.
 
 ```yaml
 Type: ADStrongNTLMPolicyType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Optional, Required
 
 Required: False
@@ -293,32 +325,37 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-Specifies the Active Directory Domain Services instance to which to connect, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
 
-Specify the Active Directory Domain Services instance in one of the following ways: 
+Specifies the Active Directory Domain Services instance to which to connect, by providing one of the
+following values for a corresponding domain name or directory server. The service may be any of the
+following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active
+Directory snapshot instance.
+
+Specify the Active Directory Domain Services instance in one of the following ways:
 
 Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
-Directory server values: 
+Directory server values:
 
 - Fully qualified directory server name
 - NetBIOS name
 - Fully qualified directory server name and port
 
-The default value for this parameter is determined by one of the following methods in the order that they are listed:
+The default value for this parameter is determined by one of the following methods in the order that
+they are listed:
 
 - By using the *Server* value from objects passed through the pipeline
-- By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
+- By using the server information associated with the Active Directory Domain Services Windows
+  PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -328,12 +365,14 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceAllowedNTLMNetworkAuthentication
-Specifies that the policy allows NTLM network authentication if the service account has an access control expression specified by the *ServiceAllowedToAuthenticateFrom* parameter.
+
+Specifies that the policy allows NTLM network authentication if the service account has an access
+control expression specified by the *ServiceAllowedToAuthenticateFrom* parameter.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -343,12 +382,14 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceAllowedToAuthenticateFrom
-Specifies an access control expression used to determine from which devices the service can authenticate.
+
+Specifies an access control expression used to determine from which devices the service can
+authenticate.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -358,12 +399,14 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceAllowedToAuthenticateTo
-Specifies the SDDL string of the security descriptor used to determine if the service can authenticate to this account.
+
+Specifies the SDDL string of the security descriptor used to determine if the service can
+authenticate to this account.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -373,12 +416,13 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceTGTLifetimeMins
+
 Specifies the lifetime in minutes for non-renewable TGTs for service accounts.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -388,12 +432,14 @@ Accept wildcard characters: False
 ```
 
 ### -UserAllowedNTLMNetworkAuthentication
-Indicates that the policy allows NTLM network authentication if the user account has an access control expression specified by the *UserAllowedToAuthenticateFrom* parameter.
+
+Indicates that the policy allows NTLM network authentication if the user account has an access
+control expression specified by the *UserAllowedToAuthenticateFrom* parameter.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -403,12 +449,14 @@ Accept wildcard characters: False
 ```
 
 ### -UserAllowedToAuthenticateFrom
-Specifies an access control expression used to determine from which devices the users can authenticate.
+
+Specifies an access control expression used to determine from which devices the users can
+authenticate.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -418,12 +466,14 @@ Accept wildcard characters: False
 ```
 
 ### -UserAllowedToAuthenticateTo
-Specifies the SDDL string of the security descriptor used to determine if the users can authenticate to this account.
+
+Specifies the SDDL string of the security descriptor used to determine if the users can authenticate
+to this account.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -433,12 +483,13 @@ Accept wildcard characters: False
 ```
 
 ### -UserTGTLifetimeMins
+
 Specifies the lifetime in minutes for non-renewable TGTs for user accounts.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -448,6 +499,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -464,11 +516,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### System.String: System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], System.Management.Automation.SwitchParameter: System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+### ADStrongNTLMPolicyType
+
+### System.Boolean
+
+### System.Int32
+
+### System.Management.Automation.SwitchParameter
+
+### System.String
 
 ## OUTPUTS
 
@@ -485,4 +549,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-ADAuthenticationPolicy](./Set-ADAuthenticationPolicy.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
-

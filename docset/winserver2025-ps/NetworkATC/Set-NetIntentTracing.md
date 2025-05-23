@@ -79,9 +79,9 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### [switch] $StopTracing, switch to stop tracing
+### SwitchParameter
 
-### [string] $ComputerName, target computer name
+### String
 
 ## OUTPUTS
 

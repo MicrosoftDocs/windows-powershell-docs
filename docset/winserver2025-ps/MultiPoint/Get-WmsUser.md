@@ -102,19 +102,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
+### None
 
 ## OUTPUTS
 
-### Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.WmsUser
+### WmsUser
+
+This cmdlet returns a **WmsUser** collection as **PSObject** collection.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-WmsUser]()
+[New-WmsUser](New-WmsUser.md)
 
-[Remove-WmsUser]()
+[Remove-WmsUser](Remove-WmsUser.md)
 
-[Set-WmsUser](./Set-WmsUser.md)
-
+[Set-WmsUser](Set-WmsUser.md)

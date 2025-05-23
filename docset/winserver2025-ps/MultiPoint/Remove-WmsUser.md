@@ -100,19 +100,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
+### None
 
 ## OUTPUTS
 
-### System.Object
+### None
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-WmsUser]()
+[Get-WmsUser](Get-WmsUser.md)
 
-[New-WmsUser]()
+[New-WmsUser](New-WmsUser.md)
 
-[Set-WmsUser](./Set-WmsUser.md)
-
+[Set-WmsUser](Set-WmsUser.md)

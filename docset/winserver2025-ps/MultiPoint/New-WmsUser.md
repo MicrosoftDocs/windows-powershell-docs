@@ -152,17 +152,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
+### None
 
 ## OUTPUTS
 
-### System.Object
+### None
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-WmsUser]()
+[New-WmsUser](New-WmsUser.md)
 
-[Remove-WmsUser]()
-
+[Remove-WmsUser](Remove-WmsUser.md)

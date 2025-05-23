@@ -34,14 +34,14 @@ The **Get-WmsUser** cmdlet gets local user account information for a specified u
 ```
 PS C:\> Get-WmsUser -All
 Name         : Administrator
-Password     : 
-FullName     : 
+Password     :
+FullName     :
 Description  : Built-in account for administering the computer/domain
 UserType     : Administrator
 ComputerName : Test1
 Name         : Guest
-Password     : 
-FullName     : 
+Password     :
+FullName     :
 Description  : Built-in account for guest access to the computer/domain
 UserType     : Standard
 ComputerName : Test1
@@ -57,7 +57,7 @@ Indicates that this operation applies to all sessions on the target host.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: GetAllUsers
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -72,7 +72,7 @@ Specifies the name of the user to get.
 ```yaml
 Type: String
 Parameter Sets: GetUser
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -106,16 +106,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### WmsUser
+
 This cmdlet returns a **WmsUser** collection as **PSObject** collection.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[New-WmsUser]()
+[New-WmsUser](New-WmsUser.md)
 
-[Remove-WmsUser]()
+[Remove-WmsUser](Remove-WmsUser.md)
 
-[Set-WmsUser](./Set-WmsUser.md)
-
+[Set-WmsUser](Set-WmsUser.md)

@@ -54,7 +54,7 @@ Specifies the name of the user account to remove.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -110,9 +110,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-WmsUser]()
+[Get-WmsUser](Get-WmsUser.md)
 
-[New-WmsUser]()
+[New-WmsUser](New-WmsUser.md)
 
-[Set-WmsUser](./Set-WmsUser.md)
-
+[Set-WmsUser](Set-WmsUser.md)

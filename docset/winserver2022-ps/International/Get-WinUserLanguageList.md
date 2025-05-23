@@ -1,6 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+Locale: en-US
 Module Name: International
 ms.date: 12/20/2016
 online version: https://learn.microsoft.com/powershell/module/international/get-winuserlanguagelist?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -30,16 +31,16 @@ For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?L
 ```
 PS C:\> Get-WinUserLanguageList
 LanguageTag     : en-US
-Autonym         : English (United States) 
-EnglishName     : English (United States) 
-LocalizedName   : English (United States) 
+Autonym         : English (United States)
+EnglishName     : English (United States)
+LocalizedName   : English (United States)
 ScriptName      : Latin
 InputMethodTips : {0409:00000409}
-Handwriting     : False 
+Handwriting     : False
 LanguageTag     : fr-FR
-Autonym         : français (France) 
-EnglishName     : French (France) 
-LocalizedName   : French (France) 
+Autonym         : français (France)
+EnglishName     : French (France)
+LocalizedName   : French (France)
 ScriptName      : Latin
 InputMethodTips : {040c:0000040c}
 Handwriting     : False
@@ -77,28 +78,28 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 This cmdlet returns a list of **WinUserLanguage** objects that contain one or more languages and associated properties from the current user account's language list.
 For information about the **Generic.List** object, see [List(Of T) Class](https://go.microsoft.com/fwlink/?LinkID=243342).
 
-The generic list object supports the following methods: 
+The generic list object supports the following methods:
 
 - Add("`LanguageTag`")
 - Insert(index, "`LanguageTag`")
 - Remove(Index)
 
-The output language object contains the following properties: 
+The output language object contains the following properties:
 
 - **LanguageTag** (READ).
 A standard BCP-47 language tag that is used to identify languages.
-For more information, see the [Internet Engineering Task Force (IETF) BCP 47 RFC](https://go.microsoft.com/fwlink/?LinkID=242207). 
+For more information, see the [Internet Engineering Task Force (IETF) BCP 47 RFC](https://go.microsoft.com/fwlink/?LinkID=242207).
 - **Autonym** (LP database) (READ).
-The name of the language in the language itself. 
+The name of the language in the language itself.
 - **EnglishName** (LP database) (READ).
-The name of the language in English. 
+The name of the language in English.
 - **LocalizedName** (LP database) (READ).
-The name of the language in the current Windows display language. 
+The name of the language in the current Windows display language.
 - **ScriptName** (LP database) (READ).
-The writing system of the language. 
+The writing system of the language.
 - **InputMethodTips** (READ/WRITE).
 A list of input method Tablet Input Panel (TIP) strings that are enabled for this language.
-The enabled Input methods are listed in the format `Language ID: Keyboard layout ID`. 
+The enabled Input methods are listed in the format `Language ID: Keyboard layout ID`.
 - **Handwriting** (READ/WRITE).
 This value is either 0 (freehand) or 1 (write each character separately).
 

@@ -1,6 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+Locale: en-US
 Module Name: International
 ms.date: 12/20/2016
 online version: https://learn.microsoft.com/powershell/module/international/set-winlanguagebaroption?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
@@ -49,7 +50,7 @@ If you do not specify this parameter, the cmdlet sets the language bar mode to t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -65,7 +66,7 @@ If you do not specify this parameter, the cmdlet sets the language bar switch mo
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

@@ -1,6 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+Locale: en-US
 Module Name: International
 ms.date: 12/20/2016
 online version: https://learn.microsoft.com/powershell/module/international/set-windefaultinputmethodoverride?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
@@ -41,7 +42,7 @@ Specifies an input tip.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -56,7 +57,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### InputTIP
-You can pipe a locale ID and a keyboard language ID (KLID). See [Default Input Profiles (Input Locales) in Windows](/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs)
+You can pipe a locale ID and a keyboard language ID (KLID). See [Default Input Profiles (Input Locales) in Windows](/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs).
 
 ## OUTPUTS
 

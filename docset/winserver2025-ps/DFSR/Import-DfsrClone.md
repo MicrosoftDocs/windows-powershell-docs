@@ -206,7 +206,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### [none]
+### None
 
 ## NOTES
 

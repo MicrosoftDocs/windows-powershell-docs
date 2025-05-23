@@ -40,7 +40,7 @@ The term downstream refers to the non-authoritative server that is a clone of th
 ```
 PS C:\> Import-DfsrClone -Volume "C:" -Path C:\DfsRClone
 This operation will import the database and clone DFSR. It can take a long time to complete. Use Get-DfsrCloneState or
-DFSR event 2404 to determine when the import has succeeded. Volume: 
+DFSR event 2404 to determine when the import has succeeded. Volume:
 c:\ Path: C:\Dfsrclone
 Are you sure you want to continue to import the database clone? [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
 ```
@@ -139,7 +139,7 @@ Use this parameter for scripted cloning.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ After you export the DFS Replication database, but before you perform the import
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -206,7 +206,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### [none]
+### None
 
 ## NOTES
 

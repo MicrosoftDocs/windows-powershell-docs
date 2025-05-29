@@ -147,7 +147,7 @@ Gets settings of physical network interfaces from the Network Controller.
 Retrieves the properties of a service insertion resource from the Network Controller.
 
 ### [Get-NetworkControllerState](Get-NetworkControllerState.md)
-Retrieves the provisioning state of NetworkControllerState resource. 
+Retrieves the provisioning state of NetworkControllerState resource.
 
 ### [Get-NetworkControllerStatistics](Get-NetworkControllerStatistics.md)
 Displays health and usage statistics of resources in Network Controller.
@@ -184,9 +184,6 @@ Gets a virtual server from the Network Controller.
 
 ### [Get-NetworkControllerVirtualSubnet](Get-NetworkControllerVirtualSubnet.md)
 Retrieves a virtual subnet belonging to a virtual network.
-
-### [Get-NetworkControllerVirtualSwitchConfiguration](./Get-NetworkControllerVirtualSwitchConfiguration.md)
-Retrieves the global settings of the virtual switch from the Network Controller.
 
 ### [Get-NetworkControllerVirtualSwitchConfiguration](Get-NetworkControllerVirtualSwitchConfiguration.md)
 Retrieves the global settings of the virtual switch from the Network Controller.

@@ -3,9 +3,9 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 12/20/2016
-online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmnetworkadapterroutingdomainmapping?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmnetworkadapterroutingdomainmapping?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Set-VmNetworkAdapterRoutingDomainMapping
+title: Set-VMNetworkAdapterRoutingDomainMapping
 ---
 
 # Set-VMNetworkAdapterRoutingDomainMapping
@@ -53,7 +53,7 @@ Set-VMNetworkAdapterRoutingDomainMapping [-InputObject] <VMNetworkAdapterRouting
 ```
 
 ## DESCRIPTION
-The **Set-VmNetworkAdapterRoutingDomainMapping** cmdlet sets virtual subnets on a routing domain.
+The **Set-VMNetworkAdapterRoutingDomainMapping** cmdlet sets virtual subnets on a routing domain.
 
 ## EXAMPLES
 
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 Specifies an array of IDs of virtual subnets.
 The cmdlet adds the virtual subnets that you specify to the routing domain.
 The subnets use VLAN or Hyper-V Network Virtualization.
-For more information about isolation IDs, see the **Set-VmNetworkAdapterIsolation** cmdlet.
+For more information about isolation IDs, see the **Set-VMNetworkAdapterIsolation** cmdlet.
 
 ```yaml
 Type: Int32[]

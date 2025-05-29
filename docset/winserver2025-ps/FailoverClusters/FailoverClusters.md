@@ -23,7 +23,8 @@ Add-WindowsFeature RSAT-Clustering-PowerShell
 ```
 
 > [!NOTE]
-> The AccelNet cmdlets have a dependency on the Hyper-V role. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
+> The AccelNet cmdlets have a dependency on the Hyper-V role. To learn more, see
+> [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 >
 > This role can also be installed using PowerShell by running the following command:
 >
@@ -41,14 +42,18 @@ Adds a cryptographic key checkpoint or registry checkpoint for a resource.
 
 Makes a new disk available for use in a failover cluster.
 
+### [Add-ClusterExcludedAdapter](Add-ClusterExcludedAdapter.md)
+
+Adds a network adapter to the list of excluded adapters.
+
 ### [Add-ClusterFileServerRole](Add-ClusterFileServerRole.md)
 
 Creates a clustered file server resource group.
 
 ### [Add-ClusterGenericApplicationRole](Add-ClusterGenericApplicationRole.md)
 
-Configures high availability for an application that wasn't originally designed to run in a
-failover cluster.
+Configures high availability for an application that wasn't originally designed to run in a failover
+cluster.
 
 ### [Add-ClusterGenericScriptRole](Add-ClusterGenericScriptRole.md)
 
@@ -71,7 +76,7 @@ Adds a dependency to a cluster set.
 
 ### [Add-ClusterGroupToAffinityRule](Add-ClusterGroupToAffinityRule.md)
 
-This command is used to add either a VM role or a group name to a cluster affinity rule.
+Adds a cluster group to an affinity rule.
 
 ### [Add-ClusterGroupToSet](Add-ClusterGroupToSet.md)
 
@@ -109,7 +114,7 @@ Makes a volume available in Cluster Shared Volumes in a failover cluster.
 
 ### [Add-ClusterSharedVolumeToAffinityRule](Add-ClusterSharedVolumeToAffinityRule.md)
 
-Adds a Cluster Shared Volume (CSV) to an existing Affinity Rule.
+Adds a Cluster Shared Volume (CSV) to an existing affinity rule.
 
 ### [Add-ClusterVirtualMachineRole](Add-ClusterVirtualMachineRole.md)
 
@@ -120,6 +125,10 @@ to a different server in the failover cluster.
 
 Configures monitoring for a service or an Event Tracing for Windows (ETW) event so that it is
 monitored on a virtual machine.
+
+### [Add-WorkgroupClusterNode](Add-WorkgroupClusterNode.md)
+
+Adds a node to a workgroup cluster.
 
 ### [Block-ClusterAccess](Block-ClusterAccess.md)
 
@@ -155,7 +164,7 @@ Enables Accelerated Networking on a VM.
 
 ### [Enable-ClusterStorageSpacesDirect](Enable-ClusterStorageSpacesDirect.md)
 
-Enables S2D.
+Enables Storage Spaces Direct on a Fail-Over Cluster.
 
 ### [Get-AccelNetManagement](Get-AccelNetManagement.md)
 
@@ -190,10 +199,18 @@ but aren't yet part of the set of clustered disks.
 
 Retrieves a cryptographic key checkpoint or registry checkpoint for a resource.
 
+### [Get-ClusterCredential](Get-ClusterCredential.md)
+
+Retrieves the credentials for a specified node in a failover cluster.
+
 ### [Get-ClusterDiagnosticInfo](Get-ClusterDiagnosticInfo.md)
 
 Gets diagnostics for a cluster a cluster that contains VMs and produces a zip file containing the
 data.
+
+### [Get-ClusterExcludedAdapter](Get-ClusterExcludedAdapter.md)
+
+Retrieves a network adapter from the list of excluded adapters.
 
 ### [Get-ClusterFaultDomain](Get-ClusterFaultDomain.md)
 
@@ -277,6 +294,10 @@ Gets the S2D settings from a cluster.
 
 Gets the list of services and events currently being monitored in the virtual machine.
 
+### [Get-VMAdaptersConnectedToEnabledIntentSwitch](Get-VMAdaptersConnectedToEnabledIntentSwitch.md)
+
+Gets the adapters on the VM that are connected to the enabled intent switch.
+
 ### [Grant-ClusterAccess](Grant-ClusterAccess.md)
 
 Grants access to a failover cluster, either full access or read-only access.
@@ -317,6 +338,10 @@ Create a names set of groups in the cluster.
 
 Creates a cluster name account in Active Directory Domain Services.
 
+### [New-WorkgroupCluster](New-WorkgroupCluster.md)
+
+Creates a new workgroup cluster.
+
 ### [Remove-Cluster](Remove-Cluster.md)
 
 Destroys an existing failover cluster.
@@ -327,11 +352,15 @@ Removes a user from the access list on the cluster.
 
 ### [Remove-ClusterAffinityRule](Remove-ClusterAffinityRule.md)
 
-Removes new affinity rules.
+Removes a specified affinity rule.
 
 ### [Remove-ClusterCheckpoint](Remove-ClusterCheckpoint.md)
 
 Removes a cryptographic key checkpoint or registry checkpoint for a resource.
+
+### [Remove-ClusterExcludedAdapter](Remove-ClusterExcludedAdapter.md)
+
+Removes a network adapter from the list of excluded adapters.
 
 ### [Remove-ClusterFaultDomain](Remove-ClusterFaultDomain.md)
 
@@ -384,11 +413,23 @@ Remove a cluster shared volume from an affinity rule.
 
 ### [Remove-ClusterVMMonitoredItem](Remove-ClusterVMMonitoredItem.md)
 
-Removes monitoring of a service or event that is currently being monitored on a virtual machine.
+## SYNTAX ## SYNOPSIS
+
+### [Remove-WorkgroupCluster](Remove-WorkgroupCluster.md)
+
+Removes a workgroup cluster.
+
+### [Remove-WorkgroupClusterNode](Remove-WorkgroupClusterNode.md)
+
+Removes a node from a workgroup cluster.
+
+### [Repair-ClusterNameAccount](Repair-ClusterNameAccount.md)
+
+Repairs the Cluster Name Account and ensures that the cluster continues to function properly.
 
 ### [Repair-ClusterStorageSpacesDirect](Repair-ClusterStorageSpacesDirect.md)
 
-Repairs S2D disks.
+Repairs disks in a Storage Spaces Direct (S2D) system.
 
 ### [Reset-ClusterVMMonitoredState](Reset-ClusterVMMonitoredState.md)
 
@@ -403,17 +444,21 @@ Resumes a node from the paused state or brings back drained workloads to the nod
 
 Turns off maintenance for a disk resource or Cluster Shared Volume within a failover cluster.
 
-### [Set-AccelNetVM](Set-AccelNetVM.md)
-
-Sets Accelerated Networking on a VM.
-
 ### [Set-AccelNetManagement](Set-AccelNetManagement.md)
 
 Sets Accelerated Networking Management cluster-wide.
 
+### [Set-AccelNetVM](Set-AccelNetVM.md)
+
+Sets Accelerated Networking on a VM.
+
 ### [Set-ClusterAffinityRule](Set-ClusterAffinityRule.md)
 
-Enabled or Disable an affinity rule, and update the rule type.
+Enable or disable an affinity rule, and update the rule type.
+
+### [Set-ClusterExcludedAdapter](Set-ClusterExcludedAdapter.md)
+
+Sets a network adapter to the list of excluded adapters.
 
 ### [Set-ClusterFaultDomain](Set-ClusterFaultDomain.md)
 
@@ -433,13 +478,11 @@ Sets the size and level of detail for the cluster log.
 
 ### [Set-ClusterOwnerNode](Set-ClusterOwnerNode.md)
 
-Specifies which nodes can own a resource in a failover cluster or specifies the order of preference
-among owner nodes for a clustered role, or resource group.
+Specifies which nodes can own a resource in a failover cluster or specifies the order of preference among owner nodes for a clustered role, or resource group.
 
 ### [Set-ClusterParameter](Set-ClusterParameter.md)
 
-Controls specific properties of an object in a failover cluster, such as a resource, a group, or a
-network.
+Controls specific properties of an object in a failover cluster, such as a resource, a group, or a network.
 
 ### [Set-ClusterQuorum](Set-ClusterQuorum.md)
 
@@ -456,6 +499,10 @@ Sets S2D cache parameters.
 ### [Set-ClusterStorageSpacesDirectDisk](Set-ClusterStorageSpacesDirectDisk.md)
 
 Configures the system to enable S2D to claim or not claim specific physical disks.
+
+### [Set-WorkgroupClusterRemotingConfiguration](Set-WorkgroupClusterRemotingConfiguration.md)
+
+Configures the remote management settings for a failover cluster that is part of a workgroup.
 
 ### [Start-Cluster](Start-Cluster.md)
 
@@ -475,8 +522,7 @@ Brings a resource online in a failover cluster.
 
 ### [Stop-Cluster](Stop-Cluster.md)
 
-Stops the Cluster service on all nodes in a failover cluster, which will stop all services and
-applications configured in the cluster.
+Stops the Cluster service on all nodes in a failover cluster, which will stop all services and applications configured in the cluster.
 
 ### [Stop-ClusterGroup](Stop-ClusterGroup.md)
 
@@ -496,8 +542,7 @@ Suspends activity on a failover cluster node, that is, pauses the node.
 
 ### [Suspend-ClusterResource](Suspend-ClusterResource.md)
 
-Turns on maintenance for a disk resource or CSV so that you can run a disk maintenance tool without
-triggering failover.
+Turns on maintenance for a disk resource or CSV so that you can run a disk maintenance tool without triggering failover.
 
 ### [Test-Cluster](Test-Cluster.md)
 
@@ -506,6 +551,14 @@ Runs validation tests for failover cluster hardware and settings.
 ### [Test-ClusterResourceFailure](Test-ClusterResourceFailure.md)
 
 Simulates a failure of a cluster resource.
+
+### [Test-WorkgroupCluster](Test-WorkgroupCluster.md)
+
+Tests the configuration of a workgroup cluster.
+
+### [Test-WorkgroupClusterRemoting](Test-WorkgroupClusterRemoting.md)
+
+Tests if remoting is configured on all nodes.
 
 ### [Update-ClusterFunctionalLevel](Update-ClusterFunctionalLevel.md)
 
@@ -517,8 +570,7 @@ Renews or releases the DHCP lease for an IP address resource in a failover clust
 
 ### [Update-ClusterNetworkNameResource](Update-ClusterNetworkNameResource.md)
 
-Registers existing Network Name resources with a DNS server in a way that does not interrupt cluster
-availability.
+Registers existing Network Name resources with a DNS server in a way that doesn't interrupt cluster availability.
 
 ### [Update-ClusterVirtualMachineConfiguration](Update-ClusterVirtualMachineConfiguration.md)
 

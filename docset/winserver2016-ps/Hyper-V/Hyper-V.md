@@ -40,7 +40,7 @@ Creates an ACL to apply to the traffic through a virtual machine network adapter
 ### [Add-VMNetworkAdapterExtendedAcl](./Add-VMNetworkAdapterExtendedAcl.md)
 Creates an extended ACL for a virtual network adapter.
 
-### [Add-VmNetworkAdapterRoutingDomainMapping](./Add-VmNetworkAdapterRoutingDomainMapping.md)
+### [Add-VMNetworkAdapterRoutingDomainMapping](./Add-VMNetworkAdapterRoutingDomainMapping.md)
 Adds a routing domain and virtual subnets to a virtual network adapter.
 
 ### [Add-VMRemoteFx3dVideoAdapter](./Add-VMRemoteFx3dVideoAdapter.md)
@@ -235,7 +235,7 @@ Gets extended ACLs configured for a virtual network adapter.
 ### [Get-VMNetworkAdapterFailoverConfiguration](./Get-VMNetworkAdapterFailoverConfiguration.md)
 Gets the IP address of a virtual network adapter configured to be used when a virtual machine fails over.
 
-### [Get-VmNetworkAdapterIsolation](./Get-VmNetworkAdapterIsolation.md)
+### [Get-VMNetworkAdapterIsolation](./Get-VMNetworkAdapterIsolation.md)
 Gets isolation settings for a virtual network adapter.
 
 ### [Get-VMNetworkAdapterRoutingDomainMapping](./Get-VMNetworkAdapterRoutingDomainMapping.md)
@@ -553,10 +553,10 @@ Configures features of the virtual network adapter in a virtual machine or the m
 ### [Set-VMNetworkAdapterFailoverConfiguration](./Set-VMNetworkAdapterFailoverConfiguration.md)
 Configures the IP address of a virtual network adapter to be used when a virtual machine fails over.
 
-### [Set-VmNetworkAdapterIsolation](./Set-VmNetworkAdapterIsolation.md)
+### [Set-VMNetworkAdapterIsolation](./Set-VMNetworkAdapterIsolation.md)
 Modifies isolation settings for a virtual network adapter.
 
-### [Set-VmNetworkAdapterRoutingDomainMapping](./Set-VmNetworkAdapterRoutingDomainMapping.md)
+### [Set-VMNetworkAdapterRoutingDomainMapping](./Set-VMNetworkAdapterRoutingDomainMapping.md)
 Sets virtual subnets on a routing domain.
 
 ### [Set-VMNetworkAdapterTeamMapping](./Set-VMNetworkAdapterTeamMapping.md)

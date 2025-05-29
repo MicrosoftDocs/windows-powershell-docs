@@ -14,19 +14,19 @@ title: MSMQ
 This reference provides cmdlet descriptions and syntax for all MSMQ-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## MSMQ Cmdlets
-### [Clear-MSMQOutgoingQueue](./Clear-MSMQOutgoingQueue.md)
+### [Clear-MsmqOutgoingQueue](./Clear-MsmqOutgoingQueue.md)
 Clears outgoing queues.
 
-### [Clear-MSMQQueue](./Clear-MSMQQueue.md)
+### [Clear-MsmqQueue](./Clear-MsmqQueue.md)
 Clears queues.
 
-### [Enable-MSMQCertificate](./Enable-MSMQCertificate.md)
+### [Enable-MsmqCertificate](./Enable-MsmqCertificate.md)
 Registers a certificate with Active Directory Domain Services.
 
-### [Get-MSMQCertificate](./Get-MSMQCertificate.md)
+### [Get-MsmqCertificate](./Get-MsmqCertificate.md)
 Gets certificates registered in Active Directory Domain Services.
 
-### [Get-MSMQOutgoingQueue](./Get-MSMQOutgoingQueue.md)
+### [Get-MsmqOutgoingQueue](./Get-MsmqOutgoingQueue.md)
 Gets outgoing message queues.
 
 ### [Get-MsmqQueue](./Get-MsmqQueue.md)

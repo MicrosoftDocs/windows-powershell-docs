@@ -3,67 +3,61 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 Module Name: Hyper-V
 ms.date: 12/20/2016
-online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmnetworkadapterroutingdomainmapping?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/hyper-v/add-vmnetworkadapterroutingdomainmapping?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Set-VmNetworkAdapterRoutingDomainMapping
+title: Add-VMNetworkAdapterRoutingDomainMapping
 ---
 
-# Set-VMNetworkAdapterRoutingDomainMapping
+# Add-VMNetworkAdapterRoutingDomainMapping
 
 ## SYNOPSIS
-Sets virtual subnets on a routing domain.
+Adds a routing domain and virtual subnets to a virtual network adapter.
 
 ## SYNTAX
 
 ### VMName (Default)
 ```
-Set-VMNetworkAdapterRoutingDomainMapping [-VMNetworkAdapterName <String>] [-CimSession <CimSession[]>]
- [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-VMName] <String[]> [-RoutingDomainID <Guid>]
- [-RoutingDomainName <String>] [-NewRoutingDomainName <String>] [-IsolationID <Int32[]>]
- [-IsolationName <String[]>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-VMNetworkAdapterRoutingDomainMapping [-RoutingDomainID] <Guid> [-RoutingDomainName] <String>
+ [-IsolationID] <Int32[]> [[-IsolationName] <String[]>] [-Passthru] [-VMNetworkAdapterName <String>]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-VMName] <String[]>
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ResourceObject
 ```
-Set-VMNetworkAdapterRoutingDomainMapping [-VMNetworkAdapter] <VMNetworkAdapterBase[]> [-RoutingDomainID <Guid>]
- [-RoutingDomainName <String>] [-NewRoutingDomainName <String>] [-IsolationID <Int32[]>]
- [-IsolationName <String[]>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-VMNetworkAdapterRoutingDomainMapping [-RoutingDomainID] <Guid> [-RoutingDomainName] <String>
+ [-IsolationID] <Int32[]> [[-IsolationName] <String[]>] [-Passthru]
+ [-VMNetworkAdapter] <VMNetworkAdapterBase[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ManagementOS
 ```
-Set-VMNetworkAdapterRoutingDomainMapping [-ManagementOS] [-VMNetworkAdapterName <String>]
- [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
- [-RoutingDomainID <Guid>] [-RoutingDomainName <String>] [-NewRoutingDomainName <String>]
- [-IsolationID <Int32[]>] [-IsolationName <String[]>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-VMNetworkAdapterRoutingDomainMapping [-RoutingDomainID] <Guid> [-RoutingDomainName] <String>
+ [-IsolationID] <Int32[]> [[-IsolationName] <String[]>] [-Passthru] [-ManagementOS]
+ [-VMNetworkAdapterName <String>] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
+ [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### VMObject
 ```
-Set-VMNetworkAdapterRoutingDomainMapping [-VMNetworkAdapterName <String>] [-VM] <VirtualMachine[]>
- [-RoutingDomainID <Guid>] [-RoutingDomainName <String>] [-NewRoutingDomainName <String>]
- [-IsolationID <Int32[]>] [-IsolationName <String[]>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### InputObjectParameter
-```
-Set-VMNetworkAdapterRoutingDomainMapping [-InputObject] <VMNetworkAdapterRoutingDomainSetting>
- [-NewRoutingDomainName <String>] [-IsolationID <Int32[]>] [-IsolationName <String[]>] [-Passthru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Add-VMNetworkAdapterRoutingDomainMapping [-RoutingDomainID] <Guid> [-RoutingDomainName] <String>
+ [-IsolationID] <Int32[]> [[-IsolationName] <String[]>] [-Passthru] [-VMNetworkAdapterName <String>]
+ [-VM] <VirtualMachine[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-VmNetworkAdapterRoutingDomainMapping** cmdlet sets virtual subnets on a routing domain.
+The **Add-VMNetworkAdapterRoutingDomainMapping** cmdlet adds a routing domain and virtual subnets to a virtual network adapter.
+The cmdlet adds the information about the routing domain and virtual subnets to connected multitenant virtual machines.
 
 ## EXAMPLES
 
-### Example 1: Set a virtual subnet on a routing domain
+### Example 1: Add a tenant and virtual subnet to a multitenant virtual network
 ```
-PS C:\> Set-VMNetworkAdapterRoutingDomainMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC" -RoutingDomainID "{5a07361e-6a54-49fc-9210-bfbf14a5c56f}" -IsolationID 6001
+PS C:\> Add-VMNetworkAdapterRoutingDomainMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC" -RoutingDomainID "{5a07361e-6a54-49fc-9210-bfbf14a5c56f}" RoutingDomainName "Contoso" -IsolationID 6000 -IsolationName "ContosoGatewayVsid"
 ```
 
-This command sets the virtual subnet that has the ID 6001 for the specified routing domain.
-The command specifies that the routing domain is on the network adapter named Internal NIC that belongs to the multitenant virtual machine named Gateway01.
+This command adds a tenant that has the specified routing domain to the virtual network adapter named Internal NIC that belongs to the multitenant virtual machine named Gateway01.
+The command also adds the virtual subnet that has the ID 6000 to the virtual network adapter.
 
 ## PARAMETERS
 
@@ -86,7 +80,7 @@ Accept wildcard characters: False
 
 ### -ComputerName
 Specifies an array of Hyper-V hosts.
-The cmdlet adds the virtual subnets to the routing domain on the Hyper-V hosts that you specify.
+The cmdlet adds the routing domain and virtual subnet to a virtual network adapter on the Hyper-V hosts that you specify.
 
 ```yaml
 Type: String[]
@@ -131,26 +125,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
-
-```yaml
-Type: VMNetworkAdapterRoutingDomainSetting
-Parameter Sets: InputObjectParameter
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
 ### -IsolationID
 Specifies an array of IDs of virtual subnets.
-The cmdlet adds the virtual subnets that you specify to the routing domain.
-The subnets use VLAN or Hyper-V Network Virtualization.
+The cmdlet adds the virtual subnets that you specify to the virtual network adapter.
+You can isolate a virtual machine adapter by using virtual local area network (VLAN), Hyper-V Network Virtualization, or a third party virtualization solution.
 For more information about isolation IDs, see the **Set-VmNetworkAdapterIsolation** cmdlet.
 
 ```yaml
@@ -158,8 +136,8 @@ Type: Int32[]
 Parameter Sets: (All)
 Aliases:
 
-Required: False
-Position: Named
+Required: True
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -167,8 +145,8 @@ Accept wildcard characters: False
 
 ### -IsolationName
 Specifies an array of names of virtual subnets.
-The cmdlet adds the virtual subnets that you specify to the routing domain.
-The subnets use VLAN or Hyper-V Network Virtualization.
+The cmdlet adds the virtual subnets that you specify to the virtual network adapter.
+The subnet uses VLAN or Hyper-V Network Virtualization.
 
 ```yaml
 Type: String[]
@@ -176,14 +154,14 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -ManagementOS
-Indicates that the cmdlet operates on the parent partition or host operating system.
+Indicates that the cmdlet operates on the parent or host operating system.
 
 ```yaml
 Type: SwitchParameter
@@ -191,21 +169,6 @@ Parameter Sets: ManagementOS
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -NewRoutingDomainName
-Specifies a new name for the routing domain.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -231,15 +194,15 @@ Accept wildcard characters: False
 ### -RoutingDomainID
 Specifies the ID of a routing domain.
 The ID of a routing domain is a system-assigned GUID.
-The cmdlet adds the virtual subnets to the routing domain that you specify.
+The cmdlet adds the routing domain that you specify to the virtual network adapter.
 
 ```yaml
 Type: Guid
-Parameter Sets: VMName, ResourceObject, ManagementOS, VMObject
+Parameter Sets: (All)
 Aliases:
 
-Required: False
-Position: Named
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -247,15 +210,15 @@ Accept wildcard characters: False
 
 ### -RoutingDomainName
 Specifies the name of a routing domain.
-The cmdlet adds the virtual subnets to the routing domain that you specify.
+The cmdlet adds the routing domain that you specify to the virtual network adapter.
 
 ```yaml
 Type: String
-Parameter Sets: VMName, ResourceObject, ManagementOS, VMObject
+Parameter Sets: (All)
 Aliases:
 
-Required: False
-Position: Named
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -263,7 +226,7 @@ Accept wildcard characters: False
 
 ### -VM
 Specifies an array of virtual machine objects.
-The cmdlet adds the virtual subnets to the routing domain from the network interfaces that belong to the virtual machines that you specify.
+The cmdlet adds the routing domain to the network interfaces that belong to the virtual machines that you specify.
 To obtain a virtual machine object, use the **Get-VM** cmdlet.
 
 ```yaml
@@ -279,9 +242,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-Specifies an array of names of virtual machines.
-The cmdlet adds the virtual subnets to the routing domain from the network interfaces that belong to the virtual machines that you specify.
-To obtain a virtual machine object, use the **Get-VM** cmdlet.
+Specifies an array of friendly names of virtual machines.
+The cmdlet adds the routing domain to the network interfaces that belong to the virtual machines that you specify.
 
 ```yaml
 Type: String[]
@@ -296,8 +258,8 @@ Accept wildcard characters: False
 ```
 
 ### -VMNetworkAdapter
-Specifies an array of virtual network adapters as a **VMNetworkAdapterBase** object.
-The cmdlet adds the virtual subnets to the routing domain on the adapters that you specify.
+Specifies an array of virtual network adapter as **VMNetworkAdapterBase** objects.
+The cmdlet adds the routing domain on the adapters that you specify.
 To obtain a network adapter, use the **Get-VMNetworkAdapter** cmdlet.
 
 ```yaml
@@ -314,7 +276,7 @@ Accept wildcard characters: False
 
 ### -VMNetworkAdapterName
 Specifies the name of a virtual network adapter.
-The cmdlet adds the virtual subnets to the routing domain on the adapter that you specify.
+The cmdlet adds the routing domain on adapter that you specify.
 
 ```yaml
 Type: String
@@ -359,7 +321,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-VMNetworkAdapterRoutingDomainMapping](./Get-VMNetworkAdapterRoutingDomainMapping.md)
 
-[Add-VMNetworkAdapterRoutingDomainMapping](./Add-VMNetworkAdapterRoutingDomainMapping.md)
+[Set-VmNetworkAdapterRoutingDomainMapping](./Set-VmNetworkAdapterRoutingDomainMapping.md)
 
 [Remove-VMNetworkAdapterRoutingDomainMapping](./Remove-VMNetworkAdapterRoutingDomainMapping.md)
+
+[Get-VM](./Get-VM.md)
 

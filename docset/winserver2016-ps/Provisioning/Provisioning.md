@@ -15,26 +15,6 @@ title: Provisioning
 This reference provides descriptions and syntax for all provisioning-specific cmdlets. It lists cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## provisioning Cmdlets
-### [Export-ProvisioningPackage](Export-ProvisioningPackage.md)
-Extracts the contents of a provisioning package.
 
 ### [Export-Trace](Export-Trace.md)
 Exports trace events.
-
-### [Get-ProvisioningPackage](Get-ProvisioningPackage.md)
-Gets information about the installed provisioning package.
-
-### [Get-TrustedProvisioningCertificate](Get-TrustedProvisioningCertificate.md)
-Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the Uninstall-TrustedProvisioningCertificate cmdlet.
-
-### [Install-ProvisioningPackage](Install-ProvisioningPackage.md)
-Installs .PPKG package onto the local machine.
-
-### [Install-TrustedProvisioningCertificate](Install-TrustedProvisioningCertificate.md)
-Adds a certificate to the Trusted Certificate Store.
-
-### [Uninstall-ProvisioningPackage](Uninstall-ProvisioningPackage.md)
-Uninstalls .PPKG package from the local machine.
-
-### [Uninstall-TrustedProvisioningCertificate](Uninstall-TrustedProvisioningCertificate.md)
-Removes a previously installed provisioning certificate.

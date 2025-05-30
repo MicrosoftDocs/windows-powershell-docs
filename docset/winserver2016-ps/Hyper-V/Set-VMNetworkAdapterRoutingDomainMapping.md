@@ -5,7 +5,7 @@ Module Name: Hyper-V
 ms.date: 12/20/2016
 online version: https://learn.microsoft.com/powershell/module/hyper-v/set-vmnetworkadapterroutingdomainmapping?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Set-VmNetworkAdapterRoutingDomainMapping
+title: Set-VMNetworkAdapterRoutingDomainMapping
 ---
 
 # Set-VMNetworkAdapterRoutingDomainMapping
@@ -53,7 +53,7 @@ Set-VMNetworkAdapterRoutingDomainMapping [-InputObject] <VMNetworkAdapterRouting
 ```
 
 ## DESCRIPTION
-The **Set-VmNetworkAdapterRoutingDomainMapping** cmdlet sets virtual subnets on a routing domain.
+The **Set-VMNetworkAdapterRoutingDomainMapping** cmdlet sets virtual subnets on a routing domain.
 
 ## EXAMPLES
 

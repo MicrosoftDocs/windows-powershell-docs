@@ -56,8 +56,7 @@ Gets a list of the app packages that are installed in a user profile.
 
 ### [Get-AppxPackageAutoUpdateSettings](Get-AppxPackageAutoUpdateSettings.md)
 
-Provides visibility to the settings configured on a Windows 10 client device for a particular
-Windows App.
+Provides visibility to the settings configured for a particular Windows App.
 
 ### [Get-AppxPackageManifest](Get-AppxPackageManifest.md)
 
@@ -69,7 +68,7 @@ Gets appx volumes for the computer.
 
 ### [Invoke-CommandInDesktopPackage](Invoke-CommandInDesktopPackage.md)
 
-Runs a command in the context of a specified app package.
+A debugging tool that creates a new process in the context of a packaged app.
 
 ### [Mount-AppxVolume](Mount-AppxVolume.md)
 
@@ -87,6 +86,10 @@ Removes the shared package container.
 
 Removes an app package from one or more user accounts.
 
+### [Remove-AppxPackageAutoUpdateSettings](Remove-AppxPackageAutoUpdateSettings.md)
+
+Removes settings configured for a particular Windows app.
+
 ### [Remove-AppxVolume](Remove-AppxVolume.md)
 
 Removes an appx volume.
@@ -97,7 +100,7 @@ Destroys all the application data of the container.
 
 ### [Reset-AppxPackage](Reset-AppxPackage.md)
 
-Use to reset your installed Windows Apps. Restores the Windows app to its initial configuration.
+Restores the Windows app to its initial configuration.
 
 ### [Set-AppxDefaultVolume](Set-AppxDefaultVolume.md)
 
@@ -105,5 +108,4 @@ Specifies a default appx volume.
 
 ### [Set-AppxPackageAutoUpdateSettings](Set-AppxPackageAutoUpdateSettings.md)
 
-Provides access to configure a specific Windows App's Auto Update and Repair settings. Including
-pausing update checks.
+Configures a specific Windows App's Auto Update and Repair settings.

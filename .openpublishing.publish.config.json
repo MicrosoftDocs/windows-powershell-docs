@@ -38,7 +38,7 @@
             "docset_name": "windows-powershell",
             "locale": "en-us",
             "monikerPath": [
-                "mapping/monikerMapping.json"
+                "mapping/MAML2Yaml/monikerMapping.json"
             ],
             "moniker_ranges": [],
             "monikers": [],

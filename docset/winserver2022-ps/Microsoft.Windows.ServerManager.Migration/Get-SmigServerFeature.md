@@ -29,7 +29,7 @@ Get-SmigServerFeature -Path <String> -Password <SecureString> [<CommonParameters
 The **Get-SmigServerFeature** cmdlet gets the set of all Windows Server features that can be migrated from the local server or from a migration store.
 If a migration store is specified in the *Path* parameter, this cmdlet returns only the features in the migration store that can be installed on the local server.
 
-For online Help about the Windows Server Migration Tools cmdlets, see [Server Migration Cmdlets in Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=246313) at http://go.microsoft.com/fwlink/?LinkId=246313.
+For online Help about the Windows Server Migration Tools cmdlets, see [Server Migration Cmdlets in Windows PowerShell](/powershell/module/microsoft.windows.servermanager.migration).
 
 ## EXAMPLES
 

@@ -35,7 +35,7 @@ File access rights are maintained during the migration; the same set of users is
 Because files are sent by using an encrypted connection, a password must be provided to decrypt migrated files on both the source and destination servers.
 Transporting encrypted files (EFS) and junction points is not supported.
 
-For online Help about the [Server Migration Cmdlets in Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=246313) at http://go.microsoft.com/fwlink/?LinkId=246313.
+For online Help about the [Server Migration Cmdlets in Windows PowerShell](/powershell/module/microsoft.windows.servermanager.migration).
 
 ## EXAMPLES
 

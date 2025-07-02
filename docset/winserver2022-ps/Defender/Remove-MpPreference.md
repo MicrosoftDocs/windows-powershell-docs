@@ -2112,7 +2112,7 @@ The value of this setting is ignored if both of the following conditions are tru
 
 - The value of the **ScanOnlyIfIdleEnabled** setting is True (scan only when the computer isn't
 in use).
-- The value of the **DisableCpuThrottleOnIdleScans** setting is False (disable CPU throttling on
+- The value of the **DisableCpuThrottleOnIdleScans** setting is True (disable CPU throttling on
 idle scans).
 
 ```yaml

@@ -1,0 +1,95 @@
+### YamlMime:PowerShellCmdlet1
+uid: UEV.Get-UevAppxPackage
+name: Get-UevAppxPackage
+module: UEV
+isPreview: false
+summary: |-
+  Gets a list of Windows 8 apps and synchronization status.
+description: |-
+  The **Get-UevAppxPackage** cmdlet gets a list of Windows® 8 apps and the Microsoft User Experience Virtualization (UE-V) synchronization status for the apps.
+  If you do not specify the **Computer** or **CurrentComputerUser** parameters, the cmdlet gets the list of Windows 8 apps for the current user.
+parameters:
+  cmdletParameters:
+  - name: Computer
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet gets the Windows 8 apps and UE-V synchronization status for all users on the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetComputer
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CurrentComputerUser
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet gets the Windows 8 apps and UE-V synchronization status for the current user on the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-UevAppxPackage
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetNoParameter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-UevAppxPackage
+        [-Computer]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetComputer
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-UevAppxPackage
+        [-CurrentComputerUser]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetUser
+  isDefault: false
+examples:
+- title: 'Example 1: Get the list of Windows 8 apps'
+  description: |-
+    ```
+    PS C:\>Get-UevAppxPackage -CurrentComputerUser
+    ```
+
+    This command gets the list of Windows 8 apps that are configured for the current user.
+links:
+- text: Clear-UevAppxPackage
+  href: ./Clear-UevAppxPackage.yml
+- text: Disable-UevAppxPackage
+  href: ./Disable-UevAppxPackage.yml
+- text: Enable-UevAppxPackage
+  href: ./Enable-UevAppxPackage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/uev/get-uevappxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: UEV
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-UevAppxPackage

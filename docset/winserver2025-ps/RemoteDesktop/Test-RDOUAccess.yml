@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteDesktop.Test-RDOUAccess
+name: Test-RDOUAccess
+module: RemoteDesktop
+isPreview: false
+summary: |-
+  Verifies that the Remote Desktop Connection Broker  server can access an Active Directory Domain Services  organizational unit.
+description: |-
+  The **Test-RDOUAccess** cmdlet verifies that the RD Connection Broker server has access to the organizational units (OUs) in a given domain of Active Directory Domain Services (AD DS).
+
+  The RD Connection Broker must have Read access to an OU to query user account information.
+parameters:
+  cmdletParameters:
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an RD Connection Broker server for a remote desktop deployment.
+      If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Domain
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Active Directory (AD) domain for which to verify access.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OU
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies one or more OUs for which to verify access.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-RDOUAccess
+        [[-Domain] <String>]
+        [-OU] <String>
+        [[-ConnectionBroker] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Verify access to an OU'
+  description: |-
+    ```
+    PS C:\> Test-RDOUAccess -ConnectionBroker "Rdcb.Contoso.com" -OU "Computers"
+    ```
+
+    This command tests access to an OU named Computers by the RD Connection Broker server named Rdcb.Contoso.com.
+links:
+- text: Grant-RDOUAccess
+  href: ./Grant-RDOUAccess.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/RemoteDesktop/test-rdouaccess?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteDesktop
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Test-RDOUAccess

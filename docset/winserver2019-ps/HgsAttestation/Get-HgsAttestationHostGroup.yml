@@ -1,0 +1,74 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsAttestation.Get-HgsAttestationHostGroup
+name: Get-HgsAttestationHostGroup
+module: HgsAttestation
+isPreview: false
+summary: |-
+  Gets attestation policies based on host groups.
+description: |-
+  The **Get-HgsAttestationHostGroup** cmdlet gets attestation policies that are based on the configuration of Active Directory host groups.
+  To obtain a particular host group policy, specify it by name.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the host group for which this cmdlet gets the policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-HgsAttestationHostGroup
+        [-Name <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Collections.Specialized.StringCollection" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **StringCollection** object.
+examples:
+- title: 'Example 1: Get policies for all host groups'
+  description: |-
+    ```
+    PS C:\> Get-HgsAttestationHostGroup
+    ```
+
+    This command gets policies for all host groups configured with the Attestation service.
+- title: 'Example 2: Get a specific policy for a host group'
+  description: |-
+    ```
+    PS C:\> Get-HgsAttestationHostGroup -Name "TrustedADHostGroup14"
+    ```
+
+    This command gets the policy for the host group named TrustedADHostGroup14.
+links:
+- text: Add-HgsAttestationHostGroup
+  href: ./Add-HgsAttestationHostGroup.yml
+- text: Remove-HgsAttestationHostGroup
+  href: ./Remove-HgsAttestationHostGroup.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsattestation/get-hgsattestationhostgroup?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-HgsAttestationHostGroup

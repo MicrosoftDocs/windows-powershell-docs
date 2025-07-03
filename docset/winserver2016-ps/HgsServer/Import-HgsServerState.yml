@@ -1,0 +1,199 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsServer.Import-HgsServerState
+name: Import-HgsServerState
+module: HgsServer
+isPreview: false
+summary: |-
+  Imports an exported Host Guardian Service state into a Host Guardian Service instance.
+description: |-
+  The **Import-HgsServer** cmdlet imports the previously exported Host Guardian Service (HGS) state to the existing Host Guardian Service instance.
+
+  The cmdlet imports the following Host Guardian Service state from the input file:
+
+  - Attestation service policies
+  - Attestation service configuration data
+  - Key protection policies
+  - Key protection configuration data
+  - Key Protection Signer Certificates and private keys
+  - Key Protection Encryption Certificates and private keys
+
+  Additionally, this cmdlet renews the attestation service signer certificate and updates the key protection service instance with this certificate.
+
+  For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImportActiveDirectoryModeState
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet imports and updates Attestation service configuration state relevant to the Active Directory operational mode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImportTpmModeState
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet imports and updates Attestation service configuration state relevant to the trusted platform module (TPM) operational mode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password that the **Export-HgsServerState** cmdlet used to encrypt the keys.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the file that this cmdlet imports.
+    aliases:
+    - FilePath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: File
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: XML
+    type: <xref href="XmlDocument" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the state that this cmdlet imports as an XML document.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: XML
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Import-HgsServerState
+        [[-XML] <XmlDocument>]
+        -Password <SecureString>
+        [-ImportTpmModeState]
+        [-ImportActiveDirectoryModeState]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: XML
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Import-HgsServerState
+        [[-Path] <String>]
+        -Password <SecureString>
+        [-ImportTpmModeState]
+        [-ImportActiveDirectoryModeState]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: File
+  isDefault: false
+examples:
+- title: 'Example 1: Import HGS state data'
+  description: |-
+    ```
+    PS C:\> Import-HgsServerState -Path "C:\ExportedHgsServerState.xml" -Password $Pass
+    ```
+
+    This command imports previously exported state on the current HGS server.
+    This command can be called on only one node.
+    The state is automatically replicated to other nodes in the HGS server setup.
+
+    The exported state is the output generated from **Export-HgsServerState** when run against an existing HGS server setup.
+    The password specified must match the password that was passed to Export-HgsServerState.
+
+    Use ConvertTo-SecureString to generate a secure string that represents the password.
+links:
+- text: Export-HgsServerState
+  href: ./Export-HgsServerState.yml
+- text: HGS Server Cmdlets
+  href: index.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: HgsServer-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsserver/import-hgsserverstate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsServer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Import-HgsServerState

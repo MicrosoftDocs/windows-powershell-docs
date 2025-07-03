@@ -1,0 +1,78 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Remove-WBCatalog
+name: Remove-WBCatalog
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Removes the backup catalog from the local computer.
+description: |-
+  The **Remove-WBCatalog** cmdlet removes the backup catalog from the local computer.
+  Use this cmdlet when the backup catalog is corrupted and you cannot restore it by using the [Restore-WBCatalog](./Restore-WBCatalog.yml) cmdlet.
+
+  If you remove the backup catalog for a computer, you cannot access the backups of that computer by using Windows Server Backup.
+  In this case, if you can access another backup location, use **Restore-WBCatalog** to restore the backup catalog from that location, and then create a new backup from that backup catalog.
+parameters:
+  cmdletParameters:
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-WBCatalog
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  description: |-
+    You can specify the *Force* parameter to suppress the confirmation message for the cmdlet.
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a string that indicates that the cmdlet has removed the catalog.
+examples:
+- title: 'Example 1: Remove a backup catalog'
+  description: |-
+    ```
+    PS C:\> Remove-WBCatalog
+    Warning
+    Are you sure that you want to delete the backup catalog? If you delete the
+    catalog, you will need to create a new set of backups.
+     [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+    The backup catalog has been successfully deleted.
+    ```
+
+    This command removes the backup catalog.
+    Because the command does not include the *Force* parameter, the command asks for confirmation before it removes the catalog.
+links:
+- text: Restore-WBCatalog
+  href: ./Restore-WBCatalog.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/remove-wbcatalog?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-WBCatalog

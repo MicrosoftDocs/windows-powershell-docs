@@ -1,0 +1,69 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Get-AccelNetManagementPreReq
+name: Get-AccelNetManagementPreReq
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Informs the user if the cluster nodes support Accelerated Networking.
+description: |-
+  Retrieves information if the cluster nodes support Accelerated Networking, including verifying OS
+  version and hyperthreading status.
+parameters:
+  cmdletParameters:
+  - name: IntentName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The intent name to be used for Accelerated Networking Management. This parameter is required.
+
+      This value must be an integer greater than or equal to **0** and less than or equal to **99**.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AccelNetManagementPreReq
+        [[-IntentName] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AccelNetManagementPreReq -IntentName "MyIntent"
+    ```
+
+    This example checks if the cluster nodes support AccelNet for the intent named `MyIntent`.
+links:
+- text: Disable-AccelNetManagement
+  href: disable-accelnetmanagement.yml
+- text: Enable-AccelNetManagement
+  href: enable-accelnetmanagement.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/get-accelnetmanagementprereq?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 01/22/2025
+  PlatyPS schema version: 2024-05-01
+  title: Get-AccelNetManagementPreReq

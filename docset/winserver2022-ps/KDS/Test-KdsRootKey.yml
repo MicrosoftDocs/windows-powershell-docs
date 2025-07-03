@@ -1,0 +1,116 @@
+### YamlMime:PowerShellCmdlet1
+uid: KDS.Test-KdsRootKey
+name: Test-KdsRootKey
+module: KDS
+isPreview: false
+summary: |-
+  Tests the root key configuration.
+description: |-
+  The **Test-KdsRootKey** cmdlet tests that the root key with the specified key identifier (ID) uses a valid configuration.
+  The test verifies generation of both new group public key and group private key.
+
+  This cmdlet is useful for analyzing failures based on invalid root key configuration failures.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the root key to test.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-KdsRootKey
+        [-KeyId] <Guid>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts no input objects.
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns whether the root key can be used to generate derived keys.
+examples:
+- title: 'Example 1: Test the root key configuration'
+  description: |-
+    ```
+    PS C:\> Test-KdsRootKey -KeyId 4A3615F1-5A90-22E4-0B1D-1416F93D4412
+    ```
+
+    This command tests the configuration of the root key specified by key ID.
+links:
+- text: Add-KdsRootKey
+  href: ./Add-KdsRootKey.yml
+- text: Clear-KdsCache
+  href: ./Clear-KdsCache.yml
+- text: Get-KdsConfiguration
+  href: ./Get-KdsConfiguration.yml
+- text: Set-KdsConfiguration
+  href: ./Set-KdsConfiguration.yml
+- text: Add-KdsRootKey
+  href: ./Add-KdsRootKey.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/kds/test-kdsrootkey?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: KDS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Test-KdsRootKey

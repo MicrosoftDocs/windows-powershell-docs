@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Set-AdfsDeviceRegistrationUpnSuffix
+name: Set-AdfsDeviceRegistrationUpnSuffix
+module: ADFS
+isPreview: false
+summary: |-
+  Sets the list of UPN suffixes.
+description: |-
+  The **Set-AdfsDeviceRegistrationUpnSuffix** cmdlet sets the list of user principal name (UPN) suffixes that you can use when you register a device with Active Directory Federation Services (AD FS).
+  The cmdlet discovers the UPN suffixes that are in use in the organization and configures the Secure Sockets Layer (SSL) bindings that correspond to the UPN suffix.
+
+  Any discovered UPN suffix must have a corresponding registration name in the SSL certificate for AD FS; for example, `enterpriseregistration.`upn suffix.
+  You can also use a wildcard SSL certificate that covers all possible registration names.
+  This cmdlet does not affect the custom UPN suffixes that you set manually by running the **Add-AdfsDeviceRegistrationUpnSuffix** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AdfsDeviceRegistrationUpnSuffix
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: |-
+    SwitchParameter objects are received by the *Force* parameter.
+examples:
+- title: 'Example 1: Set the list of UPN suffixes'
+  description: |-
+    ```
+    PS C:\> Set-AdfsDeviceRegistrationUpnSuffix
+    ```
+
+    This command sets the list of UPN suffixes that you can use when you register a device.
+- title: 'Example 2: Set the list of UPN suffixes without confirming'
+  description: |-
+    ```
+    PS C:\> Set-AdfsDeviceRegistrationUpnSuffix -Force
+    ```
+
+    This command sets the list of UPN suffixes without prompting you for confirmation.
+links:
+- text: Add-AdfsDeviceRegistrationUpnSuffix
+  href: ./Add-AdfsDeviceRegistrationUpnSuffix.yml
+- text: Get-AdfsDeviceRegistrationUpnSuffix
+  href: ./Get-AdfsDeviceRegistrationUpnSuffix.yml
+- text: Remove-AdfsDeviceRegistrationUpnSuffix
+  href: ./Remove-AdfsDeviceRegistrationUpnSuffix.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/set-adfsdeviceregistrationupnsuffix?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AdfsDeviceRegistrationUpnSuffix

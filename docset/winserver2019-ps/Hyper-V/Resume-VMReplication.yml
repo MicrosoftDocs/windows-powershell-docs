@@ -1,0 +1,359 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Resume-VMReplication
+name: Resume-VMReplication
+module: Hyper-V
+isPreview: false
+summary: |-
+  Resumes a virtual machine replication that is in a state of Paused, Error, Resynchronization Required, or Suspended.
+description: |-
+  The **Resume-VMReplication** cmdlet resumes replication of a virtual machine with a replication state of Paused, Error, Resynchronization Required, or Suspended.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts on which the virtual machine replication is to be resumed.
+      NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+      The default is the local computer.
+      Use localhost or a dot (.) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Continue
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that Hyper-V Replica continues the resynchronization comparisons from where it left off when you resume the virtual machine replication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns a **VMReplication** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicationRelationshipType
+    type: <xref href="VMReplicationRelationshipType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the replication relationship type of the virtual machine.
+      Specify whether the replication relationship is a simple primary to replica or is an extended replication chain.
+      The cmdlet resumes the replication of the virtual machines that have the replication type that you specify.
+    acceptedValues:
+    - Simple
+    - Extended
+    aliases:
+    - Relationship
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VMObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Resynchronize
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that resynchronization is to be started for the virtual machine.
+      Resynchronization requires significant storage, processor, and network resources.
+      We recommend running this process during off-peak hours.
+      Use the **Set-VMReplication** cmdlet to specify whether to automatically resynchronize the virtual machine in the future.
+    aliases:
+    - Resync
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResynchronizeStartTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies when resynchronization should start.
+      If not specified, resynchronization starts immediately.
+      You can schedule the resynchronization to start up to 7 days later.
+    aliases:
+    - ResyncStart
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the virtual machine whose replication is to be resumed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the virtual machine whose replication is to be resumed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMReplication
+    type: <xref href="VMReplication" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a virtual machine replication object representing the virtual machine replication to be resumed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMReplication
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Resume-VMReplication
+        [-VMName] <String[]>
+        [-ComputerName <String[]>]
+        [-ReplicationRelationshipType <VMReplicationRelationshipType>]
+        [-ResynchronizeStartTime <DateTime>]
+        [-Resynchronize]
+        [-AsJob]
+        [-Continue]
+        [-Passthru]
+        [-CimSession <CimSession[]>]
+        [-Credential <PSCredential[]>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Resume-VMReplication
+        [-VM] <VirtualMachine[]>
+        [-ReplicationRelationshipType <VMReplicationRelationshipType>]
+        [-ResynchronizeStartTime <DateTime>]
+        [-Resynchronize]
+        [-AsJob]
+        [-Continue]
+        [-Passthru]
+        [-CimSession <CimSession[]>]
+        [-Credential <PSCredential[]>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Resume-VMReplication
+        [-VMReplication] <VMReplication[]>
+        [-ResynchronizeStartTime <DateTime>]
+        [-Resynchronize]
+        [-AsJob]
+        [-Continue]
+        [-Passthru]
+        [-CimSession <CimSession[]>]
+        [-Credential <PSCredential[]>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMReplication
+  isDefault: false
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="VMReplication" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Resume-VMReplication VM01
+    ```
+
+    This example resumes replication of virtual machine VM01.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Resume-VMReplication VM01 -Resynchronize
+    ```
+
+    This example resynchronizes replication of virtual machine VM01.
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> Resume-VMReplication VM01 -Resynchronize -ResynchronizeStartTime "8/1/2012 05:00 AM"
+    ```
+
+    This example schedules the resynchronization of replication for virtual machine VM01 to start at 5:00 AM on August 1, 2012.
+- title: Example 4
+  description: |-
+    ```
+    PS C:\> Resume-VMReplication *
+    ```
+
+    This example resumes replication of all virtual machines for which replication is paused.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/resume-vmreplication?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Resume-VMReplication

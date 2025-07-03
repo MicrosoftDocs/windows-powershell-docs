@@ -1,0 +1,194 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADRMSADMIN.Export-RmsTPD
+name: Export-RmsTPD
+module: ADRMSADMIN
+isPreview: false
+summary: |-
+  Exports a TPD in AD RMS.
+description: |-
+  The **Export-RmsTPD** cmdlet exports a trusted publishing domain (TPD) in Active Directory Rights Management Services (AD RMS) to a file.
+
+  To perform the export, set the *SavedFilePath* parameter to the export file path, and then set the *Path* parameter to the AD RMS provider path `<PSDrive>:\TrustPolicy\TrustedPublishingDomain\<TPD_ID>` where `<PSDrive>` is the provider drive ID and `<TPD_ID>` is the ID of the TPD that you want to export.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Overrides restrictions that prevent the command from succeeding if the restrictions do not compromise security.
+      For example, *Force* overrides the read-only attribute or creates directories to complete a file path, but it does not attempt to change file permissions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a password as a **SecureString** object.
+      To create a **SecureString** object that contains a password, use the Read-Host cmdlet and specify the *AsSecureString* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a provider drive and path or relative path on the current drive.
+      Use a dot (.) to specify the current location.
+      This parameter does not accept wildcards and has no default value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SavedFile
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the full path and filename of the file that receives the exported content.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: V1Compatible
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Allows the trusted publishing domain to be imported to Windows Rights Management Services (RMS) 1.0.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-RmsTPD
+        [-SavedFile] <String[]>
+        [-Password] <SecureString>
+        [-V1Compatible]
+        [-Force]
+        [-Path] <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Export a TPD by ID'
+  description: |-
+    ```
+    PS C:\> Export-RmsTPD -Path ".\100" -SavedFile "c:\temp\test.xml"
+    ```
+
+    This command exports the TPD with the ID of 100 to the file C:\temp\test.xml.
+    Because the *Password* parameter is not specified, the command prompts for the password.
+- title: 'Example 2: Read a password and use it to export a TPD'
+  description: |-
+    ```
+    PS C:\> $pswd = Read-Host -AsSecureString
+    PS C:\> Export-RmsTPD -Path "100" -SavedFile "c:\temp\test.xml" -Password $pswd
+    ```
+
+    The first command prompts for a password and saves it in the variable $pswd.
+    The variable is then passed to the **Export-RmsTPD** command as the *Password* parameter.
+    Note that the **Export-RmsTPD** command prompts for a confirmation password that must match the password stored in the $pswd variable.
+- title: 'Example 3: Export a TPD without prompting for the password'
+  description: |-
+    ```
+    PS C:\> $pswd=Read-Host -AsSecureString
+    PS C:\> Export-RmsTPD -Path "100" -SavedFile "c:\temp\test.xml" -Password $pswd -Force
+    ```
+
+    The first command prompts for a password and saves it in the variable $pswd.
+    The variable is then passed to the **Export-RmsTPD** command as the *Password* parameter.
+    Because the *Force* parameter is specified, the **Export-RmsTPD** command does not prompt for a confirmation password.
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Export-RmsTUD
+  href: ./Export-RmsTUD.yml
+- text: Import-RmsTPD
+  href: ./Import-RmsTPD.yml
+- text: Import-RmsTUD
+  href: ./Import-RmsTUD.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adrmsadmin/export-rmstpd?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADRMSADMIN
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Export-RmsTPD

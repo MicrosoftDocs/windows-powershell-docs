@@ -1,0 +1,82 @@
+### YamlMime:PowerShellCmdlet1
+uid: HNVDiagnostics.Enable-MuxEchoResponder
+name: Enable-MuxEchoResponder
+module: HNVDiagnostics
+isPreview: false
+summary: |-
+  Enables an ICMP echo responder. This cmdlet has been deprecated.
+description: |-
+  The **Enable-MuxEchoResponder** cmdlet enables an ICMP echo responder in a multiplexer (MUX).
+
+  You should run this cmdlet on a MUX virtual machine, either locally or through remote PowerShell.
+parameters:
+  cmdletParameters:
+  - name: SequenceNumber
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ICMP sequence number of the echo responder to disable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetVIP
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the target virtual IP address of the echo responder to enable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-MuxEchoResponder
+        [-TargetVIP] <String>
+        [[-SequenceNumber] <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Enable an echo responder'
+  description: |-
+    ```
+    PS C:\> Enable-MuxEchoResponder -TargetVIP "10.123.176.108" -SequenceNumber 27
+    ```
+
+    This command enables the specified echo responder.
+links:
+- text: Disable-MuxEchoResponder
+  href: ./Disable-MuxEchoResponder.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MuxEchoResponder.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hnvdiagnostics/enable-muxechoresponder?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Enable-MuxEchoResponder

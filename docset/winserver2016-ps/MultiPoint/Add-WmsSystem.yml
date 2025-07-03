@@ -1,0 +1,106 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Add-WmsSystem
+name: Add-WmsSystem
+module: MultiPoint
+isPreview: false
+summary: |-
+  Adds a computer that can be remotely managed.
+description: |-
+  The **Add-WmsSystem** cmdlet enables the local computer to remotely manage a computer with either the MultiPoint role or MultiPoint connector installed.
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of host names of MultiPoint systems to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Administrator credentials for the computer to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedSystemsType
+    type: <xref href="ManagedSystemTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of managed systems.
+      The acceptable values for this parameter are: MultiPointServers, PersonalComputers.
+    acceptedValues:
+    - MultiPointServers
+    - PersonalComputers
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-WmsSystem
+        [-ComputerName] <String[]>
+        [-ManagedSystemsType] <ManagedSystemTypes>
+        [-Credential] <PSCredential>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" />
+  description: |-
+    The input is an array of fully qualified host names of the computers that should have remote management enabled.
+outputs:
+- name: <xref href="WmsSystem" data-throw-if-not-resolved="False" />
+  description: |-
+    For each computer added a **WmsSystem** object is returned which contains specific information about the configuration and state of the MultiPoint system on that computer.
+links:
+- text: Get-WmsSystem
+  href: ./Get-WmsSystem.yml
+- text: Remove-WmsSystem
+  href: ./Remove-WmsSystem.yml
+- text: Restart-WmsSystem
+  href: ./Restart-WmsSystem.yml
+- text: Search-WmsSystem
+  href: ./Search-WmsSystem.yml
+- text: Set-WmsSystem
+  href: ./Set-WmsSystem.yml
+- text: Stop-WmsSystem
+  href: ./Stop-WmsSystem.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/add-wmssystem?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-WmsSystem

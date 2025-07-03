@@ -1,0 +1,170 @@
+### YamlMime:PowerShellCmdlet1
+uid: BootEventCollector.Stop-SbecInstance
+name: Stop-SbecInstance
+module: BootEventCollector
+isPreview: false
+summary: |-
+  Stops the Setup and Boot Event Collector.
+description: |-
+  The **Stop-SbecInstance** cmdlet stops an instance of the Setup and Boot Event Collector.
+
+  You must have the Builtin Administrator privilege to run this cmdlet.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet on the remote computers through a remote session.
+      Enter a session object, such as the output of a **New-CimSession** or **Get-CimSession** cmdlet or an array of these objects.
+      The default is to run the cmdlet on the local computer.
+      For more information, see About_CimSession.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Direct
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the computers on which you want to perform the operation.
+      You can specify a fully qualified domain name (FQDN), a NetBIOS name, or an IP address.
+      For more information see [Invoke-CimMethod](https://go.microsoft.com/fwlink/?LinkId=808801) on MSDN.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Direct
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Direct
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Stops the Setup and Boot Event Collector instance directly through the WMI/CIM interface.
+      Specify this parameter to stop an instance of the Setup and Boot Event Collector that was started from a command prompt.
+
+      If multiple instances are running (including the service), specifying this parameter stops a random instance, because WMI connects to a random instance.
+      Do not use this parameter with the service, because the service controller interprets it as a service failure and restarts it.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Direct
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      With the *Service* parameter, this parameter acts as a pass-through parameter for **Stop-Service**, allowing the cmdlet to stop a service even if that service has dependent services.
+      With *Direct*, requests the fast stopping, discarding the buffered but not yet fully processed data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Service
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Stops the Setup and Boot Event Collector service on the current computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Service
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-SbecInstance
+        [-Service]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Service
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Stop-SbecInstance
+        [-Direct]
+        [-ComputerName <String[]>]
+        [-CimSession <CimSession[]>]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Direct
+  isDefault: false
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Stop the Boot Event Collector service'
+  description: |-
+    ```
+    PS C:\> Stop-SbecInstance -Service
+    ```
+
+    This command stops the Boot Event Collector service.
+- title: 'Example 2: Stop a Boot Event Collector instance'
+  description: |-
+    ```
+    PS C:\> Stop-SbecInstance -Direct
+    ```
+
+    This command stops an instance of Boot Event Collector that was started from the command line.
+- title: 'Example 3: Immediately stop a Boot Event Collector instance'
+  description: |-
+    ```
+    PS C:\> Stop-SbecInstance -Direct -Force
+    ```
+
+    This command stops an instance of Boot Event Collector that was started from the command line, and discards any buffered but not-yet processed data.
+links:
+- text: Get-SbecActiveConfig
+  href: ./Get-SbecActiveConfig.yml
+- text: Save-SbecInstance
+  href: ./Save-SbecInstance.yml
+- text: Set-SbecActiveConfig
+  href: ./Set-SbecActiveConfig.yml
+- text: Start-SbecInstance
+  href: ./Start-SbecInstance.yml
+- text: Test-SbecActiveConfig
+  href: ./Test-SbecActiveConfig.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: BootEventCollector-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/booteventcollector/stop-sbecinstance?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Stop-SbecInstance

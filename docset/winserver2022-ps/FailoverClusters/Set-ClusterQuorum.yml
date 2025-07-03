@@ -1,0 +1,246 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Set-ClusterQuorum
+name: Set-ClusterQuorum
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Configures quorum options for a failover cluster.
+description: |-
+  The `Set-ClusterQuorum` cmdlet configures quorum options for a failover cluster. The quorum
+  configuration in a failover cluster determines the number of failures that the cluster can sustain.
+  If an additional failure occurs, the cluster must stop running. The relevant failures in this
+  context are failures of nodes or, in some cases, of a disk witness (which contains a copy of the
+  cluster configuration) or file share witness.
+parameters:
+  cmdletParameters:
+  - name: AccessKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CloudWitness
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+      `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskOnly
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes the cluster quorum to be set to disk only type. This isn't recommended as it creates a
+      single point of failure for the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskWitness
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the disk resource that the cluster quorum uses as the disk witness. Specifying
+      this parameter sets the cluster quorum to the Node and Disk Majority type.
+    aliases:
+    - NodeAndDiskMajority
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileShareWitness
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the file share that the cluster quorum uses as the file witness. Specifying
+      this parameter sets the cluster quorum to the Node and File Share Majority type.
+    aliases:
+    - NodeAndFileShareMajority
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster on which to change the quorum type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWitness
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet sets the cluster quorum to the Node Majority type.
+    aliases:
+    - NodeMajority
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-ClusterQuorum
+        [-DiskOnly <String>]
+        [-NoWitness]
+        [-DiskWitness <String>]
+        [-FileShareWitness <String>]
+        [-CloudWitness]
+        [-AccountName <String>]
+        [-Endpoint <String>]
+        [-AccessKey <String>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterQuorumSettings" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-ClusterQuorum -NodeMajority
+    ```
+
+    This example changes the quorum configuration to Node Majority on the local cluster.
+- title: Example 2
+  description: |-
+    ```powershell
+    Set-ClusterQuorum -DiskWitness "Cluster Disk 7"
+    ```
+
+    This example changes the quorum configuration to Node and Disk Majority on the local cluster, using
+    the disk resource named `Cluster Disk 7` for the disk witness.
+- title: Example 3
+  description: |-
+    ```powershell
+    Set-ClusterQuorum -NodeAndFileShareMajority \\fileserver\fsw
+    ```
+
+    This example changes the quorum configuration to Node and File Share Majority on the local cluster,
+    using the disk resource at `\\fileserver\fsw` for the file share witness.
+- title: Example 4
+  description: |-
+    ```powershell
+    $parameters = @{
+        CloudWitness = $true
+        AccountName  = '<AzureStorageAccountName>'
+        AccessKey    = '<AzureStorageAccountAccessKey>'
+    }
+    Set-ClusterQuorum @parameters
+    ```
+
+    This example changes the quorum configuration to use an Azure Storage Account to use as a Cloud
+    Witness.
+
+    The example uses splatting to pass parameter values from the `$Parameters` variable to the command.
+    Learn more about [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+links:
+- text: Get-ClusterQuorum
+  href: ./Get-ClusterQuorum.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterquorum?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 10/21/2022
+  PlatyPS schema version: 2024-05-01
+  title: Set-ClusterQuorum

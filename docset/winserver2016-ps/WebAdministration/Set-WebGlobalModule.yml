@@ -1,0 +1,137 @@
+### YamlMime:PowerShellCmdlet1
+uid: WebAdministration.Set-WebGlobalModule
+name: Set-WebGlobalModule
+module: WebAdministration
+isPreview: false
+summary: |-
+  Specifies configuration settings for an IIS module.
+description: |-
+  The **Set-WebGlobalModule** cmdlet specifies configuration settings for an Internet Information Services (IIS) module.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Image
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to a DLL image file for the module.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the module for which this cmdlet sets configuration settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Precondition
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a precondition for the module.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WebGlobalModule
+        [-Name] <String>
+        [-Precondition <String>]
+        [-Image <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Change a property of a global module'
+  description: |-
+    ```
+    IIS:\> Set-WebGlobalModule -Name "UriCacheModule" -Image "c:\test.dll"
+    ```
+
+    This command changes the image name of the UriCacheModule to c:\test.dll.
+links:
+- text: Disable-WebGlobalModule
+  href: ./Disable-WebGlobalModule.yml
+- text: Enable-WebGlobalModule
+  href: ./Enable-WebGlobalModule.yml
+- text: Get-WebGlobalModule
+  href: ./Get-WebGlobalModule.yml
+- text: New-WebGlobalModule
+  href: ./New-WebGlobalModule.yml
+- text: Remove-WebGlobalModule
+  href: ./Remove-WebGlobalModule.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/webadministration/set-webglobalmodule?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WebGlobalModule

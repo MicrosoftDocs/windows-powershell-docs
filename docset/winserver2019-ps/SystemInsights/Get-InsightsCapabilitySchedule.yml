@@ -1,0 +1,122 @@
+### YamlMime:PowerShellCmdlet1
+uid: SystemInsights.Get-InsightsCapabilitySchedule
+name: Get-InsightsCapabilitySchedule
+module: SystemInsights
+isPreview: false
+summary: |-
+  Gets the schedule for the specified capabilities.
+description: |-
+  The **Get-InsightsCapabilitySchedule** cmdlet gets the schedule for the specified capabilities.
+
+  >[!IMPORTANT]
+  >Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a fully qualified domain name (FQDN). If not specified, uses the local computer.
+    aliases:
+    - CN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credential for accessing the computer specified by the -ComputerName parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a capability using a capability name.
+    aliases:
+    - N
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-InsightsCapabilitySchedule
+        [-Name] <String>
+        [[-ComputerName] <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.SystemInsights.Management.PowerShell.Capability" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass a capability object to the *Name* parameter.
+outputs:
+- name: <xref href="Microsoft.SystemInsights.Management.PowerShell.CapabilitySchedule" data-throw-if-not-resolved="False" />
+  description: |-
+    The cmdlet returns one or more objects that represent the specified capability schedules.
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> Get-InsightsCapabilitySchedule -Name "CPU capacity forecasting"
+    ```
+
+    This example gets the schedule for the **CPU capacity forecasting** capability.
+- title: Example 2
+  description: |-
+    ```powershell
+    PS C:\> Get-InsightsCapability | Get-InsightsCapabilitySchedule
+    ```
+
+    This example uses the **Get-InsightsCapability** cmdlet and the pipeline operator to get the schedule for all available capabilities.
+links:
+- text: Get-InsightsCapability
+  href: get-insightscapability.yml
+- text: Set-InsightsCapabilitySchedule
+  href: set-insightscapabilityschedule.yml
+- text: Enable-InsightsCapabilitySchedule
+  href: enable-insightscapabilityschedule.yml
+- text: Disable-InsightsCapabilitySchedule
+  href: disable-insightscapabilityschedule.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
+  HelpInfoUri: http://go.microsoft.com
+  HelpUri: https://learn.microsoft.com/powershell/module/systeminsights/get-insightscapabilityschedule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Locale: en-US
+  Module Name: SystemInsights
+  ms.date: 06/18/2018
+  PlatyPS schema version: 2024-05-01
+  title: Get-InsightsCapabilitySchedule

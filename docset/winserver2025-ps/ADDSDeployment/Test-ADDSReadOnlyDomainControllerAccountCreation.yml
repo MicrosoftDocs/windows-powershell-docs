@@ -1,0 +1,243 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADDSDeployment.Test-ADDSReadOnlyDomainControllerAccountCreation
+name: Test-ADDSReadOnlyDomainControllerAccountCreation
+module: ADDSDeployment
+isPreview: false
+summary: |-
+  Runs the prerequisites for adding a RODC account.
+description: |-
+  The `Test-ADDSReadOnlyDomainControllerAccountCreation` cmdlet runs the prerequisite checks which
+  would be performed if you were to add a read-only domain controller (RODC) account in Active
+  Directory using the `Add-ADDSReadOnlyDomainControllerAccount` cmdlet. It differs from using the
+  **WhatIf** parameter with the `Add-ADDSReadOnlyDomainControllerAccount` cmdlet in that instead of
+  summarizing the changes that would occur during the account creation process, this cmdlet actually
+  tests whether those changes are possible given the current environment.
+parameters:
+  cmdletParameters:
+  - name: AllowPasswordReplicationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the names of user accounts, group accounts, and computer accounts whose passwords can be
+      replicated to this RODC. Use `None` if you want to keep the value empty. By default, only the
+      Allowed RODC Password Replication Group is allowed, and it is originally created empty.
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user name and password that corresponds to the account used to install the domain
+      controller. Use the `Get-Credential` cmdlet to prompt the user to supply a password.
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DelegatedAdministratorAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the user or group that installs and administer the RODC.
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DenyPasswordReplicationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the names of user accounts, group accounts, and computer accounts whose passwords are not
+      to be replicated to this RODC. Use `None` if you do not want to deny the replication of credentials
+      of any users or computers. By default, Administrators, Server Operators, Backup Operators, Account
+      Operators, and the Denied RODC Password Replication Group are denied. By default, the Denied RODC
+      Password Replication Group includes Cert Publishers, Domain Admins, Enterprise Admins, Enterprise
+      Domain Controllers, Enterprise Read-Only Domain Controllers, Group Policy Creator Owners, the
+      krbtgt account, and Schema Admins.
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainControllerAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the RODC account that this cmdlet creates.
+    defaultValue: <mandatory>
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the domain name for the user name for the operation. This parameter is required. You
+      should specify the forest where you plan to install the domain controller or create an RODC account.
+    defaultValue: <mandatory>
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstallDns
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet installs the DNS Server service. The default is automatically computed
+      based on the environment.
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoGlobalCatalog
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the RODC is not a global catalog server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicationSourceDC
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the fully writable domain controller to use in the creation of the RODC
+      account in Active Directory.
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SiteName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an existing site where you can place the new domain controller. The default
+      value depends on the type of installation. For a new forest, the default is
+      `Default-First-Site-Name`. For all other installations, the default is the site that is associated
+      with the subnet that includes the IP address of this server. If no such site exists, the default is
+      the site of the replication source domain controller.
+    defaultValue: <mandatory>
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-ADDSReadOnlyDomainControllerAccountCreation
+        -DomainControllerAccountName <String>
+        -DomainName <String>
+        -SiteName <String>
+        [-AllowPasswordReplicationAccountName <String[]>]
+        [-Credential <PSCredential>]
+        [-DelegatedAdministratorAccountName <String>]
+        [-DenyPasswordReplicationAccountName <String[]>]
+        [-NoGlobalCatalog]
+        [-InstallDns]
+        [-ReplicationSourceDC <String>]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Test adding an RODC account to confirm it is possible'
+  description: |-
+    ```powershell
+    $HashArguments = @{
+        DomainControllerAccountName = RODC1
+        DomainName                  = "corp.contoso.com"
+        SiteName                    = "NorthAmerica"
+    }
+    Test-ADDSReadOnlyDomainControllerAccountCreation @HashArguments
+    ```
+
+    This command runs the prerequisites for adding an RODC account to the `corp.contoso.com` domain that
+    would use the North America site as the source site for the replication source domain controller.
+links:
+- text: Add-ADDSReadOnlyDomainControllerAccount
+  href: ./Add-ADDSReadOnlyDomainControllerAccount.yml
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/addsdeployment/test-addsreadonlydomaincontrolleraccountcreation?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADDSDeployment
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Test-ADDSReadOnlyDomainControllerAccountCreation

@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkControllerFc.Disable-NetworkControllerOnFailoverClusterLogging
+name: Disable-NetworkControllerOnFailoverClusterLogging
+module: NetworkControllerFc
+isPreview: false
+description: |-
+  Disables logging on physical hosts, mux VMs and gateway VMs.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the digital public key X.509 certificate of a user account that has permission to perform
+      this action.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FetchDeviceNames
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      A credential to access the Network Controller REST endpoint and the physical host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FetchDeviceNames
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      DeviceName necessary to create remote session.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SupplyDeviceName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DNS name of the REST endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FetchDeviceNames
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Device type.
+      Valid values: Server, Gateway, or Mux.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SupplyDeviceName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: LoggingFc.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontrollerfc/disable-networkcontrolleronfailoverclusterlogging?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkControllerFc
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Disable-NetworkControllerOnFailoverClusterLogging

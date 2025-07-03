@@ -1,0 +1,133 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Set-ClusterLog
+name: Set-ClusterLog
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Sets the size and level of detail for the cluster log.
+description: |-
+  The `Set-ClusterLog` cmdlet sets the size and level of detail for the cluster log. The default
+  level, `3`, includes errors, warnings, and additional information.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+      `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster from which to generate cluster logs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Level
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the log level to set for the cluster. The acceptable values for this parameter are: `0`
+      to `5`.
+
+      | Level  | Error  | Warning  | Info  | Verbose | Debug |
+      |:-----|:-----|:-----|:-----|:-----|:-----|
+      |0 (Disabled) ||||||
+      |1 |&#x2714;||||
+      |2 |&#x2714;|&#x2714;|||
+      |3 (Default) |&#x2714;|&#x2714;|&#x2714;||
+      |4 |&#x2714;|&#x2714;|&#x2714;|&#x2714;|
+      |5 |&#x2714;|&#x2714;|&#x2714;|&#x2714;|&#x2714;|
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Size
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the log size to set for the cluster. The acceptable values for this parameter in Windows
+      2016 are: `8` MB to `1024` MB. The acceptable values for this parameter in Windows 2019 are:
+      `8` MB to `2048` MB.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-ClusterLog
+        [-Size <Int32>]
+        [-Level <Int32>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-ClusterLog -Level 1
+    ```
+
+    This example sets the cluster log to a detail level of `1`.
+- title: Example 2
+  description: |-
+    ```powershell
+    Set-ClusterLog -Size 1024
+    ```
+
+    This example sets the cluster log size to 1024 MB.
+links:
+- text: Get-ClusterLog
+  href: ./Get-ClusterLog.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/set-clusterlog?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 10/21/2022
+  PlatyPS schema version: 2024-05-01
+  title: Set-ClusterLog

@@ -1,0 +1,141 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Get-ClusterResourceDependencyReport
+name: Get-ClusterResourceDependencyReport
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Generates a report that lists the dependencies between resources in a failover cluster.
+description: |-
+  The **Get-ClusterResourceDependencyReport** cmdlet generates a report that lists the dependencies between resources in a failover cluster.
+
+  The report has a filename extension of MHT.
+  For convenience in storing and finding the report, you can pipe this cmdlet to the [Copy-Item](https://go.microsoft.com/fwlink/?LinkID=113292) cmdlet and specify a destination folder into which to copy the report.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet.
+      If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Group
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster group for which to generate the dependency report.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster group or cluster resource for which to create the dependency report.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Resource
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster resource for which to generate the dependency report.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-ClusterResourceDependencyReport
+        [-Resource <String>]
+        [-Group <String>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.IO.FileInfo" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Get-ClusterResourceDependencyReport -Group cluster1FS12
+    Mode                LastWriteTime     Length Name
+    ----                -------------     ------ ----
+    -a---        10/15/2008   6:29 PM      59299 fb509e66-8d02-4881-8184-6be5b1bfa4c2.mht
+    ```
+
+    This example creates a dependency report file for the clustered file server, or resource group, named cluster1FS12 on the local cluster.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Get-ClusterResourceDependencyReport -Group cluster1FS12 | Copy-Item -Destination C:\users\user1
+    ```
+
+    This example creates a dependency report file for the clustered file server, or resource group, named cluster1FS12 on the local cluster.
+    The dependency report is copied to C:\users\user1.
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> Get-ClusterGroup | Get-ClusterResourceDependencyReport | Copy-Item -Destination \\fileserver\share
+    ```
+
+    This example creates a dependency report file for each clustered role, or resource group, on the local cluster, and copies all reports to \\\\fileserver\share.
+links:
+- text: Copy-Item
+  href: https://go.microsoft.com/fwlink/?LinkID=113292
+- text: Add-ClusterResourceDependency
+  href: ./Add-ClusterResourceDependency.yml
+- text: Remove-ClusterResourceDependency
+  href: ./Remove-ClusterResourceDependency.yml
+- text: Set-ClusterResourceDependency
+  href: ./Set-ClusterResourceDependency.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterresourcedependencyreport?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-ClusterResourceDependencyReport

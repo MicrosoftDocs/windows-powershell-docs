@@ -1,0 +1,111 @@
+### YamlMime:PowerShellCmdlet1
+uid: Appx.Remove-AppxVolume
+name: Remove-AppxVolume
+module: Appx
+isPreview: false
+summary: |-
+  Removes an appx volume.
+description: |-
+  The **Remove-AppxVolume** cmdlet removes an **AppxVolume**.
+  You can only remove a volume after there are no apps staged to it for any user.
+  After you remove a volume, apps can no longer be added to it.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Volume
+    type: <xref href="AppxVolume" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the **AppxVolume** object to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AppxVolume
+        [-Volume] <AppxVolume[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Remove a volume by using an ID'
+  description: |-
+    ```
+    PS C:\> Remove-AppxVolume -Volume {984786d3-0cae-49de-a68f-8bedb0ca260b}
+    ```
+
+    This command removes a volume that has the specified media ID.
+- title: 'Example 2: Remove a volume by using a path'
+  description: |-
+    ```
+    PS C:\> Remove-AppxVolume -Volume E:\
+    ```
+
+    This command removes a volume at the path E:\.
+links:
+- text: Add-AppxVolume
+  href: ./Add-AppxVolume.yml
+- text: Dismount-AppxVolume
+  href: ./Dismount-AppxVolume.yml
+- text: Get-AppxVolume
+  href: ./Get-AppxVolume.yml
+- text: Mount-AppxVolume
+  href: ./Mount-AppxVolume.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appx/remove-appxvolume?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: Appx
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-AppxVolume

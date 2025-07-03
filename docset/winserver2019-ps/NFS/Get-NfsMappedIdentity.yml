@@ -1,0 +1,294 @@
+### YamlMime:PowerShellCmdlet1
+uid: NFS.Get-NfsMappedIdentity
+name: Get-NfsMappedIdentity
+module: NFS
+isPreview: false
+summary: |-
+  Gets an NFS mapped identity.
+description: |-
+  The **Get-NfsMappedIdentity** cmdlet gets a Network File System (NFS) mapped identity.
+
+  A mapped identity associates a Windows user account or group account to a UNIX user account or group account.
+  A user ID (UID) or group ID (GID) identifies a UNIX account namespace.
+  These elements are associated with the corresponding elements of a Windows account namespace: a user name or a group name.
+  By using a mapped identity, a user who is logged on to a UNIX domain can access shared resources in a Windows domain without having to log on to the Windows domain.
+
+  For more information about NFS, see [Network File System](https://technet.microsoft.com/en-us/library/jj592688).
+  For more information about NFS account mapping, see [NFS Account Mapping Guide](https://technet.microsoft.com/en-us/library/hh509020(v=ws.10)) and [Identity Management for UNIX](https://technet.microsoft.com/en-us/library/cc772571).
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the SAMAccountName of the Windows user account or group account of a mapped identity.
+    aliases:
+    - aname
+    - an
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AccountType
+    type: <xref href="AccountType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Windows account type of a mapped identity.
+      Valid values are User and Group.
+    acceptedValues:
+    - User
+    - Group
+    aliases:
+    - atype
+    - at
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupIdentifier
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the group identifier of a user or group account.
+    aliases:
+    - GroupId
+    - gid
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LdapNamingContext
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Lightweight Directory Access Protocol (LDAP) naming context of the NFS identity mapping store.
+      You can use this parameter to search for mapped identities in the specified naming context.
+    aliases:
+    - dn
+    defaultValue: DefaultNamingContext
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdAdlds
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MapFilesPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the passwd and group map files from which the **Get-NfsMappedIdentity** cmdlet gets a mapped identity.
+    defaultValue: '%SystemRoot\System32\Drivers\etc\'
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MapFiles
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MappingStore
+    type: <xref href="MappingStoreType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of identity mapping store from which the **Get-NfsMappedIdentity** cmdlet gets a mapped identity.
+      When this parameter is not specified, the cmdlet gets the store configuration settings from the NFS server configuration where this command is run configuration where this command is run.
+
+      The acceptable values for this parameter are:
+
+      - AD
+      - LDAP
+      - MapFiles
+    acceptedValues:
+    - Ad
+    - Ldap
+    - Mapfiles
+    aliases:
+    - store
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultSettings
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the LDAP instance name of the store that NFS server uses.
+      This can be an Active Directory domain name, Active Directory Lightweight Directory Services (AD LDS) server name, or LDAP server name.
+      When this parameter is not specified, the cmdlet tries to connect to either the LDAP store on the local computer at port 389 when MappingStore is LDAP, or the Active Directory domain of the computer when MappingStore is Active Directory.
+    aliases:
+    - LdapServer
+    - ADDomainName
+    defaultValue: Localhost:389
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdAdlds
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserIdentifier
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the UID of the user account.
+    aliases:
+    - UserId
+    - uid
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NfsMappedIdentity
+        -AccountType <AccountType>
+        [-MappingStore <MappingStoreType>]
+        [-UserIdentifier <Int32>]
+        [-GroupIdentifier <Int32>]
+        [-AccountName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultSettings
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-NfsMappedIdentity
+        -MappingStore <MappingStoreType>
+        -AccountType <AccountType>
+        [-Server <String>]
+        [-LdapNamingContext <String>]
+        [-UserIdentifier <Int32>]
+        [-GroupIdentifier <Int32>]
+        [-AccountName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdAdlds
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-NfsMappedIdentity
+        -MappingStore <MappingStoreType>
+        -AccountType <AccountType>
+        [-MapFilesPath <String>]
+        [-UserIdentifier <Int32>]
+        [-GroupIdentifier <Int32>]
+        [-AccountName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MapFiles
+  isDefault: false
+outputs:
+- name: <xref href="System.FileServices.Management.Nfs.UserMappedIdentity" data-throw-if-not-resolved="False" />
+- name: <xref href="System.FileServices.Management.Nfs.GroupMappedIdentity" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a mapped identity for a user account by using a specified name'
+  description: |-
+    ```
+    PS C:\> Get-NfsMappedIdentity -MappingStore "LDAP" -AccountType "User" -AccountName "RPatel"
+    ```
+
+    This command gets all user account mapped identities from a configured AD LDS or RFC 2307-compliant LDAP store instance.
+    In this example, the command returns PrimaryGroup and SupplementaryGroups only when the configured mapping store is MapFiles.
+- title: 'Example 2: Get all group account mapped identities from a specific store instance'
+  description: |-
+    ```
+    PS C:\> Get-NfsMappedIdentity -MappingStore "LDAP" -AccountType "Group" -GroupName "Administrators"
+    ```
+
+    This command gets all mapped identities in the Administrator group from a configured AD LDS or RFC 2307-compliant LDAP store instance.
+- title: 'Example 3: Get a mapped identity for a group account by using a specified Id'
+  description: |-
+    ```
+    PS C:\> Get-NfsMappedIdentity -MappingStore "LDAP" -AccountType "Group" -GroupIdentifier "GID99"
+    ```
+
+    This command gets a mapped identity for the group account that has the GID 99, from a configured AD LDS or RFC 2307-compliant LDAP store instance.
+- title: 'Example 4: Get all user account mapped identities from a specific mapping store'
+  description: |-
+    ```
+    PS C:\>Get-NfsMappedIdentity -MappingStore "LDAP" -AccountType "User"
+    ```
+
+    This command gets all user account mapped identities from a configured AD LDS or RFC 2307-compliant LDAP store instance.
+    PrimaryGroup and SupplementaryGroups are returned only when the configured mapping store is MapFiles.
+- title: 'Example 5: Get all user account mapped identities from a mapping store that is specified in the NFS Server configuration settings'
+  description: |-
+    ```
+    PS C:\>Get-NfsMappedIdentity -AccountType "User"
+    ```
+
+    This command gets all user account mapped identities from a mapping store that is specified in the NFS server configuration settings.
+links:
+- text: RFC-2307
+  href: http://www.rfc-editor.org/rfc/rfc2307.txt
+- text: Get-NfsMappedIdentity
+  href: ./Get-NfsMappedIdentity.yml
+- text: Get-NfsMappingStore
+  href: ./Get-NfsMappingStore.yml
+- text: Install-NfsMappingStore
+  href: ./Install-NfsMappingStore.yml
+- text: New-NfsMappedIdentity
+  href: ./New-NfsMappedIdentity.yml
+- text: Remove-NfsMappedIdentity
+  href: ./Remove-NfsMappedIdentity.yml
+- text: Resolve-NfsMappedIdentity
+  href: ./Resolve-NfsMappedIdentity.yml
+- text: Set-NfsMappedIdentity
+  href: ./Set-NfsMappedIdentity.yml
+- text: Set-NfsMappingStore
+  href: ./Set-NfsMappingStore.yml
+- text: Test-NfsMappedIdentity
+  href: ./Test-NfsMappedIdentity.yml
+- text: Test-NfsMappingStore
+  href: ./Test-NfsMappingStore.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FileServices.Powershell.NFS.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/nfs/get-nfsmappedidentity?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: NFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NfsMappedIdentity

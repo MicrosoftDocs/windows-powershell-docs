@@ -1,0 +1,169 @@
+### YamlMime:PowerShellCmdlet1
+uid: UEV.Register-UevTemplate
+name: Register-UevTemplate
+module: UEV
+isPreview: false
+summary: |-
+  Registers a settings location template with UE-V.
+description: |-
+  The **Register-UevTemplate** cmdlet registers a settings location template with Microsoft User Experience Virtualization (UE-V).
+  A template defines settings to synchronize between computers.
+  After you register a template, UE-V synchronizes the settings.
+  If you try to register a template that is already registered, the cmdlet returns an error.
+
+  You must have administrative credentials to run this cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LiteralPath
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of literal file paths.
+      The cmdlet registers the settings location templates that have the literal paths that you specify.
+    aliases:
+    - PSPath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LiteralPath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of file paths.
+      The cmdlet registers the settings location templates that have the paths that you specify.
+      Use wildcards to specify multiple files.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Register-UevTemplate
+        [-Path] <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Path
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Register-UevTemplate
+        -LiteralPath <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LiteralPath
+  isDefault: false
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" />
+  description: |-
+    An array of paths to the settings location templates.
+examples:
+- title: 'Example 1: Register a template'
+  description: |-
+    ```
+    PS C:\> Register-UevTemplate -Path "MicrosoftCalculator.xml"
+    ```
+
+    This command registers a template in the current directory.
+- title: 'Example 2: Register multiple templates'
+  description: |-
+    ```
+    PS C:\> Register-UevTemplate -Path "Microsoft*.xml"
+    ```
+
+    This command uses a wildcard to specify multiple templates in the current directory.
+- title: 'Example 3: Register all templates in a directory'
+  description: |-
+    ```
+    PS C:\> Register-UevTemplate -Path "*.xml"
+    ```
+
+    This command uses a wildcard to register all settings location templates that are in the current directory but that are not currently registered.
+- title: 'Example 4: Register a template by using a literal path'
+  description: |-
+    ```
+    PS C:\> Register-UevTemplate -LiteralPath "C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftCalculator.xml"
+    ```
+
+    This command registers a settings location template by using the literal path of the template file.
+links:
+- text: Disable-UevTemplate
+  href: ./Disable-UevTemplate.yml
+- text: Enable-UevTemplate
+  href: ./Enable-UevTemplate.yml
+- text: Get-UevTemplate
+  href: ./Get-UevTemplate.yml
+- text: Test-UevTemplate
+  href: ./Test-UevTemplate.yml
+- text: Unregister-UevTemplate
+  href: ./Unregister-UevTemplate.yml
+- text: Update-UevTemplate
+  href: ./Update-UevTemplate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/uev/register-uevtemplate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: UEV
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Register-UevTemplate

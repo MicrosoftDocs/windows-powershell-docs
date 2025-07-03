@@ -1,0 +1,99 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Stop-WBJob
+name: Stop-WBJob
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Stops the current backup or recovery job.
+description: |-
+  The **Stop-WBJob** cmdlet stops the backup or recovery job that is currently running.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-WBJob
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Stop the current backup job'
+  description: |-
+    ```
+    PS C:\> Stop-WBJob
+    ```
+
+    This command stops the currently running backup or recovery job.
+links:
+- text: Get-WBJob
+  href: ./Get-WBJob.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/stop-wbjob?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Stop-WBJob

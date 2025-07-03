@@ -1,0 +1,214 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Remove-ClusterCheckpoint
+name: Remove-ClusterCheckpoint
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Removes a cryptographic key checkpoint or registry checkpoint for a resource.
+description: |-
+  The **Remove-ClusterCheckpoint** cmdlet removes a cryptographic key checkpoint or registry checkpoint for a resource.
+
+  Checkpoints help provide failover support for applications that store configuration information locally instead of or in addition to storing information in the cluster configuration database.
+  Applications might store information locally in two ways.
+  One way is to store configuration information in the registry on the local server; another way is to use cryptographic keys on the local server.
+parameters:
+  cmdletParameters:
+  - name: CheckpointName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the checkpoint to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet.
+      If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CryptoCheckpoint
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that cryptographic key checkpoints will be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet without prompting for confirmation.
+      By default the cmdlet will ask for confirmation from the user before proceeding.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster on which to run the cmdlet or the cluster resource from which to remove the checkpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistryCheckpoint
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that registry checkpoints will be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource from which a checkpoint should be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-ClusterCheckpoint
+        [[-ResourceName] <String>]
+        [-Force]
+        [-CheckpointName <String>]
+        [-RegistryCheckpoint]
+        [-CryptoCheckpoint]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Get-ClusterResource "Cluster Name" | Remove-ClusterCheckpoint -RegistryCheckpoint
+
+
+
+    PS C:\> Remove-ClusterCheckpoint
+    Are you sure you want to remove registry checkpoint 'software\clusname' on resource 'Cluster Name'?
+
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
+    ```
+
+    This example removes the registry checkpoint called software\clusname for the resource named Cluster Name.
+links:
+- text: Add-ClusterCheckpoint
+  href: ./Add-ClusterCheckpoint.yml
+- text: Get-ClusterCheckpoint
+  href: ./Get-ClusterCheckpoint.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clustercheckpoint?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-ClusterCheckpoint

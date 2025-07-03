@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Export-AdfsWebContent
+name: Export-AdfsWebContent
+module: ADFS
+isPreview: false
+summary: |-
+  Exports properties of all web content objects in a specific locale to a specified file.
+description: |-
+  The **Export-AdfsWebContent** cmdlet exports properties of all web content objects in a specific locale, including global and relying party web contents, to a specified file.
+  If you do not specify a locale, the cmdlet exports the web content of the invariant locale.
+  The **Set-AdfsGlobalWebContent** and **Set-AdfsRelyingPartyWebContent** cmdlets add customized web content.
+
+  Use this cmdlet to implement localization of custom messages for the Active Directory Federation Services (AD FS) sign-in experience.
+  Export the web content to a .resx file, localize the file, and then import the localized .resx file by using the **Import-AdfsWebContent** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a file path.
+      The cmdlet exports properties of web content objects to the file that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Locale
+    type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a locale.
+      The cmdlet exports properties of web content objects for the local that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-AdfsWebContent
+        [[-Locale] <CultureInfo>]
+        -FilePath <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Export web content for the invariant locale'
+  description: |-
+    ```
+    PS C:\> Export-AdfsWebContent -FilePath "C:\WebContent\Invariant.resx"
+    ```
+
+    This command exports all the customized web content for the invariant locale to the specified file.
+- title: 'Example 2: Export web content for a specified locale'
+  description: |-
+    ```
+    PS C:\> Export-AdfsWebContent -Locale en-us -FilePath "C:\WebContent\EnUs.resx"
+    ```
+
+    This command exports all the customized web content for the en-us locale to the specified file.
+links:
+- text: Import-AdfsWebContent
+  href: ./Import-AdfsWebContent.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/export-adfswebcontent?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Export-AdfsWebContent

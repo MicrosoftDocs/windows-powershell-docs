@@ -1,0 +1,62 @@
+### YamlMime:PowerShellCmdlet1
+uid: BootEventCollector.Get-SbecLocalizedMessage
+name: Get-SbecLocalizedMessage
+module: BootEventCollector
+isPreview: false
+summary: |-
+  Gets a localized message string.
+description: |-
+  The **Get-SbecLocalizedMessage** cmdlet gets a localized message string by its name.
+
+  Because message strings for Setup and Boot Event Collector error message are localized, identifying errors returned by Setup and Boot Event Collector commands in the scripts requires that you can identify the meaning of the localized text.
+
+  $PsHome\Modules\BootEventCollector\$PsCulture\BootEventCollectorStrings.psd1 contains the localized strings and their names.
+  Specify the name of the localized message to get it.
+
+  If the name is not known, the cmdlet will throw an error.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the localized message to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-SbecLocalizedMessage
+        [-Name] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet gets the text of the localized message.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: BootEventCollector-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/booteventcollector/get-sbeclocalizedmessage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-SbecLocalizedMessage

@@ -1,0 +1,93 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Set-AccelNetManagement
+name: Set-AccelNetManagement
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Sets Accelerated Networking Management cluster-wide.
+description: |-
+  Sets AccelNet Management cluster-wide. Also sets the number of nodes to reserve and enables the
+  provided intent for AccelNet Management. Returns `$true` upon success, and `$false` otherwise.
+
+  If AccelNet Management is currently active with a certain intent, providing a value for the
+  `-IntentName` parameter will disable the current AccelNet Management configuration. After disabling
+  the current AccelNet Management configuration, AccelNet Management is reenabled based on the
+  configuration of the new intent.
+parameters:
+  cmdletParameters:
+  - name: IntentName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The intent name to be used for AccelNet Management. This parameter is required.
+
+      This value must be an integer greater than or equal to **0** and less than or equal to **99**.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NodeReservePercentage
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      The percentage of cluster nodes that can be down simultaneously while still maintaining enough
+      virtual functions for each VM chosen for Accelerated Networking Management.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AccelNetManagement
+        [[-IntentName] <String>]
+        [[-NodeReservePercentage] <UInt32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```powershell
+    Set-AccelNetManagement -IntentName "LowPerformance" -NodeReservePercentage 10
+    ```
+
+    This example enables the `LowPerformance` intent for AccelNet Management and reserves `10` percent
+    of the nodes for that purpose. If the command is successful, it will return `$true`. If there is an
+    error, it will return `$false`.
+links:
+- text: Disable-AccelNetManagement
+  href: disable-accelnetmanagement.yml
+- text: Enable-AccelNetManagement
+  href: enable-accelnetmanagement.yml
+- text: Get-AccelNetManagement
+  href: get-accelnetmanagement.yml
+- text: Get-AccelNetManagementPreReq
+  href: get-accelnetmanagementprereq.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/set-accelnetmanagement?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 01/22/2025
+  PlatyPS schema version: 2024-05-01
+  title: Set-AccelNetManagement

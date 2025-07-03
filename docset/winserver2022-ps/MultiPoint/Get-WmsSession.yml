@@ -1,0 +1,159 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Get-WmsSession
+name: Get-WmsSession
+module: MultiPoint
+isPreview: false
+summary: |-
+  Gets session information.
+description: |-
+  The **Get-WmsSession** cmdlet gets information for a specified session or for all sessions.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation applies to all sessions on the target host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetAll
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+      The default is localhost.
+    aliases:
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SessionId
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of session IDs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetById
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Thumbnail
+    type: <xref href="ThumbnailSizePS" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Thumbnail size of the session.
+    acceptedValues:
+    - Small
+    - Medium
+    - Large
+    - FullScreen
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WmsSession
+        [-SessionId] <UInt32[]>
+        [-Thumbnail <ThumbnailSizePS>]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-WmsSession
+        [-All]
+        [-Thumbnail <ThumbnailSizePS>]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetAll
+  isDefault: false
+inputs:
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.WmsSession" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all sessions'
+  description: |-
+    ```
+    PS C:\> Get-WmsSession -All
+    SessionId    : 2
+    State        : RemoteConnection
+    IsOrchestratable    : False
+    IsAdmin      : True
+    IsMOGUser    : True
+    UserName     : Test
+    StationId    : 0
+    ComputerName : Test1
+    ClientName   : Test2
+    DomainName   : TestDomain
+    IsRail       : False
+    SessionId    : 3
+    State        : ConnectedToStation
+    IsOrchestratable    : False
+    IsAdmin      : True
+    IsMOGUser    : True
+    UserName     : Administrator
+    StationId    : 1
+    ComputerName : Test1
+    ClientName   : Test1
+    DomainName   : TestDomain
+    IsRail       : False
+    ```
+
+    This command gets session information for all sessions.
+    The session with ID 2 is a remote session, and the session with ID 3 is a session connected to a local Windows MultiPoint Server station.
+links:
+- text: Close-WmsSession
+  href: ./Close-WmsSession.yml
+- text: Disconnect-WmsSession
+  href: ./Disconnect-WmsSession.yml
+- text: Lock-WmsSession
+  href: ./Lock-WmsSession.yml
+- text: Unlock-WmsSession
+  href: ./Unlock-WmsSession.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/get-wmssession?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WmsSession

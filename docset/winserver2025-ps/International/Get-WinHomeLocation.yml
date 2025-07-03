@@ -1,0 +1,51 @@
+### YamlMime:PowerShellCmdlet1
+uid: International.Get-WinHomeLocation
+name: Get-WinHomeLocation
+module: International
+isPreview: false
+summary: |-
+  Gets the Windows GeoID home location setting for the current user account.
+description: |-
+  The **Get-WinHomeLocation** cmdlet gets the value of the user GeoID setting and returns a .NET GeoID object.
+  The Windows GeoID setting is a user setting that describes the home location of the current user account.
+  A home location is the country or region.
+  Applications that require the home location of the current user account, such as a driver for a television tuner application, can use this setting.
+
+  For a table of GeoIDs, see Table of [Geographical Locations](https://go.microsoft.com/fwlink/?LinkID=242308).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WinHomeLocation
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="GeoID" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a 32-bit signed number that uniquely identifies a geographical location.
+examples:
+- title: 'Example 1: Display the GeoID for the current account'
+  description: |-
+    ```
+    PS C:\> Get-WinHomeLocation
+    HomeLocation     Description
+    ----             -----------
+    244              United States
+    ```
+
+    This command returns the GeoID setting and its display name for the current user account.
+links:
+- text: RegionInfo.GeoId Property
+  href: https://go.microsoft.com/fwlink/?LinkID=242310
+- text: Set-WinHomeLocation
+  href: ./Set-WinHomeLocation.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/international/get-winhomelocation?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Locale: en-US
+  Module Name: International
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WinHomeLocation

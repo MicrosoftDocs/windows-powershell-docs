@@ -1,0 +1,245 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Remove-VMHostAssignableDevice
+name: Remove-VMHostAssignableDevice
+module: Hyper-V
+isPreview: false
+summary: |-
+  Removes a device assigned to a virtual machine (VM) host.
+description: |-
+  The `Remove-VMHostAssignableDevice` cmdlet removes a device that is assigned to a virtual machine
+  host. Depending on the parameters specified, you can remove devices by providing either the
+  instance or location path of the device.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+      object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+      or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
+      current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts from which the assignable devices are to be removed. NetBIOS
+      names, IP addresses, and fully qualified domain names are allowed. The default is the local
+      computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action. The default is the
+      current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostAssignableDevice
+    type: <xref href="VMHostAssignableDevice" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the device object to be removed. You can get this object using
+      `Get-VMHostAssignableDevice`.
+    aliases:
+    - VMHostAssignableDevice
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Object
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstancePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Device Instance path in the host machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocationPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location path to the assignable device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourcePoolName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the resource pool from which to remove an assignable device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-VMHostAssignableDevice
+        -ResourcePoolName <String[]>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-InstancePath <String>]
+        [-LocationPath <String>]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Path
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-VMHostAssignableDevice
+        [-HostAssignableDevice] <VMHostAssignableDevice[]>
+        -ResourcePoolName <String[]>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Object
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMHostAssignableDevice" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $params = @{
+    InstancePath = "PCIROOT(0)#PCI(0300)#PCI(0000)"
+    ResourcePoolName = "MyResourcePool"
+    }
+    Remove-VMHostAssignableDevice $params
+    ```
+
+    This example removes the device with the specified instance path from the resource pool named
+    **MyResourcePool**.
+links:
+- text: Add-VMHostAssignableDevice
+  href: add-vmhostassignabledevice.yml
+- text: Get-VMHostAssignableDevice
+  href: get-vmhostassignabledevice.yml
+- text: Dismount-VMHostAssignableDevice
+  href: dismount-vmhostassignabledevice.yml
+- text: Mount-VMHostAssignableDevice
+  href: mount-vmhostassignabledevice.yml
+metadata:
+  description: Removes an assignable device from a virtual machine host.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/remove-vmhostassignabledevice?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 06/12/2024
+  PlatyPS schema version: 2024-05-01
+  title: Remove-VMHostAssignableDevice

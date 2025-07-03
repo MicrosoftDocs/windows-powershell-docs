@@ -1,0 +1,180 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Set-AdfsAttributeStore
+name: Set-AdfsAttributeStore
+module: ADFS
+isPreview: false
+summary: |-
+  Modifies properties of an attribute store.
+description: |-
+  The **Set-AdfsAttributeStore** cmdlet modifies properties of an attribute store in the Federation Service.
+parameters:
+  cmdletParameters:
+  - name: Configuration
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the initialization parameters of the attribute store, such as a connection string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of this attribute store.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetAttributeStore
+    type: <xref href="AttributeStore" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an **AttributeStore** object.
+      The cmdlet modifies the attribute store that you specify.
+      To obtain an attribute store, use the **Get-AdfsAttributeStore** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the attribute store to modify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AdfsAttributeStore
+        [-TargetName] <String>
+        [-Name <String>]
+        [-Configuration <Hashtable>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsAttributeStore
+        [-TargetAttributeStore] <AttributeStore>
+        [-Name <String>]
+        [-Configuration <Hashtable>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+examples:
+- title: 'Example 1: Modify the configuration of an attribute store'
+  description: |-
+    ```
+    PS C:\> Set-AdfsAttributeStore -TargetName "ContosoAttributeStore01" -Configuration @{"runmode" = "verbose"; configParaName2 = configParaValueNew}
+    ```
+
+    This command modifies the configuration for the custom attribute store named ContosoAttributeStore01.
+links:
+- text: Add-AdfsAttributeStore
+  href: ./Add-AdfsAttributeStore.yml
+- text: Get-AdfsAttributeStore
+  href: ./Get-AdfsAttributeStore.yml
+- text: Remove-AdfsAttributeStore
+  href: ./Remove-AdfsAttributeStore.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/set-adfsattributestore?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AdfsAttributeStore

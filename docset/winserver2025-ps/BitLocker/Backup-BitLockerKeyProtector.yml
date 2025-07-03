@@ -1,0 +1,148 @@
+### YamlMime:PowerShellCmdlet1
+uid: BitLocker.Backup-BitLockerKeyProtector
+name: Backup-BitLockerKeyProtector
+module: BitLocker
+isPreview: false
+summary: |-
+  Saves a key protector for a BitLocker volume in AD DS.
+description: |-
+  The **Backup-BitLockerKeyProtector** cmdlet saves a recovery password key protector for a volume protected by BitLocker Drive Encryption to Active Directory Domain Services (AD DS).
+  Specify a key to be saved by ID.
+
+  For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyProtectorId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID for a key protector or a **KeyProtector** object.
+      A BitLocker volume object includes a **KeyProtector** object.
+      You can specify the key protector object itself, or you can specify the ID.
+      See the Examples section.
+      To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MountPoint
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of drive letters or BitLocker volume objects.
+      The cmdlet saves key protectors for the volumes specified.
+      To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Backup-BitLockerKeyProtector
+        [-MountPoint] <String[]>
+        [-KeyProtectorId] <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" />
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Save a key protector for a volume'
+  description: |-
+    ```
+    PS C:\> $BLV = Get-BitLockerVolume -MountPoint "C:"
+    PS C:\> Backup-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProtector[1].KeyProtectorId
+    ```
+
+    This example saves a key protector for a specified BitLocker volume.
+
+    The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the $BLV variable.
+
+    The second command backs up the key protector for the BitLocker volume specified by the *MountPoint* parameter.
+    The command specifies the key protector by using its ID, contained in the BitLocker object stored in $BLV.
+    The **KeyProtector** attribute contains an array of key protectors associated to the volume.
+    This command uses standard array syntax to index the **KeyProtector** object.
+    The key protector that corresponds to the recovery password key protector can be identified by using the **KeyProtectorType** attribute in the **KeyProtector** object.
+- title: 'Example 2: Save a key protector using an ID'
+  description: |-
+    ```
+    PS C:\> Backup-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId "{E2611001E-6AD0-4A08-BAAA-C9c031DB2AA6}"
+    ```
+
+    This command saves a key protector for a specified BitLocker volume to AD DS.
+    The command specifies the key protector by using its ID.
+links:
+- text: Add-BitLockerKeyProtector
+  href: ./Add-BitLockerKeyProtector.yml
+- text: Get-BitLockerVolume
+  href: ./Get-BitLockerVolume.yml
+- text: Remove-BitLockerKeyProtector
+  href: ./Remove-BitLockerKeyProtector.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: BitLocker-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/bitlocker/backup-bitlockerkeyprotector?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: BitLocker
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Backup-BitLockerKeyProtector

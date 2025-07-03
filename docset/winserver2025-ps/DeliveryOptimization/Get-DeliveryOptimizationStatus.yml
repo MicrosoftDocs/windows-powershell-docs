@@ -1,0 +1,83 @@
+### YamlMime:PowerShellCmdlet1
+uid: DeliveryOptimization.Get-DeliveryOptimizationStatus
+name: Get-DeliveryOptimizationStatus
+module: DeliveryOptimization
+isPreview: false
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: AsObject
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill AsObject Description }}
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeerInfo
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill PeerInfo Description }}
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SelectPeerCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill SelectPeerCount Description }}
+    defaultValue: "5"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+outputs:
+- name: <xref href="DOSwarmStats" data-throw-if-not-resolved="False" />
+- name: <xref href="DOFilePeerInfo" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="DOPeerInfo" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+links:
+- text: https://aka.ms/do-cmdlets
+  href: https://aka.ms/do-cmdlets
+metadata:
+  document type: cmdlet
+  external help file: DeliveryOptimizationStatus.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/deliveryoptimization/get-deliveryoptimizationstatus?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: DeliveryOptimization
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-DeliveryOptimizationStatus

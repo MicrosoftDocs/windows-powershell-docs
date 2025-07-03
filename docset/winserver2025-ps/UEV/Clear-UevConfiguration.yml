@@ -1,0 +1,505 @@
+### YamlMime:PowerShellCmdlet1
+uid: UEV.Clear-UevConfiguration
+name: Clear-UevConfiguration
+module: UEV
+isPreview: false
+summary: |-
+  Clears UE-V configuration settings.
+description: |-
+  The **Clear-UevConfiguration** cmdlet clears Microsoft User Experience Virtualization (UE-V) configuration settings.
+  If you specify the *CurrentComputerUser* parameter, the cmdlet clears the settings that you specify for the current user only.
+  If you specify the *Computer* parameter, the cmdlet clears the settings that you specify for all users on the computer.
+  You must have administrative credentials to use this cmdlet to clear settings for all users on the computer.
+  If you do not specify the *CurrentComputerUser* or *Computer* parameter, the cmdlet clears the settings that you specify for the current user only.
+parameters:
+  cmdletParameters:
+  - name: Computer
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the settings for all users on the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetComputer
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactITDescription
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the description of the Contact IT link.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetComputer
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactITUrl
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the URL of the Contact IT link.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetComputer
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CurrentComputerUser
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the settings that you specify for the current user only.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetUser
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DontSyncWindows8AppSettings
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for not synchronizing settings for Windows® 8 apps.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FirstUseNotificationEnabled
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the notification of first-use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetComputer
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxPackageSizeInBytes
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the maximum package size.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SettingsImportNotifyDelayInSeconds
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the delay before UE-V notifies the user about the settings import.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SettingsImportNotifyEnabled
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the notification of settings import.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SettingsStoragePath
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the path of the location where UE-V stores the user settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SettingsTemplateCatalogPath
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the path of the location where UE-V stores the settings template catalog.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetComputer
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SyncEnabled
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting that enables the synchronization of settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SyncMethod
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the method of the synchronization of settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SyncOverMeteredNetwork
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for synchronization over metered connections.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SyncOverMeteredNetworkWhenRoaming
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for synchronization over a metered connection that is roaming.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SyncProviderPingEnabled
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting that enables the sync provider to ping for network access before doing a sync.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SyncTimeoutInMilliseconds
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the timeout before UE-V synchronizes settings from the settings repository.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SyncUnlistedWindows8Apps
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the synchronization of unlisted Windows 8 apps.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrayIconEnabled
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the icon in the notification area.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetComputer
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VdiCollectionName
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet performs synchronization in a pooled VDI-type environment when computers are not persistent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WaitForSyncOnApplicationStart
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for waiting for synchronization to finish before the user can start an application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WaitForSyncOnLogon
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for waiting for synchronization to finish before the user can log on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WaitForSyncTimeoutInMilliseconds
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      For internal use only.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Clear-UevConfiguration
+        [-CurrentComputerUser]
+        [-MaxPackageSizeInBytes]
+        [-SettingsStoragePath]
+        [-SyncProviderPingEnabled]
+        [-SyncTimeoutInMilliseconds]
+        [-SyncMethod]
+        [-SyncEnabled]
+        [-SyncOverMeteredNetwork]
+        [-SyncOverMeteredNetworkWhenRoaming]
+        [-SettingsImportNotifyEnabled]
+        [-SettingsImportNotifyDelayInSeconds]
+        [-DontSyncWindows8AppSettings]
+        [-WaitForSyncTimeoutInMilliseconds]
+        [-WaitForSyncOnApplicationStart]
+        [-WaitForSyncOnLogon]
+        [-SyncUnlistedWindows8Apps]
+        [-VdiCollectionName]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetUser
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Clear-UevConfiguration
+        [-Computer]
+        [-MaxPackageSizeInBytes]
+        [-SettingsStoragePath]
+        [-SettingsTemplateCatalogPath]
+        [-SyncProviderPingEnabled]
+        [-SyncTimeoutInMilliseconds]
+        [-SyncMethod]
+        [-SyncEnabled]
+        [-SyncOverMeteredNetwork]
+        [-SyncOverMeteredNetworkWhenRoaming]
+        [-SettingsImportNotifyEnabled]
+        [-SettingsImportNotifyDelayInSeconds]
+        [-ContactITUrl]
+        [-ContactITDescription]
+        [-TrayIconEnabled]
+        [-FirstUseNotificationEnabled]
+        [-DontSyncWindows8AppSettings]
+        [-WaitForSyncTimeoutInMilliseconds]
+        [-WaitForSyncOnApplicationStart]
+        [-WaitForSyncOnLogon]
+        [-SyncUnlistedWindows8Apps]
+        [-VdiCollectionName]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetComputer
+  isDefault: false
+examples:
+- title: 'Example 1: Clear the setting for maximum package size for all users'
+  description: |-
+    ```
+    PS C:\> Clear-UevConfiguration -Computer -MaxPackageSizeInBytes
+    ```
+
+    This command clears the setting for maximum package size for all users on the computer.
+- title: 'Example 2: Clear the setting for maximum package size for the current user'
+  description: |-
+    ```
+    PS C:\> Clear-UevConfiguration -CurrentComputerUser -MaxPackageSizeInBytes
+    ```
+
+    This command clears the setting for maximum package size for the current user.
+- title: 'Example 3: Clear the setting for maximum package size by default for the current user'
+  description: |-
+    ```
+    PS C:\> Clear-UevConfiguration -MaxPackageSizeInBytes
+    ```
+
+    This command clears the setting for maximum package size by default for the current user.
+- title: 'Example 4: Clear multiple settings for the current user'
+  description: |-
+    ```
+    PS C:\> Clear-UevConfiguration -MaxPackageSizeInBytes -SyncTimeoutInMilliseconds
+    ```
+
+    This command clears the settings for maximum package size and synchronization timeout for the current user.
+links:
+- text: Get-UevConfiguration
+  href: ./Get-UevConfiguration.yml
+- text: Set-UevConfiguration
+  href: ./Set-UevConfiguration.yml
+- text: Import-UevConfiguration
+  href: ./Import-UevConfiguration.yml
+- text: Export-UevConfiguration
+  href: ./Export-UevConfiguration.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/uev/clear-uevconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: UEV
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Clear-UevConfiguration

@@ -1,0 +1,37 @@
+### YamlMime:PowerShellModule1
+uid: DeliveryOptimization
+name: DeliveryOptimization Module
+isPreview: false
+cmdletGroups:
+- title: DeliveryOptimization Cmdlets
+  cmdlets:
+  - DeliveryOptimization.Delete-DeliveryOptimizationCache
+  - DeliveryOptimization.Disable-DeliveryOptimizationVerboseLogs
+  - DeliveryOptimization.Enable-DeliveryOptimizationVerboseLogs
+  - DeliveryOptimization.Get-DeliveryOptimizationLog
+  - DeliveryOptimization.Get-DeliveryOptimizationLogAnalysis
+  - DeliveryOptimization.Get-DeliveryOptimizationPerfSnap
+  - DeliveryOptimization.Get-DeliveryOptimizationPerfSnapThisMonth
+  - DeliveryOptimization.Get-DeliveryOptimizationStatus
+  - DeliveryOptimization.Get-DOConfig
+  - DeliveryOptimization.Get-DODownloadMode
+  - DeliveryOptimization.Get-DOPercentageMaxBackgroundBandwidth
+  - DeliveryOptimization.Get-DOPercentageMaxForegroundBandwidth
+  - DeliveryOptimization.Set-DeliveryOptimizationStatus
+  - DeliveryOptimization.Set-DODownloadMode
+  - DeliveryOptimization.Set-DOMaxBackgroundBandwidth
+  - DeliveryOptimization.Set-DOMaxForegroundBandwidth
+  - DeliveryOptimization.Set-DOPercentageMaxBackgroundBandwidth
+  - DeliveryOptimization.Set-DOPercentageMaxForegroundBandwidth
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: b9af2675-4726-42fd-adab-38228176a516
+  Module Name: DeliveryOptimization
+  ms.date: 02/21/2024
+  title: DeliveryOptimization module
+  PlatyPS schema version: 2024-05-01
+  document type: module

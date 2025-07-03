@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Add-AdfsDeviceRegistrationUpnSuffix
+name: Add-AdfsDeviceRegistrationUpnSuffix
+module: ADFS
+isPreview: false
+summary: |-
+  Adds a custom UPN suffix.
+description: |-
+  The **Add-AdfsDeviceRegistrationUpnSuffix** cmdlet adds a custom user principal name (UPN) suffix that you can use when you register a device with Active Directory Federation Services (AD FS).
+
+  In many environments, additional UPN suffixes for users are added after an Active Directory Federation Services (AD FS) deployment is complete.
+  Run this cmdlet to support device registration for users of the new UPN suffix.
+  The cmdlet configures a Secure Sockets Layer (SSL) binding that corresponds to the UPN suffix.
+  The UPN suffix must have a corresponding registration name in the AD FS SSL certificate, for example `enterpriseregistration`.upn suffix.
+  You can use a wild-card SSL certificate that covers all possible registration names.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpnSuffix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a UPN suffix.
+      The cmdlet adds and configures the UPN suffix that you specify as a valid registration UPN suffix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AdfsDeviceRegistrationUpnSuffix
+        [-UpnSuffix] <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *UpnSuffix* parameter.
+examples:
+- title: 'Example 1: Add a UPN suffix for registering a device'
+  description: |-
+    ```
+    PS C:\> Add-AdfsDeviceRegistrationUpnSuffix -UpnSuffix "Northamerica.Contoso.com"
+    ```
+
+    This command adds the UPN suffix Northamerica.Contoso.com to the list of suffixes that AD FS responds to for device registration requests after the initial deployment of the device registration service.
+links:
+- text: Get-AdfsDeviceRegistrationUpnSuffix
+  href: ./Get-AdfsDeviceRegistrationUpnSuffix.yml
+- text: Remove-AdfsDeviceRegistrationUpnSuffix
+  href: ./Remove-AdfsDeviceRegistrationUpnSuffix.yml
+- text: Set-AdfsDeviceRegistrationUpnSuffix
+  href: ./Set-AdfsDeviceRegistrationUpnSuffix.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/add-adfsdeviceregistrationupnsuffix?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-AdfsDeviceRegistrationUpnSuffix

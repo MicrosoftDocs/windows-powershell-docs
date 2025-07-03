@@ -1,0 +1,47 @@
+### YamlMime:PowerShellCmdlet1
+uid: LAPS.Invoke-LapsPolicyProcessing
+name: Invoke-LapsPolicyProcessing
+module: LAPS
+isPreview: false
+summary: |-
+  Causes Windows Local Administrator Password Solution (LAPS) to process the currently configured
+  policy.
+description: |-
+  The `Invoke-LapsPolicyProcessing` cmdlet tells LAPS to process the currently configured policy.
+
+  The cmdlet doesn't return detailed information about the results of the operation. See
+  [Use Windows LAPS event logs](https://go.microsoft.com/fwlink/?linkid=2234103) for more information
+  on querying the resultant event log entries to get specific information on the outcome of the
+  operation.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-LapsPolicyProcessing
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Invoke-LapsPolicyProcessing
+    ```
+
+    This example starts the processing of the configured LAPS policy.
+links:
+- text: Windows LAPS Overview
+  href: https://go.microsoft.com/fwlink/?linkid=2233901
+metadata:
+  description: Causes Windows Local Administrator Password Solution (LAPS) to process the currently configured policy.
+  document type: cmdlet
+  external help file: lapspsh.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/laps/invoke-lapspolicyprocessing?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Locale: en-US
+  Module Name: LAPS
+  ms.date: 04/10/2023
+  PlatyPS schema version: 2024-05-01
+  title: Invoke-LapsPolicyProcessing

@@ -1,0 +1,162 @@
+### YamlMime:PowerShellCmdlet1
+uid: ShieldedVMDataFile.Save-ShieldedVMRecoveryKey
+name: Save-ShieldedVMRecoveryKey
+module: ShieldedVMDataFile
+isPreview: false
+summary: |-
+  Extracts the encrypted BitLocker recovery key from a shielded virtual machine's operating system disk.
+description: |-
+  The *Save-ShieldedVMRecoveryKey* cmdlet is used to extract the encrypted BitLocker recovery key from a shielded virtual machine's operaing system disk.
+  The key can be obtained from an offline VHDX or an online, mounted disk.
+  The encrypted recovery key can be passed to the [Unprotect-ShieldedVMRecoveryKey](Unprotect-ShieldedVMRecoveryKey.yml) cmdlet to decrypt the recovery key.
+
+  This cmdlet only works with Windows shielded VMs created with a shielding data file created on Windows Server, version 1709 or newer.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskNumber
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifier for the mounted disk containing the OS partition of a Windows shielded VM
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DiskNumberParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Overwrites the encrypted recovery key file located at the specified path
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location to save the encrypted recovery key
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VHDPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the VHDX file for a Windows shielded VM to be searched for an encrypted recovery key
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VHDParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Save-ShieldedVMRecoveryKey
+        -VHDPath <String>
+        -Path <String>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+    ```
+  parameterSetName: VHDParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Save-ShieldedVMRecoveryKey
+        -DiskNumber <Int32>
+        -Path <String>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+    ```
+  parameterSetName: DiskNumberParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Save-ShieldedVMRecoveryKey -VHDPath 'C:\temp\MyShieldedVM.vhdx' -Path 'C:\temp\MyShieldedVMEncryptedRecoveryKey.ebek'
+    ```
+
+    Extracts the encrypted recovery key from the "MyShieldedVM.vhdx" file and saves it to the temp directory.
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Save-ShieldedVMRecoveryKey -DiskNumber 1 -Path 'C:\temp\MyShieldedVMEncryptedRecoveryKey.ebek'
+    ```
+
+    Extracts the encrypted recovery key from the second disk (disk number 1) mounted on the system, and saves the recovery key to the temp directory.
+links:
+- text: Unprotect-ShieldedVMRecoveryKey
+  href: Unprotect-ShieldedVMRecoveryKey.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/shieldedvmdatafile/save-shieldedvmrecoverykey?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ShieldedVMDataFile
+  PlatyPS schema version: 2024-05-01
+  title: Save-ShieldedVMRecoveryKey

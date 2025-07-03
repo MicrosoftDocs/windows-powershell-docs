@@ -1,0 +1,149 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvSequencer.New-AppvPackageAccelerator
+name: New-AppvPackageAccelerator
+module: AppvSequencer
+isPreview: false
+summary: |-
+  Generates a package accelerator.
+description: |-
+  The **New-AppvPackageAccelerator** cmdlet generates a package accelerator object.
+  It accepts an existing Application Virtualization (App-V) 5.0 package file along with the appropriately installed files or installation media.
+  The cmdlet then generates a package accelerator file.
+parameters:
+  cmdletParameters:
+  - name: AcceleratorDescriptionFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the package accelerator description file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputPackagePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the App-V package used as input to generate the accelerator from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstalledFilesPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the folder containing the directory where the package is installed to, to generate an accelerator for.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromInstalledMedia
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Installer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the folder of the application installer to generate an accelerator from.
+      The installer must be of the format msi, or cab, or zip.
+      If you do not have an installer of this format, use the *InstalledFilesPath* parameter instead.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromInstaller
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path to the .cab package accelerator output file.
+    aliases:
+    - OutputPath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AppvPackageAccelerator
+        [-InputPackagePath] <String>
+        [-Installer] <String>
+        [-Path] <String>
+        [-AcceleratorDescriptionFile <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromInstaller
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AppvPackageAccelerator
+        [-InputPackagePath] <String>
+        [-InstalledFilesPath] <String>
+        [-Path] <String>
+        [-AcceleratorDescriptionFile <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromInstalledMedia
+  isDefault: false
+examples:
+- title: 'Example 1: Create a package accelerator'
+  description: |-
+    ```
+    PS C:\> New-AppvPackageAccelerator -AppvPackageFilePath "C:\MyPackages\Package1\Package1.appv" -Installer "C:\MyPackages\Package1" -OutputPath "C:\Output\packages\Package1.cab"
+    ```
+
+    This command creates a package accelerator using an installer folder containing, for example, MSI installers.
+- title: 'Example 2: Create a package accelerator with instruction sheet'
+  description: |-
+    ```
+    PS C:\> New-AppvPackageAccelerator -AppvPackageFilePath "C:\MyPackages\Package1\Package1.appv" -InstalledFilesPath "C:\Program Files\Package1InstallFolder" -OutputPath "C:\Output\packages\Package1.cab" -AcceleratorDescriptionFilePath "C:\MyPackages\Package1\Package1Description.rtf"
+    ```
+
+    This command creates a package accelerator and inserts an instruction sheet on how to accelerate package.
+links:
+- text: Expand-AppvSequencerPackage
+  href: ./Expand-AppvSequencerPackage.yml
+- text: Update-AppvSequencerPackage
+  href: ./Update-AppvSequencerPackage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.Modernizer.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvsequencer/new-appvpackageaccelerator?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvSequencer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-AppvPackageAccelerator

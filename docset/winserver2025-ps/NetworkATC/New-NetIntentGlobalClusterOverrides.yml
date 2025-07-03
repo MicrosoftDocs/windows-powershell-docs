@@ -1,0 +1,160 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.New-NetIntentGlobalClusterOverrides
+name: New-NetIntentGlobalClusterOverrides
+module: NetworkATC
+isPreview: false
+summary: |-
+  Creates a new instance of cluster setting overrides which can be used to supply granular values to `Add-NetIntent`, `Get-NetIntent`, and `Set-NetIntent`.
+description: |-
+  The `New-NetIntentGlobalClusterOverrides` cmdlet creates a new instance of cluster settings which
+  can be used to supply granular configuration values to the `Add-NetIntent` and `Set-NetIntent`
+  cmdlets. These settings can also be retrieved using the `Get-NetIntent` cmdlet.
+parameters:
+  cmdletParameters:
+  - name: EnableLiveMigrationNetworkSelection
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether live migration network selection is enabled. When set to `$true`, this setting
+      allows the cluster to choose the best network for live migrations.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableNetworkNaming
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether network naming is enabled for the cluster. When set to `$true`, this setting
+      allows the cluster to use descriptive network names.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableVirtualMachineMigrationPerformanceSelection
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the selection of virtual machine migration performance options is enabled. When
+      set to `$true`, this setting allows the selection of performance options for virtual machine
+      migrations.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaximumSMBMigrationBandwidthInGbps
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum bandwidth in gigabits per second (Gbps) that can be used for SMB migrations.
+      This setting helps to limit the network bandwidth usage for migrations.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaximumVirtualMachineMigrations
+    type: <xref href="Byte" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of virtual machine migrations that can occur simultaneously. Setting
+      this to a higher number can increase the load on the network and hosts.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachineMigrationPerformanceOption
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the performance option for virtual machine migrations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NetIntentGlobalClusterOverrides
+        [[-EnableNetworkNaming] <Boolean>]
+        [[-EnableLiveMigrationNetworkSelection] <Boolean>]
+        [[-EnableVirtualMachineMigrationPerformanceSelection] <Boolean>]
+        [[-VirtualMachineMigrationPerformanceOption] <String>]
+        [[-MaximumVirtualMachineMigrations] <Byte>]
+        [[-MaximumSMBMigrationBandwidthInGbps] <UInt32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: Example
+  description: |-
+    ```powershell
+    New-NetIntentGlobalClusterOverrides -EnableNetworkNaming $true -MaximumVirtualMachineMigrations 5
+    ```
+
+    This example creates a new instance of a cluster override with network naming enabled and sets the
+    maximum number of virtual machine migrations to `5`.
+links:
+- text: New-NetIntentAdapterPropertyOverrides
+  href: New-NetIntentAdapterPropertyOverrides.yml
+- text: New-NetIntentAdapterRssOverrides
+  href: New-NetIntentAdapterRssOverrides.yml
+- text: New-NetIntentGlobalProxyOverrides
+  href: New-NetIntentGlobalProxyOverrides.yml
+- text: New-NetIntentQoSPolicyOverrides
+  href: New-NetIntentQoSPolicyOverrides.yml
+- text: New-NetIntentSiteOverrides
+  href: New-NetIntentSiteOverrides.yml
+- text: New-NetIntentStorageOverrides
+  href: New-NetIntentStorageOverrides.yml
+- text: New-NetIntentSwitchConfigurationOverrides
+  href: New-NetIntentSwitchConfigurationOverrides.yml
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/new-netintentglobalclusteroverrides?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: New-NetIntentGlobalClusterOverrides

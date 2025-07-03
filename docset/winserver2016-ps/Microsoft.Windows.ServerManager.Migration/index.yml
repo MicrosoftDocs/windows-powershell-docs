@@ -1,0 +1,35 @@
+### YamlMime:PowerShellModule1
+uid: Microsoft.Windows.ServerManager.Migration
+name: Microsoft.Windows.ServerManager.Migration Module
+isPreview: false
+cmdletGroups:
+- title: Microsoft.Windows.ServerManager.Migration Cmdlets
+  cmdlets:
+  - Microsoft.Windows.ServerManager.Migration.Disable-ServerManagerStandardUserRemoting
+  - Microsoft.Windows.ServerManager.Migration.Enable-ServerManagerStandardUserRemoting
+  - Microsoft.Windows.ServerManager.Migration.Export-SmigServerSetting
+  - Microsoft.Windows.ServerManager.Migration.Get-SmigServerFeature
+  - Microsoft.Windows.ServerManager.Migration.Get-WindowsFeature
+  - Microsoft.Windows.ServerManager.Migration.Import-SmigServerSetting
+  - Microsoft.Windows.ServerManager.Migration.Install-WindowsFeature
+  - Microsoft.Windows.ServerManager.Migration.Receive-SmigServerData
+  - Microsoft.Windows.ServerManager.Migration.Send-SmigServerData
+  - Microsoft.Windows.ServerManager.Migration.Uninstall-WindowsFeature
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Server Migration cmdlets. It lists
+  the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+
+  Administrators can use the Windows Server Migration Tools cmdlets for Windows PowerShell to migrate
+  server roles, features, operating system settings, and other data and shares to computers that are
+  running the latest version of Windows Server.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  HelpInfoUri: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 1.0.0.0
+  Locale: en-US
+  Module Name: Microsoft.Windows.ServerManager.Migration
+  Module Guid: 00000000-0000-0000-0000-000000000000
+  ms.date: 01/03/2017
+  PlatyPS schema version: 2024-05-01
+  title: Microsoft.Windows.ServerManager.Migration
+  document type: module

@@ -1,0 +1,138 @@
+### YamlMime:PowerShellCmdlet1
+uid: IscsiTarget.Remove-IscsiVirtualDiskSnapshot
+name: Remove-IscsiVirtualDiskSnapshot
+module: IscsiTarget
+isPreview: false
+summary: |-
+  Deletes the specified snapshot.
+description: |-
+  The **Remove-IscsiVirtualDiskSnapshot** cmdlet deletes the specified snapshot.
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+      Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials when connecting to a remote computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+    description: |-
+      Accepts an iSCSI Virtual Disk Snapshot object from the input pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the identifier (ID) for the snapshot.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SnapshotId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-IscsiVirtualDiskSnapshot
+        [-SnapshotId] <String>
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SnapshotId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-IscsiVirtualDiskSnapshot
+        -InputObject <IscsiVirtualDiskSnapshot>
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDiskSnapshot" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Delete a snapshot by using an ID'
+  description: |-
+    ```
+    PS C:\> Remove-IscsiVirtualDiskSnapshot -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}"
+    ```
+
+    This example deletes the snapshot with the ID {E9A5BA03-85B9-40CA-85DF-DC1695690B40}.
+- title: 'Example 2: Delete a snapshot on a remote file server cluster'
+  description: |-
+    ```
+    PS C:\> Remove-IscsiVirtualDiskSnapshot -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}" -ComputerName "fscluster.contoso.com"
+    ```
+
+    This example deletes the snapshot with the ID {E9A5BA03-85B9-40CA-85DF-DC1695690B40} on the remote file server cluster named fscluster.contoso.com.
+links:
+- text: Dismount-IscsiVirtualDiskSnapshot
+  href: ./Dismount-IscsiVirtualDiskSnapshot.yml
+- text: Export-IscsiVirtualDiskSnapshot
+  href: ./Export-IscsiVirtualDiskSnapshot.yml
+- text: Get-IscsiVirtualDiskSnapshot
+  href: ./Get-IscsiVirtualDiskSnapshot.yml
+- text: Mount-IscsiVirtualDiskSnapshot
+  href: ./Mount-IscsiVirtualDiskSnapshot.yml
+- text: Set-IscsiVirtualDiskSnapshot
+  href: ./Set-IscsiVirtualDiskSnapshot.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iscsitarget/remove-iscsivirtualdisksnapshot?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-IscsiVirtualDiskSnapshot

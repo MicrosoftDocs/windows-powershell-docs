@@ -1,0 +1,137 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.New-NetIntentGlobalProxyOverrides
+name: New-NetIntentGlobalProxyOverrides
+module: NetworkATC
+isPreview: false
+summary: |-
+  Creates a new instance for global proxy overrides.
+description: |-
+  The `New-NetIntentGlobalProxyOverrides` cmdlet configures proxy setting override by specifying a
+  proxy server or bypass list.
+parameters:
+  cmdletParameters:
+  - name: AutoConfigUrl
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL of the automatic configuration script.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AutoDetect
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoDetect
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Configures the system to automatically detect proxy settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProxyBypass
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a list of addresses that should bypass the proxy server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProxyServer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the address of the proxy server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NetIntentGlobalProxyOverrides
+        -ProxyServer <String>
+        [-ProxyBypass <String>]
+        [-AutoDetect]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-NetIntentGlobalProxyOverrides
+        -AutoConfigUrl <String>
+        [-AutoDetect]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AutoDetect
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example
+  description: |-
+    ```powershell
+    $params = @{
+        ProxyServer = "proxy.example.com"
+        ProxyBypass = "localhost;*.example.com"
+    }
+    New-NetIntentGlobalProxyOverrides @params
+    ```
+
+    This example sets the proxy server to `proxy.example.com` and specifies that traffic to `localhost`
+    and any subdomains of `example.com` should bypass the proxy.
+links:
+- text: New-NetIntentAdapterPropertyOverrides
+  href: New-NetIntentAdapterPropertyOverrides.yml
+- text: New-NetIntentAdapterRssOverrides
+  href: New-NetIntentAdapterRssOverrides.yml
+- text: New-NetIntentGlobalClusterOverrides
+  href: New-NetIntentGlobalClusterOverrides.yml
+- text: New-NetIntentQoSPolicyOverrides
+  href: New-NetIntentQoSPolicyOverrides.yml
+- text: New-NetIntentSiteOverrides
+  href: New-NetIntentSiteOverrides.yml
+- text: New-NetIntentStorageOverrides
+  href: New-NetIntentStorageOverrides.yml
+- text: New-NetIntentSwitchConfigurationOverrides
+  href: New-NetIntentSwitchConfigurationOverrides.yml
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/new-netintentglobalproxyoverrides?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: New-NetIntentGlobalProxyOverrides

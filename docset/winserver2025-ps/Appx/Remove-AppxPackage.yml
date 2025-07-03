@@ -1,0 +1,216 @@
+### YamlMime:PowerShellCmdlet1
+uid: Appx.Remove-AppxPackage
+name: Remove-AppxPackage
+module: Appx
+isPreview: false
+summary: |-
+  Removes an app package from one or more user accounts.
+description: |-
+  The `Remove-AppxPackage` cmdlet removes an app package from a user account. An app package has an
+  `.msix` or `.appx` file extension.
+parameters:
+  cmdletParameters:
+  - name: AllUsers
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter removes the app package for all user accounts on the computer. The parameter works
+      off the parent package type. If it's a bundle, use **PackageTypeFilter** with the `Get-AppxPackage`
+      command and specify the bundle. To use this parameter, you must run the command with administrator
+      permissions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AllUsersSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Package
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an **AppxPackage** object or the full name of a package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreserveApplicationData
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the cmdlet preserves the application data during the package removal. The
+      application data is available for later use. Note that this is only applicable for apps that are
+      under development so this option can only be specified for apps that are registered from file
+      layout (Loose file registered).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByPackageSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreserveRoamableApplicationData
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Preserves the roamable portion of the app's data when the package is removed. This parameter is
+      incompatible with **PreserveApplicationData**.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByPackageForRoamingSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: User
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      If you specify this parameter, the cmdlet removes the app package for only the user that this cmdlet
+      specifies. To remove a package for a user profile other than the profile of the current user, you
+      must run this command with administrator permissions.
+
+      > [!NOTE]
+      >
+      > This parameter only accepts user SIDs. Use the **whoami /user** command to display the current
+      > SID of a user. See [whoami syntax](/windows-server/administration/windows-commands/whoami) for
+      > details.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UserSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AppxPackage
+        [-Package] <String>
+        [-PreserveApplicationData]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByPackageSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AppxPackage
+        [-Package] <String>
+        [-PreserveRoamableApplicationData]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByPackageForRoamingSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AppxPackage
+        [-Package] <String>
+        [-AllUsers]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AllUsersSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AppxPackage
+        [-Package] <String>
+        -User <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UserSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Windows.Appx.PackageManager.Commands.AppxPackage" data-throw-if-not-resolved="False" />
+  description: |-
+    An **AppxPackage** object that contain information, including the full name of the app package.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove an app package'
+  description: |-
+    ```powershell
+    Remove-AppxPackage -Package 'package1_1.0.0.0_neutral__8wekyb3d8bbwe'
+    ```
+
+    This command removes an app package named `package1_1.0.0.0_neutral__8wekyb3d8bbwe` from the
+    account of the current user.
+links:
+- text: PackageManager class
+  href: https://go.microsoft.com/fwlink/?LinkId=245447
+- text: Sideload Apps with DISM
+  href: https://go.microsoft.com/fwlink/?LinkID=231020
+metadata:
+  description: Removes an app package from one or more user accounts.
+  document type: cmdlet
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appx/remove-appxpackage?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Appx
+  ms.date: 05/15/2023
+  PlatyPS schema version: 2024-05-01
+  title: Remove-AppxPackage

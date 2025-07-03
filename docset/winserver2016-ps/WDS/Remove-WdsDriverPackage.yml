@@ -1,0 +1,268 @@
+### YamlMime:PowerShellCmdlet1
+uid: WDS.Remove-WdsDriverPackage
+name: Remove-WdsDriverPackage
+module: WDS
+isPreview: false
+summary: |-
+  Removes a driver package from a driver group or removes it from all driver groups and deletes it.
+description: |-
+  The **Remove-WdsDriverPackage** cmdlet removes a driver package from a driver group or removes a driver package from all driver groups and deletes it from the Windows Deployment Services driver store.
+  Specify a driver package by its unique name or ID.
+
+  To remove a driver package from a driver group, specify the name of the group.
+  A client must have access to at least one group that a driver package belongs to in order to install it.
+
+  To remove a driver package from all groups and delete if from the driver store, specify the *RemoveFiles* parameter.
+  Use the Import-WdsDriverPackage cmdlet to import drivers into the driver store.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job.
+      Use this parameter to run commands that take a long time to complete.
+       The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+      You can continue to work in the session while the job completes.
+      To manage the job, use the `*-Job` cmdlets.
+      To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+       For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a driver group.
+      The cmdlet removes the driver package from this group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GroupById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GroupByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an ID.
+      This is the ID of the driver package to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StoreById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: GroupById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name.
+      This is the unique name of the driver package.
+      If this name is not unique, specify the driver package ID, instead, by using the *Id* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GroupByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: StoreByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RemoveFiles
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet removes the driver package from all driver groups and deletes it from the store.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StoreById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoreByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-WdsDriverPackage
+        -Id <Guid>
+        [-RemoveFiles]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StoreById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-WdsDriverPackage
+        -Id <Guid>
+        -GroupName <String>
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GroupById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-WdsDriverPackage
+        -GroupName <String>
+        -Name <String>
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GroupByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-WdsDriverPackage
+        -Name <String>
+        [-RemoveFiles]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StoreByName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_WdsDriverPackage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a driver package from a group by using the package ID'
+  description: |-
+    ```
+    PS C:\> Remove-WdsDriverPackage -GroupName "Drivers for Fabrikam Devices" -Id 32d78628-07fb-4e18-adc4-f0ecf8b41bbe
+    ```
+
+    This command removes the driver package that has the specified ID from the group named Drivers for Fabrikam Devices.
+- title: 'Example 2: Remove a named driver package from a group'
+  description: |-
+    ```
+    PS C:\>Remove-WdsDriverPackage -GroupName "Drivers for Fabrikam Devices" -Name "Fabrikam Device Driver (x64)"
+    ```
+
+    This command removes the driver package named Fabrikam Device Driver (x64) from the group named Drivers for Fabrikam Devices.
+- title: 'Example 3: Remove a driver package from all groups by using the package ID'
+  description: |-
+    ```
+    PS C:\>Remove-WdsDriverPackage -Id 32d78628-07fb-4e18-adc4-f0ecf8b41bbe -RemoveFiles
+    ```
+
+    This command removes the driver package that has the specified ID from all groups and deletes it from the driver store.
+- title: 'Example 4: Remove a named driver package from all groups'
+  description: |-
+    ```
+    PS C:\>Remove-WdsDriverPackage -Name "Fabrikam Device Driver (x64)" -RemoveFiles
+    ```
+
+    This command removes the driver package named Fabrikam Device Driver (x64) from all groups and deletes it from the driver store.
+links:
+- text: Add-WdsDriverPackage
+  href: ./Add-WdsDriverPackage.yml
+- text: Disable-WdsDriverPackage
+  href: ./Disable-WdsDriverPackage.yml
+- text: Enable-WdsDriverPackage
+  href: ./Enable-WdsDriverPackage.yml
+- text: Get-WdsDriverPackage
+  href: ./Get-WdsDriverPackage.yml
+- text: Import-WdsDriverPackage
+  href: ./Import-WdsDriverPackage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MSFT_WdsDriverPackage_v1.0.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/wds/remove-wdsdriverpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WDS
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-WdsDriverPackage

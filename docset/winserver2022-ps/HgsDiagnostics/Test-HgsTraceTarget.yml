@@ -1,0 +1,63 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsDiagnostics.Test-HgsTraceTarget
+name: Test-HgsTraceTarget
+module: HgsDiagnostics
+isPreview: false
+summary: |-
+  Verifies that a remote Windows PowerShell® session can be opened to the provided target.
+description: |-
+  The **Test-HgsTraceTarget** cmdlet verifies that a remote Windows PowerShell® session can be opened to the specified target and that a compatible version of the diagnostic module is available.
+parameters:
+  cmdletParameters:
+  - name: Target
+    type: <xref href="InputTarget" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the target object to be tested.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-HgsTraceTarget
+        -Target <InputTarget>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Windows.HostGuardianService.Diagnostics.Payload.InputTarget" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a target object created by the **New-HgsTraceTarget** cmdlet.
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns true if a connection can be opened and the requisite conditions are met by that target; false otherwise.
+    The cmdlet reports a detailed error if the test fails.
+links:
+- text: New-HgsTraceTarget
+  href: ./New-HgsTraceTarget.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.HostGuardianService.Diagnostics.Payload.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsdiagnostics/test-hgstracetarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Test-HgsTraceTarget

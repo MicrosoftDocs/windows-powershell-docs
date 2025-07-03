@@ -1,0 +1,388 @@
+### YamlMime:PowerShellCmdlet1
+uid: FileServerResourceManager.New-FsrmFmjAction
+name: New-FsrmFmjAction
+module: FileServerResourceManager
+isPreview: false
+summary: |-
+  Returns an action object for file management jobs.
+description: |-
+  The **New-FsrmFmjAction** cmdlet returns an object that you can use to create file management job actions.
+  You can use the **FsrmFmjAction** object as input for the **New-FsrmFileManagementJob** cmdlet and the **Set-FsrmFileManagementJob** cmdlet.
+
+  The **FsrmFmjAction** object defines one action of the file management job when the job acts on a file.
+  This cmdlet supports the following actions:
+
+  - Expiration.
+  Move the file to another location.
+  - RMS.
+  Encrypt the file (Rights Management Services).
+  - Custom.
+  Run a command.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+      The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+      You can continue to work in the session while the job completes.
+      To manage the job, use the `*-Job` cmdlets.
+      To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+      For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Command
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the command that the action runs.
+      If you specify a command, you must specify Custom for the *Type* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommandParameters
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the parameters that the action passes to the command when the action runs.
+      If you specify parameters for a command, you must specify Custom for the *Type* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpirationFolder
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a path that the action uses to expire files.
+      If you specify an expiration folder, you must specify Expiration for the *Type* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RmsFolderOwner
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the action adds the RMS FolderOwner to the Full Control list.
+      If a FolderOwner is not available for a file, this setting has no effect.
+
+      If you specify an RMS folder owner, you must specify RMS for the *Type* parameter.
+      If you specify this parameter, do not specify the *RMSFullControlUser*, *RMSReadUser*, or *RMSWriteUser* parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RmsFullControlUser
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of email addresses to provide with full control to the Active Directory Rights Management Services (AD RMS) encryption.
+      If you specify this cmdlet, you must specify RMS for the *Type* parameter.
+      If you specify this parameter, do not specify the *RMSTemplate* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RmsReadUser
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of addresses to provide with read permission to the Active Directory Rights Management Services (AD RMS) encryption.
+      If you specify this cmdlet, you must specify RMS for the *Type* parameter.
+      If you specify this parameter, do not specify the *RMSTemplate* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RmsTemplate
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the RMS template that the actions applies to files.
+      If you specify an RMS template, you must specify RMS for the *Type* parameter.
+      If you specify this parameter, do not specify the *RMSFullControlUser*, *RMSReadUser*, or *RMSWriteUser* parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RmsWriteUser
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of addresses to provide with write permission to the Active Directory Rights Management Services (AD RMS) encryption.
+      If you specify this cmdlet, you must specify RMS for the *Type* parameter.
+      If you specify this parameter, do not specify the *RMSTemplate* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityLevel
+    type: <xref href="FmjActionSecurityLevelEnum" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the system account that the action uses to run the command that you specify in the *Command* parameter.
+      If you specify this parameter, you must specify Custom for the *Type* parameter.
+    acceptedValues:
+    - None
+    - NetworkService
+    - LocalService
+    - LocalSystem
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="FmjActionTypeEnum" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of action that the file management job performs.
+      The acceptable values for this parameter are:
+
+      - Expiration
+      - RMS
+      - Custom
+    acceptedValues:
+    - Expiration
+    - Custom
+    - Rms
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkingDirectory
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the working directory in which the program or script runs.
+      You must specify a valid path to a folder.
+      File Server Resource Manager (FSRM) does not support paths to remote computers.
+      If you specify this parameter, you must specify Custom for the *Type* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-FsrmFmjAction
+        [-Type] <FmjActionTypeEnum>
+        [-ExpirationFolder <String>]
+        [-RmsFolderOwner]
+        [-RmsFullControlUser <String[]>]
+        [-RmsReadUser <String[]>]
+        [-RmsWriteUser <String[]>]
+        [-RmsTemplate <String>]
+        [-Command <String>]
+        [-WorkingDirectory <String>]
+        [-CommandParameters <String>]
+        [-SecurityLevel <FmjActionSecurityLevelEnum>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_FSRMFMJAction" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an action that expires files'
+  description: |-
+    ```
+    PS C:\> New-FsrmFmjAction -Type Expiration -ExpirationFolder "C:\shares\expire01"
+    ```
+
+    This command returns an object that expires files to the path C:\shares\expire01.
+- title: 'Example 2: Create an action that encrypts files by using an RMS template'
+  description: |-
+    ```
+    PS C:\> New-FsrmFmjAction -Type RMS -RmsTemplate "Contoso Confidential"
+    ```
+
+    This command returns an action object that encrypts a file to the Contoso Confidential RMS template.
+    This command requires that an RMS template is configured on the RMS server named "Contoso Confidential".
+- title: 'Example 3: Create an action that encrypts files and assigns RMS permissions'
+  description: |-
+    ```
+    PS C:\> New-FsrmFmjAction -Type RMS -RmsFullControlUser "admin@contoso.com" -RmsReadUser "AllStaff@contoso.com" -RmsWriteUser "AllFTE@contoso.com"
+    ```
+
+    This command returns an action object that encrypts a file so that the administrator account in contoso.com has full control of the file, the ALLFTE security group has edit rights to the file, and the ALLStaff group has read rights to the file.
+- title: 'Example 4: Create an action that runs a command'
+  description: |-
+    ```
+    PS C:\> New-FsrmFmjAction -Type Custom -Command "C:\windows\system32\cmd.exe" -CommandParameters "echo [source file path] >> c:\log.txt"
+    ```
+
+    This command returns an action object that runs Cmd.exe and specifies the parameters for the command.
+links:
+- text: New-FsrmFileManagementJob
+  href: ./New-FsrmFileManagementJob.yml
+- text: Set-FsrmFileManagementJob
+  href: ./Set-FsrmFileManagementJob.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: FsrmFmjAction.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/fileserverresourcemanager/new-fsrmfmjaction?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: FileServerResourceManager
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-FsrmFmjAction

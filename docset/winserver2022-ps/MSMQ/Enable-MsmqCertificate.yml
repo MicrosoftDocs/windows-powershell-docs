@@ -1,0 +1,140 @@
+### YamlMime:PowerShellCmdlet1
+uid: MSMQ.Enable-MsmqCertificate
+name: Enable-MsmqCertificate
+module: MSMQ
+isPreview: false
+summary: |-
+  Registers a certificate with Active Directory Domain Services.
+description: |-
+  The **Enable-MsmqCertificate** cmdlet registers a certificate with Active Directory® Domain Services.
+  If you specify the *RenewInternalCertificate* parameter, the cmdlet generates a certificate in your personal certificate store and registers the certificate with Active Directory Domain Services.
+  The cmdlet returns a **System.Security.Cryptography.X509Certificates.X509Certificate** object that represents the enabled certificate.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a certificate object that represents a certificate that this cmdlet registers with Active Directory Domain Services.
+      If you specify the *RenewInternalCertificate* parameter, you cannot specify this parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RenewInternalCertificate
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet generates a certificate in the personal certificate store of the user, and registers that certificate with Active Directory Domain Services.
+      If you pass a certificate to this cmdlet by using the pipeline operator, you cannot specify this parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RenewInternalCertificate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-MsmqCertificate
+        -InputObject <X509Certificate2>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Enable-MsmqCertificate
+        [-RenewInternalCertificate]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RenewInternalCertificate
+  isDefault: false
+inputs:
+- name: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Register a certificate'
+  description: |-
+    ```
+    PS C:\> $_ | Enable-MsmqCertificate
+    ```
+
+    This command registers a certificate stored in the pipeline object variable.
+    Use this command as part of a script that uses the pipeline.
+    For more information, type `Get-Help about_Automatic_Variables`.
+- title: 'Example 2: Create and register a certificate'
+  description: |-
+    ```
+    PS C:\> Enable-MsmqCertificate -RenewInternalCertificate
+    ```
+
+    This command generates a certificate in your personal certificate store and registers it with Active Directory Domain Services.
+links:
+- text: Get-MsmqCertificate
+  href: ./Get-MsmqCertificate.yml
+- text: Remove-MsmqCertificate
+  href: ./Remove-MsmqCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/msmq/enable-msmqcertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Enable-MsmqCertificate

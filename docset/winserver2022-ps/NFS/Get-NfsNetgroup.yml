@@ -1,0 +1,166 @@
+### YamlMime:PowerShellCmdlet1
+uid: NFS.Get-NfsNetgroup
+name: Get-NfsNetgroup
+module: NFS
+isPreview: false
+summary: |-
+  Gets a netgroup.
+description: |-
+  The **Get-NfsNetgroup** cmdlet gets a netgroup from a configured netgroup store that Network File System (NFS) server uses.
+parameters:
+  cmdletParameters:
+  - name: LdapNamingContext
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Lightweight Directory Access Protocol (LDAP) naming context of the netgroup store.
+    aliases:
+    - dn
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromLdap
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LdapServer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets the netgroups that are configured on a specified LDAP server.
+      The LDAP server name can be a domain name, Active Directory Lightweight Directory Services (AD LDS) server name, or other LDAP server.
+
+      If you do not specify the *LdapServer* parameter or a Network Information Service (NIS) server, the **Get-NfsNetgroup** cmdlet uses the netgroup store configuration that exists on the local NFS server.
+    aliases:
+    - ldap
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromLdap
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a netgroup.
+      If no name is specified, all netgroups in the specified or configured store are enumerated.
+    aliases:
+    - name
+    - ngname
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: default
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NisDomain
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the domain of an NIS server that stores information about netgroups.
+    aliases:
+    - domain
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromNis
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NisServer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the host name of an NIS server that stores information about netgroups.
+    aliases:
+    - nis
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromNis
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NfsNetgroup
+        [[-NetGroupName] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-NfsNetgroup
+        [[-NetGroupName] <String>]
+        [-LdapServer] <String>
+        [[-LdapNamingContext] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromLdap
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-NfsNetgroup
+        [[-NetGroupName] <String>]
+        [-NisServer] <String>
+        [[-NisDomain] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromNis
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.FileServices.Powershell.Nfs.NetGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a netgroup from an NFS domain'
+  description: |-
+    ```
+    PS C:\> Get-NfsNetgroup -LdapServer "Contoso.com" -NetGroupName "ExchangeServers"
+
+
+    NetgroupName          : ExchangeServers
+    NetgroupNamingContext : CN=mappedidentity,DC=Contoso,DC=com
+    NetgroupMembers       : {}
+    ```
+
+    This command gets the netgroup that is named ExchangeServers from an NFS domain netgroup store that is named Contoso.com.
+links:
+- text: New-NfsNetgroup
+  href: ./New-NfsNetgroup.yml
+- text: Remove-NfsNetgroup
+  href: ./Remove-NfsNetgroup.yml
+- text: Set-NfsNetgroupStore
+  href: ./Set-NfsNetgroupStore.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FileServices.Powershell.NFS.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/nfs/get-nfsnetgroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: NFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NfsNetgroup

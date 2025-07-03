@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: MSMQ.Remove-MsmqCertificate
+name: Remove-MsmqCertificate
+module: MSMQ
+isPreview: false
+summary: |-
+  Removes personal certificates.
+description: |-
+  The **Remove-MsmqCertificate** cmdlet removes personal certificates from Active Directory® Domain Services.
+  This cmdlet returns the removed Message Queuing (also known as MSMQ) certificate.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of certificate objects that represent certificates that this cmdlet removes from Active Directory Domain Services.
+      This parameter accepts pipeline input.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-MsmqCertificate
+        -InputObject <X509Certificate2[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.Security.Cryptography.X509Certificates.X509Certificate2" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove all certificates for the current user'
+  description: |-
+    ```
+    PS C:\> Get-MsmqCertificate | Remove-MsmqCertificate
+    ```
+
+    This command gets the certificates of the current user for all hosts or virtual servers by using the **Get-MsmqCertificate** cmdlet.
+    The command passes them to the current cmdlet by using the pipeline operator.
+    The current command removes the certificates.
+links:
+- text: Get-MsmqCertificate
+  href: ./Get-MSMQCertificate.yml
+- text: Enable-MsmqCertificate
+  href: ./Enable-MSMQCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/msmq/remove-msmqcertificate?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-MsmqCertificate

@@ -1,0 +1,187 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsAttestation.Add-HgsAttestationTpmPolicy
+name: Add-HgsAttestationTpmPolicy
+module: HgsAttestation
+isPreview: false
+summary: |-
+  Adds an attestation policy based on TPM 2.0 hardware to HGS.
+description: |-
+  The **Add-HgsAttestationTpmPolicy** cmdlet adds an attestation policy based on trusted platform module (TPM) 2.0 hardware to the Host Guardian Service (HGS).
+  Specify a log, in Trusted Computing Group (TCG) format, that you obtain by using the **Get-HgsAttestationBaselinePolicy** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a TCG log, in binary form, on which this cmdlet bases a policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Console
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the policy that this cmdlet adds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Console
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a file that contains a TCG log, in binary form.
+    aliases:
+    - FilePath
+    - PSPath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: File
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyVersion
+    type: <xref href="PolicyVersion" data-throw-if-not-resolved="False" />
+    description: |-
+      Reserved for future use.
+    acceptedValues:
+    - None
+    - PolicyVersion1503
+    - PolicyVersion1704
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Stage
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Reserved for future use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-HgsAttestationTpmPolicy
+        [-InputObject] <Byte[]>
+        -Name <String>
+        [-PolicyVersion <PolicyVersion>]
+        [-Stage]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Console
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-HgsAttestationTpmPolicy
+        [-Path] <String>
+        [-Name <String>]
+        [-PolicyVersion <PolicyVersion>]
+        [-Stage]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: File
+  isDefault: false
+inputs:
+- name: <xref href="Byte" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts a TCG log as a **Byte** array or a file name.
+outputs:
+- name: <xref href="AttestationPolicyInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns attestation policy information.
+examples:
+- title: 'Example 1: Add a policy'
+  description: |-
+    ```
+    PS C:\> Add-HgsAttestationTpmPolicy -Name "BaselineTpmPolicy17" -Path "C:\Hgs\BaselineTcgLog"
+    ```
+
+    This command adds a policy named BaselineTpmPolicy17 to the Attestation service.
+    The Path parameter specifies the TCG log that you create by using **Get-HgsAttestationBaselinePolicy** cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsattestation/add-hgsattestationtpmpolicy?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-HgsAttestationTpmPolicy

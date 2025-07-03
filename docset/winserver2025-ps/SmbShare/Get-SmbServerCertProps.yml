@@ -1,0 +1,104 @@
+### YamlMime:PowerShellCmdlet1
+uid: SmbShare.Get-SmbServerCertProps
+name: Get-SmbServerCertProps
+module: SmbShare
+isPreview: false
+summary: |-
+  Retrieves an SMB over QUIC-mapped certificate's properties and tests certificate validity.
+description: |-
+  The `Get-SmbServerCertProps` cmdlet retrieves the properties of a certificate associated with the
+  SMB server for SMB over QUIC. For more information, see [SMB over QUIC](https://aka.ms/smboverquic).
+parameters:
+  cmdletParameters:
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a fully-qualified DNS name or NetBIOS name that must match the certificate's subject name
+      or an entry in the certificate's subject alternative names.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-SmbServerCertProps
+        -Name <String>
+        -Force <CommonParameters>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 - Retrieve the properties of a certificate associated with the SMB server
+  description: |-
+    This command retrieves the properties and validity of the `2025-srv-01.corp.contoso.com` SMB over
+    QUIC endpoint certificate mapping.
+
+    ```powershell
+    Get-SmbServerCertProps -Name 2025-srv-01.corp.contoso.com
+    ```
+
+    ```output
+    Checking Mapping '2025-srv-01.corp.contoso.com'.....
+    SMBServerCertificateMappingName : 2025-srv-01.corp.contoso.com
+    SelfSigned                      : True
+    SubjectName                     : System.Security.Cryptography.X509Certificates.X500DistinguishedName
+    Subject                         : CN=2025-srv-01
+    SubjectOid                      : System.Security.Cryptography.Oid
+    SubjectRawData                  : {48, 21, 49, 19...}
+    FriendlyName                    :
+    SignatureAlgorithm              : 1.2.840.113549.1.1.11 sha256RSA
+    Thumbprint                      : 88032B3551FAF7DE26EFFFF814AA086E3DBD2A4F
+    NotBefore                       : 8/20/2021 3:02:16 PM
+    NotAfter                        : 8/20/2022 3:02:16 PM
+    SendAsTrustedIssuer             : False
+    PublicKey                       : System.Security.Cryptography.X509Certificates.PublicKey
+    DnsNameList                     : {2025-srv-01.corp.contoso.com, fs1.contoso.com}
+
+    Test-Certificate result : PASS
+
+    RenewalChain:
+
+    Testing certificates in the RenewalChain.....
+    ```
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: SmbServerCertProps.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/smbshare/get-smbservercertprops?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: SmbShare
+  ms.date: 02/22/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-SmbServerCertProps

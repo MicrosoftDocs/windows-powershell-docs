@@ -1,0 +1,169 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Set-WmsUser
+name: Set-WmsUser
+module: MultiPoint
+isPreview: false
+summary: |-
+  Modifies a Windows MultiPoint Server user account.
+description: |-
+  The **Set-WmsUser** cmdlet updates a local user on the current Windows MultiPoint Server system.
+parameters:
+  cmdletParameters:
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSCredential** object. Use the **Get-Credential** cmdlet to get a **PSCredential** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UseCreds
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FullName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full name of the user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UseUserName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified host name of the MultiPoint Server that is the target of the command. The default is localhost.
+    aliases:
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserType
+    type: <xref href="UserTypePS" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user type. The acceptable values for this parameter are:
+
+       - Administrator
+       - Standard
+       - DashboardUser
+    acceptedValues:
+    - Administrator
+    - Standard
+    - DashboardUser
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WmsUser
+        [-Name] <String>
+        [-FullName <String>]
+        [-Description <String>]
+        [-UserType <UserTypePS>]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UseUserName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-WmsUser
+        [-Credential] <PSCredential>
+        [-FullName <String>]
+        [-Description <String>]
+        [-UserType <UserTypePS>]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UseCreds
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Set-WmsUser -Name "Student01" -Description "New Student" -FullName "Patti Fuller"
+    ```
+
+    This command updates a user account with the description New Student, the name as Student01, and the full name as Patti Fuller.
+links:
+- text: Get-WmsUser
+  href: Get-WmsUser.yml
+- text: New-WmsUser
+  href: New-WmsUser.yml
+- text: Remove-WmsUser
+  href: Remove-WmsUser.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/set-wmsuser?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WmsUser

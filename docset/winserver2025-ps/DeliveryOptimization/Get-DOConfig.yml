@@ -1,0 +1,29 @@
+### YamlMime:PowerShellCmdlet1
+uid: DeliveryOptimization.Get-DOConfig
+name: Get-DOConfig
+module: DeliveryOptimization
+isPreview: false
+description: |-
+  {{ Fill in the Description }}
+outputs:
+- name: <xref href="DOConfig" data-throw-if-not-resolved="False" />
+- name: <xref href="DOExtendedConfig" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+links:
+- text: https://aka.ms/do-cmdlets
+  href: https://aka.ms/do-cmdlets
+metadata:
+  document type: cmdlet
+  external help file: DeliveryOptimizationStatus.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/deliveryoptimization/get-doconfig?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: DeliveryOptimization
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-DOConfig

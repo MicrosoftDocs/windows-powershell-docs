@@ -1,0 +1,398 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Add-VMFibreChannelHba
+name: Add-VMFibreChannelHba
+module: Hyper-V
+isPreview: false
+summary: |-
+  Adds a virtual Fibre Channel host bus adapter to a virtual machine.
+description: |-
+  The **Add-VMFibreChannelHba** cmdlet adds a virtual Fibre Channel host bus adapter to a virtual machine.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName and GenerateWwn
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VMName and manual WWN
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts on which a virtual Fibre Channel host bus adapter is to be added.
+      NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+      The default is the local computer.
+      Use localhost or a dot (.) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName and GenerateWwn
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VMName and manual WWN
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName and GenerateWwn
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VMName and manual WWN
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GenerateWwn
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the world wide names for the Fibre Channel host bus adapter are to be generated automatically.
+      When specified, the **WorldWideNodeNameSetA**, **WorldWideNodeNameSetB**, **WorldWidePortNameSetA**, and **WorldWidePortNameSetB** parameters cannot be used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName and GenerateWwn
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VM object and GenerateWwn
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that an object representing the virtual machine to which the virtual Fibre Channel host bus adapter being added is to be passed through to the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SanName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual storage area network (SAN) name to associate with this virtual Fibre Channel host bus adapter.
+      Use the **Get-VMSan** cmdlet to get a list of all virtual SANs on the host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the virtual machine to which the virtual Fibre Channel host bus adapter is to be added.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VM object and GenerateWwn
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VM Object and manual WWN
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual machine to which the virtual Fibre Channel host bus adapter is to be added.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName and GenerateWwn
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VMName and manual WWN
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorldWideNodeNameSetA
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the world wide node name of address A associated with the Fibre Channel host bus adapter to be added.
+    aliases:
+    - Wwnn1
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName and manual WWN
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VM Object and manual WWN
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorldWideNodeNameSetB
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the world wide node name of address B associated with the Fibre Channel host bus adapter to be added.
+    aliases:
+    - Wwnn2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName and manual WWN
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VM Object and manual WWN
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorldWidePortNameSetA
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the world wide port name of address A associated with the Fibre Channel host bus adapter to be added.
+    aliases:
+    - Wwpn1
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName and manual WWN
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VM Object and manual WWN
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorldWidePortNameSetB
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the world wide port name of address B associated with the Fibre Channel host bus adapter to be added.
+    aliases:
+    - Wwpn2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName and manual WWN
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VM Object and manual WWN
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-VMFibreChannelHba
+        [-VMName] <String>
+        [-SanName] <String>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-GenerateWwn]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMName and GenerateWwn
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-VMFibreChannelHba
+        [-VMName] <String>
+        [-SanName] <String>
+        -WorldWideNodeNameSetA <String>
+        -WorldWidePortNameSetA <String>
+        -WorldWideNodeNameSetB <String>
+        -WorldWidePortNameSetB <String>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMName and manual WWN
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-VMFibreChannelHba
+        [-VM] <VirtualMachine[]>
+        [-SanName] <String>
+        [-GenerateWwn]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VM object and GenerateWwn
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-VMFibreChannelHba
+        [-VM] <VirtualMachine[]>
+        [-SanName] <String>
+        -WorldWideNodeNameSetA <String>
+        -WorldWidePortNameSetA <String>
+        -WorldWideNodeNameSetB <String>
+        -WorldWidePortNameSetB <String>
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VM Object and manual WWN
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Add-VMFibreChannelHba -VMName MyVM -SanName Production
+    ```
+
+    This example adds the virtual Fibre Channel host bus adapter associated with virtual storage area network Production to a virtual machine named MyVM.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/add-vmfibrechannelhba?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-VMFibreChannelHba

@@ -1,0 +1,87 @@
+### YamlMime:PowerShellCmdlet1
+uid: PersistentMemory.Get-PmemUnusedRegion
+name: Get-PmemUnusedRegion
+module: PersistentMemory
+isPreview: false
+summary: |-
+  Gets unused regions in persistent memory.
+description: |-
+  The **Get-PmemUnusedRegion** cmdlet gets unused regions of persistent memory.
+  Use this cmdlet with the **New-PmemDisk** cmdlet to create persistent memory disks.
+parameters:
+  cmdletParameters:
+  - name: RegionId
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the ID of the region of the persistent memory disk to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-PmemUnusedRegion
+        [[-RegionId] <UInt32[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get unused regions'
+  description: |-
+    ```powershell
+    Get-PmemUnusedRegion
+    ```
+
+    ```output
+    RegionId TotalSizeInBytes DeviceId
+    -------- ---------------- --------
+           1     270582939648 {20, 120}
+           3     270582939648 {1020, 1120}
+    ```
+
+    This example gets all the unused regions of persistent memory.
+- title: 'Example 1: Get a specific region'
+  description: |-
+    ```powershell
+    Get-PmemUnusedRegion -RegionId 3
+    ```
+
+    ```output
+    RegionId TotalSizeInBytes DeviceId
+    -------- ---------------- --------
+           3     270582939648 {1020, 1120}
+    ```
+
+    This example gets all the unused regions of persistent memory.
+links:
+- text: Get-PmemDisk
+  href: Get-PmemDisk.yml
+- text: New-PmemDisk
+  href: New-PmemDisk.yml
+metadata:
+  description: The Get-PmemUnusedRegion cmdlet gets unused regions in persistent memory.
+  document type: cmdlet
+  external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/persistentmemory/get-pmemUnusedregion?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: PersistentMemory
+  ms.date: 09/24/2021
+  PlatyPS schema version: 2024-05-01
+  title: Get-PmemUnusedRegion

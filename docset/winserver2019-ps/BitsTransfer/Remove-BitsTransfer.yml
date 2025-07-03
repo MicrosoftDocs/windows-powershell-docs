@@ -1,0 +1,146 @@
+### YamlMime:PowerShellCmdlet1
+uid: BitsTransfer.Remove-BitsTransfer
+name: Remove-BitsTransfer
+module: BitsTransfer
+isPreview: false
+summary: |-
+  Cancels a BITS transfer job.
+description: |-
+  The **Remove-BitsTransfer** cmdlet cancels a Background Intelligent Transfer Service (BITS) transfer job.
+  It deletes the underlying transfer job, removes any temporary files from the client, and deletes the associated **BitsJob** object.
+
+  When the **Remove-BitsTransfer** cmdlet cancels a transfer job, it deletes all the transfers.
+  Consider a scenario is which you are transferring three files.
+  One file is completely transferred, one file is pending, and one file is currently being transferred.
+  In this scenario, **Remove-BitsTransfer** cancels the whole transfer and deletes the underlying files.
+  Any files that were already transferred are not available after you use the **Remove-BitsTransfer** cmdlet to cancel the transfer job.
+  Optionally, you can use the **Complete-BitsTransfer** cmdlet to commit any files that are completely downloaded and to cancel the pending and current transfers.
+  The transferred file is not be deleted and is available.
+notes: |-
+  * After a job is removed or completed, any job objects that were previously cached in variables or in scripts are no longer valid.
+parameters:
+  cmdletParameters:
+  - name: BitsJob
+    type: <xref href="BitsJob" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of BITS transfer jobs to cancel.
+      You can pipe a value to this parameter from other cmdlets that return **BitsJob** objects, such as the **Get-BitsTransfer** cmdlet.
+    aliases:
+    - b
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-BitsTransfer
+        [-BitsJob] <BitsJob[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.BackgroundIntelligentTransfer.Management.BitsJob" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts one or more **BitsJob** objects as input that populates the *BitsJob* parameter.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+examples:
+- title: 'Example 1: Cancel all BITS transfer jobs owned by the current user'
+  description: |-
+    ```
+    PS C:\> Get-BitsTransfer | Remove-BitsTransfer
+    ```
+
+    This command cancels all the BITS transfer jobs that are owned by the current user.
+
+    The output of the **Get-BitsTransfer** cmdlet is piped to the **Remove-BitsTransfer** cmdlet.
+    The output is a set of **BitsJob** objects.
+- title: 'Example 2: Cancel all BITS transfer jobs on the computer'
+  description: |-
+    ```
+    C:\PS>$Bits = Get-BitsTransfer -AllUsers
+    PS C:\> Remove-BitsTransfer -BitsJob $Bits
+    ```
+
+    This command cancels all the BITS transfer jobs on the computer.
+
+    The first command gets all the **BitsJob** objects on the computer and then stores them in the $Bits variable.
+
+    The second command uses the *BitsJob* parameter to pass the **BitsJob** objects that are stored in the $Bits variable to the **Remove-BitsTransfer** cmdlet.
+links:
+- text: Add-BitsFile
+  href: ./Add-BitsFile.yml
+- text: Complete-BitsTransfer
+  href: ./Complete-BitsTransfer.yml
+- text: Get-BitsTransfer
+  href: ./Get-BitsTransfer.yml
+- text: Resume-BitsTransfer
+  href: ./Resume-BitsTransfer.yml
+- text: Set-BitsTransfer
+  href: ./Set-BitsTransfer.yml
+- text: Start-BitsTransfer
+  href: ./Start-BitsTransfer.yml
+- text: Suspend-BitsTransfer
+  href: ./Suspend-BitsTransfer.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.BackgroundIntelligentTransfer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/bitstransfer/remove-bitstransfer?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: BitsTransfer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-BitsTransfer

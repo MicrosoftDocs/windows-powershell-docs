@@ -1,0 +1,301 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Remove-VMSnapshot
+name: Remove-VMSnapshot
+module: Hyper-V
+isPreview: false
+summary: |-
+  Deletes a virtual machine checkpoint.
+description: |-
+  The **Remove-VMSnapshot** cmdlet deletes a virtual machine checkpoint.
+
+  Note: In Windows Server 2012 R2, virtual machine snapshots were renamed to virtual machine checkpoints.
+  For clarity, this document will refer to virtual machine snapshots as checkpoints.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SnapshotName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts on which this cmdlet deletes a checkpoint.
+      NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
+      The default is the local computer.
+      Use localhost or a dot (.) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SnapshotName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SnapshotName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeAllChildSnapshots
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the checkpoint's children are to be deleted along with the checkpoint.
+    aliases:
+    - IncludeAllChildCheckpoints
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the checkpoint to be deleted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SnapshotName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns a **Microsoft.HyperV.PowerShell.VirtualMachine** object that represents the checkpoint that it deletes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the virtual machine of which the checkpoint is to be deleted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the virtual machine of which the checkpoint is to be deleted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SnapshotName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMSnapshot
+    type: <xref href="VMSnapshot" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the checkpoint to be deleted.
+    aliases:
+    - VMCheckpoint
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SnapshotObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-VMSnapshot
+        [-VMName] <String[]>
+        [[-Name] <String[]>]
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-IncludeAllChildSnapshots]
+        [-AsJob]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SnapshotName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-VMSnapshot
+        [-VM] <VirtualMachine[]>
+        [[-Name] <String[]>]
+        [-IncludeAllChildSnapshots]
+        [-AsJob]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-VMSnapshot
+        [-VMSnapshot] <VMSnapshot[]>
+        [-IncludeAllChildSnapshots]
+        [-AsJob]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SnapshotObject
+  isDefault: false
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Get-VM TestVM | Remove-VMSnapshot -Name Experiment*
+    ```
+
+    Deletes all checkpoints of virtual machine TestVM whose names starts with Experiment.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Get-VMSnapshot -VMName TestVM | Where-Object {$_.CreationTime -lt (Get-Date).AddDays(-90) } | Remove-VMSnapshot
+    ```
+
+    Deletes all checkpoints of virtual machine TestVM older than 90 days.
+links:
+- text: Export-VMSnapshot
+  href: ./Export-VMSnapshot.yml
+- text: Get-VMSnapshot
+  href: ./Get-VMSnapshot.yml
+- text: Rename-VMSnapshot
+  href: ./Rename-VMSnapshot.yml
+- text: Restore-VMSnapshot
+  href: ./Restore-VMSnapshot.yml
+- text: Get-VM
+  href: ./Get-VM.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/remove-vmsnapshot?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-VMSnapshot

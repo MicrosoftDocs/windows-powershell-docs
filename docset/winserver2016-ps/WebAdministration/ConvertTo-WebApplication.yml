@@ -1,0 +1,142 @@
+### YamlMime:PowerShellCmdlet1
+uid: WebAdministration.ConvertTo-WebApplication
+name: ConvertTo-WebApplication
+module: WebAdministration
+isPreview: false
+summary: |-
+  Converts an IIS virtual directory to an IIS web application.
+description: |-
+  The **ConvertTo-WebApplication** cmdlet converts an Internet Information Services (IIS) virtual directory to an IIS web application.
+parameters:
+  cmdletParameters:
+  - name: ApplicationPool
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application pool in which the application runs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PSPath
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the configuration path.
+      This can be either an IIS configuration path in the format computer name/webroot/apphost, or the IIS module path in the format IIS:\sites\Default Web Site.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    ConvertTo-WebApplication
+        [-ApplicationPool <String>]
+        [-Force]
+        [[-PSPath] <String[]>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Convert a virtual directory to a web application'
+  description: |-
+    ```
+    IIS:\> Md $Env:systemdrive\inetpub\Contoso
+    IIS:\> New-WebVirtualDirectory -Site "Default Web Site" -Name "ContosoVDir" -PhysicalPath "$Env:systemdrive\inetpub\Contoso"
+    IIS:\> ConvertTo-WebApplication -PSPath "IIS:\Sites\Default Web Site\ContosoVDir"
+    ```
+
+    The first command creates a physical directory named Contoso.
+
+    The second command creates a virtual directory in IIS that uses that physical directory.
+
+    The last command converts the virtual directory to a web application.
+links:
+- text: Get-WebApplication
+  href: ./Get-WebApplication.yml
+- text: New-WebApplication
+  href: ./New-WebApplication.yml
+- text: New-WebVirtualDirectory
+  href: ./New-WebVirtualDirectory.yml
+- text: Remove-WebApplication
+  href: ./Remove-WebApplication.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/webadministration/convertto-webapplication?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: ConvertTo-WebApplication

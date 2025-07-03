@@ -1,0 +1,159 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.New-ClusterNameAccount
+name: New-ClusterNameAccount
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Creates a cluster name account in Active Directory Domain Services.
+description: |-
+  The `New-ClusterNameAccount` cmdlet creates a cluster name account in Active Directory Domain
+  Services. A cluster name account is also referred to as a cluster name object (CNO). This cmdlet
+  changes the existing cluster name to match the cluster name account that it creates. If a cluster
+  name account already exists for a cluster, this cmdlet has no effect.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+      `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credentials
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials that this cmdlet uses when it connects to Active Directory Domain
+      Services. To obtain credentials, use the `Get-Credential` cmdlet. For more information, type
+      `Get-Help Get-Credential`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Domain
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Active Directory Domain Services domain in which this cmdlet creates a cluster name
+      account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster for which this cmdlet adds a cluster name account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster name account that this cmdlet creates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-ClusterNameAccount
+        -Name <String>
+        [-Credentials <PSCredential>]
+        [-Domain <String>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-ClusterNameAccount
+        -Name <String>
+        -Credentials <PSCredential>
+        -Domain <String>
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Credentials
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts a **Cluster** object for which it creates a cluster name account.
+examples:
+- title: 'Example 1: Create a cluster name account for the current cluster'
+  description: |-
+    ```powershell
+    New-ClusterNameAccount -Name "cluster_17" -Domain "production.contoso.com"
+    ```
+
+    This command creates a cluster name account for the current cluster in the specified domain.
+    The current cluster is the default value for the cluster on which this cmdlet operates.
+- title: 'Example 2: Create a cluster name account by using credentials'
+  description: |-
+    ```powershell
+    $Credential = Get-Credential
+    New-ClusterNameAccount -Name "cluster27" -Domain "production.contoso.com" -Credentials $Credential
+    ```
+
+    The first command prompts you for credentials, and then stores them in the `$Credential` variable.
+
+    The second command creates a cluster name account for the current cluster in the specified domain.
+    The command supplies the credentials stored in `$Credential` to access Active Directory Domain
+    Services.
+links:
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/new-clusternameaccount?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 11/22/2022
+  PlatyPS schema version: 2024-05-01
+  title: New-ClusterNameAccount

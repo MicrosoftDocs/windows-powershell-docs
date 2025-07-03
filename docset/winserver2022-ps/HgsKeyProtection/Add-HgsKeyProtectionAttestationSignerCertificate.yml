@@ -1,0 +1,129 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsKeyProtection.Add-HgsKeyProtectionAttestationSignerCertificate
+name: Add-HgsKeyProtectionAttestationSignerCertificate
+module: HgsKeyProtection
+isPreview: false
+summary: |-
+  Adds an attestation signer certificate for the trusted certificates for the Key Protection Service.
+description: |-
+  The **Add-HgsKeyProtectionAttestationSignerCertificate** cmdlet adds the signer certificate of an attestation server to the list of certificates that the Key Protection Service trusts.
+  The Key Protection Service uses attestation signer certificates to verify the signatures of health certificates.
+  To modify the policy for an attestation signer certificate, use the **Set-HgsKeyProtectionAttestationSignerCertificatePolicy** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Certificate
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an **X509Certificate2** certificate.
+      This cmdlet adds the certificate that this parameter specifies to the attestation signer certificates that the Key Protection Service trusts.
+      Specify a variable that stores an **X509Certificate2** object or an expression that gets the certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-HgsKeyProtectionAttestationSignerCertificate
+        -Certificate <X509Certificate2>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+examples:
+- title: 'Example 1: Add a certificate'
+  description: |-
+    ```
+    PS C:\> Add-HgsKeyProtectionAttestationSignerCertificate -Certificate $Certificate
+    ```
+
+    This command adds the certificate stored in the **$Certificate** variable to the trusted attestation signer certificates.
+links:
+- text: Get-HgsKeyProtectionAttestationSignerCertificate
+  href: ./Get-HgsKeyProtectionAttestationSignerCertificate.yml
+- text: Remove-HgsKeyProtectionAttestationSignerCertificate
+  href: ./Remove-HgsKeyProtectionAttestationSignerCertificate.yml
+- text: Set-HgsKeyProtectionAttestationSignerCertificatePolicy
+  href: ./Set-HgsKeyProtectionAttestationSignerCertificatePolicy.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgskeyprotection/add-hgskeyprotectionattestationsignercertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-HgsKeyProtectionAttestationSignerCertificate

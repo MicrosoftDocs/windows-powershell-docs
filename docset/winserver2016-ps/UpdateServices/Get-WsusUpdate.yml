@@ -1,0 +1,209 @@
+### YamlMime:PowerShellCmdlet1
+uid: UpdateServices.Get-WsusUpdate
+name: Get-WsusUpdate
+module: UpdateServices
+isPreview: false
+summary: |-
+  Gets the WSUS update object with details about the update.
+description: |-
+  The **Get-WsusUpdate** cmdlet gets the Windows Server Update Services (WSUS) update object with details about the update. This cmdlet requires the update unique identifier (GUID) or a set of filter criteria such as classification, approval and status as parameter.
+
+  The **Get-WsusUpdate** cmdlet can be called in two ways:
+
+  - Passing in the Update ID (GUID) and **RevisionNumber**. This cmdlet returns a single update matching the specified Update ID and revision number.
+  - Passing in filter parameters. These parameters include **Classification**, **Approval**, and **Status**. One or more updates matching the specified criteria are returned.
+parameters:
+  cmdletParameters:
+  - name: Approval
+    type: <xref href="WsusApprovedState" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the approved state of the one or more updates to be returned. The acceptable values for this parameter are:
+
+      - Unapproved
+      - Declined
+      - Approved
+      - AnyExceptDeclined
+    acceptedValues:
+    - Approved
+    - Unapproved
+    - AnyExceptDeclined
+    - Declined
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Scoped
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Classification
+    type: <xref href="WsusUpdateClassifications" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the classification of updates for which you want to get updates. The acceptable values for this parameter are:
+
+      - All
+      - Critical
+      - Security
+      - WSUS
+    acceptedValues:
+    - All
+    - Critical
+    - Security
+    - WSUS
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Scoped
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RevisionNumber
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the revision number of a specific revision of an update. To specify the latest revision, set to zero.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ID
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="WsusUpdateInstallationState" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the installation status for which to search. An update will be included only if it has at least one computer with the specified status. The acceptable values for this parameter are:
+
+      - Needed
+      - FailedOrNeeded
+      - InstalledOrNotApplicableOrNoStatus
+      - Failed
+      - InstalledOrNotApplicable
+      - NoStatus
+      - Any
+    acceptedValues:
+    - NoStatus
+    - InstalledOrNotApplicable
+    - InstalledOrNotApplicableOrNoStatus
+    - Failed
+    - Needed
+    - FailedOrNeeded
+    - Any
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Scoped
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpdateId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the update by its GUID. The GUID uniquely identifies the Windows Update package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpdateServer
+    type: <xref href="IUpdateServer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the object that contains the WSUS server. This value is obtained by calling the [Get-WsusServer](./Get-WsusServer.yml) cmdlet and passing the resulting **IUpdateServer** object into this cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WsusUpdate
+        -UpdateId <Guid>
+        [-UpdateServer <IUpdateServer>]
+        [-RevisionNumber <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ID
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-WsusUpdate
+        [-UpdateServer <IUpdateServer>]
+        [-Classification <WsusUpdateClassifications>]
+        [-Approval <WsusApprovedState>]
+        [-Status <WsusUpdateInstallationState>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Scoped
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.UpdateServices.Commands.WsusUpdate" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get updates by status'
+  description: |-
+    ```powershell
+    PS C:\> Get-WsusUpdate -Classification All -Approval Unapproved -Status FailedOrNeeded
+    ```
+
+    This command gets all unapproved updates with a status of failed or needed.
+- title: 'Example 2: Get critical unapproved updates'
+  description: |-
+    ```text
+    PS C:\> Get-WsusUpdate -Classification Critical -Approval Unapproved -Status Any
+    Title                         Classification                    Installed/Not Applicable  Approved
+    Percentage
+    -----                         --------------                ----------------------------- --------
+    Windows XP Update Package,    Critical Updates                                            NotApproved
+    October 25, 2001
+    ```
+
+    This command gets all critical unapproved updates.
+links:
+- text: Approve-WsusUpdate
+  href: ./Approve-WsusUpdate.yml
+- text: Deny-WsusUpdate
+  href: ./Deny-WsusUpdate.yml
+- text: Get-WsusServer
+  href: ./Get-WsusServer.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/updateservices/get-wsusupdate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WsusUpdate

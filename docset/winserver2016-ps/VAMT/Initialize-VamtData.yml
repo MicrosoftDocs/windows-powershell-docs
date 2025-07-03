@@ -1,0 +1,118 @@
+### YamlMime:PowerShellCmdlet1
+uid: VAMT.Initialize-VamtData
+name: Initialize-VamtData
+module: VAMT
+isPreview: false
+summary: |-
+  Initializes the VAMT database and removes all the data.
+description: |-
+  The **Initialize-VamtData** cmdlet restores a dep_nextref_vamt database to its initial state and removes all the data from the database.
+  You can preserve the product keys in the database if you need them.
+  You can also suppress the prompt that asks you to confirm the database initialization.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DbCommandTimeout
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates how long dep_nextref_vamt waits for a response from the database before timing out.
+      The default value is 30 seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DbConnectionString
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the database to be initialized.
+      If no database connection string is provided, dep_nextref_vamt attempts to use the database that the dep_nextref_vamt user console used on the local computer.
+      If dep_nextref_vamt does not find a database, it returns an error.
+      You can find the connection string in the dep_nextref_vamt UI in the Preferences dialog box.
+      On the menu bar, click View, and then click Preferences to open the Volume Activation Management Tool Preferences dialog box.
+      The connection string is in the Database Settings section under Current connection string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreserveKeys
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the product keys in the dep_nextref_vamt database will be retained when the database is initialized.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Initialize-VamtData
+        [-PreserveKeys]
+        [-DbConnectionString <String>]
+        [-Confirm]
+        [-DbCommandTimeout <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Initialize database and preserve keys'
+  description: |-
+    ```
+    PS C:\>Initialize-VamtData -PreserveKeys
+    ```
+
+    This command initializes the database, but retains the product keys.
+links:
+- text: Import-VamtData
+  href: ./Import-VamtData.yml
+- text: Export-VamtData
+  href: ./Export-VamtData.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/vamt/initialize-vamtdata?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: VAMT
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Initialize-VamtData

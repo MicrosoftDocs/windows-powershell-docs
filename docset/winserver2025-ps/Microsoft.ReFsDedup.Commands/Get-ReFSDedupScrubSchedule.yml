@@ -1,0 +1,68 @@
+### YamlMime:PowerShellCmdlet1
+uid: Microsoft.ReFsDedup.Commands.Get-ReFSDedupScrubSchedule
+name: Get-ReFSDedupScrubSchedule
+module: Microsoft.ReFsDedup.Commands
+isPreview: false
+summary: |-
+  Retrieves the deduplication scrub schedule on the specified ReFS volume.
+description: |-
+  The `Get-ReFSDedupScrubSchedule` cmdlet retrieves the deduplication scrub schedule on the specified
+  ReFS volume.
+parameters:
+  cmdletParameters:
+  - name: Volume
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the volume on which to retrieve the ReFS deduplication scrub schedule. Enter one or more
+      volume IDs, drive letters, or volume GUID paths. For drive letters, use the format `D:`. For volume
+      GUID paths, use the format `\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-ReFSDedupScrubSchedule
+        [-Volume] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-ReFSDedupScrubSchedule -Volume "D:"
+    ```
+
+    This example gets the deduplication scrub schedule on the `D:` ReFS volume.
+links:
+- text: Clear-ReFSDedupScrubSchedule
+  href: Clear-ReFSDedupScrubSchedule.yml
+- text: Set-ReFSDedupScrubSchedule
+  href: Set-ReFSDedupScrubSchedule.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.ReFsDedup.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/microsoft.refsdedup.commands/get-refsdedupscrubschedule?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Microsoft.ReFsDedup.Commands
+  ms.date: 11/20/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-ReFSDedupScrubSchedule

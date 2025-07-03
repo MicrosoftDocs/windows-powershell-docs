@@ -1,0 +1,104 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Register-AdfsAuthenticationProvider
+name: Register-AdfsAuthenticationProvider
+module: ADFS
+isPreview: false
+summary: |-
+  Registers an external authentication provider in AD FS.
+description: |-
+  The **Register-AdfsAuthenticationProvider** cmdlet registers an external authentication provider as a provider in Active Directory Federation Services (AD FS).
+  Use the **Get-AdfsAuthenticationProvider** cmdlet to get a list of registered authentication providers.
+parameters:
+  cmdletParameters:
+  - name: ConfigurationFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified file path of a file that contains authentication provider configuration data.
+
+      You can also upload the file to the Active Directory Federation Services (AD FS) configuration store and make it available to the authentication provider.
+      Use this method if you want to provide additional information that pertains to a specific customer when you initialize the authentication provider.
+      Any usage of this method is specific to the vendor that supplies the authentication provider.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an authentication provider to register in AD FS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TypeName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified type of the authentication provider assembly on the federation server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Register-AdfsAuthenticationProvider
+        -TypeName <String>
+        -Name <String>
+        [-ConfigurationFilePath <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Register an authentication provider'
+  description: |-
+    ```
+    PS C:\> $TypeName = "ExternalAuthMethod.ExternalAuthProvider, ExternalAuthProvider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=365143bb27e7ac8b, processorArchitecture=MSIL"
+    PS C:\> Register-AdfsAuthenticationProvider -TypeName $TypeName -Name "MyExternalAuthProvider" -ConfigurationFilePath ".\configdata.txt"
+    ```
+
+    The first command creates a variable named $TypeName that contains the configuration data for an external provider.
+
+    The second command registers the authentication provider by using the data stored in the $TypeName variable.
+links:
+- text: Get-AdfsAuthenticationProvider
+  href: ./Get-AdfsAuthenticationProvider.yml
+- text: Unregister-AdfsAuthenticationProvider
+  href: ./Unregister-AdfsAuthenticationProvider.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/register-adfsauthenticationprovider?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Register-AdfsAuthenticationProvider

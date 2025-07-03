@@ -1,0 +1,155 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Remove-AdfsRelyingPartyWebContent
+name: Remove-AdfsRelyingPartyWebContent
+module: ADFS
+isPreview: false
+summary: |-
+  Removes a relying party web content object.
+description: |-
+  The **Remove-AdfsRelyingPartyWebContent** cmdlet removes a relying party web content object.
+  Specify a relying party web content object by using a name and locale, or use the **Get-AdfsRelyingPartyWebContent** cmdlet.
+  If you do not specify a locale, the cmdlet uses the invariant locale.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Locale
+    type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a locale.
+      The cmdlet removes relying party web content for the locale that you specify.
+      If you do not specify a locale, the cmdlet removes relying party web content for the invariant locale.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetRelyingPartyName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the relying party from which to delete web content.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetRelyingPartyWebContent
+    type: <xref href="AdfsRelyingPartyWebContent" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the web content to remove from the relying party.
+    aliases:
+    - TargetWebContent
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AdfsRelyingPartyWebContent
+        [[-Locale] <CultureInfo>]
+        -TargetRelyingPartyName <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifierName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AdfsRelyingPartyWebContent
+        [-TargetRelyingPartyWebContent] <AdfsRelyingPartyWebContent>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifierObject
+  isDefault: false
+examples:
+- title: 'Example 1: Remove the web content object for the invariant locale'
+  description: |-
+    ```
+    PS C:\> Remove-AdfsRelyingPartyWebContent -TargetRelyingPartyName "RelyingParty01"
+    ```
+
+    This command removes the web content object for the relying party named RelyingParty01 for the invariant locale.
+- title: 'Example 2: Remove the web content object for a specified locale'
+  description: |-
+    ```
+    PS C:\> Remove-AdfsRelyingPartyWebContent -Locale en-us -TargetRelyingPartyName "RelyingParty01"
+    ```
+
+    This command removes the web content object for the relying party named RelyingParty01 for the specified locale.
+links:
+- text: Get-AdfsRelyingPartyWebContent
+  href: ./Get-AdfsRelyingPartyWebContent.yml
+- text: Set-AdfsRelyingPartyWebContent
+  href: ./Set-AdfsRelyingPartyWebContent.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/remove-adfsrelyingpartywebcontent?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-AdfsRelyingPartyWebContent

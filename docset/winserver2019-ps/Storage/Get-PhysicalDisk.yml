@@ -1,0 +1,861 @@
+### YamlMime:PowerShellCmdlet1
+uid: Storage.Get-PhysicalDisk
+name: Get-PhysicalDisk
+module: Storage
+isPreview: false
+summary: |-
+  Gets a list of all PhysicalDisk objects visible across any available Storage Management Providers, or optionally a filtered list.
+description: |-
+  The **Get-PhysicalDisk** cmdlet gets a list of all PhysicalDisk objects visible across any available Storage Management Providers, or optionally a filtered list of disks.
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+parameters:
+  cmdletParameters:
+  - name: CanPool
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets physical disks that are available for use in a storage pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUniqueId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageSubsystem
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageEnclosure
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageNode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStoragePool
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets the physical disks that contain the specified description.
+      Enter a description or use wildcard characters to enter a description pattern.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUniqueId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageSubsystem
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageEnclosure
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageNode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStoragePool
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FriendlyName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets the physical disk with the specified friendly name.
+      Enter a friendly name or use wildcard characters to enter a name pattern.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HasAllocations
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the cmdlet gets a list of physical disks that host the extents of the virtual disk that you specify by using the *VirtualDisk* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HealthStatus
+    type: <xref href="PhysicalDiskHealthStatus" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **health status** of physical disks.
+      The acceptable values for this parameter are:
+
+      - Healthy
+      - Unhealthy
+      - Unknown
+      - Warning
+    acceptedValues:
+    - Healthy
+    - Warning
+    - Unhealthy
+    - Unknown
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUniqueId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageSubsystem
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageEnclosure
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageNode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStoragePool
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the input object that is used in a pipeline command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Manufacturer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets the physical disks with the specified manufacturer.
+      Enter a manufacturer string or use wildcard characters to enter a pattern.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUniqueId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageSubsystem
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageEnclosure
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageNode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStoragePool
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Model
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets the physical disks of the specified model.
+      Enter a model string or use wildcard characters to enter a pattern.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUniqueId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageSubsystem
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageEnclosure
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageNode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStoragePool
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoRedundancy
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet gets physical disks that contain the last remaining copy of the data of a virtual disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the physical disk to get.
+    aliases:
+    - PhysicalDiskObjectId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PhysicallyConnected
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet gets physical disks that are physically connected to the specified storage node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByStorageNode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SelectedForUse
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the cmdlet gets a list of physical disks to host the extents that belong to the virtual disk specified by the *VirtualDisk* parameter.
+      Specify the physical disks to host the extents of a virtual disk by using the *PhysicalDisksToUse* parameter of the **New-VirtualDisk** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SerialNumber
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the serial number of the physical disk to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageEnclosure
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a storage enclosure associated with the physical disk that this cmdlet gets.
+      To obtain a **StorageEnclosure** object, use the **Get-StorageEnclosure** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByStorageEnclosure
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageNode
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a storage node as a **CimInstance** object.
+      The cmdlet gets the physical disk connected to the node that you specify.
+      To obtain a storage node object, use the **Get-StorageNode** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByStorageNode
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoragePool
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Accepts a StoragePool object as input and gets the physical disks that belong to the pool.
+      The Storage Pool CIM object is exposed by the **Get-StoragePool** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByStoragePool
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageSubsystem
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a storage subsystem.
+      This cmdlet gets physical disks attached to the storage subsystem that you specify.
+      To obtain a **StorageSubsystem** object, use the **Get-StorageSubSystem** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByStorageSubsystem
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UniqueId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets only the physical disks with the specified IDs.
+      Type one or more IDs (separated by commas), or use wildcard characters to enter a pattern.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUniqueId
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Usage
+    type: <xref href="PhysicalDiskUsage" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an allocation method or usage.
+      This cmdlet gets the physical disks that have the specified allocation method.
+      The acceptable values for this parameter are:
+
+      - AutoSelect
+      - HotSpare
+      - Journal
+      - ManualSelect
+      - Retired
+      - Unknown
+    acceptedValues:
+    - Unknown
+    - AutoSelect
+    - ManualSelect
+    - HotSpare
+    - Retired
+    - Journal
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUniqueId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageSubsystem
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageEnclosure
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStorageNode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByStoragePool
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualDisk
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Accepts a VirtualDisk object as input and gets the physical disks used by the virtual disk.
+      The VirtualDisk object is exposed by the **Get-VirtualDisk** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualRangeMax
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter is reserved for future use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualRangeMin
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter is reserved for future use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-PhysicalDisk
+        [-UniqueId <String>]
+        [-Usage <PhysicalDiskUsage>]
+        [-Description <String>]
+        [-Manufacturer <String>]
+        [-Model <String>]
+        [-CanPool <Boolean>]
+        [-HealthStatus <PhysicalDiskHealthStatus>]
+        [-CimSession <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByUniqueId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-PhysicalDisk
+        [-ObjectId <String>]
+        [-Usage <PhysicalDiskUsage>]
+        [-Description <String>]
+        [-Manufacturer <String>]
+        [-Model <String>]
+        [-CanPool <Boolean>]
+        [-HealthStatus <PhysicalDiskHealthStatus>]
+        [-CimSession <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-PhysicalDisk
+        [[-FriendlyName] <String>]
+        [[-SerialNumber] <String>]
+        [-Usage <PhysicalDiskUsage>]
+        [-Description <String>]
+        [-Manufacturer <String>]
+        [-Model <String>]
+        [-CanPool <Boolean>]
+        [-HealthStatus <PhysicalDiskHealthStatus>]
+        [-CimSession <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-PhysicalDisk
+        -InputObject <CimInstance>
+        [-CimSession <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-PhysicalDisk
+        -StorageSubsystem <CimInstance>
+        [-Usage <PhysicalDiskUsage>]
+        [-Description <String>]
+        [-Manufacturer <String>]
+        [-Model <String>]
+        [-CanPool <Boolean>]
+        [-HealthStatus <PhysicalDiskHealthStatus>]
+        [-CimSession <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByStorageSubsystem
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-PhysicalDisk
+        -StorageEnclosure <CimInstance>
+        [-Usage <PhysicalDiskUsage>]
+        [-Description <String>]
+        [-Manufacturer <String>]
+        [-Model <String>]
+        [-CanPool <Boolean>]
+        [-HealthStatus <PhysicalDiskHealthStatus>]
+        [-CimSession <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByStorageEnclosure
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-PhysicalDisk
+        -StorageNode <CimInstance>
+        [-PhysicallyConnected]
+        [-Usage <PhysicalDiskUsage>]
+        [-Description <String>]
+        [-Manufacturer <String>]
+        [-Model <String>]
+        [-CanPool <Boolean>]
+        [-HealthStatus <PhysicalDiskHealthStatus>]
+        [-CimSession <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByStorageNode
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-PhysicalDisk
+        -StoragePool <CimInstance>
+        [-Usage <PhysicalDiskUsage>]
+        [-Description <String>]
+        [-Manufacturer <String>]
+        [-Model <String>]
+        [-CanPool <Boolean>]
+        [-HealthStatus <PhysicalDiskHealthStatus>]
+        [-CimSession <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByStoragePool
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-PhysicalDisk
+        -VirtualDisk <CimInstance>
+        [-VirtualRangeMin <UInt64>]
+        [-VirtualRangeMax <UInt64>]
+        [-HasAllocations <Boolean>]
+        [-SelectedForUse <Boolean>]
+        [-NoRedundancy]
+        [-Usage <PhysicalDiskUsage>]
+        [-Description <String>]
+        [-Manufacturer <String>]
+        [-Model <String>]
+        [-CanPool <Boolean>]
+        [-HealthStatus <PhysicalDiskHealthStatus>]
+        [-CimSession <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualDisk
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_StoragePool object to the *StoragePool* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubsystem" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_StorageSubsystem object to the *StorageSubsystem* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_VirtualDisk object to the *VirtualDisk* parameter.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_PhysicalDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    The Get-PhysicalDisk cmdlet returns objects that represent physical disks.
+examples:
+- title: 'Example 1: Getting all physical disks'
+  description: |-
+    ```
+    PS C:\> Get-PhysicalDisk
+    FriendlyName        CanPool            OperationalStatus   HealthStatus        Usage                              Size
+    ------------        --------            -----------------   ------------        -----                              ----
+    PhysicalDisk4       False               OK                  Healthy             Data Store                        25 GB
+    ```
+
+    This example returns an array of all PhysicalDisk objects present in the computer.
+    A storage management provider is required to manage physical disks.
+- title: 'Example 2: Getting all physical disks eligible for adding to a storage pool'
+  description: |-
+    ```
+    PS C:\>Get-PhysicalDisk -CanPool $True
+    ```
+
+    This example returns an array of PhysicalDisk objects that are available for adding to a storage pool (they are in a primordial pool).
+links:
+- text: Add-PhysicalDisk
+  href: ./Add-PhysicalDisk.yml
+- text: Get-StorageEnclosure
+  href: ./Get-StorageEnclosure.yml
+- text: Get-StoragePool
+  href: ./Get-StoragePool.yml
+- text: Get-StorageSubSystem
+  href: ./Get-StorageSubsystem.yml
+- text: New-StoragePool
+  href: ./New-StoragePool.yml
+- text: Remove-PhysicalDisk
+  href: ./Remove-PhysicalDisk.yml
+- text: Reset-PhysicalDisk
+  href: ./Reset-PhysicalDisk.yml
+- text: Set-PhysicalDisk
+  href: ./Set-PhysicalDisk.yml
+- text: New-VirtualDisk
+  href: ./New-VirtualDisk.yml
+- text: Get-StorageNode
+  href: ./Get-StorageNode.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: StorageScripts-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storage/get-physicaldisk?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: Storage
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-PhysicalDisk

@@ -1,0 +1,89 @@
+### YamlMime:PowerShellCmdlet1
+uid: BootEventCollector.Start-SbecInstance
+name: Start-SbecInstance
+module: BootEventCollector
+isPreview: false
+summary: |-
+  Starts the Setup and Boot Event Collector service.
+description: |-
+  The **Start-SbecInstance** cmdlet starts the Setup and Boot Event Collector service.
+
+  You must have the Builtin Administrator privilege to run this command.
+parameters:
+  cmdletParameters:
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the started service.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Service
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Starts the Setup and BEC service on the current computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-SbecInstance
+        [-Service]
+        [-PassThru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.ServiceProcess.ServiceController" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Start the Boot Event Collector'
+  description: |-
+    ```
+    PS C:\> Start-SbecInstance -Service
+    ```
+
+    This command starts the Boot Event Collector service.
+links:
+- text: Get-SbecActiveConfig
+  href: ./Get-SbecActiveConfig.yml
+- text: Set-SbecActiveConfig
+  href: ./Set-SbecActiveConfig.yml
+- text: Stop-SbecInstance
+  href: ./Stop-SbecInstance.yml
+- text: Test-SbecActiveConfig
+  href: ./Test-SbecActiveConfig.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: BootEventCollector-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/booteventcollector/start-sbecinstance?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Start-SbecInstance

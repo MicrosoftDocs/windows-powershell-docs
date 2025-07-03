@@ -1,0 +1,111 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkControllerDiagnostics.Get-NetworkControllerManagedDevices
+name: Get-NetworkControllerManagedDevices
+module: NetworkControllerDiagnostics
+isPreview: false
+summary: |-
+  Gets managed devices for a Network Controller.
+description: |-
+  The **Get-NetworkControllerManagedDevices** cmdlet gets managed devices for a Network Controller. The cmdlet aggregates results for devices from **Get-NetworkControllerServer**, **Get-NetworkControllerVirtualServer**, **Get-NetworkControllerGateway**, and **Get-NetworkControllerLoadBalancerMux**, and then presents the connections information for every device.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Certificate thumbprint to use for Network Controller.
+      Specify in case of certificate deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Credential to use for Network Controller.
+      Specify in case of Kerberos deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestURI
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URI to be used for Network Controller REST APIs.
+      Specify in case of wild card certificate deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NetworkControllerManagedDevices
+        [-RestURI] <String>
+        [[-Credential] <PSCredential>]
+        [[-CertificateThumbprint] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get managed devices'
+  description: |-
+    ```powershell
+    Get-NetworkControllerManagedDevices -RestURI "https://nc.contoso.cloud.com"
+    ```
+
+    This command gets managed devices for the specified Network Controller REST APIs.
+links:
+- text: Debug-NetworkControllerConfigurationState
+  href: Debug-NetworkControllerConfigurationState.yml
+- text: Debug-ServiceFabricNodeStatus
+  href: Debug-ServiceFabricNodeStatus.yml
+- text: Get-NetworkControllerDeploymentInfo
+  href: Get-NetworkControllerDeploymentInfo.yml
+- text: Get-NetworkControllerGateway
+  href: ../networkcontroller/Get-NetworkControllerGateway.yml
+- text: Get-NetworkControllerLoadBalancerMux
+  href: ../networkcontroller/Get-NetworkControllerLoadBalancerMux.yml
+- text: Get-NetworkControllerServer
+  href: ../networkcontroller/Get-NetworkControllerServer.yml
+- text: Get-NetworkControllerVirtualServer
+  href: ../networkcontroller/Get-NetworkControllerVirtualServer.yml
+metadata:
+  description: The Get-NetworkControllerManagedDevices cmdlet gets managed devices for a Network Controller.
+  document type: cmdlet
+  external help file: Debug-NetworkController.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontrollerdiagnostics/get-networkcontrollermanageddevices?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkControllerDiagnostics
+  ms.date: 10/22/2021
+  PlatyPS schema version: 2024-05-01
+  title: Get-NetworkControllerManagedDevices

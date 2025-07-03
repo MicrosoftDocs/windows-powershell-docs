@@ -1,0 +1,213 @@
+### YamlMime:PowerShellCmdlet1
+uid: ProcessMitigations.Get-ProcessMitigation
+name: Get-ProcessMitigation
+module: ProcessMitigations
+isPreview: false
+summary: |-
+  Gets the current process mitigation settings, either from the registry, from a running process, or saves all to a XML.
+description: |-
+  Gets all process mitigation settings either by process name (either running or from -Registry), or by process ID. Can also save all settings to an XML file.
+parameters:
+  cmdletParameters:
+  - name: FullPolicy
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns every processes' current mitigation settings in the registry
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FullPolicySet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Process Id to retrieve current running process mitigation settings from
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      {Current process name to get current running (Or from registry) process mitigation settings from one (Can be more than one instance)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NameSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistryConfigFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      File to save the current registry process mitigation configuration to
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SaveSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunningProcess
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Pull the current process mitigation settings from a running instance instead of the registry.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NameSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: System
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Pulls the current system defaults for process mitigations.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SystemSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-ProcessMitigation
+        [-FullPolicy]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FullPolicySet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-ProcessMitigation
+        [-Id] <Int32[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-ProcessMitigation
+        [-Name] <String>
+        [-RunningProcesses]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NameSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-ProcessMitigation
+        [-RegistryConfigFilePath <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SaveSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-ProcessMitigation
+        [-System]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SystemSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    System.Int32\[\]
+outputs:
+- name: <xref href="Microsoft.Samples.PowerShell.Commands.AppMitigations" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Get-ProcessMitigation -Name notepad.exe -RunningProcess
+    ```
+
+    Gets the current settings on all running instances of notepad.exe
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Get-ProcessMitigation -Name notepad.exe
+    ```
+
+    Gets the current settings in the registry for notepad.exe
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> Get-ProcessMitigation -Id 1304
+    ```
+
+    Gets the current settings for the running process with pid 1304
+- title: Example 4
+  description: |-
+    ```
+    PS C:\> Get-ProcessMitigation -RegistryConfigFilePath settings.xml
+    ```
+
+    Gets the all process mitigation settings from the registry and saves them to the xml file settings.xml
+- title: Example 5
+  description: |-
+    ```
+    PS C:\> Get-ProcessMitigation -FullPolicy
+    ```
+
+    Gets all policies for all processes set in the registry.
+- title: Example 6
+  description: |-
+    ```
+    PS C:\> Get-ProcessMitigation -System
+    ```
+
+    Gets the current system process mitigation defaults stored in the registry.
+- title: Example 7
+  description: |-
+    ```
+    PS C:\> Get-Process notepad | Get-ProcessMitigation
+    ```
+
+    Gets the current process mitigation settings for all running instances of notepad.exe
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: ProcessMitigations.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/processmitigations/get-processmitigation?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ProcessMitigations
+  ms.date: 03/29/2017
+  PlatyPS schema version: 2024-05-01
+  title: Get-ProcessMitigation

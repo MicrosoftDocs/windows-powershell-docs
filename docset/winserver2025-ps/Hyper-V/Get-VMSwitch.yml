@@ -1,0 +1,190 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Get-VMSwitch
+name: Get-VMSwitch
+module: Hyper-V
+isPreview: false
+summary: |-
+  Gets virtual switches from one or more virtual Hyper-V hosts.
+description: |-
+  The **Get-VMSwitch** cmdlet gets the virtual switches from a Hyper-V host.
+  If you specify no parameters, this cmdlet returns all virtual switches from the local Hyper-V host.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts from which virtual switches are to be retrieved.
+      NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+      The default is the local computer.
+      Use localhost or a dot (.) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the unique identifier of the virtual switch to be retrieved.
+    aliases:
+    - SwitchId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual switch to be retrieved.
+    aliases:
+    - SwitchName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourcePoolName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the resource pool from which the virtual switches are to be retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SwitchType
+    type: <xref href="VMSwitchType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the type of the virtual switches to be retrieved.
+      Allowed values are **External**, **Internal**, and **Private**.
+    acceptedValues:
+    - Private
+    - Internal
+    - External
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-VMSwitch
+        [[-Name] <String>]
+        [[-ResourcePoolName] <String[]>]
+        [-SwitchType <VMSwitchType[]>]
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-VMSwitch
+        [[-Id] <Guid[]>]
+        [[-ResourcePoolName] <String[]>]
+        [-SwitchType <VMSwitchType[]>]
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMSwitch" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Get-VMSwitch
+    ```
+
+    Gets all virtual switches from the local Hyper-V host.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Get-VMSwitch -SwitchType External
+    ```
+
+    Gets all virtual switches that connect to the external network.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/get-vmswitch?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-VMSwitch

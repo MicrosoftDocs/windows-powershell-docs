@@ -1,0 +1,176 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsServer.Test-HgsServer
+name: Test-HgsServer
+module: HgsServer
+isPreview: false
+summary: |-
+  Tests if the local computer can function as a Host Guardian Service server node.
+description: |-
+  The **Test-HgsServer** cmdlet obtains information about the features, configuration, and state of the local computer, and compares it with the recommended settings to determine whether it can function as a Host Guardian Service (HGS) server node.
+
+  The following checks are performed, when applicable:
+
+  - HostGuardianServiceRole installation integrity
+  - BitLocker is enabled on the operating system drive
+  - SecureBoot is enabled
+  - Static IP addresses are configured
+  - Whether a restart is pending
+  - Prerequisites for installing a new forest or domain controller in Active Directory, this includes a test report
+  - Active Directory trust settings
+  - Validation tests for failover cluster hardware and settings
+  - Attestation application pool state
+  - Key Protection application pool state
+
+  For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
+parameters:
+  cmdletParameters:
+  - name: DatabasePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a database path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HgsDomainCredential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Active Directory domain administrator credentials for the primary HGS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdditionalServer
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HgsDomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Active Directory domain for the HGS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HgsServerIPAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the network IP address for the HGS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdditionalServer
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogDirectory
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the output log directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SafeModeAdministratorPassword
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password for the administrator account when the computer is started in Safe Mode or a variant of Safe Mode, such as Directory Services Restore Mode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-HgsServer
+        [[-HgsDomainName] <String>]
+        [-SafeModeAdministratorPassword <SecureString>]
+        [-LogDirectory <String>]
+        [-DatabasePath <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PrimaryServer_HgsDomain
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Test-HgsServer
+        [[-HgsDomainName] <String>]
+        [-HgsDomainCredential] <PSCredential>
+        [-HgsServerIPAddress] <String>
+        [-SafeModeAdministratorPassword <SecureString>]
+        [-LogDirectory <String>]
+        [-DatabasePath <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdditionalServer
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Windows.HostGuardianService.PowerShell.TestReport" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Test the first HGS node'
+  description: |-
+    ```
+    PS C:\> Test-HgsServer -HgsDomainName "Contoso.private"
+    ```
+
+    This command tests whether the local computer can be used as the first HGS node.
+- title: 'Example 2: Test an additional HGS node'
+  description: |-
+    ```
+    PS C:\> $Cred = Get-Credential
+    PS C:\> Test-HgsServer -HgsDomainName "Contoso.private" -HgsServerIPAddress "100.100.100.1" -HgsDomainCredential $Cred
+    ```
+
+    This command tests whether the local computer can be used as an additional HGS node.
+links:
+- text: HGS Server Cmdlets
+  href: index.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: HgsServer-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsserver/test-hgsserver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsServer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Test-HgsServer

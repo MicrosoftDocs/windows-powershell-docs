@@ -1,0 +1,87 @@
+### YamlMime:PowerShellCmdlet1
+uid: ConfigCI.ConvertFrom-CIPolicy
+name: ConvertFrom-CIPolicy
+module: ConfigCI
+isPreview: false
+summary: |-
+  Converts an .xml file that contains a Code Integrity policy into binary format.
+description: |-
+  The **ConvertFrom-CIPolicy** cmdlet converts an .xml file that contains a Code Integrity policy into binary format.
+  You can install the binary version of a policy on a computer.
+parameters:
+  cmdletParameters:
+  - name: BinaryFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path for the output converted policy binary file.
+    aliases:
+    - bin
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: XmlFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the .xml policy file that this cmdlet converts.
+    aliases:
+    - xml
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    ConvertFrom-CIPolicy
+        [-XmlFilePath] <String>
+        [-BinaryFilePath] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Converts a policy'
+  description: |-
+    ```
+    PS C:\> ConvertFrom-CIPolicy -XmlFilePath ".\Policy03.xml" -BinaryFilePath "Policy03.bin"
+    C:\Policies\Policy03.bin
+    ```
+
+    This command converts the policy in Policy03.xml into a binary named Policy03.bin.
+    The console displays the full path of the binary file.
+links:
+- text: Get-CIPolicy
+  href: ./Get-CIPolicy.yml
+- text: Merge-CIPolicy
+  href: ./Merge-CIPolicy.yml
+- text: New-CIPolicy
+  href: ./New-CIPolicy.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/configci/convertfrom-cipolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: ConvertFrom-CIPolicy

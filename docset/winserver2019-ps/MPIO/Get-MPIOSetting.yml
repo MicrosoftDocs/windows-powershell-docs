@@ -1,0 +1,56 @@
+### YamlMime:PowerShellCmdlet1
+uid: MPIO.Get-MPIOSetting
+name: Get-MPIOSetting
+module: MPIO
+isPreview: false
+summary: |-
+  Gets MPIO settings.
+description: |-
+  The **Get-MPIOSetting** cmdlet gets Microsoft Multipath I/O (MPIO) settings.
+  The settings are as follows:
+
+  - PathVerificationState
+  - PathVerificationPeriod
+  - PDORemovePeriod
+  - RetryCount
+  - RetryInterval
+  - UseCustomPathRecoveryTime
+  - CustomPathRecoveryTime
+  - DiskTimeoutValue
+
+  You can use the **Set-MPIOSetting** cmdlet to change these values.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-MPIOSetting
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get MPIO settings'
+  description: |-
+    ```
+    PS C:\> Get-MPIOSetting
+    PathVerificationState     : Disabled
+    PathVerificationPeriod    : 30
+    PDORemovePeriod           : 20
+    RetryCount                : 3
+    RetryInterval             : 1
+    UseCustomPathRecoveryTime : Disabled
+    CustomPathRecoveryTime    : 40
+    DiskTimeoutValue          : 120
+    ```
+
+    This command gets the MPIO settings.
+links:
+- text: Set-MPIOSetting
+  href: ./Set-MPIOSetting.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Mpio-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/mpio/get-mpiosetting?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: MPIO
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-MPIOSetting

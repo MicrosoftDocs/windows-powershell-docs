@@ -1,0 +1,136 @@
+### YamlMime:PowerShellCmdlet1
+uid: Provisioning.Export-Trace
+name: Export-Trace
+module: Provisioning
+isPreview: false
+summary: |-
+  Exports an event trace log file for provisioning.
+description: |-
+  Exports trace events from an event trace log (ETL) file.
+parameters:
+  cmdletParameters:
+  - name: ConnectedDevice
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If enabled, specifies that the device type is mobile.
+    aliases:
+    - Device
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ETLFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ETL file location.
+    aliases:
+    - Etl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogsDirectoryPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the logs directory path.
+    aliases:
+    - Logs
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Overwrite
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet overwrites an existing exported log if one exists.
+    aliases:
+    - Force
+    - Overwrite
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WprpFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of the WPR profile file.
+    aliases:
+    - Wprp
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-Trace
+        [-ETLFile] <String>
+        [-Overwrite]
+        [-LogsDirectoryPath <String>]
+        [-WprpFile <String>]
+        [-ConnectedDevice]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Export trace events from an ETL file'
+  description: |-
+    ```powershell
+    PS C:\> Export-Trace -ETLFile C:\Windows\Logs\WindowsUpdate\WindowsUpdate.20211013.074054.819.1.etl -LogsDirectoryPath C:\ETL\Logs
+    ```
+
+    Exports trace events from a specified ETL file and saves the logs to the C:\ETL\Logs folder.
+metadata:
+  description: The Export-Trace cmdlet exports an event trace log (ETL) file for provisioning.
+  document type: cmdlet
+  external help file: provcmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/provisioning/export-trace?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: Provisioning
+  ms.date: 11/29/2021
+  PlatyPS schema version: 2024-05-01
+  title: Export-Trace

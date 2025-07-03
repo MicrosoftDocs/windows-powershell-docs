@@ -1,0 +1,173 @@
+### YamlMime:PowerShellCmdlet1
+uid: UpdateServices.Remove-WsusDynamicCategory
+name: Remove-WsusDynamicCategory
+module: UpdateServices
+isPreview: false
+summary: |-
+  Removes a dynamic category from a WSUS server.
+description: |-
+  The **Remove-WsusDynamicCategory** cmdlet removes a dynamic category from a Windows Server Update Services (WSUS) server.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DynamicCategoryType
+    type: <xref href="DynamicCategoryType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of the dynamic category to remove. The acceptable values for this parameter are:
+
+      - ComputerModel
+      - Device
+      - Application
+    acceptedValues:
+    - ComputerModel
+    - Device
+    - Application
+    - Any
+    aliases:
+    - Type
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="IDynamicCategory" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a dynamic category object. This cmdlet removes the dynamic category that this parameter specifies. To obtain a dynamic category, use the [Get-WsusDynamicCategory](./Get-WsusDynamicCategory.yml) cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the dynamic category to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpdateServer
+    type: <xref href="IUpdateServer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a WSUS server. This cmdlet removes a dynamic category from the server that this parameter specifies. To obtain a server, use the [Get-WsusServer](./Get-WsusServer.yml) cmdlet. If you do not specify a value for this parameter, the cmdlet removes dynamic categories from the local server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-WsusDynamicCategory
+        -InputObject <IDynamicCategory>
+        [-UpdateServer <IUpdateServer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-WsusDynamicCategory
+        -Name <String>
+        -DynamicCategoryType <DynamicCategoryType>
+        [-UpdateServer <IUpdateServer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+inputs:
+- name: <xref href="IDynamicCategory" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a dynamic category'
+  description: |-
+    ```powershell
+    PS C:\> Remove-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07"
+    ```
+
+    This command removes a dynamic category named PCI/Device07 of the Device type from the local update server.
+links:
+- text: Add-WsusDynamicCategory
+  href: ./Add-WsusDynamicCategory.yml
+- text: Get-WsusDynamicCategory
+  href: ./Get-WsusDynamicCategory.yml
+- text: Set-WsusDynamicCategory
+  href: ./Set-WsusDynamicCategory.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/updateservices/remove-wsusdynamiccategory?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-WsusDynamicCategory

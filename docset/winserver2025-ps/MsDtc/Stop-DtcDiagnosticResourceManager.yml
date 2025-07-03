@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: MsDtc.Stop-DtcDiagnosticResourceManager
+name: Stop-DtcDiagnosticResourceManager
+module: MsDtc
+isPreview: false
+summary: |-
+  Stops and removes a diagnostic Resource Manager job.
+description: |-
+  The **Stop-DtcDiagnosticResourceManager** cmdlet stops and removes a **DiagnosticResourceManagerJob** that runs as a Windows PowerShell® background job.
+  To stop the default Resource Manager, you must explicitly specify the name of the default Resource Manager.
+parameters:
+  cmdletParameters:
+  - name: InstanceId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **DtcDiagResourceManagerJob** instance ID to stop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetInstanceId
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Job
+    type: <xref href="DtcDiagnosticResourceManagerJob" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **DtcDiagResourceManagerJob** instance to stop.
+      This parameter accepts pipeline input.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetInstance
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name of the diagnostic resource manager to stop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-DtcDiagnosticResourceManager
+        [[-Job] <DtcDiagnosticResourceManagerJob>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetInstance
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Stop-DtcDiagnosticResourceManager
+        [[-Name] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Stop-DtcDiagnosticResourceManager
+        [[-InstanceId] <Guid>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetInstanceId
+  isDefault: false
+examples:
+- title: 'Example 1: Stop a diagnostic resource manager'
+  description: |-
+    ```
+    PS C:\> Stop-DtcDiagnosticResourceManager -Name "testRM"
+    ```
+
+    This command stops the DTC diagnostic resource manager named testRM.
+links:
+- text: Join-DtcDiagnosticResourceManager
+  href: ./Join-DtcDiagnosticResourceManager.yml
+- text: Start-DtcDiagnosticResourceManager
+  href: ./Start-DtcDiagnosticResourceManager.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Dtc.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/msdtc/stop-dtcdiagnosticresourcemanager?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Stop-DtcDiagnosticResourceManager

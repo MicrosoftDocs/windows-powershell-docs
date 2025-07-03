@@ -1,0 +1,245 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.New-VMSan
+name: New-VMSan
+module: Hyper-V
+isPreview: false
+summary: |-
+  Creates a new virtual storage area network (SAN) on a Hyper-V host.
+description: |-
+  The **New-VMSan** cmdlet creates a new virtual storage area network (SAN) on a Hyper-V host.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of a Hyper-V host on which the new virtual storage area network (SAN) is to be created.
+      NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+      The default is the local computer.
+      Use localhost or a dot (.) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostBusAdapter
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the host bus adapter (HBA) to be associated with the virtual storage area network (SAN) to be created.
+      This can be retrieved by running the **Get-InitiatorPort** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: HbaObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the virtual storage area network (SAN) to be created.
+    aliases:
+    - SanName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Note
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a note to be associated with the virtual storage area network (SAN) to be created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorldWideNodeName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the world wide node name (WWNN) of the host bus adapters to be associated with the virtual storage area network (SAN) to be created.
+    aliases:
+    - Wwnn
+    - NodeName
+    - Wwnns
+    - NodeNames
+    - WorldWideNodeNames
+    - NodeAddress
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StringWwn
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorldWidePortName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the world wide port name (WWPN) of the host bus adapters to be associated with the virtual storage area network (SAN) to be created.
+    aliases:
+    - Wwpn
+    - PortName
+    - Wwpns
+    - PortNames
+    - WorldWidePortNames
+    - PortAddress
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StringWwn
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-VMSan
+        [-Name] <String>
+        [-CimSession <CimSession>]
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [-Note <String>]
+        [-HostBusAdapter <CimInstance[]>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: HbaObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-VMSan
+        [-Name] <String>
+        -WorldWideNodeName <String[]>
+        -WorldWidePortName <String[]>
+        [-CimSession <CimSession>]
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [-Note <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StringWwn
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMSan" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> New-VMSan -Name Production -Note "Production SAN" -WorldWideNodeName C003FF0000FFFF00 -WorldWidePortName C003FF5778E50002
+    ```
+
+    Creates a new virtual storage area network (SAN) with the specified Name, Note, WorldWideNodeName, and WorldWidePortName.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/new-vmsan?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-VMSan

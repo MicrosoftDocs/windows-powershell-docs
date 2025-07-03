@@ -1,0 +1,259 @@
+### YamlMime:PowerShellCmdlet1
+uid: StorageQoS.Get-StorageQosPolicy
+name: Get-StorageQosPolicy
+module: StorageQoS
+isPreview: false
+summary: |-
+  Retrieves a storage QoS policy from the policy manager.
+description: |-
+  The **Get-StorageQosPolicy** cmdlet retrieves a storage Quality of Service (QoS) policy from the storage QoS Windows Management Instrumentation (WMI) provider.
+
+  For more information about Storage QoS, see Storage Quality of Servicehttps://technet.microsoft.com/en-us/library/Mt126108  (https://technet.microsoft.com/en-us/library/Mt126108).
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ChildPolicy
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a child policy, for which to retrieve a parent policy.
+      If the **ChildPolicy** parameter is specified, this cmdlet retrieves any parent policy associated with the input object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByChild
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Flow
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a flow object.
+      If the **Flow** parameter is specified, this cmdlet retrieves the policy governing the flow input object, if any.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFlow
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the policy, or a wildcard pattern.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentPolicy
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a parent policy for which to retrieve child policies.
+      If the *ParentPolicy* parameter is specified, this cmdlet retrieves all of the child policies associated with the input object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParent
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the GUID of the policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-StorageQosPolicy
+        [-Name <String[]>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-StorageQosPolicy
+        [-PolicyId <Guid[]>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-StorageQosPolicy
+        [-ParentPolicy <CimInstance>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParent
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-StorageQosPolicy
+        [-ChildPolicy <CimInstance>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByChild
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-StorageQosPolicy
+        [-Flow <CimInstance>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFlow
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_StorageQoSPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet outputs a Common Information Model (CIM) object of type MSFT_StorageQoSPolicyhttps://msdn.microsoft.com/en-us/library/mt164592(v=vs.85).aspx (https://msdn.microsoft.com/en-us/library/mt164592(v=vs.85).aspx).
+
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+examples:
+- title: 'Example 1: Get a QoS policy by name'
+  description: |-
+    ```
+    PS C:\>Get-StorageQosPolicy -Name "Policy01"
+
+    Name    MinimumIops MaximumIops Status
+
+    ----    ----------- ----------- ------
+
+    Policy01 10          100         Ok
+    ```
+
+    This command gets the QoS policy named Policy01.
+- title: 'Example 2: Get a parent QoS policy'
+  description: |-
+    ```
+    PS C:\>
+    Get-StorageQosPolicy -ChildPolicy (Get-StorageQosPolicy -Name "Policy02")
+
+    Name    MinimumIops MaximumIops Status
+
+    ----    ----------- ----------- ------
+
+    Policy01 10          100         Ok
+    ```
+
+    This command gets the parent policy of the policy named Policy02.
+    If there are hierarchical policies, the hierarchy can be traversed using -ChildPolicy and -ParentPolicy.
+links:
+- text: Get-StorageQoSFlow
+  href: ./Get-StorageQoSFlow.yml
+- text: Get-StorageQosVolume
+  href: ./Get-StorageQosVolume.yml
+- text: New-StorageQosPolicy
+  href: ./New-StorageQosPolicy.yml
+- text: Remove-StorageQosPolicy
+  href: ./Remove-StorageQosPolicy.yml
+- text: Set-StorageQosPolicy
+  href: ./Set-StorageQosPolicy.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Policy.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storageqos/get-storageqospolicy?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: StorageQoS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-StorageQosPolicy

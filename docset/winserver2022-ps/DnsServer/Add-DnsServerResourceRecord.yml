@@ -1,0 +1,2174 @@
+### YamlMime:PowerShellCmdlet1
+uid: DnsServer.Add-DnsServerResourceRecord
+name: Add-DnsServerResourceRecord
+module: DnsServer
+isPreview: false
+summary: |-
+  Adds a resource record of a specified type to a specified DNS zone.
+description: |-
+  The **Add-DnsServerResourceRecord** cmdlet adds a resource record for a Domain Name System (DNS) zone on a DNS server.
+  You can add different types of resource records.
+  Use different switches for different record types.
+  For more information about resource records, see [Managing Resource Records](https://technet.microsoft.com/en-us/library/cc754308.aspx).
+
+  By using this cmdlet, you can change a value for a record, configure whether a record has a time stamp, whether any authenticated user can update a record with the same owner name, and change lookup timeout values, Windows Internet Name Service (WINS) cache settings, and replication settings.
+parameters:
+  cmdletParameters:
+  - name: A
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a host address (A) resource record.
+      An A resource record maps a host name to an IPv4 address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: A
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AAAA
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is an AAAA resource record.
+      An AAAA resource record maps a host name to an IPv6 address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AAAA
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Address
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a byte array that contains the asynchronous transfer mode (ATM) address of the owner to which this resource record object pertains.
+      The *AddressType* parameter specifies the format of the byte array.
+      The first 4 bytes of the array store the size of the octet string.
+      The most significant byte is byte 0.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ATMA
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AddressType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the format of an ATM address in an ATM address (ATMA) resource record.
+      Valid values are: 0, for an ATM End System Address (AESA) format, and 1, for an E.164 address format.
+    acceptedValues:
+    - E164
+    - AESA
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ATMA
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Afsdb
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is an Andrew File System cell database server (AFSDB) resource record.
+      An AFSDB resource record gives the location of the AFS cell database server and uses DNS to map a DNS domain name to the name of an AFS cell database server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AFSDB
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AgeRecord
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the DNS server uses a time stamp for the resource record that this cmdlet adds.
+      A DNS server can scavenge resource records that have become stale based on a time stamp.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: X25
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TLSA
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AllowUpdateAny
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that any authenticated user can update a resource record that has the same owner name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TLSA
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+      The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+      You can continue to work in the session while the job completes.
+      To manage the job, use the `*-Job` cmdlets.
+      To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+      For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Atma
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is an ATM address resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ATMA
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CacheTimeout
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how long, in seconds, that a DNS server caches a response from a WINS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WINSR
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: WINS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateAssociationData
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate association data for a Transport Layer Security (TLS) authentication record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TLSA
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateUsage
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate usage TLS authentication record.
+    acceptedValues:
+    - CAConstraint
+    - ServiceCertificateConstraint
+    - TrustAnchorAssertion
+    - DomainIssuedCertificate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TLSA
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CName
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a canonical name (CNAME) resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CNAME
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a DNS server.
+      If you do not specify this parameter, the command runs on the local system.
+      You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+    aliases:
+    - Cn
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Cpu
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the CPU type of a DNS server.
+      You can find the CPU type in a host information (HINFO) resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: HINFO
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CreatePtr
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the DNS server automatically creates an associated pointer (PTR) resource record for an A or AAAA record.
+      A PTR resource record maps an IP address to a host name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AAAA
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies text to describe the person or people that are responsible for the domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RP
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DescriptiveText
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies additional text to describe a resource record on a DNS server. It is limited to 254 characters per line.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TXT
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DhcId
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a Dynamic Host Configuration Protocol Information (DHCID) resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DHCID
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DhcpIdentifier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a public key that is associated with an FQDN, as described in section 3 of RFC 2535.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DHCID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DName
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a domain alias (DNAME) resource record on a DNS server.
+      A DNAME resource record renames the root and all descendants in a domain namespace subtree and provides nonterminal domain name redirection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DNAME
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SRV
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainNameAlias
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the alias for a domain name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DNAME
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Adds a resource record without prompting you for confirmation.
+      By default, the cmdlet prompts you for confirmation before it proceeds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WINSR
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WINS
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HInfo
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a host information (HINFO) resource record on a DNS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: HINFO
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostNameAlias
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a canonical name target for a CNAME record.
+      This must be a fully qualified domain name (FQDN).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CNAME
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the input to this cmdlet.
+      You can use this parameter, or you can pipe the input to this cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IntermediateHost
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the FQDN of a host that routes packets to a destination host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RT
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InternetAddress
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP address of the owner of a resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WKS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InternetProtocol
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Internet Protocol (IP) for a resource record.
+      Valid values are: UDP or TCP.
+    acceptedValues:
+    - UDP
+    - TCP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WKS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv4Address
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv4 address of a host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: A
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv6Address
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv6 address of a host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AAAA
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Isdn
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is an Integrated Services Digital Network (ISDN) resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ISDN
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsdnNumber
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number in the ISDN address that maps to the FQDN of a DNS server.
+      An ISDN address, which consists of a phone number and an optional subaddress, is located in an ISDN resource record.
+      The phone number can contain a country/region code, an area code, and a local phone number.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ISDN
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsdnSubAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number that is contained in an ISDN address that maps to the FQDN of a DNS server.
+      An ISDN address consists of a phone number and an optional subaddress and is located in an ISDN resource record.
+      The subaddress is an identifier that describes the ISDN subaddress encoding type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ISDN
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LookupTimeout
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the lookup time-out value for a resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WINSR
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: WINS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MailExchange
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the FQDN of the host that is acting as a mail exchanger for the owner.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MX
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MatchingType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the matching type for the record.
+      The acceptable values for this parameter are:
+
+      - ExactMatch
+      - Sha256Hash
+      - Sha512Hash
+    acceptedValues:
+    - ExactMatch
+    - Sha256Hash
+    - Sha512Hash
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TLSA
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MX
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a mail exchanger (MX) resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MX
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a DNS server resource record object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: X25
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: WKS
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Unknown
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: TXT
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SRV
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RT
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RP
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: PTR
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: NS
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: MX
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ISDN
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: HINFO
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: DNAME
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: DHCID
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CNAME
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ATMA
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AFSDB
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AAAA
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: A
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NameServer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name server of a domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NS
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a Name Server (NS) resource record on a DNS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NS
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperatingSystem
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the operating system identifier of a DNS server.
+      You can find the operating system identifier in a HINFO resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: HINFO
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Port
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the port where the server listens for the service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SRV
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Preference
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the priority for this resource record among other resource records that belong to the same owner, where a lower value has a higher priority.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RT
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: MX
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the priority of a DNS server.
+      Clients try to contact the server that has the lowest priority.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SRV
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PsdnAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the public switched data network (PSDN) address of the owner of a resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: X25
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ptr
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a PTR resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PTR
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PtrDomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the FQDN of the host when you add a PTR resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PTR
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecordData
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the data contained in the resource record you want to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Unknown
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Replicate
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the DNS server allows WINS replication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WINSR
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: WINS
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResponsiblePerson
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the FQDN for the domain mailbox name of the person who is responsible for the resource record.
+
+      When used together with the MR parameter set, this value specifies a mailbox that is the proper rename of the mailbox that is specified in the resource record's owner name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RP
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResultDomain
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the domain name to append to returned NetBIOS names.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WINSR
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RP
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a Responsible Person (RP) resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RP
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RT
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a Route Through (RT) resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RT
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Selector
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a selector.
+    acceptedValues:
+    - FullCertificate
+    - SubjectPublicKeyInfo
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TLSA
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the subtype of a host AFS server.
+      For subtype 1 (value=1), the host has an AFS version 3.0 Volume Location Server for the named AFS cell.
+      For subtype 2 (value=2), the host has an authenticated name server holding the cell-root directory node for the named DCE/NCA cell.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AFSDB
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Service
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the service or services that are available for the current rewrite path.
+      It can also specify a particular protocol to use for a service.
+      Available services include Well-known Service (WKS) and NAPTR.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WKS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Srv
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a Service (SRV) resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SRV
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubType
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the server is an AFS volume location server.
+      Use a value of 1 indicate that the server is an AFS version 3.0 volume location server for the specified AFS cell.
+      Use a value of 2 to indicate that the server is an authenticated name server that holds the cell-root directory node for the server that uses either Open Software Foundation's (OSF) DCE authenticated cell-naming system or HP/Apollo's Network Computing Architecture (NCA).
+
+      For more information about server subtypes, see [RFC 1183](http://www.ietf.org/rfc/rfc1183.txt).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AFSDB
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeToLive
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Time to Live (TTL) value, in seconds, for a resource record.
+      Other DNS servers use this length of time to determine how long to cache a record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: X25
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: WKS
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Unknown
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: TXT
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SRV
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RT
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RP
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: PTR
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: NS
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: MX
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ISDN
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: HINFO
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: DNAME
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: DHCID
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CNAME
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ATMA
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AFSDB
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AAAA
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: A
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TLSA
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds is a TLS authentication resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TLSA
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Txt
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a TXT resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TXT
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of the resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Unknown
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualizationInstance
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtualization instance in which the zone will be added.
+      A virtualization instance is logical partition in a DNS Server, which is capable of independently hosting zones and zone scopes.
+      Same name zones and zone scopes can be hosted in different virtualization instances.
+      This parameter is optional and if not provided it will add the zone into the default virtualization instance which is functionally equivalent to a standard DNS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Weight
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a value for the weight of the target host for a resource record.
+      You can use this parameter when you have multiple hosts that have an identical priority.
+      Use of the host is proportional to its weight.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SRV
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Wins
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a WINS resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WINS
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WinsR
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is a WINS reverse (WinsR) resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WINSR
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WinsServers
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more IP addresses of WINS servers that you want to use for a resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WINS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Wks
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is WKS resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WKS
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: X25
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the record that this cmdlet adds to the DNS server is an X25 resource record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: X25
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZoneName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a DNS zone.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZoneScope
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a zone scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        -InputObject <CimInstance>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-AllowUpdateAny]
+        [-Force]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -PsdnAddress <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-X25]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: X25
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -InternetAddress <IPAddress>
+        -InternetProtocol <String>
+        -Service <String[]>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-Wks]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WKS
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        -LookupTimeout <TimeSpan>
+        -CacheTimeout <TimeSpan>
+        -ResultDomain <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-Force]
+        [-Replicate]
+        [-WinsR]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WINSR
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        -LookupTimeout <TimeSpan>
+        -WinsServers <IPAddress[]>
+        -CacheTimeout <TimeSpan>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-Force]
+        [-Replicate]
+        [-Wins]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WINS
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        [-Type] <UInt16>
+        [-RecordData] <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Unknown
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -DescriptiveText <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-Txt]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TXT
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [[-Name] <String>]
+        -CertificateUsage <String>
+        -MatchingType <String>
+        -Selector <String>
+        -CertificateAssociationData <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-TLSA]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TLSA
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -DomainName <String>
+        -Priority <UInt16>
+        -Weight <UInt16>
+        -Port <UInt16>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-Srv]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SRV
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -Preference <UInt16>
+        -IntermediateHost <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-RT]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RT
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -ResponsiblePerson <String>
+        -Description <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-RP]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RP
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -PtrDomainName <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-Ptr]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PTR
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -NameServer <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-NS]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NS
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -MailExchange <String>
+        -Preference <UInt16>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-MX]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MX
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -IsdnNumber <String>
+        -IsdnSubAddress <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-Isdn]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ISDN
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -Cpu <String>
+        -OperatingSystem <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-HInfo]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: HINFO
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -DomainNameAlias <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-DName]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DNAME
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -DhcpIdentifier <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-DhcId]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DHCID
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -HostNameAlias <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-CName]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CNAME
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -Address <String>
+        -AddressType <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-Atma]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ATMA
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -SubType <UInt16>
+        -ServerName <String>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-Afsdb]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AFSDB
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -IPv6Address <IPAddress>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-CreatePtr]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-AAAA]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AAAA
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-DnsServerResourceRecord
+        [-ZoneName] <String>
+        [-Name] <String>
+        -IPv4Address <IPAddress>
+        [-ComputerName <String>]
+        [-PassThru]
+        [-ZoneScope <String>]
+        [-VirtualizationInstance <String>]
+        [-CreatePtr]
+        [-TimeToLive <TimeSpan>]
+        [-AgeRecord]
+        [-AllowUpdateAny]
+        [-A]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: A
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerResourceRecord" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add an A record'
+  description: |-
+    ```
+    PS C:\> Add-DnsServerResourceRecord -ZoneName "Contoso.com" -A -Name "Host34" -AllowUpdateAny -IPv4Address "10.17.1.34" -TimeToLive 01:00:00 -AgeRecord
+    ```
+
+    This command adds an A record that is named Host34 in the zone contoso.com with the specified IP address.
+    The command uses the **AllowUpdateAny** switch to allow any authenticated user to update the record.
+    It specifies a TTL value and enables a time stamp for the record.
+- title: 'Example 2: Add an A resource record under the Admin node'
+  description: |-
+    ```
+    PS C:\> Add-DnsServerResourceRecord -ZoneName "Contoso.com" -A -Name "Host21.admin" -IPv4Address "10.17.1.21"
+
+    VERBOSE: Adding DNS resource record host21.admin of type A in zone contoso.com on ROOT server.
+    HostName                  RecordType Timestamp            TimeToLive      RecordData
+    --------                  ---------- ---------            ----------      ----------
+    host21.admin              A          0                    01:00:00        10.17.1.74
+    ```
+
+    This command adds an A record for Host21 under the Admin node of Contoso.com.
+- title: 'Example 3: Add an AAAA resource record'
+  description: |-
+    ```
+    PS C:\> Add-DnsServerResourceRecord -AAAA -Name "Host73" -ZoneName "Contoso.com" -AllowUpdateAny -IPv6Address "3ffe::1" -TimeToLive 01:00:00 -AgeRecord
+    ```
+
+    This command adds an AAAA record.
+    The command specifies **AllowUpdateAny**, a TTL value, and enables a time stamp for the record.
+- title: 'Example 4: Add a CNAME resource record'
+  description: |-
+    ```
+    PS C:\> Add-DnsServerResourceRecord -CName -Name "labhost34" -HostNameAlias "Host34.lab.contoso.com" -ZoneName "Contoso.com" -AllowUpdateAny  -TimeToLive 01:00:00
+    ```
+
+    This command adds a CNAME resource record.
+    The command specifies **AllowUpdateAny** and a TTL value.
+- title: 'Example 5: Add a PTR resource record'
+  description: |-
+    ```
+    PS C:\> Add-DnsServerResourceRecord -Name "77" -Ptr -ZoneName "0.168.192.in-addr.arpa" -AllowUpdateAny -PtrDomainName "host77.contoso.com"
+    ```
+
+    This command adds a pointer record named host77.contoso.com for the IP address 192.168.0.77 to the reverse lookup zone 0.168.192.in-addr.arpa..
+- title: 'Example 6: Add an MX resource record'
+  description: |-
+    ```
+    PS C:\> Add-DnsServerResourceRecord -Name "." -MX -ZoneName "contoso.com" -MailExchange "mail.contoso.com" -Preference 10
+    ```
+
+    This command adds an MX resource record for the contoso.com zone with a preference of 10.
+- title: 'Example 7: Add an SRV resource record'
+  description: |-
+    ```
+    PS C:\> Add-DnsServerResourceRecord -Srv -Name "sip" -ZoneName "contoso.com" -DomainName "sipserver1.contoso.com" -Priority 0 -Weight 0 -Port 5060
+    ```
+
+    This command adds a service locator (SRV) resource record for the _sip service on port 5060 with a weight and priority of 0 to the contoso.com domain.
+    The host that offers the service is sipserver1.contoso.com.
+- title: 'Example 8: Add a multiline TXT resource record'
+  description: |-
+    ```powershell
+    $dkim2 = "v=DKIM1;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy6OAXCmjYT823gq+DXRjXdsypt7iepfl4pkvLRVN8wRwoND2Fk2aVlG+CitAeJ0nqWn7JAPjoTXpFtHnOWMN7ay/atQd+DcLLHfJkpRvsYSDQ1jkI2s7CkWF6G+nwLGJcNFndOdB8oawpppyESE7+DiZae8bDicaTK8oPU0J7iogeZ1fgvmutwNtNzZHiSgwF9euCiX6lTmGe+0oZ+gRUJnUmZevh//IZ+NyDkRV2kPxQBtM8brHUpRL1c11q/CA0kC6C3ku+Pqmf6A8CGT+qvlCeQ2lVqlBydQL5UjiixUEwkSrgUEKoKE2Hqw97WrDEJZqngtuqma9hWoAsKVbzwIDAQAB"
+    $dkim2_part1 = $dkim2.Substring(0,252)
+
+    $dkim2_part2 = $dkim2.Substring(252,$dkim2.Length - 252)
+
+    Add-DnsServerResourceRecord -DescriptiveText "$dkim2_part1`r`n$dkim_part2" -Name sea2048._domainkey -Txt -ZoneName $domain -TimeToLive 0:1:0:0
+    ```
+
+    This command adds a multiline TXT resource record. The string is split into 252 character sets and the new line, which is two characters in Windows, is added at the end.
+links:
+- text: RFC 2535
+  href: http://www.ietf.org/rfc/rfc2535.txt
+- text: RFC 1183
+  href: http://www.ietf.org/rfc/rfc1183.txt
+- text: Show-DnsServerCache
+  href: ./Show-DnsServerCache.yml
+- text: Set-DnsServerZoneAging
+  href: ./Set-DnsServerZoneAging.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: PS_DnsServerResourceRecord_v1.0.0.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-DnsServerResourceRecord

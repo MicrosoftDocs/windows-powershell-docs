@@ -1,0 +1,45 @@
+### YamlMime:PowerShellCmdlet1
+uid: IISAdministration.Get-IISSharedConfig
+name: Get-IISSharedConfig
+module: IISAdministration
+isPreview: false
+summary: |-
+  Gets IIS shared configuration status.
+description: |-
+  The **Get-IISSharedConfig** cmdlet gets the current status of the IIS shared configuration feature.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-IISSharedConfig
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get shared configuration status'
+  description: |-
+    ```
+    PS C:\> Get-IISSharedConfig
+    Enabled = True
+    Physical Path = C:\export
+    UserName = administrator
+    ```
+
+    This command gets the status of the IIS shared configuration.
+links:
+- text: Disable-IISSharedConfig
+  href: ./Disable-IISSharedConfig.yml
+- text: Enable-IISSharedConfig
+  href: ./Enable-IISSharedConfig.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iisadministration/get-iissharedconfig?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-IISSharedConfig

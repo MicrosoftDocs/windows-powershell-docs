@@ -1,0 +1,165 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Resume-ClusterNode
+name: Resume-ClusterNode
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Resumes a node from the paused state or brings back drained workloads to the node or both.
+description: |-
+  The **Resume-ClusterNode** cmdlet resumes activity on a failover cluster node after it has been suspended, or paused, or brings back drained workloads to the node, or both.
+  When a node is resumed, clustered roles that were drained from the node are returned to it, and clustered roles or resources that are currently offline can be brought online on that node.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet.
+      If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Failback
+    type: <xref href="ResumeClusterNodeFailbackType" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets the policy to bring back drained workloads to the node.
+      The acceptable values for this parameter are:NoFailback, Immediate, and Policy.
+      Policy can be configured to not failback, failback immediately, or failback only during specific hours.
+    acceptedValues:
+    - NoFailback
+    - Immediate
+    - Policy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the group, node, resource, or service for which or cluster on which to run the cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the group, node, resource, or service for which or cluster on which to run the cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Resume-ClusterNode
+        [[-Name] <StringCollection>]
+        [[-Failback] <ResumeClusterNodeFailbackType>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Resume-ClusterNode node1
+    Name                                                                      State
+    ----                                                                      -----
+    node1                                                                        Up
+    ```
+
+    This example resumes node1 on the local cluster.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Resume-ClusterNode node2 -Cluster mycluster
+    Name                                                                      State
+    ----                                                                      -----
+    node2                                                                        Up
+    ```
+
+    This example resumes node2 on the cluster called mycluster.
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> Get-ClusterNode | Resume-ClusterNode
+    Name                                                                      State
+    ----                                                                      -----
+    node1                                                                        Up
+    ```
+
+    This example resumes all cluster nodes that are suspended, or paused, on the local cluster.
+- title: Example 4
+  description: |-
+    ```
+    PS C:\> Get-ClusterNode | Resume-ClusterNode -Failback Immediate
+    Name                                                                      State
+    ----                                                                      -----
+    node2                                                                        Up
+    ```
+
+    This example resumes all cluster nodes that are suspended, or paused, on the local cluster and immediately brings back the workloads drained from the nodes.
+links:
+- text: Add-ClusterNode
+  href: ./Add-ClusterNode.yml
+- text: Clear-ClusterNode
+  href: ./Clear-ClusterNode.yml
+- text: Get-ClusterNode
+  href: ./Get-ClusterNode.yml
+- text: Remove-ClusterNode
+  href: ./Remove-ClusterNode.yml
+- text: Start-ClusterNode
+  href: ./Start-ClusterNode.yml
+- text: Stop-ClusterNode
+  href: ./Stop-ClusterNode.yml
+- text: Suspend-ClusterNode
+  href: ./Suspend-ClusterNode.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/resume-clusternode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Resume-ClusterNode

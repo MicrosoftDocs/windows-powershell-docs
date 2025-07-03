@@ -1,0 +1,67 @@
+### YamlMime:PowerShellCmdlet1
+uid: MSMQ.Get-MsmqQueueACL
+name: Get-MsmqQueueACL
+module: MSMQ
+isPreview: false
+summary: |-
+  Gets queue access control lists.
+description: |-
+  The **Get-MsmqQueueACL** cmdlet gets **MsmqQueueAcl** objects.
+  The cmdlet applies to private, public, system journal, system dead-letter, and system transactional dead-letter queues.
+parameters:
+  cmdletParameters:
+  - name: InputObject
+    type: <xref href="MessageQueue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of **MsmqQueue** objects.
+      The cmdlet gets access control list (ACL) information for queues that the **MsmqQueue** objects specify.
+      This parameter accepts pipeline input.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-MsmqQueueACL
+        [-InputObject] <MessageQueue[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get message queue ACLs'
+  description: |-
+    ```
+    PS C:\> Get-MsmqQueue -Name "Order*" | Get-MsmqQueueACL
+    ```
+
+    This command gets message queues that have names that start with Order by using the **Get-MsmqQueue** cmdlet.
+    The command passes the results to the current cmdlet by using the pipeline operator.
+    The current cmdlet gets ACLs for these queues.
+links:
+- text: Get-MsmqQueue
+  href: ./Get-MsmqQueue.yml
+- text: Set-MsmqQueueACL
+  href: ./Set-MsmqQueueACL.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/msmq/get-msmqqueueacl?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-MsmqQueueACL

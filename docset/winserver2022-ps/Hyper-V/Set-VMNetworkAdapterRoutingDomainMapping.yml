@@ -1,0 +1,478 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Set-VMNetworkAdapterRoutingDomainMapping
+name: Set-VMNetworkAdapterRoutingDomainMapping
+module: Hyper-V
+isPreview: false
+summary: |-
+  Sets virtual subnets on a routing domain.
+description: |-
+  The **Set-VMNetworkAdapterRoutingDomainMapping** cmdlet sets virtual subnets on a routing domain.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ManagementOS
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of Hyper-V hosts.
+      The cmdlet adds the virtual subnets to the routing domain on the Hyper-V hosts that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ManagementOS
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ManagementOS
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="VMNetworkAdapterRoutingDomainSetting" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the input to this cmdlet.
+      You can use this parameter, or you can pipe the input to this cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsolationID
+    type: <xref href="Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of IDs of virtual subnets.
+      The cmdlet adds the virtual subnets that you specify to the routing domain.
+      The subnets use VLAN or Hyper-V Network Virtualization.
+      For more information about isolation IDs, see the **Set-VMNetworkAdapterIsolation** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsolationName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of virtual subnets.
+      The cmdlet adds the virtual subnets that you specify to the routing domain.
+      The subnets use VLAN or Hyper-V Network Virtualization.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementOS
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet operates on the parent partition or host operating system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagementOS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NewRoutingDomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a new name for the routing domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoutingDomainID
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a routing domain.
+      The ID of a routing domain is a system-assigned GUID.
+      The cmdlet adds the virtual subnets to the routing domain that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ManagementOS
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VMObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoutingDomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a routing domain.
+      The cmdlet adds the virtual subnets to the routing domain that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ManagementOS
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VMObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of virtual machine objects.
+      The cmdlet adds the virtual subnets to the routing domain from the network interfaces that belong to the virtual machines that you specify.
+      To obtain a virtual machine object, use the **Get-VM** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of virtual machines.
+      The cmdlet adds the virtual subnets to the routing domain from the network interfaces that belong to the virtual machines that you specify.
+      To obtain a virtual machine object, use the **Get-VM** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMNetworkAdapter
+    type: <xref href="VMNetworkAdapterBase" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of virtual network adapters as a **VMNetworkAdapterBase** object.
+      The cmdlet adds the virtual subnets to the routing domain on the adapters that you specify.
+      To obtain a network adapter, use the **Get-VMNetworkAdapter** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMNetworkAdapterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual network adapter.
+      The cmdlet adds the virtual subnets to the routing domain on the adapter that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ManagementOS
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VMObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-VMNetworkAdapterRoutingDomainMapping
+        [-VMName] <String[]>
+        [-VMNetworkAdapterName <String>]
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-RoutingDomainID <Guid>]
+        [-RoutingDomainName <String>]
+        [-NewRoutingDomainName <String>]
+        [-IsolationID <Int32[]>]
+        [-IsolationName <String[]>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-VMNetworkAdapterRoutingDomainMapping
+        [-VMNetworkAdapter] <VMNetworkAdapterBase[]>
+        [-RoutingDomainID <Guid>]
+        [-RoutingDomainName <String>]
+        [-NewRoutingDomainName <String>]
+        [-IsolationID <Int32[]>]
+        [-IsolationName <String[]>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-VMNetworkAdapterRoutingDomainMapping
+        [-ManagementOS]
+        [-VMNetworkAdapterName <String>]
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-RoutingDomainID <Guid>]
+        [-RoutingDomainName <String>]
+        [-NewRoutingDomainName <String>]
+        [-IsolationID <Int32[]>]
+        [-IsolationName <String[]>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ManagementOS
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-VMNetworkAdapterRoutingDomainMapping
+        [-VM] <VirtualMachine[]>
+        [-VMNetworkAdapterName <String>]
+        [-RoutingDomainID <Guid>]
+        [-RoutingDomainName <String>]
+        [-NewRoutingDomainName <String>]
+        [-IsolationID <Int32[]>]
+        [-IsolationName <String[]>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-VMNetworkAdapterRoutingDomainMapping
+        [-InputObject] <VMNetworkAdapterRoutingDomainSetting>
+        [-NewRoutingDomainName <String>]
+        [-IsolationID <Int32[]>]
+        [-IsolationName <String[]>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectParameter
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMNetworkAdapterRoutingDomainSetting" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set a virtual subnet on a routing domain'
+  description: |-
+    ```
+    PS C:\> Set-VMNetworkAdapterRoutingDomainMapping -VMName "Gateway01" -VMNetworkAdapterName "Internal NIC" -RoutingDomainID "{5a07361e-6a54-49fc-9210-bfbf14a5c56f}" -IsolationID 6001
+    ```
+
+    This command sets the virtual subnet that has the ID 6001 for the specified routing domain.
+    The command specifies that the routing domain is on the network adapter named Internal NIC that belongs to the multitenant virtual machine named Gateway01.
+links:
+- text: Get-VMNetworkAdapterRoutingDomainMapping
+  href: ./Get-VMNetworkAdapterRoutingDomainMapping.yml
+- text: Add-VMNetworkAdapterRoutingDomainMapping
+  href: ./Add-VMNetworkAdapterRoutingDomainMapping.yml
+- text: Remove-VMNetworkAdapterRoutingDomainMapping
+  href: ./Remove-VMNetworkAdapterRoutingDomainMapping.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/set-vmnetworkadapterroutingdomainmapping?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-VMNetworkAdapterRoutingDomainMapping

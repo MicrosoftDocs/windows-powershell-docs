@@ -1,0 +1,92 @@
+### YamlMime:PowerShellCmdlet1
+uid: ClusterAwareUpdating.Get-ClusterlessCauRun
+name: Get-ClusterlessCauRun
+module: ClusterAwareUpdating
+isPreview: false
+summary: |-
+  Retrieves information about a Cluster-Aware Updating (CAU) run not associated with a cluster.
+description: |-
+  The `Get-ClusterlessCauRun` cmdlet retrieves information about a Cluster-Aware Updating (CAU) run
+  that is not associated with a cluster.
+parameters:
+  cmdletParameters:
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the administrative credentials for the target cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShowClusterNodeState
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Displays detailed information about the state of each node in the CAU run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShowClusterNodeState
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-ClusterlessCauRun
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParamSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-ClusterlessCauRun
+        [-Credential <PSCredential>]
+        [-ShowClusterNodeState]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShowClusterNodeState
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauWmiObject" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.ClusterAwareUpdating.ClusterlessCauRun" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.ClusterAwareUpdating.RunState" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-ClusterlessCauRun
+    ```
+
+    This example displays information about the current CAU run, including the status of each node that
+    is being updated.
+links:
+- text: Invoke-ClusterlessCauRun
+  href: invoke-clusterlesscaurun.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/clusterawareupdating/get-clusterlesscaurun?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ClusterAwareUpdating
+  ms.date: 07/01/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-ClusterlessCauRun

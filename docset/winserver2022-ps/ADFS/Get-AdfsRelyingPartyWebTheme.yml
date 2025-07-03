@@ -1,0 +1,64 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsRelyingPartyWebTheme
+name: Get-AdfsRelyingPartyWebTheme
+module: ADFS
+isPreview: false
+summary: |-
+  Gets properties of web themes applied to relying party trusts.
+description: |-
+  The **Get-AdfsRelyingPartyWebTheme** cmdlet gets properties of any web themes applied to relying party trusts and the names of the trusts to which these themes are applied.
+parameters:
+  cmdletParameters:
+  - name: RelyingPartyName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of relying parties for which to get web themes.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsRelyingPartyWebTheme
+        [-RelyingPartyName <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get a web theme'
+  description: |-
+    ```
+    PS C:\> Get-AdfsRelyingPartyWebTheme -TargetRelyingPartyName "urn:app1"
+    ```
+
+    This command gets the relying party web theme for the relying party named urn:app1.
+links:
+- text: Remove-AdfsRelyingPartyWebTheme
+  href: ./Remove-AdfsRelyingPartyWebTheme.yml
+- text: Set-AdfsRelyingPartyWebTheme
+  href: ./Set-AdfsRelyingPartyWebTheme.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfsrelyingpartywebtheme?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsRelyingPartyWebTheme

@@ -1,0 +1,90 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Remove-AdfsFarmNode
+name: Remove-AdfsFarmNode
+module: ADFS
+isPreview: false
+summary: |-
+  The Remove-AdfsFarmNode cmdlet is deprecated.
+  Instead, use the Uninstall-WindowsFeature cmdlet.
+description: |-
+  The **Remove-AdfsFarmNode** cmdlet is deprecated in this release.
+  Instead, use the [Uninstall-WindowsFeature](https://go.microsoft.com/fwlink/?LinkID=287572) cmdlet.
+  For more information on the **Uninstall-WindowsFeature** cmdlet, type `Get-Help Uninstall-WindowsFeature`. Note that the **Uninstall-WindowsFeature** cmdlet removes only the server role but doesn't remove the node from the ADFS farm. For proper cleanup, use the **Set-AdfsFarmInformation** cmdlet with the `-RemoveNode` parameter.
+parameters:
+  cmdletParameters:
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdfsRemoveFarmNodeGmsa
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupServiceAccountIdentifier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdfsRemoveFarmNodeGmsa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceAccountCredential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ADFSRemoveFarmNodeDefault
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AdfsFarmNode
+        -ServiceAccountCredential <PSCredential>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ADFSRemoveFarmNodeDefault
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AdfsFarmNode
+        -GroupServiceAccountIdentifier <String>
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdfsRemoveFarmNodeGmsa
+  isDefault: false
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+links:
+- text: Uninstall-WindowsFeature
+  href: /powershell/module/servermanager/uninstall-windowsfeature
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/remove-adfsfarmnode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-AdfsFarmNode

@@ -1,0 +1,60 @@
+### YamlMime:PowerShellCmdlet1
+uid: HostNetworkingService.Get-HnsNamespace
+name: Get-HnsNamespace
+module: HostNetworkingService
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Id Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-HnsNamespace
+        [[-Id] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: HostNetworkingService-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hostnetworkingservice/get-hnsnamespace?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: HostNetworkingService
+  ms.date: 02/22/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-HnsNamespace

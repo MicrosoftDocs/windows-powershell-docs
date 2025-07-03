@@ -1,0 +1,74 @@
+### YamlMime:PowerShellCmdlet1
+uid: LanguagePackManagement.Get-InstalledLanguage
+name: Get-InstalledLanguage
+module: LanguagePackManagement
+isPreview: false
+summary: |-
+  Returns information about the installed languages on a device.
+description: |-
+  Returns a list of the installed languages and related Language features installed on the device.
+parameters:
+  cmdletParameters:
+  - name: Language
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows the language components that are installed for the specified language.
+    aliases:
+    - LanguageId
+    - LanguageTag
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-InstalledLanguage
+        [-Language] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Collections.Generic.List<Microsoft.LanguagePackManagement.Powershell.Commands.InstalledLanguage>" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: See what languages are installed on a device'
+  description: |-
+    ```powershell
+    Get-InstalledLanguage
+    ```
+
+    This command will show all of the language components that are installed on a device.
+- title: 'Example 2: See which language components are installed for a particular language'
+  description: |-
+    ```powershell
+    Get-InstalledLanguage -language en-US
+    ```
+
+    This command will show the language features that are installed for the en-US language.
+links:
+- text: Set-SystemPreferredUILanguage
+  href: Set-SystemPreferredUILanguage.yml
+metadata:
+  description: The Get-InstalledLanguage cmdlet lets you see which languages are installed in a running Windows installation
+  document type: cmdlet
+  external help file: Microsoft.LanguagePackManagement.Powershell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/languagepackmanagement/get-installedlanguage?view=windowsserver2025-ps
+  Module Name: LanguagePackManagement
+  ms.date: 08/15/2022
+  PlatyPS schema version: 2024-05-01
+  title: Get-InstalledLanguage

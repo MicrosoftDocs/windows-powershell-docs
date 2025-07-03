@@ -1,0 +1,86 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Disable-AdfsDeviceRegistration
+name: Disable-AdfsDeviceRegistration
+module: ADFS
+isPreview: false
+summary: |-
+  Marks the Device Registration Service as disabled on an AD FS server.
+description: |-
+  The **Disable-AdfsDeviceRegistration** cmdlet marks the Device Registration Service as disabled on an Active Directory Federation Services (AD FS) server.
+  To completely disable the Device Registration Service, you must run this command on each AD FS server in your AD FS farm.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-AdfsDeviceRegistration
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Disable Windows Server Device Registration Service'
+  description: |-
+    ```
+    PS C:\> Disable-AdfsDeviceRegistration
+    ```
+
+    This command marks the Device Registration Service as disabled on the Active Directory Federation Services (AD FS) server.
+links:
+- text: Enable-AdfsDeviceRegistration
+  href: ./Enable-AdfsDeviceRegistration.yml
+- text: Get-AdfsDeviceRegistration
+  href: ./Get-AdfsDeviceRegistration.yml
+- text: Set-AdfsDeviceRegistration
+  href: ./Set-AdfsDeviceRegistration.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/disable-adfsdeviceregistration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Disable-AdfsDeviceRegistration

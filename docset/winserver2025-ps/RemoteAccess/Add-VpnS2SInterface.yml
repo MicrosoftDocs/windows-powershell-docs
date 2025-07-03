@@ -1,0 +1,1538 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteAccess.Add-VpnS2SInterface
+name: Add-VpnS2SInterface
+module: RemoteAccess
+isPreview: false
+summary: |-
+  Create a S2S interface with the specified parameters.
+description: |-
+  The **Add-VpnS2SInterface** cmdlet creates a site-to-site (S2S) interface with the specified parameters to customize Internet Protocol security (IPsec) settings.
+  If the *Protocol* parameter is set to AutomaticOnly the only authentication method allowed is username.
+  If the authentication method is a pre-shared key, only one interface can be enabled per destination and the initiator and responder policies are governed by what is specified per interface.
+  If the authentication method is username or machine certificates, only initiator policies are governed by what is specified per interface, responder policies are governed by what is specified on the server.
+  For incoming connections:
+
+    -- If the authentication method is a pre-shared key, the interface whose destination IP matches the incoming IP is activated.
+
+  - If the authentication method is username, the interface whose name matches the username is activated.
+  - If the authentication method is certificates the interface whose name matches the certificate subject name is activated.
+parameters:
+  cmdletParameters:
+  - name: AdminStatus
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the administrator status of the cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthenticationMethod
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the AuthenticationMethod to be used by the S2S connection.
+      If a pre-shared key is specified as authentication method, there can only be one active site to site virtual private network (VPN) interface per destination IP address.
+    acceptedValues:
+    - EAP
+    - MachineCertificates
+    - PSKOnly
+    - MSCHAPv2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthenticationTransformConstants
+    type: <xref href="AuthenticationTransformConstants" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the authentication transform plumbed in IPsec policy.
+    acceptedValues:
+    - MD596
+    - SHA196
+    - SHA256128
+    - GCMAES128
+    - GCMAES192
+    - GCMAES256
+    - None
+    aliases:
+    - FirstTransformType
+    - AuthenticationTransformConstant
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoConnectEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the activation of auto-reconnection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Certificate
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate to be used in default store.
+      Applicable only if *AuthenticationMethod* is set to MachineCert.
+    aliases:
+    - Cert
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CipherTransformConstants
+    type: <xref href="CipherTransformConstants" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cipher plumbed in IPsec policy.
+    acceptedValues:
+    - DES
+    - DES3
+    - AES128
+    - AES192
+    - AES256
+    - GCMAES128
+    - GCMAES192
+    - GCMAES256
+    - None
+    aliases:
+    - OtherCipherAlgorithm
+    - FirstCipherAlgorithm
+    - CipherTransformConstant
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomPolicy
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the custom IKE IPsec policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CustomPolicy
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Destination
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the destination end-point of the S2S connection.
+    aliases:
+    - RemoteTunnelEndpoint
+    - RemoteTunnelHostname
+    - RemoteAddress
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DHGroup
+    type: <xref href="DHGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Diffie-Hellman (DH) Group to use during IKE key exchanges.
+      Acceptable values for this parameter are:
+
+      - None
+      - Group1
+      - Group2
+      - Group14
+      - ECP256
+      - ECP384
+      - Group24
+    acceptedValues:
+    - None
+    - Group1
+    - Group2
+    - Group14
+    - ECP256
+    - ECP384
+    - Group24
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EapMethod
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies EAP method if *IkeLocalAuthenticationMethod* is EAP.
+    acceptedValues:
+    - EAP-TLS
+    - EAP-PEAP
+    - EAP-MSCHAPv2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableQoS
+    type: <xref href="EnableQoS" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to enable Quality of Service (QoS) on an interface.
+      The acceptable values for this parameter are:
+
+      - Enabled
+      - Disabled
+    acceptedValues:
+    - Disabled
+    - Enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionMethod
+    type: <xref href="EncryptionMethod" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the encryption method in the IKE policy.
+    acceptedValues:
+    - DES
+    - DES3
+    - AES128
+    - AES192
+    - AES256
+    aliases:
+    - Encryption
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of encryption.
+      The acceptable values for this parameter are:
+
+      - NoEncryption
+      - RequireEncryption
+      - OptionalEncryption
+      - MaximumEncryption
+    acceptedValues:
+    - NoEncryption
+    - RequireEncryption
+    - OptionalEncryption
+    - MaximumEncryption
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GreKey
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies individual traffic flows within a Generic Routing Encapsulation (GRE) tunnel.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GreInterface
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GreTunnel
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether this cmdlet uses the GRE tunnel capability for the Windows Server Gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GreInterface
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdleDisconnectSeconds
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a value that specifies the time, in seconds, after which an idle connection is terminated.
+      Unless the idle time-out is disabled, the entire connection is terminated if the connection is idle for the specified interval.
+    aliases:
+    - IdleDurationSeconds
+    - IdleDisconnectSec
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InitiateConfigPayload
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to initiate configuration payload negotiation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IntegrityCheckMethod
+    type: <xref href="IntegrityCheckMethod" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the integrity method plumbed in IPsec policy.
+    acceptedValues:
+    - MD5
+    - SHA1
+    - SHA256
+    - SHA384
+    aliases:
+    - OtherHashAlgorithm
+    - FirstIntegrityAlgorithm
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InternalIPv4
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies Negotiation of IPv4 Address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InternalIPv6
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies negotiation of IPv6 Address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv4Address
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the cmdlet sets custom IKE IPsec policies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GreInterface
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv4Subnet
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the IPv4 subnet that is routed on this connection with metric.
+    aliases:
+    - IPv4TriggerSubnet
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv4TriggerFilter
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a string array of IPv4 filters that trigger demand dial connections.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv4TriggerFilterAction
+    type: <xref href="Action" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether a filter should trigger an S2S connection.
+    acceptedValues:
+    - Allow
+    - Deny
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv6Address
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the cmdlet sets custom IKE IPsec policies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GreInterface
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv6Subnet
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the IPv6 subnet that is routed on this connection with metric.
+    aliases:
+    - IPv6TriggerSubnet
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv6TriggerFilter
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of IPv6 filters that trigger demand dial connections.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv6TriggerFilterAction
+    type: <xref href="Action" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether a filter should trigger an S2S connection.
+    acceptedValues:
+    - Allow
+    - Deny
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocalVpnTrafficSelector
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the initiator Traffic Selector object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MMSALifeTimeSeconds
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the lifetime of main mode security association in seconds, after which the main mode security association is no longer valid.
+    aliases:
+    - MMSaLifeTimeSec
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the connection.
+    aliases:
+    - ElementName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkOutageTimeSeconds
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum network outage time after which the connection is disconnected.
+      Acceptable values for this parameter are:
+
+      - 6
+      - 9
+      - 12
+      - 15
+      - 30
+      - 60
+      - 120
+      - 240
+      - 360
+      - 720
+      - 900
+    acceptedValues:
+    - "3"
+    - "6"
+    - "9"
+    - "12"
+    - "15"
+    - "30"
+    - "60"
+    - "120"
+    - "240"
+    - "360"
+    - "720"
+    - "900"
+    aliases:
+    - NetworkOutageTimeSec
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NumberOfTries
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of tries the connection is retried.
+      If you specify 0, the cmdlet will retry infinitely.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password of the username to be used for dialing the connection.
+      Applicable only if *AuthenticationMethod* is set to EAP.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Persistent
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the connection state is persisted across the service restart or system reboots.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PfsGroup
+    type: <xref href="PfsGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the perfect forward secrecy (PFS) Group plumbed in IPsec policy.
+    acceptedValues:
+    - None
+    - PFS1
+    - PFS2
+    - PFS2048
+    - ECP256
+    - ECP384
+    - PFSMM
+    - PFS24
+    aliases:
+    - PfsGroupId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PostConnectionIPv4Subnet
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the IPv4 subnet routes that are added to a site-to-site interface after the connection is established.
+      The values specified are not used to initiate the site-to-site VPN connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PostConnectionIPv6Subnet
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the IPv6 subnet routes that are added to a site-to-site interface after the connection is established.
+      The values specified are not used to initiate the site-to-site VPN connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PromoteAlternate
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that an alternate IP address that connects successfully becomes the primary IP address, and the current primary IP address is moved to the alternate list.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the underlying protocol.
+    acceptedValues:
+    - L2TP
+    - IKEv2
+    - Automatic
+    - SSTP
+    aliases:
+    - KeyModule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RadiusAttributeClass
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a RADIUS attribute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RemoteVpnTrafficSelector
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the responder traffic selector object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResponderAuthenticationMethod
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the responder AuthenticationMethod to be used by the S2S connection.
+    acceptedValues:
+    - MachineCertificates
+    - PSKOnly
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RetryIntervalSeconds
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of seconds between retries.
+    aliases:
+    - RetryIntervalSec
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoutingDomain
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an ID, as a string, for a routing domain.
+      The ID of a routing domain is a user-defined alphanumeric string.
+    aliases:
+    - RoutingDomainName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RxBandwidthKbps
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the receive bandwidth limit, in kilobits per second (Kbps).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SADataSizeForRenegotiationKilobytes
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of kilobytes that are allowed to transfer using a security association (SA).
+      After that the SA will be renegotiated
+    aliases:
+    - SaRenegotiationDataSizeKB
+    - LifeTimeKiloBytes
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SALifeTimeSeconds
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Lifetime of an SA in seconds, after which the SA is no longer valid
+    aliases:
+    - SaLifeTimeSec
+    - LifeTimeSeconds
+    - QMSALifeTimeSeconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharedSecret
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the text of the shared secret to be used in dialing the connection.
+      This is only applicable if *AuthenticationMethod* is set to PSK.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceIpAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the source IPv4 or IPv6 addresses to use when dialing the connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent connections that can be established to run this command.
+      If you omit this parameter or enter a value of 0, the default value, 32, is used.
+
+      The throttle limit applies only to the current command, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TxBandwidthKbps
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a transmit bandwidth limit, in Kbps, for the interface.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the username to be used for dialing this connection.
+      This is only applicable if the *AuthenticationMethod* parameter is set to EAP.
+    aliases:
+    - User
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CustomPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-VpnS2SInterface
+        [-Name] <String>
+        [-Destination] <String[]>
+        [[-RoutingDomain] <String>]
+        [-Protocol <String>]
+        [-AdminStatus <Boolean>]
+        [-PromoteAlternate <Boolean>]
+        [-AuthenticationMethod <String>]
+        [-PostConnectionIPv4Subnet <String[]>]
+        [-PostConnectionIPv6Subnet <String[]>]
+        [-InitiateConfigPayload <Boolean>]
+        [-RadiusAttributeClass <String>]
+        [-EnableQoS <EnableQoS>]
+        [-TxBandwidthKbps <UInt64>]
+        [-RxBandwidthKbps <UInt64>]
+        [-IPv4TriggerFilter <String[]>]
+        [-IPv6TriggerFilter <String[]>]
+        [-Persistent]
+        [-AutoConnectEnabled <Boolean>]
+        [-IPv4TriggerFilterAction <Action>]
+        [-IPv6TriggerFilterAction <Action>]
+        [-SADataSizeForRenegotiationKilobytes <UInt32>]
+        [-IPv4Subnet <String[]>]
+        [-IPv6Subnet <String[]>]
+        [-ResponderAuthenticationMethod <String>]
+        [-PassThru]
+        [-Certificate <X509Certificate2>]
+        [-SharedSecret <String>]
+        [-NetworkOutageTimeSeconds <UInt32>]
+        [-NumberOfTries <UInt32>]
+        [-RetryIntervalSeconds <UInt32>]
+        [-SALifeTimeSeconds <UInt32>]
+        [-MMSALifeTimeSeconds <UInt32>]
+        [-EapMethod <String>]
+        [-InternalIPv4 <Boolean>]
+        [-InternalIPv6 <Boolean>]
+        [-IdleDisconnectSeconds <UInt32>]
+        [-UserName <String>]
+        [-Password <String>]
+        [-SourceIpAddress <String>]
+        [-LocalVpnTrafficSelector <CimInstance[]>]
+        [-RemoteVpnTrafficSelector <CimInstance[]>]
+        [-EncryptionType <String>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EncryptionType
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-VpnS2SInterface
+        [-Name] <String>
+        [-Destination] <String[]>
+        [[-RoutingDomain] <String>]
+        [[-GreKey] <UInt32>]
+        -SourceIpAddress <String>
+        [-AdminStatus <Boolean>]
+        [-EnableQoS <EnableQoS>]
+        [-TxBandwidthKbps <UInt64>]
+        [-RxBandwidthKbps <UInt64>]
+        [-IPv4Subnet <String[]>]
+        [-IPv6Subnet <String[]>]
+        [-PassThru]
+        [-InternalIPv4 <Boolean>]
+        [-InternalIPv6 <Boolean>]
+        [-GreTunnel]
+        [-IPv4Address <String>]
+        [-IPv6Address <String>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GreInterface
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-VpnS2SInterface
+        [-Name] <String>
+        [-Destination] <String[]>
+        [[-RoutingDomain] <String>]
+        [-Protocol <String>]
+        [-AdminStatus <Boolean>]
+        [-PromoteAlternate <Boolean>]
+        [-AuthenticationMethod <String>]
+        [-PostConnectionIPv4Subnet <String[]>]
+        [-PostConnectionIPv6Subnet <String[]>]
+        [-InitiateConfigPayload <Boolean>]
+        [-RadiusAttributeClass <String>]
+        [-EnableQoS <EnableQoS>]
+        [-TxBandwidthKbps <UInt64>]
+        [-RxBandwidthKbps <UInt64>]
+        [-IPv4TriggerFilter <String[]>]
+        [-IPv6TriggerFilter <String[]>]
+        [-Persistent]
+        [-AutoConnectEnabled <Boolean>]
+        [-IPv4TriggerFilterAction <Action>]
+        [-IPv6TriggerFilterAction <Action>]
+        [-SADataSizeForRenegotiationKilobytes <UInt32>]
+        [-IPv4Subnet <String[]>]
+        [-IPv6Subnet <String[]>]
+        [-ResponderAuthenticationMethod <String>]
+        [-PassThru]
+        [-Certificate <X509Certificate2>]
+        [-SharedSecret <String>]
+        [-NetworkOutageTimeSeconds <UInt32>]
+        [-NumberOfTries <UInt32>]
+        [-RetryIntervalSeconds <UInt32>]
+        [-SALifeTimeSeconds <UInt32>]
+        [-MMSALifeTimeSeconds <UInt32>]
+        [-EapMethod <String>]
+        [-InternalIPv4 <Boolean>]
+        [-InternalIPv6 <Boolean>]
+        [-IdleDisconnectSeconds <UInt32>]
+        [-UserName <String>]
+        [-Password <String>]
+        [-CustomPolicy]
+        [-EncryptionMethod <EncryptionMethod>]
+        [-IntegrityCheckMethod <IntegrityCheckMethod>]
+        [-CipherTransformConstants <CipherTransformConstants>]
+        [-AuthenticationTransformConstants <AuthenticationTransformConstants>]
+        [-PfsGroup <PfsGroup>]
+        [-DHGroup <DHGroup>]
+        [-SourceIpAddress <String>]
+        [-LocalVpnTrafficSelector <CimInstance[]>]
+        [-RemoteVpnTrafficSelector <CimInstance[]>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CustomPolicy
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.EncryptionMethod" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.IntegrityCheckMethod" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.CipherTransformConstants" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.AuthenticationTransformConstants" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.PfsGroup" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.VpnS2SInterface.DHGroup" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnS2SInterface" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a S2S VPN interface'
+  description: |-
+    ```
+    PS C:\>Add-VpnS2SInterface -Name "EDGE1" 131.107.0.20 -Protocol IKEv2 -AuthenticationMethod PSKOnly -SharedSecret "ABC" -IPv4Subnet 10.2.0.0/24:100 -IPv6Subnet 2001:db8:2::/48:100
+    ```
+
+    This command creates a site-to-site VPN interface by name EDGE1 to destination 131.107.0.20.
+    The protocol is IKEv2 and the authentication method is pre-shared key named ABC.
+    Traffic to 10.2.0.0/24 and subnet 2001:db8:2::/48 is sent over this interface if there is no other interface on the server that has same routes with metric less than 100 .
+    In case the interface is in disconnected state the connection is triggered if there is no other interface on the server that has same routes with metric less than 100.
+- title: 'Example 2: Create an interface that uses EAP authentication'
+  description: |-
+    ```
+    PS C:\>Add-VpnS2SInterface -IPv4Subnet @("131.0.1.0/24:254", "121.0.0.0/16:124") -UserName "abc@contoso.com" -Destination "30.0.0.1" -IPv6Subnet @("3ffe::/32:24", "2ffe::/32:24") -AuthenticationMethod "EAP" -Name "TestVpnS2SInterface" -RetryInterval 120 -EncryptionType "RequireEncryption" -InternalIPv4 1 -InternalIPv6 1 -NumberofTries 20 -AdminStatus $True -IdleDisconnectSeconds 300 -PromoteAlternate $True -Password "1111_aaaa" -PassThru
+    Name                 Destination          AdminStatus  ConnectionState IPv4Subnet
+    ----                 -----------          -----------  --------------- ----------
+    TestVpnS2SInterface  {30.0.0.1}           True         Disconnected    {131.0.1.0/24:254, 121.0.0.0/16:124}
+    ```
+
+    This command creates an interface that uses EAP authentication method and multiple subnets are routed on this interface 131.0.1.0/24, 121.0.0.0/16.
+- title: 'Example 3: Add an IKEv2 S2S VPN interface'
+  description: |-
+    ```
+    PS C:\>Add-VpnS2SInterface -RoutingDomain Rd_001 -Name "Blue-Tunnel-2" -Protocol IKEv2 -Destination 100.0.0.7 -AuthenticationMethod PSKOnly -SharedSecret 111_aaa -Persistent -IPv4Subnet 172.23.90.4/32:100 -PassThru
+    RoutingDomain   Name                 Destination          AdminStatus  ConnectionState IPv4Subnet
+    -------------   ----                 -----------          -----------  --------------- ----------
+    Rd_001          Blue-Tunnel-2        {100.0.0.7}          True         Disconnected    {172.23.90.4/32:100}
+    ```
+
+    This command adds an IKEv2 S2S VPN (Demand-Dial) interface to the Multi-Tenant Gateway for Routing Domain Rd_001
+- title: 'Example 4: Add a Gre Tunnel interface'
+  description: |-
+    ```
+    PS C:\>Add-VpnS2SInterface -GreTunnel -GreKey "1234" -RoutingDomain Rd_001 -Name "Blue-Tunnel-3" -Destination 100.0.0.8 -Persistent -IPv4Subnet 172.23.90.4/32:100 -PassThru
+    RoutingDomain   Name                 Destination          AdminStatus  ConnectionState IPv4Subnet
+    -------------   ----                 -----------          -----------  --------------- ----------
+    Rd_001          Blue-Tunnel-3        {100.0.0.8}          True         Connected    {172.23.90.4/32:100}
+    ```
+
+    This command adds a Gre Tunnel interface to the Multi-Tenant Gateway for Routing Domain named Rd_001.
+- title: 'Example 5: Add an IKEv2 S2S VPN interface with Traffic Selectors'
+  description: |-
+    ```
+    PS C:\>Add-VpnS2SInterface -RoutingDomain Rd_001 -Name "Blue-Tunnel-2" -Protocol IKEv2 -Destination 100.0.0.7 -AuthenticationMethod PSKOnly -SharedSecret 111_aaa -Persistent -IPv4Subnet 172.23.90.4/32:100 -LocalVpnTrafficSelector $localTSObject -RemoteVpnTrafficSelector $RemoteTSObject -PassThru | fl *
+    IPv4TriggerFilterAction          :
+    IPv6TriggerFilterAction          :
+    Certificate                      :
+    EnableQoS                        : Enabled
+    AdminStatus                      : True
+    AuthenticationMethod             : PSKOnly
+    ConnectionState                  : Connected
+    Destination                      : {100.0.0.7}
+    EapMethod                        :
+    IdleDisconnect                   : 500
+    InitiateConfigPayload            : True
+    InterfaceType                    : FullRouter
+    InternalIPv4                     : True
+    InternalIPv6                     : True
+    IPv4Subnet                       : {172.23.90.4/32:100}
+    IPv4TriggerFilter                :
+    IPv6Subnet                       :
+    IPv6TriggerFilter                :
+    LastError                        : 0
+    LocalVpnTrafficSelector          : {VpnTrafficSelector}
+    MMSALifeTime                     : 28800
+    Name                             : Blue-Tunnel-2_9e8ddf33-cadc-48bd-861b-150311c53c9a
+    NetworkOutageTime                : 15
+    NumberOfTries                    : 3
+    Persistent                       : False
+    PostConnectionIPv4Subnet         :
+    PostConnectionIPv6Subnet         :
+    PromoteAlternate                 : False
+    Protocol                         : Ikev2
+    RemoteVpnTrafficSelector         : {VpnTrafficSelector}
+    ResponderAuthenticationMethod    : PSKOnly
+    RetryInterval                    : 60
+    RxBandwidthKbps                  : 0
+    SADataSizeForRenegotiation       : 33553408
+    SALifeTime                       : 3600
+    SourceIpAddress                  :
+    TxBandwidthKbps                  : 0
+    UnReachabilityReasons            :
+    UserName                         :
+    RoutingDomain                    : Rd_001_fa3a844e-c397-4004-9c48-547ce397fe59
+    PSComputerName                   :
+    ```
+
+    This command adds an IKEv2 S2S VPN (Demand-Dial) interface to the Multi-Tenant Gateway for Routing Domain Rd_001.
+links:
+- text: Connect-VpnS2SInterface
+  href: ./Connect-VpnS2SInterface.yml
+- text: Disconnect-VpnS2SInterface
+  href: ./Disconnect-VpnS2SInterface.yml
+- text: Get-VpnS2SInterface
+  href: ./Get-VpnS2SInterface.yml
+- text: Remove-VpnS2SInterface
+  href: ./Remove-VpnS2SInterface.yml
+- text: Set-VpnS2SInterface
+  href: ./Set-VpnS2SInterface.yml
+- text: Remote Access Cmdlets
+  href: index.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: PS_VpnS2SInterface_v1.0.0.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/remoteaccess/add-vpns2sinterface?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteAccess
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-VpnS2SInterface

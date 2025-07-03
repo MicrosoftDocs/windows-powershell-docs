@@ -1,0 +1,563 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Set-VMSwitch
+name: Set-VMSwitch
+module: Hyper-V
+isPreview: false
+summary: |-
+  Configures a virtual switch.
+description: |-
+  The **Set-VMSwitch** cmdlet configures a virtual switch.
+parameters:
+  cmdletParameters:
+  - name: AllowManagementOS
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the management operating system can use the physical network adapter that is bound to the virtual switch. Setting **AllowManagementOS** to `$true` creates management operating system virtual network adapters (VMNetworkAdapters) in the parent partition and connects it to the virtual switch. Setting **AllowManagementOS** to `$false` removes any VMNetworkAdapters connected to the virtual switch.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SwitchName_SwitchType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SwitchName_NetAdapterInterfaceDescription
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SwitchName_NetAdapterName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts on which the virtual switch is to be configured.
+      NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+      The default is the local computer.
+      Use localhost or a dot (.) to specify the local computer explicitly.
+    aliases:
+    - PSComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultFlowMinimumBandwidthAbsolute
+    type: <xref href="Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the minimum bandwidth, in bits per second, that is allocated to a special category called "default flow." Any traffic sent by a virtual network adapter that is connected to this virtual switch and does not have minimum bandwidth allocated is filtered into this category.
+      Specify a value for this parameter only if the minimum bandwidth mode on this virtual switch is absolute (See the **New-VMSwitch** cmdlet).
+      By default, the virtual switch allocates 10% of the total bandwidth, which depends on the physical network adapter it binds to, to this category.
+      For example, if a virtual switch binds to a 1 GbE network adapter, this special category can use at least 100 Mbps.
+      If the value is not a multiple of 8, the value is rounded down to the nearest number that is a multiple of 8.
+      For example, a value input as 1234567 is converted to 1234560.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultFlowMinimumBandwidthWeight
+    type: <xref href="Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the minimum bandwidth, in relative weight, that is allocated to a special category called "default flow".
+      Any traffic sent by a virtual network adapter that is connected to this virtual switch and doesn't have minimum bandwidth allocated is filtered into this category.
+      Specify a value for this parameter only if the minimum bandwidth mode on this virtual switch is weight (See the **New-VMSwitch** cmdlet).
+      By default, this special category has a weight of 1.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultQueueVmmqEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultQueueVmmqQueuePairs
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultQueueVrssEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Extensions
+    type: <xref href="VMSwitchExtension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an ordered list of network extensions used to reorder the bindings on the virtual switch.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the virtual switch to be configured.
+    aliases:
+    - SwitchName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SwitchName_SwitchType
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SwitchName_NetAdapterInterfaceDescription
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SwitchName_NetAdapterName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetAdapterInterfaceDescription
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interface description of the physical network adapter to which an external virtual switch should be bound.
+      If you specify this parameter to convert a virtual switch, the external virtual switch is configured to allow the management operating system to share access to the physical network adapter.
+      To override this behavior, include AllowManagementOs $false in the command
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SwitchName_NetAdapterInterfaceDescription
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SwitchObject_NetAdapterInterfaceDescription
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetAdapterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the physical network adapter to which an external virtual switch should be bound.
+      If you specify this parameter to convert a virtual switch, the external virtual switch is configured to allow the management operating system to share access to the physical network adapter.
+      To override this behavior, include AllowManagementOs $false in the command
+    aliases:
+    - InterfaceAlias
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SwitchName_NetAdapterName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SwitchObject_NetAdapterName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Notes
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies notes to be associated with the virtual switch.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that a **Microsoft.HyperV.PowerShell.EthernetSwitch** object is to be passed through to the pipeline representing the virtual switch to be configured.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SwitchType
+    type: <xref href="VMSwitchType" data-throw-if-not-resolved="False" />
+    description: |-
+      Converts a virtual switch from one type to another.
+      Allowed values are **Internal** or **Private**.
+      You can convert an internal or private virtual switch to an external virtual switch, by including either the **NetAdapterInterfaceDescription** or **NetAdapterName** parameter in the command.
+      If you do this, the external virtual switch is configured to allow the management operating system to share access to the physical network adapter.
+      To override this behavior, include AllowManagementOs $false in the command.
+    acceptedValues:
+    - Private
+    - Internal
+    - External
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SwitchName_SwitchType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SwitchObject_SwitchType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMSwitch
+    type: <xref href="VMSwitch" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the virtual switch to be configured.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SwitchObject_SwitchType
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SwitchObject_NetAdapterInterfaceDescription
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SwitchObject_NetAdapterName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-VMSwitch
+        [-Name] <String[]>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-SwitchType <VMSwitchType>]
+        [-AllowManagementOS <Boolean>]
+        [-DefaultFlowMinimumBandwidthAbsolute <Int64>]
+        [-DefaultFlowMinimumBandwidthWeight <Int64>]
+        [-DefaultQueueVrssEnabled <Boolean>]
+        [-DefaultQueueVmmqEnabled <Boolean>]
+        [-DefaultQueueVmmqQueuePairs <UInt32>]
+        [-Extensions <VMSwitchExtension[]>]
+        [-Notes <String>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SwitchName_SwitchType
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-VMSwitch
+        [-VMSwitch] <VMSwitch[]>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-SwitchType <VMSwitchType>]
+        [-AllowManagementOS <Boolean>]
+        [-DefaultFlowMinimumBandwidthAbsolute <Int64>]
+        [-DefaultFlowMinimumBandwidthWeight <Int64>]
+        [-DefaultQueueVrssEnabled <Boolean>]
+        [-DefaultQueueVmmqEnabled <Boolean>]
+        [-DefaultQueueVmmqQueuePairs <UInt32>]
+        [-Extensions <VMSwitchExtension[]>]
+        [-Notes <String>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SwitchObject_SwitchType
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-VMSwitch
+        [-Name] <String[]>
+        [-NetAdapterInterfaceDescription] <String>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-AllowManagementOS <Boolean>]
+        [-DefaultFlowMinimumBandwidthAbsolute <Int64>]
+        [-DefaultFlowMinimumBandwidthWeight <Int64>]
+        [-DefaultQueueVrssEnabled <Boolean>]
+        [-DefaultQueueVmmqEnabled <Boolean>]
+        [-DefaultQueueVmmqQueuePairs <UInt32>]
+        [-Extensions <VMSwitchExtension[]>]
+        [-Notes <String>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SwitchName_NetAdapterInterfaceDescription
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-VMSwitch
+        [-Name] <String[]>
+        [-NetAdapterName] <String>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-AllowManagementOS <Boolean>]
+        [-DefaultFlowMinimumBandwidthAbsolute <Int64>]
+        [-DefaultFlowMinimumBandwidthWeight <Int64>]
+        [-DefaultQueueVrssEnabled <Boolean>]
+        [-DefaultQueueVmmqEnabled <Boolean>]
+        [-DefaultQueueVmmqQueuePairs <UInt32>]
+        [-Extensions <VMSwitchExtension[]>]
+        [-Notes <String>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SwitchName_NetAdapterName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-VMSwitch
+        [-VMSwitch] <VMSwitch[]>
+        [-NetAdapterInterfaceDescription] <String>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-AllowManagementOS <Boolean>]
+        [-DefaultFlowMinimumBandwidthAbsolute <Int64>]
+        [-DefaultFlowMinimumBandwidthWeight <Int64>]
+        [-DefaultQueueVrssEnabled <Boolean>]
+        [-DefaultQueueVmmqEnabled <Boolean>]
+        [-DefaultQueueVmmqQueuePairs <UInt32>]
+        [-Extensions <VMSwitchExtension[]>]
+        [-Notes <String>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SwitchObject_NetAdapterInterfaceDescription
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-VMSwitch
+        [-VMSwitch] <VMSwitch[]>
+        [-NetAdapterName] <String>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-AllowManagementOS <Boolean>]
+        [-DefaultFlowMinimumBandwidthAbsolute <Int64>]
+        [-DefaultFlowMinimumBandwidthWeight <Int64>]
+        [-DefaultQueueVrssEnabled <Boolean>]
+        [-DefaultQueueVmmqEnabled <Boolean>]
+        [-DefaultQueueVmmqQueuePairs <UInt32>]
+        [-Extensions <VMSwitchExtension[]>]
+        [-Notes <String>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SwitchObject_NetAdapterName
+  isDefault: false
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.EthernetSwitch" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Set-VMSwitch WA -SwitchType Internal
+    ```
+
+    This example converts a virtual switch named WA to an Internal switch.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Set-VMSwitch VMNetwork -NetAdapterName "Ethernet 2"
+    ```
+
+    This example attaches a virtual switch named VMNetwork to a physical ethernet adapter named Ethernet 2. This will also implicitly convert the VMNetwork switch to an external switch.
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> Set-VMSwitch CA -DefaultFlowMinimumBandwidthAbsolute 500000000
+    ```
+
+    This example sets the minimum bandwidth allocation to 500Mbps on a virtual switch named CA for all virtual machines without explicit minimum bandwidth configuration.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/set-vmswitch?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-VMSwitch

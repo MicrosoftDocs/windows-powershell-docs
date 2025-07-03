@@ -1,0 +1,99 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkControllerDiagnostics.Get-NetworkControllerReplica
+name: Get-NetworkControllerReplica
+module: NetworkControllerDiagnostics
+isPreview: false
+summary: |-
+  Determines which node the Network Controller service modules use as primary.
+description: |-
+  The **Get-NetworkControllerReplica** cmdlet queries the Network Controller Service Fabric to determine which node a Network Controller service module uses as primary.
+  The service modules include SDNAPI and SlbManagerService.
+  This cmdlet also checks whether there is a quorum of service module replicas.
+  A quorum is required for consensus and correct operation.
+
+  You can run this cmdlet from one of the Network Controller nodes.
+parameters:
+  cmdletParameters:
+  - name: AllReplicas
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet queries all replicas for only the primaries.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceTypeName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the service type that this cmdlet queries.
+      The acceptable values for this parameter are:
+
+      - ControllerService
+      - ApiService
+      - SlbManagerService
+      - ServiceInsertion
+      - FirewallService
+      - VSwitchService
+      - GatewayManager
+      - MonitoringService
+      - TopologyService
+      - FnmService
+      - HelperService
+      - UpdateService
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NetworkControllerReplica
+        [[-ServiceTypeName] <String>]
+        [-AllReplicas]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Determine which node is primary for Virtual Switch Service'
+  description: |-
+    ```
+    PS C:\>Get-NetworkControllerReplica -ServiceTypeName "VSwitchService"
+    ```
+
+    This command determines which node is primary for VSwitchService, or the Virtual Switch Service.
+links:
+- text: Get-NetworkControllerDeploymentInfo
+  href: ./Get-NetworkControllerDeploymentInfo.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Get-NetworkControllerReplica.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontrollerdiagnostics/get-networkcontrollerreplica?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkControllerDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NetworkControllerReplica

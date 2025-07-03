@@ -1,0 +1,133 @@
+### YamlMime:PowerShellCmdlet1
+uid: Gatewaytunnel.Disable-GatewayRoutingDomain
+name: Disable-GatewayRoutingDomain
+module: Gatewaytunnel
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill AsJob Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="Microsoft.Management.Infrastructure.CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      {{ Fill CimSession Description }}
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Name Description }}
+    aliases:
+    - RoutingDomainName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill ThrottleLimit Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayRoutingDomain.EnableType" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Type Description }}
+    acceptedValues:
+    - VpnS2S
+    - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-GatewayRoutingDomain
+        [-Name] <String>
+        -Type <EnableType>
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.PowerShell.Cmdletization.GeneratedTypes.PS_GatewayRoutingDomain.EnableType" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#PS_GatewayRoutingDomain" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: GatewayRoutingDomain_v1.0.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/gatewaytunnel/disable-gatewayroutingdomain?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Gatewaytunnel
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Disable-GatewayRoutingDomain

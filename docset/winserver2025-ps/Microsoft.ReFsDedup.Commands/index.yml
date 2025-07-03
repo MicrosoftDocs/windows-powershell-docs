@@ -1,0 +1,34 @@
+### YamlMime:PowerShellModule1
+uid: Microsoft.ReFsDedup.Commands
+name: Microsoft.ReFsDedup.Commands Module
+isPreview: false
+cmdletGroups:
+- title: Microsoft.ReFsDedup.Commands Cmdlets
+  cmdlets:
+  - Microsoft.ReFsDedup.Commands.Clear-ReFSDedupSchedule
+  - Microsoft.ReFsDedup.Commands.Clear-ReFSDedupScrubSchedule
+  - Microsoft.ReFsDedup.Commands.Disable-ReFSDedup
+  - Microsoft.ReFsDedup.Commands.Enable-ReFSDedup
+  - Microsoft.ReFsDedup.Commands.Get-ReFSDedupSchedule
+  - Microsoft.ReFsDedup.Commands.Get-ReFSDedupScrubSchedule
+  - Microsoft.ReFsDedup.Commands.Get-ReFSDedupStatus
+  - Microsoft.ReFsDedup.Commands.Resume-ReFSDedupSchedule
+  - Microsoft.ReFsDedup.Commands.Set-ReFSDedupSchedule
+  - Microsoft.ReFsDedup.Commands.Set-ReFSDedupScrubSchedule
+  - Microsoft.ReFsDedup.Commands.Start-ReFSDedupJob
+  - Microsoft.ReFsDedup.Commands.Stop-ReFSDedupJob
+  - Microsoft.ReFsDedup.Commands.Suspend-ReFSDedupSchedule
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Windows Server ReFS
+  Deduplication-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the
+  beginning of the cmdlet.
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: 63145e13-3dcf-4fa5-acef-9a437f2d9871
+  Module Name: Microsoft.ReFsDedup.Commands
+  ms.date: 11/20/2024
+  title: Microsoft.ReFsDedup.Commands module
+  PlatyPS schema version: 2024-05-01
+  document type: module

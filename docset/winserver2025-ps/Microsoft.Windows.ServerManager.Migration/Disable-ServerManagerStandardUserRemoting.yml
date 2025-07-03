@@ -1,0 +1,143 @@
+### YamlMime:PowerShellCmdlet1
+uid: Microsoft.Windows.ServerManager.Migration.Disable-ServerManagerStandardUserRemoting
+name: Disable-ServerManagerStandardUserRemoting
+module: Microsoft.Windows.ServerManager.Migration
+isPreview: false
+summary: |-
+  Disables access for specified standard users to event, service, performance counter, and role and feature inventory data that is collected by Server Manager for a server.
+description: |-
+  The **Disable-ServerManagerStandardUserRemoting** cmdlet disables access for one or more standard, non-Administrator users to event, service, performance counter, and role and feature inventory data for a server that you are managing by using Server Manager.
+  This cmdlet performs the opposite action, for specified users, of the Enable-ServerManagerStandardUserRemoting cmdlet.
+
+  The cmdlet restores the default, administrator-only access to this data, and must be run locally on the server that is being managed by using Server Manager.
+  The cmdlet works by performing the following actions:
+
+  - Deletes access rights for specified standard users to the root\cimv2 namespace on the local server (for access to role and feature inventory information).
+  - Removes specified standard users from user groups (Remote Management Users, Event Log Readers, and Performance Log Readers) that allow remote access to event and performance counter logs on the local server.
+  - Removes access rights in the Service Control Manager for specified standard users who have access to the status of services on the local server.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: User
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of user account names of standard users who runs Server Manager, and no longer requires access to event, performance counter, service, and role and feature inventory data for a server that is being managed by using either a local or remote Server Manager console.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-ServerManagerStandardUserRemoting
+        [-User] <String[]>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Disable access to event, performance counter, service status and role and feature inventory data for a user'
+  description: |-
+    ```
+    PS C:\> Disable-ServerManagerStandardUserRemoting -User "PattiFul"
+    ```
+
+    This command disables access to event, performance counter, service status, and role and feature inventory data for a server that is being managed by using either a local or remote Server Manager console, and for which there is a standard user named PattiFul.
+- title: 'Example 2: Simulate the outcome of disabling access to event, performance counter, service status and role and feature inventory data for a user'
+  description: |-
+    ```
+    PS C:\> Disable-ServerManagerStandardUserRemoting -User "EvanNar" -WhatIf
+    ```
+
+    This command views the outcome of running a command to deny a standard user named EvanNar access to event, performance counter, service status, and role and feature inventory data for a server that is being managed by using the Server Manager console running on either the local or a remote computer.
+    Because the *WhatIf* parameter is used, the command actions are not carried out.
+- title: 'Example 3: Disable access to event, performance counter, service status and role and feature inventory data for a user'
+  description: |-
+    ```
+    PS C:\> Disable-ServerManagerStandardUserRemoting -User "PattiFul" -Confirm
+    ```
+
+    This command denies a standard user named PattiFul access to event, performance counter, service status, and role and feature inventory data for a server that is being managed by using the Server Manager console running on either the local or a remote computer.
+    Because the *Confirm* parameter is used, the command prompts for confirmation before performing the action.
+links:
+- text: Get-WindowsFeature
+  href: ./Get-WindowsFeature.yml
+- text: Install-WindowsFeature
+  href: ./Install-WindowsFeature.yml
+- text: Uninstall-WindowsFeature
+  href: ./Uninstall-WindowsFeature.yml
+- text: Enable-ServerManagerStandardUserRemoting
+  href: ./Enable-ServerManagerStandardUserRemoting.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: ServerManager-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/disable-servermanagerstandarduserremoting?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Microsoft.Windows.ServerManager.Migration
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Disable-ServerManagerStandardUserRemoting

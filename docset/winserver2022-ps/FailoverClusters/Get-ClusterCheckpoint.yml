@@ -1,0 +1,163 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Get-ClusterCheckpoint
+name: Get-ClusterCheckpoint
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Retrieves a cryptographic key checkpoint or registry checkpoint for a resource.
+description: |-
+  The `Get-ClusterCheckpoint` cmdlet retrieves a cryptographic key checkpoint or registry checkpoint
+  for a resource.
+
+  Checkpoints help provide failover support for applications that store configuration information
+  locally instead of or in addition to storing information in the cluster configuration database.
+  Applications might store information locally in two ways. One way is to store configuration
+  information in the registry on the local server; another way is to use cryptographic keys on the
+  local server.
+parameters:
+  cmdletParameters:
+  - name: CheckpointName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of checkpoints for which to search. Use of wildcard expressions is accepted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+      `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CryptoCheckpoint
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that cryptographic checkpoints will be retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster on which to run the cmdlet or the cluster resource for which to retrieve the
+      checkpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistryCheckpoint
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that registry checkpoints will be retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource for which to retrieve the checkpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-ClusterCheckpoint
+        [[-ResourceName] <StringCollection>]
+        [-CheckpointName <String>]
+        [-RegistryCheckpoint]
+        [-CryptoCheckpoint]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-ClusterCheckpoint
+    ```
+
+    This example retrieves all cluster checkpoints.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-ClusterResource -ResourceName "Cluster Name" | Get-ClusterCheckpoint -CryptoCheckpoint
+    ```
+
+    This example retrieves the cryptographic checkpoints for the resource named `Cluster Name`.
+links:
+- text: Add-ClusterCheckpoint
+  href: ./Add-ClusterCheckpoint.yml
+- text: Remove-ClusterCheckpoint
+  href: ./Remove-ClusterCheckpoint.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/get-clustercheckpoint?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 11/22/2022
+  PlatyPS schema version: 2024-05-01
+  title: Get-ClusterCheckpoint

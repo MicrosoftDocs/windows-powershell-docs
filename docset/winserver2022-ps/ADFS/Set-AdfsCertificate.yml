@@ -1,0 +1,174 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Set-AdfsCertificate
+name: Set-AdfsCertificate
+module: ADFS
+isPreview: false
+summary: |-
+  Sets the properties of an existing certificate that AD FS uses to sign, decrypt, or secure communications.
+description: |-
+  The **Set-AdfsCertificate** cmdlet sets the properties of an existing certificate that Active Directory Federation Services (AD FS) uses to sign, decrypt, or secure communications.
+notes: |-
+  * Use the **Set-AdfsRelyingPartyTrust** or **Set-AdfsClaimsProviderTrust** cmdlets, as appropriate, to modify the certificates that are associated with a relying party or a claims provider.
+parameters:
+  cmdletParameters:
+  - name: CertificateType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate type (that is, how the Federation Service uses the certificate).
+      The acceptable values for this parameter are:
+
+      - Service-Communications
+      - Token-Decrypting
+      - Token-Signing
+    acceptedValues:
+    - Service-Communications
+    - Token-Decrypting
+    - Token-Signing
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsPrimary
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the certificate is primary.
+      Primary token-signing certificates are used to digitally sign outgoing claims.
+      Primary token-encrypting certificates are published in federation metadata for use by trusted claims providers.
+      Information Card signing and service communications certificates are always primary.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Thumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the thumbprint of the certificate to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AdfsCertificate
+        -CertificateType <String>
+        -Thumbprint <String>
+        [-IsPrimary]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    A String object is received by the *Thumbprint* parameter.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ServiceCertificate" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the updated ServiceCertificate object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+examples:
+- title: 'Example 1: Set a certificate'
+  description: |-
+    ```
+    PS C:\> Set-AdfsCertificate -IsPrimary -CertificateType "Token-Signing" -Thumbprint ‎"fedd995b45e633d4ef30fcbc8f3a48b627e9a28b"
+    ```
+
+    This command sets the primary token-signing certificate.
+links:
+- text: Add-AdfsCertificate
+  href: ./Add-AdfsCertificate.yml
+- text: Get-AdfsCertificate
+  href: ./Get-AdfsCertificate.yml
+- text: Remove-AdfsCertificate
+  href: ./Remove-AdfsCertificate.yml
+- text: Update-AdfsCertificate
+  href: ./Update-AdfsCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/set-adfscertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AdfsCertificate

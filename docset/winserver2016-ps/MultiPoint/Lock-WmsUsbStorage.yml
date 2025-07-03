@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Lock-WmsUsbStorage
+name: Lock-WmsUsbStorage
+module: MultiPoint
+isPreview: false
+summary: |-
+  Prevents USB storage devices from being used.
+description: |-
+  The **Lock-WmsUsbStorage** cmdlet prevents the use of any station-attached USB storage devices.
+  If a device is already attached when you run **Lock-WmsUsbStorage**, they are logically removed.
+  Any USB devices that are subsequently added to a station are hidden.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation applies to all sessions on the target host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LockAll
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+      The default is localhost.
+    aliases:
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StationId
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array MultiPoint station IDs.
+      The acceptable values for this parameter are: 1 through the number of stations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LockById
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Lock-WmsUsbStorage
+        [-StationId] <UInt32[]>
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LockById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Lock-WmsUsbStorage
+        [-All]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LockAll
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Lock USB storage devices'
+  description: |-
+    ```
+    PS C:\> Lock-WmsUsbStorage -StationId 2
+    ```
+
+    This command prevents the use of all USB storage devices on the specified station.
+links:
+- text: Unlock-WmsUsbStorage
+  href: ./Unlock-WmsUsbStorage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/lock-wmsusbstorage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Lock-WmsUsbStorage

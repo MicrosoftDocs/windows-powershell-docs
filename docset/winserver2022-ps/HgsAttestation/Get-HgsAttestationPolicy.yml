@@ -1,0 +1,187 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsAttestation.Get-HgsAttestationPolicy
+name: Get-HgsAttestationPolicy
+module: HgsAttestation
+isPreview: false
+summary: |-
+  Gets HGS attestation policies.
+description: |-
+  The **Get-HgsAttestationPolicy** cmdlet gets Host Guardian Service (HGS) attestation policies.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the policy that this cmdlet gets.
+      Use wildcard characters to get more than one policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyType
+    type: <xref href="AttestationPolicyType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the type of the policies that this cmdlet gets.
+    acceptedValues:
+    - Unknown
+    - SecureBootEnabled
+    - SecureBootSettings
+    - CiPolicy
+    - UefiDebugDisabled
+    - FullBoot
+    - VsmIdkPresent
+    - BitLockerEnabled
+    - IommuEnabled
+    - PagefileEncryptionEnabled
+    - HypervisorEnforcedCiPolicy
+    - NoHibernation
+    - NoDumps
+    - DumpEncryption
+    - DumpEncryptionKey
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyVersion
+    type: <xref href="PolicyVersion" data-throw-if-not-resolved="False" />
+    description: |-
+      Reserved for future use.
+    acceptedValues:
+    - None
+    - PolicyVersion1503
+    - PolicyVersion1704
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Stage
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Reserved for future use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="AttestationPolicyState" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the state of the policies that this cmdlet gets.
+      The acceptable values for this parameter are:
+
+      - Enabled
+      - Disabled
+      - Locked
+    acceptedValues:
+    - Disabled
+    - Enabled
+    - Locked
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-HgsAttestationPolicy
+        [[-Name] <String>]
+        [-State <AttestationPolicyState>]
+        [-PolicyType <AttestationPolicyType[]>]
+        [-PolicyVersion <PolicyVersion>]
+        [-Stage]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe strings to this cmdlet.
+outputs:
+- name: <xref href="AttestationPolicyInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns attestation policy information.
+examples:
+- title: 'Example 1: Get all policies'
+  description: |-
+    ```
+    PS C:\> Get-HgsAttestationPolicy
+    ```
+
+    This command gets all policies that are currently configured for the Attestation service.
+- title: 'Example 2: Get a policy by name'
+  description: |-
+    ```
+    PS C:\> Get-HgsAttestationPolicy -Name "BaselineTpmPolicy16"
+    ```
+
+    This command gets the policy named BaselineTpmPolicy16.
+- title: 'Example 3: Get policies by type'
+  description: |-
+    ```
+    PS C:\> Get-HgsAttestationPolicy -PolicyType SecureBootSettings
+    ```
+
+    This command gets policies that have the type Tpm.
+- title: 'Example 4: Get all enabled policies'
+  description: |-
+    ```
+    PS C:\> Get-HgsAttestationPolicy -State Enabled
+    ```
+
+    This command gets all enabled policies.
+links:
+- text: Disable-HgsAttestationPolicy
+  href: ./Disable-HgsAttestationPolicy.yml
+- text: Enable-HgsAttestationPolicy
+  href: ./Enable-HgsAttestationPolicy.yml
+- text: Remove-HgsAttestationPolicy
+  href: ./Remove-HgsAttestationPolicy.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsattestation/get-hgsattestationpolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-HgsAttestationPolicy

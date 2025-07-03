@@ -1,0 +1,41 @@
+### YamlMime:PowerShellModule1
+uid: International
+name: International Module
+isPreview: false
+cmdletGroups:
+- title: International Cmdlets
+  cmdlets:
+  - International.Copy-UserInternationalSettingsToSystem
+  - International.Get-WinAcceptLanguageFromLanguageListOptOut
+  - International.Get-WinCultureFromLanguageListOptOut
+  - International.Get-WinDefaultInputMethodOverride
+  - International.Get-WinHomeLocation
+  - International.Get-WinLanguageBarOption
+  - International.Get-WinSystemLocale
+  - International.Get-WinUILanguageOverride
+  - International.Get-WinUserLanguageList
+  - International.New-WinUserLanguageList
+  - International.Set-Culture
+  - International.Set-WinAcceptLanguageFromLanguageListOptOut
+  - International.Set-WinCultureFromLanguageListOptOut
+  - International.Set-WinDefaultInputMethodOverride
+  - International.Set-WinHomeLocation
+  - International.Set-WinLanguageBarOption
+  - International.Set-WinSystemLocale
+  - International.Set-WinUILanguageOverride
+  - International.Set-WinUserLanguageList
+description: |-
+  You can use the International Settings cmdlets to control the language that is used for various elements of the user interface (UI).
+
+  This reference provides cmdlet descriptions and syntax for all International Settings-specific cmdlets. It lists the cmdlets in alphabetical order.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 561544e6-3a83-4d24-b140-78ad771eaf10
+  Module Name: International
+  ms.date: 12/20/2016
+  title: International
+  PlatyPS schema version: 2024-05-01
+  document type: module

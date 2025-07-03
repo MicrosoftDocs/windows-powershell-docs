@@ -1,0 +1,164 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.Remove-NetIntent
+name: Remove-NetIntent
+module: NetworkATC
+isPreview: false
+summary: |-
+  Removes the requested network intent.
+description: |-
+  The `Remove-NetIntent` cmdlet removes the specified network intent.
+
+  - For clusters, if `-ClusterName` is specified, the removal affects all nodes within the given
+    cluster.
+  - For standalone nodes, only the network intents for the specified node will be removed.
+
+  Note that `Remove-NetIntent` does not remove the provisioning on the target hosts. The device
+  administrator must manually remove any old intent configurations from the node.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster from which the network intent should be removed. The removal will
+      affect all nodes in the specified cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the computer from which the network intent should be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GlobalOverrides
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that global overrides should be removed. This affects all configurations using these
+      global overrides.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Global
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the network intent to be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Cluster
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipServiceStop
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to skip stopping the service during the removal process. If set to `$true`, the
+      service will not be stopped.
+    defaultValue: "True"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-NetIntent
+        [-Name] <String>
+        [[-ComputerName] <String>]
+        [-SkipServiceStop <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ComputerName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-NetIntent
+        [-Name] <String>
+        [-ClusterName] <String>
+        [-SkipServiceStop <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Cluster
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-NetIntent
+        [-GlobalOverrides]
+        [-SkipServiceStop <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Global
+  isDefault: false
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Remove-NetIntent -Name "MyIntent" -ComputerName "Server01"
+    ```
+
+    This example removes the network intent named `MyIntent` from the standalone computer `Server01`.
+links:
+- text: Add-NetIntent
+  href: Add-NetIntent.yml
+- text: Copy-NetIntent
+  href: Copy-NetIntent.yml
+- text: Get-NetIntent
+  href: Get-NetIntent.yml
+- text: Get-NetIntentStatus
+  href: Get-NetIntentStatus.yml
+- text: Set-NetIntent
+  href: Set-NetIntent.yml
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/remove-netintent?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: Remove-NetIntent

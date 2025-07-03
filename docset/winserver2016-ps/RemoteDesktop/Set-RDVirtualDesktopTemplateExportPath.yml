@@ -1,0 +1,79 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteDesktop.Set-RDVirtualDesktopTemplateExportPath
+name: Set-RDVirtualDesktopTemplateExportPath
+module: RemoteDesktop
+isPreview: false
+summary: |-
+  Sets the export path for virtual desktop templates.
+description: |-
+  The **Set-RDVirtualDesktopTemplateExportPath** cmdlet sets the path that Remote Desktop Services uses to export virtual desktop templates for the virtual machine-based desktop deployment.
+parameters:
+  cmdletParameters:
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path for exported virtual desktop templates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-RDVirtualDesktopTemplateExportPath
+        [[-ConnectionBroker] <String>]
+        [-Path] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <span>undefined</span>
+examples:
+- title: 'Example 1: Set the export path for virtual export templates'
+  description: |-
+    ```
+    PS C:\> Set-RDVirtualDesktopTemplateExportPath -Path "\\rdsh-1\export"
+    ```
+
+    This command sets the export path for virtual desktop templates to \\\\rdsh-1\export.
+links:
+- text: Get-RDVirtualDesktopTemplateExportPath
+  href: ./Get-RDVirtualDesktopTemplateExportPath.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/moduleremotedesktop/set-rdvirtualdesktoptemplateexportpath?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteDesktop
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-RDVirtualDesktopTemplateExportPath

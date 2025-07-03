@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Get-ClusterAvailableDisk
+name: Get-ClusterAvailableDisk
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Gets information about the disks that can support Failover Clustering and are visible to all nodes,
+  but aren't yet part of the set of clustered disks.
+description: |-
+  The `Get-ClusterAvailableDisk` cmdlet gets information about the disks that can support Failover
+  Clustering and are visible to all nodes, but aren't yet part of the set of clustered disks.
+
+  If a disk is unexpectedly missing from the list of disks that are available for use in the cluster,
+  then make sure that the configuration of the storage allows the operating system on all clustered
+  servers to recognize and mount the disk as needed. The disk must be a basic disk, not a dynamic
+  disk, and shouldn't be exposed to any other servers.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{Fill All Description}}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+      `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Disk
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the disks on which to enumerate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster on which to enumerate available shared disks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-ClusterAvailableDisk
+        [[-Cluster] <String>]
+        [-Disk <CimInstance>]
+        [-All]
+        [-InputObject <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterDiskInfo" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-ClusterAvailableDisk
+    ```
+
+    This example lists the disks that are ready to be added to the cluster.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-ClusterAvailableDisk | Add-ClusterDisk
+    ```
+
+    This example adds all disks that are ready to be added to the local cluster.
+links:
+- text: Add-ClusterDisk
+  href: ./Add-ClusterDisk.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusteravailabledisk?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 11/22/2022
+  PlatyPS schema version: 2024-05-01
+  title: Get-ClusterAvailableDisk

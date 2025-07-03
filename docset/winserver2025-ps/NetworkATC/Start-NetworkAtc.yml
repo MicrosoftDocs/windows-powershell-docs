@@ -1,0 +1,83 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.Start-NetworkAtc
+name: Start-NetworkAtc
+module: NetworkATC
+isPreview: false
+summary: |-
+  Starts the Network ATC service on specified hosts.
+description: |-
+  The `Start-NetworkATC` cmdlet starts the ATC service on all hosts for a cluster or a given single
+  node.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to start the Network ATC service on all hosts.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the computer on which to start the Network ATC service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-NetworkAtc
+        [[-ComputerName] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ComputerName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-NetworkAtc
+        [-ClusterName] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Cluster
+  isDefault: false
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Start-NetworkAtc -ComputerName "Server01"
+    ```
+
+    This example starts the Network ATC service on the host specified by the computer name `Server01`.
+links:
+- text: Stop-NetworkAtc
+  href: Stop-NetworkAtc.yml
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/start-networkatc?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: Start-NetworkAtc

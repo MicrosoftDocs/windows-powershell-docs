@@ -1,0 +1,45 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsDeveloperLicense.Show-WindowsDeveloperLicenseRegistration
+name: Show-WindowsDeveloperLicenseRegistration
+module: WindowsDeveloperLicense
+isPreview: false
+summary: |-
+  Provides information about how to enable a device for development.
+description: |-
+  The **Show-WindowsDeveloperLicenseRegistration** cmdlet opens a dialog box that explains how to enable your device for development in the Windows 10® operating system.
+  The dialog box provides a link to the new settings page.
+  For more information, see [Enable your device for development](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) (https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) in the Microsoft Developer Network library.
+
+  You must have administrative credentials to enable Developer Mode.
+  You no longer need a Microsoft account or a developer license.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Show-WindowsDeveloperLicenseRegistration
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Enable your device for development'
+  description: |-
+    ```
+    PS C:\> Show-WindowsDeveloperLicenseRegistration
+    ```
+
+    This command opens a dialog box that lets you enable your device for development.
+links:
+- text: Enable your device for development
+  href: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx
+- text: Get-WindowsDeveloperLicense
+  href: ./Get-WindowsDeveloperLicense.yml
+- text: Unregister-WindowsDeveloperLicense
+  href: ./Unregister-WindowsDeveloperLicense.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.DeveloperLicense.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsdeveloperlicense/show-windowsdeveloperlicenseregistration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsDeveloperLicense
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Show-WindowsDeveloperLicenseRegistration

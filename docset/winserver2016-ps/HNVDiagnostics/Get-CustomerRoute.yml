@@ -1,0 +1,36 @@
+### YamlMime:PowerShellCmdlet1
+uid: HNVDiagnostics.Get-CustomerRoute
+name: Get-CustomerRoute
+module: HNVDiagnostics
+isPreview: false
+summary: |-
+  Gets CA routes.
+description: |-
+  The **Get-CustomerRoute** cmdlet gets Customer Address (CA) routing information organized by Routing Domain ID (RDID).
+  The information includes:
+
+  - Virtual Subnet ID (VSID).
+  This value is unique per virtual subnet, and corresponds to the VxLAN Network Identifier (VNI) or the NVGRE Tenant Network Identifier (TNI) in the VxLAN and NVGRE headers, respectively.
+  - CA IP Prefix.
+  IP prefix for the virtual subnet.
+  - CA IP Prefix Length.
+  Length (or subnet mask) of the CA IP Prefix.
+  - CA IP Next Hop.
+  The next hop required to reach the specified CA IP Prefix, usually the default gateway assigned to the HNV distributed router.
+  - Routing Domain ID.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-CustomerRoute
+    ```
+  parameterSetName: Default
+  isDefault: true
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Get-CustomerRoute-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hnvdiagnostics/get-customerroute?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-CustomerRoute

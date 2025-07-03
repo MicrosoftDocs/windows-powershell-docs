@@ -1,0 +1,337 @@
+### YamlMime:PowerShellCmdlet1
+uid: WDS.Add-WdsDriverPackage
+name: Add-WdsDriverPackage
+module: WDS
+isPreview: false
+summary: |-
+  Adds an existing driver package to a driver group or injects it into a boot image.
+description: |-
+  The **Add-WdsDriverPackage** cmdlet adds an existing driver package to a driver group or injects a driver package into a boot image.
+  Use the Import-WdsDriverPackage cmdlet to import driver packages into the Windows Deployment Services driver store.
+  Specify a driver package by its unique name or ID.
+
+  To add a driver package to a driver group, specify the group name.
+  Use the Remove-WdsDriverPackage to remove a drive package from a group.
+
+  To insert a driver package into a boot image, specify the image name and architecture.
+  If the image name and architecture do not uniquely identify the boot image, specify the boot image file.
+  After you insert a driver package into a boot image, Windows Deployment Services cannot remove the driver package.
+parameters:
+  cmdletParameters:
+  - name: Architecture
+    type: <xref href="Architecture" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an architecture.
+      This is the architecture of the image.
+      In order to insert a driver into a boot image, you must specify an architecture.
+      The acceptable values for this parameter are:
+
+      - Arm
+      - Ia64
+      - X64
+      - X86
+    acceptedValues:
+    - X86
+    - Ia64
+    - X64
+    - Arm
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdIntoBootImageProperties
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: NameIntoBootImageProperties
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job.
+      Use this parameter to run commands that take a long time to complete.
+       The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+      You can continue to work in the session while the job completes.
+      To manage the job, use the `*-Job` cmdlets.
+      To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+       For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a file name.
+      This is the file name of the boot image.
+      Use this parameter to specify the file name for the boot image if the boot image name and architecture do not uniquely identify the image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdIntoBootImageProperties
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: NameIntoBootImageProperties
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a driver group.
+      The cmdlet adds the driver package to this group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdIntoDriverGroupName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NameIntoDriverGroupName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an ID.
+      This is the ID of the driver package to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdIntoDriverGroupName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: IdIntoBootImageProperties
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an image.
+      This is the name of the boot image.
+      If this name is not unique, specify the file name of the boot image by using the *FileName* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdIntoBootImageProperties
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: NameIntoBootImageProperties
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name.
+      This is the unique name of the driver package.
+      If this name is not unique, specify the driver package ID, instead, by using the *Id* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NameIntoBootImageProperties
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NameIntoDriverGroupName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-WdsDriverPackage
+        -Id <Guid>
+        -GroupName <String>
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdIntoDriverGroupName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-WdsDriverPackage
+        -Id <Guid>
+        -Architecture <Architecture>
+        -ImageName <String>
+        [-FileName <String>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdIntoBootImageProperties
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-WdsDriverPackage
+        -Architecture <Architecture>
+        -ImageName <String>
+        -Name <String>
+        [-FileName <String>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NameIntoBootImageProperties
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-WdsDriverPackage
+        -GroupName <String>
+        -Name <String>
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NameIntoDriverGroupName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_WdsDriverPackage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a driver package to a group by using the package ID'
+  description: |-
+    ```
+    PS C:\> Add-WdsDriverPackage -Id 32d78628-07fb-4e18-adc4-f0ecf8b41bbe -GroupName "Drivers for Fabrikam Devices"
+    ```
+
+    This command adds a driver package to the group named Drivers for Fabrikam Devices.
+    The command specifies the ID of the driver package.
+- title: 'Example 2: Add a driver package to a group by using the package name'
+  description: |-
+    ```
+    PS C:\>Add-WdsDriverPackage -GroupName "Drivers for Fabrikam Devices" -Name "Fabrikam Device Driver (x64)"
+    ```
+
+    This command adds a driver package to the group named Drivers for Fabrikam Devices.
+    The command specifies Fabrikam Device Driver (x64) as the name of the driver package.
+- title: 'Example 3: Inject a driver package into a boot image by using the package ID'
+  description: |-
+    ```
+    PS C:\>Add-WdsDriverPackage -Architecture X64 -Id 32d78628-07fb-4e18-adc4-f0ecf8b41bbe -ImageName "Contoso general setup (x64)"
+    ```
+
+    This command injects the driver package into the boot image named Contoso general setup (x64).
+    The command specifies the ID of the driver package.
+- title: 'Example 4: Inject a driver package into a boot image by using the package name'
+  description: |-
+    ```
+    PS C:\>Add-WdsDriverPackage -Architecture X64 -ImageName "Contoso general setup (x64)" -Name "Fabrikam Device Driver (x64)"
+    ```
+
+    This command injects the driver package into the boot image named Contoso general setup (x64).
+    The command specifies Fabrikam Device Driver (x64) as the name of the driver package.
+links:
+- text: Disable-WdsDriverPackage
+  href: ./Disable-WdsDriverPackage.yml
+- text: Enable-WdsDriverPackage
+  href: ./Enable-WdsDriverPackage.yml
+- text: Get-WdsDriverPackage
+  href: ./Get-WdsDriverPackage.yml
+- text: Import-WdsDriverPackage
+  href: ./Import-WdsDriverPackage.yml
+- text: Remove-WdsDriverPackage
+  href: ./Remove-WdsDriverPackage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MSFT_WdsDriverPackage_v1.0.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/wds/add-wdsdriverpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: WDS
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-WdsDriverPackage

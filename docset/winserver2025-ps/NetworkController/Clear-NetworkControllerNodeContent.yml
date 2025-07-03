@@ -1,0 +1,103 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkController.Clear-NetworkControllerNodeContent
+name: Clear-NetworkControllerNodeContent
+module: NetworkController
+isPreview: false
+summary: |-
+  Clears Network Controller settings from a Network Controller node.
+description: |-
+  The **Clear-NetworkControllerNodeContent** cmdlet is used to clear Network Controller settings from a Network Controller node.
+
+  Consider a scenario where you want to remove a node from the cluster, and the node is not reachable over the network.
+  You can still remove the node using **Remove-NetworkControllerNode** command, but to remove local settings from the node, you must execute **Clear-NetworkControllerNodecontent** cmdlet locally on the removed node.
+
+  Additionally, the Network Controller configuration may fail before configuration is complete.
+  If the configuration is partially complete on one or more nodes, run this cmdlet locally on the nodes to remove the configuration.
+  In these cases, the Network Controller configuration error message will inform you to run this cmdlet on specific nodes.
+
+  Do not execute this cmdlet to remove a node from the cluster.
+  Use **Remove-NetworkControllerNode** for that purpose.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Clear-NetworkControllerNodeContent
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+links:
+- text: Remove-NetworkControllerNode
+  href: ./Remove-NetworkControllerNode.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontroller/clear-networkcontrollernodecontent?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Clear-NetworkControllerNodeContent

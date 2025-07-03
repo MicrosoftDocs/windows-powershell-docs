@@ -1,0 +1,92 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.Get-AllNetIntents
+name: Get-AllNetIntents
+module: NetworkATC
+isPreview: false
+summary: |-
+  Looks up all intent request configurations available.
+description: |-
+  The `Get-AllNetIntents` cmdlet retrieves all network intent configurations available based on the
+  computer name or cluster name.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster for which the network intent is to be retrieved. When used, the
+      intent "floats" across the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the computer name of the target host on which the network intent configuration is to be
+      retrieved. For standalone hosts, use the local computer name; for scenarios where the script is
+      executed remotely, ensure the current user has administrative privileges on the target machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GlobalOverrides
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Retrieves the global override settings.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AllNetIntents
+        [[-ClusterName] <String>]
+        [[-ComputerName] <String>]
+        [-GlobalOverrides]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AllNetIntents -ComputerName "Server01"
+    ```
+
+    This example retrieves all network intent configurations from the `Server01` standalone host.
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/get-allnetintents?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: Get-AllNetIntents

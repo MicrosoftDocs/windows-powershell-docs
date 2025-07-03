@@ -1,0 +1,50 @@
+### YamlMime:PowerShellModule1
+uid: Microsoft.Windows.Bcd.Cmdlets
+name: Microsoft.Windows.Bcd.Cmdlets Module
+isPreview: false
+cmdletGroups:
+- title: Microsoft.Windows.Bcd.Cmdlets Cmdlets
+  cmdlets:
+  - Microsoft.Windows.Bcd.Cmdlets.Copy-BcdEntry
+  - Microsoft.Windows.Bcd.Cmdlets.Disable-BcdElementBootDebug
+  - Microsoft.Windows.Bcd.Cmdlets.Disable-BcdElementBootEms
+  - Microsoft.Windows.Bcd.Cmdlets.Disable-BcdElementDebug
+  - Microsoft.Windows.Bcd.Cmdlets.Disable-BcdElementEms
+  - Microsoft.Windows.Bcd.Cmdlets.Disable-BcdElementEventLogging
+  - Microsoft.Windows.Bcd.Cmdlets.Disable-BcdElementHypervisorDebug
+  - Microsoft.Windows.Bcd.Cmdlets.Enable-BcdElementBootDebug
+  - Microsoft.Windows.Bcd.Cmdlets.Enable-BcdElementBootEms
+  - Microsoft.Windows.Bcd.Cmdlets.Enable-BcdElementDebug
+  - Microsoft.Windows.Bcd.Cmdlets.Enable-BcdElementEms
+  - Microsoft.Windows.Bcd.Cmdlets.Enable-BcdElementEventLogging
+  - Microsoft.Windows.Bcd.Cmdlets.Enable-BcdElementHypervisorDebug
+  - Microsoft.Windows.Bcd.Cmdlets.Export-BcdStore
+  - Microsoft.Windows.Bcd.Cmdlets.Get-BcdEntry
+  - Microsoft.Windows.Bcd.Cmdlets.Get-BcdEntryDebugSettings
+  - Microsoft.Windows.Bcd.Cmdlets.Get-BcdEntryHypervisorSettings
+  - Microsoft.Windows.Bcd.Cmdlets.Get-BcdStore
+  - Microsoft.Windows.Bcd.Cmdlets.Import-BcdStore
+  - Microsoft.Windows.Bcd.Cmdlets.New-BcdEntry
+  - Microsoft.Windows.Bcd.Cmdlets.New-BcdStore
+  - Microsoft.Windows.Bcd.Cmdlets.Remove-BcdElement
+  - Microsoft.Windows.Bcd.Cmdlets.Remove-BcdEntry
+  - Microsoft.Windows.Bcd.Cmdlets.Set-BcdBootDefault
+  - Microsoft.Windows.Bcd.Cmdlets.Set-BcdBootDisplayOrder
+  - Microsoft.Windows.Bcd.Cmdlets.Set-BcdBootSequence
+  - Microsoft.Windows.Bcd.Cmdlets.Set-BcdBootTimeout
+  - Microsoft.Windows.Bcd.Cmdlets.Set-BcdBootToolsDisplayOrder
+  - Microsoft.Windows.Bcd.Cmdlets.Set-BcdDebugSettings
+  - Microsoft.Windows.Bcd.Cmdlets.Set-BcdElement
+  - Microsoft.Windows.Bcd.Cmdlets.Set-BcdHypervisorSettings
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: a036f7aa-a3f6-435e-bc8e-924afd181240
+  Module Name: Microsoft.Windows.Bcd.Cmdlets
+  ms.date: 02/21/2024
+  title: Microsoft.Windows.Bcd.Cmdlets module
+  PlatyPS schema version: 2024-05-01
+  document type: module

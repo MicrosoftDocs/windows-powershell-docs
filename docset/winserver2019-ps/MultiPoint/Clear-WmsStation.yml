@@ -1,0 +1,115 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Clear-WmsStation
+name: Clear-WmsStation
+module: MultiPoint
+isPreview: false
+summary: |-
+  Clears station mapping information for all stations.
+description: |-
+  The **Clear-WmsStation** cmdlet clears station mapping information for all stations.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+      The default is localhost.
+    aliases:
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Clear-WmsStation
+        [-Server <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Clear station mapping'
+  description: |-
+    ```
+    PS C:\> Clear-WmsStation
+    ```
+
+    This command puts all MultiPoint Server stations into an unmapped state.
+    All station mapping information is lost, along with any station friendly names and station autologon information.
+
+    If you subsequently run **Get-WmsStation** it returns no station information.
+links:
+- text: Get-WmsStation
+  href: ./Get-WmsStation.yml
+- text: Join-WmsStation
+  href: ./Join-WmsStation.yml
+- text: Set-WmsStation
+  href: ./Set-WmsStation.yml
+- text: Split-WmsStation
+  href: ./Split-WmsStation.yml
+- text: Update-WmsStation
+  href: ./Update-WmsStation.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/clear-wmsstation?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Clear-WmsStation

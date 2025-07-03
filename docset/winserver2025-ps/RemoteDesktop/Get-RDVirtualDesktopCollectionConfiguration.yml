@@ -1,0 +1,190 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteDesktop.Get-RDVirtualDesktopCollectionConfiguration
+name: Get-RDVirtualDesktopCollectionConfiguration
+module: RemoteDesktop
+isPreview: false
+summary: |-
+  Gets configuration details of a virtual desktop collection.
+description: |-
+  The **Get-RDVirtualDesktopCollectionConfiguration** gets configuration details of a virtual desktop collection.
+parameters:
+  cmdletParameters:
+  - name: Client
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet gets Remote Desktop Protocol (RDP) settings for virtual desktops in the collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Client
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual desktop collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserGroups
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet gets a list of domain groups and users that are authorized to connect to the collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UserGroups
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserProfileDisks
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet gets a list of user profile disk settings for the collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UserProfileDisks
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualDesktopConfiguration
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet gets configuration settings for virtual desktops in the collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VirtualDesktopConfiguration
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-RDVirtualDesktopCollectionConfiguration
+        [-CollectionName] <String>
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: General
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-RDVirtualDesktopCollectionConfiguration
+        [-CollectionName] <String>
+        [-VirtualDesktopConfiguration]
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VirtualDesktopConfiguration
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-RDVirtualDesktopCollectionConfiguration
+        [-CollectionName] <String>
+        [-UserGroups]
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UserGroups
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-RDVirtualDesktopCollectionConfiguration
+        [-CollectionName] <String>
+        [-Client]
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Client
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-RDVirtualDesktopCollectionConfiguration
+        [-CollectionName] <String>
+        [-UserProfileDisks]
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UserProfileDisks
+  isDefault: false
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get configuration settings for virtual desktops in a collection'
+  description: |-
+    ```
+    PS C:\> Get-RDVirtualDesktopCollectionConfiguration -ConnectionBroker "rdcb.contoso.com" -CollectionName "Virtual Desktop Pool" -VirtualDesktopConfiguration
+    ```
+
+    This command gets the configuration settings for the virtual desktops in the collection named Virtual Desktop Pool that is associated with the RD Connection Broker server named rdcb.contoso.com.
+- title: 'Example 2: Get user profile disk settings for a virtual desktop collection'
+  description: |-
+    ```
+    PS C:\> Get-RDVirtualDesktopCollectionConfiguration -ConnectionBroker "rdcb.contoso.com" -CollectionName "Virtual Desktop Pool" -UserProfileDisks
+    ```
+
+    This command gets the user profile disk settings for the virtual desktop collection named Virtual Desktop Pool that is associated with the RD Connection Broker server named rdcb.contoso.com.
+links:
+- text: Set-RDVirtualDesktopCollectionConfiguration
+  href: ./Set-RDVirtualDesktopCollectionConfiguration.yml
+- text: Get-RDVirtualDesktopCollection
+  href: ./Get-RDVirtualDesktopCollection.yml
+- text: Remove-RDVirtualDesktopCollection
+  href: ./Remove-RDVirtualDesktopCollection.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/RemoteDesktop/get-rdvirtualdesktopcollectionconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteDesktop
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-RDVirtualDesktopCollectionConfiguration

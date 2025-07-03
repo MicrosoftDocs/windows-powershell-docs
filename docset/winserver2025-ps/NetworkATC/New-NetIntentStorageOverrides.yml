@@ -1,0 +1,76 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.New-NetIntentStorageOverrides
+name: New-NetIntentStorageOverrides
+module: NetworkATC
+isPreview: false
+summary: |-
+  Creates a new instance of network adapter storage overrides which can be used to supply granular
+  values to `Set-NetIntent`.
+description: |-
+  The `New-NetIntentStorageOverrides` cmdlet creates a new instance of storage network adapter
+  override setting. This instance can be used to specify configuration values for network adapters
+  when using the `Set-NetIntent` cmdlet.
+parameters:
+  cmdletParameters:
+  - name: EnableAutomaticIPGeneration
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether automatic IP generation should be enabled for the network adapter storage
+      configuration. When set to `$true`, IP addresses will be automatically generated based on the
+      network settings.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NetIntentStorageOverrides
+        [-EnableAutomaticIPGeneration <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-NetIntentStorageOverrides -EnableAutomaticIPGeneration $true
+    ```
+
+    This example creates a new storage override with automatic IP generation enabled.
+links:
+- text: New-NetIntentAdapterPropertyOverrides
+  href: New-NetIntentAdapterPropertyOverrides.yml
+- text: New-NetIntentAdapterRssOverrides
+  href: New-NetIntentAdapterRssOverrides.yml
+- text: New-NetIntentGlobalClusterOverrides
+  href: New-NetIntentGlobalClusterOverrides.yml
+- text: New-NetIntentGlobalProxyOverrides
+  href: New-NetIntentGlobalProxyOverrides.yml
+- text: New-NetIntentQoSPolicyOverrides
+  href: New-NetIntentQoSPolicyOverrides.yml
+- text: New-NetIntentSiteOverrides
+  href: New-NetIntentSiteOverrides.yml
+- text: New-NetIntentSwitchConfigurationOverrides
+  href: New-NetIntentSwitchConfigurationOverrides.yml
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/new-netintentstorageoverrides?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: New-NetIntentStorageOverrides

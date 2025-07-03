@@ -1,0 +1,201 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkSwitchManager.Disable-NetworkSwitchVlan
+name: Disable-NetworkSwitchVlan
+module: NetworkSwitchManager
+isPreview: false
+summary: |-
+  Disables a VLAN of a network switch.
+description: |-
+  The **Disable-NetworkSwitchVlan** cmdlet disables a virtual local area network (VLAN) of a network switch.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **CimSession** that this cmdlet uses to connect to the network switch.
+      For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the instance ID of a VLAN to disable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InstanceIdSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a VLAN to disable.
+      This **ElementName** is a friendly name.
+      It is not necessarily unique.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NameSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VlanID
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies VLAN ID of the VLAN to disable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VlanIdSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-NetworkSwitchVlan
+        -CimSession <CimSession>
+        -InstanceId <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InstanceIdSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Disable-NetworkSwitchVlan
+        -CimSession <CimSession>
+        -Name <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NameSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Disable-NetworkSwitchVlan
+        -CimSession <CimSession>
+        -VlanID <Int32>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VlanIdSet
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+examples:
+- title: 'Example 1: Disable a VLAN by using an instance ID'
+  description: |-
+    ```
+    PS C:\>$Session = New-CimSession -ComputerName "NetworkSwitch08"
+    PS C:\> Disable-NetworkSwitchVlan -InstanceID "Vlan02" -CimSession $Session
+    ```
+
+    The first command creates a **CimSession** for a network switch, and then stores it in the **$Session** variable.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+    The second command disables the VLAN that has the instance ID Vlan02 for the switch NetworkSwitch08 by using the **$Session** object.
+- title: 'Example 2: Disable a VLAN by using a name'
+  description: |-
+    ```
+    PS C:\>Disable-NetworkSwitchVlan -CimSession $Session -Name "VLAN22"
+    ```
+
+    This command disables the VLAN named VLAN22.
+    The command includes a **CimSession**, similar to the first example.
+- title: 'Example 3: Disable a VLAN by using its ID'
+  description: |-
+    ```
+    PS C:\>Disable-NetworkSwitchVlan -CimSession $Session -VlanId 74
+    ```
+
+    This command disables the VLAN that has the VLAN ID 74.
+    The command includes a **CimSession**, similar to the first example.
+links:
+- text: Enable-NetworkSwitchVlan
+  href: ./Enable-NetworkSwitchVlan.yml
+- text: Get-NetworkSwitchVlan
+  href: ./Get-NetworkSwitchVlan.yml
+- text: New-NetworkSwitchVlan
+  href: ./New-NetworkSwitchVlan.yml
+- text: Remove-NetworkSwitchVlan
+  href: ./Remove-NetworkSwitchVlan.yml
+- text: Set-NetworkSwitchVlanProperty
+  href: ./Set-NetworkSwitchVlanProperty.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: NetworkSwitchVlan-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkswitchmanager/disable-networkswitchvlan?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkSwitchManager
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Disable-NetworkSwitchVlan

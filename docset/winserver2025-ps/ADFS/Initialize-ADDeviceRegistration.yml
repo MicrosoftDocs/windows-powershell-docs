@@ -1,0 +1,199 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Initialize-ADDeviceRegistration
+name: Initialize-ADDeviceRegistration
+module: ADFS
+isPreview: false
+summary: |-
+  Initializes the Device Registration Service configuration in the Active Directory forest.
+description: |-
+  The **Initialize-ADDeviceRegistration** cmdlet initializes the Device Registration Service configuration in the Active Directory forest.
+  To run this cmdlet, you must be logged in with enterprise administrator permissions and your Active Directory forest must have the Windows Server 2012 R2 schema.
+  To join devices to a workplace, you must run the **Enable-AdfsDeviceRegistration** cmdlet on each Active Directory Federation Services (AD FS) server after this cmdlet has been run successfully.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSCredential** object based on a user name and password.
+      This account must be a member of the Enterprise Admins group.
+      To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+      For more information, type `Get-Help Get-Credential`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceLocation
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the domain in which to store the device objects.
+      Specify a domain in the current forest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiscoveryName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a discovery name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaximumRegistrationInactivityPeriod
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of days to elapse before a device object is deleted due to inactivity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistrationQuota
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of devices that an individual user can register.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the account to which to grant read and write access to the Device Registration service configuration and containers in Active Directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Initialize-ADDeviceRegistration
+        -ServiceAccountName <String>
+        [-DeviceLocation <String>]
+        [-RegistrationQuota <UInt32>]
+        [-MaximumRegistrationInactivityPeriod <UInt32>]
+        [-Credential <PSCredential>]
+        [-Force]
+        [-DiscoveryName <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Initialize the Device Registration Service'
+  description: |-
+    ```
+    PS C:\> Initialize-ADDeviceRegistration -ServiceAccountName "CONTOSO\svc_adfs" -DeviceLocation "Contoso.com" -RegistrationQuota 10 -MaximumRegistrationInactivityPeriod 90 -Credential ContosoAdmin
+    ```
+
+    This command initializes the Device Registration Service in the Active Directory forest.
+links:
+- text: Enable-AdfsDeviceRegistration
+  href: ./Enable-AdfsDeviceRegistration.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/initialize-addeviceregistration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Initialize-ADDeviceRegistration

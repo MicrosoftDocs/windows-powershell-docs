@@ -1,0 +1,79 @@
+### YamlMime:PowerShellCmdlet1
+uid: HNVDiagnostics.Get-VMNetworkAdapterPortId
+name: Get-VMNetworkAdapterPortId
+module: HNVDiagnostics
+isPreview: false
+summary: |-
+  Gets the VFP/VSwitch port ID.
+description: |-
+  The **Get-VMNetworkAdapterPortId** cmdlet gets the VFP/VSwitch port ID for a virtual machine or infrastructure port.
+  This cmdlet also returns the friendly name of the virtual switch to which the port is attached and the port name.
+parameters:
+  cmdletParameters:
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual machine for which to retrieve the port ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMNetworkAdapterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual machine network adapter for which to retrieve the port ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-VMNetworkAdapterPortId
+        [[-VMName] <String>]
+        [[-VMNetworkAdapterName] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get the port ID for a virtual machine network adapter'
+  description: |-
+    ```
+    PS C:\> ($switchName, $portId, $portName) = Get-VMNetworkAdapterPortId -VMName "vm1" -VMNetworkAdapterName "VMAdapter"
+    ```
+- title: 'Example 2: Get the port ID for an infrastructure port'
+  description: |-
+    ```
+    PS C:\> ($switchName, $portId, $portName) = Get-VMNetworkAdapterPortId -VMNetworkAdapterName "HostAdapter"
+    ```
+
+    This command gets the port ID for an infrastructure port, and then saves it to the specified variables.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Get-VMNetworkAdapterPortId-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hnvdiagnostics/get-vmnetworkadapterportid?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-VMNetworkAdapterPortId

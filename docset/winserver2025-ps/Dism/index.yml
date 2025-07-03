@@ -1,0 +1,97 @@
+### YamlMime:PowerShellModule1
+uid: Dism
+name: Dism Module
+isPreview: false
+cmdletGroups:
+- title: Dism Cmdlets
+  cmdlets:
+  - Dism.Add-AppxProvisionedPackage
+  - Dism.Add-WindowsCapability
+  - Dism.Add-WindowsDriver
+  - Dism.Add-WindowsImage
+  - Dism.Add-WindowsPackage
+  - Dism.Clear-WindowsCorruptMountPoint
+  - Dism.Disable-WindowsOptionalFeature
+  - Dism.Dismount-WindowsImage
+  - Dism.Enable-WindowsOptionalFeature
+  - Dism.Expand-WindowsCustomDataImage
+  - Dism.Expand-WindowsImage
+  - Dism.Export-WindowsCapabilitySource
+  - Dism.Export-WindowsDriver
+  - Dism.Export-WindowsImage
+  - Dism.Get-AppxProvisionedPackage
+  - Dism.Get-NonRemovableAppsPolicy
+  - Dism.Get-WIMBootEntry
+  - Dism.Get-WindowsCapability
+  - Dism.Get-WindowsDriver
+  - Dism.Get-WindowsEdition
+  - Dism.Get-WindowsImage
+  - Dism.Get-WindowsImageContent
+  - Dism.Get-WindowsOptionalFeature
+  - Dism.Get-WindowsPackage
+  - Dism.Get-WindowsReservedStorageState
+  - Dism.Mount-WindowsImage
+  - Dism.New-WindowsCustomImage
+  - Dism.New-WindowsImage
+  - Dism.Optimize-AppXProvisionedPackages
+  - Dism.Optimize-WindowsImage
+  - Dism.Remove-AppxProvisionedPackage
+  - Dism.Remove-WindowsCapability
+  - Dism.Remove-WindowsDriver
+  - Dism.Remove-WindowsImage
+  - Dism.Remove-WindowsPackage
+  - Dism.Repair-WindowsImage
+  - Dism.Save-WindowsImage
+  - Dism.Set-AppXProvisionedDataFile
+  - Dism.Set-NonRemovableAppsPolicy
+  - Dism.Set-WindowsEdition
+  - Dism.Set-WindowsProductKey
+  - Dism.Set-WindowsReservedStorageState
+  - Dism.Split-WindowsImage
+  - Dism.Start-OSUninstall
+  - Dism.Update-WIMBootEntry
+  - Dism.Use-WindowsUnattend
+description: |-
+  The Deployment Image Servicing and Management (DISM) platform is used to mount and service Windows
+  images before deployment. A subset of DISM commands can be used on online Windows images. You can
+  use DISM tools to mount, and get information about, Windows image (`.wim`) files or virtual hard
+  disks (`.vhd` or `.vhdx`). You can also use it to install, uninstall, configure, and update Windows
+  features, packages, and drivers in a Windows image or to change the edition of a Windows image.
+
+  The DISM platform also includes a command-line tool, `dism.exe`, and the
+  [DISM API](https://go.microsoft.com/fwlink/?LinkID=237611). The command-line tool is available in the
+  [Windows Assessment and Deployment Kit (Windows ADK)](https://go.microsoft.com/fwlink/?LinkId=206587)
+  and includes additional functionality that supports servicing commands for international settings.
+
+  You can check for errors when running Dism cmdlets by checking if the `$?`. If set to True, the last
+  operation succeeded. If False, the last operation failed. The `$LASTEXITCODE` contains the exit code
+  of the last Win32 executable run. For example, to check that the `Get-WindowsImage` cmdlet fails to
+  get information about the Windows image contained in the file, `E:\images\c.wim`, type the
+  following:
+
+  ```powershell
+  try
+  {
+
+      Get-WindowsImage -ImagePath E:\images\c.wim
+  }
+  catch
+  {
+      $message = "TRAPPED: {0}: '{1}'" -f ($_.Exception.GetType().FullName), ($_.Exception.Message)
+      Write-host $message
+  }
+  ```
+
+  For more information about error handling, see the
+  [about_Try_Catch_Finally](https://go.microsoft.com/fwlink/p/?LinkID=317390).
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.0.1.1
+  Locale: en-US
+  Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
+  Module Name: Dism
+  ms.date: 10/07/2021
+  title: Dism Module
+  PlatyPS schema version: 2024-05-01
+  document type: module

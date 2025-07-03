@@ -1,0 +1,193 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppLocker.Set-AppLockerPolicy
+name: Set-AppLockerPolicy
+module: AppLocker
+isPreview: false
+summary: |-
+  Sets the AppLocker policy for the specified GPO.
+description: |-
+  The **Set-AppLockerPolicy cmdlet** sets the specified GPO to contain the specified AppLocker policy.
+  If no Lightweight Directory Access Protocol (LDAP) is specified, then the default is the local GPO.
+
+  The input values for the AppLocker policy can be an **AppLockerPolicy** object or an XML-formatted file that contains the AppLocker policy.
+
+  Note that the Set-AppLockerPolicy cmdlet only works with GP. It cannot interact with the AppLocker CSP.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ldap
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the LDAP path of the GPO.
+      It must specify a unique GPO.
+      If this parameter is not specified, then the local AppLocker policy is set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Merge
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Merges the rules in the specified AppLocker policy with the AppLocker rules in the target GPO specified in the LDAP path.
+      The merging of policies will remove rules with duplicate rule IDs, and the enforcement setting specified by the AppLocker policy in the target GPO will be preserved.
+      If the *Merge* parameter is not specified, then the new policy will overwrite the existing policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyObject
+    type: <xref href="AppLockerPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **AppLockerPolicy** object that contains the AppLocker policy.
+      Can be obtained from the Get-AppLockerPolicy and the New-AppLockerPolicy cmdlets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPolicyObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: XmlPolicy
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path where the XML-formatted file that contains the AppLocker policy is saved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByXmlPolicy
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AppLockerPolicy
+        [-XmlPolicy] <String>
+        [-Ldap <String>]
+        [-Merge]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByXmlPolicy
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AppLockerPolicy
+        [-PolicyObject] <AppLockerPolicy>
+        [-Ldap <String>]
+        [-Merge]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPolicyObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.AppLockerPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    **AppLockerPolicy**
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set the local AppLocker policy'
+  description: |-
+    ```
+    PS C:\> Set-AppLockerPolicy -XMLPolicy C:\Policy.xml
+    ```
+
+    This example sets the local AppLocker policy to the policy specified in C:\Policy.xml.
+- title: 'Example 2: Set the GPO to contain an AppLocker policy.'
+  description: |-
+    ```
+    PS C:\> Set-AppLockerPolicy -XMLPolicy C:\Policy.xml -LDAP "LDAP://DC13.Contoso.com/CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=Contoso,DC=com"
+    ```
+
+    This example sets the GPO specified in the LDAP path to contain the AppLocker policy that is specified in C:\Policy.xml.
+- title: 'Example 3: Merge the local AppLocker policy with another'
+  description: |-
+    ```
+    PS C:\> Get-AppLockerPolicy -Local | Set-AppLockerPolicy -LDAP "LDAP://DC13.Contoso.com/CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=Contoso,DC=com" -Merge
+    ```
+
+    This example gets the local AppLocker policy, and then merges the policy with the existing AppLocker policy in the GPO specified in the LDAP path.
+    For more information on how two policies are merged, see the *Merge* parameter description.
+links:
+- text: Get-AppLockerFileInformation
+  href: ./Get-AppLockerFileInformation.yml
+- text: Get-AppLockerPolicy
+  href: ./Get-AppLockerPolicy.yml
+- text: New-AppLockerPolicy
+  href: ./New-AppLockerPolicy.yml
+- text: Test-AppLockerPolicy
+  href: ./Test-AppLockerPolicy.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/applocker/set-applockerpolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: AppLocker
+  ms.date: 09/28/2020
+  PlatyPS schema version: 2024-05-01
+  title: Set-AppLockerPolicy

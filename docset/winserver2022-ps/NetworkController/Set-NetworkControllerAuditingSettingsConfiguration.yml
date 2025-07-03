@@ -1,0 +1,268 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkController.Set-NetworkControllerAuditingSettingsConfiguration
+name: Set-NetworkControllerAuditingSettingsConfiguration
+module: NetworkController
+isPreview: false
+summary: |-
+  Sets firewall auditing settings on Network Controller.
+description: |-
+  The **Set-NetworkControllerAuditingSettingsConfiguration** cmdlet sets firewall auditing settings on Network Controller.
+
+  Firewall auditing records any flow processed by Software Defined Networking (SDN) firewall rules.
+  It records all ACLs that have logging enabled.
+  These logs can be used for diagnostics or archived for later analysis.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionUri
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Uniform Resource Identifier (URI) of a Network Controller.
+      The cmdlet gets configuration for auditing settings for that controller.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user credential that has permission to perform this action.
+      The default value is the current user.
+
+      This user must be present in the security group provided in the **ClientSecurityGroup** parameter in the `Install-NetworkController` cmdlet.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Etag
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the entity tag (ETag) parameter of the resource.
+      An ETag is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+      The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassInnerException
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+      The thumbprint must be provided only if the network controller client authentication is X509 certificates.
+      **Get-NetworkController** retrieves that client authentication and authorization information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Properties
+    type: <xref href="AuditingSettingsProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the properties of the Network Controller auditing settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource ID of the auditing settings configuration to set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceMetadata
+    type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tags
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-NetworkControllerAuditingSettingsConfiguration
+        [[-Tags] <PSObject>]
+        [-Properties] <AuditingSettingsProperties>
+        [[-Etag] <String>]
+        [[-ResourceMetadata] <ResourceMetadata>]
+        [[-ResourceId] <String>]
+        [-Force]
+        -ConnectionUri <Uri>
+        [-CertificateThumbprint <String>]
+        [-Credential <PSCredential>]
+        [-PassInnerException]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Windows.NetworkController.AuditingSettingsProperties" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set auditing properties on a NetWork Controller'
+  description: |-
+    ```powershell
+    $AuditProperties = New-Object Microsoft.Windows.NetworkController.AuditingSettingsProperties
+    $AuditProperties.OutputDirectory = "C:\test\log1"
+    Set-NetworkControllerAuditingSettingsConfiguration -Properties $AuditProperties  -ConnectionUri https://networkcontroller
+    ```
+
+    This example sets a log location for a network controller.
+
+    The first command creates an auditing settings properties object.
+
+    The second command assigns a value for an output directory to the object.
+
+    The third command sets the properties in the **AuditingSettingsProperties** object for the Network Controller.
+links:
+- text: Get-NetworkControllerAuditingSettingsConfiguration
+  href: Get-NetworkControllerAuditingSettingsConfiguration.yml
+metadata:
+  description: The Set-NetworkControllerAuditingSettingsConfiguration cmdlet sets firewall auditing settings on Network Controller.
+  document type: cmdlet
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontroller/set-networkcontrollerauditingsettingsconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkController
+  ms.date: 09/27/2021
+  PlatyPS schema version: 2024-05-01
+  title: Set-NetworkControllerAuditingSettingsConfiguration

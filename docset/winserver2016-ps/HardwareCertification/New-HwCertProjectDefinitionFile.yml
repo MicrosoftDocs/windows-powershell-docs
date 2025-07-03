@@ -1,0 +1,445 @@
+### YamlMime:PowerShellCmdlet1
+uid: HardwareCertification.New-HwCertProjectDefinitionFile
+name: New-HwCertProjectDefinitionFile
+module: HardwareCertification
+isPreview: false
+summary: |-
+  Creates an HCK project definition file.
+description: |-
+  The **New-HwCertProjectDefinitionFile** cmdlet creates a Windows Hardware Certification Kit (HCK) project definition file.
+  The project definition file includes the targets, such as devices and systems, for certification tests.
+  The HCK automation tool uses the settings in this file to determine which targets to test.
+  For more information, see [Windows Hardware Certification Kit downloads](https://go.microsoft.com/fwlink/?LinkId=614978) in the Microsoft Developer Network (MSDN) Library.
+
+  You can update this generated file by adding any changes that are valid with respect to the project definition file schema.
+parameters:
+  cmdletParameters:
+  - name: ClassIdList
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of class GUIDs as strings.
+      For more information, see [Class-GUID](https://technet.microsoft.com/en-us/library/cc957340.aspx) in the TechNet library.
+      You can use a comma-separated list.
+    aliases:
+    - ClassList
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerIdList
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of container IDs, in GUID format.
+      You can use a comma-separated list.
+    aliases:
+    - ContainerList
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ControllerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the controller or test server.
+      The project definition file stores the controller name in the **Controller** attribute of the \<ProjectDefinitionData\> element.
+      If you do not provide a controller name and do not specify the **OutputAutomatedPdef** parameter, the cmdlet uses the current computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CrashDumpCollection
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of Windows crash dump file to generate and collect for the project.
+      The acceptable values for this parameter are:
+
+      - Mini
+      - Kernel
+      - Full
+      - Disable
+
+      Default value is Disable.
+    acceptedValues:
+    - Mini
+    - Kernel
+    - Full
+    - Disable
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DriverList
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of target drivers.
+      You can use a comma-separated list.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableIsolateTargets
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet creates an individual device family for each discovered target.
+      If you do not specify this parameter, the cmdlet groups targets into families based on device class.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableMultiDeviceTest
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that multiple-device scheduling is enabled.
+      The project definition file stores the Boolean setting for multiple-device scheduling in the \<MultiDeviceTestGroup\> element.
+    aliases:
+    - EMDT
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HwIdList
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of hardware IDs for target devices.
+      You can use a comma-separated list.
+
+      You can specify partial hardware IDs.
+      The cmdlet matches a partial value as a substring of the hardware ID format.
+      The comparison uses ASCII characters and is not case sensitive.
+      If the ID contains an ampersand character (&), enclose the ID in double quotes ("").
+      In Windows PowerShell®, the ampersand is a reserved character.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachineList
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of test computer names.
+      You can use a comma-separated list.
+      If you specify more than one computer, all of them must be in the same pool.
+    aliases:
+    - Machine
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PdefOverrides
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachinePool
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an existing machine pool, which contains test computers.
+    aliases:
+    - Pool
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PdefOverrides
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputAutomatedPdef
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet generates the following attributes in the project definition file:
+
+      - **Controller** = "\[MACHINE\]"
+      - **TestCollectionReadLocation** = "\[FILTERED_TEST_COLLECTION\]"
+      - **Path** = "\[PACKAGES\]"
+    aliases:
+    - automate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PdefFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the project definition file.
+      If you do not specify a name, the cmdlet creates a name in the following format: %UserProfile%\Desktop\PDEF_Files\PDEF_TimeDate\PDEF_OSPlatformName_TimeDate.xml.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the project.
+      The project definition file stores the project name in the **Name** attribute of the \<Project\> element.
+      If you do not specify a name, the cmdlet generates a name that contains a time stamp.
+    aliases:
+    - PROJ
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunSystemTest
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet specifies a single **TargetType** attribute, which equals System.
+      Specify this parameter for testing a whole system.
+      You cannot run a System test with any other query types.
+
+      A System test treats the target as a single device.
+      This differs from TestAllDevices, which tests every target on a system, but treats them individually.
+      Specify the **TestAllDevices** parameter to test all devices.
+    aliases:
+    - System
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipTestStatus
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the skipping mode for scheduling tests.
+      The project definition file stores this value in the \<TestStatusToSkip\> element.
+      The acceptable values for this parameter are:
+
+      - Pass
+      - Fail
+      - NoData
+
+      The default value is Pass.
+    acceptedValues:
+    - Fail
+    - NoData
+    aliases:
+    - SkipStatus
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TestAllDevices
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the controller tests all target devices that it discovers.
+      The controller discovers devices on the computers specified by the **MachineList** or the **MachinePool** parameter.
+    aliases:
+    - AllDevices
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TestCollectionFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path for a test collection .xml file.
+      The project definition file stores the path in the **TestCollectionReadLocation** attribute of the \<Project\> element.
+      If you do not specify a path, the cmdlet uses an empty string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-HwCertProjectDefinitionFile
+        [-ControllerName <String>]
+        [-PdefFilePath <String>]
+        [-TestCollectionFilePath <String>]
+        [-EnableIsolateTargets]
+        [-EnableMultiDeviceTest]
+        [-OutputAutomatedPdef]
+        [-ProjectName <String>]
+        [-SkipTestStatus <String>]
+        [-CrashDumpCollection <String>]
+        [-MachineList <String[]>]
+        [-MachinePool <String>]
+        [-RunSystemTest]
+        [-TestAllDevices]
+        [-HwIdList <String[]>]
+        [-DriverList <String[]>]
+        [-ContainerIdList <String[]>]
+        [-ClassIdList <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PdefOverrides
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-HwCertProjectDefinitionFile
+        -MachineList <String[]>
+        [-ControllerName <String>]
+        [-PdefFilePath <String>]
+        [-TestCollectionFilePath <String>]
+        [-EnableIsolateTargets]
+        [-EnableMultiDeviceTest]
+        [-OutputAutomatedPdef]
+        [-ProjectName <String>]
+        [-SkipTestStatus <String>]
+        [-CrashDumpCollection <String>]
+        [-RunSystemTest]
+        [-TestAllDevices]
+        [-HwIdList <String[]>]
+        [-DriverList <String[]>]
+        [-ContainerIdList <String[]>]
+        [-ClassIdList <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MachineList
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-HwCertProjectDefinitionFile
+        -MachinePool <String>
+        [-ControllerName <String>]
+        [-PdefFilePath <String>]
+        [-TestCollectionFilePath <String>]
+        [-EnableIsolateTargets]
+        [-EnableMultiDeviceTest]
+        [-OutputAutomatedPdef]
+        [-ProjectName <String>]
+        [-SkipTestStatus <String>]
+        [-CrashDumpCollection <String>]
+        [-RunSystemTest]
+        [-TestAllDevices]
+        [-HwIdList <String[]>]
+        [-DriverList <String[]>]
+        [-ContainerIdList <String[]>]
+        [-ClassIdList <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MachinePool
+  isDefault: false
+examples:
+- title: 'Example 1: Create a project definition file for a driver'
+  description: |-
+    ```
+    PS C:\> New-HwCertProjectDefinitionFile -MachinePool "Test07" -DriverList "disk.sys"
+    ```
+
+    This command creates a project definition file.
+    The command populates the project file with HCK target values for which disk.sys is a device driver, and from all machines available in the Test07 pool.
+links:
+- text: New-HwCertTestCollection
+  href: ./New-HwCertTestCollection.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: microsoft.windows.kits.hardware.certification.management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hardwarecertification/new-hwcertprojectdefinitionfile?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: HardwareCertification
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-HwCertProjectDefinitionFile

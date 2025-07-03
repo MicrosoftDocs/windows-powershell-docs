@@ -1,0 +1,472 @@
+### YamlMime:PowerShellCmdlet1
+uid: IpamServer.Add-IpamSubnet
+name: Add-IpamSubnet
+module: IpamServer
+isPreview: false
+summary: |-
+  Adds a subnet to IPAM.
+description: |-
+  The **Add-IpamSubnet** cmdlet adds an IP subnet to an IP Address Management (IPAM) server.
+  Use the cmdlet to add a NonVirtualized, Provider or Customer IP subnet in IPAM.
+  If the network type of the subnet to add is Provider or NonVirtualized, the cmdlet will add it to the default address space, unless you specify an address space.
+  If the network type of the range to add is Customer, you must specify an address space.
+
+  You can associate virtualized subnets, either provider or customer, with a logical network and a network site.
+  These properties represent an abstraction of a physical network and are inherited by all ranges and addresses that map to this subnet.
+parameters:
+  cmdletParameters:
+  - name: AddressSpace
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an address space to which this IP address subnet belongs.
+      If you do not specify an address space, the cmdlet retrieves data for all address spaces configured in IPAM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+      The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+      You can continue to work in the session while the job completes.
+      To manage the job, use the `*-Job` cmdlets.
+      To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+      For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomConfiguration
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies semicolon-separated (;) name/value pairs.
+      This parameter specifies custom metadata that is associated with the address space.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description of the subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the network and the prefix for the given subnet.
+      Specify the network ID in Classless Interdomain Routing (CIDR) notation in the format Network/Prefix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkSite
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a network site that is associated with a logical network and forms an abstraction of the physical network.
+      A logical network can contain many network sites.
+      This property is inherited by all ranges and addresses associated with the given subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkType
+    type: <xref href="VirtualizationType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an array of network types for the addresses to add.
+      The acceptable values for this parameter are:
+
+      - Provider
+      - Customer
+      - NonVirtualized
+
+       If the value of the *AddressSpace* parameter is Default, then this parameter can take the value Provider or NonVirtualized.
+      If the value of the *AddressSpace* parameter is Provider, then the value of this parameter, if specified, must be Provider.
+      Specifying any other value for this parameter will result in an error.
+      Similarly, if the value of the *AddressSpace* parameter is Customer, then the value of this parameter, if specified, must be Customer.
+      Specifying any other value for this parameter will result in an error.
+
+      If you do not specify this parameter, the network type defaults to NonVirtualized.
+    acceptedValues:
+    - NonVirtualized
+    - Provider
+    - Customer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Owner
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an owner for the subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualSubnetId
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a virtual subnet ID.
+      When you use network virtualization, this property, along with Customer address and Provider address is used to route packets to a particular customer virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VlanId
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of unique identifiers for virtual local area networks (VLAN).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VmmLogicalNetwork
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the abstraction of a physical network that describes a particular function in your environment such as backend or frontend.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-IpamSubnet
+        [-Name] <String>
+        [-NetworkId] <String>
+        [-NetworkType <VirtualizationType>]
+        [-AddressSpace <String>]
+        [-Owner <String>]
+        [-Description <String>]
+        [-VlanId <UInt16[]>]
+        [-VmmLogicalNetwork <String>]
+        [-NetworkSite <String>]
+        [-VirtualSubnetId <UInt32>]
+        [-CustomConfiguration <String>]
+        [-PassThru]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="CimInstance#ROOT/microsoft/ipam/MSFT_IPAM_Subnet" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents an IP Subnet in IPAM Server.
+examples:
+- title: 'Example 1: Add a subnet'
+  description: |-
+    ```
+    PS C:\> Add-IpamSubnet -Name "Contoso_2" -NetworkId "10.12.0.0/16" -VlanId 13,10 -PassThru
+    Name                 : Contoso_2
+
+    NetworkId            : 10.12.0.0/16
+
+    NetworkType          : NonVirtualized
+
+    Overlapping          : False
+
+    NetworkSite          :
+
+    VmmLogicalNetwork    :
+
+    ProviderAddressSpace : Default
+
+    CustomerAddressSpace :
+
+    VlanId               : {13, 10}
+
+    Owner                :
+    ```
+
+    This command adds an IPv4 subnet named Contoso_2 to the network ID 10.12.0.0/16 and associates it with VLAN 13,10.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+- title: 'Example 2: Add a subnet to the default address space'
+  description: |-
+    ```
+    PS C:\> Add-IpamSubnet -Name "Contoso_3" -NetworkId "10.13.0.0/16" -NetworkType Provider -VmmLogicalNetwork Storage -NetworkSite "Site03" -VlanId 13,10 -PassThru
+
+    Name                 : Contoso_3
+
+    NetworkId            : 10.13.0.0/16
+
+    NetworkType          : Provider
+
+    Overlapping          : False
+
+    NetworkSite          : Site03
+
+    VmmLogicalNetwork    : Storage
+
+    ProviderAddressSpace : Default
+
+    CustomerAddressSpace :
+
+    VlanId               : {13, 10}
+
+    Owner                :
+    ```
+
+    This command adds an IPV4 subnet named Contoso_3 with network type provider to the default address space.
+    The command also adds the IPV4 subnet to the network ID 10.13.0.0/16 and sets the NetworkSite name to Site03.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+- title: 'Example 3: Add a subnet for a customer network type'
+  description: |-
+    ```
+    PS C:\> Add-IpamSubnet -Name "Contoso_4" -NetworkId "10.13.0.0/16" -NetworkType Customer -AddressSpace "NetCat" -VmmLogicalNetwork Storage -NetworkSite "Site03 -VirtualSubnetId 10 -PassThru
+    Name                 : Contoso_4
+
+    NetworkId            : 10.13.0.0/16
+
+    NetworkType          : Customer
+
+    Overlapping          : False
+
+    NetworkSite          : Site03
+
+    VmmLogicalNetwork    : Storage
+
+    ProviderAddressSpace : ContosoDatacenter
+
+    CustomerAddressSpace : NetCat
+
+    VlanId               : {13, 10}
+
+    Owner                :
+    ```
+
+    This command adds an IPv4 subnet named Contoso_4 with the network and prefix of 10.13.0.0/16 and has the network type customer.
+    The command also sets the address space as NetCat and the network site as Site03.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+- title: 'Example 4: Add a subnet and attach metadata'
+  description: |-
+    ```
+    PS C:\> Add-IpamSubnet -Name "Contosov6_10" -NetworkId 2001:db8::ff00/120 -CustomConfiguration "Country=United States;ADSite=Site01" | Format-List Name, NetworkId, Overlapping, CustomConfiguration
+    Name                : Contosov6_10
+
+    NetworkId           : 2001:db8::ff00/120
+
+    Overlapping         : False
+
+    CustomConfiguration : Country=United States;ADSite=Site01;
+    ```
+
+    This command adds physical subnets named Contosov6_10 and attaches AD Site metadata to the subnets.
+
+    The command includes the *PassThru* parameter, so it displays results to the console.
+links:
+- text: Export-IpamSubnet
+  href: ./Export-IpamSubnet.yml
+- text: Get-IpamSubnet
+  href: ./Get-IpamSubnet.yml
+- text: Import-IpamSubnet
+  href: ./Import-IpamSubnet.yml
+- text: Remove-IpamSubnet
+  href: ./Remove-IpamSubnet.yml
+- text: Set-IpamSubnet
+  href: ./Set-IpamSubnet.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: IpamSubnet.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/ipamserver/add-ipamsubnet?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-IpamSubnet

@@ -1,0 +1,157 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Remove-AppvClientConnectionGroup
+name: Remove-AppvClientConnectionGroup
+module: AppvClient
+isPreview: false
+summary: |-
+  Deletes an App-V connection group on the client.
+description: |-
+  The **Remove-AppvClientConnectionGroup** cmdlet deletes an existing Microsoft Application Virtualization (App-V) connection group on the client.
+  All packages that were in the group are separated.
+notes: |-
+  * If any packages in the group are still running, the cmdlet returns an error.
+  * The cmdlet checks that you have permissions to perform the specific action. If not, the cmdlet returns an error.
+  * If the remove operation fails, the cmdlet returns the following error:  The remove operation could not be completed. An error code is returned.
+  * If any package in the specified group is running, the connection group is not removed until all packages in the new group are shutdown. The cmdlet still returns success as long as the file is valid.
+parameters:
+  cmdletParameters:
+  - name: ConnectionGroup
+    type: <xref href="AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an App-V Connection Group object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByConnectionGroup
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the GUID of specific connection group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the App-V Connection Group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VersionId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the GUID that differentiates a package version from other versions, whether older, newer, or of a different lineage.
+      If you do not specify this parameter, the cmdlet operates on all versions of the package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AppvClientConnectionGroup
+        [-GroupId] <Guid>
+        [-VersionId] <Guid>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByGuid
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AppvClientConnectionGroup
+        [-Name] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AppvClientConnectionGroup
+        [-ConnectionGroup] <AppvClientConnectionGroup>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByConnectionGroup
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a named connection group'
+  description: |-
+    ```
+    PS C:\> Remove-AppvClientConnectionGroup -Name "MyGroup"
+    ```
+
+    This command removes the connection group named MyGroup from the computer.
+- title: 'Example 2: Remove a connection group by using its ID'
+  description: |-
+    ```
+    PS C:\> Remove-AppvClientConnectionGroup -GroupID 35ec9e5f-ab21-463f-8fe6-b90d4b66d182
+    ```
+
+    This command removes the connection group that has the group ID 35ec9e5f-ab21-463f-8fe6-b90d4b66d182.
+- title: 'Example 3: Remove all connection groups that have names that match a string'
+  description: |-
+    ```
+    PS C:\> Get-AppvClientConnectionGroup -Name "MyGr*" | Remove-AppvClientConnectionGroup
+    ```
+
+    This command finds any connection group that has the string MyGr in the name, and then removes them from the computer.
+links:
+- text: Add-AppvClientConnectionGroup
+  href: ./Add-AppvClientConnectionGroup.yml
+- text: Disable-AppvClientConnectionGroup
+  href: ./Disable-AppvClientConnectionGroup.yml
+- text: Enable-AppvClientConnectionGroup
+  href: ./Enable-AppvClientConnectionGroup.yml
+- text: Get-AppvClientConnectionGroup
+  href: ./Get-AppvClientConnectionGroup.yml
+- text: Mount-AppvClientConnectionGroup
+  href: ./Mount-AppvClientConnectionGroup.yml
+- text: Repair-AppvClientConnectionGroup
+  href: ./Repair-AppvClientConnectionGroup.yml
+- text: Stop-AppvClientConnectionGroup
+  href: ./Stop-AppvClientConnectionGroup.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/remove-appvclientconnectiongroup?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-AppvClientConnectionGroup

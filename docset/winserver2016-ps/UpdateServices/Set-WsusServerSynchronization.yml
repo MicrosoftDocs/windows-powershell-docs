@@ -1,0 +1,198 @@
+### YamlMime:PowerShellCmdlet1
+uid: UpdateServices.Set-WsusServerSynchronization
+name: Set-WsusServerSynchronization
+module: UpdateServices
+isPreview: false
+summary: |-
+  Sets whether the WSUS server synchronizes from Microsoft Update or an upstream server.
+description: |-
+  The **Set-WsusServerSynchronization** cmdlet sets whether the Windows Server Update Services (WSUS) server synchronizes from Microsoft Update or an upstream server. This cmdlet allows you to specify settings such as the upstream server name, the port number, and whether or not to use Secure Sockets Layer (SSL).
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PortNumber
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the port number to use to communicate with the upstream WSUS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Upstream
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Replica
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the WSUS server is a replica server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Upstream
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SyncFromMU
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the WSUS server synchronizes updates from Microsoft Update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SyncFromMU
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpdateServer
+    type: <xref href="IUpdateServer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the object that contains the WSUS server. This value is obtained by calling the [Get-WsusServer](./Get-WsusServer.yml) cmdlet and passing the resulting **IUpdateServer** object into this cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseSsl
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the WSUS server should use SSL via HTTPS to communicate with an upstream server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Upstream
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UssServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a local server from which to synchronize updates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Upstream
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WsusServerSynchronization
+        [-UpdateServer <IUpdateServer>]
+        [-SyncFromMU]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SyncFromMU
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-WsusServerSynchronization
+        -UssServerName <String>
+        [-UpdateServer <IUpdateServer>]
+        [-PortNumber <Int32>]
+        [-UseSsl]
+        [-Replica]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Upstream
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.UpdateServices.Commands.IUpdateServer" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Synchronize from a specified server'
+  description: |-
+    ```powershell
+    PS C:\> Set-WsusServerSynchronization -UssServerName "Test" -PortNumber 42 -UseSSL
+    ```
+
+    This command specifies that the local WSUS Server is to synchronize from another server named Test using port number 42 and the SSL protocol.
+- title: 'Example 2: Synchronize from Microsoft Update'
+  description: |-
+    ```powershell
+    PS C:\> Set-WsusServerSynchronization -SyncFromMU
+    The Update Server was successfully configured with the following parameters: Synchronize from Microsoft Update
+    ```
+
+    This command specifies that the local WSUS Server is to synchronize from Microsoft Update.
+links:
+- text: Get-WsusServer
+  href: ./Get-WsusServer.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/updateservices/set-wsusserversynchronization?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WsusServerSynchronization

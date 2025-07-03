@@ -1,0 +1,206 @@
+### YamlMime:PowerShellCmdlet1
+uid: ConfigCI.Set-CIPolicySetting
+name: Set-CIPolicySetting
+module: ConfigCI
+isPreview: false
+summary: |-
+  Modifies the SecureSettings within the Code Integrity policy.
+description: |-
+  The **Set-CIPolicySetting** cmdlet modifies the Secure Settings within a Code Integrity policy.
+  Specify the .xml file of the policy to modify.
+  Secure Settings are queried by Windows APIs to set security behaviors.
+parameters:
+  cmdletParameters:
+  - name: Delete
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet removes a Secure Setting from the Code Integrity policy identified by **Provider**, **Key** and **ValueName**.
+    aliases:
+    - d
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Delete
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path of the policy .xml file.
+    aliases:
+    - f
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Key
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Secure Setting key.
+      The key is the GUID of the program to run in this format:
+
+      {33333333-4444-4444-1616-161616161616}
+    aliases:
+    - k
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Provider
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Secure Setting provider.
+      The provider is the platform on which the code runs.
+    aliases:
+    - p
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Secure Setting value.
+      Specify `$True` to allow or `$False` to deny.
+
+      Specify $False, or deny, only for base policies, not supplemental policies.
+    aliases:
+    - v
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Set
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ValueName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value name.
+    aliases:
+    - vn
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ValueType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value type. Valid values are:
+
+      - Boolean
+      - DWord
+      - Binary
+      - String
+    acceptedValues:
+    - Boolean
+    - DWord
+    - Binary
+    - String
+    aliases:
+    - vt
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Set
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-CIPolicySetting
+        [-FilePath] <String>
+        -Provider <String>
+        -Key <String>
+        -ValueName <String>
+        -ValueType <String>
+        -Value <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Set
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-CIPolicySetting
+        [-FilePath] <String>
+        -Provider <String>
+        -Key <String>
+        -ValueName <String>
+        [-Delete]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Delete
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set the Code Integrity policy'
+  description: |-
+    ```powershell
+    Set-CIPolicySetting -FilePath C:\Policies\WDAC_policy.xml -Key "{12345678-9abc-def0-1234-56789abcdef0}" -Provider WSH -Value $True -ValueName EnterpriseDefinedClsId -ValueType Boolean
+    ```
+
+    This command sets the Code Integrity policy to allow for the specified **Provider**, **Key** and **ValueName**.
+links:
+- text: New-CIPolicy
+  href: New-CIPolicy.yml
+- text: New-CIPolicyRule
+  href: New-CIPolicyRule.yml
+metadata:
+  description: The Set-CIPolicySetting cmdlet modifies the SecureSettings within the Code Integrity policy.
+  document type: cmdlet
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/configci/set-cipolicysetting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ConfigCI
+  ms.date: 10/20/2021
+  PlatyPS schema version: 2024-05-01
+  title: Set-CIPolicySetting

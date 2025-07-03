@@ -1,0 +1,282 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Set-AdfsCertificateAuthority
+name: Set-AdfsCertificateAuthority
+module: ADFS
+isPreview: false
+summary: |-
+  Modifies a certificate authority.
+description: |-
+  The **Set-AdfsCertificateAuthority** cmdlet modifies a certificate authority in Active Directory Federation Services (AD FS).
+parameters:
+  cmdletParameters:
+  - name: AutoEnrollEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      {{Fill AutoEnrollEnabled Description}}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnrollmentAgentConfiguration
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateAuthority
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a certificate authority.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnrollmentAgentConfiguration
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateGenerationThresholdDays
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{Fill CertificateGenerationThresholdDays Description}}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnrollmentAgentConfiguration
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnrollmentAgent
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnrollmentAgentConfiguration
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnrollmentAgentCertificateTemplate
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnrollmentAgentConfiguration
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForcePromotion
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RolloverSigningCertificate
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogonCertificateTemplate
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnrollmentAgentConfiguration
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RolloverSigningCertificate
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RolloverSigningCertificate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SelfIssued
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the certificate authority is self-issued.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SelfIssued
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowsHelloCertificateProxyEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      {{Fill WindowsHelloCertificateProxyEnabled Description}}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnrollmentAgentConfiguration
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowsHelloCertificateTemplate
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{Fill WindowsHelloCertificateTemplate Description}}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnrollmentAgentConfiguration
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AdfsCertificateAuthority
+        [-SelfIssued]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SelfIssued
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsCertificateAuthority
+        [-RolloverSigningCertificate]
+        [-ForcePromotion]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RolloverSigningCertificate
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsCertificateAuthority
+        [-EnrollmentAgent]
+        [-CertificateAuthority <String>]
+        [-LogonCertificateTemplate <String>]
+        [-WindowsHelloCertificateTemplate <String>]
+        [-EnrollmentAgentCertificateTemplate <String>]
+        [-AutoEnrollEnabled <Boolean>]
+        [-CertificateGenerationThresholdDays <Int32>]
+        [-WindowsHelloCertificateProxyEnabled <Boolean>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EnrollmentAgentConfiguration
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsCertificateAuthority" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the updated AdfsCertificateAuthority object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Disable-AdfsCertificateAuthority
+  href: ./Disable-AdfsCertificateAuthority.yml
+- text: Get-AdfsCertificateAuthority
+  href: ./Get-AdfsCertificateAuthority.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/set-adfscertificateauthority?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AdfsCertificateAuthority

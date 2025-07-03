@@ -1,0 +1,172 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Add-WorkgroupClusterNode
+name: Add-WorkgroupClusterNode
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Adds a node to a workgroup cluster.
+description: |-
+  The `Add-WorkgroupClusterNode` cmdlet adds a node to a workgroup cluster.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      The credential for the node to be added.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credentials
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      An array of credentials for the nodes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the node to be added.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Node
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      An array of nodes to be added to the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoStorage
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that shared storage is ignored for the workgroup cluster node.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-WorkgroupClusterNode
+        [-Node] <String[]>
+        [-Credentials] <PSCredential[]>
+        [-Name] <String>
+        [-Credential] <PSCredential>
+        [-NoStorage]
+        [-Confirm]
+        [-WhatIf]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```powershell
+    $params = @{
+        Node = @("Node1", "Node2")
+        Credentials = @($cred1, $cred2)
+        Name = "Node3"
+        Credential = $cred3
+    }
+    Add-WorkgroupClusterNode @params
+    ```
+
+    This example adds `Node3` to the cluster whose membership is comprised of `Node1` and `Node2`.
+links:
+- text: New-WorkgroupCluster
+  href: new-workgroupcluster.yml
+- text: Remove-WorkgroupCluster
+  href: remove-workgroupcluster.yml
+- text: Remove-WorkgroupClusterNode
+  href: remove-workgroupclusternode.yml
+- text: Set-WorkgroupClusterRemotingConfiguration
+  href: set-workgroupclusterremotingconfiguration.yml
+- text: Test-WorkgroupCluster
+  href: test-workgroupcluster.yml
+- text: Test-WorkgroupClusterRemoting
+  href: test-workgroupclusterremoting.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/add-workgroupclusternode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 09/11/2024
+  PlatyPS schema version: 2024-05-01
+  title: Add-WorkgroupClusterNode

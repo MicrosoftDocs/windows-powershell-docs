@@ -1,0 +1,374 @@
+### YamlMime:PowerShellCmdlet1
+uid: DhcpServer.Import-DhcpServer
+name: Import-DhcpServer
+module: DhcpServer
+isPreview: false
+summary: |-
+  Imports the Dynamic Host Configuration Protocol (DHCP) server service configuration, and optionally lease data, from a file.
+description: |-
+  The **Import-DhcpServer** cmdlet imports the Dynamic Host Configuration Protocol (DHCP) server service configuration, and optionally lease data, from the specified file.
+
+  If you specify either the *ScopeId* or the *Prefix* parameter, or both, only the specified scopes or prefixes are imported.
+
+  If you specify neither the *ScopeId* nor the *Prefix* parameter, all of the configurations that is contained in the file, and optionally any lease data, is imported.
+
+  If you specify the *Leases* parameter, the lease data in the specified file is imported in addition to configuration data.
+
+  If you specify the *ScopeOverWrite* parameter and the scope being imported exists on the destination server, the scope on the target DHCP server service is overwritten.
+  If this parameter is not specified and the scope being imported exists on the destination DHCP server service, a warning message is displayed and the import proceeds to process the next scope being imported.
+
+  If you specify the *ServerConfigOnly* parameter, only the server level configuration is imported on the destination DHCP server service.
+  If the file specified contains any scope information, the same information is not imported on the destination DHCP server service.
+parameters:
+  cmdletParameters:
+  - name: BackupPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path where DHCP server database is backed up before it makes any configuration changes as part of the import operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the DNS name, or IPv4 or IPv6 address, of the target computer that runs the DHCP server service.
+    aliases:
+    - Cn
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: File
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the file from which the data is imported.
+      If a complete file path is not specified, the file is read from the current working directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Leases
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the lease data is also imported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Prefix
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the subnet prefixes of IPv6 scopes which are imported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScopeId
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the scope identifiers (IDs), in IPv4 address format, which must be imported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScopeOverwrite
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that, if the scope being imported exists on the target server, the scope on the destination DHCP server service are overwritten.
+
+      If this parameter is not specified and the scope being imported exists on the destination DHCP server service, a warning message is displayed and import will proceed to process the next scope being imported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerConfigOnly
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that only server level configuration is imported on the destination DHCP server service.
+      If the file specified contains any scope information, the same is not imported on the destination DHCP server service.
+
+      Both DHCPv4 and DHCPv6 server level configurations is imported.
+
+      The server level configuration includes of (both v4 and v6):
+
+      - Class definitions.
+      - Option definitions.
+      - Option values.
+      - Server level Policies (DHCPv4).
+      - MAC address filters (DHCPv4).
+      - Other Server Properties (ConflictDetectionAttempts, DHCPv6 stateless store).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Import-DhcpServer
+        [-File] <String>
+        [-BackupPath] <String>
+        [-ScopeId <IPAddress[]>]
+        [-Prefix <IPAddress[]>]
+        [-ScopeOverwrite]
+        [-Leases]
+        [-ServerConfigOnly]
+        [-Force]
+        [-ComputerName <String>]
+        [-CimSession <CimSession>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Import configuration data'
+  description: |-
+    ```powershell
+    PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\"
+    ```
+
+    This example imports the configuration data in the specified file onto the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+    The file can contain DHCPv4 and DHCPv6 configuration data.
+- title: 'Example 2: Import configuration and lease data'
+  description: |-
+    ```powershell
+    PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -Leases
+    ```
+
+    This example imports the configuration and lease data in the specified file onto the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+    The file can contain DHCPv4 and DHCPv6 configuration data.
+- title: 'Example 3: Import configuration data for specified scopes'
+  description: |-
+    ```powershell
+    PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -ScopeId 10.10.10.0,10.20.20.0
+    ```
+
+    This example imports the configuration data for scopes 10.10.10.0 and 10.20.20.0 from the specified file onto the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+    If the export file contains scopes besides 10.10.10.0 and 10.20.20.0, those scopes are ignored.
+    The DHCPv4 server level configuration data, if present in the export file, is also imported onto the DHCP server service.
+- title: 'Example 4: Import configuration and lease data for specified scopes'
+  description: |-
+    ```powershell
+    PS C:\> Import-DhcpServer -ComputerName dhcpserver.contoso.com -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -ScopeId 10.10.10.0,10.20.20.0 -Leases
+    ```
+
+    This example imports the configuration and lease data for scopes 10.10.10.0 and 10.20.20.0 from the specified file onto the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+    If the export file contains scopes besides 10.10.10.0 and 10.20.20.0, those scopes are ignored.
+    The DHCPv4 server level configuration data, if present in the export file, is also imported onto the DHCP server service.
+- title: 'Example 5: Import configuration and lease data for specified scopes with overwrite'
+  description: |-
+    ```powershell
+    PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -ScopeId 10.10.10.0,10.20.20.0 -Leases -ScopeOverwrite
+    ```
+
+    This example imports the configuration and lease data for scopes 10.10.10.0 and 10.20.20.0 from the specified file onto the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+    If the export file contains scopes besides 10.10.10.0 and 10.20.20.0, those scopes are ignored.
+    The DHCPv4 server level configuration data, if present in the export file, is also imported onto the server.
+    If the scopes 10.10.10.0 and 10.20.20.0 are already present on the DHCP server service that runs one the computer named dhcpserver.contoso.com, the scopes are deleted and recreated from the data in the export file.
+- title: 'Example 6: Import server level configuration data'
+  description: |-
+    ```powershell
+    PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -ServerConfigOnly
+    ```
+
+    This example imports only the server level configuration data in the specified file onto the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+    Any scope configuration data, if present in the file, is ignored.
+- title: 'Example 7: Import configuration data for specified scopes for DHCPv6'
+  description: |-
+    ```powershell
+    PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -Prefix 2001:4898:7020:1020::,2001:4898:7020:1030::
+    ```
+
+    This example imports the configuration data for scopes 2001:4898:7020:1020:: and 2001:4898:7020:1030:: from the specified file onto the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+    If the export file contains scopes besides 2001:4898:7020:1020:: and 2001:4898:7020:1030::, those scopes are ignored.
+    The DHCPv6 server level configuration data, if present in the export file, is also imported onto the DHCP server service.
+- title: 'Example 8: Import configuration and lease data for specified scopes for DHCPv6'
+  description: |-
+    ```powershell
+    PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -Prefix 2001:4898:7020:1020::,2001:4898:7020:1030:: -Leases
+    ```
+
+    This example imports the configuration and lease data for scopes 2001:4898:7020:1020:: and 2001:4898:7020:1030:: from the specified file onto the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+    If the export file contains scopes besides 2001:4898:7020:1020:: and 2001:4898:7020:1030::, those scopes are ignored.
+    The DHCPv6 server level configuration data, if present in the export file, is also imported onto the DHCP server service.
+- title: 'Example 9: Import configuration and lease data for specified scopes for DHCPv6 with overwrite'
+  description: |-
+    ```powershell
+    PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -Prefix 2001:4898:7020:1020::,2001:4898:7020:1030:: -Leases -ScopeOverwrite
+    ```
+
+    This example imports the configuration and lease data for scopes 2001:4898:7020:1020:: and 2001:4898:7020:1030:: from the specified file onto the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+    If the export file contains scopes besides 2001:4898:7020:1020:: and 2001:4898:7020:1030::, those scopes are ignored.
+    The DHCPv6 server level configuration data, if present in the export file, is also imported onto the DHCP server service.
+    If the scopes 2001:4898:7020:1020:: and 2001:4898:7020:1030:: are already present on the DHCP server service that runs on the computer named dhcpserver.contoso.com, the scopes are deleted and recreated from the data in the export file.
+- title: 'Example 10: Import scopes specified in a file'
+  description: |-
+    ```powershell
+    PS C:\> $ScopeIdList = Import-Csv -Path ".\ScopeList.txt"
+
+    PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exportdir\dhcpexport.xml" -Leases -ScopeId $ScopeIdList.ScopeId -BackupPath "C:\dhcpbackup\"
+    ```
+
+    This example imports a list of scopes specified in file named _ScopeList.txt_ to the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+
+    The **Import-Csv** cmdlet gets the list of scopes to import and returns it in the variable named _$ScopeIdList_. The second line imports the scopes using the variable named _$ScopeIdList_ as input for the _ScopeId_ parameter.
+
+    The file named _ScopeList.txt_ should contain the following format:
+
+    ScopeID \
+    10.10.10.0 \
+    10.20.20.0 \
+    10.30.30.0
+links:
+- text: Import-Csv
+  href: https://go.microsoft.com/fwlink/p/?LinkId=113341
+- text: Backup-DhcpServer
+  href: ./Backup-DhcpServer.yml
+- text: Export-DhcpServer
+  href: ./Export-DhcpServer.yml
+- text: Restore-DhcpServer
+  href: ./Restore-DhcpServer.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: DhcpServerMigration-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dhcpserver/import-dhcpserver?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Import-DhcpServer

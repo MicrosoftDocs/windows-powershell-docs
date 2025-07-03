@@ -1,0 +1,75 @@
+### YamlMime:PowerShellCmdlet1
+uid: IISAdministration.Clear-IISCentralCertProvider
+name: Clear-IISCentralCertProvider
+module: IISAdministration
+isPreview: false
+summary: |-
+  Removes configuration information from the IIS central certificate store.
+description: |-
+  The **Clear-IISCentralCertProvider** cmdlet removes all settings for the central certificate provider.
+  You must specify the *Force* parameter if the Central Certificate Store feature is enabled.
+  If you specify *Force*, the feature is disabled and all the settings are cleared.
+  If the Central Certificate Store feature is already disabled, you do not need to specify *Force*.
+parameters:
+  cmdletParameters:
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Clear-IISCentralCertProvider
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Clear configuration information from the IIS certificate store'
+  description: |-
+    ```
+    PS C:\> Clear-IISCentralCertProvider
+    ```
+
+    This command removes all the configuration information for the IIS central certificate store without removing the provider itself.
+links:
+- text: Disable-IISCentralCertProvider
+  href: ./Disable-IISCentralCertProvider.yml
+- text: Enable-IISCentralCertProvider
+  href: ./Enable-IISCentralCertProvider.yml
+- text: Get-IISCentralCertProvider
+  href: ./Get-IISCentralCertProvider.yml
+- text: Set-IISCentralCertProvider
+  href: ./Set-IISCentralCertProvider.yml
+- text: Set-IISCentralCertProviderCredential
+  href: ./Set-IISCentralCertProviderCredential.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iisadministration/clear-iiscentralcertprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Clear-IISCentralCertProvider

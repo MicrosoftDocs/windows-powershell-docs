@@ -1,0 +1,134 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Set-AdfsAlternateTlsClientBinding
+name: Set-AdfsAlternateTlsClientBinding
+module: ADFS
+isPreview: false
+summary: |-
+  Configures an existing AD FS deployment to use the same port for both device certificate and client certificate authentication.
+description: |-
+  The **Set-AdfsAlternateTlsClientBinding** cmdlet configures an existing AD FS deployment to use the same port (443) for both device certificate and client certificate authentication (client TLS).
+  The cmdlet creates an endpoint for user certificate authentication on `certauth`.\<federation service name\>, such as `certauth.contoso.com`.
+
+  To change the deployment back to one in which user certificate authentication uses a non-standard port, use the Set-AdfsSslCertificate cmdlet with a new certificate that does not contain a Subject Alternative Name (SAN) for `certauth`.\<federation service name\>.
+
+  The **Install-AdfsFarm** cmdlet configures client TLS on port 49443 if the SSL certificate does not contain a Subject Alternative Name (SAN) for `certauth`.\<federation service name\>, such as `certauth.contoso.com`.
+
+  Use **Set-AdfsAlternateTlsClientBinding** with a new certificate that contains the SAN entry.
+  It will configure AD FS to use port 443 for client TLS.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Member
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Thumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AdfsAlternateTlsClientBinding
+        [-Thumbprint <String>]
+        [-Member <String[]>]
+        [-Force <Boolean>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Configure a deployment'
+  description: |-
+    ```
+    PS C:\> Set-AdfsAlternateTlsClientBinding -Member "ADFSServer1.contoso.com" -Thumbprint "c67e1ffba186d70c7e00c89596e0cb5645f9874a"
+    ```
+
+    This command configures a deployment to use the same port for device certificate authentication and user certificate authentication.
+    In this example, the certificate that has the specified thumbprint contains a SAN for certauth.contoso.com.
+links:
+- text: Set-AdfsSslCertificate
+  href: ./Set-AdfsSslCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/set-adfsalternatetlsclientbinding?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AdfsAlternateTlsClientBinding

@@ -1,0 +1,126 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Get-WmsSystem
+name: Get-WmsSystem
+module: MultiPoint
+isPreview: false
+summary: |-
+  Gets MultiPoint Server system information.
+description: |-
+  The **Get-WmsSystem** cmdlet gets Windows MultiPoint Server system information.
+parameters:
+  cmdletParameters:
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+      The default is localhost.
+    aliases:
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WmsSystem
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <span>undefined</span>
+  description: |-
+    This cmdlet returns a **WmsSystem** collection as a **PSObject** collection.
+examples:
+- title: 'Example 1: Get system information'
+  description: |-
+    ```
+    PS C:\> Get-WmsSystem
+    AttemptingToConnect        : False
+    RetryAttemptToConnect      : False
+    ProtocolVersion            : 1
+    WmsServerVersion           : 10.0.10586.0
+    WmsClientVersion           : 10.0.10586.0
+    NetJoinStatus              : NetSetupDomainName
+    DomainOrWorkgroupName      : TestDomain
+    SystemMode                 : Normal
+    DiskProtectionMode         : NotInstalled
+    ConnectionString           :
+    ConnectionCount            : 1
+    LicenseCount               : 0
+    State                      : Connected
+    ConnectionError            : 0
+    ConnectionErrorMessage     :
+    ComputerName               : Test1
+    WindowsEdition             : Windows Server 2016 Standard
+    IsVirtualMachine           : False
+    ManagedSystemsType         : MultiPointServers
+    MonitoringSystemType       : Include
+    IsSingleSessionPerUser     : True
+    MultiPointServers          : {}
+    PersonalComputers          : {}
+    CloudServers               : {}
+    ExcludedMultiPointServers  : {}
+    ExcludedPersonalComputers  : {}
+    ExcludedCloudServers       : {}
+    IPAddresses                :
+    ManagedServers             :
+    ExcludedManagedServers     : {}
+    IsSQMOn                    : True
+    IsWatsonOn                 : True
+    IsIPPerSessionEnabled      : False
+    IsChatEnabled              : True
+    HasNonLoopbackAdapter      : True
+    IsDesktopMonitoringAllowed : True
+    IsWmsSvcRunning            : True
+    IsScheduledUpdateEnabled      : False
+    ScheduleUpdateRunWU           : False
+    ScheduleUpdateCustomScript    :
+    MaxTimeAllowedForCustomScript : 0
+    ScheduledUpdatesReturnState   : __SUR_FIRST
+    TimeToScheduleUpdates         : 0
+    IsAllowRemoteManagementOn     : True
+    BootToConsoleMode             : False
+    SuppressPrivacyNotification   : False
+    SystemImage                   :
+    ```
+
+    This command gets MultiPoint Server system information.
+links:
+- text: Add-WmsSystem
+  href: ./Add-WmsSystem.yml
+- text: Remove-WmsSystem
+  href: ./Remove-WmsSystem.yml
+- text: Restart-WmsSystem
+  href: ./Restart-WmsSystem.yml
+- text: Search-WmsSystem
+  href: ./Search-WmsSystem.yml
+- text: Set-WmsSystem
+  href: ./Set-WmsSystem.yml
+- text: Stop-WmsSystem
+  href: ./Stop-WmsSystem.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/get-wmssystem?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WmsSystem

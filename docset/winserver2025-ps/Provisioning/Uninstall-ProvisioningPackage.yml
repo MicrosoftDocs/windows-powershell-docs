@@ -1,0 +1,192 @@
+### YamlMime:PowerShellCmdlet1
+uid: Provisioning.Uninstall-ProvisioningPackage
+name: Uninstall-ProvisioningPackage
+module: Provisioning
+isPreview: false
+summary: |-
+  Uninstalls .PPKG package from the local machine.
+description: |-
+  Unintalls .PPKG package based on package ID, path, metadata, or all packages.
+
+  The **Uninstall-ProvisioningPackage** cmdlet is supported on Windows 11 client operating system only.
+parameters:
+  cmdletParameters:
+  - name: AllInstalledPackages
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Removes all installed packages.
+    aliases:
+    - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Installed
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectedDevice
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If enabled, specifies that the device type is mobile.
+    aliases:
+    - Device
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogsDirectoryPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the logs directory path.
+    aliases:
+    - Logs
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a package.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackagePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the package path.
+    aliases:
+    - Path
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuntimeMetadata
+    type: <xref href="RuntimeProvPackageMetadata" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a runtime provisioning package metadata object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Metadata
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WprpFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of the WPR profile file.
+    aliases:
+    - Wprp
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Uninstall-ProvisioningPackage
+        [-PackageId] <String>
+        [-LogsDirectoryPath <String>]
+        [-WprpFile <String>]
+        [-ConnectedDevice]
+    ```
+  parameterSetName: Id
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Uninstall-ProvisioningPackage
+        -PackagePath <String>
+        [-LogsDirectoryPath <String>]
+        [-WprpFile <String>]
+        [-ConnectedDevice]
+    ```
+  parameterSetName: Path
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Uninstall-ProvisioningPackage
+        [-AllInstalledPackages]
+        [-LogsDirectoryPath <String>]
+        [-WprpFile <String>]
+        [-ConnectedDevice]
+    ```
+  parameterSetName: Installed
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Uninstall-ProvisioningPackage
+        [-RuntimeMetadata] <RuntimeProvPackageMetadata>
+        [-LogsDirectoryPath <String>]
+        [-WprpFile <String>]
+        [-ConnectedDevice]
+    ```
+  parameterSetName: Metadata
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Windows.Provisioning.ProvCommon.RuntimeProvPackageMetadata" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Uninstall all provisioning packages'
+  description: |-
+    ```powershell
+    PS C:\> Uninstall-ProvisioningPackage -AllInstalledPackages
+    ```
+
+    Uninstalls all provisioning packages.
+metadata:
+  description: The Uninstall-ProvisioningPackage cmdlet uninstalls .ppkg files.
+  document type: cmdlet
+  external help file: provcmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/provisioning/uninstall-provisioningpackage?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Provisioning
+  ms.date: 05/09/2017
+  PlatyPS schema version: 2024-05-01
+  title: Uninstall-ProvisioningPackage

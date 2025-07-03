@@ -1,0 +1,154 @@
+### YamlMime:PowerShellCmdlet1
+uid: VAMT.Export-VamtData
+name: Export-VamtData
+module: VAMT
+isPreview: false
+summary: |-
+  Exports product data and product-key data from a VAMT database to a portable .cilx file.
+description: |-
+  The **Export-VamtData** cmdlet exports specified product data and product-key data from a dep_firstref_vamt database to a portable cilx file.
+  You can use this .cilx file to move data from one dep_nextref_vamt instance to another, to store data for backup purposes, or to facilitate proxy activation.
+  By default, the export does not include product-key data and personally identifiable information (PII).
+parameters:
+  cmdletParameters:
+  - name: DbCommandTimeout
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates how long dep_nextref_vamt waits for a response from the database before timing out.
+      The default value is 30 seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DbConnectionString
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the database that the product and the product key are exported from.
+      If no database connection string is provided, dep_nextref_vamt attempts to use the database that the dep_nextref_vamt user console used on the local computer.
+      If dep_nextref_vamt does not find a database, it returns an error.
+      You can find the connection string in the dep_nextref_vamt UI in the Preferences dialog box.
+      On the menu bar, click View, and then click Preferences to open the Volume Activation Management Tool Preferences dialog box.
+      The connection string is in the Database Settings section under Current connection string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeProductKeys
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet includes product keys in the export.
+      By default, dep_nextref_vamt does not include product keys in the export.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeSensitiveInfo
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet includes personally identifiable information (PII) in the export.
+      By default, dep_nextref_vamt does not include PII in the export.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location and name of the .cilx file that this cmdlet creates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Products
+    type: <xref href="Product" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the product information to be exported.
+      If the *Products* parameter is not included, dep_nextref_vamt exports all product information in the dep_nextref_vamt database to the .cilx file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-VamtData
+        -Products <Product[]>
+        -OutputFile <String>
+        [-DbConnectionString <String>]
+        [-IncludeProductKeys]
+        [-IncludeSensitiveInfo]
+        [-DbCommandTimeout <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Export data to a file'
+  description: |-
+    ```
+    PS C:\>Get-VamtProduct | Export-VamtData -IncludeProductKeys -IncludeSensitiveInfo -outputfile "c:\users\me\desktop\vamtdata.cilx"
+    ```
+
+    This command gets a dep_nextref_vamt product object that contains all products and then exports the object to the specified file.
+    The command also specifies to include product keys and personally identifiable information.
+links:
+- text: Import-VamtData
+  href: ./Import-VamtData.yml
+- text: Initialize-VamtData
+  href: ./Initialize-VamtData.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/vamt/export-vamtdata?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: VAMT
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Export-VamtData

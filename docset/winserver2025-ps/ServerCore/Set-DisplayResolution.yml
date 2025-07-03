@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: ServerCore.Set-DisplayResolution
+name: Set-DisplayResolution
+module: ServerCore
+isPreview: false
+summary: |-
+  Changes the display resolution for a Server Core server.
+description: |-
+  The **Set-DisplayResolution** cmdlet changes the display resolution for Windows Server® 2012 in Server Core mode.
+  Specify both the width and the height in pixels.
+  Unless you use the *Force* parameter, the cmdlet prompts you before it changes the settings.
+  You can use the Get-DisplayResolution cmdlet to view the current resolution.
+
+  For more information about Server Core mode, see [Configure and Manage Server Core Installations](https://technet.microsoft.com/en-us/library/jj574091).
+parameters:
+  cmdletParameters:
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Height
+    type: <xref href="Object" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a height, in pixels, for the display.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Width
+    type: <xref href="Object" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a width, in pixels, for the display.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-DisplayResolution
+        [-Width] <Object>
+        [-Height] <Object>
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Set resolution'
+  description: |-
+    ```
+    PS C:\> Set-DisplayResolution -Width 1920 -Height 1200
+    setres will now attempt to apply the following display settings:
+      Width:          1920
+      Height:         1200
+    Your screen may go blank for a moment. If your screen remains blank, press N
+    or restart your computer to revert the display settings.
+    Do you want to save the display settings?
+    [Y,N]?_
+    ```
+
+    This command sets the display resolution to a width of 1920 pixels and a height of 1200 pixels.
+    The system prompts you for confirmation.
+- title: 'Example 2: Set resolution without confirmation'
+  description: |-
+    ```
+    PS C:\>Set-DisplayResolution -Width 1024 -Height 768 -Force
+    setres will now attempt to apply the following display settings:
+      Width:          1024
+      Height:         768
+    The new display settings have been saved.
+    ```
+
+    This command sets the display resolution to a width of 1024 pixels and a height of 768 pixels.
+    Because the command uses the *Force* parameter, it makes the change without prompting you.
+links:
+- text: Get-DisplayResolution
+  href: ./Get-DisplayResolution.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: ServerCore-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/servercore/set-displayresolution?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ServerCore
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-DisplayResolution

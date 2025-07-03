@@ -1,0 +1,106 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Test-AdfsFarmBehaviorLevelRestore
+name: Test-AdfsFarmBehaviorLevelRestore
+module: ADFS
+isPreview: false
+summary: |-
+  Tests whether you can restore an AD FS farm to a previous behavior level.
+description: |-
+  The **Test-AdfsFarmBehaviorLevelRestore** cmdlet tests whether the **Restore-AdfsFarmBehaviorLevel** cmdlet can restore an Active Directory Federation Services (AD FS) farm to a previous behavior level.
+parameters:
+  cmdletParameters:
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies credentials necessary to run this cmdlet for an AD FS farm that uses SQL Server as the policy database.
+      The credentials provided must be an administrator on each AD FS server.
+      To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FarmBehavior
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the farm behavior.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Member
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of members.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AdfsFarmBehaviorLevelRestore
+        [-Member <String[]>]
+        [-Credential <PSCredential>]
+        -FarmBehavior <Int32>
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+links:
+- text: Invoke-AdfsFarmBehaviorLevelRaise
+  href: ./Invoke-AdfsFarmBehaviorLevelRaise.yml
+- text: Restore-AdfsFarmBehaviorLevel
+  href: ./Restore-AdfsFarmBehaviorLevel.yml
+- text: Test-AdfsFarmBehaviorLevelRaise
+  href: ./Test-AdfsFarmBehaviorLevelRaise.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/test-adfsfarmbehaviorlevelrestore?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Test-AdfsFarmBehaviorLevelRestore

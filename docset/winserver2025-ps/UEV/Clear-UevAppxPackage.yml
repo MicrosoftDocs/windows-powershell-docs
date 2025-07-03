@@ -1,0 +1,206 @@
+### YamlMime:PowerShellCmdlet1
+uid: UEV.Clear-UevAppxPackage
+name: Clear-UevAppxPackage
+module: UEV
+isPreview: false
+summary: |-
+  Clears a setting in the computer or user sections of the registry.
+description: |-
+  The **Clear-UevAppxPackage** cmdlet clears a setting in the computer or user sections of the registry that enables or disables the Microsoft User Experience Virtualization (UE-V) synchronization of Windows® 8 apps.
+  If you do not specify the *Computer* or *CurrentComputerUser* parameter, the cmdlet clears the setting for the package families for the current user.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears all of the computer or user settings for the package families that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetAllComputerTemplates
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ParameterSetAllUserTemplates
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Computer
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for package families that you specify for all users on the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetComputer
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ParameterSetAllComputerTemplates
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CurrentComputerUser
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet clears the setting for the package families that you specify for the current user on the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetUser
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ParameterSetAllUserTemplates
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageFamilyName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of package families.
+      The cmdlet clears the setting for the package families of Windows 8 apps that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetUser
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ParameterSetComputer
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Clear-UevAppxPackage
+        [-PackageFamilyName] <String[]>
+        [-CurrentComputerUser]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetUser
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Clear-UevAppxPackage
+        [-PackageFamilyName] <String[]>
+        [-Computer]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetComputer
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Clear-UevAppxPackage
+        [-Computer]
+        [-All]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetAllComputerTemplates
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Clear-UevAppxPackage
+        [-CurrentComputerUser]
+        [-All]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetAllUserTemplates
+  isDefault: false
+examples:
+- title: 'Example 1: Remove Windows 8 apps'
+  description: |-
+    ```
+    PS C:\>Clear-UevAppxPackage -Computer -All
+    ```
+
+    This command removes all Windows 8 apps from the Windows 8 app list on the computer.
+links:
+- text: Disable-UevAppxPackage
+  href: ./Disable-UevAppxPackage.yml
+- text: Enable-UevAppxPackage
+  href: ./Enable-UevAppxPackage.yml
+- text: Get-UevAppxPackage
+  href: ./Get-UevAppxPackage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/uev/clear-uevappxpackage?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: UEV
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Clear-UevAppxPackage

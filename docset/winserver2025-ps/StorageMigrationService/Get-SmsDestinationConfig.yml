@@ -1,0 +1,148 @@
+### YamlMime:PowerShellCmdlet1
+uid: StorageMigrationService.Get-SmsDestinationConfig
+name: Get-SmsDestinationConfig
+module: StorageMigrationService
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: Credential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Credential Description }}
+    aliases:
+    - C
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationComputerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill DestinationComputerName Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeAllAdapters
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill IncludeAllAdapters Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Name Description }}
+    aliases:
+    - N
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrchestratorComputerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill OrchestratorComputerName Description }}
+    aliases:
+    - OCN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrchestratorPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill OrchestratorPort Description }}
+    aliases:
+    - OP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-SmsDestinationConfig
+        -DestinationComputerName <String>
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [-IncludeAllAdapters]
+        [-Name] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.StorageMigration.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storagemigrationservice/get-smsdestinationconfig?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: StorageMigrationService
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-SmsDestinationConfig

@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppBackgroundTask.Set-AppBackgroundTaskResourcePolicy
+name: Set-AppBackgroundTaskResourcePolicy
+module: AppBackgroundTask
+isPreview: false
+summary: |-
+  Configures the use of the global pool by background tasks.
+description: |-
+  The **Set-AppBackgroundTaskResourcePolicy** cmdlet configures the use of the global pool by background tasks.
+  The global pool is a shared resource that provides CPU or network resources when an application requires additional resources to complete a task.
+  You must have administrator access to set the background task resource policy.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mode
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the global pool settings for background tasks on the system.
+      Valid values are Normal and Conservative.
+      Use Normal to enable the global pool for all applications.
+      Use Conservative to disable the global pool for all applications.
+    acceptedValues:
+    - Normal
+    - Conservative
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AppBackgroundTaskResourcePolicy
+        -Mode <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Set global resource policy to Conservative mode'
+  description: |-
+    ```
+    PS C:\> Set-AppBackgroundTaskResourcePolicy -Mode Conservative
+    ```
+
+    This command sets the global resource policy for background tasks to Conservative, which ensures that background tasks use the minimum CPU.
+- title: 'Example 2: Set global resource policy to Normal mode'
+  description: |-
+    ```
+    PS C:\> Set-AppBackgroundTaskResourcePolicy -Mode Normal
+    ```
+
+    This command sets the global resource policy for background tasks to Normal.
+    A restart is required if the previous setting was Conservative.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: microsoft.windows.appbackgroundtask.commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appbackgroundtask/set-appbackgroundtaskresourcepolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: AppBackgroundTask
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AppBackgroundTaskResourcePolicy

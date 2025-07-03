@@ -1,0 +1,38 @@
+### YamlMime:PowerShellCmdlet1
+uid: DeviceHealthAttestation.Get-DHASInactiveSigningCertificate
+name: Get-DHASInactiveSigningCertificate
+module: DeviceHealthAttestation
+isPreview: false
+summary: |-
+  Gets the inactive signing certificate.
+description: |-
+  The **Get-DHASInactiveSigningCertificate** cmdlet gets the inactive signing certificate thumbprint for the Device Health Attestation service.
+
+  You must have administrator rights to run this cmdlet.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-DHASInactiveSigningCertificate
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get the inactive signing certificate'
+  description: |-
+    ```
+    PS C:\> Get-DHASInactiveSigningCertificate
+    ```
+
+    This example gets the inactive signing certificate thumbprint.
+links:
+- text: Remove-DHASInactiveSigningCertificate
+  href: ./Remove-DHASInactiveSigningCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.DeviceHealthAttestation.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/devicehealthattestation/get-dhasinactivesigningcertificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: DeviceHealthAttestation
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-DHASInactiveSigningCertificate

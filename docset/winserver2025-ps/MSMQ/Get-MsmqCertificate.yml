@@ -1,0 +1,78 @@
+### YamlMime:PowerShellCmdlet1
+uid: MSMQ.Get-MsmqCertificate
+name: Get-MsmqCertificate
+module: MSMQ
+isPreview: false
+summary: |-
+  Gets certificates registered in Active Directory Domain Services.
+description: |-
+  The **Get-MsmqCertificate** cmdlet gets an array of **System.Security.Cryptography.X509Certificates.X509Certificate** objects.
+  Each object represents a personal certificate that is currently registered in Active Directory® Domain Services.
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a host or virtual server.
+      This cmdlet gets the certificates of the current user for the specified host or virtual server.
+      If you do not specify this parameter, this cmdlet gets the certificates of the current user for all hosts or virtual servers.
+    aliases:
+    - cn
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-MsmqCertificate
+        [[-ComputerName] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all certificates of the current user'
+  description: |-
+    ```
+    PS C:\> Get-MsmqCertificate
+    ```
+
+    This command gets the certificates of the current user for all hosts or virtual servers.
+- title: 'Example 2: Get the certificates of the current user for a host or virtual server'
+  description: |-
+    ```
+    PS C:\> Get-MsmqCertificate -ComputerName "Contoso27"
+    ```
+
+    This command gets the certificates of the current user for the host or virtual server named Contoso27.
+links:
+- text: Enable-MsmqCertificate
+  href: ./Enable-MsmqCertificate.yml
+- text: Remove-MsmqCertificate
+  href: ./Remove-MsmqCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/msmq/get-msmqcertificate?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-MsmqCertificate

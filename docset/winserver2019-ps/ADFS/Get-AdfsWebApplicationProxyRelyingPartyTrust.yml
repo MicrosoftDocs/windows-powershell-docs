@@ -1,0 +1,72 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsWebApplicationProxyRelyingPartyTrust
+name: Get-AdfsWebApplicationProxyRelyingPartyTrust
+module: ADFS
+isPreview: false
+summary: |-
+  Gets the relying party trust object for the Web Application Proxy.
+description: |-
+  The **Get-AdfsWebApplicationProxyRelyingPartyTrust** cmdlet gets the Web Application Proxy relying party trust object for the proxy.
+
+  The Web Application Proxy relying party trust is useful to manage global network access from outside the corporate network.
+  By setting authentication and authorization policies, an administrator can restrict access to internal web applications and services that are published through the Web Application Proxy.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsWebApplicationProxyRelyingPartyTrust
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get the relying party trust object'
+  description: |-
+    ```
+    PS C:\> Get-AdfsWebApplicationProxyRelyingPartyTrust
+
+    AlwaysRequireAuthentication   : False
+    Enabled                       : True
+    Identifier                    : {urn:AppProxy:com}
+    IssuanceAuthorizationRules    : @RuleTemplate="AllowAllAuthzRule" => issue(Type = "http://schemas.contoso.com/authorization/claims/permit", Value="true");
+    IssuanceTransformRules        : @RuleTemplate="PassThroughClaims"
+    @RuleName="Pass Through Application Identifier"
+    c:[Type == "http://schemas.contoso.com/2012/01/requestcontext/claims/relyingpartytrustid"] => issue(claim = c);
+    @RuleTemplate="PassThroughClaims"
+    @RuleName="Pass Through Device Registration Identifier"
+    c:[Type == "http://schemas.contoso.com/2012/01/devicecontext/claims/registrationid"] => issue(claim = c);
+    @RuleTemplate="PassThroughClaims"
+    @RuleName="Pass Through UPN"
+    c:[Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"] => issue(claim = c);
+    @RuleTemplate="PassThroughClaims"
+    @RuleName="Pass Through Activity ID"
+    c:[Type == "http://schemas.contoso.com/2012/01/requestcontext/claims/client-request-id"] => issue(claim = c);
+
+    AdditionalAuthenticationRules :
+    Name                          : urn:AppProxy:com
+    NotBeforeSkew                 : 0
+    Notes                         :
+    RelyingPartyType              : WebApplicationProxy
+    TokenLifetime                 : 0
+    ```
+
+    This command gets the Web Application Proxy relying party trust object.
+    The command displays authentication and authorization rules added previously.
+links:
+- text: Add-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Add-AdfsWebApplicationProxyRelyingPartyTrust.yml
+- text: Disable-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Disable-AdfsWebApplicationProxyRelyingPartyTrust.yml
+- text: Enable-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Enable-AdfsWebApplicationProxyRelyingPartyTrust.yml
+- text: Remove-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Remove-AdfsWebApplicationProxyRelyingPartyTrust.yml
+- text: Set-AdfsWebApplicationProxyRelyingPartyTrust
+  href: ./Set-AdfsWebApplicationProxyRelyingPartyTrust.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfswebapplicationproxyrelyingpartytrust?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsWebApplicationProxyRelyingPartyTrust

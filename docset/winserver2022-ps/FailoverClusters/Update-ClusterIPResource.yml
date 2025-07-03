@@ -1,0 +1,152 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Update-ClusterIPResource
+name: Update-ClusterIPResource
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Renews or releases the DHCP lease for an IP address resource in a failover cluster.
+description: |-
+  The `Update-ClusterIPResource` cmdlet renews or releases the DHCP lease for an IP address resource
+  in a failover cluster. This cmdlet applies only to IP address resources that use DHCP.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+      `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster IP address resource to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster IP address resource to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Release
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes the cmdlet to release the DHCP lease of the IP address resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Renew
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes the cmdlet to renew the DHCP lease of the IP address resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-ClusterIPResource
+        [[-Name] <String>]
+        [-Renew]
+        [-Release]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update DHCP lease'
+  description: |-
+    ```powershell
+    Update-ClusterIPResource -Name "Cluster IP Address"
+    ```
+
+    This example updates the DHCP lease for the resource called `Cluster IP Address` if this resource is
+    DHCP assigned.
+- title: 'Example 2: Update DHCP leases for all clustered IP resources'
+  description: |-
+    ```powershell
+    $clusterIP = Get-ClusterResource | Where-Object {$_.ResourceType.Name -eq "IP Address"}
+    $clusterIP | Update-ClusterIPResource
+    ```
+
+    This example updates the DHCP lease for all of the clustered IP resources that are DHCP assigned.
+- title: 'Example 3: Take a resource offline and release its lease'
+  description: |-
+    ```powershell
+    $clusterResource = Get-ClusterResource -Name "IP Address 10.24.11.0"
+    $clusterResource | Stop-ClusterResource | Update-ClusterIPResource -Release
+    ```
+
+    This example takes the resource named `IP Address 172.24.11.0` offline, and releases the DHCP lease
+    for that resource.
+links:
+- text: Get-ClusterResource
+  href: ./Get-ClusterResource.yml
+- text: Update-ClusterNetworkNameResource
+  href: ./Update-ClusterNetworkNameResource.yml
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/?LinkID=113423
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/update-clusteripresource?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 11/23/2022
+  PlatyPS schema version: 2024-05-01
+  title: Update-ClusterIPResource

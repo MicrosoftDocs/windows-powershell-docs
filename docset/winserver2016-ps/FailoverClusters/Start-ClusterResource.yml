@@ -1,0 +1,177 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Start-ClusterResource
+name: Start-ClusterResource
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Brings a resource online in a failover cluster.
+description: |-
+  The **Start-ClusterResource** cmdlet brings a resource online in a failover cluster.
+  Before the resource is brought online, any resources that it depends are brought online.
+parameters:
+  cmdletParameters:
+  - name: ChooseBestNode
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet.
+      If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IgnoreLocked
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that locked groups are ignored when running the cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster resource to bring online.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster resource to bring online.
+      This can also be the name of a Cluster Shared Volume (CSV).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Wait
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time in seconds to wait for the cmdlet.
+      If the **Wait** parameter is not specified, then the cmdlet waits for completion.
+      If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-ClusterResource
+        [[-Name] <String>]
+        [-IgnoreLocked]
+        [-ChooseBestNode]
+        [-Wait <Int32>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Start-ClusterResource -Name "IP Address 172.24.11.0"
+    Name                State               Group               ResourceType
+    ----                -----               -----               ------------
+    IP Address 172.2...  Online              cluster1FS12        IP Address
+    ```
+
+    This example brings the resource called IP Address 172.24.11.0 online on the local cluster.
+    Before bringing the resource online, this cmdlet brings online any resources on which the resource depends.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Start-ClusterResource -Name "IP Address 172.24.11.0" -Wait 0
+    Name                State               Group               ResourceType
+    ----                -----               -----               ------------
+    IP Address 172.2...  OnlinePending       cluster1FS12        IP Address
+    ```
+
+    This example brings the resource called IP Address 172.24.11.0 online on the local cluster.
+    Before bringing the resource online, this cmdlet brings online any resources on which the resource depends.
+    The Windows PowerShell® prompt returns as soon as the action has been initiated.
+links:
+- text: Add-ClusterResource
+  href: ./Add-ClusterResource.yml
+- text: Get-ClusterResource
+  href: ./Get-ClusterResource.yml
+- text: Move-ClusterResource
+  href: ./Move-ClusterResource.yml
+- text: Remove-ClusterResource
+  href: ./Remove-ClusterResource.yml
+- text: Resume-ClusterResource
+  href: ./Resume-ClusterResource.yml
+- text: Stop-ClusterResource
+  href: ./Stop-ClusterResource.yml
+- text: Suspend-ClusterResource
+  href: ./Suspend-ClusterResource.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/start-clusterresource?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Start-ClusterResource

@@ -1,0 +1,100 @@
+### YamlMime:PowerShellCmdlet1
+uid: TLS.Disable-TlsEccCurve
+name: Disable-TlsEccCurve
+module: TLS
+isPreview: false
+summary: |-
+  Disables the Elliptic Curve Cryptography (ECC) cipher suites available for TLS(Transport Layer
+  Security) for a computer.
+description: |-
+  This Command disables the Elliptic Curve Cryptography (ECC) cipher suites available for
+  TLS(Transport Layer Security) for a computer.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the ECC curve to disable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-TlsEccCurve
+        [-Name] <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Disable-TlsEccCurve -Name curve25519
+    ```
+
+    This will disable the ECC Curve `curve25519`.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/tls/disable-tlsecccurve?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: TLS
+  ms.date: 05/09/2017
+  PlatyPS schema version: 2024-05-01
+  title: Disable-TlsEccCurve

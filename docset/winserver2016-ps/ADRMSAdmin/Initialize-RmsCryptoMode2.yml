@@ -1,0 +1,194 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADRMSAdmin.Initialize-RmsCryptoMode2
+name: Initialize-RmsCryptoMode2
+module: ADRMSAdmin
+isPreview: false
+summary: |-
+  Prepares an AD RMS server for transitioning to Cryptographic Mode 2.
+description: |-
+  The **Initialize-RmsCryptoMode2** cmdlet prepares an Active Directory Rights Management Services (AD RMS) server for transitioning to Cryptographic Mode 2.
+
+  Cryptographic Mode 2 is an updated and enhanced AD RMS cryptographic implementation.
+  It supports 2048-bit RSA encryption and 256-bit length keys using the SHA-2 hashing algorithm (SHA-2/SHA-256) standards.
+
+  While this cmdlet is useful for performing the initial steps required in transitioning an AD RMS deployment to Cryptographic Mode 2, additional tasks are required.
+  First, all client computers in the AD RMS cluster environment must be patched to support this updated and enhanced mode.
+  Depending on your deployment configuration, you may need to update some or all servers.
+  When all computers are updated, as the final transition task to Cryptographic Mode 2, you can run the **Update-ADRMS** cmdlet with the *UpdateCryptographicModeOnly* parameter specified to effectively switch the cluster to using mode 2 instead of mode 1.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CspName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cryptographic service provider (CSP) to use for generating the mode 2 TUD when this cmdlet is executed.
+      This CSP must be of the type PROV_RSA_AES to support mode 2 operation (in contrast to mode 1 keys which use the CSP type PROV_RSA_FULL).
+
+      The *CspName* parameter is for CSP-based installs only.
+      If a CSP name is specified for a server with a centrally managed key, an error is returned if this parameter is included in the command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name and location for the file generated when this cmdlet is executed.
+      This file contains the mode 2 SLC (server licensor certificate) which is exported as part of transitioning a trusted user domain (TUD) to mode operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the cmdlet to save (overwrite) an existing file if one is found to exist under the name and location specified as part of the *FilePath* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      This parameter is for CSP-based installs only.
+      If a CSP name is specified for a server with a centrally managed key, an error is returned if this parameter is included in the command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Regenerate
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the AD RMS server to generate a new key even if the cmdlet has previously run.
+      This overwrites any previously generated key.
+      Because you can run this cmdlet multiple times, if this parameter is omitted, the same key is exported each subsequent time the cmdlet is run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Initialize-RmsCryptoMode2
+        -FilePath <String[]>
+        [-CspName <String>]
+        [-Regenerate]
+        [-Force]
+        [-Path] <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Export the SLC'
+  description: |-
+    ```
+    PS C:\> Initialize-RmsCryptoMode2 -Path "." -FilePath "c:\test.tud"
+    ```
+
+    This command exports the server licensor certificate (SLC) for the current AD RMS server to the trusted user domain c:\test.tud for a server that uses centrally managed keys.
+- title: 'Example 2: Force regeneration of cryptographic mode 2 keys'
+  description: |-
+    ```
+    PS C:\> Initialize-RmsCryptoMode2 -Path "." -FilePath "c:\test2.tud" -Regenerate
+
+    Initialize cryptographic mode 2
+
+    This will regenerate the cryptographic mode 2 key pair.  Are you sure you want to continue?
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+    ```
+
+    This command forces regeneration of the cryptographic mode 2 keys.
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adrmsadmin/initialize-rmscryptomode2?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Initialize-RmsCryptoMode2

@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkLoadBalancingClusters.Get-NlbClusterPortRule
+name: Get-NlbClusterPortRule
+module: NetworkLoadBalancingClusters
+isPreview: false
+summary: |-
+  Gets the port rule objects that are queried by the caller.
+description: |-
+  The **Get-NlbClusterPortRule** cmdlet gets the port rules in the Network Load Balancing (NLB) cluster.
+  If a port number is not specified, all port rules configured for the cluster are listed.
+parameters:
+  cmdletParameters:
+  - name: HostName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster host against which this cmdlet is run.
+      If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+    aliases:
+    - Host
+    - HN
+    - H
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of cluster or cluster nodes for which port rules are enumerated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Pipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InterfaceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interface to which NLB is bound.
+      This is the interface of the cluster against which this cmdlet is run.
+    aliases:
+    - Interface
+    - IN
+    - I
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IP
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP address for the cluster port rule that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NodeName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster node for which port rules are enumerated.
+    aliases:
+    - NN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Port
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a port number within the port rule that this cmdlet gets.
+      The acceptable values for this parameter are: 0 through 65535.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NlbClusterPortRule
+        [[-Port] <UInt32>]
+        [-HostName <String>]
+        [-InterfaceName <String>]
+        [-IP <IPAddress>]
+        [-NodeName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NonPipeline
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-NlbClusterPortRule
+        [[-Port] <UInt32>]
+        -InputObject <PSObject[]>
+        [-IP <IPAddress>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Pipeline
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.PortRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all port rules on the local cluster'
+  description: |-
+    ```
+    PS C:\>Get-NlbClusterPortRule
+    IPAddress State     Start     End       Protocol  Mode      Affinity  Timeout
+    --------- -----     -----     ---       --------  ----      --------  -------
+    All       Enabled   0         65535     Both      Multiple  Single    0
+    ```
+
+    This command lists all the port rules on the local cluster.
+- title: 'Example 2: Get a port rule for a specific port'
+  description: |-
+    ```
+    PS C:\>Get-NlbClusterPortRule -Port 80
+    IPAddress State     Start     End       Protocol  Mode      Affinity  Timeout
+    --------- -----     -----     ---       --------  ----      --------  -------
+    All       Enabled   0         65535     Both      Multiple  Single    0
+    ```
+
+    This command gets the port rule that includes port 80.
+- title: 'Example 3: Get port rules from all cluster nodes'
+  description: |-
+    ```
+    PS C:\>Get-NlbClusterNode | Get-NlbClusterPortRule | Format-List -Property *
+    Cluster          : mycluster
+    NodeName         : node1
+    VirtualIPAddress : 255.255.255.255
+    StartPort        : 0
+    EndPort          : 65535
+    Affinity         :
+    FilteringMode    : Single
+    Protocol         : Both
+    EqualLoad        : False
+    LoadWeight       :
+    PortState        : Enabled
+    Priority         : 1
+    Timeout          :
+
+    Cluster          : mycluster
+    NodeName         : node2
+    VirtualIPAddress : 255.255.255.255
+    StartPort        : 0
+    EndPort          : 65535
+    Affinity         :
+    FilteringMode    : Single
+    Protocol         : Both
+    EqualLoad        : False
+    LoadWeight       :
+    PortState        : Enabled
+    Priority         : 2
+    Timeout          :
+    ```
+
+    This command gets the port rule from all cluster nodes.
+    This is especially useful if there are port rules that have Single mode.
+links:
+- text: Format-List
+  href: https://go.microsoft.com/fwlink/?LinkID=113302
+- text: Add-NlbClusterPortRule
+  href: ./Add-NlbClusterPortRule.yml
+- text: Disable-NlbClusterPortRule
+  href: ./Disable-NlbClusterPortRule.yml
+- text: Enable-NlbClusterPortRule
+  href: ./Enable-NlbClusterPortRule.yml
+- text: Remove-NlbClusterPortRule
+  href: ./Remove-NlbClusterPortRule.yml
+- text: Set-NlbClusterPortRule
+  href: ./Set-NlbClusterPortRule.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkloadbalancingclusters/get-nlbclusterportrule?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NlbClusterPortRule

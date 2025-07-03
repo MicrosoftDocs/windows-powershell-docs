@@ -1,0 +1,437 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Set-VMFirmware
+name: Set-VMFirmware
+module: Hyper-V
+isPreview: false
+summary: |-
+  Sets the firmware configuration of a virtual machine.
+description: |-
+  The **Set-VMFirmware** cmdlet sets the firmware configuration of a Generation 2 virtual machine.
+notes: |-
+  * Note: This cmdlet is supported only when run against Generation 2 virtual machines.
+parameters:
+  cmdletParameters:
+  - name: BootOrder
+    type: <xref href="VMComponentObject" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of devices.
+      The boot order determines the order of the devices from which to boot.
+      The acceptable values for this parameter are:
+
+
+        -- VMBootSource
+
+        -- VMNetworkAdapter
+
+        -- HardDiskDrive
+
+        -- DVDDrive
+
+
+      The VMBootSource value describes a boot entry in firmware nonvolatile Random Access Memory (NVRAM).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the names of the Hyper-V hosts whose firmware configuration you want to modify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConsoleMode
+    type: <xref href="ConsoleModeType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the console mode type for the virtual machine.
+      This parameter allows a virtual machine to run without graphical user interface.
+    acceptedValues:
+    - Default
+    - COM1
+    - COM2
+    - None
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableSecureBoot
+    type: <xref href="OnOffState" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to enable secure boot.
+      The acceptable values for this parameter are:
+
+
+        -- On
+
+        -- Off
+
+
+      Secure boot uses a public key infrastructure that protects the integrity of the operating system.
+    acceptedValues:
+    - On
+    - Off
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FirstBootDevice
+    type: <xref href="VMComponentObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the device from which to attempt to boot from first.
+      The acceptable values for this parameter are:
+
+
+        -- VMBootSource
+
+        -- VMNetworkAdapter
+
+        -- HardDiskDrive
+
+        -- DVDDrive
+
+
+      The VMBootSource value describes a boot entry in firmware NVRAM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PauseAfterBootFailure
+    type: <xref href="OnOffState" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the behavior of the virtual machine after a start failure.
+      For a value of On, if the virtual machine fails to start correctly from a device, the virtual machine is paused.
+    acceptedValues:
+    - On
+    - Off
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreferredNetworkBootProtocol
+    type: <xref href="IPProtocolPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP protocol version to use during a network boot.
+    acceptedValues:
+    - IPv4
+    - IPv6
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecureBootTemplate
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the secure boot template.
+      If secure boot is enabled, you must have a valid secure boot template for the guest operating system to start.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecureBootTemplateId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the secure boot template.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the virtual machine objects for which want to modify the firmware configuration.
+      To obtain a virtual machine object, use the **Get-VM** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMFirmware
+    type: <xref href="VMFirmware" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of virtual machine firmware configurations.
+      The cmdlet sets the firmware configurations you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMFirmware
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of virtual machines for which you want to modify the firmware configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-VMFirmware
+        [-VMName] <String[]>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-BootOrder <VMComponentObject[]>]
+        [-FirstBootDevice <VMComponentObject>]
+        [-EnableSecureBoot <OnOffState>]
+        [-SecureBootTemplate <String>]
+        [-SecureBootTemplateId <Guid>]
+        [-PreferredNetworkBootProtocol <IPProtocolPreference>]
+        [-ConsoleMode <ConsoleModeType>]
+        [-PauseAfterBootFailure <OnOffState>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-VMFirmware
+        [-VM] <VirtualMachine[]>
+        [-BootOrder <VMComponentObject[]>]
+        [-FirstBootDevice <VMComponentObject>]
+        [-EnableSecureBoot <OnOffState>]
+        [-SecureBootTemplate <String>]
+        [-SecureBootTemplateId <Guid>]
+        [-PreferredNetworkBootProtocol <IPProtocolPreference>]
+        [-ConsoleMode <ConsoleModeType>]
+        [-PauseAfterBootFailure <OnOffState>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-VMFirmware
+        [-VMFirmware] <VMFirmware[]>
+        [-BootOrder <VMComponentObject[]>]
+        [-FirstBootDevice <VMComponentObject>]
+        [-EnableSecureBoot <OnOffState>]
+        [-SecureBootTemplate <String>]
+        [-SecureBootTemplateId <Guid>]
+        [-PreferredNetworkBootProtocol <IPProtocolPreference>]
+        [-ConsoleMode <ConsoleModeType>]
+        [-PauseAfterBootFailure <OnOffState>]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMFirmware
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.HyperV.Powershell.VMFirmware" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Set-VMFirmware "Test VM" -EnableSecureBoot On
+    ```
+
+    This example enables secure boot functionality on the virtual machine "Test VM".
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Set-VMFirmware "Test VM" -FirstBootDevice $vmNetworkAdapter
+    ```
+
+    This example sets the virtual machine "Test VM" to boot off of the VM network adapter object stored in $vmNetworkAdapter.
+    This object was acquired using get-VMNetworkAdapter.
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> Set-VMFirmware "Test VM" -BootOrder $vmNetworkAdapter, $vmHardDiskDrive
+    ```
+
+    Sets the boot order for the virtual machine "Test VM".
+    $vmNetworkAdapter contains a VM Network Adapter object (acquired using get-VMNetworkAdapter) and $vmHardDiskDrive contains a VM hard disk object (acquired using get-VMHardDiskDrive).
+    Any existing boot entries not specified by this command will be removed from the virtual machine.
+links:
+- text: Get-VMFirmware
+  href: ./Get-VMFirmware.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/set-vmfirmware?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-VMFirmware

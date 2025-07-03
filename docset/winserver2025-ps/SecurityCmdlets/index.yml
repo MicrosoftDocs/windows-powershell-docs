@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: SecurityCmdlets
+name: SecurityCmdlets Module
+isPreview: false
+cmdletGroups:
+- title: SecurityCmdlets Cmdlets
+  cmdlets:
+  - SecurityCmdlets.Backup-AuditPolicy
+  - SecurityCmdlets.Backup-SecurityPolicy
+  - SecurityCmdlets.Restore-AuditPolicy
+  - SecurityCmdlets.Restore-SecurityPolicy
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: 9765323d-6100-4545-8617-2dfda71f33af
+  Module Name: SecurityCmdlets
+  ms.date: 02/21/2024
+  title: SecurityCmdlets module
+  PlatyPS schema version: 2024-05-01
+  document type: module

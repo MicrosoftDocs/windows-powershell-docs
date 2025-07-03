@@ -1,0 +1,306 @@
+### YamlMime:PowerShellCmdlet1
+uid: StorageQoS.Get-StorageQoSFlow
+name: Get-StorageQoSFlow
+module: StorageQoS
+isPreview: false
+summary: |-
+  Retrieves performance metrics on an I/O flow that is monitored by Storage QoS.
+description: |-
+  The **Get-StorageQoSFlow** cmdlet retrieves performance metrics on an I/O flow that is monitored by Storage Quality of Service (Storage QoS).
+  The metrics are throughput and latency averages, computed over a 5-minute rolling time interval.
+
+  Each file handle opened by a server that runs Hyper-V to a VHD or VHDX file is considered a flow.
+  If a virtual machine has two virtual hard disks attached, it will have 1 flow to the file server cluster per file.
+  If a VHDX is shared with multiple virtual machines, it will have 1 flow per virtual machine.
+
+  For more information about Storage QoS, see Storage Quality of Service in Windows Server Technical Previewhttps://technet.microsoft.com/en-us/library/Mt126108 (https://technet.microsoft.com/en-us/library/Mt126108).
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the file that a flow accesses.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Arguments
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FlowId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the GUID that identifies the flow.
+      This identifier is not unique across flow objects, because the same logical flow may be split across several volumes or storage nodes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Arguments
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeHidden
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet includes the default flow, which groups together all flows not governed by a policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Arguments
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InitiatorId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifies the virtual machine that is the initiator of the flow.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Arguments
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InitiatorName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the initiator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Arguments
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InitiatorNodeName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the hostname of the node initiating the flow.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Arguments
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a policy for which to get associated flows.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Object
+      position: "9"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="Status" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the status of the flow.
+
+      - Ok indicates that the flow meets the minimum Input/Output Operations Per Second (IOPS).
+      - InsufficientThroughput indicates that the IOPS are below the minimum.
+    acceptedValues:
+    - Ok
+    - InsufficientThroughput
+    - UnknownPolicyId
+    - LostCommunication
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Arguments
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageNodeName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the hostname of the storage node servicing the flow.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Arguments
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a volume that the flow accesses.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Arguments
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-StorageQoSFlow
+        [[-FlowId] <Guid>]
+        [[-InitiatorId] <String>]
+        [[-FilePath] <String>]
+        [[-VolumeId] <String>]
+        [[-InitiatorName] <String>]
+        [[-InitiatorNodeName] <String>]
+        [[-StorageNodeName] <String>]
+        [[-Status] <Status>]
+        [-IncludeHidden]
+        [-AsJob]
+        [-CimSession <CimSession>]
+        [-ThrottleLimit <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Arguments
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-StorageQoSFlow
+        [-Policy] <CimInstance>
+        [-AsJob]
+        [-CimSession <CimSession>]
+        [-ThrottleLimit <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Object
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_StorageQoSFlow" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet outputs a Common Information Model (CIM) object of type MSFT_StorageQoSFlowhttps://msdn.microsoft.com/en-us/library/mt164591(v=vs.85).aspx (https://msdn.microsoft.com/en-us/library/mt164591(v=vs.815).aspx).
+
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+examples:
+- title: 'Example 1: Get information on an I/O flow'
+  description: |-
+    ```
+    PS C:\>
+    Get-StorageQoSFlow -FilePath "C:\ClusterStorage\Volume01\TEST"
+
+    InitiatorName FilePath                       InitiatorIOPS InitiatorLatency InitiatorBandwidth PSComputerName
+
+    ------------- --------                       ------------- ---------------- ------------------ --------------
+
+    storqosclient C:\ClusterStorage\Volume01\TEST 104           8.0921 ms        0.2 MB/s
+
+    storqosclient C:\ClusterStorage\Volume01\TEST 31            8.9741 ms        0.5 MB/s
+    ```
+
+    This command gets information about all flow initiators accessing C:\ClusterStorage\Volume01\TEST.
+links:
+- text: Get-StorageQosPolicy
+  href: ./Get-StorageQosPolicy.yml
+- text: Get-StorageQosVolume
+  href: ./Get-StorageQosVolume.yml
+- text: New-StorageQosPolicy
+  href: ./New-StorageQosPolicy.yml
+- text: Remove-StorageQosPolicy
+  href: ./Remove-StorageQosPolicy.yml
+- text: Set-StorageQosPolicy
+  href: ./Set-StorageQosPolicy.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Policy-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storageqos/get-storageqosflow?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: StorageQoS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-StorageQoSFlow

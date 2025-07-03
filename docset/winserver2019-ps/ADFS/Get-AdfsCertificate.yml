@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsCertificate
+name: Get-AdfsCertificate
+module: ADFS
+isPreview: false
+summary: |-
+  Retrieves the certificates from AD FS.
+description: |-
+  The **Get-AdfsCertificate** cmdlet retrieves the certificates that Active Directory Federation Services (AD FS) uses for token signing, token decrypting, card signing, and securing service communications.
+notes: |-
+  * You can use the **Get-AdfsCertificate** cmdlet without any parameters to get all the certificates.
+parameters:
+  cmdletParameters:
+  - name: CertificateType
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the type of the certificate to retrieve.
+      The acceptable values for this parameter are:
+
+      - Infocard-Signing
+      - Service-Communications
+      - Token-Encryption
+      - Token-Signing
+    acceptedValues:
+    - Service-Communications
+    - Token-Decrypting
+    - Token-Signing
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByType
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Thumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the thumbprint of the certificate to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByReference
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsCertificate
+        [[-CertificateType] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByType
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AdfsCertificate
+        [-Thumbprint] <String[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByReference
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ServiceCertificate" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more ServiceCertificate objects that represent the certificate objects for AD FS.
+examples:
+- title: 'Example 1: Get the token-signing certificates'
+  description: |-
+    ```
+    PS C:\> Get-AdfsCertificate -CertificateType "Token-Signing"
+    ```
+
+    This command retrieves the token-signing certificates for AD FS.
+links:
+- text: Add-AdfsCertificate
+  href: ./Add-AdfsCertificate.yml
+- text: Remove-AdfsCertificate
+  href: ./Remove-AdfsCertificate.yml
+- text: Set-AdfsCertificate
+  href: ./Set-AdfsCertificate.yml
+- text: Update-AdfsCertificate
+  href: ./Update-AdfsCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfscertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsCertificate

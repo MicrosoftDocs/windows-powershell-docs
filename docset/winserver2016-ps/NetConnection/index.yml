@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: NetConnection
+name: NetConnection Module
+isPreview: false
+cmdletGroups:
+- title: NetConnection Cmdlets
+  cmdlets:
+  - NetConnection.Get-NetConnectionProfile
+  - NetConnection.Set-NetConnectionProfile
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Net Connection cmdlets. It lists the
+  cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  HelpInfoUri: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: ce4ff86e-9416-4f2d-a869-c860ac543b5e
+  Module Name: NetConnection
+  ms.date: 12/20/2016
+  title: NetConnection
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,66 @@
+### YamlMime:PowerShellCmdlet1
+uid: RDMgmt.Get-RDRemoteDesktop
+name: Get-RDRemoteDesktop
+module: RDMgmt
+isPreview: false
+summary: |-
+  Gets published Remote Desktop connections.
+description: |-
+  The **Get-RDRemoteDesktop** cmdlet gets published Remote Desktop connections.
+
+  When you publish a Remote Desktop connection, the Remote Desktop Web Access (RD Web Access) server displays the Remote Desktop connection for the collection defined by the **CollectionName** parameter.
+  RemoteApp and Desktop Connections that the user subscribes to also display published Remote Desktop connections.
+parameters:
+  cmdletParameters:
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-RDRemoteDesktop
+        [[-ConnectionBroker] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.RemoteDesktopServices.Management.RDPublishedRemoteDesktop" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the published virtual desktops for all collections'
+  description: |-
+    ```
+    PS C:\> Get-RDRemoteDesktop -ConnectionBroker "RDCB.Contoso.com"
+    ```
+
+    This command gets the published virtual desktops for collections on the RD Connection Broker named RDCB.Contoso.com.
+links:
+- text: Set-RDRemoteDesktop
+  href: ./Set-RDRemoteDesktop.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/rdmgmt/get-rdremotedesktop?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-RDRemoteDesktop

@@ -1,0 +1,98 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsAuthenticationProvider
+name: Get-AdfsAuthenticationProvider
+module: ADFS
+isPreview: false
+summary: |-
+  Gets a list of all authentication providers in AD FS.
+description: |-
+  The **Get-AdfsAuthenticationProvider** cmdlet gets a list of all authentication providers currently registered in Active Directory Federation Services (AD FS).
+  The read-only list includes built-in and external authentication providers and associated properties.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an authentication provider to retrieve from AD FS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsAuthenticationProvider
+        [[-Name] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all registered authentication providers'
+  description: |-
+    ```
+    PS C:\> Get-AdfsAuthenticationProvider
+    AdminName                          : Forms Authentication
+    AllowedForPrimaryExtranet          : True
+    AllowedForPrimaryIntranet          : True
+    AllowedForAdditionalAuthentication : False
+    AuthenticationMethods              : {urn:oasis:names:tc:SAML:1.0:am:password, urn:oasis:names:tc:SAML:2.0:ac:classes:Password, urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport, http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password}
+    Descriptions                       : {}
+    DisplayNames                       : {}
+    Name                               : FormsAuthentication
+    IdentityClaims                     : {}
+    IsCustom                           : False
+    RequiresIdentity                   : False
+
+    AdminName                          : Windows Authentication
+    AllowedForPrimaryExtranet          : False
+    AllowedForPrimaryIntranet          : True
+    AllowedForAdditionalAuthentication : False
+    AuthenticationMethods              : {urn:ietf:rfc:1510, urn:federation:authentication:windows, urn:oasis:names:tc:SAML:2.0:ac:classes:Kerberos, http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/kerberos...} Descriptions                       : {}
+    DisplayNames                       : {}
+    Name                               : WindowsAuthentication
+    IdentityClaims                     : {}
+    IsCustom                           : False
+    RequiresIdentity                   : False
+
+    AdminName                          : Certificate Authentication
+    AllowedForPrimaryExtranet          : True
+    AllowedForPrimaryIntranet          : True
+    AllowedForAdditionalAuthentication : True
+    AuthenticationMethods              : {urn:ietf:rfc:2246, urn:oasis:names:tc:SAML:1.0:am:X509-PKI, urn:oasis:names:tc:SAML:2.0:ac:classes:TLSClient, urn:oasis:names:tc:SAML:2.0:ac:classes:X509...} Descriptions                       : {}
+    DisplayNames                       : {}
+    Name                               : CertificateAuthentication
+    IdentityClaims                     : {}
+    IsCustom                           : False
+    RequiresIdentity                   : False
+    ```
+
+    This command gets all authentication providers currently registered in AD FS.
+links:
+- text: Register-AdfsAuthenticationProvider
+  href: ./Register-AdfsAuthenticationProvider.yml
+- text: Unregister-AdfsAuthenticationProvider
+  href: ./Unregister-AdfsAuthenticationProvider.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfsauthenticationprovider?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsAuthenticationProvider

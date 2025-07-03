@@ -1,0 +1,154 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsClient.Grant-HgsKeyProtectorAccess
+name: Grant-HgsKeyProtectorAccess
+module: HgsClient
+isPreview: false
+summary: |-
+  Grants access to a guardian for a key protector.
+description: |-
+  The **Grant-HgsKeyProtectorAccess** cmdlet grants a Host Guardian Service guardian access to a key protector.
+  This operation requires the private signing key of the owner of the key protector.
+parameters:
+  cmdletParameters:
+  - name: AllowExpired
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet can grant permissions to a guardian that contains certificates that are expired.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AllowUntrustedRoot
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet can grant permissions to a guardian that uses self-signed certificates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Guardian
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a guardian to which to grant access to the key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GuardianFriendlyName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a friendly name for the guardian.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FriendlyName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyProtector
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the key protector to which to grant access.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Grant-HgsKeyProtectorAccess
+        -KeyProtector <CimInstance>
+        -Guardian <CimInstance>
+        [-AllowUntrustedRoot]
+        [-AllowExpired]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Grant-HgsKeyProtectorAccess
+        -KeyProtector <CimInstance>
+        -GuardianFriendlyName <String>
+        [-AllowUntrustedRoot]
+        [-AllowExpired]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FriendlyName
+  isDefault: false
+outputs:
+- name: <xref href="CimInstance#MSFT_HgsKeyProtector" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+examples:
+- title: 'Example 1: Grant access to a guardian'
+  description: |-
+    ```
+    PS C:\> $Owner = Get-HgsGuardian -Name "Guardian06"
+    PS C:\> $Guardian01 = Get-HgsGuardian -Name "Guardian11"
+    PS C:\> $KeyProtector = New-HgsKeyProtector -Owner $Owner
+    PS C:\> Grant-HgsKeyProtectorAccess -KeyProtector $KeyProtector -Guardian $Guardian01
+    ```
+
+    The first command gets the guardian object named Guardian06 by using the **Get-HgsGuardian** cmdlet, and then stores that object in the **$Owner** variable.
+
+    The second commands get the guardian object named Guardian11, and then stores it in the **$Guardian01** variable.
+
+    The third command creates a key protector.
+    The command defines Guardian06, stored in **$Owner**, as the **Owner**.
+
+    The final command grants access to the guardian stored in **$Guardian01** for the key protector.
+links:
+- text: New-HgsKeyProtector
+  href: ./New-HgsKeyProtector.yml
+- text: Revoke-HgsKeyProtectorAccess
+  href: ./Revoke-HgsKeyProtectorAccess.yml
+- text: Get-HgsGuardian
+  href: ./Get-HgsGuardian.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: HgsClient-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsclient/grant-hgskeyprotectoraccess?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Grant-HgsKeyProtectorAccess

@@ -1,0 +1,104 @@
+### YamlMime:PowerShellCmdlet1
+uid: RDMgmt.Get-RDVirtualDesktopConcurrency
+name: Get-RDVirtualDesktopConcurrency
+module: RDMgmt
+isPreview: false
+summary: |-
+  Gets the number of virtual desktops that RDS can create in parallel.
+description: |-
+  The **Get-RDVirtualDesktopConcurrency** cmdlet gets the number of virtual desktops that Remote Desktop Services (RDS) can create in parallel on one or more Remote Desktop Virtualization Host (RD Virtualization Host) servers.
+parameters:
+  cmdletParameters:
+  - name: BatchSize
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the batch size.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostServer
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of the servers that host the session.
+      For session collections the host server has the name of the Remote Desktop Session Host (RD Session Host) server.
+      For virtual desktop collections the host server has the name of the Remote Desktop Virtualization Host (RD Virtualization Host) server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-RDVirtualDesktopConcurrency
+        [[-HostServer] <String[]>]
+        [-ConnectionBroker <String>]
+        [-BatchSize <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the number of virtual desktops that RDS can create in parallel on host servers'
+  description: |-
+    ```
+    PS C:\> Get-RDVirtualDesktopConcurrency -ConnectionBroker "rdcb.contoso.com" -HostServer @("rdvh-1.contoso.com","rdvh-2.contoso.com")
+    ```
+
+    This command gets the number of virtual desktops that Remote Desktop Services (RDS) can create in parallel on the host servers named rdvh-1.contoso.com and rdvh-2.contoso.com.
+- title: 'Example 2: Get the number of virtual desktops that RDS can create in parallel on all host servers'
+  description: |-
+    ```
+    PS C:\> Get-RDVirtualDesktopConcurrency -ConnectionBroker "rdcb.contoso.com"
+    ```
+
+    This command gets the number of virtual desktops that Remote Desktop Services (RDS) can create in parallel on all the host servers associated with the RD Connection Broker server named rdcb.contoso.com.
+links:
+- text: Set-RDVirtualDesktopConcurrency
+  href: ./Set-RDVirtualDesktopConcurrency.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/rdmgmt/get-rdvirtualdesktopconcurrency?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-RDVirtualDesktopConcurrency

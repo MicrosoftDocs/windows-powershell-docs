@@ -1,0 +1,149 @@
+### YamlMime:PowerShellCmdlet1
+uid: NFS.Get-NfsSession
+name: Get-NfsSession
+module: NFS
+isPreview: false
+summary: |-
+  Gets information about which client computers are currently connected to one or more shares on an NFS server.
+description: |-
+  The **Get-NfsSession** cmdlet gets information about Network File System (NFS) sessions that client computers establish on an NFS server.
+  The session ID characterizes each NFS session.
+  You can specify a session ID in the Get-NfsOpenFile and Get-NfsClientLock cmdlets to get a list of open or locked files or on a client computer.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet runs the command as a background job on a remote computer.
+      Use this parameter to run commands that take an extensive time to finish.
+
+      When you use the *AsJob* parameter, the command returns an object that represents the job, and then displays the command prompt.
+      You can continue to work in the session while the job finishes.
+      To manage the job, use the **Job** cmdlets.
+      To get the job results, use the Receive-Job cmdlet.
+
+      The *AsJob* parameter resembles using the Invoke-Command cmdlet to run a Start-Job command remotely.
+      However, with *AsJob*, the job is created on the local computer, even though the job runs on a remote computer, and the results of the remote job are automatically returned to the local computer.
+
+      For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251) and [about_Remote_Jobs](https://go.microsoft.com/fwlink/?LinkID=135184).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientId
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the ID of one or more NFS clients.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SessionId
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the unique ID of one or more NFS sessions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NfsSession
+        [[-SessionId] <String[]>]
+        [[-ClientId] <UInt64[]>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_NfsSession" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all NFS sessions for a specified client computer'
+  description: |-
+    ```
+    PS C:\> Get-NfsSession -ClientId 101
+    ```
+
+    This command gets all NFS sessions on a local NFS server for a client computer that has the ID 101.
+links:
+- text: Disconnect-NfsSession
+  href: ./Disconnect-NfsSession.yml
+- text: Get-NfsClientLock
+  href: ./Get-NfsClientLock.yml
+- text: Get-NfsOpenFile
+  href: ./Get-NfsOpenFile.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MSFT_NfsSession.cmdletDefinition.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/nfs/get-nfssession?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: NFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NfsSession

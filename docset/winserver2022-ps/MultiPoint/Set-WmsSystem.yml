@@ -1,0 +1,220 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Set-WmsSystem
+name: Set-WmsSystem
+module: MultiPoint
+isPreview: false
+summary: |-
+  Modifies system properties.
+description: |-
+  The **Set-WmsSystem** cmdlet modifies system properties for a MultiPoint Server system.
+parameters:
+  cmdletParameters:
+  - name: AdminOrchestration
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to allow Admin Orchestration.
+    aliases:
+    - IsAdminOrchestrationEnabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BootToConsoleMode
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to enable Boot to Console Mode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DesktopMonitoring
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to allow desktop monitoring.
+    aliases:
+    - IsDesktopMonitoringAllowed
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IM
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to enable the chat feature.
+    aliases:
+    - IsChatEnabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPPerSession
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to assign each session a unique IP address.
+    aliases:
+    - IsIPPerSessionEnabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mode
+    type: <xref href="SystemOperatingModePS" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the mode.
+      The acceptable values for this parameter are: Console, MultiStation.
+    acceptedValues:
+    - Console
+    - MultiStation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+      The default is localhost.
+    aliases:
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SingleSessionPerUser
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether a user can log on to multiple stations with the same user account.
+    aliases:
+    - IsSingleSessionPerUser
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SuppressPrivacyNotification
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to disable privacy notificationfor standard users.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WmsSystem
+        [-BootToConsoleMode <Boolean>]
+        [-DesktopMonitoring <Boolean>]
+        [-IM <Boolean>]
+        [-IPPerSession <Boolean>]
+        [-Mode <SystemOperatingModePS>]
+        [-SingleSessionPerUser <Boolean>]
+        [-SuppressPrivacyNotification <Boolean>]
+        [-AdminOrchestration <Boolean>]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Modify system settings'
+  description: |-
+    ```
+    PS C:\> Set-WmsSystem -CEIP $True -DesktopMonitoring $True
+    ```
+
+    This command enables the Customer Experience Improvement Program (CEIP) for the current system and also enables the current system desktop to be monitored.
+links:
+- text: Add-WmsSystem
+  href: ./Add-WmsSystem.yml
+- text: Get-WmsSystem
+  href: ./Get-WmsSystem.yml
+- text: Remove-WmsSystem
+  href: ./Remove-WmsSystem.yml
+- text: Restart-WmsSystem
+  href: ./Restart-WmsSystem.yml
+- text: Search-WmsSystem
+  href: ./Search-WmsSystem.yml
+- text: Stop-WmsSystem
+  href: ./Stop-WmsSystem.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/set-wmssystem?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WmsSystem

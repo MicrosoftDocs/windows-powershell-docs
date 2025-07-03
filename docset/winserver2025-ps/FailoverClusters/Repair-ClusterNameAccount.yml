@@ -1,0 +1,146 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Repair-ClusterNameAccount
+name: Repair-ClusterNameAccount
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Repairs the Cluster Name Account and ensures that the cluster continues to function properly.
+description: |-
+  The `Repair-ClusterNameAccount` cmdlet repairs or updates the Cluster Name Account used for
+  authentication and authorization on a Failover Cluster. The Cluster Name Account is used to create
+  Highly Available applications or Virtual Computer Objects (VCOs) in the cluster.
+
+  To learn more about cluster accounts in domain environments, see
+  [Configuring cluster accounts in Active Directory](/windows-server/failover-clustering/configure-ad-accounts).
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+      `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credentials
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials that this cmdlet uses when it connects to Active Directory Domain
+      Services.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Domain
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the domain in which to repair the cluster name account. This should be the
+      fully qualified domain name (FQDN) of the domain that the cluster is in.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster name account to repair.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Repair-ClusterNameAccount
+        [-Credentials <PSCredential>]
+        [-Domain <String>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Repair-ClusterNameAccount
+        [-Credentials <PSCredential>]
+        [-Domain <String>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Credentials
+  isDefault: false
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Repair-ClusterNameAccount -Cluster "Cluster01"
+    ```
+
+    This example repairs or updates the Cluster Name Account for the cluster named `Cluster01`.
+- title: Example 2
+  description: |-
+    ```powershell
+    $cred = Get-Credential
+    Repair-ClusterNameAccount -Cluster "Cluster01" -Credentials $cred -Domain "contoso.com"
+    ```
+
+    This example repairs or updates the Cluster Name Account for the cluster named `Cluster01` using
+    the specified credentials and domain. The `Get-Credential` cmdlet is used to create a PSCredential
+    object for the `-Credentials` parameter.
+links:
+- text: Add-ClusterExcludedAdapter
+  href: add-clusterexcludedadapter.yml
+- text: Get-ClusterExcludedAdapter
+  href: get-clusterexcludedadapter.yml
+- text: Remove-ClusterExcludedAdapter
+  href: remove-clusterexcludedadapter.yml
+- text: Set-ClusterExcludedAdapter
+  href: set-clusterexcludedadapter.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/repair-clusternameaccount?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 08/28/2024
+  PlatyPS schema version: 2024-05-01
+  title: Repair-ClusterNameAccount

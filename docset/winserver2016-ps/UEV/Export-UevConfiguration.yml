@@ -1,0 +1,69 @@
+### YamlMime:PowerShellCmdlet1
+uid: UEV.Export-UevConfiguration
+name: Export-UevConfiguration
+module: UEV
+isPreview: false
+summary: |-
+  Exports the UE-V configuration.
+description: |-
+  The **Export-UevConfiguration** cmdlet exports the Microsoft User Experience Virtualization (UE-V) computer configuration to a settings migration (.uev) file.
+  The cmdlet exports all UE-V agent settings for all users on the computer.
+parameters:
+  cmdletParameters:
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the settings migration file.
+      The cmdlet exports the UE-V configuration to the settings migration file that you specify.
+      The extension of the settings migration file must be .uev.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-UevConfiguration
+        [-Path] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Export the UE-V configuration'
+  description: |-
+    ```
+    PS C:\> Export-UevConfiguration -Path "ContosoUev.uev"
+    ```
+
+    This command exports the UE-V computer configuration to the settings migration file named ContosoUev.uev.
+links:
+- text: Get-UevConfiguration
+  href: ./Get-UevConfiguration.yml
+- text: Set-UevConfiguration
+  href: ./Set-UevConfiguration.yml
+- text: Clear-UevConfiguration
+  href: ./Clear-UevConfiguration.yml
+- text: Import-UevConfiguration
+  href: ./Import-UevConfiguration.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/uev/export-uevconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: UEV
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Export-UevConfiguration

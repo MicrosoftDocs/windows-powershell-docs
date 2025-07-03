@@ -1,0 +1,180 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkLoadBalancingClusters.Remove-NlbClusterNode
+name: Remove-NlbClusterNode
+module: NetworkLoadBalancingClusters
+isPreview: false
+summary: |-
+  Removes a node from the Network Load Balancing (NLB) cluster.
+description: |-
+  The **Remove-NlbClusterNode** cmdlet removes a node from the Network Load Balancing (NLB) cluster.
+  Once a node is removed, NLB will redistribute the client traffic among the remaining servers in the cluster.
+
+  This cmdlet changes the configuration on all cluster nodes.
+  As a result, the NLB cluster will have to restart the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.
+  Any additional operations on the NLB cluster should not be initiated until all cluster nodes have completed the convergence process and are back to the converged state.
+
+  ps_nlbc_checkstate_remark
+parameters:
+  cmdletParameters:
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    aliases:
+    - F
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster host against which this cmdlet is run.
+      If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+    aliases:
+    - Host
+    - HN
+    - H
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Node" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the cluster node that this cmdlet removes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Pipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InterfaceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interface to which NLB is bound.
+      This is the interface of the cluster against which this cmdlet is run.
+    aliases:
+    - Interface
+    - IN
+    - I
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Sends items from the interactive window down the pipeline as input to other cmdlets.
+      By default, this cmdlet does not generate any output.
+      To send items from the interactive window down the pipeline, click to select the items and then click OK.
+      Shift-click and Ctrl-click are supported.
+    aliases:
+    - Pass
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-NlbClusterNode
+        [[-HostName] <String>]
+        [-PassThru]
+        [-InterfaceName <String>]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NonPipeline
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-NlbClusterNode
+        -InputObject <Node[]>
+        [-PassThru]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Pipeline
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove the current machine from the local cluster with confirmation'
+  description: |-
+    ```
+    PS C:\>Remove-NlbClusterNode
+    ```
+
+    This command removes the current machine from the local cluster after seeking confirmation from the user.
+- title: 'Example 2: Remove a cluster node from the local cluster without confirmation'
+  description: |-
+    ```
+    PS C:\>Remove-NlbClusterNode -HostName "Node004" -Force
+    ```
+
+    This command removes the cluster node named Node004 from the local cluster without seeking user confirmation.
+links:
+- text: Add-NlbClusterNode
+  href: ./Add-NlbClusterNode.yml
+- text: Get-NlbClusterNode
+  href: ./Get-NlbClusterNode.yml
+- text: Resume-NlbClusterNode
+  href: ./Resume-NlbClusterNode.yml
+- text: Set-NlbClusterNode
+  href: ./Set-NlbClusterNode.yml
+- text: Start-NlbClusterNode
+  href: ./Start-NlbClusterNode.yml
+- text: Stop-NlbClusterNode
+  href: ./Stop-NlbClusterNode.yml
+- text: Suspend-NlbClusterNode
+  href: ./Suspend-NlbClusterNode.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkloadbalancingclusters/remove-nlbclusternode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-NlbClusterNode

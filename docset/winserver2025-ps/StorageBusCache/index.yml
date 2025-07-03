@@ -1,0 +1,40 @@
+### YamlMime:PowerShellModule1
+uid: StorageBusCache
+name: StorageBusCache Module
+isPreview: false
+cmdletGroups:
+- title: StorageBusCache Cmdlets
+  cmdlets:
+  - StorageBusCache.Clear-StorageBusDisk
+  - StorageBusCache.Disable-StorageBusCache
+  - StorageBusCache.Disable-StorageBusDisk
+  - StorageBusCache.Enable-StorageBusCache
+  - StorageBusCache.Enable-StorageBusDisk
+  - StorageBusCache.Get-StorageBusBinding
+  - StorageBusCache.Get-StorageBusCache
+  - StorageBusCache.Get-StorageBusClientDevice
+  - StorageBusCache.Get-StorageBusDisk
+  - StorageBusCache.Get-StorageBusTargetCacheStore
+  - StorageBusCache.Get-StorageBusTargetCacheStoresInstance
+  - StorageBusCache.Get-StorageBusTargetDevice
+  - StorageBusCache.Get-StorageBusTargetDeviceInstance
+  - StorageBusCache.New-StorageBusBinding
+  - StorageBusCache.New-StorageBusCacheStore
+  - StorageBusCache.Remove-StorageBusBinding
+  - StorageBusCache.Resume-StorageBusDisk
+  - StorageBusCache.Set-StorageBusCache
+  - StorageBusCache.Set-StorageBusProfile
+  - StorageBusCache.Suspend-StorageBusDisk
+  - StorageBusCache.Update-StorageBusCache
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: c85588a4-1180-4635-ba9e-a04581bf10c8
+  Module Name: StorageBusCache
+  ms.date: 02/21/2024
+  title: StorageBusCache module
+  PlatyPS schema version: 2024-05-01
+  document type: module

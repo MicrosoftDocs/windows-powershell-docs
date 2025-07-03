@@ -1,0 +1,281 @@
+### YamlMime:PowerShellCmdlet1
+uid: Microsoft.Windows.Bcd.Cmdlets.Set-BcdHypervisorSettings
+name: Set-BcdHypervisorSettings
+module: Microsoft.Windows.Bcd.Cmdlets
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: Baudrate
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Baudrate Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SerialWithDebugPort
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Channel
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Channel Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: "1394"
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DebugPort
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill DebugPort Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SerialWithDebugPort
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Force Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostIp
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill HostIp Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NET
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ieee1394
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Ieee1394 Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: "1394"
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Net
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Net Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NET
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Port
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Port Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NET
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Serial
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Serial Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SerialWithDebugPort
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SerialWithOutDebugPort
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Store
+    type: <xref href="Microsoft.Windows.Bcd.Cmdlets.BcdExtensions.BcdStoreInfo" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Store Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-BcdHypervisorSettings
+        [[-Store] <BcdStoreInfo>]
+        -DebugPort <Int64>
+        [-Baudrate <Int64>]
+        [-Serial]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SerialWithDebugPort
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-BcdHypervisorSettings
+        [[-Store] <BcdStoreInfo>]
+        [-Channel <Int64>]
+        [-Ieee1394]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: "1394"
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-BcdHypervisorSettings
+        [[-Store] <BcdStoreInfo>]
+        -HostIp <String>
+        -Port <Int64>
+        [-Net]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NET
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-BcdHypervisorSettings
+        [[-Store] <BcdStoreInfo>]
+        [-Serial]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SerialWithOutDebugPort
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Windows.Bcd.Cmdlets.BcdExtensions.BcdStoreInfo" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Windows.Bcd.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/microsoft.windows.bcd.cmdlets/set-bcdhypervisorsettings?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Microsoft.Windows.Bcd.Cmdlets
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Set-BcdHypervisorSettings

@@ -1,0 +1,130 @@
+### YamlMime:PowerShellCmdlet1
+uid: Storage.Get-PhysicalDiskStorageNodeView
+name: Get-PhysicalDiskStorageNodeView
+module: Storage
+isPreview: false
+summary: |-
+  Gets the node view of a physical disk.
+description: |-
+  The **Get-PhysicalDiskStorageNodeView** cmdlet gets the node view of physical disk.
+  The object that this cmdlet returns includes physical disk properties such as Microsoft Multipath I/O (MPIO) settings, drive health, and so on.
+
+  You can use this cmdlet to debug disk issues specific to a node.
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PhysicalDisk
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a physical disk as a **CimInstance** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageNode
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a storage node as a **CimInstance** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-PhysicalDiskStorageNodeView
+        [[-StorageNode] <CimInstance>]
+        [[-PhysicalDisk] <CimInstance>]
+        [[-CimSession] <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="MSFT_StorageNodeToPhysicalDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    Specifies physical disk properties such as health status, operational status, MPIO status, MPIO load balancing policy, MPIO path IDs, MPIO path state, and IDs of the physical disk object and Storage node object.
+examples:
+- title: 'Example 1: Get the node view for a Storage node'
+  description: |-
+    ```
+    PS C:\>$N = Get-StorageNode -Name "ClusterNode01"
+    PS C:\> $Output = Get-PhysicalDiskStorageNodeView -StorageNode $N
+    PS C:\> $Pd = Get-PhysicalDisk -ObjectId $Output[0].PhysicalDiskObjectId
+    ```
+
+    The first command gets the Storage node named ClusterNode01, and then stores it in the $N variable.
+
+    The second command gets the node-specific properties of the Storage node in $N, and then stores them in the $Output variable.
+
+    The third command gets the specified drive object, and then stores it in the $Pd variable.
+- title: 'Example 2: Get the node view for a disk'
+  description: |-
+    ```
+    PS C:\>$Pd = Get-PhysicalDisk -FriendlyName "PhysicalDisk01"
+    PS C:\> Get-PhysicalDiskStorageNodeView -PhysicalDisk $Pd
+    ```
+
+    The first command gets the disk object for PhysicalDisk01, and then stores it in the $Pd variable.
+
+    The second command gets the node-specific properties for the disk in $Pd.
+- title: 'Example 3: Get the node view for a specified disk and node'
+  description: |-
+    ```
+    PS C:\>$N = Get-StorageNode -Name "ClusterNode01"
+    PS C:\> $Pd = Get-PhysicalDisk -FriendlyName "PhysicalDisk01"
+    PS C:\> Get-PhysicalDiskStorageNodeView -StorageNode $N -PhysicalDisk $Pd
+    ```
+
+    The first command gets the Storage node named ClusterNode01, and then stores it in the $N variable.
+
+    The second command gets the physical disk named PhysicalDisk01, and then stores it in the $Pd variable.
+
+    The third command gets the node view for the specified Storage node and physical disk.
+links:
+- text: Get-DiskStorageNodeView
+  href: ./Get-DiskStorageNodeView.yml
+- text: Get-StorageEnclosureStorageNodeView
+  href: ./Get-StorageEnclosureStorageNodeView.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: StorageScripts-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storage/get-physicaldiskstoragenodeview?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Storage
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-PhysicalDiskStorageNodeView

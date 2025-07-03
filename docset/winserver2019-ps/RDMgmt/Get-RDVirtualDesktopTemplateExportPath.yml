@@ -1,0 +1,65 @@
+### YamlMime:PowerShellCmdlet1
+uid: RDMgmt.Get-RDVirtualDesktopTemplateExportPath
+name: Get-RDVirtualDesktopTemplateExportPath
+module: RDMgmt
+isPreview: false
+summary: |-
+  Gets the export path setting of the virtual desktop template.
+description: |-
+  The **Get-RDVirtualDesktopTemplateExportPath** cmdlet gets the export path setting of the template that Remote Desktop Services uses to deploy virtual machine-based desktops.
+parameters:
+  cmdletParameters:
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-RDVirtualDesktopTemplateExportPath
+        [[-ConnectionBroker] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the export path of the virtual desktop template'
+  description: |-
+    ```
+    PS C:\> Get-RDVirtualDesktopTemplateExportPath
+    ```
+
+    This command gets the export path setting of the virtual desktop template for the local computer.
+links:
+- text: Set-RDVirtualDesktopTemplateExportPath
+  href: ./Set-RDVirtualDesktopTemplateExportPath.yml
+- text: Update-RDVirtualDesktopCollection
+  href: ./Update-RDVirtualDesktopCollection.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/rdmgmt/get-rdvirtualdesktoptemplateexportpath?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-RDVirtualDesktopTemplateExportPath

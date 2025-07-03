@@ -1,0 +1,61 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.Get-HUDSwitchlessMapping
+name: Get-HUDSwitchlessMapping
+module: NetworkATC
+isPreview: false
+summary: |-
+  Retrieves the HUD switchless mapping configuration for the specified cluster.
+description: |-
+  The `Get-HUDSwitchlessMapping` cmdlet queries retrieves the configuration mapping for switchless
+  operation within the HUD subsystem on the target cluster.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-HUDSwitchlessMapping
+        [-ClusterName] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-HUDSwitchlessMapping -ClusterName "Cluster01"
+    ```
+
+    This example retrieves the HUD switchless mapping configuration for the cluster `Cluster01`.
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/get-hudswitchlessmapping?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: Get-HUDSwitchlessMapping

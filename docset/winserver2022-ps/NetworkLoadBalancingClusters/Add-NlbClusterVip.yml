@@ -1,0 +1,172 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkLoadBalancingClusters.Add-NlbClusterVip
+name: Add-NlbClusterVip
+module: NetworkLoadBalancingClusters
+isPreview: false
+summary: |-
+  Adds a virtual IP address to a Network Load Balancing (NLB) cluster.
+description: |-
+  The **Add-NlbClusterVIP** cmdlet adds a virtual IP address to a Network Load Balancing (NLB) cluster.
+  The virtual IP address will appear on all hosts in the cluster.
+  This IP address is used to address the cluster as a whole, and it should be the IP address that maps to the full Internet name that you specify for the cluster.
+
+  This cmdlet changes the configuration on all cluster nodes.
+  As a result, the NLB cluster will have to restart the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.
+  Any additional operations on the NLB cluster should not be initiated until all cluster nodes have completed the convergence process and are back to the converged state.
+
+  ps_nlbc_checkstate_remark
+parameters:
+  cmdletParameters:
+  - name: HostName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster host against which this cmdlet is run.
+      If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+    aliases:
+    - Host
+    - HN
+    - H
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Cluster" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of clusters to which this cmdlet adds a cluster virtual IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Pipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InterfaceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interface to which NLB is bound.
+      This is the interface of the cluster against which this cmdlet is run.
+    aliases:
+    - Interface
+    - IN
+    - I
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IP
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP address of the new cluster to which the virtual IP address is added.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetMask
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the subnet mask for the virtual IP address of the new cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-NlbClusterVip
+        [-IP] <IPAddress>
+        -InterfaceName <String>
+        [-SubnetMask <IPAddress>]
+        [-HostName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NonPipeline
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-NlbClusterVip
+        [-IP] <IPAddress>
+        -InputObject <Cluster[]>
+        [-SubnetMask <IPAddress>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Pipeline
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ClusterVip" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add an IPv6 IP address to the list of virtual NLB cluster addresses on the specified network interface'
+  description: |-
+    ```
+    PS C:\>Add-NlbClusterVip -IP fe80::94dc:5e59:3626:f1d4 -InterfaceName Vlan-03
+    IPAddress                               SubnetMask
+    ---------                               ----------
+    fe80::94dc:5e59:3626:f1d4               ::
+    ```
+
+    This command adds an IPv6 IP address to the list of virtual NLB cluster IP addresses on the network interface Vlan-03.
+- title: 'Example 2: Add an IPv6 IP address to the list of virtual NLB cluster addresses on the local cluster'
+  description: |-
+    ```
+    PS C:\>Get-NlbCluster | Add-NlbClusterVip -IP fe80::94dc:5e59:3626:f1d4
+    IPAddress                               SubnetMask
+    ---------                               ----------
+    fe80::94dc:5e59:3626:f1d4               ::
+    ```
+
+    This command adds an IPv6 IP address to the list of virtual NLB cluster IP addresses on the local cluster.
+links:
+- text: Get-NlbClusterVip
+  href: ./Get-NlbClusterVip.yml
+- text: Remove-NlbClusterVip
+  href: ./Remove-NlbClusterVip.yml
+- text: Set-NlbClusterVip
+  href: ./Set-NlbClusterVip.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkloadbalancingclusters/add-nlbclustervip?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-NlbClusterVip

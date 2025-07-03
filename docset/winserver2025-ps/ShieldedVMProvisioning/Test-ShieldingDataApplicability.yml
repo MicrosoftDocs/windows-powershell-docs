@@ -1,0 +1,82 @@
+### YamlMime:PowerShellCmdlet1
+uid: ShieldedVMProvisioning.Test-ShieldingDataApplicability
+name: Test-ShieldingDataApplicability
+module: ShieldedVMProvisioning
+isPreview: false
+summary: |-
+  Verifies a shielding data file can be used with a given volume signature catalog.
+description: |-
+  The **Test-ShieldingDataApplicability** cmdlet verifies a shielding data file can be used with a given volume signature catalog.
+parameters:
+  cmdletParameters:
+  - name: ShieldingDataFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to a shielding data file (.pdk).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeSignatureCatalogPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to a volume signature catalog file (.vsc).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-ShieldingDataApplicability
+        [-ShieldingDataFilePath] <String>
+        [-VolumeSignatureCatalogPath] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Verify that a shielding data file can be used with a given volume signature catalog'
+  description: |-
+    ```
+    PS C:\>Test-ShieldingDataApplicability -ShieldingDataFilePath "C:\temp\Tenant01-Shielded.pdk" -VolumeSignatureCatalogPath "C:\temp\templatedisk.vsc"
+    ```
+
+    This command verifies that the shielding data file located at C:\temp\Tenant01-Shielded.pdk can be used to provision new shielded virtual machines using the template disk with the volume signature catalog located at C:\temp\templatedisk.vsc.
+links:
+- text: Get-KeyProtectorFromShieldingDataFile
+  href: ./Get-KeyProtectorFromShieldingDataFile.yml
+- text: Get-ShieldedVMProvisioningStatus
+  href: ./Get-ShieldedVMProvisioningStatus.yml
+- text: Initialize-ShieldedVM
+  href: ./Initialize-ShieldedVM.yml
+- text: New-ShieldedVMSpecializationDataFile
+  href: ./New-ShieldedVMSpecializationDataFile.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: ShieldedVmCmdlets-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/shieldedvmcmdlets/test-shieldingdataapplicability?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ShieldedVMProvisioning
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Test-ShieldingDataApplicability

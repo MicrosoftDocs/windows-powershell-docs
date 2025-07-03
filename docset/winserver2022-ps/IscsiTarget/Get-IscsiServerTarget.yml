@@ -1,0 +1,205 @@
+### YamlMime:PowerShellCmdlet1
+uid: IscsiTarget.Get-IscsiServerTarget
+name: Get-IscsiServerTarget
+module: IscsiTarget
+isPreview: false
+summary: |-
+  Obtains iSCSI targets and their associated properties.
+description: |-
+  The **Get-IscsiServerTarget** cmdlet obtains iSCSI targets and their associated properties from the local server or specified computer.
+parameters:
+  cmdletParameters:
+  - name: ClusterGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group or network in the resource group on which this cmdlet runs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+      Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials when connecting to a remote computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InitiatorId
+    type: <xref href="InitiatorId" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the iSCSI initiator identifiers (IDs) to which the iSCSI target is assigned.
+      Use this parameter to filter out the iSCSI Server Target object which can be accessed by the given iSCSI initiator.
+      The format of this parameter is IdType:Value.
+      The acceptable values for this parameter are: DNSName, IPAddress, IPv6Address, IQN, and MACAddress.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Initiator
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the virtual hard disk (VHD) file that is associated with the iSCSI virtual disk.
+      Use this parameter to filter the iSCSI Target object that is associated with the virtual disks.
+    aliases:
+    - DevicePath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Device
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the iSCSI target.
+      Use this parameter to filter out the iSCSI Target object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Target
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-IscsiServerTarget
+        [[-TargetName] <String>]
+        [-ClusterGroupName <String>]
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Target
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-IscsiServerTarget
+        [-ClusterGroupName <String>]
+        [-Path <String>]
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Device
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-IscsiServerTarget
+        [-ClusterGroupName <String>]
+        [-InitiatorId <InitiatorId>]
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Initiator
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiServerTarget" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiServerTarget" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get targets on the local server'
+  description: |-
+    ```
+    PS C:\> Get-IscsiServerTarget
+    ```
+
+    This example gets the iSCSI targets on the local server.
+- title: 'Example 2: Get targets on a remote server'
+  description: |-
+    ```
+    PS C:\> Get-IscsiServerTarget -ComputerName "fs1.contoso.com"
+    ```
+
+    This example gets all of the iSCSI targets on the remote server named fs1.contoso.com.
+- title: 'Example 3: Get targets on a cluster'
+  description: |-
+    ```
+    PS C:\> Get-IscsiServerTarget -ComputerName "fscluster.contoso.com" -ClusterGroupName "target1group"
+    ```
+
+    This example gets all of the iSCSI targets in the resource group named target1group on the cluster named fscluster.contoso.com.
+- title: 'Example 4: Get a target by using a path'
+  description: |-
+    ```
+    PS C:\> Get-IscsiServerTarget -Path "E:\temp\test.vhdx"
+    ```
+
+    This example gets the iSCSI target associated with the VHD with the path E:\temp\test.vhdx.
+- title: 'Example 5: Get targets assigned to an initiator'
+  description: |-
+    ```
+    PS C:\> Get-IscsiServerTarget -InitiatorId "DNSName:TargetSvr.Contoso.com"
+    ```
+
+    This example gets all of the iSCSI targets that have been assigned to the initiator with type DNSName, and value TargetSvr.contoso.com.
+links:
+- text: New-IscsiServerTarget
+  href: ./New-IscsiServerTarget.yml
+- text: Remove-IscsiServerTarget
+  href: ./Remove-IscsiServerTarget.yml
+- text: Set-IscsiServerTarget
+  href: ./Set-IscsiServerTarget.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iscsitarget/get-iscsiservertarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-IscsiServerTarget

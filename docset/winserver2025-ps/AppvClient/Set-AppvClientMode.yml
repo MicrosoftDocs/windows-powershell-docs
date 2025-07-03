@@ -1,0 +1,79 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Set-AppvClientMode
+name: Set-AppvClientMode
+module: AppvClient
+isPreview: false
+summary: |-
+  Sets the mode in which the client runs.
+description: |-
+  The **Set-AppvClientMode** cmdlet sets the mode in which the client runs.
+  By default, the cmdlet is set to *Normal* and the Microsoft Application Virtualization (App-V) Client runs normally.
+  If the *Uninstall* parameter is specified, the App-V Client prevents all client activity from happening which includes adding and publishing packages and creating virtual environments.
+parameters:
+  cmdletParameters:
+  - name: Normal
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the App-V Client functions normally.
+      This means all adding and publishing of App-V packages and creating of Virtual environments function normally.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Normal
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Uninstall
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet prevents the App-V Client from adding and publishing packages or creating any virtual environments.
+      This is set to enable an uninstall of the App-V Client to correctly occur.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Uninstall
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AppvClientMode
+        [-Normal]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Normal
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AppvClientMode
+        [-Uninstall]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Uninstall
+  isDefault: false
+links:
+- text: Get-AppvClientMode
+  href: ./Get-AppvClientMode.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/set-appvclientmode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AppvClientMode

@@ -1,0 +1,26 @@
+### YamlMime:PowerShellCmdlet1
+uid: ConfigCI.Get-CIPolicyInfo
+name: Get-CIPolicyInfo
+module: ConfigCI
+isPreview: false
+summary: |-
+  This cmdlet is not supported.
+description: |-
+  The **Get-CIPolicyInfo** cmdlet is not supported.
+  Do not use this cmdlet.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-CIPolicyInfo
+    ```
+  parameterSetName: Default
+  isDefault: true
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/configci/get-cipolicyinfo?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-CIPolicyInfo

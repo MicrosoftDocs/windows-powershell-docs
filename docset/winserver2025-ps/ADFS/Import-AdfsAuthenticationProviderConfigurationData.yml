@@ -1,0 +1,121 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Import-AdfsAuthenticationProviderConfigurationData
+name: Import-AdfsAuthenticationProviderConfigurationData
+module: ADFS
+isPreview: false
+summary: |-
+  Imports the custom configuration for an authentication provider.
+description: |-
+  The **Import-AdfsAuthenticationProviderConfigurationData** cmdlet imports custom configuration for an authentication provider from a file.
+  Before you use this cmdlet, verify that the external authentication provider supports a custom configuration.
+
+  Use this cmdlet when the information specific to the authentication provider changes after you initially register the authentication provider.
+  In some situations, the security key to access the authentication service can change and you must update the information in the Active Directory Federation Services (AD FS) configuration store for the authentication provider to function correctly.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a file path.
+      The cmdlet imports the configuration data from a file that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the authentication provider to import.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Import-AdfsAuthenticationProviderConfigurationData
+        -Name <String>
+        -FilePath <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Import authentication provider configuration data'
+  description: |-
+    ```
+    PS C:\> Import-AdfsAuthenticationProviderConfigurationData -Name "ContosoExternalAuthProvider" -FilePath "C:\share\test.txt"
+    ```
+
+    This command imports the authentication provider configuration data.
+    This command also overwrites existing configuration data for the specified authentication provider with the data from the file.
+links:
+- text: Export-AdfsAuthenticationProviderConfigurationData
+  href: ./Export-AdfsAuthenticationProviderConfigurationData.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/import-adfsauthenticationproviderconfigurationdata?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Import-AdfsAuthenticationProviderConfigurationData

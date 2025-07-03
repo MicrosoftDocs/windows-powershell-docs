@@ -1,0 +1,50 @@
+### YamlMime:PowerShellCmdlet1
+uid: Appx.Get-AppxLastError
+name: Get-AppxLastError
+module: Appx
+isPreview: false
+summary: |-
+  Get the last error reported in the app package installation logs.
+description: |-
+  The `Get-AppxLastError` cmdlet gets the last error reported in the app package installation logs
+  for the current Windows PowerShell session. An app package has an `.msix` or `.appx` file
+  extension.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AppxLastError
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Diagnostics.Eventing.Reader.EventLogRecord" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the last error'
+  description: |-
+    ```powershell
+    Get-AppxLastError
+    ```
+
+    This command gets the last error reported in the app installation logs.
+links:
+- text: Package Manager API
+  href: https://go.microsoft.com/fwlink/?LinkId=245447
+- text: How to Deploy App Packages
+  href: https://go.microsoft.com/fwlink/?LinkID=231020
+- text: Get-AppxPackage
+  href: ./Get-AppxPackage.yml
+- text: Get-AppxPackageManifest
+  href: ./Get-AppxPackageManifest.yml
+- text: Get-AppxLog
+  href: ./Get-AppxLog.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appx/get-appxlasterror?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Appx
+  ms.date: 05/15/2023
+  PlatyPS schema version: 2024-05-01
+  title: Get-AppxLastError

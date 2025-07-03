@@ -1,0 +1,353 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Get-VMReplication
+name: Get-VMReplication
+module: Hyper-V
+isPreview: false
+summary: |-
+  Gets the replication settings for a virtual machine.
+description: |-
+  The **Get-VMReplication** cmdlet gets the replication settings for a virtual machine.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts from which virtual machine replication settings are to be retrieved.
+      NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+      The default is the local computer.
+      Use localhost or a dot (.) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the primary server of the virtual machines whose replication settings are to be retrieved.
+    aliases:
+    - PrimaryServer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicaServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the replica server name of the virtual machines whose replication settings are to be retrieved.
+    aliases:
+    - ReplicaServer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicationHealth
+    type: <xref href="VMReplicationHealthState" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets replication settings for virtual machines with the specified replication health state.
+      Valid values are Normal, Warning, and Critical.
+    acceptedValues:
+    - NotApplicable
+    - Normal
+    - Warning
+    - Critical
+    aliases:
+    - Health
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicationMode
+    type: <xref href="VMReplicationMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets the replication settings for virtual machines with the specified replication mode.
+      Valid values are None, Primary, Replica, and TestReplica.
+    acceptedValues:
+    - None
+    - Primary
+    - Replica
+    - TestReplica
+    - ExtendedReplica
+    aliases:
+    - Mode
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicationRelationshipType
+    type: <xref href="VMReplicationRelationshipType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the replication relationship type of the virtual machine.
+      Specify whether the replication relationship is a simple primary to replica or is an extended replication chain.
+      The cmdlet gets the replication settings for the virtual machines that have the replication type that you specify.
+    acceptedValues:
+    - Simple
+    - Extended
+    aliases:
+    - Relationship
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicationState
+    type: <xref href="VMReplicationState" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets replication settings for virtual machines with the specified replication state.
+      Valid values are:
+
+      - Error
+      - FailOverWaitingCompletion
+      - FailedOver
+      - NotApplicable
+      - ReadyForInitialReplication
+      - Replicating
+      - Resynchronizing
+      - ResynchronizeSuspended
+      - Suspended
+      - SyncedReplicationComplete
+      - WaitingForInitialReplication
+      - WaitingForStartResynchronize
+    acceptedValues:
+    - Disabled
+    - ReadyForInitialReplication
+    - InitialReplicationInProgress
+    - WaitingForInitialReplication
+    - Replicating
+    - PreparedForFailover
+    - FailedOverWaitingCompletion
+    - FailedOver
+    - Suspended
+    - Error
+    - WaitingForStartResynchronize
+    - Resynchronizing
+    - ResynchronizeSuspended
+    - RecoveryInProgress
+    - FailbackInProgress
+    - FailbackComplete
+    - WaitingForUpdateCompletion
+    - UpdateError
+    - WaitingForRepurposeCompletion
+    - PreparedForSyncReplication
+    - PreparedForGroupReverseReplication
+    - FiredrillInProgress
+    aliases:
+    - State
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrustGroup
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the trust group of the virtual machines whose replication settings you want to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the virtual machine whose replication settings are to be retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the virtual machine whose replication settings are to be retrieved.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-VMReplication
+        [[-VMName] <String[]>]
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-ReplicaServerName <String>]
+        [-PrimaryServerName <String>]
+        [-ReplicationState <VMReplicationState>]
+        [-ReplicationHealth <VMReplicationHealthState>]
+        [-ReplicationMode <VMReplicationMode>]
+        [-ReplicationRelationshipType <VMReplicationRelationshipType>]
+        [-TrustGroup <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-VMReplication
+        [-VM] <VirtualMachine[]>
+        [-ReplicationRelationshipType <VMReplicationRelationshipType>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMObject
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMReplication" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Get-VMReplication
+    ```
+
+    This example gets the replication settings of all replication-enabled virtual machines on the local Hyper-V host.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Get-VMReplication VM01
+    ```
+
+    This example gets the replication settings of a virtual machine named VM01.
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> Get-VMReplication -ReplicaServerName server01.domain01.contoso.com
+    ```
+
+    This example gets the replication settings of all virtual machines replicating to server server01.domain01.contoso.com.
+- title: Example 4
+  description: |-
+    ```
+    PS C:\> Get-VMReplication -ReplicationState Replicating
+    ```
+
+    This example gets the replication settings of all virtual machines in the Replicating state.
+- title: Example 5
+  description: |-
+    ```
+    PS C:\> Get-VMReplication -TrustGroup DEFAULT
+    ```
+
+    This example gets the replication settings of all virtual machines in a trust group named DEFAULT.
+- title: Example 6
+  description: |-
+    ```
+    PS C:\> Get-VMReplication -ReplicationMode Primary
+    ```
+
+    This example gets the replication settings of all primary virtual machines on the local host.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/get-vmreplication?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-VMReplication

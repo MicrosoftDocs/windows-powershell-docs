@@ -1,0 +1,251 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkLoadBalancingClusters.New-NlbCluster
+name: New-NlbCluster
+module: NetworkLoadBalancingClusters
+isPreview: false
+summary: |-
+  Creates a NLB cluster on the specified interface that is defined by the node and network adapter name.
+description: |-
+  The **New-NlbCluster** cmdlet creates a Network Load Balancing (NLB) cluster.
+  The following will need to be defined: the node name, the network adapter, primary IP address, dedicated IP address, and the name of the cluster.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the new cluster.
+    aliases:
+    - Name
+    - CN
+    - N
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterPrimaryIP
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the primary cluster IP address for the new cluster.
+    aliases:
+    - PrimaryIP
+    - IPAddress
+    - IP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DedicatedIP
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the dedicated IP address to use for the node when creating the new cluster.
+      If this parameter is omitted, then the existing static IP address on the node is used.
+    aliases:
+    - DIP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DedicatedIPSubnetMask
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the dedicated IP address subnet mask to use for the node when creating the new cluster.
+      If this parameter is omitted, then the existing static IP address subnet mask on the node will be used.
+    aliases:
+    - DIPSubnetMask
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+      This parameter applies if the DHCP setting on the interface needs to be overwritten by the cmdlet.
+    aliases:
+    - F
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster host against which this cmdlet is run.
+      If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+    aliases:
+    - Host
+    - HN
+    - H
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InterfaceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interface to which NLB is bound.
+      This is the interface of the cluster against which this cmdlet is run.
+    aliases:
+    - Interface
+    - IN
+    - I
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperationMode
+    type: <xref href="ClusterMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the operation mode for the new cluster.
+      If this parameter is omitted, then the mode is UNICAST.
+      The acceptable values for this parameter are:
+
+      - IGMPMULTICAST
+      - MULTICAST
+      - UNICAST
+    acceptedValues:
+    - Unicast
+    - Multicast
+    - IgmpMulticast
+    aliases:
+    - Mode
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetMask
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the subnet mask for the new cluster primary IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NlbCluster
+        [[-HostName] <String>]
+        [-InterfaceName] <String>
+        [-ClusterName <String>]
+        [-ClusterPrimaryIP] <IPAddress>
+        [-SubnetMask <IPAddress>]
+        [-DedicatedIP <IPAddress>]
+        [-DedicatedIPSubnetMask <IPAddress>]
+        [-Force]
+        [-OperationMode <ClusterMode>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a one-node NLB cluster on the current computer'
+  description: |-
+    ```
+    PS C:\>New-NlbCluster -InterfaceName "Vlan-3" -ClusterPrimaryIP 3.53.100.100 -ClusterName "Cluster001"
+    Name                IPAddress           SubnetMask          Mode
+    ----                ---------           ----------          ----
+    cluster1            3.53.100.100        255.0.0.0           UNICAST
+    ```
+
+    This command creates a one-node NLB cluster on the current computer.
+    The created cluster is named Cluster001 and has one virtual IP address 3.53.100.100.
+    This assumes that the interface is not DHCP-enabled.
+links:
+- text: Get-NlbCluster
+  href: ./Get-NlbCluster.yml
+- text: Get-NlbClusterNodeNetworkInterface
+  href: ./Get-NlbClusterNodeNetworkInterface.yml
+- text: New-NlbClusterIpv6Address
+  href: ./New-NlbClusterIpv6Address.yml
+- text: Remove-NlbCluster
+  href: ./Remove-NlbCluster.yml
+- text: Resume-NlbCluster
+  href: ./Resume-NlbCluster.yml
+- text: Set-NlbCluster
+  href: ./Set-NlbCluster.yml
+- text: Start-NlbCluster
+  href: ./Start-NlbCluster.yml
+- text: Stop-NlbCluster
+  href: ./Stop-NlbCluster.yml
+- text: Suspend-NlbCluster
+  href: ./Suspend-NlbCluster.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkloadbalancingclusters/new-nlbcluster?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-NlbCluster

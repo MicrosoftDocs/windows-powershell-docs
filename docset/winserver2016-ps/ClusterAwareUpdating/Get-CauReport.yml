@@ -1,0 +1,222 @@
+### YamlMime:PowerShellCmdlet1
+uid: ClusterAwareUpdating.Get-CauReport
+name: Get-CauReport
+module: ClusterAwareUpdating
+isPreview: false
+summary: |-
+  Gets the Updating Run reports for all known Updating Runs, or all Updating Runs that match the specified dates or other specified parameters.
+description: |-
+  The **Get-CauReport** cmdlet gets the Updating Run reports for all known Updating Runs, or all Updating Runs that match the specified dates or other specified parameters.
+  This cmdlet can return a list of all Updating Run reports between the specified *StartDate* and *EndDate* parameters, or if the *Last* parameter is specified instead of dates, then the cmdlet returns the most recent Updating Run report.
+  By default, the report contains summaries only, but more detail can be obtained with the *Detailed* parameter or by using the *Report* parameter and specifying a Cluster-Aware Updating (CAU) report summary object.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster for which this cmdlet gets reports.
+      This parameter is only required when this cmdlet is not run on a failover cluster node, or this cmdlet is used to reference a failover cluster different from where the cmdlet is run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the administrative credentials for the target cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Detailed
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that cmdlet gets full results for one or more runs, instead of just summary information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AllParamsSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RangeParamSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: LastParamSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndDate
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that this cmdlet gets only the reports for runs before this time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RangeParamSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Last
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet gets only the most recent run report.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LastParamSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Report
+    type: <xref href="CauReportSummary" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the report summary that this cmdlet gets detailed results for the run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SpecificReportParamSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartDate
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that this cmdlet gets only the reports for runs after this time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RangeParamSet
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-CauReport
+        [[-ClusterName] <String>]
+        [-Detailed]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AllParamsSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-CauReport
+        [[-ClusterName] <String>]
+        [[-StartDate] <DateTime>]
+        [[-EndDate] <DateTime>]
+        [-Detailed]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RangeParamSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-CauReport
+        [[-ClusterName] <String>]
+        [-Last]
+        [-Detailed]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LastParamSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-CauReport
+        [[-ClusterName] <String>]
+        [-Report <CauReportSummary>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SpecificReportParamSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauReportSummary" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauReport" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauReportSummary" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a detailed list of updating runs from the specified cluster'
+  description: |-
+    ```
+    PS C:\> Get-CauReport -ClusterName Contoso-FC1 -StartDate 01/01/2012 -Detailed
+    ```
+
+    This command gets a detailed list of the updating runs performed on the cluster named Contoso-FC1 on 01/01/2012 or later.
+- title: 'Example 2: Get a detailed list of updating runs from a date span from the specified cluster'
+  description: |-
+    ```
+    PS C:\> Get-CauReport -ClusterName "Contoso-FC1" -StartDate 01/01/2012 -EndDate 04/01/2012 -Detailed
+    ```
+
+    This command gets a detailed list of the updating runs performed on the cluster called Contoso-FC1 starting with updating runs on 01/01/2012 and ending with updating runs on 04/01/2012.
+- title: 'Example 3: Get the last updating run summary from the specified cluster'
+  description: |-
+    ```
+    PS C:\> $CauReportSummary = Get-CauReport "Contoso-FC1" -Last
+    PS C:\> Get-CauReport "Contoso-FC1" -Report $CauReportSummary
+    ```
+
+    The first command gets the last updating run report summary from the cluster named Contoso-FC1 and stores the result in the variable named $CauReportSummary.
+
+    The second command gets the detailed report from the information stored in the $CauReportSummary variable.
+links:
+- text: Export-CauReport
+  href: ./Export-CauReport.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/clusterawareupdating/get-caureport?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ClusterAwareUpdating
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-CauReport

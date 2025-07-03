@@ -1,0 +1,208 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Repair-AppvClientConnectionGroup
+name: Repair-AppvClientConnectionGroup
+module: AppvClient
+isPreview: false
+summary: |-
+  Resets the user package settings for the connection group.
+description: |-
+  The **Repair-AppvClientConnectionGroup** cmdlet resets the user settings of the connection group.
+  Resetting the settings causes permanent loss of any user-specific application settings in the package.
+  The settings are reset to their original state when the connection group was originally added to the system.
+parameters:
+  cmdletParameters:
+  - name: ConnectionGroup
+    type: <xref href="AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an App-V Connection Group object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByConnectionGroup
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Extensions
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet repairs the extension points of a connection group only, and does not delete the user state of the connection group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Global
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet resets user settings for the specified packages for all users on the computer.
+      Usage of the *Global* parameter requires administrative credentials.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the group ID of specific connection group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Microsoft Application Virtualization (App-V) Connection Group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserState
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet deletes the user state of the connection group only, and does not perform a repair on the extension points.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VersionId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a GUID that differentiates a connection group version from other versions, whether older, newer, or of a different lineage.
+      If you do not specify this parameter, the cmdlet operates on all versions of the connection group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Repair-AppvClientConnectionGroup
+        [-GroupId] <Guid>
+        [-VersionId] <Guid>
+        [-Global]
+        [-UserState]
+        [-Extensions]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByGuid
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Repair-AppvClientConnectionGroup
+        [-Name] <String>
+        [-Global]
+        [-UserState]
+        [-Extensions]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Repair-AppvClientConnectionGroup
+        [-ConnectionGroup] <AppvClientConnectionGroup>
+        [-Global]
+        [-UserState]
+        [-Extensions]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByConnectionGroup
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Repair a named connection group'
+  description: |-
+    ```
+    PS C:\> Repair-AppvClientConnectionGroup -Name "MyGroup"
+    ```
+
+    This command repairs the connection group named MyGroup.
+- title: 'Example 2: Repair a connection group by using its ID'
+  description: |-
+    ```
+    PS C:\> Repair-AppvClientConnectionGroup -GroupID 793afd37-bd68-4ea1-859a-669f6afd0aa8
+    ```
+
+    This command repairs the connection group that has the group ID 793afd37-bd68-4ea1-859a-669f6afd0aa8.
+- title: 'Example 3: Repair all connection groups that have names that match a string'
+  description: |-
+    ```
+    PS C:\> Get-AppvClientConnectionGroup -Name "MyGr*" | Repair-AppvClientConnectionGroup
+    ```
+
+    This command finds all of the connection groups that have the string MyGr in the name, and then repairs them.
+links:
+- text: Add-AppvClientConnectionGroup
+  href: ./Add-AppvClientConnectionGroup.yml
+- text: Disable-AppvClientConnectionGroup
+  href: ./Disable-AppvClientConnectionGroup.yml
+- text: Enable-AppvClientConnectionGroup
+  href: ./Enable-AppvClientConnectionGroup.yml
+- text: Get-AppvClientConnectionGroup
+  href: ./Get-AppvClientConnectionGroup.yml
+- text: Mount-AppvClientConnectionGroup
+  href: ./Mount-AppvClientConnectionGroup.yml
+- text: Remove-AppvClientConnectionGroup
+  href: ./Remove-AppvClientConnectionGroup.yml
+- text: Stop-AppvClientConnectionGroup
+  href: ./Stop-AppvClientConnectionGroup.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/repair-appvclientconnectiongroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Repair-AppvClientConnectionGroup

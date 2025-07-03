@@ -1,0 +1,27 @@
+### YamlMime:PowerShellModule1
+uid: OsConfiguration
+name: OsConfiguration Module
+isPreview: false
+cmdletGroups:
+- title: OSConfiguration Cmdlets
+  cmdlets:
+  - OsConfiguration.Get-OSConfiguration
+  - OsConfiguration.Get-OsConfigurationDocument
+  - OsConfiguration.Get-OsConfigurationDocumentContent
+  - OsConfiguration.Get-OsConfigurationDocumentResult
+  - OsConfiguration.Get-OsConfigurationProperty
+  - OsConfiguration.Remove-OsConfigurationDocument
+  - OsConfiguration.Set-OsConfigurationDocument
+  - OsConfiguration.Set-OsConfigurationProperty
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: 1c9ff8ee-e567-4883-a532-4087d40bc5d6
+  Module Name: OsConfiguration
+  ms.date: 02/21/2024
+  title: OsConfiguration
+  PlatyPS schema version: 2024-05-01
+  document type: module

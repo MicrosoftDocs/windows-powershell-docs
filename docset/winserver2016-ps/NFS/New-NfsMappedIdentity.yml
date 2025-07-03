@@ -1,0 +1,333 @@
+### YamlMime:PowerShellCmdlet1
+uid: NFS.New-NfsMappedIdentity
+name: New-NfsMappedIdentity
+module: NFS
+isPreview: false
+summary: |-
+  Creates a new NFS mapped identity.
+description: |-
+  The **New-NfsMappedIdentity** cmdlet creates a new Network File System (NFS) mapped identity between a UNIX user account or group account and a Windows user account or group account.
+  If a specified user account or group account does not exist, the **New-NfsMappedIdentity** cmdlet can create the account, set its user ID (UID) and group ID (GID) attributes, and update user membership in the group.
+
+  A mapped identity associates a Windows user account or group account to a UNIX user account or group account.
+  A UID or GID identifies a UNIX account namespace.
+  These elements are associated with the corresponding elements of a Windows account namespace: a user name or a group name.
+  By using a mapped identity, a user who is logged on to a UNIX domain can access shared resources in a Windows domain without having to log on to the Windows domain.
+
+  For more information about NFS, see [Network File System Overview](https://technet.microsoft.com/en-us/library/jj592688).
+  For more information about NFS account mapping, see [NFS Account Mapping Guide](https://technet.microsoft.com/en-us/library/hh509020(v=ws.10)) and [Identity Management for UNIX](https://technet.microsoft.com/en-us/library/cc772571).
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupIdentifier
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a group identifier of a user or group account.
+    aliases:
+    - GroupId
+    - gid
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a SAMAcccount name of a group account.
+    aliases:
+    - group
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Group
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LdapNamingContext
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Lightweight Directory Access Protocol (LDAP) naming context (directory partition) of the identity mapping store that NFS uses.
+      You can use this parameter to search for mapped identities in the specified naming context.
+    aliases:
+    - dn
+    defaultValue: DefaultNamingContext
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MappingStore
+    type: <xref href="MappingStoreType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of identity mapping store in which the **New-NfsMappedIdentity** cmdlet creates a mapped identity.
+      When the MappingStore  is not specified, the **New-NfsMappedIdentity** cmdlet gets the store configuration settings from an NFS server.
+      Valid values are AD and LDAP.
+    acceptedValues:
+    - Ad
+    - Ldap
+    - Mapfiles
+    aliases:
+    - store
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a password for a user account that the **New-NfsMappedIdentity** cmdlet creates.
+      If no password is specified, the cmdlet disables the new user account until a password is set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryGroup
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the group account that the cmdlet creates if no existing group account has the specified group identifier.
+      In this case, the *GroupIdentifier* parameter assigns a GID to the group account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: User
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the LDAP instance name of the store that an NFS server uses.
+      This can be a domain name, Active Directory Lightweight Directory Services (AD LDS) server name, or LDAP server name.
+      When this parameter is not specified, the cmdlet tries to connect to either the LDAP store on the local computer at port 389 when *MappingStore* is LDAP, or the Active Directory domain of the computer when *MappingStore* is Active Directory.
+    aliases:
+    - LdapServer
+    - ADDomainName
+    defaultValue: Localhost:389
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupplementaryGroups
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a comma-separated list of group names to which the cmdlet adds a user account that the *UserName* parameter specifies.
+    aliases:
+    - sg
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: User
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserIdentifier
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user identifier that the cmdlet assigns to the user account that the *UserName* parameter specifies.
+    aliases:
+    - UserId
+    - uid
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: User
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a SAMAcccount name of a user account.
+    aliases:
+    - user
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: User
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NfsMappedIdentity
+        -UserName <String>
+        -UserIdentifier <Int32>
+        -GroupIdentifier <Int32>
+        [-MappingStore <MappingStoreType>]
+        [-Server <String>]
+        [-LdapNamingContext <String>]
+        [-Password <SecureString>]
+        [-PrimaryGroup <String>]
+        [-SupplementaryGroups <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: User
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-NfsMappedIdentity
+        -GroupName <String>
+        -GroupIdentifier <Int32>
+        [-MappingStore <MappingStoreType>]
+        [-Server <String>]
+        [-LdapNamingContext <String>]
+        [-Password <SecureString>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Group
+  isDefault: false
+outputs:
+- name: <xref href="Nothing" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a mapped identify for a UNIX user account and a Windows user account'
+  description: |-
+    ```
+    PS C:\> New-NfsMappedIdentity -MappingStore "AD" -Server "Contoso" -UserName "JBrown" -UserIdentifier 500 -GroupIdentifier 41
+    ```
+
+    This command creates a mapped identity for a UNIX user that has a UID of 500, and maps it to the Windows account name Contoso\JBrown in a Windows group that has the group identifier of 41.
+    The command stores the mapped identity in the configured Active Directory domain of the local computer.
+    If the user account does not already exist, the command creates it.
+- title: 'Example 2: Create a mapped identity for a UNIX group account and a Windows group account'
+  description: |-
+    ```
+    PS C:\> New-NfsMappedIdentity -MappingStore "Ldap" -GroupName "Operators" -GroupIdentifier 501 -Server "LdapServer01:389" -NfsServer "NFSServer-012"
+    ```
+
+    This command creates a mapped identity for a UNIX group that has a group identifier of 501 and maps it to the Windows group account that is named Operators.
+    The mapped identity is stored in the configured LDAP store on the computer that is named LdapServer01, that the NFS server NFSServer-012 uses.
+    The command also creates a local group account named Operators on the NFS server NFSServer-012 if it does not already exist.
+- title: 'Example 3: Create an identity mapping and create the user account and group account if they do not exist'
+  description: |-
+    ```
+    PS C:\> New-NfsMappedIdentity -MappingStore "AD" -Server "Contoso" -UserName "JCool" -UserIdentifier 500 -GroupIdentifier 501 -PrimaryGroup "Operators"
+    ```
+
+    This command creates a mapped identity for a UNIX user whose UID is 500 and maps it to the Windows account named Contoso\JCool.
+    The mapped identity is stored in the Active Directory domain named Contoso.
+    If the user account Contoso\JCool does not exist, the command creates the user account.
+    If the group account Operators does not exist, the command creates the group, assigns GID 501 to the group, and adds the user account Contoso\JCool to the group.
+links:
+- text: Get-NfsMappedIdentity
+  href: ./Get-NfsMappedIdentity.yml
+- text: Get-NfsMappingStore
+  href: ./Get-NfsMappingStore.yml
+- text: Install-NfsMappingStore
+  href: ./Install-NfsMappingStore.yml
+- text: Remove-NfsMappedIdentity
+  href: ./Remove-NfsMappedIdentity.yml
+- text: Resolve-NfsMappedIdentity
+  href: ./Resolve-NfsMappedIdentity.yml
+- text: Set-NfsMappedIdentity
+  href: ./Set-NfsMappedIdentity.yml
+- text: Set-NfsMappingStore
+  href: ./Set-NfsMappingStore.yml
+- text: Test-NfsMappedIdentity
+  href: ./Test-NfsMappedIdentity.yml
+- text: Test-NfsMappingStore
+  href: ./Test-NfsMappingStore.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FileServices.Powershell.NFS.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/nfs/new-nfsmappedidentity?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: NFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-NfsMappedIdentity

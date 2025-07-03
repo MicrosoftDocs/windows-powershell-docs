@@ -1,0 +1,129 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Update-ClusterVirtualMachineConfiguration
+name: Update-ClusterVirtualMachineConfiguration
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Refreshes the configuration of a clustered virtual machine within a failover cluster.
+description: |-
+  The **Update-ClusterVirtualMachineConfiguration** cmdlet refreshes the configuration of a clustered virtual machine within a failover cluster.
+  Use this cmdlet if a hardware device, such as a network adapter, is to be added or removed or the hardware configuration settings, such as the setting for virtual memory, are being changed for a clustered virtual machine.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet.
+      If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the clustered virtual machine resource to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the clustered virtual machine resource to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine identifier (ID).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-ClusterVirtualMachineConfiguration
+        [[-Name] <String>]
+        [-VMId <Guid>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Refresh a clustered virtual machine on the local cluster'
+  description: |-
+    ```
+    PS C:\> Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM1"
+    Name                State               Group               ResourceType
+    ----                -----               -----               ------------
+    Virtual Machine ... Online              Virtual Machine     Virtual Machine ...
+    ```
+
+    This example refreshes the clustered virtual machine named Virtual Machine Configuration VM1 on the local cluster.
+- title: 'Example 2: Refresh a clustered virtual machine on a cluster'
+  description: |-
+    ```
+    PS C:\> Update-ClusterVirtualMachineConfiguration -Name "Virtual Machine Configuration VM2" -Cluster cluster1
+    Name                State               Group               ResourceType
+    ----                -----               -----               ------------
+    Virtual Machine ... Online              Virtual Machine     Virtual Machine
+    ```
+
+    This example refreshes the clustered virtual machine named Virtual Machine Configuration VM2 on the cluster named cluster1.
+links:
+- text: Add-ClusterVirtualMachineRole
+  href: ./Add-ClusterVirtualMachineRole.yml
+- text: Move-ClusterVirtualMachineRole
+  href: ./Move-ClusterVirtualMachineRole.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/update-clustervirtualmachineconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Update-ClusterVirtualMachineConfiguration

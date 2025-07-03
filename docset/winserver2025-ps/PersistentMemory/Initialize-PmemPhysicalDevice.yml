@@ -1,0 +1,137 @@
+### YamlMime:PowerShellCmdlet1
+uid: PersistentMemory.Initialize-PmemPhysicalDevice
+name: Initialize-PmemPhysicalDevice
+module: PersistentMemory
+isPreview: false
+summary: |-
+  Initializes the label storage area on a physical persistent memory device.
+description: |-
+  The **Initialize-PmemPhysicalDevice** cmdlet initializes the label storage area on a physical persistent memory device.
+
+  Each persistent memory module contains a label storage area that stores configuration metadata.
+  The cmdlet can clear corrupted label storage information on the devices.
+
+  This cmdlet causes data loss in persistent memory.
+  Use it only as a last resort to fix persistent memory issues.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the device ID of the device to initialize.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the command initializes the device without verification.
+      Removing a disk results in data loss.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Initialize-PmemPhysicalDevice
+        -DeviceId <String>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Initialize physical devices'
+  description: |-
+    ```powershell
+    Get-PmemPhysicalDevice | Initialize-PmemPhysicalDevice
+    ```
+
+    ```output
+    This will initialize the label storage area on the physical persistent memory device(s) and will result in data loss.
+    Initializes the physical persistent memory device(s)?
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): A
+    Initializing the physical persistent memory device. This may take a few moments.
+    Initializing the physical persistent memory device. This may take a few moments.
+    Initializing the physical persistent memory device. This may take a few moments.
+    Initializing the physical persistent memory device. This may take a few moments.
+    ```
+
+    This command initializes the label storage areas on the physical persistent memory devices.
+    The command can clear corrupted label storage information on the devices.
+links:
+- text: Get-PmemPhysicalDevice
+  href: Get-PmemPhysicalDevice.yml
+- text: New-PmemDisk
+  href: New-PmemDisk.yml
+metadata:
+  description: The Initialize-PmemPhysicalDevice cmdlet initializes the label storage area on a physical persistent memory device.
+  document type: cmdlet
+  external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/persistentmemory/initialize-pmemphysicaldevice?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: PersistentMemory
+  ms.date: 09/24/2021
+  PlatyPS schema version: 2024-05-01
+  title: Initialize-PmemPhysicalDevice

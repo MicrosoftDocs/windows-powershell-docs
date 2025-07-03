@@ -1,0 +1,180 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkLoadBalancingClusters.Get-NlbClusterNodeDip
+name: Get-NlbClusterNodeDip
+module: NetworkLoadBalancingClusters
+isPreview: false
+summary: |-
+  Gets the dedicated IP address that is queried by the caller.
+description: |-
+  The **Get-NlbClusterNodeDIP** cmdlet gets the dedicated IP address that is requested by the caller.
+  This IP address is the unique IP address of the local host that is used for dedicated traffic to the host or network traffic that is not associated with the cluster.
+  Network Load Balancing (NLB) never load balances traffic for the dedicated IP address.
+  Instead, NLB load balances incoming traffic from all IP addresses other than the dedicated IP address.
+parameters:
+  cmdletParameters:
+  - name: HostName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster host against which this cmdlet is run.
+      If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+    aliases:
+    - Host
+    - HN
+    - H
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Node" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the node of the cluster for which this cmdlet gets the dedicated IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Pipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InterfaceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interface to which NLB is bound.
+      This is the interface of the cluster against which this cmdlet is run.
+    aliases:
+    - Interface
+    - IN
+    - I
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IP
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP address of the cluster node for which this cmdlet gets the dedicated IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NodeName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster node for which this cmdlet gets the dedicated IP address.
+    aliases:
+    - NN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NlbClusterNodeDip
+        [[-IP] <IPAddress>]
+        [-HostName <String>]
+        [-InterfaceName <String>]
+        [-NodeName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NonPipeline
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-NlbClusterNodeDip
+        [[-IP] <IPAddress>]
+        -InputObject <Node[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Pipeline
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.ClusterNodeDip" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all dedicated IP addresses on the local cluster node'
+  description: |-
+    ```
+    PS C:\>Get-NlbClusterNodeDip
+    Node                       IPAddress                  SubnetMask
+    ----                       ---------                  ----------
+    Node01                      3.53.4.1                   255.0.0.0
+    Node01                      fe80::a9cb:eafb:e841:d8cf
+    Node02                      3.53.4.2                   255.0.0.0
+    ```
+
+    This command lists all the dedicated IP addresses on the local cluster node.
+- title: 'Example 2: List all the dedicated IP addresses on the specified cluster node'
+  description: |-
+    ```
+    PS C:\>Get-NlbClusterNodeDip -NodeName "Node02"
+    Node                       IPAddress                  SubnetMask
+    ----                       ---------                  ----------
+    Node02                      3.53.4.2                   255.0.0.0
+    ```
+
+    This command lists all the dedicated IP addresses on cluster node Node02.
+- title: 'Example 3: List the dedicated IP address that is specified'
+  description: |-
+    ```
+    PS C:\>Get-NlbClusterNodeDip -IP 3.53.4.2
+    Node                       IPAddress                  SubnetMask
+    ----                       ---------                  ----------
+    node2                      3.53.4.2                   255.0.0.0
+    ```
+
+    This command lists the dedicated IP address specified.
+links:
+- text: Add-NlbClusterNodeDip
+  href: ./Add-NlbClusterNodeDip.yml
+- text: Remove-NlbClusterNodeDip
+  href: ./Remove-NlbClusterNodeDip.yml
+- text: Set-NlbClusterNodeDip
+  href: ./Set-NlbClusterNodeDip.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkloadbalancingclusters/get-nlbclusternodedip?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NlbClusterNodeDip

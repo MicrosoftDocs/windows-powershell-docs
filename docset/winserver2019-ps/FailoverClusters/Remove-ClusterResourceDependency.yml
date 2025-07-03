@@ -1,0 +1,171 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Remove-ClusterResourceDependency
+name: Remove-ClusterResourceDependency
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Removes a dependency between two resources in a clustered role within a failover cluster.
+description: |-
+  The **Remove-ClusterResourceDependency** cmdlet removes a dependency between two resources in a clustered role within a failover cluster.
+
+  A dependent resource is brought online after the resources on which it depends.
+  Likewise, a dependent resource is taken offline before the resources on which it depends.
+  If no dependency is configured between clustered resources, then the order in which they are brought online or taken offline might vary.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet.
+      If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster resource from which to remove the dependency.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Provider
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster resource on which to remove a dependency.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Resource
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster resource from which to remove the dependency.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-ClusterResourceDependency
+        [[-Resource] <String>]
+        [[-Provider] <String>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Remove-ClusterResourceDependency -Resource cluster1FS -Provider "IP Address 2001:4898:9:2:: (3)"
+    Name                State               Group               ResourceType
+    ----                -----               -----               ------------
+    cluster1FS          Online              cluster1FS          Network Name
+    ```
+
+    This example removes the dependency between cluster resource cluster1FS and the resource named IP Address 2001:4898:9:2:: (3).
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Get-ClusterResource -Name cluster1FS | Remove-ClusterResourceDependency -Provider "IP Address 2001:4898:9:2:: (3)"
+    Name                State               Group               ResourceType
+    ----                -----               -----               ------------
+    cluster1FS          Online              cluster1FS          Network Name
+    ```
+
+    This example removes the dependency between the cluster resource named cluster1FS and the resource named IP Address 2001:4898:9:2:: (3).
+links:
+- text: Add-ClusterResourceDependency
+  href: ./Add-ClusterResourceDependency.yml
+- text: Get-ClusterResourceDependency
+  href: ./Get-ClusterResourceDependency.yml
+- text: Set-ClusterResourceDependency
+  href: ./Set-ClusterResourceDependency.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clusterresourcedependency?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-ClusterResourceDependency

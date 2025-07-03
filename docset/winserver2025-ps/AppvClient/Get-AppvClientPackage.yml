@@ -1,0 +1,172 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Get-AppvClientPackage
+name: Get-AppvClientPackage
+module: AppvClient
+isPreview: false
+summary: |-
+  Returns App-V Client Packages.
+description: |-
+  The **Get-AppvClientPackage** cmdlet returns a set of Microsoft Application Virtualization (App-V) Client Packages based on the criteria provided.
+notes: |-
+  * If you do not specify any parameters, the cmdlet returns a set of all packages on the computer.
+  * The cmdlet checks that you have permissions to perform the specific action. If not, the cmdlet returns the following error: The action could not be performed due to current App-V permissions. Please modify the permissions and try the operation again.
+  * If the cmdlet cannot find the package, the cmdlet returns the following error: The specified package(s) could not be found. An error code is returned.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet uses the set of all packages added to the computers as the searchable set.
+      If not provided, the cmdlet only uses packages that are entitled to the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the package given during Sequencing time.
+      This value is obtained from the package manifest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the GUID that uniquely identifies the package.
+      It can be found in the package manifest or by opening the package in the App-V Sequencer.
+      The package ID is shared by all versions of a package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of an App-V package in one specific lineage.
+      If you do not specify this parameter, the cmdlet operates on available versions of the package on the target computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VersionId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the GUID that differentiates a package version from other versions, whether older, newer, or of a different lineage.
+      If you do specify this parameter, the cmdlet operates on all versions of a package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AppvClientPackage
+        [[-Name] <String>]
+        [[-Version] <String>]
+        [-All]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AppvClientPackage
+        [-PackageId] <Guid>
+        [[-VersionId] <Guid>]
+        [-All]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByGuid
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.AppV.AppvClientPowerShell.AppvClientPackage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get packages that have names that match a string'
+  description: |-
+    ```
+    PS C:\> Get-AppvClientPackage -Name "MyApp*" -All
+    ```
+
+    This command gets the set of packages that have names that start with the string MyApp.
+- title: 'Example 2: Get a specific version of a package by name'
+  description: |-
+    ```
+    PS C:\> Get-AppvClientPackage -Name "MyApp" -Version 4
+    ```
+
+    This command gets the version 4 of the package named MyApp.
+- title: 'Example 3: Get a package by using its package ID'
+  description: |-
+    ```
+    PS C:\> Get-AppvClientPackage -PackageID 793afd37-bd68-4ea1-859a-669f6afd0aa8
+    ```
+
+    This command gets the package with the package ID of 793afd37-bd68-4ea1-859a-669f6afd0aa8.
+links:
+- text: Add-AppvClientPackage
+  href: ./Add-AppvClientPackage.yml
+- text: Mount-AppvClientPackage
+  href: ./Mount-AppvClientPackage.yml
+- text: Publish-AppvClientPackage
+  href: ./Publish-AppvClientPackage.yml
+- text: Remove-AppvClientPackage
+  href: ./Remove-AppvClientPackage.yml
+- text: Repair-AppvClientPackage
+  href: ./Repair-AppvClientPackage.yml
+- text: Set-AppvClientPackage
+  href: ./Set-AppvClientPackage.yml
+- text: Stop-AppvClientPackage
+  href: ./Stop-AppvClientPackage.yml
+- text: Unpublish-AppvClientPackage
+  href: ./Unpublish-AppvClientPackage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/get-appvclientpackage?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AppvClientPackage

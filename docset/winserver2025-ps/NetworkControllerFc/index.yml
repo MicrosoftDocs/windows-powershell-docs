@@ -1,0 +1,31 @@
+### YamlMime:PowerShellModule1
+uid: NetworkControllerFc
+name: NetworkControllerFc Module
+isPreview: false
+cmdletGroups:
+- title: NetworkControllerFc Cmdlets
+  cmdlets:
+  - NetworkControllerFc.Add-NetworkControllerOnFailoverClusterNode
+  - NetworkControllerFc.Disable-NetworkControllerOnFailoverClusterLogging
+  - NetworkControllerFc.Enable-NetworkControllerOnFailoverClusterLogging
+  - NetworkControllerFc.Enable-NetworkControllerOnFailoverClusterLoggingOnDevice
+  - NetworkControllerFc.Get-NetworkControllerOnFailoverCluster
+  - NetworkControllerFc.Get-NetworkControllerOnFailoverClusterReplica
+  - NetworkControllerFc.Install-NetworkControllerOnFailoverCluster
+  - NetworkControllerFc.Restore-NetworkControllerOnFailoverCluster
+  - NetworkControllerFc.Set-NetworkControllerOnFailoverCluster
+  - NetworkControllerFc.Uninstall-NetworkControllerOnFailoverCluster
+  - NetworkControllerFc.Update-NetworkControllerOnFailoverCluster
+  - NetworkControllerFc.Update-NetworkControllerOnFailoverClusterLogging
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: 4119dd8d-e8f0-4394-9dd7-ebc6c4852095
+  Module Name: NetworkControllerFc
+  ms.date: 02/21/2024
+  title: NetworkControllerFc module
+  PlatyPS schema version: 2024-05-01
+  document type: module

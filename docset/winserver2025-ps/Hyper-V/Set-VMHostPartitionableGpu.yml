@@ -1,0 +1,204 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Set-VMHostPartitionableGpu
+name: Set-VMHostPartitionableGpu
+module: Hyper-V
+isPreview: false
+summary: |-
+  Configures the host partitionable GPU to the number of partitions supported by the manufacturer.
+description: |-
+  The `Set-VMHostPartitionableGpu` cmdlet configures the host partitionable GPU to the number of
+  partitions supported by the manufacturer.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+      object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+      or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
+      current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CimSession
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS
+      names, IP addresses, and fully qualified domain names are allowed. The default is the local
+      computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action. The default is the
+      current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostPartitionableGpu
+    type: <xref href="VMHostPartitionableGpu" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Full GPU object, obtained by executing `Get-VMHostPartitionableGpu`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Object
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the GPU.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartitionCount
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of partitions that the GPU will assign. The number of partitions is defined by
+      the manufacturer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object for each process that the cmdlet started.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-VMHostPartitionableGpu
+        [[-ComputerName] <String[]>]
+        [[-Credential] <PSCredential[]>]
+        [-Passthru]
+        [-PartitionCount <UInt16>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ComputerName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-VMHostPartitionableGpu
+        [-CimSession] <CimSession[]>
+        [-Passthru]
+        [-PartitionCount <UInt16>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CimSession
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-VMHostPartitionableGpu
+        [-HostPartitionableGpu] <VMHostPartitionableGpu[]>
+        [-Passthru]
+        [-PartitionCount <UInt16>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Object
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-VMHostPartitionableGpu
+        [-Passthru]
+        [-Name <String>]
+        [-PartitionCount <UInt16>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimSession" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.HyperV.PowerShell.VMHostPartitionableGpu" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMHostPartitionableGpu" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-VMHostPartitionableGpu -ComputerName "MyHost" -PartitionCount 8
+    ```
+
+    This example partitions a GPU in a specific host into eight partitions.
+- title: Example 2
+  description: |-
+    ```powershell
+    $GPU = Get-VMHostPartitionableGpu -Name "GPUDeviceIDName"
+    Set-VMHostPartitionableGpu -Name $GPU -PartitionCount 4
+    ```
+
+    This example partitions a GPU in a host into four partitions by using the GPU device ID name.
+links:
+- text: Get-VMHostPartitionableGpu
+  href: get-vmhostpartitionablegpu.yml
+metadata:
+  description: Configures the host partitionable GPU to the number of partitions supported by the manufacturer.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/set-vmhostpartitionablegpu?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 06/12/2024
+  PlatyPS schema version: 2024-05-01
+  title: Set-VMHostPartitionableGpu

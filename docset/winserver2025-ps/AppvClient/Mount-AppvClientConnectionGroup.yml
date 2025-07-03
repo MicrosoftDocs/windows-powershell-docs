@@ -1,0 +1,155 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Mount-AppvClientConnectionGroup
+name: Mount-AppvClientConnectionGroup
+module: AppvClient
+isPreview: false
+summary: |-
+  Streams the contents of packages to the local disk.
+description: |-
+  The **Mount-AppvClientConnectionGroup** cmdlet streams the contents of all packages in a connection group to the local disk.
+notes: |-
+  * If a previous load has been canceled, the cmdlet resumes that load when it is run again. The package will be added to the system before loading. Otherwise the cmdlet fails. If you do not specify any parameters, the cmdlet loads all packages on the system.
+  * The cmdlet is synchronous. It returns when the load option has completed. To make the cmdlet asynchronous, use the **Start-Job** cmdlet.
+  * The cmdlet checks that you have permissions to perform the specific action. If not, the cmdlet returns an error.
+parameters:
+  cmdletParameters:
+  - name: ConnectionGroup
+    type: <xref href="AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Microsoft Application Virtualization (App-V) Connection Group object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByConnectionGroup
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the group ID of specific connection group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the App-V Connection Group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VersionId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the GUID that differentiates a Connection Group version from other versions.
+      If you do not specify this parameter, the cmdlet operates on all versions of the connection group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Mount-AppvClientConnectionGroup
+        [-GroupId] <Guid>
+        [-VersionId] <Guid>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByGuid
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Mount-AppvClientConnectionGroup
+        [-Name] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Mount-AppvClientConnectionGroup
+        [-ConnectionGroup] <AppvClientConnectionGroup>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByConnectionGroup
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Download packages for a named group'
+  description: |-
+    ```
+    PS C:\> Mount-AppvClientConnectionGroup -Name "MyGroup"
+    ```
+
+    This command downloads all packages that are part of the enabled connection group named MyGroup.
+- title: 'Example 2: Download packages for a group by using group ID'
+  description: |-
+    ```
+    PS C:\> Mount-AppvClientConnectionGroup -GroupID 793afd37-bd68-4ea1-859a-669f6afd0aa8
+    ```
+
+    This cmdlet downloads all the packages that are part of the enabled connection group that has the group ID 793afd37-bd68-4ea1-859a-669f6afd0aa8.
+- title: 'Example 3: Download packages for groups that match a string'
+  description: |-
+    ```
+    PS C:\> Get-AppvClientConnectionGroup -Name "MyGr*" | Mount-AppvClientConnectionGroup
+    ```
+
+    This command gets all enabled connection groups that have the string MyGr in the name, and then downloads all of the packages in those connection groups.
+links:
+- text: Add-AppvClientConnectionGroup
+  href: ./Add-AppvClientConnectionGroup.yml
+- text: Disable-AppvClientConnectionGroup
+  href: ./Disable-AppvClientConnectionGroup.yml
+- text: Enable-AppvClientConnectionGroup
+  href: ./Enable-AppvClientConnectionGroup.yml
+- text: Get-AppvClientConnectionGroup
+  href: ./Get-AppvClientConnectionGroup.yml
+- text: Remove-AppvClientConnectionGroup
+  href: ./Remove-AppvClientConnectionGroup.yml
+- text: Repair-AppvClientConnectionGroup
+  href: ./Repair-AppvClientConnectionGroup.yml
+- text: Stop-AppvClientConnectionGroup
+  href: ./Stop-AppvClientConnectionGroup.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/mount-appvclientconnectiongroup?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Mount-AppvClientConnectionGroup

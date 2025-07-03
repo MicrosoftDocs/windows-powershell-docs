@@ -1,0 +1,243 @@
+### YamlMime:PowerShellCmdlet1
+uid: DeviceHealthAttestation.Install-DeviceHealthAttestation
+name: Install-DeviceHealthAttestation
+module: DeviceHealthAttestation
+isPreview: false
+summary: |-
+  Installs the Device Health Attestation service.
+description: |-
+  The **Install-DeviceHealthAttestation** cmdlet installs the Device Health Attestation service and configures its dependencies.
+  Before you can install the service, you must add the Device Health Attestation service role.
+
+  The installation does the following:
+
+  - Creates an application pool.
+  - Creates a web application.
+  - Adds a firewall rule for incoming requests.
+  - Sets the initial configuration.
+  - Registers user access logging.
+
+  You must have administrator rights to run this cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionCertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the encryption certificate thumbprint.
+      The value must contain only hexadecimal digits (0-9, A-F) and be 40 characters in length.
+      This value is case-insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SigningCertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the signing certificate thumbprint.
+      The value must contain only hexadecimal digits (0-9, A-F) and be 40 characters in length.
+      This value is case-insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslCertificateStoreName
+    type: <xref href="StoreName" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate store that contains the certificate referenced by the *SslCertificateThumbprint* parameter.
+      The acceptable values for this parameter are:
+
+      - AddressBook
+      - AuthRoot
+      - CertificateAuthority
+      - Disallowed
+      - My
+      - Root
+      - TrustedPeople
+      - TrustedPublisher
+    acceptedValues:
+    - AddressBook
+    - AuthRoot
+    - CertificateAuthority
+    - Disallowed
+    - My
+    - Root
+    - TrustedPeople
+    - TrustedPublisher
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InstallAndAddSslBinding
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslCertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the thumbprint of the certificate to use for server SSL binding.
+      The value must contain only hexadecimal digits (0-9, A-F) and be 40 characters in length.
+      This value is case-insensitive.
+
+      If you specify *SslCertificateThumbprint*, the cmdlet creates an SSL binding on the default website.
+      If you specify this parameter, you must also specify the *SslCertificateStoreName* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InstallAndAddSslBinding
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportedAuthenticationSchema
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies, in a comma-separated list, the authentication schema that the Device Health Attestation service supports.
+      The acceptable values for this parameter are:
+
+      - AikPub
+      - AikCertificate
+      - EkCertificate
+
+      You cannot specify both AikCertificate and EkCertificate in the same command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Install-DeviceHealthAttestation
+        -EncryptionCertificateThumbprint <String>
+        -SigningCertificateThumbprint <String>
+        -SupportedAuthenticationSchema <String>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Install
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Install-DeviceHealthAttestation
+        -EncryptionCertificateThumbprint <String>
+        -SigningCertificateThumbprint <String>
+        -SslCertificateThumbprint <String>
+        -SupportedAuthenticationSchema <String>
+        [-SslCertificateStoreName <StoreName>]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InstallAndAddSslBinding
+  isDefault: false
+examples:
+- title: 'Example 1: Install the Device Health Attestation service'
+  description: |-
+    ```
+    PS C:\> Install-DeviceHealthAttestation -EncryptionCertificateThumbprint "0123456789ABCDEF0123456789ABCDEF01234567" -SigningCertificateThumbprint "0123456789ABCDEF0123456789ABCDEF01234567" -SupportedAuthenticationSchema "AikPub,EkCertificate"
+    ```
+
+    This command installs the Device Health Attestation service.
+- title: 'Example 2: Install the Device Health Attestation service with SSL'
+  description: |-
+    ```
+    PS C:\> Install-DeviceHealthAttestation -EncryptionCertificateThumbprint "0123456789ABCDEF0123456789ABCDEF01234567" -SigningCertificateThumbprint "0123456789ABCDEF0123456789ABCDEF01234567" -SupportedAuthenticationSchema "AikPub,EkCertificate" -SslCertificateThumbprint "0123456789ABCDEF0123456789ABCDEF01234567" -SslCertificateStoreName "My"
+    ```
+
+    This command installs the Device Health Attestation service with SSL bindings.
+links:
+- text: Uninstall-DeviceHealthAttestation
+  href: ./Uninstall-DeviceHealthAttestation.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.DeviceHealthAttestation.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/devicehealthattestation/install-devicehealthattestation?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: DeviceHealthAttestation
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Install-DeviceHealthAttestation

@@ -1,0 +1,289 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Set-WmsStation
+name: Set-WmsStation
+module: MultiPoint
+isPreview: false
+summary: |-
+  Modifies station information.
+description: |-
+  The **Set-WmsStation** cmdlet modifies station information.
+  You can use this cmdlet to set the automatic logon and the friendly name for the station.
+  If you want to enable a user in the Administrator group to auto-logon, specify the *OverrideAdminWarning* parameter.
+parameters:
+  cmdletParameters:
+  - name: AutoLogonCredential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the automatic logon credentials.
+      Use Get-Credential cmdlet to get a **PSCredential** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AutoLogonEnable
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableAutoLogon
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disables automatic logon for the station.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisableAutoLogon
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayOrientation
+    type: <xref href="EDisplayOrientationPS" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Display Orientation for the station.
+    acceptedValues:
+    - Portrait
+    - Landscape
+    - PortraitFlipped
+    - LandscapeFlipped
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisplayOrientation
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FriendlyName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a friendly name for the station.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FriendlyName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocalSessionHost
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the local session host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisableRemoteConnection
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OverrideAdminWarning
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation overrides the Administrator warning.
+      Specify this parameter to enable an Administrator to automatically log on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AutoLogonEnable
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+      The default is localhost.
+    aliases:
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SessionHost
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the session host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoteConnection
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StationId
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of station IDs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VmName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine guest host name for Virtual Desktop Infrastructure (VDI) stations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoteConnectionVM
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WmsStation
+        [-StationId] <UInt32[]>
+        -FriendlyName <String>
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FriendlyName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-WmsStation
+        [-StationId] <UInt32[]>
+        -AutoLogonCredential <PSCredential>
+        [-OverrideAdminWarning]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AutoLogonEnable
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-WmsStation
+        [-StationId] <UInt32[]>
+        [-DisableAutoLogon]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisableAutoLogon
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-WmsStation
+        [-StationId] <UInt32[]>
+        -SessionHost <String>
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoteConnection
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-WmsStation
+        [-StationId] <UInt32[]>
+        -VmName <String>
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoteConnectionVM
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-WmsStation
+        [-StationId] <UInt32[]>
+        [-LocalSessionHost]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisableRemoteConnection
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-WmsStation
+        [-StationId] <UInt32[]>
+        -DisplayOrientation <EDisplayOrientationPS>
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayOrientation
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Throws SecurityException if the specified autologon user is an administrative user.
+    This exception is not thrown if the *OverrideAdminWarning* parameter is specified for administrative users.
+examples:
+- title: 'Example 1: Set a station'
+  description: |-
+    ```
+    PS C:\> $Creds = Get-Credential -UserName "Student01" -Message "Enter desired password"
+    PS C:\> Set-WmsStation -StationId 1 -FriendlyName -"Patti's Station" -AutoLogonCredential $Creds
+    ```
+
+    The first command gets the credentials for Student01, and then stores them in the $Creds variable.
+
+    The second command sets the friendly name of station 1 to Patti's Station.
+    Station 1 is now configured to auto-logon as Student01.
+links:
+- text: Clear-WmsStation
+  href: ./Clear-WmsStation.yml
+- text: Get-WmsStation
+  href: ./Get-WmsStation.yml
+- text: Join-WmsStation
+  href: ./Join-WmsStation.yml
+- text: Split-WmsStation
+  href: ./Split-WmsStation.yml
+- text: Update-WmsStation
+  href: ./Update-WmsStation.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/set-wmsstation?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WmsStation

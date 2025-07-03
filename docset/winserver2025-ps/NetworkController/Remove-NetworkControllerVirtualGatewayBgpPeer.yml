@@ -1,0 +1,241 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkController.Remove-NetworkControllerVirtualGatewayBgpPeer
+name: Remove-NetworkControllerVirtualGatewayBgpPeer
+module: NetworkController
+isPreview: false
+summary: |-
+  Removes a BGP peer.
+description: |-
+  The **Remove-NetworkControllerVirtualGatewayBgpPeer** cmdlet removes the configuration of the BGP peer configuration specified by the *ResourceId* parameter from a tenant.
+parameters:
+  cmdletParameters:
+  - name: BgpRouterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a BGP router.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+      This is the certificate thumbprint of the certificate.
+      This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionUri
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user credential that has permission to perform this action.
+      The default value is the current user.
+      This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Etag
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the entity tag (ETag) of the resource.
+      An ETag is an HTTP response header returned by an HTTP-compliant web server.
+      An ETag is used to determine change in the content of a resource at a given URL.
+      The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassInnerException
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+      The thumbprint must be provided only if the network controller client authentication is X509 certificates.
+      **Get-NetworkController** retrieves that client authentication and authorization information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource ID of the BGP peer to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualGatewayId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a virtual gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-NetworkControllerVirtualGatewayBgpPeer
+        [-VirtualGatewayId] <String>
+        [-BgpRouterName] <String>
+        [-ResourceId] <String>
+        [[-Etag] <String>]
+        [-Force]
+        -ConnectionUri <Uri>
+        [-CertificateThumbprint <String>]
+        [-Credential <PSCredential>]
+        [-PassInnerException]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: "Example 1: Remove a tenant's virtual gateway BGP peer configuration from the Network Controller"
+  description: |-
+    ```
+    PS C:\> Remove-NetworkControllerVirtualGatewayBgpPeer -ConnectionUri "https://networkcontroller" -VirtualGatewayId "Contoso" -BgpRouterName "Contoso_Vnet_Router1" -ResourceId "SiteB_Gre" -Force
+    ```
+
+    This command removes the configuration for BGP peer SiteB_Gre from the Network Controller.
+links:
+- text: Get-NetworkControllerVirtualGatewayBgpPeer
+  href: ./Get-NetworkControllerVirtualGatewayBgpPeer.yml
+- text: New-NetworkControllerVirtualGatewayBgpPeer
+  href: ./New-NetworkControllerVirtualGatewayBgpPeer.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontroller/remove-networkcontrollervirtualgatewaybgppeer?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-NetworkControllerVirtualGatewayBgpPeer

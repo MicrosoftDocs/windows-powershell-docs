@@ -1,0 +1,66 @@
+### YamlMime:PowerShellCmdlet1
+uid: BootEventCollector.Get-SbecTraceProviders
+name: Get-SbecTraceProviders
+module: BootEventCollector
+isPreview: false
+summary: |-
+  Gets the ETW trace providers.
+description: |-
+  The **Get-SbecTraceProviders** cmdlet gets the list of ETW trace providers, building the hash tables for translation from name to GUID and back.
+
+  **Get-SbecTraceProviders** returns a hash table with the following nested hash tables:
+
+  - `<ByName>`: Finds the provider object by name.
+  - `<ByGuid>`: Finds the provider object by GUID.
+  - `<NameToGuid>`: Translation of provider name (key) to GUID string (value).
+  - `<GuidToName>`: Translation of provider GUID (key) to name (value).
+
+  Curly braces are added to the GUIDs when they are converted to strings.
+
+  The returned hash table is also saved as a cache, and is returned on subsequent calls.
+  If any new providers are defined, they are added to the cache (and thus to the previously returned references to it) on subsequent calls.
+parameters:
+  cmdletParameters:
+  - name: Uncached
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation bypasses the cache.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-SbecTraceProviders
+        [-Uncached]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="hash table" data-throw-if-not-resolved="False" />
+links:
+- text: Clear-SbecProviderCache
+  href: ./Clear-SbecProviderCache.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: BootEventCollector-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/booteventcollector/get-sbectraceproviders?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-SbecTraceProviders

@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsApplicationPermission
+name: Get-AdfsApplicationPermission
+module: ADFS
+isPreview: false
+summary: |-
+  Gets permission for an application.
+description: |-
+  The **Get-AdfsApplicationPermission** cmdlet gets permission for an application in Active Directory Federation Services (AD FS).
+parameters:
+  cmdletParameters:
+  - name: ClientRoleIdentifiers
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of client role identifiers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ClientRoleIdentifier
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Identifiers
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of identifiers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Identifier
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerRoleIdentifiers
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of server role identifiers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServerRoleIdentifier
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsApplicationPermission
+        [[-Identifiers] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Identifier
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AdfsApplicationPermission
+        [[-ClientRoleIdentifiers] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ClientRoleIdentifier
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AdfsApplicationPermission
+        [[-ServerRoleIdentifiers] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ServerRoleIdentifier
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *ClientRoleIdentifiers*, *Identifiers*, and *ServerRoleIdentifiers* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.OAuthPermission" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more OAuthPermission objects that represent the application permissions for the Federation Service.
+links:
+- text: Grant-AdfsApplicationPermission
+  href: ./Grant-AdfsApplicationPermission.yml
+- text: Revoke-AdfsApplicationPermission
+  href: ./Revoke-AdfsApplicationPermission.yml
+- text: Set-AdfsApplicationPermission
+  href: ./Set-AdfsApplicationPermission.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfsapplicationpermission?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsApplicationPermission

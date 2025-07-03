@@ -1,0 +1,73 @@
+### YamlMime:PowerShellCmdlet1
+uid: IISAdministration.Stop-IISCommitDelay
+name: Stop-IISCommitDelay
+module: IISAdministration
+isPreview: false
+summary: |-
+  Instructs the IIS configuration system to resume the commitment of changes.
+description: |-
+  The **Stop-IISCommitDelay** cmdlet instructs the Internet Information Services (IIS) configuration system to resume the commitment of changes.
+parameters:
+  cmdletParameters:
+  - name: Commit
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet commits the changes if True; Otherwise, if False, the cmdlet discards the changes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-IISCommitDelay
+        [[-Commit] <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Commit configuration changes'
+  description: |-
+    ```
+    PS C:\> Stop-IISCommitDelay -Commit $True
+    ```
+
+    This command commits the configuration changes made since the **Start-IISCommitDelay** cmdlet was executed.
+- title: 'Example 2: Discard configuration changes'
+  description: |-
+    ```
+    PS C:\> Stop-IISCommitDelay -Commit $False
+    ```
+
+    This command discards the configuration changes made since the **Start-IISCommitDelay** cmdlet was executed.
+links:
+- text: Start-IISCommitDelay
+  href: ./Start-IISCommitDelay.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: index.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iisadministration/stop-iiscommitdelay?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Stop-IISCommitDelay

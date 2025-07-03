@@ -1,0 +1,142 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Remove-AdfsAuthenticationProviderWebContent
+name: Remove-AdfsAuthenticationProviderWebContent
+module: ADFS
+isPreview: false
+summary: |-
+  Removes web content customization of the authentication provider in the user sign-in web pages from AD FS.
+description: |-
+  The **Remove-AdfsAuthenticationProviderWebContent** cmdlet removes web content customization of the authentication provider in the user sign-in web pages from the Active Directory Federation Services (AD FS) service.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Locale
+    type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a locale.
+      The cmdlet removes the provider web content associated with the locale that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name.
+      The cmdlet gets the provider web content associated with the name that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetWebContent
+    type: <xref href="AdfsAuthProviderWebContent" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an **AdfsAuthenticationProviderWebContent** object that is used by the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AdfsAuthenticationProviderWebContent
+        [[-Locale] <CultureInfo>]
+        -Name <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifierName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AdfsAuthenticationProviderWebContent
+        [-TargetWebContent] <AdfsAuthProviderWebContent>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifierObject
+  isDefault: false
+examples:
+- title: 'Example 1: Remove authentication provider web content'
+  description: |-
+    ```
+    PS C:\> Remove-AdfsAuthenticationProviderWebContent -Name "ContosoAuthenticationProvider"
+    ```
+
+    This command removes the provider web content for the authentication provider named ContosoAuthenticationProvider.
+links:
+- text: Get-AdfsAuthenticationProviderWebContent
+  href: ./Get-AdfsAuthenticationProviderWebContent.yml
+- text: Set-AdfsAuthenticationProviderWebContent
+  href: ./Set-AdfsAuthenticationProviderWebContent.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/remove-adfsauthenticationproviderwebcontent?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-AdfsAuthenticationProviderWebContent

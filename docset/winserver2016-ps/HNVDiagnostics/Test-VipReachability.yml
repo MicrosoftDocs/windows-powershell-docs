@@ -1,0 +1,191 @@
+### YamlMime:PowerShellCmdlet1
+uid: HNVDiagnostics.Test-VipReachability
+name: Test-VipReachability
+module: HNVDiagnostics
+isPreview: false
+summary: |-
+  Tests whether DIPs are reachable.
+description: |-
+  The **Test-VipReachability** cmdlet tests whether a list of datacenter IP addresses (DIPs) can be reached through the specified multiplexers (MUXes).
+
+  The test covers layer-3 connectivity to the MUX nodes, and from the MUX nodes to the DIP hosts.
+
+  The test first sends Internet Control Message Protocol (ICMP) echo requests to the virtual IP (VIP) address.
+  The MUX intercepts the echo requests and sends responses that appear to come from the targeted VIP.
+
+  The test then sends ICMP echo requests from the MUX host to the DIP host on the provider network.
+  The results of the test are reported in the output object.
+parameters:
+  cmdletParameters:
+  - name: CompartmentId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the network compartment to use to inject ICMP echo requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Dips
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of DIPs to test.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Muxes
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of MUXes to load-balance the DIPs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperationId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an ID for the operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PayloadSize
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the size of the payload to carry in ICMP messages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SequenceNumber
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ICMP sequence number.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceIP
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP address of the source node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetVIP
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP address of the target VIP.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-VipReachability
+        [[-OperationId] <String>]
+        [-SourceIP] <String>
+        [[-CompartmentId] <String>]
+        [-TargetVIP] <String>
+        [-Muxes] <Hashtable[]>
+        [-Dips] <Hashtable[]>
+        [[-SequenceNumber] <Int32>]
+        [[-PayloadSize] <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Test VIP reachability'
+  description: |-
+    ```
+    PS C:\> for ($mux in $VipHostMapping.MuxList) {
+        $secpasswd = ConvertTo-SecureString <plaintext password> -AsPlainText -Force
+        $creds = New-Object System.Management.Automation.PSCredential (<username>, $secpasswd)
+        $mux.Credentials = $creds
+    }
+    PS C:\> for ($dip in $VipHostMapping.DIPHosts) {
+        $secpasswd = ConvertTo-SecureString <plaintext password> -AsPlainText -Force
+        $creds = New-Object System.Management.Automation.PSCredential (<username>, $secpasswd)
+        $dip.HostInfo.Credentials = $creds
+    }
+    PS C:\> Test-VIPReachability -OperationId 1 -SourceIP "10.123.176.108" -TargetVIP "10.123.177.110" -Muxes $VipHostMapping.MuxList -Dips $VipHostMapping.DIPHosts
+    ```
+
+    The first command populates the credentials for the MUX nodes to test.
+
+    The second command populates the credentials for the DIPs to test.
+
+    The last command tests the VIP reachability for the specified MUXes and DIPs.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: VipReachability-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hnvdiagnostics/test-vipreachability?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Test-VipReachability

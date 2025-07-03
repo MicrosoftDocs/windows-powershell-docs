@@ -1,0 +1,160 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Get-VHDSnapshot
+name: Get-VHDSnapshot
+module: Hyper-V
+isPreview: false
+summary: |-
+  Gets information about a checkpoint in a VHD set.
+description: |-
+  The `Get-VHDSnapshot` cmdlet gets information about a checkpoint in a virtual hard disk (VHD) set
+  file.
+
+  Checkpoint replaces the previous term, snapshot.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+      object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967)
+      or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet. The default is the
+      current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts that run this command. NetBIOS names, IP addresses, and fully
+      qualified domain names are allowable. The default is the local computer. Use `localhost` or a dot
+      (`.`) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action. The default is the
+      current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GetParentPaths
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets the paths of all files on which this VHD checkpoint depends.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of paths of VHD set files from which this cmdlet gets checkpoints. If you specify
+      a file name or relative path, the cmdlet determines the full path relative to the current working
+      folder.
+    aliases:
+    - FullName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of unique IDs of VHD checkpoints that this cmdlet gets from a VHD set file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-VHDSnapshot
+        [-Path] <String[]>
+        [-GetParentPaths]
+        [-SnapshotId <Guid[]>]
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Vhd.PowerShell.VHDSnapshotInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **VHDSnapshotInfo** object.
+examples:
+- title: 'Example 1: Get information about a checkpoint'
+  description: |-
+    ```powershell
+    Get-VHDSnapshot -Path "Data01.vhds" -SnapshotId 6c87351a-a39a-4581-b231-6d693b26485d
+    ```
+
+    This command gets information about the checkpoint that has the specified ID from the VHD set file
+    named `Data01.vhds` in the current working folder.
+links:
+- text: Remove-VHDSnapshot
+  href: remove-vhdsnapshot.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/get-vhdsnapshot?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 06/21/2023
+  PlatyPS schema version: 2024-05-01
+  title: Get-VHDSnapshot

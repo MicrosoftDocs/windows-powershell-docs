@@ -1,0 +1,272 @@
+### YamlMime:PowerShellCmdlet1
+uid: MSMQ.Set-MsmqQueueACL
+name: Set-MsmqQueueACL
+module: MSMQ
+isPreview: false
+summary: |-
+  Modifies the access rights of queues.
+description: |-
+  The **Set-MsmqQueueACL** cmdlet modifies the access rights of queues.
+  This cmdlet returns the updated **MsmqQueueAcl** object.
+  The cmdlet modifies private, public, journal, system journal, system dead-letter, and system transactional dead-letter queues.
+parameters:
+  cmdletParameters:
+  - name: Allow
+    type: <xref href="MessageQueueAccessRights" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an array of permissions that this cmdlet grants to a user account or group.
+
+      The acceptable values for this parameter are:
+
+      - DeleteQueue - Delete the specified queue
+      - FullControl - Full control of the specified queue
+      - GetQueuePermissions - Get the permissions of the specified queue
+      - GetQueueProperties - Get the properties of the specified queue
+      - ReceiveJournalMessage - Receive messages from the journal queue. This includes the rights to delete and peek messages from the journal queue
+      - DeleteJournalMessage - Delete messages from the journal queue
+      - PeekMessage - Peek a message from the specified queue
+      - ReceiveMessage - Receive messages from the queue. This includes the rights to delete and peek messages
+      - WriteMessage - Send a message to the specified queue
+      - DeleteMessage - Delete a message from the specified queue
+      - ChangeQueuePermissions - Set the permissions of the specified queue
+      - SetQueueProperties - Set the properties of the specified queue
+      - TakeQueueOwnership - Assign the specified queue to oneself
+      - GenericRead - A combination of `GetQueueProperties`, `GetQueuePermissions`, `ReceiveMessage`, and `ReceiveJournalMessage`
+      - GenericWrite - A combination of `GetQueueProperties`, `GetQueuePermissions`, and `WriteMessage`
+    acceptedValues:
+    - DeleteMessage
+    - PeekMessage
+    - ReceiveMessage
+    - WriteMessage
+    - DeleteJournalMessage
+    - ReceiveJournalMessage
+    - SetQueueProperties
+    - GetQueueProperties
+    - DeleteQueue
+    - GetQueuePermissions
+    - GenericWrite
+    - GenericRead
+    - ChangeQueuePermissions
+    - TakeQueueOwnership
+    - FullControl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Deny
+    type: <xref href="MessageQueueAccessRights" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an array of permissions that the cmdlet revokes from a user account or group.
+
+      The acceptable values for this parameter are:
+
+      - DeleteQueue - Delete the specified queue
+      - FullControl - Full control of the specified queue
+      - GetQueuePermissions - Get the permissions of the specified queue
+      - GetQueueProperties - Get the properties of the specified queue
+      - ReceiveJournalMessage - Receive messages from the journal queue. This includes the rights to delete and peek messages from the journal queue
+      - DeleteJournalMessage - Delete messages from the journal queue
+      - PeekMessage - Peek a message from the specified queue
+      - ReceiveMessage - Receive messages from the queue. This includes the rights to delete and peek messages
+      - WriteMessage - Send a message to the specified queue
+      - DeleteMessage - Delete a message from the specified queue
+      - ChangeQueuePermissions - Set the permissions of the specified queue
+      - SetQueueProperties - Set the properties of the specified queue
+      - TakeQueueOwnership - Assign the specified queue to oneself
+      - GenericRead - A combination of `GetQueueProperties`, `GetQueuePermissions`, `ReceiveMessage`, and `ReceiveJournalMessage`
+      - GenericWrite - A combination of `GetQueueProperties`, `GetQueuePermissions`, and `WriteMessage`
+    acceptedValues:
+    - DeleteMessage
+    - PeekMessage
+    - ReceiveMessage
+    - WriteMessage
+    - DeleteJournalMessage
+    - ReceiveJournalMessage
+    - SetQueueProperties
+    - GetQueueProperties
+    - DeleteQueue
+    - GetQueuePermissions
+    - GenericWrite
+    - GenericRead
+    - ChangeQueuePermissions
+    - TakeQueueOwnership
+    - FullControl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="MessageQueue" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of **MsmqQueue** objects.
+      This cmdlet updates permissions for the queues that the **MsmqQueue** objects specify.
+      This parameter accepts pipeline input.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Remove
+    type: <xref href="MessageQueueAccessRights" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an array of permissions that this cmdlet removes from a user account or group.
+
+      The acceptable values for this parameter are:
+
+      - DeleteQueue - Delete the specified queue
+      - FullControl - Full control of the specified queue
+      - GetQueuePermissions - Get the permissions of the specified queue
+      - GetQueueProperties - Get the properties of the specified queue
+      - ReceiveJournalMessage - Receive messages from the journal queue. This includes the rights to delete and peek messages from the journal queue
+      - DeleteJournalMessage - Delete messages from the journal queue
+      - PeekMessage - Peek a message from the specified queue
+      - ReceiveMessage - Receive messages from the queue. This includes the rights to delete and peek messages
+      - WriteMessage - Send a message to the specified queue
+      - DeleteMessage - Delete a message from the specified queue
+      - ChangeQueuePermissions - Set the permissions of the specified queue
+      - SetQueueProperties - Set the properties of the specified queue
+      - TakeQueueOwnership - Assign the specified queue to oneself
+      - GenericRead - A combination of `GetQueueProperties`, `GetQueuePermissions`, `ReceiveMessage`, and `ReceiveJournalMessage`
+      - GenericWrite - A combination of `GetQueueProperties`, `GetQueuePermissions`, and `WriteMessage`
+    acceptedValues:
+    - DeleteMessage
+    - PeekMessage
+    - ReceiveMessage
+    - WriteMessage
+    - DeleteJournalMessage
+    - ReceiveJournalMessage
+    - SetQueueProperties
+    - GetQueueProperties
+    - DeleteQueue
+    - GetQueuePermissions
+    - GenericWrite
+    - GenericRead
+    - ChangeQueuePermissions
+    - TakeQueueOwnership
+    - FullControl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the user account or group whose permissions the cmdlet changes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-MsmqQueueACL
+        [-InputObject] <MessageQueue[]>
+        -UserName <String[]>
+        [-Allow <MessageQueueAccessRights>]
+        [-Deny <MessageQueueAccessRights>]
+        [-Remove <MessageQueueAccessRights>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Modify the ACLs of queues specified by name'
+  description: |-
+    ```powershell
+    PS C:\> $queue = Get-MsmqQueue -Name "Order*" -QueueType Private
+    PS C:\> $rights = "DeleteQueue", "PeekMessage", "ReceiveMessage", "WriteMessage"
+    PS C:\> $rights | Foreach-Object { Set-MsmqQueueAcl -InputObject $queue -UserName "CONTOSO\DavidChew" -Allow $PSItem}
+    PS C:\> Set-MsmqQueueAcl -InputObject $queue -UserName "CONTOSO\DavidChew" -Deny TakeQueueOwnership
+    ```
+
+    This command gets all the private queues that have names that start with the string Order by using the **Get-MsmqQueue** cmdlet. The current cmdlet modifies the ACL of the queues.
+links:
+- text: Get-MsmqQueue
+  href: ./Get-MsmqQueue.yml
+- text: Get-MsmqQueueACL
+  href: ./Get-MsmqQueueACL.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/msmq/set-msmqqueueacl?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-MsmqQueueACL

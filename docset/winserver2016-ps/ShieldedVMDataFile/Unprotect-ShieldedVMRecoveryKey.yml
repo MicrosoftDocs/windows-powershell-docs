@@ -1,0 +1,178 @@
+### YamlMime:PowerShellCmdlet1
+uid: ShieldedVMDataFile.Unprotect-ShieldedVMRecoveryKey
+name: Unprotect-ShieldedVMRecoveryKey
+module: ShieldedVMDataFile
+isPreview: false
+summary: |-
+  Decrypts an encrypted recovery key for a Windows shielded VM obtained from the [Save-ShieldedVMRecoveryKey](Save-ShieldedVMRecoveryKey.yml) cmdlet.
+description: |-
+  The *Unprotect-ShieldedVMRecoveryKey* cmdlet decrypts an encrypted BitLocker recovery key file obtained from a Windows shielded VM.
+  To run the cmdlet, you must have the shielding data file that was used to deploy the shielded VM and have the private key for the owner guardian installed on your computer.
+
+  The resulting recovery key can be provided to `manage-bde.exe`, `Unlock-BitLocker`, or the BitLocker Recovery pre-boot environment to access the contents of your shielded VM OS volume.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptedBitLockerKeyPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location to save the decrypted BitLocker encryption key (.bek)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptedBitLockerKeyPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the encrypted BitLocker encryption key
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Recurse
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cmdlet should search subdirectories of the shielding data file search path for compatible PDK files.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EBEKFileSearchParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShieldingDataFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the shielding data file (.pdk) used to deploy the shielded VM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EBEKFileParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShieldingDataFileSearchPath
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Location of one or more directories to search for a shielding data file that can be used to decrypt the provided encrypted BitLocker encryption key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EBEKFileSearchParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Unprotect-ShieldedVMRecoveryKey
+        -ShieldingDataFilePath <String>
+        -EncryptedBitLockerKeyPath <String>
+        -DecryptedBitLockerKeyPath <String>
+        [-WhatIf]
+        [-Confirm]
+    ```
+  parameterSetName: EBEKFileParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Unprotect-ShieldedVMRecoveryKey
+        -ShieldingDataFileSearchPath <String[]>
+        -EncryptedBitLockerKeyPath <String>
+        -DecryptedBitLockerKeyPath <String>
+        [-Recurse]
+        [-WhatIf]
+        [-Confirm]
+    ```
+  parameterSetName: EBEKFileSearchParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Unprotect-ShieldedVMRecoveryKey -ShieldingDataFilePath 'C:\temp\ShieldingDataFile.pdk' -EncryptedBitLockerKeyPath 'C:\temp\MyShieldedVMEncryptedRecoveryKey.ebek' -DecryptedBitLockerKeyPath 'C:\temp\DecryptedRecoveryKey.bek'
+    ```
+
+    Decrypts the provided encrypted BitLocker recovery key using the shielding data file and owner guardian private keys, and saves it to the temp directory.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Unprotect-ShieldedVMRecoveryKey -ShieldingDataSearchPath 'C:\temp\AllShieldingDataFiles\' -Recurse -EncryptedBitLockerKeyPath 'C:\temp\MyShieldedVMEncryptedRecoveryKey.ebek' -DecryptedBitLockerKeyPath 'C:\temp\DecryptedRecoveryKey.bek'
+    ```
+
+    Searches the 'AllShieldingDataFiles' directory and all subdirectories for shielding data files that can be used to decrypt the provided encrypted BitLocker recovery key.
+    If a suitable shielding data file is found and the private key for its owner guardian is available on the local computer, the decrypted BitLocker encryption key will be saved to the temp directory.
+links:
+- text: Save-ShieldedVMRecoveryKey
+  href: Save-ShieldedVMRecoveryKey.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/shieldedvmdatafile/unprotect-shieldedvmrecoverykey?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ShieldedVMDataFile
+  PlatyPS schema version: 2024-05-01
+  title: Unprotect-ShieldedVMRecoveryKey

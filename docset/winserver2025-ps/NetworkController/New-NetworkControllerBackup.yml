@@ -1,0 +1,273 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkController.New-NetworkControllerBackup
+name: New-NetworkControllerBackup
+module: NetworkController
+isPreview: false
+summary: |-
+  Backs up the Network Controller database.
+description: |-
+  The **New-NetworkControllerBackup** cmdlet backs up the Network Controller database.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionUri
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Uniform Resource Identifier (URI) of the Network Controller to back up.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user credential that has permission to perform this action.
+      The default value is the current user.
+
+      This user must be present in the security group provided in the **ClientSecurityGroup** parameter in the `Install-NetworkController` cmdlet.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Etag
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the entity tag (ETag) parameter of the resource.
+      An ETag is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
+      The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassInnerException
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This thumbprint must also be provided in the **ClientCertificateThumbprint** parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
+      The thumbprint must be provided only if the network controller client authentication is X509 certificates.
+      **Get-NetworkController** retrieves that client authentication and authorization information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Properties
+    type: <xref href="NetworkControllerBackupProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the properties of the Network Controller backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource ID of the backup to create.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceMetadata
+    type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tags
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NetworkControllerBackup
+        [-ResourceId] <String>
+        [[-Tags] <PSObject>]
+        [-Properties] <NetworkControllerBackupProperties>
+        [[-Etag] <String>]
+        [[-ResourceMetadata] <ResourceMetadata>]
+        [-Force]
+        -ConnectionUri <Uri>
+        [-CertificateThumbprint <String>]
+        [-Credential <PSCredential>]
+        [-PassInnerException]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Windows.NetworkController.NetworkControllerBackupProperties" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Network Controller backup'
+  description: |-
+    ```powershell
+    $Credential = Get-Credential
+    $BackupTime = (get-date).ToString("s").Replace(":", "_")
+    $BackupProperties = New-Object Microsoft.Windows.NetworkController.NetworkControllerBackupProperties
+    $BackupProperties.BackupPath = "C:\backups\NetworkController\$BackupTime"
+    New-NetworkControllerBackup -ResourceId $BackupTime -Properties $BackupProperties -ConnectionURI https://networkcontroller -Credential $Credential
+    ```
+
+    This example creates a backup of the Network Controller database.
+
+    The first command gets the credential for the current environment and then saves it in `$Credential`.
+
+    The second command creates a string version of the current time to use as the location of the backup.
+
+    The third command creates a **NetworkControllerBackupProperties** object.
+
+    The fourth command adds a path for the backup to the properties object.
+
+    The fifth command creates the backup.
+    The command uses the specified connection URI and the items created in the previous commands.
+links:
+- text: Get-NetworkControllerBackup
+  href: Get-NetworkControllerBackup.yml
+- text: Remove-NetworkControllerBackup
+  href: Remove-NetworkControllerBackup.yml
+metadata:
+  description: The New-NetworkControllerBackup cmdlet backs up the Network Controller database.
+  document type: cmdlet
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontroller/new-networkcontrollerbackup?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkController
+  ms.date: 09/27/2021
+  PlatyPS schema version: 2024-05-01
+  title: New-NetworkControllerBackup

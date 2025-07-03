@@ -1,0 +1,135 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkLoadBalancingClusters.New-NlbClusterIpv6Address
+name: New-NlbClusterIpv6Address
+module: NetworkLoadBalancingClusters
+isPreview: false
+summary: |-
+  Generates an IPv6 address to use with the NLB cmdlets.
+description: |-
+  The **New-NlbClusterIpv6Address** cmdlet generates IPv6 addresses to create cluster virtual IP addresses or node dedicated IP addresses.
+parameters:
+  cmdletParameters:
+  - name: Global
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet returns a global IPv6 address.
+      If this parameter is omitted, then all applicable IPv6 address types are returned.
+    aliases:
+    - G
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster host against which this cmdlet is run.
+      If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+    aliases:
+    - Host
+    - HN
+    - H
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InterfaceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interface to which NLB is bound.
+      This is the interface of the cluster against which this cmdlet is run.
+    aliases:
+    - Interface
+    - IN
+    - I
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LinkLocal
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns only a link local IPv6 address.
+      If this parameter is omitted, then all applicable IPv6 address types are returned.
+    aliases:
+    - L
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NlbClusterIpv6Address
+        [[-HostName] <String>]
+        [-InterfaceName] <String>
+        [-LinkLocal]
+        [-Global]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get IPv6 addresses with the specified interface on the local computer'
+  description: |-
+    ```
+    PS C:\>New-NlbClusterIpv6Address -InterfaceName "Vlan-003"
+
+    fe80::b071:3696:dadd:26d4
+    ```
+
+    This command gets the applicable IPv6 addresses that is used with the interface named Vlan-003 on the local computer.
+    This address can be used as a dedicated IP address on the node or a virtual IP address on the cluster.
+links:
+- text: Add-NlbClusterNodeDip
+  href: ./Add-NlbClusterNodeDip.yml
+- text: Add-NlbClusterVip
+  href: ./Add-NlbClusterVip.yml
+- text: New-NlbCluster
+  href: ./New-NlbCluster.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkloadbalancingclusters/new-nlbclusteripv6address?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-NlbClusterIpv6Address

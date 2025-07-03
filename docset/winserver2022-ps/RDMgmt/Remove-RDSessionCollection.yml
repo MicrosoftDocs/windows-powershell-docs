@@ -1,0 +1,137 @@
+### YamlMime:PowerShellCmdlet1
+uid: RDMgmt.Remove-RDSessionCollection
+name: Remove-RDSessionCollection
+module: RDMgmt
+isPreview: false
+summary: |-
+  Removes a session collection from a Remote Desktop deployment.
+description: |-
+  The **Remove-RDSessionCollection** cmdlet removes a session collection from a Remote Desktop deployment.
+  A session collection consists of one or more Remote Desktop Session Host (RD Session Host) servers.
+  The RD Session Host servers remain part of the deployment.
+  This cmdlet does not remove or modify any of the role services installed on the servers.
+parameters:
+  cmdletParameters:
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a session collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Performs the action without a confirmation message.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-RDSessionCollection
+        [-CollectionName] <String>
+        [-ConnectionBroker <String>]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <span>undefined</span>
+examples:
+- title: 'Example 1: Remove a session collection'
+  description: |-
+    ```
+    PS C:\> Remove-RDSessionCollection -CollectionName "Session Collection" -ConnectionBroker "RDCB.Contoso.com"
+    ```
+
+    This command removes the session collection named Session Collection from the Remote Desktop deployment that has the RD Connection Broker named RDCB.Contoso.com.
+links:
+- text: Get-RDSessionCollection
+  href: ./Get-RDSessionCollection.yml
+- text: New-RDSessionCollection
+  href: ./New-RDSessionCollection.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/rdmgmt/remove-rdsessioncollection?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-RDSessionCollection

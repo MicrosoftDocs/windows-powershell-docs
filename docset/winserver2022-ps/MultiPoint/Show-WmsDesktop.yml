@@ -1,0 +1,153 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Show-WmsDesktop
+name: Show-WmsDesktop
+module: MultiPoint
+isPreview: false
+summary: |-
+  Displays the currently shared desktop to the specified sessions.
+description: |-
+  The **Show-WmsDesktop** cmdlet displays the currently shared desktop to the specified sessions on the current Windows MultiPoint Server system.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation applies to all sessions on the target host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShowAll
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Desktop
+    type: <xref href="WmsDesktop" data-throw-if-not-resolved="False" />
+    description: |-
+      {{Fill Desktop Description}}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+      The default is localhost.
+    aliases:
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SessionId
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of session IDs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShowSessionList
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Title
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a title.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoteControl
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Show-WmsDesktop
+        [-SessionId] <UInt32[]>
+        -Desktop <WmsDesktop>
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShowSessionList
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Show-WmsDesktop
+        -Desktop <WmsDesktop>
+        [-All]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShowAll
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Show-WmsDesktop
+        -Desktop <WmsDesktop>
+        [-Title <String>]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoteControl
+  isDefault: false
+inputs:
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.WindowsServerSolutions.MultipointServer.PowerShell.Commands.Library.WmsDesktop" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Show a desktop'
+  description: |-
+    ```
+    PS C:\> Show-WmsDesktop -Invitation "See My Shared Desktop" -SessionId "1,2" -Title "Teacher's Desktop"
+    ```
+
+    This command projects the desktop to the specified session list.
+links:
+- text: Unpublish-WmsDesktop
+  href: ./Unpublish-WmsDesktop.yml
+- text: Publish-WmsDesktop
+  href: ./Publish-WmsDesktop.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/show-wmsdesktop?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Show-WmsDesktop

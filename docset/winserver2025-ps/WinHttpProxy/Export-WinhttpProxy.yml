@@ -1,0 +1,33 @@
+### YamlMime:PowerShellCmdlet1
+uid: WinHttpProxy.Export-WinhttpProxy
+name: Export-WinhttpProxy
+module: WinHttpProxy
+isPreview: false
+summary: |-
+  Exports the current Winhttp proxy configuration.
+description: |-
+  Creates a script that contains the current configuration. If saved to a file, this script can be
+  used to restore altered configuration settings.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-WinhttpProxy
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: WinHttpProxy-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/winhttpproxy/export-winhttpproxy?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: WinHttpProxy
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Export-WinhttpProxy

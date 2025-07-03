@@ -1,0 +1,588 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetTCPIP.Get-NetIPv6Protocol
+name: Get-NetIPv6Protocol
+module: NetTCPIP
+isPreview: false
+summary: |-
+  Gets IPv6 protocol configurations.
+description: |-
+  The **Get-NetIPv6Protocol** cmdlet gets the global IPv6 protocol configurations for the computer.
+  The cmdlet returns IPv6 Protocol settings, such as the Internet Control Message Protocol (ICMP) setting, the default hop limit, the neighbor cache limit, and the multicast configuration.
+  If you do not specify any parameters, the cmdlet gets all the IPv6 Protocol configuration settings.
+parameters:
+  cmdletParameters:
+  - name: AddressMaskReply
+    type: <xref href="AddressMaskReply" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for address mask reply.
+      The cmdlet gets the IPv6 protocol configurations that have these values.
+      Address mask reply specifies how the computer responds to ICMP address mask packets.
+      The acceptable values for this parameter are:
+
+      - Enabled.
+      The computer responds to ICMP address mask packets.
+      - Disabled.
+      The computer does not respond to ICMP address mask packets.
+    acceptedValues:
+    - Disabled
+    - Enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultHopLimit
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for the default hop limit.
+      The cmdlet gets the IPv6 protocol configurations that have these values.
+      The default hop limit is the default value for the **CurrentHopLimit** property in the IP interface.
+      The current hop limit is the value that the IP interface writes in the time-to-live (TTL) field in all outbound traffic.
+      When routers forward a packet, they decrement the hop limit by 1 and discard the packet when the hop limit is 0.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DhcpMediaSense
+    type: <xref href="DhcpMediaSense" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for Media Sense.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+
+      Media Sense provides a mechanism for the network adapter to notify the protocol stack of media connect and disconnect events.
+      These events trigger the DHCP client to take an action, such as attempting to renew a DHCP lease or removing routes that are related to a disconnected network.
+      When Media Sense is enabled, the network parameters on the laptop of a roaming user are automatically and transparently updated without requiring a restart when the user moves from one location to another.
+      The acceptable values for this parameter are:
+
+      - Enabled
+      - Disabled
+    acceptedValues:
+    - Disabled
+    - Enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupForwardedFragments
+    type: <xref href="GroupForwardedFragments" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for group forwarded fragments.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+      Group forwarded fragments specifies whether the IP interface collects fragments into groups before it forwards the fragments.
+      The acceptable values for this parameter are:
+
+      - Enabled.
+      The IP interface collects IPv4 protocol fragments into groups before it forwards the fragments.
+      - Disabled.
+      The IP interface does not collect IPv4 protocol fragments into groups before it forwards the fragments.
+    acceptedValues:
+    - Disabled
+    - Enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IcmpRedirects
+    type: <xref href="IcmpRedirects" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for ICMP redirects.
+      The cmdlet gets IPv4 protocol configurations that have these values.
+      ICMP redirects specifies whether to update the path cache in response to ICMP redirect packets.
+      The acceptable values for this parameter are:
+
+      - Enabled.
+      The IP interface updates the path cache in response to ICMP redirect packets.
+      - Disabled.
+      The IP interface does not update the path cache in response to ICMP redirect packets.
+    acceptedValues:
+    - Disabled
+    - Enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxTemporaryDadAttempts
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for the maximum number of duplicate address detection attempts for temporary addresses.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+    aliases:
+    - MaxDadAttempts
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxTemporaryDesyncTime
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for the maximum time to desynchronize temporary address preferred lifetimes.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+    aliases:
+    - MaxRandomTime
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxTemporaryPreferredLifetime
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values, as **TimeSpan** objects, for the maximum preferred lifetime over which to prefer a temporary address.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+    aliases:
+    - MaxPreferredLifetime
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxTemporaryValidLifetime
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values, as **TimeSpan** objects, for the maximum lifetime over which a temporary address is valid.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+    aliases:
+    - MaxValidLifetime
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MediaSenseEventLog
+    type: <xref href="MediaSenseEventLog" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for Media Sense event log.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+      Media Sense event log specifies whether the computer logs DHCP Media Sense events.
+      The acceptable values for this parameter are:
+
+      - Enabled.
+      The IP interface logs DHCP Media Sense events in the event log for troubleshooting purposes.
+      - Disabled.
+      The IP interface does not log DHCP Media Sense events in the event log.
+    acceptedValues:
+    - Disabled
+    - Enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MldLevel
+    type: <xref href="MldLevel" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for the level of Multicast Listener Discovery (MLD) support.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+      The acceptable values for this parameter are:
+
+      - All.
+      The computer can send and receive multicast packets.
+      - None.
+      The computer cannot send or receive multicast packets.
+      - SendOnly.
+      The computer can send but not receive multicast packets.
+    acceptedValues:
+    - None
+    - SendOnly
+    - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MldVersion
+    type: <xref href="MldVersion" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for the maximum version of Multicast Listener Discovery that the host supports.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+    acceptedValues:
+    - Version1
+    - Version2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MulticastForwarding
+    type: <xref href="MulticastForwarding" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for multicast forwarding.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+      The acceptable values for this parameter are:
+
+      - Enabled.
+      The computer can forward multicast packets.
+      - Disabled.
+      The computer cannot forward multicast packets.
+    acceptedValues:
+    - Disabled
+    - Enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NeighborCacheLimitEntries
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for the maximum number of neighbor cache entries.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+    aliases:
+    - NeighborCacheLimit
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RandomizeIdentifiers
+    type: <xref href="RandomizeIdentifiers" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for the randomization of identifiers.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+      The acceptable values for this parameter are:
+
+      - Enabled.
+      The IP interface randomizes identifiers when it creates an IP address.
+      - Disabled: The IP interface does not randomize identifiers when it creates an IP address.
+    acceptedValues:
+    - Disabled
+    - Enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReassemblyLimitBytes
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for the maximum size of the reassembly buffer.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+    aliases:
+    - ReassemblyLimit
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RouteCacheLimitEntries
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for the maximum number of route cache entries.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+    aliases:
+    - RouteCacheLimit
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceRoutingBehavior
+    type: <xref href="SourceRoutingBehavior" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for the behavior for source-routed packets.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+      The acceptable values for this parameter are:
+
+      - DontForward.
+      The computer can receive but not forward source-routed packets.
+      - Drop.
+      The computer drops source-routed packets.
+    acceptedValues:
+    - Forward
+    - DontForward
+    - Drop
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemporaryRegenerateTime
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values, as **TimeSpan** objects, for the time before deprecating a temporary address when a new address is generated.
+
+      The cmdlet gets IPv6 protocol configurations that have these values.
+    aliases:
+    - RegenerateTime
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseTemporaryAddresses
+    type: <xref href="UseTemporaryAddresses" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of values for temporary addresses.
+      The cmdlet gets IPv6 protocol configurations that have these values.
+      The acceptable values for this parameter are:
+
+      - Always.
+      The computer always generates temporary addresses by using random numbers.
+      - Counter.
+      The computer generates temporary addresses by using the interface identifier.
+      You typically use this identifier for test purposes.
+      - Disabled.
+      The computer does not use temporary addresses.
+      - Enabled.
+      The computer uses temporary addresses.
+    acceptedValues:
+    - Disabled
+    - Enabled
+    - Always
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NetIPv6Protocol
+        [-DefaultHopLimit <UInt32[]>]
+        [-NeighborCacheLimitEntries <UInt32[]>]
+        [-RouteCacheLimitEntries <UInt32[]>]
+        [-ReassemblyLimitBytes <UInt32[]>]
+        [-IcmpRedirects <IcmpRedirects[]>]
+        [-SourceRoutingBehavior <SourceRoutingBehavior[]>]
+        [-DhcpMediaSense <DhcpMediaSense[]>]
+        [-MediaSenseEventLog <MediaSenseEventLog[]>]
+        [-MldLevel <MldLevel[]>]
+        [-MldVersion <MldVersion[]>]
+        [-MulticastForwarding <MulticastForwarding[]>]
+        [-GroupForwardedFragments <GroupForwardedFragments[]>]
+        [-RandomizeIdentifiers <RandomizeIdentifiers[]>]
+        [-AddressMaskReply <AddressMaskReply[]>]
+        [-UseTemporaryAddresses <UseTemporaryAddresses[]>]
+        [-MaxTemporaryDadAttempts <UInt32[]>]
+        [-MaxTemporaryValidLifetime <TimeSpan[]>]
+        [-MaxTemporaryPreferredLifetime <TimeSpan[]>]
+        [-TemporaryRegenerateTime <TimeSpan[]>]
+        [-MaxTemporaryDesyncTime <TimeSpan[]>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetIPv6Protocol" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+examples:
+- title: 'Example 1: Get all IPv6 protocol configurations'
+  description: |-
+    ```
+    PS C:\>Get-NetIPv6Protocol
+    ```
+
+    This command gets all IPv6 protocol configurations for the IP interface.
+    The default output for the cmdlet does not include all properties of the **NetIPv6Protocol** object.
+- title: 'Example 2: Output all properties of IPv6 protocol configurations'
+  description: |-
+    ```
+    PS C:\>Get-NetIPv6Protocol | Format-List -Property *
+    ```
+
+    This command gets all IPv6 protocol configurations for the IP interface.
+    The command uses the Format-List cmdlet to display all the properties in the output in the form of a table.
+    For more information, type `Get-Help Format-Table`.
+    The command default output omits some properties.
+links:
+- text: Set-NetIPv6Protocol
+  href: ./Set-NetIPv6Protocol.yml
+- text: Get-NetIPv4Protocol
+  href: ./Get-NetIPv4Protocol.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MSFT_NetIPv6Protocol.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/nettcpip/get-netipv6protocol?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: NetTCPIP
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NetIPv6Protocol

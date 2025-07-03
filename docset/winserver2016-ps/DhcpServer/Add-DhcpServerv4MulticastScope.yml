@@ -1,0 +1,336 @@
+### YamlMime:PowerShellCmdlet1
+uid: DhcpServer.Add-DhcpServerv4MulticastScope
+name: Add-DhcpServerv4MulticastScope
+module: DhcpServer
+isPreview: false
+summary: |-
+  Adds a multicast scope on the DHCP server.
+description: |-
+  The **Add-DhcpServerv4MulticastScope** cmdlet adds a multicast scope on the Dynamic Host Configuration Protocol (DHCP) server.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job.
+      Use this parameter to run commands that take a long time to complete.
+      The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+      You can continue to work in the session while the job completes.
+      To manage the job, use the `*-Job` cmdlets.
+      To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+      For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the DNS name or IP address of the target computer that runs the DHCP Server service.
+    aliases:
+    - Cn
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description of the multicast scope.
+      The default value is null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndRange
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the end address of the range for the scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpiryTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the expiry time of the multicast scope.
+      The default value is infinite.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LeaseDuration
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the duration of the IP address lease.
+      The default value 30 days.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the multicast scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartRange
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the start address of the range of IP addresses for the scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the state of the scope.
+      The acceptable values for this parameter are:
+
+      - Active
+      - Inactive
+
+      The default value is Active.
+    acceptedValues:
+    - Active
+    - InActive
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ttl
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of routers through which multicast traffic passes.
+      The default value is 32.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-DhcpServerv4MulticastScope
+        [-ComputerName <String>]
+        [-Name] <String>
+        [-StartRange] <IPAddress>
+        [-EndRange] <IPAddress>
+        [-Description <String>]
+        [-State <String>]
+        [-LeaseDuration <TimeSpan>]
+        [-PassThru]
+        [-Ttl <UInt32>]
+        [-ExpiryTime <DateTime>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DhcpServerv4MulticastScope" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add an inactive multicast scope'
+  description: |-
+    ```
+    PS C:\> Add-DhcpServerv4MulticastScope -ComputerName "DhcpServer01.Contoso.com" -Name "Multicast_AudioConference" -StartRange 224.0.0.0 -EndRange 224.0.0.30 -State Inactive -Ttl 20-LeaseDuration 20
+    ```
+
+    This command creates an inactive multicast scope named Multicast_AudioConference on the DHCP server named DhcpServer01.Contoso.com.
+    The command specifies the lease duration of 20 days for allocating addresses to participants of audio conferences.
+    You can allocate a single multicast address to multiple clients.
+    The command specifies that the traffic passes through 20 routers.
+- title: 'Example 2: Add an active multicast scope'
+  description: |-
+    ```
+    PS C:\> Add-DhcpServerv4MulticastScope -ComputerName "DhcpServer01.Contoso.com" -Name "Multicast_VideoConference" -StartRange 224.0.0.50 -EndRange 224.0.0.80
+    ```
+
+    This command creates an active multicast scope named Multicast_AudioConference on the DHCP server named DhcpServer01.Contoso.com.
+    You can use the multicast scope on the DHCP server service for allocating addresses to participants of video conferences.
+    You can allocate a single multicast address to multiple clients.
+    The traffic passes through 32 routers, and the lease duration is 30 days.
+links:
+- text: Get-DhcpServerv4MulticastScope
+  href: ./Get-DhcpServerv4MulticastScope.yml
+- text: Set-DhcpServerv4MulticastScope
+  href: ./Set-DhcpServerv4MulticastScope.yml
+- text: Remove-DhcpServerv4MulticastScope
+  href: ./Remove-DhcpServerv4MulticastScope.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: PS_DhcpServerV4MulticastScope_v1.0.0.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dhcpserver/add-dhcpserverv4multicastscope?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: DhcpServer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-DhcpServerv4MulticastScope

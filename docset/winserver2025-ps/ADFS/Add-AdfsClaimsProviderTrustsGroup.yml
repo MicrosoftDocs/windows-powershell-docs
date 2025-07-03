@@ -1,0 +1,229 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Add-AdfsClaimsProviderTrustsGroup
+name: Add-AdfsClaimsProviderTrustsGroup
+module: ADFS
+isPreview: false
+summary: |-
+  Creates a claims provider trust group based on metadata that contains multiple entities.
+description: |-
+  The **Add-AdfsClaimsProviderTrustsGroup** cmdlet creates a claims provider trust group based on metadata that contains multiple entities.
+parameters:
+  cmdletParameters:
+  - name: AcceptanceTransformRules
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AcceptanceTransformRulesFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoUpdateEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether automatic updates are enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MetadataUrl
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetadataFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the file path and name of a metadata file on the local file system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MetadataFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetadataUrl
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL of a metadata file available on the public Internet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MetadataUrl
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonitoringEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether monitoring is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AdfsClaimsProviderTrustsGroup
+        -MetadataFile <String>
+        [-Force]
+        [-PassThru]
+        [-AcceptanceTransformRules <String>]
+        [-AcceptanceTransformRulesFile <String>]
+        [-MonitoringEnabled <Boolean>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MetadataFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AdfsClaimsProviderTrustsGroup
+        -MetadataUrl <Uri>
+        [-AutoUpdateEnabled <Boolean>]
+        [-Force]
+        [-PassThru]
+        [-AcceptanceTransformRules <String>]
+        [-AcceptanceTransformRulesFile <String>]
+        [-MonitoringEnabled <Boolean>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MetadataUrl
+  isDefault: false
+examples:
+- title: 'Example 1: Add a trust group by metadata URL'
+  description: |-
+    ```
+    PS C:\> Add-AdfsClaimsProviderTrustsGroup -MetadataUrl https://www.contosoconsortium.com/metadata/metadata.xml
+    ```
+
+    This command specifies a metadata URL to add a trust group
+- title: 'Example 2: Add a trust group by metadata file'
+  description: |-
+    ```
+    PS C:\> Add-AdfsClaimsProviderTrustsGroup -MetadataFile "C:\metadata.xml"
+    ```
+
+    This command specifies a metadata file to add a trust group.
+links:
+- text: Get-AdfsClaimsProviderTrustsGroup
+  href: ./Get-AdfsClaimsProviderTrustsGroup.yml
+- text: Remove-AdfsClaimsProviderTrustsGroup
+  href: ./Remove-AdfsClaimsProviderTrustsGroup.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/add-adfsclaimsprovidertrustsgroup?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-AdfsClaimsProviderTrustsGroup

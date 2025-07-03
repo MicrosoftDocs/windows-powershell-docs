@@ -1,0 +1,42 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsSslCertificate
+name: Get-AdfsSslCertificate
+module: ADFS
+isPreview: false
+summary: |-
+  Gets the host name, port, and certificate hash for SSL bindings configured for AD FS and the device registration service.
+description: |-
+  The **Get-AdfsSslCertificate** cmdlet gets the host name, port, and certificate hash for all SSL bindings configured for Active Directory Federation Services (AD FS) and, if enabled, the device registration service.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsSslCertificate
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get information for SSL bindings'
+  description: |-
+    ```
+    PS C:\> Get-AdfsSslCertificate
+    HostName                           PortNumber  CertificateHash
+    --------                           ----------  ---------------
+    sts.contoso100.com                    443      4195EE03C2721F7478B67E94BD83BB373FE22D98
+    localhost                             443      4195EE03C2721F7478B67E94BD83BB373FE22D98
+    sts.contoso100.com                   49443     4195EE03C2721F7478B67E94BD83BB373FE22D98
+    EnterpriseRegistration.contoso...     443      4195EE03C2721F7478B67E94BD83BB373FE22D98
+    ```
+
+    This command gets the host names, ports, and certificate hashes for all configured SSL bindings.
+links:
+- text: Set-AdfsSslCertificate
+  href: ./Set-AdfsSslCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfssslcertificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsSslCertificate

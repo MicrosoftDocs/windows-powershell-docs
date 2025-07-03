@@ -1,0 +1,142 @@
+### YamlMime:PowerShellCmdlet1
+uid: RDMgmt.Set-RDConnectionBrokerHighAvailability
+name: Set-RDConnectionBrokerHighAvailability
+module: RDMgmt
+isPreview: false
+summary: |-
+  Sets high availability settings for RD Connection Broker servers for a Remote Desktop deployment.
+description: |-
+  The **Set-RDConnectionBrokerHighAvailability** cmdlet sets high availability settings for Remote Desktop Connection Broker (RD Connection Broker) servers for a Remote Desktop deployment.
+  You can use the Get-RDConnectionBrokerHighAvailability cmdlet to see current settings.
+parameters:
+  cmdletParameters:
+  - name: ClientAccessName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a Domain Name System (DNS) name for clients to use to connect to a Remote Desktop deployment.
+      This is the DNS round-robin name that contains fully qualified domain names (FQDNs) of the RD Connection Broker servers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the RD Connection Broker server for a Remote Desktop deployment.
+      If you do not specify a value, the cmdlet uses the FQDN of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseConnectionString
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a connection string for the database that stores the high availability settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a path to the database supplied by the *DatabaseConnectionString* parameter.
+      This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseSecondaryConnectionString
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the secondary database connection string optionally used to support password expiration.
+      This string is used when the high availability configuration uses a shared database server (that is, where the method of authentication to the database server requires a user name and password).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-RDConnectionBrokerHighAvailability
+        [[-ConnectionBroker] <String>]
+        [-DatabaseConnectionString] <String>
+        [[-DatabaseSecondaryConnectionString] <String>]
+        [[-DatabaseFilePath] <String>]
+        [-ClientAccessName] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <span>undefined</span>
+examples:
+- title: 'Example 1: Set high availability settings for a dedicated database server'
+  description: |-
+    ```
+    PS C:\> Set-RDConnectionBrokerHighAvailability -ConnectionBroker "RDCB.Contoso.com" -DatabaseConnectionString "DRIVER=SQL Server Native Client 10.0;SERVER=sqlserver.contoso.com;Trusted_Connection=Yes;APP=Remote Desktop Services Connection Broker;Database=RemoteDesktopDeployment" -DatabaseFilePath "C:\RDFiles\RemoteDesktopDeployment.mdf" -ClientAccessName "RemoteResources.Contoso.com"
+    ```
+
+    This command sets high availability settings for an RD Connection Broker server named RDCB.Contoso.com.
+    The command specifies a database connection string, and includes the path to the database.
+    The command specifies the client access name as RemoteResources.Contoso.com.
+- title: 'Example 2: Set high availability settings for a shared database server'
+  description: |-
+    ```
+    PS C:\>Set-RDConnectionBrokerHighAvailability -ConnectionBroker "RDCB.Contoso.com" -DatabaseConnectionString "Driver={SQL Server Native Client 11.0};Server= sqlserver.contoso.com;Database= RemoteDesktopDeployment;Uid=admin1@wxm56whnww;Pwd=Password!;Encrypt=yes;Connection Timeout=30;" -DatabaseSecondaryConnectionString "Driver={SQL Server Native Client 11.0};Server= sqlserver.contoso.com;Database= RemoteDesktopDeployment;Uid=admin;Pwd=OtherPassword!;Encrypt=yes;Connection Timeout=30;"'-ClientAccessName "RemoteResources.Contoso.com"
+    ```
+
+    This command sets high availability settings for an RD Connection Broker server named RDCB.Contoso.com.
+    The command specifies a database connection string and a secondary connection string.
+    The command specifies the client access name as RemoteResources.Contoso.com.
+links:
+- text: Get-RDConnectionBrokerHighAvailability
+  href: ./Get-RDConnectionBrokerHighAvailability.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/rdmgmt/set-rdconnectionbrokerhighavailability?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-RDConnectionBrokerHighAvailability

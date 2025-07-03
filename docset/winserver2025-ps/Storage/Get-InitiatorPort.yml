@@ -1,0 +1,345 @@
+### YamlMime:PowerShellCmdlet1
+uid: Storage.Get-InitiatorPort
+name: Get-InitiatorPort
+module: Storage
+isPreview: false
+summary: |-
+  Gets one or more host bus adapter (HBA) initiator ports.
+description: |-
+  The **Get-InitiatorPort** cmdlet gets and displays host bus adapter (HBA) initiator ports, such as SAS, FibreChannel, and iSCSI ports.
+  Typically used either for connection to an iSCSI target in the case of iSCSI, or for in the management of masking sets in the case of FibreChannel.
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionType
+    type: <xref href="ConnectionType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the type of the connection.
+      Acceptable values are: Other, FibreChannel, iSCSI, and SAS.
+
+      To specify a custom connection type, specify the Other value and specify a non-NULL value for the **OtherConnectionTypeDescription** property.
+    acceptedValues:
+    - Other
+    - FibreChannel
+    - iSCSI
+    - SAS
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNodeAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByInstanceName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the instance name of the initiator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInstanceName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: iSCSIConnection
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the iSCSIConnection object for which you want to get the initiator port.
+      Enter an iSCSIConnection CIM object, which is exposed by the **Get-IscsiConnection** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByiSCSIConnection
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: iSCSISession
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the iSCSISession object for which you want to get the initiator port.
+      Enter an iSCSISession CIM object, which is exposed by the **Get-IscsiSession** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByiSCSISession
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: iSCSITarget
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the iSCSITarget object for which you want to get the initiator port.
+      Enter an iSCSITarget CIM object, which is exposed by the **Get-IscsiTarget** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByiSCSITarget
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NodeAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the node address for the initiator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNodeAddress
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the ObjectID of the initiator.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualDisk
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the VirtualDisk object for which you want to get the initiator port.
+      Enter a VirtualDisk CIM object, which is exposed by the Get-VirtualDisk cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-InitiatorPort
+        [[-NodeAddress] <String[]>]
+        [-ConnectionType <ConnectionType[]>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNodeAddress
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-InitiatorPort
+        [-ObjectId <String[]>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-InitiatorPort
+        [-InstanceName <String[]>]
+        [-ConnectionType <ConnectionType[]>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInstanceName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-InitiatorPort
+        [-VirtualDisk <CimInstance>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualDisk
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-InitiatorPort
+        [-iSCSISession <CimInstance>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByiSCSISession
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-InitiatorPort
+        [-iSCSIConnection <CimInstance>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByiSCSIConnection
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-InitiatorPort
+        [-iSCSITarget <CimInstance>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByiSCSITarget
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_IscsiConnection" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe an iSCSIConnection object to the *iSCSIConnection* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_IscsiSession" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe an iSCSISession object to the *iSCSISession* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_IscsiTarget" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe an IscsiTarget object to the *IscsiTarget* parameter.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a VirtualDisk object to the *VirtualDisk* parameter.
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_InitiatorPort" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents the initiator port you specified.
+examples:
+- title: 'Example 1: Get all initiator ports'
+  description: |-
+    ```
+    PS C:\>Get-InitiatorPort
+    InstanceName                  NodeAddress                   PortAddress                   ConnectionType
+    ------------                  -----------                   -----------                   --------------
+    ROOT\ISCSIPRT\0000_0          iqn.1991-05.com.contoso:...   ISCSI ANY PORT                iSCSI
+    ```
+
+    This example gets all available initiator ports.
+- title: 'Example 2: Get all initiator ports, and filter the display'
+  description: |-
+    ```
+    PS C:\>Get-InitiatorPort | Select-Object -Property NodeAddress,ConnectionType | Format-Table -AutoSize
+    NodeAddress                                                    ConnectionType
+    -----------                                                    --------------
+    iqn.1991-05.com.microsoft:johnj99-pc2.contoso.com              iSCSI
+    ```
+
+    This example gets all available initiator ports.
+    selects only the NodeAddress and ConnectionType properties, and then displays this information.
+links:
+- text: Format-Table
+  href: https://go.microsoft.com/fwlink/?LinkID=113303
+- text: Select-Object
+  href: https://go.microsoft.com/fwlink/?LinkID=113387
+- text: Set-InitiatorPort
+  href: ./Set-InitiatorPort.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: InitiatorPort.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storage/get-initiatorport?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Storage
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-InitiatorPort

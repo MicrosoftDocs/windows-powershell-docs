@@ -1,0 +1,132 @@
+### YamlMime:PowerShellCmdlet1
+uid: BootEventCollector.Test-SbecActiveConfig
+name: Test-SbecActiveConfig
+module: BootEventCollector
+isPreview: false
+summary: |-
+  Tests the active Boot Event Collector configuration.
+description: |-
+  The **Test-SbecActiveConfig** cmdlet tests whether the specified Boot Event Collector configuration matches the current active configuration.
+
+  The comparison is done on the "normalized" text of the configuration by removing all the carriage return (`\r`) characters and by removing any empty lines at the end of configuration.
+  The empty lines in the middle of the text are not removed, and the white space matters.
+
+  This command returns $True if the configurations match; otherwise, it returns $False.
+
+  This command throws an error on failures.
+
+  You must have the Builtin Administrator privilege to run this command.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet on the remote computers through a remote session.
+      Enter a session object, such as the output of a **New-CimSession** or **Get-CimSession** cmdlet or an array of these objects.
+      The default is to run the cmdlet on the local computer.
+      For more information, see About_CimSession.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the names of the computers on which you want to perform the operation.
+      You can specify a fully qualified domain name (FQDN), a NetBIOS name, or an IP address for each computer.
+      For more information see [Invoke-CimMethod](https://go.microsoft.com/fwlink/?LinkId=808801) on MSDN.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Content
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the configuration to test.
+      The acceptable values for this parameter are:
+
+      - A multiline string.
+      Use `\n` to indicate line breaks.
+      - An array of one-line strings.
+      This cmdlet merges the array.
+      - A mix of multiline strings and string arrays.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-SbecActiveConfig
+        [-Content] <String[]>
+        [[-ComputerName] <String[]>]
+        [[-CimSession] <CimSession[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" />
+  description: |-
+    The text of the configuration, same as in the *Content* parameter.
+outputs:
+- name: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    The result of comparison: $True or $False.
+examples:
+- title: 'Example 1: Test a configuration file through a pipeline'
+  description: |-
+    ```
+    PS C:\> Get-Content -Path "c:\MyConfig.xml" | Test-SbecActiveConfig
+    ```
+
+    This command compares the current configuration with the contents of the file MyConfig.xml by passing it through a pipeline.
+- title: 'Example 2: Test a configuration file through a parameter'
+  description: |-
+    ```
+    PS C:\> Test-SbecActiveConfig -Content "(Get-Content -Path "c:\MyConfig.xml")"
+    ```
+
+    This command compares the current configuration with the contents of the file MyConfig.xml by passing it as a parameter.
+links:
+- text: Get-SbecActiveConfig
+  href: ./Get-SbecActiveConfig.yml
+- text: Set-SbecActiveConfig
+  href: ./Set-SbecActiveConfig.yml
+- text: Test-SbecConfig
+  href: ./Test-SbecConfig.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: BootEventCollector-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/booteventcollector/test-sbecactiveconfig?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Test-SbecActiveConfig

@@ -1,0 +1,142 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADRMSAdmin.Install-RmsMfgEnrollment
+name: Install-RmsMfgEnrollment
+module: ADRMSAdmin
+isPreview: false
+summary: |-
+  Enrolls an AD RMS server with Microsoft Federation Gateway.
+description: |-
+  The **Install-RmsMfgEnrollment** cmdlet enrolls an Active Directory Rights Management Services (AD RMS) server with the Microsoft Federation Gateway.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a string containing the thumbprint hash of the certificate being used to enroll with the Microsoft Federation Gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GetDefaultCertificate
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the thumbprint hash of the AD RMS default certificate should be retrieved and used to enroll with the Microsoft Federation Gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Install-RmsMfgEnrollment
+        [-Force]
+        [-GetDefaultCertificate]
+        [-CertificateThumbprint <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Enroll in the Microsoft Federation Gateway using the default certificate'
+  description: |-
+    ```
+    PS C:\> Install-RmsMfgEnrollment -GetDefaultCertificate
+    ```
+
+    This command enrolls the AD RMS cluster in the Microsoft Federation Gateway by retrieving and using the thumbprint hash of the AD RMS default certificate.
+- title: 'Example 2: Enroll in the Microsoft Federation Gateway using a specified certificate'
+  description: |-
+    ```
+    PS C:\> Install-RmsMfgEnrollment -CertificateThumbprint "a909502dd82ae41433e6f83886b00d4277a32a7b"
+    ```
+
+    This command enrolls the AD RMS cluster in the Microsoft Federation Gateway using the thumbprint hash of a non-default certificate.
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Uninstall-RmsMfgEnrollment
+  href: ./Uninstall-RmsMfgEnrollment.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adrmsadmin/install-rmsmfgenrollment?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Install-RmsMfgEnrollment

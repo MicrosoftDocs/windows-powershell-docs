@@ -1,0 +1,24 @@
+### YamlMime:PowerShellModule1
+uid: Microsoft.ServerCore.SConfig
+name: Microsoft.ServerCore.SConfig Module
+isPreview: false
+cmdletGroups:
+- title: Microsoft.ServerCore.SConfig Cmdlets
+  cmdlets:
+  - Microsoft.ServerCore.SConfig.Get-SConfig
+  - Microsoft.ServerCore.SConfig.Invoke-SConfig
+  - Microsoft.ServerCore.SConfig.Invoke-SConfigLogon
+  - Microsoft.ServerCore.SConfig.Reset-SConfig
+  - Microsoft.ServerCore.SConfig.Set-SConfig
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: 961eaf2b-70de-4ef4-801e-bd1ea302bede
+  Module Name: Microsoft.ServerCore.SConfig
+  ms.date: 02/21/2024
+  title: Microsoft.ServerCore.SConfig module
+  PlatyPS schema version: 2024-05-01
+  document type: module

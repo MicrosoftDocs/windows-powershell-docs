@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Get-WBVirtualMachine
+name: Get-WBVirtualMachine
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Gets all virtual machines and components from the backup policy.
+description: |-
+  The **Get-WBVirtualMachine** cmdlet gets all virtual machines and Hyper-V Server components from the **WBPolicy** object or the physical computer.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the backup policy information contained in the **WBPolicy** object to display.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Policy
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WBVirtualMachine
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-WBVirtualMachine
+        [[-Policy] <WBPolicy>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Policy
+  isDefault: false
+inputs:
+- name: <xref href="Windows.ServerBackup.Commands.WBPolicy" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Windows.ServerBackup.Commands.WBVirtualMachine" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all virtual machines and components from the backup policy'
+  description: |-
+    ```
+    PS C:\> Get-WBVirtualMachine
+    ```
+
+    This command queries for virtual machines and Hyper-V Server 2016 components on the machine and lists them.
+links:
+- text: Add-WBVirtualMachine
+  href: ./Add-WBVirtualMachine.yml
+- text: Remove-WBVirtualMachine
+  href: ./Remove-WBVirtualMachine.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/get-wbvirtualmachine?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WBVirtualMachine

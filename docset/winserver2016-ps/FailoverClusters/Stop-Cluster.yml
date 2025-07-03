@@ -1,0 +1,181 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Stop-Cluster
+name: Stop-Cluster
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Stops the Cluster service on all nodes in a failover cluster, which will stop all services and applications configured in the cluster.
+description: |-
+  The **Stop-Cluster** cmdlet stops the Cluster service on all nodes in a failover cluster, which will stop all services and applications configured in the cluster.
+  A node can only function as part of the cluster when the Cluster service is running on that node.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet.
+      If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster name
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet without prompting for confirmation.
+      By default the cmdlet will ask for confirmation from the user before proceeding.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster to stop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Wait
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time in seconds to wait for the cmdlet.
+      If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+      If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-Cluster
+        [[-Cluster] <String>]
+        [-Force]
+        [-Wait <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Cluster name
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Stop-Cluster
+        [-Force]
+        [-Wait <Int32>]
+        [-InputObject <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Stop Cluster service on all nodes of the local cluster'
+  description: |-
+    ```
+    PS C:\> Stop-Cluster
+    ```
+
+    This example stops the Cluster service on all nodes in the local cluster, which will stop all services and applications configured in the cluster.
+- title: 'Example 2: Stop Cluster service on all nodes of a cluster'
+  description: |-
+    ```
+    PS C:\> Stop-Cluster -Name cluster1
+    ```
+
+    This example stops the Cluster service on all nodes in the cluster named cluster1, which will stop all services and applications configured in the cluster.
+links:
+- text: Get-Cluster
+  href: ./Get-Cluster.yml
+- text: New-Cluster
+  href: ./New-Cluster.yml
+- text: Remove-Cluster
+  href: ./Remove-Cluster.yml
+- text: Start-Cluster
+  href: ./Start-Cluster.yml
+- text: Test-Cluster
+  href: ./Test-Cluster.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/stop-cluster?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Stop-Cluster

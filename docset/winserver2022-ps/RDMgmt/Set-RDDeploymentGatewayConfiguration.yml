@@ -1,0 +1,191 @@
+### YamlMime:PowerShellCmdlet1
+uid: RDMgmt.Set-RDDeploymentGatewayConfiguration
+name: Set-RDDeploymentGatewayConfiguration
+module: RDMgmt
+isPreview: false
+summary: |-
+  Specifies settings for the RD Gateway server for a Remote Desktop deployment.
+description: |-
+  The **Set-RDDeploymentGatewayConfiguration** cmdlet specifies settings for the Remote Desktop Gateway (RD Gateway) server for a Remote Desktop deployment.
+  These settings include whether to use the RD Gateway server, user authentication methods, and other connection and authentication options.
+  The RD Gateway role service enables authorized users to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network from any Internet-connected device.
+parameters:
+  cmdletParameters:
+  - name: BypassLocal
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether authorized remote users bypass the RD Gateway server for local connections.
+      By default, the value of this parameter is $False.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for this Remote Desktop deployment.
+      If this parameter does not appear, the default value is the fully qualified domain name (FQDN) of the local host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewayExternalFqdn
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the external FQDN of the RD Gateway server for this Remote Desktop deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewayMode
+    type: <xref href="GatewayUsage" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a value that indicates whether or not authorized remote users use the RD Gateway server and, if so, whether they detect existing RD Gateway settings automatically or enter settings manually.
+      The acceptable values for this parameter are:
+
+      - DoNotUse: Remote users enter settings manually and do not use the Gateway.
+      - Custom: Remote users get Gateway settings from other parameters to this cmdlet.
+      - Automatic: Remote users detect Gateway settings automatically.
+    acceptedValues:
+    - DoNotUse
+    - Custom
+    - Automatic
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogonMethod
+    type: <xref href="GatewayAuthMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the method for authenticating user access to the RD Gateway server.
+      The acceptable values for this parameter are:
+
+      - GatewayAuthMode: Users authenticate by using the method that the Gateway specifies (using a smart card reader or a password).
+
+      - AllowUserToSelectDuringConnection: The Gateway prompts users to authenticate access when they connect.
+      They must specify a password or smart card reader as the authentication method.
+    acceptedValues:
+    - Password
+    - Smartcard
+    - AllowUserToSelectDuringConnection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseCachedCredentials
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether or not remote users can use RD Gateway access credentials to authenticate access to the remote computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-RDDeploymentGatewayConfiguration
+        [-GatewayMode] <GatewayUsage>
+        [[-GatewayExternalFqdn] <String>]
+        [[-LogonMethod] <GatewayAuthMode>]
+        [[-UseCachedCredentials] <Boolean>]
+        [[-BypassLocal] <Boolean>]
+        [[-ConnectionBroker] <String>]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <span>undefined</span>
+  description: |-
+    None
+examples:
+- title: 'Example 1: Specify settings to configure RD Gateway access'
+  description: |-
+    ```
+    PS C:\> Set-RDDeploymentGatewayConfiguration -GatewayMode Automatic -GatewayExternalFQDN "rdg.contoso.com" -LogonMethod AllowUserToSelectDuringConnection -UseCachedCredentials $True -BypassLocal $True -ConnectionBroker "rdcb.contoso.com"
+    ```
+
+    This command sets these options for the RD Gateway server:
+
+    - Authorized users automatically detect settings from the RD Gateway server.
+
+    - The RD Gateway server has an FQDN of rdcb.contoso.com.
+
+    - Remote users authenticate access when they connect, use RD Gateway access credentials to authenticate access to the remote computer, and bypass the RD Gateway server for local connections.
+
+    - The cmdlet also specifies rdcb.contoso.com as the RD Connection Broker server.
+links:
+- text: Get-RDDeploymentGatewayConfiguration
+  href: ./Get-RDDeploymentGatewayConfiguration.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/rdmgmt/set-rddeploymentgatewayconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-RDDeploymentGatewayConfiguration

@@ -1,0 +1,153 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Remove-WBPolicy
+name: Remove-WBPolicy
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Removes the backup policy.
+description: |-
+  The **Remove-WBPolicy** cmdlet removes the **WBPolicy** object.
+  This cmdlet stops scheduled daily backups from running.
+  If the backup storage location is a disk, the cmdlet frees the disk.
+  If the system does not have a scheduled backup, the cmdlet does not do anything.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+notes: |-
+  * The **WBPolicy** object must be in edit mode. To put the **WBPolicy** object in edit mode for a policy that is set as the scheduled backup policy, use the Get-WBPolicy cmdlet with the *Editable* parameter. The New-WBPolicy cmdlet creates a **WBPolicy** object that is already in edit mode.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet removes the **WBPolicy** object that is set in the system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the backup policy object that this cmdlet updates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-WBPolicy
+        [[-Policy] <WBPolicy>]
+        [-All]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Windows.ServerBackup.Commands.WBPolicy" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove all scheduled backups'
+  description: |-
+    ```
+    PS C:\> Remove-WBPolicy -All -Force
+    ```
+
+    This command removes the currently set **WBPolicy** object and disables all scheduled backups on the system.
+    The command also uses the *Force* parameter to suppress the confirmation message.
+- title: 'Example 2: Remove a specified backup policy'
+  description: |-
+    ```
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Remove-WBPolicy -Policy $Policy
+    ```
+
+    This command store the result of the [Get-WBPolicy](./Get-WBPolicy.yml) cmdlet in the variable named $Policy, then removes the **WBPolicy** object, which disables all scheduled backups on the system.
+links:
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: New-WBPolicy
+  href: ./New-WBPolicy.yml
+- text: Set-WBPolicy
+  href: ./Set-WBPolicy.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/remove-wbpolicy?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-WBPolicy

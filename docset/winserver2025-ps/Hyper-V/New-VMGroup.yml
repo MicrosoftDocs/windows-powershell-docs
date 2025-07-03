@@ -1,0 +1,173 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.New-VMGroup
+name: New-VMGroup
+module: Hyper-V
+isPreview: false
+summary: |-
+  Creates a virtual machine group.
+
+  With Hyper-V, there are two types of VMGroups: a VMCollectionType and a ManagementCollectionType.
+  A VMCollectionType VMGroup contains VMs while the ManagementCollectionType VMGroup contains VMCollectionType VMGroups.
+  For example, you could have two VMCollectionType VMGroups VMG1 (containing VMs VM1 and VM2) and a second VMG2 (containing VMs VM3 and VM4).
+  You could then create a ManagementCollectionType VMGroup VM-All containing the two VMCollectionType VMGroups.
+  You use the [Add-VMGroupMember](./Add-VMGroupMember.yml) cmdlet to add VMs to VMCollectionType VMGroups and to add VMCollectionType groups to ManagementCollectionType VMGroups.
+description: |-
+  The **New-VMGroup** cmdlet creates a virtual machine group.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts that run this cmdlet.
+      NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+      The default is the local computer.
+      Use localhost or a dot (.) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupType
+    type: <xref href="GroupType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of group that this cmdlet creates.
+      The acceptable values for this parameter are: ManagementCollectionType and VMCollectionType.
+    acceptedValues:
+    - VMCollectionType
+    - ManagementCollectionType
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unique ID of the group that this cmdlet creates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name for the group that this cmdlet creates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-VMGroup
+        [-Name] <String>
+        [-GroupType] <GroupType>
+        [[-Id] <Guid>]
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a group to contain virtual machines'
+  description: |-
+    ```powershell
+    PS C:\> New-VMGroup -Name 'CollectionGroup07' -GroupType VMCollectionType
+    ```
+
+    This command creates a virtual machine group named CollectionGroup07 of type VMCollectionType.
+    This group can contain collections of virtual machines.
+- title: 'Example 2: Create a group to contain groups of virtual machines'
+  description: |-
+    ```powershell
+    PS C:\> New-VMGroup -Name 'ManagementCollectionGroup03' -GroupType ManagementCollectionType
+    ```
+
+    This command creates a virtual machine group named ManagementCollectionGroup03 of type ManagementCollectionType.
+    This group can contain collections of other groups.
+links:
+- text: Get-VMGroup
+  href: ./Get-VMGroup.yml
+- text: Remove-VMGroup
+  href: ./Remove-VMGroup.yml
+- text: Rename-VMGroup
+  href: ./Rename-VMGroup.yml
+- text: Add-VMGroupMember
+  href: ./Add-VMGroupMember.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/new-vmgroup?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-VMGroup

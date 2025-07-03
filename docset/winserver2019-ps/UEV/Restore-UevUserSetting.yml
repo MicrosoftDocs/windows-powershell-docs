@@ -1,0 +1,187 @@
+### YamlMime:PowerShellCmdlet1
+uid: UEV.Restore-UevUserSetting
+name: Restore-UevUserSetting
+module: UEV
+isPreview: false
+summary: |-
+  Sets a restore flag for the user settings.
+description: |-
+  The **Restore-UevUserSetting** cmdlet sets a restore flag for the user application settings or Windows operating system settings group.
+  You must perform this action for each application for which to restore the user settings.
+  The settings are restored the next time you run the application or log on to the operating system.
+parameters:
+  cmdletParameters:
+  - name: Application
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an application.
+      Use the application name, or a partial name with wildcard characters, to set the restore flag for specific applications.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetApplication
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetApplication
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LastKnownGood
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet restores the application to the settings last known good state.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a template.
+      The cmdlet sets the restore flag for the application settings or operating system settings group to restore.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetTemplateId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Restore-UevUserSetting
+        -Application <String>
+        [-Force]
+        [-LastKnownGood]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetApplication
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-UevUserSetting
+        [-TemplateId] <String>
+        [-LastKnownGood]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetTemplateId
+  isDefault: false
+examples:
+- title: 'Example 1: Restore user settings for a specific template'
+  description: |-
+    ```
+    PS C:\> Restore-UevUserSetting -TemplateId "MicrosoftCalculator6"
+    ```
+
+    This command sets a restore flag for the user settings that are identified by the template ID MicrosoftCalculator6.
+- title: 'Example 2: Restore all user settings'
+  description: |-
+    ```
+    PS C:\> Get-UevTemplate | Restore-UevUserSetting
+    ```
+
+    This command sets a restore flag for all user settings.
+- title: 'Example 3: Restore user settings that match an application name'
+  description: |-
+    ```
+    PS C:\> Restore-UevUserSetting -Application "word"
+    Confirm
+    The following user settings will be restored:
+
+    MicrosoftOffice2010.Word (Microsoft Office 2010.Word)
+    MicrosoftWordpad6 (Microsoft Wordpad)
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
+    ```
+
+    This command sets a restore flag for user settings for applications with names that contain the string word.
+- title: 'Example 4: Restore user settings that match a pattern'
+  description: |-
+    ```
+    PS C:\> Restore-UevUserSetting -Application "office*word" -Force
+    ```
+
+    This command sets a restore flag for the user settings of the application whose name contains the strings office and word, in that order.
+links:
+- text: Get-UevTemplate
+  href: ./Get-UevTemplate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/uev/restore-uevusersetting?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: UEV
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Restore-UevUserSetting

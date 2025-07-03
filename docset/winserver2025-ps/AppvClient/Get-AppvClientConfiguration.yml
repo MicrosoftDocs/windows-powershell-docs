@@ -1,0 +1,78 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Get-AppvClientConfiguration
+name: Get-AppvClientConfiguration
+module: AppvClient
+isPreview: false
+summary: |-
+  Returns the configuration for the App-V client.
+description: |-
+  The **Get-AppvClientConfiguration** cmdlet returns an object that contains all of the settings and permissions for the Microsoft Application Virtualization (App-V) client.
+  These settings include both App-V client settings and permissions.
+
+  If a particular setting is specified, the cmdlet returns the value for that setting.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a setting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AppvClientConfiguration
+        [[-Name] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.AppV.AppvClientPowerShell.AppvClientConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    The cmdlet returns an **AppvClientConfiguration** object, if you do not specify the *Name* parameter.
+    The object is displayed as a two column table.
+    The first column contains the specific configuration and the second column contains the associated current value.
+
+    If you specify *Name*, the cmdlet returns the same two column table, but only for the configuration requested.
+examples:
+- title: 'Example 1: Display all configuration settings'
+  description: |-
+    ```
+    PS C:\> Get-AppvClientConfiguration
+    ```
+
+    This command displays all of the App-V Client Configuration settings.
+- title: 'Example 2: Display a single configuration setting'
+  description: |-
+    ```
+    PS C:\> Get-AppvClientConfiguration -Name "PackageSourceRoot"
+    ```
+
+    This command displays the value of the **PackageSourceRoot** setting.
+links:
+- text: Set-AppvClientConfiguration
+  href: ./Set-AppvClientConfiguration.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/get-appvclientconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AppvClientConfiguration

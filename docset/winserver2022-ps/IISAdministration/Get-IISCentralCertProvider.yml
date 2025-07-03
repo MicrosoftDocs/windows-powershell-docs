@@ -1,0 +1,146 @@
+### YamlMime:PowerShellCmdlet1
+uid: IISAdministration.Get-IISCentralCertProvider
+name: Get-IISCentralCertProvider
+module: IISAdministration
+isPreview: false
+summary: |-
+  Gets information about the IIS central certificate store.
+description: |-
+  The **Get-IISCentralCertProvider** cmdlet returns information about the IIS central certificate store.
+  The central certificate store allows you to store all your IIS certificates in a centralized location (such as a file share); IIS servers then retrieve certificate from this centralized location.
+  That means that you only have to install certificates in one location; there is no need to install the same certificate on each and every IIS server.
+
+  Called without any parameters, **Get-IISCentralCertProvider** returns information for all the certificate store property values.
+  Alternatively, you can include one or more optional parameters in order to limit the returned data only to the specified properties.
+  For example, this command limits the returned data to the **Enabled** property:
+
+  Get-IISCentralCertProvider -Enabled
+parameters:
+  cmdletParameters:
+  - name: CertStoreLocation
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the certificate store location will be returned when running the command.
+      If no parameters are specified when calling **Get-IISCentralCertProvider** then information will be returned for all the property values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enabled
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the current state of the central store (enabled or disabled) will be returned when running the command.
+      If no parameters are specified when calling **Get-IISCentralCertProvider** then information will be returned for all the property values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateKeyPassword
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the private key password will be returned when running the command.
+      If no parameters are specified when calling **Get-IISCentralCertProvider** then information will be returned for all the property values.
+
+      Note that the password itself will not be displayed on screen; instead, you will only see a series of asterisks (*******).
+      While this does not tell you what the private key password is, it does let you know that a private key password has been configured for the certificate store.
+      If no value is returned for the **PrivateKeyPassword** property that means that no private key password has been assigned to the certificate store.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserName
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the central store user account name will be returned when running the command.
+      If no parameters are specified when calling **Get-IISCentralCertProvider** then information will be returned for all the property values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-IISCentralCertProvider
+        [-CertStoreLocation]
+        [-UserName]
+        [-PrivateKeyPassword]
+        [-Enabled]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Get-IISCentralCertProvider
+    ```
+
+    This command returns information about the IIS central certificate store.
+    Because no parameters are used when running this command **Get-IISCentralCertProvider** returns information for all the certificate store properties.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Get-IISCentralCertProvider -CertStoreLocation -UserName
+    ```
+
+    This command returns information for two properties of the IIS central certificate store: the store location (**CertStoreLocation**) and the name of the user account used for accessing the store (**UserName**).
+    Values for other properties (such as the private key password) are not returned.
+    To return all the property values leave off all parameter when calling **Get-IISCentralCertProvider**.
+links:
+- text: Clear-IISCentralCertProvider
+  href: ./Clear-IISCentralCertProvider.yml
+- text: Disable-IISCentralCertProvider
+  href: ./Disable-IISCentralCertProvider.yml
+- text: Enable-IISCentralCertProvider
+  href: ./Enable-IISCentralCertProvider.yml
+- text: Set-IISCentralCertProvider
+  href: ./Set-IISCentralCertProvider.yml
+- text: Set-IISCentralCertProviderCredential
+  href: ./Set-IISCentralCertProviderCredential.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iisadministration/get-iiscentralcertprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-IISCentralCertProvider

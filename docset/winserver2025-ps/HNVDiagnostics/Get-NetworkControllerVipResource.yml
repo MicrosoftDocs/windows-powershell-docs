@@ -1,0 +1,174 @@
+### YamlMime:PowerShellCmdlet1
+uid: HNVDiagnostics.Get-NetworkControllerVipResource
+name: Get-NetworkControllerVipResource
+module: HNVDiagnostics
+isPreview: false
+summary: |-
+  Gets a VIP resource.
+description: |-
+  The **Get-NetworkControllerVipResource** cmdlet gets information, such as the MUXes and DIP hosts, for the specified virtual IP address (VIP) resource.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a certificate thumbprint for Network Controller.
+      Specify this parameter for a certificate deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials to use for Network Controller.
+      Specify this parameter for a Kerberos deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Direction
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the direction of the traffic flow.
+      The acceptable values for this parameter are:
+
+      - In
+      - Out
+    acceptedValues:
+    - Out
+    - In
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DstPort
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the port for the VIP resource to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP address of the VIP resource to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the protocol of the VIP resource to get.
+    acceptedValues:
+    - Tcp
+    - Udp
+    - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestURI
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URI to use for Network Controller REST APIs.
+      Specify this parameter for a wild card certificate deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NetworkControllerVipResource
+        [[-RestURI] <String>]
+        [[-CertificateThumbprint] <String>]
+        [[-Credential] <PSCredential>]
+        [[-Direction] <String>]
+        [-IPAddress] <String>
+        [[-DstPort] <String>]
+        [[-Protocol] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a Network Controller VIP resource'
+  description: |-
+    ```
+    PS C:\> $Cred = Get-Credential
+    PS C:\> Get-NetworkControllerVipResource -Credential $Cred -DstPort 80 -IPAddress 10.123.176.108 -Direction "In"
+    ```
+
+    The first command gets the credentials and stores them in the $Cred variable.
+
+    The second command gets the specified VIP resource using the credentials in $Cred.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Get-VipConnectivityInfo.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hnvdiagnostics/get-networkcontrollervipresource?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NetworkControllerVipResource

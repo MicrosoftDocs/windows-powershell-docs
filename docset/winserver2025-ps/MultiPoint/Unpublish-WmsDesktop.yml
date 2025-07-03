@@ -1,0 +1,86 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Unpublish-WmsDesktop
+name: Unpublish-WmsDesktop
+module: MultiPoint
+isPreview: false
+summary: |-
+  Stops the sharing of the specified session desktop.
+description: |-
+  The **Unpublish-WmsDesktop** cmdlet stops the sharing of the specified session desktop.
+parameters:
+  cmdletParameters:
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+      The default is localhost.
+    aliases:
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SessionId
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the session ID to stop sharing.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Unpublish-WmsDesktop
+        [-SessionId] <UInt32>
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Stop sharing a desktop'
+  description: |-
+    ```
+    PS C:\> Unpublish-WmsDesktop -SessionId 2
+    ```
+
+    This command stops desktop sharing of the desktop with the session ID of 2.
+links:
+- text: Publish-WmsDesktop
+  href: ./Publish-WmsDesktop.yml
+- text: Show-WmsDesktop
+  href: ./Show-WmsDesktop.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/unpublish-wmsdesktop?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Unpublish-WmsDesktop

@@ -1,0 +1,35 @@
+### YamlMime:PowerShellModule1
+uid: DcbQos
+name: DcbQos Module
+isPreview: false
+cmdletGroups:
+- title: DcbQos Cmdlets
+  cmdlets:
+  - DcbQos.Disable-NetQosFlowControl
+  - DcbQos.Enable-NetQosFlowControl
+  - DcbQos.Get-NetQosDcbxSetting
+  - DcbQos.Get-NetQosFlowControl
+  - DcbQos.Get-NetQosTrafficClass
+  - DcbQos.New-NetQosTrafficClass
+  - DcbQos.Remove-NetQosTrafficClass
+  - DcbQos.Set-NetQosDcbxSetting
+  - DcbQos.Set-NetQosFlowControl
+  - DcbQos.Set-NetQosTrafficClass
+  - DcbQos.Switch-NetQosDcbxSetting
+  - DcbQos.Switch-NetQosFlowControl
+  - DcbQos.Switch-NetQosTrafficClass
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Data Center Bridging (DCB) Quality of
+  Service (QoS)-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the
+  beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: b57d41f8-8b6b-4012-912f-b08109101281
+  Module Name: DcbQos
+  ms.date: 12/27/2016
+  title: DcbQos
+  PlatyPS schema version: 2024-05-01
+  document type: module

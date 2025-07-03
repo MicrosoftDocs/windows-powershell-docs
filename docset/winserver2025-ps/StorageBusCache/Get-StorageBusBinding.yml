@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: StorageBusCache.Get-StorageBusBinding
+name: Get-StorageBusBinding
+module: StorageBusCache
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: Guid
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Guid Description }}
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Number
+    type: <xref href="System.UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Number Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNumber
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PhysicalDisk
+    type: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill PhysicalDisk Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPhysicalDisk
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-StorageBusBinding
+        [-Guid <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByGuid
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-StorageBusBinding
+        -Number <UInt16>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNumber
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-StorageBusBinding
+        -PhysicalDisk <CimInstance>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPhysicalDisk
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.UInt16" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: StorageBusCache-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storagebuscache/get-storagebusbinding?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: StorageBusCache
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-StorageBusBinding

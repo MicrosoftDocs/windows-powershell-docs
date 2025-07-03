@@ -1,0 +1,44 @@
+### YamlMime:PowerShellCmdlet1
+uid: NPS.Get-NpsRadiusClient
+name: Get-NpsRadiusClient
+module: NPS
+isPreview: false
+summary: |-
+  Gets RADIUS clients.
+description: |-
+  The **Get-NpsRadiusClient** cmdlet gets Remote Authentication Dial-In User Service (RADIUS) clients.
+  A RADIUS client uses a RADIUS server to manage authentication, authorization, and accounting requests that the client sends.
+  A RADIUS client can be an access server, such as a dial-up server or wireless access point, or a RADIUS proxy.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NpsRadiusClient
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="NpsRadiusClient" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all RADIUS clients'
+  description: |-
+    ```
+    PS C:\>Get-NpsRadiusClient
+    ```
+
+    This command gets a list of all RADIUS clients.
+links:
+- text: New-NpsRadiusClient
+  href: ./New-NpsRadiusClient.yml
+- text: Remove-NpsRadiusClient
+  href: ./Remove-NpsRadiusClient.yml
+- text: Set-NpsRadiusClient
+  href: ./Set-NpsRadiusClient.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NPS.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/nps/get-npsradiusclient?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NPS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NpsRadiusClient

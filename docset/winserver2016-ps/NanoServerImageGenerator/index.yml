@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: NanoServerImageGenerator
+name: NanoServerImageGenerator Module
+isPreview: false
+cmdletGroups:
+- title: NanoServerImageGenerator Cmdlets
+  cmdlets:
+  - NanoServerImageGenerator.Edit-NanoServerImage
+  - NanoServerImageGenerator.Get-NanoServerPackage
+  - NanoServerImageGenerator.New-NanoServerImage
+description: |-
+  The Nano Server Image Generator cmdlets are used to create and edit Nano Server installation images.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  HelpInfoUri: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.0.3
+  Locale: en-US
+  Module Guid: d1079600-ad0a-4837-8ed9-ce3d6797f5a2
+  Module Name: NanoServerImageGenerator
+  ms.date: 12/20/2016
+  title: NanoServerImageGenerator
+  PlatyPS schema version: 2024-05-01
+  document type: module

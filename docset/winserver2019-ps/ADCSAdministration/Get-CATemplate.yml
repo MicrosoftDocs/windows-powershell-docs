@@ -1,0 +1,45 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADCSAdministration.Get-CATemplate
+name: Get-CATemplate
+module: ADCSAdministration
+isPreview: false
+summary: |-
+  Gets the list of templates set on the CA for issuance of certificates.
+description: |-
+  The **Get-CATemplate** cmdlet gets the list of templates set on the certificate authority (CA) for issuance of certificates.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-CATemplate
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Administration.Commands.Common.CertificateTemplate" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an array of certificate template objects which have two properties: (1) Object Name and (2) Object ID (OID).
+    Both properties are of string type.
+examples:
+- title: 'Example 1: Get the list of templates set on the CA for issuance of certificates'
+  description: |-
+    ```
+    PS C:\> Get-CATemplate
+    ```
+
+    This command gets a list of certificate template entries that each contain a template name.
+links:
+- text: Add-CATemplate
+  href: ./Add-CATemplate.yml
+- text: Remove-CATemplate
+  href: ./Remove-CATemplate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adcsadministration/get-catemplate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADCSAdministration
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-CATemplate

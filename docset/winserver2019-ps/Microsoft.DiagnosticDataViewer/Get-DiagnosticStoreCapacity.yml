@@ -1,0 +1,99 @@
+### YamlMime:PowerShellCmdlet1
+uid: Microsoft.DiagnosticDataViewer.Get-DiagnosticStoreCapacity
+name: Get-DiagnosticStoreCapacity
+module: Microsoft.DiagnosticDataViewer
+isPreview: false
+summary: |-
+  Fetches the current diagnostic store capacity.
+  Parameter \[-Size\] returns the diagnostic store size capacity in megabytes.
+  Parameter \[-Time\] returns the diagnostic store capacity in days.
+  The default diagnostic data store size capacity is 1024 MB.
+  The default time capacity is 30 days.
+description: |-
+  The amount of Diagnostic Data history that can be shown through this tool is capped based on time in days and size in megabytes.
+  Once either cap is reached (whichever comes first), diagnostic data is removed based on a first in first out order.
+  For example, if the size cap is 1GB and the time cap is 30 days, then once the diagnostic data store has reached 1GB of history or the oldest record is 30 days old (whichever comes first), the oldest seen event is dropped.
+notes: |-
+  Requires Windows 10 version 17134 (1803) or higher
+parameters:
+  cmdletParameters:
+  - name: Size
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Get configured size capacity (megabytes) of the Diagnostic store.
+    aliases:
+    - s
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Time
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Get configured time capacity (hours) of the Diagnostic store.
+    aliases:
+    - t
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-DiagnosticStoreCapacity
+        [-Size]
+        [-Time]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: |-
+    Get configured size capacity (megabytes) of the Diagnostic store.
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+  description: |-
+    Get configured time capacity (hours) of the Diagnostic store.
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```
+    Get-DiagnosticStoreCapacity -Size
+    ```
+
+    Get configured size capacity (megabytes) of the Diagnostic store.
+- title: EXAMPLE 2
+  description: |-
+    ```
+    Get-DiagnosticStoreCapacity -Time
+    ```
+
+    Get configured time capacity (hours) of the Diagnostic store.
+metadata:
+  document type: cmdlet
+  external help file: DDVCmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/get-diagnosticstorecapacity?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: Microsoft.DiagnosticDataViewer
+  PlatyPS schema version: 2024-05-01
+  title: Get-DiagnosticStoreCapacity

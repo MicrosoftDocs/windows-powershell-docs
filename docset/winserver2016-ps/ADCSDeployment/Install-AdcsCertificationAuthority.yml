@@ -1,0 +1,623 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADCSDeployment.Install-AdcsCertificationAuthority
+name: Install-AdcsCertificationAuthority
+module: ADCSDeployment
+isPreview: false
+summary: |-
+  Performs installation and configuration of the AD CS Certification Authority role service.
+description: |-
+  The **Install-AdcsCertificationAuthority** cmdlet performs installation and configuration of the Active Directory Certificate Services (AD CS) Certification Authority (CA) role service.
+  To remove the certification authority role service use the **Uninstall-AdcsCertificationAuthority** cmdlet.
+
+  You can import the cmdlet by running the following commands from Windows PowerShell:
+
+  - `Install-WindowsFeature Adcs-Cert-Authority`
+
+  To include the Certification Authority and Certificate Templates consoles in a CA installation, you must use the *IncludeManagementTools* parameter at the end of the `Install-WindowsFeature Adcs-Cert-Authority` command.
+
+  Int is equivalent to Int32 in the [.NET Framework](/dotnet/csharp/language-reference/builtin-types/built-in-types).
+notes: |-
+  * Ensure you run Windows PowerShell as an administrator. You can use the *force* parameter to bypass the prompt for confirmation.
+  To see parameters, run the following command: `Install-AdcsCertificationAuthority -?`
+  If you have installation issues, try using the *verbose* parameter to get verbose output and review the information in the %windir%\cerocm.log file.
+parameters:
+  cmdletParameters:
+  - name: AllowAdministratorInteraction
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet enables prompting when the private key is accessed.
+      This is not required for any of the Microsoft default providers.
+      For enhanced security components, such as a hardware security module (HSM), review the enhanced security component vendor documentation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CACommonName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certification authority common name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CADistinguishedNameSuffix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certification authority distinguished name suffix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExistingKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CAType
+    type: <xref href="CAType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of certification authority that this cmdlet installs.
+      The acceptable values for this parameter are:
+
+      - EnterpriseRootCA
+      - EnterpriseSubordinateCA
+      - StandaloneRootCA
+      - StandaloneSubordinateCA
+    acceptedValues:
+    - EnterpriseRootCA
+    - EnterpriseSubordinateCA
+    - StandaloneRootCA
+    - StandaloneSubordinateCA
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the file name of certification authority PKCS #12 formatted certificate file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExistingCertificateParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertFilePassword
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password for certification authority certificate file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExistingCertificateParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateID
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the thumbprint or serial number of certification authority certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExistingCertificateParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSCredential** object for the connection to AD DS.
+      To obtain a credential object, use the **Get-Credential** cmdlet.
+      For more information, type `Get-Help Get-Credential`.
+      To install an enterprise certification authority, the computer must be joined to an AD DS domain and a user account that is a member of the Enterprise Admin group is required.
+      To install a standalone certification authority, the computer can be in a workgroup or AD DS domain.
+      If the computer is in a workgroup, a user account that is a member of Administrators is required.
+      If the computer is in an AD DS domain, a user account that is a member of Domain Admins is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CryptoProviderName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cryptographic service provider (CSP) or key storage provider (KSP) that is used to generate or store the private key for the CA.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExistingKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseDirectory
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the folder location of the certification authority database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HashAlgorithmName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the signature hash algorithm used by the certification authority.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExistingKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IgnoreUnicode
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet allows Unicode characters in the certification authority name string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExistingKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyContainerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an existing private key container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExistingKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyLength
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the bit length for new certification authority key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogDirectory
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the folder location of the certification authority database log.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputCertRequestFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the folder location for certificate request file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExistingKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OverwriteExistingCAinDS
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet overwrites the computer object in the Active Directory Domain Service domain with the same computer name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExistingKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OverwriteExistingDatabase
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet overwrites the existing certification authority database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OverwriteExistingKey
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet overwrites the existing key container with the same name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExistingCertificateParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentCA
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the configuration string of the parent certification authority that will certify this CA.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExistingKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ValidityPeriod
+    type: <xref href="ValidityPeriod" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the validity period of the certification authority (CA) certificate in hours, days, weeks, months or years.
+      If this is a subordinate CA, do not use this parameter, because the validity period is determined by the parent CA.
+    acceptedValues:
+    - Hours
+    - Days
+    - Weeks
+    - Months
+    - Years
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExistingKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ValidityPeriodUnits
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the validity period of the CA certificate.
+      If this is a subordinate CA, do not specify this parameter because the validity period is determined by the parent CA.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExistingKeyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Install-AdcsCertificationAuthority
+        [-AllowAdministratorInteraction]
+        [-ValidityPeriod <ValidityPeriod>]
+        [-ValidityPeriodUnits <Int32>]
+        [-CACommonName <String>]
+        [-CADistinguishedNameSuffix <String>]
+        [-CAType <CAType>]
+        [-CryptoProviderName <String>]
+        [-DatabaseDirectory <String>]
+        [-HashAlgorithmName <String>]
+        [-IgnoreUnicode]
+        [-KeyLength <Int32>]
+        [-LogDirectory <String>]
+        [-OutputCertRequestFile <String>]
+        [-OverwriteExistingCAinDS]
+        [-OverwriteExistingKey]
+        [-ParentCA <String>]
+        [-OverwriteExistingDatabase]
+        [-Credential <PSCredential>]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewKeyParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Install-AdcsCertificationAuthority
+        [-AllowAdministratorInteraction]
+        [-CertFilePassword <SecureString>]
+        [-CertFile <String>]
+        [-CAType <CAType>]
+        [-CertificateID <String>]
+        [-DatabaseDirectory <String>]
+        [-LogDirectory <String>]
+        [-OverwriteExistingKey]
+        [-OverwriteExistingDatabase]
+        [-Credential <PSCredential>]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExistingCertificateParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Install-AdcsCertificationAuthority
+        [-AllowAdministratorInteraction]
+        [-ValidityPeriod <ValidityPeriod>]
+        [-ValidityPeriodUnits <Int32>]
+        [-CADistinguishedNameSuffix <String>]
+        [-CAType <CAType>]
+        [-CryptoProviderName <String>]
+        [-DatabaseDirectory <String>]
+        [-HashAlgorithmName <String>]
+        [-IgnoreUnicode]
+        [-KeyContainerName <String>]
+        [-LogDirectory <String>]
+        [-OutputCertRequestFile <String>]
+        [-OverwriteExistingCAinDS]
+        [-ParentCA <String>]
+        [-OverwriteExistingDatabase]
+        [-Credential <PSCredential>]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExistingKeyParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="bool, string, string, enum, string, SecureString, string, string, string, string, bool, string, long, string, string, bool, bool, bool, string, enum, long" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Deployment.Commands.CA.CertificationAuthoritySetupResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Install a new Standalone Root CA with default settings'
+  description: |-
+    ```powershell
+    PS C:\> Install-AdcsCertificationAuthority -CAType StandaloneRootCa
+    ```
+
+    This command installs a new Standalone Root CA with default settings.
+- title: 'Example 2: Install a new Enterprise Root CA using a specific provider and key length'
+  description: |-
+    ```powershell
+    PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseRootCa -CryptoProviderName "ECDSA_P256#Microsoft Software Key Storage Provider" -KeyLength 256 -HashAlgorithmName SHA256
+    ```
+
+    This command installs a new Enterprise Root CA using the provider named ECDSA_P256 Microsoft Software Key Storage Provider, key length of 256, and the hash algorithm named SHA 256.
+- title: 'Example 3: Install a new Enterprise Root CA using a specific provider and a validity period'
+  description: |-
+    ```powershell
+    PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseRootCa -CryptoProviderName "RSA#Microsoft Software Key Storage Provider" -KeyLength 2048 -HashAlgorithmName SHA1 -ValidityPeriod Years -ValidityPeriodUnits 3
+    ```
+
+    This command installs a new Enterprise Root CA using a RSA algorithm using the provider named Microsoft Software Key Storage Provider, a key length of 2048, a hash algorithm named SHA 1, and validity period of three years.
+- title: 'Example 4: Install a new Enterprise Subordinate CA using a parent CA'
+  description: |-
+    ```powershell
+    PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseSubordinateCa -ParentCA SERVER75.corp.contoso.com\SERVER75-CA
+    ```
+
+    This command installs a new Enterprise subordinate CA, the parent CA is SERVER75 in the CORP domain of Contoso.com.
+- title: 'Example 5: Install a new Enterprise Subordinate CA using an existing certificate'
+  description: |-
+    ```powershell
+    PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseSubordinateCa -CertFile C:\Cert\SERVER80-CA.p12 -CertFilePassword (read-host "Set user password" -assecurestring)
+    ```
+
+    This command installs an Enterprise Subordinate CA using an existing certificate from a PFX/P12 file that is located on the local C:\Cert folder named SERVER80-CA.p12.
+links:
+- text: Uninstall-AdcsCertificationAuthority
+  href: ./Uninstall-AdcsCertificationAuthority.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adcsdeployment/install-adcscertificationauthority?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ADCSDeployment
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Install-AdcsCertificationAuthority

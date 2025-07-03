@@ -1,0 +1,173 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Remove-AdfsWebApiApplication
+name: Remove-AdfsWebApiApplication
+module: ADFS
+isPreview: false
+summary: |-
+  Removes a Web API application role from an application in AD FS.
+description: |-
+  The **Remove-AdfsWebApiApplication** cmdlet removes a Web API application role from an application in Active Directory Federation Services (AD FS).
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetApplication
+    type: <xref href="WebApiApplication" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Web API application to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetIdentifier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the Web API application to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Identifier
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Web API application to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AdfsWebApiApplication
+        [-TargetIdentifier] <String>
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Identifier
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AdfsWebApiApplication
+        [-TargetName] <String>
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AdfsWebApiApplication
+        [-TargetApplication] <WebApiApplication>
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.WebApiApplication" data-throw-if-not-resolved="False" />
+  description: |-
+    WebApiApplication objects are received by the 'TargetApplication' parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *TargetIdentifier* and *TargetName* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.WebApiApplication" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the removed WebApiApplication object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Add-AdfsWebApiApplication
+  href: ./Add-AdfsWebApiApplication.yml
+- text: Get-AdfsWebApiApplication
+  href: ./Get-AdfsWebApiApplication.yml
+- text: Set-AdfsWebApiApplication
+  href: ./Set-AdfsWebApiApplication.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/remove-adfswebapiapplication?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-AdfsWebApiApplication

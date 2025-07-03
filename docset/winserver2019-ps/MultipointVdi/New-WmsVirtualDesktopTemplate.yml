@@ -1,0 +1,194 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultipointVdi.New-WmsVirtualDesktopTemplate
+name: New-WmsVirtualDesktopTemplate
+module: MultipointVdi
+isPreview: false
+summary: |-
+  Create a virtual desktop template.
+description: |-
+  The **New-WmsVirtualDesktopTemplate** cmdlet shuts down all station virtual desktops based on an existing template of the same name.
+  It then creates a virtual desktop template using the virtual hard disk created with Import-WmsVirtualDesktop.
+  This virtual desktop is in either a workgroup or attached to the supplied domain, and has an administrative account with the specified user name and password.
+parameters:
+  cmdletParameters:
+  - name: AdministratorPassword
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password to assign to the Administrator account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonDomainJoin
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdministratorUser
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a user to create in the virtual desktop template that has Administrator privileges.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Domain
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Active Directory domain for the virtual desktop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DomainJoin
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path of the input file to use for the virtual desktop template.
+      Valid file types are .wim, .iso, or .vhd that contains the version of Windows to use as the guest operating system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplatePrefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the prefix to use for the name of the virtual machine template.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VhdLocation
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the location to store the desktop template and station .vhd files.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-WmsVirtualDesktopTemplate
+        -InputFilePath <String>
+        -TemplatePrefix <String>
+        -AdministratorUser <String>
+        -AdministratorPassword <String>
+        [-VhdLocation <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NonDomainJoin
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-WmsVirtualDesktopTemplate
+        -InputFilePath <String>
+        -TemplatePrefix <String>
+        -AdministratorUser <String>
+        -Domain <String>
+        [-VhdLocation <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DomainJoin
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a virtual desktop template'
+  description: |-
+    ```
+    PS C:\> New-WmsVirtualDesktopTemplate -InputFilePath "C:\Images\Windows10Enterprise.iso" -TemplatePrefix "MyVdiImage" -VhdLocation "C:\MultiPointVhdImages" -AdministratorUser "admin" -AdministratorPassword "password"
+    ```
+
+    This command creates a virtual desktop template that you can customize or use to generate station virtual desktops.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPointVdi.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipointvdi/new-wmsvirtualdesktoptemplate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: MultipointVdi
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-WmsVirtualDesktopTemplate

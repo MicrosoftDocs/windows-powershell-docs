@@ -1,0 +1,92 @@
+### YamlMime:PowerShellCmdlet1
+uid: Appx.Remove-AppSharedPackageContainer
+name: Remove-AppSharedPackageContainer
+module: Appx
+isPreview: false
+summary: |-
+  Removes the shared package container.
+description: |-
+  The cmdlet removes the shared package container definition for the particular user.
+parameters:
+  cmdletParameters:
+  - name: AllUsers
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Unsupported. Will result in `-AllUsers functionality is not yet implemented` error.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForceApplicationShutdown
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Closes all packages in the Shared Package Container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AppSharedPackageContainer
+        [-Name] <String>
+        [-ForceApplicationShutdown]
+        [-AllUsers]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Remove-AppSharedPackageContainer -Name ContosoTestContainer
+    ```
+
+    This command removes the shared package container definition with the name `ContosoTestContainer`.
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appx/remove-appsharedpackagecontainer?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: appx
+  ms.date: 05/15/2023
+  PlatyPS schema version: 2024-05-01
+  title: Remove-AppSharedPackageContainer

@@ -1,0 +1,150 @@
+### YamlMime:PowerShellCmdlet1
+uid: VMDirectStorage.Remove-VMDirectVirtualDisk
+name: Remove-VMDirectVirtualDisk
+module: VMDirectStorage
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="Microsoft.Management.Infrastructure.CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      {{ Fill CimSession Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ControllerLocation
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill ControllerLocation Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVMName
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ControllerNumber
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill ControllerNumber Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVMName
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ControllerType
+    type: <xref href="ControllerType" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill ControllerType Description }}
+    acceptedValues:
+    - SCSI
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVMName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualDisk
+    type: <xref href="VMDirectVirtualDisk" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      {{ Fill VirtualDisk Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualDisk
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill VMName Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVMName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-VMDirectVirtualDisk
+        [-VMName] <String>
+        [-ControllerType] <ControllerType>
+        [-ControllerNumber] <Int32>
+        [-ControllerLocation] <Int32>
+        [-CimSession <CimSession[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVMName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-VMDirectVirtualDisk
+        [-VirtualDisk] <VMDirectVirtualDisk[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualDisk
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="VMDirectVirtualDisk" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: VMDirectStorage-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/vmdirectstorage/remove-vmdirectvirtualdisk?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: VMDirectStorage
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Remove-VMDirectVirtualDisk

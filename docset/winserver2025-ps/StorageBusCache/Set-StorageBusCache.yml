@@ -1,0 +1,156 @@
+### YamlMime:PowerShellCmdlet1
+uid: StorageBusCache.Set-StorageBusCache
+name: Set-StorageBusCache
+module: StorageBusCache
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: CacheMetadataReserveBytes
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill CacheMetadataReserveBytes Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CacheModeHDD
+    type: <xref href="Microsoft.Windows.Storage.StorageBusCache.CacheModeSet" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill CacheModeHDD Description }}
+    acceptedValues:
+    - ReadOnly
+    - ReadWrite
+    - WriteOnly
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CacheModeSSD
+    type: <xref href="Microsoft.Windows.Storage.StorageBusCache.CacheModeSet" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill CacheModeSSD Description }}
+    acceptedValues:
+    - ReadOnly
+    - ReadWrite
+    - WriteOnly
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CachePageSizeKBytes
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill CachePageSizeKBytes Description }}
+    acceptedValues:
+    - "8"
+    - "16"
+    - "32"
+    - "64"
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProvisionMode
+    type: <xref href="Microsoft.Windows.Storage.StorageBusCache.ProvisionMode" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill ProvisionMode Description }}
+    acceptedValues:
+    - Shared
+    - Cache
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharedCachePercent
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill SharedCachePercent Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-StorageBusCache
+        [[-CacheMetadataReserveBytes] <UInt64>]
+        [[-CacheModeHDD] <CacheModeSet>]
+        [[-CacheModeSSD] <CacheModeSet>]
+        [[-CachePageSizeKBytes] <UInt32>]
+        [[-SharedCachePercent] <UInt32>]
+        [[-ProvisionMode] <ProvisionMode>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: StorageBusCache-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storagebuscache/set-storagebuscache?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: StorageBusCache
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Set-StorageBusCache

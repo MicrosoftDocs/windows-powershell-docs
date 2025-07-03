@@ -1,0 +1,29 @@
+### YamlMime:PowerShellModule1
+uid: PcsvDevice
+name: PcsvDevice Module
+isPreview: false
+cmdletGroups:
+- title: PcsvDevice Cmdlets
+  cmdlets:
+  - PcsvDevice.Clear-PcsvDeviceLog
+  - PcsvDevice.Get-PcsvDevice
+  - PcsvDevice.Get-PcsvDeviceLog
+  - PcsvDevice.Restart-PcsvDevice
+  - PcsvDevice.Set-PcsvDeviceBootConfiguration
+  - PcsvDevice.Set-PcsvDeviceNetworkConfiguration
+  - PcsvDevice.Set-PcsvDeviceUserPassword
+  - PcsvDevice.Start-PcsvDevice
+  - PcsvDevice.Stop-PcsvDevice
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Physical Computer System View cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  HelpInfoUri: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 2.0.0.1
+  Locale: en-US
+  Module Guid: 576ff287-7d01-46a3-8a88-94df7581a2b0
+  Module Name: PcsvDevice
+  ms.date: 01/19/2024
+  title: PcsvDevice
+  PlatyPS schema version: 2024-05-01
+  document type: module

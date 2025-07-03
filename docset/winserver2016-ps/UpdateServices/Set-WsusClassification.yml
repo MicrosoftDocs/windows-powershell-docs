@@ -1,0 +1,122 @@
+### YamlMime:PowerShellCmdlet1
+uid: UpdateServices.Set-WsusClassification
+name: Set-WsusClassification
+module: UpdateServices
+isPreview: false
+summary: |-
+  Sets whether the classifications of updates that WSUS synchronizes are enabled.
+description: |-
+  The **Set-WsusClassification** cmdlet enables or disables the category of updates, for example, security or critical, to be synchronized.
+
+  To use this cmdlet without filtering results, the [Get-WsusClassification](./Get-WsusClassification.yml) cmdlet must be run, then the results are passed it into this cmdlet.
+
+  To use this cmdlet with filtered results, the Get-WsusClassification cmdlet must be run, then results are filtered using the [Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423) cmdlet and passed into this cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Classification
+    type: <xref href="WsusClassification" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the classification of updates that are to be synchronized. If the **Disable** parameter is used, then this parameter specifies the classification of updates that are not to be synchronized. This parameter value is passed from the **Get-WsusClassification** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Disable
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that updates are not to be synchronized for the specified classification.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WsusClassification
+        -Classification <WsusClassification>
+        [-Disable]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Disable driver updates'
+  description: |-
+    ```powershell
+    PS C:\> Get-WsusClassification | Where-Object -FilterScript {$_.Classification.Title -Eq "Drivers"} | Set-WsusClassification -Disable
+    ```
+
+    This command specifies that you do not want driver updates.
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/p/?LinkID=289623
+- text: Get-WsusClassification
+  href: ./Get-WsusClassification.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/updateservices/set-wsusclassification?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WsusClassification

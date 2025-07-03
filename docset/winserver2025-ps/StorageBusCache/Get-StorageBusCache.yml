@@ -1,0 +1,36 @@
+### YamlMime:PowerShellCmdlet1
+uid: StorageBusCache.Get-StorageBusCache
+name: Get-StorageBusCache
+module: StorageBusCache
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-StorageBusCache
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: StorageBusCache-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storagebuscache/get-storagebuscache?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: StorageBusCache
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-StorageBusCache

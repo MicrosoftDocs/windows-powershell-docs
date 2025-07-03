@@ -1,0 +1,94 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsClient.Test-HgsClientConfiguration
+name: Test-HgsClientConfiguration
+module: HgsClient
+isPreview: false
+summary: |-
+  Forces the HGS client to attest against the configured attestation servers.
+description: |-
+  The **Test-HgsClientConfiguration** cmdlet forces the HGS client to attest against an HGS server and report back on the attestation attempt.
+  Any cached attestation health certificates from recent attestation attempts will be ignored.
+parameters:
+  cmdletParameters:
+  - name: UseFallback
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the HGS client should only attest against the fallback attestation server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fallback
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsePrimary
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the HGS client should only attest against the primary attestation server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Primary
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-HgsClientConfiguration
+        [-UsePrimary]
+    ```
+  parameterSetName: Primary
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-HgsClientConfiguration
+        [-UseFallback]
+    ```
+  parameterSetName: Fallback
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: |-
+    An object containing the attestation server URL used and the results of the attestation attempt.
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Test-HgsClientConfiguration
+    ```
+
+    Performs an attestation attempt using the primary HGS server.
+    If the primary HGS server cannot be reached and fallback URLs are configured, the fallback HGS server will be used.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Test-HgsClientConfiguration -UsePrimary
+    ```
+
+    Performs an attestation attempt using the primary HGS server.
+    If the primary HGS server cannot be reached, the cmdlet will fail.
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> Test-HgsClientConfiguration -UseFallback
+    ```
+
+    Performs an attestation attempt using the fallback HGS server.
+metadata:
+  document type: cmdlet
+  external help file: HgsClient-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsclient/test-hgsclientconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsClient
+  PlatyPS schema version: 2024-05-01
+  title: Test-HgsClientConfiguration

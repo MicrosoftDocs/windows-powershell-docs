@@ -1,0 +1,377 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.Copy-NetIntent
+name: Copy-NetIntent
+module: NetworkATC
+isPreview: false
+summary: |-
+  Moves or copies network intents across different hosts or clusters.
+description: |-
+  The `Copy-NetIntent` cmdlet copies or moves a network intent from one host or cluster to another.
+  The source intent is removed if the **RemoveSource** parameter is provided.
+notes: |-
+  The copy and removal operation of the intent isn't a transacted operation.
+parameters:
+  cmdletParameters:
+  - name: DestinationClusterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the destination cluster to which the network intent is to be copied.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ClusterToCluster
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: LocalToCluster
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GlobalClusterToCluster
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GlobalLocalToCluster
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the destination computer where the network intent is to be copied.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LocalToLocal
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ClusterToLocal
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GlobalClusterToLocal
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GlobalLocalToLocal
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GlobalOverrides
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that global override settings during the copy operation for any local
+      settings.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GlobalClusterToLocal
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: GlobalClusterToCluster
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: GlobalLocalToCluster
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: GlobalLocalToLocal
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines a unique name that identifies the network intent. Since intents are uniquely determined by
+      their list of physical adapters, the name is used as an identifier to ensure that each intent is
+      distinct.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LocalToLocal
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ClusterToCluster
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ClusterToLocal
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: LocalToCluster
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RemoveSource
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the original network intent should be removed from the source after the copy
+      operation is completed.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceClusterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the source cluster that contains the network intent to be copied.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ClusterToCluster
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ClusterToLocal
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GlobalClusterToLocal
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GlobalClusterToCluster
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the source computer that holds the network intent to be copied.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LocalToLocal
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: LocalToCluster
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GlobalLocalToCluster
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GlobalLocalToLocal
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Wait
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When specified, the command will wait for the network configuration commands to complete or for
+      status confirmation before returning control.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Copy-NetIntent
+        [[-Name] <String>]
+        [-SourceComputerName] <String>
+        [-DestinationComputerName] <String>
+        [-RemoveSource <Boolean>]
+        [-Wait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LocalToLocal
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Copy-NetIntent
+        [[-Name] <String>]
+        [-SourceClusterName] <String>
+        [-DestinationClusterName] <String>
+        [-RemoveSource <Boolean>]
+        [-Wait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ClusterToCluster
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Copy-NetIntent
+        [[-Name] <String>]
+        [-SourceClusterName] <String>
+        [-DestinationComputerName] <String>
+        [-RemoveSource <Boolean>]
+        [-Wait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ClusterToLocal
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Copy-NetIntent
+        [[-Name] <String>]
+        [-SourceComputerName] <String>
+        [-DestinationClusterName] <String>
+        [-RemoveSource <Boolean>]
+        [-Wait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LocalToCluster
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Copy-NetIntent
+        [-SourceClusterName] <String>
+        [-DestinationComputerName] <String>
+        [-GlobalOverrides]
+        [-RemoveSource <Boolean>]
+        [-Wait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GlobalClusterToLocal
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Copy-NetIntent
+        [-SourceClusterName] <String>
+        [-DestinationClusterName] <String>
+        [-GlobalOverrides]
+        [-RemoveSource <Boolean>]
+        [-Wait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GlobalClusterToCluster
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Copy-NetIntent
+        [-SourceComputerName] <String>
+        [-DestinationClusterName] <String>
+        [-GlobalOverrides]
+        [-RemoveSource <Boolean>]
+        [-Wait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GlobalLocalToCluster
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Copy-NetIntent
+        [-SourceComputerName] <String>
+        [-DestinationComputerName] <String>
+        [-GlobalOverrides]
+        [-RemoveSource <Boolean>]
+        [-Wait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GlobalLocalToLocal
+  isDefault: false
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```powershell
+    Copy-NetIntent -Name "MyIntent" -SourceComputerName "Server01" -DestinationComputerName "Server02"
+    ```
+
+    This example copies a network intent from the standalone device `Server01` to the standalone
+    destination device `Server02`.
+links:
+- text: Add-NetIntent
+  href: Add-NetIntent.yml
+- text: Get-NetIntent
+  href: Get-NetIntent.yml
+- text: Get-NetIntentStatus
+  href: Get-NetIntentStatus.yml
+- text: Remove-NetIntent
+  href: Remove-NetIntent.yml
+- text: Set-NetIntent
+  href: Set-NetIntent.yml
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/copy-netintent?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: Copy-NetIntent

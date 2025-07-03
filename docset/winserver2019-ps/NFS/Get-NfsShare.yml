@@ -1,0 +1,344 @@
+### YamlMime:PowerShellCmdlet1
+uid: NFS.Get-NfsShare
+name: Get-NfsShare
+module: NFS
+isPreview: false
+summary: |-
+  Gets NFS shares on an NFS server.
+description: |-
+  The **Get-NfsShare** cmdlet gets Network File System (NFS) shares that are configured on a computer.
+  By default, the cmdlet gets all the nonclustered (standard) shares from the local computer.
+  If the server belongs to a server cluster, the cmdlet enumerates all the local shares in addition to the cluster shares that belong to resource groups that the local node owns.
+
+  The local node is the node where you run the cmdlet.
+  Shares that belong to resource groups that other nodes of the cluster own are not enumerated.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet runs the command as a background job on a remote computer.
+      Use this parameter to run commands that take an extensive time to finish.
+
+      When you use the *AsJob* parameter, the command returns an object that represents the job, and then displays the command prompt.
+      You can continue to work in the session while the job finishes.
+      To manage the job, use the **Job** cmdlets.
+      To get the job results, use the Receive-Job cmdlet.
+
+      The *AsJob* parameter resembles using the Invoke-Command cmdlet to run a Start-Job command remotely.
+      However, with *AsJob*, the job is created on the local computer, even though the job runs on a remote computer, and the results of the remote job are automatically returned to the local computer.
+
+      For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251) and [about_Remote_Jobs](https://go.microsoft.com/fwlink/?LinkID=135184).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludeName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of share names to exclude from the list of shares that the cmdlet gets from an NFS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludePath
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of share paths to exclude from the list of shares that the cmdlet gets from an NFS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsClustered
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enumerates shares that are highly available and are configured in a failover cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByPath
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LiteralName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of share names to get from an NFS server.
+
+      The cmdlet uses the value of *LiteralName* exactly as typed.
+      The cmdlet does not interpret any characters as wildcards.
+      If the name includes escape characters, enclose it in single quotation marks (').
+      Single quotation marks instruct Windows PowerShell®not to interpret any characters as escape sequences.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByLiteralName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LiteralPath
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of share paths to get from an NFS server.
+
+      The cmdlet uses the value of *LiteralPath* exactly as typed.
+      The cmdlet does not interpret any characters as wildcards.
+      If the name includes escape characters, enclose it in single quotation marks (').
+      Single quotation marks instruct Windows PowerShell not to interpret any characters as escape sequences.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByLiteralPath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of share names to get from a local NFS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of network names.
+      **Get-NfsShare** gets the NFS shares scoped to specified networks.
+
+      For a local NFS share, the network name is the host name.
+      For a server cluster, the network name is the network name in the resource group to which the share is scoped.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByPath
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of share paths on a local NFS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPath
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NfsShare
+        [[-Name] <String[]>]
+        [[-NetworkName] <String[]>]
+        [-ExcludeName <String[]>]
+        [-IsClustered]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-NfsShare
+        -LiteralName <String[]>
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByLiteralName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-NfsShare
+        [[-Path] <String[]>]
+        [[-NetworkName] <String[]>]
+        [-ExcludePath <String[]>]
+        [-IsClustered]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-NfsShare
+        -LiteralPath <String[]>
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByLiteralPath
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/NFS/MSFT_NfsShare" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get an NFS share'
+  description: |-
+    ```
+    PS C:\> Get-NfsShare -Name "NFSshare01"
+    Name:                 nfsexport
+    Path:                 C:\shares\nfsexport
+    NetworkName:          GAPRASAD-TST22
+    Availability:         Standard (not clustered)
+    Online:               True
+    AnonymousAccess:       Disabled
+    AnonymousGid: -2
+    AnonymousUID: -2
+    UnmappedUserAccess:   Enabled
+    Authentication:         {sys, Krb5, Krb5i, Krb5p}
+    ```
+
+    This command gets an NFS share named NFSshare01.
+- title: 'Example 2: Get all NFS shares on a local computer'
+  description: |-
+    ```
+    PS C:\> Get-NfsShare
+
+    Name:                  nfsexportA
+    Path:                  C:\shares\nfsexportA
+    NetworkName:           contoso-fs
+    Availability:          Standard (not clustered)
+    Online:                True
+    AnonymousAccess:       Disabled
+    AnonymousGID:          -2
+    AnonymousUID:          -2
+    UnmappedUserAccess:    Enabled
+    Authentication:        {sys, Krb5, Krb5i, Krb5p}
+    Name:                  nfsexportB
+    Path:                  C:\shares\nfsexportB
+    NetworkName:           contoso-fs
+    Availability:          Standard (not clustered)
+    Online:                True
+    AnonymousAccess:       Disabled
+    AnonymousGID:          -2
+    AnonymousUID:          -2
+    UnmappedUserAccess:    Enabled
+    Authentication:        {sys, Krb5, Krb5i, Krb5p}
+    ```
+
+    This command gets all the NFS shares on a local computer.
+links:
+- text: New-NfsShare
+  href: ./New-NfsShare.yml
+- text: Remove-NfsShare
+  href: ./Remove-NfsShare.yml
+- text: Set-NfsShare
+  href: ./Set-NfsShare.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MSFT_NfsShare.cmdletDefinition.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/nfs/get-nfsshare?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: NFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NfsShare

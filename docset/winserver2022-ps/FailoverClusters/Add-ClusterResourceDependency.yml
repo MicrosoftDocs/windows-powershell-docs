@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Add-ClusterResourceDependency
+name: Add-ClusterResourceDependency
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Adds a resource to the list of resources on which a particular resource depends, using AND as the
+  connector, within a failover cluster.
+description: |-
+  The `Add-ClusterResourceDependency` cmdlet adds a resource to the list of resources on which a
+  particular resource depends, using AND as the connector, within a failover cluster. Existing
+  dependencies will remain on the list. If you specify the **InputObject** parameter, the **Resource**
+  parameter will be ignored.
+
+  A dependent resource is brought online after the resources on which it depends. A dependent resource
+  is taken offline before the resources on which it depends.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+      `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster resource for which to add the dependency.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Provider
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster resource to add as a dependency.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Resource
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster resource for which to add the dependency.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-ClusterResourceDependency
+        [[-Resource] <String>]
+        [[-Provider] <String>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Add-ClusterResourceDependency -Resource "FileServer-(cluster1FS12)" -Provider "Cluster Disk 4"
+    ```
+
+    This example adds the resource named `Cluster Disk 4` to the list of resources on which the resource
+    called `FileServer-(cluster1FS12)` depends.
+links:
+- text: Get-ClusterResourceDependency
+  href: ./Get-ClusterResourceDependency.yml
+- text: Get-ClusterResourceDependencyReport
+  href: ./Get-ClusterResourceDependencyReport.yml
+- text: Remove-ClusterResourceDependency
+  href: ./Remove-ClusterResourceDependency.yml
+- text: Set-ClusterResourceDependency
+  href: ./Set-ClusterResourceDependency.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/add-clusterresourcedependency?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 11/22/2022
+  PlatyPS schema version: 2024-05-01
+  title: Add-ClusterResourceDependency

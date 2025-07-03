@@ -1,0 +1,55 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsWebConfig
+name: Get-AdfsWebConfig
+module: ADFS
+isPreview: false
+summary: |-
+  Gets AD FS web customization configuration settings.
+description: |-
+  The **Get-AdfsWebConfig** cmdlet gets Active Directory Federation Services (AD FS) web customization configuration settings.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsWebConfig
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.AdfsWebConfig" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates an **AdfsWebConfig** object that represents AD FS web customization configuration settings.
+    This object contains the following properties:
+
+    - ActiveThemeName: **System.String**
+    - CDCCookieReader: **System.Uri**
+    - CDCCookieWriter: **System.Uri**
+    - HRDCookieLifetime: **System.Int32**
+    - HRDCookieEnabled: **System.Boolean**
+    - ContextCookieEnabled: **System.Boolean**
+examples:
+- title: 'Example 1: Get configuration settings'
+  description: |-
+    ```
+    PS C:\> Get-AdfsWebConfig
+
+    ActiveThemeName      : Default
+    CDCCookieReader      :
+    CDCCookieWriter      :
+    HRDCookieLifetime    : 30
+    HRDCookieEnabled     : True
+    ContextCookieEnabled : True
+    ```
+
+    This command gets the web customization configuration settings.
+links:
+- text: Set-AdfsWebConfig
+  href: ./Set-AdfsWebConfig.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfswebconfig?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsWebConfig

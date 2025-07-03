@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: BitLocker.Enable-BitLockerAutoUnlock
+name: Enable-BitLockerAutoUnlock
+module: BitLocker
+isPreview: false
+summary: |-
+  Enables automatic unlocking for a BitLocker volume.
+description: |-
+  The **Enable-BitLockerAutoUnlock** cmdlet enables automatic unlocking for a volume protected by BitLocker Disk Encryption.
+
+  You can configure BitLocker to automatically unlock volumes that do not host an operating system.
+  After a user unlocks the operating system volume, BitLocker uses encrypted information stored in the registry and volume metadata to unlock any data volumes that use automatic unlocking.
+
+  For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MountPoint
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of drive letters or BitLocker volume objects.
+      The cmdlet enables automatic unlocking for the volumes specified.
+      To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-BitLockerAutoUnlock
+        [-MountPoint] <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Enable automatic unlocking'
+  description: |-
+    ```
+    PS C:\>Enable-BitLockerAutoUnlock -MountPoint "E:"
+    ```
+
+    This command enables automatic unlocking for the specified BitLocker volume.
+links:
+- text: Clear-BitLockerAutoUnlock
+  href: ./Clear-BitLockerAutoUnlock.yml
+- text: Disable-BitLockerAutoUnlock
+  href: ./Disable-BitLockerAutoUnlock.yml
+- text: Get-BitLockerVolume
+  href: ./Get-BitLockerVolume.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: BitLocker-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/bitlocker/enable-bitlockerautounlock?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: BitLocker
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Enable-BitLockerAutoUnlock

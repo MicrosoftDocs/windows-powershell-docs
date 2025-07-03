@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteDesktop.Set-RDSessionHost
+name: Set-RDSessionHost
+module: RemoteDesktop
+isPreview: false
+summary: |-
+  Configures one or more RD Session Host servers in a session collection.
+description: |-
+  The **Set-RDSessionHost** cmdlet configures one or more Remote Desktop Session Host (RD Session Host) servers in a session collection by specifying whether each server can accept new connections.
+  RD Session Host is a Remote Desktop Services role service that lets users share Windows-based programs or the full Windows desktop.
+  Users can connect to a RD Session Host server to run programs, save files, and use network resources on that server.
+parameters:
+  cmdletParameters:
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for this Remote Desktop deployment.
+      If this parameter does not appear, the default value is the fully qualified domain name (FQDN) of the local host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NewConnectionAllowed
+    type: <xref href="RDServerNewConnectionAllowed" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines whether the RD Session Host servers specified by the **SessionHost** parameter can accept new connections.
+      The acceptable values for this parameter are: Yes, NotUntilReboot, or No.
+    acceptedValues:
+    - Yes
+    - NotUntilReboot
+    - No
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SessionHost
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array that contains the fully qualified domain name (FQDN) of one or more RD Session Host servers that you configure.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-RDSessionHost
+        [-SessionHost] <String[]>
+        [-NewConnectionAllowed] <RDServerNewConnectionAllowed>
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <span>undefined</span>
+examples:
+- title: 'Example 1: Set values for an RD  Session Host server'
+  description: |-
+    ```
+    PS C:\> Set-RDSessionHost -SessionHost "rdsh.contoso.com" -NewConnectionAllowed Yes -ConnectionBroker "rdcb.contoso.com"
+    ```
+
+    This command specifies values for an RD Session Host server named rdsh.contoso.com.
+    Users can make new server connections to a session collection on the RD Connection Broker server named rdcb.contoso.com.
+links:
+- text: Add-RDSessionHost
+  href: ./Add-RDSessionHost.yml
+- text: Get-RDSessionHost
+  href: ./Get-RDSessionHost.yml
+- text: Remove-RDSessionHost
+  href: ./Remove-RDSessionHost.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/RemoteDesktop/set-rdsessionhost?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteDesktop
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-RDSessionHost

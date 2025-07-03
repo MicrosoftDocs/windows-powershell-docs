@@ -1,0 +1,129 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Add-WBBackupTarget
+name: Add-WBBackupTarget
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Adds a backup target to a backup policy.
+description: |-
+  The **Add-WBBackupTarget** cmdlet adds a **WBBackupTarget** object, which specifies backup storage locations, to a **WBPolicy** object that contains a backup policy.
+  To use this cmdlet, you must first use the New-WBBackupTarget cmdlet to create a **WBBackupTarget** object.
+  You can then use the Add-WBBackupTarget cmdlet to specify the storage location by using a disk, a volume, or a remote shared folder (network) location.
+
+  Before you can add a backup target to a **WBPolicy** object, you must make sure that the **WBPolicy** object is in edit mode.
+  To put the **WBPolicy** object in edit mode for a policy that you have set as the scheduled backup policy, use the [Get-WBPolicy](./Get-WBPolicy.yml) cmdlet with the *Editable* parameter.
+  The [New-WBPolicy](./New-WBPolicy.yml) cmdlet creates a new **WBPolicy** object that is already in edit mode.
+
+  If you specify a disk as a storage location for backups, the server formats the disk before it uses the disk and permanently deletes any existing data on the disk.
+
+  You can add only one storage type at a time to a policy.
+  If you specify a shared folder as the storage location, you cannot add more locations because you can specify only one shared folder as a storage location at any time.
+  However, you can specify multiple disks or volumes at one time by calling [Add-WBBackupTarget](./Add-WBBackupTarget.yml) for each location.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+parameters:
+  cmdletParameters:
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet adds the backup target without prompting you for confirmation.
+      By default, the cmdlet prompts you for confirmation before it proceeds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a backup policy object that contains the backup policy to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Target
+    type: <xref href="WBBackupTarget" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a backup target object that contains the backup storage location to add to the backup policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-WBBackupTarget
+        [-Policy] <WBPolicy>
+        [-Target] <WBBackupTarget>
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Windows.ServerBackup.Commands.WBPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Windows.ServerBackup.Commands.WBBackupTarget" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet adds a **WBBackupTarget** object, which contains new backup storage locations, to a **WBPolicy** object that contains a backup policy.
+    To add more than one storage location, you must call the **Add-WBBackupTarget** cmdlet separately for each location.
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a backup storage location to a backup policy'
+  description: |-
+    ```
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Add-WBBackupTarget -Policy $Policy -Target $BackupLocation
+    ```
+
+    This example adds a backup storage location to a backup policy.
+
+    The first command gets the current backup policy and stores it in a variable named $Policy.
+
+    The second command adds the backup storage location in the variable named $BackupLocation to the **WBPolicy** object in the variable named $Policy.
+    You can create the backup target that you add to the location in the $BackupLocation variable by using the [New-WBBackupTarget](./New-WBBackupTarget.yml) cmdlet.
+links:
+- text: Get-WBBackupTarget
+  href: ./Get-WBBackupTarget.yml
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: New-WBBackupTarget
+  href: ./New-WBBackupTarget.yml
+- text: New-WBPolicy
+  href: ./New-WBPolicy.yml
+- text: Remove-WBBackupTarget
+  href: ./Remove-WBBackupTarget.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/add-wbbackuptarget?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-WBBackupTarget

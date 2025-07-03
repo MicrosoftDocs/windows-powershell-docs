@@ -1,0 +1,615 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Set-VM
+name: Set-VM
+module: Hyper-V
+isPreview: false
+summary: |-
+  Configures a virtual machine.
+description: |-
+  The **Set-VM** cmdlet configures a virtual machine.
+parameters:
+  cmdletParameters:
+  - name: AllowUnverifiedPaths
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that no error is to be thrown if the specified path is not verified as accessible by the cluster.
+      This parameter is applicable to clustered virtual machines.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomaticCheckpointsEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether automatic checkpoints are enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomaticCriticalErrorAction
+    type: <xref href="CriticalErrorAction" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the action to take when the VM encounters a critical error, and exceeds the timeout duration specified by the **AutomaticCriticalErrorActionTimeout** cmdlet.
+      The acceptable values for this parameter are: Pause and None.
+    acceptedValues:
+    - None
+    - Pause
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomaticCriticalErrorActionTimeout
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the amount of time, in minutes, to wait in critical pause before powering off the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomaticStartAction
+    type: <xref href="StartAction" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the action the virtual machine is to take upon start.
+      Allowed values are **Nothing**, **StartIfRunning**, and **Start**.
+    acceptedValues:
+    - Nothing
+    - StartIfRunning
+    - Start
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomaticStartDelay
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of seconds by which the virtual machine's start should be delayed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomaticStopAction
+    type: <xref href="StopAction" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the action the virtual machine is to take when the virtual machine host shuts down.
+      Allowed values are **TurnOff**, **Save**, and **ShutDown**.
+    acceptedValues:
+    - TurnOff
+    - Save
+    - ShutDown
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CheckpointType
+    type: <xref href="CheckpointType" data-throw-if-not-resolved="False" />
+    description: |-
+      Allows you to configure the type of checkpoints created by Hyper-V.
+      The acceptable values for this parameter are:
+
+      - Disabled.
+      Block creation of checkpoints.
+      - Standard.
+      Create standard checkpoints.
+      - Production.
+      Create production checkpoints if supported by guest operating system.
+      Otherwise, create standard checkpoints.
+      - ProductionOnly.
+      Create production checkpoints if supported by guest operating system.
+      Otherwise, the operation fails.
+    acceptedValues:
+    - Disabled
+    - Production
+    - ProductionOnly
+    - Standard
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts on which the virtual machine is to be configured.
+      NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+      The default is the local computer.
+      Use localhost or a dot (.) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DynamicMemory
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the virtual machine is to be configured to use dynamic memory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GuestControlledCacheTypes
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether this virtual machine uses guest controlled cache types.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HighMemoryMappedIoSpace
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LockOnDisconnect
+    type: <xref href="OnOffState" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether virtual machine connection in basic mode locks the console after a user disconnects.
+    acceptedValues:
+    - On
+    - Off
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LowMemoryMappedIoSpace
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MemoryMaximumBytes
+    type: <xref href="Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum amount of memory that the virtual machine is to be allocated.
+      (Applies only to virtual machines using dynamic memory.)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MemoryMinimumBytes
+    type: <xref href="Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the minimum amount of memory that the virtual machine is to be allocated.
+      (Applies only to virtual machines using dynamic memory.)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MemoryStartupBytes
+    type: <xref href="Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the amount of memory that the virtual machine is to be allocated upon startup.
+      (If the virtual machine does not use dynamic memory, then this is the static amount of memory to be allocated.)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the virtual machine to be configured.
+    aliases:
+    - VMName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NewVMName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name to which the virtual machine is to be renamed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Notes
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies notes to be associated with the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that an object is to be passed through to the pipeline representing the virtual machine to be configured.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProcessorCount
+    type: <xref href="Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of virtual processors for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmartPagingFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the folder in which the Smart Paging file is to be stored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotFileLocation
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the folder in which the virtual machine is to store its snapshot files.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StaticMemory
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This cmdlet configures the virtual machine to use static memory.
+      Specify the amount of static memory to allocate by using the **MemoryStartupBytes** parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the virtual machine to be configured.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-VM
+        [-Name] <String[]>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-GuestControlledCacheTypes <Boolean>]
+        [-LowMemoryMappedIoSpace <UInt32>]
+        [-HighMemoryMappedIoSpace <UInt64>]
+        [-ProcessorCount <Int64>]
+        [-DynamicMemory]
+        [-StaticMemory]
+        [-MemoryMinimumBytes <Int64>]
+        [-MemoryMaximumBytes <Int64>]
+        [-MemoryStartupBytes <Int64>]
+        [-AutomaticStartAction <StartAction>]
+        [-AutomaticStopAction <StopAction>]
+        [-AutomaticStartDelay <Int32>]
+        [-AutomaticCriticalErrorAction <CriticalErrorAction>]
+        [-AutomaticCriticalErrorActionTimeout <Int32>]
+        [-AutomaticCheckpointsEnabled <Boolean>]
+        [-LockOnDisconnect <OnOffState>]
+        [-Notes <String>]
+        [-NewVMName <String>]
+        [-SnapshotFileLocation <String>]
+        [-SmartPagingFilePath <String>]
+        [-CheckpointType <CheckpointType>]
+        [-Passthru]
+        [-AllowUnverifiedPaths]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-VM
+        [-VM] <VirtualMachine[]>
+        [-GuestControlledCacheTypes <Boolean>]
+        [-LowMemoryMappedIoSpace <UInt32>]
+        [-HighMemoryMappedIoSpace <UInt64>]
+        [-ProcessorCount <Int64>]
+        [-DynamicMemory]
+        [-StaticMemory]
+        [-MemoryMinimumBytes <Int64>]
+        [-MemoryMaximumBytes <Int64>]
+        [-MemoryStartupBytes <Int64>]
+        [-AutomaticStartAction <StartAction>]
+        [-AutomaticStopAction <StopAction>]
+        [-AutomaticStartDelay <Int32>]
+        [-AutomaticCriticalErrorAction <CriticalErrorAction>]
+        [-AutomaticCriticalErrorActionTimeout <Int32>]
+        [-AutomaticCheckpointsEnabled <Boolean>]
+        [-LockOnDisconnect <OnOffState>]
+        [-Notes <String>]
+        [-NewVMName <String>]
+        [-SnapshotFileLocation <String>]
+        [-SmartPagingFilePath <String>]
+        [-CheckpointType <CheckpointType>]
+        [-Passthru]
+        [-AllowUnverifiedPaths]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMObject
+  isDefault: false
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Set-VM -Name TestVM -AutomaticStopAction Shutdown
+    ```
+
+    Configures virtual machine TestVM to shut down when the Hyper-V host shuts down.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Stop-VM -Name TestVM -Passthru | Set-VM -ProcessorCount 2 -DynamicMemory -MemoryMaximumBytes 2GB -Passthru | Start-VM
+    ```
+
+    Stops virtual machine TestVM, sets it to use dynamic memory, sets its maximum amount of memory to 2GB, sets it to use 2 virtual processors, and starts it.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/set-vm?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-VM

@@ -1,0 +1,168 @@
+### YamlMime:PowerShellCmdlet1
+uid: HNVDiagnostics.Debug-SlbDatapath
+name: Debug-SlbDatapath
+module: HNVDiagnostics
+isPreview: false
+summary: |-
+  Collects logs from an SLB MUX and DIP host.
+description: |-
+  The **Debug-SlbDatapath** cmdlet collects logs from the Software Load Balancing (SLB) Multiplexer (MUX) and dynamic IP address (DIP) host traversed by packets in the specified flow.
+parameters:
+  cmdletParameters:
+  - name: Dips
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the DIPs that implement the virtual IP address (VIP) endpoint under test.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Muxes
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the MUXes that load balance the DIPs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperationId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an operation ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PortNumber
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the port number of the VIP endpoint this operation tests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceIP
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP of the source node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetVIP
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP of the VIP this operation tests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TraceFolderPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the trace log folder.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Debug-SlbDatapath
+        [[-OperationId] <String>]
+        [-SourceIP] <String>
+        [-TargetVIP] <String>
+        [-PortNumber] <UInt16>
+        [-Muxes] <Hashtable[]>
+        [-Dips] <Hashtable[]>
+        [[-TraceFolderPath] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get MUX and DIP host logs'
+  description: |-
+    ```
+    PS C:\> for ($mux in $VipHostMapping.MuxList) {
+        $secpasswd = ConvertTo-SecureString <plaintext password> -AsPlainText -Force
+        $creds = New-Object System.Management.Automation.PSCredential (<username>, $secpasswd)
+        $mux.Credentials = $creds
+    }
+    PS C:\> for ($dip in $VipHostMapping.DIPHosts) {
+        $secpasswd = ConvertTo-SecureString <plaintext password> -AsPlainText -Force
+        $creds = New-Object System.Management.Automation.PSCredential (<username>, $secpasswd)
+        $dip.HostInfo.Credentials = $creds
+    }
+    PS C:\> $out = Debug-SlbDatapath -OperationId "1" -SourceIP "10.123.176.108" -TargetVIP "10.123.177.110" -PortNumber 445 -Muxes $VipHostMapping.MuxList -Dips $VipHostMapping.DIPHosts
+    ```
+
+    The first command creates a **PSCredential** object containing MUX credentials, and then stores it in the $mux.Credentials variable.
+
+    The second command creates a **PSCredential** object containing DIP host credentials, and then stores it in the $dip.HostInfo.Credentials variable.
+
+    The third command runs test traffic targeting the specified VIP endpoint from the specified source IP address.
+    You can use the command `$out | Format-Custom` to display the paths of the MUX and DIP logs that were collected.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: SlbDatapathTracing-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hnvdiagnostics/debug-slbdatapath?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Debug-SlbDatapath

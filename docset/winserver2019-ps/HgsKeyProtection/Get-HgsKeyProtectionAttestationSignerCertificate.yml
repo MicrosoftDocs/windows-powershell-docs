@@ -1,0 +1,85 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsKeyProtection.Get-HgsKeyProtectionAttestationSignerCertificate
+name: Get-HgsKeyProtectionAttestationSignerCertificate
+module: HgsKeyProtection
+isPreview: false
+summary: |-
+  Gets the attestation signer certificates that the Key Protection Service trusts.
+description: |-
+  The **Get-HgsKeyProtectionAttestationSignerCertificate** cmdlet gets the attestation signer certificates that the Key Protection Service trusts
+parameters:
+  cmdletParameters:
+  - name: Thumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the thumbprint of the attestation signer certificate to get.
+      If you do not specify a value for this parameter, this cmdlet gets all the attestation signer certificates for trusted attestation servers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-HgsKeyProtectionAttestationSignerCertificate
+        [-Thumbprint <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="Microsoft.Windows.KpsServer.Common.Store.Data.AttestationCertificate" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an **AttestationCertificate** object that represents an attestation signer certificate.
+    The object contains the following fields:
+
+    - Certificate.
+    The **X509Certificate2** object.
+    - AttestationCertificatePolicy.
+    The policy that describes further limitations on which health certificates signed by this signer certificate are trusted by the Key Protection Service.
+examples:
+- title: 'Example 1: Get all attestation certificates'
+  description: |-
+    ```
+    PS C:\> Get-HgsKeyProtectionAttestationSignerCertificate
+    ```
+
+    This command gets all the attestation certificates signers that the Key Protection Service trusts.
+- title: 'Example 2: Get a single attestation certificate'
+  description: |-
+    ```
+    PS C:\> Get-HgsKeyProtectionAttestationSignerCertificate -Thumbprint "d39203a3b3544743ad552afe0615dc1f"
+    ```
+
+    This command gets a single attestation certificate signer that the Key Protection Service trusts.
+    The command looks up the certificate signer by using a thumbprint.
+links:
+- text: Add-HgsKeyProtectionAttestationSignerCertificate
+  href: ./Add-HgsKeyProtectionAttestationSignerCertificate.yml
+- text: Remove-HgsKeyProtectionAttestationSignerCertificate
+  href: ./Remove-HgsKeyProtectionAttestationSignerCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgskeyprotection/get-hgskeyprotectionattestationsignercertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-HgsKeyProtectionAttestationSignerCertificate

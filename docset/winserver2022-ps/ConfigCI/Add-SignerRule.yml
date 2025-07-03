@@ -1,0 +1,202 @@
+### YamlMime:PowerShellCmdlet1
+uid: ConfigCI.Add-SignerRule
+name: Add-SignerRule
+module: ConfigCI
+isPreview: false
+summary: |-
+  Creates a signer rule and adds it to a policy.
+description: |-
+  The **Add-SignerRule** cmdlet creates a signer rule based on a certificate, and then adds the rule to a Code Integrity policy.
+  By default, this cmdlet creates allow rules.
+  Specify at least one scenario for the rule in the policy from the following scenarios:
+
+  - User
+  - Kernel
+  - Update
+parameters:
+  cmdletParameters:
+  - name: CertificatePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a certificate (.cer) file that this cmdlet uses for the rule.
+    aliases:
+    - c
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Certificate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertStorePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to a certificate store to export certificates into the policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CertStore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Deny
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet creates a deny rule instead of the default allow rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the policy .xml file to which this cmdlet adds the rule.
+    aliases:
+    - f
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Kernel
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet adds the rule as a Kernel mode rule.
+      You can add a rule as more than one scenario.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Supplemental
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet adds the rule as a Supplemental policy signers rule.
+      You can add a rule as more than one scenario.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Update
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet adds the rule as an Update policy signers rule.
+      You can add a rule as more than one scenario.
+
+      Update policy signers rules to determine which signers can sign a policy in signed policy scenario.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: User
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet adds the rule as a User mode rule.
+      You can add a rule as more than one scenario.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-SignerRule
+        -FilePath <String>
+        -CertificatePath <String>
+        [-Kernel]
+        [-User]
+        [-Update]
+        [-Supplemental]
+        [-Deny]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Certificate
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-SignerRule
+        -FilePath <String>
+        -CertStorePath <String>
+        [-Kernel]
+        [-User]
+        [-Update]
+        [-Supplemental]
+        [-Deny]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CertStore
+  isDefault: false
+examples:
+- title: 'Example 1: Create and add a signer rule for User mode'
+  description: |-
+    ```
+    PS C:\> Add-SignerRule -FilePath '.\Policy.xml' -CertificatePath '.\certificate07.cer' -User
+    ```
+
+    This command generates a signer rule for the certificate in certificate07.cer.
+    The command adds the rule to policy.xml for the User mode scenario.
+links:
+- text: New-CIPolicyRule
+  href: ./New-CIPolicyRule.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/configci/add-signerrule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-SignerRule

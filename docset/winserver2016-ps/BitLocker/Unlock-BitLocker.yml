@@ -1,0 +1,233 @@
+### YamlMime:PowerShellCmdlet1
+uid: BitLocker.Unlock-BitLocker
+name: Unlock-BitLocker
+module: BitLocker
+isPreview: false
+summary: |-
+  Restores access to data on a BitLocker volume.
+description: |-
+  The **Unlock-BitLocker** cmdlet restores access to encrypted data on a volume that uses BitLocker Drive Encryption.
+  You can use the **Lock-BitLocker** cmdlet to prevent access.
+
+  In order to restore access, provide one of the following key protectors for the volume:
+
+  - Active Directory Domain Services (AD DS) account
+  - Password
+  - Recovery key
+  - Recovery password
+
+  For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+parameters:
+  cmdletParameters:
+  - name: AdAccountOrGroup
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that BitLocker requires account credentials to unlock the volume.
+      In order to use this parameter, the account for the current user must be a key protector for the volume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: OnlyAdAccountOrGroupParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MountPoint
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of drive letters or BitLocker volume objects.
+      The cmdlet unlocks the volumes specified.
+      To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a secure string that contains a password.
+      The password specified acts as a protector for the volume encryption key.
+    aliases:
+    - pw
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: OnlyPasswordParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryKeyPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to a folder where recovery keys are stored.
+      The key stored in the specified path, if found, acts as a protector for the volume encryption.
+    aliases:
+    - rk
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: OnlyRecoveryKeyParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryPassword
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a recovery password.
+      The password specified acts as a protector for the volume encryption key.
+    aliases:
+    - rp
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: OnlyRecoveryPasswordParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Unlock-BitLocker
+        [-MountPoint] <String[]>
+        -Password <SecureString>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: OnlyPasswordParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Unlock-BitLocker
+        [-MountPoint] <String[]>
+        -RecoveryPassword <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: OnlyRecoveryPasswordParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Unlock-BitLocker
+        [-MountPoint] <String[]>
+        -RecoveryKeyPath <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: OnlyRecoveryKeyParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Unlock-BitLocker
+        [-MountPoint] <String[]>
+        [-AdAccountOrGroup]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: OnlyAdAccountOrGroupParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="BitLockerVolume" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Unlock a volume'
+  description: |-
+    ```
+    PS C:\> $SecureString = ConvertTo-SecureString "fjuksAS1337" -AsPlainText -Force
+    PS C:\> Unlock-BitLocker -MountPoint "E:" -Password $SecureString
+    ```
+
+    This example unlocks a specified BitLocker volume by using a password.
+
+    The first command uses the **ConvertTo-SecureString** cmdlet to create a secure string that contains a password and saves it in the $SecureString variable.
+    For more information about the **ConvertTo-SecureString** cmdlet, type `Get-Help ConvertTo-SecureString`.
+
+    The second command unlocks the specified BitLocker volume by using the password saved in the $SecureString variable.
+links:
+- text: Disable-BitLocker
+  href: ./Disable-BitLocker.yml
+- text: Enable-BitLocker
+  href: ./Enable-BitLocker.yml
+- text: Get-BitLockerVolume
+  href: ./Get-BitLockerVolume.yml
+- text: Lock-BitLocker
+  href: ./Lock-BitLocker.yml
+- text: Resume-BitLocker
+  href: ./Resume-BitLocker.yml
+- text: Suspend-BitLocker
+  href: ./Suspend-BitLocker.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: BitLocker-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/bitlocker/unlock-bitlocker?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: BitLocker
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Unlock-BitLocker

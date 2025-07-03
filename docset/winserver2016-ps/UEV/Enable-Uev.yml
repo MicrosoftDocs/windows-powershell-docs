@@ -1,0 +1,43 @@
+### YamlMime:PowerShellCmdlet1
+uid: UEV.Enable-Uev
+name: Enable-Uev
+module: UEV
+isPreview: false
+summary: |-
+  Enables the UE-V service.
+description: |-
+  The **Enable-Uev** cmdlet enables the Microsoft User Experience Virtualization (UE-V) service on Windows 10 Anniversary edition computers.
+  This cmdlet enables synchronization of all UE-V settings.
+  The cmdlet returns a success message.
+
+  If you enable UE-V, you must restart the computer for the change to take effect.
+  Before you enable the UE-V service, configure UE-V service settings by using Windows PowerShell or Group Policy.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-Uev
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Enable the UE-V service'
+  description: |-
+    ```
+    PS C:\>Enable-Uev
+    ```
+
+    This command enables the UE-V service.
+links:
+- text: Disable-Uev
+  href: ./Disable-Uev.yml
+- text: Get-UevStatus
+  href: ./Get-UevStatus.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/uev/enable-uev?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: UEV
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Enable-Uev

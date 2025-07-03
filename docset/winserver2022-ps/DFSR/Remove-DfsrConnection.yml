@@ -1,0 +1,199 @@
+### YamlMime:PowerShellCmdlet1
+uid: DFSR.Remove-DfsrConnection
+name: Remove-DfsrConnection
+module: DFSR
+isPreview: false
+summary: |-
+  Removes a connection between members of a replication group.
+description: |-
+  The **Remove-DfsrConnection** cmdlet removes a connection between members of a replication group.
+  After you remove the connections between a pair of server, the Distributed File System (DFS) Replication service cannot replicate data between the servers.
+  You should always delete connections bidirectionally between two servers.
+  Run this cmdlet for the receiving computer and the sending computer.
+
+  DFS Replication connections are the logical partnerships between members in a replication group.
+  The DFS Replication service uses the Remote Procedure Call (RPC) protocol to communicate between servers.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the receiving computer.
+      A receiving computer is also called an inbound or downstream computer.
+    aliases:
+    - ReceivingMember
+    - RMem
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: DomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains the replication group.
+      If you do not specify this parameter, the cmdlet uses the domain of the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "100"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of replication groups.
+      You can use a comma separated list and the wildcard character (*).
+    aliases:
+    - RG
+    - RgName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: SourceComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the sending computer.
+      A sending computer is also called an outbound or upstream computer.
+    aliases:
+    - SendingMember
+    - SMem
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-DfsrConnection
+        [-GroupName] <String[]>
+        [-SourceComputerName] <String>
+        [-DestinationComputerName] <String>
+        [-Force]
+        [[-DomainName] <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+- name: <xref href="string" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a connection between members of a replication group'
+  description: |-
+    ```
+    PS C:\> Remove-DfsrConnection -GroupName "RG24" -SourceComputerName "SRV01" -DestinationComputerName "SRV02"
+    This operation will remove the connection from the replication group. First computer: SRV01 Second computer: SRV02 Replication group: "RG24"
+    Are you sure you want to continue to remove this connection?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+    ```
+
+    This command removes the connection from the computer named SRV01 to the computer named SRV02 in the replication group named RG24.
+- title: 'Example 2: Remove a connection between members of a replication group without a confirmation'
+  description: |-
+    ```
+    PS C:\> Remove-DfsrConnection -GroupName "RG24" -SourceComputerName "SRV02" -DestinationComputerName "SRV01" -Force
+    ```
+
+    This command removes the connection from the computer named SRV01 to the computer named SRV02 without prompting you to confirm the removal.
+links:
+- text: Get-DfsrConnection
+  href: ./Get-DfsrConnection.yml
+- text: Add-DfsrConnection
+  href: ./Add-DfsrConnection.yml
+- text: Set-DfsrConnection
+  href: ./Set-DfsrConnection.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: DfsrPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dfsr/remove-dfsrconnection?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-DfsrConnection

@@ -1,0 +1,137 @@
+### YamlMime:PowerShellCmdlet1
+uid: DFSR.ConvertFrom-DfsrGuid
+name: ConvertFrom-DfsrGuid
+module: DFSR
+isPreview: false
+summary: |-
+  Translates GUIDs to friendly names within a given replication group.
+description: |-
+  The **ConvertFrom-DfsrGuid** cmdlet translates Distributed File System (DFS) Replication GUIDs to friendly names within a given replication group.
+  DFS Replication uses GUIDs to represent the friendly names of various objects and metadata.
+  DFS Replication writes these GUIDs to Active Directory, XML files, the event log, and debug logs.
+  This cmdlet converts GUIDs for connections (connid), replicated folders (csid), replication groups (rgid), volumes (volumeid), members (memberid), and databases (dbguid).
+parameters:
+  cmdletParameters:
+  - name: DomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains the replication group.
+      If you do not specify this parameter, the cmdlet uses the domain of the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "100"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of replication groups.
+      If you do not specify this parameter, the cmdlet queries for all participating replication groups.
+      You can use a comma separated list and the wildcard character (*).
+    aliases:
+    - RG
+    - RgName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: Guid
+    type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of GUID values to convert to a friendly name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    ConvertFrom-DfsrGuid
+        [-GroupName] <String[]>
+        [-Guid] <Guid[]>
+        [[-DomainName] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsrMember" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsrMembership" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsrConnection" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsrVolume" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Convert a GUID to a friendly name'
+  description: |-
+    ```
+    PS C:\> ConvertFrom-DfsrGuid -GroupName RG01 -Guid 9268F23A-7701-4184-8B8B-4BFDBB8AC411
+
+    GroupName              : RG01
+    FolderName             : RF01
+    DomainName             : corp.contoso.com
+    Identifier             : 9268f23a-7701-4184-8b8b-4bfdbb8ac411
+    Description            :
+    FileNameToExclude      : {~*, *.bak, *.tmp}
+    DirectoryNameToExclude : {}
+    DfsnPath               :
+    IsDfsnPathPublished    : False
+    ```
+
+    This command uses the **ConvertFrom-DfsrGuid** cmdlet to convert a replicated folder GUID to its friendly details.
+- title: 'Example 2: Determine which server originated a file modification'
+  description: |-
+    ```
+    PS C:\> Get-DfsrIdRecord -Path C:\rf01\canary.bmp | Format-List global* GlobalVersionSequenceNumber : {B34A6F21-A20D-402D-9BE1-467309C21CDF}-v20
+    PS C:\> ConvertFrom-DfsrGuid -GroupName Rg01 -guid B34A6F21-A20D-402D-9BE1-467309C21CDF
+
+    ComputerName : SRV01
+    DomainName   : corp.contoso.com
+    VolumeGuid   : 9ee0fc3b-a906-11e2-8f95-806e6f6e6963
+    SerialNumber : 903727946
+    Path         : \\.\C:
+    DatabaseGuid : B34A6F21-A20D-402D-9BE1-467309C21CDF
+    ```
+
+    This example looks up a Global Version Sequence Number (GUID) for a file, and then looks up the name of the server that originated that change.
+
+    The first command uses the **Get-DfsrIdRecord** cmdlet to lookup a file's Global Version Sequence Number (GUID).
+
+    The second command looks up the server that originated the change.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: DfsrPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dfsr/convertfrom-dfsrguid?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: ConvertFrom-DfsrGuid

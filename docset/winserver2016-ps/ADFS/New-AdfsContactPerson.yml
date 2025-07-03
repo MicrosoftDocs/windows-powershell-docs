@@ -1,0 +1,137 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.New-AdfsContactPerson
+name: New-AdfsContactPerson
+module: ADFS
+isPreview: false
+summary: |-
+  Creates a contact person object.
+description: |-
+  The **New-AdfsContactPerson** cmdlet creates a contact person object in ADFS.
+notes: |-
+  * You can publish this contact person in the federation metadata of the Federation Service by using the **Set-AdfsProperties** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Company
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the company name of the contact person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of e-mail addresses of the contact person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GivenName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the given name of the contact person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Surname
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the surname, or last name, of the contact person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TelephoneNumber
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of telephone numbers of the contact person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AdfsContactPerson
+        [-Company <String>]
+        [-EmailAddress <String[]>]
+        [-GivenName <String>]
+        [-TelephoneNumber <String[]>]
+        [-Surname <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ContactPerson" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a class structure that represents a contact person object in the Federation Service.
+examples:
+- title: 'Example 1: Create and publish contact person object'
+  description: |-
+    ```
+    PS C:\> $CP = New-AdfsContactPerson -EmailAddress "support@fabrikam.com"
+    PS C:\> Set-AdfsProperties -ContactPerson $CP
+    ```
+
+    The first command creates a contact person who has the specified address, and then assigns it to the $CP variable.
+
+    The second command uses the **Set-AdfsProperties** cmdlet to publish the contact person object to the Federation Service.
+links:
+- text: Get-AdfsProperties
+  href: ./Get-AdfsProperties.yml
+- text: Set-AdfsProperties
+  href: ./Set-AdfsProperties.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/new-adfscontactperson?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-AdfsContactPerson

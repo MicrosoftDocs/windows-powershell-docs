@@ -1,0 +1,100 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsAttestation.Remove-HgsAttestationHostGroup
+name: Remove-HgsAttestationHostGroup
+module: HgsAttestation
+isPreview: false
+summary: |-
+  Removes an attestation policy based on a host group.
+description: |-
+  The **Remove-HgsAttestationHostGroup** cmdlet removes an attestation policy that is based on the configuration of an Active Directory host group from Host Guardian Service (HGS).
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the host group for which this cmdlet removes a policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-HgsAttestationHostGroup
+        [-Name] <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Remove a host group'
+  description: |-
+    ```
+    PS C:\> Remove-HgsAttestationHostGroup -Name "TrustedADHostGroup14"
+    ```
+
+    This command removes the host group named TrustedADHostGroup14 from the Attestation service.
+    If a guarded host belongs to this host group and to no other trusted host group, the host can no longer obtain a new Attestation certificate.
+links:
+- text: Add-HgsAttestationHostGroup
+  href: ./Add-HgsAttestationHostGroup.yml
+- text: Get-HgsAttestationHostGroup
+  href: ./Get-HgsAttestationHostGroup.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsattestation/remove-hgsattestationhostgroup?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsAttestation
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-HgsAttestationHostGroup

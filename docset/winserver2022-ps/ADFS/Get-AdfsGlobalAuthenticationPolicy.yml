@@ -1,0 +1,45 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsGlobalAuthenticationPolicy
+name: Get-AdfsGlobalAuthenticationPolicy
+module: ADFS
+isPreview: false
+summary: |-
+  Displays the AD FS global policy.
+description: |-
+  The **Get-AdfsGlobalAuthenticationPolicy** cmdlet displays the global authentication policy, which includes the providers currently allowed as additional providers in the **AdditionalAuthenticationProvider** property.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsGlobalAuthenticationPolicy
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Display the global authentication policy'
+  description: |-
+    ```
+    PS C:\> Get-AdfsGlobalAuthenticationPolicy
+
+
+    AdditionalAuthenticationProvider      : {MultiFactorAuthentication}
+    DeviceAuthenticationEnabled           : True
+    PrimaryIntranetAuthenticationProvider : {WindowsAuthentication}
+    PrimaryExtranetAuthenticationProvider : {FormsAuthentication, CertificateAuthentication}
+    WindowsIntegratedFallbackEnabled      : True
+    ```
+
+    This command displays the global authentication policy.
+links:
+- text: Set-AdfsGlobalAuthenticationPolicy
+  href: ./Set-AdfsGlobalAuthenticationPolicy.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfsglobalauthenticationpolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsGlobalAuthenticationPolicy

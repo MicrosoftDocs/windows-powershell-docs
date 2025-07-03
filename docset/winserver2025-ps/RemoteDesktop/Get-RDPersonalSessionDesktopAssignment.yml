@@ -1,0 +1,151 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteDesktop.Get-RDPersonalSessionDesktopAssignment
+name: Get-RDPersonalSessionDesktopAssignment
+module: RemoteDesktop
+isPreview: false
+summary: |-
+  Gets personal session desktop assignments.
+description: |-
+  The **Get-RDPersonalSessionDesktopAssignment** cmdlet gets Remote Desktop personal session desktop assignments.
+parameters:
+  cmdletParameters:
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a personal virtual desktop collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the personal session desktop assignment to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByDesktop
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: User
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user account in DOMAIN\user format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-RDPersonalSessionDesktopAssignment
+        [-CollectionName] <String>
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByCollection
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-RDPersonalSessionDesktopAssignment
+        [-CollectionName] <String>
+        -Name <String>
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByDesktop
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-RDPersonalSessionDesktopAssignment
+        [-CollectionName] <String>
+        -User <String>
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByUser
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.RemoteDesktopServices.Management.RDPersonalSessionDesktopAssignment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get assignments for a collection'
+  description: |-
+    ```
+    PS C:\>Get-RDPersonalSessionDesktopAssignment -CollectionName "RDSessionHostPersonalDesktopCollection"
+    ```
+
+    This command gets the personal session desktop assignments from the collection named RDSessionHostPersonalDesktopCollection.
+- title: 'Example 2: Get assignments for a user'
+  description: |-
+    ```
+    PS C:\>Get-RDPersonalSessionDesktopAssignment -CollectionName "Wrdsh_pd" -User "contoso\user"
+    ```
+
+    This command gets the personal session desktop assignments for the specified user.
+- title: 'Example 3: Get assignments for a server'
+  description: |-
+    ```
+    PS C:\>Get-RDPersonalSessionDesktopAssignment -CollectionName "Rdsh_pd" -Name "RdshServer.contoso.com"
+    ```
+
+    This command gets the personal session desktop assignments from the server named RdshServer.contoso.com.
+links:
+- text: Export-RDPersonalSessionDesktopAssignment
+  href: ./Export-RDPersonalSessionDesktopAssignment.yml
+- text: Import-RDPersonalSessionDesktopAssignment
+  href: ./Import-RDPersonalSessionDesktopAssignment.yml
+- text: Remove-RDPersonalSessionDesktopAssignment
+  href: ./Remove-RDPersonalSessionDesktopAssignment.yml
+- text: Set-RDPersonalSessionDesktopAssignment
+  href: ./Set-RDPersonalSessionDesktopAssignment.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/RemoteDesktop/get-rdpersonalsessiondesktopassignment?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteDesktop
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-RDPersonalSessionDesktopAssignment

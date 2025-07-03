@@ -1,0 +1,301 @@
+### YamlMime:PowerShellCmdlet1
+uid: IpamServer.Remove-IpamBlock
+name: Remove-IpamBlock
+module: IpamServer
+isPreview: false
+summary: |-
+  Removes an address block from IPAM.
+description: |-
+  The **Remove-IpamBlock** cmdlet removes an IP address block from IP Address Management (IPAM).
+  Specify an address block by using the *StartIPAddress* and *EndIPAddress* parameters, or use the *InputObject* parameter to specify the input to this cmdlet.
+  You can specify the *DeleteAssociatedSubBlocks* parameter to remove all the child IP address ranges mapped to the address block.
+  When you remove an address block, IPAM remaps all subnets and unmaps some subnets which it previously mapped to an address block.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+      The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+      You can continue to work in the session while the job completes.
+      To manage the job, use the `*-Job` cmdlets.
+      To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+      For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeleteAssociatedSubBlocks
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet removes the child IP address ranges that belong to the address block.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndIPAddress
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of end addresses for IP address blocks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByKeySet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the input to this cmdlet.
+      You can use this parameter, or you can pipe the input to this cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject (cdxml)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkId
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the IP network prefix, in Classless Interdomain Routing (CIDR) notation, for the network blocks to be deleted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByKeySet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartIPAddress
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of start addresses for IP address blocks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByKeySet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-IpamBlock
+        [-NetworkId] <String[]>
+        [-StartIPAddress] <IPAddress[]>
+        [-EndIPAddress] <IPAddress[]>
+        [-DeleteAssociatedSubBlocks]
+        [-Force]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByKeySet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-IpamBlock
+        -InputObject <CimInstance[]>
+        [-DeleteAssociatedSubBlocks]
+        [-Force]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject (cdxml)
+  isDefault: false
+outputs:
+- name: <xref href="IpamBlock" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that represents an address block in IPAM.
+examples:
+- title: 'Example 1: Remove an IP address block'
+  description: |-
+    ```
+    PS C:\> Get-IpamBlock -NetworkId "10.15.0.0/16" -StartIPAddress 10.15.0.0 -EndIPAddress 10.15.255.255 | Remove-IpamBlock
+    Confirm
+
+    Deleting IP address block with NetworkId 10.15.0.0/16 from IPAM. Deleting the block may move the currently mapped IP address ranges within this block to Unmapped address space.Do you want to continue?
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+    ```
+
+    This command removes the IP address block from the network that has the ID 10.15.0.0/8/16.
+    The command specifies the start and end addresses for the address block.
+- title: 'Example 2: Remove all child IP address ranges that belong to an address block'
+  description: |-
+    ```
+    PS C:\> Get-IpamBlock -NetworkId "10.0.0.0/8" -StartIPAddress 10.0.0.0 -EndIPAddress 10.255.255.255 | Remove-IpamBlock -DeleteAssociatedSubBlocks
+    Confirm
+
+    This will permanently delete the given IP Block with NetworkId 10.0.0.0/8 from IPAM. Deleting the block may move the currently mapped IP address ranges within this block to Unmapped address space. Any sub-blocks associated with the given block will also be deleted. Do you want to continue?
+
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+    ```
+
+    This command removes all child IP address ranges that belong to the address block from the network that has the ID 10.0.0.0/8.
+    The command specifies the start and end addresses for the address block.
+links:
+- text: Get-IpamBlock
+  href: ./Get-IpamBlock.yml
+- text: Set-IpamBlock
+  href: ./Set-IpamBlock.yml
+- text: Add-IpamBlock
+  href: ./Add-IpamBlock.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: IpamBlock.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/ipamserver/remove-ipamblock?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: IpamServer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-IpamBlock

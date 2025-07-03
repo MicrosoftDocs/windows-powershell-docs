@@ -1,0 +1,213 @@
+### YamlMime:PowerShellCmdlet1
+uid: DeviceHealthAttestation.Set-DHASCertificateChainPolicy
+name: Set-DHASCertificateChainPolicy
+module: DeviceHealthAttestation
+isPreview: false
+summary: |-
+  Sets certificate chain policy.
+description: |-
+  The **Set-DHASCertificateChainPolicy** cmdlet sets the certificate chain policy that the Device Health Attestation service enforces.
+  The certificate chain policy specifies parameters for certificate chain verification and revocation behavior.
+
+  You can specify a **CertificateChainPolicy** object to use as input, or alternatively, you can specify the components that comprise a **CertificateChainPolicy**.
+  The components to specify as input are:
+
+  - RevocationFlag.
+  - RevocationMode.
+  - VerificationFlags.
+  - UrlRetrievalTimeout.
+
+  You must have administrator rights to run this cmdlets.
+parameters:
+  cmdletParameters:
+  - name: CertificateChainPolicy
+    type: <xref href="CertificateChainPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate chain policy to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCertificateChainPolicy
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RevocationFlag
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a .NET [X509RevocationFlag enumeration](https://go.microsoft.com/fwlink/?LinkId=821152).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCertificateChainPolicyComponents
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RevocationMode
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a .NET [X509RevocationMode enumeration](https://go.microsoft.com/fwlink/?LinkId=821153).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCertificateChainPolicyComponents
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UrlRetrievalTimeout
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a .NET [TimeSpan structure](https://go.microsoft.com/fwlink/?LinkId=821155).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCertificateChainPolicyComponents
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VerificationFlags
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a .NET [X509VerificationFlags enumeration](https://go.microsoft.com/fwlink/?LinkId=821154).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCertificateChainPolicyComponents
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-DHASCertificateChainPolicy
+        [-CertificateChainPolicy] <CertificateChainPolicy>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetCertificateChainPolicy
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-DHASCertificateChainPolicy
+        -RevocationFlag <String>
+        -RevocationMode <String>
+        -VerificationFlags <String>
+        -UrlRetrievalTimeout <String>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetCertificateChainPolicyComponents
+  isDefault: false
+inputs:
+- name: <xref href="CertificateChainPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set certificate chain policy with a CertificateChainPolicy object'
+  description: |-
+    ```
+    PS C:\> $policy = Get-DHASCertificateChainPolicy
+    PS C:\> $policy.RevocationFlag = "ExcludeRoot"
+    PS C:\> Set-DHASCertificateChainPolicy -CertificateChainPolicy $policy
+    ```
+
+    The first command gets the **CertificateChainPolicy** object, and then stores it in the $policy variable.
+
+    The second command sets the RevocationFlag property of the policy to ExcludeRoot.
+
+    The third command sets the policy to include the new value for RevocationFlag.
+- title: 'Example 2: Set certificate chain policy with its components'
+  description: |-
+    ```
+    PS C:\> Set-DHASCertificateChainPolicy -RevocationFlag "ExcludeRoot" -RevocationMode "NoCheck" -VerificationFlags "NoFlag" -UrlRetrievalTimeout "00:01:00"
+    ```
+
+    This command modifies the certificate chain policy by specifying a value for each of its components.
+links:
+- text: Get-DHASCertificateChainPolicy
+  href: ./Get-DHASCertificateChainPolicy.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.DeviceHealthAttestation.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/devicehealthattestation/set-dhascertificatechainpolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: DeviceHealthAttestation
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-DHASCertificateChainPolicy

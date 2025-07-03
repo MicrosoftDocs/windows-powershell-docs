@@ -1,0 +1,102 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADCSDeployment.Uninstall-AdcsOnlineResponder
+name: Uninstall-AdcsOnlineResponder
+module: ADCSDeployment
+isPreview: false
+summary: |-
+  Uninstalls the Online Responder service.
+description: |-
+  The **Uninstall-AdcsOnlineResponder** cmdlet uninstalls the Online Responder role service.
+notes: |-
+  * Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Uninstall-AdcsOnlineResponder
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Deployment.Commands.OCSP.OnlineResponderResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Uninstall the Online Responder role service'
+  description: |-
+    ```
+    PS C:\> Uninstall-AdcsOnlineResponder -Force
+    ```
+
+    This command removes Online Responder role service without requiring confirmation.
+links:
+- text: Install-AdcsOnlineResponder
+  href: ./Install-AdcsOnlineResponder.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adcsdeployment/uninstall-adcsonlineresponder?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADCSDeployment
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Uninstall-AdcsOnlineResponder

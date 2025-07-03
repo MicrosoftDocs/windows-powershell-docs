@@ -1,0 +1,348 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Set-AdfsClaimDescription
+name: Set-AdfsClaimDescription
+module: ADFS
+isPreview: false
+summary: |-
+  Modifies the properties of a claim description.
+description: |-
+  The **Set-AdfsClaimDescription** cmdlet modifies properties on a Active Directory Federation Services (AD FS) claim description.
+notes: |-
+  * All Set-* cmdlets have a positional parameter (at position 0) with a name that starts with Target*. This parameter defines the search criteria, and the parameter set. For example, **Set-ADFSRelyingParty** has the parameters *TargetName*, *TargetIdentifierUri*, and *TargetRelyingParty*. You can use only one of these *Target** parameters to identify which RelyingParty to modify. Because these parameters are positional, you do not have to specify their name. Therefore, the following commands are identical in effect. The commands change the RelyingParty object named RP1 to RP2.
+
+  - `Set-ADFSRelyingParty -TargetName RP1Name -Name RP2Name`
+  - `Set-ADFSRelyingParty RP1Name -Name RP2Name`
+parameters:
+  cmdletParameters:
+  - name: ClaimType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the claim type URI of the claim.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsAccepted
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the claim is published in federation metadata as a claim that is accepted by the Federation Service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsOffered
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the claim is published in federation metadata as a claim that is offered by the Federation Service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsRequired
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the claim is published in federation metadata as a claim that is required by the Federation Service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the claim to modify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Notes
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies text that describes the purpose of the claim description.
+      The cmdlet adds the notes to the claim description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShortName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unique short name identifier for the claim description that is used for issuing and consuming JWT tokens.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetClaimDescription
+    type: <xref href="ClaimDescription" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **ClaimDescription** object.
+      The cmdlet modifies the **ClaimDescription** object that you specify.
+      To obtain a claim description, use the **Get-AdfsClaimDescription** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetClaimType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the claim type of the claim description to modify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Identifier
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the claim description to modify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetShortName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the short name identifier that AD FS uses to lookup an existing claim description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShortName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AdfsClaimDescription
+        [-TargetName] <String>
+        [-IsAccepted <Boolean>]
+        [-IsOffered <Boolean>]
+        [-IsRequired <Boolean>]
+        [-Notes <String>]
+        [-Name <String>]
+        [-ClaimType <String>]
+        [-ShortName <String>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsClaimDescription
+        [-TargetShortName] <String>
+        [-IsAccepted <Boolean>]
+        [-IsOffered <Boolean>]
+        [-IsRequired <Boolean>]
+        [-Notes <String>]
+        [-Name <String>]
+        [-ClaimType <String>]
+        [-ShortName <String>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShortName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsClaimDescription
+        [-TargetClaimType] <String>
+        [-IsAccepted <Boolean>]
+        [-IsOffered <Boolean>]
+        [-IsRequired <Boolean>]
+        [-Notes <String>]
+        [-Name <String>]
+        [-ClaimType <String>]
+        [-ShortName <String>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Identifier
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsClaimDescription
+        [-TargetClaimDescription] <ClaimDescription>
+        [-IsAccepted <Boolean>]
+        [-IsOffered <Boolean>]
+        [-IsRequired <Boolean>]
+        [-Notes <String>]
+        [-Name <String>]
+        [-ClaimType <String>]
+        [-ShortName <String>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    A ClaimDescription object is received by the *TargetClaimDescription* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *TargetClaimType*, *TargetName*, and *TargetShortName* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the updated ClaimDescription object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+examples:
+- title: 'Example 1: Change the name of a claim description'
+  description: |-
+    ```
+    PS C:\> Set-AdfsClaimDescription -TargetName "Role" -Name "RoleDesc"
+    ```
+
+    This command changes the name of the claim description named Role to RoleDesc.
+links:
+- text: Add-AdfsClaimDescription
+  href: ./Add-AdfsClaimDescription.yml
+- text: Get-AdfsClaimDescription
+  href: ./Get-AdfsClaimDescription.yml
+- text: Remove-AdfsClaimDescription
+  href: ./Remove-AdfsClaimDescription.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/set-adfsclaimdescription?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AdfsClaimDescription

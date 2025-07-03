@@ -1,0 +1,79 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.Set-NetIntentTracing
+name: Set-NetIntentTracing
+module: NetworkATC
+isPreview: false
+summary: |-
+  Starts or stops ATC tracing sessions on the host.
+description: |-
+  The `Set-NetIntentTracing` cmdlet starts or stops ATC tracing sessions on the specified host.
+  Tracing sessions are useful for diagnosing issues related to network intents by capturing relevant
+  data.
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the computer on which to start or stop the tracing session. If this parameter
+      is not specified, the cmdlet operates on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StopTracing
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet should stop the tracing session instead of starting it.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-NetIntentTracing
+        [-StopTracing]
+        [[-ComputerName] <String>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-NetIntentTracing -ComputerName "Server01"
+    ```
+
+    This example starts an ATC tracing session on the computer named `Server01`.
+- title: Example 2
+  description: |-
+    ```powershell
+    Set-NetIntentTracing -StopTracing -ComputerName "Server01"
+    ```
+
+    This example stops an ATC tracing session on the computer named `Server01`.
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/set-netintenttracing?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: Set-NetIntentTracing

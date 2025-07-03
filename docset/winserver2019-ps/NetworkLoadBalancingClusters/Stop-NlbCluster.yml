@@ -1,0 +1,170 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkLoadBalancingClusters.Stop-NlbCluster
+name: Stop-NlbCluster
+module: NetworkLoadBalancingClusters
+isPreview: false
+summary: |-
+  Stops all nodes of a NLB cluster.
+description: |-
+  The **Stop-NlbCluster** cmdlet stops all nodes in a Network Load Balancing (NLB) cluster.
+  The cmdlet stops the NLB service on the host and all existing connections will be lost.
+  To avoid interrupting active connections, use the *Drain* parameter which allows the host to continue servicing active connections, but disables all new traffic to that host.
+parameters:
+  cmdletParameters:
+  - name: Drain
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet drains existing traffic before stopping the cluster.
+      If this parameter is omitted, then the existing traffic is dropped.
+    aliases:
+    - D
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster host against which this cmdlet is run.
+      If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+    aliases:
+    - Host
+    - HN
+    - H
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Cluster" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the cluster to stop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Pipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InterfaceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interface to which NLB is bound.
+      This is the interface of the cluster against which this cmdlet is run.
+    aliases:
+    - Interface
+    - IN
+    - I
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Timeout
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of minutes to wait for the drain operation before stopping the cluster.
+      After the time expires, the existing connections are dropped.
+    aliases:
+    - T
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-NlbCluster
+        [[-HostName] <String>]
+        [[-InterfaceName] <String>]
+        [-Drain]
+        [-Timeout <UInt32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NonPipeline
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Stop-NlbCluster
+        -InputObject <Cluster[]>
+        [-Drain]
+        [-Timeout <UInt32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Pipeline
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Stop all cluster nodes on the local cluster'
+  description: |-
+    ```
+    PS C:\>Stop-NlbCluster
+    Name                IPAddress           SubnetMask          Mode
+    ----                ---------           ----------          ----
+    cluster1            3.53.100.100        255.0.0.0           UNICAST
+    ```
+
+    This example stops all cluster nodes on the local cluster.
+links:
+- text: Get-NlbCluster
+  href: ./Get-NlbCluster.yml
+- text: New-NlbCluster
+  href: ./New-NlbCluster.yml
+- text: Remove-NlbCluster
+  href: ./Remove-NlbCluster.yml
+- text: Resume-NlbCluster
+  href: ./Resume-NlbCluster.yml
+- text: Set-NlbCluster
+  href: ./Set-NlbCluster.yml
+- text: Start-NlbCluster
+  href: ./Start-NlbCluster.yml
+- text: Suspend-NlbCluster
+  href: ./Suspend-NlbCluster.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkloadbalancingclusters/stop-nlbcluster?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Stop-NlbCluster

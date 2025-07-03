@@ -1,0 +1,213 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADRMSAdmin.Update-RmsMfgEnrollment
+name: Update-RmsMfgEnrollment
+module: ADRMSAdmin
+isPreview: false
+summary: |-
+  Updates enrollment information for an AD RMS server enrolled with the Microsoft Federation Gateway service.
+description: |-
+  The **Update-RmsMfgEnrollment** cmdlet updates enrollment information for an Active Directory Rights Management Services (AD RMS) server enrolled with the Microsoft Federation Gateway service.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a string containing the thumbprint hash of the certificate being used to update enrollment with the Microsoft Federation Gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GetDefaultCertificate
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When specified, indicates that the thumbprint hash of the AD RMS default certificate should be retrieved and used to update enrollment with the Microsoft Federation Gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SetCertificatePermissions
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When specified, indicates that permissions are to be set on the AD RMS server enrollment with the Microsoft Federation Gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SigningCert
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When specified, indicates that the Microsoft Federation Gateway signing certificate should be updated (or refreshed in metadata) for the current AD RMS server enrollment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TokenCert
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When specified, indicates that the token decryption certificate should be updated for the AD RMS server enrollment with the Microsoft Federation Gateway.
+
+      You can update the token decryption certificate or the Microsoft Federation Gateway certificate, as needed.
+      Because the token decryption certificate is the SSL certificate for the AD RMS cluster, you must update the token decryption certificate if the cluster SSL certificate expires.
+      After you update the token decryption certificate, you must grant the AD RMS Services group permission to access the certificate on all servers in the AD RMS cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-RmsMfgEnrollment
+        [-TokenCert]
+        [-SigningCert]
+        [-SetCertificatePermissions]
+        [-Force]
+        [-GetDefaultCertificate]
+        [-CertificateThumbprint <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update support enrollment using the default certificate'
+  description: |-
+    ```
+    PS C:\> Update-RmsMfgEnrollment -GetDefaultCertificate
+    ```
+
+    This command updates the Microsoft Federation Gateway support enrollment for the current AD RMS server by retrieving and using the thumbprint hash of the AD RMS default certificate.
+- title: 'Example 2: Update support enrollment using a specified certificate'
+  description: |-
+    ```
+    PS C:\> Update-RmsMfgEnrollment -CertificateThumbprint "a909502dd82ae41433e6f83886b00d4277a32a7b"
+    ```
+
+    This command updates the Microsoft Federation Gateway support enrollment for the current AD RMS server using the thumbprint hash of a non-default certificate.
+- title: 'Example 3: Update the signing certificate for the enrollment'
+  description: |-
+    ```
+    PS C:\> Update-RmsMfgEnrollment -SigningCert
+    ```
+
+    This command updates the Microsoft Federation Gateway support enrollment for the current AD RMS server.
+- title: 'Example 4: Update the token decryption certificate'
+  description: |-
+    ```
+    PS C:\> Update-RmsMfgEnrollment -TokenCert
+    ```
+
+    This command updates the token decryption certificate for the current AD RMS server.
+- title: 'Example 5: Set certificate permissions for the Microsoft Federation Gateway'
+  description: |-
+    ```
+    PS C:\> Update-RmsMfgEnrollment -SetCertificatePermissions
+    ```
+
+    This command sets certificate permissions for the Microsoft Federation Gateway support enrollment for the current AD RMS.
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adrmsadmin/update-rmsmfgenrollment?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Update-RmsMfgEnrollment

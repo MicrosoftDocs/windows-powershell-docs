@@ -1,0 +1,95 @@
+### YamlMime:PowerShellCmdlet1
+uid: AssignedAccess.Clear-AssignedAccess
+name: Clear-AssignedAccess
+module: AssignedAccess
+isPreview: false
+summary: |-
+  Clears assigned access configured account settings.
+description: |-
+  The **Clear-AssignedAccess** cmdlet clears assigned access configured account settings and returns the user to default settings.
+
+  If a user is signed-in or the computer has a PS/2 keyboard, you must restart the computer to apply the changes.
+
+  Assigned Access cmdlets are supported on Windows 10 and Windows 11 client operating systems only.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Clear-AssignedAccess
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+examples:
+- title: 'Example 1: Clear assigned access configured settings'
+  description: |-
+    ```
+    PS C:\> Clear-AssignedAccess
+    ```
+
+    This command assigned access configured account settings  and returns the user to default settings.
+links:
+- text: Get-AssignedAccess
+  href: ./Get-AssignedAccess.yml
+- text: Set-AssignedAccess
+  href: ./Set-AssignedAccess.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: AssignedAccess-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/assignedaccess/clear-assignedaccess?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: AssignedAccess
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Clear-AssignedAccess

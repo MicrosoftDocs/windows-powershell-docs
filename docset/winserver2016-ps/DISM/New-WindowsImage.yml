@@ -1,0 +1,338 @@
+### YamlMime:PowerShellCmdlet1
+uid: DISM.New-WindowsImage
+name: New-WindowsImage
+module: DISM
+isPreview: false
+summary: |-
+  Captures an image of a drive to a new WIM file.
+description: |-
+  The **New-WindowsImage** cmdlet captures an image of a drive to a new WIM file.
+  Captured directories include all subfolders and data.
+  You cannot capture an empty directory.
+  A directory must contain at least one file.
+
+  This cmdlet does not apply to virtual hard disk (VHD) files.
+parameters:
+  cmdletParameters:
+  - name: CapturePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the drive or path to the Windows operating system that is to be captured to an image file.
+
+      When the path specified is not the root folder of a drive, the captured image will inherit the parent folder security descriptors. If you are capturing an image that was previously applied, apply the original image to the root folder of the drive to ensure that the security descriptors of the new image remain the same.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CheckIntegrity
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Detects and tracks .wim file corruption when used with the **Add-WindowsImage**, **Dismount-WindowsImage**, or **Save-WindowsImage** cmdlet.
+      CheckIntegrity stops the operation if DISM detects that the .wim file is corrupted when used with the **Expand-WindowsImage** or **Mount-WindowsImage** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompressionType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of compression used for the initial capture operation:
+
+      - **Max** = This option provides the best compression but takes more time to capture the image.
+      - **Fast** = This option provides faster image compression but the resulting files are larger than those compressed using the maximum (max) option.
+      - **None** = This option does not compress the captured image at all.
+
+      The *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
+    defaultValue: Fast
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of a configuration file that lists exclusions for image capture commands and compress commands.
+      For more information, see [DISM Configuration List and WimScript.ini Files](https://go.microsoft.com/fwlink/?LinkID=313768) in the TechNet Library.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the description of the image to be captured.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImagePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of a WIM file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogLevel
+    type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum output level shown in the logs.
+      The default log level is WarningsInfo.
+      The accepted values are as follows:
+
+      - Errors = Errors only
+      - Warnings = Errors and warnings
+      - WarningsInfo = Errors, warnings, and information
+    acceptedValues:
+    - Errors
+    - Warnings
+    - WarningsInfo
+    aliases:
+    - LL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path and file name to log to.
+      If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+      In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
+      The log file will automatically be archived.
+      The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
+      Each time the log file is archived the .bak file will be overwritten.
+      When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+    aliases:
+    - LP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an image in a WIM file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoRpFix
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disables the reparse point tag fix.
+      A reparse point is a file that contains a link to another file on the file system.
+      If the parameter is not specified, reparse points that resolve to paths outside of the value specified by the *ImagePath* parameter will not be captured.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScratchDirectory
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a temporary directory that will be used when extracting files for use during servicing.
+      The directory must exist locally.
+      If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+      Items in the scratch directory are deleted after each operation.
+      You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
+      The directory used for extracting files for temporary usage during servicing should be a local directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Setbootable
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Marks a volume image as being a bootable image.
+      This argument is available only for Windows PE images.
+      Only one volume image can be marked as bootable in a .wim file.
+    aliases:
+    - SB
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Verify
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Checks for errors and file duplication.
+       During an apply operation, for example, using the **Add-WindowsImage** cmdlet, the size and the hash of the file being applied are checked against the image file to verify they are both equal.
+       During a capture operation, for example, when using the **New-WindowsImage** cmdlet, after the files is captured into a Windows image, the file is written to a temporary file and compared on a bit-by-bit basis with the original file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WIMBoot
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the image will be formatted to install on a Windows Image Format Boot (WIMBoot) system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-WindowsImage
+        -ImagePath <String>
+        -CapturePath <String>
+        [-CompressionType <String>]
+        [-ConfigFilePath <String>]
+        [-Description <String>]
+        -Name <String>
+        [-CheckIntegrity]
+        [-NoRpFix]
+        [-Setbootable]
+        [-Verify]
+        [-WIMBoot]
+        [-LogPath <String>]
+        [-ScratchDirectory <String>]
+        [-LogLevel <LogLevel>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Dism.Commands.ImageObjectWithState" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Dism.Commands.OfflineImageObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Capture an image of a drive for a WIM file'
+  description: |-
+    ```
+    PS C:\> New-WindowsImage -ImagePath "c:\imagestore\custom.wim" -CapturePath "d:\" -Name "Drive D"
+    ```
+
+    This command captures the Drive D image in the WIM file located on d:\ and save to the file c:\imagestore\custom.wim.
+links:
+- text: Dismount-WindowsImage
+  href: ./Dismount-WindowsImage.yml
+- text: Expand-WindowsImage
+  href: ./Expand-WindowsImage.yml
+- text: Export-WindowsImage
+  href: ./Export-WindowsImage.yml
+- text: Get-WindowsImage
+  href: ./Get-WindowsImage.yml
+- text: Mount-WindowsImage
+  href: ./Mount-WindowsImage.yml
+- text: Remove-WindowsImage
+  href: ./Remove-WindowsImage.yml
+- text: Repair-WindowsImage
+  href: ./Repair-WindowsImage.yml
+- text: Save-WindowsImage
+  href: ./Save-WindowsImage.yml
+- text: Split-WindowsImage
+  href: ./Split-WindowsImage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dism/new-windowsimage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: DISM
+  ms.date: 12/21/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-WindowsImage

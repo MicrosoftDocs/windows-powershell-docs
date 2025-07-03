@@ -1,0 +1,134 @@
+### YamlMime:PowerShellCmdlet1
+uid: WebAdministration.Get-WebURL
+name: Get-WebURL
+module: WebAdministration
+isPreview: false
+summary: |-
+  Gets information about the URL associated with a website.
+description: |-
+  The **Get-WebURL** cmdlet gets information about the URL associated with the specified website.
+parameters:
+  cmdletParameters:
+  - name: Accept
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an HTTP Accept header.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Content
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The content returned by the request.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PSPath
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an IIS configuration path to the site for which this cmdlet returns information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputPSPath
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResponseHeaders
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The HTTP Response headers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Url
+    type: <xref href="Uri" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the URL for which information is retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputURL
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WebURL
+        [[-PSPath] <String[]>]
+        [-Accept <String>]
+        [-ResponseHeaders]
+        [-Content]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputPSPath
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-WebURL
+        [[-Url] <Uri[]>]
+        [-Accept <String>]
+        [-ResponseHeaders]
+        [-Content]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputURL
+  isDefault: false
+examples:
+- title: 'Example 1: Request the default website'
+  description: |-
+    ```
+    IIS:\> Get-WebURL -PSPath "IIS:\Sites\Default Web Site"
+    ResponseUri       Contents
+    -----------       --------
+    http://localhost/ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN".
+    ```
+
+    This command returns data about the default website.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/webadministration/get-weburl?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WebURL

@@ -1,0 +1,66 @@
+### YamlMime:PowerShellCmdlet1
+uid: ShieldedVMDataFile.Import-ShieldingDataFile
+name: Import-ShieldingDataFile
+module: ShieldedVMDataFile
+isPreview: false
+summary: |-
+  Imports shielding data.
+description: |-
+  The **Import-ShieldingDataFile** cmdlet imports a **ShieldingDataFile** object from a shielding data file.
+parameters:
+  cmdletParameters:
+  - name: ShieldingDataFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a shielding data file.
+      The file has the .pdk file name extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Import-ShieldingDataFile
+        [-ShieldingDataFilePath] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="ShieldingDataFile" data-throw-if-not-resolved="False" />
+- name: <xref href="ExistingVMShieldingDataFile" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **ShieldingDataFile** object.
+    This object represents a .pdk file used to provision a shielded virtual machine.
+examples:
+- title: 'Example 1: Provision a virtual machine by using an imported data file'
+  description: |-
+    ```
+    PS C:\>Import-ShieldingDataFile -ShieldingDataFilePath "ShieldingFile02.pdk" | Protect-ShieldingDataFile -ShieldingDataFilePath "ShieldingDataFile07.pdk"
+    ```
+
+    This command creates a **ShieldingDataFile** object.
+    The command passes it to the Protect-ShieldingDataFile cmdlet.
+    That cmdlet specifies the output file name.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/shieldedvmdatafile/import-shieldingdatafile?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ShieldedVMDataFile
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Import-ShieldingDataFile

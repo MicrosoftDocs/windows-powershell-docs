@@ -1,0 +1,85 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Get-WBBackupTarget
+name: Get-WBBackupTarget
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Gets backup storage locations that you specified as part of a backup policy.
+description: |-
+  The **Get-WBBackupTarget** cmdlet gets backup storage locations that you specified for a **WBPolicy** object that contains a backup policy.
+  Valid locations include disks, volumes, or remote shared folders.
+  To view the list of all online disks, use the [Get-WBDisk](./Get-WBDisk.yml) cmdlet.
+
+  You can add the locations that the cmdlet returns to a **WBPolicy** object by specifying them as backup storage locations to the [New-WBBackupTarget](./New-WBBackupTarget.yml) cmdlet.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+parameters:
+  cmdletParameters:
+  - name: Policy
+    type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a backup policy object for which this cmdlet displays information.
+    aliases:
+    - InPolicy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WBBackupTarget
+        [-Policy] <WBPolicy>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Windows.ServerBackup.Commands.WBPolicy" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a list of backup targets'
+  description: |-
+    ```
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Get-WBBackupTarget -Policy $Policy
+    ```
+
+    This example gets a list of the storage backup locations from a backup policy.
+
+    The first command gets the current backup policy and stores it in a variable named $Policy.
+
+    The second command gets the list of storage backup locations from the **WBPolicy** object that is stored in the $Policy variable.
+links:
+- text: Add-WBBackupTarget
+  href: ./Add-WBBackupTarget.yml
+- text: Get-WBDisk
+  href: ./Get-WBDisk.yml
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: New-WBBackupTarget
+  href: ./New-WBBackupTarget.yml
+- text: Remove-WBBackupTarget
+  href: ./Remove-WBBackupTarget.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/get-wbbackuptarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WBBackupTarget

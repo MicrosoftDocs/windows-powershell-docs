@@ -1,0 +1,95 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Restore-WBCatalog
+name: Restore-WBCatalog
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Restores a backup catalog for the local computer from a storage location.
+description: |-
+  The **Restore-WBCatalog** cmdlet restores a backup catalog for the local computer from a storage location that you specify.
+
+  If the location (disk, DVD, or remote shared folder) where you store your backups is damaged or lost and you cannot use it to restore the backup catalog, use this cmdlet to remove the corrupted catalog.
+  Then create a new backup after the cmdlet finishes removing your backup catalog.
+parameters:
+  cmdletParameters:
+  - name: BackupTarget
+    type: <xref href="WBBackupTarget" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a backup target object that contains the storage location where backups from which the cmdlet restores the catalog reside.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Restore-WBCatalog
+        [-BackupTarget] <WBBackupTarget>
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="WBBackupTarget, SwitchParameter" data-throw-if-not-resolved="False" />
+  description: |-
+    Specifies a backup target object from which to restore the catalog.
+    Use the *Force* parameter to suppress the confirmation message.
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a warning that gives details about the backups present in the backup target and a message that confirms that the cmdlet successfully recovered the catalog.
+examples:
+- title: 'Example 1: Restore a backup catalog'
+  description: |-
+    ```
+    PS C:\> Restore-WBCatalog -BackupTarget $Bt -Force
+    3 backups found in the specified target.
+    WARNING: The backup information on this location has details of backups created
+    up to 12/8/2011 11:41:38 AM. You may not be able to access backups created
+    after this date when the catalog recovery operation completes.
+    The catalog has been successfully recovered.
+    ```
+
+    This command recovers the backup catalog from the backup target stored in the variable named $Bt.
+    The cmdlet displays a warning that gives details about the backups present in the backup target.
+    The cmdlet also displays a message that confirms that it has successfully recovered the catalog.
+links:
+- text: Remove-WBCatalog
+  href: ./Remove-WBCatalog.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/restore-wbcatalog?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Restore-WBCatalog

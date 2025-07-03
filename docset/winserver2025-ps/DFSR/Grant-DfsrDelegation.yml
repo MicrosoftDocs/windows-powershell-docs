@@ -1,0 +1,161 @@
+### YamlMime:PowerShellCmdlet1
+uid: DFSR.Grant-DfsrDelegation
+name: Grant-DfsrDelegation
+module: DFSR
+isPreview: false
+summary: |-
+  Grants permissions to security principals for a replication group.
+description: |-
+  The **Grant-DfsrDelegation** cmdlet grants users or groups permission to create replicated folders, connections, members, and memberships inside a replication group.
+  Delegation allows users who are local administrators on servers that run the Distributed File System (DFS) Replication service to administer the Active Directory Domain Services (AD DS) portions of the replication topology, without being domain administrators.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of security principals.
+      This cmdlet assigns permissions to the users and groups that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the NetBIOS name or fully qualified domain name (FQDN) for the AD DS domain that contains a replication group.
+      If you do not specify this parameter, the cmdlet uses the domain of the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "100"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of replication groups.
+    aliases:
+    - RG
+    - RgName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Grant-DfsrDelegation
+        [-GroupName] <String[]>
+        [-AccountName] <String[]>
+        [-Force]
+        [[-DomainName] <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsrDelegation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Grant delegated permissions'
+  description: |-
+    ```
+    PS C:\> Grant-DfsrDelegation -GroupName "RG01" -AccountName "DFSR Admins"
+    GroupName   : RG01
+    AccountName : TSQA\DFSR Admins
+    IsInherited : False
+    ```
+
+    This command grants delegated permissions to the security group named DFSR Admins for a replication group named RG01.
+links:
+- text: Get-DfsrDelegation
+  href: ./Get-DfsrDelegation.yml
+- text: Revoke-DfsrDelegation
+  href: ./Revoke-DfsrDelegation.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: DfsrPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dfsr/grant-dfsrdelegation?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Grant-DfsrDelegation

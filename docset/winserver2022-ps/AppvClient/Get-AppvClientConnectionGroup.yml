@@ -1,0 +1,147 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Get-AppvClientConnectionGroup
+name: Get-AppvClientConnectionGroup
+module: AppvClient
+isPreview: false
+summary: |-
+  Returns an App-V connection group object.
+description: |-
+  The **Get-AppvClientConnectionGroup** cmdlet returns a specific Microsoft Application Virtualization (App-V) connection group object.
+notes: |-
+  * The cmdlet returns an error if the name of the specified App-V connection group cannot be found on the target computer.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet returns all connection groups that have been added to the computer, not just those that are enabled to the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the GUID of specific connection group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the App-V Connection Group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VersionId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a GUID that differentiates a package version from other versions, whether older, newer, or of a different lineage.
+      If you do not specify this parameter, the cmdlet operates on all versions of the package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AppvClientConnectionGroup
+        [[-Name] <String>]
+        [-All]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AppvClientConnectionGroup
+        [-GroupId] <Guid>
+        [[-VersionId] <Guid>]
+        [-All]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByGuid
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.AppV.AppvClientPowerShell.AppvClientConnectionGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all versions of a group by name'
+  description: |-
+    ```
+    PS C:\> Get-AppvClientConnectionGroup -Name "MyConnectionGroup"
+    ```
+
+    This command gets all versions of the enabled connection groups named MyConnectionGroup.
+- title: 'Example 2: Get a connection group by using its ID'
+  description: |-
+    ```
+    PS C:\> Get-AppvClientConnectionGroup -GroupID 793afd37-bd68-4ea1-859a-669f6afd0aa8
+    ```
+
+    This command gets the enabled connection group that has the group ID of 793afd37-bd68-4ea1-859a-669f6afd0aa8.
+- title: 'Example 3: Get all connection groups'
+  description: |-
+    ```
+    PS C:\> Get-AppvClientConnectionGroup -All
+    ```
+
+    This command gets all of the connection groups on the computer.
+links:
+- text: Add-AppvClientConnectionGroup
+  href: ./Add-AppvClientConnectionGroup.yml
+- text: Disable-AppvClientConnectionGroup
+  href: ./Disable-AppvClientConnectionGroup.yml
+- text: Enable-AppvClientConnectionGroup
+  href: ./Enable-AppvClientConnectionGroup.yml
+- text: Mount-AppvClientConnectionGroup
+  href: ./Mount-AppvClientConnectionGroup.yml
+- text: Remove-AppvClientConnectionGroup
+  href: ./Remove-AppvClientConnectionGroup.yml
+- text: Repair-AppvClientConnectionGroup
+  href: ./Repair-AppvClientConnectionGroup.yml
+- text: Stop-AppvClientConnectionGroup
+  href: ./Stop-AppvClientConnectionGroup.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/get-appvclientconnectiongroup?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AppvClientConnectionGroup

@@ -1,0 +1,169 @@
+### YamlMime:PowerShellCmdlet1
+uid: UEV.Export-UevPackage
+name: Export-UevPackage
+module: UEV
+isPreview: false
+summary: |-
+  Exports the settings stored in a settings package.
+description: |-
+  The **Export-UevPackage** cmdlet exports the settings that are stored in a settings package to an XML file.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LiteralPath
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of literal file paths.
+      The cmdlet exports the settings location templates that have the literal paths that you specify.
+    aliases:
+    - PSPath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LiteralPath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of file paths.
+      The cmdlet exports the settings location templates that have the paths you specify.
+      Use wildcards to specify multiple files.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-UevPackage
+        [-Path] <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Path
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Export-UevPackage
+        -LiteralPath <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LiteralPath
+  isDefault: false
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" />
+  description: |-
+    A collection of paths to the settings packages.
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates XML text that describes the settings stored in the specified settings package.
+examples:
+- title: 'Example 1: Export a UE-V package'
+  description: |-
+    ```
+    PS C:\> Export-UevPackage -Path "MicrosoftCalculator6.pkgx"
+    <SettingsDocument>
+    <registry>
+    <Setting Type="VT_BINARY" Name="registry://HKCU\Software\Microsoft\Calc\Window_Placement" Action="Update">LAAAAAAAAAABAAAA/////////////////////60AAABQAAAAVAIAANQBAAA=</Setting>
+    <Setting Type="VT_DWORD" Name="registry://HKCU\Software\Microsoft\Calc\layout" Action="Update">2</Setting>
+    </registry>
+    </SettingsDocument>
+    ```
+
+    This command exports a settings package file for Microsoft calculator by using the *Path* parameter.
+- title: 'Example 2: Export a UE-V package by name'
+  description: |-
+    ```
+    PS C:\> Export-UevPackage -Path "*calc*.pkgx"
+
+
+    <SettingsDocument>
+    <registry>
+    <Setting Type="VT_BINARY" Name="registry://HKCU\Software\Microsoft\Calc\Window_Placement" Action="Update">LAAAAAAAAAABAAAA/////////////////////60AAABQAAAAVAIAANQBAAA=</Setting>
+    <Setting Type="VT_DWORD" Name="registry://HKCU\Software\Microsoft\Calc\layout" Action="Update">2</Setting>
+    </registry>
+    </SettingsDocument>
+    ```
+
+    This command exports a settings package file for Microsoft calculator by using wildcard characters in the file name.
+- title: 'Example 3: Export a UE-V package by path'
+  description: |-
+    ```
+    PS C:\> Export-UevPackage -LiteralPath "MicrosoftCalculator6.pkgx"
+    <SettingsDocument>
+    <registry>
+    <Setting Type="VT_BINARY" Name="registry://HKCU\Software\Microsoft\Calc\Window_Placement" Action="Update">LAAAAAAAAAABAAAA/////////////////////60AAABQAAAAVAIAANQBAAA=</Setting>
+    <Setting Type="VT_DWORD" Name="registry://HKCU\Software\Microsoft\Calc\layout" Action="Update">2</Setting>
+    </registry>
+    </SettingsDocument>
+    ```
+
+    This command exports a settings package file for Microsoft calculator.
+    The example does not use wildcard characters in the path.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/uev/export-uevpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: UEV
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Export-UevPackage

@@ -1,0 +1,142 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Remove-AdfsWebTheme
+name: Remove-AdfsWebTheme
+module: ADFS
+isPreview: false
+summary: |-
+  Removes a web theme.
+description: |-
+  The **Remove-AdfsWebTheme** cmdlet removes an **AdfsWebTheme** object.
+  Specify a web theme by name or by using the **Get-AdfsWebTheme** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name.
+      The cmdlet removes the theme that you specify by name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetWebTheme
+    type: <xref href="AdfsWebTheme" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an **AdfsWebTheme** object.
+      The cmdlet removes the theme that you specify.
+      To obtain an **AdfsWebTheme** object, use the **Get-AdfsWebTheme** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AdfsWebTheme
+        [-TargetName] <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifierName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AdfsWebTheme
+        [-TargetWebTheme] <AdfsWebTheme>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifierObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String;Microsoft.IdentityServer.Management.Resources.AdfsWebTheme" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a named web theme'
+  description: |-
+    ```
+    PS C:\> Remove-AdfsWebTheme -TargetName "Theme01"
+    ```
+
+    This command removes the web theme named Theme01.
+- title: 'Example 2: Remove a web theme by specifying a web theme object'
+  description: |-
+    ```
+    PS C:\> Get-AdfsWebTheme -Name "Theme02" | Remove-AdfsWebTheme
+    ```
+
+    This command uses the **Get-AdfsWebTheme** cmdlet to get the web theme named Theme02, and then passes it to the current cmdlet by using the pipeline operator.
+    The cmdlet removes that web theme.
+links:
+- text: Export-AdfsWebTheme
+  href: ./Export-AdfsWebTheme.yml
+- text: Get-AdfsWebTheme
+  href: ./Get-AdfsWebTheme.yml
+- text: New-AdfsWebTheme
+  href: ./New-AdfsWebTheme.yml
+- text: Set-AdfsWebTheme
+  href: ./Set-AdfsWebTheme.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/remove-adfswebtheme?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-AdfsWebTheme

@@ -1,0 +1,167 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Remove-AppvClientPackage
+name: Remove-AppvClientPackage
+module: AppvClient
+isPreview: false
+summary: |-
+  Removes the package from a computer.
+description: |-
+  The **Remove-AppvClientPackage** cmdlet removes the package from computer that runs the Microsoft Application Virtualization (App-V) client.
+  The cmdlet deletes the **AppvClientPackage** object.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the package given during sequencing.
+      This value is obtained from the package manifest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Package
+    type: <xref href="AppvClientPackage" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an App-V package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPackage
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the package ID that uniquely identifies the package.
+      It can be found in the package manifest or by opening the package in the sequencer.
+      The package ID is shared by all versions of a specific package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of an App-V package in a lineage.
+      If you do not specify this parameter, the cmdlet operates on all versions on the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VersionId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a GUID that differentiates a package version from other versions, whether older, newer, or of a different lineage.
+      If you do not specify this parameter, the cmdlet operates on all versions of the package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AppvClientPackage
+        [-PackageId] <Guid>
+        [-VersionId] <Guid>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByGuid
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AppvClientPackage
+        [-Package] <AppvClientPackage>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPackage
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AppvClientPackage
+        [-Name] <String>
+        [[-Version] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a version of a package by using the pipeline operator'
+  description: |-
+    ```
+    PS C:\> Get-AppvPackage -Name "MyPackage" -Version 1 | Remove-Package
+    ```
+
+    This command gets version 1 of the package named MyPackage, and then removes it from the computer.
+- title: 'Example 2: Remove a version of a package'
+  description: |-
+    ```
+    PS C:\> Remove-Package -Name "MyPackage" -Version 1
+    ```
+
+    This command removes version 1 of the package named MyPackage from the computer.
+links:
+- text: Add-AppvClientPackage
+  href: ./Add-AppvClientPackage.yml
+- text: Get-AppvClientPackage
+  href: ./Get-AppvClientPackage.yml
+- text: Mount-AppvClientPackage
+  href: ./Mount-AppvClientPackage.yml
+- text: Publish-AppvClientPackage
+  href: ./Publish-AppvClientPackage.yml
+- text: Repair-AppvClientPackage
+  href: ./Repair-AppvClientPackage.yml
+- text: Set-AppvClientPackage
+  href: ./Set-AppvClientPackage.yml
+- text: Stop-AppvClientPackage
+  href: ./Stop-AppvClientPackage.yml
+- text: Unpublish-AppvClientPackage
+  href: ./Unpublish-AppvClientPackage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/remove-appvclientpackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-AppvClientPackage

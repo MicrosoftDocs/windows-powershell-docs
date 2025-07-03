@@ -1,0 +1,88 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Test-WorkgroupClusterRemoting
+name: Test-WorkgroupClusterRemoting
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Tests if remoting is configured on all nodes.
+description: |-
+  The `Test-WorkgroupClusterRemoting` function tests if remoting is configured on all nodes. It also
+  verifies if CredSSP is configured.
+parameters:
+  cmdletParameters:
+  - name: Credentials
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      An array of credentials for the nodes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Node
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      An array of nodes to test remoting on.
+    defaultValue: '@()'
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-WorkgroupClusterRemoting
+        [[-Node] <String[]>]
+        [[-Credentials] <PSCredential[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```powershell
+    Test-WorkgroupClusterRemoting -Node "Node1", "Node2" -Credentials $cred1, $cred2
+    ```
+
+    This example tests if remoting is configured on `Node1` and `Node2` using the credentials in
+    `$cred1` and `$cred2`.
+links:
+- text: Add-WorkgroupClusterNode
+  href: add-workgroupclusternode.yml
+- text: New-WorkgroupCluster
+  href: new-workgroupcluster.yml
+- text: Remove-WorkgroupCluster
+  href: remove-workgroupcluster.yml
+- text: Remove-WorkgroupClusterNode
+  href: remove-workgroupclusternode.yml
+- text: Set-WorkgroupClusterRemotingConfiguration
+  href: set-workgroupclusterremotingconfiguration.yml
+- text: Test-WorkgroupCluster
+  href: test-workgroupcluster.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/test-workgroupclusterremoting?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 09/11/2024
+  PlatyPS schema version: 2024-05-01
+  title: Test-WorkgroupClusterRemoting

@@ -1,0 +1,113 @@
+### YamlMime:PowerShellCmdlet1
+uid: Appx.Add-AppSharedPackageContainer
+name: Add-AppSharedPackageContainer
+module: Appx
+isPreview: false
+summary: |-
+  Deploys the shared package container definition.
+description: |-
+  The `Add-AppSharedPackageContainer` cmdlet deploys the shared package container definition for the
+  particular user.
+parameters:
+  cmdletParameters:
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Replaces an existing container of the same name with the newly created container's definition for
+      the target users.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForceApplicationShutdown
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Closes all packages currently running in the Shared Package Container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Merge
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Merges a new container's definition into an existing container definition of the same name for
+      target users.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path to the XML definition file.
+    aliases:
+    - PSPath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AppSharedPackageContainer
+        [-Path] <String>
+        [-ForceApplicationShutdown]
+        [-Merge]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Add-AppSharedPackageContainer -Path C:\MyFolder\ContosoTestContainer.xml
+    ```
+
+    This command deploys the definition described in the ContosoTestContainer file.
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appx/add-appsharedpackagecontainer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Appx
+  ms.date: 05/15/2023
+  PlatyPS schema version: 2024-05-01
+  title: Add-AppSharedPackageContainer

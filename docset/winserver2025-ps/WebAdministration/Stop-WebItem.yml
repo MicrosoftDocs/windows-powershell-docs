@@ -1,0 +1,114 @@
+### YamlMime:PowerShellCmdlet1
+uid: WebAdministration.Stop-WebItem
+name: Stop-WebItem
+module: WebAdministration
+isPreview: false
+summary: |-
+  Stops a site or an application pool.
+description: |-
+  The **Stop-WebItem** cmdlet stops a site or an application pool.
+parameters:
+  cmdletParameters:
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Passes an object that represents the web item to the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the protocol binding of the site to stop.
+      This parameter applies to sites only.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PSPath
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the path to the site or application pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-WebItem
+        [-Passthru]
+        [-Protocol <String>]
+        [[-PSPath] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Stop a website'
+  description: |-
+    ```
+    IIS:\> Stop-WebItem -PSPath "IIS:\Sites\Default Web Site"
+    ```
+
+    This command stops the site named Default Web Site.
+    No output is returned.
+- title: 'Example 2: Stop a website with feedback'
+  description: |-
+    ```
+    IIS:\> Stop-WebItem -PSPath "IIS:\Sites\Default Web Site" -Passthru
+    Name        ID     State    Physical Path                  Bindings
+
+    ----        --     -----    -------------                  --------
+
+    Default Web Site 1 Stopped  C:\inetpub\wwwroot\Default Web http *:80:
+
+    Site
+    ```
+
+    This command stops the site named Default Web Site and reports whether the site was stopped.
+links:
+- text: Restart-WebItem
+  href: ./Restart-WebItem.yml
+- text: Start-WebItem
+  href: ./Start-WebItem.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/webadministration/stop-webitem?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Stop-WebItem

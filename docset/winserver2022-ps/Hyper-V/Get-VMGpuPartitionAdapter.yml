@@ -1,0 +1,168 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Get-VMGpuPartitionAdapter
+name: Get-VMGpuPartitionAdapter
+module: Hyper-V
+isPreview: false
+summary: |-
+  Gets the information of assigned GPU partitions to a virtual machine.
+description: |-
+  The `Get-VMGpuPartitionAdapter` cmdlet gets the information of assigned graphic processing unit
+  partitions to a virtual machine.
+parameters:
+  cmdletParameters:
+  - name: AdapterId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is a VM's GPU partition identification number used to display the GPU information assigned to a
+      VM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+      object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+      or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
+      current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts on the virtual network adapters are to be retrieved. NetBIOS
+      names, IP addresses, and fully qualified domain names are allowed. The default is the local
+      computer. Use localhost or a dot (`.`) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action. The default is the
+      current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the virtual machine whose virtual network adapters are to be retrieved. The asterisk (`*`)
+      is the wildcard. If it is specified the cmdlet returns virtual network adapters from every virtual
+      machine in the system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the virtual machine whose network adapters are to be retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-VMGpuPartitionAdapter
+        [-VMName] <String[]>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-AdapterId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-VMGpuPartitionAdapter
+        [-VM] <VirtualMachine[]>
+        [-AdapterId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMGpuPartitionAdapter" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $testvm = Get-VM "TestVM"
+    Get-VMGpuPartitionAdapter -VM $testvm
+    ```
+
+    This example gets the GPU information assigned to a VM object.
+links:
+- text: Add-VMGpuPartitionAdapter
+  href: add-vmgpupartitionadapter.yml
+- text: Remove-VMGpuPartitionAdapter
+  href: remove-vmgpupartitionadapter.yml
+- text: Set-VMGpuPartitionAdapter
+  href: set-vmgpupartitionadapter.yml
+metadata:
+  description: Gets the information of assigned GPU partitions to a virtual machine.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/get-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 06/12/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-VMGpuPartitionAdapter

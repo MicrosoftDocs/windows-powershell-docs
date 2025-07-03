@@ -1,0 +1,226 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsKeyProtection.Add-HgsKeyProtectionCertificate
+name: Add-HgsKeyProtectionCertificate
+module: HgsKeyProtection
+isPreview: false
+summary: |-
+  Adds a key certificate to the Key Protection Service.
+description: |-
+  The **Add-HgsKeyProtectionCertificate** cmdlet adds a certificate to the Key Protection Service.
+  You can add a certificate as an encryption certificate or a signing certificate.
+  You can add a reference to a certificate stored in the Windows certificate store.
+  Before you add a certificate reference you must add the certificate to the LocalMachine\My certificate store.
+  The cmdlet looks up the certificate in the LocalMachine\My certificate store by using its thumbprint.
+  You can also add a full certificate stored in a file as a pfx.
+  If the file containing the pfx is protected by a password, you must specify the pfx password.
+parameters:
+  cmdletParameters:
+  - name: CertificatePassword
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password which protects a certificate file.
+      If the certificate file is protected by a password, you must specify this value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FullCertificate
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificatePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the certificate which will be added to the Key Protection Service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FullCertificate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateType
+    type: <xref href="KeyCertificateType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of the certificate that this cmdlet adds.
+      The acceptable values for this parameter are:
+
+      - Signing
+      - Encryption
+    acceptedValues:
+    - Signing
+    - Encryption
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoCertificateReplication
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This only applies when you use the `-Thumbprint` option to specify a certificate.
+      It is typically used for hardware security module (HSM) backed certificates but can be used for other certificates too.
+      Specifying `NoCertificateReplication` disables automatic replication of the certificate from LocalMachine\My certificate store to the same store on all other nodes in the cluster.
+      The HGS admin is then responsible for replicating that certificate manually to all other nodes in the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CertificateReference
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Thumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the thumbprint of the certificate to add.
+      You must add the certificate to the LocalMachine\My certificate store before you run the current cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CertificateReference
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-HgsKeyProtectionCertificate
+        -CertificateType <KeyCertificateType>
+        -Thumbprint <String>
+        [-NoCertificateReplication]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CertificateReference
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-HgsKeyProtectionCertificate
+        -CertificateType <KeyCertificateType>
+        -CertificatePath <String>
+        [-CertificatePassword <SecureString>]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FullCertificate
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+examples:
+- title: 'Example 1: Add an encryption certificate'
+  description: |-
+    ```
+    PS C:\> Add-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint "d39203a3b3544743ad552afe0615dc1f"
+    ```
+
+    This command adds a certificate reference to the Key Protection Service for use as an encryption certificate.
+- title: 'Example 2: Add an encryption certificate file with a password'
+  description: |-
+    ```
+    PS C:\> Add-HgsKeyProtectionCertificate -CertificateType Encryption -CertificatePath "C:\example.pfx" -CertificatePassword $Password
+    ```
+
+    This command adds a certificate file to the Key Protection Service as an encryption certificate.
+    In this example, the certificate file is protected by a password stored as a SecureString in the variable $Password.
+links:
+- text: Get-HgsKeyProtectionCertificate
+  href: ./Get-HgsKeyProtectionCertificate.yml
+- text: Remove-HgsKeyProtectionCertificate
+  href: ./Remove-HgsKeyProtectionCertificate.yml
+- text: Set-HgsKeyProtectionCertificate
+  href: ./Set-HgsKeyProtectionCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgskeyprotection/add-hgskeyprotectioncertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-HgsKeyProtectionCertificate

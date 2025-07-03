@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: StartLayout.Get-StartApps
+name: Get-StartApps
+module: StartLayout
+isPreview: false
+summary: |-
+  Gets the names and AppIDs of installed apps.
+description: |-
+  The **Get-StartApps** cmdlet gets the names and AppIDs of installed apps of the current user.
+  An AppID is an AppUserModelID.
+  You can specify a particular app by using its name, or you can specify a name that includes the wildcard character (*).
+  If you do not specify a name, the cmdlet displays all installed apps.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="Object" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an app.
+      You can use the wildcard character.
+      If you do not specify this parameter, the cmdlet gets all the apps.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-StartApps
+        [[-Name] <Object>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  description: |-
+    A **PSObject** that contains the name and AppID for each app found in the Start screen for the user, as in this output example:
+
+    Output Example:
+
+    Name AppID
+    ---- -----
+
+    A.
+    Datum Pro Center Datum.ProCenter
+    Proseware Studio Proseware.Studio.5
+    A.
+    Datum 2010 prog..tion_0000000000000000_ebec13db489e8ef9
+    Fabrikam Initializer Fabrikam.Initializer.1
+    A.
+    Datum Connector Contoso.Datum.Connector
+    Proseware Design Pro Proseware.Design.3
+examples:
+- title: 'Example 1: Get all apps'
+  description: |-
+    ```
+    PS C:\> Get-StartApps
+    Name AppID
+    ---- -----
+
+    A. Datum Pro Center Datum.ProCenter
+    Proseware Studio Proseware.Studio.5
+    A. Datum 2010 prog..tion_0000000000000000_ebec13db489e8ef9
+    Fabrikam Initializer Fabrikam.Initializer.1
+    A. Datum Connector Contoso.Datum.Connector
+    Proseware Design Pro Proseware.Design.3
+    ```
+
+    This command gets all the names and IDs of installed apps for the current user.
+links:
+- text: Export-StartLayout
+  href: ./Export-StartLayout.yml
+- text: Import-StartLayout
+  href: ./Import-StartLayout.yml
+- text: Start Layout Cmdlets
+  href: index.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.StartLayout.Commands.dll-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/startlayout/get-startapps?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: StartLayout
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-StartApps

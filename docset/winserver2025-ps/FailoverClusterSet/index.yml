@@ -1,0 +1,52 @@
+### YamlMime:PowerShellModule1
+uid: FailoverClusterSet
+name: FailoverClusterSet Module
+isPreview: false
+cmdletGroups:
+- title: FailoverClusterSet Cmdlets
+  cmdlets:
+  - FailoverClusterSet.Add-ClusterSetFaultDomainMember
+  - FailoverClusterSet.Add-ClusterSetMember
+  - FailoverClusterSet.Add-ClusterSetMemberTag
+  - FailoverClusterSet.Add-ClusterSetParticipantToAvailabilitySet
+  - FailoverClusterSet.Clear-ClusterSetMember
+  - FailoverClusterSet.Get-ClusterSet
+  - FailoverClusterSet.Get-ClusterSetAvailabilitySet
+  - FailoverClusterSet.Get-ClusterSetFaultDomain
+  - FailoverClusterSet.Get-ClusterSetLog
+  - FailoverClusterSet.Get-ClusterSetMember
+  - FailoverClusterSet.Get-ClusterSetNode
+  - FailoverClusterSet.Get-ClusterSetOptimalNodeForVm
+  - FailoverClusterSet.Get-ClusterSetVM
+  - FailoverClusterSet.Initialize-ClusterSet
+  - FailoverClusterSet.Initialize-ClusterSetMember
+  - FailoverClusterSet.Move-ClusterSetVM
+  - FailoverClusterSet.New-ClusterSet
+  - FailoverClusterSet.New-ClusterSetAvailabilitySet
+  - FailoverClusterSet.New-ClusterSetFaultDomain
+  - FailoverClusterSet.Register-ClusterSetMember
+  - FailoverClusterSet.Register-ClusterSetSRPartnership
+  - FailoverClusterSet.Register-ClusterSetVM
+  - FailoverClusterSet.Remove-ClusterSet
+  - FailoverClusterSet.Remove-ClusterSetAvailabilitySet
+  - FailoverClusterSet.Remove-ClusterSetFaultDomain
+  - FailoverClusterSet.Remove-ClusterSetFaultDomainMember
+  - FailoverClusterSet.Remove-ClusterSetMember
+  - FailoverClusterSet.Remove-ClusterSetMemberTag
+  - FailoverClusterSet.Remove-ClusterSetParticipantFromAvailabilitySet
+  - FailoverClusterSet.Set-ClusterSet
+  - FailoverClusterSet.Set-ClusterSetVm
+  - FailoverClusterSet.Unregister-ClusterSetMember
+  - FailoverClusterSet.Unregister-ClusterSetVM
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: 2fa63304-0f50-4bd5-b99a-a59c1a8d6e95
+  Module Name: FailoverClusterSet
+  ms.date: 02/21/2024
+  title: FailoverClusterSet module
+  PlatyPS schema version: 2024-05-01
+  document type: module

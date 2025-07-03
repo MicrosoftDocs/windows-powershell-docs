@@ -1,0 +1,165 @@
+### YamlMime:PowerShellCmdlet1
+uid: ConfigCI.Set-CIPolicyIdInfo
+name: Set-CIPolicyIdInfo
+module: ConfigCI
+isPreview: false
+summary: |-
+  Modifies the name and ID of a Code Integrity policy.
+description: |-
+  The **Set-CIPolicyIdInfo** cmdlet modifies the policy name and policy ID of a Code Integrity policy.
+  Specify the .xml file of the policy to modify.
+  Event Tracing for Windows (ETW) events use the **PolicyID** and **Name** properties to identify which policy is currently running on a computer.
+parameters:
+  cmdletParameters:
+  - name: BasePolicyToSupplementPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to a base policy to get the value for the **BasePolicyID** property for a supplemental policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a Code Integrity policy .xml file.
+    aliases:
+    - f
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value for the **PolicyID** property.
+      This string is not required to be a GUID.
+    aliases:
+    - pid
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value for the **Name** property.
+    aliases:
+    - pn
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResetPolicyID
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Resets both the PolicyID and BasePolicyID values. This parameter will convert a single-policy format policy to multi-policy format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupplementsBasePolicyID
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value for the **BasePolicyID** property for a supplemental policy.
+    aliases:
+    - None
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-CIPolicyIdInfo
+        [-FilePath] <String>
+        [-PolicyName <String>]
+        [-SupplementsBasePolicyID <Guid>]
+        [-BasePolicyToSupplementPath <String>]
+        [-ResetPolicyID]
+        [-PolicyId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Modify the ID and name of a policy'
+  description: |-
+    ```
+    PS C:\> Set-CIPolicyIdInfo -FilePath ".\Policy03.xml" -PolicyId "CIP077" -PolicyName "CIPolicy03"
+    ```
+
+    This command modifies the policy ID and the policy name for the policy stored in the Policy03.xml file.
+- title: 'Example 2: Modify the name of a policy'
+  description: |-
+    ```
+    PS C:\> Set-CIPolicyIdInfo -FilePath ".\Policy03.xml" -PolicyName "CIPolicy77"
+    ```
+
+    This command modifies only the policy name for the policy stored in the Policy03.xml file.
+- title: 'Example 3: Specify the base policy ID of a supplemental policy'
+  description: |-
+    ```
+    PS C:\> Set-CIPolicyIdInfo -FilePath ".\Supplemental_Policy.xml" -BasePolicyToSupplementPath ".\Base_Policy.xml"
+    ```
+
+    This command will extract the PolicyID field from the Base_Policy.xml file and modify the BasePolicyID field in the Supplemental_Policy.xml file.
+links:
+- text: Get-CIPolicyIdInfo
+  href: ./Get-CIPolicyIdInfo.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/configci/set-cipolicyidinfo?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-CIPolicyIdInfo

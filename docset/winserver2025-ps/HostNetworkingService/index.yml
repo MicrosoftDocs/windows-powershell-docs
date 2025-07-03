@@ -1,0 +1,29 @@
+### YamlMime:PowerShellModule1
+uid: HostNetworkingService
+name: HostNetworkingService Module
+isPreview: false
+cmdletGroups:
+- title: HostNetworkingService Cmdlets
+  cmdlets:
+  - HostNetworkingService.Get-HnsEndpoint
+  - HostNetworkingService.Get-HnsEndpointAddresses
+  - HostNetworkingService.Get-HnsEndpointStats
+  - HostNetworkingService.Get-HnsNamespace
+  - HostNetworkingService.Get-HnsNetwork
+  - HostNetworkingService.Get-HnsPolicyList
+  - HostNetworkingService.Remove-HnsEndpoint
+  - HostNetworkingService.Remove-HnsNamespace
+  - HostNetworkingService.Remove-HnsNetwork
+  - HostNetworkingService.Remove-HnsPolicyList
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: db0313a4-e42d-4b51-9d8e-523e839075fd
+  Module Name: HostNetworkingService
+  ms.date: 02/22/2024
+  title: HostNetworkingService module
+  PlatyPS schema version: 2024-05-01
+  document type: module

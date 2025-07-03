@@ -1,0 +1,99 @@
+### YamlMime:PowerShellCmdlet1
+uid: NanoServerImageGenerator.Get-NanoServerPackage
+name: Get-NanoServerPackage
+module: NanoServerImageGenerator
+isPreview: false
+summary: |-
+  Gets available packages for a Nano Server installation image.
+description: |-
+  The **Get-NanoServerPackage** cmdlet gets packages that are available to embed into a Nano Server installation image.
+parameters:
+  cmdletParameters:
+  - name: BasePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the source media.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path where log files from the operation will be collected.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MediaPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the source media.
+      If a local copy of the source media already exists, and it is specified as the base path, then no copying is performed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NanoServerPackage
+        [[-MediaPath] <String>]
+        [[-BasePath] <String>]
+        [[-LogPath] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get available packages'
+  description: |-
+    ```
+    PS C:\> Get-NanoServerPackage -MediaPath D:\
+    ```
+
+    This command gets packages available on the source media mounted on the D: drive.
+links:
+- text: Edit-NanoServerImage
+  href: ./Edit-NanoServerImage.yml
+- text: New-NanoServerImage
+  href: ./New-NanoServerImage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: NanoServerImageGenerator-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/nanoserverimagegenerator/get-nanoserverpackage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: NanoServerImageGenerator
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NanoServerPackage

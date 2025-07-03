@@ -1,0 +1,317 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADCSDeployment.Install-AdcsEnrollmentWebService
+name: Install-AdcsEnrollmentWebService
+module: ADCSDeployment
+isPreview: false
+summary: |-
+  Performs the initial configuration of the Certificate Enrollment Web service.
+description: |-
+  The **Install-AdcsEnrollmentWebService** cmdlet performs the configuration of Certificate Enrollment Web service.
+  It is also used to create additional instances of the service within an existing installation.
+  To remove the Certificate Enrollment Web Service role service use the **Uninstall-AdcsEnrollmentWebService** cmdlet.
+
+  You can import the cmdlet by running the following commands from Windows PowerShell:
+
+  - `Import-Module ServerManager`
+  - `Add-WindowsFeature Adcs-Enroll-Web-Svc`
+notes: |-
+  * Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.
+  To see parameters, run the following command: `Install-AdcsEnrollmentWebService cmdlet -?`
+  * You can get the CA configuration, which is the computer name and CA name by running certutil without any parameters. You can see the SSL certificate thumbprints assigned to the local computer by running the following commands:
+   - `cd cert:\LocalMachine\My`
+   - `dir | format-list`
+parameters:
+  cmdletParameters:
+  - name: AllowKeyBasedRenewal
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet accept key based renewal requests for the enrollment server, which are valid client certificates for authentication that do not directly map to a security principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationPoolIdentity
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet uses the application pool identity that the Certificate Enrollment Web Service uses when communicating with the Certification Authority (CA).
+      This parameter is only valid when Certificate Enrollment Web Service targets a remote CA.
+      If not specified, the local application pool identity is used.
+      This parameter is only valid when installing the first instance of the Certificate Enrollment Web Service.
+      If this installation will be for an additional instance of Certificate Enrollment Web Service on this server, then this parameter should not be specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthenticationType
+    type: <xref href="AuthenticationType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the authentication type.
+      The acceptable values for this parameter are:
+
+      - Certificate
+      - Kerberos
+      - UserName
+    acceptedValues:
+    - Kerberos
+    - UserName
+    - Certificate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CAConfig
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the configuration string of the CA used by the Certificate Enrollment Web Service to process enrollment requests.
+      This parameter depends upon whether a local CA is installed.
+      If the CA is local, then the parameter is optional and defaults to the local CA when not specified.
+      If there is not a local CA, then the parameter is required.
+      The input is the configuration string is `<CAComputerName>\<CACommonName>`.
+      Replace the computer name of the (CA) for `<CAComputerName>` and replace the CA common name for `<CACommonName>`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials for installing the Certificate Enrollment Web Service.
+      To obtain a credential object, use the **Get-Credential** cmdlet.
+      For more information, type `Get-Help Get-Credential`.
+      The Certificate Enrollment Web Service must be installed on a server that is a member of an Active Directory Domain Services (AD DS) domain.
+      If the Certificate Enrollment Web Service is configured to use a Standalone certification authority (CA), then an account that is a member of the local Administrators on the CA is required.
+      If the Enrollment Web Service is installed to use an Enterprise CA, then using an account that is a member of Domain Admins group is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RenewalOnly
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet enables renewal only mode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the domain account for use with the service.
+      The input string should be in the form of `<domain>\<accountname>`.
+      For instance, to specify an account named WebEnroll in the Corp.contoso.com domain, you would type `CORP\WebEnroll`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServiceAccountParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceAccountPassword
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password for the domain account used as the service account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServiceAccountParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SSLCertThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the hash or thumbprint of the Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificate for a web site as a string value.
+      This parameter is optional.
+      If used, it establishes the necessary binding with Internet Information Server (IIS) to enable support for the required SSL/TLS connectivity.
+      If a binding already exists within IIS, specifying this parameter overwrites the existing binding.
+      If this parameter is not specified, any existing binding is used.
+      If no bindings exist, installation succeeds, but the service will not function until the binding is established manually.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Install-AdcsEnrollmentWebService
+        [-CAConfig <String>]
+        [-ApplicationPoolIdentity]
+        [-AuthenticationType <AuthenticationType>]
+        [-SSLCertThumbprint <String>]
+        [-RenewalOnly]
+        [-AllowKeyBasedRenewal]
+        [-Force]
+        [-Credential <PSCredential>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Install-AdcsEnrollmentWebService
+        -ServiceAccountName <String>
+        -ServiceAccountPassword <SecureString>
+        [-CAConfig <String>]
+        [-AuthenticationType <AuthenticationType>]
+        [-SSLCertThumbprint <String>]
+        [-RenewalOnly]
+        [-AllowKeyBasedRenewal]
+        [-Force]
+        [-Credential <PSCredential>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ServiceAccountParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="bool, bool, enum, string, bool, string, SecureString, string, PSCredential" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Deployment.Commands.CES.EnrollmentServiceResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Installs the Certificate Enrollment Web Service to use the certification authority'
+  description: |-
+    ```
+    PS C:\> Install-AdcsEnrollmentWebService -ApplicationPoolIdentity -CAConfig "CA1.contoso.com\contoso-CA1-CA" -SSLCertThumbprint "Thumbprint001" -AuthenticationType Certificate
+    ```
+
+    This command installs the Certificate Enrollment Web Service to use the certification authority with a computer name of CA1.contoso.com and a CA common name contoso-CA1-CA.
+    The identity of the Certificate Enrollment Web Service is specified as the default application pool identity.
+    The authentication type is certificate based.
+- title: 'Example 2: Installs the Certificate Enrollment Web Service to use the certification authority that prompts for password'
+  description: |-
+    ```
+    PS C:\> Install-AdcsEnrollmentWebService -CAConfig "APP1.corp.contoso.com\corp-APP1-CA" -SSLCertThumbprint "Thumbprint001" -ServiceAccountName "Corp\CEPAcct1" -ServiceAccountPassword (read-host "Set user password" -assecurestring)
+    ```
+
+    This command installs the Certificate Enrollment Web Service to use the certification authority with a computer name of APP1.corp.contoso.com and a CA common name corp-APP1-CA.
+    The identity of the Certificate Enrollment Web Service is specified as CEPAcct1 from the Corp domain.
+    The command will prompt for the user password.
+links:
+- text: Uninstall-AdcsEnrollmentWebService
+  href: ./Uninstall-AdcsEnrollmentWebService.yml
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adcsdeployment/install-adcsenrollmentwebservice?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADCSDeployment
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Install-AdcsEnrollmentWebService

@@ -1,0 +1,277 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Set-AdfsRelyingPartyWebTheme
+name: Set-AdfsRelyingPartyWebTheme
+module: ADFS
+isPreview: false
+summary: |-
+  Applies a web theme to a relying party.
+description: |-
+  The **Set-AdfsRelyingPartyWebTheme** cmdlet applies a web theme to a relying party.
+  A web theme includes logo, illustration, stylesheets, and custom onload.js files.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Illustration
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an illustration as a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Logo
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a logo as a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OnLoadScriptPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of an onload script.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RTLStyleSheetPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the RTL style sheet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceRelyingPartyName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the source relying party.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceWebThemeName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the source web theme.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StyleSheet
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a style sheet as a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetRelyingPartyName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the target relying party.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetRelyingPartyWebTheme
+    type: <xref href="AdfsRelyingPartyWebTheme" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the target web theme.
+    aliases:
+    - TargetWebTheme
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AdfsRelyingPartyWebTheme
+        [-TargetRelyingPartyName] <String>
+        [-StyleSheet <Hashtable[]>]
+        [-RTLStyleSheetPath <String>]
+        [-OnLoadScriptPath <String>]
+        [-Logo <Hashtable[]>]
+        [-Illustration <Hashtable[]>]
+        [-SourceWebThemeName <String>]
+        [-SourceRelyingPartyName <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifierName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AdfsRelyingPartyWebTheme
+        [-TargetRelyingPartyWebTheme] <AdfsRelyingPartyWebTheme>
+        [-StyleSheet <Hashtable[]>]
+        [-RTLStyleSheetPath <String>]
+        [-OnLoadScriptPath <String>]
+        [-Logo <Hashtable[]>]
+        [-Illustration <Hashtable[]>]
+        [-SourceWebThemeName <String>]
+        [-SourceRelyingPartyName <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifierObject
+  isDefault: false
+examples:
+- title: 'Example 1: Create a custom theme and assign it to the Office 365 relying party trust'
+  description: |-
+    ```
+    PS C:\> New-AdfsWebTheme -Name "Office365Theme" -SourceName "default"
+    PS C:\> Set-AdfsWebTheme -TargetName "Office365Theme" -Illustration @{Path="C:\localpath\illustration22.jpg"}
+    PS C:\> Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName "Microsoft Office 365 Identity Platform" -SourceWebThemeName "Office365Theme"
+    ```
+
+    The first command creates an AD FS web theme by using the **New-AdfsWebTheme** cmdlet.
+    The theme is named Office365Theme.
+
+    The second command modifies Office365Theme by using the **Set-AdfsWebTheme** cmdlet.
+
+    The final command assigns the custom theme to the Office 365 relying party trust.
+- title: 'Example 2: Create an advanced per application custom theme and assign it to a relying party'
+  description: |-
+    ```
+    PS C:\> New-AdfsWebTheme -Name "AppSpecificTheme" -SourceName "default"
+    PS C:\> Export-AdfsWebTheme -Name "AppSpecificTheme" -DirectoryPath "C:\AppSpecificTheme"
+    PS C:\> Set-AdfsWebTheme -TargetName "AppSpecificTheme" -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="C:\AppSpecificTheme\script\onload.js"}
+    PS C:\> Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName "urn:app1" -SourceWebThemeName "AppSpecificTheme"
+    ```
+
+    The first command creates a theme as a copy of the default global theme in AD FS by using **New-AdfsWebTheme**.
+
+    The second command exports the theme for customization by using the **Export-AdfsWebTheme** cmdlet.
+
+    The third command customizes the theme by specifying files by using **Set-AdfsWebTheme**.
+
+    The final command applies the customized theme to a relying party.
+links:
+- text: Export-AdfsWebTheme
+  href: ./Export-AdfsWebTheme.yml
+- text: Get-AdfsRelyingPartyWebTheme
+  href: ./Get-AdfsRelyingPartyWebTheme.yml
+- text: New-AdfsWebTheme
+  href: ./New-AdfsWebTheme.yml
+- text: Remove-AdfsRelyingPartyWebTheme
+  href: ./Remove-AdfsRelyingPartyWebTheme.yml
+- text: Set-AdfsWebTheme
+  href: ./Set-AdfsWebTheme.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/set-adfsrelyingpartywebtheme?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AdfsRelyingPartyWebTheme

@@ -1,0 +1,170 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvSequencer.Update-AppvSequencerPackage
+name: Update-AppvSequencerPackage
+module: AppvSequencer
+isPreview: false
+summary: |-
+  Upgrades virtual application packages.
+description: |-
+  The **Update-AppvSequencerPackage** cmdlet upgrades virtual application packages.
+  It takes as an input the original package, the upgrade installer, and an output path.
+  The cmdlet returns a package that is upgraded.
+parameters:
+  cmdletParameters:
+  - name: FullLoad
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet forces the package to be fully downloaded onto the computer before it can be launched.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputPackagePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the existing Microsoft Application Virtualization (App-V) package to upgrade.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Installer
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the installer used to upgrade the App-V package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstallerOptions
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of Installer Command-Line Options as parameter values, such as /quiet, /passive, or /norestart.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the package given during Sequencing time.
+      This value is obtained from the package manifest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the folder where the updated package is to be saved.
+    aliases:
+    - OutputPath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the App-V package template file to be used for this package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AppvSequencerPackage
+        [-FullLoad]
+        [-InputPackagePath] <String>
+        [-Installer] <String[]>
+        [-InstallerOptions <String[]>]
+        [-Name] <String>
+        [-Path] <String>
+        [-TemplateFilePath <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Update an application'
+  description: |-
+    ```
+    PS C:\> Update-AppvSequencerPackage -AppvPackageFilePath "C:\Packages\MyPackage.appv" -Installer "C:\PackageInstall\PackageUpgrade.exe" -OutputPath "C:\UpgradedPackages"
+    ```
+
+    This command updates an application, changing the output path.
+- title: 'Example 2: Update an application and require package to be fully loaded'
+  description: |-
+    ```
+    PS C:\> Update-AppvSequencerPackage -AppvPackageFilePath "C:\Packages\MyPackage.appv" -Installer "C:\PackageInstall\PackageUpgrade.exe" -OutputPath "C:\UpgradedPackages" -FullLoad
+    ```
+
+    This command updates an application, and sets the package to be fully loaded.
+links:
+- text: Expand-AppvSequencerPackage
+  href: ./Expand-AppvSequencerPackage.yml
+- text: New-AppvSequencerPackage
+  href: ./New-AppvSequencerPackage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.Modernizer.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvsequencer/update-appvsequencerpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvSequencer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Update-AppvSequencerPackage

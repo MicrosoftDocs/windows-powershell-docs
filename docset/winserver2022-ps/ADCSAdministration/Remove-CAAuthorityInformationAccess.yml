@@ -1,0 +1,191 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADCSAdministration.Remove-CAAuthorityInformationAccess
+name: Remove-CAAuthorityInformationAccess
+module: ADCSAdministration
+isPreview: false
+summary: |-
+  Removes AIA or OCSP URI from the AIA extension set on the certification authority.
+description: |-
+  The **Remove-CAAuthorityInformationAccess** cmdlet removes the Authority Information Access (AIA) or Online Certificate Status Protocol (OCSP) uniform resource information (URI) from the AIA extension set on the certification authority.
+notes: |-
+  * You must be a member of Enterprise Admins group to successfully run this command.
+parameters:
+  cmdletParameters:
+  - name: AddToCertificateAia
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet adds the AIA URI.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveAsAIA
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AddToCertificateOcsp
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet adds an Online Responder's URI.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveAsOCSP
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Uri
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URI from where the certificate for the CA can be downloaded or the online responder information can be obtained.
+      This information is added to the CA properties and registry.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-CAAuthorityInformationAccess
+        [-Uri] <String>
+        [-AddToCertificateAia]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveAsAIA
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-CAAuthorityInformationAccess
+        [-Uri] <String>
+        [-AddToCertificateOcsp]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveAsOCSP
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Administration.Commands.CA.AuthorityInformationAccessResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove AIA for a specified URI'
+  description: |-
+    ```
+    PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.contoso.com/pki/orca1.crt" -AddToCertificateAia
+    ```
+
+    This command removes AIA for the specified URI named `http://www.contoso.com/pki/orca1.crt`.
+- title: 'Example 2: Remove OCSP for a specified URI'
+  description: |-
+    ```
+    PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.cpandl.com/ocsp/" -AddToCertificateOcsp
+    ```
+
+    This command removes the OCSP for the specified URI named `http://www.cpandl.com/ocsp`.
+- title: 'Example 3: Remove all AIA and OCSP entries for a specified URI'
+  description: |-
+    ```
+    PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.contoso.com/pki/orca1.crt"
+    ```
+
+    This command removes all AIA and OCSP entries that match the URL `http://www.contoso.com/pki/orca1.crt`.
+- title: 'Example 4: Remove all AIA entries'
+  description: |-
+    ```powershell
+    $AIA = Get-CAAuthorityInformationAccess
+    $AIA | Remove-CAAuthorityInformationAccess
+    ```
+
+    This example removes all AIA entries
+
+    The first command gets the certificate authority information and stores the information in the variable named $AIA.
+
+    The second command removes all the AIA entries that are stored in the $AIA variable.
+links:
+- text: Add-CAAuthorityInformationAccess
+  href: ./Add-CAAuthorityInformationAccess.yml
+- text: Get-CAAuthorityInformationAccess
+  href: ./Get-CAAuthorityInformationAccess.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adcsadministration/remove-caauthorityinformationaccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADCSAdministration
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-CAAuthorityInformationAccess

@@ -1,0 +1,81 @@
+### YamlMime:PowerShellCmdlet1
+uid: ConfigCI.Get-CIPolicyIdInfo
+name: Get-CIPolicyIdInfo
+module: ConfigCI
+isPreview: false
+summary: |-
+  Displays Code Integrity policy information.
+description: |-
+  The **Get-CIPolicyIdInfo** cmdlet displays Code Integrity policy information.
+  Specify the .xml file of the policy to modify.
+
+  This cmdlet returns human readable content.
+  It is not intended for use with other cmdlets.
+parameters:
+  cmdletParameters:
+  - name: FilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a Code Integrity policy .xml file.
+    aliases:
+    - f
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-CIPolicyIdInfo
+        [-FilePath] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="CIPolicyIdInfo" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Display Code Integrity policy information'
+  description: |-
+    ```
+    PS C:\> Get-CIPolicyIdInfo -FilePath ".\Policy03.xml"
+
+    Provider  : ConfigCIPolicy
+    Key       : PolicyInfo
+    ValueName : Name
+    ValueType : String
+    Value     : CIPolicy03
+
+    Provider  : ConfigCIPolicy
+    Key       : PolicyInfo
+    ValueName : PolicyId
+    ValueType : String
+    Value     : CIP077
+    ```
+
+    This command displays the Code Integrity policy information for the policy in the stored in the Policy03.xml file.
+    This policy has values for both name and ID.
+links:
+- text: Set-CIPolicyIdInfo
+  href: ./Set-CIPolicyIdInfo.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/configci/get-cipolicyidinfo?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ConfigCI
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-CIPolicyIdInfo

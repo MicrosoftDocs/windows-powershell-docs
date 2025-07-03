@@ -1,0 +1,39 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Get-AppvStatus
+name: Get-AppvStatus
+module: AppvClient
+isPreview: false
+summary: |-
+  Gets the status of the App-V service.
+description: |-
+  The **Get-AppvStatus** cmdlet gets the status of the Microsoft Application Virtualization (App-V) service.
+  This cmdlet returns a value of $True or $False for whether App-V is enabled and whether a restart is required.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AppvStatus
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get status'
+  description: |-
+    ```
+    PS C:\> Get-AppvStatus
+    ```
+
+    This command gets the status of the App-V service.
+links:
+- text: Disable-Appv
+  href: ./Disable-Appv.yml
+- text: Enable-Appv
+  href: ./Enable-Appv.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/get-appvstatus?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AppvStatus

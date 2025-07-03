@@ -1,0 +1,425 @@
+### YamlMime:PowerShellCmdlet1
+uid: ProcessMitigations.Set-ProcessMitigation
+name: Set-ProcessMitigation
+module: ProcessMitigations
+isPreview: false
+summary: |-
+  Commands to enable and disable process mitigations or set them in bulk from an XML file.
+description: |-
+  Used to turn on and off various process mitigation settings.
+  Can also apply an XML file to apply settings for many processes at once.
+parameters:
+  cmdletParameters:
+  - name: Disable
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Comma separated list of mitigations to disable.
+      Disable list takes priority over enable list.
+      If specified in both, it will be disabled.
+    acceptedValues:
+    - DEP
+    - EmulateAtlThunks
+    - SEHOP
+    - ForceRelocateImages
+    - RequireInfo
+    - BottomUp
+    - HighEntropy
+    - StrictHandle
+    - DisableWin32kSystemCalls
+    - AuditSystemCall
+    - DisableExtensionPoints
+    - BlockDynamicCode
+    - AllowThreadsToOptOut
+    - AuditDynamicCode
+    - CFG
+    - SuppressExports
+    - StrictCFG
+    - MicrosoftSignedOnly
+    - AllowStoreSignedBinaries
+    - AuditMicrosoftSigned
+    - AuditStoreSigned
+    - EnforceModuleDependencySigning
+    - DisableNonSystemFonts
+    - AuditFont
+    - BlockRemoteImageLoads
+    - BlockLowLabelImageLoads
+    - PreferSystem32
+    - AuditRemoteImageLoads
+    - AuditLowLabelImageLoads
+    - AuditPreferSystem32
+    - EnableExportAddressFilter
+    - AuditEnableExportAddressFilter
+    - EnableExportAddressFilterPlus
+    - AuditEnableExportAddressFilterPlus
+    - EnableImportAddressFilter
+    - AuditEnableImportAddressFilter
+    - EnableRopStackPivot
+    - AuditEnableRopStackPivot
+    - EnableRopCallerCheck
+    - AuditEnableRopCallerCheck
+    - EnableRopSimExec
+    - AuditEnableRopSimExec
+    - SEHOP
+    - AuditSEHOP
+    - SEHOPTelemetry
+    - TerminateOnError
+    - DisallowChildProcessCreation
+    - AuditChildProcess
+    aliases:
+    - d
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ProcessPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SystemMode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EAFModules
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Modules to be added to the EAF+ mitigation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ProcessPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SystemMode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enable
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Comma separated list of mitigations to enable.
+      Disable list takes priority over enable list.
+      If specified in both, it will be disabled.
+    acceptedValues:
+    - DEP
+    - EmulateAtlThunks
+    - SEHOP
+    - ForceRelocateImages
+    - RequireInfo
+    - BottomUp
+    - HighEntropy
+    - StrictHandle
+    - DisableWin32kSystemCalls
+    - AuditSystemCall
+    - DisableExtensionPoints
+    - BlockDynamicCode
+    - AllowThreadsToOptOut
+    - AuditDynamicCode
+    - CFG
+    - SuppressExports
+    - StrictCFG
+    - MicrosoftSignedOnly
+    - AllowStoreSignedBinaries
+    - AuditMicrosoftSigned
+    - AuditStoreSigned
+    - EnforceModuleDependencySigning
+    - DisableNonSystemFonts
+    - AuditFont
+    - BlockRemoteImageLoads
+    - BlockLowLabelImageLoads
+    - PreferSystem32
+    - AuditRemoteImageLoads
+    - AuditLowLabelImageLoads
+    - AuditPreferSystem32
+    - EnableExportAddressFilter
+    - AuditEnableExportAddressFilter
+    - EnableExportAddressFilterPlus
+    - AuditEnableExportAddressFilterPlus
+    - EnableImportAddressFilter
+    - AuditEnableImportAddressFilter
+    - EnableRopStackPivot
+    - AuditEnableRopStackPivot
+    - EnableRopCallerCheck
+    - AuditEnableRopCallerCheck
+    - EnableRopSimExec
+    - AuditEnableRopSimExec
+    - SEHOP
+    - AuditSEHOP
+    - SEHOPTelemetry
+    - TerminateOnError
+    - DisallowChildProcessCreation
+    - AuditChildProcess
+    aliases:
+    - e
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ProcessPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SystemMode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Overrides a system setting either on or off depending on the level this is set at. Will force "on"/"off" all mitigations provided in the -Enable list
+    acceptedValues:
+    - on
+    - off
+    - notset
+    aliases:
+    - f
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ProcessPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SystemMode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsValid
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Set to check the given XML file for validity. Requires local .xsd
+    aliases:
+    - v
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FullPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the process to apply mitigation settings to.
+      Can be in the format "notepad" or "notepad.exe"
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ProcessPolicy
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path to XML file containing mitigation settings.
+    aliases:
+    - x
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FullPolicy
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Remove
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Removes a mitigation entry from the registry.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ProcessPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SystemMode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Reset
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Resets a specific mitigation entry to defer.
+    aliases:
+    - r
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ProcessPolicy
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SystemMode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: System
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Used to configure system defaults rather than individual apps.
+    aliases:
+    - s
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SystemMode
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-ProcessMitigation
+        [[-Name] <String>]
+        [-Disable <String[]>]
+        [-Enable <String[]>]
+        [-EAFModules <String[]>]
+        [-Force <String>]
+        [-Reset]
+        [-Remove]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ProcessPolicy
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-ProcessMitigation
+        -PolicyFilePath <String>
+        [-IsValid]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FullPolicy
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-ProcessMitigation
+        [-Disable <String[]>]
+        [-Enable <String[]>]
+        [-EAFModules <String[]>]
+        [-System]
+        [-Force <String>]
+        [-Reset]
+        [-Remove]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SystemMode
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\>  Set-ProcessMitigation -Name Notepad.exe -Enable SEHOP -Disable ForceRelocateImages
+    ```
+
+    Gets the current process mitigation for "notepad.exe" from the registry and then enables SEHOP, and disables ForceRelocateImages.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Set-ProcessMitigation -PolicyFilePath settings.xml
+    ```
+
+    Applies all settings inside settings.xml
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> Set-ProcessMitigation -System -Enable DEP
+    ```
+
+    Applies DEP at the system level. To disable mitigations, you can replace `-Enable` with `-Disable`. However, for app-level mitigations, this will force the mitigation to be disabled only for that app.
+- title: Exmaple 4
+  description: |-
+    ```
+    PS C:\> Set-ProcessMitigation -System -Remove -Disable DEP
+    ```
+
+    If you need to restore the mitigation back to the system default, you need to include the `-Remove` cmdlet as well, as in the above  example:
+- title: Example 5
+  description: |-
+    ```
+    PS C:\> Set-ProcessMitigation -System -Enable SEHOP
+    ```
+
+    Enable SEHOP Component at the system level.
+- title: Example 6
+  description: |-
+    ```
+    PS C:\> Set-ProcessMitigation -System -Disable SEHOP
+    ```
+
+    Disable SEHOP Component at the system level.
+- title: Example 7
+  description: |-
+    ```
+    PS C:\> Set-ProcessMitigation -System -Reset
+    ```
+
+    Reset Mitigation at the system level.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.ProcessMitigations.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/processmitigations/set-processmitigation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ProcessMitigations
+  ms.date: 03/29/2017
+  PlatyPS schema version: 2024-05-01
+  title: Set-ProcessMitigation

@@ -1,0 +1,140 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Resume-ClusterResource
+name: Resume-ClusterResource
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Turns off maintenance for a disk resource or Cluster Shared Volume within a failover cluster.
+description: |-
+  The `Resume-ClusterResource` cmdlet turns off maintenance for a disk resource or Cluster Shared
+  Volume within a failover cluster.
+
+  This cmdlet applies to disks and Cluster Shared Volumes only. We recommend that maintenance be
+  turned off for a disk or Cluster Shared Volume as soon as the maintenance tasks have been completed.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+      `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster resource to resume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster resource to resume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the volume to suspend. This parameter is only applicable to Cluster Shared
+      Volumes. If this parameter isn't specified, then the operation will be performed on all volumes on
+      the Cluster Shared Volume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Resume-ClusterResource
+        [[-Name] <String>]
+        [-VolumeName <String>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterSharedVolume" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Resume-ClusterResource "Cluster Disk 2"
+    ```
+
+    This example turns off maintenance for the CSV named `Cluster Disk 2`.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-ClusterSharedVolume "Cluster Disk 5" | Resume-ClusterResource
+    ```
+
+    This example turns off maintenance for all volumes on the CSV named `Cluster Disk 5`.
+links:
+- text: Add-ClusterResource
+  href: ./Add-ClusterResource.yml
+- text: Get-ClusterResource
+  href: ./Get-ClusterResource.yml
+- text: Move-ClusterResource
+  href: ./Move-ClusterResource.yml
+- text: Remove-ClusterResource
+  href: ./Remove-ClusterResource.yml
+- text: Start-ClusterResource
+  href: ./Start-ClusterResource.yml
+- text: Stop-ClusterResource
+  href: ./Stop-ClusterResource.yml
+- text: Suspend-ClusterResource
+  href: ./Suspend-ClusterResource.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/resume-clusterresource?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 10/21/2022
+  PlatyPS schema version: 2024-05-01
+  title: Resume-ClusterResource

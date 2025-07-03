@@ -1,0 +1,123 @@
+### YamlMime:PowerShellCmdlet1
+uid: RDMgmt.Get-RDServer
+name: Get-RDServer
+module: RDMgmt
+isPreview: false
+summary: |-
+  Gets RDS servers in a Remote Desktop deployment.
+description: |-
+  The **Get-RDServer** cmdlet gets the Remote Desktop Services (RDS) servers in a Remote Desktop deployment.
+  You can get servers by role, or all servers in a deployment.
+parameters:
+  cmdletParameters:
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Role
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of RDS service roles.
+      The acceptable values for this parameter are:
+
+      - RDS-VIRTUALIZATION.
+      Remote Desktop Virtualization Host (RD Virtualization Host).
+      - RDS-RD-SERVER.
+      Remote Desktop Session Host (RD Session Host).
+      - RDS-CONNECTION-BROKER.
+      RD Connection Broker.
+      - RDS-WEB-ACCESS.
+      Remote Desktop Web Access (RD Web Access).
+      - RDS-GATEWAY.
+      Remote Desktop Gateway (RD Gateway).
+      - RDS-LICENSING.
+      Remote Desktop Licensing (RD Licensing).
+    acceptedValues:
+    - RDS-VIRTUALIZATION
+    - RDS-RD-SERVER
+    - RDS-CONNECTION-BROKER
+    - RDS-WEB-ACCESS
+    - RDS-GATEWAY
+    - RDS-LICENSING
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-RDServer
+        [[-ConnectionBroker] <String>]
+        [[-Role] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    Server.
+    FQDN of an RD Connection Broker.
+    Roles.
+    Names of RDS role services.
+examples:
+- title: 'Example 1: Get all servers'
+  description: |-
+    ```
+    PS C:\> Get-RDserver
+    ```
+
+    This command gets all servers and the server roles installed in the Remote Desktop deployment on the local computer.
+- title: 'Example 2: Get servers that have a specified role'
+  description: |-
+    ```
+    PS C:\> Get-RDserver -Role "RDS-VIRTUALIZATION"
+    ```
+
+    This command gets the servers that have the RD Virtualization Host server role for the local computer.
+    The **Role** parameter has the value RDS-VIRTUALIZATION.
+- title: 'Example 3: Get all servers for an RD Connection Broker'
+  description: |-
+    ```
+    PS C:\> Get-RDServer -ConnectionBroker "RDCB.Contoso.com"
+    ```
+
+    This command gets the servers and the server roles installed in the Remote Desktop deployment for the RD Connection Broker, named RDCB.Contoso.com.
+links:
+- text: Add-RDServer
+  href: ./Add-RDServer.yml
+- text: Remove-RDServer
+  href: ./Remove-RDServer.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/rdmgmt/get-rdserver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-RDServer

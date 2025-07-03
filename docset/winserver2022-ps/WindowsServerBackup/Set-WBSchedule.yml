@@ -1,0 +1,99 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Set-WBSchedule
+name: Set-WBSchedule
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Sets the current schedule for backups.
+description: |-
+  The **Set-WBSchedule** cmdlet sets the current schedule for backups and saves the settings in the **WBPolicy** object.
+
+  The **WBPolicy** object must be in edit mode.
+  To put the **WBPolicy** object in edit mode, use the [Get-WBPolicy](./Get-WBPolicy.yml) cmdlet with the *Editable* parameter.
+  The [New-WBPolicy](./New-WBPolicy.yml) cmdlet creates a **WBPolicy** object that is already in edit mode.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+parameters:
+  cmdletParameters:
+  - name: Policy
+    type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **WBPolicy** object to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Schedule
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the times of day to create a backup.
+      Time values are formatted as HH:MM and separated by a comma.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WBSchedule
+        [-Policy] <WBPolicy>
+        [-Schedule] <DateTime[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Windows.ServerBackup.Commands.WBPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet references a **Datetime** object for the scheduled times and the **WBPolicy** object for the backup policy to update.
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set a backup policy schedule'
+  description: |-
+    ```
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Set-WBSchedule -Policy $Policy -Schedule 12:00,09:00
+    ```
+
+    This example sets the scheduled times to create backups and saves the information in the **WBPolicy** object.
+    When you set this policy on the computer, backups are created daily at the specified times.
+
+    The first command stores the result of the **Get-WBPolicy** in the variable named $Policy.
+
+    The second command sets the backup schedule in the $Policy variable.
+    The *Schedule* parameter indicates the times.
+links:
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: Get-WBSchedule
+  href: ./Get-WBSchedule.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/set-wbschedule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WBSchedule

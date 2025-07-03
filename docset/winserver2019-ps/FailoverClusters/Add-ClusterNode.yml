@@ -1,0 +1,151 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Add-ClusterNode
+name: Add-ClusterNode
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Adds a node (server) to a failover cluster.
+description: |-
+  The **Add-ClusterNode** cmdlet adds a node, or server, to a failover cluster.
+  Before adding the new node, you should run validation tests on the existing nodes together with the proposed new node.
+
+  Before adding the new node, you should run validation tests on the existing nodes together with the proposed new node.
+  By running the validation tests, you can confirm that the server to be added is connected correctly to the networks and storage and that it contains the same software updates.
+
+  Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet.
+      If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster to which to add the new cluster node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster node to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoStorage
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Ensures that shared storage, on the node being joined to the cluster, will not be added to the cluster during the join operation.
+      Shared storage can be added by piping the ClusterDiskInfo object from the **Get-ClusterAvailableDisk** cmdlet into the **Add-ClusterDisk** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-ClusterNode
+        [[-Name] <StringCollection>]
+        [-NoStorage]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Add-ClusterNode -Name node4
+    Name                                                                      State
+    ----                                                                      -----
+    node4                                                                        Up
+    ```
+
+    This example adds node named node4 to the local cluster.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Get-Cluster -Name cluster1 | Add-ClusterNode -Name node3
+    Name                                                                      State
+    ----                                                                      -----
+    node3                                                                        Up
+    ```
+
+    This example adds the node named node3 to cluster called cluster1.
+links:
+- text: Add-ClusterDisk
+  href: ./Add-ClusterDisk.yml
+- text: Get-ClusterAvailableDisk
+  href: ./Get-ClusterAvailableDisk.yml
+- text: Get-ClusterNode
+  href: ./Get-ClusterNode.yml
+- text: New-Cluster
+  href: ./New-Cluster.yml
+- text: Remove-ClusterNode
+  href: ./Remove-ClusterNode.yml
+- text: Resume-ClusterNode
+  href: ./Resume-ClusterNode.yml
+- text: Start-ClusterNode
+  href: ./Start-ClusterNode.yml
+- text: Stop-ClusterNode
+  href: ./Stop-ClusterNode.yml
+- text: Suspend-ClusterNode
+  href: ./Suspend-ClusterNode.yml
+- text: Test-Cluster
+  href: ./Test-Cluster.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/add-clusternode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-ClusterNode

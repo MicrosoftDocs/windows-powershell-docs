@@ -1,0 +1,489 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Test-AdfsFarmInstallation
+name: Test-AdfsFarmInstallation
+module: ADFS
+isPreview: false
+summary: |-
+  Runs prerequisite checks for installing a new federation server farm.
+description: |-
+  The **Test-AdfsFarmInstallation** cmdlet performs the checks that you must complete before you run the Install-AdfsFarm cmdlet to install a new federation server farm.
+parameters:
+  cmdletParameters:
+  - name: AdminConfiguration
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies admin configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of the thumbprint of the certificate that the Secure Sockets Layer (SSL) binding of the default website uses in Internet Information Services (IIS).
+      This value must match the thumbprint of a valid certificate in the certificate store of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSCredential** object based on a user name and password.
+      To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+      For more information, type `Get-Help Get-Credential`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptionCertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of the thumbprint of the certificate that Active Directory Federation Services (AD FS) uses for token decryption.
+      If you specify this parameter, AD FS disables automatic certificate rollover, and you must specify a token signing certificate by specifying the **SigningCertificateThumbprint** parameter.
+      This value must match the thumbprint of a valid certificate in the certificate store of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ADFSFarmCreateLocalDatabaseDisableAutoCertRollover
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ADFSFarmCreateSharedDatabaseDisableAutoCertRollover
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdfsFarmCreateLocalDatabaseDisableAutoCertRolloverGmsa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdfsFarmCreateSharedDatabaseDisableAutoCertRolloverGmsa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FederationServiceDisplayName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the display name of the Federation Service.
+      The name of the Federation Service appears by default in sign-in pages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FederationServiceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Domain Name System (DNS) name of the Federation Service.
+      This value must match the subject name of the certificate that you configure on the SSL binding in IIS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupServiceAccountIdentifier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the group Managed Service Account that the AD FS service uses as the logon identity for the AD FS Windows service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdfsFarmCreateLocalDatabaseDisableAutoCertRolloverGmsa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdfsFarmCreateSharedDatabaseDisableAutoCertRolloverGmsa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdfsFarmCreateLocalDatabaseGmsa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdfsFarmCreateSharedDatabaseGmsa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OverwriteConfiguration
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the AD FS service removes an existing AD FS configuration database and overwrites it with a new database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceAccountCredential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSCredential** object based on a user name and password for the service account in Active Directory® Domain Services under which the AD FS service runs.
+      To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+      For more information, type `Get-Help Get-Credential`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ADFSFarmCreateLocalDatabase
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ADFSFarmCreateLocalDatabaseDisableAutoCertRollover
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ADFSFarmCreateSharedDatabaseDisableAutoCertRollover
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ADFSFarmCreateSharedDatabase
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SigningCertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of the thumbprint of the certificate that the AD FS service uses for token signing.
+      If you specify this parameter, AD FS disables automatic certificate rollover, and you must also specify a token decryption certificate by using the **DecryptionCertificateThumbprint** parameter.
+      This value must match the thumbprint of a valid certificate in the certificate store of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ADFSFarmCreateLocalDatabaseDisableAutoCertRollover
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ADFSFarmCreateSharedDatabaseDisableAutoCertRollover
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdfsFarmCreateLocalDatabaseDisableAutoCertRolloverGmsa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdfsFarmCreateSharedDatabaseDisableAutoCertRolloverGmsa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SQLConnectionString
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Microsoft SQL Server database that stores the AD FS configuration settings.
+      If you do not specify this parameter, the AD FS installer uses the Windows Internal Database to store configuration settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ADFSFarmCreateSharedDatabaseDisableAutoCertRollover
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdfsFarmCreateSharedDatabaseDisableAutoCertRolloverGmsa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ADFSFarmCreateSharedDatabase
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdfsFarmCreateSharedDatabaseGmsa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SSLPort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of the port number of the SSL binding that the AD FS website uses.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TlsClientPort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the port number that the AD FS service uses for Transport Layer Security (TLS) authentication for the user certificate client.
+      The default value is 49443.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AdfsFarmInstallation
+        -FederationServiceName <String>
+        -ServiceAccountCredential <PSCredential>
+        [-CertificateThumbprint <String>]
+        [-Credential <PSCredential>]
+        [-FederationServiceDisplayName <String>]
+        [-OverwriteConfiguration]
+        [-SSLPort <Int32>]
+        [-TlsClientPort <Int32>]
+        [-AdminConfiguration <Hashtable>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ADFSFarmCreateLocalDatabase
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Test-AdfsFarmInstallation
+        -DecryptionCertificateThumbprint <String>
+        -FederationServiceName <String>
+        -ServiceAccountCredential <PSCredential>
+        -SigningCertificateThumbprint <String>
+        [-CertificateThumbprint <String>]
+        [-Credential <PSCredential>]
+        [-FederationServiceDisplayName <String>]
+        [-OverwriteConfiguration]
+        [-SSLPort <Int32>]
+        [-TlsClientPort <Int32>]
+        [-AdminConfiguration <Hashtable>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ADFSFarmCreateLocalDatabaseDisableAutoCertRollover
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AdfsFarmInstallation
+        -DecryptionCertificateThumbprint <String>
+        -FederationServiceName <String>
+        -ServiceAccountCredential <PSCredential>
+        -SigningCertificateThumbprint <String>
+        -SQLConnectionString <String>
+        [-CertificateThumbprint <String>]
+        [-Credential <PSCredential>]
+        [-FederationServiceDisplayName <String>]
+        [-OverwriteConfiguration]
+        [-SSLPort <Int32>]
+        [-TlsClientPort <Int32>]
+        [-AdminConfiguration <Hashtable>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ADFSFarmCreateSharedDatabaseDisableAutoCertRollover
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AdfsFarmInstallation
+        -DecryptionCertificateThumbprint <String>
+        -FederationServiceName <String>
+        -GroupServiceAccountIdentifier <String>
+        -SigningCertificateThumbprint <String>
+        [-CertificateThumbprint <String>]
+        [-Credential <PSCredential>]
+        [-FederationServiceDisplayName <String>]
+        [-OverwriteConfiguration]
+        [-SSLPort <Int32>]
+        [-TlsClientPort <Int32>]
+        [-AdminConfiguration <Hashtable>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdfsFarmCreateLocalDatabaseDisableAutoCertRolloverGmsa
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AdfsFarmInstallation
+        -DecryptionCertificateThumbprint <String>
+        -FederationServiceName <String>
+        -GroupServiceAccountIdentifier <String>
+        -SigningCertificateThumbprint <String>
+        -SQLConnectionString <String>
+        [-CertificateThumbprint <String>]
+        [-Credential <PSCredential>]
+        [-FederationServiceDisplayName <String>]
+        [-OverwriteConfiguration]
+        [-SSLPort <Int32>]
+        [-TlsClientPort <Int32>]
+        [-AdminConfiguration <Hashtable>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdfsFarmCreateSharedDatabaseDisableAutoCertRolloverGmsa
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AdfsFarmInstallation
+        -FederationServiceName <String>
+        -ServiceAccountCredential <PSCredential>
+        -SQLConnectionString <String>
+        [-CertificateThumbprint <String>]
+        [-Credential <PSCredential>]
+        [-FederationServiceDisplayName <String>]
+        [-OverwriteConfiguration]
+        [-SSLPort <Int32>]
+        [-TlsClientPort <Int32>]
+        [-AdminConfiguration <Hashtable>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ADFSFarmCreateSharedDatabase
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AdfsFarmInstallation
+        -FederationServiceName <String>
+        -GroupServiceAccountIdentifier <String>
+        [-CertificateThumbprint <String>]
+        [-Credential <PSCredential>]
+        [-FederationServiceDisplayName <String>]
+        [-OverwriteConfiguration]
+        [-SSLPort <Int32>]
+        [-TlsClientPort <Int32>]
+        [-AdminConfiguration <Hashtable>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdfsFarmCreateLocalDatabaseGmsa
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AdfsFarmInstallation
+        -FederationServiceName <String>
+        -GroupServiceAccountIdentifier <String>
+        -SQLConnectionString <String>
+        [-CertificateThumbprint <String>]
+        [-Credential <PSCredential>]
+        [-FederationServiceDisplayName <String>]
+        [-OverwriteConfiguration]
+        [-SSLPort <Int32>]
+        [-TlsClientPort <Int32>]
+        [-AdminConfiguration <Hashtable>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdfsFarmCreateSharedDatabaseGmsa
+  isDefault: false
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Test the creation of a node in a federation server farm'
+  description: |-
+    ```
+    PS C:\> $Cred = Get-Credential
+    PS C:\> Test-AdfsFarmInstallation -CertificateThumbprint 8169c52b4ec6e77eb2ae17f028fe5da4e35c0bed -FederationServiceName "FS.Corp.Contoso.com" -ServiceAccountCredential $Cred
+    ```
+
+    The first command uses the **Get-Credential** cmdlet to create a credential object for the Active Directory account under which the AD FS service runs.
+    The command stores the credential object in the $Cred variable.
+
+    The second command tests the creation the first node in a federation server farm that uses the Windows Internal Database on the local server computer.
+    The command specifies a thumbprint of the certificate.
+    AD FS uses this certificate as the SSL certificate and the service communications certificate.
+    The command uses automatically generated, self-signed certificates for the token signing and token decryption certificates.
+    The command specifies the credentials stored in $Cred for the Active Directory account under which the AD FS service runs.
+links:
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+- text: Install-AdfsFarm
+  href: ./Install-AdfsFarm.yml
+- text: Test-AdfsFarmJoin
+  href: ./Test-AdfsFarmJoin.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/test-adfsfarminstallation?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Test-AdfsFarmInstallation

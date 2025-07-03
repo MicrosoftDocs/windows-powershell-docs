@@ -1,0 +1,163 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Start-ClusterGroup
+name: Start-ClusterGroup
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Starts one or more clustered roles, also known as resource groups, on a failover cluster.
+description: |-
+  The `Start-ClusterGroup` cmdlet starts one or more clustered roles, also known as resource groups,
+  on a failover cluster. With this cmdlet, a clustered role can be started again after stopping it for
+  maintenance or diagnosis.
+parameters:
+  cmdletParameters:
+  - name: ChooseBestNode
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+      `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IgnoreLocked
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that locked groups are ignored when running the cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the clustered role to start.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the clustered role to start.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Wait
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+      then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+      cmdlet returns without waiting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-ClusterGroup
+        [[-Name] <String>]
+        [-IgnoreLocked]
+        [-ChooseBestNode]
+        [-Wait <Int32>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Start-ClusterGroup FileServer1
+    ```
+
+    This example starts the clustered file server, or resource group, called `FileServer1`.
+- title: Example 2
+  description: |-
+    ```powershell
+    Start-ClusterGroup FileServer1 -Wait 0
+    ```
+
+    This example starts the clustered file server, or resource group, called `FileServer1`.
+    The Windows PowerShell prompt returns as soon as the action has been initiated.
+links:
+- text: Add-ClusterGroup
+  href: ./Add-ClusterGroup.yml
+- text: Get-ClusterGroup
+  href: ./Get-ClusterGroup.yml
+- text: Move-ClusterGroup
+  href: ./Move-ClusterGroup.yml
+- text: Remove-ClusterGroup
+  href: ./Remove-ClusterGroup.yml
+- text: Stop-ClusterGroup
+  href: ./Stop-ClusterGroup.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/start-clustergroup?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 10/21/2022
+  PlatyPS schema version: 2024-05-01
+  title: Start-ClusterGroup

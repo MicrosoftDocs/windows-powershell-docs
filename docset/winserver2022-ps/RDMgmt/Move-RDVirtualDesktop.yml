@@ -1,0 +1,149 @@
+### YamlMime:PowerShellCmdlet1
+uid: RDMgmt.Move-RDVirtualDesktop
+name: Move-RDVirtualDesktop
+module: RDMgmt
+isPreview: false
+summary: |-
+  Moves a virtual desktop to a new Remote Desktop Virtualization Host (RD Virtualization Host) server.
+description: |-
+  The **Move-RDVirtualDesktop** cmdlet moves a virtual desktop to a new Remote Desktop Virtualization Host (RD Virtualization Host) server.
+parameters:
+  cmdletParameters:
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a remote desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSCredential** object that contains the user credentials for the virtual desktop.
+      Remote Desktop Services does not require user credentials if you run the cmdlet from the source host.
+      If you do not specify user credentials for the virtual desktop and you run the cmdlet on a remote host, the server prompts you for credentials.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationHost
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified domain name (FQDN) of the new RD Virtualization Host server for the virtual desktop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual desktop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceHost
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified domain name (FQDN) of the current RD Virtualization Host server for the virtual desktop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Move-RDVirtualDesktop
+        [-SourceHost] <String>
+        [-DestinationHost] <String>
+        [-Name] <String>
+        [[-ConnectionBroker] <String>]
+        [[-Credential] <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <span>undefined</span>
+examples:
+- title: 'Example 1: Move a virtual desktop to a new RD Virtualization Host server'
+  description: |-
+    ```
+    PS C:\>Enable-WSManCredSSP -Role "Client" -DelegateComputer * -Force
+    PS C:\> Enable-WSManCredSSP -Role "Server" -DelegateComputer * -Force
+    PS C:\> $Creds = Get-Credential
+    PS C:\> Move-RDVirtualDesktop -SourceHost "rdvh-1.contoso.com" -DestinationHost "rdvh-2.contoso.com" -Name "RDS-WKS-A2" -Credential $Creds
+    ```
+
+    This example moves a virtual desktop from one RD Virtualization server to another.
+    The commands run on the RD Connection Broker and move virtual desktops from the source host to the destination host.
+
+    The first command enables Credential Security Support Provider (CredSSP) authentication on the destination host.
+    The **Enable-WSManCredSSP** cmdlet delegates the client credentials to the delegate server.
+
+    The second command enables CredSSP authentication on the source host.
+    The **Enable-WSManCredSSP** cmdlet delegates the server credentials to the delegate server.
+
+    The third command gets a credential object based on the user name and password that the user enters.
+    The command stores the results in the **$Creds** variable.
+
+    The fourth command moves the virtual desktop named RDS-WKS-A2 from the source host named rdvh-1.contoso.com to the destination host named rdvh-2.contoso.com.
+    The command uses the credential object stored in the **$Creds** variable.
+links:
+- text: Add-RDVirtualDesktopToCollection
+  href: ./Add-RDVirtualDesktopToCollection.yml
+- text: Get-RDVirtualDesktop
+  href: ./Get-RDVirtualDesktop.yml
+- text: Get-RDVirtualDesktopCollection
+  href: ./Get-RDVirtualDesktopCollection.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/rdmgmt/move-rdvirtualdesktop?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Move-RDVirtualDesktop

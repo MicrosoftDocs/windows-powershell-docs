@@ -1,0 +1,164 @@
+### YamlMime:PowerShellCmdlet1
+uid: Appx.Invoke-CommandInDesktopPackage
+name: Invoke-CommandInDesktopPackage
+module: Appx
+isPreview: false
+summary: |-
+  A debugging tool that creates a new process in the context of a packaged app.
+description: |-
+  `Invoke-CommandInDesktopPackage` creates a new process in the context of the supplied
+  **PackageFamilyName** and **AppId**.
+
+  The created process will have the identity of the provided **AppId** and will have access to its
+  virtualized file system and registry (if any). The new process will have a token that's similar to,
+  but not identical to, a real **AppId** process.
+
+  The primary use-case of this command is to invoke debugging or troubleshooting tools in the context
+  of the packaged app to access its virtualized resources. For example, you can run the Registry
+  Editor to see virtualized registry keys, or Notepad to read virtualized files. See the important
+  note that follows on using tools such as the Registry Editor that require elevation.
+
+  No guarantees are made about the behavior of the created process, other than it having the package
+  identity and access to the package's virtualized resources. In particular, the new process will
+  _not_ be created in an AppContainer even if an **AppId** process would normally be created in an
+  AppContainer. Features such as Privacy Controls or other App Settings may or may not apply to the
+  new process. You shouldn't rely on any specific side-effects of using this command, as they're
+  undefined and subject to change.
+parameters:
+  cmdletParameters:
+  - name: AppId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      **AppId** is the Application ID from the target package's manifest.
+
+      For example, `MyAppName` is the Application ID in this manifest snippet:
+
+      `<Application Id="MyAppName" ... />`
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Args
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional arguments to be passed to the new process. For example, `/foo /bar`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Command
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An executable to invoke, like `regedit.exe`.
+
+      Note that if the executable requires elevation (like `regedit`), you must call
+      `Invoke-CommandInDesktopPackage` from an already-elevated context. Calling
+      `Invoke-CommandInDesktopPackage` from a non-elevated context doesn't work as expected. The new
+      process is created without the package context, and the PowerShell command fails.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageFamilyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Package Family Name of the target package. You can retrieve this by calling
+      [Get-AppxPackage](./Get-AppxPackage.yml).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreventBreakaway
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes all child processes of the invoked process to also be created in the context of the
+      **AppId**. By default, child processes are created without any context. This switch is useful for
+      running `cmd.exe` so that you can launch multiple other tools in the package context.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-CommandInDesktopPackage
+        [-PackageFamilyName] <String>
+        [-AppId] <String>
+        [-Command] <String>
+        [[-Args] <String>]
+        [-PreventBreakaway]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Invoke Notepad to read virtualized files'
+  description: |-
+    The following command invokes Notepad in the context of the `ContosoApp` app from the
+    `Contoso.MyApp` package. This allows you to access resources such as a log file or configuration
+    file stored in the app's virtualized filesystem.
+
+    ```powershell
+    $params = @{
+        AppId             = 'ContosoApp'
+        PackageFamilyName = 'Contoso.MyApp_abcdefgh23456'
+        Command           = 'notepad.exe'
+    }
+    Invoke-CommandInDesktopPackage @params
+    ```
+links:
+- text: Get-AppxPackage
+  href: ./Get-AppxPackage.yml
+metadata:
+  description: A debugging tool that creates a new process in the context of a packaged app.
+  document type: cmdlet
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appx/invoke-commandindesktoppackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Appx
+  ms.date: 05/15/2023
+  PlatyPS schema version: 2024-05-01
+  title: Invoke-CommandInDesktopPackage

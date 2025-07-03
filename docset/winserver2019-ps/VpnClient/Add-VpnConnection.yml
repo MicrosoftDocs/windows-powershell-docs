@@ -1,0 +1,632 @@
+### YamlMime:PowerShellCmdlet1
+uid: VpnClient.Add-VpnConnection
+name: Add-VpnConnection
+module: VpnClient
+isPreview: false
+summary: |-
+  Adds a VPN connection to the Connection Manager phone book.
+description: |-
+  The **Add-VpnConnection** cmdlet adds a VPN connection with the specified parameters to the Connection Manager phone book.
+  If errors occur when you create the VPN profile, the cmdlet returns the error information.
+parameters:
+  cmdletParameters:
+  - name: AllUserConnection
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet adds the VPN connection to the global phone book entries.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InboxProfile
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthenticationMethod
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the authentication method to use for the VPN connection.
+    acceptedValues:
+    - Pap
+    - Chap
+    - MSChapv2
+    - Eap
+    - MachineCertificate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InboxProfile
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomConfiguration
+    type: <xref href="XmlDocument" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an XML document that allows vendors to specify custom configuration information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ThirdParty
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DnsSuffix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the DNS suffix of the VPN connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EapConfigXmlStream
+    type: <xref href="XmlDocument" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the contents of the EAP XML configuration file, which includes the EAP method ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InboxProfile
+      position: "11"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionLevel
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the encryption level for the VPN connection.
+    acceptedValues:
+    - NoEncryption
+    - Optional
+    - Required
+    - Maximum
+    - Custom
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InboxProfile
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the pre-shared key (PSK) value is supplied over an insecure channel, if L2TP is used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdleDisconnectSeconds
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time, in seconds, before an idle connection is closed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: L2tpPsk
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of the PSK to be used for L2TP authentication.
+      If this parameter is not specified, a certificate is used for L2TP.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InboxProfile
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachineCertificateEKUFilter
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of enhanced key usage (EKU) filters for Internet Key Exchange version 2 (IKEv2) machine certificate selection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InboxProfile
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachineCertificateIssuerFilter
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the X509 certificate of the issuer filter for IKEv2 machine certificate selection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InboxProfile
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of this VPN connection profile.
+    aliases:
+    - ConnectionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlugInApplicationID
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the identifier for a third party application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ThirdParty
+      position: "10"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RememberCredential
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the credentials supplied at the time of first successful connection are stored in the cache.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "9"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the address of the remote VPN server to which the client connects.
+      You can specify the address as a URL, an IPv4 address, or an IPv6 address.
+    aliases:
+    - ServerName
+    - DefaultServer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerList
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of VPN servers.
+      The VPN client can connect to these servers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SplitTunneling
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet enables split tunneling for this VPN connection profile.
+      When you enable split tunneling, traffic to destinations outside the intranet does not flow through the VPN tunnel.
+      If you do not specify this parameter, split tunneling is disabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TunnelType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of tunnel used for the VPN connection.
+    acceptedValues:
+    - Pptp
+    - L2tp
+    - Sstp
+    - Ikev2
+    - Automatic
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InboxProfile
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseWinlogonCredential
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that MSCHAPv2 or EAP MSCHAPv2 is used as the authentication method, and that Windows logon credentials are used automatically when connecting with this VPN connection profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InboxProfile
+      position: "10"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-VpnConnection
+        [-Name] <String>
+        [-ServerAddress] <String>
+        [-PlugInApplicationID] <String>
+        -CustomConfiguration <XmlDocument>
+        [-RememberCredential]
+        [-SplitTunneling]
+        [-Force]
+        [-PassThru]
+        [-ServerList <CimInstance[]>]
+        [-DnsSuffix <String>]
+        [-IdleDisconnectSeconds <UInt32>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ThirdParty
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-VpnConnection
+        [-Name] <String>
+        [-ServerAddress] <String>
+        [[-TunnelType] <String>]
+        [[-L2tpPsk] <String>]
+        [[-EapConfigXmlStream] <XmlDocument>]
+        [[-AuthenticationMethod] <String[]>]
+        [[-EncryptionLevel] <String>]
+        [-AllUserConnection]
+        [-RememberCredential]
+        [-SplitTunneling]
+        [-Force]
+        [-PassThru]
+        [-UseWinlogonCredential]
+        [-ServerList <CimInstance[]>]
+        [-DnsSuffix <String>]
+        [-IdleDisconnectSeconds <UInt32>]
+        [-MachineCertificateIssuerFilter <X509Certificate2>]
+        [-MachineCertificateEKUFilter <String[]>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InboxProfile
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnConnection" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+    This cmdlet returns a **VpnConnection** object that contains the VPN connection configuration settings.
+examples:
+- title: 'Example 1: Add a VPN connection'
+  description: |-
+    ```powershell
+    PS C:\> Add-VpnConnection -Name "Test1" -ServerAddress "10.1.1.1" -PassThru
+    ```
+    ```output
+    Name                  : Test1
+    ServerAddress         : 10.1.1.1
+    AllUserConnection     : False
+    Guid                  : {4B308E9B-C225-42CB-8158-307193429591}
+    TunnelType            : Automatic
+    AuthenticationMethod  : {MsChapv2}
+    EncryptionLevel       : Required
+    L2tpIPsecAuth         : Certificate
+    UseWinlogonCredential : False
+    EapConfigXmlStream    :
+    ConnectionStatus      : Disconnected
+    NapState              : NotConnected
+    RememberCredential    : False
+    SplitTunneling        : False
+    ```
+
+    This command adds a VPN connection named Test1 to the server with an IP address 10.1.1.1.
+    By specifying the *PassThru* parameter, you can see the configuration of the VPN connection object.
+- title: 'Example 2: Add a VPN connection with an alternate authentication method'
+  description: |-
+    ```powershell
+    PS C:\> Add-VpnConnection -Name "Test3" -ServerAddress "10.1.1.1" -TunnelType "Pptp" -EncryptionLevel "Required" -AuthenticationMethod MSChapv2 -UseWinlogonCredential -SplitTunneling -AllUserConnection -RememberCredential -PassThru
+    ```
+    ```output
+    Name                  : Test3
+    ServerAddress         : 10.1.1.1
+    AllUserConnection     : True
+    Guid                  : {76746D4E-D72A-467D-A11F-3D4D9075F50D}
+    TunnelType            : Pptp
+    AuthenticationMethod  : {MsChapv2}
+    EncryptionLevel       : Required
+    L2tpIPsecAuth         :
+    UseWinlogonCredential : True
+    EapConfigXmlStream    :
+    ConnectionStatus      : Disconnected
+    NapState              : NotConnected
+    RememberCredential    : True
+    SplitTunneling        : True
+    ```
+
+    This command adds a VPN connection named Test3 to the server with an IP address 10.1.1.1.
+    This connection uses the MSCHAPv2 authentication method, as specified by the **AuthenticationMethod** parameter.
+    Additional parameters specify that the connection:
+
+    - Uses the Windows logon credentials (the **UseWinlogonCredential** parameter)
+    - Uses split tunneling (the **SplitTunneling** parameter)
+    - Is stored in the global phone book (the **AllUserConnection** parameter)
+    - Caches the credentials used for the first successful connection (the **RememberCredential** parameter)
+
+    By specifying the **PassThru** parameter, you can see the configuration of the VPN connection object.
+- title: 'Example 3: Add a VPN connection that uses EAP authentication'
+  description: |-
+    ```powershell
+    PS C:\> Add-VpnConnection -Name "Test4" -ServerAddress "10.1.1.1" -TunnelType "L2tp" -EncryptionLevel "Required" -AuthenticationMethod Eap -SplitTunneling -AllUserConnection -L2tpPsk "password" -Force -RememberCredential -PassThru
+    ```
+    ```output
+    Name                  : Test4
+    ServerAddress         : 10.1.1.1
+    AllUserConnection     : True
+    Guid                  : {1D423FF3-E3D4-404A-B052-DB9130656D29}
+    TunnelType            : L2tp
+    AuthenticationMethod  : {Eap}
+    EncryptionLevel       : Required
+    L2tpIPsecAuth         : Psk
+    UseWinlogonCredential : False
+    EapConfigXmlStream    : #document
+    ConnectionStatus      : Disconnected
+    NapState              : NotConnected
+    RememberCredential    : True
+    SplitTunneling        : True
+    ```
+
+    This command adds a VPN connection named Test4 to the server with an IP address of 10.1.1.1.
+    This connection uses the default EAP authentication method, as specified by the **AuthenticationMethod** parameter.
+    The pre-shared key for the connection is specified by the **L2tpPsk** parameter. Additional parameters specify that the connection:
+
+    - Uses split tunneling (the **SplitTunneling** parameter)
+    - Is stored in the global phone book (the **AllUserConnection** parameter)
+    - Caches the credentials used for the first successful connection (the **RememberCredential** parameter)
+
+    By specifying the **PassThru** parameter, you can see the configuration of the VPN connection object.
+- title: 'Example 4: Add a VPN connection that uses a custom EAP authentication method'
+  description: |-
+    ```powershell
+    PS C:\> $A = New-EapConfiguration
+    PS C:\> Add-VpnConnection -Name "Test5" -ServerAddress "10.1.1.1" -TunnelType "L2tp" -EncryptionLevel "Required" -AuthenticationMethod Eap -SplitTunneling -AllUserConnection -RememberCredential -EapConfigXmlStream $A.EapConfigXmlStream -PassThru
+    ```
+    ```output
+    Name                  : Test5
+    ServerAddress         : 10.1.1.1
+    AllUserConnection     : True
+    Guid                  : {CF9F624F-D7DF-48BA-BD4B-D4E34AE05148}
+    TunnelType            : L2tp
+    AuthenticationMethod  : {Eap}
+    EncryptionLevel       : Required
+    L2tpIPsecAuth         : Certificate
+    UseWinlogonCredential : False
+    EapConfigXmlStream    : #document
+    ConnectionStatus      : Disconnected
+    NapState              : NotConnected
+    RememberCredential    : True
+    SplitTunneling        : True
+    ```
+
+    This set of commands adds a VPN connection using a custom EAP authentication method.
+    For more information about custom EAP authentication methods, see the **New-EapConfiguration** cmdlet.
+- title: 'Example 5: Add a VPN connection that uses already generated EAP XML configuration'
+  description: |-
+    ```powershell
+    PS C:\> $EAPXml = Get-Content -Path C:\eap-config.xml
+    PS C:\> Add-VpnConnection -Name "Test6" -ServerAddress "10.1.1.1" -TunnelType "L2tp" -EncryptionLevel "Required" -AuthenticationMethod Eap -SplitTunneling -AllUserConnection -RememberCredential -EapConfigXmlStream $EAPXml
+    ```
+
+    This set of commands adds a VPN connection using an already generated EAP XML configuration. For more information about how to generate EAP XML configuration, see [EAP Configuration](/windows/client-management/mdm/eap-configuration).
+links:
+- text: Get-VpnConnection
+  href: ./Get-VpnConnection.yml
+- text: Set-VpnConnection
+  href: ./Set-VpnConnection.yml
+- text: Remove-VpnConnection
+  href: ./Remove-VpnConnection.yml
+- text: New-EapConfiguration
+  href: ./New-EapConfiguration.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: PS_VpnConnection_v1.0.0.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/vpnclient/add-vpnconnection?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: VpnClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-VpnConnection

@@ -1,0 +1,336 @@
+### YamlMime:PowerShellCmdlet1
+uid: IscsiTarget.New-IscsiVirtualDisk
+name: New-IscsiVirtualDisk
+module: IscsiTarget
+isPreview: false
+summary: |-
+  Creates an iSCSI virtual disk with the specified file path and size.
+description: |-
+  The **New-IscsiVirtualDisk** cmdlet creates an iSCSI Virtual Hard Disk (VHDX) object that has the specified file path and size.
+  After the iSCSI VHDX object has been created, the virtual disk can be assigned to an iSCSI target.
+  Once a virtual disk has been assigned to a target, and an initiator connects to that target, the iSCSI initiator can then access the virtual disk after the initiator connects to the target.
+
+  If the virtual hard disk file path does not exist, a new VHDX file is created.
+
+  If the VHDX file path exists, the server returns an error.
+  Use the **Import-IscsiVirtualDisk** cmdlet to import existing virtual hard disks.
+
+  If the cmdlet displays an error while it creates a virtual disk, check the following conditions:
+
+  - An absolute file path must be specified for the *Path* and *ParentPath* parameters.
+
+  - The virtual disk file name must have a .vhdx file name extension.
+  - The VHDX file cannot be a network file, or be in a compressed, sparse, or transacted folder.
+parameters:
+  cmdletParameters:
+  - name: BlockSizeBytes
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the block size, in bytes, for the VHDX.
+      For fixed VHDX, if the value of the *SizeBytes* parameter is less than 32 MB, the default size if 2 MB.
+      Otherwise, the default value is 32 MB.
+      For dynamic VHDX, the default size is 2 MB.
+      For differencing VHDX, the default size is the parent *BlockSize*.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+      Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+      If you do not specify a value for this parameter, the cmdlet uses the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials when connecting to a remote computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the description for the iSCSI virtual disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DoNotClearData
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet does not clear the fixed VHDX.
+      Because failing to clear data can reveal pre-existing data, we do not recommend this option.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fixed
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogicalSectorSizeBytes
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the logical sector size, in bytes, for the VHDX.
+      The acceptable values for this parameter are: 512 and 4096.
+      The default value is 512.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Dynamic
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Fixed
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the parent virtual disk path if the VHDX is a differencing disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Differencing
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the VHDX file that is associated with the iSCSI virtual disk.
+      If the VHDX file path does not exist, a new VHDX file is created.
+      If the virtual hard disk file path exists, the server returns an error.
+      Use the **Import-IscsiVirtualDisk** cmdlet to import existing virtual hard drives.
+    aliases:
+    - DevicePath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PhysicalSectorSizeBytes
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the physical sector size, in bytes, for the VHDX.
+      The acceptable values for this parameter are: 512 and 4096.
+      The default value is 4096.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SizeBytes
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the size, in bytes, of the iSCSI virtual disk.
+    aliases:
+    - Size
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Dynamic
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Fixed
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseFixed
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet creates a fixed VHDX.
+    aliases:
+    - Fixed
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fixed
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-IscsiVirtualDisk
+        [-Path] <String>
+        [-SizeBytes] <UInt64>
+        [-Description <String>]
+        [-LogicalSectorSizeBytes <UInt32>]
+        [-PhysicalSectorSizeBytes <UInt32>]
+        [-BlockSizeBytes <UInt32>]
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Dynamic
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-IscsiVirtualDisk
+        [-Path] <String>
+        [[-SizeBytes] <UInt64>]
+        -ParentPath <String>
+        [-Description <String>]
+        [-PhysicalSectorSizeBytes <UInt32>]
+        [-BlockSizeBytes <UInt32>]
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Differencing
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-IscsiVirtualDisk
+        [-Path] <String>
+        [-SizeBytes] <UInt64>
+        [-Description <String>]
+        [-DoNotClearData]
+        [-UseFixed]
+        [-LogicalSectorSizeBytes <UInt32>]
+        [-PhysicalSectorSizeBytes <UInt32>]
+        [-BlockSizeBytes <UInt32>]
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Fixed
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a fixed VHDX'
+  description: |-
+    ```
+    PS C:\> New-IscsiVirtualDisk -UseFixed -Path "E:\temp\test.vhdx" -Size 10GB
+    ```
+
+    This example creates a fixed VHDX that is 10GB in size.
+- title: 'Example 2: Create a differencing VHDX'
+  description: |-
+    ```
+    PS C:\> New-IscsiVirtualDisk -ParentPath "E:\temp\test.vhdx" -Path "E:\temp\child\diff.vhdx"
+    ```
+
+    This example creates a differencing VHDX, with the parent path E:\temp\test.vhdx and the differencing VHDX path is E:\temp\child\diff.vhdx.
+- title: 'Example 3: Create a dynamic VHDX on a remote computer'
+  description: |-
+    ```
+    PS C:\> New-IscsiVirtualDisk -Path "E:\temp\test.vhdx" -Size 10GB -ComputerName "iscsisvr"
+    ```
+
+    This example creates a dynamic VHDX with the size 10GB at E:\temp\test.vhdx on the computer named iscsisvr.
+- title: 'Example 4: Create a VHDX'
+  description: |-
+    ```
+    PS C:\> New-IscsiVirtualDisk -Path "ramdisk:test.vhdx" -Size 20MB
+    ```
+
+    This example creates a VHDX with the size 20MB.
+    This VHDX is not saved.
+    The VHDX is lost if the wintarget service is restarted or the system is restarted.
+links:
+- text: Checkpoint-IscsiVirtualDisk
+  href: ./Checkpoint-IscsiVirtualDisk.yml
+- text: Convert-IscsiVirtualDisk
+  href: ./Convert-IscsiVirtualDisk.yml
+- text: Get-IscsiVirtualDisk
+  href: ./Get-IscsiVirtualDisk.yml
+- text: Import-IscsiVirtualDisk
+  href: ./Import-IscsiVirtualDisk.yml
+- text: Remove-IscsiVirtualDisk
+  href: ./Remove-IscsiVirtualDisk.yml
+- text: Restore-IscsiVirtualDisk
+  href: ./Restore-IscsiVirtualDisk.yml
+- text: Set-IscsiVirtualDisk
+  href: ./Set-IscsiVirtualDisk.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iscsitarget/new-iscsivirtualdisk?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-IscsiVirtualDisk

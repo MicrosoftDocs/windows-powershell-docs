@@ -1,0 +1,151 @@
+### YamlMime:PowerShellCmdlet1
+uid: HNVDiagnostics.Debug-VirtualMachineQueueOperation
+name: Debug-VirtualMachineQueueOperation
+module: HNVDiagnostics
+isPreview: false
+summary: |-
+  Debugs VMQ/VMMQ traffic.
+description: |-
+  The **Debug-VirtualMachineQueueOperation** cmdlet analyzes virtual machine queue (VMQ) and VMMQ traffic.
+  You can use this cmdlet to identify whether VMQ/VMMQ is degrading throughput or is contributing to high utilization on some cores.
+parameters:
+  cmdletParameters:
+  - name: Creds
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials to use to connect to a remote host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the remote host on which to run the diagnostics.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MgmtIp
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the management IP address of the remote host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SampleCount
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of seconds to analyze network traffic.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual machine to analyze.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMNetworkAdapterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual machine network adapter to analyze.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Debug-VirtualMachineQueueOperation
+        [[-HostName] <String>]
+        [[-MgmtIp] <String>]
+        [[-Creds] <PSCredential>]
+        [-VMName] <String>
+        [-VMNetworkAdapterName] <String>
+        [[-SampleCount] <UInt32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Debug VMMQ on a remote computer'
+  description: |-
+    ```
+    PS C:\> $Cred = Get-Credential
+    PS C:\> Debug-VirtualMachineQueueOperation -HostName "NCHost.corp.com" -MgmtIp "10.123.176.108" -Creds $Cred -VMName "MuxVM" -VMNetworkAdapterName "Ethernet"
+    ```
+
+    The first command gets the credentials for the current user, and then stores them in the $Cred variable.
+
+    The second command gets debug information for VMMQ on a remote computer.
+- title: 'Example 2: Debug VMMQ on the local host'
+  description: |-
+    ```
+    PS C:\> $Cred = Get-Credential
+    PS C:\> Debug-VirtualMachineQueueOperation -VMName "MuxVM" -VMNetworkAdapterName "Ethernet" -SampleCount 90
+    ```
+
+    The first command gets the credentials for the current user, and then stores them in the $Cred variable.
+
+    The second command gets debug information for VMMQ on the local host.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Debug-VirtualMachineQueueOperation-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hnvdiagnostics/debug-virtualmachinequeueoperation?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Debug-VirtualMachineQueueOperation

@@ -1,0 +1,164 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteDesktop.Set-RDLicenseConfiguration
+name: Set-RDLicenseConfiguration
+module: RemoteDesktop
+isPreview: false
+summary: |-
+  Defines settings for the RD Licensing server and the licensing mode of the Remote Desktop deployment.
+description: |-
+  The **Set-RDLicenseConfiguration** cmdlet defines settings for the Remote Desktop Licensing (RD Licensing) server and the licensing mode of the Remote Desktop deployment.
+
+  RD Licensing manages the Remote Desktop Services client access licenses (RDS CALs) that each device or user requires to connect to a Remote Desktop Session Host (RD Session Host) server.
+parameters:
+  cmdletParameters:
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+      If you do not supply a value, the cmdlet uses the fully qualified domain name (FQDN) of the local host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseServer
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the FQDN of the RD Licensing server to configure.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BothPS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: LicenseServerPS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mode
+    type: <xref href="LicensingMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the licensing mode to configure for the deployment.
+      Valid values are PerUser, PerDevice, and NotConfigured.
+    acceptedValues:
+    - PerDevice
+    - PerUser
+    - NotConfigured
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ModePS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BothPS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-RDLicenseConfiguration
+        -Mode <LicensingMode>
+        [-Force]
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ModePS
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-RDLicenseConfiguration
+        -Mode <LicensingMode>
+        -LicenseServer <String[]>
+        [-Force]
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BothPS
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-RDLicenseConfiguration
+        -LicenseServer <String[]>
+        [-Force]
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LicenseServerPS
+  isDefault: false
+outputs:
+- name: <span>undefined</span>
+examples:
+- title: 'Example 1: Set the Remote Desktop license configuration'
+  description: |-
+    ```
+    PS C:\> Set-RDLicenseConfiguration -LicenseServer @("Rdl-1.Contoso.com","Rdl-2.Contoso.com") -ConnectionBroker "Rdcb.Contoso.com"
+    ```
+
+    This command sets the Remote Desktop license configuration with the servers named Rdl1-Contoso.com and Rdl-2.Contoso.com and the RD Connection Broker server named Rdcb.Contoso.com.
+- title: 'Example 2: Set the Remote Desktop license configuration in PerUser mode'
+  description: |-
+    ```
+    PS C:\> Set-RDLicenseConfiguration -LicenseServer @("Rdl-1.Contoso.com","Rdl-2.Contoso.com") -Mode PerUser -ConnectionBroker "Rdcb.Contoso.com"
+    ```
+
+    This command sets the Remote Desktop license configuration in PerUser mode with the servers named Rdl-1.Contoso.com and Rdl-2.Contoso.com and the RD Connection Broker server named Rdcb.Contoso.com.
+- title: 'Example 3: Set the Remote Desktop license configuration in PerDevice mode'
+  description: |-
+    ```
+    PS C:\> Set-RDLicenseConfiguration -Mode PerDevice -ConnectionBroker "Rdcb.Contoso.com"
+    ```
+
+    This command sets the Remote Desktop license configuration in PerDevice mode for the RD Connection Broker server named Rdcb.Contoso.com.
+links:
+- text: Get-RDLicenseConfiguration
+  href: ./Get-RDLicenseConfiguration.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/RemoteDesktop/set-rdlicenseconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteDesktop
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-RDLicenseConfiguration

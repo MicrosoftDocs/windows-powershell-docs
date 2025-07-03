@@ -1,0 +1,36 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsServer.Get-HgsServer
+name: Get-HgsServer
+module: HgsServer
+isPreview: false
+summary: |-
+  Gets the status of the Host Guardian Service server.
+description: |-
+  The **Get-HgsServer** cmdlet gets the status of the Host Guardian Service (HGS) server, including key protection URL(s), attestation URL(s), and the attestation operation mode.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-HgsServer
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get the status of the Host Guardian Service server'
+  description: |-
+    ```
+    PS C:\> Get-HgsServer
+    ```
+
+    This command gets the status of the Host Guardian Service server.
+links:
+- text: HGS Server Cmdlets
+  href: index.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: HgsServer-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsserver/get-hgsserver?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsServer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-HgsServer

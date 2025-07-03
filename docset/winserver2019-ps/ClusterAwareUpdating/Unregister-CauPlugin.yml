@@ -1,0 +1,105 @@
+### YamlMime:PowerShellCmdlet1
+uid: ClusterAwareUpdating.Unregister-CauPlugin
+name: Unregister-CauPlugin
+module: ClusterAwareUpdating
+isPreview: false
+summary: |-
+  Removes a software updating plug-in from the list of plug-ins that are used by CAU.
+description: |-
+  The **Unregister-CauPlugin** cmdlet removes a software updating plug-in from the list of plug-ins that are used by Cluster-Aware Updating (CAU).
+  The plug-in can be removed, but afterwards, it cannot be used for updating runs.
+  The **Microsoft.WindowsUpdatePlugin** and **Microsoft.HotfixPlugin** plug-ins, which are installed with CAU, cannot be unregistered.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the plug-in that this cmdlet unregisters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Unregister-CauPlugin
+        [-Name] <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauPlugin" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Unregister a plug-in that is used by CAU'
+  description: |-
+    ```
+    PS C:\> Unregister-CauPlugin -Name "Plugin01"
+    ```
+
+    This command removes the plug-in named Plugin01 from the list of plug-ins that are used by CAU.
+links:
+- text: Get-CauPlugin
+  href: ./Get-CauPlugin.yml
+- text: Register-CauPlugin
+  href: ./Register-CauPlugin.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/clusterawareupdating/unregister-cauplugin?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ClusterAwareUpdating
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Unregister-CauPlugin

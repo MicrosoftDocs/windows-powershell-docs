@@ -1,0 +1,262 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Remove-WBBackupSet
+name: Remove-WBBackupSet
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Removes backups from a target catalog, a system catalog, or both.
+description: |-
+  The **Remove-WBBackupSet** cmdlet removes a set of backups from a target catalog, a system catalog, or both.
+parameters:
+  cmdletParameters:
+  - name: BackupSet
+    type: <xref href="WBBackupSet" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of backup set objects that determine which backup or which backup sets that this cmdlet removes.
+      You can specify one backup or an array of backup sets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupTarget
+    type: <xref href="WBBackupTarget" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a backup target object that indicates the storage location with the backups that you want to remove.
+
+      Use this parameter to delete backups from computers other than the local computer.
+      The cmdlet deletes the backup sets from the catalog on the computer that you specify in this parameter and from the system catalog of the local computer.
+      These locations can be locally attached disk drives or remote shared folders.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WBBackupTarget
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSCredential** object that contains the username and password for a user account that has access permissions for the location that stores backups.
+
+      To obtain a credential object, use the Get-Credential cmdlet.
+      For more information, type `Get-Help Get-Credential`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NetworkWithPSCred
+      position: "4"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeleteOldest
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet removes the oldest backup in the set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeepVersions
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of the most recent backups to keep on the backup target.
+      The cmdlet removes backups over this number from the target.
+
+      If you specify this parameter along with the *BackupTarget* and *MachineName* parameters, the cmdlet examines the target location on the specified computer for backups to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachineName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the computer for which this cmdlet removes backups.
+
+      Use this parameter when you specify the *BackupTarget* parameter or when multiple computers store backups in the same location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the remote shared folder from which the cmdlet removes backups.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NetworkWithPSCred
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NonInheritAcl
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not use.
+      This parameter is not implemented in this version of the module.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NetworkWithPSCred
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the drive letter of the volume where the cmdlet stores backups.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VolumePath
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-WBBackupSet
+        [[-BackupSet] <WBBackupSet[]>]
+        [[-KeepVersions] <Int32>]
+        [[-MachineName] <String>]
+        [-DeleteOldest]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-WBBackupSet
+        [[-BackupSet] <WBBackupSet[]>]
+        [[-KeepVersions] <Int32>]
+        [-BackupTarget] <WBBackupTarget>
+        [[-MachineName] <String>]
+        [-DeleteOldest]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WBBackupTarget
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-WBBackupSet
+        [[-BackupSet] <WBBackupSet[]>]
+        [[-KeepVersions] <Int32>]
+        [-VolumePath] <String>
+        [[-MachineName] <String>]
+        [-DeleteOldest]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VolumePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-WBBackupSet
+        [[-BackupSet] <WBBackupSet[]>]
+        [[-KeepVersions] <Int32>]
+        [-NetworkPath] <String>
+        [[-Credential] <PSCredential>]
+        [[-MachineName] <String>]
+        [-DeleteOldest]
+        [-NonInheritAcl]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NetworkWithPSCred
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Windows.ServerBackup.Commands.WBBackupSet" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove oldest backup set'
+  description: |-
+    ```
+    PS C:\> $Ret = Remove-WBBackupSet -DeleteOldest -BackupTarget $WB_BackupTarget -MachineName $MachineName -Force
+    ```
+
+    This command deletes the oldest backup of the computer that has its name in the $MachineName variable from the backup target and stores the result in the variable named $Ret.
+    Because the command includes the *Force* parameter, it does not ask for confirmation of the deletion.
+links:
+- text: Get-WBBackupSet
+  href: ./Get-WBBackupSet.yml
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/remove-wbbackupset?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-WBBackupSet

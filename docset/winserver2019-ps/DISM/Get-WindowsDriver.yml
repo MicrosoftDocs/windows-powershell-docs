@@ -1,0 +1,264 @@
+### YamlMime:PowerShellCmdlet1
+uid: DISM.Get-WindowsDriver
+name: Get-WindowsDriver
+module: DISM
+isPreview: false
+summary: |-
+  Displays information about drivers in a Windows image.
+description: |-
+  The **Get-WindowsDriver** cmdlet displays information about driver packages in the online or offline Windows image.
+  You can display basic information about all of the drivers in an image, or display detailed information about a specific driver.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Displays information about default drivers.
+      If you do not specify this parameter, only third-party drivers and listed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Driver
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the .inf file or folder containing the .inf files of the drivers you want detailed information about.
+      When you specify a folder, .inf files that are not valid driver packages are ignored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogLevel
+    type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum output level shown in the logs.
+      The default log level is 3.
+      The accepted values are as follows:
+      - 1 = Errors only
+      - 2 = Errors and warnings
+      - 3 = Errors, warnings, and information
+      - 4 = All of the information listed previously, plus debug output
+    acceptedValues:
+    - Errors
+    - Warnings
+    - WarningsInfo
+    aliases:
+    - LL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path and file name to log to.
+      If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+      In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
+      The log file will automatically be archived.
+      The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
+      Each time the log file is archived the .bak file will be overwritten.
+      When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+    aliases:
+    - LP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Online
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the action is to be taken on the operating system that is currently running on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Online
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path to the root directory of the offline Windows image that you will service.
+      If the directory named Windows is not a subdirectory of the root directory, *WindowsDirectory* must be specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Offline
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScratchDirectory
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a temporary directory that will be used when extracting files for use during servicing.
+      The directory must exist locally.
+      If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+      Items in the scratch directory are deleted after each operation.
+      You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
+      The directory used for extracting files for temporary usage during servicing should be a local directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SystemDrive
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the location of the BootMgr files.
+      This is necessary only when the BootMgr files are located on a partition other than the one that you are running the command from.
+      Use -SystemDrive to service an installed Windows image from a Windows PE environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowsDirectory
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the Windows directory relative to the image path.
+      This cannot be the full path to the Windows directory; it should be a relative path.
+      If not specified, the default is the Windows directory in the root of the offline image directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WindowsDriver
+        -Path <String>
+        [-All]
+        [-Driver <String>]
+        [-WindowsDirectory <String>]
+        [-SystemDrive <String>]
+        [-LogPath <String>]
+        [-ScratchDirectory <String>]
+        [-LogLevel <LogLevel>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Offline
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-WindowsDriver
+        [-All]
+        [-Driver <String>]
+        [-Online]
+        [-WindowsDirectory <String>]
+        [-SystemDrive <String>]
+        [-LogPath <String>]
+        [-ScratchDirectory <String>]
+        [-LogLevel <LogLevel>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Online
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Dism.Commands.BasicDriverObject" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Dism.Commands.AdvancedDriverObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Gets all drivers in an online image'
+  description: |-
+    ```
+    PS C:\> Get-WindowsDriver -Online -All
+    ```
+
+    This command gets all of the drivers in an online Windows image.
+- title: 'Example 2: Gets third-party drivers in a mounted image'
+  description: |-
+    ```
+    PS C:\> Get-WindowsDriver -Path "c:\offline"
+    ```
+
+    This command gets the third-party drivers in a mounted Windows image.
+- title: 'Example 3: Get details about a driver in a mounted image'
+  description: |-
+    ```
+    PS C:\> Get-WindowsDriver -Path "c:\offline" -Driver "OEM1.inf"
+    ```
+
+    This command gets detailed information about the OEM1.inf driver in a mounted Windows image.
+- title: 'Example 4: Get details about a driver in a specified location in a mounted image'
+  description: |-
+    ```
+    PS C:\> Get-WindowsDriver -Path "c:\offline" -Driver "c:\drivers\Usb\Usb.inf"
+    ```
+
+    This command gets detailed information about the Usb.inf driver in a mounted Windows image.
+links:
+- text: Add-WindowsDriver
+  href: ./Add-WindowsDriver.yml
+- text: Remove-WindowsDriver
+  href: ./Remove-WindowsDriver.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dism/get-windowsdriver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: DISM
+  ms.date: 12/21/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WindowsDriver

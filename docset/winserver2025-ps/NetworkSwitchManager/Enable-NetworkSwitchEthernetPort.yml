@@ -1,0 +1,186 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkSwitchManager.Enable-NetworkSwitchEthernetPort
+name: Enable-NetworkSwitchEthernetPort
+module: NetworkSwitchManager
+isPreview: false
+summary: |-
+  Enables an Ethernet port on a network switch.
+description: |-
+  The **Enable-NetworkSwitchEthernetPort** cmdlet enables an Ethernet port on a network switch.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **CimSession** that this cmdlet uses to connect to the network switch.
+      For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceID
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a device ID.
+      This cmdlet enables a port on a device that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DeviceIdSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the input object that is used in a pipeline command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PortNumber
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a port to enable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PortNumberSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-NetworkSwitchEthernetPort
+        -CimSession <CimSession>
+        -DeviceID <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DeviceIdSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Enable-NetworkSwitchEthernetPort
+        -CimSession <CimSession>
+        -PortNumber <Int32>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PortNumberSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Enable-NetworkSwitchEthernetPort
+        -CimSession <CimSession>
+        -InputObject <CimInstance[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe an array of **CimInstance** objects that correspond to Ethernet ports to this cmdlet.
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Enable a port by using a device ID'
+  description: |-
+    ```
+    PS C:\>$Session = New-CimSession -ComputerName "NetworkSwitch08"
+    PS C:\> Enable-NetworkSwitchEthernetPort -DeviceID "Ethernet17" -CimSession $Session
+    ```
+
+    The first command creates a **CimSession** for a network switch, and then stores it in the **$Session** variable.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+    The second command enables ports for the device that has the ID Ethernet17 by using the **$Session** object.
+- title: 'Example 2: Enable a port by using a port number'
+  description: |-
+    ```
+    PS C:\>Enable-NetworkSwitchEthernetPort -Port 21 -CimSession $Session
+    ```
+
+    This command enables port 21.
+    The command includes a **CimSession**, similar to the first example.
+links:
+- text: Disable-NetworkSwitchEthernetPort
+  href: ./Disable-NetworkSwitchEthernetPort.yml
+- text: Get-NetworkSwitchEthernetPort
+  href: ./Get-NetworkSwitchEthernetPort.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: NetworkSwitchEthernetPort.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkswitchmanager/enable-networkswitchethernetport?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkSwitchManager
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Enable-NetworkSwitchEthernetPort

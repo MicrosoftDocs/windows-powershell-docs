@@ -1,0 +1,443 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Add-VMGpuPartitionAdapter
+name: Add-VMGpuPartitionAdapter
+module: Hyper-V
+isPreview: false
+summary: |-
+  Adds a GPU partition adapter to a virtual machine.
+description: |-
+  The `Add-VMGpuPartitionAdapter` cmdlet adds a GPU partition adapter to a virtual machine. With no
+  parameter, it assigns a full partition from an assignable GPU to a VM.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+      object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+      or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
+      current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts from which virtual machines are to be retrieved. NetBIOS names,
+      IP addresses, and fully qualified domain names are allowable. The default is the local computer.
+      Use localhost or a dot (`.`) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action. The default is the
+      current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstancePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Represents the Device Instance path of a GPU in the host. This value can be obtained from the
+      "Name" property of the command `Get-VMHostPartitionableGpu`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxPartitionCompute
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of compute assigned by the host GPU. This is defined by the manufacturer's
+      driver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxPartitionDecode
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of decoders assigned by the host GPU. This is defined by the manufacturer's
+      driver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxPartitionEncode
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of encoders assigned by the host GPU. This is defined by the manufacturer's
+      driver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxPartitionVRAM
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum VRAM in bytes supported by the host GPU. This is defined by the manufacturer's driver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinPartitionCompute
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimum number of compute assigned by the host GPU. This is defined by the manufacturer's
+      driver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinPartitionDecode
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimum number of decoders assigned by the host GPU. This is defined by the manufacturer's
+      driver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinPartitionEncode
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimum number of encoders assigned by the host GPU. This is defined by the manufacturer's
+      driver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinPartitionVRAM
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimum VRAM in bytes supported by the host GPU. This is defined by the manufacturer's driver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptimalPartitionCompute
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The optimal number of compute assigned by the host GPU. This is defined by the manufacturer's
+      driver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptimalPartitionDecode
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The optimal number of decoders assigned by the host GPU. This is defined by the manufacturer's
+      driver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptimalPartitionEncode
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The optimal number of encoders assigned by the host GPU. This is defined by the manufacturer's
+      driver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptimalPartitionVRAM
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The optimal VRAM in bytes supported by the host GPU. This is defined by the manufacturer's driver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object for each process that the cmdlet started.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the virtual machine on which the network adapter is to be added.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the virtual machine on which the network adapter is to be added.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-VMGpuPartitionAdapter
+        [-VMName] <String[]>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-Passthru]
+        [-InstancePath <String>]
+        [-MinPartitionVRAM <UInt64>]
+        [-MaxPartitionVRAM <UInt64>]
+        [-OptimalPartitionVRAM <UInt64>]
+        [-MinPartitionEncode <UInt64>]
+        [-MaxPartitionEncode <UInt64>]
+        [-OptimalPartitionEncode <UInt64>]
+        [-MinPartitionDecode <UInt64>]
+        [-MaxPartitionDecode <UInt64>]
+        [-OptimalPartitionDecode <UInt64>]
+        [-MinPartitionCompute <UInt64>]
+        [-MaxPartitionCompute <UInt64>]
+        [-OptimalPartitionCompute <UInt64>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-VMGpuPartitionAdapter
+        [-VM] <VirtualMachine[]>
+        [-Passthru]
+        [-InstancePath <String>]
+        [-MinPartitionVRAM <UInt64>]
+        [-MaxPartitionVRAM <UInt64>]
+        [-OptimalPartitionVRAM <UInt64>]
+        [-MinPartitionEncode <UInt64>]
+        [-MaxPartitionEncode <UInt64>]
+        [-OptimalPartitionEncode <UInt64>]
+        [-MinPartitionDecode <UInt64>]
+        [-MaxPartitionDecode <UInt64>]
+        [-OptimalPartitionDecode <UInt64>]
+        [-MinPartitionCompute <UInt64>]
+        [-MaxPartitionCompute <UInt64>]
+        [-OptimalPartitionCompute <UInt64>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMGpuPartitionAdapter" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $vm = Get-VM -Name "TestVM"
+    Add-VMGpuPartitionAdapter -VM $vm
+    ```
+
+    This example assigns a partition to a specific VM object.
+- title: Example 2
+  description: |-
+    ```powershell
+    $vm = Get-VM -Name "TestVM"
+    Add-VMGpuPartitionAdapter -VM $vm -InstancePath "GPUInstancePath"
+    ```
+
+    This example assigns a partition from a specific GPU to a VM where the instance path is the GPU
+    device ID name on the host.
+links:
+- text: Get-VMGpuPartitionAdapter
+  href: get-vmgpupartitionadapter.yml
+- text: Remove-VMGpuPartitionAdapter
+  href: remove-vmgpupartitionadapter.yml
+- text: Set-VMGpuPartitionAdapter
+  href: set-vmgpupartitionadapter.yml
+metadata:
+  description: Adds a GPU partition adapter to a virtual machine.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/add-vmgpupartitionadapter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 06/12/2024
+  PlatyPS schema version: 2024-05-01
+  title: Add-VMGpuPartitionAdapter

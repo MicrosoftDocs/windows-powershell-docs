@@ -1,0 +1,146 @@
+### YamlMime:PowerShellCmdlet1
+uid: BootEventCollector.Enable-SbecBootImage
+name: Enable-SbecBootImage
+module: BootEventCollector
+isPreview: false
+summary: |-
+  Enables AutoLogger settings in offline WinPE Setup images.
+description: |-
+  The **Enable-SbecBootImage** cmdlet enables the AutoLogger settings and creates the Winpeshl.ini files in offline WinPE Setup images to forward events to the Setup and Boot Event Collector.
+
+  The default event log sessions that are configured for sending events to the Boot Event Collector are NT Kernel Logger, EventLog-System, and SetupPlatform.
+  You can configure other loggers with the parameters *Logger* and *PermLogger*.
+  Loggers are always switched to real-time mode, regardless of whether they previously wrote to a file.
+
+  The AutoLogger settings enable event forwarding during the first stage of Setup when it boots from the WinPE image.
+  The Winpeshl.ini files facilitate the configuration of events on the HDD image through Unattend.xml.
+parameters:
+  cmdletParameters:
+  - name: DismLogPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the Deployment Image Servicing and Management (DISM) log file to use when mounting images.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Logger
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the AutoLogger sessions for which to enable forwarding.
+      The forwarding on these sessions auto-disables after the operating system starts.
+      Specifying a session explicitly in *Logger* or *PermLogger* overrides the defaults for it.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoDefaultLoggers
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation does not automatically add the default set of logger sessions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of full paths to the offline Windows image (WIM or VHD) files to which to apply the settings.
+      If a WIM file contains multiple images, all of them are modified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PermLogger
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the AutoLogger sessions for which to enable forwarding.
+      The forwarding on these sessions remains enabled after the operating system starts.
+      Specifying a session explicitly in *Logger* or *PermLogger* overrides the defaults for it.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-SbecBootImage
+        [-Path] <String[]>
+        [[-Logger] <String[]>]
+        [[-PermLogger] <String[]>]
+        [-NoDefaultLoggers]
+        [[-DismLogPath] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Enable Boot Event Collector in a WIM image'
+  description: |-
+    ```
+    PS C:\> Enable-SbecBootImage -Path "C:\Images\Boot.wim"
+    ```
+
+    This command enables the Boot Event Collector for the Boot.wim image.
+links:
+- text: Disable-SbecAutologger
+  href: ./Disable-SbecAutologger.yml
+- text: Enable-SbecAutologger
+  href: ./Enable-SbecAutologger.yml
+- text: Enable-SbecWdsBcd
+  href: ./Enable-SbecWdsBcd.yml
+- text: New-SbecUnattendFragment
+  href: ./New-SbecUnattendFragment.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: BootEventCollector-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/booteventcollector/enable-sbecbootimage?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Enable-SbecBootImage

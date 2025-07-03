@@ -1,0 +1,224 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Add-ClusterGenericScriptRole
+name: Add-ClusterGenericScriptRole
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Configures an application controlled by a script that runs in Windows Script Host, within a failover cluster.
+description: |-
+  The **Add-ClusterGenericScriptRole** cmdlet configures an application controlled by a script that runs in Windows Script Host, within a failover cluster.
+
+  The script provides the cluster software with information about the current state of the application.
+  As needed, the cluster software will restart or fail over the script.
+  Through the script, the application will be restarted or failed over.
+
+  Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet.
+      If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IgnoreNetwork
+    type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies one or more networks to ignore when running the cmdlet.
+      Networks with DHCP enabled are always included, but other networks need a static address to be specified using the *StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster on which to create the highly available script.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the highly available script to create.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScriptFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the script file to use for the highly available script.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StaticAddress
+    type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies one or more static addresses to use when running the cmdlet.
+      Networks with DHCP enabled are always included, but other networks need a static address to be specified using the *StaticAddress* parameter or should be explicitly ignored with this *IgnoreNetwork* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Storage
+    type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster disk resource to be added to the created highly available script.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Wait
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time in seconds to wait for the cmdlet.
+      If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+      If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-ClusterGenericScriptRole
+        -ScriptFilePath <String>
+        [-Storage <StringCollection>]
+        [-StaticAddress <StringCollection>]
+        [-IgnoreNetwork <StringCollection>]
+        [[-Name] <String>]
+        [-Wait <Int32>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Configure a script to run on a failover cluster'
+  description: |-
+    ```
+    PS C:\> Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs"
+    Name                       OwnerNode                           State
+    ----                       ---------                           -----
+    cluster1GenScript          node2                              Online
+    ```
+
+    This example configures the script named script1.vbs to run within a failover cluster, using defaults for the name and IP address, and does not assign a disk.
+- title: 'Example 2: Configure a script on a failover cluster and assign a clustered script name'
+  description: |-
+    ```
+    PS C:\> Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Storage "Cluster Disk 4" -Name "script1"
+    Name                       OwnerNode                           State
+    ----                       ---------                           -----
+    script1                    node2                              Online
+    ```
+
+    This example configures the script named script1.vbs to run within a failover cluster and use Cluster Disk 4.
+    The cmdlet assigns the clustered script the name script1.
+- title: 'Example 3: Configure a script to run on a fail over cluster without waiting for resources'
+  description: |-
+    ```
+    PS C:\> Add-ClusterGenericScriptRole -ScriptFilePath "script1.vbs" -Wait 0
+    Name                       OwnerNode                           State
+    ----                       ---------                           -----
+    cluster1GenScript          node2                             Pending
+    ```
+
+    This example configures the script called script1.vbs to run within a failover cluster, using defaults for the name and IP address, and does not assign a disk.
+    The cmdlet completes without waiting for all resources to come online.
+links:
+- text: Add-ClusterGenericApplicationRole
+  href: ./Add-ClusterGenericApplicationRole.yml
+- text: Add-ClusterGenericServiceRole
+  href: ./Add-ClusterGenericServiceRole.yml
+- text: Get-ClusterGroup
+  href: ./Get-ClusterGroup.yml
+- text: Move-ClusterGroup
+  href: ./Move-ClusterGroup.yml
+- text: Remove-ClusterGroup
+  href: ./Remove-ClusterGroup.yml
+- text: Start-ClusterGroup
+  href: ./Start-ClusterGroup.yml
+- text: Stop-ClusterGroup
+  href: ./Stop-ClusterGroup.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/add-clustergenericscriptrole?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-ClusterGenericScriptRole

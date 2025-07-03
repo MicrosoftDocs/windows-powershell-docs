@@ -1,0 +1,143 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Get-VMHostPartitionableGpu
+name: Get-VMHostPartitionableGpu
+module: Hyper-V
+isPreview: false
+summary: |-
+  Gets the host machine’s partitionable GPU.
+description: |-
+  The `Get-VMHostPartitionableGpu` cmdlet gets the host machine’s partitionable graphic processing
+  unit. This displays the information of the GPU as provided by the manufacturer's driver.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+      object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+      or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
+      current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CimSession
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts that run this cmdlet. NetBIOS names, IP addresses, and fully
+      qualified domain names are allowed. The default is the local computer. Use localhost or a dot (`.`)
+      to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action. The default is the
+      current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the graphic processing unit to be retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-VMHostPartitionableGpu
+        [[-ComputerName] <String[]>]
+        [[-Credential] <PSCredential[]>]
+        [-Name <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ComputerName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-VMHostPartitionableGpu
+        [-CimSession] <CimSession[]>
+        [-Name <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CimSession
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimSession" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMHostPartitionableGpu" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-VMHostPartitionableGpu
+    ```
+
+    This example gets the details of the local partitionable graphic processing unit on the host.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-VMHostPartitionableGpu -ComputerName "MyHost"
+    ```
+
+    This example gets a partitionable GPU by using the host name. This command will display all the GPU
+    devices available for partitioning in the host.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-VMHostPartitionableGpu -Name "GPUDeviceIDName"
+    ```
+
+    Displays a partitionable GPU by using the specific GPU device name. The result will show the
+    details of the specific GPU listed.
+links:
+- text: Set-VMHostPartitionableGpu
+  href: set-vmhostpartitionablegpu.yml
+metadata:
+  description: Gets the host machine’s partitionable GPU.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/get-vmhostpartitionablegpu?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 06/12/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-VMHostPartitionableGpu

@@ -1,0 +1,45 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsDeveloperLicense.Get-WindowsDeveloperLicense
+name: Get-WindowsDeveloperLicense
+module: WindowsDeveloperLicense
+isPreview: false
+summary: |-
+  Provides information about Developer Mode for the current computer.
+description: |-
+  The **Get-WindowsDeveloperLicense** cmdlet provides information about whether you enabled Developer Mode for the current computer.
+  You no longer need a developer license.
+  Therefore, there is no longer an expiration date for a developer license.
+  For more information, see [Enable your device for development](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) (https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) in the Microsoft Developer Network library.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WindowsDeveloperLicense
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="WindowsDeveloperLicense" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Check the status of Developer Mode DM'
+  description: |-
+    ```
+    PS C:\> Get-WindowsDeveloperLicense
+    ```
+
+    This command checks the status of Developer Mode for the current computer.
+links:
+- text: Enable your device for development
+  href: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx
+- text: Unregister-WindowsDeveloperLicense
+  href: ./Unregister-WindowsDeveloperLicense.yml
+- text: Show-WindowsDeveloperLicenseRegistration
+  href: ./Show-WindowsDeveloperLicenseRegistration.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.DeveloperLicense.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsdeveloperlicense/get-windowsdeveloperlicense?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsDeveloperLicense
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WindowsDeveloperLicense

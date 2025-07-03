@@ -1,0 +1,187 @@
+### YamlMime:PowerShellCmdlet1
+uid: NFS.Set-NfsNetgroup
+name: Set-NfsNetgroup
+module: NFS
+isPreview: false
+summary: |-
+  Modifies a netgroup.
+description: |-
+  The **Set-NfsNetgroup** cmdlet adds or removes netgroup members.
+  You can specify a netgroup member by its host name or IP address.
+
+  You can modify netgroups that are stored in Active Directory Domain Services (AD DS) or Active Directory Lightweight Directory Services (AD LDS) only.
+  To modify a netgroup that is stored in Network Information Service (NIS), use the corresponding NIS administration tool.
+  For more information about how to manage an NIS server, see [Server for NIS Administration](https://technet.microsoft.com/en-us/library/cc753089).
+parameters:
+  cmdletParameters:
+  - name: AddMember
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of host names or IP addresses of client computers to add to a netgroup.
+    aliases:
+    - add
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LdapNamingContext
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Lightweight Directory Access Protocol (LDAP) naming context of a netgroup store.
+    aliases:
+    - dn
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LdapServer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an LDAP server name of a netgroup store.
+    aliases:
+    - ldap
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a netgroup.
+      This parameter is mandatory.
+    aliases:
+    - name
+    - ngname
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RemoveMember
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of host names or IP addresses of client computers to remove from a netgroup.
+    aliases:
+    - remove
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-NfsNetgroup
+        [-NetGroupName] <String>
+        [[-AddMember] <String[]>]
+        [[-RemoveMember] <String[]>]
+        [[-LdapServer] <String>]
+        [[-LdapNamingContext] <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.FileServices.Powershell.Nfs.NetGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a member to a netgroup'
+  description: |-
+    ```
+    PS C:\> Set-NfsNetgroup -LdapServer "Contoso.com" -NetGroupName "AppServers" -AddMember "APPServer-08"
+    NetgroupName          : AppServers
+    NetgroupNamingContext : CN=mappedidentity,DC=Contoso,DC=com
+    NetgroupMembers       : {appserver-08, appserver-07}
+    ```
+
+    This command adds a member that is named APPServer-08 to a netgroup that is named AppServers, in a network store that is named Contoso.com.
+links:
+- text: Get-NfsNetgroup
+  href: ./Get-NfsNetgroup.yml
+- text: New-NfsNetgroup
+  href: ./New-NfsNetgroup.yml
+- text: Remove-NfsNetgroup
+  href: ./Remove-NfsNetgroup.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FileServices.Powershell.NFS.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/nfs/set-nfsnetgroup?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: NFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-NfsNetgroup

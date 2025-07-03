@@ -1,0 +1,208 @@
+### YamlMime:PowerShellCmdlet1
+uid: VMDirectStorage.Add-VMDirectVirtualDisk
+name: Add-VMDirectVirtualDisk
+module: VMDirectStorage
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="Microsoft.Management.Infrastructure.CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      {{ Fill CimSession Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ControllerLocation
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill ControllerLocation Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ControllerNumber
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill ControllerNumber Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVMName
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVM
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ControllerType
+    type: <xref href="ControllerType" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill ControllerType Description }}
+    acceptedValues:
+    - SCSI
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVMName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVM
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualDiskUniqueId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill VirtualDiskUniqueId Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      {{ Fill VM Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVM
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMDriveController
+    type: <xref href="Microsoft.HyperV.PowerShell.VMDriveController" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill VMDriveController Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVMDriveController
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      {{ Fill VMName Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVMName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-VMDirectVirtualDisk
+        [-VMName] <String[]>
+        [[-ControllerType] <ControllerType>]
+        [[-ControllerNumber] <Int32>]
+        [-CimSession <CimSession[]>]
+        [-ControllerLocation <Int32>]
+        [-VirtualDiskUniqueId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVMName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-VMDirectVirtualDisk
+        [-VM] <VirtualMachine[]>
+        [[-ControllerType] <ControllerType>]
+        [[-ControllerNumber] <Int32>]
+        [-ControllerLocation <Int32>]
+        [-VirtualDiskUniqueId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVM
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-VMDirectVirtualDisk
+        [-VMDriveController] <VMDriveController>
+        [-ControllerLocation <Int32>]
+        [-VirtualDiskUniqueId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVMDriveController
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.HyperV.PowerShell.VirtualMachine" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.HyperV.PowerShell.VMDriveController" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: VMDirectStorage-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/vmdirectstorage/add-vmdirectvirtualdisk?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: VMDirectStorage
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Add-VMDirectVirtualDisk

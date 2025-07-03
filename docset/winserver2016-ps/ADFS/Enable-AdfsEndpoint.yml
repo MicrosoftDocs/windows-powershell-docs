@@ -1,0 +1,180 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Enable-AdfsEndpoint
+name: Enable-AdfsEndpoint
+module: ADFS
+isPreview: false
+summary: |-
+  Enables an endpoint in AD FS.
+description: |-
+  The **Enable-AdfsEndpoint** cmdlet enables an endpoint in Active Directory Federation Services (AD FS).
+notes: |-
+  * Endpoints provide access to the federation server functionality of AD FS, such as token issuance and the publishing of federation metadata. Depending on the type of endpoint, you can enable or disable the endpoint or control whether the endpoint is published to Web Application Proxy.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetAddressPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the address path of the endpoint.
+      The cmdlet enables the endpoint that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Address
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetEndpoint
+    type: <xref href="Endpoint" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the endpoint to enable.
+      This value is typically taken from the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TargetObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetFullUrl
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full URL of the endpoint to enable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FullUrl
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-AdfsEndpoint
+        [[-TargetAddressPath] <String>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Address
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Enable-AdfsEndpoint
+        [-TargetEndpoint] <Endpoint>
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TargetObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Enable-AdfsEndpoint
+        [-TargetFullUrl] <Uri>
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FullUrl
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.Endpoint" data-throw-if-not-resolved="False" />
+  description: |-
+    A class structure that represents the endpoints for the Federation Service.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Enable an endpoint'
+  description: |-
+    ```
+    PS C:\> Enable-AdfsEndpoint -TargetAddress "/adfs/services/trust/13/Windows"
+    ```
+
+    This command enables the WS-Trust 1.3 endpoint for AD FS.
+links:
+- text: Disable-AdfsEndpoint
+  href: ./Disable-AdfsEndpoint.yml
+- text: Get-AdfsEndpoint
+  href: ./Get-AdfsEndpoint.yml
+- text: Set-AdfsEndpoint
+  href: ./Set-AdfsEndpoint.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/enable-adfsendpoint?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Enable-AdfsEndpoint

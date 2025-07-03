@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteDesktop.Send-RDUserMessage
+name: Send-RDUserMessage
+module: RemoteDesktop
+isPreview: false
+summary: |-
+  Sends a system message to a specified user session.
+description: |-
+  The **Send-RDUserMessage** cmdlet sends a system message to a specified user session.
+  Because the user session ID is unique only within the context of a session host, a different session host server can share the same user session ID.
+  The host server and session ID that you specify by using this cmdlet uniquely identify a session within a deployment.
+parameters:
+  cmdletParameters:
+  - name: HostServer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server that hosts the session.
+      For session collections the host server has the name of the Remote Desktop Session Host (RD  Session Host) server.
+      For virtual desktop collections the host server has the name of the Remote Desktop Virtualization Host (RD Virtualization Host) server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MessageBody
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the text for the message body.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MessageTitle
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the text for the message title.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UnifiedSessionID
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a unique session ID on the host.
+      Use Get-RDUserSession to retrieve the unique ID for a specific session.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Send-RDUserMessage
+        [-HostServer] <String>
+        [-UnifiedSessionID] <Int32>
+        [-MessageTitle] <String>
+        [-MessageBody] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Send a system message to users of a Remote Desktop application'
+  description: |-
+    ```
+    PS C:\> Send-RDUserMessage -HostServer "rdsh.contoso.com" -UnifiedSessionID 1 -MessageTitle "Message from Administrator" -MessageBody "Please save your work. You will be logged off in 10 minutes"
+    ```
+
+    This command sends a system message to users of the session with an ID of 1 on the host server named rdsh.contoso.com.
+links:
+- text: Disconnect-RDUser
+  href: ./Disconnect-RDUser.yml
+- text: Get-RDUserSession
+  href: ./Get-RDUserSession.yml
+- text: Invoke-RDUserLogoff
+  href: ./Invoke-RDUserLogoff.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/moduleremotedesktop/send-rdusermessage?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteDesktop
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Send-RDUserMessage

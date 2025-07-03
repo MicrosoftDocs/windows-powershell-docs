@@ -1,0 +1,101 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPointVdi.Enable-WmsVirtualDesktopRole
+name: Enable-WmsVirtualDesktopRole
+module: MultiPointVdi
+isPreview: false
+summary: |-
+  Installs the Hyper-V virtual desktop role and customizes it for use with MultiPoint services.
+description: |-
+  The **Enable-WmsVirtualDesktopRole** cmdlet installs the virtual desktop Hyper-V role if it isn't already installed, and optionally restarts the computer to apply the change.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Restart
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation automatically restarts the computer to apply the change.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-WmsVirtualDesktopRole
+        [-Restart]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Install the Hyper-V virtual desktop role'
+  description: |-
+    ```
+    PS C:\> Enable-WmsVirtualDesktopRole -Restart
+    ```
+
+    This command installs the Hyper-V virtual desktop role and reboots the computer to apply the change.
+links:
+- text: Disable-WmsVirtualDesktopRole
+  href: ./Disable-WmsVirtualDesktopRole.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPointVdi.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipointvdi/enable-wmsvirtualdesktoprole?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPointVdi
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Enable-WmsVirtualDesktopRole

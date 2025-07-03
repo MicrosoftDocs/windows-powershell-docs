@@ -1,0 +1,21 @@
+### YamlMime:PowerShellModule1
+uid: RemoteDesktopServices
+name: RemoteDesktopServices Module
+isPreview: false
+cmdletGroups:
+- title: RemoteDesktopServices Cmdlets
+  cmdlets:
+  - RemoteDesktopServices.Convert-License
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Remote Desktop Services cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  HelpInfoUri: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 4.0.2.2
+  Locale: en-US
+  Module Guid: 9fdb63ca-68ae-4034-a9fa-78529396c689
+  Module Name: RemoteDesktopServices
+  ms.date: 12/27/2016
+  title: RemoteDesktopServices
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,655 @@
+### YamlMime:PowerShellCmdlet1
+uid: StorageMigrationService.Get-SmsState
+name: Get-SmsState
+module: StorageMigrationService
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill ComputerName Description }}
+    aliases:
+    - CN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Inventory Config Detail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Inventory SMB Detail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Inventory DFSN Detail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Transfer SMB Detail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Transfer DFSN Detail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Transfer File Detail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Transfer Volume Detail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Get Local User Detail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Get Local Groups Detail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Credential Description }}
+    aliases:
+    - C
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CutoverSummary
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill CutoverSummary Description }}
+    aliases:
+    - CS
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cutover Summary
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorsOnly
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill ErrorsOnly Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Transfer File Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GetLocalGroupsDetail
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill GetLocalGroupsDetail Description }}
+    aliases:
+    - GLGD
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get Local Groups Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GetLocalUsersDetail
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill GetLocalUsersDetail Description }}
+    aliases:
+    - GLUD
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get Local User Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GetNasPrescanResult
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill GetNasPrescanResult Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get NasPrescanResult Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeAllAdapters
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill IncludeAllAdapters Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Inventory Config Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InventoryConfigDetail
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill InventoryConfigDetail Description }}
+    aliases:
+    - ICD
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Inventory Config Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InventoryDFSNDetail
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill InventoryDFSNDetail Description }}
+    aliases:
+    - IDD
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Inventory DFSN Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InventorySMBDetail
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill InventorySMBDetail Description }}
+    aliases:
+    - ISD
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Inventory SMB Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InventorySummary
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill InventorySummary Description }}
+    aliases:
+    - IS
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Inventory Summary
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobSummary
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill JobSummary Description }}
+    aliases:
+    - JS
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Job Summary
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Name Description }}
+    aliases:
+    - N
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Job Summary
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NasController
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill NasController Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get NasPrescanResult Detail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrchestratorComputerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill OrchestratorComputerName Description }}
+    aliases:
+    - OCN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrchestratorPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill OrchestratorPort Description }}
+    aliases:
+    - OP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TransferDFSNDetail
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill TransferDFSNDetail Description }}
+    aliases:
+    - TDD
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Transfer DFSN Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TransferFileDetail
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill TransferFileDetail Description }}
+    aliases:
+    - TFD
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Transfer File Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TransferSMBDetail
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill TransferSMBDetail Description }}
+    aliases:
+    - TSD
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Transfer SMB Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TransferSummary
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill TransferSummary Description }}
+    aliases:
+    - TS
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Transfer Summary
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TransferVolumeDetail
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill TransferVolumeDetail Description }}
+    aliases:
+    - TVD
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Transfer Volume Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeTypes
+    type: <xref href="Microsoft.StorageMigration.Commands.GetSmsStateCommand+VolumeType" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill VolumeTypes Description }}
+    acceptedValues:
+    - TAFSEnabled
+    - NonTAFSEnabled
+    - All
+    aliases:
+    - VT
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Transfer Volume Detail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [[-Name] <String>]
+        [-JobSummary]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Job Summary
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        -ComputerName <String>
+        [-InventoryConfigDetail]
+        [-IncludeAllAdapters]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Inventory Config Detail
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        -ComputerName <String>
+        [-InventorySMBDetail]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Inventory SMB Detail
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        -ComputerName <String>
+        [-InventoryDFSNDetail]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Inventory DFSN Detail
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        -ComputerName <String>
+        [-TransferSMBDetail]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Transfer SMB Detail
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        -ComputerName <String>
+        [-TransferDFSNDetail]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Transfer DFSN Detail
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        -ComputerName <String>
+        [-TransferFileDetail]
+        [-ErrorsOnly]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Transfer File Detail
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        -ComputerName <String>
+        [-TransferVolumeDetail]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [-VolumeTypes <VolumeType>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Transfer Volume Detail
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        [-ComputerName <String>]
+        [-CutoverSummary]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Cutover Summary
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        -ComputerName <String>
+        [-GetLocalUsersDetail]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get Local User Detail
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        -ComputerName <String>
+        [-GetLocalGroupsDetail]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get Local Groups Detail
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        -NasController <String>
+        [-GetNasPrescanResult]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get NasPrescanResult Detail
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        [-InventorySummary]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Inventory Summary
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-SmsState
+        [-Name] <String>
+        [-TransferSummary]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Transfer Summary
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.StorageMigration.Commands.GetSmsStateCommand+VolumeType" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.StorageMigration.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storagemigrationservice/get-smsstate?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: StorageMigrationService
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-SmsState

@@ -1,0 +1,185 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Move-ClusterGroup
+name: Move-ClusterGroup
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Moves a clustered role (a resource group) from one node to another in a failover cluster.
+description: |-
+  The `Move-ClusterGroup` cmdlet moves a clustered role (a resource group) from one node to another
+  in a failover cluster.
+
+  Moving a resource group is a way of simulating failover. Running this cmdlet is also an appropriate
+  step to take in preparation for routine maintenance on a node.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+      `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IgnoreLocked
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that locked groups are ignored when running the cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource group to move.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group to move.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Node
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster node to which to move the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Wait
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+      then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+      cmdlet returns without waiting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Move-ClusterGroup
+        [[-Name] <String>]
+        [[-Node] <String>]
+        [-IgnoreLocked]
+        [-Wait <Int32>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Move-ClusterGroup -Name MyFileServer
+    ```
+
+    This example moves the clustered service called `MyFileServer` from the current owner node to any
+    other node.
+- title: Example 2
+  description: |-
+    ```powershell
+    Move-ClusterGroup -Name MyFileServer -Node node2
+    ```
+
+    This example moves the resource group called `MyFileServer` from the current owner node to the node
+    named `node2`.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-ClusterNode node3 | Get-ClusterGroup | Move-ClusterGroup
+    ```
+
+    This example moves all resource groups that are currently owned by the node named `node3` to other
+    nodes. Use this cmdlet before performing maintenance on the specified node.
+- title: Example 4
+  description: |-
+    ```powershell
+    Move-ClusterGroup -Name MyFileServer -Node node2 -Wait 0
+    ```
+
+    This example moves the resource group called `MyFileServer` from the current owner node to the node
+    named `node2`. Information about `MyFileServer` is displayed immediately, while it is in the process
+    of being moved.
+links:
+- text: Add-ClusterGroup
+  href: ./Add-ClusterGroup.yml
+- text: Get-ClusterGroup
+  href: ./Get-ClusterGroup.yml
+- text: Remove-ClusterGroup
+  href: ./Remove-ClusterGroup.yml
+- text: Start-ClusterGroup
+  href: ./Start-ClusterGroup.yml
+- text: Stop-ClusterGroup
+  href: ./Stop-ClusterGroup.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/move-clustergroup?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 11/22/2022
+  PlatyPS schema version: 2024-05-01
+  title: Move-ClusterGroup

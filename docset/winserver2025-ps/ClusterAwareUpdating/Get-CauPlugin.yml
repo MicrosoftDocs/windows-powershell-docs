@@ -1,0 +1,77 @@
+### YamlMime:PowerShellCmdlet1
+uid: ClusterAwareUpdating.Get-CauPlugin
+name: Get-CauPlugin
+module: ClusterAwareUpdating
+isPreview: false
+summary: |-
+  Gets information about one or more software updating plug-ins that are registered on the local
+  computer.
+description: |-
+  The `Get-CauPlugin` cmdlet gets information about one or more software updating plug-ins that are
+  registered on the local computer. A plug-in can be specified or information can be retrieved about
+  all registered plug-ins.
+
+  CAU always uses a plug-in when performing updates. The default is the
+  **Microsoft.WindowsUpdatePlugin** plug-in. This plug-in communicates with the Windows Update agent,
+  the same software that is used when updates are downloaded from Windows Update or Microsoft Update,
+  or from a Windows Server Update Services (WSUS) server. For more information about how plug-ins work
+  in CAU, see [How CAU Plug-ins Work](https://go.microsoft.com/fwlink/p/?LinkId=235333).
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the plug-in whose information this cmdlet gets.
+      If not specified, then information for all the registered plug-ins is returned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-CauPlugin
+        [[-Name] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.ClusterAwareUpdating.CauPlugin" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get information about software update plug-ins'
+  description: |-
+    ```powershell
+    Get-CauPlugin | Format-List -Property "*"
+    ```
+
+    This command gets information about the software updating plug-ins that are registered in the local
+    CAU tool.
+links:
+- text: Register-CauPlugin
+  href: ./Register-CauPlugin.yml
+- text: Unregister-CauPlugin
+  href: ./Unregister-CauPlugin.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/clusterawareupdating/get-cauplugin?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ClusterAwareUpdating
+  ms.date: 09/27/2022
+  PlatyPS schema version: 2024-05-01
+  title: Get-CauPlugin

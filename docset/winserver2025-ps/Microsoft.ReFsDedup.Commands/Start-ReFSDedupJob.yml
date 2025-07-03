@@ -1,0 +1,286 @@
+### YamlMime:PowerShellCmdlet1
+uid: Microsoft.ReFsDedup.Commands.Start-ReFSDedupJob
+name: Start-ReFSDedupJob
+module: Microsoft.ReFsDedup.Commands
+isPreview: false
+summary: |-
+  Starts a deduplication job on the specified ReFS volume.
+description: |-
+  The `Start-ReFSDedupJob` cmdlet starts a deduplication job on the specified ReFS volume or to
+  resume an existing job that was previously paused or stopped.
+parameters:
+  cmdletParameters:
+  - name: CompressionChunkSize
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the chunk size to use during compression.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompressionFormat
+    type: <xref href="Format" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the compression format to use during the job. Acceptable values are:
+
+      - `LZ4`
+      - `Uncompressed`
+      - `Unknown`
+      - `ZSTD`
+    acceptedValues:
+    - Unknown
+    - Uncompressed
+    - LZ4
+    - ZSTD
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompressionLevel
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the compression level to use during the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompressionTuning
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the compression tuning to use during the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConcurrentOpenFiles
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of files that can be open concurrently during the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CpuPercentage
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum percentage of CPU to use during the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecompressionTuning
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the decompression tuning to use during the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Duration
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the duration of the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludeFileExtension
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more file extensions to exclude from the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludeFolder
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more folders to exclude from the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FullRun
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to run a full deduplication job on the specified ReFS volume. If this parameter
+      isn't specified, the job will run in incremental mode where only new or changed files will be
+      processed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimumLastModifiedTimeHours
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the minimum number of hours that must elapse before a file can be deduplicated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecompressionTuning
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the recompression tuning to use during deduplication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Volume
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ReFS volume on which to run the job. Enter one or more volume IDs, drive letters, or
+      volume GUID paths. For drive letters, use the format `D:`. For volume GUID paths, use the format
+      `\\?\Volume{{GUID}}\`. Separate multiple volumes with a comma.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-ReFSDedupJob
+        [-Volume] <String>
+        [-Duration <TimeSpan>]
+        [-FullRun]
+        [-CpuPercentage <UInt32>]
+        [-ConcurrentOpenFiles <UInt32>]
+        [-MinimumLastModifiedTimeHours <Int32>]
+        [-ExcludeFileExtension <String[]>]
+        [-ExcludeFolder <String[]>]
+        [-CompressionFormat <Format>]
+        [-CompressionLevel <UInt16>]
+        [-CompressionChunkSize <UInt32>]
+        [-CompressionTuning <UInt32>]
+        [-RecompressionTuning <UInt32>]
+        [-DecompressionTuning <UInt32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Start-ReFSDedupJob -Volume "D:"
+    ```
+
+    This example starts a deduplication job on the `D:` drive using the default settings.
+links:
+- text: Stop-ReFSDedupJob
+  href: Stop-ReFSDedupJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.ReFsDedup.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/microsoft.refsdedup.commands/start-refsdedupjob?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Microsoft.ReFsDedup.Commands
+  ms.date: 11/20/2024
+  PlatyPS schema version: 2024-05-01
+  title: Start-ReFSDedupJob

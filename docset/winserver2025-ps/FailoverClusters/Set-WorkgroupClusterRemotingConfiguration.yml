@@ -1,0 +1,52 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Set-WorkgroupClusterRemotingConfiguration
+name: Set-WorkgroupClusterRemotingConfiguration
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Configures the remote management settings for a failover cluster that is part of a workgroup.
+description: |-
+  The `Set-WorkgroupClusterRemotingConfiguration` cmdlet configures the remote management settings for
+  a failover cluster that is part of a workgroup.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WorkgroupClusterRemotingConfiguration
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-WorkgroupClusterRemotingConfiguration -Verbose
+    ```
+
+    This example displays detailed information about the current workgroup cluster remoting
+    configuration.
+links:
+- text: Add-WorkgroupClusterNode
+  href: add-workgroupclusternode.yml
+- text: New-WorkgroupCluster
+  href: new-workgroupcluster.yml
+- text: Remove-WorkgroupCluster
+  href: remove-workgroupcluster.yml
+- text: Remove-WorkgroupClusterNode
+  href: remove-workgroupclusternode.yml
+- text: Test-WorkgroupCluster
+  href: test-workgroupcluster.yml
+- text: Test-WorkgroupClusterRemoting
+  href: test-workgroupclusterremoting.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/set-workgroupclusterremotingconfiguration?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 09/11/2024
+  PlatyPS schema version: 2024-05-01
+  title: Set-WorkgroupClusterRemotingConfiguration

@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: IISAdministration.Get-IISConfigCollectionElement
+name: Get-IISConfigCollectionElement
+module: IISAdministration
+isPreview: false
+summary: |-
+  Gets a configuration element object from an IIS configuration collection.
+description: |-
+  The **Get-IISConfigCollectionElement** cmdlet gets a **ConfigurationElement** object that is part of a given ConfigurationCollection.
+  The returned element then can be used in further cmdlets that expect a **ConfigurationElement**.
+parameters:
+  cmdletParameters:
+  - name: ConfigAttribute
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a hashtable of the attributes for the configuration element to be inserted.
+      The cmdlet will fail if any required attributes are omitted from this table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigCollection
+    type: <xref href="ConfigurationElementCollection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **ConfigurationCollection** object for which the collection elements will be returned.
+      If a ConfigurationCollection is previously obtained and assigned to a variable, you cannot pass it to this cmdlet through the pipeline because the pipeline engine will try to enumerate, passing ConfigurationElement objects instead.
+      Try either passing the whole Get-IISConfigCollection cmdlet into the pipeline or use it as a parameter for correct results.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-IISConfigCollectionElement
+        [-ConfigCollection] <ConfigurationElementCollection>
+        [[-ConfigAttribute] <Hashtable>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Web.Administration.ConfigurationElementCollection" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a configuration element for the default web site by passing the collection through a pipeline'
+  description: |-
+    ```
+    PS C:\> Get-IISConfigSection -SectionPath "system.applicationHost/sites" | Get-IISConfigCollection | Get-IISConfigCollectionElement -ConfigAttribute @{"name"="Default Web Site"}
+    ```
+
+    This command gets a configuration element for the default web site by passing the collection through a pipeline.
+- title: 'Example 2: Get a configuration element using a configuration collection as a parameter'
+  description: |-
+    ```
+    PS C:\> $SiteCollection = Get-IISConfigSection -SectionPath "system.applicationHost/sites" | Get-IISConfigCollection
+    Get-IISConfigCollectionElement -ConfigCollection $SiteCollection -ConfigAttribute @{"name"="Default Web Site"}
+    ```
+
+    This command gets a configuration element for the default web site and then stores the element into variable $SiteCollection.
+links:
+- text: New-IISConfigCollectionElement
+  href: ./New-IISConfigCollectionElement.yml
+- text: Remove-IISConfigCollectionElement
+  href: ./Remove-IISConfigCollectionElement.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: index.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iisadministration/get-iisconfigcollectionelement?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-IISConfigCollectionElement

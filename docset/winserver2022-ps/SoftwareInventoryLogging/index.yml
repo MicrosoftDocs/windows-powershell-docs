@@ -1,0 +1,31 @@
+### YamlMime:PowerShellModule1
+uid: SoftwareInventoryLogging
+name: SoftwareInventoryLogging Module
+isPreview: false
+cmdletGroups:
+- title: SoftwareInventoryLogging Cmdlets
+  cmdlets:
+  - SoftwareInventoryLogging.Get-SilComputer
+  - SoftwareInventoryLogging.Get-SilComputerIdentity
+  - SoftwareInventoryLogging.Get-SilData
+  - SoftwareInventoryLogging.Get-SilLogging
+  - SoftwareInventoryLogging.Get-SilSoftware
+  - SoftwareInventoryLogging.Get-SilUalAccess
+  - SoftwareInventoryLogging.Get-SilWindowsUpdate
+  - SoftwareInventoryLogging.Publish-SilData
+  - SoftwareInventoryLogging.Set-SilLogging
+  - SoftwareInventoryLogging.Start-SilLogging
+  - SoftwareInventoryLogging.Stop-SilLogging
+description: |-
+  This reference provides cmdlet descriptions and syntax for all Software Inventory Logging-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  HelpInfoUri: https://aka.ms/winsvr-2022-pshelp
+  Help Version: 5.0.0.1
+  Locale: en-US
+  Module Guid: 421a5b89-0f16-4df7-b607-fffd66107510
+  Module Name: SoftwareInventoryLogging
+  ms.date: 01/24/2017
+  title: SoftwareInventoryLogging
+  PlatyPS schema version: 2024-05-01
+  document type: module

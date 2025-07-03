@@ -1,0 +1,188 @@
+### YamlMime:PowerShellCmdlet1
+uid: BitsTransfer.Resume-BitsTransfer
+name: Resume-BitsTransfer
+module: BitsTransfer
+isPreview: false
+summary: |-
+  Resumes a BITS transfer job.
+description: |-
+  The **Resume-BitsTransfer** cmdlet resumes one or more suspended Background Intelligent Transfer Service (BITS) transfer jobs.
+  If the BITS transfer is already in process, the cmdlet does nothing.
+  You can view the current state of a transfer job through the **Get-BitsTransfer** cmdlet.
+
+  By default, the **Resume-BitsTransfer** cmdlet restarts the transfer job synchronously even if the original job was specified as an asynchronous transfer job.
+  You could use this behavior to convert an asynchronous transfer job into a synchronous transfer job.
+  You could do this if either of the following conditions is true:
+
+  - The asynchronous transfer job was created outside cmdlets.
+
+  - The asynchronous transfer job was created through the **Start-BitsTransfer** cmdlet.
+
+  If you want to restart the transfer job as an asynchronous transfer, use the *Asynchronous* parameter.
+notes: |-
+  * You can cancel a transfer job that is running in synchronous mode (foreground priority) by pressing CTRL+C.
+parameters:
+  cmdletParameters:
+  - name: Asynchronous
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet processes the BITS transfer job in the background.
+      The command prompt reappears immediately after the BITS transfer job is resumed.
+      The returned **BitsJob** object can be used to monitor status and progress.
+    aliases:
+    - as
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BitsJob
+    type: <xref href="BitsJob" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of BITS transfer jobs to resume.
+      You can pipe a value to this parameter from other cmdlets that return **BitsJob** objects, such as the **Get-BitsTransfer** cmdlet.
+    aliases:
+    - b
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Resume-BitsTransfer
+        [-BitsJob] <BitsJob[]>
+        [-Asynchronous]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.BackgroundIntelligentTransfer.Management.BitsJob" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts one or more **BitsJob** objects as input that populates the *BitsJob* parameter.
+outputs:
+- name: <xref href="Microsoft.BackgroundIntelligentTransfer.Management.BitsJob" data-throw-if-not-resolved="False" />
+  description: |-
+    When called with the *Asynchronous* parameter, this cmdlet sends the **BitsJob** object that is associated with the resumed BITS transfer job as output.
+    Otherwise, no output is generated.
+examples:
+- title: 'Example 1: Resume all BITS transfer jobs owned by the current user'
+  description: |-
+    ```
+    PS C:\> Get-BitsTransfer | Resume-BitsTransfer
+    ```
+
+    This command resumes all the BITS transfer jobs that are owned by the current user.
+
+    The command prompt returns after the jobs are complete or after the jobs enter an error state.
+    The output of the **Get-BitsTransfer** cmdlet is a set of BitsJob objects.
+    This output is piped to the **Resume-BitsTransfer** cmdlet.
+    If any of the BITS transfer jobs are already active, they will continue to run.
+- title: 'Example 2: Resume a new BITS transfer job that was initially suspended'
+  description: |-
+    ```
+    PS C:\> $Bits = Start-BitsTransfer -DisplayName "MyJob" -Suspended
+    PS C:\> Add-BitsTransfer -BitsJob $Bits  -ClientFileName C:\myFile -ServerFileName http://www.mysite.com/file1
+    PS C:\> Resume-BitsTransfer -BitsJob $Bits -Asynchronous
+    ```
+
+    This command resumes a new BITS transfer job that was initially suspended, and it returns the command prompt immediately.
+
+    The first command creates a new **BitsJob** object in a suspended state and then stores it in the $Bits variable.
+
+    The second command adds a file to the transfer queue of the new **BitsJob** object that is stored in the $Bits variable.
+
+    The third command uses the **BitsJob** parameter to pass the **BitsJob** object that is stored in the $Bits variable to the **Resume-BitsTransfer** cmdlet.
+    This command starts the BITS transfer job.
+- title: 'Example 3: Resume the BITS transfer by the specified display name'
+  description: |-
+    ```
+    PS C:\> Get-BitsTransfer -Name "TestJob01" | Resume-BitsTransfer
+    ```
+
+    This command resumes the BITS transfer that is identified by the display name named TestJob01.
+
+    The command prompt returns after the job is complete or after the job enters an error state.
+    The output of the **Get-BitsTransfer** cmdlet is a **BitsJob** object.
+    This output is piped to the **Resume-BitsTransfer** cmdlet.
+    If the BITS transfer job is already active, it continues to run.
+links:
+- text: Add-BitsFile
+  href: ./Add-BitsFile.yml
+- text: Complete-BitsTransfer
+  href: ./Complete-BitsTransfer.yml
+- text: Get-BitsTransfer
+  href: ./Get-BitsTransfer.yml
+- text: Remove-BitsTransfer
+  href: ./Remove-BitsTransfer.yml
+- text: Set-BitsTransfer
+  href: ./Set-BitsTransfer.yml
+- text: Start-BitsTransfer
+  href: ./Start-BitsTransfer.yml
+- text: Suspend-BitsTransfer
+  href: ./Suspend-BitsTransfer.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.BackgroundIntelligentTransfer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/bitstransfer/resume-bitstransfer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: BitsTransfer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Resume-BitsTransfer

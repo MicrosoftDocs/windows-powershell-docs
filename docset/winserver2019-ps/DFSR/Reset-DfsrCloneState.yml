@@ -1,0 +1,106 @@
+### YamlMime:PowerShellCmdlet1
+uid: DFSR.Reset-DfsrCloneState
+name: Reset-DfsrCloneState
+module: DFSR
+isPreview: false
+summary: |-
+  Cancels a cloning operation.
+description: |-
+  The **Reset-DfsrCloneState** cmdlet cancels an ongoing Distributed File System (DFS) Replication database cloning operation and resets the database of the volume to the previous state.
+
+  When you cancel an export, the DFS Replication service restores the backup database copy that it created at the start of the process.
+  When you cancel an import, the DFS Replication service deletes the new database copy.
+  When you run the cmdlet, the cmdlet sends the reset and waits for the DFS Replication service to complete.
+  Use the **Get-DfsrState** cmdlet to determine the current reset status.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Reset-DfsrCloneState
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Cancel a cloning operation'
+  description: |-
+    ```
+    PS C:\> Reset-DfsrCloneState
+    ```
+
+    This command cancels the ongoing DFS Replication cloning operation and resets the volume's database to the previous state.
+links:
+- text: Get-DfsrCloneState
+  href: ./Get-DfsrCloneState.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: DfsrPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dfsr/reset-dfsrclonestate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Reset-DfsrCloneState

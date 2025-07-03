@@ -1,0 +1,182 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsAttestation.Add-HgsAttestationCIPolicy
+name: Add-HgsAttestationCIPolicy
+module: HgsAttestation
+isPreview: false
+summary: |-
+  Authorizes a trusted code integrity policy to be used by hosts attesting against HGS.
+description: |-
+  The **Add-HgsAttestationCIPolicy** cmdlet adds an attestation policy based on a trusted code integrity policy to HGS.
+  When HGS is configured to use TPM attestation, hosts will need to use one of the code integrity policies registered with HGS to successfully pass attestation.
+  Use the **New-CIPolicy** and **ConvertFrom-CIPolicy** cmdlets to create a binary code integrity policy that can be passed to this cmdlet.
+
+  HGS will not know which software is allowed or disallowed by your policy, nor will it know which policy rules (e.g. enforced CI, reboot actions) are configured in the policy.
+  You should choose a descriptive name for your policy to ensure you know what your policy covers for future reference when reviewing authorized policies.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Byte array containing the contents of a binary code integrity policy file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Console
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Friendly name for the code integrity policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Console
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a file that contains the code integrity policy, in binary form.
+      The file typically has a .p7b or .bin extension.
+    aliases:
+    - FilePath
+    - PSPath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: File
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyVersion
+    type: <xref href="PolicyVersion" data-throw-if-not-resolved="False" />
+    description: |-
+      Reserved for future use.
+    acceptedValues:
+    - None
+    - PolicyVersion1503
+    - PolicyVersion1704
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Stage
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Reserved for future use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-HgsAttestationCIPolicy
+        [-InputObject] <Byte[]>
+        -Name <String>
+        [-PolicyVersion <PolicyVersion>]
+        [-Stage]
+        [-WhatIf]
+        [-Confirm]
+    ```
+  parameterSetName: Console
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-HgsAttestationCIPolicy
+        [-Path] <String>
+        [-Name <String>]
+        [-PolicyVersion <PolicyVersion>]
+        [-Stage]
+        [-WhatIf]
+        [-Confirm]
+    ```
+  parameterSetName: File
+  isDefault: false
+inputs:
+- name: <xref href="Byte" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts a code integrity policy as a **Byte** array or filename.
+outputs:
+- name: <xref href="AttestationPolicyInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns attestation policy information.
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Add-HgsAttestationCIPolicy -Path C:\temp\WS2016-Enforced.p7b -Name "Windows Server 2016 Enforced CI Policy"
+    ```
+
+    Adds the binary code integrity policy file to HGS and names the policy "Windows Server 2016 Enforced CI Policy"
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsattestation/add-hgsattestationcipolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsAttestation
+  PlatyPS schema version: 2024-05-01
+  title: Add-HgsAttestationCIPolicy

@@ -1,0 +1,84 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteDesktop.Get-RDSessionCollection
+name: Get-RDSessionCollection
+module: RemoteDesktop
+isPreview: false
+summary: |-
+  Gets session collections in a Remote Desktop deployment.
+description: |-
+  The **Get-RDSessionCollection** cmdlet gets session collections in a Remote Desktop deployment.
+  A session collection consists of one or more Remote Desktop Session Host (RD Session Host) servers.
+  Users can connect to RD Session Host servers in a session collection to run programs, save files, and use resources on those servers.
+  The user needs to be a member of the local computer Administrator group to run this command.
+parameters:
+  cmdletParameters:
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a session collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-RDSessionCollection
+        [[-CollectionName] <String>]
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.RemoteDesktopServices.Management.RDSessionCollection" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example1: Get a list of the Session Collections in the Remote Desktop Deployment'
+  description: |-
+    ```
+    PS C:\> Get-RDSessionCollection -CollectionName "Session Collection" -ConnectionBroker "RDCB.Contoso.com"
+    ```
+
+    This command gets the collection named Session Collection in the deployment that has the RD Connection Broker named RDCB.Contoso.com.
+links:
+- text: New-RDSessionCollection
+  href: ./New-RDSessionCollection.yml
+- text: Remove-RDSessionCollection
+  href: ./Remove-RDSessionCollection.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/moduleremotedesktop/get-rdsessioncollection?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteDesktop
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-RDSessionCollection

@@ -1,0 +1,429 @@
+### YamlMime:PowerShellCmdlet1
+uid: StorageMigrationService.Set-SmsTransfer
+name: Set-SmsTransfer
+module: StorageMigrationService
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: ChecksumType
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.StorageMigration.Commands.TransferChecksumType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      {{ Fill ChecksumType Description }}
+    acceptedValues:
+    - None
+    - Crc64
+    - SHA256
+    aliases:
+    - TCT
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Credential Description }}
+    aliases:
+    - C
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationCredential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill DestinationCredential Description }}
+    aliases:
+    - DCR
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludeLocalPrincipals
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      {{ Fill ExcludeLocalPrincipals Description }}
+    aliases:
+    - ELP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileRetryCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill FileRetryCount Description }}
+    aliases:
+    - FRC
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileRetryIntervalInSec
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill FileRetryIntervalInSec Description }}
+    aliases:
+    - FRI
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Force Description }}
+    aliases:
+    - F
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxDuration
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill MaxDuration Description }}
+    aliases:
+    - MD
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Name Description }}
+    aliases:
+    - N
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrchestratorComputerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill OrchestratorComputerName Description }}
+    aliases:
+    - OCN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrchestratorPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill OrchestratorPort Description }}
+    aliases:
+    - OP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OverrideTransferValidation
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      {{ Fill OverrideTransferValidation Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityMigrationOption
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.StorageMigration.Service.Contracts.SecurityMigrationOptions" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      {{ Fill SecurityMigrationOption Description }}
+    acceptedValues:
+    - MigrateAndRenameConflictingAccounts
+    - MigrateAndMergeConflictingAccounts
+    - SkipSecurityMigration
+    aliases:
+    - SMO
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipMovePreExisting
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill SkipMovePreExisting Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceCredential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill SourceCredential Description }}
+    aliases:
+    - SCR
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceHostFingerprint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill SourceHostFingerprint Description }}
+    aliases:
+    - SHFP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceHostPassphrase
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill SourceHostPassphrase Description }}
+    aliases:
+    - SHPP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceHostPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill SourceHostPassword Description }}
+    aliases:
+    - SHPW
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceHostPrivateKey
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill SourceHostPrivateKey Description }}
+    aliases:
+    - SHPK
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceHostUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill SourceHostUsername Description }}
+    aliases:
+    - SHU
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TransferType
+    type: <xref href="Microsoft.StorageMigration.Commands.TransferType" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill TransferType Description }}
+    acceptedValues:
+    - Copy
+    - Move
+    aliases:
+    - TT
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-SmsTransfer
+        [-DestinationCredential <PSCredential>]
+        [-SourceCredential <PSCredential>]
+        [-TransferType <TransferType>]
+        [-MaxDuration <Int32>]
+        [-FileRetryIntervalInSec <Int32>]
+        [-FileRetryCount <Int32>]
+        [-ExcludeLocalPrincipals <Boolean>]
+        [-SkipMovePreExisting]
+        [-ChecksumType <TransferChecksumType>]
+        [-SecurityMigrationOption <SecurityMigrationOptions>]
+        [-OrchestratorComputerName <String>]
+        [-OrchestratorPort <Int32>]
+        [-Credential <PSCredential>]
+        [-SourceHostUsername <String>]
+        [-SourceHostPassword <SecureString>]
+        [-SourceHostPrivateKey <SecureString>]
+        [-SourceHostPassphrase <SecureString>]
+        [-SourceHostFingerprint <String>]
+        [-OverrideTransferValidation <Boolean>]
+        [-Force]
+        [-Name] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.StorageMigration.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storagemigrationservice/set-smstransfer?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: StorageMigrationService
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Set-SmsTransfer

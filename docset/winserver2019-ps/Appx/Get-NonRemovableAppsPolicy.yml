@@ -1,0 +1,208 @@
+### YamlMime:PowerShellCmdlet1
+uid: Appx.Get-NonRemovableAppsPolicy
+name: Get-NonRemovableAppsPolicy
+module: Appx
+isPreview: false
+summary: |-
+  Returns the  a list of the app packages that are installed and configured as non-removable apps.
+description: |-
+  The **Get-NonRemovableAppsPolicy** cmdlet gets a list of the app packages what are installed, and have been configured as non-removable (can not be uninstalled). An app package has a .msix or .appx file name extension.
+parameters:
+  cmdletParameters:
+  - name: LogLevel
+    type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum output level shown in the logs. The default log level is 3. The accepted values are as follows:
+
+          - 1 = Error
+          - 2 = Errors and warnings
+          - 3 = Errors, warnings, and information
+          - 4 = All of the information listed previously, plus debug output
+    aliases:
+    - LL
+    defaultValue: "3"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByOnline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByOffline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path and file name to log to. If not set, the default is `%WINDIR%\Logs\Dism\dism.log`. In Windows PE, the default directory is the RAMDISK scratch space which can be as small as 32MB. The log file will automatically be archived. The archived log file will be saved with .bak appended to the file name and a new log file will be generated. Each time the log file is archived the .bak file will be overwritten. When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+    aliases:
+    - LP
+    defaultValue: '%WINDIR%\Logs\Dism\dism.log'
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByOnline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByOffline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Online
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet operates on a running operating system on the local host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByOnline
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path to the root directory of the offline Windows image that you will inquire into. If the directory named Windows is not a subdirectory of the root directory, WindowsDirectory must be specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByOffline
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScratchDirectory
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a temporary directory that will be used when extracting files for use during inquiry. The directory must exist locally. If not spcified, the `\Windows\Temp` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM. Items in the scratch directory are deleted after each operation. You should not use a network share location as a scratch directory to expand a package(.cab or .msu file) for installation.
+    defaultValue: \Windows\Temp
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByOnline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByOffline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SystemDrive
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the location of the BootMgr files. This is necessary only when the BootMgr files are located on a partition other than the one that you are running the command from. Use -SystemDrive to inquire an installed Windows image from a Windows PE environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByOnline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByOffline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowsDirectory
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the Windows directory relative to the image path. This cannot be the full path to the Windows directory; it should be a relative path. If not specified, the default is the Windows directory in the root of the offline image directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByOffline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NonRemovableAppsPolicy
+        -Path <string>
+        [-WindowsDirectory <string>]
+        [-SystemDrive <string>]
+        [-LogPath <string>]
+        [-ScratchDirectory <string>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByOffline
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-NonRemovableAppsPolicy
+        -Online
+        [-WindowsDirectory <string>]
+        [-SystemDrive <string>]
+        [-LogPath <string>]
+        [-ScratchDirectory <string>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByOnline
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Dism.Commands.ImageObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all installed non-removable app packages'
+  description: |-
+    ```
+    PS C:\> Get-NonRemovableAppsPolicy -Online
+    ```
+
+    This command gets information about all installed app packages which have been previously configured as non-removable.
+- title: 'Example 2: Get all non-removable apps from an offline Windows image'
+  description: |-
+    ```
+    PS C:\> Get-NonRemovableAppsPolicy -Path ".\wim\image.wim"
+    ```
+
+    This command gets all apps packages that have been loaded into the offline operating system image.
+metadata:
+  audience: ITPro
+  description: Use this topic to help prevent the uninstall of specific Windows apps with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appx/get-nonremovableappspolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: Appx
+  ms.date: 02/05/2020
+  ms.localizationpriority: Low
+  PlatyPS schema version: 2024-05-01
+  title: Get-NonRemovableAppsPolicy

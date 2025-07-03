@@ -1,0 +1,74 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Reset-ClusterVMMonitoredState
+name: Reset-ClusterVMMonitoredState
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Resets the Application Critical state of a virtual machine, so that the virtual machine is no longer
+  marked as being in a critical state in the cluster.
+description: |-
+  The `Reset-ClusterVMMonitoredState` cmdlet resets the Application Critical state of a virtual
+  machine, so that the virtual machine is no longer marked as being in a critical state in the
+  cluster. Note: This cmdlet can only be run locally on the virtual machine or through Windows
+  PowerShell remoting to the virtual machine.
+parameters:
+  cmdletParameters:
+  - name: Wait
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time in seconds to wait for the cmdlet. If the **Wait** parameter isn't specified,
+      then the cmdlet waits for completion. If `-Wait 0` is specified, then the call is initiated and the
+      cmdlet returns without waiting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Reset-ClusterVMMonitoredState
+        [-Wait <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Reset-ClusterVMMoniteredState
+    ```
+
+    This example resets the state of the virtual machine and clears the critical state.
+links:
+- text: Add-ClusterVMMonitoredItem
+  href: ./Add-ClusterVMMonitoredItem.yml
+- text: Get-ClusterVMMonitoredItem
+  href: ./Get-ClusterVMMonitoredItem.yml
+- text: Remove-ClusterVMMonitoredItem
+  href: ./Remove-ClusterVMMonitoredItem.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/reset-clustervmmonitoredstate?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 10/21/2022
+  PlatyPS schema version: 2024-05-01
+  title: Reset-ClusterVMMonitoredState

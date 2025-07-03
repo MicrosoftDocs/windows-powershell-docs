@@ -1,0 +1,187 @@
+### YamlMime:PowerShellCmdlet1
+uid: IscsiTarget.Resize-IscsiVirtualDisk
+name: Resize-IscsiVirtualDisk
+module: IscsiTarget
+isPreview: false
+summary: |-
+  Resizes an iSCSI virtual disk.
+description: |-
+  The **Resize-IscsiVirtualDisk** cmdlet resizes a virtual disk either by expanding or compacting an existing virtual disk.
+  Virtual disks that use the VHDX format can remain online while the cmdlet resizes them.
+  If the cmdlet resizes an online disk, when the virtual disk is mapped to an iSCSI Target, initiators can continue to access the virtual disk even while the cmdlet resizes it.
+  However, an initiator will not automatically see the resized virtual disk.
+  To get access to the capacity of the expanded virtual disk, the initiator must use the **Resize-Partition** cmdlet to modify the volume hosted on the virtual disk.
+
+  This cmdlet can compact a disk only when the logical unit number (LUN) on the initiator side created some partitions on the LUN, and the compacting process shrinks the unallocated part of the LUN.
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+      Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+      If you do not specify a value for this parameter, the cmdlet uses the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials when connecting to a remote computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+    description: |-
+      Accepts an iSCSI Virtual Disk object from the input pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the virtual hard disk (VHDX) file that is associated with the iSCSI virtual disk.
+      Filter the iSCSI Virtual Disk object by using this parameter.
+    aliases:
+    - DevicePath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SizeBytes
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+      If you do not specify a value for this parameter, the cmdlet uses the local computer.
+    aliases:
+    - Size
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Resize-IscsiVirtualDisk
+        [-Path] <String>
+        [-SizeBytes] <UInt64>
+        [-PassThru]
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Path
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Resize-IscsiVirtualDisk
+        [-SizeBytes] <UInt64>
+        -InputObject <IscsiVirtualDisk>
+        [-PassThru]
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Resize a virtual disk'
+  description: |-
+    ```
+    PS C:\> Resize-IscsiVirtualDisk -Path "E:\temp\test06.vhdx" -Size 20GB
+    ```
+
+    This command resizes the virtual disk at the path E:\temp\test06.vhdx to 20GB.
+links:
+- text: Checkpoint-IscsiVirtualDisk
+  href: ./Checkpoint-IscsiVirtualDisk.yml
+- text: Convert-IscsiVirtualDisk
+  href: ./Convert-IscsiVirtualDisk.yml
+- text: Get-IscsiVirtualDisk
+  href: ./Get-IscsiVirtualDisk.yml
+- text: Import-IscsiVirtualDisk
+  href: ./Import-IscsiVirtualDisk.yml
+- text: New-IscsiVirtualDisk
+  href: ./New-IscsiVirtualDisk.yml
+- text: Remove-IscsiVirtualDisk
+  href: ./Remove-IscsiVirtualDisk.yml
+- text: Restore-IscsiVirtualDisk
+  href: ./Restore-IscsiVirtualDisk.yml
+- text: Set-IscsiVirtualDisk
+  href: ./Set-IscsiVirtualDisk.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iscsitarget/resize-iscsivirtualdisk?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Resize-IscsiVirtualDisk

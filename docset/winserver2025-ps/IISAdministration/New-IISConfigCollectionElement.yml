@@ -1,0 +1,132 @@
+### YamlMime:PowerShellCmdlet1
+uid: IISAdministration.New-IISConfigCollectionElement
+name: New-IISConfigCollectionElement
+module: IISAdministration
+isPreview: false
+summary: |-
+  Creates a new configuration element object in an IIS configuration collection.
+description: |-
+  The **New-IISConfigCollectionElement** cmdlet creates a new ConfigurationElement in a given Internet Information Services (IIS) ConfigurationCollection.
+parameters:
+  cmdletParameters:
+  - name: AddAt
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the collection index for the new configuration element; by default, new elements are added to the end of the collection.
+      The collection index specifies the ordering of items in the collection: the first item in the collection is item 0; the second item in the collection is item 1; and so on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigAttribute
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a hashtable of the attributes for the configuration element to be inserted.
+      The cmdlet will fail if any required attributes are omitted from this table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigCollection
+    type: <xref href="ConfigurationElementCollection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **ConfigurationCollection** object to which the new collection element will be added.
+      If a **ConfigurationCollection** is previously obtained and assigned to a variable, you cannot pass it to this cmdlet through the pipeline because the pipeline engine will try to enumerate it, passing **ConfigurationElement** objects instead.
+      Try either passing the whole Get-IISConfigCollection cmdlet into the pipeline or use it as a parameter for correct results.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-IISConfigCollectionElement
+        [-ConfigCollection] <ConfigurationElementCollection>
+        [-ConfigAttribute] <Hashtable>
+        [[-AddAt] <UInt32>]
+        [-Passthru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Web.Administration.ConfigurationElementCollection" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a new file name to list of default documents'
+  description: |-
+    ```
+    PS C:\> $ConfigSection = Get-IISConfigSection -SectionPath "system.webServer/defaultDocument"
+    PS C:\> $DefaultDocumentCollection = Get-IISConfigCollection -ConfigElement $ConfigSection -CollectionName "files"
+    PS C:\> New-IISConfigCollectionElement
+      -ConfigCollection $DefaultDocumentCollection -ConfigAttribute @{"Value" = "MyDefDoc.htm"}
+    ```
+
+    This command creates an entry in the list of default documents.
+- title: 'Example 2: Add a new file name to the top of the list of default documents'
+  description: |-
+    ```
+    PS C:\> Get-IISConfigSection -SectionPath "system.webServer/defaultDocument" | Get-IISConfigCollection -CollectionName "files" | New-IISConfigCollectionElement  -ConfigAttribute @{Value = "MyDefDoc.htm"} -AddAt 0
+    ```
+
+    This command creates a new entry in the list of default documents, and makes this new entry the first item in the collection.
+    This is done by setting the value of the *AddAt* parameter to 0; the first item in a collection is always item number 0.
+links:
+- text: Get-IISConfigCollectionElement
+  href: ./Get-IISConfigCollectionElement.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: index.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iisadministration/new-iisconfigcollectionelement?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-IISConfigCollectionElement

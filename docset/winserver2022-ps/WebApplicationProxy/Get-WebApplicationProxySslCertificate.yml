@@ -1,0 +1,40 @@
+### YamlMime:PowerShellCmdlet1
+uid: WebApplicationProxy.Get-WebApplicationProxySslCertificate
+name: Get-WebApplicationProxySslCertificate
+module: WebApplicationProxy
+isPreview: false
+summary: |-
+  Gets binding information for the SSL certificate for federation server proxy.
+description: |-
+  The **Get-WebApplicationProxySslCertificate** cmdlet gets binding information for the Active Directory Federation Services (AD FS) Secure Sockets Layer (SSL) certificate for the federation server proxy component of the Web Application Proxy.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WebApplicationProxySslCertificate
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get binding information for a certificate'
+  description: |-
+    ```
+    PS C:\> Get-WebApplicationProxySslCertificate
+    ```
+
+    This command gets the binding information for the AD FS SSL certificate that is installed and configured for the federation server proxy component of the Web Application Proxy.
+links:
+- text: Set-WebApplicationProxySslCertificate
+  href: ./Set-WebApplicationProxySslCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.Proxy.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/webapplicationproxy/get-webapplicationproxysslcertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: WebApplicationProxy
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WebApplicationProxySslCertificate

@@ -1,0 +1,84 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsLocalClaimsProviderTrust
+name: Get-AdfsLocalClaimsProviderTrust
+module: ADFS
+isPreview: false
+summary: |-
+  Gets local claims provider trusts.
+description: |-
+  The **Get-AdfsLocalClaimsProviderTrust** cmdlet gets local claims provider trusts.
+  Specify names or IDs of trusts to get.
+parameters:
+  cmdletParameters:
+  - name: Identifier
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of IDs of the local claims provider trusts to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Identifier
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of the local claims provider trusts to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ClaimsProviderName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsLocalClaimsProviderTrust
+        [[-Name] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ClaimsProviderName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AdfsLocalClaimsProviderTrust
+        [-Identifier] <String[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Identifier
+  isDefault: false
+links:
+- text: Add-AdfsLocalClaimsProviderTrust
+  href: ./Add-AdfsLocalClaimsProviderTrust.yml
+- text: Disable-AdfsLocalClaimsProviderTrust
+  href: ./Disable-AdfsLocalClaimsProviderTrust.yml
+- text: Enable-AdfsLocalClaimsProviderTrust
+  href: ./Enable-AdfsLocalClaimsProviderTrust.yml
+- text: Remove-AdfsLocalClaimsProviderTrust
+  href: ./Remove-AdfsLocalClaimsProviderTrust.yml
+- text: Set-AdfsLocalClaimsProviderTrust
+  href: ./Set-AdfsLocalClaimsProviderTrust.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfslocalclaimsprovidertrust?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsLocalClaimsProviderTrust

@@ -1,0 +1,130 @@
+### YamlMime:PowerShellCmdlet1
+uid: VAMT.Get-VamtConfirmationId
+name: Get-VamtConfirmationId
+module: VAMT
+isPreview: false
+summary: |-
+  Acquires confirmation IDs (CIDs) from the Microsoft licensing servers during proxy activation.
+description: |-
+  The **Get-VamtConfirmationID** cmdlet acquires the confirmation IDs (CIDs) from the Microsoft licensing servers during proxy activation.
+  All products either in the Windows PowerShell object or in the .cilx file are updated with the results.
+parameters:
+  cmdletParameters:
+  - name: FileName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the file that contains the products that need CIDs.
+      Use this parameter during proxy activation to acquire CIDs for all products in the specified .cilx file.
+      You cannot use the *FileName* parameter together with the *Products* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CilX
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Products
+    type: <xref href="Product" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the products in dep_nextref_vamt that need CIDs.
+      By default, if you do not specify a product, CIDs are retrieved for all products in dep_nextref_vamt.
+      You cannot use the *Products* parameter together with the *FileName* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Product
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProxyPassword
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a password for a proxy server or gateway, if it is required for your environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProxyUserName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-VamtConfirmationId
+        -FileName <String>
+        [-ProxyUserName <String>]
+        [-ProxyPassword <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CilX
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-VamtConfirmationId
+        -Products <Product[]>
+        [-ProxyUserName <String>]
+        [-ProxyPassword <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Product
+  isDefault: false
+examples:
+- title: 'Example 1: Get CIDs from a file'
+  description: |-
+    ```
+    PS C:\> Get-VamtConfirmationId -FileName "c:\users\me\desktop\vamtdata.cilx"
+    ```
+
+    This command gets the CIDs for the products in the specified file.
+- title: 'Example 2: Get CIDs for products'
+  description: |-
+    ```
+    PS C:\> $ProductInfo = Get-VamtProduct
+    PS C:\> $UpdatedProductInfo = Get-VamtConfirmationId -Products $ProductInfo
+    ```
+
+    This example gets a product object that has all products and gets the confirmation IDs for these products.
+links:
+- text: Get-VamtProduct
+  href: ./Get-VamtProduct.yml
+- text: Install-VamtConfirmationId
+  href: ./Install-VamtConfirmationId.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/vamt/get-vamtconfirmationid?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: VAMT
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-VamtConfirmationId

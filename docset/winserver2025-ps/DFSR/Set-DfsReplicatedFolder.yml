@@ -1,0 +1,275 @@
+### YamlMime:PowerShellCmdlet1
+uid: DFSR.Set-DfsReplicatedFolder
+name: Set-DfsReplicatedFolder
+module: DFSR
+isPreview: false
+summary: |-
+  Changes settings of a replicated folder.
+description: |-
+  The **Set-DfsReplicatedFolder** cmdlet changes settings of a replicated folder in a replication group.
+  You can use this cmdlet to modify global settings of replicated folders such as filters and Distributed File System (DFS) Namespace associations.
+  Replicated folders are logical arrangements of replication that do not contain computer-specific settings.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for the replicated folder.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DfsnPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the DFS Namespace folder path of the replicated folder.
+
+      This parameter is used to connect the replication group to the replicated folder.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DirectoryNameToExclude
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of subfolders that the DSFR service excludes and does not replicate in the replicated folder.
+      You must provide only folder names, not full paths.
+      You can use wildcards.
+    aliases:
+    - DirectoryFilter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains the replication group.
+      If you do not specify this parameter, the cmdlet uses the domain of the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "100"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileNameToExclude
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names and extensions of files that the DSFR service excludes and does not replicate.
+      You must provide only file names, not full paths.
+      You can use wildcards.
+    aliases:
+    - FileFilter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FolderName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of replicated folders.
+      You can use a comma separated list and the wildcard character (*).
+      If you do not specify this parameter, the cmdlet gets all replicated folders.
+    aliases:
+    - RF
+    - RfName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: GroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of replication groups.
+      You can use a comma separated list and the wildcard character (*).
+    aliases:
+    - RG
+    - RgName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-DfsReplicatedFolder
+        [-GroupName] <String[]>
+        [[-FolderName] <String[]>]
+        [[-Description] <String>]
+        [[-FileNameToExclude] <String[]>]
+        [[-DirectoryNameToExclude] <String[]>]
+        [[-DfsnPath] <String>]
+        [[-DomainName] <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicatedFolder" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a description to a replicated folder'
+  description: |-
+    ```
+    PS C:\> Set-DfsReplicatedFolder -GroupName "RG11" -FolderName "RF101" -Description "Branch Store #101, Data Collection for Backups"
+    GroupName              : RG11
+    FolderName             : RF101
+    DomainName             : corp.contoso.com
+    Identifier             : c335e8f6-bc3e-4671-8f7b-9cdc51a6b222
+    Description            : Branch Store #101 Data Collection for Backups
+    FileNameToExclude      : {~*, *.bak, *.tmp}
+    DirectoryNameToExclude : {}
+    DfsnPath               :
+    IsDfsnPathPublished    : False
+    State                  : Normal
+    ```
+
+    This command sets a new description on the replicated folder named RF101 in the replication group named RG11.
+- title: 'Example 2: Exclude files on all replicated folders'
+  description: |-
+    ```
+    PS C:\> Set-DfsReplicatedFolder -GroupName "RG11" -FolderName * -FileNameToExclude "~*, *.bak, *.tmp, *.ned"
+    GroupName              : RG11
+    FolderName             : RF11
+    DomainName             : corp.contoso.com
+    Identifier             : c335e8f6-bc3e-4671-8f7b-9cdc51a6b222
+    Description            :
+    FileNameToExclude      : {~*, *.bak, *.tmp, *.ned}
+    DirectoryNameToExclude : {}
+    DfsnPath               :
+    IsDfsnPathPublished    : False
+    State                  : Normal
+
+    GroupName              : RG11
+    FolderName             : rf12
+    DomainName             : corp.contoso.com
+    Identifier             : 50e057af-08a4-4dbb-af1c-3765620afd9e
+    Description            :
+    FileNameToExclude      : {~*, *.bak, *.tmp, *.ned}
+    DirectoryNameToExclude : {}
+    DfsnPath               :
+    State                  : Normal
+
+    IsDfsnPathPublished    : False
+
+    GroupName              : RG11
+    FolderName             : rf101
+    DomainName             : corp.contoso.com
+    Identifier             : c335e8f6-bc3e-4671-8f7b-9cdc51a6b222
+    Description            : Branch Store #101 Data Collection for Backups
+    FileNameToExclude      : {~*, *.bak, *.tmp, *.ned}
+    DirectoryNameToExclude : {}
+    DfsnPath               :
+    IsDfsnPathPublished    : False
+    State                  : Normal
+    ```
+
+    This command sets the list of files to exclude from replication for all replicated folders in the RG11 replication group.
+    The command specifies that the DFS Replication service exclude file names starting with a tilde (~) character and files that have the extensions .bak, .tmp, and .ned from replication.
+links:
+- text: Get-DfsReplicatedFolder
+  href: ./Get-DfsReplicatedFolder.yml
+- text: New-DfsReplicatedFolder
+  href: ./New-DfsReplicatedFolder.yml
+- text: Remove-DfsReplicatedFolder
+  href: ./Remove-DfsReplicatedFolder.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: DfsrPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dfsr/set-dfsreplicatedfolder?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-DfsReplicatedFolder

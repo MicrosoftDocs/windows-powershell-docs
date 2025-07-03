@@ -1,0 +1,81 @@
+### YamlMime:PowerShellCmdlet1
+uid: ProcessMitigations.ConvertTo-ProcessMitigationPolicy
+name: ConvertTo-ProcessMitigationPolicy
+module: ProcessMitigations
+isPreview: false
+summary: |-
+  Converts an mitigation policy file formats.
+description: |-
+  Converts an EMET policy file or pinning rule file to a new Windows 10 format.
+parameters:
+  cmdletParameters:
+  - name: EMETFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path of the Enhanced Mitigation Experience Tool (EMET) file to convert.
+    aliases:
+    - f
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path of the converted format file.
+    aliases:
+    - o
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    ConvertTo-ProcessMitigationPolicy
+        [-EMETFilePath] <String>
+        [-OutputFilePath] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> ConvertTo-ProcessMitigationPolicy -EMETFilePath policy.xml -OutputFilePath result.xml
+    ```
+
+    Converts EMET file policy.xml to result.xml, may also generate a CI file CI-result.xml if necessary.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.ProcessMitigations.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/processmitigations/convertto-processmitigationpolicy?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ProcessMitigations
+  ms.date: 03/29/2017
+  PlatyPS schema version: 2024-05-01
+  title: ConvertTo-ProcessMitigationPolicy

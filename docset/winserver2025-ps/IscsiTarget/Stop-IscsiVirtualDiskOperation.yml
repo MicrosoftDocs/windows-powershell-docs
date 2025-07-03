@@ -1,0 +1,140 @@
+### YamlMime:PowerShellCmdlet1
+uid: IscsiTarget.Stop-IscsiVirtualDiskOperation
+name: Stop-IscsiVirtualDiskOperation
+module: IscsiTarget
+isPreview: false
+summary: |-
+  Stops a long-running operation in progress on an iSCSI virtual disk.
+description: |-
+  The **Stop-IscsiVirtualDiskOperation** cmdlet stops a long-running operation in progress on an iSCSI virtual disk.
+  If you cancel an operation, that operation might finish before the cancellation takes effect.
+  Always re-enumerate or recheck objects affected by an operation after this cmdlet finishes.
+
+  Stopping a create operation can remove a created file, or can leave the file intact but not zero it out.
+
+  After you stop an operation, the size of an existing file to be increased can appear larger until the next time you restart the iSCSI service, restart the disk, or disable and re-enable the disk.
+  Some data can be lost.
+
+  If you stop an operation, the virtual disk may be in an inconsistent state, and require a new rollback.
+
+  This cmdlet accepts values for the *ComputerName* and *Path* parameters by using as pipeline input the *InputObject* parameter.
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+      Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+
+      If you do not specify a value for this parameter, the cmdlet uses the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials when connecting to a remote computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an **IscsiVirtualDisk** object.
+      You can get an **IscsiVirtualDisk** object by using the **Get-IscsiVirtualDisk** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the virtual hard disk (VHDX) file that is associated with the iSCSI virtual disk.
+      The cmdlet stops the long-running operation on the iSCSI virtual disk that you specify.
+    aliases:
+    - DevicePath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DevicePath
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-IscsiVirtualDiskOperation
+        [-Path] <String>
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DevicePath
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Stop-IscsiVirtualDiskOperation
+        -InputObject <IscsiVirtualDisk>
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Stop a virtual disk operation'
+  description: |-
+    ```
+    PS C:\> Stop-IscsiVirtualDiskOperation -Path "D:\VirtualDisk09"
+    ```
+
+    This command stops an operation in progress on the virtual disk at the specified location.
+links:
+- text: Get-IscsiVirtualDisk
+  href: ./Get-IscsiVirtualDisk.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iscsitarget/stop-iscsivirtualdiskoperation?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Stop-IscsiVirtualDiskOperation

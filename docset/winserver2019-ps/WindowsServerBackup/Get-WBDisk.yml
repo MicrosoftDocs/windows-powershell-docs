@@ -1,0 +1,56 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Get-WBDisk
+name: Get-WBDisk
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Gets a list of internal and external disks that are online for the local computer.
+description: |-
+  The **Get-WBDisk** cmdlet gets a list of internal and external disks that are online for the local computer.
+  You can add these disks to a **WBPolicy** object that contains a backup policy by using the [New-WBBackupTarget](./New-WBBackupTarget.yml) cmdlet to specify online disks as backup storage locations.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WBDisk
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="WBDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an array of **WBDisk** objects for the hard disks that the cmdlet detects on the local computer.
+examples:
+- title: 'Example 1: Get a list of disks for the local computer'
+  description: |-
+    ```
+    PS C:\> $Disks = Get-WBDisk
+    ```
+
+    This command gets a list of the disks that are on the system.
+    You can then use the **WBDisk** object in the variable named $Disks to specify a **WBBackupTarget** object, and use the **WBBackupTarget** object to specify where to store backups for a **WBPolicy** object that contains a backup policy.
+links:
+- text: Add-WBBackupTarget
+  href: ./Add-WBBackupTarget.yml
+- text: Get-WBBackupTarget
+  href: ./Get-WBBackupTarget.yml
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: Get-WBVolume
+  href: ./Get-WBVolume.yml
+- text: New-WBBackupTarget
+  href: ./New-WBBackupTarget.yml
+- text: Remove-WBBackupTarget
+  href: ./Remove-WBBackupTarget.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/get-wbdisk?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WBDisk

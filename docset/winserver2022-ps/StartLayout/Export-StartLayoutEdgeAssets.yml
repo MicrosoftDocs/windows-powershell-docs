@@ -1,0 +1,139 @@
+### YamlMime:PowerShellCmdlet1
+uid: StartLayout.Export-StartLayoutEdgeAssets
+name: Export-StartLayoutEdgeAssets
+module: StartLayout
+isPreview: false
+summary: |-
+  Exports secondary tiles for Microsoft Edge that display a custom image.
+description: |-
+  The **Export-StartLayoutEdgeAssets** cmdlet exports secondary tiles for Microsoft Edge that display a custom image.
+  Use [Export-StartLayout](./Export-StartLayout.yml) and [Import-StartLayout](./Import-StartLayout.yml) along with the current cmdlet to import the assets.
+  For more information, see [Add image for secondary Microsoft Edge tiles](/windows/configuration/start-secondary-tiles).
+
+  The provisioning policies that use the exported assets are no longer used with the Windows 11 Start menu.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LiteralPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a literal path for an asset file.
+      Include the `.xml` file name extension.
+      This parameter does not accept the wildcard character (*).
+      If the path includes an escape character (\\), enclose the string in single quotes (').
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Literal
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an absolute path for an asset file.
+      Include the `.xml` file name extension.
+      This parameter does not accept the wildcard character (*).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Non-literal
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-StartLayoutEdgeAssets
+        [-Path] <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Non-literal
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Export-StartLayoutEdgeAssets
+        -LiteralPath <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Literal
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Export assets'
+  description: |-
+    ```powershell
+    Export-StartLayoutEdgeAssets -Path "C:\Layouts\assets.xml"
+    ```
+
+    This example exports the assets to the file `assets.xml` in the `C:\Layouts` folder.
+    This cmdlet doesn't append `.xml` to a file name.
+links:
+- text: Export-StartLayout
+  href: ./Export-StartLayout.yml
+- text: Get-StartApps
+  href: Get-StartApps.yml
+- text: Import-StartLayout
+  href: ./Import-StartLayout.yml
+metadata:
+  description: The Export-StartLayoutEdgeAssets cmdlet exports secondary tiles for Microsoft Edge that display a custom image.
+  document type: cmdlet
+  external help file: Microsoft.Windows.StartLayout.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/startlayout/export-startlayoutedgeassets?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: StartLayout
+  ms.date: 09/20/2021
+  PlatyPS schema version: 2024-05-01

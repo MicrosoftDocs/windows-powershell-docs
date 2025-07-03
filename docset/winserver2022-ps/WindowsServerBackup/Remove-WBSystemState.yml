@@ -1,0 +1,84 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Remove-WBSystemState
+name: Remove-WBSystemState
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Removes the system state components from the backup policy.
+description: |-
+  The **Remove-WBSystemState** cmdlet removes the system state components from a policy contained in the **WBPolicy** object.
+  Depending on what the **WBPolicy** object includes, you may still backup some of the components that are part of the system state, but you may not be able to use the components in a system state recovery.
+
+  The **WBPolicy** object must be in edit mode.
+  To put the **WBPolicy** object in edit mode for a policy that is the scheduled backup policy, use the [Get-WBPolicy](./Get-WBPolicy.yml) cmdlet with the *Editable* parameter.
+  The [New-WBPolicy](./New-WBPolicy.yml) cmdlet creates a new **WBPolicy** object that is already in edit mode.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+parameters:
+  cmdletParameters:
+  - name: Policy
+    type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the backup policy **WBPolicy** object that this cmdlet updates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-WBSystemState
+        [-Policy] <WBPolicy>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Windows.ServerBackup.Commands.WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet queries the **WBPolicy** object to determine whether the **WBSystemState** object is present.
+    The cmdlet does nothing if the **WBSystemState** object is not already present.
+    The cmdlet removes the **WBSystemState** object if it is present.
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove system state from the backup policy'
+  description: |-
+    ```
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> Remove-WBSystemState -Policy $Policy
+    ```
+
+    This example removes the system state components from the **WBPolicy** object.
+
+    The first command stores the results of the **Get-WBPolicy** cmdlet in the variable named $Policy.
+
+    The second command removes system state components from the backup policy in the variable $Policy.
+links:
+- text: Add-WBSystemState
+  href: ./Add-WBSystemState.yml
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: Get-WBSystemState
+  href: ./Get-WBSystemState.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/remove-wbsystemstate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-WBSystemState

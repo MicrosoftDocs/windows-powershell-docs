@@ -1,0 +1,183 @@
+### YamlMime:PowerShellCmdlet1
+uid: kds.Add-KdsRootKey
+name: Add-KdsRootKey
+module: kds
+isPreview: false
+summary: |-
+  Generates a new root key for the Microsoft Group KdsSvc within Active Directory.
+description: |-
+  The **Add-KdsRootKey** cmdlet generates a new root key for the Microsoft Group Key Distribution Service (KdsSvc) within Active Directory.
+  The Microsoft Group KdsSvc generates new group keys from the new root key. It is required to run this only once per forest.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EffectiveImmediately
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the Microsoft Group Key Distribution Service immediately uses the new root key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EffectiveImmediately
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EffectiveTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the date on which the newly generated root key takes effect.
+      If this parameter is not specified, the default date set is 10 days after the current date.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EffectiveTime
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocalTestOnly
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the new root key is generated on the local host only.
+      This parameter is used with the **Set-KdsConfiguration** cmdlet to test the local server configuration.
+
+      If this parameter is specified, then the cmdlet returns a value that indicates whether the test passed.
+
+      If this parameter is not specified, then the cmdlet returns the identifier (ID) of the root key when the operation succeeds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-KdsRootKey
+        [[-EffectiveTime] <DateTime>]
+        [-LocalTestOnly]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EffectiveTime
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-KdsRootKey
+        [-LocalTestOnly]
+        [-EffectiveImmediately]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EffectiveImmediately
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts no input objects.
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Generate a new root key'
+  description: |-
+    ```
+    PS C:\> Add-KdsRootKey
+    ```
+
+    This command generates a new root key for the Microsoft Group KdsSvc within Active Directory.
+- title: 'Example 2: Generate a new root key for immediate use'
+  description: |-
+    ```
+    PS C:\> Add-KdsRootKey -EffectiveImmediately
+    ```
+
+    This command generates a new root key immediately and adds it to the Microsoft Group KdsSvc.
+- title: 'Example 3: Generate a new root key which takes effect on a specific date'
+  description: |-
+    ```
+    PS C:\> Add-KdsRootKey -EffectiveTime 03/23/2013
+    ```
+
+    This command generates a new root key for the Microsoft Group KdsSvc which takes effect on the date 03/23/2013.
+    Use the mm/dd/yyyy format.
+- title: 'Example 4: Generate a new root key on the local host only'
+  description: |-
+    ```
+    PS C:\> Add-KdsRootKey -LocalTestOnly
+    ```
+
+    This command generates a new root key on the local host only.
+links:
+- text: Clear-KdsCache
+  href: ./Clear-KdsCache.yml
+- text: Get-KdsConfiguration
+  href: ./Get-KdsConfiguration.yml
+- text: Get-KdsRootKey
+  href: ./Get-KdsRootKey.yml
+- text: Set-KdsConfiguration
+  href: ./Set-KdsConfiguration.yml
+- text: Test-KdsRootKey
+  href: ./Test-KdsRootKey.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/kds/add-kdsrootkey?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: KDS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-KdsRootKey

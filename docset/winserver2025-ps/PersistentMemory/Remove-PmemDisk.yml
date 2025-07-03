@@ -1,0 +1,172 @@
+### YamlMime:PowerShellCmdlet1
+uid: PersistentMemory.Remove-PmemDisk
+name: Remove-PmemDisk
+module: PersistentMemory
+isPreview: false
+summary: |-
+  Removes persistent memory disks.
+description: |-
+  The **Remove-PmemDisk** cmdlet removes persistent memory disks.
+
+  You can use this cmdlet for troubleshooting.
+  If you remove a persistent memory disk, you lose all data on that disk.
+
+  You can specify a disk by number or remove disks from simulated persistent memory.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskNumber
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the disk number of persistent memory disk to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNumber
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the command removes the disk without verification.
+      Removing a disk results in data loss.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Simulated
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet removes simulated disks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Simulated
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-PmemDisk
+        -DiskNumber <UInt32>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNumber
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-PmemDisk
+        [-Simulated]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Simulated
+  isDefault: false
+inputs:
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a persistent memory disk'
+  description: |-
+    ```powershell
+    Remove-PmemDisk -DiskNumber 2
+    ```
+
+    ```output
+    This will remove the persistent memory disk(s) from the system and will result in data loss.
+    Remove the persistent memory disk(s)?
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
+    Removing the persistent memory disk. This may take a few moments.
+    ```
+
+    This example removes a persistent memory disk.
+- title: 'Example 1: Remove a disk in simulated persistent memory'
+  description: |-
+    ```powershell
+    Remove-PmemDisk -Simulated
+    ```
+
+    ```output
+    This will remove the persistent memory disk(s) from the system and will result in data loss.
+    Remove the persistent memory disk(s)?
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
+    Removing the persistent memory disk. This may take a few moments.
+    ```
+
+    This example removes the disks in simulated persistent memory.
+links:
+- text: Get-PmemDisk
+  href: Get-PmemDisk.yml
+- text: New-PmemDisk
+  href: New-PmemDisk.yml
+metadata:
+  description: The Remove-PmemDisk cmdlet removes persistent memory disks.
+  document type: cmdlet
+  external help file: Microsoft.Storage.PersistentMemory.Management.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/persistentmemory/remove-pmemfisk?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: PersistentMemory
+  ms.date: 09/24/2021
+  PlatyPS schema version: 2024-05-01
+  title: Remove-PmemDisk

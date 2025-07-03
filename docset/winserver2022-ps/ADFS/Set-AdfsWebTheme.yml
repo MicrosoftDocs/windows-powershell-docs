@@ -1,0 +1,306 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Set-AdfsWebTheme
+name: Set-AdfsWebTheme
+module: ADFS
+isPreview: false
+summary: |-
+  Modifies properties of a web theme.
+description: |-
+  The **Set-AdfsWebTheme** cmdlet modifies properties of an **AdfsWebTheme** object.
+  Specify a web theme by name or by using the **Get-AdfsWebTheme** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: AdditionalFileResource
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of **Hashtable** objects that specify additional file resources by using two string keys: **Uri** and **Path**.
+      For more information, type `Get-Help about_Hash_Tables`.
+      **Uri** is the relative Uniform Resource Identifier (URI) string for a resource.
+      The URI always begins with /adfs/portal/.
+      **Path** is the file path of a resource.
+      If you do not specify the path, the cmdlet removes the file resource that corresponds to the specified URI.
+
+      Specify this parameter to make resources, such as images, available to cascading style sheets or JavaScript applications.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Illustration
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of **Hashtable** objects that specify illustrations by using two string keys: **Locale** and **Path**.
+      **Locale** is a **CultureInfo** object.
+      **Path** is a file path.
+      If you do not specify a locale, **Locale** refers to the invariant locale.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Logo
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of **Hashtable** objects that specify logos by using two string keys: **Locale** and **Path**.
+      **Locale** is a **CultureInfo** object.
+      **Path** is a file path.
+      If you do not specify a locale, **Locale** refers to the invariant locale.
+      If you do not specify a path, the cmdlet removes the file content that corresponds to the specified locale.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OnLoadScriptPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify this parameter to make resources, such as images, available to cascading style sheets or JavaScript applications.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RTLStyleSheetPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a file path to a run-time library (RTL) style sheet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StyleSheet
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of **Hashtable** objects that specify style sheets by using two string keys: **Locale** and **Path**.
+      **Locale** is a **CultureInfo** object for a style sheet.
+      **Path** is a file path of the style sheet.
+      If you do not specify a locale, **Locale** refers to the invariant locale.
+      If you do not specify a path, the cmdlet removes the file content that corresponds to the specified locale.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name.
+      The cmdlet modifies the theme that you specify by name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetWebTheme
+    type: <xref href="AdfsWebTheme" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an **AdfsWebTheme** object.
+      The cmdlet modifies the theme that you specify.
+      To obtain an **AdfsWebTheme** object, use the **Get-AdfsWebTheme** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AdfsWebTheme
+        [-TargetName] <String>
+        [-StyleSheet <Hashtable[]>]
+        [-RTLStyleSheetPath <String>]
+        [-OnLoadScriptPath <String>]
+        [-Logo <Hashtable[]>]
+        [-Illustration <Hashtable[]>]
+        [-AdditionalFileResource <Hashtable[]>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifierName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AdfsWebTheme
+        [-TargetWebTheme] <AdfsWebTheme>
+        [-StyleSheet <Hashtable[]>]
+        [-RTLStyleSheetPath <String>]
+        [-OnLoadScriptPath <String>]
+        [-Logo <Hashtable[]>]
+        [-Illustration <Hashtable[]>]
+        [-AdditionalFileResource <Hashtable[]>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifierObject
+  isDefault: false
+outputs:
+- name: <xref href="System.IdentityServer.Management.Resources.AdfsWebTheme" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a web customization object, **System.IdentityServer.Management.Resources.AdfsWebTheme**.
+    This object includes the following properties:
+
+    - Name: **System.String**
+    - IsBuiltinTheme: **System.Boolean**
+    - StyleSheet: **IDictionary\<string, byte\[\]\>**
+    - Logo: **IDictionary\<string, byte\[\]\>**
+    - Illustration: **IDictionary\<string, byte\[\]\>**
+    - RTLStyleSheet: **byte\[\]**
+    - AdditionalFileResources: **IDictionary\<string, byte\[\]\>**
+examples:
+- title: 'Example 1: Modify a web named theme'
+  description: |-
+    ```
+    PS C:\> Set-AdfsWebTheme -TargetName "Theme01" -Illustration @{Locale="";Path="c:\illustration.png"} -Logo @{Locale="";Path="c:\logo.png"} -RTLStyleSheetPath "C:\StyleSheet.css" -StyleSheet @{Locale="";Path="c:\stylesheet.css"}
+    ```
+
+    This command modifies a web theme named Theme01.
+    The command uses standard Windows PowerShell® syntax to create hash tables.
+    For more information, type `Get-Help about_Hash_Tables`.
+    The command specifies an illustration image, a logo image, an RTL style sheet, and a cascading style sheet for Theme01.
+    The command specifies no value for **Locale** for any of these parameters, and, therefore, the illustration, logo, and style sheet all use the invariant locale.
+- title: 'Example 2: Specify an additional resource'
+  description: |-
+    ```
+    PS C:\> Set-AdfsWebTheme -TargetName "Theme02" -AdditionalFileResource @{Uri="/adfs/portal/Background.png";Path="Background.png"}
+    ```
+
+    This command specifies an additional file resource for the web theme named Theme02.
+    The command makes a resource, in this case, BackGround.png, available to cascading style sheets or JavaScript applications.
+- title: 'Example 3: Modify a web theme by using a variable'
+  description: |-
+    ```
+    PS C:\> $Theme = Get-AdfsWebTheme -Name "Theme03"
+    PS C:\> Set-AdfsWebTheme -TargetWebTheme $Theme -Illustration @{Locale="";Path="C:\Illustration.png"} -Logo @{Locale="";Path="C:\Logo.png"} -RTLStyleSheetPath "C:\StyleSheet.css" -StyleSheet @{Locale="";Path="C:\StyleSheet.css"}
+    ```
+
+    The first command uses the **Get-AdfsWebTheme** cmdlet to get the web theme named Theme03, and then stores it in the $Theme variable.
+
+    The second command modifies the web theme stored in the $Theme.
+    The command specifies an illustration image, a logo image, an RTL style sheet, and a cascading style sheet for that theme.
+links:
+- text: Export-AdfsWebTheme
+  href: ./Export-AdfsWebTheme.yml
+- text: Get-AdfsWebTheme
+  href: ./Get-AdfsWebTheme.yml
+- text: New-AdfsWebTheme
+  href: ./New-AdfsWebTheme.yml
+- text: Remove-AdfsWebTheme
+  href: ./Remove-AdfsWebTheme.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/set-adfswebtheme?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AdfsWebTheme

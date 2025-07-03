@@ -1,0 +1,152 @@
+### YamlMime:PowerShellCmdlet1
+uid: VAMT.Install-VamtProductKey
+name: Install-VamtProductKey
+module: VAMT
+isPreview: false
+summary: |-
+  Installs the specified product key on a product or a group of products.
+description: |-
+  The **Install-VamtProductKey** cmdlet installs the specified product key on a single product or on a group of products.
+  The cmdlet returns a value to indicate whether the product key is valid.
+parameters:
+  cmdletParameters:
+  - name: DbCommandTimeout
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates how long dep_nextref_vamt waits for a response from the database before timing out.
+      The default value is 30 seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DbConnectionString
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the database where the product keys are installed.
+      If no database connection string is provided, dep_nextref_vamt attempts to use the database that the dep_nextref_vamt user console used on the local computer.
+      If dep_nextref_vamt does not find a database, it returns an error.
+      You can find the connection string in the dep_nextref_vamt UI in the Preferences dialog box.
+      On the menu bar, click View, and then click Preferences to open the Volume Activation Management Tool Preferences dialog box.
+      The connection string is in the Database Settings section under Current connection string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Provides a password for password-protected environments.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the product key to be installed on the product or products.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Products
+    type: <xref href="Product" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the product or products to install the product key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Username
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Provides a user name for password-protected environments.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Install-VamtProductKey
+        -Products <Product[]>
+        -ProductKey <String>
+        [-DbConnectionString <String>]
+        [-Username <String>]
+        [-Password <String>]
+        [-DbCommandTimeout <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Install a product key'
+  description: |-
+    ```
+    PS C:\> $Product = Get-VamtProduct | where { $_.fullyqualifieddomainname -eq 'mymachine' }
+    PS C:\> Install-VamtProductKey -Products $Product -ProductKey "12345-67890-12345-67890-12345"
+    ```
+
+    This command gets a specified product by using the fully qualified domain name and then installs the specified product key on that product.
+links:
+- text: Add-VamtProductKey
+  href: ./Add-VamtProductKey.yml
+- text: Get-VamtProduct
+  href: ./Get-VamtProduct.yml
+- text: Get-VamtProductKey
+  href: ./Get-VamtProductKey.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/vamt/install-vamtproductkey?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: VAMT
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Install-VamtProductKey

@@ -1,0 +1,227 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Remove-ClusterVMMonitoredItem
+name: Remove-ClusterVMMonitoredItem
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Removes monitoring of a service or event that is currently being monitored on a virtual machine.
+description: |-
+  The **Remove-ClusterVMMonitoredItem** cmdlet removes monitoring of a service or event that is currently being monitored.
+  After removal, if the service fails or the event occurs, the system will no longer take an action, such as restarting the virtual machine.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet.
+      If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventId
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the event identifier (ID) of the Event Tracing for Windows (ETW) event to be removed from monitoring.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventLog
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the event log of the event to be removed from monitoring.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventSource
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the event source of the event to be removed from monitoring.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster on which to run the cmdlet, the clustered virtual machine from which to remove monitoring, or the clustered virtual machine monitored item to stop monitoring.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Service
+    type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the service to be removed from monitoring.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachine
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the clustered virtual machine from which to remove monitoring.
+      When this parameter is specified, this cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
+    aliases:
+    - VM
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VirtualMachine
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine identifier (ID).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Wait
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time in seconds to wait for the cmdlet.
+      If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+      If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-ClusterVMMonitoredItem
+        [[-VirtualMachine] <String>]
+        [-InputObject <PSObject>]
+        [-Service <StringCollection>]
+        [-EventLog <String>]
+        [-EventSource <String>]
+        [-EventId <Int32>]
+        [-Wait <Int32>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VirtualMachine
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-ClusterVMMonitoredItem
+        [-InputObject <PSObject>]
+        [-Service <StringCollection>]
+        [-EventLog <String>]
+        [-EventSource <String>]
+        [-EventId <Int32>]
+        [-VMId <Guid>]
+        [-Wait <Int32>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterGroup" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterVMMonitoredItem" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Get-ClusterVMMonitoredItem -VirtualMachine VM1 | Remove-ClusterVMMonitoredItem -VirtualMachine VM1
+    ```
+
+    This example removes all of the items being monitored on the virtual machine named VM1.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Remove-ClusterVMMonitoredItem -VirtualMachine VM1 -Service spooler
+    ```
+
+    This example removes monitoring on the print spooler service on the virtual machine named VM1.
+links:
+- text: Add-ClusterVMMonitoredItem
+  href: ./Add-ClusterVMMonitoredItem.yml
+- text: Get-ClusterVMMonitoredItem
+  href: ./Get-ClusterVMMonitoredItem.yml
+- text: Reset-ClusterVMMonitoredState
+  href: ./Reset-ClusterVMMonitoredState.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/remove-clustervmmonitoreditem?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-ClusterVMMonitoredItem

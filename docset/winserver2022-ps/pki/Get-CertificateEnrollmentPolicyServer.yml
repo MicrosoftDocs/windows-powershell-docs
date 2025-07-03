@@ -1,0 +1,133 @@
+### YamlMime:PowerShellCmdlet1
+uid: pki.Get-CertificateEnrollmentPolicyServer
+name: Get-CertificateEnrollmentPolicyServer
+module: pki
+isPreview: false
+summary: |-
+  Returns all of the certificate enrollment policy server URL configurations.
+description: |-
+  The `Get-CertificateEnrollmentPolicyServer` cmdlet retrieves information required for connecting to
+  one or more certificate enrollment policy servers configured for this user or computer. The returned
+  information can be filtered by providing a specific URL, a specific scope, or requesting only user
+  or computer (machine) context.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.CertificateServices.Commands.Context" data-throw-if-not-resolved="False" />
+    description: |-
+      Retrieves information about the enrollment policy server for the local computer (machine) or current
+      user context.
+    acceptedValues:
+    - Machine
+    - User
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="Microsoft.CertificateServices.Commands.EnrollmentPolicyServerScope" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies where the cmdlet will find the enrollment policy server configuration.
+    acceptedValues:
+    - Applied
+    - ConfiguredByYou
+    - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Url
+    type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Limits the returned enrollment policy servers to the servers that contain the provided URL.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-CertificateEnrollmentPolicyServer
+        [-Url <Uri>]
+        -Scope <EnrollmentPolicyServerScope>
+        -Context <Context>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.EnrollmentPolicyUrlDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    Describes the enrollment policy obtained from the specified URL.
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```powershell
+    Get-CertificateEnrollmentPolicyServer -Scope All -Context User
+    ```
+
+    This example returns all of the enrollment policy URL configurations that are included with the user
+    configuration, Group Policy, and local policy for the user context.
+- title: EXAMPLE 2
+  description: |-
+    ```powershell
+    $params = @{
+        Url = 'http://www.contoso.com/Policy/service.svc'
+        Scope = 'All'
+        Context = 'Machine'
+    }
+    Get-CertificateEnrollmentPolicyServer @params
+    ```
+
+    This example returns all of the enrollment policy URL configurations that have the given URL for the
+    machine context.
+- title: EXAMPLE 3
+  description: |-
+    ```powershell
+    Get-CertificateEnrollmentPolicyServer -Scope ConfiguredByYou -Context User
+    ```
+
+    This example returns all of the enrollment policy server URL configurations that are configured for
+    the user context.
+links:
+- text: Add-CertificateEnrollmentPolicyServer
+  href: ./Add-CertificateEnrollmentPolicyServer.yml
+- text: Remove-CertificateNotificationTask
+  href: ./Remove-CertificateNotificationTask.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/pki/get-certificateenrollmentpolicyserver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: pki
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-CertificateEnrollmentPolicyServer

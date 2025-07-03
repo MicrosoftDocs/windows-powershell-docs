@@ -1,0 +1,171 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADRMSAdmin.Set-RmsSvcAccount
+name: Set-RmsSvcAccount
+module: ADRMSAdmin
+isPreview: false
+summary: |-
+  Sets the service account for an AD RMS cluster.
+description: |-
+  The **Set-RmsSvcAccount** cmdlet sets the service account of an Active Directory Rights Management Services (AD RMS) cluster.
+
+  To specify the service account, set the *Credential* parameter to the service account credentials, and then set the *Path* parameter to `<PSDrive>:\` where `<PSDrive>` is the AD RMS provider drive ID.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user name and password as a **PSCredential** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Overrides restrictions that prevent the command from succeeding if the restrictions do not compromise security.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a provider drive and path or relative path on the current drive.
+      Use a dot (.) to specify the current location.
+      This parameter does not accept wildcards and has no default value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-RmsSvcAccount
+        [-Credential] <PSCredential>
+        [-Force]
+        [-PassThru]
+        [-Path] <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Modify the service account'
+  description: |-
+    ```
+    PS C:\> Set-RmsSvcAccount -Path "."
+    ```
+
+    This command changes the AD RMS service account.
+    Because the *Credential* parameter is not used, the **Set-RmsSvcAccount** cmdlet prompts for the user name and password of the new service account.
+- title: 'Example 2: Modify the service account with specified credentials'
+  description: |-
+    ```
+    PS C:\> Set-RmsSvcAccount -Path "." -Force -PassThru -Credential ITDOMAIN\adrmssvc
+    ```
+
+    This command changes the AD RMS service account.
+    Because the *Credential* parameter specifies the domain and user name of the account, the **Set-RmsSvcAccount** cmdlet prompts for the password of the new service account.
+- title: 'Example 3: Get credentials to use to modify a service account'
+  description: |-
+    ```
+    PS C:\> $userAccount = Get-Credential ITDOMAIN\adrmssvc
+    PS C:\> Set-RmsSvcAccount -Path "." -Force -PassThru -Credential $userAccount
+    ```
+
+    This command uses the **Get-Credential** cmdlet to prompt for the password for the ITDOMAIN\adrmsvc account and then stores the account credentials securely in a variable, which is then passed to the **Set-RmsSvcAccount** cmdlet.
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Get-RmsSvcAccount
+  href: ./Get-RmsSvcAccount.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adrmsadmin/set-rmssvcaccount?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-RmsSvcAccount

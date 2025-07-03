@@ -1,0 +1,459 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADCSDeployment.Install-AdcsNetworkDeviceEnrollmentService
+name: Install-AdcsNetworkDeviceEnrollmentService
+module: ADCSDeployment
+isPreview: false
+summary: |-
+  Installs the NDES role service.
+description: |-
+  The `Install-AdcsNetworkDeviceEnrollmentService` cmdlet performs the configuration of the Network
+  Device Enrollment Service (NDES) role service.
+
+  To remove the NDES role service, use the `Uninstall-AdcsNetworkDeviceEnrollmentService` cmdlet.
+
+  You can import the cmdlet by running the following commands from Windows PowerShell:
+
+  - `Import-Module ServerManager`
+  - `Add-WindowsFeature Adcs-Device-Enrollment`
+
+  Int is equivalent to Int32 in the [.NET Framework](https://msdn.microsoft.com/en-us/library/ya5y69ds.aspx).
+notes: |-
+  - Ensure you run Windows PowerShell as an administrator. You can use the **Force** parameter to bypass
+    the prompt for confirmation. To see parameters, run the following command:
+
+      `Install-AdcsNetworkDeviceEnrollmentService -?`
+parameters:
+  cmdletParameters:
+  - name: ApplicationPoolIdentity
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the identity that the Network Device Enrollment Service (NDES) uses when communicating
+      with the certification authority (CA). This parameter is only valid when NDES is using
+      a remote CA. If the CA is local, the application pool identity account cannot be used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CAConfig
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the remote certification authority (CA) that the Network Device Enrollment Service uses. This
+      parameter is mandatory when used within the **ApplicationPoolIdentity** parameter. Do not use this
+      parameter when a local CA is installed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSCredential** object that this cmdlet uses to connect to the NDES role service. To
+      obtain a credential object, use the `Get-Credential` cmdlet. For more information, type
+      `Get-Help Get-Credential`. The NDES must be installed on a server that is a member of an Active
+      Directory Domain Services (AD DS) domain. If NDES is configured to use a Standalone CA, then an
+      account that is a member of the local Administrators on the CA is required. If NDES is installed to
+      use an Enterprise CA, then using an account that is a member of Domain Admins group is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionKeyLength
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the encryption key length.
+      This option is not valid if you use existing keys during installation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionProviderName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the encryption provider, such as the name of cryptographic service provider
+      (CSP).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RACity
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the city of the registration authority.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RACompany
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the organization or company that the registration authority represents.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RACountry
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the country/region of the registration authority.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RADepartment
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the department of the registration authority.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RAEmail
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the email address of the registration authority.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RAName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the NDES registration authority.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RAState
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the state or province (geographical political boundary), if applicable, of the
+      registration authority.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the account that is used by the Network Device Enrollment Service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServiceAccountParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceAccountPassword
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password of the service account that is used by the Network Device Enrollment Service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServiceAccountParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SigningKeyLength
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the signing key length.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SigningProviderName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the signing device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Install-AdcsNetworkDeviceEnrollmentService
+        [-ApplicationPoolIdentity]
+        [-RAName <String>]
+        [-RAEmail <String>]
+        [-RACompany <String>]
+        [-RADepartment <String>]
+        [-RACity <String>]
+        [-RAState <String>]
+        [-RACountry <String>]
+        [-SigningProviderName <String>]
+        [-SigningKeyLength <Int32>]
+        [-EncryptionProviderName <String>]
+        [-EncryptionKeyLength <Int32>]
+        [-CAConfig <String>]
+        [-Force]
+        [-Credential <PSCredential>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Install-AdcsNetworkDeviceEnrollmentService
+        -ServiceAccountName <String>
+        -ServiceAccountPassword <SecureString>
+        [-RAName <String>]
+        [-RAEmail <String>]
+        [-RACompany <String>]
+        [-RADepartment <String>]
+        [-RACity <String>]
+        [-RAState <String>]
+        [-RACountry <String>]
+        [-SigningProviderName <String>]
+        [-SigningKeyLength <Int32>]
+        [-EncryptionProviderName <String>]
+        [-EncryptionKeyLength <Int32>]
+        [-CAConfig <String>]
+        [-Force]
+        [-Credential <PSCredential>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ServiceAccountParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Deployment.Common.NDES.NetworkDeviceEnrollmentServiceResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Display the default NDES settings'
+  description: |-
+    ```powershell
+    Install-AdcsNetworkDeviceEnrollmentService -ApplicationPoolIdentity -WhatIf
+    ```
+
+    This command displays the default NDES settings that will be configured if it is installed.
+- title: 'Example 2: Display the default NDES settings using a service account name and password'
+  description: |-
+    ```powershell
+    $params = @{
+        ServiceAccountName     = "CONTOSO\svcNDES"
+        ServiceAccountPassword = (Read-Host "Set user password" -AsSecureString)
+        WhatIf                 = $true
+    }
+    Install-AdcsNetworkDeviceEnrollmentService @params
+    ```
+
+    This command displays the default settings when NDES is using a service account without making any
+    changes to the configuration. This command uses the service account named `CONTOSO\svcNDES` that
+    is a member of the local computer's `IIS_USRS` group.
+- title: 'Example 3: Install NDES using the application pool identity'
+  description: |-
+    ```powershell
+    $params = @{
+        ApplicationPoolIdentity = $true
+        CAConfig                = "<CAComputerName>\<CACommonName>"
+    }
+    Install-AdcsNetworkDeviceEnrollmentService @params
+    ```
+
+    This command installs NDES using the application pool identity to use a remote CA as specified by
+    the CA computer `<CAComputerName>\<CACommonName>`. Substitute the appropriate CA computer name and
+    common name for `<CAComputerName>` and `<CACommonName>`.
+- title: 'Example 4: Install NDES using a specific service account'
+  description: |-
+    ```powershell
+    $params = @{
+        ServiceAccountName     = "CONTOSO\svcNDES"
+        ServiceAccountPassword = (Read-Host "Set user password" -AsSecureString)
+        CAConfig               = "CAComputerName\CAName"
+        RAName                 = "Contoso-NDES-RA"
+        RACountry              = "US"
+        RACompany              = "Contoso"
+        SigningProviderName    = "Microsoft Strong Cryptographic Provider"
+        SigningKeyLength       = 4096
+        EncryptionProviderName = "Microsoft Strong Cryptographic Provider"
+        EncryptionKeyLength    = 4096
+    }
+    Install-AdcsNetworkDeviceEnrollmentService @params
+    ```
+
+    This command installs the NDES using a service account named `CONTOSO\svcNDES` that is a member of
+    the local computer's `IIS_USRS` group. The command also specifies several non-default parameters.
+links:
+- text: Uninstall-AdcsNetworkDeviceEnrollmentService
+  href: ./Uninstall-AdcsNetworkDeviceEnrollmentService.yml
+- text: Get-Credential
+  href: https://go.microsoft.com/fwlink/?LinkID=293936
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adcsdeployment/install-adcsnetworkdeviceenrollmentservice?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADCSDeployment
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Install-AdcsNetworkDeviceEnrollmentService

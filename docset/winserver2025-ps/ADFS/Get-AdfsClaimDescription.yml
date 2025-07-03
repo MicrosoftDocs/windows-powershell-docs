@@ -1,0 +1,124 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsClaimDescription
+name: Get-AdfsClaimDescription
+module: ADFS
+isPreview: false
+summary: |-
+  Gets claim descriptions from the Federation Service.
+description: |-
+  The **Get-AdfsClaimDescription** cmdlet gets claim descriptions from the Federation Service.
+  Claim descriptions describe the claims that the Federation Service uses.
+  Claim descriptions also describe how claims are published in federation metadata.
+  You can use this cmdlet without parameters to get all claim descriptions in the Federation Service.
+notes: |-
+  * Use claim descriptions to configure the list of claims available to be offered or accepted by Active Directory Federation Services (AD FS).
+parameters:
+  cmdletParameters:
+  - name: ClaimType
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of claim type URNs or URIs of the claim.
+      The cmdlet gets the claim descriptions for the claims that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Identifier
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of claim descriptions to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShortName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the unique short name ID for the claim description that is used for issuing and consuming JWT tokens.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShortName
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsClaimDescription
+        [[-Name] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AdfsClaimDescription
+        -ClaimType <String[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Identifier
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AdfsClaimDescription
+        -ShortName <String[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShortName
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *ClaimType*, *Name*, and *ShortName* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more ClaimDescription objects that represent the claim description resources for the Federation Service.
+examples:
+- title: 'Example 1: Get a claim description'
+  description: |-
+    ```powershell
+    PS C:\> Get-AdfsClaimDescription | Where-Object {$_.IsOffered}
+    ```
+
+    This command gets the list of claim descriptions that the Federation Service offers.
+links:
+- text: Add-AdfsClaimDescription
+  href: ./Add-AdfsClaimDescription.yml
+- text: Remove-AdfsClaimDescription
+  href: ./Remove-AdfsClaimDescription.yml
+- text: Set-AdfsClaimDescription
+  href: ./Set-AdfsClaimDescription.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfsclaimdescription?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsClaimDescription

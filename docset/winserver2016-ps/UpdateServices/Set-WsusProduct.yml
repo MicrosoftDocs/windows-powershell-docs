@@ -1,0 +1,120 @@
+### YamlMime:PowerShellCmdlet1
+uid: UpdateServices.Set-WsusProduct
+name: Set-WsusProduct
+module: UpdateServices
+isPreview: false
+summary: |-
+  Sets whether the product representing the category of updates to synchronize is enabled.
+description: |-
+  The **Set-WsusProduct** cmdlet enables or disables the product representing the category of updates to synchronize. In order to use this cmdlet, the Get-WsusProduct cmdlet must be run with its results passed into this cmdlet. You can run the [Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423) cmdlet to filter results.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Disable
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that updates are not to be synchronized for the specified product.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Product
+    type: <xref href="WsusProduct" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the product for which the updates are to be synchronized. If the **Disable** parameter is used, then this parameter specifies the product for which the updates are not to be synchronized. This parameter value is passed from the [Get-WsusProduct](./Get-WsusProduct.yml) cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WsusProduct
+        -Product <WsusProduct>
+        [-Disable]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Specify updates for a product'
+  description: |-
+    ```powershell
+    PS C:\> Get-WsusServer | Get-WsusProduct | Where-Object -FilterScript {$_.product.title -Eq "Antigen"} | Set-WsusProduct
+    ```
+
+    This command specifies that you want updates for the Antigen product.
+links:
+- text: Where-Object
+  href: https://go.microsoft.com/fwlink/p/?LinkID=289623
+- text: Get-WsusProduct
+  href: ./Get-WsusProduct.yml
+- text: Get-WsusServer
+  href: ./Get-WsusServer.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/updateservices/set-wsusproduct?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WsusProduct

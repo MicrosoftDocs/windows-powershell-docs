@@ -1,0 +1,118 @@
+### YamlMime:PowerShellCmdlet1
+uid: Appx.Reset-AppxPackage
+name: Reset-AppxPackage
+module: Appx
+isPreview: false
+summary: |-
+  Restores the Windows app to its initial configuration.
+description: |-
+  The `Reset-AppxPackage` cmdlet resets the app to its original settings, and the app will react
+  as a freshly installed app.
+
+  After resetting the app, any initial prompts by the app will be prompted for user input.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Package
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the package full name (PFuN) of the app to reset.
+    aliases:
+    - None
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: None
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Reset-AppxPackage
+
+        [-Package] <string>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.IO.FileInfo" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Reset app package'
+  description: |-
+    ```powershell
+    Reset-AppxPackage -Package publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe
+    ```
+
+    This cmdlet resets the `publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe` application back to
+    its original settings.
+links:
+- text: Package Manager API
+  href: http://go.microsoft.com/fwlink/?LinkId=245447
+- text: How to Add and Remove Apps
+  href: http://go.microsoft.com/fwlink/?LinkID=231020
+- text: Get-AppxPackage
+  href: ./Get-AppxPackage.yml
+- text: Get-AppxPackageManifest
+  href: ./Get-AppxPackageManifest.yml
+- text: Move-AppxPackage
+  href: ./Move-AppxPackage.yml
+- text: Remove-AppxPackage
+  href: ./Remove-AppxPackage.yml
+metadata:
+  description: Restores the Windows app to its initial configuration.
+  document type: cmdlet
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appx/reset-appxpackage?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Appx
+  ms.date: 05/15/2023
+  PlatyPS schema version: 2024-05-01
+  title: Reset-AppxPackage

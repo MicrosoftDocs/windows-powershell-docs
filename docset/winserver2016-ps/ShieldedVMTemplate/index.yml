@@ -1,0 +1,20 @@
+### YamlMime:PowerShellModule1
+uid: ShieldedVMTemplate
+name: ShieldedVMTemplate Module
+isPreview: false
+cmdletGroups:
+- title: ShieldedVMTemplate Cmdlets
+  cmdlets:
+  - ShieldedVMTemplate.Initialize-VMShieldingHelperVHD
+  - ShieldedVMTemplate.Protect-TemplateDisk
+description: |-
+  This reference provides cmdlet descriptions and syntax for shielded virtual machine template cmdlets. This table lists the cmdlets in alphabetical order.
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2016-pshelp
+  Help Version: 5.0.2.2
+  Locale: en-US
+  Module Guid: afb7d213-3f7e-4a0d-86eb-02d57ad7b858
+  Module Name: ShieldedVMTemplate
+  title: ShieldedVMTemplate
+  PlatyPS schema version: 2024-05-01
+  document type: module

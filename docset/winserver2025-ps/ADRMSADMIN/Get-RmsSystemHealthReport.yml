@@ -1,0 +1,279 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADRMSADMIN.Get-RmsSystemHealthReport
+name: Get-RmsSystemHealthReport
+module: ADRMSADMIN
+isPreview: false
+summary: |-
+  Generates a system health report of the Active Directory Rights Management Services (AD RMS) cluster.
+description: |-
+  The **Get-RmsSystemHealthReport** cmdlet generates a report that contains information about the overall health of the Active Directory Rights Management Services (AD RMS) cluster.
+
+  To obtain the report, set the parameters for the type of report you want and then set the *Path* parameter to the AD RMS provider drive path `<PSDrive>:\`Report where `<PSDrive>` is the provider drive ID.
+  You can also specify a relative path.
+  For example, a dot (.) specifies the current location.
+
+  The cmdlet generates a summary report for the specified ReportType unless you specify *RequestType*, *ServerName*, *DomainName*, or *UserName*.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the domain name of the e-mail of the user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the end of a time period for a system health report.
+      This parameter specifies a time value.
+      See the description of the *StartTime* parameter for information on specifying a time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a provider drive and path or relative path on the current drive.
+      This parameter is required.
+      Use a dot (.) to specify the current location.
+      This parameter does not accept wildcards and has no default value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReportType
+    type: <xref href="ReportType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of report.
+      The acceptable values for this parameter are:
+
+      - Server
+      - Request
+      - Domain
+      - User
+    acceptedValues:
+    - Server
+    - Request
+    - Domain
+    - User
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of user request, such as Acquire License, Pre-Certify, and Get Client Licensor Certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server for which you are requesting the health report.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the beginning of a time period.
+      This parameter specifies a time value.
+
+      The following examples show commonly-used syntax to specify a time.
+      Time is assumed to be local time unless otherwise specified.
+      When a time value is not specified, the time is assumed to 12:00:00 AM local time.
+      When a date is not specified, the date is assumed to be the current date.
+
+      `4/17/2006`
+
+      `Monday, April 17, 2006`
+
+      `2:22:45 PM`
+
+      `Monday, April 17, 2006 2:22:45 PM`
+
+      These examples specify the same date and the time without the seconds.
+
+      `4/17/2006 2:22 PM`
+
+      `Monday, April 17, 2006 2:22 PM`
+
+      `2:22 PM`
+
+      The following example shows how to specify a date and time by using the RFC1123 standard.
+      This example defines time by using Greenwich Mean Time (GMT).
+
+      `Mon, 17 Apr 2006 21:22:48 GMT`
+
+      The following example shows how to specify a round-trip value as Coordinated Universal Time (UTC).
+      This example represents Monday, April 17, 2006 at 2:22:48 PM UTC.
+
+      `2000-04-17T14:22:48.0000000`
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user name for which you are requesting a system health report.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-RmsSystemHealthReport
+        [-StartTime <DateTime>]
+        [-EndTime <DateTime>]
+        [-ServerName <String>]
+        [-RequestType <String>]
+        [-DomainName <String>]
+        [-UserName <String>]
+        -ReportType <ReportType>
+        [-Path] <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get a report for requests'
+  description: |-
+    ```
+    PS C:\> Get-RmsSystemHealthReport -Path "." -ReportType Request
+    ```
+
+    This command displays a summary report of requests processed by the AD RMS cluster.
+- title: 'Example 2: Get a report of user activity'
+  description: |-
+    ```
+    PS C:\> Get-RmsSystemHealthReport -Path "." -StartTime 12/1/2008 -EndTime 12/31/2008 -ReportType User
+    ```
+
+    This command displays a summary report of user activity during calendar year 2008.
+- title: 'Example 3: Get a report of users in a domain'
+  description: |-
+    ```
+    PS C:\> Get-RmsSystemHealthReport -Path "." -ReportType User -DomainName "Research"
+    ```
+
+    This command displays a summary report of requests by all users in the Research domain.
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Get-RmsUserRequestReport
+  href: ./Get-RmsUserRequestReport.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adrmsadmin/get-rmssystemhealthreport?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADRMSADMIN
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-RmsSystemHealthReport

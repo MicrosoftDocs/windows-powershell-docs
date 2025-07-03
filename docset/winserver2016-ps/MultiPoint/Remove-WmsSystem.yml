@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Remove-WmsSystem
+name: Remove-WmsSystem
+module: MultiPoint
+isPreview: false
+summary: |-
+  Removes a computer from the list of managed systems.
+description: |-
+  The **Remove-WmsSystem** cmdlet removes the specified computer from the list of managed systems so that it is no longer remotely managed.
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of computer host names from the MultiPoint system to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-WmsSystem
+        [-ComputerName] <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Remove a MultiPoint system'
+  description: |-
+    ```
+    PS C:\> Remove-WmsSystem -ComputerName "sample.microsoft.com"
+    ```
+
+    This command removes the computer named sample.microsoft.com from the collection of computers that can be managed.
+links:
+- text: Add-WmsSystem
+  href: ./Add-WmsSystem.yml
+- text: Get-WmsSystem
+  href: ./Get-WmsSystem.yml
+- text: Restart-WmsSystem
+  href: ./Restart-WmsSystem.yml
+- text: Search-WmsSystem
+  href: ./Search-WmsSystem.yml
+- text: Set-WmsSystem
+  href: ./Set-WmsSystem.yml
+- text: Stop-WmsSystem
+  href: ./Stop-WmsSystem.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/remove-wmssystem?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-WmsSystem

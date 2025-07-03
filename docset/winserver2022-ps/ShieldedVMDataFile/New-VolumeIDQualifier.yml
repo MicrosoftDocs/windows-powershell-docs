@@ -1,0 +1,116 @@
+### YamlMime:PowerShellCmdlet1
+uid: ShieldedVMDataFile.New-VolumeIDQualifier
+name: New-VolumeIDQualifier
+module: ShieldedVMDataFile
+isPreview: false
+summary: |-
+  Creates a volume ID qualifier.
+description: |-
+  The **New-VolumeIDQualifier** cmdlet creates a **VolumeIDQualifier** object from a volume signature catalog file and an associated rule.
+parameters:
+  cmdletParameters:
+  - name: TemplateDiskFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path to the template file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TemplateDisk
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VersionRule
+    type: <xref href="VolumeVersionRule" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a rule that defines what volume versions the **VolumeIDQualifier** matches.
+      The acceptable values for this parameter are:
+
+      - Equals
+      - GreaterThan
+      - GreaterThanOrEquals
+    acceptedValues:
+    - Equals
+    - GreaterThan
+    - GreaterThanOrEquals
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeSignatureCatalogFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a volume signature catalog file.
+      This type of file uses the .vsc file name extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SignatureCatalog
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-VolumeIDQualifier
+        [-VolumeSignatureCatalogFilePath] <String>
+        [-VersionRule] <VolumeVersionRule>
+        [<CommonParameters>]
+    ```
+  parameterSetName: SignatureCatalog
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-VolumeIDQualifier
+        [-TemplateDiskFilePath] <String>
+        [-VersionRule] <VolumeVersionRule>
+        [<CommonParameters>]
+    ```
+  parameterSetName: TemplateDisk
+  isDefault: false
+inputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+- name: <xref href="VolumeVersionRule" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="VolumeIDQualifier" data-throw-if-not-resolved="False" />
+  description: |-
+    This object returns a new **VolumeIDQualifier** object. Provide this object to the
+    Protect-ShieldingDataFile to create a provisioning data file.
+examples:
+- title: 'Example 1: Create a volume ID qualifier'
+  description: |-
+    ```
+    PS C:\>New-VolumeIDQualifier -VolumeSignatureCatalogFilePath "SignatureCatalog.vsc" -VolumeVersionRule Equals
+    ```
+
+    This command creates a **VolumeIDQualifier** object that contains information associated with a .vsc file.
+    The **VolumeSignatureCatalogFilePath** parameter the .vsc file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/shieldedvmdatafile/new-volumeidqualifier?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ShieldedVMDataFile
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-VolumeIDQualifier

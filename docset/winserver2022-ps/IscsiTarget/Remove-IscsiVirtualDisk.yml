@@ -1,0 +1,139 @@
+### YamlMime:PowerShellCmdlet1
+uid: IscsiTarget.Remove-IscsiVirtualDisk
+name: Remove-IscsiVirtualDisk
+module: IscsiTarget
+isPreview: false
+summary: |-
+  Deletes a virtual disk object, without deleting the virtual hard disk (VHD) file.
+description: |-
+  The **Remove-IscsiVirtualDisk** cmdlet deletes the iSCSI virtual disk object.
+  The virtual hard disk (VHD) file is not deleted.
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+      Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials when connecting to a remote computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+    description: |-
+      Accepts an iSCSI virtual disk object from the input pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the VHD file that is associated with the iSCSI virtual disk.
+      Filter the iSCSI virtual disk object by using this parameter.
+    aliases:
+    - DevicePath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DevicePath
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-IscsiVirtualDisk
+        [-Path] <String>
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DevicePath
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-IscsiVirtualDisk
+        -InputObject <IscsiVirtualDisk>
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Iscsi.Target.Commands.IscsiVirtualDisk" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Delete a virtual disk'
+  description: |-
+    ```
+    PS C:\> Remove-IscsiVirtualDisk -Path "E:\temp\vhd1.vhdx"
+    ```
+
+    This example deletes a virtual disk that has the path E:\temp\vhd1.vhdx.
+links:
+- text: Checkpoint-IscsiVirtualDisk
+  href: ./Checkpoint-IscsiVirtualDisk.yml
+- text: Convert-IscsiVirtualDisk
+  href: ./Convert-IscsiVirtualDisk.yml
+- text: Get-IscsiVirtualDisk
+  href: ./Get-IscsiVirtualDisk.yml
+- text: Import-IscsiVirtualDisk
+  href: ./Import-IscsiVirtualDisk.yml
+- text: New-IscsiVirtualDisk
+  href: ./New-IscsiVirtualDisk.yml
+- text: Restore-IscsiVirtualDisk
+  href: ./Restore-IscsiVirtualDisk.yml
+- text: Set-IscsiVirtualDisk
+  href: ./Set-IscsiVirtualDisk.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iscsitarget/remove-iscsivirtualdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-IscsiVirtualDisk

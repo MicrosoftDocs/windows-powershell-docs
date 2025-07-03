@@ -1,0 +1,188 @@
+### YamlMime:PowerShellCmdlet1
+uid: WebApplicationProxy.Get-WebApplicationProxyApplication
+name: Get-WebApplicationProxyApplication
+module: WebApplicationProxy
+isPreview: false
+summary: |-
+  Gets published web applications.
+description: |-
+  The **Get-WebApplicationProxyApplication** cmdlet gets objects that represent published web applications.
+  You can specify the ID of an application, or specify the name of an application, including a name that includes the wildcard characters * or ?.
+  If you do not specify name or ID, the cmdlet gets all the published applications.
+  If more than one application is found, then the cmdlet outputs a list of the applications.
+  If only one application is found, then the cmdlet displays properties of the application.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ID
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the GUID of a web application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a friendly name for the published web application.
+      You can use wildcard characters.
+    aliases:
+    - FriendlyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WebApplicationProxyApplication
+        -ID <Guid>
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ID
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-WebApplicationProxyApplication
+        [[-Name] <String>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#PublishedWebApp" data-throw-if-not-resolved="False" />
+  description: |-
+    If the cmdlet finds more than one application, it displays a list of the applications.
+    If the cmdlet gets a single application, it displays the properties of the application.
+examples:
+- title: 'Example 1: Get all published applications'
+  description: |-
+    ```
+    PS C:\> Get-WebApplicationProxyApplication
+    ```
+
+    This command all of the published applications, and displays information about them.
+- title: 'Example 2: Get an application by using an ID'
+  description: |-
+    ```
+    PS C:\> Get-WebApplicationProxyApplication -ID 616b2e81-bada-4abc-996a-b0c806eb6f45
+    ```
+
+    This command gets the application that has the specified ID.
+- title: 'Example 3: Get an application by using a name'
+  description: |-
+    ```
+    PS C:\> Get-WebApplicationProxyApplication -Name "ContosoApp"
+    ```
+
+    This command gets the application named ContosoApp.
+- title: 'Example 4: Get applications that have names that end in a specified string'
+  description: |-
+    ```
+    PS C:\> Get-WebApplicationProxyApplication -Name "*Contoso"
+    ```
+
+    This command gets applications that have names that end with the string Contoso.
+- title: 'Example 5: Show the full details of a published application'
+  description: |-
+    ```
+    PS C:\> Get-WebApplicationProxyApplication *Contoso | Format-List
+    ```
+
+    This command shows the full details of applications that have names that end with the string Contoso.
+links:
+- text: Web Application Proxy Overview
+  href: https://technet.microsoft.com/library/dn280944.aspx
+- text: Publishing Internal Applications using Web Application Proxy
+  href: https://technet.microsoft.com/library/dn383650.aspx
+- text: Add-WebApplicationProxyApplication
+  href: ./Add-WebApplicationProxyApplication.yml
+- text: Remove-WebApplicationProxyApplication
+  href: ./Remove-WebApplicationProxyApplication.yml
+- text: Set-WebApplicationProxyApplication
+  href: ./Set-WebApplicationProxyApplication.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: WebApplicationProxy-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/webapplicationproxy/get-webapplicationproxyapplication?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WebApplicationProxy
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WebApplicationProxyApplication

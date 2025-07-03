@@ -1,0 +1,192 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkLoadBalancingClusters.Add-NlbClusterNode
+name: Add-NlbClusterNode
+module: NetworkLoadBalancingClusters
+isPreview: false
+summary: |-
+  Adds a new node to the Network Load Balancing (NLB) cluster.
+description: |-
+  The **Add-NlbClusterNode** cmdlet adds a new node to the Network Load Balancing (NLB) cluster.
+  Once the new node settings are circulated through all of the NLB cluster nodes, the new cluster node will be in a running state in the cluster.
+
+  This cmdlet changes the configuration on all cluster nodes.
+  As a result, the NLB cluster will have to restart the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.
+  Any additional operations on the NLB cluster should not be initiated until all cluster nodes have completed the convergence process and are back to the converged state.
+
+  ps_nlbc_checkstate_remark
+parameters:
+  cmdletParameters:
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    aliases:
+    - F
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster host against which this cmdlet is run.
+      If this parameter is omitted or a value of `.` is entered, then the local cluster is assumed.
+    aliases:
+    - Host
+    - HN
+    - H
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Cluster" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of clusters to which the node is added.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Pipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InterfaceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interface to which NLB is bound.
+      This is the interface of the cluster against which this cmdlet is run.
+    aliases:
+    - Interface
+    - IN
+    - I
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NonPipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NewNodeInterface
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interface name on the new cluster node.
+    aliases:
+    - NewInterface
+    - NI
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NewNodeName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the new cluster node.
+    aliases:
+    - NewNode
+    - NN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-NlbClusterNode
+        [-NewNodeName] <String>
+        [-NewNodeInterface] <String>
+        -InterfaceName <String>
+        [-HostName <String>]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NonPipeline
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-NlbClusterNode
+        [-NewNodeName] <String>
+        [-NewNodeInterface] <String>
+        -InputObject <Cluster[]>
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Pipeline
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.NetworkLoadBalancingClusters.PowerShell.Node" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a new node to an NLB cluster'
+  description: |-
+    ```
+    PS C:\>Get-NlbCluster "Node001" | Add-NlbClusterNode -NewNodeName "Node002" -NewNodeInterface "Vlan-3"
+    Name                State               Interface           HostID
+    ----                -----               ---------           ------
+    node2               Converged           vlan-3              2
+    ```
+
+    This command adds the host named Node002 to the cluster on the node named Node001 using the interface named Vlan-3.
+links:
+- text: Get-NlbClusterNode
+  href: ./Get-NlbClusterNode.yml
+- text: Remove-NlbClusterNode
+  href: ./Remove-NlbClusterNode.yml
+- text: Resume-NlbClusterNode
+  href: ./Resume-NlbClusterNode.yml
+- text: Set-NlbClusterNode
+  href: ./Set-NlbClusterNode.yml
+- text: Stop-NlbClusterNode
+  href: ./Stop-NlbClusterNode.yml
+- text: Suspend-NlbClusterNode
+  href: ./Suspend-NlbClusterNode.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkloadbalancingclusters/add-nlbclusternode?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkLoadBalancingClusters
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-NlbClusterNode

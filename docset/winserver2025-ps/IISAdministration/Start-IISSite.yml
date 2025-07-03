@@ -1,0 +1,89 @@
+### YamlMime:PowerShellCmdlet1
+uid: IISAdministration.Start-IISSite
+name: Start-IISSite
+module: IISAdministration
+isPreview: false
+summary: |-
+  Starts an existing site on the IIS server.
+description: |-
+  The **Start-IISSite** cmdlet starts an existing site on the Internet Information Services (IIS) server.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the IIS web site
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-IISSite
+        [-Name] <String>
+        [-Passthru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Start an IIS web site'
+  description: |-
+    ```
+    PS C:\> Start-IISSite -Name "Default Web Site"
+    ```
+
+    This command starts an IIS web site named Default Web Site
+links:
+- text: Get-IISSite
+  href: ./Get-IISSite.yml
+- text: New-IISSite
+  href: ./New-IISSite.yml
+- text: Remove-IISSite
+  href: ./Remove-IISSite.yml
+- text: Stop-IISSite
+  href: ./Stop-IISSite.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: index.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iisadministration/start-iissite?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Start-IISSite

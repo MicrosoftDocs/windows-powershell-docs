@@ -1,0 +1,62 @@
+### YamlMime:PowerShellCmdlet1
+uid: HNVDiagnostics.Get-VMSwitchExternalPortId
+name: Get-VMSwitchExternalPortId
+module: HNVDiagnostics
+isPreview: false
+summary: |-
+  Gets the VFP/VSwitch port ID for the external port for a virtual switch.
+description: |-
+  The **Get-VMSwitchExternalPortId** cmdlet gets the VFP/VSwitch port ID for the external port of a virtual switch.
+parameters:
+  cmdletParameters:
+  - name: SwitchName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual switch.
+      This cmdlet get the port ID for the switch that you specify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-VMSwitchExternalPortId
+        [-SwitchName] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the port ID of a virtual switch'
+  description: |-
+    ```
+    PS C:\> Get-VMSwitchExternalPortId -SwitchName "ExternalPrivate"
+    ```
+
+    This command gets the VFP/VSwitch port ID for the switch named ExternalPrivate.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Get-VMSwitchExternalPortId.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hnvdiagnostics/get-vmswitchexternalportid?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-VMSwitchExternalPortId

@@ -1,0 +1,89 @@
+### YamlMime:PowerShellCmdlet1
+uid: HNVDiagnostics.Test-DipHostReachability
+name: Test-DipHostReachability
+module: HNVDiagnostics
+isPreview: false
+summary: |-
+  Tests whether DIPs can be reached.
+description: |-
+  The **Test-DipHostReachability** cmdlet tests whether datacenter IP (DIP) addresses can be reached.
+parameters:
+  cmdletParameters:
+  - name: Dips
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of DIPs to test.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperationId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the operation ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PayloadSize
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the size of the payload to include in Internet Control Message Protocol (ICMP) requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-DipHostReachability
+        [[-OperationId] <String>]
+        [-Dips] <String[]>
+        [[-PayloadSize] <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Test a DIP'
+  description: |-
+    ```
+    PS C:\> Test-DipHostReachability -Dips "10.123.176.108"
+    ```
+
+    This command tests whether the specified DIP can be reached.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: DipHostReachability-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hnvdiagnostics/test-diphostreachability?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Test-DipHostReachability

@@ -1,0 +1,295 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetNat.Add-NetNatStaticMapping
+name: Add-NetNatStaticMapping
+module: NetNat
+isPreview: false
+summary: |-
+  Adds a static mapping to a NAT instance.
+description: |-
+  The **Add-NetNatStaticMapping** cmdlet adds a static mapping to a network address translation (NAT) instance.
+  A static mapping enables an incoming connection from an external network to access a host on an internal network through the NAT.
+
+  You can use NAT to share a connection to the public Internet through a single interface with a single public IP address.
+  The computers on the private network use private, non-routable addresses.
+  NAT maps the private addresses to the public address.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+      The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+      You can continue to work in the session while the job completes.
+      To manage the job, use the `*-Job` cmdlets.
+      To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+      For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExternalIPAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the external IP address to which an incoming connection is addressed.
+      This parameter specifies the destination IP address in the incoming packet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExternalPort
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the external port to which an incoming connection is sent.
+      This parameter specifies the destination port in the incoming TCP or UDP packets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InternalIPAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP address to which the packets from a remote machine in the external network are addressed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InternalPort
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the internal port to which the packets from a remote machine in the external network are sent.
+      If you do not specify this parameter, NAT uses the port that you specify for the *ExternalPort* parameter for the internal port.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InternalRoutingDomainId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the GUID of the routing domain of the internal interface.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NatName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the NAT instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="Protocol" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the network protocol of the client computer in the internal network.
+      The acceptable values for this parameter are:
+
+      - TCP
+      - UDP
+    acceptedValues:
+    - TCP
+    - UDP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RemoteExternalIPAddressPrefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP address prefix of the remote computer on the external network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-NetNatStaticMapping
+        [-NatName] <String>
+        -Protocol <Protocol>
+        [-RemoteExternalIPAddressPrefix <String>]
+        -ExternalIPAddress <String>
+        -ExternalPort <UInt16>
+        -InternalIPAddress <String>
+        [-InternalPort <UInt16>]
+        [-InternalRoutingDomainId <String>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetNatStaticMapping" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a static mapping to a NAT instance'
+  description: |-
+    ```
+    PS C:\> Add-NetNatStaticMapping -ExternalIPAddress "a.b.c.0/24" -ExternalPort 80 -InternalIPAddress "192.0.02.179" -InternalPort 8080 -InternalRoutingDomainId "{12345678-0000-0000-0000-123456789012}"
+    ```
+
+    This command adds a static mapping to a NAT instance.
+    The command specifies that NAT maps the external IP address to the internal IP address 192.0.02.179.
+    The command specifies that the NAT maps the destination port 80 of the Internet resource to the source application port 8080.
+    The command specifies that the tenant compartment that has the ID TSQATenant contains the internal address and internal port.
+    This example uses the placeholder a.b.c.0/24 to represent a public Internet address prefix.
+links:
+- text: Get-NetNatStaticMapping
+  href: ./Get-NetNatStaticMapping.yml
+- text: Remove-NetNatStaticMapping
+  href: ./Remove-NetNatStaticMapping.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MSFT_NetNatStaticMapping.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/netnat/add-netnatstaticmapping?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetNat
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-NetNatStaticMapping

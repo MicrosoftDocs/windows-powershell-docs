@@ -1,0 +1,232 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADCSAdministration.Remove-CACrlDistributionPoint
+name: Remove-CACrlDistributionPoint
+module: ADCSAdministration
+isPreview: false
+summary: |-
+  Removes the URI for the CRL distribution point (CDP) from the CA.
+description: |-
+  The **Remove-CACRLDistributionPoint** cmdlet removes the uniform resource identifier (URI) for the certificate revocation list (CRL) distribution point from the certification authority (CA).
+parameters:
+  cmdletParameters:
+  - name: AddToCertificateCdp
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet removes the CDP extension of issued certificates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AddToCrlCdp
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet removes the CRL.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AddToCrlIdp
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet removes the IDP extension of issued certificates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AddToFreshestCrl
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet removes the most recent CRL.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublishDeltaToServer
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet removes the delta CRL.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublishToServer
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet removes the base CRL.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Uri
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the uniform resource identifier (URI) for the distribution point location of the certificate revocation list (CRL).
+      This is the location from where status information about certificate revocation has been retrieved and/or the location the CRL was published.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-CACrlDistributionPoint
+        [-Uri] <String>
+        [-AddToCertificateCdp]
+        [-AddToFreshestCrl]
+        [-AddToCrlCdp]
+        [-AddToCrlIdp]
+        [-PublishToServer]
+        [-PublishDeltaToServer]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Administration.Commands.CA.CrlDistributionPointResult" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a property named RestartCA, which when set to True indicates that the CA service (certsvc) needs to be restarted.
+examples:
+- title: 'Example 1: Remove all URIs for all distribution points for the specified URI'
+  description: |-
+    ```
+    PS C:\> Remove-CACrlDistributionPoint -URI "http://corp.contoso.com/rootca.crl"
+    ```
+
+    This command removes all URIs for all distribution points that contain the specified URI value `http://corp.contoso.com/rootca.crl`.
+- title: 'Example 2: Remove the URIs for all distribution points for the CDP extension of issued certificates'
+  description: |-
+    ```
+    PS C:\> Remove-CACrlDistributionPoint -Uri "http://corp.contoso.com/rootca.crl" -AddToCertificateCdp
+    ```
+
+    This command removes only the URIs that are set to a value of `http://corp.contoso.com/rootca.crl` and for which the *AddToCertificateCdp* parameter is set.
+- title: 'Example 3: Remove the URIs for all distribution points for the CDP and IDP extensions of issued certificates'
+  description: |-
+    ```
+    PS C:\> Remove-CACrlDistributionPoint -Uri "http://www.contoso.com/pki/orca.crl" -AddToCertificateCdp -AddToCrlIdp
+    ```
+
+    This command removes only the URIs that are unique to the URI named `http://www.contoso.com/pki/orca.crl` and the combination of flags that are set or included with the *AddToCertificateCdp* and *AddToCrlIdp* parameters.
+links:
+- text: Add-CACrlDistributionPoint
+  href: ./Add-CACrlDistributionPoint.yml
+- text: Get-CACrlDistributionPoint
+  href: ./Get-CACrlDistributionPoint.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adcsadministration/remove-cacrldistributionpoint?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADCSAdministration
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-CACrlDistributionPoint

@@ -1,0 +1,145 @@
+### YamlMime:PowerShellCmdlet1
+uid: DFSR.Get-DfsrConnection
+name: Get-DfsrConnection
+module: DFSR
+isPreview: false
+summary: |-
+  Gets a connection between DFS Replication partners.
+description: |-
+  The **Get-DfsrConnection** cmdlet gets an existing connection between two Distributed File System (DFS) Replication partners.
+
+  DFS Replication connections are the logical partnerships between members in a replication group.
+  The DFS Replication service uses the Remote Procedure Call (RPC) protocol to communicate between servers.
+parameters:
+  cmdletParameters:
+  - name: DestinationComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the receiving computer.
+      A receiving computer is also called an inbound or downstream computer.
+    aliases:
+    - ReceivingMember
+    - RMem
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: DomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the NetBIOS name or fully qualified domain name (FQDN) for the Active Directory Domain Service (AD DS) domain that contains the replication group.
+      If you do not specify this parameter, the cmdlet uses the domain of the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "100"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of replication groups.
+      You can use a comma separated list and the wildcard character (*).
+    aliases:
+    - RG
+    - RgName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: SourceComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the sending computer.
+      A sending computer is also called an outbound or upstream computer.
+    aliases:
+    - SendingMember
+    - SMem
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-DfsrConnection
+        [[-GroupName] <String[]>]
+        [[-SourceComputerName] <String>]
+        [[-DestinationComputerName] <String>]
+        [[-DomainName] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsReplicationGroup" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.DistributedFileSystemReplication.DfsrConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a one-way connection between computers'
+  description: |-
+    ```
+    PS C:\> Get-DfsrConnection -GroupName "RG24" -SourceComputerName "SRV01" -DestinationComputerName "SRV02"
+
+
+    GroupName               : RG24
+    SourceComputerName      : SRV01
+    DestinationComputerName : SRV02
+    DomainName              : corp.contoso.com
+    Identifier              : c33eaaf1-9e50-4510-8484-68271bf93b25
+    Enabled                 : True
+    RdcEnabled              : True
+    CrossFileRdcEnabled     : True
+    Description             :
+    MinimumRDCFileSizeInKB  : 64
+    State                   : Normal
+    ```
+
+    This command gets the one-way connection from the computer named SRV01 to the computer named SRV02 in the RG24 replication group.
+links:
+- text: Add-DfsrConnection
+  href: ./Add-DfsrConnection.yml
+- text: Set-DfsrConnection
+  href: ./Set-DfsrConnection.yml
+- text: Remove-DfsrConnection
+  href: ./Remove-DfsrConnection.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: DfsrPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dfsr/get-dfsrconnection?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: DFSR
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-DfsrConnection

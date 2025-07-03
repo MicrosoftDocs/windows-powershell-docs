@@ -1,0 +1,92 @@
+### YamlMime:PowerShellCmdlet1
+uid: BootEventCollector.Save-SbecLogSession
+name: Save-SbecLogSession
+module: BootEventCollector
+isPreview: false
+summary: |-
+  Flushes the buffers in a log session to disk.
+description: |-
+  The **Save-SbecLogSession** cmdlet flushes the buffers in a log session to disk.
+  The session may be identified either by name or as an object.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of session names.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Session
+    type: <xref href="TraceSessionInfo" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of **SbecEtwTrace.TraceSessionInfo** objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Object
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Save-SbecLogSession
+        -Session <TraceSessionInfo[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Object
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Save-SbecLogSession
+        -Name <String[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: false
+inputs:
+- name: <xref href="SbecEtwTrace.TraceSessionInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts **SbecEtwTrace.TraceSessionInfo** objects as the sessions to flush the buffers on.
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+links:
+- text: Get-SbecLogSession
+  href: ./Get-SbecLogSession.yml
+- text: Set-SbecLogSession
+  href: ./Set-SbecLogSession.yml
+- text: Start-SbecLogSession
+  href: ./Start-SbecLogSession.yml
+- text: Start-SbecSimpleLogSession
+  href: ./Start-SbecSimpleLogSession.yml
+- text: Start-SbecNtKernelLogSession
+  href: ./Start-SbecNtKernelLogSession.yml
+- text: Stop-SbecLogSession
+  href: ./Stop-SbecLogSession.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: BootEventCollector-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/booteventcollector/save-sbeclogsession?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Save-SbecLogSession

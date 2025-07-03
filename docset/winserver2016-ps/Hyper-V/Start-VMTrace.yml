@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Start-VMTrace
+name: Start-VMTrace
+module: Hyper-V
+isPreview: false
+summary: |-
+  Starts tracing to a file.
+description: |-
+  The **Start-VMTrace** cmdlet starts tracing to a file.
+  You can use this information for advanced debugging.
+parameters:
+  cmdletParameters:
+  - name: Level
+    type: <xref href="TraceLevel" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the level of tracing.
+      The acceptable values for this parameter are:
+
+      - Off
+      - Error
+      - Warning
+      - Info
+      - Verbose
+    acceptedValues:
+    - Error
+    - Warning
+    - Info
+    - Verbose
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the file where this cmdlet stores the trace information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TraceVerboseObjects
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that tracing uses verbose objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-VMTrace
+        [-Level] <TraceLevel>
+        [-TraceVerboseObjects]
+        [-Path <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Start error tracing'
+  description: |-
+    ```
+    PS C:\> Start-VMTrace -Level Error
+    ```
+
+    This command starts tracing at the level of Error.
+links:
+- text: Stop-VMTrace
+  href: ./Stop-VMTrace.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/start-vmtrace?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Start-VMTrace

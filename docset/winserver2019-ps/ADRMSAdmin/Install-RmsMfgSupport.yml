@@ -1,0 +1,122 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADRMSAdmin.Install-RmsMfgSupport
+name: Install-RmsMfgSupport
+module: ADRMSAdmin
+isPreview: false
+summary: |-
+  Adds Microsoft Federation Gateway support to an AD RMS server.
+description: |-
+  The **Install-RmsMfgSupport** cmdlet adds Microsoft Federation Gateway support to an Active Directory Rights Management Services (AD RMS) server.
+notes: |-
+  * Before adding Microsoft Federation Gateway Support, it is very important that you back up the AD RMS configuration database.
+  * Do not run this command if the AD RMS snap-in is open in the Microsoft Management Console (MMC). If you do, the command will not respond until you close the AD RMS MMC snap-in.
+  * Before uninstalling Service Pack 1 for Windows® 7, you must remove Microsoft Federation Gateway Support from the AD RMS cluster by running the **Uninstall-RmsMfgSupport** cmdlet. Failure to do so may cause an inconsistent configuration of your AD RMS cluster.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FederationUrl
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the uniform resource locator (URL) for the AD RMS server to use to connect to the Microsoft Federation Gateway.
+      If this parameter is not specified, AD RMS connects to the Microsoft Federation Gateway using the default value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Install-RmsMfgSupport
+        [-Force]
+        [-FederationUrl <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add Microsoft Federation Gateway support'
+  description: |-
+    ```
+    PS C:\> Install-RmsMfgSupport
+    ```
+
+    This command adds Microsoft Federation Gateway support to an AD RMS server.
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adrmsadmin/install-rmsmfgsupport?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Install-RmsMfgSupport

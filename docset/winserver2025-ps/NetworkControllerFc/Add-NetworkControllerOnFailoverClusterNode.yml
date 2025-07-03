@@ -1,0 +1,61 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkControllerFc.Add-NetworkControllerOnFailoverClusterNode
+name: Add-NetworkControllerOnFailoverClusterNode
+module: NetworkControllerFc
+isPreview: false
+summary: |-
+  Adds a new Node to the NetworkController
+description: |-
+  Adds a new Node to the NetworkController. This performs the following tasks.
+
+  - Copies the binaries to the New Node
+  - Creates the Services for the SDN Microservices
+  - Creates the Http.Sys SSL bindings
+  - Adds an entry to the Node ThumbPrint list
+parameters:
+  cmdletParameters:
+  - name: NodeName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill NodeName Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-NetworkControllerOnFailoverClusterNode
+        [-NodeName] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: NetworkControllerFc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontrollerfc/add-networkcontrolleronfailoverclusternode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkControllerFc
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Add-NetworkControllerOnFailoverClusterNode

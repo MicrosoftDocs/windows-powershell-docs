@@ -1,0 +1,170 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Backup-ACL
+name: Backup-ACL
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Backs up the security descriptor of an item.
+description: |-
+  The **Backup-Acl** cmdlet backs up the security descriptor of a specified item, such as a file or a registry key.
+
+  To back up an ACL, specify the **Path** parameter to identify the item. Use the **DestinationPath** parameter to specify the location for the backup.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a full path to store the permission backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a full path for the log file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path of the object for which the cmdlet backs up permissions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleTrigger
+    type: <xref href="Object" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **ScheduleTrigger** object.
+      A trigger creates pipeline runs periodically, on schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Backup-ACL
+        [-Path] <String>
+        [-DestinationPath] <String>
+        [-LogPath] <String>
+        [[-ScheduleTrigger] <Object>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Back up the ACL for a file'
+  description: |-
+    ```powershell
+    Backup-ACL -Path "C:\file01.txt" -DestinationPath "C:\AclBackups\file01.xml" -LogPath "C:\AclBackupLogs\"
+    ```
+
+    This command backs up the ACL for the specified file.
+    The command also specifies the location for the backup and the log.
+- title: 'Example 2: Back up on a schedule'
+  description: |-
+    ```powershell
+    $TaskTrigger = New-ScheduledTaskTrigger -Daily -At 6am
+    Backup-ACL -Path "C:\file02.txt" -DestinationPath "C:\AclBackups\" -LogPath "C:\AclBackups\" -ScheduleTrigger $TaskTrigger
+    ```
+
+    This example backs up the ACL on a regular schedule.
+
+    The first command creates a scheduled task trigger by using the **New-ScheduledTaskTrigger** cmdlet and stores it in the `$TaskTrigger` variable.
+
+    The second command backs up the ACL according to the schedule object, in this case, daily at 6:00 AM.
+links:
+- text: Get-ACL
+  href: /powershell/module/microsoft.powershell.security/get-acl
+- text: New-ScheduledTaskTrigger
+  href: ../scheduledtasks/New-ScheduledTaskTrigger.yml
+- text: Restore-ACL
+  href: Restore-ACL.yml
+metadata:
+  description: The Backup-Acl cmdlet backs up the security descriptor of a specified item, such as a file or a registry key.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/backup-acl?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 09/10/2021
+  PlatyPS schema version: 2024-05-01
+  title: Backup-ACL

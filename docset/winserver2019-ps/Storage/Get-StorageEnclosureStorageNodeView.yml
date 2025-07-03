@@ -1,0 +1,116 @@
+### YamlMime:PowerShellCmdlet1
+uid: Storage.Get-StorageEnclosureStorageNodeView
+name: Get-StorageEnclosureStorageNodeView
+module: Storage
+isPreview: false
+summary: |-
+  Gets the node view of a Storage enclosure.
+description: |-
+  The **Get-StorageEnclosureStorageNodeView** cmdlet gets the node view of a Storage enclosure.
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageEnclosure
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Storage enclosure.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageNode
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Storage node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-StorageEnclosureStorageNodeView
+        [[-StorageNode] <CimInstance>]
+        [[-StorageEnclosure] <CimInstance>]
+        [[-CimSession] <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="MSFT_StorageNodeToStorageEnclosure" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an array of **StorageNodeToStorageEnclosure** objects.
+examples:
+- title: 'Example 1: Get enclosure details on a storage node'
+  description: |-
+    ```
+    PS C:\>Get-StorageNode -Name "StorageNode21" | Get-StorageEnclosureStorageNodeView
+    ```
+
+    This command gets all storage enclosure details connected to storage node named StorageNode21.
+- title: 'Example 2: Get storage enclosure details for all healthy enclosures'
+  description: |-
+    ```
+    PS C:\>Get-StorageEnclosure -HealthStatus Healthy | Get-StorageEnclosureStorageNodeView
+    ```
+
+    This command gets all Healthy storage enclosure details across all nodes in the cluster.
+- title: 'Example 3: Get storage enclosure details across all nodes'
+  description: |-
+    ```
+    PS C:\>Get-StorageEnclosureStorageNodeView
+    ```
+
+    This command gets all storage enclosure details across all nodes in the cluster.
+links:
+- text: Get-DiskStorageNodeView
+  href: ./Get-DiskStorageNodeView.yml
+- text: Get-PhysicalDiskStorageNodeView
+  href: ./Get-PhysicalDiskStorageNodeView.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: StorageScripts-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storage/get-storageenclosurestoragenodeview?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: Storage
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-StorageEnclosureStorageNodeView

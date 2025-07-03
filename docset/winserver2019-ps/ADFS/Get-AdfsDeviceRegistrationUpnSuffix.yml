@@ -1,0 +1,49 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsDeviceRegistrationUpnSuffix
+name: Get-AdfsDeviceRegistrationUpnSuffix
+module: ADFS
+isPreview: false
+summary: |-
+  Gets the UPN suffixes that can be used with device registration.
+description: |-
+  The **Get-AdfsDeviceRegistrationUpnSuffix** cmdlet gets all of the user principal name (UPN) suffixes that you can use when you register a device with Active Directory Federation Services (AD FS).
+  The cmdlet returns a list of UPN suffixes and indicates whether a UPN suffix was discovered or manually configured by the administrator, and if the server has a valid SSL binding configured for the UPN suffix.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsDeviceRegistrationUpnSuffix
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Commands.GetAdfsDeviceRegistrationUpnSuffix+DrsBinding" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more DrsBinding objects that represent the device registration service UPN suffix resources for the Federation Service.
+examples:
+- title: 'Example 1: Get the UPN suffixes for the device registration service'
+  description: |-
+    ```
+    PS C:\> Get-AdfsDeviceRegistrationUpnSuffix | Format-List
+    Upn               : contoso.com
+    SslPort           : 443
+    IsSetAsSslBinding : True
+    IsCustom          : False
+    ```
+
+    This command gets information on the UPN suffixes that are accepted by the Device Registration Service in AD FS.
+links:
+- text: Add-AdfsDeviceRegistrationUpnSuffix
+  href: ./Add-AdfsDeviceRegistrationUpnSuffix.yml
+- text: Remove-AdfsDeviceRegistrationUpnSuffix
+  href: ./Remove-AdfsDeviceRegistrationUpnSuffix.yml
+- text: Set-AdfsDeviceRegistrationUpnSuffix
+  href: ./Set-AdfsDeviceRegistrationUpnSuffix.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfsdeviceregistrationupnsuffix?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsDeviceRegistrationUpnSuffix

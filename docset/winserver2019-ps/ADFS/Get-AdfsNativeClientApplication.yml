@@ -1,0 +1,162 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsNativeClientApplication
+name: Get-AdfsNativeClientApplication
+module: ADFS
+isPreview: false
+summary: |-
+  Gets native client application roles from an application in AD FS.
+description: |-
+  The **Get-AdfsNativeClientApplication** cmdlet gets native client application roles from an application in Active Directory Federation Services (AD FS).
+parameters:
+  cmdletParameters:
+  - name: Application
+    type: <xref href="NativeClientApplication" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the native client application to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationGroup
+    type: <xref href="ApplicationGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application group from which to get native client applications.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationGroupObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationGroupIdentifier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the application group from which to get native client applications.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationGroupIdentifier
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Identifier
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of IDs of native client applications get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Identifier
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of native client applications get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsNativeClientApplication
+        [[-Identifier] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Identifier
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AdfsNativeClientApplication
+        [-Name] <String[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AdfsNativeClientApplication
+        [-Application] <NativeClientApplication>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AdfsNativeClientApplication
+        [-ApplicationGroupIdentifier] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationGroupIdentifier
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AdfsNativeClientApplication
+        [-ApplicationGroup] <ApplicationGroup>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationGroupObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.NativeClientApplication" data-throw-if-not-resolved="False" />
+  description: |-
+    NativeClientApplication objects are received by the *Application* parameter.
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.ApplicationGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    ApplicationGroup objects are received by the *ApplicationGroup* parameter.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *Identifier* and *Name* parameters.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.NativeClientApplication" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns one or more NativeClientApplication objects that represent the native client application resources for the Federation Service.
+links:
+- text: Add-AdfsNativeClientApplication
+  href: ./Add-AdfsNativeClientApplication.yml
+- text: Remove-AdfsNativeClientApplication
+  href: ./Remove-AdfsNativeClientApplication.yml
+- text: Set-AdfsNativeClientApplication
+  href: ./Set-AdfsNativeClientApplication.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfsnativeclientapplication?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsNativeClientApplication

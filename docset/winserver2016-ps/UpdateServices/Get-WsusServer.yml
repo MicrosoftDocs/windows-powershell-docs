@@ -1,0 +1,111 @@
+### YamlMime:PowerShellCmdlet1
+uid: UpdateServices.Get-WsusServer
+name: Get-WsusServer
+module: UpdateServices
+isPreview: false
+summary: |-
+  Gets the WSUS update server object.
+description: |-
+  The **Get-WsusServer** cmdlet gets the Windows Server Update Services (WSUS) update server object. This cmdlet requires the server name, port number and a flag that specifies if the server uses Secure Sockets Layer (SSL) as parameters.
+
+  Given a server name, port number, and flag specifying whether to use SSL, returns an **IUpdateServer** object.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a WSUS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServerSpecified
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PortNumber
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the port number to use to communicate with the upstream WSUS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServerSpecified
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseSsl
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the WSUS server should use Secure Sockets Layer (SSL) via HTTPS to communicate with an upstream server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServerSpecified
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WsusServer
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultServer
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-WsusServer
+        [-Name] <String>
+        -PortNumber <Int32>
+        [-UseSsl]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ServerSpecified
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.UpdateServices.Commands.IUpdateServer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the local server'
+  description: |-
+    ```text
+    PS C:\> Get-WsusServer
+    Name : contoso
+    ```
+
+    This command gets the **IUpdateServer** object for the local computer.
+- title: 'Example 2: Get a remote server'
+  description: |-
+    ```text
+    PS C:\> Get-WsusServer -Name "contoso" -PortNumber 8530
+    Name : contoso
+    ```
+
+    This command gets the **IUpdateServer** object for a remote computer.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/updateservices/get-wsusserver?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WsusServer

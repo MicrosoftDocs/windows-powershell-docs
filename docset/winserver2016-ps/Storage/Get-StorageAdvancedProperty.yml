@@ -1,0 +1,83 @@
+### YamlMime:PowerShellCmdlet1
+uid: Storage.Get-StorageAdvancedProperty
+name: Get-StorageAdvancedProperty
+module: Storage
+isPreview: false
+summary: |-
+  Gets the advanced properties on a storage device.
+description: |-
+  The **Get-StorageAdvancedProperty** cmdlet gets the advanced properties of a storage device.
+  For example, Get-PhysicalDisk gets the most commonly used attributes of a physical disk such as **CanPool**.
+  To get the cache (**IsDeviceCacheEnabled**) and power protection (**IsPowerProtected**) settings for a physical disk, you can pass a **PhysicalDisk** object to the **Get-StorageAdvancedProperty** cmdlet.
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+parameters:
+  cmdletParameters:
+  - name: PhysicalDisk
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an array of physical disk objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-StorageAdvancedProperty
+        -PhysicalDisk <CimInstance>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="PhysicalDiskAdvancedProperties" data-throw-if-not-resolved="False" />
+  description: |-
+    The cmdlet gets the advanced properties for **PhysicalDisk** objects: **IsPowerProtected** and **IsDeviceCacheEnabled**.
+examples:
+- title: 'Example 1: Get advanced storage properties of a physical disk'
+  description: |-
+    ```
+    PS C:\>Get-PhysicalDisk | Get-StorageAdvancedProperty
+    FriendlyName          SerialNumber    IsPowerProtected IsDeviceCacheEnabled
+    ------------          ------------    ---------------- --------------------
+    MTFDWSC128MAM-1J1     1247091D111W                True                False
+    WDC WD10EZWC-60ZF5A0  WD-WCC1S1822719             True                False
+    WDC WD10EZWC-60ZF5A0  WD-WCC1S1634655             True                False
+    ```
+
+    This command uses the Get-PhysicalDisk cmdlet to get all physical disks, and uses the pipeline operator to pass them to **Get-StorageAdvancedProperty** to get the advanced storage properties **IsPowerProtected** and **IsDeviceCacheEnabled** for the physical disks.
+- title: 'Example 2: Get advanced storage properties for the first physical disk in an array'
+  description: |-
+    ```
+    PS C:\>Get-StorageAdvancedProperty -PhysicalDisk (Get-PhysicalDisk)[0]
+    FriendlyName          SerialNumber    IsPowerProtected IsDeviceCacheEnabled
+    ------------          ------------    ---------------- --------------------
+    MTFDWSC128MAM-1J1     1247091D111W                True                False
+    ```
+
+    This command gets the advanced storage properties **IsPowerProtected** and **IsDeviceCacheEnabled** for the first **PhysicalDisk** object in the array of returned physical disks.
+links:
+- text: Get-PhysicalDisk
+  href: ./Get-PhysicalDisk.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: StorageScripts-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storage/get-storageadvancedproperty?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: Storage
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-StorageAdvancedProperty

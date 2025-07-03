@@ -1,0 +1,190 @@
+### YamlMime:PowerShellCmdlet1
+uid: Microsoft.DiagnosticDataViewer.Get-DiagnosticData
+name: Get-DiagnosticData
+module: Microsoft.DiagnosticDataViewer
+isPreview: false
+summary: |-
+  Fetches historical Windows Diagnostic Data uploaded by this machine.
+description: |-
+  This cmdlet fetches historical Windows Diagnostic Data uploaded by this machine.
+  The total available historical data is limited by the diagnostic data store's configurations.
+  See 'Set-DiagnosticStoreCapacity' for changes.
+notes: |-
+  Requires Windows 10 version 17134 (1803) or higher
+parameters:
+  cmdletParameters:
+  - name: BasicTelemetryOnly
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Query filter parameter.
+      Specifies if resultset should only include Basic diagnostic data events.
+    aliases:
+    - basic
+    - basicOnly
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiagnosticDataType
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Query filter parameter.
+      Specifies if resultset should only include events having this diagnostic data type.
+      See Get-DiagnosticDataTypes for data type IDs.
+    aliases:
+    - ddt
+    - dt
+    defaultValue: "-2147483648"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Query filter parameter.
+      Specifies end time of the window for the newest event in the fetched set.
+    aliases:
+    - et
+    - end
+    defaultValue: 12/31/9999 11:59:59 PM
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecordCount
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies maximum number of events to fetch.
+    aliases:
+    - rc
+    - recCount
+    - c
+    - count
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Query filter parameter.
+      Specifies start time of the window for the oldest event in the fetched set.
+    aliases:
+    - st
+    - start
+    defaultValue: 1/1/0001 12:00:00 AM
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-DiagnosticData
+        [[-StartTime] <DateTime>]
+        [[-EndTime] <DateTime>]
+        [[-RecordCount] <Int32>]
+        [-DiagnosticDataType <Int32>]
+        [-BasicTelemetryOnly]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  description: |-
+    Query filter parameter.
+    Specifies start time of the window for the oldest event in the fetched set.
+- name: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+  description: |-
+    Query filter parameter.
+    Specifies end time of the window for the newest event in the fetched set.
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+  description: |-
+    Specifies maximum number of events to fetch.
+outputs:
+- name: <xref href="DDVCmdlets.Containers.EventRecord" data-throw-if-not-resolved="False" />
+  description: |-
+    Persisted event record.
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```
+    Get-DiagnosticData -StartTime (Get-Date).AddDays(-1) -RecordCount 1
+    ```
+
+    Returns first (oldest) diagnostic event since yesterday.
+    Sample output below.
+
+    Name : Microsoft.Windows.Kernel.PnP.DeviceConfig
+
+    Timestamp : 11/8/2018 4:52:53 PM
+
+    Payload : JSON PAYLOAD
+
+    IsBasic : False
+
+    DiagnosticDataTypes : {11}
+- title: EXAMPLE 2
+  description: |-
+    ```
+    Get-DiagnosticData -StartTime (Get-Date).AddHours(-12) -EndTime (Get-Date).AddHours(-6) -BasicTelemetryOnly
+    ```
+
+    Returns all basic diagnostic events sent between 12 and 6 hours before now.
+- title: EXAMPLE 3
+  description: |-
+    ```
+    Get-DiagnosticData -DiagnosticDataType 11
+    ```
+
+    Returns diagnostic events tagged with diagnostic data type ID 11.
+    See Get-DiagnosticDataTypes for the list of diagnostic data types.
+links:
+- text: About Windows Diagnostic Data
+  href: /windows/privacy/windows-diagnostic-data
+metadata:
+  document type: cmdlet
+  external help file: DDVCmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/get-diagnosticdata?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: Microsoft.DiagnosticDataViewer
+  PlatyPS schema version: 2024-05-01
+  title: Get-DiagnosticData

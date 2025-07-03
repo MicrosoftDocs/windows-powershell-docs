@@ -1,0 +1,64 @@
+### YamlMime:PowerShellCmdlet1
+uid: International.Set-WinCultureFromLanguageListOptOut
+name: Set-WinCultureFromLanguageListOptOut
+module: International
+isPreview: false
+summary: |-
+  Sets the Culture from language list opt out setting for the current user account.
+description: |-
+  The **Set-WinCultureFromLanguageListOptOut** cmdlet sets the Culture, or User Locale, opt-out setting for the current user account.
+  Setting this option to $True disables the action of dynamically setting the Culture for the current user based on changes to the Windows display language.
+  Setting this option to $False activates the dynamic setting behavior.
+  The default setting is $False.
+parameters:
+  cmdletParameters:
+  - name: OptOut
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the opt-out value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WinCultureFromLanguageListOptOut
+        [-OptOut] <Boolean>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Block dynamic setting'
+  description: |-
+    ```
+    PS C:\> Set-WinCultureFromLanguageListOptOut -OptOut $True
+    ```
+
+    This command blocks the dynamic setting behavior.
+links:
+- text: Get-WinCultureFromLanguageListOptOut
+  href: ./Get-WinCultureFromLanguageListOptOut.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/international/set-winculturefromlanguagelistoptout?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Locale: en-US
+  Module Name: International
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WinCultureFromLanguageListOptOut

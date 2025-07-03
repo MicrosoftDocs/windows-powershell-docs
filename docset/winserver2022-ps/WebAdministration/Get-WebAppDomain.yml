@@ -1,0 +1,99 @@
+### YamlMime:PowerShellCmdlet1
+uid: WebAdministration.Get-WebAppDomain
+name: Get-WebAppDomain
+module: WebAdministration
+isPreview: false
+summary: |-
+  Gets the application domains in which the specified IIS worker process is running.
+description: |-
+  The **Get-WebAppDomain** cmdlet gets the application domains in which the specified Internet Information Services (IIS) worker process is running.
+parameters:
+  cmdletParameters:
+  - name: ApplicationPool
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application pool for which application domains are returned.
+    aliases:
+    - apppool
+    - pool
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the input object from which parameter data is received.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProcessId
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the worker process for which the application domain is returned.
+    aliases:
+    - proc
+    - procid
+    - pid
+    - wp
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WebAppDomain
+        [-InputObject <PSObject>]
+        [-ApplicationPool <String>]
+        [-ProcessId <UInt32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get the application domain of a running worker process'
+  description: |-
+    ```
+    IIS:\> Get-WebAppDomain -ProcessId 5872 -ApplicationPool "DefaultAppPool"
+    IIS:\> Get-ChildItem IIS:\AppPools\DefaultAppPool\WorkerProcesses
+    ```
+
+    The first command gets the application domains loaded in the specified worker process.
+    The second command gets the process ID from the WorkerProcesses node below the AppPools node.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/webadministration/get-webappdomain?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WebAppDomain

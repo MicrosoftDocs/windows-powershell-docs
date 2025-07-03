@@ -1,0 +1,84 @@
+### YamlMime:PowerShellCmdlet1
+uid: ShieldedVmCmdlets.New-ShieldedVMSpecializationDataFile
+name: New-ShieldedVMSpecializationDataFile
+module: ShieldedVmCmdlets
+isPreview: false
+summary: |-
+  Creates a specialization data file to be used when provisioning a shielded virtual machine.
+description: |-
+  The **New-ShieldedVMSpecializationDataFile** cmdlet creates a specialization data file to be used when provisioning a shielded virtual machine.
+parameters:
+  cmdletParameters:
+  - name: ShieldedVMSpecializationDataFilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path where the specialization data file (.fsk) is saved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SpecializationDataPairs
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a table of key-value pairs used to replace strings in the answer file.
+      The values must be strings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-ShieldedVMSpecializationDataFile
+        [-ShieldedVMSpecializationDataFilePath] <String>
+        [-SpecializationDataPairs] <Hashtable>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a specialization data file to be used when provisioning a shielded virtual machine'
+  description: |-
+    ```
+    PS C:\>New-ShieldedVMSpecializationDataFile -ShieldedVMSpecializationDataFilePath "C:\temp\VM01.fsk" -SpecializationDataPairs @{ "@ComputerName@" = "PC-001"; "@TimeZone@" = "GMT Standard Time" }
+    ```
+
+    This command creates a specialization data file mapping the string @ComputerName@ in answer files to PC-001 and @TimeZone@ to GMT Standard Time.
+    The file is stored at C:\temp\VM01.fsk.
+links:
+- text: Get-KeyProtectorFromShieldingDataFile
+  href: ./Get-KeyProtectorFromShieldingDataFile.yml
+- text: Get-ShieldedVMProvisioningStatus
+  href: ./Get-ShieldedVMProvisioningStatus.yml
+- text: Initialize-ShieldedVM
+  href: ./Initialize-ShieldedVM.yml
+- text: Test-ShieldingDataApplicability
+  href: ./Test-ShieldingDataApplicability.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: ShieldedVmCmdlets-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/shieldedvmcmdlets/new-shieldedvmspecializationdatafile?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ShieldedVmCmdlets
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-ShieldedVMSpecializationDataFile

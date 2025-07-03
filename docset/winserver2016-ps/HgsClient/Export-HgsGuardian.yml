@@ -1,0 +1,88 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsClient.Export-HgsGuardian
+name: Export-HgsGuardian
+module: HgsClient
+isPreview: false
+summary: |-
+  Exports a guardian that contains public keys.
+description: |-
+  The **Export-HgsGuardian** cmdlet exports a guardian that contains public keys to an .xml file.
+parameters:
+  cmdletParameters:
+  - name: InputObject
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the input to this cmdlet.
+      You can use this parameter, or you can pipe the input to this cmdlet.
+    aliases:
+    - Guardian
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the file to write an XML representation of the guardian.
+    aliases:
+    - FilePath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-HgsGuardian
+        [-InputObject] <CimInstance>
+        [-Path] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Export a guardian'
+  description: |-
+    ```
+    PS C:\> Get-HgsGuardian -Name "Guardian11" | Export-HGsGuardian -Path "C:\LocalHGSFiles\Guardian11.xml"
+    ```
+
+    This command uses the **Get-HgsGuardian** cmdlet to get the guardian named Guardian11, and then passes the object to the current cmdlet by using the pipeline operator.
+    That cmdlet exports the guardian to the specified file.
+links:
+- text: Get-HgsGuardian
+  href: ./Get-HgsGuardian.yml
+- text: Import-HgsGuardian
+  href: ./Import-HgsGuardian.yml
+- text: New-HgsGuardian
+  href: ./New-HgsGuardian.yml
+- text: Remove-HgsGuardian
+  href: ./Remove-HgsGuardian.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: HgsClient-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsclient/export-hgsguardian?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Export-HgsGuardian

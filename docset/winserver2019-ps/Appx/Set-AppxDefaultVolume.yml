@@ -1,0 +1,106 @@
+### YamlMime:PowerShellCmdlet1
+uid: Appx.Set-AppxDefaultVolume
+name: Set-AppxDefaultVolume
+module: Appx
+isPreview: false
+summary: |-
+  Specifies a default appx volume.
+description: |-
+  The **Set-AppxDefaultVolume** cmdlet specifies a default **AppxVolume**.
+  The default **AppxVolume** is the default target for all deployment operations on the computer.
+  Deployment operations can specify a different non-default target volume.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Volume
+    type: <xref href="AppxVolume" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path a volume.
+      This cmdlet sets the volume that this parameter specifies to be the default deployment target for the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AppxDefaultVolume
+        [-Volume] <AppxVolume>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Set a default volume by using a path'
+  description: |-
+    ```
+    PS C:\> Set-AppxDefaultVolume -Volume F:\
+    ```
+
+    This command sets the default volume to be the volume F:\.
+- title: 'Example 2: Set a default volume by using an ID'
+  description: |-
+    ```
+    PS C:\> Set-AppxDefaultVolume -Volume {ef23c8d6-b13c-4c4c-ae3b-7d5a162de9b9}
+    ```
+
+    This command sets the default volume to be the one that has the specified media ID.
+links:
+- text: Get-AppxDefaultVolume
+  href: ./Get-AppxDefaultVolume.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appx/set-appxdefaultvolume?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: Appx
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AppxDefaultVolume

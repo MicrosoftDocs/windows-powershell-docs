@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: DeviceHealthAttestation.Set-DHASSupportedAuthenticationSchema
+name: Set-DHASSupportedAuthenticationSchema
+module: DeviceHealthAttestation
+isPreview: false
+summary: |-
+  Sets authentication schemas.
+description: |-
+  The **Set-DHASSupportedAuthenticationSchema** cmdlet sets the authentication schemas that are supported by the Device Health Attestation service.
+
+  You must have administrator rights to run this cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportedAuthenticationSchema
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies, in a comma-separated list, the authentication schema that the Device Health Attestation service supports.
+      The acceptable values for this parameter are:
+
+      - AikPub
+      - AikCertificate
+      - EkCertificate
+
+      You cannot specify both AikCertificate and EkCertificate in the same command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-DHASSupportedAuthenticationSchema
+        [-SupportedAuthenticationSchema] <String>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Set the authentication schemas to support'
+  description: |-
+    ```
+    PS C:\> Set-DHASSupportedAuthenticationSchema -SupportedAuthenticationSchema "AikPub,EkCertificate"
+    ```
+
+    This command sets the supported authentication schemas.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.DeviceHealthAttestation.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/devicehealthattestation/set-dhassupportedauthenticationschema?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: DeviceHealthAttestation
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-DHASSupportedAuthenticationSchema

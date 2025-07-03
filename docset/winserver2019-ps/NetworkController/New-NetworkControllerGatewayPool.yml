@@ -1,0 +1,289 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkController.New-NetworkControllerGatewayPool
+name: New-NetworkControllerGatewayPool
+module: NetworkController
+isPreview: false
+summary: |-
+  Creates a gateway pool.
+description: |-
+  The **New-NetworkControllerGatewayPool** cmdlet adds a new gateway pool configuration to the Network Controller.
+  If the specified gateway pool configuration already exists with Network Controller, this cmdlet overwrites and replaces the older configuration.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+      This is the certificate thumbprint of the certificate.
+
+      This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionUri
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user credential that has permission to perform this action.
+      The default value is the current user.
+      This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Etag
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the entity tag (ETag) of the resource.
+      An ETag is an HTTP response header returned by an HTTP-compliant web server.
+      An ETag is used to determine change in the content of a resource at a given URL.
+      The value of the header is an opaque string representing the state of the resource at the time the response was generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassInnerException
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Properties
+    type: <xref href="GatewayPoolProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies properties for the gateway pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Species the resource ID of a gateway pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceMetadata
+    type: <xref href="ResourceMetadata" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tags
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NetworkControllerGatewayPool
+        [-ResourceId] <String>
+        [[-Tags] <PSObject>]
+        [-Properties] <GatewayPoolProperties>
+        [[-Etag] <String>]
+        [[-ResourceMetadata] <ResourceMetadata>]
+        [-Force]
+        -ConnectionUri <Uri>
+        [-CertificateThumbprint <String>]
+        [-Credential <PSCredential>]
+        [-PassInnerException]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <span>undefined</span>
+  description: |-
+    This cmdlet outputs the following information:
+
+    - Resource reference URI.
+    - Created time of the resource.
+    - Instance ID of the resource.
+    - Resource metadata.
+    - Properties of the resource:
+    "{
+
+             ""IPConfiguration"" : {
+
+                      ""GREVipSubnets"": @( @{""ResourceRef"": ""\<string\>""} ),
+
+                      ""PublicIPAddresses"": @( @{""ResourceRef"": ""\<string\>""} ),
+
+              },
+
+             ""RedundantGatewayCount"" : \<Uint32\>,
+
+             ""GatewayCapacityKiloBitsPerSecond"": \<Uint32\>
+
+    }"
+examples:
+- title: 'Example 1: Add a gateway pool configuration to the Network Controller'
+  description: |-
+    ```
+    PS C:\> New-NetworkControllerGatewayPool -ConnectionUri "https://networkcontroller"
+    -ResourceId "GreGWPool" -Properties $greGwPoolProperties
+    Confirm
+    Performing the operation 'New-NetworkControllerGatewayPool' on entities of type 'Microsoft.Windows.NetworkController.GatewayPool' via 'https://networkcontroller/networking/v1/gatewaypools/GreGWPool'. Are you sure you want to continue?
+     [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): yes
+
+    Tags             :
+    ResourceRef      : /GatewayPools/GreGWPool
+    InstanceId       : 6974707a-f4d6-478e-8bf9-ed669c3e8717
+    Etag             : W/"7bcf66df-1000-4a85-9065-91faf09b1f42"
+    ResourceMetadata :
+    ResourceId       : GreGWPool
+    Properties       : Microsoft.Windows.NetworkController.GatewayPoolProperties
+    ```
+
+    This command adds a new gateway pool configuration to Network Controller.
+links:
+- text: Get-NetworkControllerGatewayPool
+  href: ./Get-NetworkControllerGatewayPool.yml
+- text: Remove-NetworkControllerGatewayPool
+  href: ./Remove-NetworkControllerGatewayPool.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkController.Powershell.dll-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontroller/new-networkcontrollergatewaypool?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-NetworkControllerGatewayPool

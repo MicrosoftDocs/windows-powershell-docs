@@ -1,0 +1,71 @@
+### YamlMime:PowerShellCmdlet1
+uid: ShieldedVMDataFile.Save-VolumeSignatureCatalog
+name: Save-VolumeSignatureCatalog
+module: ShieldedVMDataFile
+isPreview: false
+summary: |-
+  Extracts and saves a volume signature catalog file from a given shielded VM template disk.
+description: |-
+  The **Save-VolumeSignatureCatalog** cmdlet extracts the volume signature catalog containing the disk signer, name, and version number of a shielded VM template disk and persists it to a file.
+  This file can be given to VM owners who wish to deploy a VM using this template disk for use in the Shielding Data File Wizard.
+parameters:
+  cmdletParameters:
+  - name: TemplateDiskPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to a VHDX file that has been templatized in preparation for deploying shielded VMs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeSignatureCatalogPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the desired path for the volume signature catalog file.
+      The path should use a .vsc extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Save-VolumeSignatureCatalog
+        [-TemplateDiskPath] <String>
+        [-VolumeSignatureCatalogPath] <String>
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Save-VolumeSignatureCatalog -TemplateDiskPath 'C:\temp\mydisk.vhdx' -VolumeSignatureCatalogPath 'C:\temp\mydiskcatalog.vsc'
+    ```
+
+    Saves the volume signature from the template disk to a file.
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/shieldedvmdatafile/save-volumesignaturecatalog?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ShieldedVMDataFile
+  PlatyPS schema version: 2024-05-01
+  title: Save-VolumeSignatureCatalog

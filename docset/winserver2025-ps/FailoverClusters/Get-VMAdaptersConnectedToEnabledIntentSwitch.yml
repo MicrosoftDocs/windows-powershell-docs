@@ -1,0 +1,74 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Get-VMAdaptersConnectedToEnabledIntentSwitch
+name: Get-VMAdaptersConnectedToEnabledIntentSwitch
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Gets the adapters on the VM that are connected to the enabled intent switch.
+description: |-
+  Retrieves the adapters on the VM that are connected to the enabled intent switch.
+parameters:
+  cmdletParameters:
+  - name: VM
+    type: <xref href="VirtualMachineBase" data-throw-if-not-resolved="False" />
+    description: |-
+      The VM object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-VMAdaptersConnectedToEnabledIntentSwitch
+        [[-VMName] <String>]
+        [[-VM] <VirtualMachineBase>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```powershell
+    Get-VMAdaptersConnectedToEnabledIntentSwitch -VMName "MyVM"
+    ```
+
+    This example retrieves the network adapter connected to the enabled intent switch from the VM named
+    `MyVM`.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/get-vmadaptersconnectedtoenabledintentswitch?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 01/22/2025
+  PlatyPS schema version: 2024-05-01
+  title: Get-VMAdaptersConnectedToEnabledIntentSwitch

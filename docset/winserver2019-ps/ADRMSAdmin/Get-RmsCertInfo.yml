@@ -1,0 +1,137 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADRMSAdmin.Get-RmsCertInfo
+name: Get-RmsCertInfo
+module: ADRMSAdmin
+isPreview: false
+summary: |-
+  Generates a report about a certificate used in a user request for the AD RMS cluster.
+description: |-
+  The **Get-RmsCertInfo** cmdlet generates a report about a certificate used in a user request on the Active Directory Rights Management Services (AD RMS) cluster.
+
+  To obtain the report, specify the CertificateID of the certificate for which you want a report and then set the *Path* parameter to the AD RMS provider drive path `<PSDrive>:\`Report where `<PSDrive>` is the provider drive ID.
+  You can also specify a relative path.
+  For example, a dot (.) specifies the current location.
+
+  Use the **Get-RmsCertChain** cmdlet to obtain the *CertificateID* of the certificate for which you want a report.
+  The *CertificateID* value returned is valid only for the cluster identified by the *Path* parameter of **Get-RmsCertChain**.
+  You cannot use a *CertificateID* to identify the same certificate in different clusters.
+parameters:
+  cmdletParameters:
+  - name: CertificateId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a unique internal certificate ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a provider drive and path or relative path on the current drive.
+      Use a dot (.) to specify the current location.
+      This parameter does not accept wildcards and has no default value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-RmsCertInfo
+        -CertificateId <String>
+        [-Path] <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get a certificate report'
+  description: |-
+    ```
+    PS C:\> Get-RmsCertInfo -Path "." -CertificateId "sH+lchPGEP9IKIajmnw5QGUqOl4="
+    ```
+
+    This command displays detailed information for a particular certificate.
+- title: 'Example 2: Pass a certificate and get a report for it'
+  description: |-
+    ```
+    PS C:\> $certs= Get-RmsCertChain -Path "." -RequestId 2 | Where {$_.CertificateType -eq 'DRM-CA-Certificate'}
+    PS C:\> $certs[0] | Get-RmsCertInfo -Path "."
+    ```
+
+    This command stores filtered results of the **Get-RmsCertChain** cmdlet in a variable and then pipes the first certificate in the array to the **Get-RmsCertInfo** cmdlet to display details about that certificate.
+links:
+- text: Using Windows PowerShell with AD RMS
+  href: https://go.microsoft.com/fwlink/?LinkId=136806
+- text: Get-RmsCertChain
+  href: ./Get-RmsCertChain.yml
+- text: Get-RmsChildCert
+  href: ./Get-RmsChildCert.yml
+- text: Get-RmsUserRequestReport
+  href: ./Get-RmsUserRequestReport.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adrmsadmin/get-rmscertinfo?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADRMSAdmin
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-RmsCertInfo

@@ -1,0 +1,156 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADCSAdministration.Remove-CATemplate
+name: Remove-CATemplate
+module: ADCSAdministration
+isPreview: false
+summary: |-
+  Removes the templates from the CA which were set for issuance of certificates.
+description: |-
+  The **Remove-CATemplate** cmdlet removes the templates from the certification authority (CA) which were set for issuance of certificates.
+parameters:
+  cmdletParameters:
+  - name: AllTemplates
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet removes all certificate templates on the CA that are available for certificate issuance.
+      A common task administrative task is to remove all the default templates that are currently added for issuance.
+      This allows the administrator to add only the templates that should be available for certificate issuance in the given scenario.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AllTemplates
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an individual certificate template from the CA that is available for certificate issuance that this cmdlet removes.
+      You need to use the certificate template name and not the certificate template display name.
+      For instance, the certificate template display name of Basic EFS is assigned the template name EFS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-CATemplate
+        [-Name] <String>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-CATemplate
+        [-AllTemplates]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AllTemplates
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove all templates on the CA'
+  description: |-
+    ```
+    PS C:\> Remove-CATemplate -AllTemplates
+    ```
+
+    This command removes all the templates on the CA set for certificates issuance are removed.
+- title: 'Example 2: Remove a specific CA'
+  description: |-
+    ```
+    PS C:\> Remove-CATemplate -Name "EFS"
+    ```
+
+    This command removes the template named EFS on the CA that is set for certificate issuance is removed.
+links:
+- text: Add-CATemplate
+  href: ./Add-CATemplate.yml
+- text: Get-CATemplate
+  href: ./Get-CATemplate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adcsadministration/remove-catemplate?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADCSAdministration
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-CATemplate

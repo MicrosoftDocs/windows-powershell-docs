@@ -1,0 +1,113 @@
+### YamlMime:PowerShellCmdlet1
+uid: HostComputeService.Get-ComputeProcess
+name: Get-ComputeProcess
+module: HostComputeService
+isPreview: false
+summary: |-
+  Gets a list of running compute systems from the Hyper-V Host Compute Service.
+description: |-
+  The **Get-ComputeProcess** cmdlet gets a list of running compute systems from the Hyper-V Host Compute Service, including virtual machines and containers.
+
+  You must run this cmdlet from an elevated PowerShell session.
+parameters:
+  cmdletParameters:
+  - name: Id
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of IDs of compute systems that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the compute system that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Filters
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Owner
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the management client that owns the compute systems that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Filters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="ComputeProcessType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the type of compute systems that this cmdlet gets.
+      The acceptable values for this parameter are: VirtualMachine and Container.
+    acceptedValues:
+    - Container
+    - VirtualMachine
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Filters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-ComputeProcess
+        [[-Name] <String[]>]
+        [-Owner <String[]>]
+        [-Type <ComputeProcessType[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Filters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-ComputeProcess
+        [-Id] <String[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: false
+links:
+- text: Stop-ComputeProcess
+  href: ./Stop-ComputeProcess.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HostCompute.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hostcomputeservice/get-computeprocess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: HostComputeService
+  ms.date: 12/21/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-ComputeProcess

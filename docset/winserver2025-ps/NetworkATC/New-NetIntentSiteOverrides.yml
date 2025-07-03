@@ -1,0 +1,124 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.New-NetIntentSiteOverrides
+name: New-NetIntentSiteOverrides
+module: NetworkATC
+isPreview: false
+summary: |-
+  Creates a new instance of site configuration overrides which can be used to supply granular values to `Set-NetIntent`.
+description: |-
+  The `New-NetIntentSiteOverrides` cmdlet creates a new instance of a site override. It specifies
+  detailed configuration values that can be applied to a network intent using the `Set-NetIntent`
+  cmdlet. It allows administrators to define VLAN settings for storage, stretch, and management
+  purposes.
+parameters:
+  cmdletParameters:
+  - name: ManagementVLAN
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the VLAN ID used for network management traffic. This parameter accepts a single VLAN ID.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the site configuration. This parameter allows you to assign a unique name
+      making it easier to reference and manage your network policies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageVLAN
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the VLAN IDs used for storage traffic. This parameter accepts an array of VLAN IDs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StretchVLAN
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the VLAN IDs used for stretch networking. This parameter accepts an array of VLAN IDs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NetIntentSiteOverrides
+        [[-StorageVLAN] <UInt16[]>]
+        [[-StretchVLAN] <UInt16[]>]
+        [[-ManagementVLAN] <UInt16>]
+        [[-Name] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-NetIntentSiteOverrides -Name "MySite" -StorageVLAN 101,102
+    ```
+
+    This example configures a site named `MySite` and sets up VLAN IDs `101` and `102` for storage
+    traffic.
+links:
+- text: New-NetIntentAdapterPropertyOverrides
+  href: New-NetIntentAdapterPropertyOverrides.yml
+- text: New-NetIntentAdapterRssOverrides
+  href: New-NetIntentAdapterRssOverrides.yml
+- text: New-NetIntentGlobalClusterOverrides
+  href: New-NetIntentGlobalClusterOverrides.yml
+- text: New-NetIntentGlobalProxyOverrides
+  href: New-NetIntentGlobalProxyOverrides.yml
+- text: New-NetIntentQoSPolicyOverrides
+  href: New-NetIntentQoSPolicyOverrides.yml
+- text: New-NetIntentStorageOverrides
+  href: New-NetIntentStorageOverrides.yml
+- text: New-NetIntentSwitchConfigurationOverrides
+  href: New-NetIntentSwitchConfigurationOverrides.yml
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/new-netintentsiteoverrides?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: New-NetIntentSiteOverrides

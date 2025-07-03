@@ -1,0 +1,169 @@
+### YamlMime:PowerShellCmdlet1
+uid: TroubleshootingPack.Invoke-TroubleshootingPack
+name: Invoke-TroubleshootingPack
+module: TroubleshootingPack
+isPreview: false
+summary: |-
+  Runs a troubleshooting pack.
+description: |-
+  The **Invoke-TroubleshootingPack** cmdlet runs a troubleshooting pack in either interactive or unattended mode.
+  A troubleshooting pack determines the root causes of issues, resolves the issues, and verifies that the issues were resolved.
+  The cmdlet can save reports that detail issues and resolutions.
+
+  In interactive mode, you can select the resolutions to use and provide input to interactions with the troubleshooting pack.
+  In unattended mode, the troubleshooting pack determines which resolutions to use at run time.
+  While in unattended mode, if the troubleshooting pack requires input, you need to provide answers or specify an answer file.
+  To create an answer file, use the **Get-TroubleshootingPack** cmdlet.
+
+  You can save the result report and the debug report, along with XSL and any linked files.
+  Both reports contain the issues and resolutions.
+  The debug report contains additional information.
+parameters:
+  cmdletParameters:
+  - name: AnswerFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a path for an answer file.
+      You can use an absolute path, a relative path, or a Universal Naming Convention (UNC) path.
+      To generate an answer file, use the **Get-TroubleshootingPack** cmdlet.
+    aliases:
+    - AF
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pack
+    type: <xref href="DiagPack" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **DiagPack** object.
+      The **DiagPack** object defines a troubleshooting pack.
+      To obtain a **DiagPack** object, use the **Get-TroubleshootingPack** cmdlet.
+    aliases:
+    - P
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Result
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a path for the result report and the debug report.
+      You can use an absolute path, a relative path, or a Universal Naming Convention (UNC) path.
+
+      If you do not use this parameter, the cmdlet does not save reports.
+    aliases:
+    - R
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Unattended
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the troubleshooting pack runs in unattended mode.
+      If you specify this parameter and the troubleshooting pack requires input, specify an answer file in the **AnswerFile** parameter.
+    aliases:
+    - U
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-TroubleshootingPack
+        [-Pack] <DiagPack>
+        [-AnswerFile <String>]
+        [-Result <String>]
+        [-Unattended]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Windows.Diagnosis.DiagPack" data-throw-if-not-resolved="False" />
+  description: |-
+    The troubleshooting pack to run.
+    To obtain a **DiagPack** object, use the **Get-TroubleshootingPack** cmdlet.
+examples:
+- title: 'Example 1: Run a troubleshooting pack'
+  description: |-
+    ```powershell
+    PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" | Invoke-TroubleshootingPack
+    ```
+
+    This example runs the Audio pack in interactive mode.
+    This example does not save reports.
+
+    The command uses the **Get-TroubleshootingPack** cmdlet to get a **DiagPack** object and pipes it to the **Invoke-TroubleshootingPack** cmdlet.
+- title: 'Example 2: Save troubleshooting reports'
+  description: |-
+    ```powershell
+    PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
+    PS C:\> Invoke-TroubleshootingPack -Pack $Audio -Result "C:\DiagResult"
+    ```
+
+    This example runs the Audio pack in interactive mode and saves the results to a folder.
+
+    The first command uses the **Get-TroubleshootingPack** cmdlet to get a DiagPack object and stores it in the $Audio variable.
+
+    The second command invokes the troubleshooting pack stored in $Audio.
+    The pack saves reports in the specified folder.
+- title: 'Example 3: Run a troubleshooting pack in unattended mode'
+  description: |-
+    ```powershell
+    PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
+    PS C:\> Invoke-TroubleshootingPack -Pack $Audio -AnswerFile "AudioAnswerFile.xml" -Unattended
+    ```
+
+    This example runs the Audio pack in unattended mode with a specified answer file.
+
+    The first command uses the **Get-TroubleshootingPack** cmdlet to get a DiagPack object and stores it in the $Audio variable.
+
+    The second command invokes the troubleshooting pack stored in $Audio in unattended mode.
+    The command specifies an answer file, previously created by using the **Get-TroubleshootingPack** cmdlet.
+links:
+- text: Get-TroubleshootingPack
+  href: ./Get-TroubleshootingPack.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.Diagnosis.TroubleshootingPack.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/troubleshootingpack/invoke-troubleshootingpack?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: TroubleshootingPack
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Invoke-TroubleshootingPack

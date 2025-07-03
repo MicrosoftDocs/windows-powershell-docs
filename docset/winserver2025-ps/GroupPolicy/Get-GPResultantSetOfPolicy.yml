@@ -1,0 +1,216 @@
+### YamlMime:PowerShellCmdlet1
+uid: GroupPolicy.Get-GPResultantSetOfPolicy
+name: Get-GPResultantSetOfPolicy
+module: GroupPolicy
+isPreview: false
+summary: |-
+  Gets and writes the RSoP information for a user, a computer, or both to a file.
+description: |-
+  The `Get-GPResultantSetOfPolicy` cmdlet gets and writes the Resultant Set of Policy (RSoP)
+  information for a user, a computer, or both to a file.
+notes: |-
+  * This cmdlet provides only the logging results for a specified computer and user. You must use the
+    GPMC to generate RSoP modeling information.
+parameters:
+  cmdletParameters:
+  - name: Computer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the computer for which to generate the report. You can specify the computer
+      name in one of the following formats:
+
+      - Full computer name (FQDN computer name); for example, computer-01.sales.contoso.com.
+
+      - Fully qualified domain name (FQDN)\computer name; for instance, sales.contoso.com\computer-01.
+
+      - NetBIOS domain name\computer name; for instance, sales\computer-01.
+
+      - Computer name (host name): for instance, computer-01.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the report file; for instance, `c:\Reports\GpRsopReport.xml`.
+
+      You can also refer to the **Path** parameter by its built-in alias, **FilePath**. For more information,
+      see [about_Aliases](/powershell/module/microsoft.powershell.core/about/about_aliases).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReportType
+    type: <xref href="ReportType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the format of the RSoP report. You must specify either `Html` (for HTML format) or `Xml`
+      (for XML format). These values are not case sensitive.
+
+      The acceptable values for this parameter are: `Html` or `Xml`.
+    acceptedValues:
+    - Xml
+    - Html
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: User
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user name of the user for which to generate the report. You can specify the user name
+      in one of the following formats:
+
+      - Fully qualified domain name (FQDN)\user name; for instance, `sales.contoso.com\SomeUser`.
+
+      - NetBIOS domain name\user name; for example, `sales\SomeUser`.
+
+      - User name: for example, `SomeUser`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-GPResultantSetOfPolicy
+        [-Computer <String>]
+        [-User <String>]
+        -ReportType <ReportType>
+        -Path <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not take any object as input.
+outputs:
+- name: <xref href="Microsoft.GroupPolicy.GPRsop" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an RSoP object.
+examples:
+- title: 'Example 1: Generate a report for the default user that is running on the current session'
+  description: |-
+    ```powershell
+    Get-GPResultantSetOfPolicy -ReportType Xml -Path "c:\reports\LocalUserAndComputerReport.xml"
+    ```
+
+    ```Output
+    RsopMode        : Logging
+    Namespace       : \\COMPUTER-02-PC\Root\Rsop\NS2BBE3F29_794F_4EAE_B9DB_0A2310622534
+    LoggingComputer : COMPUTER-02
+    LoggingUser     : CONTOSO\someuser
+    LoggingMode     : UserAndComputer
+    ```
+
+    This command generates a report for the default user that is running on the current session. The
+    report is generated in XML format, and is written to the specified file.
+- title: 'Example 2: Generate a report for the specified computer'
+  description: |-
+    ```powershell
+    $params = @{
+        ReportType = 'Xml'
+        Path       = 'c:\reports\computer-08.xml'
+        Computer   = 'computer-08.contso.com'
+    }
+    Get-GPResultantSetOfPolicy @params
+    ```
+
+    ```Output
+    RsopMode        : Logging
+    Namespace       : \\computer-08.contoso.com\Root\Rsop\NS643B2E66_8F54_4407_A813_7D47173B0922
+    LoggingComputer : computer-08.contoso.com
+    LoggingUser     : CONTOSO\Administrator
+    LoggingMode     : Computer
+    ```
+
+    This command generates a report for the specified computer. The computer is specified by its fully
+    qualified domain name (FQDN), `computer-08.contoso.com`. The report is generated in `XML` format,
+    and is written to the specified file.
+- title: 'Example 3: Generate a report for the specified user in HTML format and save it to the specified file'
+  description: |-
+    ```powershell
+    $params = @{
+        ReportType = 'HTML'
+        Path       = 'c:\reports\UserReport.html'
+        User       = 'Contoso\PattiFul'
+    }
+    Get-GPResultantSetOfPolicy @params
+    ```
+
+    ```Output
+    RsopMode        : Logging
+    Namespace       : \\COMPUTER-02\Root\Rsop\NS78355E76_C754_41B5_8F5E_B61551837A62
+    LoggingComputer : COMPUTER-02
+    LoggingUser     : contoso\someuser
+    LoggingMode     : User
+    ```
+
+    This command generates a report for the specified user `Contoso\PattiFul` in `HTML` format and saves
+    it to the specified file.
+- title: 'Example 4: Generate a report for the specified computer and user in HTML format and save it to the specified file'
+  description: |-
+    ```powershell
+    $params = @{
+        ReportType = 'HTML'
+        Path       = 'c:\reports\UserAndComputerReport.xml'
+        User       = 'SomeUser'
+        Computer   = 'contoso.com\computer-08'
+    }
+    Get-GPResultantSetOfPolicy @params
+    ```
+
+    ```Output
+    RsopMode        : Logging
+    Namespace       : \\computer-08\Root\Rsop\NS72116C25_6570_4586_9B79_FC4F71372E57
+    LoggingComputer : contoso.com\computer-08
+    LoggingUser     : someuser
+    LoggingMode     : UserAndComputer
+    ```
+
+    This command generates a report for the specified computer `contoso.com\computer-08` and user
+    `SomeUser` in `HTML` format and saves it to the specified file.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.GroupPolicy.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/grouppolicy/get-gpresultantsetofpolicy?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: GroupPolicy
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-GPResultantSetOfPolicy

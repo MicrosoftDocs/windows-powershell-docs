@@ -1,0 +1,351 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Start-AppvVirtualProcess
+name: Start-AppvVirtualProcess
+module: AppvClient
+isPreview: false
+summary: |-
+  Starts a virtual process.
+description: |-
+  The **Start-AppvVirtualProcess** cmdlet starts a new virtual process.
+parameters:
+  cmdletParameters:
+  - name: AppvClientObject
+    type: <xref href="Object" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an **AppvClientPackage** or **AppvClientConnectionGroup** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ArgumentList
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the arguments to be passed into the virtual process.
+    aliases:
+    - Args
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credential to start this process.
+    aliases:
+    - RunAs
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a file path.
+    aliases:
+    - PSPath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadUserProfile
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet loads a user profile for use with the process.
+    aliases:
+    - Lup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoNewWindow
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet attempts to keep the process in the same window instead of opening a new window.
+    aliases:
+    - nnw
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RedirectStandardError
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Redirects the stderr to the file specified.
+    aliases:
+    - RSE
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RedirectStandardInput
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Takes the stdinput from the file specified.
+    aliases:
+    - RSI
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RedirectStandardOutput
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Redirects the stdout to the file specified.
+    aliases:
+    - RSO
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseNewEnvironment
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet uses a new environment for the process.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Verb
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a verb for the process.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UseShellExecute
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Wait
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet uses synchronous operation of the virtual process.
+      The cmdlet waits to exit until the virtual process exits.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowStyle
+    type: <xref href="ProcessWindowStyle" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies what to do without a Process Window Style.
+      The acceptable values for this parameter are:
+
+      - Normal.
+      Display the normal window.
+      - Hidden.
+      Launch a hidden window.
+      - Minimized.
+      Launch a minimized window.
+      - Maximized.
+      Launch a maximized window.
+
+      The default value is Normal.
+    acceptedValues:
+    - Normal
+    - Hidden
+    - Minimized
+    - Maximized
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UseShellExecute
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkingDirectory
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies working directory of the process.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AppvVirtualProcess
+        [-FilePath] <String>
+        [[-ArgumentList] <String[]>]
+        -AppvClientObject <Object>
+        [-Credential <PSCredential>]
+        [-WorkingDirectory <String>]
+        [-LoadUserProfile]
+        [-NoNewWindow]
+        [-PassThru]
+        [-RedirectStandardError <String>]
+        [-RedirectStandardInput <String>]
+        [-RedirectStandardOutput <String>]
+        [-Wait]
+        [-UseNewEnvironment]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AppvVirtualProcess
+        [-FilePath] <String>
+        [[-ArgumentList] <String[]>]
+        -AppvClientObject <Object>
+        [-WorkingDirectory <String>]
+        [-PassThru]
+        [-Verb <String>]
+        [-Wait]
+        [-WindowStyle <ProcessWindowStyle>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UseShellExecute
+  isDefault: false
+examples:
+- title: 'Example 1: Start a virtual process in a virtual environment of a package'
+  description: |-
+    ```
+    PS C:\> $AppVObj = Get-AppvClientPackage -Name "MyPackage"
+    PS C:\> Start-AppvVirtualProcess -FilePath "C:\Calc.exe" -AppvClientObject $AppVObj
+    ```
+
+    The first command gets the client package named MyPackage by using the **Get-AppvClientPackage** cmdlet.
+    The command stores the result in the $AppVObj variable.
+
+    The second command starts a new virtual process for Calc.exe in virtual environment of in $AppVObj.
+- title: 'Example 2: Start a virtual process in a virtual environment of a connection group'
+  description: |-
+    ```
+    PS C:\> $AppVObj = Get-AppvClientConnectionGroup -Name MyConnectionGroup
+    PS C:\> Start-AppvVirtualProcess -FilePath "C:\Calc.exe" -AppvClientObject $AppVObj
+    ```
+
+    The first command gets the client package named MyPackage by using the **Get-AppvClientConnectionGroup** cmdlet.
+    The command stores the result in the $AppVObj variable.
+
+    The second command starts a new virtual process for Calc.exe in the virtual environment of in $AppVObj.
+links:
+- text: Get-AppvClientConnectionGroup
+  href: ./Get-AppvClientConnectionGroup.yml
+- text: Get-AppvClientPackage
+  href: ./Get-AppvClientPackage.yml
+- text: Get-AppvVirtualProcess
+  href: ./Get-AppvVirtualProcess.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: AppVClientCmdlets-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/start-appvvirtualprocess?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Start-AppvVirtualProcess

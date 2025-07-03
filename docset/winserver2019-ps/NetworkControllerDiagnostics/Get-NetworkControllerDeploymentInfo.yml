@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkControllerDiagnostics.Get-NetworkControllerDeploymentInfo
+name: Get-NetworkControllerDeploymentInfo
+module: NetworkControllerDiagnostics
+isPreview: false
+summary: |-
+  Queries the Network Controller for REST information.
+description: |-
+  The **Get-NetworkControllerDeploymentInfo** cmdlet queries the Network Controller for Representational State Transfer (REST) information, such the REST URI and the REST Certificate.
+
+  You can run this cmdlet from a computer that has Layer-3 connectivity to the Network Controller.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies certificate thumbprint to use for the Network Controller.
+      Specify this parameter for certificate deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a credential to use for the Network Controller.
+      Specify this parameter for Kerberos deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkController
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name or IP address of a Network Controller node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestURI
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URI to use for Network Controller REST APIs.
+      Specify this parameter for wildcard certificate deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NetworkControllerDeploymentInfo
+        [-NetworkController] <String>
+        [[-Credential] <PSCredential>]
+        [[-RestURI] <String>]
+        [[-CertificateThumbprint] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get configuration state for all REST resources for a Network Controller'
+  description: |-
+    ```
+    PS C:\>$Credential = Get-Credential
+    PS C:\> Get-NetworkControllerDeploymentInfo -NetworkController "NC-0.contoso.cloud.com" -Credential $Credential
+    ```
+
+    The first command creates credentials by using the Get-Credential cmdlet, and then stores it in the $Credential variable.
+    The command prompts you for user name and password.
+
+    The second command gets configuration state for all REST resources for a Network Controller.
+links:
+- text: Get-NetworkControllerReplica
+  href: ./Get-NetworkControllerReplica.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Debug-NetworkController-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontrollerdiagnostics/get-networkcontrollerdeploymentinfo?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkControllerDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NetworkControllerDeploymentInfo

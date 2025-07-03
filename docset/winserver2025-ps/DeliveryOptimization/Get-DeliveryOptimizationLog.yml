@@ -1,0 +1,113 @@
+### YamlMime:PowerShellCmdlet1
+uid: DeliveryOptimization.Get-DeliveryOptimizationLog
+name: Get-DeliveryOptimizationLog
+module: DeliveryOptimization
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: Flush
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Flush Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LevelFilter
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill LevelFilter Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      {{ Fill Path Description }}
+    aliases:
+    - PSPath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Provider
+    type: <xref href="Microsoft.Windows.DeliveryOptimization.AdminCommands.ProviderType" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Provider Description }}
+    acceptedValues:
+    - Dosvc
+    - Domgmt
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-DeliveryOptimizationLog
+        [-LevelFilter <UInt32>]
+        [-Provider <ProviderType>]
+        [[-Path] <String[]>]
+        [-Flush]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Windows.DeliveryOptimization.AdminCommands.LogOutput" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Windows.DeliveryOptimization.AdminCommands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/deliveryoptimization/get-deliveryoptimizationlog?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: DeliveryOptimization
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Get-DeliveryOptimizationLog

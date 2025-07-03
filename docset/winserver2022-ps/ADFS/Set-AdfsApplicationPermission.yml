@@ -1,0 +1,382 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Set-AdfsApplicationPermission
+name: Set-AdfsApplicationPermission
+module: ADFS
+isPreview: false
+summary: |-
+  Modifies application permissions.
+description: |-
+  The **Set-AdfsApplicationPermission** cmdlet modifies application permissions.
+parameters:
+  cmdletParameters:
+  - name: AddScope
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierAddScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: InputObjectAddScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RoleIdentifierAddScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="OAuthPermission" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an **OAuthPermission** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectAddScope
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectRemoveScope
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RemoveScope
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifierRemoveScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: InputObjectRemoveScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RoleIdentifierRemoveScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScopeNames
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Identifier
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: InputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RoleIdentifier
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetClientRoleIdentifier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RoleIdentifier
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RoleIdentifierAddScope
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RoleIdentifierRemoveScope
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetIdentifier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the identifier of the target.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Identifier
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: IdentifierAddScope
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: IdentifierRemoveScope
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetServerRoleIdentifier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the identifier of the target server role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RoleIdentifier
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RoleIdentifierAddScope
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RoleIdentifierRemoveScope
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AdfsApplicationPermission
+        [-TargetIdentifier] <String>
+        [-ScopeNames <String[]>]
+        [-Description <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Identifier
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AdfsApplicationPermission
+        [-TargetIdentifier] <String>
+        -AddScope <String[]>
+        [-Description <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifierAddScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsApplicationPermission
+        [-TargetIdentifier] <String>
+        -RemoveScope <String[]>
+        [-Description <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifierRemoveScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsApplicationPermission
+        [-InputObject] <OAuthPermission>
+        [-ScopeNames <String[]>]
+        [-Description <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsApplicationPermission
+        [-InputObject] <OAuthPermission>
+        -AddScope <String[]>
+        [-Description <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectAddScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsApplicationPermission
+        [-InputObject] <OAuthPermission>
+        -RemoveScope <String[]>
+        [-Description <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectRemoveScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsApplicationPermission
+        [[-TargetClientRoleIdentifier] <String>]
+        [[-TargetServerRoleIdentifier] <String>]
+        [-ScopeNames <String[]>]
+        [-Description <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RoleIdentifier
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsApplicationPermission
+        [[-TargetClientRoleIdentifier] <String>]
+        [[-TargetServerRoleIdentifier] <String>]
+        -AddScope <String[]>
+        [-Description <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RoleIdentifierAddScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsApplicationPermission
+        [[-TargetClientRoleIdentifier] <String>]
+        [[-TargetServerRoleIdentifier] <String>]
+        -RemoveScope <String[]>
+        [-Description <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RoleIdentifierRemoveScope
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *AddScope*, *Description*, *RemoveScope*, *ScopeNames*, *TargetClientRoleIdentifier*, *TargetIdentifier*, and *TargetServerRoleIdentifier* parameters.
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.OAuthPermission" data-throw-if-not-resolved="False" />
+  description: |-
+    OAuthPermission objects are received by the *InputObject* parameter.
+links:
+- text: Get-AdfsApplicationPermission
+  href: ./Get-AdfsApplicationPermission.yml
+- text: Grant-AdfsApplicationPermission
+  href: ./Grant-AdfsApplicationPermission.yml
+- text: Revoke-AdfsApplicationPermission
+  href: ./Revoke-AdfsApplicationPermission.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/set-adfsapplicationpermission?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AdfsApplicationPermission

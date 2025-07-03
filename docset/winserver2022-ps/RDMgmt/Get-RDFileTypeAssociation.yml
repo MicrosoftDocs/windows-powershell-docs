@@ -1,0 +1,136 @@
+### YamlMime:PowerShellCmdlet1
+uid: RDMgmt.Get-RDFileTypeAssociation
+name: Get-RDFileTypeAssociation
+module: RDMgmt
+isPreview: false
+summary: |-
+  Displays the file extensions associated with a RemoteApp program.
+description: |-
+  The **Get-RDFileTypeAssociation** cmdlet displays the file extensions that are associated with a firstref_server_7 RemoteApp program in the Remote Desktop deployment.
+parameters:
+  cmdletParameters:
+  - name: AppAlias
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the alias for the RemoteApp program.
+      The default alias is the program's filename without the extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppDisplayName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name that users see for the RemoteApp program.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD  Connection Broker) server for this Remote Desktop deployment.
+      Remote users connect to this server to obtain views of available RemoteApp programs, session-based desktops, and virtual desktops.
+      If this parameter does not appear, the default value is the fully qualified domain name (FQDN) of the local host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileExtension
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the file name extension whose associated RemoteApp program appears.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-RDFileTypeAssociation
+        [[-CollectionName] <String>]
+        [-AppAlias <String>]
+        [-AppDisplayName <String[]>]
+        [-FileExtension <String>]
+        [-ConnectionBroker <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.RemoteDesktopServices.Management.FileTypeAssociation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a file type association by using an alias and a file name extension'
+  description: |-
+    ```
+    PS C:\> Get-RDFileTypeAssociation -AppAlias "iexplore" -FileExtension ".html"
+    ```
+
+    This command gets a file type association by using the file name extension .html and the RemoteApp program whose alias is iexplore.
+- title: 'Example 2: Get a file type association by using a collection name and an application display name'
+  description: |-
+    ```
+    PS C:\> Get-RDFileTypeAssociation -CollectionName "Session Collection" -AppDisplayName "Note*"
+    ```
+
+    This command gets the file type association by using the collection named Session Collection and the names of all RemoteApp programs whose names begin with the word Note.
+links:
+- text: Set-RDFileTypeAssociation
+  href: ./Set-RDFileTypeAssociation.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/rdmgmt/get-rdfiletypeassociation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-RDFileTypeAssociation

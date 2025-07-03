@@ -1,0 +1,116 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Get-WBFileSpec
+name: Get-WBFileSpec
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Gets the list of backup file specifications associated with a backup policy.
+description: |-
+  The **Get-WBFileSpec** cmdlet gets the list of **WBFileSpec** objects that contain backup file specifications for a **WBPolicy** object that contains a backup policy.
+  A **WBFileSpec** object defines the items to include in or exclude from backups that you create by using the backup policy.
+
+  Use the [New-WBFileSpec](./New-WBFileSpec.yml) and [Add-WBFileSpec](./Add-WBFileSpec.yml) cmdlets to define and apply changes to the backup policy.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **WBPolicy** object that contains the backup policy for which to display backup file specifications.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WBFileSpec
+        [-Policy] <WBPolicy>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet queries the **WBPolicy** object that contains the specified backup policy.
+outputs:
+- name: <xref href="WBFileSpec" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a list of **WBFileSpec** objects that contain backup file specifications for a **WBPolicy** object that contains a backup policy.
+examples:
+- title: 'Example 1: Get backup file specifications for a backup policy'
+  description: |-
+    ```
+    PS C:\> $Filespeclist = Get-WBFileSpec -Policy $Policy
+    ```
+
+    This command gets the list of file specifications in the **WBPolicy** object in the variable named $Policy and assigns them to the $Filespeclist array.
+links:
+- text: Add-WBFileSpec
+  href: ./Add-WBFileSpec.yml
+- text: Get-WBFileSpec
+  href: ./Get-WBFileSpec.yml
+- text: New-WBPolicy
+  href: ./New-WBPolicy.yml
+- text: Remove-WBFileSpec
+  href: ./Remove-WBFileSpec.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/get-wbfilespec?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WBFileSpec

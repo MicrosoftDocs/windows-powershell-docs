@@ -1,0 +1,232 @@
+### YamlMime:PowerShellCmdlet1
+uid: BootEventCollector.Disable-SbecBcd
+name: Disable-SbecBcd
+module: BootEventCollector
+isPreview: false
+summary: |-
+  Disables the event forwarding mode in BCD settings.
+description: |-
+  The **Disable-SbecBcd** cmdlet disables the Boot Configuration Data (BCD) */event* flag.
+  This operation has no effect on the current connections; you must reboot the computer for the settings to take effect.
+
+  You can apply these changes to the local computer, to a remote computer, or to an offline disk image.
+
+  To operate on a local computer, specify the *Local* parameter.
+  Enabling forwarding on the computer that runs the Collector service makes sense only if it sends the data to a Collector on a different computer.
+  Otherwise, the in-kernel module is not able to connect to the Collector.
+  However, you can copy the PowerShell BootEventCollector module to the other computers, where you can use it for local configuration.
+
+  To operate on a remote computer, specify either the *ComputerName* or *Session* parameter.
+  Windows PowerShell remoting is used to perform the remote operations.
+
+  To operate on an offline (WIM or VHD) image, use the *Path* parameter.
+  WIM images do not normally contain the BCD files, and there is rarely a need to replace them there.
+  Instead, Windows Setup creates the BCD settings when it extracts the image from WIM to the hard drive.
+parameters:
+  cmdletParameters:
+  - name: BcdStore
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path of the BCD store.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Local
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the names of the computers on which you want to perform the operation.
+      You can specify a fully qualified domain name (FQDN), a NetBIOS name, or an IP address for each computer.
+      For more information, see [Invoke-CimMethod](https://go.microsoft.com/fwlink/?LinkId=808801) on TechNet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Online
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user account that has permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Online
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DismLogPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the file for the Deployment Image Servicing and Management (DISM) log when mounting images.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Offline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the entry to disable, without the curly braces.
+
+      The BCD settings may contain entries for multiple boot images (when a computer has multiple operating system versions installed).
+      When the settings for an operating system other than the currently running one (or the default operating system in an offline image) must be modified, you can use this parameter to select the entry.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Local
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation occurs on the local computer.
+      This mode also allows the extra control over the BCD store of where the settings are applied.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Local
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the list of full paths to the offline Windows image files (WIM or VHD) to which to apply the settings.
+      If a WIM file contains multiple images, all of them are modified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Offline
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Session
+    type: <xref href="PSSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the **PSSession** objects connected to the remote target computers.
+      Enter a session object, such as the output of the **Get-PSSession** or **New-PSSession** cmdlet, or an array of these objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: OnlineSession
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-SbecBcd
+        -Path <String[]>
+        [-Id <String>]
+        [-DismLogPath <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Offline
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Disable-SbecBcd
+        -ComputerName <String[]>
+        [-Credential <PSCredential>]
+        [-Id <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Online
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Disable-SbecBcd
+        -Session <PSSession[]>
+        [-Id <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: OnlineSession
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Disable-SbecBcd
+        [-Local]
+        [-BcdStore <String>]
+        [-Id <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Local
+  isDefault: false
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Disable BCD'
+  description: |-
+    ```
+    PS C:\> Disable-SbecBcd -Session $MyPSSession
+    ```
+
+    This command disables the BCD settings on a remote session.
+links:
+- text: Disable-SbecAutologger
+  href: ./Disable-SbecAutologger.yml
+- text: Enable-SbecAutologger
+  href: ./Enable-SbecAutologger.yml
+- text: Enable-SbecBcd
+  href: ./Enable-SbecBcd.yml
+- text: Enable-SbecBootImage
+  href: ./Enable-SbecBootImage.yml
+- text: Enable-SbecWdsBcd
+  href: ./Enable-SbecWdsBcd.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: BootEventCollector-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/booteventcollector/disable-sbecbcd?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Disable-SbecBcd

@@ -1,0 +1,100 @@
+### YamlMime:PowerShellCmdlet1
+uid: ShieldedVMTemplate.Initialize-VMShieldingHelperVHD
+name: Initialize-VMShieldingHelperVHD
+module: ShieldedVMTemplate
+isPreview: false
+summary: |-
+  Initializes a VHD for use as a shielding utility disk in a guarded fabric.
+description: |-
+  The **Protect-TemplateDisk** cmdlet initializes a virtual hard disk (VHD) for use as a shielding utility disk in a guarded fabric.
+
+  Utility VHDs contain the software needed to shield an existing VM on a guarded fabric.
+  A supported operating system must be installed on the disk before initializing it as a shielding helper VHD.
+
+  For more information about preparing a shielding helper VHD, see Shielded VMs - Hosting service provider prepares a VM Shielding Helper VHDhttps://technet.microsoft.com/en-us/windows-server-docs/security/guarded-fabric-shielded-vm/guarded-fabric-vm-shielding-helper-vhd at https://go.microsoft.com/fwlink/?linkid=832557.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the .vhdx file to initialize.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Initialize-VMShieldingHelperVHD
+        -Path <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Initialize a virtual hard disk'
+  description: |-
+    ```
+    PS C:\>Initialize-VMShieldingHelperVHD -Path "C:\temp\ShieldedVMUtility.vhdx"
+    ```
+links:
+- text: Protect-TemplateDisk
+  href: ./Protect-TemplateDisk.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/shieldedvmtemplate/initialize-vmshieldinghelpervhd?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ShieldedVMTemplate
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Initialize-VMShieldingHelperVHD

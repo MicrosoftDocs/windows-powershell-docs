@@ -1,5 +1,7 @@
 items:
-  - name: Windows 2019 PowerShell modules
-    href: get-started.md
-  - name: PowerShell 7 compatibility in Windows Server 2019
-    href: module-compatibility.md
+- name: Windows 2019 PowerShell modules
+  href: get-started.md
+- name: PowerShell 7 compatibility in Windows Server 2019
+  href: module-compatibility.md
+metadata:
+  universal_ref_toc: /powershell/module/WindowsServer2019-ps/toc.json

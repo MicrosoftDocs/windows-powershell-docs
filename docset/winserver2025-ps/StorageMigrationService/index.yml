@@ -1,0 +1,55 @@
+### YamlMime:PowerShellModule1
+uid: StorageMigrationService
+name: StorageMigrationService Module
+isPreview: false
+cmdletGroups:
+- title: StorageMigrationService Cmdlets
+  cmdlets:
+  - StorageMigrationService.Get-SmsCutover
+  - StorageMigrationService.Get-SmsCutoverPairing
+  - StorageMigrationService.Get-SmsCutoverStages
+  - StorageMigrationService.Get-SmsDestinationConfig
+  - StorageMigrationService.Get-SmsInventory
+  - StorageMigrationService.Get-SmsNasPrescan
+  - StorageMigrationService.Get-SmsProxy
+  - StorageMigrationService.Get-SmsState
+  - StorageMigrationService.Get-SmsTransfer
+  - StorageMigrationService.Get-SmsTransferPairing
+  - StorageMigrationService.Get-SmsVersion
+  - StorageMigrationService.New-SmsCutover
+  - StorageMigrationService.New-SmsInventory
+  - StorageMigrationService.New-SmsNasPrescan
+  - StorageMigrationService.New-SmsTransfer
+  - StorageMigrationService.Register-SmsProxy
+  - StorageMigrationService.Remove-SmsCutover
+  - StorageMigrationService.Remove-SmsCutoverPairing
+  - StorageMigrationService.Remove-SmsInventory
+  - StorageMigrationService.Remove-SmsTransfer
+  - StorageMigrationService.Remove-SmsTransferPairing
+  - StorageMigrationService.Resume-SmsCutover
+  - StorageMigrationService.Set-SmsCutover
+  - StorageMigrationService.Set-SmsCutoverPairing
+  - StorageMigrationService.Set-SmsInventory
+  - StorageMigrationService.Set-SmsTransfer
+  - StorageMigrationService.Set-SmsTransferPairing
+  - StorageMigrationService.Start-SmsCutover
+  - StorageMigrationService.Start-SmsInventory
+  - StorageMigrationService.Start-SmsNasPrescan
+  - StorageMigrationService.Start-SmsTransfer
+  - StorageMigrationService.Stop-SmsCutover
+  - StorageMigrationService.Stop-SmsInventory
+  - StorageMigrationService.Stop-SmsTransfer
+  - StorageMigrationService.Test-SmsMigration
+  - StorageMigrationService.Unregister-SmsProxy
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: 2e8f70fe-6df9-468b-922a-f83e5380bf63
+  Module Name: StorageMigrationService
+  ms.date: 02/21/2024
+  title: StorageMigrationService module
+  PlatyPS schema version: 2024-05-01
+  document type: module

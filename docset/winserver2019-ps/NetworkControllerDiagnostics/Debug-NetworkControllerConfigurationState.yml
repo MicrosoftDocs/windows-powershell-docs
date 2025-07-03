@@ -1,0 +1,151 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkControllerDiagnostics.Debug-NetworkControllerConfigurationState
+name: Debug-NetworkControllerConfigurationState
+module: NetworkControllerDiagnostics
+isPreview: false
+summary: |-
+  Queries for resources in a failure or warning state.
+description: |-
+  The **Debug-NetworkControllerConfigurationState** cmdlet queries for resources that are in a failure or warning state.
+  This cmdlet queries the Network Controller to see if there are any tenant or fabric resources that are in a failure or warning configuration state based on the actual configuration state of the component.
+  This cmdlet also returns detailed information that contains the source of the error, a message, and error code.
+
+  You can run this cmdlet from a computer that has Layer-3 connectivity to the Representational State Transfer (REST) IP address of the Network Controller.
+  The computer must have the Network Controller REST certificate installed.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate thumbprint to use for the Network Controller.
+      Specify this parameter for certificate deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a credential to use for the Network Controller.
+      To obtain a **PSCredential** object, use the Get-Credential cmdlet.
+      Specify this parameter for Kerberos deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkController
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name or IP address of a Network Controller node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a REST resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a REST Resource type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestURI
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URI to use for Network Controller REST APIs.
+      Specify this parameter for wildcard certificate deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Debug-NetworkControllerConfigurationState
+        [-NetworkController] <String>
+        [[-ResourceId] <String>]
+        [[-ResourceType] <String>]
+        [[-Credential] <PSCredential>]
+        [[-RestURI] <String>]
+        [[-CertificateThumbprint] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Query configuration state for REST resources'
+  description: |-
+    ```
+    PS C:\>Debug-NetworkControllerConfigurationState -NetworkController 10.123.177.94
+    ```
+
+    This command queries configuration state for all REST resources for the specified Network Controller.
+links:
+- text: Debug-NetworkController
+  href: ./Debug-NetworkController.yml
+- text: Debug-ServiceFabricNodeStatus
+  href: ./Debug-ServiceFabricNodeStatus.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Debug-NetworkControllerConfigurationState-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontrollerdiagnostics/debug-networkcontrollerconfigurationstate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkControllerDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Debug-NetworkControllerConfigurationState

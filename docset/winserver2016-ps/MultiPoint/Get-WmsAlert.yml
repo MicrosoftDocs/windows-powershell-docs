@@ -1,0 +1,72 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Get-WmsAlert
+name: Get-WmsAlert
+module: MultiPoint
+isPreview: false
+summary: |-
+  Gets alert information.
+description: |-
+  The **Get-WmsAlert** cmdlet gets alert information from the Windows MultiPoint Server core service.
+parameters:
+  cmdletParameters:
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+      The default is localhost.
+    aliases:
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WmsAlert
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <span>undefined</span>
+  description: |-
+    This cmdlet returns a **WmsAlert** collection as a **PSObject** collection.
+examples:
+- title: 'Example 1: Get alert information'
+  description: |-
+    ```
+    PS C:\> Get-WmsAlert
+    TimeStampInUtc : 12/7/2010 12:17:15 AM
+    AlertType      : HubMissingRequiredDevice
+    AlertSeverity  : Warning
+    ComputerName   : TEST
+    StationId      : 1
+    ```
+
+    This cmdlet returns alert information from the MultiPoint Server core service.
+    In this example, station 1 is missing a keyboard.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/get-wmsalert?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WmsAlert

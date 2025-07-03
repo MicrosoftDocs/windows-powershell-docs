@@ -1,0 +1,253 @@
+### YamlMime:PowerShellCmdlet1
+uid: MSMQ.New-MsmqQueue
+name: New-MsmqQueue
+module: MSMQ
+isPreview: false
+summary: |-
+  Creates public or private queues.
+description: |-
+  The **New-MsmqQueue** cmdlet creates public or private queues.
+  The cmdlet returns **System.Messaging.MessageQueue** objects that represent the new queues.
+  If you do not specify *QueueType* parameter, the cmdlet creates a private queue.
+parameters:
+  cmdletParameters:
+  - name: Authenticate
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the queue accepts only authenticated messages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Journaling
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that received messages are copied to the journal queue.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JournalQuota
+    type: <xref href="Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum size of the journal queue.
+      Specify a value in kilobytes.
+      If you do not specify a value, this cmdlet uses the default journal queue quota.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Label
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a label.
+      The label that this parameter specifies describes the queue.
+      The default value is an empty string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MulticastAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the multicast address associated with the queue.
+      If you do not specify a multicast address, the cmdlet does not assign a multicast address to this queue.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of queues.
+      This parameter specifies friendly names of queues.
+      This parameter does not support wildcard characters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivacyLevel
+    type: <xref href="EncryptionRequired" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the privacy level associated with the queue.
+      The default value is Optional.
+    acceptedValues:
+    - None
+    - Optional
+    - Body
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QueueQuota
+    type: <xref href="Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum size, in kilobytes, of the queue.
+      If you do not specify a value, this cmdlet uses the default queue quota.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QueueType
+    type: <xref href="MSMQQueueType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a queue type.
+      The acceptable values for this parameter are:
+
+      - Private.
+      The cmdlet creates a private queue with the name that the *Name* parameter specifies.
+      - Public.
+      The cmdlet creates a public queue with the name that the *Name* parameter specifies.
+
+      The default value is Private.
+    acceptedValues:
+    - Private
+    - Public
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Transactional
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet creates a transactional queue at the specified path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-MsmqQueue
+        [-Name] <String[]>
+        [-QueueType <MSMQQueueType>]
+        [-Transactional]
+        [-Label <String>]
+        [-Authenticate]
+        [-Journaling]
+        [-QueueQuota <Int64>]
+        [-JournalQuota <Int64>]
+        [-PrivacyLevel <EncryptionRequired>]
+        [-MulticastAddress <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a public queue'
+  description: |-
+    ```
+    PS C:\> New-MsmqQueue -Name "OrderQueue" -QueueType Public
+    ```
+
+    This command creates a public queue named OrderStatus.
+- title: 'Example 2: Create a private queue for authenticated messages'
+  description: |-
+    ```
+    PS C:\> New-MsmqQueue -Name "OrderQueue" -Authenticate -MulticastAddress "234.12.3:8001" -QueueQuota 200000
+    ```
+
+    This command creates a private queue named OrderQueue.
+    The queue accepts only authenticated messages.
+    The command specifies a quota size for the queue.
+links:
+- text: Clear-MsmqQueue
+  href: ./Clear-MSMQQueue.yml
+- text: Get-MsmqQueue
+  href: ./Get-MsmqQueue.yml
+- text: Receive-MsmqQueue
+  href: ./Receive-MsmqQueue.yml
+- text: Remove-MsmqQueue
+  href: ./Remove-MsmqQueue.yml
+- text: Send-MsmqQueue
+  href: ./Send-MsmqQueue.yml
+- text: Set-MsmqQueue
+  href: ./Set-MsmqQueue.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/msmq/new-msmqqueue?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-MsmqQueue

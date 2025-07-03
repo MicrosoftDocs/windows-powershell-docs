@@ -1,0 +1,145 @@
+### YamlMime:PowerShellCmdlet1
+uid: UpdateServices.Approve-WsusUpdate
+name: Approve-WsusUpdate
+module: UpdateServices
+isPreview: false
+summary: |-
+  Approves an update to be applied to clients.
+description: |-
+  The **Approve-WsusUpdate** cmdlet approves an update to be applied to clients. This operation requires Windows Server Update Services (WSUS) Administrator privileges.
+
+  To use this cmdlet, run the [Get-WsusUpdate](./Get-WsusUpdate.yml) cmdlet and pipe the resulting **WsusUpdate** object into this cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="UpdateApprovalAction" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the action that clients should perform when applying the associated update. The acceptable values for this parameter are:
+
+      - Install
+      - NotApproved
+      - Uninstall
+    acceptedValues:
+    - Install
+    - Uninstall
+    - NotApproved
+    - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the computer target group for which to run this cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Update
+    type: <xref href="WsusUpdate" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the object that contains the server of the update to be approved or denied as well as the update to be approved or denied. This value is obtained by running the **Get-WsusUpdate** cmdlet and passing the resulting **WsusUpdate** object into this cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Approve-WsusUpdate
+        -Update <WsusUpdate>
+        -Action <UpdateApprovalAction>
+        -TargetGroupName <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.UpdateServices.Commands.WsusUpdate" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Approve updates'
+  description: |-
+    ```powershell
+    PS C:\> Get-WsusUpdate -Classification All -Approval Unapproved -Status FailedOrNeeded | Approve-WsusUpdate -Action Install -TargetGroupName "All Computers"
+    ```
+
+    This command approves for installation all unapproved updates with a status of failed or needed.
+links:
+- text: Deny-WsusUpdate
+  href: ./Deny-WsusUpdate.yml
+- text: Get-WsusUpdate
+  href: ./Get-WsusUpdate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/updateservices/approve-wsusupdate?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: UpdateServices
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Approve-WsusUpdate

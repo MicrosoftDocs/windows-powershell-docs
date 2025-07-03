@@ -1,0 +1,162 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Add-ClusterExcludedAdapter
+name: Add-ClusterExcludedAdapter
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Adds a network adapter to the list of excluded adapters.
+description: |-
+  The `Add-ClusterExcludedAdapter` cmdlet adds a network adapter to a list of network adapters that
+  should be excluded from use by the Failover Cluster. By default, the cluster will use all available
+  network adapters, but in some cases you may want to reserve certain adapters as backup or
+  management, such as Dell iDRAC or HPE iLO.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to
+      complete.
+
+      The cmdlet immediately returns an object that represents the job and then displays the command
+      prompt. You can continue to work in the session while the job completes.
+
+      For more information about Windows PowerShell background jobs, see
+      [about_Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+      object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+      or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
+      current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExclusionType
+    type: <xref href="AdapterExclusionType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of exclusion to add to the cluster. Acceptable values are:
+
+      - `IPPrefix`: Excludes a network adapter based on its IP address.
+      - `Description`: Excludes a network adapter based on its description.
+      - `FriendlyName`: Excludes a network adapter based on its friendly name.
+    acceptedValues:
+    - IPPrefix
+    - Description
+    - FriendlyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExclusionValue
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the value to use for the exclusion. The value of this parameter depends on the value of
+      the `-ExclusionType` parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If
+      this parameter is omitted or a value of `0` is entered, then PowerShell calculates an optimum
+      throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-ClusterExcludedAdapter
+        -ExclusionType <AdapterExclusionType>
+        -ExclusionValue <String[]>
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Add-ClusterExcludedAdapter -ExclusionType "IPPrefix" -ExclusionValue "10.10.20.25"
+    ```
+
+    This example excludes the network adapter based on the IP Address `10.10.20.25` from use by the
+    cluster.
+links:
+- text: Get-ClusterExcludedAdapter
+  href: get-clusterexcludedadapter.yml
+- text: Remove-ClusterExcludedAdapter
+  href: remove-clusterexcludedadapter.yml
+- text: Repair-ClusterNameAccount
+  href: repair-clusternameaccount.yml
+- text: Set-ClusterExcludedAdapter
+  href: set-clusterexcludedadapter.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/add-clusterexcludedadapter?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 08/28/2024
+  PlatyPS schema version: 2024-05-01
+  title: Add-ClusterExcludedAdapter

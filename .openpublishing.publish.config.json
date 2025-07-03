@@ -13,7 +13,7 @@
     ],
     "dependent_repositories": [
         {
-            "branch": "main",
+            "branch": "pr-993197",
             "branch_mapping": {},
             "path_to_root": "_themes",
             "url": "https://github.com/Microsoft/templates.docs.msft"
@@ -37,9 +37,6 @@
             },
             "docset_name": "windows-powershell",
             "locale": "en-us",
-            "monikerPath": [
-                "mapping/MAML2Yaml/monikerMapping.json"
-            ],
             "moniker_ranges": [],
             "monikers": [],
             "open_to_public_contributors": true,

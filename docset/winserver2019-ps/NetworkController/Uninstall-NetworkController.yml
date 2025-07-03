@@ -1,0 +1,174 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkController.Uninstall-NetworkController
+name: Uninstall-NetworkController
+module: NetworkController
+isPreview: false
+summary: |-
+  Removes the network controller application deployed on a network controller cluster.
+description: |-
+  The **Uninstall-NetworkController** cmdlet removes the network controller application deployed on a network controller cluster.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+      Specify the certificate thumbprint of the certificate.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the network controller node on which this cmdlet operates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user credential that has permission to perform this action.
+      The default is the current user.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseSsl
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the remote computer uses the Secure Sockets Layer (SSL) protocol to establish a connection to the Network Controller node.
+      The default value of this parameter is false.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Uninstall-NetworkController
+        [-Force]
+        [-ComputerName <String>]
+        [-UseSsl]
+        [-Credential <PSCredential>]
+        [-CertificateThumbprint <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Remove a network controller application'
+  description: |-
+    This command removes the network controller application.
+    The computer Node01.Contoso.com must be a node in the network controller cluster.
+    If you do not specify a computer name, this cmdlet removes the network controller application on the local computer.
+
+
+    ```
+    PS C:\> Uninstall-NetworkController -ComputerName "Node01.Contoso.com"
+    ```
+links:
+- text: Get-NetworkController
+  href: ./Get-NetworkController.yml
+- text: Install-NetworkController
+  href: ./Install-NetworkController.yml
+- text: Set-NetworkController
+  href: ./Set-NetworkController.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontroller/uninstall-networkcontroller?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Uninstall-NetworkController

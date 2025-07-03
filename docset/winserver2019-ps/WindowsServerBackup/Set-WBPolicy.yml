@@ -1,0 +1,187 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Set-WBPolicy
+name: Set-WBPolicy
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Sets the backup policy for scheduled backups.
+description: |-
+  The **Set-WBPolicy** cmdlet sets a **WBPolicy** object as the backup policy for scheduled backups.
+
+  To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
+notes: |-
+  * The **WBPolicy** object must be in edit mode. To put the **WBPolicy** object in edit mode for a policy that is set as the scheduled backup policy, use the Get-WBPolicy cmdlet with the *Editable* parameter. The New-WBPolicy cmdlet creates a **WBPolicy** object in edit mode.
+parameters:
+  cmdletParameters:
+  - name: AllowDeleteOldBackups
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether new backups can overwrite older backups.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **WBPolicy** object that contains that contains a backup policy that this cmdlet updates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WBPolicy
+        [-Policy] <WBPolicy>
+        [-Force]
+        [-AllowDeleteOldBackups]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    The **Set-WBPolicy** cmdlet sets a **WBPolicy** object as the current backup policy to use for scheduled backups.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    None
+examples:
+- title: 'Example 1: Set a backup policy'
+  description: |-
+    ```
+    The first command creates a backup policy object and stores it in the $Policy variable.
+    PS C:\> $Policy = New-WBPolicy
+
+    The second command creates a file specification object and stores the result in the $FileSpec variable. A file specification determines what items to include or exclude from backups.
+    PS C:\> $FileSpec = New-WBFileSpec -FileSpec "C:\dir1"
+
+    The third command adds a Windows Backup file specification to the backup policy.
+    PS C:\> Add-WBFileSpec -Policy $Policy -FileSpec $FileSpec
+
+    The fourth command adds bare metal recovery to the policy.
+    PS C:\> Add-WBBareMetalRecovery $Policy
+
+    The fifth command gets the Windows Backup disk configuration. This cmdlet gets the list of internal and external disks available for the local computer and stores the resulting list in the $Disks variable.
+    PS C:\> $Disks = Get-WBDisk
+
+    The sixth command creates a backup target object and stores it in the $BackupLocation variable.
+    PS C:\> $BackupLocation = New-WBBackupTarget -Disk $Disks[2]
+
+    The seventh command adds a backup target. The $BackupLocation variable specifies the backup locations in the policy.
+    PS C:\> Add-WBBackupTarget -Editable -Policy $Policy -Target $BackupLocation
+
+    The eighth command sets the backup schedule in the policy. The cmdlet sets the times to create daily backups.
+    PS C:\> Set-WBSchedule -Policy $Policy 09:00
+
+    The ninth command sets the backup policy object for the computer.
+    PS C:\> Set-WBPolicy -Policy $Policy
+    ```
+
+    This example sets a new backup policy.
+- title: 'Example 2: Set backup policy by using a remote shared file'
+  description: |-
+    ```
+    The first command gets the backup policy object and stores it in the $Policy variable.
+    PS C:\> $Policy = Get-WBPolicy -Editable
+
+    The second command creates a backup target object and stores it in the $BackupLocation variable. When you are prompted, specify the credentials to access the remote shared folder and acknowledge the warning about choosing a remote shared folder as a backup storage location.
+    PS C:\> $BackupLocation = New-WBBackupTarget -NetworkPath "\\ContosoSrv\ContosoShared"
+
+    The third command adds a backup target to the policy. The target is the $BackupLocation variable.
+    PS C:\> Add-WBBackupTarget -Policy $policy -Target $BackupLocation
+
+    The fourth command sets backup policy object from the changes to the $Policy variable.
+    PS C:\> Set-WBPolicy -Policy $Policy
+    ```
+
+    This example modifies the backup policy for the set **WBPolicy** object and changes the backup location to a remote file share.
+links:
+- text: Get-WBPolicy
+  href: ./Get-WBPolicy.yml
+- text: New-WBPolicy
+  href: ./New-WBPolicy.yml
+- text: Remove-WBPolicy
+  href: ./Remove-WBPolicy.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/set-wbpolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WBPolicy

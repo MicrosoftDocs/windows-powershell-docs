@@ -1,0 +1,82 @@
+### YamlMime:PowerShellCmdlet1
+uid: HardwareCertification.Import-HwCertTestCollectionFromXml
+name: Import-HwCertTestCollectionFromXml
+module: HardwareCertification
+isPreview: false
+summary: |-
+  Imports a test collection from an .xml file.
+description: |-
+  The **Import-HwCertTestCollectionFromXml** cmdlet imports a test collection from an .xml file.
+  For more information, see [Windows Hardware Certification Kit downloads](https://go.microsoft.com/fwlink/?LinkId=614978) in the Microsoft Developer Network (MSDN) Library.
+
+  After you import a test collection, you can filter it by using **TestCollectionRecord** properties, and then use the **Export-HwCertTestCollectionToXml** cmdlet to export the filtered test collection.
+parameters:
+  cmdletParameters:
+  - name: LiteralPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a full path.
+      This is the file path to the test collection .xml file.
+    aliases:
+    - XML
+    - Input
+    - Path
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Import-HwCertTestCollectionFromXml
+        [-LiteralPath] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Filter a test collection'
+  description: |-
+    ```
+    PS C:\> Import-HwCertTestCollectionFromXml -Input "C:\Temp\All.xml" | Where-Object { $_.ContentLevelSet.Contains("Basic") }
+    ```
+
+    This command imports a test collection, and then finds the results that belong to a specified content level.
+    The command imports a test collection named All.xml, as a **TestCollectionRecord** object, and then passes that object to the **Where-Object** cmdlet by using the pipeline operator.
+    The **Where-Object** cmdlet filters the imported object for results that belong to the Basic content level.
+    For more information, type `Get-Help Where-Object`.
+- title: 'Example 2: Filter a test collection and export the results to a new test collection'
+  description: |-
+    ```
+    PS C:\> Import-HwCertTestCollectionFromXml -Input "C:\Temp\All.xml" | Where-Object { $_.ContentLevelSet.Contains("Basic") } | Export-HwCertTestCollectionToXml -Output "C:\Temp\Basic.xml"
+    ```
+
+    This command imports a test collection, finds the results that belong to a specified content level, and exports a new test collection .xml file that contains only those results.
+    The command imports a test collection named All.xml, as a **TestCollectionRecord** object, and then passes that object to the **Where-Object** cmdlet by using the pipeline operator.
+    The **Where-Object** cmdlet filters the imported object for results that belong to the Basic content level.
+    For more information, type `Get-Help Where-Object`.
+    The command then passes those items to the **Export-HwCertTestCollectionToXml** cmdlet, which exports the test collection to the file named Basic.xml.
+links:
+- text: Export-HwCertTestCollectionToXml
+  href: ./Export-HwCertTestCollectionToXml.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: microsoft.windows.kits.hardware.certification.management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hardwarecertification/import-hwcerttestcollectionfromxml?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: HardwareCertification
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Import-HwCertTestCollectionFromXml

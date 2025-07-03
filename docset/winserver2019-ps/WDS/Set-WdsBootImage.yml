@@ -1,0 +1,356 @@
+### YamlMime:PowerShellCmdlet1
+uid: WDS.Set-WdsBootImage
+name: Set-WdsBootImage
+module: WDS
+isPreview: false
+summary: |-
+  Modifies settings of a boot image.
+description: |-
+  The **Set-WdsBootImage** cmdlet modifies information associated with a boot image in the Windows Deployment Services image store.
+  You can use the cmdlet to change the name and description of the boot image, set the display order in the boot menu, and enable the boot image for multicast transmissions.
+
+  Specify the boot image by using the *ImageName* and *Architecture* parameters.
+  If the image name and architecture do not uniquely identify the image, also specify the *FileName* parameter.
+parameters:
+  cmdletParameters:
+  - name: Architecture
+    type: <xref href="Architecture" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an architecture.
+      This is the architecture of the boot image.
+      Because you can use the same image name for boot images in different architectures, specify this parameter to make sure that you modify the correct image.
+      The acceptable values for this parameter are:
+
+      - ARM
+      - ia64
+      - x64
+      - x86
+    acceptedValues:
+    - X86
+    - Ia64
+    - X64
+    - Arm
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job.
+      Use this parameter to run commands that take a long time to complete.
+       The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+      You can continue to work in the session while the job completes.
+      To manage the job, use the `*-Job` cmdlets.
+      To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+       For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayOrder
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the order in which images appear in the boot menu on Pre-Boot Execution Environment (PXE) clients.
+      The menu lists the boot images in ascending order, smallest number to largest number.
+
+      If two boot images have the same display order, the imported images appear in alphabetical order of file name.
+      If you do not specify this parameter, the imported images appear in the middle of the list.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a file name.
+      This is the file name of the boot image.
+      Use this parameter to specify the file name for the boot image if the boot image name does not uniquely identify the image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+
+      If you specify this parameter, the cmdlet disconnects any clients connected to the multicast transmission.
+      If you do not specify this parameter, and you specified the *Multicast* parameter to enable an autocast transmission of the image, existing clients finish receiving the content, but no additional clients can join the multicast transmission.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopMulticastTransmission
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an image.
+      This is the name of the image to modify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Multicast
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet enables an autocast transmission of the image.
+      If you do not specify the *TransmissionName* parameter, Windows Deployment Services uses the image name of the imported image for the multicast.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AutoStart
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NewDescription
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a new description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NewImageName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StopMulticastTransmission
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet stops the multicast transmission of the image.
+
+      If you specify the *Force* parameter, the cmdlet disconnects any clients connected to the multicast transmission.
+      If you do not specify the *Force* parameter, and the transmission is autocast, current clients finish receiving the content, but no additional clients can join the transmission.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopMulticastTransmission
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TransmissionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the multicast transmission.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AutoStart
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WdsBootImage
+        -ImageName <String>
+        -Architecture <Architecture>
+        [-NewImageName <String>]
+        [-NewDescription <String>]
+        [-DisplayOrder <UInt32>]
+        [-FileName <String>]
+        [-StopMulticastTransmission]
+        [-Force]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StopMulticastTransmission
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-WdsBootImage
+        -ImageName <String>
+        -Architecture <Architecture>
+        [-NewImageName <String>]
+        [-NewDescription <String>]
+        [-DisplayOrder <UInt32>]
+        [-FileName <String>]
+        [-Multicast]
+        [-TransmissionName <String>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AutoStart
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-WdsBootImage
+        -ImageName <String>
+        -Architecture <Architecture>
+        [-NewImageName <String>]
+        [-NewDescription <String>]
+        [-DisplayOrder <UInt32>]
+        [-FileName <String>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BootImageName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#MSFT_WdsBootImage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Change boot image settings'
+  description: |-
+    ```
+    PS C:\> Set-WdsBootImage -Architecture x86 -ImageName " Fabrikam LOB setup (x86)" -DisplayOrder 2 -NewImageName " Fabrikam LOB setup with re-partitioning (x86)" -NewDescription "Choose this image to re-partition the disk, and install Fabrikam LOB on computers with x86 processors."
+    ```
+
+    This command changes the settings of the boot image named Fabrikam LOB setup (x86) for the x86 architecture.
+    The command sets the display order of the boot image on the boot menu on PXE clients, and specifies a new name and description for the boot image.
+- title: 'Example 2: Start a multicast transmission of a boot image'
+  description: |-
+    ```
+    PS C:\> Set-WdsBootImage -Architecture x86 -ImageName " Fabrikam LOB setup (x86)" -Multicast -TransmissionName "Custom WinPE multicast"
+    ```
+
+    This command starts a multicast transmission of the boot image named Fabrikam LOB setup (x86) for the x86 architecture.
+    The command specifies that the multicast transmission is named Custom WinPE multicast.
+- title: 'Example 3: Stop a multicast transmission of a boot image'
+  description: |-
+    ```
+    PS C:\> Set-WdsBootImage -Architecture x86 -ImageName "Fabrikam LOB setup (x86)" -StopMulticastTransmission -Force
+    ```
+
+    This command stops a multicast transmission of the boot image named Fabrikam LOB setup (x86) for the x86 architecture.
+    The *Force* parameter specifies that the cmdlet disconnects any clients connected to the multicast transmission.
+links:
+- text: Get-WdsBootImage
+  href: ./Get-WdsBootImage.yml
+- text: Enable-WdsBootImage
+  href: ./Enable-WdsBootImage.yml
+- text: Disable-WdsBootImage
+  href: ./Disable-WdsBootImage.yml
+- text: Remove-WdsBootImage
+  href: ./Remove-WdsBootImage.yml
+- text: Import-WdsBootImage
+  href: ./Import-WdsBootImage.yml
+- text: Export-WdsBootImage
+  href: ./Export-WdsBootImage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MSFT_WdsBootImage_v1.0.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/wds/set-wdsbootimage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: WDS
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WdsBootImage

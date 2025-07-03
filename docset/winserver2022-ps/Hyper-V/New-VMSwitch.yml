@@ -1,0 +1,364 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.New-VMSwitch
+name: New-VMSwitch
+module: Hyper-V
+isPreview: false
+summary: |-
+  Creates a new virtual switch on one or more virtual machine hosts.
+description: |-
+  The **New-VMSwitch** cmdlet creates a new virtual switch on one or more virtual machine hosts.
+parameters:
+  cmdletParameters:
+  - name: AllowManagementOS
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the parent partition (i.e.
+      the management operating system) is to have access to the physical NIC bound to the virtual switch to be created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NetAdapterName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NetAdapterInterfaceDescription
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts on which the virtual switch is to be created.
+      NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+      The default is the local computer.
+      Use localhost or a dot (.) to specify the local computer explicitly.
+    aliases:
+    - PSComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableEmbeddedTeaming
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether this cmdlet enables teaming for the virtual switch.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableIov
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that IO virtualization is to be enabled on the virtual switch to be created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnablePacketDirect
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether this cmdlet enables the packet direct path through the virtual switch.
+      The default value is $False.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimumBandwidthMode
+    type: <xref href="VMSwitchBandwidthMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how minimum bandwidth is to be configured on the virtual switch.
+      Allowed values are **Absolute**, **Default**, **None**, or **Weight**.
+      If **Absolute** is specified, minimum bandwidth is bits per second.
+      If **Weight** is specified, minimum bandwidth is a value ranging from 1 to 100.
+      If **None** is specified, minimum bandwidth is disabled on the switch - that is, users cannot configure it on any network adapter connected to the switch.
+      If **Default** is specified, the system will set the mode to **Weight**, if the switch is not IOV-enabled, or **None** if the switch is IOV-enabled.
+    acceptedValues:
+    - Default
+    - Weight
+    - Absolute
+    - None
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the switch to be created.
+    aliases:
+    - SwitchName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetAdapterInterfaceDescription
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the interface description of the network adapter to be bound to the switch to be created.
+      You can use the **Get-NetAdapter** cmdlet to get the interface description of a network adapter.
+    aliases:
+    - InterfaceDescription
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NetAdapterInterfaceDescription
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetAdapterName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the network adapter to be bound to the switch to be created.
+      You can use the **Get-NetAdapter** cmdlet to get the interface description of a network adapter.
+    aliases:
+    - InterfaceAlias
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NetAdapterName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Notes
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a note to be associated with the switch to be created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SwitchType
+    type: <xref href="VMSwitchType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of the switch to be created.
+      Allowed values are **Internal** and **Private**.
+      To create an External virtual switch, specify either the **NetAdapterInterfaceDescription** or the **NetAdapterName** parameter, which implicitly set the type of the virtual switch to External.
+    acceptedValues:
+    - Internal
+    - Private
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SwitchType
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-VMSwitch
+        [-Name] <String>
+        -NetAdapterName <String[]>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-AllowManagementOS <Boolean>]
+        [-Notes <String>]
+        [-MinimumBandwidthMode <VMSwitchBandwidthMode>]
+        [-EnableIov <Boolean>]
+        [-EnablePacketDirect <Boolean>]
+        [-EnableEmbeddedTeaming <Boolean>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NetAdapterName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-VMSwitch
+        [-Name] <String>
+        -NetAdapterInterfaceDescription <String[]>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-AllowManagementOS <Boolean>]
+        [-Notes <String>]
+        [-MinimumBandwidthMode <VMSwitchBandwidthMode>]
+        [-EnableIov <Boolean>]
+        [-EnablePacketDirect <Boolean>]
+        [-EnableEmbeddedTeaming <Boolean>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NetAdapterInterfaceDescription
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-VMSwitch
+        [-Name] <String>
+        -SwitchType <VMSwitchType>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-Notes <String>]
+        [-MinimumBandwidthMode <VMSwitchBandwidthMode>]
+        [-EnableIov <Boolean>]
+        [-EnablePacketDirect <Boolean>]
+        [-EnableEmbeddedTeaming <Boolean>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SwitchType
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMSwitch" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> New-VMSwitch "QoS Switch" -NetAdapterName "Wired Ethernet Connection 3" -MinimumBandwidthMode Weight
+    ```
+
+    Creates a new switch QoS switch, which binds to a network adapter called Wired Ethernet Connection 3 and supports weight-based minimum bandwidth.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/new-vmswitch?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-VMSwitch

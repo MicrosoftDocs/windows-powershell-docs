@@ -1,0 +1,135 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteDesktop.Remove-RDServer
+name: Remove-RDServer
+module: RemoteDesktop
+isPreview: false
+summary: |-
+  Removes a server from a Remote Desktop deployment.
+description: |-
+  The **Remove-RDServer** cmdlet removes a specified Remote Desktop Services (RDS) server from a Remote Desktop deployment.
+  This cmdlet does not uninstall a server or server role.
+parameters:
+  cmdletParameters:
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Role
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an RDS role service name.
+      The acceptable values for this parameter are:
+
+      - RDS-VIRTUALIZATION.
+      Remote Desktop Virtualization Host (RD Virtualization Host).
+      - RDS-RD-SERVER.
+      Remote Desktop Session Host (RD Session Host).
+      - RDS-CONNECTION-BROKER.
+      RD Connection Broker.
+      - RDS-WEB-ACCESS.
+      Remote Desktop Web Access (RD Web Access).
+      - RDS-GATEWAY.
+      Remote Desktop Gateway (RD Gateway).
+      - RDS-LICENSING.
+      Remote Desktop Licensing (RD Licensing).
+    acceptedValues:
+    - RDS-CONNECTION-BROKER
+    - RDS-VIRTUALIZATION
+    - RDS-RD-SERVER
+    - RDS-WEB-ACCESS
+    - RDS-GATEWAY
+    - RDS-LICENSING
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the FQDN of the server to be removed from the Remote Desktop deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-RDServer
+        [-Server] <String>
+        [-Role] <String>
+        [[-ConnectionBroker] <String>]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <span>undefined</span>
+examples:
+- title: 'Example 1: Remove an RD Virtualization Host'
+  description: |-
+    ```
+    PS C:\> Remove-RDServer -Server "RDVH.Contoso.com" -Role "RDS-VIRTUALIZATION" -ConnectionBroker "RDCB.Contoso.com"
+    ```
+
+    This command removes an RD Virtualization Host server named RDVH.Contoso.com from the deployment that has an RD Connection Broker server named RDCB.Contoso.com.
+links:
+- text: Add-RDServer
+  href: ./Add-RDServer.yml
+- text: Get-RDServer
+  href: ./Get-RDServer.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/RemoteDesktop/remove-rdserver?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteDesktop
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-RDServer

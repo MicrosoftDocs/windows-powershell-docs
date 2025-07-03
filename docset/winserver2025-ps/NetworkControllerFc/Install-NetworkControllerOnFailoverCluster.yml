@@ -1,0 +1,278 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkControllerFc.Install-NetworkControllerOnFailoverCluster
+name: Install-NetworkControllerOnFailoverCluster
+module: NetworkControllerFc
+isPreview: false
+summary: |-
+  Installs NetworkController on a FailOver cluster. The user running this should be a part of the
+  Cluster Administrators group.
+description: |-
+  Installs Network Controller on a Windows FailOver Cluster..
+parameters:
+  cmdletParameters:
+  - name: ClientAuthentication
+    type: <xref href="ClientAuthentication" data-throw-if-not-resolved="False" />
+    description: |-
+      This the Client authentication Mode.
+    acceptedValues:
+    - None
+    - Kerberos
+    - X509
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: None
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterAuthentication
+    type: <xref href="ClusterAuthentication" data-throw-if-not-resolved="False" />
+    description: |-
+      This the Cluster authentication Mode.
+    acceptedValues:
+    - None
+    - Kerberos
+    - X509
+    defaultValue: X509
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterNetworkName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is the name of the cluster network to be used for the REST server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabasePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies path to the database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackagePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is a directory where the NetworkController installation package is present. By default this is
+      the NetworkController installation folder under %windir%\NetworkController. This can also be a
+      private package path.
+    defaultValue: $global:defaultBinaryDir
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestCertificateSubjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill RestCertificateSubjectName Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestCertificateThumbPrint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is the REST Server certificate Thumbprint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestClientCertificateSubjectNames
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      {{ Fill RestClientCertificateSubjectNames Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestClientCertificateThumbprints
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      {{ Fill RestClientCertificateThumbprints Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestClientSecurityGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is the client security group for Kerberos authentication by the REST server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Kerberos
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestIPAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is the Floating IP for the rest server. This is needed if multinode Deployment is used. When
+      this is specified this has to be in the IP/MASKLength format. Ex 10.10.0.1/24
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DNS name of the REST endpoint.
+    defaultValue: '[string]::Empty'
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Install-NetworkControllerOnFailoverCluster
+        -DatabasePath <String>
+        [-PackagePath <String>]
+        [-RestIPAddress <String>]
+        [-ClientAuthentication <ClientAuthentication>]
+        [-ClusterAuthentication <ClusterAuthentication>]
+        [-RestCertificateThumbPrint <String>]
+        [-RestClientCertificateSubjectNames <String[]>]
+        [-RestName <String>]
+        [-ClusterNetworkName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: None
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Install-NetworkControllerOnFailoverCluster
+        -DatabasePath <String>
+        -ClientAuthentication <ClientAuthentication>
+        -RestClientSecurityGroup <String>
+        [-PackagePath <String>]
+        [-RestIPAddress <String>]
+        [-ClusterAuthentication <ClusterAuthentication>]
+        [-RestCertificateThumbPrint <String>]
+        [-RestCertificateSubjectName <String>]
+        [-RestClientCertificateThumbprints <String[]>]
+        [-RestClientCertificateSubjectNames <String[]>]
+        [-RestName <String>]
+        [-ClusterNetworkName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Kerberos
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Install-NetworkControllerOnFailoverCluster
+        -DatabasePath <String>
+        -ClientAuthentication <ClientAuthentication>
+        [-PackagePath <String>]
+        [-RestIPAddress <String>]
+        [-ClusterAuthentication <ClusterAuthentication>]
+        [-RestCertificateThumbPrint <String>]
+        [-RestCertificateSubjectName <String>]
+        [-RestClientCertificateThumbprints <String[]>]
+        [-RestClientCertificateSubjectNames <String[]>]
+        [-RestName <String>]
+        [-ClusterNetworkName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: X509
+  isDefault: false
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: NetworkControllerFc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontrollerfc/install-networkcontrolleronfailovercluster?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkControllerFc
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Install-NetworkControllerOnFailoverCluster

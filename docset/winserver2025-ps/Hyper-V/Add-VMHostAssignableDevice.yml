@@ -1,0 +1,217 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Add-VMHostAssignableDevice
+name: Add-VMHostAssignableDevice
+module: Hyper-V
+isPreview: false
+summary: |-
+  Adds an assignable device to a virtual machine (VM) host.
+description: |-
+  The `Add-VMHostAssignableDevice` cmdlet assigns a hardware device to a virtual machine host. You
+  can add devices to the VM host by providing either the instance or location path of the device, or
+  by specifying an existing host-assignable device object.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session
+      object, such as the output of a [New-CimSession](/powershell/module/cimcmdlets/new-cimsession)
+      or [Get-CimSession](/powershell/module/cimcmdlets/get-cimsession) cmdlet. The default is the
+      current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the Hyper-V host to which the device is to be added. NetBIOS names, IP
+      addresses, and fully qualified domain names are allowed. The default is the local computer. Use
+      localhost or a dot (`.`) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action. The default is the
+      current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostAssignableDevice
+    type: <xref href="VMHostAssignableDevice" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the device object to be assigned to the virtual machine.
+    aliases:
+    - VMHostAssignableDevice
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Object
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstancePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Represents the Device Instance path in the host machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocationPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location path to the assignable device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourcePoolName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the resource pool to which the device is assigned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-VMHostAssignableDevice
+        -ResourcePoolName <String[]>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-Force]
+        [-InstancePath <String>]
+        [-LocationPath <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Path
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-VMHostAssignableDevice
+        [-HostAssignableDevice] <VMHostAssignableDevice[]>
+        -ResourcePoolName <String[]>
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Object
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.HyperV.PowerShell.VMHostAssignableDevice" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $params = @{
+    ComputerName = "MyVM01"
+    InstancePath = "PCI\VEN_8086&DEV_0F48&SUBSYS_72708086&REV_0B\3&11583659&0&D8"
+    ResourcePoolName = "MyResourcePool"
+    }
+    Add-VMHostAssignableDevice $params
+    ```
+
+    This example assigns a device identified by its instance path to VM host **MyVM01** within the
+    resource pool **MyResourcePool**.
+- title: Example 2
+  description: |-
+    ```powershell
+    $gpu = Get-VMHostAssignableDevice
+    Add-VMHostAssignableDevice -HostAssignableDevice $gpu -ResourcePoolName "GpuChildPool"
+    ```
+
+    This example retrieves a list of GPUs or other assignable devices and adds these devices to a
+    resource pool named **GpuChildPool**, making the devices available for use by virtual machines in
+    that resource pool.
+links:
+- text: Get-VMHostAssignableDevice
+  href: get-vmhostassignabledevice.yml
+- text: Dismount-VMHostAssignableDevice
+  href: dismount-vmhostassignabledevice.yml
+- text: Mount-VMHostAssignableDevice
+  href: mount-vmhostassignabledevice.yml
+- text: Remove-VMHostAssignableDevice
+  href: remove-vmhostassignabledevice.yml
+metadata:
+  description: Assigns a device to a virtual machine host.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/add-vmhostassignabledevice?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 06/12/2024
+  PlatyPS schema version: 2024-05-01
+  title: Add-VMHostAssignableDevice

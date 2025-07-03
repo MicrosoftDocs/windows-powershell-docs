@@ -1,0 +1,124 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Export-AdfsAuthenticationProviderConfigurationData
+name: Export-AdfsAuthenticationProviderConfigurationData
+module: ADFS
+isPreview: false
+summary: |-
+  Returns a file containing the tenant ID for which the AD FS farm is configured for Azure MFA, as well as the well-known client ID for Azure MFA.
+description: |-
+  The **Export-AdfsAuthenticationProviderConfigurationData** cmdlet returns a file containing the tenant ID for which the Active Directory Federation Services (AD FS) farm is configured for Azure MFA, as well as the well-known client ID for Azure MFA.
+
+  Before you use this cmdlet, verify that the external authentication provider supports a custom configuration.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path and filename of the text file to which the configuration will be output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the authentication provider to export, for example, AzureMfaAuthentication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-AdfsAuthenticationProviderConfigurationData
+        -Name <String>
+        -FilePath <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Export configuration data'
+  description: |-
+    ```
+    PS C:\> Export-AdfsAuthenticationProviderConfigurationData -Name "ContosoExternalAuthProvider" -FilePath "C:\share\test.txt"
+    ```
+
+    This command exports configuration data for the authentication provider named ContosoExternalAuthProvider to the file C:\share\test.txt.
+- title: 'Example 2: Determine which certificate Azure MFA is using'
+  description: |-
+    ```
+    PS C:\> New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID> - FilePath amfacert.cer
+    ```
+
+    This command determines which certificate Azure MFA is using, after AD FS is configured for Azure MFA.
+links:
+- text: Import-AdfsAuthenticationProviderConfigurationData
+  href: ./Import-AdfsAuthenticationProviderConfigurationData.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Export-AdfsAuthenticationProviderConfigurationData

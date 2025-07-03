@@ -1,0 +1,215 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Add-AppvPublishingServer
+name: Add-AppvPublishingServer
+module: AppvClient
+isPreview: false
+summary: |-
+  Adds a publishing server for the computer that runs the App-V client.
+description: |-
+  The **Add-AppvPublishingServer** cmdlet adds a new publishing server for the computer that runs the Microsoft Application Virtualization (App-V) client to connect to.
+  After the server has been added, the computer that runs the App-V client can use the server to obtain publishing refresh data, stream packages, and perform other operations.
+parameters:
+  cmdletParameters:
+  - name: GlobalRefreshEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to turn on the refreshing of the publishing server for all packages that are published globally.
+      You can set the refresh to be at the time of logon or on a defined time interval.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GlobalRefreshInterval
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time interval for the refresh of globally published packages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GlobalRefreshIntervalUnit
+    type: <xref href="IntervalUnit" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unit of time measurement.
+      The acceptable values for this parameter are: day and hour.
+    acceptedValues:
+    - Hour
+    - Day
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GlobalRefreshOnLogon
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether a refresh of all packages published to globally occurs every time that a user logs into the target computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the publishing server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: URL
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL path of the App-V publishing server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserRefreshEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to turn on the refreshing of the publishing server for all packages that are published to the user.
+      The refresh can be set to be at the time of logon or on a defined time interval.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserRefreshInterval
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time interval for refreshes of user-published packages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserRefreshIntervalUnit
+    type: <xref href="IntervalUnit" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unit of time measurement.
+      The acceptable values for this parameter are: day and hour.
+    acceptedValues:
+    - Hour
+    - Day
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "9"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserRefreshOnLogon
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether a refresh of all packages published to the user occurs every time that a user logs into the target computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AppvPublishingServer
+        [-Name] <String>
+        [-URL] <String>
+        [[-GlobalRefreshEnabled] <Boolean>]
+        [[-GlobalRefreshOnLogon] <Boolean>]
+        [[-GlobalRefreshInterval] <UInt32>]
+        [[-GlobalRefreshIntervalUnit] <IntervalUnit>]
+        [[-UserRefreshEnabled] <Boolean>]
+        [[-UserRefreshOnLogon] <Boolean>]
+        [[-UserRefreshInterval] <UInt32>]
+        [[-UserRefreshIntervalUnit] <IntervalUnit>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.AppvAgent.AppvPublishingServer" data-throw-if-not-resolved="False" />
+links:
+- text: Get-AppvPublishingServer
+  href: ./Get-AppvPublishingServer.yml
+- text: Remove-AppvPublishingServer
+  href: ./Remove-AppvPublishingServer.yml
+- text: Set-AppvPublishingServer
+  href: ./Set-AppvPublishingServer.yml
+- text: Sync-AppvPublishingServer
+  href: ./Sync-AppvPublishingServer.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/add-appvpublishingserver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-AppvPublishingServer

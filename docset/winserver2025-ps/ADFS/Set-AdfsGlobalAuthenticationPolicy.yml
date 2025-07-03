@@ -1,0 +1,256 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Set-AdfsGlobalAuthenticationPolicy
+name: Set-AdfsGlobalAuthenticationPolicy
+module: ADFS
+isPreview: false
+summary: |-
+  Modifies the AD FS global policy.
+description: |-
+  The **Set-AdfsGlobalAuthenticationPolicy** cmdlet modifies the Active Directory Federation Services (AD FS) global policy.
+  You can also use the cmdlet to enable an external provider in the global policy.
+parameters:
+  cmdletParameters:
+  - name: AdditionalAuthenticationProvider
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of external authentication providers to add to the global policy.
+
+      Specifying this parameter configures an external authentication provider, for second stage authentication, in the global policy.
+      This is the first step in creating an AD FS policy that invokes an external authentication provider for multifactor authentication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AllowDeviceAuthAsPrimaryForDomainJoinedDevices
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Allows the use of device authentication as the primary type for domain-joined devices.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientAuthenticationMethods
+    type: <xref href="ClientAuthenticationMethod" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the client authentication method.
+    acceptedValues:
+    - None
+    - ClientSecretPostAuthentication
+    - ClientSecretBasicAuthentication
+    - PrivateKeyJWTBearerAuthentication
+    - WindowsIntegratedAuthentication
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceAuthenticationEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether device authentication is enabled for the global policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceAuthenticationMethod
+    type: <xref href="DeviceAuthenticationMethod" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the device authentication method.
+    acceptedValues:
+    - All
+    - ClientTLS
+    - SignedToken
+    - PKeyAuth
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryExtranetAuthenticationProvider
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of authentication providers for the primary extranet to add to the global policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryIntranetAuthenticationProvider
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of authentication providers for the primary intranet to add to the global policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowsIntegratedFallbackEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether fallback to Integrated Windows Authentication is enabled on the intranet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AdfsGlobalAuthenticationPolicy
+        [-AdditionalAuthenticationProvider <String[]>]
+        [-DeviceAuthenticationEnabled <Boolean>]
+        [-DeviceAuthenticationMethod <DeviceAuthenticationMethod>]
+        [-AllowDeviceAuthAsPrimaryForDomainJoinedDevices <Boolean>]
+        [-PrimaryExtranetAuthenticationProvider <String[]>]
+        [-PrimaryIntranetAuthenticationProvider <String[]>]
+        [-WindowsIntegratedFallbackEnabled <Boolean>]
+        [-ClientAuthenticationMethods <ClientAuthenticationMethod>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set the primary extranet authentication policy'
+  description: |-
+    ```
+    PS C:\> Set-AdfsGlobalAuthenticationPolicy -PrimaryExtranetAuthenticationProvider @('FormsAuthentication', 'CertificateAuthentication')
+    ```
+
+    This command sets the primary extranet authentication policy to forms-based or certificate-based authentication.
+    In this case, the user is provided a choice when the user logs on to an application protected by AD FS from the extranet.
+- title: 'Example 2: Enable an additional authentication provider'
+  description: |-
+    ```
+    PS C:\> Set-AdfsGlobalAuthenticationPolicy -AdditionalAuthenticationProvider "A1ExternalAuthProvider"
+    ```
+
+    This command enables the provider named A1ExternalAuthProvider as an additional authentication provider in the global policy.
+    Note that the value provided for the *AdditionalAuthenticationProvider* parameter corresponds to the value you provide for the *Name* parameter in the **Register-AdfsAuthenticationProvider** cmdlet, and to the **Name** property in the output from the **Get-AdfsAuthenticationProvider** cmdlet.
+links:
+- text: Get-AdfsGlobalAuthenticationPolicy
+  href: ./Get-AdfsGlobalAuthenticationPolicy.yml
+- text: Register-AdfsAuthenticationProvider
+  href: ./Register-AdfsAuthenticationProvider.yml
+- text: Get-AdfsAuthenticationProvider
+  href: ./Get-AdfsAuthenticationProvider.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/set-adfsglobalauthenticationpolicy?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AdfsGlobalAuthenticationPolicy

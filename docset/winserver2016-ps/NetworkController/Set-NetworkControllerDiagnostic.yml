@@ -1,0 +1,324 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkController.Set-NetworkControllerDiagnostic
+name: Set-NetworkControllerDiagnostic
+module: NetworkController
+isPreview: false
+summary: |-
+  Changes diagnostic settings for the Network Controller.
+description: |-
+  The **Set-NetworkControllerDiagnostic** cmdlet changes diagnostic settings for the Network Controller.
+  You can specify whether to collect logs locally on the nodes, or in a single central remote location.
+  You can specify the central location and credentials to access that location.
+  You can specify whether to collect all logs or only cluster logs.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+      Specify the certificate thumbprint of the certificate.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the Network Controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Network Controller node on which this cmdlet operates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user credential that has permission to perform this action.
+      The default is the current user.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the Network Controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiagnosticLogLocation
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a central remote location for the logs.
+
+      If you do not specify a value for this parameter, the logs are stored locally on each node.
+      Application logs are stored locally in the %systemdrive%\Windows\tracing\SDNDiagnostics folder.
+      Cluster logs are stored locally in %systemdrive%\ProgramData\Microsoft\Service Fabric\log\Traces folder.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogLevel
+    type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the level of the log.The acceptable values for this parameter are:
+
+      - Error
+      - Warning
+      - Informational
+      - Verbose
+
+      The default value is Verbose.
+    acceptedValues:
+    - Error
+    - Warning
+    - Informational
+    - Verbose
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogLocationCredential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials required to access the log location.
+      Specify this parameter only if the log location restricts access.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogScope
+    type: <xref href="LogScope" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether Network Controller collects cluster logs or collects all logs.
+      All logs include cluster and application logs.
+      The acceptable values for this parameter are: Cluster and All.
+    acceptedValues:
+    - Cluster
+    - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogSizeLimitInMBs
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum log size, in MB, to store.
+      Logs are stored in a circular fashion.
+      . If the *DiagnosticLogLocation* parameter is provided, the default value of this parameter is 40 GB.
+      If DiagnosticLogLocation is not provided, the logs are stored on the Network Controller nodes and the default value of this parameter is 15 GB.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogTimeLimitInDays
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the duration, in days, that logs are stored.
+      Logs are stored in a circular fashion.
+      The default value of this parameter is 3 days.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseLocalLogLocation
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet collects all diagnostic logs locally on each node in the Network Controller cluster.
+      To collect logs centrally in a remote location, specify the *DiagnosticLogLocation* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseSsl
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the remote computer uses the Secure Sockets Layer (SSL) protocol to establish a connection to the Network Controller node.
+      The default value of this parameter is $False.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the Network Controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-NetworkControllerDiagnostic
+        [-LogScope <LogScope>]
+        [-DiagnosticLogLocation <String>]
+        [-LogLocationCredential <PSCredential>]
+        [-UseLocalLogLocation]
+        [-LogTimeLimitInDays <UInt32>]
+        [-LogSizeLimitInMBs <UInt32>]
+        [-LogLevel <LogLevel>]
+        [-PassThru]
+        [-ComputerName <String>]
+        [-UseSsl]
+        [-Credential <PSCredential>]
+        [-CertificateThumbprint <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <span>undefined</span>
+  description: |-
+    This cmdlet returns an object that contains the following fields:
+
+    - Log scope
+    - Diagnostic log location
+    - Log aging size limit in MBs
+    - Log aging time limit in days
+    - Log level
+examples:
+- title: 'Example 1: Modify diagnostic settings'
+  description: |-
+    ```
+    PS C:\> Set-NetworkControllerDiagnostic -LogScope All -UseLocalLogLocation -PassThru
+    LogScope               : All
+    DiagnosticLogLocation  :
+    ```
+
+    This command changes the location for diagnostic logs to be the Network Controller nodes.
+    The command also starts logging both cluster and application logs.
+links:
+- text: Get-NetworkControllerDiagnostic
+  href: ./Get-NetworkControllerDiagnostic.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontroller/set-networkcontrollerdiagnostic?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-NetworkControllerDiagnostic

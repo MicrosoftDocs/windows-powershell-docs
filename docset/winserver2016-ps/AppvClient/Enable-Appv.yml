@@ -1,0 +1,41 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Enable-Appv
+name: Enable-Appv
+module: AppvClient
+isPreview: false
+summary: |-
+  Enables the App-V service.
+description: |-
+  The **Enable-Appv** cmdlet enables the Microsoft Application Virtualization (App-V) service on computers running at least Windows 10 Anniversary Edition (version 1607) .
+  If this cmdlet succeeds, it returns a message.
+
+  Before you enable the App-V service, configure App-V service settings by using Windows PowerShell or Group Policy.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-Appv
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Enable the service'
+  description: |-
+    ```
+    PS C:\> Enable-Appv
+    ```
+
+    This command enables the App-V service.
+links:
+- text: Disable-Appv
+  href: ./Disable-Appv.yml
+- text: Get-AppvStatus
+  href: ./Get-AppvStatus.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/enable-appv?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Enable-Appv

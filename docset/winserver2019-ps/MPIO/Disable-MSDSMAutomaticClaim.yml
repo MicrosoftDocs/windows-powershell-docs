@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: MPIO.Disable-MSDSMAutomaticClaim
+name: Disable-MSDSMAutomaticClaim
+module: MPIO
+isPreview: false
+summary: |-
+  Stops MSDSM from automatically claiming SAN disks for MPIO for a bus type.
+description: |-
+  The **Disable-MSDSMAutomaticClaim** cmdlet stops a Microsoft Device Specific Module (MSDSM) from automatically claiming storage area network (SAN) disks for Microsoft Multipath I/O (MPIO) for a specified bus type.
+
+  The valid bus types are serial attached storage (SAS) and Internet Small Computer System Interface (iSCSI).
+  This cmdlet does not change previously claimed SAN disks.
+parameters:
+  cmdletParameters:
+  - name: BusType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a bus type.
+      This cmdlet disables automatic claiming of SAN disks for this bus type.
+      The acceptable values for this parameter are: SAS and iSCSI.
+    acceptedValues:
+    - SAS
+    - iSCSI
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-MSDSMAutomaticClaim
+        [-BusType] <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Disable automatic claim for iSCSI'
+  description: |-
+    ```
+    PS C:\> Disable-MSDSMAutomaticClaim -BusType "iSCSI"
+    ```
+
+    This command stops MSDSM from automatically claiming SAN disks for MPIO for iSCSI bus types.
+    The command does not affect previously claimed disks.
+
+    The command does not affect the settings for an SAS bus type.
+    If you want to disable automatic claims for both bus types, use the cmdlet again and specify SAS.
+links:
+- text: Enable-MSDSMAutomaticClaim
+  href: ./Enable-MSDSMAutomaticClaim.yml
+- text: Get-MSDSMAutomaticClaimSettings
+  href: ./Get-MSDSMAutomaticClaimSettings.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Mpio-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/mpio/disable-msdsmautomaticclaim?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: MPIO
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Disable-MSDSMAutomaticClaim

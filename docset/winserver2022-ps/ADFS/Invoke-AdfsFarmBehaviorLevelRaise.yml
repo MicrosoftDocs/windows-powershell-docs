@@ -1,0 +1,195 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Invoke-AdfsFarmBehaviorLevelRaise
+name: Invoke-AdfsFarmBehaviorLevelRaise
+module: ADFS
+isPreview: false
+summary: |-
+  Raises the behavior level of a farm.
+description: |-
+  The **Invoke-AdfsFarmBehaviorLevelRaise** cmdlet raises the behavior level of an Active Directory Federation Services (AD FS) farm to enable the new features that are available in later versions of the Windows operating system.
+
+  To raise the behavior level of a farm that uses SQL Server as the policy database, specify the *Credential* parameter.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies credentials necessary to run this cmdlet for an AD FS farm that uses SQL Server as the policy database.
+      The credentials provided must be an administrator on each AD FS server.
+      To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupServiceAccountIdentifier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a group Managed Service Account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdfsUpgradeGmsaAccount
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Member
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of members.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceAccountCredential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies credentials for a service account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdfsUpgradeServiceAccount
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-AdfsFarmBehaviorLevelRaise
+        [-Member <String[]>]
+        [-Credential <PSCredential>]
+        [-ServiceAccountCredential <PSCredential>]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdfsUpgradeServiceAccount
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Invoke-AdfsFarmBehaviorLevelRaise
+        [-Member <String[]>]
+        [-Credential <PSCredential>]
+        [-GroupServiceAccountIdentifier <String>]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdfsUpgradeGmsaAccount
+  isDefault: false
+examples:
+- title: 'Example 1: Raise the farm behavior level'
+  description: |-
+    ```
+    PS C:\> Invoke-AdfsFarmBehaviorLevelRaise
+    ```
+
+    This command raises the farm behavior level from Windows Server 2012 R2 to the Windows Server 2016 level.
+    The command applies to the latest version available on your forest.
+    You not have to specify the level.
+- title: 'Example 2: Raise the farm behavior level for a farm that uses SQL Server'
+  description: |-
+    ```
+    PS C:\> $Credentials = Get-Credential
+    PS C:\> Invoke-AdfsFarmBehaviorLevelRaise -Credential $Credentials
+    ```
+
+    The first command prompts you for user name and password by using the **Get-Credential** cmdlet.
+    The command stores the credentials in the $Credentials variable.
+
+    The second command raises the farm behavior level from Windows Server 2012 R2 to the Windows Server 2016 level.
+    The cmdlet specifies the necessary credentials stored in $Credentials.
+links:
+- text: Restore-AdfsFarmBehaviorLevel
+  href: ./Restore-AdfsFarmBehaviorLevel.yml
+- text: Test-AdfsFarmBehaviorLevelRaise
+  href: ./Test-AdfsFarmBehaviorLevelRaise.yml
+- text: Test-AdfsFarmBehaviorLevelRestore
+  href: ./Test-AdfsFarmBehaviorLevelRestore.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/invoke-adfsfarmbehaviorlevelraise?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Invoke-AdfsFarmBehaviorLevelRaise

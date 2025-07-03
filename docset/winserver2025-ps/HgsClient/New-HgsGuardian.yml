@@ -1,0 +1,310 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsClient.New-HgsGuardian
+name: New-HgsGuardian
+module: HgsClient
+isPreview: false
+summary: |-
+  Creates a Host Guardian Service guardian.
+description: |-
+  The **New-HgsGuardian** cmdlet creates a cryptographic entity called a Host Guardian Service guardian.
+  A guardian is a principal that you can grant access to the key that is contained in a key protector.
+parameters:
+  cmdletParameters:
+  - name: AllowExpired
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet can create a guardian by using certificates that are expired.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AcceptCertificates
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByThumbprints
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AllowUntrustedRoot
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet can create a guardian by using self-signed certificates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AcceptCertificates
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByThumbprints
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionCertificate
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a .pfx file that contains a password protected encryption certificate for the guardian.
+      This .pfx file contains the public and private keys.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AcceptCertificates
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionCertificatePassword
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password to decrypt the .pfx file that contains the encryption certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AcceptCertificates
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionCertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the encryption certificate thumbprint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByThumbprints
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GenerateCertificates
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet generates self-signed signing and encryption certificates for the guardian.
+      The certificates contain the public and private keys.
+
+      If you specify this parameter, the new guardian does not have a trusted root.
+      Therefore, you must also specify the **AllowUntrustedRoot** parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenerateCertificates
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the new guardian.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SigningCertificate
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a .pfx file that contains a password protected signing certificate for the guardian.
+      This .pfx file contains the public and private keys.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AcceptCertificates
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SigningCertificatePassword
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password necessary to decrypt the signing certificate .pfx file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AcceptCertificates
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SigningCertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the thumbprint of a signing certificate located in the local computer certificate store.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByThumbprints
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-HgsGuardian
+        [-Name] <String>
+        -SigningCertificate <String>
+        -EncryptionCertificate <String>
+        [-SigningCertificatePassword <SecureString>]
+        [-EncryptionCertificatePassword <SecureString>]
+        [-AllowExpired]
+        [-AllowUntrustedRoot]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AcceptCertificates
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-HgsGuardian
+        [-Name] <String>
+        -SigningCertificateThumbprint <String>
+        -EncryptionCertificateThumbprint <String>
+        [-AllowExpired]
+        [-AllowUntrustedRoot]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByThumbprints
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-HgsGuardian
+        [-Name] <String>
+        [-GenerateCertificates]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GenerateCertificates
+  isDefault: false
+outputs:
+- name: <xref href="CimInstance#MSFT_HgsGuardian" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+examples:
+- title: 'Example 1: Create a guardian'
+  description: |-
+    ```
+    PS C:\> New-HgsGuardian -Name "Guardian11" -GenerateCertificates
+    ```
+
+    This command creates a Host Guardian Service guardian named Guardian11.
+    This guardian can act as owner for a key protector.
+    Because this command specifies the **GenerateCertificates** parameter, it generates signing and encryption certificates.
+- title: 'Example 2: Create a guardian by using existing certificates'
+  description: |-
+    ```
+    PS C:\> $SecureStringPassword01 = ConvertTo-SecureString "<Password01>" -AsPlainText -Force
+    PS C:\> $SecureStringPassword02 = ConvertTo-SecureString "<Password02>" -AsPlainText -Force
+    PS C:\> New-HgsGuardian -Name "Guardian21" -SigningCertificate "C:\Keys\SigningCertificate.pfx" -SigningCertificatePassword $SecureStringPassword01 -EncryptionCertificate "C:\Keys\EncryptionCertificate.pfx" -EncryptionCertificatePassword $SecureStringPassword02
+    ```
+
+    The first two commands create passwords, as secure strings, by using the **ConvertTo-SecureString** cmdlet.
+    For more information, type `Get-Help ConvertTo-SecureString`.
+    The commands store the passwords in two variables.
+
+    The final command creates a guardian named Guardian21.
+    The command specifies the necessary signing and encryption certificates as password protected .pfx files.
+    The passwords stored in the **$SecureStringPassword01** and **$SecureStringPassword02** must match the passwords used to generate the .pfx files.
+links:
+- text: Export-HgsGuardian
+  href: ./Export-HgsGuardian.yml
+- text: Get-HgsGuardian
+  href: ./Get-HgsGuardian.yml
+- text: Import-HgsGuardian
+  href: ./Import-HgsGuardian.yml
+- text: Remove-HgsGuardian
+  href: ./Remove-HgsGuardian.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: HgsClient-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsclient/new-hgsguardian?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-HgsGuardian

@@ -1,0 +1,103 @@
+### YamlMime:PowerShellCmdlet1
+uid: VAMT.Install-VamtConfirmationId
+name: Install-VamtConfirmationId
+module: VAMT
+isPreview: false
+summary: |-
+  Installs Confirmation IDs (CID) acquired from Microsoft to the respective computers to complete proxy activation.
+description: |-
+  The **Install-VamtConfirmationID** cmdlet installs the confirmation IDs (CIDs) to the computers in the system and alerts the products that they have been enabled.
+  Use this cmdlet for proxy activations after you have acquired the CIDs from the Microsoft licensing servers.
+parameters:
+  cmdletParameters:
+  - name: Password
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Provides a password for password-protected environments.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Products
+    type: <xref href="Product" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the product or products to install the CIDs on during the proxy activation process.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Username
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Provides a user name for password-protected environments.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Install-VamtConfirmationId
+        -Products <Product[]>
+        [-Username <String>]
+        [-Password <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Install CIDs in the database'
+  description: |-
+    ```
+    PS C:\> Import-VamtData -InputFile "c:\users\me\desktop\vamtdata.cilx"
+    PS C:\> $ProductInfo = Get-VamtProduct
+    PS C:\> $UpdatedProductInfo = Install-VamtConfirmationID -Products $ProductInfo
+    PS C:\> Import-VamtData -Products $UpdatedProductInfo
+    ```
+
+    This command imports a file and acquires the data in the file.
+    It then installs the CIDs to the dep_nextref_vamt data object.
+    Finally, it imports the dep_nextref_vamt data object into the dep_nextref_vamt database.
+    Run this command at the end of a proxy activation.
+links:
+- text: Get-VamtConfirmationId
+  href: ./Get-VamtConfirmationId.yml
+- text: Get-VamtProduct
+  href: ./Get-VamtProduct.yml
+- text: Import-VamtData
+  href: ./Import-VamtData.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/vamt/install-vamtconfirmationid?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: VAMT
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Install-VamtConfirmationId

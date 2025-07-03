@@ -1,0 +1,105 @@
+### YamlMime:PowerShellCmdlet1
+uid: BootEventCollector.Get-SbecLogSession
+name: Get-SbecLogSession
+module: BootEventCollector
+isPreview: false
+summary: |-
+  Gets the running log sessions.
+description: |-
+  The **Get-SbecLogSession** cmdlet gets the ETW log sessions that are currently running.
+  This operation does not get log sessions defined in the registry for AutoLogger.
+
+  This cmdlet returns the **SbecEtwTrace.TraceSessionInfo** objects, whose properties contain most of the interesting information.
+  More details are available in the Trace property.
+parameters:
+  cmdletParameters:
+  - name: KdOnly
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation gets only log sessions that are configured to forward events through the kernel transport to the collector.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a log session.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SimulateError
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Simulate a Windows error, and cause the function to throw.
+      You can specify this parameter to test error handling.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-SbecLogSession
+        [[-Name] <String>]
+        [-KdOnly]
+        [[-SimulateError] <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None." data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="SbecEtwTrace.TraceSessionInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    The **SbecEtwTrace.TraceSessionInfo** class is defined in $PsHome\Modules\BootEventCollector\SbecTraceHelpers.psm1.
+links:
+- text: Save-SbecLogSession
+  href: ./Save-SbecLogSession.yml
+- text: Set-SbecLogSession
+  href: ./Set-SbecLogSession.yml
+- text: Start-SbecLogSession
+  href: ./Start-SbecLogSession.yml
+- text: Start-SbecNtKernelLogSession
+  href: ./Start-SbecNtKernelLogSession.yml
+- text: Start-SbecSimpleLogSession
+  href: ./Start-SbecSimpleLogSession.yml
+- text: Stop-SbecLogSession
+  href: ./Stop-SbecLogSession.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: BootEventCollector-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/booteventcollector/get-sbeclogsession?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: BootEventCollector
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-SbecLogSession

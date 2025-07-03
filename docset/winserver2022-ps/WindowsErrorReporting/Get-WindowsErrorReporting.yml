@@ -1,0 +1,47 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsErrorReporting.Get-WindowsErrorReporting
+name: Get-WindowsErrorReporting
+module: WindowsErrorReporting
+isPreview: false
+summary: |-
+  Retrieves the Windows Error Reporting status.
+description: |-
+  The **Get-WindowsErrorReporting** cmdlet retrieves the Windows Error Reporting (WER) status for the server.
+
+  Windows Error Reporting is a flexible feedback infrastructure that gathers information about hardware and software problems, reports the information to Microsoft, and gives users any available solutions.
+  Windows Error Reporting generates reports in response to system events, such as application crashes or kernel faults.
+
+  Use [Enable-WindowsErrorReporting](./Enable-WindowsErrorReporting.yml) to enable Windows Error Reporting.
+  After you enable it, WER sends information about application failures to Microsoft.
+  Use [Disable-WindowsErrorReporting](./Disable-WindowsErrorReporting.yml) to disable WER.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WindowsErrorReporting
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the Windows Error Reporting status'
+  description: |-
+    ```
+    PS C:\> Get-WindowsErrorReporting
+    ```
+
+    This command gets the Windows Error Reporting status, which is either enabled or disabled.
+links:
+- text: Disable-WindowsErrorReporting
+  href: ./Disable-WindowsErrorReporting.yml
+- text: Enable-WindowsErrorReporting
+  href: ./Enable-WindowsErrorReporting.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.WindowsErrorReporting.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowserrorreporting/get-windowserrorreporting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsErrorReporting
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-WindowsErrorReporting

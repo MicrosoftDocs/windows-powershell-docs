@@ -1,0 +1,239 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetTCPIP.Get-NetIPConfiguration
+name: Get-NetIPConfiguration
+module: NetTCPIP
+isPreview: false
+summary: |-
+  Gets IP network configuration.
+description: |-
+  The **Get-NetIPConfiguration** cmdlet gets network configuration, including usable interfaces, IP addresses, and DNS servers.
+
+  If you do not specify any parameters, this cmdlet gets IP configuration properties for all non-virtual connected interfaces on a computer.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet retrieves the IP configuration properties for all of the interfaces on a computer, including virtual interfaces, loopback interfaces, and disconnected interfaces.
+    aliases:
+    - IncludeAllInterfaces
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: All
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AllCompartments
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet gets the IP configuration properties for all of the compartments on a computer.
+    aliases:
+    - IncludeAllCompartments
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - PSComputerName
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompartmentId
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an identifier for network compartment in the protocol stack.
+      By default, the cmdlet gets Net IP configuration in the default compartment.
+      If you specify a value for this parameter, the cmdlet gets any matching Net IP configuration in the compartment specified in this field.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Detailed
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet retrieves additional interface and computer configuration information, including the computer name, link layer address, network profile, MTU length, and DHCP status.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InterfaceAlias
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an alias of a network interface.
+      The cmdlet gets an IP configuration that matches the alias.
+    aliases:
+    - ifAlias
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Alias
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: InterfaceIndex
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an index of a network interface.
+      The cmdlet gets an IP configuration that matches the index.
+    aliases:
+    - ifIndex
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Index
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NetIPConfiguration
+        [[-InterfaceAlias] <String>]
+        [-AllCompartments]
+        [-CompartmentId <Int32>]
+        [-Detailed]
+        [-CimSession <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Alias
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-NetIPConfiguration
+        -InterfaceIndex <Int32>
+        [-AllCompartments]
+        [-CompartmentId <Int32>]
+        [-Detailed]
+        [-CimSession <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Index
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-NetIPConfiguration
+        [-All]
+        [-AllCompartments]
+        [-CompartmentId <Int32>]
+        [-Detailed]
+        [-CimSession <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: All
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the IP configuration'
+  description: |-
+    ```
+    PS C:\>Get-NetIPConfiguration
+    ```
+
+    This command gets IP configuration information.
+    When this cmdlet is run without parameters, it gets the IP configuration information for all of the non-virtual connected interfaces on the computer.
+- title: 'Example 2: Get all IP configuration details'
+  description: |-
+    ```
+    PS C:\>Get-NetIPConfiguration -All
+    ```
+
+    This command gets the IP configuration information for all of the interfaces on the computer, including virtual interfaces, loopback interfaces, and disconnected interfaces.
+- title: 'Example 3: Get the IP configuration information with a common parameter'
+  description: |-
+    ```
+    PS C:\>Get-NetIPConfiguration -Verbose
+    ```
+
+    This command gets IP configuration information.
+    By using the *Verbose* parameter, the networking cmdlets are shown to gather and format the information displayed in this cmdlet.
+- title: 'Example 4: Get the IP configuration by interface index'
+  description: |-
+    ```
+    PS C:\>Get-NetIPConfiguration -InterfaceIndex 12
+    ```
+
+    This command gets the IP configuration information for the interface at the index 12.
+- title: 'Example 5: Get the IP configuration from pipeline input'
+  description: |-
+    ```
+    PS C:\>Get-NetIPConfiguration | Get-NetIPAddress
+    ```
+
+    This command gets the IP address information, including the prefix length.
+links:
+- text: Get-DNSClientServerAddress
+  href: ../dnsclient/Get-DnsClientServerAddress.yml
+- text: Get-NetAdapter
+  href: ../netadapter/Get-NetAdapter.yml
+- text: Get-NetIPAddress
+  href: ./Get-NetIPAddress.yml
+- text: Get-NetIPInterface
+  href: ./Get-NetIPInterface.yml
+- text: Get-NetRoute
+  href: ./Get-NetRoute.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: NetIPConfiguration-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/nettcpip/get-netipconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: NetTCPIP
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-NetIPConfiguration

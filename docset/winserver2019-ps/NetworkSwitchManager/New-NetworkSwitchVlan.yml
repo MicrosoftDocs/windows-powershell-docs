@@ -1,0 +1,147 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkSwitchManager.New-NetworkSwitchVlan
+name: New-NetworkSwitchVlan
+module: NetworkSwitchManager
+isPreview: false
+summary: |-
+  Creates a VLAN for a network switch.
+description: |-
+  The **New-NetworkSwitchVlan** cmdlet creates a virtual local area network (VLAN) for a network switch.
+parameters:
+  cmdletParameters:
+  - name: Caption
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a caption for the new VLAN.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **CimSession** that this cmdlet uses to connect to the network switch.
+      For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description of the new VLAN.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name to use as the VLAN **ElementName**.
+      This is a friendly name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VlanID
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a VLAN ID for the new VLAN.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NetworkSwitchVlan
+        [-CimSession] <CimSession>
+        [[-Caption] <String>]
+        [[-Description] <String>]
+        [-VlanID] <Int32>
+        [-Name] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+examples:
+- title: 'Example 1: Create a VLAN'
+  description: |-
+    ```
+    PS C:\>$Session = New-CimSession -ComputerName "NetworkSwitch08"
+    PS C:\> New-NetworkSwitchVlan -Name "Contoso07VLAN" -Caption "VLAN 07" -CimSession $Session
+    Caption             Description         ElementName         InstanceID                       VlanID PSComputerName
+    -------             -----------         -----------         ----------                       ------ --------------
+    VLAN 07                                 VLAN0004            Contoso:NetworkVL...                  4 10.19.26.4
+    ```
+
+    The first command creates a **CimSession** for a network switch, and then stores it in the **$Session** variable.
+    For more information about **CimSession** objects, type `Get-Help New-CimSession`.
+
+    The second creates a VLAN for the switch NetworkSwitch08 by using the **$Session** object.
+links:
+- text: Disable-NetworkSwitchVlan
+  href: ./Disable-NetworkSwitchVlan.yml
+- text: Enable-NetworkSwitchVlan
+  href: ./Enable-NetworkSwitchVlan.yml
+- text: Get-NetworkSwitchVlan
+  href: ./Get-NetworkSwitchVlan.yml
+- text: Remove-NetworkSwitchVlan
+  href: ./Remove-NetworkSwitchVlan.yml
+- text: Set-NetworkSwitchVlanProperty
+  href: ./Set-NetworkSwitchVlanProperty.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: NetworkSwitchVlan-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkswitchmanager/new-networkswitchvlan?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkSwitchManager
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-NetworkSwitchVlan

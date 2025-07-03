@@ -1,0 +1,213 @@
+### YamlMime:PowerShellCmdlet1
+uid: pki.New-CertificateNotificationTask
+name: New-CertificateNotificationTask
+module: pki
+isPreview: false
+summary: |-
+  Creates a new task in the Task Scheduler that will be triggered when a certificate is replaced, expired, or about to expired.
+description: |-
+  The **New-CertificateNotificationTask** cmdlet creates a new task in the Task Scheduler that will be triggered when a certificate is replaced or expires.
+  The task will launch the script specified by the **PSScript** parameter.
+
+  If the **RunTaskForExistingCertificates** parameter is specified, then after this cmdlet is registered, the cmdlet will go through all certificates (including archived certificates) in the My store and initiate Replace events for all certificates with a Renewal property.
+  The NewCertHash value will always be the one at the end of the renewal chain.
+  For example; if certificate A was renewed to certificate B, which was then renewed to certificate C, then the cmdlet fires two events: certificate A to certificate C and certificate B to certificate C.
+  This will ensure that applications that are still using old certificates are properly updated to the newest certificates.
+  If any certificate has a renewal chain longer than 20, then the certificate is not logged.
+parameters:
+  cmdletParameters:
+  - name: Channel
+    type: <xref href="NotificationChannel" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets the channel of the CertificateServicesClient-Notifications log that will be monitored for certificate lifecycle events.
+      The acceptable values for this parameter are:
+
+       -- System:  The Operation-System channel will be used.
+      This channel should be used to modify system certificate bindings that use computer certificates.
+
+       -- User: The Operational-User channel will be used.
+      This channel should be used to modify user certificate bindings.
+    acceptedValues:
+    - System
+    - User
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unique name for the certificate notification task.
+      If a certificate notification task with the same name already exists, then an error is generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PSScript
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifies the Windows PowerShell® script that will be triggered by the certificate notification task.
+      The script will be launched with the **NonInteractive** parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunTaskForExistingCertificates
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Generates a replacement notification for any certificate in the My store that has been replaced in the past.
+      For the notification to be generated both certificates must be present in the store.
+      This parameter can only be used with the Replace type.
+      Note: The following warning will be displayed when this cmdlet is run with this parameter set to False and there are some certificates in MY store that would have resulted in a notification.
+
+       -- `There are certificates in My store that have been replaced in the past.
+      You can use the New-CertificateNotification cmdlet with the RunTaskForExistingCerts parameter to generate notifications for those certificates to correct any configuration problems that you may already have on this machine.`
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="CertificateNotificationType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of events that will trigger certificate notifications.
+      The acceptable values for this parameter are:
+
+       -- Replace: Certificate replacement events will trigger this notification, including certificates that are renewed by auto-enrollment, using the Certificates snap-in, or by using the Switch-Certificate cmdlet.
+
+       -- Expire: Certificate expiration and close-to-expire events will trigger this notification.
+    acceptedValues:
+    - Replace
+    - Expire
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-CertificateNotificationTask
+        -Type <CertificateNotificationType>
+        [-RunTaskForExistingCertificates]
+        -PSScript <String>
+        -Name <String>
+        -Channel <NotificationChannel>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Command.CertificateNotificationTask" data-throw-if-not-resolved="False" />
+  description: |-
+    A **CertificateNotificationTask** object that contains details about a newly created task.
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```
+    PS C:\>New-CertificateNotificationTask -PSScript C:\myscript.ps1 -Channel System -Type Replace -Name "My System Certificate Task"
+    ```
+
+    This example creates a system notification task for certificate replacement events with the name My System Certificate Task that will launch the myscript.ps1 script located on the C: drive.
+    The cmdlet will run on the local system.
+- title: EXAMPLE 2
+  description: |-
+    ```
+    PS C:\>New-CertificateNotificationTask -PSScript C:\myscript.ps1 -Channel User -Type Expire -Name "My User Certificate Task"
+    ```
+
+    This example creates a system notification task for the expiration and close-to-expiration certificate events with the name My User Certificate Task that will launch the myscript.ps1 script located on the C: drive.
+    The cmdlet will run for all currently logged on users in the user contexts.
+links:
+- text: Get-CertificateNotificationTask
+  href: ./Get-CertificateNotificationTask.yml
+- text: Remove-CertificateNotificationTask
+  href: ./Remove-CertificateNotificationTask.yml
+- text: Switch-Certificate
+  href: ./Switch-Certificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/pki/new-certificatenotificationtask?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: pki
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-CertificateNotificationTask

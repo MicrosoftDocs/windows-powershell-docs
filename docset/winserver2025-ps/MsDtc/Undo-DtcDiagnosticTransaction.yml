@@ -1,0 +1,70 @@
+### YamlMime:PowerShellCmdlet1
+uid: MsDtc.Undo-DtcDiagnosticTransaction
+name: Undo-DtcDiagnosticTransaction
+module: MsDtc
+isPreview: false
+summary: |-
+  Invokes the Abort process on the specified transaction.
+description: |-
+  The **Undo-DtcDiagnosticTransaction** cmdlet invokes the Abort process on the specified transaction.
+parameters:
+  cmdletParameters:
+  - name: Transaction
+    type: <xref href="DtcDiagnosticTransaction" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **DtcDiagnosticTransaction** object on which to invoke the Abort process.
+      You can use the pipeline operator to pass this parameter value to the cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Undo-DtcDiagnosticTransaction
+        [-Transaction] <DtcDiagnosticTransaction>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Undo a DTC diagnostic transaction'
+  description: |-
+    ```
+    PS C:\> $Tx = New-DtcDiagnosticTransaction
+    PS C:\> Undo-DtcDiagnosticTransaction -Transaction $Tx
+    ```
+
+    This command creates a new diagnostic transaction and assigns it to a variable.
+
+    The second command undoes the transaction.
+links:
+- text: Complete-DtcDiagnosticTransaction
+  href: ./Complete-DtcDiagnosticTransaction.yml
+- text: New-DtcDiagnosticTransaction
+  href: ./New-DtcDiagnosticTransaction.yml
+- text: Receive-DtcDiagnosticTransaction
+  href: ./Receive-DtcDiagnosticTransaction.yml
+- text: Send-DtcDiagnosticTransaction
+  href: ./Send-DtcDiagnosticTransaction.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Dtc.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/msdtc/undo-dtcdiagnostictransaction?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: MsDtc
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Undo-DtcDiagnosticTransaction

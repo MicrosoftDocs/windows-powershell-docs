@@ -1,0 +1,84 @@
+### YamlMime:PowerShellCmdlet1
+uid: LanguagePackManagement.Uninstall-Language
+name: Uninstall-Language
+module: LanguagePackManagement
+isPreview: false
+summary: |-
+  Uninstalls a language from a device.
+description: |-
+  Uninstalls a language, including all language components, from a device. This operation runs asynchronously.
+parameters:
+  cmdletParameters:
+  - name: Language
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The bcp47 tag of the language to install.
+    aliases:
+    - LanguageId
+    - LanguageTag
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If specified, this parameter returns the bcp47 tag of the newly installed language upon successful installation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Uninstall-Language
+        [-Language] <String>
+        [-PassThru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a language from a device'
+  description: |-
+    ```powershell
+    Uninstall-Language ja-jp
+    ```
+
+    This command removes the Japanese language from the device.
+links:
+- text: InstallLanguage
+  href: Install-Language.yml
+metadata:
+  description: The Uninstall-Language cmdlet lets you remove a language and its components from a running Windows installation
+  document type: cmdlet
+  external help file: Microsoft.LanguagePackManagement.Powershell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/languagepackmanagement/uninstall-language?view=windowsserver2022-ps
+  Module Name: LanguagePackManagement
+  ms.date: 08/15/2022
+  PlatyPS schema version: 2024-05-01
+  title: Uninstall-Language

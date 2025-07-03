@@ -1,0 +1,259 @@
+### YamlMime:PowerShellCmdlet1
+uid: WebAdministration.New-WebHandler
+name: New-WebHandler
+module: WebAdministration
+isPreview: false
+summary: |-
+  Creates an IIS request handler.
+description: |-
+  The **New-WebHandler** cmdlet creates an Internet Information Services (IIS) request handler.
+parameters:
+  cmdletParameters:
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the creation of the new handler.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the configuration location in which the handler is configured.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Modules
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the modules used for the handler.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the new request handler.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the physical path to the handler.
+      This parameter applies to native modules only.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Precondition
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies preconditions for the new handler.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PSPath
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an IIS configuration path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequiredAccess
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user rights that are required for the new handler.
+      The acceptable values for this parameter are:
+
+      - Read
+      - Write
+      - Execute
+      - Script
+    acceptedValues:
+    - None
+    - Read
+    - Write
+    - Script
+    - Execute
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource type this handler runs.
+    acceptedValues:
+    - File
+    - Directory
+    - Either
+    - Unspecified
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScriptProcessor
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the script processor that runs for the module.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the managed type of the new module.
+      This parameter applies to managed modules only.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Verb
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the HTTP verbs that are handled by the new handler.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-WebHandler
+        [-Name] <String>
+        -Path <String>
+        -Verb <String>
+        [-Type <String>]
+        [-Modules <String>]
+        [-ScriptProcessor <String>]
+        [-Precondition <String>]
+        [-ResourceType <String>]
+        [-RequiredAccess <String>]
+        [-Force]
+        [-Location <String[]>]
+        [[-PSPath] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Add a new handler'
+  description: |-
+    ```
+    IIS:\> New-WebHandler -Name "TestHandler" -Path "*.test" -Verb "GET,POST" -Modules "IsapiModule" -PSPath "IIS:\sites\Default Web Site"
+    ```
+
+    This command adds a handler named TestHandler to the default website.
+links:
+- text: Get-WebHandler
+  href: ./Get-WebHandler.yml
+- text: Remove-WebHandler
+  href: ./Remove-WebHandler.yml
+- text: Set-WebHandler
+  href: ./Set-WebHandler.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/webadministration/new-webhandler?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-WebHandler

@@ -1,0 +1,124 @@
+### YamlMime:PowerShellCmdlet1
+uid: Provisioning.Get-TrustedProvisioningCertificate
+name: Get-TrustedProvisioningCertificate
+module: Provisioning
+isPreview: false
+summary: |-
+  Lists all installed trusted provisioning certificates.
+description: |-
+  Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the `Uninstall-TrustedProvisioningCertificate` cmdlet.
+
+  The **Get-TrustedProvisioningCertificate** cmdlet is supported on Windows 11 client operating system only.
+parameters:
+  cmdletParameters:
+  - name: ConnectedDevice
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If enabled, specifies that the device type is mobile.
+    aliases:
+    - Device
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogsDirectoryPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the logs directory path.
+    aliases:
+    - Logs
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Thumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the thumbprint of the certificate to retrieve.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WprpFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of the WPR profile file.
+    aliases:
+    - Wprp
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-TrustedProvisioningCertificate
+        [[-Thumbprint] <String>]
+        [-LogsDirectoryPath <String>]
+        [-WprpFile <String>]
+        [-ConnectedDevice]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List installed trusted provisioning certificates'
+  description: |-
+    ```powershell
+    PS C:\> Get-TrustedProvisioningCertificate
+    ```
+    ```output
+    The operation completed successfully.
+
+    No certificates found in the trusted provisioners store
+    ```
+
+    Lists all installed trusted provisioning certificates.
+metadata:
+  description: Lists all installed trusted provisioning certificates; use this cmdlet to get the certificate thumbprint to use with the Uninstall-TrustedProvisioningCertificate cmdlet.
+  document type: cmdlet
+  external help file: provcmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/provisioning/get-trustedprovisioningcertificate?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Provisioning
+  ms.date: 05/09/2017
+  PlatyPS schema version: 2024-05-01
+  title: Get-TrustedProvisioningCertificate

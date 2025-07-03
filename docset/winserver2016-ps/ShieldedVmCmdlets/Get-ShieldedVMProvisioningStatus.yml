@@ -1,0 +1,132 @@
+### YamlMime:PowerShellCmdlet1
+uid: ShieldedVmCmdlets.Get-ShieldedVMProvisioningStatus
+name: Get-ShieldedVMProvisioningStatus
+module: ShieldedVmCmdlets
+isPreview: false
+summary: |-
+  Queries the provisioning status of a shielded virtual machine.
+description: |-
+  The **Get-ShieldedVMProvisioningStatus** cmdlet queries the provisioning status of a shielded virtual machine.
+parameters:
+  cmdletParameters:
+  - name: ProvisioningJob
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **CimInstance** object returned from either the Initialize-ShieldedVM cmdlet or a prior call to the Get-ShieldedVMProvisioningStatus cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInstance
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine that this cmdlet provisions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVM
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual machine that this cmdlet provisions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-ShieldedVMProvisioningStatus
+        [-VMName] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-ShieldedVMProvisioningStatus
+        [-VM] <VirtualMachine>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVM
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-ShieldedVMProvisioningStatus
+        -ProvisioningJob <CimInstance>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInstance
+  isDefault: false
+examples:
+- title: 'Example 1: Get the provisioning job status for a virtual machine'
+  description: |-
+    ```
+    PS C:\>Get-ShieldedVMProvisioningStatus -VMName "MyVM"
+    ```
+
+    This command gets the provisioning job status for the virtual machine named MyVM.
+- title: 'Example 2: Get the provisioning job status for a virtual machine using a variable'
+  description: |-
+    ```
+    PS C:\>$VM = Get-VM -VMName "MyVM"
+    Get-ShieldedVMProvisioningStatus -VM $VM
+    ```
+
+    The first command gets the virtual machine named MyVM and stores it in the variable named $VM.
+
+    The second command gets the provisioning job status for the virtual machine stored in the variable named $VM.
+- title: 'Example 3: Get the provisioning job status for a virtual machine using an existing provisioning job object'
+  description: |-
+    ```
+    PS C:\>$Job = Get-ShieldedVMProvisioningStatus -VMName "MyVM"
+    Get-ShieldedVMProvisioningStatus -ProvisioningJob $Job
+    ```
+
+    The first command gets the provisioning job status for the virtual machine named MyVM and stores it in the variable named $Job.
+
+    The second command calls **Get-ShieldedVMProvisioningStatus** again using the provisioning job status stored in the $Job variable.
+links:
+- text: Get-KeyProtectorFromShieldingDataFile
+  href: ./Get-KeyProtectorFromShieldingDataFile.yml
+- text: Initialize-ShieldedVM
+  href: ./Initialize-ShieldedVM.yml
+- text: New-ShieldedVMSpecializationDataFile
+  href: ./New-ShieldedVMSpecializationDataFile.yml
+- text: Test-ShieldingDataApplicability
+  href: ./Test-ShieldingDataApplicability.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: ShieldedVmCmdlets-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/shieldedvmcmdlets/get-shieldedvmprovisioningstatus?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ShieldedVmCmdlets
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-ShieldedVMProvisioningStatus

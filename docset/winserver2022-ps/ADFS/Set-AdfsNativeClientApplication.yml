@@ -1,0 +1,277 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Set-AdfsNativeClientApplication
+name: Set-AdfsNativeClientApplication
+module: ADFS
+isPreview: false
+summary: |-
+  Modifies configuration settings for a server native client application role of an application in AD FS.
+description: |-
+  The **Set-AdfsNativeClientApplication** cmdlet modifies configuration settings for a native client application role of an application in Active Directory Federation Services (AD FS).
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Identifier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogoutUri
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the logout URI for the OAuth 2.0 client to register with the AD FS. When AD FS initiates a logout it redirects the client's user-agent to this URI by rendering this URI in an iframe. The value of this parameter must be an absolute URI, may include a query component, and must not include a fragment component. This parameter is available with the Windows Update KB4038801 installed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RedirectUri
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of redirection URIs for the OAuth 2.0 client to register with AD FS.
+      The redirection URI is specified by the OAuth 2.0 client when it requests authorization to access a resource in ADFS.
+
+      The redirection URI specified by the client must already be registered with AD FS.
+      It must correspond to the client identifier for that OAuth 2.0 client.
+      If the client ID and redirection URI correspond to a pre-registered OAuth 2.0 client and the resource owner authorized access by providing their credentials, ADFS delivers the authorization code or access token by redirecting the client's user-agent back to this redirection URI.
+
+      The value of this parameter must match exactly the redirection URI that is specified by the OAuth 2.0 client when requesting authorization.
+      This includes trailing slashes '/', if they are required.
+      We recommended the use of more secure schemes such as https in a redirection URI.
+
+      For Windows Store applications that authenticate by using the Windows Web Authentication Broker, use the `ms-app://` scheme for a redirection URI.
+      If you are developing a Windows Store application, obtain the redirection URI for your application by using the following code fragment:
+
+      `Uri redirectURI = Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri();`
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetApplication
+    type: <xref href="NativeClientApplication" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the native client application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetIdentifier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the native client application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Identifier
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the native client application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AdfsNativeClientApplication
+        [-TargetIdentifier] <String>
+        [-Identifier <String>]
+        [-Name <String>]
+        [-RedirectUri <String[]>]
+        [-Description <String>]
+        [-LogoutUri <String>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Identifier
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AdfsNativeClientApplication
+        [-TargetName] <String>
+        [-Identifier <String>]
+        [-Name <String>]
+        [-RedirectUri <String[]>]
+        [-Description <String>]
+        [-LogoutUri <String>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AdfsNativeClientApplication
+        [-TargetApplication] <NativeClientApplication>
+        [-Identifier <String>]
+        [-Name <String>]
+        [-RedirectUri <String[]>]
+        [-Description <String>]
+        [-LogoutUri <String>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    String objects are received by the *Description*, *Identifier*, *Name*, *RedirectUri*, *TargetIdentifier*, and *TargetName* parameters.
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.NativeClientApplication" data-throw-if-not-resolved="False" />
+  description: |-
+    NativeClientApplication objects are received by the *TargetApplication* parameter.
+outputs:
+- name: <xref href="Microsoft.IdentityServer.Management.Resources.NativeClientApplication" data-throw-if-not-resolved="False" />
+  description: |-
+    Returns the updated NativeClientApplication object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+links:
+- text: Add-AdfsNativeClientApplication
+  href: ./Add-AdfsNativeClientApplication.yml
+- text: Get-AdfsNativeClientApplication
+  href: ./Get-AdfsNativeClientApplication.yml
+- text: Remove-AdfsNativeClientApplication
+  href: ./Remove-AdfsNativeClientApplication.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/set-adfsnativeclientapplication?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 09/19/2017
+  PlatyPS schema version: 2024-05-01
+  title: Set-AdfsNativeClientApplication

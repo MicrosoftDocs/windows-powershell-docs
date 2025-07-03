@@ -1,0 +1,587 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.New-NetIntentAdapterPropertyOverrides
+name: New-NetIntentAdapterPropertyOverrides
+module: NetworkATC
+isPreview: false
+summary: |-
+  Creates a new instance of network adapter property overrides which can be used to supply granular values to `Set-NetIntent`.
+description: |-
+  The `New-NetIntentAdapterPropertyOverrides` cmdlet creates a new instance of network adapter
+  property overrides, which is used to specify granular settings for adapter properties that can be
+  applied using the `Set-NetIntent` cmdlet. These settings allow administrators to fine-tune network
+  adapter properties to optimize performance and functionality for specific network intents.
+parameters:
+  cmdletParameters:
+  - name: EncapOverhead
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of the encapsulation overhead.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncapsulatedPacketTaskOffload
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of the encapsulated packet task offload.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncapsulatedPacketTaskOffloadNvgre
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of the encapsulated packet task offload for NVGRE.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncapsulatedPacketTaskOffloadVxlan
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of the encapsulated packet task offload for VXLAN.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FlowControl
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies if flow control is to be used.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InterruptModeration
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interrupt moderation rate.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPChecksumOffloadIPv4
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv4 checksum offload value.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JumboPacket
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum size for jumbo packets.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LsoV2IPv4
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of large send offload version 2 (LSO V2) for IPv6.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LsoV2IPv6
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of large send offload version 2 (LSO V2) for IPv6.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkDirect
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Network Direct value.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkDirectTechnology
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Network Direct technology value.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NumaNodeId
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the NUMA node ID to use for the network adapter.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PacketDirect
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Packet Direct value.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PriorityVLANTag
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the priority value of VLAN tagging.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PtpHardwareTimestamp
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the hardware timestamp for the Precision Time Protocol (PTP).
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QOS
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Quality of Service (QoS) value for the network adapter.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QosOffload
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether QoS offloading is to be enabled.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReceiveBuffers
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of receive buffers to use.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RscIPv4
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of Receive Segment Coalescing (RSC) for IPv4.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RscIPv6
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value of Receive Segment Coalescing (RSC) for IPv6.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RssOnHostVPorts
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the RSS on host virtual ports.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sriov
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the SR-IOV value.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TCPUDPChecksumOffloadIPv4
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the TCP/UDP checksum offload value for IPv4.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TCPUDPChecksumOffloadIPv6
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the TCP/UDP checksum offload value for IPv6.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TransmitBuffers
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of transmit buffers to be used.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UDPChecksumOffloadIPv4
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the UDP checksum offload for IPv4.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UDPChecksumOffloadIPv6
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the UDP checksum offload for IPv6.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsoIPv4
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the UDP segment offload (USO) for IPv4.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsoIPv6
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the UDP segment offload (USO) for IPv6.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VlanID
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the VLAN ID.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMQ
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Virtual Machine Queue (VMQ) to use.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VxlanUDPPortNumber
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the UDP port number to use for VXLAN.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NetIntentAdapterPropertyOverrides
+        [-EncapOverhead <Int32>]
+        [-EncapsulatedPacketTaskOffload <Int32>]
+        [-EncapsulatedPacketTaskOffloadNvgre <Int32>]
+        [-EncapsulatedPacketTaskOffloadVxlan <Int32>]
+        [-FlowControl <Int32>]
+        [-InterruptModeration <Int32>]
+        [-IPChecksumOffloadIPv4 <Int32>]
+        [-JumboPacket <Int32>]
+        [-LsoV2IPv4 <Int32>]
+        [-LsoV2IPv6 <Int32>]
+        [-NetworkDirect <Int32>]
+        [-NetworkDirectTechnology <Int32>]
+        [-NumaNodeId <Int32>]
+        [-PacketDirect <Int32>]
+        [-PriorityVLANTag <Int32>]
+        [-PtpHardwareTimestamp <Int32>]
+        [-QOS <Int32>]
+        [-QosOffload <Int32>]
+        [-ReceiveBuffers <Int32>]
+        [-RscIPv4 <Int32>]
+        [-RscIPv6 <Int32>]
+        [-RssOnHostVPorts <Int32>]
+        [-Sriov <Int32>]
+        [-TCPUDPChecksumOffloadIPv4 <Int32>]
+        [-TCPUDPChecksumOffloadIPv6 <Int32>]
+        [-UDPChecksumOffloadIPv4 <Int32>]
+        [-UDPChecksumOffloadIPv6 <Int32>]
+        [-TransmitBuffers <Int32>]
+        [-UsoIPv4 <Int32>]
+        [-UsoIPv6 <Int32>]
+        [-VMQ <Int32>]
+        [-VxlanUDPPortNumber <Int32>]
+        [-VlanID <UInt16>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: Example
+  description: |-
+    ```powershell
+    New-NetIntentAdapterPropertyOverrides -EncapOverhead 50 -FlowControl 1 -JumboPacket 9000
+    ```
+
+    This example creates a new instance of adapter property override with an encapsulation overhead of
+    `50` bytes, with flow control enabled, and jumbo packets set to `9000` bytes.
+links:
+- text: New-NetIntentAdapterRssOverrides
+  href: New-NetIntentAdapterRssOverrides.yml
+- text: New-NetIntentGlobalClusterOverrides
+  href: New-NetIntentGlobalClusterOverrides.yml
+- text: New-NetIntentGlobalProxyOverrides
+  href: New-NetIntentGlobalProxyOverrides.yml
+- text: New-NetIntentQoSPolicyOverrides
+  href: New-NetIntentQoSPolicyOverrides.yml
+- text: New-NetIntentSiteOverrides
+  href: New-NetIntentSiteOverrides.yml
+- text: New-NetIntentStorageOverrides
+  href: New-NetIntentStorageOverrides.yml
+- text: New-NetIntentSwitchConfigurationOverrides
+  href: New-NetIntentSwitchConfigurationOverrides.yml
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/new-netintentadapterpropertyoverrides?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: New-NetIntentAdapterPropertyOverrides

@@ -1,0 +1,185 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.New-NetIntentAdapterRssOverrides
+name: New-NetIntentAdapterRssOverrides
+module: NetworkATC
+isPreview: false
+summary: |-
+  Creates a new instance of RSS overrides which can be used to supply granular values to `Set-NetIntent`.
+description: |-
+  The `New-NetIntentAdapterRssOverrides` cmdlet creates a new instance of Receive Side Scaling (RSS)
+  overrides. These overrides allow you to specify detailed processor and RSS configuration settings,
+  which can be applied using the `Set-NetIntent` cmdlet.
+parameters:
+  cmdletParameters:
+  - name: BaseProcessorGroup
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the base processor group. This is the starting group number for the processors that will
+      be used by RSS.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BaseProcessorNumber
+    type: <xref href="Byte" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the base processor number within the base processor group in bytes. This is the starting
+      processor number within the base group for RSS.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxProcessorGroup
+    type: <xref href="UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum processor group. This defines the last group number that will be used by RSS.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxProcessorNumber
+    type: <xref href="Byte" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum processor number within the maximum processor group. This defines the last
+      processor number within the maximum group that will be used by RSS.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxProcessors
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the total number of processors that RSS can use. This limits the number of processors that
+      can handle network traffic.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the profile to be used for the RSS settings. This can be a custom profile name that
+      contains predefined RSS settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RssEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether RSS should be enabled. When RSS is enabled, network traffic is distributed across
+      multiple processors to improve performance.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NetIntentAdapterRssOverrides
+        [-RssEnabled <Boolean>]
+        [-BaseProcessorGroup <UInt16>]
+        [-BaseProcessorNumber <Byte>]
+        [-MaxProcessorGroup <UInt16>]
+        [-MaxProcessorNumber <Byte>]
+        [-MaxProcessors <UInt32>]
+        [-Profile <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: Example
+  description: |-
+    ```powershell
+    $params = @{
+        RssEnabled          = $true
+        BaseProcessorGroup  = 0
+        BaseProcessorNumber = 2
+        MaxProcessorGroup   = 0
+        MaxProcessorNumber  = 8
+        MaxProcessors       = 4
+    }
+    New-NetIntentAdapterRssOverrides @params
+    ```
+
+    This example demonstrates how to create a new RSS override instance with RSS enabled. It specifies
+    the base processor group and number, as well as the maximum processor group and number.
+    Additionally, it sets the total number of processors to be used for RSS to `4`.
+links:
+- text: New-NetIntentAdapterPropertyOverrides
+  href: New-NetIntentAdapterPropertyOverrides.yml
+- text: New-NetIntentGlobalClusterOverrides
+  href: New-NetIntentGlobalClusterOverrides.yml
+- text: New-NetIntentGlobalProxyOverrides
+  href: New-NetIntentGlobalProxyOverrides.yml
+- text: New-NetIntentQoSPolicyOverrides
+  href: New-NetIntentQoSPolicyOverrides.yml
+- text: New-NetIntentSiteOverrides
+  href: New-NetIntentSiteOverrides.yml
+- text: New-NetIntentStorageOverrides
+  href: New-NetIntentStorageOverrides.yml
+- text: New-NetIntentSwitchConfigurationOverrides
+  href: New-NetIntentSwitchConfigurationOverrides.yml
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/new-netintentadapterrssoverrides?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: New-NetIntentAdapterRssOverrides

@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Repair-AppvClientPackage
+name: Repair-AppvClientPackage
+module: AppvClient
+isPreview: false
+summary: |-
+  Resets the user settings of a package.
+description: |-
+  The **Repair-AppvClientPackage** cmdlet deletes the user settings and reset the extension points of the package.
+  Resetting the settings causes permanent loss of any user-specific application settings in the package.
+  The settings are reset to their original state when the package was originally added to the system.
+parameters:
+  cmdletParameters:
+  - name: Extensions
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet repairs the extension points of a package only, and does not delete the user state of the package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Global
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet repairs the extension points for the provided packages for all users that log into the targeted computer.
+      Otherwise, the extension points of the packages are only repaired for the currently running user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the package given during Sequencing time.
+      This value is obtained from the package manifest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Package
+    type: <xref href="AppvClientPackage" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an App-V package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPackage
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a GUID that uniquely identifies the package.
+      It can be found in the package manifest or by opening the package in the Microsoft Application Virtualization (App-V) Sequencer.
+      The Package ID is shared by all versions of a package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserState
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet deletes the user state of the package only, and does not perform a repair on the extension points.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of an App-V package in a lineage.
+      If you do not specify this parameter, the cmdlet operates on all versions on the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VersionId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the GUID that differentiates a package version from other versions, whether older, newer, or of a different lineage.
+      If you do not specify this parameter, the cmdlet operates on all versions of the package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByGuid
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Repair-AppvClientPackage
+        [-PackageId] <Guid>
+        [-VersionId] <Guid>
+        [-Global]
+        [-UserState]
+        [-Extensions]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByGuid
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Repair-AppvClientPackage
+        [-Package] <AppvClientPackage>
+        [-Global]
+        [-UserState]
+        [-Extensions]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPackage
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Repair-AppvClientPackage
+        [-Name] <String>
+        [[-Version] <String>]
+        [-Global]
+        [-UserState]
+        [-Extensions]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.AppvAgent.AppvClientPackage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Delete user state for a version of a package'
+  description: |-
+    ```
+    PS C:\> Repair-AppvClientPackage -Name "MyApp" -Version 3
+    ```
+
+    This command deletes the user state of version 3 of the package named MyApp.
+- title: 'Example 2: Delete user state for packages that have a name that matches a string'
+  description: |-
+    ```
+    PS C:\> Get-AppvClientPackage -Name "MyA*" | Repair-AppvClientPackage
+    ```
+
+    This command gets all packages that have the string MyA in the name, and then delete the user state for those packages.
+links:
+- text: Add-AppvClientPackage
+  href: ./Add-AppvClientPackage.yml
+- text: Get-AppvClientPackage
+  href: ./Get-AppvClientPackage.yml
+- text: Mount-AppvClientPackage
+  href: ./Mount-AppvClientPackage.yml
+- text: Publish-AppvClientPackage
+  href: ./Publish-AppvClientPackage.yml
+- text: Remove-AppvClientPackage
+  href: ./Remove-AppvClientPackage.yml
+- text: Set-AppvClientPackage
+  href: ./Set-AppvClientPackage.yml
+- text: Stop-AppvClientPackage
+  href: ./Stop-AppvClientPackage.yml
+- text: Unpublish-AppvClientPackage
+  href: ./Unpublish-AppvClientPackage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/repair-appvclientpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Repair-AppvClientPackage

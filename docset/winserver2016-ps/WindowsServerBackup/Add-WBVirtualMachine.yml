@@ -1,0 +1,149 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsServerBackup.Add-WBVirtualMachine
+name: Add-WBVirtualMachine
+module: WindowsServerBackup
+isPreview: false
+summary: |-
+  Adds a list of virtual machines to the backup policy.
+description: |-
+  The **Add-WBVirtualMachine** cmdlet adds a list of virtual machines to a backup policy contained in the specified **WBPolicy** object.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet adds all virtual machines on the computer to the policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: All
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="WBPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **WBPolicy** object that contains the backup policy to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachine
+    type: <xref href="WBVirtualMachine" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of one or more virtual machines to add to the **WBPolicy** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WBVirtualMachine
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-WBVirtualMachine
+        [-Policy] <WBPolicy>
+        [[-VirtualMachine] <WBVirtualMachine[]>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WBVirtualMachine
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-WBVirtualMachine
+        [-Policy] <WBPolicy>
+        [-All]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: All
+  isDefault: false
+examples:
+- title: 'Example 1: Add virtual machines to the backup policy'
+  description: |-
+    ```
+    PS C:\> $Policy = Get-WBPolicy
+    PS C:\> $VirtualMachines = Get-WBVirtualMachine
+    PS C:\> Add-WBVirtualMachine -Policy $Policy -VirtualMachine $VirtualMachines
+    ```
+
+    This example adds the list of volumes in the $VirtualMachines variable to the **WBPolicy** object contained in the $Policy variable.
+
+    The first command stores the result of the [Get-WBPolicy](./Get-WBPolicy.yml) cmdlet in the $Policy variable.
+
+    The second command stores the result of the **Get-WBVirtualMachine** cmdlet in the $VirtualMachines variable.
+
+    The third command adds the virtual machines listed in the $VirtualMachines variable to the backup policy in the $Policy variable.
+links:
+- text: Get-WBVirtualMachine
+  href: ./Get-WBVirtualMachine.yml
+- text: Remove-WBVirtualMachine
+  href: ./Remove-WBVirtualMachine.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: wsbcmdlet.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsserverbackup/add-wbvirtualmachine?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsServerBackup
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-WBVirtualMachine

@@ -1,0 +1,65 @@
+### YamlMime:PowerShellCmdlet1
+uid: International.Set-WinAcceptLanguageFromLanguageListOptOut
+name: Set-WinAcceptLanguageFromLanguageListOptOut
+module: International
+isPreview: false
+summary: |-
+  Sets the HTTP Accept Language from the Language List opt-out setting for the current user account.
+description: |-
+  The **Set-WinAcceptLanguageFromLanguageListOptOut** cmdlet sets the **HTTP Accept Language** from the Language List opt-out setting for the current user account.
+  By default, the **HTTP Accept Language List** is automatically generated from language list of the current user account.
+  You can use this cmdlet to set the **HTTP Accept Language from Language List opt-out** value.
+  When set to $True, this setting deletes the current content of the HTTP Accept Language registry key and prevents changes to the language list from reestablishing the key.
+  When set to $False, this setting reestablishes the **HTTP Accept Language List** based on the language list for the current user account.
+parameters:
+  cmdletParameters:
+  - name: OptOut
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the opt-out value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WinAcceptLanguageFromLanguageListOptOut
+        [-OptOut] <Boolean>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Update the registry key'
+  description: |-
+    ```
+    PS C:\> Set-WinAcceptLanguageFromLanguageListOptOut -OptOut $True
+    ```
+
+    This cmdlet deletes the current content of the **HTTP Accept Language** registry key and blocks updates to the key based on changes to the language list of the user.
+links:
+- text: Get-WinAcceptLanguageFromLanguageListOptOut
+  href: ./Get-WinAcceptLanguageFromLanguageListOptOut.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/international/set-winacceptlanguagefromlanguagelistoptout?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Locale: en-US
+  Module Name: International
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WinAcceptLanguageFromLanguageListOptOut

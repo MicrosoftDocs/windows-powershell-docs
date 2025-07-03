@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: IscsiTarget.Remove-IscsiVirtualDiskTargetMapping
+name: Remove-IscsiVirtualDiskTargetMapping
+module: IscsiTarget
+isPreview: false
+summary: |-
+  Removes the assignment between the specified iSCSI virtual disk and the specified iSCSI target.
+description: |-
+  The **Remove-IscsiVirtualDiskTargetMapping** cmdlet removes the assignment between a virtual disk and an iSCSI target.
+  The virtual disk is no longer accessible by an iSCSI initiator after the assignment is removed.
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+      Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials when connecting to a remote computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the virtual hard disk (VHD) file that is associated with the iSCSI virtual disk.
+      Filter the iSCSI Virtual Disk object by using this parameter.
+    aliases:
+    - DevicePath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the iSCSI target.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-IscsiVirtualDiskTargetMapping
+        [-TargetName] <String>
+        [-Path] <String>
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Disassociates a virtual disk from a target'
+  description: |-
+    ```
+    PS C:\> Remove-IscsiVirtualDiskTargetMapping -TargetName "TargetOne" -Path "E:\temp\vhd1.vhdx"
+    ```
+
+    This example un-assigns, or disassociates, the virtual disk at E:\temp\vhd1.vhdx from the target named TargetOne.
+    Use Add-IscsiVirtualDiskTargetMapping to assign the virtual disk to an iSCSI target before it can be used by an iSCSI initiator.
+links:
+- text: Add-IscsiVirtualDiskTargetMapping
+  href: ./Add-IscsiVirtualDiskTargetMapping.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iscsitarget/remove-iscsivirtualdisktargetmapping?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-IscsiVirtualDiskTargetMapping

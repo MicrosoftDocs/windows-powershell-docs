@@ -1,0 +1,154 @@
+### YamlMime:PowerShellCmdlet1
+uid: StartLayout.Export-StartLayout
+name: Export-StartLayout
+module: StartLayout
+isPreview: false
+summary: |-
+  Exports the layout of the Start screen.
+description: |-
+  The **Export-StartLayout** cmdlet exports the layout of the tiles on Start of the current user.
+  You can export layout and use Import-StartLayout as well as other management policies for the Start layout.
+  Specify the .xml file name extension in the name of the file.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LiteralPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a literal path to a layout file.
+      Include the file .xml file name extension.
+      This parameter does not accept the wildcard character (*).
+      If the path includes an escape character (\\), enclose the string in single quotes (').
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Literal
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an absolute path to a layout file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Non-literal
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseDesktopApplicationID
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the layout file should export the DesktopApplicationID value instead of DesktopApplicationLinkPath which is the default.
+      DesktopApplicationID is the application's ID and DesktopApplicationLinkPath is a path to a shortcut link (.lnk file) to a Windows desktop application.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-StartLayout
+        [-Path] <String>
+        [-UseDesktopApplicationID]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Non-literal
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Export-StartLayout
+        -LiteralPath <String>
+        [-UseDesktopApplicationID]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Literal
+  isDefault: false
+inputs:
+- name: <xref href="Enum" data-throw-if-not-resolved="False" />
+  description: |-
+    You can specify the following file format:
+
+    - XML.
+    Export as an .xml file.
+examples:
+- title: 'Example 1: Export the layout'
+  description: |-
+    ```
+    PS C:\> Export-StartLayout -Path "C:\Layouts\Marketing.xml"
+    ```
+
+    This command exports the layout of the tiles on Start to a file named Marketing.xml in the C:\Layouts folder.
+links:
+- text: Export-StartLayoutEdgeAssets
+  href: Export-StartLayoutEdgeAssets.yml
+- text: Import-StartLayout
+  href: ./Import-StartLayout.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.StartLayout.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/startlayout/export-startlayout?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: StartLayout
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Export-StartLayout

@@ -1,0 +1,125 @@
+### YamlMime:PowerShellCmdlet1
+uid: Storage.Get-DiskStorageNodeView
+name: Get-DiskStorageNodeView
+module: Storage
+isPreview: false
+summary: |-
+  Gets the view of a disk from a storage node.
+description: |-
+  The **Get-DiskStorageNodeView** cmdlet gets the view of a disk from the perspective of the specified storage node.
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Disk
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a disk object.
+      To obtain a **Disk** object, use the Get-Disk cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageNode
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a disk object.
+      To obtain a **StorageNode** object, use the Get-StorageNode cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-DiskStorageNodeView
+        [[-StorageNode] <CimInstance>]
+        [[-Disk] <CimInstance>]
+        [[-CimSession] <CimSession>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get the node view for a disk on a storage node'
+  description: |-
+    ```
+    PS C:\>Get-Disk -Number 11 | Get-DiskStorageNodeView
+    StorageNodeObjectId: {1}\\Contoso-C1\ROOT/Microsoft/Windows/Storage/Providers_v2\SPACES_StorageNode.ObjectId="{57e
+
+    eb746-cb28-4a7e-90bb-3d124ffcb0f7}:SN:Contoso-04"
+
+
+
+
+
+    DiskNumber        : 11
+
+    HealthStatus      : Healthy
+
+    OperationalStatus : Online
+
+    IsReadOnly        : False
+
+    IsOffline         : False
+
+    OfflineReason     :
+
+    StorageNode       : MSFT_StorageNode (ObjectId = "{1}\\Contoso-C1\ROOT/Microsoft/Window...)
+
+    Disk              : MSFT_Disk (ObjectId = "{1}\\Contoso-C1\ROOT/Microsoft/Window...)
+    ```
+
+    This command gets the disk numbered 11 by using **Get-Disk**, and then passes it to the current cmdlet by using the pipeline operator.
+    The current cmdlet gets the storage node on which disk 11 is present.
+    The command displays some node specific properties.
+links:
+- text: Get-Disk
+  href: ./Get-Disk.yml
+- text: Get-StorageNode
+  href: ./Get-StorageNode.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: StorageScripts-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storage/get-diskstoragenodeview?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: Storage
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-DiskStorageNodeView

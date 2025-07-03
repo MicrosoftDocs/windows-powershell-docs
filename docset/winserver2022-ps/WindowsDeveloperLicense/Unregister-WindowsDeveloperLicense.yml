@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsDeveloperLicense.Unregister-WindowsDeveloperLicense
+name: Unregister-WindowsDeveloperLicense
+module: WindowsDeveloperLicense
+isPreview: false
+summary: |-
+  Disables Developer Mode on the current computer.
+description: |-
+  The **Unregister-WindowsDeveloperLicense** cmdlet disables Developer Mode on the current computer.
+  If a developer license exists on the current computer, this cmdlet also removes it.
+  If you disable Developer Mode, you can no longer install and test your apps by using Microsoft Visual Studio.
+  Any app that you deployed from Visual Studio no longer runs on the current computer.
+
+  You must have administrative credentials to disable Developer Mode.
+  For more information, see [Enable your device for development](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) (https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) in the Microsoft Developer Network library. If you have not enabled Developer Mode for the current computer, this cmdlet returns an error.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disables Developer Mode without prompting you for confirmation.
+      By default, the cmdlet prompts you for confirmation before it proceeds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Unregister-WindowsDeveloperLicense
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Disable Developer Mode'
+  description: |-
+    ```
+    PS C:\> Unregister-WindowsDeveloperLicense
+    ```
+
+    This command disables Developer Mode for the current computer.
+    The cmdlet prompts you for confirmation before it disables Developer Mode.
+    To skip this prompt, specify the **Force** parameter.
+links:
+- text: Enable your device for development
+  href: https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx
+- text: Get-WindowsDeveloperLicense
+  href: ./Get-WindowsDeveloperLicense.yml
+- text: Show-WindowsDeveloperLicenseRegistration
+  href: ./Show-WindowsDeveloperLicenseRegistration.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.DeveloperLicense.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowsdeveloperlicense/unregister-windowsdeveloperlicense?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsDeveloperLicense
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Unregister-WindowsDeveloperLicense

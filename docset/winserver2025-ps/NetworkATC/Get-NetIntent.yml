@@ -1,0 +1,131 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.Get-NetIntent
+name: Get-NetIntent
+module: NetworkATC
+isPreview: false
+summary: |-
+  Gets the current set of intents configured on the node or cluster.
+description: |-
+  The `Get-NetIntent` cmdlet retrieves the current network intents that have been configured either on
+  a standalone host or a cluster.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster for which the network intent is being defined. When used, the
+      intent "floats" across the cluster. Any node with matching physical adapter names will automatically
+      apply the intended configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the computer name of the target host on which the network intent configuration will be
+      applied. For standalone hosts, use the local computer name; for scenarios where the script is
+      executed remotely, ensure the current user has administrative privileges on the target machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GlobalOverrides
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Retrieves the global override settings of the network intent.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines a unique name that identifies the network intent. Since intents are uniquely determined by
+      their list of physical adapters, the name is used as an identifier to ensure that each intent is
+      distinct.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-NetIntent
+        [[-ComputerName] <String>]
+        [-Name <String>]
+        [-GlobalOverrides]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ComputerName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-NetIntent
+        [-ClusterName] <String>
+        [-Name <String>]
+        [-GlobalOverrides]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Cluster
+  isDefault: false
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-NetIntent -ComputerName "Server01" -Name "MyIntent"
+    ```
+
+    This example retrieves the network intent `MyIntent` on the standalone host `Server01`.
+links:
+- text: Add-NetIntent
+  href: Add-NetIntent.yml
+- text: Copy-NetIntent
+  href: Copy-NetIntent.yml
+- text: Get-NetIntentStatus
+  href: Get-NetIntentStatus.yml
+- text: Remove-NetIntent
+  href: Remove-NetIntent.yml
+- text: Set-NetIntent
+  href: Set-NetIntent.yml
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/get-netintent?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: Get-NetIntent

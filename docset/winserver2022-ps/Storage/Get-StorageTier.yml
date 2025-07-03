@@ -1,0 +1,264 @@
+### YamlMime:PowerShellCmdlet1
+uid: Storage.Get-StorageTier
+name: Get-StorageTier
+module: Storage
+isPreview: false
+summary: |-
+  Gets storage tiers on Windows Storage subsystems.
+description: |-
+  The **Get-StorageTier** cmdlet gets storage tiers on Windows Storage subsystems.
+  Storage tiers are physical disks that are grouped by characteristics, for example, solid-state drives (SSD) and hybrid hard drives (HHD).
+notes: |-
+  * When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FriendlyName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of friendly names of storage tiers to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFriendlyName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MediaType
+    type: <xref href="MediaType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of media types.
+      The cmdlet gets the storage tiers for the media type that you specify.
+      The acceptable values for this parameter are:
+
+      - SSD
+      - HDD
+    acceptedValues:
+    - Unspecified
+    - HDD
+    - SSD
+    - SCM
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoragePool
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a storage pool as a **CIMInstance** object.
+      The cmdlet gets the storage tiers for the storage pool that you specify.
+      To obtain a storage pool, use the Get-StoragePool cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByStoragePool
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UniqueId
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of IDs of storage tiers to get.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUniqueId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualDisk
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a virtual disk as a **CIMInstance** object.
+      The cmdlet gets the storage tiers for the virtual disk that you specify.
+      To obtain a virtual disk, use theGet-VirtualDisk cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualDisk
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-StorageTier
+        [[-FriendlyName] <String[]>]
+        [-MediaType <MediaType[]>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFriendlyName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-StorageTier
+        [-UniqueId <String[]>]
+        [-MediaType <MediaType[]>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByUniqueId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-StorageTier
+        [-MediaType <MediaType[]>]
+        [-VirtualDisk <CimInstance>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualDisk
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-StorageTier
+        [-MediaType <MediaType[]>]
+        [-StoragePool <CimInstance>]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByStoragePool
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StoragePool" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an MSFT_StoragePool object to the *StoragePool* parameter to get the storage tier associated with the **StoragePool** object.
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk" data-throw-if-not-resolved="False" />
+  description: |-
+    You can use the pipeline operator to pass an **MSFT_VirtualDisk** object to the *VirtualDisk* parameter to get the storage tier associated with the **VirtualDisk** object.
+outputs:
+- name: <xref href="MSFT_StorageTier" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an object that contains details about the storage tier, such as tier friendly name, media type and size.
+examples:
+- title: 'Example 1: Get a storage tier'
+  description: |-
+    ```
+    PS C:\>Get-StorageTier -FriendlyName "StoreTier01"
+    ```
+
+    This command gets the storage tier named StoreTier01.
+- title: 'Example 2: Get a storage tier from a storage pool'
+  description: |-
+    ```
+    PS C:\> Get-StoragePool -FriendlyName "StorePool01" | Get-StorageTier
+    ```
+
+    This command gets the object that contains the storage pool named StorePool01, and then passes the object to the Get-StorageTier cmdlet by using the pipeline operator.
+    The **Get-StorageTier** cmdlet gets the storage tier from the storage pool object.
+- title: 'Example 3: Get a storage tier from a virtual disk'
+  description: |-
+    ```
+    PS C:\>Get-VirtualDisk -FriendlyName "VDisk01" | Get-StorageTier
+    ```
+
+    This command uses the Get-VirtualDisk cmdlet to get the tiered virtual disk named VDisk01.
+    The command passes the virtual disk to the **Get-StorageTier** cmdlet by using the pipeline operator.
+    The **Get-StorageTier** cmdlet gets the storage tiers that compose the tiered virtual disk.
+links:
+- text: New-StorageTier
+  href: ./New-StorageTier.yml
+- text: Remove-StorageTier
+  href: ./Remove-StorageTier.yml
+- text: Resize-StorageTier
+  href: ./Resize-StorageTier.yml
+- text: Set-StorageTier
+  href: ./Set-StorageTier.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: StorageTier.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/storage/get-storagetier?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Storage
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-StorageTier

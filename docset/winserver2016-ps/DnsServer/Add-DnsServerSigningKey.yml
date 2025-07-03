@@ -1,0 +1,437 @@
+### YamlMime:PowerShellCmdlet1
+uid: DnsServer.Add-DnsServerSigningKey
+name: Add-DnsServerSigningKey
+module: DnsServer
+isPreview: false
+summary: |-
+  Adds a KSK or ZSK to a signed zone.
+description: |-
+  The **Add-DnsServerSigningKey** cmdlet adds a Key Signing Key (KSK) or Zone Signing Key (ZSK) key to a Domain Name System (DNS) signed zone.
+parameters:
+  cmdletParameters:
+  - name: ActiveKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a signing key pointer string for the KSK's active key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+
+      The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+      You can continue to work in the session while the job completes.
+      To manage the job, use the `*-Job` cmdlets.
+      To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
+
+      For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a remote DNS server.
+      You can specify an IP address or any value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+    aliases:
+    - Cn
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CryptoAlgorithm
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a cryptographic algorithm to use for key generation.
+      The acceptable values for this parameter are:
+
+      - RsaSha1
+      - RsaSha256
+      - RsaSha512
+      - RsaSha1NSec3
+      - ECDsaP256Sha256
+      - ECDsaP384Sha384
+    acceptedValues:
+    - RsaSha1
+    - RsaSha256
+    - RsaSha512
+    - RsaSha1NSec3
+    - ECDsaP256Sha256
+    - ECDsaP384Sha384
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DnsKeySignatureValidityPeriod
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the amount of time that signatures that cover DNSKEY record sets are valid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DSSignatureValidityPeriod
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the amount of time that signatures that cover DS record sets are valid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InitialRolloverOffset
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the amount of time to delay the first scheduled key rollover.
+      You can use **InitialRolloverOffset** to stagger key rollovers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyLength
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the bit length of a key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyStorageProvider
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Key Storage Provider that the DNS server uses to generate keys.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NextKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a signing key pointer string for the next key.
+      The DNS server uses this key during the next key rollover event.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RolloverPeriod
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the amount of time between scheduled key rollovers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StandbyKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a signing key pointer string for the KSK's standby key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoreKeysInAD
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to store the keys in Active Directory Domain Services (AD DS).
+      This setting applies only to Active Directory-integrated zones when the vendor of KeyStorageProvider is Microsoft.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether a key is a KSK or a ZSK.
+    acceptedValues:
+    - KeySigningKey
+    - ZoneSigningKey
+    aliases:
+    - KeyType
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZoneName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the zone in which DNS Security Extensions (DNSSEC) operations are performed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZoneSignatureValidityPeriod
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the amount of time that signatures that cover all other record sets are valid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-DnsServerSigningKey
+        [-ZoneName] <String>
+        [[-Type] <String>]
+        [[-CryptoAlgorithm] <String>]
+        [-ComputerName <String>]
+        [[-KeyLength] <UInt32>]
+        [-InitialRolloverOffset <TimeSpan>]
+        [-DnsKeySignatureValidityPeriod <TimeSpan>]
+        [-DSSignatureValidityPeriod <TimeSpan>]
+        [-ZoneSignatureValidityPeriod <TimeSpan>]
+        [-RolloverPeriod <TimeSpan>]
+        [-ActiveKey <String>]
+        [-StandbyKey <String>]
+        [-NextKey <String>]
+        [-KeyStorageProvider <String>]
+        [-StoreKeysInAD <Boolean>]
+        [-PassThru]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#DnsServerSigningKey" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a KSK to a DNS zone'
+  description: |-
+    ```
+    PS C:\> Add-DnsServerSigningKey -ZoneName "corp.contoso.com" -Type "KeySigningKey" -CryptoAlgorithm "RsaSha1NSec3" -KeyLength 2048 -PassThru -Verbose
+    ```
+
+    This command adds a KSK to the DNS signed-zone corp.contoso.com.
+links:
+- text: Disable-DnsServerSigningKeyRollover
+  href: ./Disable-DnsServerSigningKeyRollover.yml
+- text: Enable-DnsServerSigningKeyRollover
+  href: ./Enable-DnsServerSigningKeyRollover.yml
+- text: Get-DnsServerSigningKey
+  href: ./Get-DnsServerSigningKey.yml
+- text: Invoke-DnsServerSigningKeyRollover
+  href: ./Invoke-DnsServerSigningKeyRollover.yml
+- text: Remove-DnsServerSigningKey
+  href: ./Remove-DnsServerSigningKey.yml
+- text: Set-DnsServerSigningKey
+  href: ./Set-DnsServerSigningKey.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: PS_DnsServerSigningKey_v1.0.0.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dnsserver/add-dnsserversigningkey?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: DnsServer
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-DnsServerSigningKey

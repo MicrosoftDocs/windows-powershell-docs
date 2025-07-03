@@ -1,0 +1,217 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Get-ClusterLog
+name: Get-ClusterLog
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Creates a log file for all nodes, or a specific a node, in a failover cluster.
+description: |-
+  The **Get-ClusterLog** cmdlet creates a log file for all nodes, or a specific a node, in a failover cluster.
+
+  When creating a log file for the cluster, you can specify the timespan that you want logged information for in addition to providing a destination for the created logs.
+
+  Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet.
+      If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Destination
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location to which to copy one or more cluster logs.
+      To copy to the current folder, use `.` for this parameter input.
+      Default location is C:\Windows\Cluster\Reports.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Health
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet also logs the health information of the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster from which to generate cluster logs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Node
+    type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster node for which to generate the cluster log.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipClusterState
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet does not add additional cluster state information to the cluster logs.
+    aliases:
+    - scs
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeSpan
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time span in minutes for which to generate the cluster log.
+    aliases:
+    - Span
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseLocalTime
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the time stamp for each cluster log entry uses local time.
+      By default, the timestamp uses Greenwich Mean Time (GMT).
+    aliases:
+    - lt
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-ClusterLog
+        [[-Node] <StringCollection>]
+        [-Destination <String>]
+        [-TimeSpan <UInt32>]
+        [-UseLocalTime]
+        [-SkipClusterState]
+        [-Health]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.IO.FileInfo" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a log file for the local cluster'
+  description: |-
+    ```
+    PS C:\> Get-ClusterLog
+    Mode                LastWriteTime     Length Name
+    ----                -------------     ------ ----
+    -a---          9/4/2008   3:53 PM    2211301 Cluster.log
+    -a---          9/4/2008   3:53 PM    1261025 Cluster.log
+    ```
+
+    This command creates a log file for the local cluster in the cluster reports folder (C:\Windows\Cluster\Reports) on each node of the cluster.
+- title: 'Example 2: Create log files for each node and save them locally'
+  description: |-
+    ```
+    PS C:\> Get-ClusterLog -Destination .
+    Mode                LastWriteTime     Length Name
+    ----                -------------     ------ ----
+    -a---          9/4/2008   3:55 PM    2211301 node1_cluster.log
+    -a---          9/4/2008   3:55 PM    1261025 node2_cluster.log
+    ```
+
+    This command creates a log file for each node of the local cluster, and copies all logs to the local folder.
+- title: 'Example 3: Create a log file for the local cluster for previous five minutes'
+  description: |-
+    ```
+    PS C:\> Get-ClusterLog -TimeSpan 5
+    Mode                LastWriteTime     Length Name
+    ----                -------------     ------ ----
+    -a---          9/4/2008   3:58 PM     128299 Cluster.log
+    -a---          9/4/2008   4:01 PM     104181 Cluster.log
+    ```
+
+    This command creates a log file for the local cluster in the cluster reports folder (C:\Windows\Cluster\Reports) on each node of the cluster.
+    The log covers the last 5 minutes.
+links:
+- text: Set-ClusterLog
+  href: ./Set-ClusterLog.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterlog?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-ClusterLog

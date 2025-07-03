@@ -1,0 +1,90 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Publish-SslCertificate
+name: Publish-SslCertificate
+module: ADFS
+isPreview: false
+summary: |-
+  The Publish-SslCertificate cmdlet is deprecated.
+  Instead, use the Set-AdfsSslCertificate cmdlet.
+description: |-
+  The **Publish-SslCertificate** cmdlet is deprecated in this release.
+  Instead, use the Set-AdfsSslCertificate cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Password
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PublishByPfxPath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RawPfx
+    type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PublishByPfxData
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Publish-SslCertificate
+        -Path <String>
+        -Password <SecureString>
+        [<CommonParameters>]
+    ```
+  parameterSetName: PublishByPfxPath
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Publish-SslCertificate
+        -RawPfx <Byte[]>
+        -Password <SecureString>
+        [<CommonParameters>]
+    ```
+  parameterSetName: PublishByPfxData
+  isDefault: false
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+links:
+- text: Set-AdfsSslCertificate
+  href: ./Set-AdfsSslCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/publish-sslcertificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Publish-SslCertificate

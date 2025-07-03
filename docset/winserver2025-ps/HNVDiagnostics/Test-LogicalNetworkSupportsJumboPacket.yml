@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: HNVDiagnostics.Test-LogicalNetworkSupportsJumboPacket
+name: Test-LogicalNetworkSupportsJumboPacket
+module: HNVDiagnostics
+isPreview: false
+summary: |-
+  Tests whether a jumbo packet can be sent between two nodes.
+description: |-
+  The **Test-LogicalNetworkSupportsJumboPacket** cmdlet tests whether a jumbo packet can be sent between two nodes.
+parameters:
+  cmdletParameters:
+  - name: DestinationHost
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the destination IP address or fully qualified domain name (FQDN).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationHostCreds
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials to use on the destination host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceHost
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the source IP address or FQDN.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceHostCreds
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials to use on the source host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-LogicalNetworkSupportsJumboPacket
+        [-SourceHost] <String>
+        [-DestinationHost] <String>
+        [[-SourceHostCreds] <PSCredential>]
+        [[-DestinationHostCreds] <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Test a jumbo packet'
+  description: |-
+    ```
+    PS C:\> $cred = Get-Credential
+    Test-LogicalNetworkSupportsJumboPacket -SourceHost "localhost" -SourceHostCreds $cred -DestinationHost "1.1.1.1" -DestinationHostCreds $cred
+    ```
+
+    The first command gets the user's credentials, and then stores them in the $cred variable.
+
+    The second command tests a jumbo packet between the specified source and destination hosts.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Test-LogicalNetworkSupportsJumboPacket.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hnvdiagnostics/test-logicalnetworksupportsjumbopacket?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: HNVDiagnostics
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Test-LogicalNetworkSupportsJumboPacket

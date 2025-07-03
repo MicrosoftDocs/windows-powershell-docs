@@ -1,0 +1,32 @@
+### YamlMime:PowerShellModule1
+uid: Gatewaytunnel
+name: Gatewaytunnel Module
+isPreview: false
+cmdletGroups:
+- title: Gatewaytunnel Cmdlets
+  cmdlets:
+  - Gatewaytunnel.Connect-GatewayTunnel
+  - Gatewaytunnel.Disable-GatewayRoutingDomain
+  - Gatewaytunnel.Disable-GatewayTunnelPacketTrace
+  - Gatewaytunnel.Disconnect-GatewayTunnel
+  - Gatewaytunnel.Enable-GatewayRoutingDomain
+  - Gatewaytunnel.Enable-GatewayTunnelPacketTrace
+  - Gatewaytunnel.Get-GatewayConfiguration
+  - Gatewaytunnel.Get-GatewayRoutingDomain
+  - Gatewaytunnel.Get-GatewayTunnel
+  - Gatewaytunnel.Get-GatewayTunnelStatistics
+  - Gatewaytunnel.Remove-GatewayTunnel
+  - Gatewaytunnel.Set-GatewayConfiguration
+  - Gatewaytunnel.Set-GatewayTunnel
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: c474e086-dd3f-47e8-b26e-b5f048a0a76f
+  Module Name: Gatewaytunnel
+  ms.date: 02/21/2024
+  title: Gatewaytunnel module
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,95 @@
+### YamlMime:PowerShellCmdlet1
+uid: IISAdministration.Get-IISConfigAttributeValue
+name: Get-IISConfigAttributeValue
+module: IISAdministration
+isPreview: false
+summary: |-
+  Gets a configuration attribute value from an IIS configuration section or configuration element attribute.
+description: |-
+  The **Get-IISConfigAttributeValue** cmdlet gets a configuration attribute value from an Internet Information Services (IIS) configuration section attribute or a configuration element attribute.
+  The value returned is the value that can be extracted from the given **ConfigurationElement** and not necessarily the effective value for a given site / virtual directory / folder etc.
+  To obtain the effective attribute values, always retrieve the configuration element by specifying the commit path as the deepest level possible.
+  Even the configuration attribute is not defined at that level, the parent attributes are scanned and the effective configuration element is returned.
+  You can then work on this **ConfigurationElement** to get/set/remove configuration attribute values.
+parameters:
+  cmdletParameters:
+  - name: AttributeName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the attribute that will be retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigElement
+    type: <xref href="ConfigurationElement" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IIS ConfigurationSection or ConfigurationElement for which the attribute value will be looked up.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-IISConfigAttributeValue
+        [-ConfigElement] <ConfigurationElement>
+        [-AttributeName] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Web.Administration.ConfigurationElement" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a configuration attribute from an IIS website'
+  description: |-
+    ```
+    PS C:\> Get-IISSite "Default Web Site" | Get-IISConfigElement -ChildElementName "limits" | Get-IISConfigAttributeValue -AttributeName "MaxUrlSegments"
+    ```
+
+    This command gets the configuration attribute MaxUrlSegments for the Default Web Site.
+- title: 'Example 2: Get configuration attribute values from different parts of the configuration store'
+  description: |-
+    ```
+    PS C:\> Get-IISConfigSection "system.webServer/asp" | Get-IISConfigAttributeValue -AttributeName "ScriptErrorMessage"
+    An error occurred on the server when processing the URL. Please contact the system administrator. <p/> If you are the system administrator please click <a href="https://go.microsoft.com/fwlink/?LinkID=82731">here</a> to find out more about this error.
+    ```
+
+    This command gets the global attribute value for ScriptErrorMessage
+links:
+- text: Set-IISConfigAttributeValue
+  href: ./Set-IISConfigAttributeValue.yml
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: index.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iisadministration/get-iisconfigattributevalue?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-IISConfigAttributeValue

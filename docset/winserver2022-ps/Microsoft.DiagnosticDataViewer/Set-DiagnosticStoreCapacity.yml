@@ -1,0 +1,102 @@
+### YamlMime:PowerShellCmdlet1
+uid: Microsoft.DiagnosticDataViewer.Set-DiagnosticStoreCapacity
+name: Set-DiagnosticStoreCapacity
+module: Microsoft.DiagnosticDataViewer
+isPreview: false
+summary: |-
+  Sets the diagnostic store time and size capacity.
+description: |-
+  This cmdlet sets the maximum amount of Diagnostic Data history (by time and by size) that can be shown through this tool.
+  The size cap is measured in megabytes, and the time cap is measured in days.
+  Once the either cap is reached (whichever comes first), diagnostic data history is removed based on a first in first out order.
+notes: |-
+  Requires Windows 10 version 17134 (1803) or higher
+parameters:
+  cmdletParameters:
+  - name: Size
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Set size capacity of the diagnostic store.
+    aliases:
+    - s
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Time
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Set time capacity of the diagnostic store.
+    aliases:
+    - t
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-DiagnosticStoreCapacity
+        [[-Size] <UInt32>]
+        [[-Time] <UInt32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  description: |-
+    Set size capacity of the diagnostic store.
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+  description: |-
+    Set time capacity of the diagnostic store.
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```
+    Set-DiagnosticStoreCapacity -Size 1024
+    ```
+
+    Set store capacity (megabytes) of the diagnostic store.
+- title: EXAMPLE 2
+  description: |-
+    ```
+    Set-DiagnosticStoreCapacity -Time 24
+    ```
+
+    Set time capacity (hours) of the diagnostic store.
+- title: EXAMPLE 3
+  description: |-
+    ```
+    Set-DiagnosticStoreCapacity -Size 1024 -Time 24
+    ```
+
+    Set store capacity (megabytes) and time capacity (hours) of the diagnostic store at the same time.
+metadata:
+  document type: cmdlet
+  external help file: DDVCmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/set-diagnosticstorecapacity?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Microsoft.DiagnosticDataViewer
+  PlatyPS schema version: 2024-05-01
+  title: Set-DiagnosticStoreCapacity

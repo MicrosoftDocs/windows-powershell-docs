@@ -1,0 +1,54 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsClaimsProviderTrustsGroup
+name: Get-AdfsClaimsProviderTrustsGroup
+module: ADFS
+isPreview: false
+summary: |-
+  Gets an AD FS claims provider trust group.
+description: |-
+  The **Get-AdfsClaimsProviderTrustsGroup** cmdlet gets an Active Directory Federation Services (AD FS) claims provider trust group.
+parameters:
+  cmdletParameters:
+  - name: Identifier
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of IDs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsClaimsProviderTrustsGroup
+        [[-Identifier] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+links:
+- text: Add-AdfsClaimsProviderTrustsGroup
+  href: ./Add-AdfsClaimsProviderTrustsGroup.yml
+- text: Remove-AdfsClaimsProviderTrustsGroup
+  href: ./Remove-AdfsClaimsProviderTrustsGroup.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfsclaimsprovidertrustsgroup?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsClaimsProviderTrustsGroup

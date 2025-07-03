@@ -1,0 +1,129 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Set-AdfsAzureMfaTenant
+name: Set-AdfsAzureMfaTenant
+module: ADFS
+isPreview: false
+summary: |-
+  Enables an AD FS farm to use MFA.
+description: |-
+  The **Set-AdfsAzureMfaTenant** cmdlet enables an Active Directory Federation Services (AD FS) farm to use Azure Multi-Factor Authentication (MFA) after a certificate has been created and registered in the Microsoft Entra tenant.
+parameters:
+  cmdletParameters:
+  - name: ClientId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the well-known ID of the Azure MFA application in Microsoft Entra ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TenantId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the GUID representation of a Microsoft Entra tenant ID.
+      This can be found in the URL bar of the Microsoft Entra admin center, as in this example:
+
+      `https://manage.windowsazure.com/contoso.onmicrosoft.com#Workspaces/ActiveDirectoryExtension/Directory/\<tenantID_GUID\>/directoryQuickStart`
+
+      You can also use the **Login-AzureRmAccount** cmdlet that is part of the Azure PowerShell module to get the tenant ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AdfsAzureMfaTenant
+        -TenantId <String>
+        -ClientId <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Enable Azure MFA'
+  description: |-
+    ```
+    PS C:\> $certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID>
+    PS C:\> Add-MgServicePrincipalKey -ServicePrincipalId <service principal ID> -KeyCredential $certbase64
+    PS C:\> Set-AdfsAzureMfaTenant -TenantId <your tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
+    ```
+
+    This command creates a certificate for Azure MFA, registers it in the tenant, and enables Azure MFA on the AD FS farm.
+- title: 'Example 2: Determine which certificate Azure MFA is using'
+  description: |-
+    ```
+    $CertInBase64 = New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID>
+    [Security.Cryptography.X509Certificates.X509Certificate2]([System.Convert]::FromBase64String($CertInBase64))
+    ```
+
+    After AD FS has been configured for Azure MFA, this command determines which certificate Azure MFA is using and when it expires.
+links:
+- text: New-AdfsAzureMfaTenantCertificate
+  href: ./New-AdfsAzureMfaTenantCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/set-adfsazuremfatenant?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.custom: no-azure-ad-ps-ref
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-AdfsAzureMfaTenant

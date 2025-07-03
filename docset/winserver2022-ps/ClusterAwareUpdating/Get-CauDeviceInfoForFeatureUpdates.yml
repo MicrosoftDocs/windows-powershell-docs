@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: ClusterAwareUpdating.Get-CauDeviceInfoForFeatureUpdates
+name: Get-CauDeviceInfoForFeatureUpdates
+module: ClusterAwareUpdating
+isPreview: false
+summary: |-
+  Gets device information for feature updates to use with CAU.
+description: |-
+  The `Get-CauDeviceInfoForFeatureUpdates` cmdlet gets device information for feature updates to use
+  with Cluster-Aware Updating (CAU).
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster fow which to get device information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the administrative credentials for the target cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PathToDirectory
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-CauDeviceInfoForFeatureUpdates
+        [[-ClusterName] <String>]
+        [-Credential <PSCredential>]
+        -PathToDirectory <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.ClusterAwareUpdating.ActivityIdMap" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get device information'
+  description: |-
+    ```powershell
+    $Parameters = @{
+        ClusterName = 'CONTOSO-FC1'
+        PathToDirectory = 'C:\temp\contoso-device-info'
+    }
+    Get-CauDeviceInfoForFeatureUpdates $Parameters
+    ```
+
+    This example gets device information for CAU for the specified cluster. This example uses
+    splatting to pass parameter values from the `$Parameters` variable to the command. Learn more about
+    [Splatting](/powershell/module/microsoft.powershell.core/about/about_splatting).
+links:
+- text: Get-CauClusterRole
+  href: get-cauclusterrole.yml
+- text: Get-CauPlugin
+  href: get-cauplugin.yml
+- text: Get-CauReport
+  href: get-caureport.yml
+- text: Get-CauRun
+  href: get-caurun.yml
+metadata:
+  description: The Get-CauDeviceInfoForFeatureUpdates cmdlet gets device information for feature updates to use with Cluster-Aware Updating (CAU).
+  document type: cmdlet
+  external help file: ClusterAwareUpdating.dll-Help.xml
+  HelpUri: https://docs.microsoft.com/powershell/module/clusterawareupdating/get-caudeviceinfoforfeatureupdates?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: ClusterAwareUpdating
+  ms.date: 09/17/2021
+  PlatyPS schema version: 2024-05-01
+  title: Get-CauDeviceInfoForFeatureUpdates

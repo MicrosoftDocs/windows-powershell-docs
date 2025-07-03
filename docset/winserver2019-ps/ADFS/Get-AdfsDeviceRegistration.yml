@@ -1,0 +1,60 @@
+### YamlMime:PowerShellCmdlet1
+uid: ADFS.Get-AdfsDeviceRegistration
+name: Get-AdfsDeviceRegistration
+module: ADFS
+isPreview: false
+summary: |-
+  Gets the administrative polices of the Device Registration Service.
+description: |-
+  The **Get-AdfsDeviceRegistration** cmdlet gets the administrative polices that are used by the Device Registration Service in Active Directory Federation Services (AD FS).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AdfsDeviceRegistration
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="DeviceRegistrationServiceObject" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a **DeviceRegistrationServiceObject** object that represents the Device Registration Service.
+    The object includes the following properties:
+
+    - DevicesPerUser Type: **Int**
+    - MaximumInactiveDays Type: **Int**
+    - IsEnabledOnPremises: Type: **bool**
+    - IsEnabledInCloud: Type: **bool**
+    - DeviceObjectLocation: Type: **string**
+    - DrsObjectDN: Type: **string**
+examples:
+- title: 'Example 1: Get settings of the Device Registration Service'
+  description: |-
+    ```
+    PS C:\> Get-AdfsDeviceRegistration
+
+
+    DrsObjectDN          : CN=DeviceRegistrationService,CN=Device Registration Services,CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com
+    DevicesPerUser       : 10
+    MaximumInactiveDays  : 90
+    IsEnabledOnPremises  : True
+    IsEnabledInCloud     : False
+    DeviceObjectLocation : CN=RegisteredDevices,DC=contoso,DC=com
+    ```
+
+    This command gets the current settings for the Device Registration Service in AD FS.
+links:
+- text: Disable-AdfsDeviceRegistration
+  href: ./Disable-AdfsDeviceRegistration.yml
+- text: Enable-AdfsDeviceRegistration
+  href: ./Enable-AdfsDeviceRegistration.yml
+- text: Set-AdfsDeviceRegistration
+  href: ./Set-AdfsDeviceRegistration.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/adfs/get-adfsdeviceregistration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ADFS
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-AdfsDeviceRegistration

@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: DISM.Get-WindowsReservedStorageState
+name: Get-WindowsReservedStorageState
+module: DISM
+isPreview: false
+summary: |-
+  Gets the reserved storage state of the image.
+description: |-
+  Gets the current state of reserved storage. This command is supported with the online Windows image.
+notes: |-
+  Supported on Windows 10, version 2004
+parameters:
+  cmdletParameters:
+  - name: LogLevel
+    type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the output level shown in the logs.
+      The accepted values are as follows:
+      - Errors (or '0') - shows error events. Could be combined with Warnings or WarningsInfo
+      - Warnings (or '1') - shows warning events
+      - WarningsInfo (or '2') - shows information log records
+    acceptedValues:
+    - Errors
+    - Warnings
+    - WarningsInfo
+    aliases:
+    - LL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path and file name to log to.
+      If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+      In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
+      The log file will automatically be archived.
+      The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
+      Each time the log file is archived the .bak file will be overwritten.
+      When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+    aliases:
+    - LP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScratchDirectory
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a temporary directory that will be used when extracting files for use during servicing.
+      The directory must exist locally.
+      If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+      Items in the scratch directory are deleted after each operation.
+      You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
+      The directory used for extracting files for temporary usage during servicing should be a local directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WindowsReservedStorageState
+        [-LogPath <String>]
+        [-ScratchDirectory <String>]
+        [-LogLevel <LogLevel>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Dism.Commands.LogLevel" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Dism.Commands.ReservedStorageStateObject" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> Get-WindowsReservedStorageState -Online
+    ```
+
+    This command gets the Windows reserved storage state on the local host.
+links:
+- text: Set-WindowsReservedStorageState
+  href: ./Set-WindowsReservedStorageState.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/dism/get-windowsreservedstoragestate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: DISM
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,86 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteDesktop.Get-RDUserSession
+name: Get-RDUserSession
+module: RemoteDesktop
+isPreview: false
+summary: |-
+  Gets a list of all user sessions in a collection or in a Remote Desktop deployment.
+description: |-
+  The **Get-RDUserSession** cmdlet gets a list of all user sessions in a collection or in a Remote Desktop deployment.
+parameters:
+  cmdletParameters:
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array that contains the name of the virtual desktop collection that contains the user sessions.
+      If this parameter does not appear, the cmdlet returns all user sessions across all virtual desktop collections.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for this Remote Desktop deployment.
+      Remote users connect to this server to obtain views of available firstref_server_7 RemoteApp programs, session-based desktops, and virtual desktops.
+      If this parameter does not appear, the default value is the fully qualified domain name (FQDN) of the local host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-RDUserSession
+        [[-CollectionName] <String[]>]
+        [[-ConnectionBroker] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.RemoteDesktopServices.Management.RDUserSession" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Retrieve a list of user sessions in a collection'
+  description: |-
+    ```
+    PS C:\> Get-RDUserSession -ConnectionBroker "rdcb.contoso.com"
+    ```
+
+    This command lists user sessions in a collection that is associated with the RD Connection Broker server named rdcb.contoso.com.
+- title: 'Example 2: Retrieve a list of user sessions in multiple collections'
+  description: |-
+    ```
+    PS C:\> Get-RDUserSession -ConnectionBroker "rdcb.contoso.com" -CollectionName @("Session Collection","Virtual Desktop Collection")
+    ```
+
+    This command lists user sessions in the collections named Session Collection and Virtual Desktop Collection.
+    The cmdlet associates these collections with the RD  Connection Broker server named rdcb.contoso.com.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/moduleremotedesktop/get-rdusersession?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteDesktop
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-RDUserSession

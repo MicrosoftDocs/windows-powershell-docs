@@ -1,0 +1,89 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Set-AccelNetVM
+name: Set-AccelNetVM
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Sets Accelerated Networking on a VM.
+description: |-
+  Sets Accelerated Networking on a VM.
+parameters:
+  cmdletParameters:
+  - name: Performance
+    type: <xref href="PerformanceWeight" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets the performance level. Acceptable values are:
+
+      - `Low`
+      - `Medium`
+      - `High`
+    acceptedValues:
+    - Low
+    - Medium
+    - High
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AccelNetVM
+        [-VMName] <String>
+        [-Performance] <PerformanceWeight>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```powershell
+    Set-AccelNetVM -VMName "MyVM" -Performance High
+    ```
+
+    This example sets Accelerated Networking with the performance level set to `High` for the VM
+    named `MyVM`.
+links:
+- text: Disable-AccelNetVM
+  href: disable-accelnetvm.yml
+- text: Enable-AccelNetVM
+  href: enable-accelnetvm.yml
+- text: Get-AccelNetVM
+  href: get-accelnetvm.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/set-accelnetvm?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 01/22/2025
+  PlatyPS schema version: 2024-05-01
+  title: Set-AccelNetVM

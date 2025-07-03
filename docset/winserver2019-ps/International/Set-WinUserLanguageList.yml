@@ -1,0 +1,163 @@
+### YamlMime:PowerShellCmdlet1
+uid: International.Set-WinUserLanguageList
+name: Set-WinUserLanguageList
+module: International
+isPreview: false
+summary: |-
+  Sets the language list and associated properties for the current user account.
+description: |-
+  The **Set-WinUserLanguageList** cmdlet sets the current user language settings.
+  These settings include input method, spelling setting, text prediction setting, and handwriting input mode.
+  For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306) and [Configurable Language and Cultural Settings](https://go.microsoft.com/fwlink/?LinkID=242307).
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LanguageList
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.InternationalSettings.Commands.WinUserLanguage" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies a language list.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WinUserLanguageList
+
+        [-LanguageList] <System.Collections.Generic.List`1[Microsoft.InternationalSettings.Commands.WinUserLanguage]>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.Collections.Generic.List<Microsoft.InternationalSettings.Commands.WinUserLanguage>" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a list of **WinUserLanguage** objects that contain one or more languages and associated properties from the current user account's language list.
+    The language object contains the following properties:
+
+    - **BCP-47** (READ).
+    A standard language tag that is used to identify languages.
+    For more information, see the [Internet Engineering Task Force (IETF) BCP 47 RFC](https://go.microsoft.com/fwlink/?LinkID=242207).
+    - **Autonym** (LP database) (READ).
+    The name of the language in the language itself.
+    - **English name** (LP database) (READ).
+    The name of the language in English.
+    - **Localized name** (LP database) (READ).
+    The name of the language in the current Windows display language.
+    - **Script** (LP database) (READ).
+    The writing system of the language.
+    - **Input methods** (READ/WRITE).
+    A list of input method Tablet Input Panel (TIP) strings that are enabled for this language.
+    The enabled input methods are listed in the format `Language ID:Keyboard layout ID`. See [Default input profiles (input locales) in Windows](/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs).
+    - **Handwriting recognition input mode** (READ/WRITE).
+    This value is either 0 (freehand) or 1 (write each character separately).
+examples:
+- title: 'Example 1: Add a language to an existing language list'
+  description: |-
+    ```
+    PS C:\> $OldList = Get-WinUserLanguageList
+    PS C:\> $OldList.Add("fr-FR")
+    PS C:\> Set-WinUserLanguageList -LanguageList $OldList
+    ```
+
+    This example adds the language French (France) to the language list of the user.
+
+    The first command gets the user language list by using the **Get-WinUserLanguageList** cmdlet.
+    The command stores the result in the $OldList variable.
+
+    The second command adds a language to the object in $OldList.
+
+    The final command sets the language list of the current user to the revised value of $OldList.
+- title: 'Example 2: Change a value in a language'
+  description: |-
+    ```
+    PS C:\> $UserLanguageList = New-WinUserLanguageList -Language en-US
+    PS C:\> $UserLanguageList[0].Handwriting = $True
+    PS C:\> Set-WinUserLanguageList -LanguageList $UserLanguageList
+    ```
+
+    This example changes the handwriting setting for a language in the user language list.
+
+    The first command creates a language list for US English that has default values, and then stores it in the $UserLanguageList variable.
+
+    The second command modifies the **Handwriting** property of the first member of the language list in $UserLanguageList.
+
+    The final command sets the language list of the current user to the revised value of $UserLanguageList.
+links:
+- text: Get-WinUserLanguageList
+  href: ./Get-WinUserLanguageList.yml
+- text: New-WinUserLanguageList
+  href: ./New-WinUserLanguageList.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/international/set-winuserlanguagelist?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Locale: en-US
+  Module Name: International
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WinUserLanguageList

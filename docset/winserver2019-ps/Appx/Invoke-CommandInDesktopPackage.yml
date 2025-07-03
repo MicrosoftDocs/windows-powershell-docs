@@ -1,0 +1,135 @@
+### YamlMime:PowerShellCmdlet1
+uid: Appx.Invoke-CommandInDesktopPackage
+name: Invoke-CommandInDesktopPackage
+module: Appx
+isPreview: false
+summary: |-
+  Runs a command in the context of a specified app package.
+description: |-
+  **Invoke-CommandInDesktopPackage** will have a package token and identity. It's primarily designed to be used as a debugging utility.
+parameters:
+  cmdletParameters:
+  - name: AppId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      AppId is the Application ID from the package manifest.
+
+
+
+      <Application Id="blah" ... />
+      </Application>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Args
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional arguments that should be passed to the Command (e.g. "/od")
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Command
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      An executable to invoke (e.g. "cmd.exe")
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageFamilyName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Family Name of the package. You can retrieve this by calling [Get-AppxPackage](./Get-AppxPackage.yml).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreventBreakaway
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Switch that causes the entire process tree to stay in the package context.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-CommandInDesktopPackage
+        [-PackageFamilyName] <String>
+        [[-AppId] <String>]
+        [-Command] <String>
+        [[-Args] <String>]
+        [-PreventBreakaway]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    System.Management.Automation.SwitchParameter
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Invoke an executable from app package'
+  description: |-
+    ```
+    PS C:\> Invoke-CommandInDesktopPackage -AppId "AppPackage1" -PackageFamilyName "29270sandstorm.AppPackage1_gah1vdar1nn7a" -Command "demo.exe"
+    ```
+
+    This command invokes the demo.exe that can be found in '29270sandstorm.AppPackage1_gah1vdar1nn7a' app package under the 'AppPackage1' Application element.
+links:
+- text: Get-AppxPackage
+  href: ./Get-AppxPackage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appx/invoke-commandindesktoppackage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: Appx
+  ms.date: 05/19/2017
+  PlatyPS schema version: 2024-05-01
+  title: Invoke-CommandInDesktopPackage

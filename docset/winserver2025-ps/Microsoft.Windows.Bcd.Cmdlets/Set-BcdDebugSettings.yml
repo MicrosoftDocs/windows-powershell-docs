@@ -1,0 +1,439 @@
+### YamlMime:PowerShellCmdlet1
+uid: Microsoft.Windows.Bcd.Cmdlets.Set-BcdDebugSettings
+name: Set-BcdDebugSettings
+module: Microsoft.Windows.Bcd.Cmdlets
+isPreview: false
+summary: |-
+  {{ Fill in the Synopsis }}
+description: |-
+  {{ Fill in the Description }}
+parameters:
+  cmdletParameters:
+  - name: Baudrate
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Baudrate Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SerialWithDebugPort
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Channel
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Channel Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: "1394"
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DebugPort
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill DebugPort Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SerialWithDebugPort
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Force Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostIp
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill HostIp Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NETWithKey
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NETCreateKey
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ieee1394
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Ieee1394 Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: "1394"
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Key
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Key Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NETWithKey
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Local
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Local Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Local
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Net
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Net Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NETWithKey
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NETCreateKey
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NewKey
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill NewKey Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NETCreateKey
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoDhcp
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill NoDhcp Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NETWithKey
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NETCreateKey
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoUserModeExceptions
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill NoUserModeExceptions Description }}
+    aliases:
+    - NoUmex
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Port
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Port Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NETWithKey
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NETCreateKey
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Serial
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Serial Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SerialWithDebugPort
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SerialWithOutDebugPort
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartPolicy
+    type: <xref href="Microsoft.Windows.Bcd.Cmdlets.BcdExtensions.StartPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill StartPolicy Description }}
+    acceptedValues:
+    - Active
+    - AutoEnable
+    - Disable
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Store
+    type: <xref href="Microsoft.Windows.Bcd.Cmdlets.BcdExtensions.BcdStoreInfo" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Store Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill TargetName Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Usb
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Usb
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      {{ Fill Usb Description }}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Usb
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-BcdDebugSettings
+        [[-Store] <BcdStoreInfo>]
+        -DebugPort <Int64>
+        [-Baudrate <Int64>]
+        [-Serial]
+        [-StartPolicy <StartPolicy>]
+        [-NoUserModeExceptions]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SerialWithDebugPort
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-BcdDebugSettings
+        [[-Store] <BcdStoreInfo>]
+        [-Serial]
+        [-StartPolicy <StartPolicy>]
+        [-NoUserModeExceptions]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SerialWithOutDebugPort
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-BcdDebugSettings
+        [[-Store] <BcdStoreInfo>]
+        -Port <Int64>
+        -HostIp <String>
+        -Key <String>
+        [-Net]
+        [-NoDhcp]
+        [-StartPolicy <StartPolicy>]
+        [-NoUserModeExceptions]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NETWithKey
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-BcdDebugSettings
+        [[-Store] <BcdStoreInfo>]
+        -Port <Int64>
+        -HostIp <String>
+        [-Net]
+        [-NewKey]
+        [-NoDhcp]
+        [-StartPolicy <StartPolicy>]
+        [-NoUserModeExceptions]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NETCreateKey
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-BcdDebugSettings
+        [[-Store] <BcdStoreInfo>]
+        -Channel <Int64>
+        [-Ieee1394]
+        [-StartPolicy <StartPolicy>]
+        [-NoUserModeExceptions]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: "1394"
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-BcdDebugSettings
+        [[-Store] <BcdStoreInfo>]
+        [-Usb]
+        [-TargetName <String>]
+        [-StartPolicy <StartPolicy>]
+        [-NoUserModeExceptions]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Usb
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-BcdDebugSettings
+        [[-Store] <BcdStoreInfo>]
+        [-Local]
+        [-StartPolicy <StartPolicy>]
+        [-NoUserModeExceptions]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Local
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Windows.Bcd.Cmdlets.BcdExtensions.BcdStoreInfo" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Windows.Bcd.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/microsoft.windows.bcd.cmdlets/set-bcddebugsettings?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: Microsoft.Windows.Bcd.Cmdlets
+  ms.date: 02/21/2024
+  PlatyPS schema version: 2024-05-01
+  title: Set-BcdDebugSettings

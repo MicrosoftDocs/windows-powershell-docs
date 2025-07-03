@@ -1,0 +1,115 @@
+### YamlMime:PowerShellCmdlet1
+uid: Appx.Get-AppxLog
+name: Get-AppxLog
+module: Appx
+isPreview: false
+summary: |-
+  Gets an app package installation log.
+description: |-
+  The `Get-AppxLog` cmdlet gets the app package installation log created during the deployment of
+  an app package. An app package has an `.msix` or `.appx` file extension. The log contains errors,
+  warnings, and additional information about the processes initiated by cmdlets in the Appx Windows
+  PowerShell module.
+
+  When `Add-AppxPackage` or `Remove-AppxPackage` report a failure, they return the **ActivityID** to
+  use with `Get-AppxLog`.
+
+  For more information about common error codes, see
+  [Troubleshooting packaging, deployment, and query of Windows Store apps](https://go.microsoft.com/fwlink/?LinkId=271201).
+parameters:
+  cmdletParameters:
+  - name: ActivityId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an activity ID. This cmdlet uses the ID to get the log for a particular app package
+      installation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ActivityId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: All
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet gets all logs on the computer. You can get additional information when you
+      run this cmdlets from Windows PowerShell as an administrator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: All
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AppxLog
+        [-All]
+        [<CommonParameters>]
+    ```
+  parameterSetName: All
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AppxLog
+        [-ActivityId <System.String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ActivityId
+  isDefault: false
+inputs:
+- name: <xref href="System.System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Diagnostics.Eventing.Reader.EventLogRecord" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get logs for the most recent deployment'
+  description: |-
+    ```powershell
+    Get-AppxLog
+    ```
+
+    This command gets the logs associated with the most recent deployment operation.
+- title: 'Example 2: Get logs for all logs'
+  description: |-
+    ```powershell
+    Get-AppxLog -All
+    ```
+
+    This command gets all the app package installation logs on the computer.
+links:
+- text: Package Manager API
+  href: https://go.microsoft.com/fwlink/?LinkId=245447
+- text: How to Add and Remove Apps
+  href: https://go.microsoft.com/fwlink/?LinkID=231020
+- text: Troubleshooting packaging, deployment, and query of Windows Store apps
+  href: https://go.microsoft.com/fwlink/?LinkId=271201
+- text: Get-AppxPackage
+  href: ./Get-AppxPackage.yml
+- text: Get-AppxPackageManifest
+  href: ./Get-AppxPackageManifest.yml
+- text: Get-AppxLastError
+  href: ./Get-AppxLastError.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appx/get-appxlog?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Appx
+  ms.date: 05/15/2023
+  PlatyPS schema version: 2024-05-01
+  title: Get-AppxLog

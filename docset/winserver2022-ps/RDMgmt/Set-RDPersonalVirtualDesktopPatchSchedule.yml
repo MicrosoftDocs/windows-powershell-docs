@@ -1,0 +1,213 @@
+### YamlMime:PowerShellCmdlet1
+uid: RDMgmt.Set-RDPersonalVirtualDesktopPatchSchedule
+name: Set-RDPersonalVirtualDesktopPatchSchedule
+module: RDMgmt
+isPreview: false
+summary: |-
+  Changes patch schedule settings for a personal virtual desktop.
+description: |-
+  The **Set-RDPersonalVirtualDesktopPatchSchedule** cmdlet changes patch schedule settings for a personal virtual desktop.
+parameters:
+  cmdletParameters:
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of binary data that the program performing the patch operation uses.
+      This data is transparent to the user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Deadline
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a date and time, as a **DateTime** object, by which the patch operation must be complete.
+      The server uses this value to prioritize the order in which patches are installed.
+      To obtain a **DateTime** object, use the **Get-Date** cmdlet.
+      For more information, type `Get-Help Get-Date`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the latest date and time, as a **DateTime** object, by which the patch operation must begin.
+      To obtain a **DateTime** object, use the **Get-Date** cmdlet.
+      For more information, type `Get-Help Get-Date`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ID
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a patch schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Label
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a string that describes the purpose of the patch.
+      Add a user-friendly, descriptive string so that the patch is easy to distinguish from other, potentially similar patches.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Plugin
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies name for the program that installs the patches.
+      For example, Windows Update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the earliest date and time, as a **DateTime** object, by which to begin the patch operation.
+      To obtain a **DateTime** object, use the **Get-Date** cmdlet.
+      For more information, type `Get-Help Get-Date`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualDesktopName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a personal virtual desktop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-RDPersonalVirtualDesktopPatchSchedule
+        [-VirtualDesktopName] <String>
+        [-ID] <String>
+        [[-Context] <Byte[]>]
+        [[-Deadline] <DateTime>]
+        [[-StartTime] <DateTime>]
+        [[-EndTime] <DateTime>]
+        [[-Label] <String>]
+        [[-Plugin] <String>]
+        [[-ConnectionBroker] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <span>undefined</span>
+examples:
+- title: 'Example 1: Set a default patch schedule for a virtual desktop'
+  description: |-
+    ```
+    PS C:\> Set-RDPersonalVirtualDesktopPatchSchedule -VirtualDesktopName "RDS-WKS-A27" -ID "{58E69A71-AFC9-49A6-81B9-494DA20216AC}"
+    ```
+
+    This command sets the patch schedule  that has the ID 58E69A71-AFC9-49A6-81B9-494DA20216AC for the personal virtual desktop named RDS-WKS-A27.
+- title: 'Example 2: Set a patch schedule for a personal virtual desktop'
+  description: |-
+    ```
+    PS C:\> Set-RDPersonalVirtualDesktopPatchSchedule -VirtualDesktopName "RDS-WKS-A27" -ID "{58E69A71-AFC9-49A6-81B9-494DA20216AC}" -StartTime (Get-Date)
+    ```
+
+    This command sets properties of the path schedule that has the ID 58E69A71-AFC9-49A6-81B9-494DA20216AC for the personal virtual desktop named RDS-WKS-A27.
+    The **StartTime** parameter specifies the current time as the earliest time by which to begin the patch operation.
+links:
+- text: Get-RDPersonalVirtualDesktopPatchSchedule
+  href: ./Get-RDPersonalVirtualDesktopPatchSchedule.yml
+- text: New-RDPersonalVirtualDesktopPatchSchedule
+  href: ./New-RDPersonalVirtualDesktopPatchSchedule.yml
+- text: Remove-RDPersonalVirtualDesktopPatchSchedule
+  href: ./Remove-RDPersonalVirtualDesktopPatchSchedule.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/rdmgmt/set-rdpersonalvirtualdesktoppatchschedule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: RDMgmt
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-RDPersonalVirtualDesktopPatchSchedule

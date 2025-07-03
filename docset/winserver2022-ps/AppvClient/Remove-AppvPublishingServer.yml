@@ -1,0 +1,141 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppvClient.Remove-AppvPublishingServer
+name: Remove-AppvPublishingServer
+module: AppvClient
+isPreview: false
+summary: |-
+  Removes an App-V publishing server.
+description: |-
+  The **Remove-AppvPublishingServer** cmdlet removes the Microsoft Application Virtualization (App-V) publishing server from the App-V client list.
+notes: |-
+  * If an operation is being done between the server and targeted App-V agent, the cmdlet deletes the App-V server object, but any operation that had already been initiated finishes. Subsequent actions that may have been queued up fail.
+  * The cmdlet checks that you have permissions to perform the specific action. If not, the cmdlet returns the following error: The action could not be performed due to current App-V permissions. Please modify the permissions and try the operation again.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the composition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameUrl
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="AppvPublishingServer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an **AppvPublishingServer** object.
+      To obtain an **AppvPublishingServer** object, use the **Get-AppvPublishingServer** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerId
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID for the publishing server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByServerId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: URL
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL path of the publishing server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameUrl
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AppvPublishingServer
+        [-ServerId] <UInt32>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByServerId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AppvPublishingServer
+        [-Server] <AppvPublishingServer>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AppvPublishingServer
+        [[-Name] <String>]
+        [[-URL] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNameUrl
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.AppvAgent.AppvMgmtServer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a publishing server'
+  description: |-
+    ```
+    PS C:\> Remove-AppvPublishingServer -Name "Server01"
+    ```
+
+    This command removes the publishing server named Server01.
+- title: 'Example 2: Remove multiple publishing servers'
+  description: |-
+    ```
+    PS C:\> Remove-AppvPublishingServer -Name "Server*"
+    ```
+
+    This command removes all publishing servers that have names that start with the string Server.
+links:
+- text: Add-AppvPublishingServer
+  href: ./Add-AppvPublishingServer.yml
+- text: Get-AppvPublishingServer
+  href: ./Get-AppvPublishingServer.yml
+- text: Set-AppvPublishingServer
+  href: ./Set-AppvPublishingServer.yml
+- text: Sync-AppvPublishingServer
+  href: ./Sync-AppvPublishingServer.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appvclient/remove-appvpublishingserver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: AppvClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-AppvPublishingServer

@@ -1,0 +1,105 @@
+### YamlMime:PowerShellCmdlet1
+uid: pki.Get-CertificateAutoEnrollmentPolicy
+name: Get-CertificateAutoEnrollmentPolicy
+module: pki
+isPreview: false
+summary: |-
+  Retrieves certificate auto-enrollment policy settings.
+description: |-
+  The **Get-CertificateAutoEnrollmentPolicy** cmdlet gets certificate auto-enrollment policy settings for the user or computer.
+  This cmdlet can return the settings configured in local policy or that are being applied from either local or domain policy.
+
+  Delegation may be required when using this cmdlet with Windows PowerShell® remoting and changing user configuration.
+parameters:
+  cmdletParameters:
+  - name: context
+    type: <xref href="Context" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the context of the enrollment policy to return.
+    acceptedValues:
+    - Machine
+    - User
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="AutoEnrollmentPolicyScope" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the scope of the enrollment policy to return.
+      If Local scope is specified, then the locally configured policy is returned.
+      If Applied scope is specified, then the currently applied policy which can be either the local policy or a domain policy, is returned.
+    acceptedValues:
+    - Applied
+    - Local
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-CertificateAutoEnrollmentPolicy
+        -Scope <AutoEnrollmentPolicyScope>
+        -context <Context>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.AutoEnrollmentPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    The **AutoEnrollmentPolicy** object combines certificate auto-enrollment policy settings and exposes them as properties.
+outputs:
+- name: <xref href="Microsoft.CertificateServices.Commands.AutoEnrollmentPolicy" data-throw-if-not-resolved="False" />
+  description: |-
+    The **AutoEnrollmentPolicy** object combines certificate auto-enrollment policy settings and exposes them as properties.
+    Each property can be modified and piped into the Set-CertificateAutoEnrollmentPolicy cmdlet to be applied.
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```
+    PS C:\>Get-CertificateAutoEnrollmentPolicy -Scope Local -Context User
+    PolicyState                : Enabled
+    EnableMyStoreManagement    : True
+    EnableTemplateCheck        : True
+    ExpirationPercentage       : 10
+    StoreName                  : {MY}
+    EnableBalloonNotifications : False
+    ```
+
+    This example gets the locally configured certificate auto-enrollment user policy.
+    In this example, the Renew expired certificates, update pending certificates, and remove revoked certificates and Update certificates that use certificates templates options are enabled.
+    Also, the Expiration notifications option is enabled and set to 10 percent of the certificate lifetime which are stored in the MY store.
+    Finally, Balloon notifications are disabled.
+links:
+- text: Set-CertificateAutoEnrollmentPolicy
+  href: ./Set-CertificateAutoEnrollmentPolicy.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/pki/get-certificateautoenrollmentpolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: pki
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-CertificateAutoEnrollmentPolicy

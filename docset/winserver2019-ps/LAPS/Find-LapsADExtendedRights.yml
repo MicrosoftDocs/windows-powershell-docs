@@ -1,0 +1,146 @@
+### YamlMime:PowerShellCmdlet1
+uid: LAPS.Find-LapsADExtendedRights
+name: Find-LapsADExtendedRights
+module: LAPS
+isPreview: false
+summary: |-
+  Queries Active Directory (AD) to find principals that have been granted permission to read Windows
+  Local Administrator Password Solution (LAPS) password attributes.
+description: |-
+  The `Find-LapsADExtendedRights` cmdlet is used by administrators to query which principals have
+  been granted permissions to read the LAPS password attributes.
+parameters:
+  cmdletParameters:
+  - name: Credential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials to use when updating AD. If not specified, the current
+      user's credentials are used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Domain
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the domain to connect to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainController
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the domain controller to connect to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Identity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the OU to query.
+
+      This parameter accepts several different name formats that influence the criteria used in the
+      resultant AD search. The supported name formats are as follows:
+
+      - distinguishedName (begins with a `CN=`)
+      - name (for all other inputs)
+
+      Querying permissions on the domain root is only supported using the distinguishedName input format, for example 'DC=laps,DC=com'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeComputers
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify this parameter to also check computer objects for the permissions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Find-LapsADExtendedRights
+        [-Credential <PSCredential>]
+        -Identity <String[]>
+        [-Domain <String>]
+        [-DomainController <String>]
+        [-IncludeComputers]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Find-LapsADExtendedRights -Identity LapsTestOU
+    ```
+
+    ```Output
+    ObjectDN                     ExtendedRightHolders
+    --------                     --------------------
+    OU=LapsTestOU,DC=laps,DC=com {NT AUTHORITY\SYSTEM, LAPS\Domain Admins, LAPS\LapsAdmins}
+    ```
+
+    This example shows how to run the cmdlet.
+links:
+- text: Windows LAPS Overview
+  href: https://go.microsoft.com/fwlink/?linkid=2233901
+metadata:
+  description: Queries Active Directory (AD) to find principals that have been granted permission to read Windows Local Administrator Password Solution (LAPS) password attributes.
+  document type: cmdlet
+  external help file: lapspsh.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/laps/find-lapsadextendedrights?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Locale: en-US
+  Module Name: LAPS
+  ms.date: 04/10/2023
+  PlatyPS schema version: 2024-05-01
+  title: Find-LapsADExtendedRights

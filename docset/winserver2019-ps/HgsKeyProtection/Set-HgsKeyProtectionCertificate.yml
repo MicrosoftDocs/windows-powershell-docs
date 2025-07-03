@@ -1,0 +1,192 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsKeyProtection.Set-HgsKeyProtectionCertificate
+name: Set-HgsKeyProtectionCertificate
+module: HgsKeyProtection
+isPreview: false
+summary: |-
+  Modifies properties of a key certificate in the Key Protection Service.
+description: |-
+  The **Set-HgsKeyProtectionCertificate** cmdlet modifies properties of a key certificate in the Key Protection Service.
+  You can make a certificate into the primary certificate.
+  The primary certificate is used to sign and encrypt new key protectors.
+  You can enable or disable a certificate.
+  You can use enabled certificates for either signing or encryption.
+  A disabled certificate cannot be the primary certificate.
+parameters:
+  cmdletParameters:
+  - name: CertificateType
+    type: <xref href="KeyCertificateType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies of the type of the certificate that this cmdlet modifies.
+      The acceptable values for this parameter are:
+
+      - Signing
+      - Encryption
+    acceptedValues:
+    - Signing
+    - Encryption
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to enable a certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsPrimary
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet makes a certificate into the primary certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Thumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the thumbprint of the certificate to modify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-HgsKeyProtectionCertificate
+        -CertificateType <KeyCertificateType>
+        -Thumbprint <String>
+        [-IsEnabled <Boolean>]
+        [-IsPrimary]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+examples:
+- title: 'Example 1: Disable a key certificate'
+  description: |-
+    ```
+    PS C:\> Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint "a0e2650e25084961a24da956d132a5fa" -IsEnabled $False
+    ```
+
+    This command disables a signing key certificate.
+- title: 'Example 2: Designate a certificate as the primary certificate'
+  description: |-
+    ```
+    PS C:\> Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint "a17dd68f4ecc499bbe65ee18718123da" -IsPrimary
+    ```
+
+    This command designates a certificate as the primary certificate.
+links:
+- text: Add-HgsKeyProtectionCertificate
+  href: ./Add-HgsKeyProtectionCertificate.yml
+- text: Get-HgsKeyProtectionCertificate
+  href: ./Get-HgsKeyProtectionCertificate.yml
+- text: Remove-HgsKeyProtectionCertificate
+  href: ./Remove-HgsKeyProtectionCertificate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgskeyprotection/set-hgskeyprotectioncertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsKeyProtection
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-HgsKeyProtectionCertificate

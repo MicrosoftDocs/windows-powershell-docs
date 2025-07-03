@@ -1,0 +1,186 @@
+### YamlMime:PowerShellCmdlet1
+uid: FailoverClusters.Get-ClusterResource
+name: Get-ClusterResource
+module: FailoverClusters
+isPreview: false
+summary: |-
+  Gets information about one or more resources in a failover cluster.
+description: |-
+  The `Get-ClusterResource` cmdlet gets information about one or more resources in a failover
+  cluster.
+
+  To set a common property for a clustered resource, use this cmdlet to get the object for the
+  clustered resource, and then set the appropriate property on that object directly. To get and set
+  more specific information about a clustered resource, use this cmdlet with `Get-ClusterParameter`
+  and `Set-ClusterParameter`.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+      `.` or it is omitted, then the cmdlet runs on the local cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster node or cluster group on which to enumerate cluster resources.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="StringCollection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster resource to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine identifier (ID).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-ClusterResource
+        [[-Name] <StringCollection>]
+        [-VMId <Guid>]
+        [-InputObject <PSObject>]
+        [-Cluster <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.Cluster" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterNode" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.FailoverClusters.PowerShell.ClusterResource" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-ClusterResource
+    ```
+
+    This example lists all cluster resources on the local cluster.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-ClusterResource -Name "Cluster Disk 2" | Format-List -Property *
+    ```
+
+    This example displays information about `Cluster Disk 2`, on the local cluster, in the form of a
+    list.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-ClusterResource -Name "Cluster Disk 2" | Get-ClusterParameter
+    ```
+
+    This example displays detailed parameters for `Cluster Disk 2` on the local cluster.
+- title: Example 4
+  description: |-
+    ```powershell
+    Get-ClusterGroup -Name FileServer1 | Get-ClusterResource
+    ```
+
+    This example lists cluster resources in cluster group named `FileServer1`, a clustered file server
+    on the local cluster.
+- title: Example 5
+  description: |-
+    ```powershell
+    Get-ClusterResource -Name "Cluster Disk 2" | ForEach-Object -Process {
+        $_.RestartDelay = 600
+    }
+    ```
+
+    This example sets the common property `RestartDelay` for the `Cluster Disk 2` resource on the local
+    cluster to `600`.
+- title: Example 6
+  description: |-
+    ```powershell
+    Get-ClusterResource -Name "cluster pool 1" | Format-List -Property OwnerNode
+    ```
+
+    This example shows how to display the owner of a cluster pooled disk.
+- title: Example 7
+  description: |-
+    ```powershell
+    Get-ClusterResource -Name *print-VM1 | Get-VM | Stop-VM -Verbose -Confirm:$false
+    ```
+
+    This example enumerates the cluster resources for wildcard characters `*print-VM1` and stops the
+    corresponding virtual machines without user confirmation. Verbose mode is turned on for details of
+    the operation.
+links:
+- text: ForEach-Object
+  href: https://go.microsoft.com/fwlink/?LinkID=113300
+- text: Format-List
+  href: https://go.microsoft.com/fwlink/?LinkID=113302
+- text: Add-ClusterResource
+  href: ./Add-ClusterResource.yml
+- text: Move-ClusterResource
+  href: ./Move-ClusterResource.yml
+- text: Remove-ClusterResource
+  href: ./Remove-ClusterResource.yml
+- text: Resume-ClusterResource
+  href: ./Resume-ClusterResource.yml
+- text: Start-ClusterResource
+  href: ./Start-ClusterResource.yml
+- text: Stop-ClusterResource
+  href: ./Stop-ClusterResource.yml
+- text: Suspend-ClusterResource
+  href: ./Suspend-ClusterResource.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/failoverclusters/get-clusterresource?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: FailoverClusters
+  ms.date: 11/22/2022
+  PlatyPS schema version: 2024-05-01
+  title: Get-ClusterResource

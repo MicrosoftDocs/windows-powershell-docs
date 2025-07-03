@@ -1,0 +1,150 @@
+### YamlMime:PowerShellCmdlet1
+uid: WindowsSearch.Set-WindowsSearchSetting
+name: Set-WindowsSearchSetting
+module: WindowsSearch
+isPreview: false
+summary: |-
+  Modifies values that control Windows Search.
+description: |-
+  The **Set-WindowsSearchSetting** cmdlet modifies values that control Windows Search.
+  You can specify whether Windows Search displays web results or suggestions, and you can specify whether to display web results and suggestions while using a metered network.
+  You can specify whether Windows Search personalizes results, including whether Windows Search employs the specific location of the user.
+  You can also specify SafeSearch settings.
+parameters:
+  cmdletParameters:
+  - name: EnableMeteredWebResultsSetting
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether Windows Search displays web results and suggestions while using metered connections.
+      Specify a value of $True to display web results and suggestions over metered connections or a value of $False to exclude web results and suggestions.
+
+      Do not specify a value for this parameter if the value of the *EnableWebResultsSetting* parameter is $False.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableWebResultsSetting
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether Windows Search displays web results and suggestions.
+      Specify a value of $True to display web results and suggestions or a value of $False to exclude web results and suggestions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SafeSearchSetting
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a SafeSearch setting for Window Search.
+
+      The acceptable values for this parameter are:
+
+      - Off.
+      Windows Search does not remove adult content from the results.
+      - Moderate.
+      Windows Search excludes adult images and videos, but not text, from the results.
+      - Strict.
+      Windows Search excludes adult images, videos, and text from the results.
+    acceptedValues:
+    - Strict
+    - Moderate
+    - Off
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SearchExperienceSetting
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a Windows Search experience setting.
+
+      The acceptable values for this parameter are:
+
+      - PersonalizedAndLocation.
+      Personalize Windows Search and other Microsoft experiences by using search history, some Microsoft account information, and specific location of the user.
+      - Personalized.
+      Personalize Windows Search and other Microsoft experiences by using search history and some Microsoft account information, but do not use specific location of the user.
+      - NotPersonalized.
+      Do not personalize Windows Search and other Microsoft experiences or use specific location of the user.
+    acceptedValues:
+    - PersonalizedAndLocation
+    - Personalized
+    - NotPersonalized
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WindowsSearchSetting
+        [-EnableWebResultsSetting <Boolean>]
+        [-EnableMeteredWebResultsSetting <Boolean>]
+        [-SearchExperienceSetting <String>]
+        [-SafeSearchSetting <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Personalize Windows Search'
+  description: |-
+    ```
+    PS C:\> Set-WindowsSearchSetting -SearchExperienceSetting "Personalized"
+    ```
+
+    This command allows Windows Search to use search history, but not specific location of the user, to personalize results.
+- title: 'Example 2: Modify Windows Search settings'
+  description: |-
+    ```
+    PS C:\> Set-WindowsSearchSetting -EnableWebResultsSetting $True -SafeSearchSetting "Strict" -SearchExperienceSetting "PersonalizedAndLocation"
+    ```
+
+    This command modifies Windows Search settings.
+    The command enables the use of search history and specific location of the user by specifying a value of PersonalizedAndLocation for the *SearchExperienceSetting* parameter.
+    The command enables web results and sets SafeSearch to a value of Strict.
+links:
+- text: Get-WindowsSearchSetting
+  href: ./Get-WindowsSearchSetting.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.WindowsSearch.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/windowssearch/set-windowssearchsetting?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: WindowsSearch
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WindowsSearchSetting

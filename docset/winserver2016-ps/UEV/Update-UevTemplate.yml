@@ -1,0 +1,160 @@
+### YamlMime:PowerShellCmdlet1
+uid: UEV.Update-UevTemplate
+name: Update-UevTemplate
+module: UEV
+isPreview: false
+summary: |-
+  Updates settings location templates in UE-V.
+description: |-
+  The **Update-UevTemplate** cmdlet updates settings location templates in Microsoft User Experience Virtualization (UE-V).
+  In order for the cmdlet to update a template, the new template must have a higher value for template version.
+
+  You must have administrative credentials to run this cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LiteralPath
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of literal file paths.
+      The cmdlet updates the settings location templates that have the literal paths that you specify.
+    aliases:
+    - PSPath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LiteralPath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of file paths.
+      The cmdlet updates the settings location templates that have the paths that you specify.
+      Use wildcards to specify multiple files.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-UevTemplate
+        [-Path] <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Path
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-UevTemplate
+        -LiteralPath <String[]>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LiteralPath
+  isDefault: false
+inputs:
+- name: <xref href="string" data-throw-if-not-resolved="False" />
+  description: |-
+    An array of paths to settings location templates.
+examples:
+- title: 'Example 1: Update a template'
+  description: |-
+    ```
+    PS C:\> Update-UevTemplate -Path "MicrosoftCalculator.xml"
+    ```
+
+    This command updates the settings location template specified in the current directory.
+- title: 'Example 2: Update templates by specifying a path'
+  description: |-
+    ```
+    PS C:\> Update-UevTemplate -Path "Microsoft*.xml"
+    ```
+
+    This command updates all settings location templates in the current directory that match the specified string.
+- title: 'Example 3: Update a template by specifying a literal path'
+  description: |-
+    ```
+    PS C:\> Update-UevTemplate -LiteralPath "C:\Program Files\Microsoft User Experience Virtualization\Templates\MicrosoftCalculator.xml"
+    ```
+
+    This command updates a settings location template by specifying a literal path to the template file.
+links:
+- text: Disable-UevTemplate
+  href: ./Disable-UevTemplate.yml
+- text: Enable-UevTemplate
+  href: ./Enable-UevTemplate.yml
+- text: Get-UevTemplate
+  href: ./Get-UevTemplate.yml
+- text: Register-UevTemplate
+  href: ./Register-UevTemplate.yml
+- text: Test-UevTemplate
+  href: ./Test-UevTemplate.yml
+- text: Unregister-UevTemplate
+  href: ./Unregister-UevTemplate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Uev.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/uev/update-uevtemplate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: UEV
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Update-UevTemplate

@@ -1,0 +1,289 @@
+### YamlMime:PowerShellCmdlet1
+uid: VpnClient.Add-VpnConnectionTriggerDnsConfiguration
+name: Add-VpnConnectionTriggerDnsConfiguration
+module: VpnClient
+isPreview: false
+summary: |-
+  Adds a DNS suffix or name to VPN connection trigger properties.
+description: |-
+  The **Add-VpnConnectionTriggerDnsConfiguration** cmdlet adds a Domain Name System (DNS) suffix or name to the DNS trigger properties for a client.
+  If you specify a DNS IP address for the suffix or name, when the client accesses a resource in the suffix, the client starts a virtual private network (VPN) connection.
+  If you do not specify a DNS IP address for a DNS suffix or name, accessing the suffix or name does not trigger the VPN connection.
+
+  If you previously ran the Set-VpnConnectionTriggerTrustedNetwork cmdlet with the *DefaultDnsSuffixes* parameter specified, the current cmdlet adds the DNS suffix to the trusted Network list.
+  This cmdlet does not add DNS suffixes that do not have DNS server addresses.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    aliases:
+    - Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a VPN connection profile.
+      To view existing VPN connection profiles, use the Get-VpnConnection cmdlet.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DnsIPAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array IP addresses of DNS servers for the DNS suffix.
+      You can use both IPv4 and IPv6 addresses.
+
+      If you do not specify a DNS server, the client does not start a VPN connection when the client accesses a resource with the DNS suffix or name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DnsSuffix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a DNS suffix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+      If you specify this parameter, the cmdlet returns the **VpnConnectionTriggerDnsConfiguration** object that contains DNS suffixes and corresponding DNS servers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottleLimit
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+      If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+      The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-VpnConnectionTriggerDnsConfiguration
+        [-ConnectionName] <String>
+        [-DnsSuffix] <String>
+        [[-DnsIPAddress] <String[]>]
+        [-PassThru]
+        [-Force]
+        [-CimSession <CimSession[]>]
+        [-ThrottleLimit <Int32>]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Management.Infrastructure.CimInstance#VpnConnectionTriggerDnsConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a DNS suffix'
+  description: |-
+    ```
+    PS C:\>Add-VpnConnectionTriggerDnsConfiguration -ConnectionName "Contoso" -DnsSuffix "washington.contoso.com" -DnsIPAddress "172.16.12.23" -PassThru
+    WARNING: The suffix washington.contoso.com will be automatically added to
+
+    the trusted network detection list. Any subsequent addition/removal of
+
+    suffixes from this cmdlet will be reflected in the trusted network
+
+    detection list. If you do not want this auto-population, remove the
+
+    suffixes from the trusted network detection list by using the
+
+    cmdlet Remove-VpnConnectionTriggerTrustedNetwork
+
+    ConnectionName       DnsSuffix            DnsIPAddress                             DnsSuffixSearchList
+
+    --------------       ---------            ------------                             -------------------
+
+    Contoso              washington.contos... {172.16.12.23}
+    ```
+
+    This command adds the DNS suffix washington.contoso.com to the trigger properties for the current client.
+    The command specifies the VPN connection profile named Contoso and an address for a DNS server for this suffix.
+    The command includes the *PassThru* parameter.
+    Therefore, it returns the VPN connection DNS trigger properties for the client.
+
+    In this example, Trigger Trusted Network has the default value.
+    Therefore the command adds the suffix to the trusted network detection list.
+- title: 'Example 2: Add a DNS suffix that has multiple DNS servers'
+  description: |-
+    ```
+    PS C:\>Add-VpnConnectionTriggerDnsConfiguration -ConnectionName "Contoso" -DnsSuffix "newyork.contoso.com" -DnsIPAddress "172.16.12.3", "172.16.12.22" -PassThru
+    ConnectionName       DnsSuffix            DnsIPAddress                             DnsSuffixSearchList
+
+    --------------       ---------            ------------                             -------------------
+
+    Contoso              newyork.contoso.com  {172.16.12.3, 172.16.12.22}
+    ```
+
+    This command adds the DNS suffix newyork.contoso.com to the trigger properties for the current client.
+    The command specifies the VPN connection profile named Contoso and multiple addresses for DNS servers.
+    The command includes the *PassThru* parameter.
+    Therefore, it returns the VPN connection DNS trigger properties for the client.
+- title: 'Example 3: Add a DNS suffix that does not trigger a VPN connection'
+  description: |-
+    ```
+    PS C:\>Add-VpnConnectionTriggerDnsConfiguration -ConnectionName "Contoso" -DnsSuffix "ras.washington.contoso.com" -PassThru
+    ConnectionName       DnsSuffix            DnsIPAddress                             DnsSuffixSearchList
+
+    --------------       ---------            ------------                             -------------------
+
+    Contoso              ras.washington.co...
+    ```
+
+    This command adds the DNS suffix ras.washington.contoso.com to the trigger properties for the current client.
+    The command specifies the VPN connection profile named Contoso.
+    Unlike the previous examples, this command does not specify an address for a DNS server.
+    When this client accesses resources from ras.washington.contoso.com, it does not trigger a VPN connection.
+    The command includes the *PassThru* parameter.
+    Therefore, it returns the VPN connection DNS trigger properties for the client.
+links:
+- text: Get-VpnConnection
+  href: ./Get-VpnConnection.yml
+- text: Remove-VpnConnectionTriggerDnsConfiguration
+  href: ./Remove-VpnConnectionTriggerDnsConfiguration.yml
+- text: Set-VpnConnectionTriggerDnsConfiguration
+  href: ./Set-VpnConnectionTriggerDnsConfiguration.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: PS_VpnConnectionTriggerDnsConfiguration_v1.0.cdxml-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/vpnclient/add-vpnconnectiontriggerdnsconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: VpnClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Add-VpnConnectionTriggerDnsConfiguration

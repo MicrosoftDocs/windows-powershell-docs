@@ -1,0 +1,167 @@
+### YamlMime:PowerShellCmdlet1
+uid: Provisioning.Get-ProvisioningPackage
+name: Get-ProvisioningPackage
+module: Provisioning
+isPreview: false
+summary: |-
+  Gets information about the installed provisioning package.
+description: |-
+  The **Get-ProvisioningPackage** cmdlet gets information about the installed provisioning package.
+
+  The **Get-ProvisioningPackage** cmdlet is supported on Windows 11 client operating system only.
+parameters:
+  cmdletParameters:
+  - name: AllInstalledPackages
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets all the installed packages information.
+    aliases:
+    - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Installed
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectedDevice
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets the connected device information.
+    aliases:
+    - Device
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogsDirectoryPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the logs directory path.
+    aliases:
+    - Logs
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Id of a package.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackagePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the package path.
+    aliases:
+    - Path
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Path
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WprpFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a WPR profile file.
+    aliases:
+    - Wprp
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-ProvisioningPackage
+        [-PackageId] <String>
+        [-LogsDirectoryPath <String>]
+        [-WprpFile <String>]
+        [-ConnectedDevice]
+    ```
+  parameterSetName: Id
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-ProvisioningPackage
+        [-PackagePath] <String>
+        [-LogsDirectoryPath <String>]
+        [-WprpFile <String>]
+        [-ConnectedDevice]
+    ```
+  parameterSetName: Path
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-ProvisioningPackage
+        [-AllInstalledPackages]
+        [-LogsDirectoryPath <String>]
+        [-WprpFile <String>]
+        [-ConnectedDevice]
+    ```
+  parameterSetName: Installed
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Get-ProvisioningPackage -PackagePath c:\test\testppkg.ppkg
+    ```
+
+    This command gets information about the testppkg.ppkg provisioning package.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: provcmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/provisioning/get-provisioningpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Provisioning
+  ms.date: 05/09/2017
+  PlatyPS schema version: 2024-05-01
+  title: Get-ProvisioningPackage

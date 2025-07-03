@@ -1,0 +1,118 @@
+### YamlMime:PowerShellCmdlet1
+uid: WebAdministration.Set-WebCentralCertProvider
+name: Set-WebCentralCertProvider
+module: WebAdministration
+isPreview: false
+summary: |-
+  Changes the configuration settings for the central certificate provider.
+description: |-
+  The **Set-WebCentralCertProvider** cmdlet changes the configuration settings for the central certificate provider.
+  The settings that you can set include whether the provider is enabled, the location of the centralized certification store, the user name and password, and the private key password.
+parameters:
+  cmdletParameters:
+  - name: CertStoreLocation
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the physical path to the central certificate store.
+      The path is either a local path such as D:\CertStore, or a UNC path such as \\\\MyCertServer\CertStore.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password for the user account that is used to access the central certificate store.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateKeyPassword
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password for the private key.
+      If specified, this password is the same for all keys.
+      The password can be $Null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the user account that is used to access the central certificate store.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WebCentralCertProvider
+        [-CertStoreLocation <String>]
+        [-UserName <String>]
+        [-Password <String>]
+        [-PrivateKeyPassword <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Set the central certificate store location'
+  description: |-
+    ```
+    PS C:\> Set-WebCentralCertProvider -CertStoreLocation "\\MyCertServer\CertStore"
+    ```
+
+    This command sets the physical location of the central certificate store.
+links:
+- text: Clear-WebCentralCertProvider
+  href: ./Clear-WebCentralCertProvider.yml
+- text: Disable-WebCentralCertProvider
+  href: ./Disable-WebCentralCertProvider.yml
+- text: Enable-WebCentralCertProvider
+  href: ./Enable-WebCentralCertProvider.yml
+- text: Get-WebCentralCertProvider
+  href: ./Get-WebCentralCertProvider.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/webadministration/set-webcentralcertprovider?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: WebAdministration
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-WebCentralCertProvider

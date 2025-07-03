@@ -1,0 +1,134 @@
+### YamlMime:PowerShellCmdlet1
+uid: HgsClient.New-HgsKeyProtector
+name: New-HgsKeyProtector
+module: HgsClient
+isPreview: false
+summary: |-
+  Creates a key protector.
+description: |-
+  The **New-HgsKeyProtector** cmdlet creates a key protector.
+  This cmdlet generates a key and wraps it for the specified guardian owner.
+  You cannot change the owner for this key protector.
+  You can grant or revoke access to the key for other guardians by using the **Grant-HgsKeyProtectorAccess** and **Revoke-HgsKeyProtectorAccess** cmdlets.
+
+  This cmdlet can create a key protector based on the raw byte stream of an existing key protector.
+parameters:
+  cmdletParameters:
+  - name: AllowExpired
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet can create a key protector by using certificates that are expired.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AllowUntrustedRoot
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet can create a key protector by using self-signed certificates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Guardian
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of guardians to grant access to the key in addition to the guardian specified by the **Owner** parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Owner
+    type: <xref href="CimInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a guardian for the new key protector.
+      The cmdlet grants access to this guardian.
+      This guardian cannot be changed for this key protector.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-HgsKeyProtector
+        [-Owner] <CimInstance>
+        [[-Guardian] <CimInstance[]>]
+        [-AllowExpired]
+        [-AllowUntrustedRoot]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="CimInstance#MSFT_HgsKeyProtector" data-throw-if-not-resolved="False" />
+  description: |-
+    The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+    The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+examples:
+- title: 'Example 1: Create a key protector'
+  description: |-
+    ```
+    PS C:\> $Owner = Get-HgsGuardian -Name "Guardian11"
+    PS C:\> $GuardianA = Get-HgsGuardian -Name "GuardianA"
+    PS C:\> $GuardianB = Get-HgsGuardian -Name "GuardianB"
+    PS C:\> New-HgsKeyProtector -Owner $Owner -Guardians @($GuardianA, $GuardianB)
+    ```
+
+    The first command gets the guardian object named Guardian11 by using the **Get-HgsGuardian** cmdlet, and then stores that object in the **$Owner** variable.
+
+    The second and third commands get two guardians named GuardianA and GuardianB.
+    These commands store the guardians in the **$GuardianA** and **$GuardianB** variables.
+
+    The final command creates a key protector.
+    The command defines Guardian11 as the **Owner**.
+    The command also grants access to the guardians stored in **$GuardianA** and **$GuardianB**.
+links:
+- text: Grant-HgsKeyProtectorAccess
+  href: ./Grant-HgsKeyProtectorAccess.yml
+- text: Revoke-HgsKeyProtectorAccess
+  href: ./Revoke-HgsKeyProtectorAccess.yml
+- text: Get-HgsGuardian
+  href: ./Get-HgsGuardian.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: HgsClient-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hgsclient/new-hgskeyprotector?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: HgsClient
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-HgsKeyProtector

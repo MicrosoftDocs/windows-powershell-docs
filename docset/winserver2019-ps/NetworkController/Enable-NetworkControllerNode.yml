@@ -1,0 +1,207 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkController.Enable-NetworkControllerNode
+name: Enable-NetworkControllerNode
+module: NetworkController
+isPreview: false
+summary: |-
+  Enables a network controller node.
+description: |-
+  The **Enable-NetworkControllerNode** cmdlet enables a disabled network controller node that used the **Disable-NetworkControllerNode** cmdlet.
+  After a network controller node is enabled, it will be able to process requests.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
+      This is the certificate thumbprint of the certificate.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the network controller node on which this cmdlet operates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user credential that has permission to perform this action.
+      The default is the current user.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the node to be enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseSsl
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the remote computer uses the Secure Sockets Layer (SSL) protocol to establish a connection to the Network Controller node.
+      The default value of this parameter is false.
+      Specify this parameter only if you run this cmdlet on a computer that is not part of the network controller cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-NetworkControllerNode
+        -Name <String>
+        [-PassThru]
+        [-ComputerName <String>]
+        [-UseSsl]
+        [-Credential <PSCredential>]
+        [-CertificateThumbprint <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <span>undefined</span>
+  description: |-
+    The output for this cmdlet contains the following fields:
+    - Name of the node
+    - Hostname, fully qualified domain name (FQDN), or IP address of the node
+    - Fault domain of the node
+    - Name of interface to be used for representational state transfer (REST) operations on the node
+    - Node certificate
+    - Status of the node
+examples:
+- title: 'Example 1: Enable a network controller'
+  description: |-
+    ```
+    PS C:\> Enable-NetworkControllerNode -Name "Node1" -PassThru
+    Name           : Node1
+    Server         : Node1.contoso.com
+    FaultDomain    : fd:/host1/node1
+    RestInterface  : Ethernet
+    NodeCertificate:
+    Status         : Enabling
+    ```
+
+    This command enables the network controller node named Node1.
+links:
+- text: Add-NetworkControllerNode
+  href: ./Add-NetworkControllerNode.yml
+- text: Disable-NetworkControllerNode
+  href: ./Disable-NetworkControllerNode.yml
+- text: Get-NetworkControllerNode
+  href: ./Get-NetworkControllerNode.yml
+- text: Set-NetworkControllerNode
+  href: ./Set-NetworkControllerNode.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkcontroller/enable-networkcontrollernode?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkController
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Enable-NetworkControllerNode

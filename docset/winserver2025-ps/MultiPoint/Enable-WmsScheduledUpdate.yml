@@ -1,0 +1,174 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Enable-WmsScheduledUpdate
+name: Enable-WmsScheduledUpdate
+module: MultiPoint
+isPreview: false
+summary: |-
+  Enables scheduled updates while disk protection is enabled and in discard mode.
+description: |-
+  The **Enable-WmsScheduledUpdate** cmdlet enables the specified computer to periodically disable the disk protection feature so that scheduled updates can be applied.
+  After updates are applied, the disk protection feature is automatically re-enabled.
+parameters:
+  cmdletParameters:
+  - name: AutomaticUpdateMode
+    type: <xref href="EAutomaticUpdateMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of automatic updates to process.
+      The acceptable values for this parameter are:
+
+      - None
+      - WindowsOnly
+      - WindowsAndOtherPrograms
+    acceptedValues:
+    - None
+    - WindowsOnly
+    - WindowsAndOtherPrograms
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomScript
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path of a user-supplied command to run at update time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HourToScheduleUpdates
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the hour at which to run automatic updates.
+      The acceptable values for this parameter are: 0-23.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxTimeAllowedForCustomScript
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum amount of time that the custom script is allowed to run.
+      After this amount of time expires, the process is stopped and the system is restarted to re-enable disk protection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnState
+    type: <xref href="EScheduleUpdateReturnState" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the state in which to place the computer after updates are complete.
+      The acceptable values for this parameter are: Shutdown and PreviousState.
+    acceptedValues:
+    - Shutdown
+    - PreviousState
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+      The default is localhost.
+    aliases:
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-WmsScheduledUpdate
+        [-AutomaticUpdateMode <EAutomaticUpdateMode>]
+        [-HourToScheduleUpdates <UInt32>]
+        [-CustomScript <String>]
+        [-MaxTimeAllowedForCustomScript <UInt32>]
+        [-ReturnState <EScheduleUpdateReturnState>]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="scheduledUpdate" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a structure containing the current configuration.
+examples:
+- title: 'Example 1: Enable scheduled updates'
+  description: |-
+    ```
+    PS C:\> Enable-WmsScheduledUpdate -Server "Sample.microsoft.com" -AutomaticUpdateMode WindowsOnly -HourToScheduleUpdates 3 -CustomScript "C:\MyApps\SampleApp.exe" -MaxTimeAllowedForCustomScript 30 -ReturnState PreviousState
+    IsScheduleUpdateEnabled       : True
+    AutomaticUpdateMode           : WindowsOnly
+    HourToScheduleUpdates         : 3
+    CustomScript                  : c:\myapps\sampleapp.exe
+    MaxTimeAllowedForCustomScript : 30
+    ReturnState                   : PreviousState
+    ```
+
+    This command enables the computer Sample.microsoft.com to switch disk protection to passive mode (reboot) at 3 AM to apply any pending Windows updates and run the application SampleApp.exe.
+    The system then returns to the power/running state it was in before 3 AM.
+links:
+- text: Disable-WmsScheduledUpdate
+  href: ./Disable-WmsScheduledUpdate.yml
+- text: Get-WmsScheduledUpdate
+  href: ./Get-WmsScheduledUpdate.yml
+- text: Set-WmsScheduledUpdate
+  href: ./Set-WmsScheduledUpdate.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/enable-wmsscheduledupdate?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Enable-WmsScheduledUpdate

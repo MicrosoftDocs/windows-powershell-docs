@@ -1,0 +1,41 @@
+### YamlMime:PowerShellCmdlet1
+uid: ServerCore.Get-DisplayResolution
+name: Get-DisplayResolution
+module: ServerCore
+isPreview: false
+summary: |-
+  Shows the current display resolution for a Server Core server.
+description: |-
+  The **Get-DisplayResolution** cmdlet shows the display resolution for Windows Server® 2012 in Server Core mode.
+  For a width of 1920 pixels and a height of 1080 pixels, the cmdlet displays 1920x1080.
+  You can use the Set-DisplayResolution cmdlet to change the resolution.
+
+  For more information about Server Core mode, see [Configure and Manage Server Core Installations](https://technet.microsoft.com/en-us/library/jj574091).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-DisplayResolution
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get display resolution'
+  description: |-
+    ```
+    PS C:\> Get-DisplayResolution
+    1920x1080
+    ```
+
+    This command gets the current display resolution, which is a width of 1920 and a height of 1080.
+links:
+- text: Set-DisplayResolution
+  href: ./Set-DisplayResolution.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: ServerCore-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/servercore/get-displayresolution?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: ServerCore
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-DisplayResolution

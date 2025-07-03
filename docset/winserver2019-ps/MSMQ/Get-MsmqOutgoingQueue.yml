@@ -1,0 +1,70 @@
+### YamlMime:PowerShellCmdlet1
+uid: MSMQ.Get-MsmqOutgoingQueue
+name: Get-MsmqOutgoingQueue
+module: MSMQ
+isPreview: false
+summary: |-
+  Gets outgoing message queues.
+description: |-
+  The **Get-MsmqOutgoingQueue** cmdlet gets **MsmqOutgoingQueue** objects.
+  Each object represents a transactional or non-transactional outgoing queue.
+  This cmdlet gets outgoing queues that are local to the computer on which you run the cmdlet.
+  If you do not specify parameters, this cmdlet gets all outgoing queues of the host computer.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of queues.
+      The names specify outgoing queues.
+      This parameter supports wildcard characters.
+      The default value is *.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-MsmqOutgoingQueue
+        [[-Name] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get outgoing message queues'
+  description: |-
+    ```
+    PS C:\> Get-MsmqOutgoingQueue -Name "Order*"
+    ```
+
+    This command gets all outgoing message queues that are local to the current computer that start with the string Order.
+links:
+- text: Clear-MsmqOutgoingQueue
+  href: ./Clear-MSMQOutgoingQueue.yml
+- text: Resume-MsmqOutgoingQueue
+  href: ./Resume-MsmqOutgoingQueue.yml
+- text: Suspend-MsmqOutgoingQueue
+  href: ./Suspend-MsmqOutgoingQueue.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/msmq/get-msmqoutgoingqueue?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+  Module Name: MSMQ
+  ms.date: 12/27/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-MsmqOutgoingQueue

@@ -1,0 +1,489 @@
+### YamlMime:PowerShellCmdlet1
+uid: Hyper-V.Set-VMNetworkAdapterFailoverConfiguration
+name: Set-VMNetworkAdapterFailoverConfiguration
+module: Hyper-V
+isPreview: false
+summary: |-
+  Configures the IP address of a virtual network adapter to be used when a virtual machine fails over.
+description: |-
+  The **Set-VMNetworkAdapterFailoverConfiguration** cmdlet sets the configuration of an IP address of a virtual network adapter  to be used when a virtual machine fails over.
+parameters:
+  cmdletParameters:
+  - name: CimSession
+    type: <xref href="CimSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Runs the cmdlet in a remote session or on a remote computer.
+      Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+      The default is the current session on the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClearFailoverIPv4Settings
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Clears the configured IPv4 failover settings.
+      The IPv4 address configured in the primary virtual machine (static or dynamic) will be used by the Replica virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClearFailoverIPv6Settings
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Clears the configured IPv6 failover settings.
+      The IPv6 address configured in the primary virtual machine (static or dynamic) will be used by the Replica virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more Hyper-V hosts on which the IP address configuration of a virtual network adapter is to be set.
+      NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+      The default is the local computer.
+      Use localhost or a dot (.) to specify the local computer explicitly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies one or more user accounts that have permission to perform this action.
+      The default is the current user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv4Address
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv4 address to set on the VMNetworkAdapter for use on failover of the virtual machine.
+      You must also specify the **IPv4SubnetMask** parameter when you specify this parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv4AlternateDNSServer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv4 alternate DNS server to be set on the VMNetworkAdapter for use on failover of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv4DefaultGateway
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv4 default gateway to be set on VMNetworkAdapter for use on failover of the virtual machine..
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv4PreferredDNSServer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv4 preferred DNS server to be set on VMNetworkAdapter for use on failover of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv4SubnetMask
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv4 subnet mask to be set on VMNetworkAdapter for use on failover of the virtual machine.
+      You must specify the **IPv4Address** parameter when you specify this parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv6Address
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv6 address to be set on VMNetworkAdapter for use on failover of the virtual machine.
+      You must specify the **IPv6SubnetPrefixLength** parameter when you specify this parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv6AlternateDNSServer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv6 alternate DNS server to be set on VMNetworkAdapter for use on failover of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv6DefaultGateway
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv6 default gateway to be set on VMNetworkAdapter for use on failover of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv6PreferredDNSServer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv6 preferred DNS server to be set on VMNetworkAdapter for use on failover of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPv6SubnetPrefixLength
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IPv6 subnet prefix length to be set on VMNetworkAdapter for use on failover of the virtual machine.
+      You must specify the **IPv6Address** parameter when you specify this parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passthru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that a **Microsoft.HyperV.PowerShell.VMNetworkAdapterFailoverConfiguration** object is to be passed through to the pipeline representing the IP address configuration to be set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine for which you want to configure the IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the virtual machine for which you want to configure the IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMNetworkAdapter
+    type: <xref href="VMNetworkAdapter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual network adapter for which you want to configure the IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMNetworkAdapterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual network adapter for which you want to set the IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: VMObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-VMNetworkAdapterFailoverConfiguration
+        [-VMName] <String>
+        [-CimSession <CimSession[]>]
+        [-ComputerName <String[]>]
+        [-Credential <PSCredential[]>]
+        [-VMNetworkAdapterName <String>]
+        [-IPv4Address <String>]
+        [-IPv6Address <String>]
+        [-IPv4SubnetMask <String>]
+        [-IPv6SubnetPrefixLength <Int32>]
+        [-IPv4PreferredDNSServer <String>]
+        [-IPv4AlternateDNSServer <String>]
+        [-IPv6PreferredDNSServer <String>]
+        [-IPv6AlternateDNSServer <String>]
+        [-IPv4DefaultGateway <String>]
+        [-IPv6DefaultGateway <String>]
+        [-ClearFailoverIPv4Settings]
+        [-ClearFailoverIPv6Settings]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-VMNetworkAdapterFailoverConfiguration
+        [-VMNetworkAdapter] <VMNetworkAdapter>
+        [-IPv4Address <String>]
+        [-IPv6Address <String>]
+        [-IPv4SubnetMask <String>]
+        [-IPv6SubnetPrefixLength <Int32>]
+        [-IPv4PreferredDNSServer <String>]
+        [-IPv4AlternateDNSServer <String>]
+        [-IPv6PreferredDNSServer <String>]
+        [-IPv6AlternateDNSServer <String>]
+        [-IPv4DefaultGateway <String>]
+        [-IPv6DefaultGateway <String>]
+        [-ClearFailoverIPv4Settings]
+        [-ClearFailoverIPv6Settings]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-VMNetworkAdapterFailoverConfiguration
+        [-VM] <VirtualMachine>
+        [-VMNetworkAdapterName <String>]
+        [-IPv4Address <String>]
+        [-IPv6Address <String>]
+        [-IPv4SubnetMask <String>]
+        [-IPv6SubnetPrefixLength <Int32>]
+        [-IPv4PreferredDNSServer <String>]
+        [-IPv4AlternateDNSServer <String>]
+        [-IPv6PreferredDNSServer <String>]
+        [-IPv6AlternateDNSServer <String>]
+        [-IPv4DefaultGateway <String>]
+        [-IPv6DefaultGateway <String>]
+        [-ClearFailoverIPv4Settings]
+        [-ClearFailoverIPv6Settings]
+        [-Passthru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMObject
+  isDefault: false
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    Default
+- name: <xref href="Microsoft.HyperV.PowerShell.VMNetworkAdapterFailoverConfiguration" data-throw-if-not-resolved="False" />
+  description: |-
+    If **-PassThru** is specified.
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Get-VMNetworkAdapter VM01 NetworkAdapter01 | Set-VMNetworkAdapterFailoverConfiguration -IPv4Address 10.100.1.100 -IPv4SubnetMask 255.255.255.0
+    ```
+
+    This example configures a failover IPv4 address for virtual network adapter NetworkAdapter01 on virtual machine VM01.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Get-VMNetworkAdapter VM01 NetworkAdapter01 | Set-VMNetworkAdapterFailoverConfiguration -ClearFailoverIPv4Settings
+    ```
+
+    This example clears the current failover IPv4 settings on virtual network adapter NetworkAdapter01 for virtual machine VM01.
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> Get-VMNetworkAdapter VM01 NetworkAdapter01 | Set-VMNetworkAdapterFailoverConfiguration -Ipv6Address aaaa:aaaa:aaaa:aaaa:aaaa:aaaa:aaa:aaaa -Ipv6SubnetPrefixLength 12
+    ```
+
+    This example configures an IPv6 address and a prefix length of 12 for a virtual network adapter NetworkAdapter01 for virtual machine VM01.
+- title: Example 4
+  description: |-
+    ```
+    PS C:\> Get-VMNetworkAdapter VM01 NetworkAdapter01 | Set-VMNetworkAdapterFailoverConfiguration -ClearFailoverIPv6Settings
+    ```
+
+    This example clears the current failover IPv6 settings on a virtual network adapter NetworkAdapter01 for virtual machine VM01.
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/hyper-v/set-vmnetworkadapterfailoverconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: Hyper-V
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-VMNetworkAdapterFailoverConfiguration

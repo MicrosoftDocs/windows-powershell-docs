@@ -1,0 +1,388 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.Set-NetIntent
+name: Set-NetIntent
+module: NetworkATC
+isPreview: false
+summary: |-
+  Allows provisioning of override values for the given network intent.
+description: |-
+  The `Set-NetIntent` cmdlet allows provisioning of override values for given network intents. All
+  properties inside the override objects are nullable, meaning only the properties which are set will
+  be applied.
+notes: |-
+  Once the request has been successfully placed, all services will eventually detect and apply the
+  updated override policies. Use `Get-NetIntentStatus` to see the current status. This may take
+  several minutes to retrieve.
+
+  To force policy updates, use the `Set-NetIntentRetryState` to put a given policy in a retry pending
+  state in which case the policy will be forcefully applied.
+parameters:
+  cmdletParameters:
+  - name: AdapterPropertyOverrides
+    type: <xref href="NetAdapterAdvancedConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the overrides for network adapter properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Cluster
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdapterRssOverrides
+    type: <xref href="RssConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the overrides for Receive Side Scaling (RSS) configuration on network adapters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Cluster
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster on which the network intent should be set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the computer on which the network intent should be set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Global
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GlobalClusterOverrides
+    type: <xref href="ClusterSettings" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the global overrides for cluster settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Global
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GlobalProxyOverrides
+    type: <xref href="WinHttpAdvProxy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the global overrides for proxy settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Global
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementVlan
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the VLAN for management traffic.
+    defaultValue: "-1"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Cluster
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the network intent to be set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Cluster
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QoSPolicyOverrides
+    type: <xref href="QoSPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the overrides for Quality of Service (QoS) policies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Cluster
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SiteOverrides
+    type: <xref href="SiteConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the overrides for site configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Cluster
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageOverrides
+    type: <xref href="NetAdapterStorageOverride" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the overrides for storage-related network adapter properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Cluster
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageVlans
+    type: <xref href="Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the VLANs for storage networks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Cluster
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SwitchOverrides
+    type: <xref href="SwitchConfigurationOverride" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the overrides for network switch configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Cluster
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Wait
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet should wait for the operation to complete before returning control to the
+      command line.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-NetIntent
+        [-Name] <String>
+        [[-ComputerName] <String>]
+        [-AdapterPropertyOverrides <NetAdapterAdvancedConfiguration>]
+        [-QoSPolicyOverrides <QoSPolicy>]
+        [-AdapterRssOverrides <RssConfiguration>]
+        [-SwitchOverrides <SwitchConfigurationOverride>]
+        [-StorageOverrides <NetAdapterStorageOverride>]
+        [-SiteOverrides <SiteConfiguration[]>]
+        [-StorageVlans <Int32[]>]
+        [-ManagementVlan <Int32>]
+        [-Wait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ComputerName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-NetIntent
+        [-Name] <String>
+        [-ClusterName] <String>
+        [-AdapterPropertyOverrides <NetAdapterAdvancedConfiguration>]
+        [-QoSPolicyOverrides <QoSPolicy>]
+        [-AdapterRssOverrides <RssConfiguration>]
+        [-SwitchOverrides <SwitchConfigurationOverride>]
+        [-StorageOverrides <NetAdapterStorageOverride>]
+        [-SiteOverrides <SiteConfiguration[]>]
+        [-StorageVlans <Int32[]>]
+        [-ManagementVlan <Int32>]
+        [-Wait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Cluster
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-NetIntent
+        [[-ComputerName] <String>]
+        [[-ClusterName] <String>]
+        [-GlobalProxyOverrides <WinHttpAdvProxy>]
+        [-GlobalClusterOverrides <ClusterSettings>]
+        [-Wait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Global
+  isDefault: false
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $adapterOverrides = @{
+        JumboPacket = 9000
+        InterruptModeration = "Enabled"
+    }
+    $qosOverrides = @{
+        Name = "HighPriority"
+        Priority = 1
+        BandwidthPercentage = 50
+    }
+    $params = @{
+        Name                     = "MyIntent"
+        ComputerName             = "Server01"
+        AdapterPropertyOverrides = $adapterOverrides
+        QoSPolicyOverrides       = $qosOverrides
+    }
+    Set-NetIntent @params
+    ```
+
+    This example sets the network intent named `MyIntent` on the computer `Server01` with specified
+    adapter property overrides and QoS policy overrides.
+links:
+- text: Add-NetIntent
+  href: Add-NetIntent.yml
+- text: Copy-NetIntent
+  href: Copy-NetIntent.yml
+- text: Get-NetIntent
+  href: Get-NetIntent.yml
+- text: Get-NetIntentStatus
+  href: Get-NetIntentStatus.yml
+- text: Remove-NetIntent
+  href: Remove-NetIntent.yml
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/set-netintent?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: Set-NetIntent

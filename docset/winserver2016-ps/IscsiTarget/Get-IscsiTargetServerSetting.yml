@@ -1,0 +1,85 @@
+### YamlMime:PowerShellCmdlet1
+uid: IscsiTarget.Get-IscsiTargetServerSetting
+name: Get-IscsiTargetServerSetting
+module: IscsiTarget
+isPreview: false
+summary: |-
+  Gets the global settings or common configurations for iSCSI target, virtual disk or snapshots.
+description: |-
+  The **Get-IscsiTargetServerSetting** cmdlet gets the global settings or common configurations for iSCSI targets, virtual disks or snapshots.
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the computer name, or IP address, of the remote computer, if this cmdlet is run on a remote computer.
+
+      Specifies the cluster resource group network name, or cluster node name, if this cmdlet is run on a cluster configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials when connecting to a remote computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-IscsiTargetServerSetting
+        [-ComputerName <String>]
+        [-Credential <PSCredential>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get portal entries for the local computer'
+  description: |-
+    ```
+    PS C:\> Get-IscsiTargetServerSetting
+    ComputerName                            Version                                 Portals
+    ------------                            -------                                 -------
+    fssvr.contoso.com                       6.3.9600                                {+172.21.0.1:3260, ...
+    ```
+
+    This example gets all of the portal entries of the local server.
+links:
+- text: Set-IscsiTargetServerSetting
+  href: ./Set-IscsiTargetServerSetting.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iscsitarget/get-iscsitargetserversetting?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: IscsiTarget
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-IscsiTargetServerSetting

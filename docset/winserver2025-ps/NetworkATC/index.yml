@@ -1,0 +1,47 @@
+### YamlMime:PowerShellModule1
+uid: NetworkATC
+name: NetworkATC Module
+isPreview: false
+cmdletGroups:
+- title: NetworkATC Cmdlets
+  cmdlets:
+  - NetworkATC.Add-NetIntent
+  - NetworkATC.Copy-NetIntent
+  - NetworkATC.Get-AllNetIntents
+  - NetworkATC.Get-HUDSwitchlessMapping
+  - NetworkATC.Get-NetIntent
+  - NetworkATC.Get-NetIntentAllGoalStates
+  - NetworkATC.Get-NetIntentStatus
+  - NetworkATC.New-NetIntentAdapterPropertyOverrides
+  - NetworkATC.New-NetIntentAdapterRssOverrides
+  - NetworkATC.New-NetIntentGlobalClusterOverrides
+  - NetworkATC.New-NetIntentGlobalProxyOverrides
+  - NetworkATC.New-NetIntentQoSPolicyOverrides
+  - NetworkATC.New-NetIntentSiteOverrides
+  - NetworkATC.New-NetIntentStorageOverrides
+  - NetworkATC.New-NetIntentSwitchConfigurationOverrides
+  - NetworkATC.Remove-NetIntent
+  - NetworkATC.Set-NetIntent
+  - NetworkATC.Set-NetIntentRetryState
+  - NetworkATC.Set-NetIntentTracing
+  - NetworkATC.Start-NetworkAtc
+  - NetworkATC.Stop-NetworkAtc
+  - NetworkATC.Update-NetIntentAdapter
+  - NetworkATC.Update-NetIntentType
+  - NetworkATC.Update-NetworkATC
+description: |-
+  The NetworkATC modules are part of a toolset provided for automating and
+  managing network configurations in a software-defined networking (SDN)
+  environment. These modules enable administrators to automate the setup,
+  configuration, and monitoring of network traffic policies and routes, ensuring
+  optimal performance and resource allocation.
+metadata:
+  HelpInfoUri: https://aka.ms/winsvr-2025-pshelp
+  Help Version: 5.1.0.2025
+  Locale: en-US
+  Module Guid: 74bd14cc-e0b8-42f9-b940-0ad938bb852b
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  title: NetworkATC module
+  PlatyPS schema version: 2024-05-01
+  document type: module

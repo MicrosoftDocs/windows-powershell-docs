@@ -1,0 +1,182 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteDesktop.Set-RDCertificate
+name: Set-RDCertificate
+module: RemoteDesktop
+isPreview: false
+summary: |-
+  Imports or applies a certificate to use with an RDS role.
+description: |-
+  The **Set-RDCertificate** cmdlet imports a certificate or applies an installed certificate to use with a Remote Desktop Services (RDS) role. You can use this cmdlet to secure an existing certificate by using a secure string supplied by the user.
+parameters:
+  cmdletParameters:
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+
+      If you don't specify a value, the cmdlet uses the local computer's fully qualified domain name (FQDN).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter performs the action without a confirmation message.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImportPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter specifies the location of a certificate as a file that has a .pfx extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Import
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter specifies a secure string used to help secure the certificate.
+
+      See the Examples section.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Reapply
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Import
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Role
+    type: <xref href="RDCertificateRole" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter specifies a certificate type associated with an RDS server role.
+
+      The acceptable values for this parameter are:
+
+      - RDGateway
+      - RDWebAccess
+      - RDRedirector
+      - RDPublishing
+    acceptedValues:
+    - RDGateway
+    - RDWebAccess
+    - RDRedirector
+    - RDPublishing
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Thumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter specifies the thumbprint of the certificate to use. Currently, it is only available in Windows Server 2019.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Thumbprint
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-RDCertificate
+        [-Role] <RDCertificateRole>
+        [-Password <SecureString>]
+        [-ConnectionBroker <String>]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Reapply (default)
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-RDCertificate
+        [-Role] <RDCertificateRole>
+        [-ImportPath <String>]
+        [-Password <SecureString>]
+        [-ConnectionBroker <String>]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Import
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-RDCertificate
+        [-Role] <RDCertificateRole>
+        [-Thumbprint <String>]
+        [-ConnectionBroker <String>]
+        [-Force]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Thumbprint
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+links:
+- text: Get-RDCertificate
+  href: ./Get-RDCertificate.yml
+- text: New-RDCertificate
+  href: ./New-RDCertificate.yml
+- text: about_CommonParameters
+  href: https://go.microsoft.com/fwlink/?LinkID=113216
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/moduleremotedesktop/set-rdcertificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteDesktop
+  PlatyPS schema version: 2024-05-01
+  title: Set-RDCertificate

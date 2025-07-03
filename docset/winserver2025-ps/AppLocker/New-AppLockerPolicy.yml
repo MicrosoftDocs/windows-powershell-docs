@@ -1,0 +1,276 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppLocker.New-AppLockerPolicy
+name: New-AppLockerPolicy
+module: AppLocker
+isPreview: false
+summary: |-
+  Creates a new AppLocker policy from a list of file information and other rule creation options.
+description: |-
+  The **New-AppLockerPolicy** cmdlet uses a list of file information to automatically generate a list of rules for a given user or group.
+  Rules can be generated based on publisher, hash, or path information.
+
+  Run the **Get-AppLockerFileInformation** cmdlet to create the list of file information.
+
+  By default, the output is an **AppLockerPolicy** object.
+  If the *Xml* parameter is specified, the output will be the AppLocker policy as an XML-formatted string.
+parameters:
+  cmdletParameters:
+  - name: AllowWindows
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the AppLocker policy allows all local Windows components.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileInformation
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.FileInformation" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies a file that can contain publisher, path, and hash information.
+      Some information may be missing, such as publisher information for an unsigned file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FileInformation
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IgnoreMissingFileInformation
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that, if a rule cannot be created for a file because of missing file information, then evaluation of the remaining file information will continue and a warning log of the files skipped will be generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Optimize
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that similar rules will be grouped together.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleNamePrefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name to add as the prefix for each rule that is created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleType
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Security.ApplicationId.PolicyManagement.RuleType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the type of rules to create from the file information.
+      Publisher, path, or hash rules can be created from the file information.
+      Multiple rule types may be specified.
+      Therefore, that there are backup rule types if the necessary file information is not available.
+
+      For example, if `Publisher, Hash` is specified for this parameter, then the hash rules are applied when publisher information is not available.
+    acceptedValues:
+    - Publisher
+    - Path
+    - Hash
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceEnforcement
+    type: <xref href="ServiceEnforcementMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the AppLocker policy for EXE and DLL rule collections applies to non-interactive processes.
+      The acceptable values for this parameter are:
+
+      - NotConfigured
+      - Enabled
+      - ServicesOnly
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: User
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user or group to which the rules are applied.
+      The acceptable values for this parameter are:
+
+      - DNS user name (domain\username)
+      - User Principal Name (username@domain.com)
+      - SAM user name (username)
+      - Security identifier (S-1-5-21-3165297888-301567370-576410423-1103)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Xml
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the output of the AppLocker policy be as an XML-formatted string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AppLockerPolicy
+
+        [-FileInformation] <System.Collections.Generic.List`1[Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.FileInformation]>
+        [-AllowWindows]
+        [-RuleType <System.Collections.Generic.List`1[Microsoft.Security.ApplicationId.PolicyManagement.RuleType]>]
+        [-RuleNamePrefix <String>]
+        [-User <String>]
+        [-Optimize]
+        [-IgnoreMissingFileInformation]
+        [-Xml]
+        [-ServiceEnforcement <ServiceEnforcementMode>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FileInformation
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AppLockerPolicy
+        [-AllowWindows]
+        [-RuleType <System.Collections.Generic.List`1[Microsoft.Security.ApplicationId.PolicyManagement.RuleType]>]
+        [-RuleNamePrefix <String>]
+        [-User <String>]
+        [-Optimize]
+        [-IgnoreMissingFileInformation]
+        [-Xml]
+        [-ServiceEnforcement <ServiceEnforcementMode>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AllowWindows
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.FileInformation" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Security.ApplicationId.PolicyManagement.PolicyModel.AppLockerPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an AppLocker policy with allow rules'
+  description: |-
+    ```
+    C:\PS>Get-ChildItem C:\Windows\System32\*.exe | Get-AppLockerFileInformation | New-AppLockerPolicy -RuleType Publisher, Hash -User Everyone -RuleNamePrefix System32
+
+                                    Version RuleCollections                         RuleCollectionTypes
+                                    ------- ---------------                         -------------------
+                                          1 {Microsoft.Security.ApplicationId.Po... {Exe}
+    ```
+
+    This example creates an AppLocker policy that contains allow rules for all of the executable files in C:\Windows\System32.
+    The policy contains publisher rules for those files with publisher information and hash rules for those that do not.
+    The rules are prefixed with `System32:` and the rules apply to the Everyone group.
+- title: 'Example 2: Create an AppLocker policy'
+  description: |-
+    ```
+    C:\PS>Get-ChildItem C:\Windows\System32\*.exe | Get-AppLockerFileInformation | New-AppLockerPolicy -AllowWindows -RuleType Path -User Everyone -Optimize -XML
+    <AppLockerPolicy Version="1"><RuleCollection Type="Exe" EnforcementMode="NotConfigured"><FilePathRule Id="31B2F340-016D
+    -11D2-945F-00C04FB984F9" Name="%SYSTEM32%\*" Description="" 10 UserOrGroupSid="S-1-5-21-3165297888-301567370-576410423-
+    13" Action="cAllow"><Conditions><FilePathCondition Path="%SYSTEM32%\*" /></Conditions></FilePathRule></RuleCollection>
+    </AppLockerPolicy>
+    ```
+
+    This example creates an XML-formatted AppLocker policy for all of the executable files in `C:\Windows\System32`.
+    The policy contains only path rules.
+    The rules are applied to the Everyone group.
+    The *Optimize* parameter indicates that similar rules are grouped together where possible.
+    The AppLocker policy trusts all local Windows components.
+- title: 'Example 3: Create an AppLocker policy from audited events'
+  description: |-
+    ```
+    C:\PS>Get-AppLockerFileInformation -EventLog -LogPath "Microsoft-Windows-AppLocker/EXE and DLL" -EventType Audited | New-AppLockerPolicy -RuleType Publisher,Hash -User domain\FinanceGroup -IgnoreMissingFileInformation | Set-AppLockerPolicy -LDAP "LDAP://DC13.TailspinToys.com/CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=WingTipToys,DC=com"
+    ```
+
+    This example creates a new AppLocker policy from the audited events in the local Microsoft-Windows-AppLocker/EXE and DLL event log.
+    All of the rules will be applied to the domain\FinanceGroup group.
+    Publisher rules are created when the publisher information is available, and hash rules are created if the publisher information is not available.
+    If only path information is available for a file, then the file is skipped because the *IgnoreMissingFileInformation* parameter is specified, and the file is included in the warning log.
+    If the *IgnoreMissingFileInformation* parameter is not specified when file information is missing, then the cmdlet exits because it cannot create the specified rule type.
+    After the new AppLocker policy is created, the AppLocker policy of the specified Group Policy Object (GPO) is set.
+    The existing AppLocker policy in the specified GPO will be overwritten.
+links:
+- text: Get-AppLockerFileInformation
+  href: ./Get-AppLockerFileInformation.yml
+- text: Get-AppLockerPolicy
+  href: ./Get-AppLockerPolicy.yml
+- text: Set-AppLockerPolicy
+  href: ./Set-AppLockerPolicy.yml
+- text: Test-AppLockerPolicy
+  href: ./Test-AppLockerPolicy.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/applocker/new-applockerpolicy?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: AppLocker
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: New-AppLockerPolicy

@@ -1,0 +1,66 @@
+### YamlMime:PowerShellCmdlet1
+uid: International.Set-Culture
+name: Set-Culture
+module: International
+isPreview: false
+summary: |-
+  Sets the user culture for the current user account.
+description: |-
+  The **Set-Culture** cmdlet sets a specific culture for the current user account.
+  A culture is known as a locale for unmanaged code development.
+  The information includes the names for the culture, the writing system, the calendar, and formatting for dates and sort strings.
+  For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306) and [Configurable Language and Cultural Settings](https://go.microsoft.com/fwlink/?LinkID=242307).
+notes: |-
+  Changes made by the use of this cmdlet will take effect on subsequent PowerShell sessions.
+parameters:
+  cmdletParameters:
+  - name: CultureInfo
+    type: <xref href="CultureInfo" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a culture.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-Culture
+        [-CultureInfo] <CultureInfo>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Set the culture'
+  description: |-
+    ```powershell
+    PS C:\> Set-Culture -CultureInfo de-DE
+    ```
+
+    This command sets the culture for the current user account to German (Germany).
+links:
+- text: GetCulture Class
+  href: https://go.microsoft.com/fwlink/?LinkID=243343
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/international/set-culture?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Locale: en-US
+  Module Name: International
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Set-Culture

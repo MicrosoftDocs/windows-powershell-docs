@@ -1,0 +1,162 @@
+### YamlMime:PowerShellCmdlet1
+uid: RemoteDesktop.Remove-RDPersonalVirtualDesktopPatchSchedule
+name: Remove-RDPersonalVirtualDesktopPatchSchedule
+module: RemoteDesktop
+isPreview: false
+summary: |-
+  Removes a patch schedule from a personal virtual desktop.
+description: |-
+  The **Remove-RDPersonalVirtualDesktopPatchSchedule** cmdlet removes a patch schedule from a personal virtual desktop.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionBroker
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+      If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ID
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a patch schedule.
+      If you do not specify a value, the cmdlet removes all patch schedules.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualDesktopName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a person virtual desktop.
+      If you do not specify a value, the cmdlet removes patch schedules for all personal virtual desktops.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-RDPersonalVirtualDesktopPatchSchedule
+        [[-VirtualDesktopName] <String>]
+        [[-ID] <String>]
+        [[-ConnectionBroker] <String>]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <span>undefined</span>
+examples:
+- title: 'Example 1: Remove a patch schedule by using an ID'
+  description: |-
+    ```
+    PS C:\> Remove-RDPersonalVirtualDesktopPatchSchedule -ID "{58E69A71-AFC9-49A6-81B9-494DA20216AC}"
+    ```
+
+    This command removes the path schedule that has the ID "58E69A71-AFC9-49A6-81B9-494DA20216AC" from the local computer.
+- title: 'Example 2: Remove a patch schedule without a confirmation prompt'
+  description: |-
+    ```
+    PS C:\> Remove-RDPersonalVirtualDesktopPatchSchedule -ID "{58E69A71-AFC9-49A6-81B9-494DA20216AC}" -Force
+    ```
+
+    This command removes the path schedule that has the ID "58E69A71-AFC9-49A6-81B9-494DA20216AC" from the local computer.
+    The **Force** parameter specifies that the server removes the patch schedule without prompting you for confirmation.
+links:
+- text: Get-RDPersonalVirtualDesktopPatchSchedule
+  href: ./Get-RDPersonalVirtualDesktopPatchSchedule.yml
+- text: Set-RDPersonalVirtualDesktopPatchSchedule
+  href: ./Set-RDPersonalVirtualDesktopPatchSchedule.yml
+- text: New-RDPersonalVirtualDesktopPatchSchedule
+  href: ./New-RDPersonalVirtualDesktopPatchSchedule.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: RemoteDesktop.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/moduleremotedesktop/remove-rdpersonalvirtualdesktoppatchschedule?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: RemoteDesktop
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Remove-RDPersonalVirtualDesktopPatchSchedule

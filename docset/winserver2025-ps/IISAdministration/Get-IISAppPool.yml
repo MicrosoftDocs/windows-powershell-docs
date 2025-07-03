@@ -1,0 +1,85 @@
+### YamlMime:PowerShellCmdlet1
+uid: IISAdministration.Get-IISAppPool
+name: Get-IISAppPool
+module: IISAdministration
+isPreview: false
+summary: |-
+  Gets configuration information for an IIS Application Pool.
+description: |-
+  The **Get-IISAppPool** cmdlet gets information about application pools and their current status and other key information.
+  If a specific application pool or a comma delimited list of application pools are requested, only those whose names are passed as an argument are returned.
+  Otherwise all the application pools are returned.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the application pool(s) in which the configuration information is returned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-IISAppPool
+        [[-Name] <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get information about specific app pool(s)'
+  description: |-
+    ```powershell
+    PS C:\> Get-IISAppPool "DefaultAppPool","NewAppPool"
+    Name                 Status       CLR Ver  Pipeline Mode  Start Mode
+    ----                 ------       -------  -------------  ----------
+    DefaultAppPool       Started      v4.0     Integrated     OnDemand
+    NewAppPool           Started      v4.0     Integrated     OnDemand
+    ```
+
+    This command gets the configuration information for the pools DefaultAppPool and NewAppPool.
+- title: 'Example 2: Get information about all application pools'
+  description: |-
+    ```powershell
+    PS C:\> Get-IISAppPool
+    Name                 Status       CLR Ver  Pipeline Mode  Start Mode
+    ----                 ------       -------  -------------  ----------
+    DefaultAppPool       Started      v4.0     Integrated     OnDemand
+    .NET v4.5 Classic    Started      v4.0     Classic        OnDemand
+    .NET v4.5            Started      v4.0     Integrated     OnDemand
+    PattiFul             Stopped      v4.0     Integrated     OnDemand
+    ```
+
+    This command gets the configuration information for all application pools.
+links:
+- text: IIS Administration Cmdlets for Windows PowerShell
+  href: index.yml
+- text: Web Administration Cmdlets for Windows PowerShell
+  href: ../webadministration/index.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/iisadministration/get-iisapppool?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: IISAdministration
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Get-IISAppPool

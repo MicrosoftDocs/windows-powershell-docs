@@ -1,0 +1,182 @@
+### YamlMime:PowerShellCmdlet1
+uid: NetworkATC.New-NetIntentSwitchConfigurationOverrides
+name: New-NetIntentSwitchConfigurationOverrides
+module: NetworkATC
+isPreview: false
+summary: |-
+  Creates a new instance of virtual switch configuration overrides which can be used to supply granular values to `Set-NetIntent`.
+description: |-
+  The `New-NetIntentSwitchConfigurationOverrides` cmdlet creates a new instance of a virtual switch
+  configuration override that allows you to provide specific configuration values for network intent
+  settings.
+parameters:
+  cmdletParameters:
+  - name: DefaultQueueVrssMaxQueuePairs
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of Virtual RSS (Vrss) queue pairs to be used by default. This parameter
+      can help optimize network performance by balancing the load across multiple CPU cores.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultQueueVrssMinQueuePairs
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the minimum number of Virtual RSS (Vrss) queue pairs to be used by default. Setting this
+      can ensure a minimum level of resource allocation for network traffic processing.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultQueueVrssQueueSchedulingMode
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines the scheduling mode for Virtual RSS (Vrss) queues. This parameter can be used to configure
+      how Virtual RSS queues are scheduled for processing network traffic.
+    defaultValue: "0"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableEmbeddedTeaming
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether Embedded Teaming is enabled. Embedded Teaming allows multiple network adapters to
+      be grouped together for redundancy and load balancing.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableIov
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether Input-Output Virtualization (IOV) is enabled. IOV allows VMs to have direct access
+      to hardware I/O resources, potentially improving performance.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableSoftwareRsc
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether Software Receive Side Coalescing (RSC) is enabled. When enabled, this feature can
+      improve network performance by reducing the CPU load associated with processing received packets.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBalancingAlgorithm
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines the load balancing algorithm used for distributing network traffic. This parameter can be
+      used to select a specific algorithm that best suits the network environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-NetIntentSwitchConfigurationOverrides
+        [-EnableSoftwareRsc <Boolean>]
+        [-DefaultQueueVrssMaxQueuePairs <UInt32>]
+        [-DefaultQueueVrssMinQueuePairs <UInt32>]
+        [-DefaultQueueVrssQueueSchedulingMode <UInt32>]
+        [-EnableIov <Boolean>]
+        [-EnableEmbeddedTeaming <Boolean>]
+        [-LoadBalancingAlgorithm <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $params = @{
+        DefaultQueueVrssMaxQueuePairs  = 16
+        EnableSoftwareRsc              = $true
+        EnableIov                      = $false
+    }
+    New-NetIntentSwitchConfigurationOverrides @params
+    ```
+
+    This example creates a new switch configuration override with the maximum number of Vrss queue pairs
+    to `16` while enabling Software RSC and disabling IOV.
+links:
+- text: New-NetIntentAdapterPropertyOverrides
+  href: New-NetIntentAdapterPropertyOverrides.yml
+- text: New-NetIntentAdapterRssOverrides
+  href: New-NetIntentAdapterRssOverrides.yml
+- text: New-NetIntentGlobalClusterOverrides
+  href: New-NetIntentGlobalClusterOverrides.yml
+- text: New-NetIntentGlobalProxyOverrides
+  href: New-NetIntentGlobalProxyOverrides.yml
+- text: New-NetIntentQoSPolicyOverrides
+  href: New-NetIntentQoSPolicyOverrides.yml
+- text: New-NetIntentSiteOverrides
+  href: New-NetIntentSiteOverrides.yml
+- text: New-NetIntentStorageOverrides
+  href: New-NetIntentStorageOverrides.yml
+metadata:
+  document type: cmdlet
+  external help file: NetworkAtc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/networkatc/new-netintentswitchconfigurationoverrides?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
+  Module Name: NetworkATC
+  ms.date: 03/14/2025
+  PlatyPS schema version: 2024-05-01
+  title: New-NetIntentSwitchConfigurationOverrides

@@ -1,0 +1,82 @@
+### YamlMime:PowerShellCmdlet1
+uid: AppBackgroundTask.Enable-AppBackgroundTaskDiagnosticLog
+name: Enable-AppBackgroundTaskDiagnosticLog
+module: AppBackgroundTask
+isPreview: false
+summary: |-
+  Enables background task logging in Event Viewer.
+description: |-
+  The **Enable-AppBackgroundTaskDiagnosticLog** cmdlet enables background task logging in Event Viewer.
+  You must have administrator access to enable background task logging.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-AppBackgroundTaskDiagnosticLog
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Enable background task logging'
+  description: |-
+    ```
+    PS C:\> Enable-AppBackgroundTaskDiagnosticLog
+    ```
+
+    This command turns on background task logging in Event Viewer.
+links:
+- text: Disable-AppBackgroundTaskDiagnosticLog
+  href: ./Disable-AppBackgroundTaskDiagnosticLog.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: microsoft.windows.appbackgroundtask.commands.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/appbackgroundtask/enable-appbackgroundtaskdiagnosticlog?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+  Module Name: AppBackgroundTask
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Enable-AppBackgroundTaskDiagnosticLog

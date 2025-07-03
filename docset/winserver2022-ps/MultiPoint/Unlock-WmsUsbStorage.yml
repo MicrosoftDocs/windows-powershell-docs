@@ -1,0 +1,109 @@
+### YamlMime:PowerShellCmdlet1
+uid: MultiPoint.Unlock-WmsUsbStorage
+name: Unlock-WmsUsbStorage
+module: MultiPoint
+isPreview: false
+summary: |-
+  Unlocks USB storage.
+description: |-
+  The **Unlock-WmsUsbStorage** cmdlet enables USB storage on the specified station or stations.
+  If a USB storage device is hidden, this cmdlet makes it available.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation applies to all sessions on the target host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UnlockAll
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+      The default is localhost.
+    aliases:
+    - ComputerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StationId
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of station IDs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UnlockById
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Unlock-WmsUsbStorage
+        [-StationId] <UInt32[]>
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UnlockById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Unlock-WmsUsbStorage
+        [-All]
+        [-Server <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UnlockAll
+  isDefault: false
+inputs:
+- name: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Unblock USB storage devices'
+  description: |-
+    ```
+    PS C:\> Unlock-WmsUsbStorage -StationId 2
+    ```
+
+    This command unblocks USB storage devices on the specified station.
+links:
+- text: Lock-WmsUsbStorage
+  href: ./Lock-WmsUsbStorage.yml
+metadata:
+  description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+  document type: cmdlet
+  external help file: MultiPoint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/multipoint/unlock-wmsusbstorage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+  Module Name: MultiPoint
+  ms.date: 12/20/2016
+  PlatyPS schema version: 2024-05-01
+  title: Unlock-WmsUsbStorage

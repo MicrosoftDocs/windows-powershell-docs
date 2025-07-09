@@ -1,6 +1,6 @@
 ---
-Download Help Link: https://aka.ms/winsvr-2016-pshelp
-Help Version: 1.0.0.0
+Download Help Link:
+Help Version:
 Locale: en-US
 Module Guid: 11888dc4-4830-4138-b422-e8bc2209ffb9
 Module Name: WindowsDiagnosticData

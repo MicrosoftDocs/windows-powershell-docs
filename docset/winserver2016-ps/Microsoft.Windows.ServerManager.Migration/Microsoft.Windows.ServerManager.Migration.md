@@ -1,7 +1,7 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2016-pshelp
-Help Version: 1.0.0.0
+Download Help Link:
+Help Version:
 Locale: en-US
 Module Name: Microsoft.Windows.ServerManager.Migration
 Module Guid: 00000000-0000-0000-0000-000000000000

@@ -39,6 +39,28 @@ You can use this cmdlet to support a rolling OS upgrade for a cluster. If you us
 runs Hyper-V in which all the nodes run Windows Server 2012 R2, you can upgrade the nodes of that
 cluster without downtime for your virtual machines.
 
+## EXAMPLES
+
+### Example 1: Test a possible update
+
+```powershell
+Update-ClusterFunctionalLevel -WhatIf
+```
+
+This command tests whether an update would finish successfully. Because the command includes the
+**WhatIf** parameter, the command doesn't perform the update.
+
+### Example 2: Update a cluster functional level
+
+```powershell
+Update-ClusterFunctionalLevel -Cluster "cluster_17"
+```
+
+This command updates the cluster functional level of the cluster named `cluster_17`. All of the
+nodes of this cluster must already be updated before you run this command.
+
+### Example 3: Rolling OS upgrade of a cluster
+
 First, drain one cluster node by specifying the **Drain** parameter of the `Suspend-ClusterNode`
 cmdlet. This cmdlet causes all virtual machines to live-migrate to one of the other hosts.
 
@@ -63,26 +85,6 @@ Install-WindowsFeature -Name Failover-Clustering -IncludeManagementTools
 Finally, add the node into the cluster by using the `Add-ClusterNode` cmdlet.
 
 Repeat these steps for each node in the cluster.
-
-## EXAMPLES
-
-### Example 1: Test a possible update
-
-```powershell
-Update-ClusterFunctionalLevel -WhatIf
-```
-
-This command tests whether an update would finish successfully. Because the command includes the
-**WhatIf** parameter, the command doesn't perform the update.
-
-### Example 2: Update a cluster functional level
-
-```powershell
-Update-ClusterFunctionalLevel -Cluster "cluster_17"
-```
-
-This command updates the cluster functional level of the cluster named `cluster_17`. All of the
-nodes of this cluster must already be updated before you run this command.
 
 ## PARAMETERS
 

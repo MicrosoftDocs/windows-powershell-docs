@@ -36,8 +36,7 @@ We recommend that you upgrade all nodes in the cluster within a month. We don't 
 mixed-version cluster permanently.
 
 You can use this cmdlet to support a rolling OS upgrade for a cluster. If you use a cluster that
-runs Hyper-V in which all the nodes run Windows Server 2012 R2, you can upgrade the nodes of that
-cluster without downtime for your virtual machines.
+runs Hyper-V, you can upgrade the nodes of that cluster without downtime for your virtual machines.
 
 ## EXAMPLES
 

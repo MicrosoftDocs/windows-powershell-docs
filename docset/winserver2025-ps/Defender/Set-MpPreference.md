@@ -2,7 +2,7 @@
 description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 04/14/2025
+ms.date: 09/29/2025
 online version: https://learn.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -1684,7 +1684,7 @@ Accept wildcard characters: False
 
 ### -SignatureDefinitionUpdateFileSharesSources
 Specifies file-share sources for definition updates.
-Specify sources as a bracketed sequence of Universal Naming Convention (UNC) locations, separated by the pipeline symbol; for example, { \\\\Server01\Share01 | \\\\Server02\Share02 | \\\\Server03\Share03}.
+Specify sources as a sequence of Universal Naming Convention (UNC) locations, separated by the pipeline symbol; for example, `"\\Server01\Share01 | \\Server02\Share02 | \\Server03\Share03"`.
 If you specify a value for this parameter, Windows Defender attempts to connect to the shares in the order that you specify.
 After Windows Defender updates a definition, it stops attempting to connect to shares on the list.
 If you do not specify a value for this parameter, the list is empty.
@@ -1720,7 +1720,7 @@ Accept wildcard characters: False
 
 ### -SignatureFallbackOrder
 Specifies the order in which to contact different definition update sources.
-Specify the types of update sources in the order in which you want Windows Defender to contact them, enclosed in braces and separated by the pipeline symbol; for example, { InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC }.
+Specify the types of update sources in the order in which you want Windows Defender to contact them, separated by the pipeline symbol; for example, `"InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC"`.
 The values that you can specify in the string are:
 
 - InternalDefinitionUpdateServer
@@ -1732,7 +1732,7 @@ MMPC refers to Microsoft Malware Protection Center.
 
 If you specify a value for this parameter, Windows Defender contacts the definition update sources in the specified order.
 After Windows Defender downloads definition updates from a source, it stops attempting to connect to other sources.
-If you do not specify a value for this parameter, Windows Defender contacts sources in the default order of { MicrosoftUpdateServer | MMPC }.
+If you do not specify a value for this parameter, Windows Defender contacts sources in the default order of `"MicrosoftUpdateServer | MMPC"`.
 
 ```yaml
 Type: String

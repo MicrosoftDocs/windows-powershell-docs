@@ -1,66 +1,66 @@
 {
-  "docsets_to_publish": [
-    {
-      "build_entry_point": "docs",
-      "build_output_subfolder": "windows-powershell",
-      "build_source_folder": "docset",
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
-        ]
-      },
-      "docset_name": "windows-powershell",
-      "locale": "en-us",
-      "monikerPath": [
-        "mapping/monikerMapping.json"
-      ],
-      "cabgenConfigPath": [
-        "mapping/cabgenConfig.json"
-      ],
-      "moniker_ranges": [],
-      "monikers": [],
-      "open_to_public_contributors": true,
-      "template_folder": "_themes",
-      "type_mapping": {
-        "PowershellModule": "Content",
-        "PowershellCmdlet": "Content",
-        "Conceptual": "Content"
-      },
-      "xref_query_tags": [
-        "/dotnet"
-      ],
-      "version": 0
-    }
-  ],
-  "notification_subscribers": [],
-  "sync_notification_subscribers": [],
-  "branches_to_filter": [],
-  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/windows-powershell-docs",
-  "git_repository_branch_open_to_public_contributors": "main",
-  "skip_source_output_uploading": false,
-  "need_preview_pull_request": true,
-  "contribution_branch_mappings": {},
-  "dependent_repositories": [
-    {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "main",
-      "branch_mapping": {}
-    }
-  ],
-  "branch_target_mapping": {},
-  "dependent_packages": [
-    {
-      "id": "Microsoft.DocAsCode.MAML2Yaml",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
-      "path_to_root": "_dependentPackages/MAML2Yaml",
-      "target_framework": "net45",
-      "version": "latest"
-    }
-  ],
-  "need_generate_pdf_url_template": false,
-  "targets": {},
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  }
+    "branch_target_mapping": {},
+    "branches_to_filter": [],
+    "contribution_branch_mappings": {},
+    "dependent_packages": [
+        {
+            "id": "Microsoft.DocAsCode.MAML2Yaml",
+            "nuget_feed": "https://www.myget.org/F/op/api/v2",
+            "path_to_root": "_dependentPackages/MAML2Yaml",
+            "target_framework": "net45",
+            "version": "latest"
+        }
+    ],
+    "dependent_repositories": [
+        {
+            "branch": "main",
+            "branch_mapping": {},
+            "path_to_root": "_themes",
+            "url": "https://github.com/Microsoft/templates.docs.msft"
+        }
+    ],
+    "docs_build_engine": {
+        "name": "docfx_v3"
+    },
+    "docsets_to_publish": [
+        {
+            "build_entry_point": "docs",
+            "build_output_subfolder": "windows-powershell",
+            "build_source_folder": "docset",
+            "cabgenConfigPath": [
+                "mapping/cabgenConfig.json"
+            ],
+            "customized_tasks": {
+                "docset_prebuild": [
+                    "_dependentPackages/MAML2Yaml/tools/Run.ps1"
+                ]
+            },
+            "docset_name": "windows-powershell",
+            "locale": "en-us",
+            "monikerPath": [
+                "mapping/monikerMapping.json"
+            ],
+            "moniker_ranges": [],
+            "monikers": [],
+            "open_to_public_contributors": true,
+            "template_folder": "_themes",
+            "type_mapping": {
+                "Conceptual": "Content",
+                "PowerShellCmdlet1": "Content",
+                "PowerShellModule1": "Content"
+            },
+            "version": 0,
+            "xref_query_tags": [
+                "/dotnet"
+            ]
+        }
+    ],
+    "git_repository_branch_open_to_public_contributors": "main",
+    "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/windows-powershell-docs",
+    "need_generate_pdf_url_template": false,
+    "need_preview_pull_request": true,
+    "notification_subscribers": [],
+    "skip_source_output_uploading": false,
+    "sync_notification_subscribers": [],
+    "targets": {}
 }

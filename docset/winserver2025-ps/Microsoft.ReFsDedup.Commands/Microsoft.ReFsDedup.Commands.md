@@ -20,9 +20,9 @@ beginning of the cmdlet.
 
 ### [Clear-ReFSDedupSchedule](Clear-ReFSDedupSchedule.md)
 
-Clears the scheduled job and the schedule itself for deduplication on a specified ReFS volume.
+Clears the scheduled task for deduplication on a specified ReFS volume.
 
-### [Clear-ReFSDedupScrubSchedule.md](Clear-ReFSDedupScrubSchedule.md)
+### [Clear-ReFSDedupScrubSchedule](Clear-ReFSDedupScrubSchedule.md)
 
 Clears the deduplication scrub schedule on a specified ReFS volume.
 
@@ -36,7 +36,7 @@ Enables data deduplication on a specified ReFS volume.
 
 ### [Get-ReFSDedupSchedule](Get-ReFSDedupSchedule.md)
 
-Retrieves the deduplication schedule for a specified ReFS volume.
+Retrieves the deduplication schedule on a specified ReFS volume.
 
 ### [Get-ReFSDedupScrubSchedule](Get-ReFSDedupScrubSchedule.md)
 

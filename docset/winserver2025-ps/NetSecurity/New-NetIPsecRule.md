@@ -19,7 +19,7 @@ Creates an IPsec rule that defines security requirements for network connections
 New-NetIPsecRule [-PolicyStore <String>] [-GPOSession <String>] [-IPsecRuleName <String>] -DisplayName <String>
  [-Description <String>] [-Group <String>] [-Enabled <Enabled>] [-Profile <Profile>] [-Platform <String[]>]
  [-Mode <IPsecMode>] [-InboundSecurity <SecurityPolicy>] [-OutboundSecurity <SecurityPolicy>]
- [-QuickModeCryptoSet <String>] [-Phase1AuthSet <String>] [-Phase2AuthSet <String>] [-KeyModule <KeyModule>]
+ [-QuickModeCryptoSet <String>] [-Phase1AuthSet <String>] [-Phase2AuthSet <String>] [-KeyModule <KeyModule>] [-TunnelType <TunnelType>]
  [-AllowWatchKey <Boolean>] [-AllowSetKey <Boolean>] [-LocalTunnelEndpoint <String[]>]
  [-RemoteTunnelEndpoint <String[]>] [-RemoteTunnelHostname <String>] [-ForwardPathLifetime <UInt32>]
  [-EncryptedTunnelBypass <Boolean>] [-RequireAuthorization <Boolean>] [-User <String>] [-Machine <String>]
@@ -441,6 +441,28 @@ Accepted values: Default, IKEv1, AuthIP, IKEv2
 Required: False
 Position: Named
 Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TunnelType
+Specifies that matching IPsec rules of the indicated tunnel type are created.
+This parameter specifies which tunnel type to negotiate.
+The acceptable value for this parameter is: PointToSite.
+
+- PointToSite: Indicates that the IPsec rule applies only to point-to-site tunnels, typically used for connecting an individual client to a network.
+
+The default value is PointToSite. This setting is very advanced and should only be modified for specific interoperability or security scenarios. Overriding this parameter incorrectly may result in rules not applying as intended, potentially leaving traffic unprotected. Windows versions prior to Windows Server 2025 do not support explicit tunnel type configuration.
+
+```yaml
+Type: TunnelType
+Parameter Sets: (All)
+Aliases:
+Accepted values: PointToSite
+
+Required: False
+Position: Named
+Default value: PointToSite
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

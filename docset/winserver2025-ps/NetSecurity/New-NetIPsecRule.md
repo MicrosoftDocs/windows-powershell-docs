@@ -445,28 +445,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TunnelType
-Specifies that matching IPsec rules of the indicated tunnel type are created.
-This parameter specifies which tunnel type to negotiate.
-The acceptable value for this parameter is: PointToSite.
-
-- PointToSite: Indicates that the IPsec rule applies only to point-to-site tunnels, typically used for connecting an individual client to a network.
-
-The default value is PointToSite. This setting is very advanced and should only be modified for specific interoperability or security scenarios. Overriding this parameter incorrectly may result in rules not applying as intended, potentially leaving traffic unprotected. Windows versions prior to Windows Server 2025 don't support explicit tunnel type configuration.
-
-```yaml
-Type: TunnelType
-Parameter Sets: (All)
-Aliases:
-Accepted values: PointToSite
-
-Required: False
-Position: Named
-Default value: PointToSite
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LocalAddress
 Specifies that network packets with matching IP addresses match this rule.
 This parameter value is the first end point of an IPsec rule and specifies the computers that are subject to the requirements of this rule.
@@ -903,6 +881,25 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TunnelType
+Specifies that matching IPsec rules of the indicated tunnel type are created.
+This parameter specifies which tunnel type to negotiate.
+The acceptable value for this parameter is: PointToSite.
+- PointToSite: Indicates that the IPsec rule applies only to point-to-site tunnels, typically used for connecting an individual client to a network.
+The default value is PointToSite. This setting is very advanced and should only be modified for specific interoperability or security scenarios. Overriding this parameter incorrectly may result in rules not applying as intended, potentially leaving traffic unprotected. Windows versions prior to Windows Server 2025 do not support explicit tunnel type configuration.
+```yaml
+Type: TunnelType
+Parameter Sets: (All)
+Aliases:
+Accepted values: PointToSite
+
+Required: False
+Position: Named
+Default value: PointToSite
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

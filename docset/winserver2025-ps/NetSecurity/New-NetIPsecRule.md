@@ -452,7 +452,7 @@ The acceptable value for this parameter is: PointToSite.
 
 - PointToSite: Indicates that the IPsec rule applies only to point-to-site tunnels, typically used for connecting an individual client to a network.
 
-The default value is PointToSite. This setting is very advanced and should only be modified for specific interoperability or security scenarios. Overriding this parameter incorrectly may result in rules not applying as intended, potentially leaving traffic unprotected. Windows versions prior to Windows Server 2025 do not support explicit tunnel type configuration.
+The default value is PointToSite. This setting is very advanced and should only be modified for specific interoperability or security scenarios. Overriding this parameter incorrectly may result in rules not applying as intended, potentially leaving traffic unprotected. Windows versions prior to Windows Server 2025 don't support explicit tunnel type configuration.
 
 ```yaml
 Type: TunnelType

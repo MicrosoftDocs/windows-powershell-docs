@@ -1,8 +1,11 @@
 ---
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerEncryptionProtocol_v1.0.0.cdxml-help.xml
 Module Name: DnsServer
-online version:
+ms.date: 01/14/2026
+online version: https://learn.microsoft.com/powershell/module/dnsserver/set-dnsserverencryptionprotocol?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Set-DnsServerEncryptionProtocol
 ---
 
 # Set-DnsServerEncryptionProtocol
@@ -14,54 +17,55 @@ Configures DNS server encryption protocol settings.
 
 ```
 Set-DnsServerEncryptionProtocol -EnableDoh <Boolean> [-UriTemplate <String>] [-ComputerName <String>]
- [-Force <Boolean>] [-PassThru <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-Force] [-PassThru <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Set-DnsServerEncryptionProtocol cmdlet modifies encryption settings on a Domain Name System (DNS) server. You can use this cmdlet to:
-
-- Enable or disable DNS over HTTPS (DoH) protocol
-- Configure single or multiple URI templates for DoH requests
-
-After modifying encryption settings, you must restart the DNS Server service for changes to take effect.
-
-When DoH is enabled, DNS queries are encrypted using HTTPS to provide enhanced security for DNS communications. Multiple URI templates provide redundancy and load distribution.
+The **Set-DnsServerEncryptionProtocol** cmdlet modifies encryption settings on a Domain Name System (DNS) server to enable or disable DNS over HTTPS (DoH) protocol and configure URI templates for DNS queries. When DoH is enabled, DNS queries are encrypted over HTTPS, protecting them from eavesdropping and tampering. After modifying encryption settings, you must restart the DNS Server service for changes to take effect. Ensure that a valid SSL/TLS certificate is configured for the DNS server with the hostname(s) specified in the URI template(s). This cmdlet is available on Windows Server 2025 or later.
 
 ## EXAMPLES
 
-### Example 1: Enable DoH with a single URI template
+### Example 1: Enable DNS over HTTPS (DoH) with default URI template
 ```powershell
-PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $true -UriTemplate "https://dns.example.com/dns-query"
+PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $true
+PS C:\> Restart-Service DNS
+```
+
+This command enables DNS over HTTPS (DoH) using the default URI template path `/dns-query`. When you don't specify the **UriTemplate** parameter, the DNS server uses a template based on the server's FQDN with the standard `/dns-query` path (for example, `https://dnsserver.contoso.com/dns-query`).
+
+### Example 2: Enable DNS over HTTPS (DoH) with a single URI template
+```powershell
+PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $true -UriTemplate "https://dnsserver.example.net/dns-query"
 PS C:\> Restart-Service DNS
 ```
 
 This command enables DNS over HTTPS (DoH) on the DNS server with the specified URI template. The DNS service must be restarted for the changes to take effect.
 
-### Example 2: Enable DoH with multiple URI templates
+### Example 3: Enable DNS over HTTPS (DoH) with multiple URI templates
 ```powershell
-PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $true -UriTemplate "https://primary.example.com/dns-query|https://backup.example.com/dns-query"
+PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $true -UriTemplate "https://dnsserver.example.net/dns-query|https://dnsserver2.example.net/dns-query"
 PS C:\> Restart-Service DNS
 ```
 
-This command configures DoH with multiple URI templates (separated by pipe character) for redundancy and load distribution.
+This command configures DNS over HTTPS (DoH) with multiple URI templates separated by the pipe character (|) for redundancy and load distribution. A maximum of three URI templates can be specified.
 
-### Example 3: Disable DoH
+### Example 4: Disable DNS over HTTPS (DoH)
 ```powershell
 PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $false
 PS C:\> Restart-Service DNS
 ```
 
-This command disables DNS over HTTPS (DoH) on the DNS server. The URI template configuration is cleared when DoH is disabled.
+This command disables DNS over HTTPS (DoH) on the DNS server. All configured URI templates are automatically cleared.
 
 ## PARAMETERS
 
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. You can continue to work in the session while the job completes. To manage the job, use the `*-Job` cmdlets. To get the job results, use the Receive-Job cmdlet.
+The cmdlet immediately returns an object that represents the job and then displays the command prompt. You can continue to work in the session while the job completes. To manage the job, use the `*-Job` cmdlets. To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
-For more information about Windows PowerShell background jobs, see about_Jobs.
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -92,6 +96,7 @@ Accept wildcard characters: False
 
 ### -ComputerName
 Specifies a DNS server. The acceptable values for this parameter are: an IPv4 address; an IPv6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+
 
 ```yaml
 Type: String
@@ -136,10 +141,10 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation. Use this parameter to bypass confirmation prompts when scripting or automating cmdlet execution.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -181,14 +186,12 @@ Accept wildcard characters: False
 ```
 
 ### -UriTemplate
-Specifies one or more URI templates for DNS over HTTPS (DoH) requests. 
+Specifies one or more URI templates for DNS over HTTPS (DoH) queries. If not specified when **EnableDoh** is set to `$true`, the DNS server uses a default URI template with the `/dns-query` path based on the server's fully qualified domain name (FQDN).
 
-- For a single template: `"https://dns.example.com/dns-query"`
-- For multiple templates (redundancy/load balancing): `"https://primary.example.com/dns-query|https://backup.example.com/dns-query"`
-- Templates must be valid HTTPS URIs compliant with RFC 3986
-- DoH implementation follows RFC 8484 (DNS Queries over HTTPS) specification
-- Multiple templates are separated by the pipe character (|)
-- This parameter is required when EnableDoh is set to `$true`
+For a single URI template, specify `"https://dnsserver.example.net/dns-query"`. To provide multiple URI templates for redundancy and load balancing, specify them as **a single string** with templates separated by the pipe character (|): `"https://dnsserver.example.net/dns-query|https://dnsserver2.example.net/dns-query"`. A maximum of three URI templates can be specified.
+
+URI templates must be valid HTTPS URIs compliant with [RFC 3986, Uniform Resource Identifier (URI): Generic Syntax](https://datatracker.ietf.org/doc/html/rfc3986). Ensure that a valid SSL/TLS certificate is configured for the DNS server with the hostname(s) specified in the URI template(s).
+
 
 ```yaml
 Type: String
@@ -219,29 +222,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### System.Boolean
-
-### System.String
-
 ## OUTPUTS
-
-### Microsoft.Management.Infrastructure.CimInstance
 
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerEncryptionProtocol
 
 ## NOTES
-- After modifying encryption settings, you must restart the DNS Server service for changes to take effect.
-- When enabling DoH, ensure that the SSL/TLS certificate is properly configured for the specified URI template.
-- The DNS server must be running Windows Server 2025 or later.
-- The UriTemplate parameter is required when EnableDoh is set to `$true`.
-- Multiple URI templates provide redundancy and load distribution.
 
 ## RELATED LINKS
 
-[Get-DnsServerEncryptionProtocol](Get-DnsServerEncryptionProtocol.md)
-
-[DNS over HTTPS (DoH)](https://learn.microsoft.com/windows-server/networking/dns/dns-over-https)
+[Get-DnsServerEncryptionProtocol](./Get-DnsServerEncryptionProtocol.md)

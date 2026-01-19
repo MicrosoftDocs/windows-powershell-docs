@@ -22,11 +22,13 @@ Set-DnsServerEncryptionProtocol -EnableDoh <Boolean> [-UriTemplate <String>] [-C
 ```
 
 ## DESCRIPTION
+
 The **Set-DnsServerEncryptionProtocol** cmdlet modifies encryption settings on a Domain Name System (DNS) server to enable or disable DNS over HTTPS (DoH) protocol and configure URI templates for DNS queries. When DoH is enabled, DNS queries are encrypted over HTTPS, protecting them from eavesdropping and tampering. After modifying encryption settings, you must restart the DNS Server service for changes to take effect. Ensure that a valid SSL/TLS certificate is configured for the DNS server with the hostname(s) specified in the URI template(s). This cmdlet is available on Windows Server 2025 or later.
 
 ## EXAMPLES
 
 ### Example 1: Enable DNS over HTTPS (DoH) with default URI template
+
 ```powershell
 PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $true
 PS C:\> Restart-Service DNS
@@ -35,6 +37,7 @@ PS C:\> Restart-Service DNS
 This command enables DNS over HTTPS (DoH) using the default URI template path `/dns-query`. When you don't specify the **UriTemplate** parameter, the DNS server uses a template based on the server's FQDN with the standard `/dns-query` path (for example, `https://dnsserver.contoso.com/dns-query`).
 
 ### Example 2: Enable DNS over HTTPS (DoH) with a single URI template
+
 ```powershell
 PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $true -UriTemplate "https://dnsserver.example.net/dns-query"
 PS C:\> Restart-Service DNS
@@ -43,6 +46,7 @@ PS C:\> Restart-Service DNS
 This command enables DNS over HTTPS (DoH) on the DNS server with the specified URI template. The DNS service must be restarted for the changes to take effect.
 
 ### Example 3: Enable DNS over HTTPS (DoH) with multiple URI templates
+
 ```powershell
 PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $true -UriTemplate "https://dnsserver.example.net/dns-query|https://dnsserver2.example.net/dns-query"
 PS C:\> Restart-Service DNS
@@ -51,6 +55,7 @@ PS C:\> Restart-Service DNS
 This command configures DNS over HTTPS (DoH) with multiple URI templates separated by the pipe character (|) for redundancy and load distribution. A maximum of three URI templates can be specified.
 
 ### Example 4: Disable DNS over HTTPS (DoH)
+
 ```powershell
 PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $false
 PS C:\> Restart-Service DNS
@@ -61,6 +66,7 @@ This command disables DNS over HTTPS (DoH) on the DNS server. All configured URI
 ## PARAMETERS
 
 ### -AsJob
+
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 The cmdlet immediately returns an object that represents the job and then displays the command prompt. You can continue to work in the session while the job completes. To manage the job, use the `*-Job` cmdlets. To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
@@ -80,6 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
+
 Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a session object, such as the output of a New-CimSession or Get-CimSession cmdlet. The default is the current session on the local computer.
 
 ```yaml
@@ -95,6 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
+
 Specifies a DNS server. The acceptable values for this parameter are: an IPv4 address; an IPv6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
 
 
@@ -111,6 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -126,6 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDoh
+
 Specifies whether to enable or disable DNS over HTTPS (DoH) on the DNS server. Set to `$true` to enable DoH, or `$false` to disable it. When disabled, any configured URI templates are cleared.
 
 ```yaml
@@ -141,6 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
@@ -156,7 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
+
+Returns an object representing the item with which you are working. By default, this cmdlet doesn't generate any output.
 
 ```yaml
 Type: Boolean
@@ -171,6 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
+
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet. If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -186,6 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -UriTemplate
+
 Specifies one or more URI templates for DNS over HTTPS (DoH) queries. If not specified when **EnableDoh** is set to `$true`, the DNS server uses a default URI template with the `/dns-query` path based on the server's fully qualified domain name (FQDN).
 
 For a single URI template, specify `"https://dnsserver.example.net/dns-query"`. To provide multiple URI templates for redundancy and load balancing, specify them as **a single string** with templates separated by the pipe character (|): `"https://dnsserver.example.net/dns-query|https://dnsserver2.example.net/dns-query"`. A maximum of three URI templates can be specified.
@@ -206,6 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -222,6 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

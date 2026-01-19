@@ -10,5 +10,3 @@ common/
 *.db
 
 .openpublishing.buildcore.ps1
-
-.github/prompts/

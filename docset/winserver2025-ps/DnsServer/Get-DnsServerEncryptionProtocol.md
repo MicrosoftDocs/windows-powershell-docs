@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Learn how to retrieve DNS over HTTPS (DoH) settings using the Get-DnsServerEncryptionProtocol cmdlet in Windows PowerShell for Windows Server 2025 and later.
 external help file: PS_DnsServerEncryptionProtocol_v1.0.0.cdxml-help.xml
 Module Name: DnsServer
 ms.date: 01/14/2026
@@ -11,7 +11,7 @@ title: Get-DnsServerEncryptionProtocol
 # Get-DnsServerEncryptionProtocol
 
 ## SYNOPSIS
-Retrieves DNS server encryption protocol settings. This cmdlet is available on Windows Server 2025 or later.
+Retrieves DNS server encryption protocol settings for DNS over HTTPS (DoH) on Windows Server 2025 or later.
 
 ## SYNTAX
 
@@ -22,7 +22,14 @@ Get-DnsServerEncryptionProtocol [-ComputerName <String>] [-PassThru <Boolean>] [
 
 ## DESCRIPTION
 
-The **Get-DnsServerEncryptionProtocol** cmdlet retrieves Domain Name System (DNS) server DNS over HTTPS (DoH) settings: **EnableDoh** and **UriTemplate**.
+The `Get-DnsServerEncryptionProtocol` cmdlet can be used to verify the current DoH configuration
+on a DNS server. The cmdlet retrieves the current settings as an object with the properties
+**EnableDoh** and **UriTemplate** to indicate whether DoH is enabled and the configured URI
+templates for DNS queries over HTTPS.
+
+> [!IMPORTANT]
+> The `Get-DnsServerEncryptionProtocol` cmdlet is available on Windows Server 2025 or
+> later beginning with 2026-02 Security Update.
 
 ## EXAMPLES
 
@@ -103,8 +110,12 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies a DNS server.
-The acceptable values for this parameter are: an IP V4 address; an IP V6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+Specifies a DNS server. The acceptable values for this parameter are: 
+
+- An IP V4 address
+- An IP V6 address
+- Any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host
+  name, or NETBIOS name.
 
 ```yaml
 Type: String

@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Learn how to enable or disable DNS over HTTPS (DoH) and configure URI templates for secure DNS queries using the Set-DnsServerEncryptionProtocol cmdlet.
 external help file: PS_DnsServerEncryptionProtocol_v1.0.0.cdxml-help.xml
 Module Name: DnsServer
 ms.date: 01/14/2026
@@ -11,7 +11,8 @@ title: Set-DnsServerEncryptionProtocol
 # Set-DnsServerEncryptionProtocol
 
 ## SYNOPSIS
-Configures DNS server encryption protocol settings.
+Configures DNS server encryption protocol settings for DNS over HTTPS (DoH) on Windows Server 2025
+or later.
 
 ## SYNTAX
 
@@ -23,45 +24,62 @@ Set-DnsServerEncryptionProtocol -EnableDoh <Boolean> [-UriTemplate <String>] [-C
 
 ## DESCRIPTION
 
-The **Set-DnsServerEncryptionProtocol** cmdlet modifies encryption settings on a Domain Name System (DNS) server to enable or disable DNS over HTTPS (DoH) protocol and configure URI templates for DNS queries. When DoH is enabled, DNS queries are encrypted over HTTPS, protecting them from eavesdropping and tampering. After modifying encryption settings, you must restart the DNS Server service for changes to take effect. Ensure that a valid SSL/TLS certificate is configured for the DNS server with the hostname(s) specified in the URI template(s). This cmdlet is available on Windows Server 2025 or later.
+The `Set-DnsServerEncryptionProtocol` cmdlet modifies encryption settings on a Domain Name System
+(DNS) server to enable or disable DNS over HTTPS (DoH) and configure URI templates for DNS
+queries. When DoH is enabled, DNS queries are encrypted over HTTPS, protecting them from
+eavesdropping and tampering.
+
+You must restart the DNS Server service for changes to take effect. Ensure that a valid SSL/TLS
+certificate is configured for the DNS server with the hostname(s) specified in the URI template(s).
+
+> [!IMPORTANT]
+> The `Get-DnsServerEncryptionProtocol` cmdlet is available on Windows Server 2025 or
+> later beginning with 2026-02 Security Update.
 
 ## EXAMPLES
 
 ### Example 1: Enable DNS over HTTPS (DoH) with default URI template
 
 ```powershell
-PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $true
-PS C:\> Restart-Service DNS
+Set-DnsServerEncryptionProtocol -EnableDoh $true
+Restart-Service DNS
 ```
 
-This command enables DNS over HTTPS (DoH) using the default URI template path `/dns-query`. When you don't specify the **UriTemplate** parameter, the DNS server uses a template based on the server's FQDN with the standard `/dns-query` path (for example, `https://dnsserver.contoso.com/dns-query`).
+This example command enables DNS over HTTPS (DoH) using the default URI template path `/dns-query`. When
+you don't specify the **UriTemplate** parameter, the DNS server uses a template based on the server's
+FQDN with the standard `/dns-query` path (for example, `https://dnsserver.contoso.com/dns-query`).
+The DNS service should be restarted for the changes to take effect.
 
 ### Example 2: Enable DNS over HTTPS (DoH) with a single URI template
 
 ```powershell
-PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $true -UriTemplate "https://dnsserver.example.net/dns-query"
-PS C:\> Restart-Service DNS
+Set-DnsServerEncryptionProtocol -EnableDoh $true -UriTemplate "https://dnsserver.example.net/dns-query"
+Restart-Service DNS
 ```
 
-This command enables DNS over HTTPS (DoH) on the DNS server with the specified URI template. The DNS service must be restarted for the changes to take effect.
+In this example, you enables DNS over HTTPS (DoH) on the DNS server with the specified URI template. The
+DNS service should be restarted for the changes to take effect.
 
 ### Example 3: Enable DNS over HTTPS (DoH) with multiple URI templates
 
 ```powershell
-PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $true -UriTemplate "https://dnsserver.example.net/dns-query|https://dnsserver2.example.net/dns-query"
-PS C:\> Restart-Service DNS
+Set-DnsServerEncryptionProtocol -EnableDoh $true -UriTemplate "https://dnsserver.example.net/dns-query|https://dnsserver2.example.net/dns-query"
+Restart-Service DNS
 ```
 
-This command configures DNS over HTTPS (DoH) with multiple URI templates separated by the pipe character (|) for redundancy and load distribution. A maximum of three URI templates can be specified.
+In this example, the command configures DNS over HTTPS (DoH) with multiple URI templates separated
+by the pipe character `|` for redundancy and load distribution. A maximum of three URI templates
+can be specified. Finally, the DNS service should be restarted for the change to take effect.
 
 ### Example 4: Disable DNS over HTTPS (DoH)
 
 ```powershell
-PS C:\> Set-DnsServerEncryptionProtocol -EnableDoh $false
-PS C:\> Restart-Service DNS
+Set-DnsServerEncryptionProtocol -EnableDoh $false
+Restart-Service DNS
 ```
 
-This command disables DNS over HTTPS (DoH) on the DNS server. All configured URI templates are automatically cleared.
+In this example, the command disables DNS over HTTPS (DoH) on the DNS server and restarts the DNS service.
+All configured URI templates are automatically cleared.
 
 ## PARAMETERS
 
@@ -103,7 +121,12 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies a DNS server. The acceptable values for this parameter are: an IPv4 address; an IPv6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
+Specifies a DNS server. The acceptable values for this parameter are: 
+
+- An IP V4 address  
+- An IP V6 address  
+- Any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host  
+  name, or NETBIOS name.  
 
 
 ```yaml
@@ -136,7 +159,8 @@ Accept wildcard characters: False
 
 ### -EnableDoh
 
-Specifies whether to enable or disable DNS over HTTPS (DoH) on the DNS server. Set to `$true` to enable DoH, or `$false` to disable it. When disabled, any configured URI templates are cleared.
+Specifies whether to enable or disable DNS over HTTPS (DoH) on the DNS server. Set the value to `$true` to
+enable DoH, or `$false` to disable it. When disabled, any configured URI templates are also cleared.
 
 ```yaml
 Type: Boolean
@@ -200,11 +224,19 @@ Accept wildcard characters: False
 
 ### -UriTemplate
 
-Specifies one or more URI templates for DNS over HTTPS (DoH) queries. If not specified when **EnableDoh** is set to `$true`, the DNS server uses a default URI template with the `/dns-query` path based on the server's fully qualified domain name (FQDN).
+Specifies one or more URI templates for DNS over HTTPS (DoH) queries. If you don't specify a value when  
+**EnableDoh** is set to `$true`, the DNS server uses a default URI template with the `/dns-query` path  
+based on the server's fully qualified domain name (FQDN).  
 
-For a single URI template, specify `"https://dnsserver.example.net/dns-query"`. To provide multiple URI templates for redundancy and load balancing, specify them as **a single string** with templates separated by the pipe character (|): `"https://dnsserver.example.net/dns-query|https://dnsserver2.example.net/dns-query"`. A maximum of three URI templates can be specified.
+For a single URI template, specify `"https://dnsserver.example.net/dns-query"`. To provide multiple URI  
+templates for redundancy and load balancing, specify them as a single string with templates separated  
+by the pipe character `|`. For example,  
+`"https://dnsserver.example.net/dns-query|https://dnsserver2.example.net/dns-query"`. A maximum of three  
+URI templates can be specified.  
 
-URI templates must be valid HTTPS URIs compliant with [RFC 3986, Uniform Resource Identifier (URI): Generic Syntax](https://datatracker.ietf.org/doc/html/rfc3986). Ensure that a valid SSL/TLS certificate is configured for the DNS server with the hostname(s) specified in the URI template(s).
+URI templates must be valid HTTPS URIs compliant with [RFC 3986, Uniform Resource Identifier (URI): 
+Generic Syntax](https://datatracker.ietf.org/doc/html/rfc3986). Ensure that a valid SSL/TLS certificate is  
+configured for the DNS server with the hostname(s) specified in the URI template(s). 
 
 
 ```yaml
@@ -221,8 +253,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
 Type: SwitchParameter

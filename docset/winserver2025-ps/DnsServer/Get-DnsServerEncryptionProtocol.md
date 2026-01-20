@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-Specifies a DNS server. The acceptable values for this parameter are: 
+Specifies a DNS server. The acceptable values for this parameter are:
 
 - An IP V4 address
 - An IP V6 address

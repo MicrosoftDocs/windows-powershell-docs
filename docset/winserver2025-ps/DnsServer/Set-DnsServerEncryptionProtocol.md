@@ -52,12 +52,7 @@ WARNING: Modifying DOH setting will require restarting the DNS service.
 Restart-Service DNS
 ```
 
-In this example, the command enables DNS over HTTPS (DoH) using an implementation-specific default URI template.
-When you don't specify the **UriTemplate** parameter, the Windows DNS server implementation
-automatically configures a URI template based on the server's FQDN with the `/dns-query` path
-(for example, `https://dnsserver.contoso.com/dns-query`). This default behavior is
-implementation-specific and not defined by RFC 8484. The DNS service must be restarted for
-the changes to take effect.
+In this example, the command enables DNS over HTTPS (DoH). When you don't specify the **UriTemplate** parameter, the DNS server automatically generates a URI template based on the server's FQDN with the `/dns-query` path (for example, `https://dnsserver.contoso.com/dns-query`). The DNS service must be restarted for the changes to take effect.
 
 ### Example 2: Enable DNS over HTTPS (DoH) with a single URI template
 
@@ -223,7 +218,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet doesn't generate any output.
+Returns an object representing the item with which you are working.
 
 ```yaml
 Type: Boolean
@@ -255,20 +250,21 @@ Accept wildcard characters: False
 
 ### -UriTemplate
 
-Specifies one or more URI templates for DNS over HTTPS (DoH) queries. If you don't specify a value when
-**EnableDoh** is set to `$true`, the Windows DNS server implementation uses a default URI template
-with the `/dns-query` path based on the server's fully qualified domain name (FQDN). This default
-behavior is implementation-specific and not defined by RFC 8484.
+Specifies one or more URI templates for DNS over HTTPS (DoH) queries.
 
-For a single URI template, specify `"https://dnsserver.example.net/dns-query"`. To provide multiple URI
-templates, specify them as a single string with templates separated by the pipe character `|`. For
-example, `"https://dnsserver.example.net/dns-query|https://dnsserver2.example.net/dns-query"`.
+URI template(s) must be valid HTTPS URIs compliant with [RFC 3986, Uniform Resource Identifier (URI):
+Generic Syntax](https://datatracker.ietf.org/doc/html/rfc3986). Ensure that a valid SSL/TLS certificate is
+configured for the DNS server with the hostname(s) specified in the URI template(s).
+
+For a single URI template, specify a valid HTTPS URI (for example, `"https://dnsserver.example.net/dns-query"`).
+For multiple URI templates, separate them with the pipe character `|` (for example,
+`"https://dnsserver.example.net/dns-query|https://dnsserver2.example.net/dns-query"`).
 Multiple URI templates may be provisioned to allow client implementations to choose among multiple
 DoH endpoints. A maximum of three URI templates can be specified.
 
-URI templates must be valid HTTPS URIs compliant with [RFC 3986, Uniform Resource Identifier (URI):
-Generic Syntax](https://datatracker.ietf.org/doc/html/rfc3986). Ensure that a valid SSL/TLS certificate is
-configured for the DNS server with the hostname(s) specified in the URI template(s).
+If you don't specify a value when **EnableDoh** is set to `$true`, the DNS server automatically generates a 
+URI template using the format `https://<server-fqdn>/dns-query`, where `<server-fqdn>` is the server's fully qualified domain name. 
+For example, if your DNS server's FQDN is `dns1.contoso.com`, the template will be `https://dns1.contoso.com/dns-query`.
 
 
 ```yaml
@@ -305,9 +301,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
+You cannot pipe objects to this cmdlet.
+
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerEncryptionProtocol
+
+This cmdlet returns a `DnsServerEncryptionProtocol` object that represents the updated encryption protocol settings on the DNS server.
 
 ## NOTES
 

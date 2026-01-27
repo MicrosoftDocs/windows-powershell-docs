@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-Returns an object representing the item with which you are working. By default, this cmdlet doesn't generate any output.
+Returns an object representing the item with which you are working.
 
 ```yaml
 Type: Boolean
@@ -174,6 +174,8 @@ You cannot pipe objects to this cmdlet.
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerEncryptionProtocol
+
+This cmdlet returns a `DnsServerEncryptionProtocol` object that represents the updated encryption protocol settings on the DNS server.
 
 ## NOTES
 

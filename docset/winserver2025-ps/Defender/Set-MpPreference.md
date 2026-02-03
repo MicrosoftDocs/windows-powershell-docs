@@ -1624,6 +1624,8 @@ Accept wildcard characters: False
 ### -SharedSignaturesPath
 Specifies the shared signatures path.
 
+Note: Configuring this option disables updates via options configured for **SignatureFallbackOrder**. 
+
 ```yaml
 Type: String
 Parameter Sets: (All)

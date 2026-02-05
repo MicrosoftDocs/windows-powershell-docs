@@ -42,7 +42,7 @@ This cmdlet this runs on both UEFI and BIOS (non-UEFI) computers.
 
 ## EXAMPLES
 
-### Example 1: Format a private key
+### Example 1: Format a platform key
 ```
 PS C:\> Format-SecureBootUefi -Name PK -SignatureOwner 12345678-1234-1234-1234-123456789abc -CertificateFilePath PK.cer -SignableFilePath GeneratedFileToSign.bin -Time 2011-11-01T13:30:00Z | Format-List
 Name        : PK 
@@ -51,7 +51,7 @@ AppendWrite : False
 Content     : {232, 102, 87, 60...}
 ```
 
-This command formats the private key in PK.cer that is later piped to the Set-SecureBootUEFI cmdlet.
+This command formats the platform key in PK.cer that is later piped to the Set-SecureBootUEFI cmdlet.
 
 ### Example 2: Format a hash
 ```

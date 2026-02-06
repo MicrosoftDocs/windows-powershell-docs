@@ -1622,7 +1622,11 @@ Accept wildcard characters: False
 ```
 
 ### -SharedSignaturesPath
-Specifies the shared signatures path.
+Specifies the shared signatures path as a UNC file path to a file share containing pre-downloaded and unpackaged security intelligence updates. For example, `\\<FileServer>\<ShareName>`. The parameter enables the shared security intelligence feature, which offloads the update unpackaging process to a central host machine.
+
+To learn more about the shared security intelligence feature, see [Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment](/defender-endpoint/deployment-vdi-microsoft-defender-antivirus).
+
+Configuring the shared signatures path disables definition updates using the sources defined in the **SignatureFallbackOrder**.
 
 ```yaml
 Type: String

@@ -16,7 +16,8 @@ title: DFSN
 This reference provides cmdlet descriptions and syntax for all DFS Namespace cmdlets. It lists the
 cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-## DFSN Cmdlets
+## Distributed File System (DFS) Namespace Cmdlets
+This reference provides cmdlet descriptions and syntax for all DFS Namespace cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ### [Get-DfsnAccess](./Get-DfsnAccess.md)
 
@@ -109,3 +110,17 @@ Changes settings for a root target of a DFS namespace.
 ### [Set-DfsnServerConfiguration](./Set-DfsnServerConfiguration.md)
 
 Changes settings for a DFS namespace root server.
+
+Note
+To list all the cmdlets that are available, use the cmdlet.Get-Command –Module DFSN
+
+For more information about each cmdlet (or their syntax), use the <CmdletName> cmdlet. Where <cmdlet name> is the name of the cmdlet for which information is desired. Run one of the following cmdlets for more detailed information:Get-Help
+
+● <cmdlet name>
+● <cmdlet name>
+● <cmdlet name>Get-Help -DetailedGet-Help -ExamplesGet-Help -Full
+
+## More Information
+For more information about the cmdlets, see the following:
+
+DFS Namespaces and DFS Replication Overview on TechNet

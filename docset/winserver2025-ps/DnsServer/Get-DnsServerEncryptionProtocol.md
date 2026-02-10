@@ -2,7 +2,7 @@
 description: Learn how to retrieve DNS over HTTPS (DoH) settings using the Get-DnsServerEncryptionProtocol cmdlet in Windows PowerShell for Windows Server 2025 and later.
 external help file: PS_DnsServerEncryptionProtocol_v1.0.0.cdxml-help.xml
 Module Name: DnsServer
-ms.date: 01/14/2026
+ms.date: 02/10/2026
 online version: https://learn.microsoft.com/powershell/module/dnsserver/get-dnsserverencryptionprotocol?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-DnsServerEncryptionProtocol
@@ -25,7 +25,9 @@ Get-DnsServerEncryptionProtocol [-ComputerName <String>] [-PassThru <Boolean>] [
 The `Get-DnsServerEncryptionProtocol` cmdlet can be used to verify the current DoH configuration
 on a DNS server. The cmdlet retrieves the current settings as an object with the properties
 **EnableDoh** and **UriTemplate** to indicate whether DoH is enabled and the configured URI
-templates for DNS queries over HTTPS.
+templates for DNS queries over HTTPS. The cmdlet retrieves the persistent encryption protocol
+settings. Changes made using `Set-DnsServerEncryptionProtocol` require a DNS server restart to take
+effect before being retrieved.
 
 > [!IMPORTANT]
 > The `Get-DnsServerEncryptionProtocol` cmdlet is available on Windows Server 2025 or

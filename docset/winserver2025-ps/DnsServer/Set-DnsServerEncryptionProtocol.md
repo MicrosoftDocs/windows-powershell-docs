@@ -2,7 +2,7 @@
 Learn how to enable or disable DNS over HTTPS (DoH) and configure URI templates for secure DNS queries using the Set-DnsServerEncryptionProtocol cmdlet.
 external help file: PS_DnsServerEncryptionProtocol_v1.0.0.cdxml-help.xml
 Module Name: DnsServer
-ms.date: 01/14/2026
+ms.date: 02/10/2026
 online version: https://learn.microsoft.com/powershell/module/dnsserver/set-dnsserverencryptionprotocol?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DnsServerEncryptionProtocol

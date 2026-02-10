@@ -595,6 +595,8 @@ Accept wildcard characters: False
 Specifies the accounts which can act on the behalf of users to services running as this Managed Service Account or Group Managed Service Account.
 This parameter sets the **msDS-AllowedToActOnBehalfOfOtherIdentity** attribute of the object.
 
+You can specify the Distinguished Name of an account when it is from the same domain as the account in focus. When you want a security principal from another domain, you need to construct an ADPrincipal object with the desired account, for example using Get-ADGroup.
+
 ```yaml
 Type: ADPrincipal[]
 Parameter Sets: Identity

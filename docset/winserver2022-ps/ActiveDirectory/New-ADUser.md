@@ -1202,8 +1202,7 @@ operating systems, create a SAM account name that is 20 characters or less. This
 property is `sAMAccountName`.
 
 > [!NOTE]
-> Information the user should notice even if skimmingIf the string value provided is not terminated
-> with a `$` character, the system adds one if needed.
+> If the string value provided is not terminated with a `$` character, the system adds one if needed.
 
 ```yaml
 Type: System.String

@@ -117,6 +117,7 @@
     "template": [],
     "dest": "powershell-windows"
   },
+  "rules": {
   "filename-incomplete": { 
         "exclude": [ 
           "**/*.md", 
@@ -132,7 +133,7 @@
           "**/*.svg" 
         ]
        }, 
-    "image-structure-incorrect": { 
+      "image-structure-incorrect": { 
         "exclude": [ 
           "**/*.gif", 
           "**/*.jpeg", 
@@ -141,10 +142,11 @@
           "**/*.svg" 
         ] 
        }, 
-      "include-structure-incorrect": { 
+       "include-structure-incorrect": { 
         "exclude": [ 
           "**/*.md", 
           "**.*.yml"
-       ] 
+        ] 
       }
+   }
 }

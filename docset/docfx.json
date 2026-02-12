@@ -118,7 +118,7 @@
     "dest": "powershell-windows"
   },
   "rules": {
-  "filename-incomplete": { 
+      "filename-incomplete": { 
         "exclude": [ 
           "**/*.md", 
           "**.*.yml" 

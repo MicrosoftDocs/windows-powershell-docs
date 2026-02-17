@@ -16,8 +16,9 @@ Imports certificates and private keys from a Personal Information Exchange (PFX)
 ## SYNTAX
 
 ```
-Import-PfxCertificate [-Exportable] [-Password <SecureString>] [[-CertStoreLocation] <String>]
- [-FilePath] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+Import-PfxCertificate [-Exportable] [-ProtectPrivateKey <ProtectPrivateKeyType>] [-Password <SecureString>] 
+ [[-CertStoreLocation] <String>] [-FilePath] <String>
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,6 +56,15 @@ PS Cert:\localMachine\my>Import-PfxCertificate -FilePath c:\mypfx.pfx
 This example imports the PFX file mypfx.pfx into the My store for the machine account.
 The **Password** parameter is not required since this PFX file is protected using the domain account of this machine.
 This requires a Windows Server® 2012 domain controller.
+
+### EXAMPLE 4
+```
+PS C:\>Get-ChildItem -Path c:\mypfx\my.pfx | Import-PfxCertificate -CertStoreLocation Cert:\CurrentUser\My -ProtectPrivateKey vsm 
+```
+
+This example imports the PFX file `my.pfx` with a private key into the My store for the current user.
+The **Password** parameter is not required since this PFX file is not password protected.
+The private key will be protected by virtualized-based security (VBS) and cannot be exported.
 
 ## PARAMETERS
 
@@ -97,6 +107,24 @@ If this parameter is not specified, then the private key cannot be exported.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProtectPrivateKey
+Specifies whether to protect the imported private key by virtualized-based security.
+If this parameter is specified with the value `vsm`, then the private key cannot be exported.
+Virtual Secure Mode (VSM) capabilities were introduced in Windows 10 and Windows Server 2016.
+
+```yaml
+Type: Microsoft.CertificateServices.Commands.ProtectPrivateKeyType
+Parameter Sets: (All)
+Aliases: 
+Accepted values: none, vsm
 
 Required: False
 Position: Named
@@ -177,3 +205,5 @@ The imported **X509Certificate2** object contained in the PFX file that is assoc
 [Export-PfxCertificate](./Export-PfxCertificate.md)
 
 [System Store Locations](/windows/desktop/seccrypto/system-store-locations)
+
+[Virtualization-based Security](https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-vbs)

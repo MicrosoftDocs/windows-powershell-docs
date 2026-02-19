@@ -1,8 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Removes a workgroup cluster. This cmdlet disconnects and removes all nodes from the specified workgroup cluster, using the provided credentials and authentication method.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
-ms.date: 09/11/2024
+ms.date: 04/24/2025
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/remove-workgroupcluster?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-WorkgroupCluster
@@ -16,13 +16,13 @@ Removes a workgroup cluster.
 ## SYNTAX
 
 ```
-Remove-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [-Force] [-Confirm]
- [-WhatIf] [<CommonParameters>]
+Remove-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [-Force] [-Confirm] [-WhatIf]
+ [-AuthenticationMethod] <WorkgroupClusterAuthenticationMethod> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Remove-WorkgroupCluster` cmdlet removes a workgroup cluster.
+The `Remove-WorkgroupCluster` cmdlet removes a workgroup cluster. This cmdlet disconnects and removes all nodes from the specified workgroup cluster, using the provided credentials and authentication method. If communication is lost with a node or the cluster membership is incomplete, manual cleanup may be required.
 
 ## EXAMPLES
 
@@ -39,18 +39,20 @@ be removed and manual cleanup may be needed.
 
 ## PARAMETERS
 
-### -Node
-
-An array of nodes that form the current cluster.
+### -AuthenticationMethod
+Specifies the authentication method to use when removing the workgroup cluster. Acceptable values are:
+- `Certificates`: Uses certificate-based authentication for secure communication between nodes.
+- `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.
 
 ```yaml
-Type: String[]
+Type: WorkgroupClusterAuthenticationMethod
 Parameter Sets: (All)
 Aliases:
+Accepted values: Certificates, NoCertificates
 
-Required: False
-Position: 1
-Default value: @()
+Required: True
+Position: 3
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -60,7 +62,7 @@ Accept wildcard characters: False
 An array of credentials for the nodes.
 
 ```yaml
-Type: PSCredential[]
+Type: System.Management.Automation.PSCredential[]
 Parameter Sets: (All)
 Aliases:
 
@@ -76,7 +78,7 @@ Accept wildcard characters: False
 Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -87,12 +89,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Node
+
+An array of nodes that form the current cluster.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: @()
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -108,7 +126,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -128,7 +146,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+You can pipe an array of node names to this cmdlet.
+
+### System.Management.Automation.PSCredential[]
+You can pipe an array of credentials to this cmdlet.
+
 ## OUTPUTS
+
+### None
+This cmdlet does not generate any output. It performs the operation of removing a workgroup cluster.
 
 ## NOTES
 

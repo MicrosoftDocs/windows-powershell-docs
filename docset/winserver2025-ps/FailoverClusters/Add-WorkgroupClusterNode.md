@@ -2,57 +2,83 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
-ms.date: 09/11/2024
+ms.date: 04/25/2025
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/add-workgroupclusternode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-WorkgroupClusterNode
+ai-usage: ai-generated
 ---
 
 # Add-WorkgroupClusterNode
 
 ## SYNOPSIS
+
 Adds a node to a workgroup cluster.
 
 ## SYNTAX
 
 ```
 Add-WorkgroupClusterNode [-Node] <String[]> [-Credentials] <PSCredential[]> [-Name] <String>
- [-Credential] <PSCredential> [-NoStorage] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-Credential] <PSCredential> [-NoStorage] [-Confirm] [-WhatIf]
+ [-AuthenticationMethod] <WorkgroupClusterAuthenticationMethod> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Add-WorkgroupClusterNode` cmdlet adds a node to a workgroup cluster.
+The `Add-WorkgroupClusterNode` cmdlet adds a node to a workgroup cluster. This cmdlet lets you
+expand an existing workgroup cluster by adding a new node, specifying the required credentials and
+authentication method. The node can be added with or without shared storage, depending on your
+configuration.
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Add a node to a workgroup cluster
+
+This example adds `Node3` to the cluster whose membership is comprised of `Node1` and `Node2`.
 
 ```powershell
-$params = @{
+$parameters = @{
     Node = @("Node1", "Node2")
     Credentials = @($cred1, $cred2)
     Name = "Node3"
     Credential = $cred3
 }
-Add-WorkgroupClusterNode @params
+Add-WorkgroupClusterNode @parameters
 ```
-
-This example adds `Node3` to the cluster whose membership is comprised of `Node1` and `Node2`.
 
 ## PARAMETERS
 
-### -Node
+### -AuthenticationMethod
 
-An array of nodes to be added to the cluster.
+Specifies the authentication method to use when adding the node to the workgroup cluster. Acceptable values are:
+
+- `Certificates`: Uses certificate-based authentication for secure communication between nodes.
+- `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.
 
 ```yaml
-Type: String[]
+Type: WorkgroupClusterAuthenticationMethod
+Parameter Sets: (All)
+Aliases:
+Accepted values: Certificates, NoCertificates
+
+Required: True
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Credential
+
+The credential for the node to be added.
+
+```yaml
+Type: System.Management.Automation.PSCredential
 Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 1
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -63,7 +89,7 @@ Accept wildcard characters: False
 An array of credentials for the nodes.
 
 ```yaml
-Type: PSCredential[]
+Type: System.Management.Automation.PSCredential[]
 Parameter Sets: (All)
 Aliases:
 
@@ -79,7 +105,7 @@ Accept wildcard characters: False
 The name of the node to be added.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -90,17 +116,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Credential
+### -Node
 
-The credential for the node to be added.
+An array of nodes to be added to the cluster.
 
 ```yaml
-Type: PSCredential
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 4
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -111,7 +137,7 @@ Accept wildcard characters: False
 Specifies that shared storage is ignored for the workgroup cluster node.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -127,7 +153,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -143,7 +169,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -163,7 +189,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
+You can pipe an array of node names to this cmdlet.
+
+### System.Management.Automation.PSCredential[]
+
+You can pipe an array of credentials to this cmdlet.
+
+### System.String
+
+You can pipe the name of the node to be added.
+
+### System.Management.Automation.PSCredential
+
+You can pipe the credential for the node to be added.
+
 ## OUTPUTS
+
+### None
+
+This cmdlet doesn't generate any output. It performs the operation of adding a node to a workgroup cluster.
 
 ## NOTES
 

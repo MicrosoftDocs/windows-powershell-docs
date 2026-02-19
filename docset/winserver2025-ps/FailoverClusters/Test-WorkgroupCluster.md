@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
-ms.date: 09/11/2024
+ms.date: 04/24/2025
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/test-workgroupcluster?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-WorkgroupCluster
@@ -17,8 +17,9 @@ Tests the configuration of a workgroup cluster.
 
 ```
 Test-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [[-Disk] <Object[]>]
- [[-Pool] <Object[]>] [[-ReportName] <String>] [[-Include] <String[]>] [[-Ignore] <String[]>]
- [-Force] [[-Cluster] <String>] [-Confirm] [-WhatIf] [-Destination] <String> [<CommonParameters>]
+ [[-Pool] <Object[]>] [[-ReportName] <String>] [[-Include] <String[]>] [[-Ignore] <String[]>] [-Force]
+ [[-Cluster] <String>] [-Confirm] [-WhatIf] [-Destination] <String>
+ [-AuthenticationMethod] <WorkgroupClusterAuthenticationMethod> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,18 +41,37 @@ credentials in `$cred1` and `$cred2`, and additional parameters.
 
 ## PARAMETERS
 
-### -Node
-
-An array of nodes in the workgroup cluster.
+### -AuthenticationMethod
+Specifies the authentication method to use when testing the workgroup cluster. Acceptable values are:
+- `Certificates`: Uses certificate-based authentication for secure communication between nodes.
+- `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.
 
 ```yaml
-Type: String[]
+Type: WorkgroupClusterAuthenticationMethod
+Parameter Sets: (All)
+Aliases:
+Accepted values: Certificates, NoCertificates
+
+Required: True
+Position: 10
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Cluster
+
+Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
+`.` or it is omitted, then the cmdlet runs on the local cluster.
+
+```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
-Default value: @()
+Position: 8
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -61,13 +81,30 @@ Accept wildcard characters: False
 An array of credentials for the nodes.
 
 ```yaml
-Type: PSCredential[]
+Type: System.Management.Automation.PSCredential[]
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 3
+Position: 2
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Destination
+
+Specifies the location to which to copy one or more cluster logs. To copy to the current folder, use
+`.` for this parameter input. Default location is `C:\Windows\Cluster\Reports`.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 9
+Default value: (Get-Location).Path
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -93,13 +130,79 @@ Acceptable values are:
   module.
 
 ```yaml
-Type: Object[]
+Type: System.Object[]
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 4
+Position: 3
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+
+Forces the command to run without asking for user confirmation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Ignore
+
+Specifies which tests or category of tests to ignore during the validation test run. All other
+tests or category of tests will run.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Include
+
+Specifies which tests or category of tests to include during the validation test run. Only the tests
+or category of tests specified will run.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Node
+
+An array of nodes in the workgroup cluster.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: @()
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -123,12 +226,12 @@ Acceptable values are:
   PowerShell storage module.
 
 ```yaml
-Type: Object[]
+Type: System.Object[]
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 5
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -139,79 +242,12 @@ Accept wildcard characters: False
 Specifies the name of the test report to generate.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 6
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Include
-
-Specifies which tests or category of tests to include during the validation test run. Only the tests
-or category of tests specified will run.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 7
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Ignore
-
-Specifies which tests or category of tests to ignore during the validation test run. All other
-tests or category of tests will run.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 8
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-
-Forces the command to run without asking for user confirmation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 9
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Cluster
-
-Specifies the name of the cluster on which to run this cmdlet. If the input for this parameter is
-`.` or it is omitted, then the cmdlet runs on the local cluster.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 10
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -222,12 +258,12 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 11
+Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -238,30 +274,13 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 12
+Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Destination
-
-Specifies the location to which to copy one or more cluster logs. To copy to the current folder, use
-`.` for this parameter input. Default location is `C:\Windows\Cluster\Reports`.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 13
-Default value: (Get-Location).Path
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -275,7 +294,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+You can pipe an array of node names to this cmdlet.
+
+### System.Management.Automation.PSCredential[]
+You can pipe an array of credentials to this cmdlet.
+
+### System.Object[]
+You can pipe an array of disk or storage pool objects to this cmdlet.
+
+### System.String
+You can pipe the name of the cluster, report, or destination path to this cmdlet.
+
 ## OUTPUTS
+
+### Microsoft.FailoverClusters.PowerShell.ClusterValidationReport
+Returns a ClusterValidationReport object that contains the results of the cluster validation tests, including the status of each test and the location of the generated report.
 
 ## NOTES
 

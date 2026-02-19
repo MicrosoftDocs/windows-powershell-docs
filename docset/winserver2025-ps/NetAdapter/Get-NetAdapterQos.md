@@ -13,6 +13,8 @@ title: Get-NetAdapterQos
 ## SYNOPSIS
 Gets the QoS properties of the network adapter, specifically DCB settings.
 
+
+
 ## SYNTAX
 
 ### ByName (Default)

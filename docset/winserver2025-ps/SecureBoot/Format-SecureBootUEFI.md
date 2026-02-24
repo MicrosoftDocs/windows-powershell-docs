@@ -62,7 +62,7 @@ AppendWrite : True
 Content     : {18, 165, 108, 130...}
 ```
 
-This command formats the hash to beg appended to the DBX UEFI variable when the result is piped to the Set-SecureBootUEFI cmdlet.
+This command formats the hash to be appended to the DBX UEFI variable when the result is piped to the Set-SecureBootUEFI cmdlet.
 
 ### Example 3: Format for a variable to be deleted
 ```

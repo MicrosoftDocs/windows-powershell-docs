@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
 Module Name: SecureBoot
-ms.date: 12/20/2016
+ms.date: 03/06/2026
 online version: https://learn.microsoft.com/powershell/module/secureboot/get-securebootuefi?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-SecureBootUEFI
@@ -50,6 +50,19 @@ Attributes : NON VOLATILE
 
 This command gets information about PK from the UEFI variable.
 
+### Example 2:
+```
+PS C:\>Get-SecureBootUEFI -Name db -Decoded
+SignatureOwner       : 77fa9abd-0359-4d32-bd60-28f4e78f784b
+Subject              : CN=Microsoft Windows Production PCA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+Version              : 3
+Algorithm            : sha256RSA
+SerialNumber         : 61077656000000000008
+ValidFrom            : 2011-10-19 11:41:42Z
+ValidTo              : 2026-10-19 11:51:42Z  
+```
+
+
 ## PARAMETERS
 
 ### -Name
@@ -75,6 +88,22 @@ Specifies the output file path of the UEFI environment variable.
 Type: String
 Parameter Sets: (All)
 Aliases: f
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Decoded
+Displays the Secure Boot database contents (for example, PK, KEK, db, dbx) in a human-readable format by decoding the certiricates, hashes, and metadata stored in UEFI authenticated variables.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Accept pipeline input: False
+Accept wildcard characters: False
 
 Required: False
 Position: Named

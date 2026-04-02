@@ -1,5 +1,5 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Use this topic to retrieve Secure Boot Security Version Number (SVN) data from UEFI firmware and the boot manager to assess compliance with Secure Boot policies on a system.
 external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
 Module Name: SecureBoot
 ms.date: 04/01/2026
@@ -94,25 +94,4 @@ This cmdlet returns a SecureBootSVNInfo object with the following properties:
 [Monitoring Secure Boot certificate status with Microsoft Intune remediations](https://support.microsoft.com/en-us/topic/monitoring-secure-boot-certificate-status-with-microsoft-intune-remediations-6696a27b-fa09-4570-b112-124965adc87f)
 
 [Secure Boot Certificate Updates for Azure Virtual Desktop](https://support.microsoft.com/en-us/topic/secure-boot-certificate-updates-for-azure-virtual-desktop-06a8a1bc-2510-4ead-9bea-3698e1d6b1db)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

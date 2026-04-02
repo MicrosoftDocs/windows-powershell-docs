@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 04/02/2026
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/start-clusternode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ClusterNode
@@ -27,7 +27,7 @@ The `Start-ClusterNode` cmdlet starts the Cluster service on a node in a failove
 is the first node started, then it will wait for other nodes to join. The cluster will begin to run
 when a quorum has formed.
 
-This cmdlet with the **FixQuorum** parameter can be used to force quorum, that is, force the start
+This cmdlet with the **ForceQuorum** parameter can be used to force quorum, that is, force the start
 of a cluster node even if quorum hasn't been achieved. When quorum is forced on a given node, the
 copy of the cluster configuration that is on that node will be treated as the authoritative copy and
 will be replicated to all other nodes. Therefore, forcing quorum should be considered a last resort,
@@ -62,7 +62,7 @@ This example starts the Cluster service on the node named `node1` on the cluster
 ### Example 3
 
 ```powershell
-Start-ClusterNode -FixQuorum
+Start-ClusterNode -ForceQuorum
 ```
 
 This example forces the local node and the local cluster to start, even if quorum hasn't been
@@ -111,7 +111,7 @@ Indicates that the cmdlet forces the start of a cluster node regardless if quoru
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: fq, FixQuorum
+Aliases: fq, ForceQuorum
 
 Required: False
 Position: Named

@@ -23,6 +23,9 @@ Formats certificates or hashes into a content object that is returned and create
 ### [Get-SecureBootPolicy](./Get-SecureBootPolicy.md)
 Gets the publisher GUID and the policy version of the Secure Boot configuration policy.
 
+### [Get-SecureBootSVN](./Get-SecureBootSVN.md)
+Gets Secure Boot Security Version Number (SVN) information and compliance status for the system firmware and boot manager.
+
 ### [Get-SecureBootUEFI](./Get-SecureBootUEFI.md)
 Gets the UEFI variable values related to Secure Boot.
 

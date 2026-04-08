@@ -4,6 +4,7 @@ external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
 Module Name: SecureBoot
 ms.date: 04/01/2026
 online version: https://learn.microsoft.com/powershell/module/secureboot/get-securebootsvn?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 title: Get-SecureBootSVN
 ---
 

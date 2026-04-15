@@ -2,6 +2,7 @@
 title: about_ActiveDirectory
 ms.date: 04/22/2013
 description: The Active Directory module is a command line interface for managing Active Directory.
+ms.manager: eliotgra
 Locale: en-US
 schema: 2.0.0
 ---

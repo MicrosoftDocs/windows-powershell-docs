@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 10/21/2022
+ms.date: 04/02/2026
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/start-clusternode?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ClusterNode
@@ -111,7 +111,7 @@ Indicates that the cmdlet forces the start of a cluster node regardless if quoru
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: fq, FixQuorum
+Aliases: fq, ForceQuorum
 
 Required: False
 Position: Named

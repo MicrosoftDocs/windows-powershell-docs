@@ -72,20 +72,30 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
 The **Set-MpPreference** cmdlet configures preferences for Windows Defender scans and updates.
 You can modify exclusion file name extensions, paths, or processes, and specify the default action for high, moderate, and low threat levels.
 
-**REMEDIATION VALUES**
+**REMEDIATION VALUES**:
 
 The following table provides remediation action values for detected threats at low, medium, high, and severe alert levels.
 
-|Value |Action |
-|------|-------------------------------------------------------------------------|
-|1 |Clean the detected threat. |
-|2 |Quarantine the detected threat. |
-|3 |Remove the detected threat. |
-|6 |Allow the detected threat. |
-|8 |Allow the user to determine the action to take with the detected threat. |
-|9 |Don't take any action. |
-|10 |Block the detected threat. |
-|0 | (NULL)|Apply action based on the Security Intelligence Update (SIU). This is the default value. |
+|Value|Action|
+|---|---|
+|0 (NULL)|Apply action based on the Security Intelligence Update (SIU). This value is the default value.|
+|1|Clean the detected threat.|
+|2|Quarantine the detected threat.|
+|3|Remove the detected threat.|
+|6|Allow the detected threat.|
+|8|Allow the user to determine the action to take with the detected threat.|
+|9|Don't take any action.|
+|10|Block the detected threat.|
+|11|No remediation action is taken, but detection events and alerts continue to be generated.|
+
+> [!WARNING]
+> **Non-remediating threat actions:** Actions **Allow (6)**, **NoAction (9)**, and **None (11)** don't remediate detected threats. **Allow (6)** suppresses ongoing detection events, while **None (11)** continues to generate alerts and Protection History entries. **Allow (6)** and **None (11)** can't be configured when [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where:
+>
+> - Automatic remediation isn't practical for operations.
+> - Other procedures exist to respond to detected threats.
+> - Compensating security controls are deployed.
+>
+> Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
 
 ## EXAMPLES
 
@@ -1021,17 +1031,23 @@ Accept wildcard characters: False
 
 ### -HighThreatDefaultAction
 Specifies which automatic remediation action to take for a high level threat.
-The acceptable values for this parameter are:
+Valid values are:
 
+- Clean
 - Quarantine
 - Remove
-- Ignore
+- Allow
+- UserDefined
+- NoAction
+- Block
+- None
+
+See the [Description](#description) section for important information about these values.
 
 ```yaml
 Type: ThreatAction
 Parameter Sets: (All)
 Aliases: htdefac
-Accepted values: Clean, Quarantine, Remove, Allow, UserDefined, NoAction, Block
 
 Required: False
 Position: Named
@@ -1062,17 +1078,23 @@ Accept wildcard characters: False
 
 ### -LowThreatDefaultAction
 Specifies which automatic remediation action to take for a low level threat.
-The acceptable values for this parameter are:
+Valid values are:
 
+- Clean
 - Quarantine
 - Remove
-- Ignore
+- Allow
+- UserDefined
+- NoAction
+- Block
+- None
+
+See the [Description](#description) section for important information about these values.
 
 ```yaml
 Type: ThreatAction
 Parameter Sets: (All)
 Aliases: ltdefac
-Accepted values: Clean, Quarantine, Remove, Allow, UserDefined, NoAction, Block
 
 Required: False
 Position: Named
@@ -1131,17 +1153,23 @@ Accept wildcard characters: False
 
 ### -ModerateThreatDefaultAction
 Specifies which automatic remediation action to take for a moderate level threat.
-The acceptable values for this parameter are:
+Valid values are:
 
+- Clean
 - Quarantine
 - Remove
-- Ignore
+- Allow
+- UserDefined
+- NoAction
+- Block
+- None
+
+See the [Description](#description) section for important information about these values.
 
 ```yaml
 Type: ThreatAction
 Parameter Sets: (All)
 Aliases: mtdefac
-Accepted values: Clean, Quarantine, Remove, Allow, UserDefined, NoAction, Block
 
 Required: False
 Position: Named
@@ -1602,17 +1630,23 @@ Accept wildcard characters: False
 
 ### -SevereThreatDefaultAction
 Specifies which automatic remediation action to take for a severe level threat.
-The acceptable values for this parameter are:
+Valid values are:
 
+- Clean
 - Quarantine
 - Remove
-- Ignore
+- Allow
+- UserDefined
+- NoAction
+- Block
+- None
+
+See the [Description](#description) section for important information about these values.
 
 ```yaml
 Type: ThreatAction
 Parameter Sets: (All)
 Aliases: stdefac
-Accepted values: Clean, Quarantine, Remove, Allow, UserDefined, NoAction, Block
 
 Required: False
 Position: Named
@@ -1898,24 +1932,23 @@ Accept wildcard characters: False
 
 ### -ThreatIDDefaultAction_Actions
 Specifies an array of the actions to take for the IDs specified by using the **ThreatIDDefaultAction_Ids** parameter.
-The acceptable values for this parameter are:
+Valid values are:
 
-- 1: Clean
-- 2: Quarantine
-- 3: Remove
-- 6: Allow
-- 8: UserDefined
-- 9: NoAction
-- 10: Block
+- Clean
+- Quarantine
+- Remove
+- Allow
+- UserDefined
+- NoAction
+- Block
+- None
 
->[!NOTE]
->A value of 0 (NULL) applies an action based on the Security Intelligence Update (SIU). This is the default value.
+See the [Description](#description) section for important information about these values.
 
 ```yaml
 Type: ThreatAction[]
 Parameter Sets: (All)
 Aliases: tiddefaca
-Accepted values: Clean, Quarantine, Remove, Allow, UserDefined, NoAction, Block
 
 Required: False
 Position: Named
@@ -1995,17 +2028,23 @@ Accept wildcard characters: False
 
 ### -UnknownThreatDefaultAction
 Specifies which automatic remediation action to take for an unknown level threat.
-The acceptable values for this parameter are:
+Valid values are:
 
+- Clean
 - Quarantine
 - Remove
-- Ignore
+- Allow
+- UserDefined
+- NoAction
+- Block
+- None
+
+See the [Description](#description) section for important information about these values.
 
 ```yaml
 Type: ThreatAction
 Parameter Sets: (All)
 Aliases: unktdefac
-Accepted values: Clean, Quarantine, Remove, Allow, UserDefined, NoAction, Block
 
 Required: False
 Position: Named

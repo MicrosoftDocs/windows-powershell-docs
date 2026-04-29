@@ -1530,19 +1530,17 @@ Accept wildcard characters: False
 ```
 
 ### -ThreatIDDefaultAction_Actions
-Specifies an array of the actions to take for the IDs specified by using the **ThreatIDDefaultAction_Ids** parameter.
-The acceptable values for this parameter are:
+Specifies an array of the actions to remove for the IDs specified by using the **ThreatIDDefaultAction_Ids** parameter.
+Valid values are:
 
-- 1: Clean
-- 2: Quarantine
-- 3: Remove
-- 6: Allow
-- 8: UserDefined
-- 9: NoAction
-- 10: Block
-
->[!NOTE]
->A value of 0 (NULL) applies an action based on the Security Intelligence Update (SIU). This is the default value.
+- Clean
+- Quarantine
+- Remove
+- Allow
+- UserDefined
+- NoAction
+- Block
+- None
 
 ```yaml
 Type: ThreatAction[]

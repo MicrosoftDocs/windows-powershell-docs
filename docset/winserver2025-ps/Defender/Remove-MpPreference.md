@@ -1530,7 +1530,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThreatIDDefaultAction_Actions
-Specifies an array of the actions to remove for the IDs specified by using the **ThreatIDDefaultAction_Ids** parameter.
+Specifies an array of actions to remove for the threat IDs specified by using the **ThreatIDDefaultAction_Ids** parameter.
 Valid values are:
 
 - Clean

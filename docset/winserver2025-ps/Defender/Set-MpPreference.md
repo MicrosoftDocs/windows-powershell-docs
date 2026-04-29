@@ -78,18 +78,18 @@ The following table provides remediation action values for detected threats at l
 
 |Value|Action|
 |---|---|
-|0 (NULL)|Apply action based on the Security Intelligence Update (SIU). This value is the default value.|
-|1|Clean the detected threat.|
-|2|Quarantine the detected threat.|
-|3|Remove the detected threat.|
-|6|Allow the detected threat.|
-|8|Allow the user to determine the action to take with the detected threat.|
-|9|Don't take any action.|
-|10|Block the detected threat.|
-|11|No remediation action is taken, but detection events and alerts continue to be generated.|
+|0 (not configurable)|Apply action based on the Security Intelligence Update (SIU). This value is the default.|
+|Clean (1)|Clean the detected threat.|
+|Quarantine (2)|Quarantine the detected threat.|
+|Remove (3)|Remove the detected threat.|
+|Allow (6)|Allow the detected threat.|
+|UserDefined (8)|Allow the user to determine the action to take with the detected threat.|
+|NoAction (9)|Don't take any action.|
+|Block (10)|Block the detected threat.|
+|None (11)|No remediation action is taken, but detection events and alerts continue to be generated.|
 
 > [!WARNING]
-> **Non-remediating threat actions:** Actions **Allow (6)**, **NoAction (9)**, and **None (11)** don't remediate detected threats. **Allow (6)** suppresses ongoing detection events, while **None (11)** continues to generate alerts and Protection History entries. **Allow (6)** and **None (11)** can't be configured when [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where:
+> **Non-remediating threat actions:** Actions **Allow (6)**, **NoAction (9)**, and **None (11)** don't remediate detected threats. **Allow (6)** suppresses ongoing detection events, while **None (11)** continues to generate alerts and Protection History entries. **Allow (6)** and **None (11)** can't be configured when [tamper protection](https://learn.microsoft.com/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where:
 >
 > - Automatic remediation isn't practical for operations.
 > - Other procedures exist to respond to detected threats.

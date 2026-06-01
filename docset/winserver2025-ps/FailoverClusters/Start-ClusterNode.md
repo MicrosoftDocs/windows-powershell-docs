@@ -27,7 +27,7 @@ The `Start-ClusterNode` cmdlet starts the Cluster service on a node in a failove
 is the first node started, then it will wait for other nodes to join. The cluster will begin to run
 when a quorum has formed.
 
-This cmdlet with the **FixQuorum** parameter can be used to force quorum, that is, force the start
+This cmdlet with the **ForceQuorum** parameter can be used to force quorum, that is, force the start
 of a cluster node even if quorum hasn't been achieved. When quorum is forced on a given node, the
 copy of the cluster configuration that is on that node will be treated as the authoritative copy and
 will be replicated to all other nodes. Therefore, forcing quorum should be considered a last resort,
@@ -62,7 +62,7 @@ This example starts the Cluster service on the node named `node1` on the cluster
 ### Example 3
 
 ```powershell
-Start-ClusterNode -FixQuorum
+Start-ClusterNode -ForceQuorum
 ```
 
 This example forces the local node and the local cluster to start, even if quorum hasn't been

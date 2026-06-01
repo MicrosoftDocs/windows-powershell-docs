@@ -144,6 +144,9 @@ Retrieves DNS Server Active Directory settings
 ### [Get-DnsServerEDns](./Get-DnsServerEDns.md)
 Gets EDNS configuration settings on a DNS server.
 
+### [Get-DnsServerEncryptionProtocol](./Get-DnsServerEncryptionProtocol.md)
+Retrieves DNS over HTTPS (DoH) settings on a DNS server.
+
 ### [Get-DnsServerForwarder](./Get-DnsServerForwarder.md)
 Gets forwarder configuration settings on a DNS server.
 
@@ -311,6 +314,9 @@ Modifies DNS Active Directory settings.
 
 ### [Set-DnsServerEDns](./Set-DnsServerEDns.md)
 Changes EDNS settings on a DNS server.
+
+### [Set-DnsServerEncryptionProtocol](./Set-DnsServerEncryptionProtocol.md)
+Configures DNS over HTTPS (DoH) settings on a DNS server.
 
 ### [Set-DnsServerForwarder](./Set-DnsServerForwarder.md)
 Changes forwarder settings on a DNS server.

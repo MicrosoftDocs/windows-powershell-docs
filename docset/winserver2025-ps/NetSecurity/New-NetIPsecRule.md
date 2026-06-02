@@ -425,7 +425,7 @@ Specifies that matching IPsec rules of the indicated key module are created.
 This parameter specifies which keying modules to negotiate.
 The acceptable values for this parameter are: Default, AuthIP, IKEv1, or IKEv2.
 
-- Default: KeyModule is set based on the authentication method. As of Windows 11, version 24H2 and Windows Server 2025, the Default enables negotiation using both IKEv1 and IKEv2, and only sets AuthIP if the authentication method(s) require it. In previous releases, Default is equivalent to both IKEv1 and AuthIP. Required in order for the rule to be applied to computers running Windows versions prior to Windows Server 2008.
+- Default: KeyModule is set based on the authentication method. As of Windows 11, version 24H2 and Windows Server 2025, the Default prefers IKEv2, falls back to IKEv1, and only includes AuthIP if the configured authentication method(s) require it. The protocol actually used depends on what the remote peer supports. In previous releases, Default is equivalent to both IKEv1 and AuthIP. This value is required in order for the rule to be applied to computers running Windows versions prior to Windows Server 2008.
 - AuthIP: Supported with phase 2 authentication. 
 - IKEv1: Supported with pre-shared key (PSK), Certificates, and Kerberos. Supported with phase 1 authentication only.
 - IKEv2: Not supported with Kerberos or NTLM. Supported with phase 1 authentication only. When used with tunnel mode, the *TunnelType* parameter must be specified.

@@ -736,14 +736,7 @@ Accept wildcard characters: False
 
 ### -DisableCpuThrottleOnIdleScans
 
-Specifies whether to disable CPU throttling for scheduled scans while the device is idle. You don't
-need to specify a value with this switch.
-
-**Tip**: This switch works only if the current value of the DisableCpuThrottleOnIdleScans
-property is False (enabled). If the value is already True (disabled), this switch does nothing.
-
-This setting doesn't affect other types scheduled scans. Normal CPU throttling occurs on other
-types of scheduled scans.
+Indicates that the cmdlet removes whether the CPU will be throttled for scheduled scans while the device is idle.
 
 ```yaml
 Type: SwitchParameter

@@ -11,6 +11,7 @@ title: Move-ADDirectoryServer
 # Move-ADDirectoryServer
 
 ## SYNOPSIS
+
 Moves a directory server in Active Directory to a new site.
 
 ## SYNTAX
@@ -21,13 +22,14 @@ Move-ADDirectoryServer [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credentia
 ```
 
 ## DESCRIPTION
+
 The **Move-ADDirectoryServer** cmdlet moves a directory server in Active Directory to a new site within the same domain.
 
 The *Identity* parameter specifies the directory server to move.
 You can specify a directory server object by one of the following values:
 
 - Name of the server object (name)
-- A distinguished name  of the NTDS Settings object
+- A distinguished name of the NTDS Settings object
 - A distinguished name of the server object that represents the directory server
 - GUID (objectGUID) of server object under the configuration partition
 - GUID (objectGUID) of NTDS settings object under the configuration partition
@@ -41,14 +43,16 @@ You can identify a site by its distinguished name or GUID.
 ## EXAMPLES
 
 ### Example 1: Move a domain controller to an existing site
-```
+
+```powershell
 PS C:\> Move-ADDirectoryServer -Identity "USER01-DC2" -Site "Branch-Office-Site"
 ```
 
 This command moves the domain controller USER01-DC2 to the site Branch-Office-Site.
 
 ### Example 2: Move read-only domain controllers to an existing site
-```
+
+```powershell
 PS C:\> Get-ADDomainController -Filter "IsReadOnly -eq `$True" | Move-ADDirectoryServer -Site "RODC-Site-Name"
 ```
 
@@ -57,6 +61,7 @@ This command moves all Read-Only domain controllers to the site RODC-Site-Name.
 ## PARAMETERS
 
 ### -AuthType
+
 Specifies the authentication method to use. 
 The acceptable values for this parameter are:
 
@@ -81,6 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -96,11 +102,12 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies the user account credentials to use to perform this task.
 The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
 If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
 
-To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
+To specify this parameter, you can type a user name, such as User1 or Domain01\User01.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
 You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
@@ -121,14 +128,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
 Specifies an Active Directory server object by providing one of the following values.
 The identifier in parentheses is the Lightweight Directory Access Protocol (LDAP) display name for the attribute.
 
 - Name of the server object (name)
 
-For Active Directory Lightweight Directory Services (AD LDS) instances the syntax is of a name is `<computer-name>$<instance-name>`
+For Active Directory Lightweight Directory Services (AD LDS) instances the syntax of a name is `<computer-name>$<instance-name>`
 
-Note: When you type this value in Windows PowerShell, you must use the backtick (\`) as an escape character for the dollar sign ($), for example, *asia-w7-vm4`$instance1*.
+Note: When you type this value in Windows PowerShell, you must use the backtick (\`) as an escape character for the dollar sign ($), for example, *asia-w7-vm4\`$instance1*.
 
 For other Active Directory instances, use the value of the name property. 
 
@@ -155,17 +163,18 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
 
-Specify the Active Directory Domain Services instance in one of the following ways: 
+Specify the Active Directory Domain Services instance in one of the following ways:
 
 Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
-Directory server values: 
+Directory server values:
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -190,13 +199,14 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
 Specifies the new site for the directory server.
 You can identify the site by one of the following property values.
 Note: The identifier in parentheses is the LDAP display name for the attribute.
 The acceptable values for this parameter are:
 
-- A distinguished name
-- A GUID (objectGUID) 
+- A distinguished name (distinguishedName)
+- A GUID (objectGUID)
 - A name (name)
 
 ```yaml
@@ -212,6 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -228,11 +239,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADDirectoryServer
+
 A directory server object is received by the *Identity* parameter.
 
 ## OUTPUTS
@@ -240,13 +253,12 @@ A directory server object is received by the *Identity* parameter.
 ### None
 
 ## NOTES
+
 * This cmdlet does not work with an Active Directory snapshot.
 * This cmdlet does not work with a read-only domain controller.
-
 
 ## RELATED LINKS
 
 [Move-ADDirectoryServerOperationMasterRole](./Move-ADDirectoryServerOperationMasterRole.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
-

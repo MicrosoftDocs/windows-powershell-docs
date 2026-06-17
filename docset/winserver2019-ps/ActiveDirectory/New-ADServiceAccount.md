@@ -11,11 +11,13 @@ title: New-ADServiceAccount
 # New-ADServiceAccount
 
 ## SYNOPSIS
+
 Creates a new Active Directory managed service account or group managed service account object.
 
 ## SYNTAX
 
 ### Group (Default)
+
 ```
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthenticationPolicy <ADAuthenticationPolicy>] [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>]
@@ -30,6 +32,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToSingleComputer
+
 ```
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AccountPassword <SecureString>] [-AuthenticationPolicy <ADAuthenticationPolicy>]
@@ -42,6 +45,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToOutboundAuthenticationOnly
+
 ```
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthenticationPolicy <ADAuthenticationPolicy>] [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>]
@@ -53,6 +57,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ## DESCRIPTION
+
 The **New-ADServiceAccount** cmdlet creates a new Active Directory managed service account.
 By default, the cmdlet creates a group managed service account.
 To create a standalone managed service account which is linked to a specific computer, use the **RestrictToSingleComputer** parameter.
@@ -82,6 +87,7 @@ Then pass these objects through the pipeline to the **New-ADServiceAccount** cmd
 ## EXAMPLES
 
 ### Example 1: Create an enabled managed service account
+
 ```powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -DNSHostName "Service01.contoso.com" -Enabled $True
 ```
@@ -89,6 +95,7 @@ PS C:\> New-ADServiceAccount -Name "Service01" -DNSHostName "Service01.contoso.c
 This command creates an enabled managed service account in Active Directory Domain Services (AD DS).
 
 ### Example 2: Create a managed service account and register its service principal name
+
 ```powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -ServicePrincipalNames "MSSQLSVC/Machine3.corp.contoso.com" -DNSHostName "Service01.contoso.com"
 ```
@@ -96,6 +103,7 @@ PS C:\> New-ADServiceAccount -Name "Service01" -ServicePrincipalNames "MSSQLSVC/
 This command creates a managed service account and registers its service principal name.
 
 ### Example 3: Create a managed service account for a single computer
+
 ```powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -RestrictToSingleComputer
 ```
@@ -103,6 +111,7 @@ PS C:\> New-ADServiceAccount -Name "Service01" -RestrictToSingleComputer
 This command creates a managed service account and restricts its use to a single computer.
 
 ### Example 4: Create a managed service account for outbound authentication only
+
 ```powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -RestrictToOutboundAuthenticationOnly
 ```
@@ -110,6 +119,7 @@ PS C:\> New-ADServiceAccount -Name "Service01" -RestrictToOutboundAuthentication
 This command creates a managed service account and restricts its use to outbound authentication.
 
 ### Example 5: Create a new managed service account and register multiple service principal names
+
 ```Powershell
 PS C:\> New-ADServiceAccount service1 -ServicePrincipalNames "HTTP/Machine3.corp.contoso.com,HTTP/Machine3.corp.contoso.com/contoso" -DNSHostName service1.contoso.com
 ```
@@ -117,13 +127,14 @@ PS C:\> New-ADServiceAccount service1 -ServicePrincipalNames "HTTP/Machine3.corp
 ## PARAMETERS
 
 ### -AccountExpirationDate
+
 Specifies the expiration date for an account.
 This parameter sets the **AccountExpirationDate** property of an account object.
 The LDAP display name (**ldapDisplayName**) for this property is accountExpires.
 
 Use the **DateTime** syntax when you specify this parameter.
 Time is assumed to be local time unless otherwise specified.
-When a time value is not specified, the time is assumed to 12:00:00 AM local time.
+When a time value is not specified, the time is assumed to be 12:00:00 AM local time.
 When a date is not specified, the date is assumed to be the current date.
 
 ```yaml
@@ -139,6 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountNotDelegated
+
 Indicates whether the security context of the user is delegated to a service.
 When this parameter is set to true, the security context of the account is not delegated to a service even when the service account is set as trusted for Kerberos delegation.
 This parameter sets the **AccountNotDelegated** property for an Active Directory account.
@@ -157,6 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountPassword
+
 Specifies a new password value for the service account.
 This value is stored as an encrypted string.
 
@@ -185,6 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthType
+
 Specifies the authentication method to use.
 The acceptable values for this parameter are:
 
@@ -209,6 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationPolicy
+
 Specifies an Active Directory Domain Services authentication policy object.
 Specify the authentication policy object in one of the following formats: 
 
@@ -234,6 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationPolicySilo
+
 Specifies an Active Directory Domain Services authentication policy silo object.
 Specify the authentication policy silo object in one of the following formats: 
 
@@ -259,6 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -Certificates
+
 Specifies an array of certificates.
 The cmdlet modifies the DER-encoded X.509v3 certificates of the account.
 These certificates include the public key certificates issued to this account by the Microsoft Certificate Service.
@@ -305,6 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompoundIdentitySupported
+
 Indicates whether an account supports Kerberos service tickets which includes the authorization data for the user's device. 
 This value sets the compound identity supported flag of the Active Directory **msDS-SupportedEncryptionTypes** attribute.
 The acceptable values for this parameter are:
@@ -328,6 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -343,7 +362,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies the service account credentials to use to perform this task.
+
+Specifies the credentials to use to perform this task.
 The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory PowerShell provider drive.
 If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
 
@@ -368,6 +388,7 @@ Accept wildcard characters: False
 ```
 
 ### -DNSHostName
+
 Specifies the DNS host name of Service Account.
 
 ```yaml
@@ -383,6 +404,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
 Specifies a description of the object.
 This parameter sets the value of the **Description** property for the object.
 The LDAP Display Name (**ldapDisplayName**) for this property is description.
@@ -400,6 +422,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
+
 Specifies the display name of the object.
 This parameter sets the **DisplayName** property of the object.
 The LDAP Display Name (**ldapDisplayName**) for this property is displayName.
@@ -417,6 +440,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
+
 Indicates whether an account is enabled.
 An enabled account requires a password.
 This parameter sets the **Enabled** property for an account object.
@@ -435,6 +459,7 @@ Accept wildcard characters: False
 ```
 
 ### -HomePage
+
 Specifies the URL of the home page of the object.
 This parameter sets the **homePage** property of an Active Directory object.
 The LDAP Display Name (**ldapDisplayName**) for this property is wWWHomePage.
@@ -452,6 +477,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
+
 Specifies an instance of a service account object to use as a template for a new service account object.
 
 You can use an instance of an existing service account object as a template or you can construct a new service account object for template use.
@@ -472,6 +498,7 @@ Accept wildcard characters: False
 ```
 
 ### -KerberosEncryptionType
+
 Indicates whether an account supports Kerberos encryption types which are used during creation of service tickets.
 This value sets the encryption types supported flags of the Active Directory **msDS-SupportedEncryptionTypes** attribute.
 The acceptable values for this parameter are:
@@ -503,6 +530,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedPasswordIntervalInDays
+
 Specifies the number of days for the password change interval.
 If set to 0 then the default is used.
 This can only be set on object creation.
@@ -522,6 +550,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the object.
 This parameter sets the **Name** property of the Active Directory object.
 The LDAP Display Name (**ldapDisplayName**) of this property is name.
@@ -539,6 +568,7 @@ Accept wildcard characters: False
 ```
 
 ### -OtherAttributes
+
 Specifies object attribute values for attributes that are not represented by cmdlet parameters.
 You can set one or more parameters at the same time with this parameter.
 If an attribute takes more than one value, you can assign multiple values.
@@ -570,6 +600,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
 Returns an object representing the item with which you are working.
 By default, this cmdlet does not generate any output.
 
@@ -586,6 +617,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
 Specifies the X.500 path of the organizational unit (OU) or container where the new object is created.
 
 In many cases, a default value will be used for the **Path** parameter if no value is specified.
@@ -624,6 +656,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrincipalsAllowedToDelegateToAccount
+
 Specifies the accounts that can act on the behalf of users to services running as this managed service account or group-managed service account.
 This parameter sets the **msDS-AllowedToActOnBehalfOfOtherIdentity** attribute of the object.
 
@@ -640,6 +673,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrincipalsAllowedToRetrieveManagedPassword
+
 Specifies the membership policy for systems that can use a group-managed service account.
 For a service to run under a group managed service account, the system must be in the membership policy of the account.
 This parameter sets the **msDS-GroupMSAMembership** attribute of a group-managed service account object.
@@ -658,6 +692,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictToOutboundAuthenticationOnly
+
 Indicates that the cmdlet creates a group-managed service account that on success can be used by a service for successful outbound authentication requests only.
 This allows creating a group managed service account without the parameters required for successful inbound authentication.
 
@@ -675,6 +710,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictToSingleComputer
+
 Indicates that the cmdlet creates a managed service account that can be used only for a single computer.
 Managed service accounts that are linked to a single computer account were introduced in Windows Server 2008 R2.
 
@@ -692,8 +728,9 @@ Accept wildcard characters: False
 ```
 
 ### -SamAccountName
+
 Specifies the Security Account Manager (SAM) account name of the user, group, computer, or service account.
-The maximum length of the description is 256 characters.
+The maximum length is 256 characters.
 To be compatible with older operating systems, create a SAM account name that is 15 characters or less.
 This parameter sets the **SAMAccountName** for an account object.
 The LDAP display name (**ldapDisplayName**) for this property is sAMAccountName.
@@ -713,6 +750,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
 Specifies the Active Directory Domain Services (AD DS) instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following: Active Directory Lightweight Domain Services (AD LDS), AD DS, or Active Directory snapshot instance.
 
@@ -746,6 +784,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalNames
+
 Specifies the service principal names for the account.
 This parameter sets the **ServicePrincipalNames** property of the account.
 The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
@@ -791,6 +830,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedForDelegation
+
 Indicates whether an account is trusted for Kerberos delegation.
 A service that runs under an account that is trusted for Kerberos delegation can assume the identity of a client requesting the service.
 This parameter sets the **TrustedForDelegation** property of an account object.
@@ -813,6 +853,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -829,20 +870,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)
 
 ## INPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADServiceAccount
+
 You can pipe a managed service account object that is a template for the new managed service account object to the **Instance** parameter.
 
 ## OUTPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADServiceAccount
+
 This cmdlet returns the new managed service account object when the **PassThru** parameter is specified.
 By default, this cmdlet does not generate any output.
 
 ## NOTES
+
 * This cmdlet does not work with AD LDS.
 * This cmdlet does not work with an Active Directory snapshot.
 * This cmdlet does not work with a read-only domain controller.

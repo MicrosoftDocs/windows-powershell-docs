@@ -1,6 +1,6 @@
 ---
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+Download Help Link:
 Help Version: 5.0.3.1
 Locale: en-US
 Module Guid: c46be3dc-30a9-452f-a5fd-4bf9ca87a854
@@ -13,7 +13,7 @@ title: Defender
 
 ## Description
 
-This reference provides functions descriptions and syntax for all Defender-specific functions. 
+This reference provides functions descriptions and syntax for all Defender-specific functions.
 It lists the functions in alphabetical order based on the verb at the beginning of the functions.
 
 > [!NOTE]

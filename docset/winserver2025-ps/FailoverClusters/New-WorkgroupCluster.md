@@ -1,16 +1,18 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Creates a new workgroup cluster with the specified nodes, credentials, and configuration options.
 external help file: Microsoft.FailoverClusters.Adless.PowerShell.psm1-help.xml
 Module Name: FailoverClusters
-ms.date: 09/11/2024
+ms.date: 04/24/2025
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/new-workgroupcluster?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-WorkgroupCluster
+ai-usage: ai-generated
 ---
 
 # New-WorkgroupCluster
 
 ## SYNOPSIS
+
 Creates a new workgroup cluster.
 
 ## SYNTAX
@@ -18,42 +20,68 @@ Creates a new workgroup cluster.
 ```
 New-WorkgroupCluster [[-Node] <String[]>] [[-Credentials] <PSCredential[]>] [[-Name] <String>]
  [[-StaticAddress] <String[]>] [[-IgnoreNetwork] <String[]>]
- [[-ManagementPointNetworkType] <AdminAccessPointResType>]
- [[-AdministrativeAccessPoint] <AdminAccessPoint>] [-NoStorage] [-S2D] [-Force] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+ [[-ManagementPointNetworkType] <AdminAccessPointResType>] [[-AdministrativeAccessPoint] <AdminAccessPoint>]
+ [-NoStorage] [-S2D] [-Force] [-Confirm] [-WhatIf]
+ [-AuthenticationMethod] <WorkgroupClusterAuthenticationMethod> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `New-WorkgroupCluster` cmdlet creates a new workgroup cluster.
+The `New-WorkgroupCluster` cmdlet creates a new workgroup cluster. This cmdlet allows you to specify the nodes, credentials, cluster name, network configuration, and authentication method for the new cluster. You can configure the cluster to use certificate-based or local account authentication, and optionally enable Storage Spaces Direct or specify static addresses and networks to ignore.
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Create a new workgroup cluster
+
+This example creates a new workgroup cluster named `Cluster1` with `Node1` and `Node2` using the credentials in `$cred1` and `$cred2`, without creating an administrative access point.
 
 ```powershell
 New-WorkgroupCluster -Node "Node1", "Node2" -Credentials $cred1, $cred2 -Name "Cluster1"
 ```
 
-This example creates a new workgroup cluster named `Cluster1` with `Node1` and `Node2` using
-the credentials in `$cred1` and `$cred2`.
-
-Note: Only None and DNS are supported for AdministrativeAccessPoint.
-
 ## PARAMETERS
 
-### -Node
+### -AdministrativeAccessPoint
 
-An array of nodes to be included in the cluster.
+Specifies the type of administrative access point that the cmdlet creates for the cluster.
+Acceptable values are:
+
+- `DNS`: The cmdlet creates an administrative access point for the cluster. The administrative
+  access point is registered in DNS but isn't enabled in Active Directory Domain Services.
+- `None`
+
+The cmdlet doesn't create an administrative access point for the cluster. Some clustered roles and
+functionality might not be available for a cluster that doesn't have an administrative access
+point. Also, you cannot use Failover Cluster Manager to manage a cluster that doesn't have an
+administrative access point.
 
 ```yaml
-Type: String[]
+Type: AdminAccessPoint
 Parameter Sets: (All)
 Aliases:
+Accepted values: None, Dns
 
 Required: False
-Position: 1
-Default value: @()
+Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationMethod
+Specifies the authentication method to use when creating the workgroup cluster. Acceptable values are:
+- `Certificates`: Uses certificate-based authentication for secure communication between nodes.
+- `NoCertificates`: Uses local user accounts and passwords for authentication without certificates.
+
+```yaml
+Type: WorkgroupClusterAuthenticationMethod
+Parameter Sets: (All)
+Aliases:
+Accepted values: Certificates, NoCertificates
+
+Required: True
+Position: 8
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -63,7 +91,7 @@ Accept wildcard characters: False
 An array of credentials for the nodes.
 
 ```yaml
-Type: PSCredential[]
+Type: System.Management.Automation.PSCredential[]
 Parameter Sets: (All)
 Aliases:
 
@@ -74,36 +102,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
+### -Force
 
-The name of the workgroup cluster.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
-Type: String
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StaticAddress
-
-Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
-are always included, but other networks need a static address to be specified using the
-**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 4
-Default value: None
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -115,7 +125,7 @@ always included, but other networks need a static address to be specified using 
 **StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
-Type: String[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -151,29 +161,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AdministrativeAccessPoint
+### -Name
 
-Specifies the type of administrative access point that the cmdlet creates for the cluster.
-Acceptable values are:
-
-- `DNS`: The cmdlet creates an administrative access point for the cluster. The administrative
-  access point is registered in DNS but isn't enabled in Active Directory Domain Services.
-- `None`
-
-The cmdlet doesn't create an administrative access point for the cluster. Some clustered roles and
-functionality might not be available for a cluster that doesn't have an administrative access
-point. Also, you cannot use Failover Cluster Manager to manage a cluster that doesn't have an
-administrative access point.
+The name of the workgroup cluster.
 
 ```yaml
-Type: AdminAccessPoint
+Type: System.String
 Parameter Sets: (All)
 Aliases:
-Accepted values: None, Dns
 
 Required: False
-Position: 7
+Position: 3
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Node
+
+An array of nodes to be included in the cluster.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: @()
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -183,7 +198,7 @@ Accept wildcard characters: False
 Specifies that shared storage is ignored for the workgroup cluster node.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -199,7 +214,7 @@ Accept wildcard characters: False
 Specifies whether to enable Storage Spaces Direct when creating the workgroup cluster.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -210,18 +225,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
+### -StaticAddress
 
-Forces the command to run without asking for user confirmation.
+Specifies one or more static addresses to use when running the cmdlet. Networks with DHCP enabled
+are always included, but other networks need a static address to be specified using the
+**StaticAddress** parameter or should be explicitly ignored with this **IgnoreNetwork** parameter.
 
 ```yaml
-Type: SwitchParameter
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
-Default value: False
+Position: 4
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -231,7 +248,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -247,7 +264,7 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -267,7 +284,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+You can pipe an array of node names to this cmdlet.
+
+### System.Management.Automation.PSCredential[]
+You can pipe an array of credentials to this cmdlet.
+
+### System.String
+You can pipe the name of the cluster to be created.
+
 ## OUTPUTS
+
+### None
+This cmdlet does not generate any output. It performs the operation of creating a new workgroup cluster.
 
 ## NOTES
 

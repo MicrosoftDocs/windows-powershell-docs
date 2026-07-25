@@ -28,16 +28,16 @@ Export-StartLayout -LiteralPath <String> [-UseDesktopApplicationID] [-WhatIf] [-
 ## DESCRIPTION
 The **Export-StartLayout** cmdlet exports the layout of the tiles on Start of the current user.
 You can export layout and use Import-StartLayout as well as other management policies for the Start layout.
-Specify the .xml file name extension in the name of the file.
+Specify the .json file name extension in the name of the file.
 
 ## EXAMPLES
 
 ### Example 1: Export the layout
 ```
-PS C:\> Export-StartLayout -Path "C:\Layouts\Marketing.xml"
+PS C:\> Export-StartLayout -Path "C:\Layouts\Marketing.json"
 ```
 
-This command exports the layout of the tiles on Start to a file named Marketing.xml in the C:\Layouts folder.
+This command exports the layout of the tiles on Start to a file named Marketing.json in the C:\Layouts folder.
 
 ## PARAMETERS
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 
 ### -LiteralPath
 Specifies a literal path to a layout file.
-Include the file .xml file name extension.
+Include the file .json file name extension.
 This parameter does not accept the wildcard character (*).
 If the path includes an escape character (\\), enclose the string in single quotes (').
 

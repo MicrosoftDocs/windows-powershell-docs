@@ -1230,6 +1230,8 @@ Accept wildcard characters: False
 Specifies an array of principal objects. This parameter sets the
 **msDS-AllowedToActOnBehalfOfOtherIdentity** attribute of a computer account object.
 
+You can specify the Distinguished Name of an account when it is from the same domain as the account in focus. When you want a security principal from another domain, you need to construct an ADPrincipal object with the desired account, for example using Get-ADGroup.
+
 ```yaml
 Type: ADPrincipal[]
 Parameter Sets: Identity

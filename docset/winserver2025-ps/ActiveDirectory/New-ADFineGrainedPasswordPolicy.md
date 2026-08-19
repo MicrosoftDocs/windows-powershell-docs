@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
-ms.date: 12/27/2016
+ms.date: 08/19/2026
 online version: https://learn.microsoft.com/powershell/module/activedirectory/new-adfinegrainedpasswordpolicy?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ADFineGrainedPasswordPolicy
@@ -537,7 +537,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

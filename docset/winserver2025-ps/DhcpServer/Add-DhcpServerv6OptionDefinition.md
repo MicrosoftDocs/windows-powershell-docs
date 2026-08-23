@@ -29,7 +29,7 @@ The **Add-DhcpServerv6OptionDefinition** cmdlet adds a DHCPv6 option definition 
 
 ### Example 1: Add an option definition
 ```
-PS C:\> Add-DhcpServerv6OptionDefinition -Name "Broadcast and Multicast Service Controller IPv6 Address" -OptionId 36 -Type "IPv6Address"
+PS C:\> Add-DhcpServerv6OptionDefinition -Name "Broadcast and Multicast Service Controller IPv6 Address" -OptionId 34 -Type "IPv6Address"
 ```
 
 This example adds the Broadcast and Multi-cast Service Controller IPv6 Address option definition to the DHCPv6 server service.

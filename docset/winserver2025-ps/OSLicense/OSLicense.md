@@ -5,7 +5,7 @@ Help Version: 1.0.0.0
 Locale: en-US
 Module Guid: b3e5a5c8-7d2f-4e1a-9c3b-8f6d4a2e1b0c
 Module Name: OSLicense
-ms.date: 09/10/2026
+ms.date: 09/11/2026
 PlatyPS schema version: 2024-05-01
 title: OSLicense Module
 ---
@@ -27,9 +27,17 @@ Windows update KB number for module availability still needs confirmation.
 
 Gets Active Directory-based activation information.
 
+### [Get-KmsLicenseInfo](Get-KmsLicenseInfo.md)
+
+Gets Key Management Service (KMS) licensing information.
+
 ### [Get-OSLicenseInfo](Get-OSLicenseInfo.md)
 
 Gets Windows operating system licensing information.
+
+### [Get-SubscriptionLicenseInfo](Get-SubscriptionLicenseInfo.md)
+
+Gets Windows subscription licensing information.
 
 ### [Invoke-ADLicense](Invoke-ADLicense.md)
 

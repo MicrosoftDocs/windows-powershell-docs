@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-ms.date: 12/20/2016
+ms.date: 04/02/2026
 online version: https://learn.microsoft.com/powershell/module/failoverclusters/start-clusternode?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-ClusterNode
@@ -25,7 +25,7 @@ The **Start-ClusterNode** cmdlet starts the Cluster service on a node in a failo
 If this is the first node started, then it will wait for other nodes to join.
 The cluster will begin to run when a quorum has formed.
 
-This cmdlet with the **FixQuorum** parameter can be used to force quorum, that is, force the start of a cluster node even if quorum has not been achieved.
+This cmdlet with the **ForceQuorum** parameter can be used to force quorum, that is, force the start of a cluster node even if quorum has not been achieved.
 When quorum is forced on a given node, the copy of the cluster configuration that is on that node will be treated as the authoritative copy and will be replicated to all other nodes.
 Therefore, forcing quorum should be considered a last resort, because some cluster configuration changes could be lost.
 The ability to force quorum can be especially useful in a multi-site cluster if the primary site, with the majority of nodes, becomes unavailable, and the secondary site, with a minority of nodes, need to be brought into service.
@@ -57,7 +57,7 @@ This example starts the Cluster service on the node named node1 on the cluster n
 
 ### Example 3
 ```
-PS C:\> Start-ClusterNode -FixQuorum
+PS C:\> Start-ClusterNode -ForceQuorum
 Name                                                                      State 
 ----                                                                      ----- 
 node1                                                                   Joining
@@ -106,7 +106,7 @@ Indicates that the cmdlet forces the start of a cluster node regardless if quoru
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: fq, FixQuorum
+Aliases: fq, ForceQuorum
 
 Required: False
 Position: Named

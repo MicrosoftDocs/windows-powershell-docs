@@ -286,6 +286,9 @@ Specifies the Active Directory instance to use by providing the following value 
 
 Note: A cross-domain move requires a fully qualified server name and the use of the RID Master in both domains.
 
+IMPORTANT: At the database level, a cross-domain move is treated like a object deletion in the source domain and object creatiion in the target domain. There is the case of a very large object, because there are many links on the object, for example a group with more than 5000 members. 5000 is a soft limit. You may be able to move groups with more members, but at some point you experience problems when moving such a group. The recommendation is to export and remove group members so the group has less than 5000 members. Then you can safely move the group to another domain and after that, re-add the exported members.
+References: [LDAP transaction limits](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/active-directory-domain-services-maximum-limits#maximum-number-of-accounts-per-ldap-transaction), [Link batch size limit](https://learn.microsoft.com/en-us/troubleshoot/windows-server/active-directory/replication-failures-delete-active-directory-objects)
+
 Domain name values:
 
 - Fully qualified domain name (FQDN)

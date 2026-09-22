@@ -35,8 +35,8 @@ certificate is configured for the DNS server with the hostname(s) specified in t
 > [!IMPORTANT]
 > Before you run `Set-DnsServerEncryptionProtocol`, note these requirements:
 >
-> - This cmdlet is available on Windows Server 2025 or later beginning with the 2026-02 Security
->   Update.
+> - The `Set-DnsServerEncryptionProtocol` cmdlet is available on Windows Server 2025 or later
+>   beginning with 2026-02 Security Update.
 > - This cmdlet requires SysAdmin privileges to execute. Other DNS cmdlets generally require only
 >   DnsAdmin privileges.
 

@@ -316,21 +316,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisablePermissiveModify
-Group membership updates use permissive modify by default. This suppresses an error when removing a member that is not member of the group.
-When this parameter is used, an error "The specified account name is not a member of the group" is returned.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.

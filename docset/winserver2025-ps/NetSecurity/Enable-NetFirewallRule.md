@@ -125,7 +125,7 @@ PS C:\>Enable-NetFirewallRule -Group "@FirewallAPI.dll,-28502"
 ```
 
 This example enables all of the File and Printer Sharing rules.
-Use the universal and world-ready indirect string @FirewallAPI to specify the group.
+"@FirewallAPI.dll,-28502" is an indirect string that specifies a "File and Printer Sharing" group.
 
 ### EXAMPLE 2
 ```
@@ -423,13 +423,8 @@ Accept wildcard characters: False
 
 ### -DisplayGroup
 Specifies that only matching firewall rules of the indicated group association are enabled.
-Wildcard characters are accepted.
-The *Group* parameter specifies the source string for this parameter.
-If the value for this parameter is a localizable string, then the *Group* parameter contains an indirect string.
-Rule groups can be used to organize rules by influence and allows batch rule modifications.
-Using the Set-NetFirewallRule cmdlet, if the group name is specified for a set of rules or sets, then all of the rules or sets in that group receive the same set of modifications.
-It is good practice to specify the *Group* parameter value with a universal and world-ready indirect @FirewallAPI name.
-This parameter cannot be specified upon object creation using the New-NetFirewallRule cmdlet, but can be modified using dot-notation and the Set-NetFirewallRule cmdlet.
+The **Group** property specifies the source string for **DisplayGroup**.
+If the **Group** property contains an indirect string, then you should use a localized string, located at the address specified in the **Group** property, as a value for this parameter.
 
 ```yaml
 Type: String[]
@@ -440,7 +435,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -DisplayName
@@ -517,13 +512,9 @@ Accept wildcard characters: False
 
 ### -Group
 Specifies that only matching firewall rules of the indicated group association are enabled.
-Wildcard characters are accepted.
-This parameter specifies the source string for the *DisplayGroup* parameter.
-If the *DisplayGroup* parameter value is a localizable string, then this parameter contains an indirect string.
-Rule groups can be used to organize rules by influence and allows batch rule modifications.
-Using the Set-NetFirewallRule cmdlets, if the group name is specified for a set of rules or sets, then all of the rules or sets in that group receive the same set of modifications.
-It is good practice to specify this parameter value with a universal and world-ready indirect @FirewallAPI name.
-The *DisplayGroup* parameter cannot be specified upon object creation using the New-NetFirewallRule cmdlet, but can be modified using dot-notation and the Set-NetFirewallRule cmdlet.
+
+> [!TIP]
+> For most built-in rules, the group string is specified as an indirect string (for example, `@FirewallAPI.dll,-34002`). To retrieve such rules you should use those indirect strings in this parameter, rather their localized counterparts displayed in the UI. Alternatively, you can use the **DisplayGroup** parameter to filter by group display names.
 
 ```yaml
 Type: String[]
@@ -534,7 +525,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -InputObject

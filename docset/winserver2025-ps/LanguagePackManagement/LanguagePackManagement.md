@@ -15,7 +15,6 @@ title: LanguagePackManagement module
 This module can be used to easily [add languages](/windows-hardware/manufacture/desktop/available-language-packs-for-windows) and [related language features](/windows-hardware/manufacture/desktop/features-on-demand-language-fod) and manage settings like System Preferred UI Language, System Locale, Input method (Keyboard), Locale, Speech Recognizer, User Preferred Language List using the new cmdlets.   
 
 > [!NOTE]
-> - These cmdlets are supported on client operating system only. 
 > - To run the `Install-Language` and `Set-Language` cmdlets you must run the PowerShell as an admin (right click on the icon). 
 > - These cmdlets work in conjunction with the [International module](/powershell/module/international/), which allows users to control the language used for various elements of the user interface (UI).
 > - The `Install-Language` cmdlet can only install Windows display language resources for [Language Pack languages](/windows-hardware/manufacture/desktop/available-language-packs-for-windows).

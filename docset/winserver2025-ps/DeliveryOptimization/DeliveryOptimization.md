@@ -4,7 +4,7 @@ Help Version: 5.1.0.2025
 Locale: en-US
 Module Guid: b9af2675-4726-42fd-adab-38228176a516
 Module Name: DeliveryOptimization
-ms.date: 02/21/2024
+ms.date: 11/02/2026
 title: DeliveryOptimization module
 ---
 

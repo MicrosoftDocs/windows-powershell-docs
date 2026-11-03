@@ -171,8 +171,9 @@ Accept wildcard characters: False
 ### -AllowHostPolicyMerge
 Specifies that the host firewall policy should be merged into the effective policy.
 
-This setting controls whether host firewall profile settings (DefaultInboundAction, DefaultOutboundAction, Enabled, AllowLocalFirewallRules) as well as host firewall rules (only rules that are IP 5-tuple based, that is, not having any local conditions such as application) should be applicable to Hyper-V firewall.
+This setting controls whether host firewall profile settings (DefaultInboundAction, DefaultOutboundAction, Enabled, AllowLocalFirewallRules) and supported host firewall rules are applicable to Hyper-V firewall.
 
+Only host firewall rules that are IP 5-tuple-based are applied to Hyper-V firewall. Host firewall rules that use local conditions, such as application-based rules, and rules that use dynamic keywords are not applied to Hyper-V firewall, even when `AllowHostPolicyMerge` is enabled.
 
 Policy configurations may come from many stores. If this setting is True, the following order of precedence is used for determining the effective policy (highest priority to lowest priority):
 - Host Firewall Group Policy

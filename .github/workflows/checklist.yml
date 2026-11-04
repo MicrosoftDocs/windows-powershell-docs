@@ -24,4 +24,4 @@ jobs:
     steps:
       - name: Verify Checklist
         id: verify_checklist
-        uses: MicrosoftDocs/PowerShell-Docs/.github/actions/verification/checklist/v1@main
+        uses: MicrosoftDocs/PowerShell-Docs/.github/actions/verification/checklist/v1@ebaa235784a688ec72ab642186c4c17460fb438b # main

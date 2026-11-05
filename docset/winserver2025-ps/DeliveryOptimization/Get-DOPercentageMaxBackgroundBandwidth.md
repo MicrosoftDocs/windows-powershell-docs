@@ -1,7 +1,7 @@
 ---
 external help file: DeliveryOptimizationStatus.psm1-help.xml
 Module Name: DeliveryOptimization
-ms.date: 02/21/2024
+ms.date: 11/02/2026
 online version: https://learn.microsoft.com/powershell/module/deliveryoptimization/get-dopercentagemaxbackgroundbandwidth?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-DOPercentageMaxBackgroundBandwidth
@@ -11,6 +11,8 @@ title: Get-DOPercentageMaxBackgroundBandwidth
 
 ## SYNOPSIS
 
+Gets the maximum bandwidth percentage for Delivery Optimization background downloads.
+
 ## SYNTAX
 
 ```
@@ -18,17 +20,22 @@ Get-DOPercentageMaxBackgroundBandwidth [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+The `Get-DOPercentageMaxBackgroundBandwidth` cmdlet returns the current maximum percentage
+of available bandwidth that Delivery Optimization can use for background downloads.
+
+The returned value is a percentage, not an absolute transfer rate. Use `Get-DOConfig` to inspect
+bandwidth configuration values and their providers.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get the background bandwidth percentage
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-DOPercentageMaxBackgroundBandwidth
 ```
 
-{{ Add example description here }}
+This command returns the configured maximum background download bandwidth percentage.
 
 ## PARAMETERS
 
@@ -41,12 +48,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
+You can't pipe objects to this cmdlet.
+
 ## OUTPUTS
 
 ### System.Byte
 
+The maximum background download bandwidth percentage.
+
 ## NOTES
+
+This cmdlet reports the percentage setting. Absolute bandwidth limits and other applicable
+policies can also affect the bandwidth used by downloads.
 
 ## RELATED LINKS
 
-[https://aka.ms/do-cmdlets](https://aka.ms/do-cmdlets)
+[Set-DOPercentageMaxBackgroundBandwidth](Set-DOPercentageMaxBackgroundBandwidth.md)
+
+[Get-DOPercentageMaxForegroundBandwidth](Get-DOPercentageMaxForegroundBandwidth.md)
+
+[Get-DOConfig](Get-DOConfig.md)

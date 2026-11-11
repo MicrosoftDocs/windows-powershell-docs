@@ -2,10 +2,11 @@
 description: The Remove-MpPreference cmdlet removes exclusions for file name extensions, paths, and processes, or default actions for high, moderate, and low threats.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 12/20/2016
+ms.date: 11/11/2026
 online version: https://learn.microsoft.com/powershell/module/defender/remove-mppreference?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-MpPreference
+ai-usage: ai-assisted
 ---
 
 # Remove-MpPreference
@@ -45,7 +46,8 @@ Remove-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>]
  [-DisableDnsOverTcpParsing] [-DisableSshParsing] [-PlatformUpdatesChannel] [-EngineUpdatesChannel]
  [-SignaturesUpdatesChannel] [-DisableGradualRelease] [-AllowNetworkProtectionDownLevel]
  [-AllowDatagramProcessingOnWinServer] [-EnableDnsSinkhole] [-DisableInboundConnectionFiltering]
- [-DisableRdpParsing] [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-DisableRdpParsing] [-AiAgentProtection] [-AiAgentNetworkInspection] [-PromptEvidenceCollection]
+ [-Force] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
  [<CommonParameters>]
 ```
 
@@ -69,7 +71,51 @@ Remove-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\Windows\App.exe"
 
 This command will exclude only that specific file app.exe in that specific folder.
 
+### Example 3: Remove a local prompt evidence collection preference
+
+```powershell
+Remove-MpPreference -PromptEvidenceCollection
+```
+
+This command removes the locally configured prompt evidence collection preference.
+It doesn't remove or override a setting configured through Intune or another management channel.
+To explicitly disable local collection instead, use `Set-MpPreference -PromptEvidenceCollection $false`.
+
 ## PARAMETERS
+
+### -AiAgentNetworkInspection
+
+Removes the locally configured AI agent network inspection preference.
+This switch doesn't remove or override managed device policy.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ani
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AiAgentProtection
+
+Removes the locally configured agent-native AI agent runtime protection preference.
+This switch doesn't remove or override managed device policy.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: ap
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowDatagramProcessingOnWinServer
 Indicates that the cmdlet removes whether to disable inspection of UDP connections on Windows Server.
@@ -987,6 +1033,26 @@ Valid values are:
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: prelr
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PromptEvidenceCollection
+
+Removes the locally configured prompt evidence collection preference.
+Removing the preference isn't the same as explicitly disabling collection, and doesn't remove
+or override a setting configured through Intune or another management channel.
+For requirements and policy precedence, see
+[Configure prompt evidence collection](/defender-endpoint/configure-ai-agent-runtime-protection#configure-prompt-evidence-collection).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: pec
 
 Required: False
 Position: Named

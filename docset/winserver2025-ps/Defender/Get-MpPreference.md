@@ -2,10 +2,11 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 12/20/2016
+ms.date: 11/11/2026
 online version: https://learn.microsoft.com/powershell/module/defender/get-mppreference?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-MpPreference
+ai-usage: ai-assisted
 ---
 
 # Get-MpPreference
@@ -39,6 +40,19 @@ The first command gets the preferences, and then stores them in the **$Preferenc
 
 The second command uses standard dot syntax to display the **ScanScheduleDay** property of the
 object stored in the **$Preferences** variable.
+
+### Example 2: View AI agent runtime protection preferences
+
+```powershell
+Get-MpPreference |
+    Select-Object AiAgentProtection, AiAgentNetworkInspection, PromptEvidenceCollection
+```
+
+This command displays the device's agent-native inspection, network inspection, and prompt evidence
+collection preferences.
+The properties require supported Microsoft Defender Antivirus platform and engine updates.
+For requirements, configuration, and policy precedence, see
+[Set up AI agent runtime protection](/defender-endpoint/configure-ai-agent-runtime-protection).
 
 ## PARAMETERS
 

@@ -1290,15 +1290,23 @@ Accept wildcard characters: False
 
 ### -PromptEvidenceCollection
 
-Specifies whether to collect additional AI prompt, response, and tool-interaction content to support
-analysis of agent activity and related alerts.
-Collection isn't limited to interactions that produce a detection.
+Controls prompt evidence collection for AI agent runtime protection.
+When collection is enabled and runtime protection is enabled in audit or block mode, Defender
+exposes prompt snippets exchanged between the user and the agent to support deeper analysis of
+agent-related alerts.
+These snippets include only the portions of user prompts or agent responses identified as suspicious
+and relevant to security classification.
 Set this parameter to `$true` to enable collection or `$false` to disable it.
-The device preference is disabled by default.
+
+The default is changing from Off to On through an update to the November 2026 Microsoft Defender
+Antivirus platform release.
+Devices that haven't received that update still default to Off.
+Explicitly configured settings take precedence over this default.
 
 Managed device policy takes precedence over a local PowerShell preference and the tenant-wide
 prompt evidence collection preference.
-This setting doesn't change the audit or block mode of either inspection method.
+This setting doesn't enable runtime protection or change the audit or block mode of either
+inspection method.
 Content associated with activity that Defender blocks can still appear in the associated alert
 when this additional collection is disabled.
 

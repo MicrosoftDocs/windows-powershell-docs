@@ -1,7 +1,7 @@
 ---
 external help file: DeliveryOptimizationSettings.psm1-help.xml
 Module Name: DeliveryOptimization
-ms.date: 02/21/2024
+ms.date: 11/02/2026
 online version: https://learn.microsoft.com/powershell/module/deliveryoptimization/set-domaxbackgroundbandwidth?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DOMaxBackgroundBandwidth
@@ -11,6 +11,8 @@ title: Set-DOMaxBackgroundBandwidth
 
 ## SYNOPSIS
 
+Sets the maximum bandwidth for Delivery Optimization background downloads.
+
 ## SYNTAX
 
 ```
@@ -19,23 +21,39 @@ Set-DOMaxBackgroundBandwidth [[-MaxBackgroundBandwidth] <UInt32>] [-Reset] [<Com
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The `Set-DOMaxBackgroundBandwidth` cmdlet sets an absolute bandwidth limit, in kilobytes per
+second (KB/s), for Delivery Optimization background downloads on the local device.
+
+Specify **MaxBackgroundBandwidth** to set a limit, or **Reset** to restore the default dynamic
+bandwidth adjustment. You can't specify both parameters in the same command.
+
+Group Policy or MDM policy can override changes made with this cmdlet.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Limit background download bandwidth
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Set-DOMaxBackgroundBandwidth -MaxBackgroundBandwidth 5000
 ```
 
-{{ Add example description here }}
+This command limits Delivery Optimization background downloads to 5,000 KB/s.
+
+### Example 2: Restore default background bandwidth behavior
+
+```powershell
+Set-DOMaxBackgroundBandwidth -Reset
+```
+
+This command removes the limit set by this cmdlet and restores dynamic bandwidth adjustment,
+subject to applicable policies.
 
 ## PARAMETERS
 
 ### -MaxBackgroundBandwidth
 
-{{ Fill MaxBackgroundBandwidth Description }}
+Specifies the maximum background download bandwidth in KB/s. Specify this parameter or **Reset**,
+but not both.
 
 ```yaml
 Type: System.Nullable`1[System.UInt32]
@@ -51,7 +69,8 @@ Accept wildcard characters: False
 
 ### -Reset
 
-{{ Fill Reset Description }}
+Restores the default dynamic background download bandwidth adjustment. Don't specify
+**MaxBackgroundBandwidth** with this parameter.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -74,10 +93,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
+You can't pipe objects to this cmdlet.
+
 ## OUTPUTS
+
+### None
+
+This cmdlet doesn't return objects.
 
 ## NOTES
 
+Run this cmdlet from an elevated PowerShell session. Use `Get-DOConfig` to inspect bandwidth
+settings and their configuration providers.
+
 ## RELATED LINKS
 
-[https://aka.ms/do-cmdlets](https://aka.ms/do-cmdlets)
+[Set-DOMaxForegroundBandwidth](Set-DOMaxForegroundBandwidth.md)
+
+[Set-DOPercentageMaxBackgroundBandwidth](Set-DOPercentageMaxBackgroundBandwidth.md)
+
+[Get-DOConfig](Get-DOConfig.md)
+
+[Monitor Delivery Optimization](https://learn.microsoft.com/windows/deployment/do/waas-delivery-optimization-monitor)

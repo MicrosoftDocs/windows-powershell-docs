@@ -1291,7 +1291,7 @@ Accept wildcard characters: False
 ### -PromptEvidenceCollection
 
 Controls prompt evidence collection for AI agent runtime protection.
-When collection is enabled and runtime protection is enabled in audit or block mode, Defender
+When prompt evidence collection is enabled and runtime protection is in audit or block mode, Defender
 exposes prompt snippets exchanged between the user and the agent to support deeper analysis of
 agent-related alerts.
 These snippets include only the portions of user prompts or agent responses identified as suspicious

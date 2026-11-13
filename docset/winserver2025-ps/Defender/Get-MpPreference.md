@@ -50,7 +50,7 @@ Get-MpPreference |
 
 This command displays the device's agent-native inspection, network inspection, and prompt evidence
 collection preferences.
-The properties require supported Microsoft Defender Antivirus platform and engine updates.
+These properties require supported Microsoft Defender Antivirus platform and engine updates.
 For requirements, configuration, and policy precedence, see
 [Set up AI agent runtime protection](/defender-endpoint/configure-ai-agent-runtime-protection).
 

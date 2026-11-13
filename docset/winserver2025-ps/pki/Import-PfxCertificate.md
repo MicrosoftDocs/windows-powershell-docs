@@ -36,7 +36,7 @@ configuration.
 ### EXAMPLE 1
 
 ```powershell
-$mypwd = Get-Credential -UserName 'Enter password below' -Message 'Enter password below'
+$mypwd = Get-Credential -UserName 'User name' -Message 'Enter password below'
 
 $params = @{
     FilePath = 'C:\mypfx.pfx'

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_WdsInstallImage_v1.0.cdxml-help.xml
 Module Name: WDS
-ms.date: 12/27/2016
+ms.date: 10/22/2026
 online version: https://learn.microsoft.com/powershell/module/wds/import-wdsinstallimage?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-WdsInstallImage
@@ -39,6 +39,13 @@ Import-WdsInstallImage [-SkipVerify] [-ImageGroup <String>] [-DisplayOrder <UInt
 ```
 
 ## DESCRIPTION
+
+> [!TIP]
+> After you install the 2026-11 security update, `Import-WdsInstallImage` requires administrator
+> privileges. Import attempts by users without administrator privileges fail with `ACCESS_DENIED`.
+> Use an account with administrator privileges to run the cmdlet. All other cmdlet requirements
+> still apply.
+
 The **Import-WdsInstallImage** cmdlet imports an install image to an image store.
 You can import a single image from a WIM file, all images from a WIM file, or a VHD image.
 If you add a single image, you can also specify a new name, description, and file name for the image.
@@ -411,4 +418,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-WdsInstallImage](./Remove-WdsInstallImage.md)
 
 [Set-WdsInstallImage](./Set-WdsInstallImage.md)
-

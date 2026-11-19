@@ -61,7 +61,7 @@ The maximum background download bandwidth percentage.
 ## NOTES
 
 This cmdlet reports the percentage setting. Absolute bandwidth limits and other applicable
-policies can also affect the bandwidth used by downloads.
+policies can also affect how much bandwidth downloads use.
 
 ## RELATED LINKS
 

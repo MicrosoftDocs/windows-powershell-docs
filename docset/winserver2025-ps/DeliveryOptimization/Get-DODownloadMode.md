@@ -61,8 +61,8 @@ An enumeration value that identifies the active download mode.
 
 ## NOTES
 
-The modes that this cmdlet can report aren't limited to the modes accepted by `Set-DODownloadMode`.
-A mode can also be configured through Group Policy or MDM.
+This cmdlet can report modes even if `Set-DODownloadMode` doesn't accept them.
+You can also configure a mode through Group Policy or mobile device management.
 
 ## RELATED LINKS
 

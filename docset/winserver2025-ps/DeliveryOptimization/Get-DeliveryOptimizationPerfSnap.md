@@ -42,10 +42,11 @@ This command returns the current Delivery Optimization performance statistics.
 
 ```powershell
 Get-DeliveryOptimizationPerfSnap |
-    Select-Object Files, CacheSizeBytes, TotalBytesDownloaded, TotalBytesUploaded
+    Select-Object -Property Files, CacheSizeBytes, TotalBytesDownloaded,
+        TotalBytesUploaded
 ```
 
-This command displays the file count, cache size, and downloaded and uploaded byte totals.
+This command shows the file count, cache size, and downloaded and uploaded byte totals.
 
 ## PARAMETERS
 

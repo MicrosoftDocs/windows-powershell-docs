@@ -26,13 +26,16 @@ The `Set-DeliveryOptimizationStatus` cmdlet changes the expiration time or pinni
 files in the Delivery Optimization cache.
 
 Use **ExpireOn** to extend the expiration of a specific file, or omit **FileId** to apply the
-expiration to all files. For downloads in progress, the expiration is applied after completion.
+expiration to all files. For downloads in progress, the expiration takes effect after the
+download completes.
 
-Use **Pin** with **FileId** to pin or unpin a specific file. Pinned files are retained until their
-expiration and excluded from cache quota calculations. Unpinned files are subject to normal
-cache management.
+Use **Pin** with **FileId** to pin or unpin a specific file. Delivery Optimization retains pinned
+files until their expiration and excludes them from cache quota calculations. Unpinned files
+are subject to normal cache management.
 
 Specify at least one of **Pin** or **ExpireOn**. Pinning or unpinning requires **FileId**.
+When you specify both **Pin** and **ExpireOn**, the cmdlet changes the pinning status first.
+If expiration validation or the expiration update then fails, the pinning change isn't rolled back.
 
 ## EXAMPLES
 
@@ -52,6 +55,7 @@ Set-DeliveryOptimizationStatus -FileId $fileId -Pin $true -ExpireOn (Get-Date).A
 ```
 
 This command pins the specified file and sets its expiration to seven days from now.
+Pinning happens first. If the expiration update fails, the file remains pinned.
 Replace the example ID with a **FileId** returned by `Get-DeliveryOptimizationStatus`.
 
 ### Example 3: Unpin a cached file
@@ -66,7 +70,7 @@ This command unpins the specified file, making it subject to normal cache manage
 
 ### -ExpireOn
 
-Specifies the cache expiration date and time. Set a future expiration less than one year from
+Specifies the cache expiration date and time. Specify an expiration less than 365 days from
 the current date and time. If you omit **FileId**, the expiration applies to all files.
 For files still downloading, the expiration takes effect when the download completes.
 
@@ -134,7 +138,7 @@ You can't pipe objects to this cmdlet.
 
 ### None
 
-This cmdlet doesn't return objects. It displays update status messages in the console.
+This cmdlet doesn't return objects. It shows update status messages in the console.
 
 ## NOTES
 

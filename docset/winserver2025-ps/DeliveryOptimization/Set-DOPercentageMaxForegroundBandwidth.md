@@ -28,7 +28,7 @@ downloads to a percentage of available bandwidth on the local device.
 Specify **MaxForegroundBandwidthPercentage** to set a percentage, or **Reset** to restore the
 default of 90 percent. You can't specify both parameters in the same command.
 
-Group Policy or MDM policy can override changes made with this cmdlet.
+Group Policy or mobile device management policy can override changes this cmdlet makes.
 
 ## EXAMPLES
 

@@ -27,7 +27,7 @@ second (KB/s), for Delivery Optimization foreground downloads on the local devic
 Specify **MaxForegroundBandwidth** to set a limit, or **Reset** to restore the default dynamic
 bandwidth adjustment. You can't specify both parameters in the same command.
 
-Group Policy or MDM policy can override changes made with this cmdlet.
+Group Policy or mobile device management (MDM) policy can override changes this cmdlet makes.
 
 ## EXAMPLES
 
@@ -45,7 +45,7 @@ This command limits Delivery Optimization foreground downloads to 10,000 KB/s.
 Set-DOMaxForegroundBandwidth -Reset
 ```
 
-This command removes the limit set by this cmdlet and restores dynamic bandwidth adjustment,
+This command removes the limit this cmdlet sets and restores dynamic bandwidth adjustment,
 subject to applicable policies.
 
 ## PARAMETERS

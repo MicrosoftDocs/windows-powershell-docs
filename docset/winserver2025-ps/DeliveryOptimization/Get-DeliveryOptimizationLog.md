@@ -28,8 +28,7 @@ files and writes the log entries to the PowerShell pipeline as objects.
 Use **Path** to read saved ETL files. If you omit **Path**, the cmdlet reads logs from the
 Delivery Optimization service log directory, which requires administrator permissions.
 
-Use **Flush** to flush buffered trace data before reading logs. This stops the Delivery
-Optimization service and can interrupt active downloads.
+Use **Flush** to flush buffered trace data before reading logs.
 
 ## EXAMPLES
 
@@ -55,16 +54,15 @@ This command converts entries in the specified ETL file to PowerShell objects.
 Get-DeliveryOptimizationLog -Flush | Set-Content -Path 'C:\Logs\DeliveryOptimization.txt'
 ```
 
-This command flushes the logs and saves the log entries as text. The destination directory
-must already exist. Flushing stops the service and can interrupt downloads.
+This command flushes buffered trace data and saves the log entries as text. The destination
+directory must already exist.
 
 ## PARAMETERS
 
 ### -Flush
 
-Flushes buffered Delivery Optimization trace data before reading the logs. This stops the
-Delivery Optimization service and can interrupt active downloads. Run with administrator
-permissions.
+Flushes buffered Delivery Optimization trace data before reading the logs. Run with
+administrator permissions.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -96,9 +94,12 @@ Accept wildcard characters: False
 
 ### -Path
 
-Specifies one or more ETL file paths to read. If you omit this parameter, the cmdlet reads
-the Delivery Optimization service log directory. You can pipe paths to this parameter or
-provide objects with a **Path** or **PSPath** property.
+Specifies one or more ETL file paths to read. Pass paths directly to **Path**. If you omit
+this parameter, the cmdlet reads the Delivery Optimization service log directory.
+
+Although the parameter metadata declares pipeline input support by value and by the **Path**
+or **PSPath** property, the cmdlet selects and reads files before processing pipeline input.
+Piped paths don't select the files to read.
 
 ```yaml
 Type: System.String[]
@@ -141,7 +142,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
-You can pipe ETL file paths to this cmdlet.
+The parameter metadata declares pipeline input support, but piped paths don't select the
+files to read. Pass ETL file paths directly to **Path** instead.
 
 ## OUTPUTS
 

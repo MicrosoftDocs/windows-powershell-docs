@@ -27,7 +27,8 @@ second (KB/s), for Delivery Optimization background downloads on the local devic
 Specify **MaxBackgroundBandwidth** to set a limit, or **Reset** to restore the default dynamic
 bandwidth adjustment. You can't specify both parameters in the same command.
 
-Group Policy or MDM policy can override changes made with this cmdlet.
+Group Policy or mobile device management (MDM) policy can override changes made by using
+this cmdlet.
 
 ## EXAMPLES
 

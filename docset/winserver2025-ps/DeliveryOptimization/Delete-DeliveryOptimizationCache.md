@@ -23,7 +23,7 @@ Delete-DeliveryOptimizationCache [[-FileId] <String>] [-IncludePinnedFiles] [-Fo
 ## DESCRIPTION
 
 The `Delete-DeliveryOptimizationCache` cmdlet deletes cached Delivery Optimization files and
-their associated persisted data. By default, pinned files aren't deleted.
+their associated persisted data. By default, the cmdlet doesn't delete pinned files.
 
 Use the **FileId** parameter to delete a specific file. If you omit **FileId**, the cmdlet
 deletes all eligible files in the cache. Use **IncludePinnedFiles** to also delete pinned files.
@@ -47,7 +47,7 @@ Delete-DeliveryOptimizationCache -FileId '0123456789abcdef0123456789abcdef'
 ```
 
 This command prompts before deleting the specified file. Replace the example ID with a
-**FileId** returned by `Get-DeliveryOptimizationStatus`.
+**FileId** that `Get-DeliveryOptimizationStatus` returns.
 
 ### Example 3: Delete all cached files, including pinned files
 
@@ -126,7 +126,7 @@ You can't pipe objects to this cmdlet.
 
 ### None
 
-This cmdlet doesn't return objects. It displays deletion status messages in the console.
+This cmdlet doesn't return objects. It shows deletion status messages in the console.
 
 ## NOTES
 

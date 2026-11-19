@@ -61,7 +61,7 @@ The maximum foreground download bandwidth percentage.
 ## NOTES
 
 This cmdlet reports the percentage setting. Absolute bandwidth limits and other applicable
-policies can also affect the bandwidth used by downloads.
+policies can also affect the bandwidth that downloads use.
 
 ## RELATED LINKS
 

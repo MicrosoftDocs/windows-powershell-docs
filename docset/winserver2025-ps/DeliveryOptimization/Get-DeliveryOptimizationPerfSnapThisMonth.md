@@ -42,10 +42,11 @@ This command returns Delivery Optimization usage statistics for the current cale
 
 ```powershell
 Get-DeliveryOptimizationPerfSnapThisMonth |
-    Select-Object MonthStartDate, DownloadHttpBytes, DownloadLanBytes, DownloadInternetBytes
+    Select-Object -Property MonthStartDate, DownloadHttpBytes, DownloadLanBytes,
+        DownloadInternetBytes
 ```
 
-This command displays the reporting month's start date and bytes downloaded from HTTP,
+This command shows the reporting month's start date and bytes downloaded from HTTP,
 LAN peers, and internet peers.
 
 ## PARAMETERS

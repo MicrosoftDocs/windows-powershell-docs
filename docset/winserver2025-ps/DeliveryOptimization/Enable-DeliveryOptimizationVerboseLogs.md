@@ -85,7 +85,7 @@ You can't pipe objects to this cmdlet.
 
 ### None
 
-This cmdlet doesn't return objects. It displays logging configuration status in the console.
+This cmdlet doesn't return objects. It shows logging configuration status in the console.
 
 ## NOTES
 

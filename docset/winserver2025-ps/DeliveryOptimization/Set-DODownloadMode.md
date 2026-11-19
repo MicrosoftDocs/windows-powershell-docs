@@ -25,7 +25,8 @@ The `Set-DODownloadMode` cmdlet sets the Delivery Optimization download mode on 
 The supported modes are `CdnOnly`, `Lan`, and `Internet`.
 
 The download mode controls whether Delivery Optimization uses HTTP sources only or also
-exchanges content with peers. Group Policy or MDM policy can override changes made with this cmdlet.
+exchanges content with peers. Group Policy or mobile device management (MDM) policy can override
+changes you make with this cmdlet.
 
 ## EXAMPLES
 

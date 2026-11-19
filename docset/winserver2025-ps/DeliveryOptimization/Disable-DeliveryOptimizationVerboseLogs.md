@@ -22,11 +22,14 @@ Disable-DeliveryOptimizationVerboseLogs [-Force] [<CommonParameters>]
 ## DESCRIPTION
 
 The `Disable-DeliveryOptimizationVerboseLogs` cmdlet removes the verbose tracing configuration
-and log size overrides set by `Enable-DeliveryOptimizationVerboseLogs`.
+and log size overrides that `Enable-DeliveryOptimizationVerboseLogs` sets.
 
-If the Delivery Optimization service is running, the cmdlet prompts to restart it so the changes
-take effect. Restarting the service interrupts active downloads. If you decline the restart,
-the changes take effect the next time the service starts.
+If no verbose tracing configuration exists, the cmdlet exits without prompting or restarting
+the service, even when you specify **Force**.
+
+Otherwise, if the Delivery Optimization service is running, the cmdlet prompts to restart it
+so the changes take effect. Restarting the service interrupts active downloads. If you decline
+the restart, the changes take effect the next time the service starts.
 
 ## EXAMPLES
 
@@ -36,7 +39,8 @@ the changes take effect the next time the service starts.
 Disable-DeliveryOptimizationVerboseLogs
 ```
 
-This command disables verbose logging and prompts to restart the service if it's running.
+If a verbose tracing configuration exists, this command disables verbose logging and prompts
+to restart the service if it's running. Otherwise, it exits without prompting or restarting.
 
 ### Example 2: Disable verbose logging without a restart prompt
 
@@ -44,8 +48,9 @@ This command disables verbose logging and prompts to restart the service if it's
 Disable-DeliveryOptimizationVerboseLogs -Force
 ```
 
-This command disables verbose logging and restarts the running service without prompting.
-The restart interrupts active downloads.
+If a verbose tracing configuration exists, this command disables verbose logging and restarts
+the running service without prompting. The restart interrupts active downloads.
+If no configuration exists, the command exits without restarting the service.
 
 ## PARAMETERS
 
@@ -53,6 +58,7 @@ The restart interrupts active downloads.
 
 Restarts the Delivery Optimization service without prompting if it's running, so the logging
 changes take effect immediately. The restart interrupts active downloads.
+If no verbose tracing configuration exists, the cmdlet exits without restarting the service.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -83,7 +89,7 @@ You can't pipe objects to this cmdlet.
 
 ### None
 
-This cmdlet doesn't return objects. It displays logging configuration status in the console.
+This cmdlet doesn't return objects. It shows logging configuration status in the console.
 
 ## NOTES
 

@@ -45,7 +45,7 @@ This command returns the basic Delivery Optimization configuration and the provi
 Get-DOConfig -Verbose
 ```
 
-This command returns extended configuration values in addition to the basic configuration.
+This command returns the basic configuration and extended configuration values.
 
 ## PARAMETERS
 
@@ -70,7 +70,8 @@ Basic configuration values and their providers, returned by default.
 
 ### DOExtendedConfig
 
-Basic and extended configuration values and their providers, returned when verbose output is enabled.
+Basic and extended configuration values and their providers, returned when you enable
+verbose output.
 
 ## NOTES
 

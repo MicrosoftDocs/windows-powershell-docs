@@ -2,10 +2,11 @@
 description: The Set-MpPreference cmdlet configures preferences for Windows Defender scans and updates.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 09/29/2025
+ms.date: 11/11/2026
 online version: https://learn.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
+ai-usage: ai-assisted
 ---
 
 # Set-MpPreference
@@ -65,6 +66,8 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-SignaturesUpdatesChannel <UpdatesChannelType>] [-DisableGradualRelease <Boolean>]
  [-AllowNetworkProtectionDownLevel <Boolean>] [-AllowDatagramProcessingOnWinServer <Boolean>]
  [-EnableDnsSinkhole <Boolean>] [-DisableInboundConnectionFiltering <Boolean>] [-DisableRdpParsing <Boolean>]
+ [-AiAgentProtection <AiAgentProtectionType>]
+ [-AiAgentNetworkInspection <AiAgentNetworkInspectionType>] [-PromptEvidenceCollection <Boolean>]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
@@ -115,7 +118,71 @@ PS C:\> Set-MpPreference -SignatureScheduleTime 02:00:00
 
 This command configures preferences to check for definition updates 120 minutes after midnight on days when it's scheduled to check.
 
+### Example 3: Audit AI agent activity
+
+```powershell
+Set-MpPreference -AiAgentProtection Audit -AiAgentNetworkInspection Audit
+```
+
+This command enables agent-native event inspection and network inspection in audit mode.
+Each inspection method detects supported threats without blocking the agent action.
+Configure each method independently, using `Block` for enforcement or `Disabled` to turn it off.
+
+### Example 4: Enable prompt evidence collection
+
+```powershell
+Set-MpPreference -PromptEvidenceCollection $true
+```
+
+This command enables additional prompt evidence collection on the device.
+Use `$false` to disable collection.
+Review the privacy considerations in
+[Configure prompt evidence collection](/defender-endpoint/configure-ai-agent-runtime-protection#configure-prompt-evidence-collection)
+before enabling this setting.
+
 ## PARAMETERS
+
+### -AiAgentNetworkInspection
+
+Configures network inspection for supported AI agent-to-LLM traffic.
+Use `Disabled` to turn off this inspection method, `Audit` to detect and report threats without
+blocking, or `Block` to block detected threats at supported inspection points.
+This setting is independent of **AiAgentProtection**.
+The device preference is disabled by default.
+
+```yaml
+Type: AiAgentNetworkInspectionType
+Parameter Sets: (All)
+Aliases: ani
+Accepted values: Disabled, Block, Audit
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AiAgentProtection
+
+Configures AI agent runtime protection through supported agent-native event interfaces.
+Use `Disabled` to turn off this inspection method, `Audit` to detect and report threats without
+blocking, or `Block` to block detected threats at supported inspection points.
+This setting is independent of **AiAgentNetworkInspection**.
+The device preference is disabled by default.
+
+```yaml
+Type: AiAgentProtectionType
+Parameter Sets: (All)
+Aliases: ap
+Accepted values: Disabled, Block, Audit
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowDatagramProcessingOnWinServer
 Specifies whether to disable inspection of UDP connections on Windows Server.
@@ -1221,6 +1288,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PromptEvidenceCollection
+
+Controls prompt evidence collection for AI agent runtime protection.
+When prompt evidence collection is enabled and runtime protection is in audit or block mode, Defender
+exposes prompt snippets exchanged between the user and the agent to support deeper analysis of
+agent-related alerts.
+These snippets include only the portions of user prompts or agent responses identified as suspicious
+and relevant to security classification.
+Set this parameter to `$true` to enable collection or `$false` to disable it.
+
+The default is changing from Off to On through an update to the November 2026 Microsoft Defender
+Antivirus platform release.
+Devices that haven't received that update still default to Off.
+Explicitly configured settings take precedence over this default.
+
+Managed device policy takes precedence over a local PowerShell preference and the tenant-wide
+prompt evidence collection preference.
+This setting doesn't enable runtime protection or change the audit or block mode of either
+inspection method.
+Content associated with activity that Defender blocks can still appear in the associated alert
+when this additional collection is disabled.
+
+> [!IMPORTANT]
+> Prompt evidence can contain sensitive customer conversations.
+> Review your organization's privacy and data-handling requirements before enabling collection.
+> For prerequisites and privacy details, see
+> [Configure prompt evidence collection](/defender-endpoint/configure-ai-agent-runtime-protection#configure-prompt-evidence-collection).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: pec
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProxyBypass
 Specifies proxy bypasses.
 
@@ -2061,6 +2168,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+
+AI agent runtime protection is a preview feature for supported Windows client devices.
+The AI agent and prompt evidence parameters require supported Microsoft Defender Antivirus platform
+and engine updates.
+For requirements and deployment guidance, see
+[Set up AI agent runtime protection](/defender-endpoint/configure-ai-agent-runtime-protection).
 
 ## RELATED LINKS
 

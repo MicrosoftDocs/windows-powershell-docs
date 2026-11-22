@@ -3,7 +3,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: BitLocker-help.xml
 Module Name: BitLocker
 ms.date: 12/14/2021
-online version: https://learn.microsoft.com/powershell/module/bitlocker/enable-bitlocker?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+online version: https://learn.microsoft.com/powershell/module/bitlocker/enable-bitlocker?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-BitLocker
 ---
@@ -134,9 +134,11 @@ For a password or PIN key protector, specify a secure string. You can use the
 **ConvertTo-SecureString** cmdlet to create a secure string. You can use secure strings in a script
 and still maintain confidentiality of passwords.
 
-You may optionally select an encryption method. By default, BitLocker uses AES-128 but you can opt
-AES-256 for stronger security. (Diffuser is not supported.) You may request hardware encryption but
-we strongly advise against it. For further guidance, see the
+We strongly recommend specifying the encryption method. By default, BitLocker uses XTS-AES-128. You
+can opt XTS-AES-256 for stronger security. However, if you are encrypting a removable media and
+intend to use it on Windows 8.1 or Windows Server 2012 R2, you must opt either AES-128 or AES-256
+for backward compatibility. You may request hardware encryption but we strongly advise
+against it. For further guidance, see the
 [ADV180028 Security Advisory](https://msrc.microsoft.com/update-guide/vulnerability/ADV180028).
 
 This cmdlet returns a BitLocker volume object. If you choose recovery password as your key protector
@@ -265,7 +267,7 @@ We strongly advise not enabling hardware encryption. For further guidance, see t
 Type: BitLockerVolumeEncryptionMethodOnEnable
 Parameter Sets: (All)
 Aliases:
-Accepted values: Aes128, Aes256, Hardware
+Accepted values: Aes128, Aes256, XtsAes128, XtsAes256
 
 Required: False
 Position: Named

@@ -1,33 +1,33 @@
 {
   "docsets_to_publish": [
     {
-      "build_entry_point": "docs",
-      "build_output_subfolder": "windows-powershell",
+      "docset_name": "windows-powershell",
       "build_source_folder": "docset",
+      "build_output_subfolder": "windows-powershell",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "xref_query_tags": [
+        "/dotnet"
+      ],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "PowerShellCmdlet1": "Content",
+        "PowerShellModule1": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "cabgenConfigPath": [
+        "mapping/cabgenConfig.json"
+      ],
       "customized_tasks": {
         "docset_prebuild": [
           "_dependentPackages/MAML2Yaml/tools/Run.ps1"
         ]
       },
-      "docset_name": "windows-powershell",
-      "locale": "en-us",
       "monikerPath": [
         "mapping/monikerMapping.json"
-      ],
-      "cabgenConfigPath": [
-        "mapping/cabgenConfig.json"
-      ],
-      "moniker_ranges": [],
-      "monikers": [],
-      "open_to_public_contributors": true,
-      "template_folder": "_themes",
-      "type_mapping": {
-        "PowershellModule": "Content",
-        "PowershellCmdlet": "Content",
-        "Conceptual": "Content"
-      },
-      "xref_query_tags": [
-        "/dotnet"
       ],
       "version": 0
     }
@@ -37,9 +37,7 @@
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/windows-powershell-docs",
   "git_repository_branch_open_to_public_contributors": "main",
-  "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -49,6 +47,14 @@
     }
   ],
   "branch_target_mapping": {},
+  "targets": {},
+  "docs_build_engine": {},
+  "skip_source_output_uploading": false,
+  "contribution_branch_mappings": {},
+  "monikerPath": [
+    "mapping/monikerMapping.json"
+  ],
+  "need_generate_pdf_url_template": false,
   "dependent_packages": [
     {
       "id": "Microsoft.DocAsCode.MAML2Yaml",
@@ -57,10 +63,5 @@
       "target_framework": "net45",
       "version": "latest"
     }
-  ],
-  "need_generate_pdf_url_template": false,
-  "targets": {},
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  }
+  ]
 }

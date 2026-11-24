@@ -23,7 +23,7 @@ Reset-ADServiceAccountPassword [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-I
 ## DESCRIPTION
 The **Reset-ADServiceAccountPassword** cmdlet resets the password for the standalone managed service account (MSA) on the local computer.
 You must run this cmdlet on the computer where the standalone MSA is installed.
-Reset is not supported for group managed service accounts.
+**Note:** Reset is not supported for group managed service accounts (GMSA). GMSAs only change the password on the predetermined schedule.
 
 The *Identity* parameter specifies the Active Directory standalone MSA that receives the password reset.
 You can identify an MSA by its distinguished name (DN), GUID, security identifier (SID) or Security Accounts Manager (SAM) account name.

@@ -1,6 +1,6 @@
 ---
-Download Help Link: https://aka.ms/winsvr-2019-pshelp
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Download Help Link:
+Help Version:
 Locale: en-US
 Module Guid: 9bd99f27-788b-4912-8f67-5d9d1640fd9b
 Module Name: Microsoft.DiagnosticDataViewer
@@ -12,7 +12,7 @@ title: Microsoft.DiagnosticsDataViewer
 The Microsoft.DiagnosticDataViewer module provides commands for viewing and analyzing the Diagnostic Data sent by a Windows device.
 
 ## Minimum Requirements
-The module requires Windows 10 version 17134 (1803) or higher.  
+The module requires Windows 10 version 17134 (1803) or higher.
 
 ## Microsoft.DiagnosticDataViewer Cmdlets
 ### [Disable-DiagnosticDataViewing](Disable-DiagnosticDataViewing.md)

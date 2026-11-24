@@ -16,44 +16,53 @@ Marks one certificate as having been replaced by another certificate.
 ## SYNTAX
 
 ```
-Switch-Certificate [-NotifyOnly] [-NewCert] <Certificate> [-OldCert] <Certificate> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Switch-Certificate [-NotifyOnly] [-NewCert] <Certificate> [-OldCert] <Certificate> [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Switch-Certificate** cmdlet marks one certificate as having been replaced by another certificate.
-This cmdlet triggers a replace certificate notification and optionally sets the renewal property on the certificate being replaced.
+
+The `Switch-Certificate` cmdlet marks one certificate as having been replaced by another
+certificate. This cmdlet triggers a replace certificate notification and optionally sets the renewal
+property on the certificate being replaced.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
-PS C:\>Switch-Certificate -OldCert cert:\LocalMachine\My\E42DBC3B3F2771990A9B3E35D0C3C422779DACD7 -NewCert cert:\LocalMachine\My\4A346B4385F139CA843912D358D765AB8DEE9FD4
+
+```powershell
+$params = @{
+    OldCert = 'Cert:\LocalMachine\My\E42DBC3B3F2771990A9B3E35D0C3C422779DACD7'
+    NewCert = 'Cert:\LocalMachine\My\4A346B4385F139CA843912D358D765AB8DEE9FD4'
+}
+Switch-Certificate @params
 ```
 
-This example sets the renewal property of the certificate with the thumbprint E42DBC3B3F2771990A9B3E35D0C3C422779DACD7 as renewed by the certificate with the thumbprint 4A346B4385F139CA843912D358D765AB8DEE9FD4 and generates a replace certificate notification.
+This example sets the renewal property of the certificate with the thumbprint
+E42DBC3B3F2771990A9B3E35D0C3C422779DACD7 as renewed by the certificate with the thumbprint
+4A346B4385F139CA843912D358D765AB8DEE9FD4 and generates a replace certificate notification.
 
 ### EXAMPLE 2
-```
-PS C:\>Set-Location -Path cert:\LocalMachine\My
 
-PS cert:\LocalMachine\My>$oldCert = Get-ChildItem -Path E42DBC3B3F2771990A9B3E35D0C3C422779DACD7
-
-PS cert:\LocalMachine\My>$newCert = Get-ChildItem -Path 4A346B4385F139CA843912D358D765AB8DEE9FD4
-
-PS cert:\LocalMachine\My>Switch-Certificate -OldCert $oldCert -NewCert $newCert -NotifyOnly
+```powershell
+Set-Location -Path cert:\LocalMachine\My
+$oldCert = Get-ChildItem -Path E42DBC3B3F2771990A9B3E35D0C3C422779DACD7
+$newCert = Get-ChildItem -Path 4A346B4385F139CA843912D358D765AB8DEE9FD4
+Switch-Certificate -OldCert $oldCert -NewCert $newCert -NotifyOnly
 ```
 
-This example locates two certificates in the machine MY store and assigns them the variables $oldCert and $newCert.
-This cmdlet then generates a replacement notification without changing a renewal property of the old certificate.
+This example locates two certificates in the machine MY store and assigns them the variables
+`$oldCert` and `$newCert`. This cmdlet then generates a replacement notification without changing a
+renewal property of the old certificate.
 
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -65,10 +74,12 @@ Accept wildcard characters: False
 ```
 
 ### -NewCert
-Specifies an X509 certificate or a certificate path for the certificate that replaces the certificate specified with the **OldCert** parameter.
+
+Specifies an X509 certificate or a certificate path for the certificate that replaces the
+certificate specified with the **OldCert** parameter.
 
 ```yaml
-Type: Certificate
+Type: Microsoft.CertificateServices.Commands.Certificate
 Parameter Sets: (All)
 Aliases: 
 
@@ -80,11 +91,13 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyOnly
-Creates a replacement certificate notification without replacing the **NewCert** parameter with the **OldCert** parameter. 
-This mode is useful when testing a script that was registered with the New-CertificateNotificationTask cmdlet.
+
+Creates a replacement certificate notification without replacing the **NewCert** parameter with the
+**OldCert** parameter. This mode is useful when testing a script that was registered with the
+`New-CertificateNotificationTask` cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -96,10 +109,12 @@ Accept wildcard characters: False
 ```
 
 ### -OldCert
-Specifies an X509 certificate or a certificate path in the certificate provider for the certificate to be replaced.
+
+Specifies an X509 certificate or a certificate path in the certificate provider for the certificate
+to be replaced.
 
 ```yaml
-Type: Certificate
+Type: Microsoft.CertificateServices.Commands.Certificate
 Parameter Sets: (All)
 Aliases: 
 
@@ -111,11 +126,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -127,12 +143,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.CertificateServices.Commands.Certificate
-The **Certificate** object can either be provided as a Path object to a certificate or an **X509Certificate2** object.
+
+The **Certificate** object can either be provided as a Path object to a certificate or an
+**X509Certificate2** object.
 
 ## OUTPUTS
 
@@ -151,4 +173,3 @@ The **Certificate** object can either be provided as a Path object to a certific
 [New-CertificateNotificationTask](./New-CertificateNotificationTask.md)
 
 [Remove-CertificateNotificationTask](./Remove-CertificateNotificationTask.md)
-

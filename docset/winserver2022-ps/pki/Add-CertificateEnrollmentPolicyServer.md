@@ -11,83 +11,109 @@ title: Add-CertificateEnrollmentPolicyServer
 # Add-CertificateEnrollmentPolicyServer
 
 ## SYNOPSIS
+
 Adds an enrollment policy server to the current user or local system configuration.
 
 ## SYNTAX
 
 ```
 Add-CertificateEnrollmentPolicyServer [-NoClobber] -Url <Uri> [-RequireStrongValidation]
- [-Credential <PkiCredential>] -context <Context> [-AutoEnrollmentEnabled] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-Credential <PkiCredential>] -context <Context> [-AutoEnrollmentEnabled] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-CertificateEnrollmentPolicyServer** cmdlet adds an enrollment policy server to the current user or local system configuration.
-If an enrollment policy server already exists, then this cmdlet will overwrite it.
-Group Policy can be configured to prevent enrollment policy servers from being added.
 
-Delegation may be required when using this cmdlet with Windows PowerShell® remoting and changing user configuration.
+The `Add-CertificateEnrollmentPolicyServer` cmdlet adds an enrollment policy server to the current
+user or local system configuration. If an enrollment policy server already exists, then this cmdlet
+will overwrite it. Group Policy can be configured to prevent enrollment policy servers from being
+added.
+
+Delegation may be required when using this cmdlet with Windows PowerShell remoting and changing
+user configuration.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
-PS C:\>Add-CertificateEnrollmentPolicyServer -Url $url -Context Machine
+
+```powershell
+Add-CertificateEnrollmentPolicyServer -Url $url -Context Machine
 ```
 
-This example loads a policy from $url using Windows integrated authentication under the computer context, using the computer account credentials.
-This example also adds the policy server to the local computer configuration.
-Auto enrollment is off and strong validation is off.
+This example loads a policy from `$url` using Windows integrated authentication under the computer
+context, using the computer account credentials. This example also adds the policy server to the
+local computer configuration. Auto enrollment is off and strong validation is off.
 
 ### EXAMPLE 2
-```
-PS C:\>$cert = Get-ChildItem -Path cert:\LocalMachine\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
 
-PS C:\>Add-CertificateEnrollmentPolicyServer -Url $cert.EnrollmentPolicyEndPoint.Url -Credential $cert -Context Machine
+```powershell
+$cert = Get-ChildItem -Path cert:\LocalMachine\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
+
+$parameters = @{
+    Url = $cert.EnrollmentPolicyEndPoint.Url
+    Credential = $cert
+    Context = 'Machine'
+}
+Add-CertificateEnrollmentPolicyServer @parameters
 ```
 
-This example loads a policy using $cert as the authentication credential and adds the policy to the local computer local configuration since the context is the local computer (Machine).
+This example loads a policy using `$cert` as the authentication credential and adds the policy to
+the local computer local configuration since the context is the local computer (Machine).
 
 ### EXAMPLE 3
-```
-PS C:\>$up = Get-Credential
 
-PS C:\>Add-CertificateEnrollmentPolicyServer -Url $url -Context Machine -Credential $up
+```powershell
+$up = Get-Credential
+
+Add-CertificateEnrollmentPolicyServer -Url $url -Context Machine -Credential $up
 ```
 
-This example loads a policy using the username and password from $url.
+This example loads a policy using the username and password from `$url`.
 This example adds the policy server to the local computer configuration.
 
 ### EXAMPLE 4
-```
-PS C:\>$cert = Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
 
-PS C:\>Add-CertificateEnrollmentPolicyServer -Url $cert.EnrollmentPolicyEndPoint.Url -Credential $cert.PSPath -Context Machine
+```powershell
+$cert = Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
+
+$parameters = @{
+    Url = $cert.EnrollmentPolicyEnd
+    Credential = $cert.PSPath
+    Context = 'Machine'
+}
+Add-CertificateEnrollmentPolicyServer @parameters
 ```
 
-This example loads policy using the Path object for a certificate.
-Use the certificate to authenticate to the URL and add the policy server into the local user configuration.
+This example loads policy using the Path object for a certificate. Use the certificate to
+authenticate to the URL and add the policy server into the local user configuration.
 
 ### EXAMPLE 5
-```
-PS C:\>$up = Get-Credential
 
-PS C:\>Add-CertificateEnrollmentPolicyServer -Url $url -Context User -Credential $up -WhatIf
+```powershell
+$up = Get-Credential
+
+Add-CertificateEnrollmentPolicyServer -Url $url -Context User -Credential $up -WhatIf
+```
+
+```Output
 What if: Policy successfully loaded from {$url} using username/password credentials. 
 Policy server configuration will be added to current user context.
 ```
 
-This example shows that if the policy cannot be loaded or if there is a conflict with an identifier (ID) or URL, then this will be the output. 
+This example shows that if the policy cannot be loaded or if there is a conflict with an identifier
+(ID) or URL, then this will be the output.
 
-If the policy server already exists, then the output will state that the existing policy server configuration will be overwritten.
+If the policy server already exists, then the output will state that the existing policy server
+configuration will be overwritten.
 
 ## PARAMETERS
 
 ### -AutoEnrollmentEnabled
+
 Enables auto-enrollment for the policy server being added.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -99,10 +125,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -114,12 +141,13 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies the credential used to authenticate to the policy server.
-This credential can be a **PSCredential** object, which is a username and password, an x509 certificate, or a path to an x509 certificate.
-Kerberos authentication is used if no credential is specified.
+
+Specifies the credential used to authenticate to the policy server. This credential can be a
+**PSCredential** object, which is a username and password, an x509 certificate, or a path to an x509
+certificate. Kerberos authentication is used if no credential is specified.
 
 ```yaml
-Type: PkiCredential
+Type: Microsoft.CertificateServices.Commands.PkiCredential
 Parameter Sets: (All)
 Aliases: 
 
@@ -131,10 +159,11 @@ Accept wildcard characters: False
 ```
 
 ### -NoClobber
+
 Prevents an enrollment policy server from overwriting an existing one.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -146,10 +175,12 @@ Accept wildcard characters: False
 ```
 
 ### -RequireStrongValidation
-Specifies that the certificate obtained through this enrollment policy server must be trusted on the client.
+
+Specifies that the certificate obtained through this enrollment policy server must be trusted on the
+client.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -161,10 +192,11 @@ Accept wildcard characters: False
 ```
 
 ### -Url
+
 Identifies the uniform resource locator (URL) of the enrollment policy server to configure.
 
 ```yaml
-Type: Uri
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: 
 
@@ -176,6 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -191,11 +224,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -context
-Stores information about the policy server in the configuration for the Current User or Local computer.
+### -Context
+
+Stores information about the policy server in the configuration for the Current User or Local
+computer.
 
 ```yaml
-Type: Context
+Type: Microsoft.CertificateServices.Commands.Context
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Machine, User
@@ -208,16 +243,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.CertificateServices.Commands.EnrollmentPolicyServer
+
 The **EnrollmentPolicyServer** object contains information about the certificate enrollment policy.
 
 ## OUTPUTS
 
 ### Microsoft.CertificateServices.Commands.EnrollmentPolicyServer
+
 The **EnrollmentPolicyServer** object contains information about the certificate enrollment policy.
 
 ## NOTES
@@ -231,4 +272,3 @@ The **EnrollmentPolicyServer** object contains information about the certificate
 [Get-CertificateEnrollmentPolicyServer](./Get-CertificateEnrollmentPolicyServer.md)
 
 [Remove-CertificateEnrollmentPolicyServer](./Remove-CertificateEnrollmentPolicyServer.md)
-

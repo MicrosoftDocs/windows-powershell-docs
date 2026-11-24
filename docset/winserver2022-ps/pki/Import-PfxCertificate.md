@@ -11,59 +11,76 @@ title: Import-PfxCertificate
 # Import-PfxCertificate
 
 ## SYNOPSIS
-Imports certificates and private keys from a Personal Information Exchange (PFX) file to the destination store.
+Imports certificates and private keys from a Personal Information Exchange (PFX) file to the
+destination store.
 
 ## SYNTAX
 
 ```
-Import-PfxCertificate [-Exportable] [-Password <SecureString>] [[-CertStoreLocation] <String>]
- [-FilePath] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+Import-PfxCertificate [-Exportable] [-Password <SecureString>]
+ [[-CertStoreLocation] <String>] [-FilePath] <String> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Import-PfxCertificate** cmdlet imports certificates and private keys from a PFX file to the destination store.
-Certificates with and without private keys in the PFX file are imported, along with any external properties that are present.
 
-Delegation may be required when using this cmdlet with Windows PowerShell® remoting and changing user configuration.
+The `Import-PfxCertificate` cmdlet imports certificates and private keys from a PFX file to the
+destination store. Certificates with and without private keys in the PFX file are imported, along
+with any external properties that are present.
+
+Delegation may be required when using this cmdlet with Windows PowerShell remoting and changing user
+configuration.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
-PS C:\>$mypwd = Get-Credential -UserName 'Enter password below' -Message 'Enter password below'
 
-PS C:\>Import-PfxCertificate -FilePath C:\mypfx.pfx -CertStoreLocation Cert:\LocalMachine\My -Password $mypwd.Password
+```powershell
+$mypwd = Get-Credential -UserName 'Enter password below' -Message 'Enter password below'
+
+$params = @{
+    FilePath = 'C:\mypfx.pfx'
+    CertStoreLocation = 'Cert:\LocalMachine\My'
+    Password = $mypwd.Password
+}
+Import-PfxCertificate @params
 ```
 
-This example imports the PFX file my.pfx with a private non-exportable key into the My store for the machine account.
+This example imports the PFX file `mypfx.pfx` with a private, non-exportable key into the My store
+for the machine account.
 
 ### EXAMPLE 2
-```
-PS C:\>Get-ChildItem -Path c:\mypfx\my.pfx | Import-PfxCertificate -CertStoreLocation Cert:\CurrentUser\My -Exportable
+
+```powershell
+Get-ChildItem -Path C:\mypfx.pfx |
+    Import-PfxCertificate -CertStoreLocation Cert:\CurrentUser\My -Exportable
 ```
 
-This example imports the PFX file my.pfx with a private non-exportable key into the My store for the current user with private key exportable.
-The **Password** parameter is not required since this PFX file is not password protected.
+This example imports the PFX file `mypfx.pfx` with a private, exportable key into the My store for
+the current user. The **Password** parameter is not required since this PFX file is not password
+protected.
 
 ### EXAMPLE 3
-```
-PS C:\>Set-Location -Path cert:\localMachine\my
 
-PS Cert:\localMachine\my>Import-PfxCertificate -FilePath c:\mypfx.pfx
+```powershell
+Set-Location -Path Cert:\LocalMachine\My
+
+Import-PfxCertificate -FilePath C:\mypfx.pfx
 ```
 
-This example imports the PFX file mypfx.pfx into the My store for the machine account.
-The **Password** parameter is not required since this PFX file is protected using the domain account of this machine.
-This requires a Windows Server® 2012 domain controller.
+This example imports the PFX file `mypfx.pfx` into the My store for the machine account. The
+**Password** parameter is not required since this PFX file is protected using the domain account of
+this machine. This requires a Windows Server 2012 or later domain controller.
 
 ## PARAMETERS
 
 ### -CertStoreLocation
-Specifies the path of the store to which certificates will be imported.
-If this parameter is not specified, then the current path is used as the destination store.
+
+Specifies the path of the store to which certificates will be imported. If this parameter is not
+specified, then the current path is used as the destination store.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 
@@ -75,10 +92,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -90,11 +108,12 @@ Accept wildcard characters: False
 ```
 
 ### -Exportable
-Specifies whether the imported private key can be exported.
-If this parameter is not specified, then the private key cannot be exported.
+
+Specifies whether the imported private key can be exported. If this parameter is not specified, then
+the private key cannot be exported.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -106,10 +125,11 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
 Specifies the path for the PFX file.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases: FullName
 
@@ -121,10 +141,11 @@ Accept wildcard characters: False
 ```
 
 ### -Password
+
 Specifies the password for the imported PFX file in the form of a secure string.
 
 ```yaml
-Type: SecureString
+Type: System.SecureString
 Parameter Sets: (All)
 Aliases: 
 
@@ -136,11 +157,12 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -152,17 +174,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
+
 A **String** containing the path to the PFX file.
 
 ## OUTPUTS
 
 ### System.Security.Cryptography.X509Certificates.X509Certificate2
-The imported **X509Certificate2** object contained in the PFX file that is associated with private keys.
+
+The imported **X509Certificate2** object contained in the PFX file that is associated with private
+keys.
 
 ## NOTES
 

@@ -1,0 +1,6 @@
+{
+    "import": [
+        "./cspell/psdocs/cspell.yaml",
+        "./cspell/winmodules/cspell.yaml"
+    ]
+}

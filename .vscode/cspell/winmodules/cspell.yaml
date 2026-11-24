@@ -1,0 +1,18 @@
+name: azmodules
+description: >
+  This cSpell configuration is for terminology specific to the PowerShell modules in this
+  repository. Only add to the dictionaries defined here if the terms specifically apply to one of
+  the modules. If they apply to PowerShell more broadly, contribute those changes back to the psdocs
+  configuration and dictionaries in the MicrosoftDocs/PowerShell-Docs repository, not here.
+
+dictionaryDefinitions:
+  - name: winps
+    description: >
+      Dictionary of common terms for the Windows modules. Add entries to this dictionary for words
+      used in the documentation for these modules but not broader PowerShell or other documentation.
+    path: ./dictionaries/winps.txt
+
+overrides:
+  - filename: '**/winserver*/**/*.md'
+    dictionaries:
+      - winps

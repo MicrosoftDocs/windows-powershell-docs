@@ -10,10 +10,6 @@
       tocHref: /powershell/windows/
       topicHref: /powershell/windows/get-started
       items:
-    - name: MDOP PowerShell
-      tocHref: /powershell/mdop/
-      topicHref: /powershell/mdop/get-started
     - name: PowerShell
       tocHref: /powershell/module/
       topicHref: /powershell/module
- 

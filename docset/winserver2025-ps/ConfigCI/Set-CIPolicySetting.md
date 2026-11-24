@@ -36,7 +36,7 @@ Secure Settings are queried by Windows APIs to set security behaviors.
 
 ### Example 1: Set the Code Integrity policy
 ```powershell
-Set-CIPolicySetting -FilePath C:\Policies\WDAC_policy.xml -Key "{12345678-9abc-def0-1234-56789abcdef0}" -Provider WSH -Value $True -ValueName EnterpriseDefinedClsId -ValueType Boolean
+Set-CIPolicySetting -FilePath C:\Policies\WDAC_policy.xml -Key "{12345678-9abc-def0-1234-56789abcdef0}" -Provider WSH -Value true -ValueName EnterpriseDefinedClsId -ValueType Boolean
 ```
 
 This command sets the Code Integrity policy to allow for the specified **Provider**, **Key** and **ValueName**.

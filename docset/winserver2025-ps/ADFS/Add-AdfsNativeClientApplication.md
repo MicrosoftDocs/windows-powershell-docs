@@ -154,6 +154,12 @@ The value of this parameter must match exactly the redirection URI that is speci
 This includes trailing slashes '/', if they are required.
 We recommended the use of more secure schemes such as https in a redirection URI.
 
+[!NOTE]
+> Starting with the October 2026 update, AD FS requires an exact match for the OAuth `redirect_uri` parameter, in accordance with [RFC 6749, section 3.1.2.3](https://www.rfc-editor.org/rfc/rfc6749#section-3.1.2.3).
+> Redirection URIs containing wildcard characters, such as `https://*.hostname/path`, are accepted during registration without an error but will not match OAuth `redirect_uri` validation at runtime.
+> Wildcard entries that previously matched through prefix matching will now be silently skipped, resulting in error MSIS9224 (Event ID 364) when no other registered URI exactly matches the requested redirection URI.
+> Register a separate redirection URI for each specific hostname instead of using a wildcard.
+
 For Windows Store applications that authenticate by using the Windows Web Authentication Broker, use the `ms-app://` scheme for a redirection URI.
 If you are developing a Windows Store application, obtain the redirection URI for your application by using the following code fragment:
 

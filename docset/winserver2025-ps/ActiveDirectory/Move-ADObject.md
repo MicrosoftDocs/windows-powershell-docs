@@ -22,7 +22,7 @@ Move-ADObject [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCred
 ```
 
 ## DESCRIPTION
-The **Move-ADObject** cmdlet moves an object or a container of objects from one container to another or from one domain to another within the same forest.
+The **Move-ADObject** cmdlet moves an object or a container of objects from one container to another. It can also move individual objects from one domain to another within the same forest.
 
 When an object is moved between domains, both the source DC and the target DC need to be the RID Master of their domains. If a different DC is being used, you will receive the following error:
 
@@ -37,8 +37,18 @@ You can also use the **Get-ADGroup**, **Get-ADUser**, **Get-ADComputer**, **Get-
 The *TargetPath* parameter must be specified.
 This parameter identifies the new location for the object or container.
 
-The cmdlet also moves the password when a user or computer object is moved across domains within a forest.
+The cmdlet also moves the password when a user or computer object is moved across domains within a forest. Note that a computer will not be able to continue to use the computer account without re-joining the new domain.
 
+Hints when you move across domains that results from the fact that objects must not have child objects when being moved:
+- If the solution managing child objects creates them automatically, for example as the user or computer logs on, you have to disable the account prior to starting the object move.
+- If the solution that manages them can re-create them child objects without requiring context, you can delete them before starting the move.
+- Otherwise, move the child objects to interim parents while the target account is in transition. For example, you may need to have a dummy user or computer for the purpose. After the move of the parent user or computer, you can move the child object underneath the object in the new domain. Note that commercial AD migration tools may do this automatically.
+
+Solutions that may create child objects on common object types include but are not limited to:
+- Exchange creates Child Objects under User Accounts when Mobile Devices are used.
+- BitLocker Recovery Key support creates child objects under computer account for key recovery.
+- Microsoft Hyper-V may create a serviceConnectionPoint object for Hyper-V Guest computers.
+- Microsoft LDS may create a serviceConnectionPoint object for LDS instances the comptuer hosts.
 
 ## EXAMPLES
 

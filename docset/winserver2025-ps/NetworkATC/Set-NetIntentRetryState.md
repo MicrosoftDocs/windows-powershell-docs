@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: NetworkAtc-help.xml
 Module Name: NetworkATC
-ms.date: 02/21/2024
+ms.date: 03/14/2025
 online version: https://learn.microsoft.com/powershell/module/networkatc/set-netintentretrystate?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NetIntentRetryState
@@ -10,7 +10,7 @@ title: Set-NetIntentRetryState
 # Set-NetIntentRetryState
 
 ## SYNOPSIS
-Changes the provisioning state of the goal state for an intent on a given host.
+Changes the provisioning state of the goal state for the network intent on a given host.
 
 ## SYNTAX
 
@@ -23,38 +23,42 @@ Set-NetIntentRetryState [-ComputerName <String>] -Name <String> [-Wait] [<Common
 ### Global
 
 ```
-Set-NetIntentRetryState [-ClusterName <String>] [-ComputerName <String>] [-NodeName <String>] [-Wait]
- [-GlobalOverrides] [<CommonParameters>]
+Set-NetIntentRetryState [-ClusterName <String>] [-ComputerName <String>] [-NodeName <String>]
+ [-Wait] [-GlobalOverrides] [<CommonParameters>]
 ```
 
 ### Cluster
 
 ```
-Set-NetIntentRetryState [-ClusterName <String>] -Name <String> -NodeName <String> [-Wait] [<CommonParameters>]
+Set-NetIntentRetryState [-ClusterName <String>] -Name <String> -NodeName <String> [-Wait]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Use this to reset failed provisioning. The state of the request is reset to `RetryRequired`.
+The `Set-NetIntentRetryState` cmdlet changes the provisioning state of the goal state for a network
+intent on a given host. This is useful for resetting failed provisioning attempts, as it resets the
+**RetryRequired** state.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Set-NetIntentRetryState -ComputerName "Server01" -Name "MyIntent" -Wait
 ```
 
-{{ Add example description here }}
+This example resets the provisioning state for the network intent named `MyIntent` on the computer
+`Server01` and waits for the operation to complete.
 
 ## PARAMETERS
 
 ### -ClusterName
 
-{{ Fill ClusterName Description }}
+Specifies the name of the cluster.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Global, Cluster
 Aliases:
 
@@ -67,10 +71,10 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-{{ Fill ComputerName Description }}
+Specifies the name of the computer.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ComputerName, Global
 Aliases:
 
@@ -81,28 +85,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -GlobalOverrides
-
-{{ Fill GlobalOverrides Description }}
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: Global
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 
-{{ Fill Name Description }}
+Specifies the name of the network intent to be reset.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: ComputerName, Cluster
 Aliases:
 
@@ -115,10 +103,10 @@ Accept wildcard characters: False
 
 ### -NodeName
 
-{{ Fill NodeName Description }}
+Specifies the name of the node within the cluster.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Global
 Aliases:
 
@@ -130,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: Cluster
 Aliases:
 
@@ -143,11 +131,28 @@ Accept wildcard characters: False
 
 ### -Wait
 
-{{ Fill Wait Description }}
+Indicates that the cmdlet should wait for the operation to complete before returning control to the
+command line.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GlobalOverrides
+
+Indicates the global overrides that should be applied when resetting the provisioning state.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Global
 Aliases:
 
 Required: False
@@ -162,7 +167,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

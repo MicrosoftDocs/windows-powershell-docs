@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: NetworkAtc-help.xml
 Module Name: NetworkATC
-ms.date: 02/21/2024
+ms.date: 03/14/2025
 online version: https://learn.microsoft.com/powershell/module/networkatc/copy-netintent?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Copy-NetIntent
@@ -10,7 +10,7 @@ title: Copy-NetIntent
 # Copy-NetIntent
 
 ## SYNOPSIS
-Moves (or copies) net intent across different hosts or clusters
+Moves or copies network intents across different hosts or clusters.
 
 ## SYNTAX
 
@@ -72,72 +72,30 @@ Copy-NetIntent [-GlobalOverrides] [-SourceComputerName] <String> [-DestinationCo
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The `Copy-NetIntent` cmdlet copies or moves a network intent from one host or cluster to another.
+The source intent is removed if the **RemoveSource** parameter is provided.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
+```powershell
+Copy-NetIntent -Name "MyIntent" -SourceComputerName "Server01" -DestinationComputerName "Server02"
 ```
-Copy-NetIntent
-```
+
+This example copies a network intent from the standalone device `Server01` to the standalone
+destination device `Server02`.
 
 ## PARAMETERS
 
-### -DestinationClusterName
-
-The name of the cluster that the intent is copied to.
-
-```yaml
-Type: System.String
-Parameter Sets: ClusterToCluster, LocalToCluster, GlobalClusterToCluster, GlobalLocalToCluster
-Aliases:
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DestinationComputerName
-
-The name of the computer that the intent is copied to.
-
-```yaml
-Type: System.String
-Parameter Sets: LocalToLocal, ClusterToLocal, GlobalClusterToLocal, GlobalLocalToLocal
-Aliases:
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GlobalOverrides
-
-{{ Fill GlobalOverrides Description }}
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: GlobalClusterToLocal, GlobalClusterToCluster, GlobalLocalToCluster, GlobalLocalToLocal
-Aliases:
-
-Required: True
-Position: Named
-Default value: False
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
 ### -Name
 
-The name of the intent to be copied.
+Defines a unique name that identifies the network intent. Since intents are uniquely determined by
+their list of physical adapters, the name is used as an identifier to ensure that each intent is
+distinct.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: LocalToLocal, ClusterToCluster, ClusterToLocal, LocalToCluster
 Aliases:
 
@@ -148,44 +106,29 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -RemoveSource
+### -GlobalOverrides
 
-Indicates that the source needs to be removed after the copy.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SourceClusterName
-
-The name of the cluster that the intent is copied from.
+Specifies that global override settings during the copy operation for any local
+settings.
 
 ```yaml
-Type: System.String
-Parameter Sets: ClusterToCluster, ClusterToLocal, GlobalClusterToLocal, GlobalClusterToCluster
+Type: SwitchParameter
+Parameter Sets: GlobalClusterToLocal, GlobalClusterToCluster, GlobalLocalToCluster, GlobalLocalToLocal
 Aliases:
 
 Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
+Position: Named
+Default value: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
 ### -SourceComputerName
 
-The name of the computer that the intent is copied from.
+Specifies the name of the source computer that holds the network intent to be copied.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: LocalToLocal, LocalToCluster, GlobalLocalToCluster, GlobalLocalToLocal
 Aliases:
 
@@ -196,12 +139,78 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Wait
+### -SourceClusterName
 
-{{ Fill Wait Description }}
+Specifies the name of the source cluster that contains the network intent to be copied.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: String
+Parameter Sets: ClusterToCluster, ClusterToLocal, GlobalClusterToLocal, GlobalClusterToCluster
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DestinationComputerName
+
+Specifies the name of the destination computer where the network intent is to be copied.
+
+```yaml
+Type: String
+Parameter Sets: LocalToLocal, ClusterToLocal, GlobalClusterToLocal, GlobalLocalToLocal
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DestinationClusterName
+
+Specifies the name of the destination cluster to which the network intent is to be copied.
+
+```yaml
+Type: String
+Parameter Sets: ClusterToCluster, LocalToCluster, GlobalClusterToCluster, GlobalLocalToCluster
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveSource
+
+Indicates whether the original network intent should be removed from the source after the copy
+operation is completed.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Wait
+
+When specified, the command will wait for the network configuration commands to complete or for
+status confirmation before returning control.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -214,7 +223,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -222,6 +234,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-The copy & removal operation of the intent is not a transacted operation\`.
+The copy and removal operation of the intent isn't a transacted operation.
 
 ## RELATED LINKS
+
+[Add-NetIntent](Add-NetIntent.md)
+
+[Get-NetIntent](Get-NetIntent.md)
+
+[Get-NetIntentStatus](Get-NetIntentStatus.md)
+
+[Remove-NetIntent](Remove-NetIntent.md)
+
+[Set-NetIntent](Set-NetIntent.md)

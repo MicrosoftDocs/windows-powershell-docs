@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: NetworkAtc-help.xml
 Module Name: NetworkATC
-ms.date: 02/21/2024
+ms.date: 03/14/2025
 online version: https://learn.microsoft.com/powershell/module/networkatc/get-allnetintents?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-AllNetIntents
@@ -10,7 +10,7 @@ title: Get-AllNetIntents
 # Get-AllNetIntents
 
 ## SYNOPSIS
-Looks up all intent requests configurations available
+Looks up all intent request configurations available.
 
 ## SYNTAX
 
@@ -21,26 +21,28 @@ Get-AllNetIntents [[-ClusterName] <String>] [[-ComputerName] <String>] [-GlobalO
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+The `Get-AllNetIntents` cmdlet retrieves all network intent configurations available based on the
+computer name or cluster name.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-AllNetIntents -ComputerName "Server01"
 ```
 
-{{ Add example description here }}
+This example retrieves all network intent configurations from the `Server01` standalone host.
 
 ## PARAMETERS
 
 ### -ClusterName
 
-{{ Fill ClusterName Description }}
+Specifies the name of the cluster for which the network intent is to be retrieved. When used, the
+intent "floats" across the cluster.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -53,10 +55,12 @@ Accept wildcard characters: False
 
 ### -ComputerName
 
-{{ Fill ComputerName Description }}
+Specifies the computer name of the target host on which the network intent configuration is to be
+retrieved. For standalone hosts, use the local computer name; for scenarios where the script is
+executed remotely, ensure the current user has administrative privileges on the target machine.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -69,10 +73,10 @@ Accept wildcard characters: False
 
 ### -GlobalOverrides
 
-{{ Fill GlobalOverrides Description }}
+Retrieves the global override settings.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -88,7 +92,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

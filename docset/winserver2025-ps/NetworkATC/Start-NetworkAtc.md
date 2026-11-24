@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: NetworkAtc-help.xml
 Module Name: NetworkATC
-ms.date: 02/21/2024
+ms.date: 03/14/2025
 online version: https://learn.microsoft.com/powershell/module/networkatc/start-networkatc?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-NetworkAtc
@@ -10,7 +10,7 @@ title: Start-NetworkAtc
 # Start-NetworkAtc
 
 ## SYNOPSIS
-Starts the Atc Service on all hosts for a cluster or a given single node.
+Starts the Network ATC service on specified hosts.
 
 ## SYNTAX
 
@@ -28,46 +28,47 @@ Start-NetworkAtc [-ClusterName] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Starts the Atc Service on all hosts for a cluster or a given single node.
+The `Start-NetworkATC` cmdlet starts the ATC service on all hosts for a cluster or a given single
+node.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Start-NetworkAtc -ComputerName "Server01"
 ```
 
-{{ Add example description here }}
+This example starts the Network ATC service on the host specified by the computer name `Server01`.
 
 ## PARAMETERS
 
-### -ClusterName
+### -ComputerName
 
-{{ Fill ClusterName Description }}
+Specifies the name of the computer on which to start the Network ATC service.
 
 ```yaml
-Type: System.String
-Parameter Sets: Cluster
+Type: String
+Parameter Sets: ComputerName
 Aliases:
 
-Required: True
+Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ComputerName
+### -ClusterName
 
-{{ Fill ComputerName Description }}
+Specifies the name of the cluster on which to start the Network ATC service on all hosts.
 
 ```yaml
-Type: System.String
-Parameter Sets: ComputerName
+Type: String
+Parameter Sets: Cluster
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -79,7 +80,7 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
 -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
 -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -88,3 +89,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Stop-NetworkAtc](Stop-NetworkAtc.md)

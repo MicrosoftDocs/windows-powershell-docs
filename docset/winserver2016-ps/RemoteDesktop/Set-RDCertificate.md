@@ -69,7 +69,10 @@ The following example applies an existing certificate to use with an RDS role.
 PS C:\>Set-RDCertificate -Role RDRedirector -Thumbprint fedd995b45e633d4ef30fcbc8f3a48b627e9a28b -ConnectionBroker "RDCB.Contoso.com"
 ```
 
-The first part of the example specifies the thumbprint of the certificate to use for the RD Connection Broker's redirector role, which in this example is named "RDCB.Contoso.com." The certificate must be installed in the "localmachine\my" store on each server running the specified RDS role. The `-Thumbprint` parameter is only available in Windows Server 2019.
+The first part of the example specifies the thumbprint of the certificate to use for the
+RD Connection Broker's redirector role, which in this example is named "RDCB.Contoso.com." The
+certificate must be installed in the "localmachine\my" store on each server running the specified
+RDS role. The `-Thumbprint` parameter is available on Windows Server 2019 and later.
 
 ## Parameters
 
@@ -161,7 +164,8 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-This parameter specifies the thumbprint of the certificate to use. Currently, it is only available in Windows Server 2019.
+This parameter specifies the thumbprint of the certificate to use. The parameter is available on
+Windows Server 2019 and later.
 
 ```yaml
 Type: String
@@ -199,4 +203,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-RDCertificate](./New-RDCertificate.md)
 
 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)
-

@@ -62,9 +62,9 @@
         "Ruchika-mittal01",
         "sdwheeler",
         "shdyas",
-        "Shipra-M09", 
+        "Shipra-M09",
         "Stacyrch140",
-        "techtoons", 
+        "techtoons",
         "tiburd",
         "traya1",
         "v-dihans",
@@ -72,6 +72,7 @@
       ],
       "feedback_product_url": "https://support.microsoft.com/windows/send-feedback-to-microsoft-with-the-feedback-hub-app-f59187f8-8739-22d6-ba93-f66612949332",
       "feedback_system": "Standard",
+      "manager": "eliotgra",
       "ms.author": "roharwoo",
       "ms.devlang": "powershell",
       "ms.service": "windows-11",
@@ -123,7 +124,7 @@
       "filename-incomplete": { 
         "exclude": [ 
           "**/*.md", 
-          "**.*.yml" 
+          "**/*.yml" 
         ] 
       }, 
     "image-name-incomplete": { 
@@ -147,7 +148,7 @@
     "include-structure-incorrect": { 
       "exclude": [ 
         "**/*.md", 
-        "**.*.yml"
+        "**/*.yml"
       ] 
     }
   }

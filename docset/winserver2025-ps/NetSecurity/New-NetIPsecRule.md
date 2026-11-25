@@ -425,10 +425,10 @@ Specifies that matching IPsec rules of the indicated key module are created.
 This parameter specifies which keying modules to negotiate.
 The acceptable values for this parameter are: Default, AuthIP, IKEv1, or IKEv2.
 
-- Default: KeyModule is set based on the authentication method. As of Windows 11, version 24H2 and Windows Server 2025, the Default is equivalent to both IKEv1 and IKEv2, and only sets AuthIP if the authentication method(s) require it. In previous releases, Default is equivalent to both IKEv1 and AuthIP. Required in order for the rule to be applied to computers running Windows versions prior to Windows Server 2008.
+- Default: KeyModule is set based on the authentication method. As of Windows 11, version 24H2 and Windows Server 2025, the Default prefers IKEv2, falls back to IKEv1, and only includes AuthIP if the configured authentication method(s) require it. In previous releases, Default prefers IKEv1 and falls back to AuthIP. This value is required in order for the rule to be applied to computers running Windows versions prior to Windows Server 2008.
 - AuthIP: Supported with phase 2 authentication. 
 - IKEv1: Supported with pre-shared key (PSK), Certificates, and Kerberos. Supported with phase 1 authentication only.
-- IKEv2: Not supported with Kerberos, PSK, or NTLM. Supported with phase 1 authentication only.
+- IKEv2: Not supported with Kerberos or NTLM. Supported with phase 1 authentication only. When used with the **Mode** parameter set to Tunnel, the **TunnelType** parameter must be specified.
 
 The default value is Default. There are authentication and cryptographic methods that are only compatible with certain keying modules. This is a very advanced setting intended only for specific interoperability scenarios. Overriding this parameter value may result in traffic being sent in plain-text if the authorization and cryptographic settings are not supported by the keying modules. Windows versions prior to Windows Server 2012 only support the Default configuration.
 
@@ -888,6 +888,7 @@ Accept wildcard characters: False
 ### -TunnelType
 Specifies that matching IPsec rules of the indicated tunnel type are created.
 This parameter specifies which tunnel type to negotiate.
+This parameter is only valid when the **Mode** parameter is set to Tunnel and the **KeyModule** parameter is set to IKEv2.
 The acceptable value for this parameter is: PointToSite.
 - PointToSite: Indicates that the IPsec rule applies only to point-to-site tunnels, typically used for connecting an individual client to a network.
 The default value is PointToSite. This setting is very advanced and should only be modified for specific interoperability or security scenarios. Overriding this parameter incorrectly may result in rules not applying as intended, potentially leaving traffic unprotected. Windows versions prior to Windows Server 2025 do not support explicit tunnel type configuration.

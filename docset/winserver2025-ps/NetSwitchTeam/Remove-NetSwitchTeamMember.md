@@ -29,7 +29,7 @@ The member designated must exist in the specified switch team.
 
 ### Example 1: Remove a member from a team
 ```
-PS C:\>Remove-NetSwitchTeamMember -Team "SwitchTeam01" -Member "Ethernet 2"
+PS C:\>Remove-NetSwitchTeamMember -Team "SwitchTeam01" -Name "Ethernet 2"
 ```
 
 This command removes the network adapter named Ethernet 2 from the switch team named SwitchTeam01.

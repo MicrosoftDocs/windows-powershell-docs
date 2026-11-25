@@ -12,7 +12,8 @@ on:
 jobs:
 
   live-merge:
-    uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-LiveMergeCheck.yml@workflows-prod
+    if: github.repository_owner == 'MicrosoftDocs'
+    uses: MicrosoftDocs/tcp-workflows/.github/workflows/Shared-LiveMergeCheck.yml@workflows-prod
     with:
       PayloadJson: ${{ toJSON(github) }}
     secrets:

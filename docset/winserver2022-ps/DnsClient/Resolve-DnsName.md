@@ -15,7 +15,7 @@ Performs a DNS name query resolution for the specified name.
 ## SYNTAX
 
 ```
-Resolve-DnsName [-Name] <String> [[-Type] <RecordType>] [-Server <String[]>] [-DnsOnly] [-CacheOnly]
+Resolve-DnsName [-Name] <String> [[-Type] <RecordType>] [-Server <String[]>] [-DnsOnly] [-CacheOnly] [-CheckCache]
  [-DnssecOk] [-DnssecCd] [-NoHostsFile] [-LlmnrNetbiosOnly] [-LlmnrFallback] [-LlmnrOnly] [-NetbiosFallback]
  [-NoIdn] [-NoRecursion] [-QuickTimeout] [-TcpOnly] [<CommonParameters>]
 ```
@@ -59,6 +59,21 @@ LLMNR and NetBIOS queries are not issued.
 
 ### -CacheOnly
 Resolves this query using only the local cache.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CheckCache
+Resolves this query using the local cache first.
 
 ```yaml
 Type: SwitchParameter

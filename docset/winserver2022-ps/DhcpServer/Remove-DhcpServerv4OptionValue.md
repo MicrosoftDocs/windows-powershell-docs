@@ -68,7 +68,7 @@ PS C:\> Remove-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -O
 
 This example deletes DHCPv4 option value configured at the server level, or server-wide, for the specified option ID.
 
-### Example 6: Delete an otion value at the server level for a vendor class
+### Example 6: Delete an option value at the server level for a vendor class
 ```
 PS C:\> Remove-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -VendorClass "MSUCClient" -OptionId 5
 ```

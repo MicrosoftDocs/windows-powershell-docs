@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerDiagnostics_v1.0.0.cdxml-help.xml
 Module Name: DnsServer
-ms.date: 12/20/2016
+ms.date: 11/12/2026
 online version: https://learn.microsoft.com/powershell/module/dnsserver/set-dnsserverdiagnostics?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DnsServerDiagnostics
@@ -434,6 +434,20 @@ Accept wildcard characters: False
 
 ### -LogFilePath
 Specifies a log file path.
+
+Starting with the [2026-11 Cumulative Update](https://support.microsoft.com/help/5131080) for
+Windows Server 2025, changing **LogFilePath** requires membership in the local `Administrators`
+group on the target DNS server. Membership in `DnsAdmins` alone isn't sufficient. Callers who are
+members of `DnsAdmins` but not the local `Administrators` group receive `PermissionDenied` (Win32
+error 5) or `Access denied` when changing **LogFilePath**. Members of `DnsAdmins` can still change
+other debug settings when **LogFilePath** remains unchanged.
+
+After you install this update, DNS Server no longer honors a previously configured debug log path
+outside `C:\Windows\System32\dns\`. DNS Server logs Event ID 506 and relocates the debug log. If
+`C:\Windows\System32\dns\log` is a directory, the relocated log file is
+`C:\Windows\System32\dns\log\dns.log`. If `C:\Windows\System32\dns\log` is a file, DNS Server falls
+back to `C:\Windows\System32\dns\`. If the relocated log file already exists, DNS Server
+appends `-<timestamp>` to the file name before `.log`.
 
 ```yaml
 Type: String

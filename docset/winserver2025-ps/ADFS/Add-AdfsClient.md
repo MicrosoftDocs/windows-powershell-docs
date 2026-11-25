@@ -252,6 +252,12 @@ If the client ID and redirection URI correspond to a pre-registered OAuth 2.0 cl
 Ensure that the value of the RedirectUri parameter matches exactly the redirection URI that will be specified by the OAuth 2.0 client when requesting authorization, including trailing slashes (/), if required.
 Use more secure schemes, such as https, when you specify a redirection URI.
 
+ [!NOTE]
+> Starting with the October 2026 update, AD FS requires an exact match for the OAuth `redirect_uri` parameter, in accordance with [RFC 6749, section 3.1.2.3](https://www.rfc-editor.org/rfc/rfc6749#section-3.1.2.3).
+> Redirection URIs containing wildcard characters, such as `https://*.hostname/path`, are accepted during registration without an error but will not match OAuth `redirect_uri` validation at runtime.
+> Wildcard entries that previously matched through prefix matching will now be silently skipped, resulting in error MSIS9224 (Event ID 364) when no other registered URI exactly matches the requested redirection URI.
+> Register a separate redirection URI for each specific hostname instead of using a wildcard.
+
 For Windows Store applications that authenticate using the Windows Web Authentication Broker, use the 'ms-app://' scheme when registering a redirect URI.
 For example, ms-app://s-1-15-2-1101140336-4090662585-1905587327-262951538-2732256205-1306401843-4235927180/ is a redirect URI for a Windows Store application.
 If you are developing a Windows Store application, you can obtain the redirect URI for your application using the following code fragment:

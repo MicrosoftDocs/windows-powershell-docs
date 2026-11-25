@@ -56,7 +56,7 @@ It registers the new scheduled task and defines it by using the `$task` variable
 
 ### Example 2: Define a scheduled task with multiple actions
 ```powershell
-PS C:\> $actions = (New-ScheduledTaskAction –Execute 'foo.ps1'), (New-ScheduledTaskAction –Execute 'bar.ps1')
+PS C:\> $actions = (New-ScheduledTaskAction -Execute 'foo.ps1'), (New-ScheduledTaskAction -Execute 'bar.ps1')
 PS C:\> $trigger = New-ScheduledTaskTrigger -Daily -At '9:15 AM'
 PS C:\> $principal = New-ScheduledTaskPrincipal -UserId 'DOMAIN\user' -RunLevel Highest
 PS C:\> $settings = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable -WakeToRun

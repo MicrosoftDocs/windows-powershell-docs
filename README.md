@@ -1,5 +1,8 @@
 # Windows IT professional documentation
 
+> [!IMPORTANT]
+> The repos [office-docs-powershell](https://github.com/MicrosoftDocs/office-docs-powershell) and [windows-powershell-docs](https://github.com/MicrosoftDocs/windows-powershell-docs) will be private and offer no public access after November 30, 2026.
+
 This repository houses the Windows client, Windows Server, and MDOP PowerShell module docs that are
 written for IT professionals.
 

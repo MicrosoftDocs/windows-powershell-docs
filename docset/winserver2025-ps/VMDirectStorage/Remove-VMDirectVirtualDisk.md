@@ -1,46 +1,75 @@
 ---
 external help file: VMDirectStorage-help.xml
 Module Name: VMDirectStorage
-ms.date: 02/21/2024
+ms.date: 03/28/2025
 online version: https://learn.microsoft.com/powershell/module/vmdirectstorage/remove-vmdirectvirtualdisk?view=windowsserver2025-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-VMDirectVirtualDisk
+ai-usage: ai-generated
 ---
 
 # Remove-VMDirectVirtualDisk
 
-## SYNOPSIS
-{{ Fill in the Synopsis }}
+## Synopsis
 
-## SYNTAX
+Detaches a Storage Spaces Direct virtual disk from a virtual machine.
+
+## Syntax
 
 ### ByVMName
+
 ```
 Remove-VMDirectVirtualDisk [-VMName] <String> [-CimSession <CimSession[]>] [-ControllerType] <ControllerType>
  [-ControllerNumber] <Int32> [-ControllerLocation] <Int32> [<CommonParameters>]
 ```
 
 ### ByVirtualDisk
+
 ```
 Remove-VMDirectVirtualDisk [-VirtualDisk] <VMDirectVirtualDisk[]> [<CommonParameters>]
 ```
 
-## DESCRIPTION
-{{ Fill in the Description }}
+## Description
 
-## EXAMPLES
+The **Remove-VMDirectVirtualDisk** cmdlet detaches a Storage Spaces Direct virtual disk from a
+virtual machine. This operation ensures that the virtual disk is no longer accessible by the VM,
+though it doesn't delete the virtual disk itself.
 
-### Example 1
+## Examples
+
+### Example 1: Remove a virtual disk by specifying VM name and controller details
+
+This command removes the virtual disk located at controller 0, location 1, from the virtual machine
+named `VM1`.
+
 ```powershell
-PS C:\> {{ Add example code here }}
+$parameters = @{
+    VMName            = "VM1"
+    ControllerType    = "SCSI"
+    ControllerNumber  = 0
+    ControllerLocation = 1
+}
+Remove-VMDirectVirtualDisk @parameters
 ```
 
-{{ Add example description here }}
+### Example 2: Remove a virtual disk by using the virtual disk object
 
-## PARAMETERS
+This example gets all of the virtual disks directly attached to `VM1` on `Cluster01` and then
+removes them.
+
+```powershell
+$VmDirectDisk = Get-VMDirectVirtualDisk -VMName "VM1" -CimSession "Cluster01"
+Remove-VMDirectVirtualDisk -VirtualDisk $VmDirectDisk
+```
+
+## Parameters
 
 ### -CimSession
-{{ Fill CimSession Description }}
+
+Runs the command using the specified CIM session. Enter a variable that contains the CIM session, or
+a command that creates or gets the CIM session, such as `New-CimSession` or `Get-CimSession`. For
+more information, see
+[about_CimSession](/powershell/module/microsoft.powershell.core/about/about_cimsession).
 
 ```yaml
 Type: Microsoft.Management.Infrastructure.CimSession[]
@@ -55,7 +84,10 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerLocation
-{{ Fill ControllerLocation Description }}
+
+Specifies the location on the controller of the virtual disk to remove. If you don't specify a
+controller location, the cmdlet removes all directly virtual disks attached to the specified
+controller.
 
 ```yaml
 Type: System.Int32
@@ -70,7 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerNumber
-{{ Fill ControllerNumber Description }}
+
+Specifies the number of the controller where the virtual disk is attached. If you don't specify a
+controller number, the cmdlet removes all directly virtual disks on the specified controller.
 
 ```yaml
 Type: System.Int32
@@ -85,7 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerType
-{{ Fill ControllerType Description }}
+
+Specifies the type of controller used by the VM. If you don't specify a controller type, the cmdlet
+uses the SCSI controller type, which is the only type supported at this time.
 
 ```yaml
 Type: ControllerType
@@ -101,7 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDisk
-{{ Fill VirtualDisk Description }}
+
+Specifies the virtual disk object to remove.
 
 ```yaml
 Type: VMDirectVirtualDisk[]
@@ -116,7 +153,9 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-{{ Fill VMName Description }}
+
+Specifies the name of the virtual machine from which the directly attached virtual disk will be
+removed.
 
 ```yaml
 Type: System.String
@@ -131,17 +170,33 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## Inputs
 
 ### System.String
 
+Specifies the name of the virtual machine.
+
 ### VMDirectVirtualDisk[]
 
-## OUTPUTS
+Specifies the virtual disk objects to be removed. You can get the virtual disk object by using the
+[Get-VMDirectVirtualDisk](Get-VMDirectVirtualDisk.md) cmdlet.
 
-### System.Object
-## NOTES
+## Outputs
 
-## RELATED LINKS
+### None
+
+This cmdlet returns no output of its own.
+
+## Notes
+
+## Related links
+
+- [Add-VMDirectVirtualDisk](Add-VMDirectVirtualDisk.md)
+
+- [Get-VMDirectVirtualDisk](Get-VMDirectVirtualDisk.md)

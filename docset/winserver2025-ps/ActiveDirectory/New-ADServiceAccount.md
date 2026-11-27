@@ -11,7 +11,7 @@ title: New-ADServiceAccount
 # New-ADServiceAccount
 
 ## SYNOPSIS
-Creates a new Active Directory managed service account or group managed service account object.
+Creates a new Active Directory managed service account, group managed service account object or delegated managed service account.
 
 ## SYNTAX
 
@@ -77,7 +77,7 @@ cmdlet parameters. Property values that aren't associated with cmdlet parameters
 using the **OtherAttributes** parameter.
 
 The **Path** parameter specifies the container or organizational unit (OU) for the new managed
-service account object. When you Don�t specify the **Path** parameter, the cmdlet creates an
+service account object. When you don't specify the **Path** parameter, the cmdlet creates an
 object in the default managed service accounts container for managed service account objects in the
 domain.
 
@@ -150,7 +150,7 @@ $params = @{
 New-ADServiceAccount @params
 ```
 
-This command creates a delegated managed service account.
+This command creates a managed service account with multiple SPNs.
 
 ### Example 6: Create an enabled delegated managed service account to be used for migration
 
@@ -408,7 +408,7 @@ Accept wildcard characters: False
 
 ### -Credential
 
-Specifies the service account credentials to use to perform this task. The default credentials are
+Specifies the credentials to use to perform this task. The default credentials are
 the credentials of the currently logged on user unless the cmdlet is run from an Active Directory
 PowerShell provider drive. If the cmdlet is run from such a provider drive, the account associated
 with the drive is the default.
@@ -531,7 +531,7 @@ You can use an instance of an existing service account object as a template or y
 new service account object for template use. You can construct a new service account using the
 Windows PowerShell command line or by using a script.
 
-Note: Specified attributes aren't validated, so attempting to set attributes that Don�t exist or
+Note: Specified attributes aren't validated, so attempting to set attributes that don't exist or
 can't be set raises an error.
 
 ```yaml
@@ -558,10 +558,10 @@ service tickets. This value sets the encryption types supported flags of the Act
 - AES128
 - AES256
 
-None will remove all encryption types from the account may result in the KDC being unable to issue
+None will remove all encryption types from the account and may result in the KDC being unable to issue
 service tickets for services using the account.
 
-DES is a weak encryption type that'sn't supported by default since Windows 7 and Windows Server
+DES is a weak encryption type that isn't supported by default since Windows 7 and Windows Server
 2008 R2.
 
 Warning: Domain-joined Windows systems and services such as clustering manage their own
@@ -968,7 +968,7 @@ account object to the **Instance** parameter.
 
 ### None or Microsoft.ActiveDirectory.Management.ADServiceAccount
 
-This cmdlet returns the new managed service account object when the **PassThru** parameter.is
+This cmdlet returns the new managed service account object when the **PassThru** parameter is
 specified. By default, this cmdlet doesn't generate any output.
 
 ## NOTES

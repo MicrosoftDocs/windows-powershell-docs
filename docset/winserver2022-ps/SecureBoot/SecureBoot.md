@@ -29,4 +29,5 @@ Gets the UEFI variable values related to Secure Boot.
 ### [Set-SecureBootUEFI](./Set-SecureBootUEFI.md)
 Sets the Secure Boot-related UEFI variables.
 
-
+### [Get-SecureBootSVN](./Get-SecureBootSVN.md)
+Gets Secure Boot Security Version Number (SVN) information and compliance status for the system firmware and boot manager

@@ -284,7 +284,7 @@ Accept wildcard characters: False
 ### -TargetServer
 Specifies the Active Directory instance to use by providing the following value for a corresponding domain name or directory server.
 
-Note: A cross-domain move requires a fully qualified server name and the use of the RID Master in both domains.
+Note: A cross-domain move requires a fully qualified server name and the use of the RID Master in both source and target domains. When the Administrator account used for the task cannot be delegated, you have to run the cmdlet on the Rid Master of the source domain. When you do this, delegation is not required.
 
 Domain name values:
 

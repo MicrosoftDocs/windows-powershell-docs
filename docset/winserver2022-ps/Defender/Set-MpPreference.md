@@ -758,15 +758,7 @@ Accept wildcard characters: False
 
 ### -DisableCpuThrottleOnIdleScans
 
-Specifies whether to disable CPU throttling for scheduled scans while the device is idle. Valid
-values are:
-
-- $true: The CPU isn't throttled for scheduled scans, regardless of the value of the
-**ScanAvgCPULoadFactor** parameter.
-- $false: The CPU is throttled for scheduled scans.
-
-This parameter doesn't affect other types scheduled scans. Normal CPU throttling occurs on other
-types of scheduled scans.
+Indicates whether the CPU will be throttled for scheduled scans while the device is idle. This parameter is enabled by default, thus ensuring that the CPU won't be throttled for scheduled scans performed when the device is idle, regardless of what **ScanAvgCPULoadFactor** is set to. For all other scheduled scans, this flag does not have any impact and normal throttling will occur.
 
 ```yaml
 Type: Boolean
